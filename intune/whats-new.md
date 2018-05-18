@@ -41,6 +41,18 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 
 -->   
 
+## <a name="week-of-may-7-2018"></a>Semaine du 7 Mai 2018
+
+### Gestion des applications
+
+#### Prise en charge de l'inscription mobile Samsung Knox <!--1112863-->
+
+Lorsque vous utilisez Intune avec Samsung Knox Mobile Enrollment (KME), vous pouvez enregistrer un nombre important d'appareils Android appartenant à l'entreprise. Les utilisateurs connectés au réseau Wi-Fi ou cellulaire peuvent s'inscrire en quelques clics lorsqu'ils démarrent leur appareil pour la première fois. Lorsque vous utilisez l'application de déploiement Knox, les périphériques peuvent être inscrits via Bluetooth ou NFC. Pour plus d'informations, consultez la documentation pour configurer Intune avec Samsung KME [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md).
+
+#### Effectuer une demande de support via le portail de l'entreprise pour Windows 10 <!-- 1874137 -->
+
+Le portail d'entreprise pour Windows 10 envoie désormais les journaux d'application directement à Microsoft lorsque l'utilisateur initie le processus pour obtenir de l'aide sur un problème. Cela facilitera le dépannage et la résolution des problèmes remontés à Microsoft.
+
 ## <a name="week-of-april-23-2018"></a>Semaine du 23 avril 2018
 
 ### <a name="app-management"></a>Gestion d'applications
