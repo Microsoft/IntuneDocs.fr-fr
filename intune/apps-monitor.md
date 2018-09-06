@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0cd9db9399eb08c3ed04ff1d8920082aa0c04f06
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bedd1108ce0c9e173e6e9519a29d3948f1320c3a
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224311"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251812"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -62,6 +62,12 @@ Les graphiques indiquent le nombre d’applications liées aux états suivants 
 | **Installation en attente**   | Nombre d’applications qui sont en cours d’installation. |
 | **Non applicable**           | Nombre d’applications auxquelles l’état n’est pas applicable.            |
 
+> [!NOTE]
+> Il peut arriver que le nombre d’applications découvertes ne corresponde pas au nombre d’états d’installation d’applications. Voici quelques sources d’incohérences :
+>    - Une modification de ciblage d’une application managée installée peut faire baisser le nombre d’installations dans le panneau d’état, tandis que l’application reste comptée parmi les applications détectées.
+>    - Si plusieurs instances de la même application sont ciblées dans un locataire, le chevauchement potentiel d’utilisateurs ou d’appareils entraîne des disparités dans les volumes. Chaque instance de l’application compte les utilisateurs qui se chevauchent, mais les applications découvertes sont comptées plusieurs fois.
+>    - Les applications découvertes et leur état sont collectés à différents intervalles de temps, ce qui peut causer des écarts dans le nombre d’applications.
+ 
 ### <a name="device-install-status"></a>État de l’installation de l’appareil
 
 Une listes des états de l’appareil s’affiche quand vous sélectionnez **État de l’installation de l’appareil** dans la section **Surveiller** du menu. Le tableau des détails inclut les colonnes suivantes :

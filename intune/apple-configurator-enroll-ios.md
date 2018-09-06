@@ -15,12 +15,12 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2b3965c651bb6fcc38d61a55208fc8b199223891
-ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
+ms.openlocfilehash: b7cff6c777de4a35aa6825d1d37fdd0c2f2d0b72
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212118"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751715"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Inscrire des appareils iOS à l’aide de l’outil Apple Configurator
 
@@ -57,12 +57,18 @@ Un profil d’inscription d’appareil définit les paramètres appliqués duran
 
     - **Inscrire avec affinité utilisateur** : choisissez cette option pour les appareils qui appartiennent à des utilisateurs et qui veulent utiliser le Portail d’entreprise pour des services comme l’installation d’applications. L’appareil doit être affilié à un utilisateur avec l’Assistant Configuration. Il pourra alors accéder aux données et à la messagerie de l’entreprise. Prise en charge seulement pour l’inscription de l’Assistant Configuration. L’affinité utilisateur nécessite un [point de terminaison WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [En savoir plus](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-   > [!NOTE]
-   > L’authentification multifacteur ne fonctionne pas lors de l’inscription configurée avec l’affinité utilisateur. Après l’inscription, l’authentification multifacteur fonctionne comme prévu sur les appareils. Les appareils ne peuvent pas inviter les utilisateurs à changer leur mot de passe lors de leur première connexion. De plus, les utilisateurs dont les mots de passe ont expiré ne sont pas invités à réinitialiser leur mot de passe lors de l’inscription. Ils doivent le faire à partir d’un autre appareil.
-
     - **Inscrire sans affinité utilisateur** : choisissez cette option pour les appareils non affiliés à un seul utilisateur, qui effectuent des tâches sans accéder aux données de l’utilisateur local. Les applications qui nécessitent l’affiliation d’un utilisateur (y compris l’application Portail d’entreprise utilisée pour l’installation des applications métier) ne fonctionneront pas. Obligatoire pour l’inscription directe.
 
 4. Si vous avez choisi **Inscrire avec affinité utilisateur**, vous avez la possibilité d’autoriser les utilisateurs à s’authentifier avec le Portail d’entreprise au lieu de l’Assistant Configuration Apple.
+
+    > [!NOTE]
+    > Si vous souhaitez effectuer l’une des options suivantes, définissez **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration Apple** sur **Oui**.
+    >    - utiliser l’authentification multifacteur
+    >    - inviter les utilisateurs à changer leur mot de passe lors de leur première connexion
+    >    - demander aux utilisateurs de réinitialiser leurs mots de passe arrivés à expiration lors de l’inscription
+    >
+    > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
+
 
 6. Sélectionnez **Créer** pour enregistrer le profil.
 

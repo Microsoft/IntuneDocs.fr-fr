@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
-ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
+ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822719"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255236"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
 
@@ -115,11 +115,10 @@ Le nouvel anneau de mise à jour s’affiche dans la liste des anneaux de mises 
 3. Quand vous avez terminé, choisissez **Sélectionner** pour terminer l’affectation.
 
 ## <a name="update-compliance-reporting"></a>Création de rapports sur la conformité des mises à jour
-Vous pouvez afficher la conformité des mises à jour dans Intune ou en utilisant une solution gratuite d’Operations Management Suite (OMS) appelée Update Compliance.
+Vous pouvez afficher la conformité des mises à jour dans Intune ou avec une solution gratuite nommée Update Compliance.
 
 ### <a name="review-update-compliance-in-intune"></a>Examiner la conformité des mises à jour dans Intune 
-<!-- 1352223 -->
-Passez en revue un rapport sur la stratégie pour voir l’état du déploiement pour les anneaux de mise à jour Windows 10 que vous avez configurés.
+<!-- 1352223 --> Consultez un rapport sur la stratégie pour voir l’état de déploiement des boucles de mise à jour Windows 10 que vous avez configurées.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
@@ -137,7 +136,7 @@ Passez en revue un rapport sur la stratégie pour voir l’état du déploiement
       - **État de l’utilisateur**
 
 ### <a name="review-update-compliance-using-oms"></a>Examiner la conformité des mises à jour en utilisant OMS
-Vous pouvez surveiller les déploiements de mises à jour Windows 10 à l’aide d’une solution gratuite d’Operations Management Suite (OMS) appelée Conformité de la mise à jour. Pour plus d’informations, consultez [Analyse des mises à jour Windows avec la conformité de la mise à jour](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Lorsque vous utilisez cette solution, vous pouvez déployer un ID commercial dans un des appareils Windows 10 gérés par Intune pour lequel vous souhaitez générer des rapports sur la conformité des mises à jour.
+Pour surveiller les déploiements de mises à jour Windows 10, vous pouvez utiliser une solution gratuite nommée Update Compliance. Pour plus d’informations, consultez [Analyse des mises à jour Windows avec la conformité de la mise à jour](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Lorsque vous utilisez cette solution, vous pouvez déployer un ID commercial dans un des appareils Windows 10 gérés par Intune pour lequel vous souhaitez générer des rapports sur la conformité des mises à jour.
 
 Dans la console Intune, vous pouvez utiliser les paramètres OMA-URI d’une stratégie personnalisée pour configurer l’ID commercial. Pour plus d’informations, consultez [Paramètres de stratégie Intune pour les appareils Windows 10 dans Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
 

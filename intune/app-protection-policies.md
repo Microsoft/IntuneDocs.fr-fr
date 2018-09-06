@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 606c173c1723d526436b9ae75d9a4085883f071b
-ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
+ms.openlocfilehash: 3a66ed41442e89ed40850f5b9cd56cbc004a43d0
+ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305431"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251840"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -30,11 +30,11 @@ Découvrez comment créer des stratégies de protection des applications Microso
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Si vous cherchez des instructions dans le portail classique Intune, consultez [Comment créer des stratégies de protection des applications](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
-
-Les stratégies de protection d'application peuvent être appliquées à des applications qui s’exécutent sur des appareils gérés ou non par Intune. Pour une description plus détaillée du fonctionnement des stratégies de protection d’application et les scénarios pris en charge par les stratégies de protection d’application Intune, consultez [Nouveautés des stratégies de protection d’application Microsoft Intune](app-protection-policy.md).
+Les stratégies de protection d'application peuvent être appliquées à des applications qui s’exécutent sur des appareils gérés ou non par Intune. Pour une description plus détaillée du fonctionnement des stratégies de protection d’applications et la liste des scénarios pris en charge par les stratégies Intune App Protection, voir [Présentation des stratégies Microsoft Intune App Protection](app-protection-policy.md).
 
 Si vous recherchez une liste d’applications prises en charge par la gestion des applications mobiles, consultez [Liste d’applications de gestion des applications mobiles](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+Pour plus d’informations sur l’ajout d’applications métier professionnelles à Microsoft Intune dans le but de préparer des stratégies de protection d’applications, voir [Ajouter des applications à Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Créer une stratégie de protection des applications
 1. Dans la charge de travail **Applications mobiles**, sélectionnez **Stratégies de protection des applications** dans la section **Gérer**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.

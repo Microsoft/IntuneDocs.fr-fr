@@ -14,12 +14,12 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 351282634d6c6e087456e61e9fd967b70f9cf515
-ms.sourcegitcommit: c109ea6e9b7104630cd767aa27c5f7789286a906
+ms.openlocfilehash: 9d4dbdb3aa07020aa027dc1a4a1b2edcefefb4ca
+ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39450788"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251791"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -28,7 +28,7 @@ ms.locfileid: "39450788"
 Vous pouvez configurer vos applications pour utiliser des stratégies de protection des applications à l’aide de l’outil de création de package de restrictions d’application Intune ou du SDK d’application Intune. Utilisez ces informations pour en savoir plus sur ces deux méthodes et quand les utiliser.
 
 ## <a name="intune-app-wrapping-tool"></a>Outil de création de package de restrictions d’application Intune
-L’outil de création de package de restrictions d’application est utilisé principalement pour les applications métier internes. Cet outil est une application en ligne de commande qui crée un wrapper autour de l’application, ce qui permet ensuite à l’application d’être gérée par une stratégie de protection des applications Intune.
+App Wrapping Tool est utilisé principalement pour les applications métier **internes**. Cet outil est une application en ligne de commande qui crée un wrapper autour de l’application, ce qui permet ensuite à l’application d’être gérée par une stratégie de protection des applications Intune. Lorsque l’application à protéger est fournie par un éditeur de logiciels indépendant (ISV), il est important de savoir si ce dernier prendra toujours en charge l’application une fois incluse dans un wrapper.
 
 Vous n’avez pas besoin du code source pour utiliser l’outil, mais vous avez besoin des informations d’identification de signature. Pour plus d’informations sur les informations d’identification de signature, consultez le [blog Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Pour obtenir la documentation de l’outil de création de package de restrictions d’application, consultez [Android App Wrapping Tool](app-wrapper-prepare-android.md) (Outil de création de package de restrictions d’application Android) et [iOS App Wrapping Tool](app-wrapper-prepare-ios.md) (Outil de création de package de restrictions d’application iOS).
 
@@ -48,7 +48,7 @@ Pour plus d’informations sur l’outil de création de package de restrictions
 
 |**Outil de création de package de restrictions d’application** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Non : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Oui|
+|**iOS** |Oui|Oui|
 |**Android**|Non : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Oui|
 
 ## <a name="intune-app-sdk"></a>Kit SDK d’application Intune

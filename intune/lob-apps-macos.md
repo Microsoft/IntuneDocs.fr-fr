@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c871d32fbcdfa089de88ae649c2926d2c839cce2
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993715"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255492"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Guide pratique pour ajouter des applications métier macOS à Microsoft Intune
 
@@ -28,14 +28,15 @@ ms.locfileid: "38993715"
 
 Utilisez les informations contenues dans cet article pour ajouter des applications métier macOS à Microsoft Intune. Vous devez télécharger un outil externe pour pré-traiter vos fichiers *.pkg* avant de pouvoir charger votre fichier métier dans Microsoft Intune. Le traitement préalable de vos fichiers *.pkg* doit avoir lieu sur un appareil macOS.
 
->[!NOTE]
->Bien que les utilisateurs d’appareils macOS puissent supprimer certaines applications macOS intégrées, telles que Stocks et Maps, vous ne pouvez pas vous servir d’Intune pour redéployer ces applications. Si des utilisateurs finaux suppriment ces applications, ils doivent se rendre sur l’App Store et les réinstaller manuellement.
->
->Seuls les fichiers *.pkg* peuvent être utilisés pour charger des applications métier macOS à Microsoft Intune. La conversion d’autres formats, tels que *.dmg* vers *.pkg*, n’est pas prise en charge.
+> [!NOTE]
+> Bien que les utilisateurs d’appareils macOS puissent supprimer certaines applications macOS intégrées, telles que Stocks et Maps, vous ne pouvez pas vous servir d’Intune pour redéployer ces applications. Si des utilisateurs finaux suppriment ces applications, ils doivent se rendre sur l’App Store et les réinstaller manuellement.
 
-## <a name="step-1---pre-process-your-software-setup-file"></a>Étape 1 : prétraiter votre fichier d’installation du logiciel
+## <a name="before-your-start"></a>Avant de commencer
 
-Utilisez l’outil Intune App Wrapping Tool pour Mac pour permettre aux applications Mac d’être gérées par Microsoft Intune.
+Vous devez télécharger un outil externe pour pré-traiter vos fichiers *.pkg* avant de pouvoir charger votre fichier métier dans Microsoft Intune. Le traitement préalable de vos fichiers *.pkg* doit avoir lieu sur un appareil macOS. Utilisez l’outil Intune App Wrapping Tool pour Mac pour permettre aux applications Mac d’être gérées par Microsoft Intune.
+
+> [!IMPORTANT]
+> Seuls les fichiers *.pkg* peuvent être utilisés pour charger des applications métier macOS à Microsoft Intune. La conversion d’autres formats, tels que *.dmg* vers *.pkg*, n’est pas prise en charge.
 
 1. Téléchargez et exécutez l’outil [Intune App Wrapping Tool pour Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -55,7 +56,7 @@ Utilisez l’outil Intune App Wrapping Tool pour Mac pour permettre aux applicat
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Cette commande extrait les paramètres détectés et la version pour le fichier *.intunemac* créé.
 
-## <a name="step-2---specify-the-software-setup-file"></a>Étape 2 : spécifier le fichier d’installation du logiciel
+## <a name="step-1---specify-the-software-setup-file"></a>Étape 1 : spécifier le fichier d’installation de logiciel
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
@@ -64,14 +65,14 @@ Utilisez l’outil Intune App Wrapping Tool pour Mac pour permettre aux applicat
 5. Au-dessus de la liste des applications, choisissez **Ajouter**.
 6. Dans le volet **Ajouter une application**, choisissez **Application métier**.
 
-## <a name="step-3---configure-the-app-package-file"></a>Étape 3 : configurer le fichier de package d’application
+## <a name="step-2---configure-the-app-package-file"></a>Étape 2 : configurer le fichier de package d’application
 
 1. Dans le volet **Ajouter une application**, choisissez **Fichier de package d’application**.
 2. Dans le volet **Fichier de package d’application**, cliquez sur le bouton Parcourir et sélectionnez un fichier d’installation macOS avec l’extension *.intunemac*.
 3. Quand vous avez terminé, cliquez sur **OK**.
 
 
-## <a name="step-4---configure-app-information"></a>Étape 4 : configurer les informations de l’application
+## <a name="step-3---configure-app-information"></a>Étape 3 : configurer les informations de l’application
 
 1. Dans le volet **Ajouter une application**, choisissez **Informations sur l’application**.
 2. Dans le volet **Informations sur l’application**, ajoutez les détails de votre application. Selon l’application choisie, certaines valeurs de ce volet peuvent avoir été renseignées automatiquement :
@@ -89,7 +90,7 @@ Utilisez l’outil Intune App Wrapping Tool pour Mac pour permettre aux applicat
     - **Logo** : chargez l’icône qui est associée à l’application. Il s’agit de l’icône qui est affichée avec l’application quand les utilisateurs naviguent dans le portail d’entreprise.
 3. Quand vous avez terminé, cliquez sur **OK**.
 
-## <a name="step-5---finish-up"></a>Étape 5 : terminer
+## <a name="step-4---finish-up"></a>Étape 4 : Terminer
 
 1. Dans le volet **Ajouter une application**, vérifiez que les détails de votre application sont corrects.
 2. Sélectionnez **Ajouter** pour charger l’application sur Intune.
@@ -99,7 +100,7 @@ L’application que vous avez créée apparaît dans la liste des applications, 
 > [!NOTE]
 > Si le fichier *.pkg* contient plusieurs applications ou programmes d’installation d’applications, Microsoft Intune ne signale que l’*application* est installé correctement que lorsque toutes les applications installées sont détectées sur l’appareil.
 
-## <a name="step-6---update-a-line-of-business-app"></a>Étape 6 : mettre à jour une application métier
+## <a name="step-5---update-a-line-of-business-app"></a>Étape 5 : Mise à jour d’une application métier
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

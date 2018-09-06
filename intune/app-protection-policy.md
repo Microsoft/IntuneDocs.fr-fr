@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 01/19/2018
+ms.date: 08/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f59bd4e0f795b73d830e41d47262c10c24d9398b
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e9dbda4c768bf9963a4ec168d6a613dca197995
+ms.sourcegitcommit: c5cba0f4bf01eb9a9492e4e3fb6cd756f0737057
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834276"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251756"
 ---
 # <a name="what-are-app-protection-policies"></a>Que sont les stratégies de protection des applications ?
 
@@ -32,7 +32,7 @@ Les stratégies de protection d’application Microsoft Intune vous aident à pr
 ## <a name="how-you-can-protect-app-data"></a>Comment protéger les données d’application
 Vos employés utilisent des appareils mobiles pour des tâches à la fois personnelles et professionnelles.  Tout en veillant à ce que vos employés soient productifs, vous voulez éviter toute perte de données, qu’elle soit intentionnelle ou non.  Vous devez également avoir la possibilité de protéger des données d’entreprise accessibles à l’aide d’appareils même si vous ne les gérez pas.
 
-Vous pouvez utiliser des stratégies de gestion des applications mobiles Intune pour protéger les données de votre entreprise. Étant donné que les stratégies de gestion des applications mobiles Intune sont **indépendantes de toute solution de gestion des appareils mobiles (MDM)**, vous pouvez les utiliser pour protéger les données de votre entreprise en inscrivant ou non les appareils dans une solution de gestion des appareils. En implémentant des **stratégies au niveau de l’application**, vous pouvez restreindre l’accès aux ressources d’entreprise et conserver les données au sein de votre département informatique.
+Vous pouvez utiliser des stratégies de protection des applications Intune pour protéger les données de votre entreprise. Étant donné que les stratégies de gestion des applications mobiles Intune sont **indépendantes de toute solution de gestion des appareils mobiles (MDM)**, vous pouvez les utiliser pour protéger les données de votre entreprise en inscrivant ou non les appareils dans une solution de gestion des appareils. En implémentant des **stratégies au niveau de l’application**, vous pouvez restreindre l’accès aux ressources d’entreprise et conserver les données au sein de votre département informatique.
 
 Vous pouvez configurer des stratégies de protection d’application pour les applications exécutées sur des appareils :
 
@@ -46,7 +46,7 @@ Vous pouvez configurer des stratégies de protection d’application pour les ap
 - **non inscrits dans une solution de gestion d’appareils mobiles :** les appareils de cette catégorie sont généralement la propriété d’employés et ne sont pas gérés ou inscrits dans Intune ou d’autres solutions de gestion des appareils mobiles.
 
 > [!IMPORTANT]
-> Vous pouvez créer des stratégies de gestion des applications mobiles pour les applications mobiles Office qui se connectent aux services Office 365. Les stratégies de protection des applications ne sont pas prises en charge pour les applications qui se connectent à des services Exchange ou SharePoint locaux.
+> Vous pouvez créer des stratégies de gestion des applications mobiles pour les applications mobiles Office qui se connectent aux services Office 365. Vous pouvez également protéger l’accès aux boîtes aux lettres Exchange sur site en créant des stratégies Intune App Protection pour Outlook sous iOS et Android avec authentification moderne hybride. Avant d’utiliser cette fonctionnalité, vérifiez que vous répondez aux [exigences relatives à Outlook pour iOS et Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Les stratégies de protection d’applications ne sont pas prises en charge pour les autres applications qui se connectent à des services Exchange ou SharePoint sur site.
 
 **Les principaux avantages de l’utilisation de stratégies de protection des applications sont les suivants :**
 

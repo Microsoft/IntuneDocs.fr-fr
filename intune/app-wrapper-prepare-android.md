@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/7/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bb94c5a0941dc4f4d626c6316f79d5e4b1f4b551
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: 3be9be3c290a6cbb2e68358a6810aa2dc1636065
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "35679442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251494"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -50,6 +50,9 @@ Avant d’exécuter l’outil, passez en revue les [considérations en matière 
     > Dans certains cas, la version 32 bits de Java peut occasionner des problèmes de mémoire. Nous vous conseillons d’installer la version 64 bits.
 
 - Android nécessite que tous les packages d’application (.apk) soient signés. Pour obtenir de l’aide sur la**réutilisation** de certificats existants et sur les certificats de signature en général, consultez [Réutilisation de certificats de signature et inclusion d’applications dans un wrapper](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). L’exécutable Java keytool.exe permet de générer de **nouvelles** informations d’identification nécessaires pour signer l’application de sortie incluse dans un wrapper. Tous les mots de passe définis doivent être sécurisés, mais notez-les car ils sont nécessaires pour exécuter l’outil de création de package de restrictions d’application.
+
+> [!NOTE]
+> Intune App Wrapping Tool ne prend pas en charge les schémas de signature d’applications de la v2 et de la v3 à venir. Une fois le fichier .apk inclus dans un wrapper à l’aide d’Intune App Wrapping Tool, il est recommandé d’utiliser [l’outil apksigner fourni par Google]( https://developer.android.com/studio/command-line/apksigner). Ainsi, lorsque l’application arrive sur les appareils des utilisateurs finaux, elle peut être lancée correctement selon les standards Android. 
 
 - (Facultatif) Activez Multidex dans l’application d’entrée. Parfois, une application peut atteindre la limite de taille du fichier exécutable Dalvik (DEX) à cause des classes du SDK Intune MAM ajoutées pendant le wrapping. Les fichiers DEX font partie de la compilation d’une application Android. Dans ce scénario, une bonne pratique consiste à activer Multidex au sein de l’application elle-même. Dans certaines organisations, il peut être nécessaire de contacter la personne compile l’application (c’est-à-dire l’équipe de génération des applications). 
 

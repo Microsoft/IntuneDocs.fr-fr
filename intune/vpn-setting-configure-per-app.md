@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
-ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
+ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
+ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753890"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "40251523"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Configurer un VPN par application dans Intune pour les appareils iOS
 
@@ -35,7 +35,7 @@ Un VPN par application est actuellement disponible pour les fournisseurs suivant
  - SonicWall
  - Palo Alto Networks GlobalProtect
 
-## <a name="prerequisites-for-per-app-vpn"></a>Prérequis du réseau VPN par application
+## <a name="prerequisites-for-per-app-vpn"></a>Prérequis du VPN par application
 
 > [!IMPORTANT]
 > Votre fournisseur VPN peut avoir d’autres exigences spécifiques pour les VPN par application, comme du matériel ou une gestion des licences spécifiques. Veillez à consulter leur documentation et répondez aux prérequis avant de configurer les VPN par application dans Intune.
@@ -111,7 +111,7 @@ Le profil de certificat racine approuvé permet à iOS d’approuver automatique
 
 ## <a name="create-a-per-app-vpn-profile"></a>Créer un profil VPN par application
 
-Le profil VPN contient le certificat SCEP qui inclut les informations d’identification du client, les informations de connexion au VPN et l’indicateur VPN par application permettant d’activer la fonctionnalité VPN par application pour que l’application iOS l’utilise.
+Le profil VPN contient le certificat SCEP qui inclut les informations d’identification du client, les informations de connexion au VPN et l’indicateur VPN par application permettant d’activer la fonctionnalité de VPN par application pour que l’application iOS l’utilise.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
@@ -145,30 +145,41 @@ Après avoir ajouté votre profil VPN, associez l’application et le groupe Azu
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-2. Choisissez **Applications mobiles**.
-3. Cliquez sur **Applications**.
-4. Sélectionnez l’application dans la liste des applications.
-5. Cliquez sur **Affectations**.
-6. Cliquez sur **Ajouter un groupe**.
-7. Sélectionnez **Obligatoire** pour le **Type affectation** dans le volet**Ajouter un groupe**.
-6. Sélectionnez le groupe que vous avez défini précédemment et sélectionnez **Rendre cette application obligatoire**.
-8. Sélectionnez votre définition de VPN pour le **VPN**.
+3. Choisissez **Applications mobiles**.
+4. Cliquez sur **Applications**.
+5. Sélectionnez l’application dans la liste des applications.
+6. Cliquez sur **Affectations**.
+7. Cliquez sur **Ajouter un groupe**.
+8. Sélectionnez **Obligatoire** pour le **Type affectation** dans le volet**Ajouter un groupe**.
+9. Sélectionnez le groupe que vous avez défini précédemment et sélectionnez **Rendre cette application obligatoire**.
+10. Sélectionnez votre définition de VPN pour le **VPN**.
  
     > [!NOTE]  
     > La définition de VPN peut prendre jusqu’à une minute pour récupérer la valeur. Attendez 3 à 5 minutes avant de cliquer sur **Enregistrer**.
 
-9. Cliquez sur **OK**, puis sur **Enregistrer**.
+11. Cliquez sur **OK**, puis sur **Enregistrer**.
 
     ![Associer une application au VPN](./media/vpn-per-app-app-to-vpn.png)
 
+Une association entre une application et un profil sera supprimée au prochain archivage de l’appareil si les conditions suivantes sont réunies :
+- L’application a été ciblée avec l’intention « installation requise ».
+- Le profil et l’application sont ciblés vers le même groupe.
+- Vous supprimez la configuration du VPN par application de l’affectation d'applications.
+
+Une association entre une application et un profil sera conservée jusqu'à ce que l’utilisateur final demande une réinstallation à partir du portail d’entreprise si les conditions suivantes sont réunies :
+- L’application a été ciblée avec l’intention « installation disponible ».
+- Le profil et l’application sont ciblés vers le même groupe.
+- L’utilisateur final a demandé l’installation de l’application sur le portail d’entreprise ; l’application et le profil sont donc installés sur l’appareil.
+- Vous supprimez la configuration du VPN par application de l’affectation d'applications.
+
 ## <a name="verify-the-connection-on-the-ios-device"></a>Vérifier la connexion sur l’appareil iOS
 
-Une fois votre VPN par application défini et associé à votre application, vérifiez que la connexion fonctionne sur l’appareil.
+Une fois votre VPN par application configuré et associé à votre application, vérifiez que la connexion fonctionne sur un appareil.
 
 ### <a name="before-you-attempt-to-connect"></a>Avant d’essayer de se connecter
 
  - Veillez à exécuter iOS 9 ou une version ultérieure.
- - Veillez à déployer *toutes* les stratégies mentionnées ci-dessus sur le même groupe d’utilisateurs. Si vous ne le faites pas, vous ne pourrez pas profiter de l’expérience de VPN par application.  
+ - Veillez à déployer *toutes* les stratégies mentionnées ci-dessus sur le même groupe d’utilisateurs. Si vous ne le faites pas, vous ne pourrez selon toute probabilité pas profiter de l’expérience de VPN par application.  
  - Vérifiez que l’application VPN tierce prise en charge est installée. Les applications VPN prises en charge sont les suivantes :
     - Check Point Capsule Connect
     - Cisco AnyConnect
@@ -191,7 +202,7 @@ Vérifiez la connexion sur un appareil iOS.
 2. Appuyez sur **Se connecter**.  
 Le VPN se connecte sans aucune autre invite.
 
-<!-- ## Troubleshooting the Per-App VPN
+<!-- ## Troubleshooting the per-app VPN
 
 The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
 

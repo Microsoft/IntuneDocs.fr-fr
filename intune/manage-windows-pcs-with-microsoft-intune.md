@@ -15,12 +15,12 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: a22aafdca8c049367d4c88d27a07a7c1825a01e3
-ms.sourcegitcommit: e6e93419f46e8647d4661eeca09eb1e2e460ad2b
+ms.openlocfilehash: 5a248345a40cd7cfcff3883643562923f9535d3b
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966916"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41910645"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Gérer des PC Windows en tant qu’ordinateurs via le logiciel client Intune
 
@@ -53,10 +53,10 @@ Intune prend en charge la gestion de 7 000 PC Windows au maximum en tant qu’
 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
-|Système d'exploitation | Appareil Windows exécutant Windows 7 SP1 ou ultérieur. </br></br>**Les éditions familiales ne sont pas prises en charge.**|
+|Système d'exploitation | Appareil Windows sous Windows 7 SP1 et Windows 8.1 ou une version ultérieure. </br></br>**Les éditions familiales ne sont pas prises en charge.**|
 |Autorisations administratives|Le compte qui installe le logiciel client doit disposer des autorisations d’administrateur local sur cet ordinateur.|
 |Windows Installer 3.1|Le PC doit disposer de Windows Installer 3.1 au minimum.<br /><br />Pour afficher la version de Windows Installer sur un PC :<br /><br />  Sur le PC, cliquez avec le bouton droit sur **%windir%\System32\msiexec.exe**, puis cliquez sur **Propriétés**.<br /><br />Vous pouvez télécharger la dernière version de Windows Installer à partir de [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) sur le site web Microsoft Developer Network.|
-|Supprimer les logiciels clients incompatibles|Avant d’installer le logiciel client Intune, désinstallez tout logiciel client Configuration Manager, Operations Manager, Operations Management Suite et Service Manager du PC.|
+|Supprimer les logiciels clients incompatibles|Avant d’installer le logiciel client Intune, désinstallez tous les logiciels clients Configuration Manager, Operations Manager et Service Manager du PC.|
 
 ## <a name="deploying-the-intune-software-client"></a>Déploiement du logiciel client Intune
 En tant qu’administrateur Intune, vous pouvez mettre le logiciel client Intune à la disposition des utilisateurs de plusieurs façons. Pour obtenir des instructions, consultez [Installer le logiciel client Intune sur des PC Windows](install-the-windows-pc-client-with-microsoft-intune.md).

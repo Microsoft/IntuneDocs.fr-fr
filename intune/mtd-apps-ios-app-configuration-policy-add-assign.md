@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6c7f3229c2cb4c5f3f57d84d348053f25eeeb9c9
-ms.sourcegitcommit: f70d6aaea59b52cd0d7bd3008afd243868967fd6
+ms.openlocfilehash: c64c267623db93128177d56ced29586d3a877b19
+ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066213"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42823050"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Ajouter et affecter des applications Mobile Threat Defense (MTD) avec Intune
 
@@ -45,7 +45,7 @@ Les étapes ci-dessous doivent être effectuées dans le [portail Azure](https:/
 ## <a name="configure-microsoft-authenticator-for-ios"></a>Configurer Microsoft Authenticator pour iOS
 Pour les appareils iOS, vous avez besoin de [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) pour que l’identité des utilisateurs puisse être vérifiée par Azure AD. Vous avez aussi besoin de la stratégie de configuration d’application iOS qui indique l’application iOS MTD à utiliser avec Intune.
 
-Consultez les instructions relatives à [l’ajout d’applications de l’App Store iOS à Microsoft Intune](store-apps-ios.md). Utilisez cette [URL du magasin de l’application Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) à **l’étape 12** dans la section **Configurer les informations sur l’application**.
+Consultez les instructions relatives à [l’ajout d’applications de l’App Store iOS à Microsoft Intune](store-apps-ios.md). Utilisez cette [URL du magasin de l’application ;icrosoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) à **l’étape 12** dans la section **Configurer les informations sur l’application**.
 
 ## <a name="configure-mtd-applications"></a>Configurer les applications MTD
 
@@ -56,6 +56,7 @@ Choisissez la section correspondant à votre fournisseur MTD :
   - [Check Point SandBlast Mobile](#configure-check-point-sandblast-mobile-apps)
   - [Zimperium](#configure-zimperium-apps)
   - [Pradeo](#configure-pradeo-apps)
+  - [Better Mobile](#configure-better-mobile-apps)
 
 ### <a name="configure-lookout-for-work-apps"></a>Configurer les applications Lookout for Work
 
@@ -129,6 +130,16 @@ Choisissez la section correspondant à votre fournisseur MTD :
 
     - Consultez les instructions relatives à [l’ajout d’applications de l’App Store iOS à Microsoft Intune](store-apps-ios.md). Utilisez cette [URL de l’App Store Pradeo](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) à **l’étape 12** dans la section **Configurer les informations de l’application**.
 
+### <a name="configure-better-mobile-apps"></a>Configurer des applications Better Mobile
+
+ - **Android**
+
+    - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](store-apps-android.md). Utilisez cette [URL du magasin d’application Active Shield](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) à **l’étape 7**.
+
+ - **iOS**
+
+    - Consultez les instructions relatives à [l’ajout d’applications de l’App Store iOS à Microsoft Intune](store-apps-ios.md). Utilisez cette [URL du magasin d’application Active Shield](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) à **l’étape 12** dans la section **Configurer les informations sur l’application**.
+
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Configurer vos applications MTD avec une stratégie de configuration des applications iOS
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Stratégie de configuration des applications Lookout for Work
@@ -177,6 +188,22 @@ Choisissez la section correspondant à votre fournisseur MTD :
 <string>{{serialnumber}}</string>
 <key>udidlast4digits</key>
 <string>{{udidlast4digits}}</string>
+</dict>
+```
+
+### <a name="better-mobile-app-configuration-policy"></a>Stratégie de configuration des applications Better Mobile
+
+- Consultez les instructions [d’utilisation de stratégies de configuration d’application Microsoft Intune pour iOS](app-configuration-policies-use-ios.md) pour ajouter la stratégie de configuration d’application iOS Better Mobile.
+    - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu ci-dessous et collez-le dans le corps de la stratégie de configuration. Remplacez l’URL `https://client.bmobi.net` par l’URL de la console concernée.
+
+```
+<dict>
+<key>better_server_url</key>
+<string>https://client.bmobi.net</string>
+<key>better_udid</key>
+<string>{{aaddeviceid}}</string>
+<key>better_user</key>
+<string>{{userprincipalname}}</string>
 </dict>
 ```
 

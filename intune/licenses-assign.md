@@ -14,12 +14,12 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a6a5bbdd5c8cd155dad99b3a8fcceabb2ff1f6f8
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 8b132c0853bf9d591f16610f1e7a714b6288491b
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225406"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751648"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Affecter des licences aux utilisateurs pour qu’ils puissent inscrire des appareils dans Intune
 
@@ -61,7 +61,7 @@ Pour en savoir plus sur SDS, consultez cette [vue d’ensemble de School Data Sy
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Impact des licences utilisateur et d’appareil sur l’accès aux services
 * Chaque **utilisateur** auquel vous affectez une licence de logiciel utilisateur peut accéder à et utiliser les services en ligne et logiciels liés (y compris les logiciels de System Center) pour gérer les applications et jusqu’à 15 appareils.
-* Chaque **appareil** auquel vous affectez une licence de logiciel pour appareil peut accéder à et utiliser les services en ligne et logiciels liés (y compris les logiciels de System Center) pour une utilisation par n’importe quel nombre d’utilisateurs.
+* Vous pouvez acheter des licences pour un appareil indépendamment de la licence utilisateur. Les licences appareil ne sont pas nécessairement affectées aux appareils. Chaque appareil qui accède aux services en ligne et aux logiciels liés (y compris le logiciel System Center) et les utilise doit avoir une licence appareil.
 * Si un appareil est utilisé par plusieurs utilisateurs, chacun requiert une licence de logiciel pour appareil, ou tous les utilisateurs requièrent une licence de logiciel utilisateur.
 
 ## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Présentation du type des licences achetées

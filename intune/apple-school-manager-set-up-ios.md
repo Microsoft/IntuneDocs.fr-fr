@@ -15,12 +15,12 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 31d09c8c97da823ec40785a6db42df64056277fb
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
+ms.openlocfilehash: 59449efd592f3c47bdf2350b495f81c23f442999
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164550"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751800"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Activer l’inscription des appareils iOS avec Apple School Manager
 
@@ -94,8 +94,13 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
     ![Authentification avec le Portail d’entreprise.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
-    >[!NOTE]
-    >L’authentification multifacteur (MFA) ne fonctionne pas lors de l’inscription sur les appareils Apple School Manager si les propriétés de profil sont définies sur **Utiliser avec affinité utilisateur** et que vous n’utilisez pas un Portail d’entreprise. Après l’inscription, l’authentification multifacteur fonctionne comme prévu sur ces appareils. Les appareils ne peuvent pas inviter les utilisateurs à changer leur mot de passe lors de leur première connexion. De plus, les utilisateurs dont les mots de passe ont expiré ne sont pas invités à réinitialiser leur mot de passe lors de l’inscription. Ils doivent le faire à partir d’un autre appareil.
+    > [!NOTE]
+    > Si vous souhaitez effectuer l’une des options suivantes, définissez **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration Apple** sur **Oui**.
+    >    - utiliser l’authentification multifacteur
+    >    - inviter les utilisateurs à changer leur mot de passe lors de leur première connexion
+    >    - demander aux utilisateurs de réinitialiser leurs mots de passe arrivés à expiration lors de l’inscription
+    >
+    > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
 
 6. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
     Les appareils **supervisés** offrent plus d’options de gestion ; le Verrouillage d’activation est par défaut désactivé. Microsoft recommande l’utilisation du Programme d’inscription des appareils comme mécanisme d’activation du mode supervisé, en particulier pour les organisations qui déploient un grand nombre d’appareils iOS.

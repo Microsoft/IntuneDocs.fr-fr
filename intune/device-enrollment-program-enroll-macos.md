@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6f9035b5a31d04e7d6ec6c5ec5b8f69a7c0943f
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: 7b913cc2f667cb2bb16d6f810d7449ce8ee752e8
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40090113"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751732"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple
 
@@ -127,25 +127,30 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 8. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
-
-    |                 Paramètre                  |                                                                                               Description                                                                                               |
+    | Paramètres du service | Description |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    |     <strong>Nom du service</strong>     |                                                             S’affiche quand l’utilisateur appuie sur <strong>À propos de la configuration</strong> pendant l’activation.                                                              |
-    |    <strong>Numéro de téléphone du service</strong>     |                                                          S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation.                                                          |
-    | <strong>Options de l’Assistant Configuration</strong> |                                                     Les paramètres facultatifs suivants pourront être configurés plus tard dans le menu <strong>Paramètres</strong> de macOS.                                                      |
-    |        <strong>Code secret</strong>         | Invite à saisir un code secret pendant l’activation. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
-    |    <strong>Services d’emplacement</strong>    |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier le service pendant l’activation.                                                                  |
-    |         <strong>Restauration</strong>         |                                                                Si cette option est activée, l’Assistant Configuration invite à spécifier la sauvegarde iCloud pendant l’activation.                                                                 |
-    |   <strong>ID Apple et iCloud</strong>   |                         Si cette option est activée, l’Assistant Configuration invite l’utilisateur à se connecter avec un ID Apple, et l’écran Applications et données autorisera la restauration de l’appareil à partir de la sauvegarde iCloud.                         |
-    |  <strong>Conditions générales</strong>   |                                                   Si cette option est activée, l’Assistant Configuration invite l’utilisateur à accepter les conditions générales d’Apple pendant l’activation.                                                   |
-    |        <strong>Touch ID</strong>         |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier ce service pendant l’activation.                                                                 |
-    |        <strong>Apple Pay</strong>        |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier ce service pendant l’activation.                                                                 |
-    |          <strong>Zoom</strong>           |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier ce service pendant l’activation.                                                                 |
-    |          <strong>Siri</strong>           |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier ce service pendant l’activation.                                                                 |
-    |     <strong>Données de diagnostic</strong>     |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier ce service pendant l’activation.                                                                 |
-    |     <strong>FileVault</strong>           |  |
-    |     <strong>Diagnostics iCloud</strong>  |  |
-    |     <strong>Inscription</strong>        |  |
+    | <strong>Nom du service</strong> | S’affiche quand l’utilisateur appuie sur <strong>À propos de la configuration</strong> pendant l’activation. |
+    |    <strong>Numéro de téléphone du service</strong>     |                                                          S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
+
+    Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
+    - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur pourra toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
+    - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il pourra ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
+
+    | Paramètres des écrans de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
+    |------------------------------------------|------------------------------------------|
+    | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
+    | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
+    | <strong>Restauration</strong> | Affiche l’écran **Applications et données**. Cet écran donne à l’utilisateur la possibilité de restaurer ou de transférer des données à partir de la sauvegarde iCloud pendant la configuration de l’appareil. |
+    | <strong>ID Apple et iCloud</strong> | Donne à l’utilisateur la possibilité de se connecter avec son **Identifiant Apple** et d’utiliser **iCloud**.                         |
+    | <strong>Conditions générales</strong> | Oblige l’utilisateur à accepter les conditions générales d’Apple. |
+    | <strong>Touch ID</strong> | Donne à l’utilisateur la possibilité de configurer l’identification par empreinte digitale sur l’appareil. |
+    | <strong>Apple Pay</strong> | Donne à l’utilisateur la possibilité de configurer Apple Pay sur l’appareil. |
+    | <strong>Zoom</strong> | Donne à l’utilisateur la possibilité d’effectuer un zoom sur l’affichage pendant la configuration de l’appareil. |
+    | <strong>Siri</strong> | Donne à l’utilisateur la possibilité de configurer Siri. |
+    | <strong>Données de diagnostic</strong> | Affiche l’écran **Diagnostics**. Cet écran permet à l’utilisateur d’envoyer des données de diagnostic à Apple. |
+    | <strong>FileVault</strong> | Donne à l’utilisateur la possibilité de configurer le chiffrement FileVault. |
+    | <strong>Diagnostics iCloud</strong> | Donne à l’utilisateur la possibilité d’envoyer des données de diagnostic iCloud à Apple. |
+    | <strong>Inscription</strong>| Oblige l’utilisateur à inscrire l’appareil. |
 
 
 10. Choisissez **OK**.

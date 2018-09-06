@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321286"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251934"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune
 
@@ -129,6 +129,9 @@ Avant de commencer à ajouter et affecter des applications, tenez compte des poi
 - Quand vous ajoutez et affectez une application à partir d’un store, vos utilisateurs doivent avoir un compte sur ce store pour pouvoir installer l’application.
 - Certaines applications ou certains éléments que vous affectez peuvent dépendre d’applications iOS intégrées. Par exemple, si vous affectez un livre dans le store iOS, l’application iBooks doit être présente sur l’appareil. Si vous avez supprimé l’application iBook intégrée, vous ne pouvez pas utiliser Intune pour la réactiver.
 
+> [!IMPORTANT]
+> Si vous modifiez le nom de l’application sur le portail Intune Azure après l’avoir déployée et installée, vous ne pourrez plus la cibler à l’aide de commandes.
+
 ## <a name="cloud-storage-space"></a>Espace de stockage cloud
 Toutes les applications que vous créez en utilisant le type d’installation de programme d’installation de logiciel (par exemple, une application métier) sont empaquetées et chargées dans le stockage cloud Intune. Un abonnement d’essai à Intune inclut 2 Go de stockage cloud, utilisé pour stocker les applications gérées et les mises à jour. Un abonnement complet ne limite pas la quantité totale d’espace de stockage.
 
@@ -170,6 +173,10 @@ Intune réinstalle, met à jour ou supprime automatiquement une application obli
 - En cas d’échec de l’installation d’une application obligatoire ou si cette dernière, pour une raison quelconque, est absente de l’appareil, Intune évalue la conformité et réinstalle l’application une fois ce délai écoulé.  
 - Un administrateur met une application à la disposition d’un groupe d’utilisateurs, et un utilisateur final l’installe à partir du Portail d’entreprise sur l’appareil. L’administrateur fait ensuite passer l’application de la version v1 à la version v2. Une fois ce délai écoulé, Intune met à jour l’application si une version précédente de celle-ci est encore présente sur l’appareil.
 - Si l’administrateur déploie une intention de désinstallation et que la désinstallation de l’application, présente sur l’appareil, échoue, Intune évalue la conformité et désinstalle l’application une fois ce délai écoulé.   
+
+## <a name="app-installation-errors"></a>Erreurs d'installation des applications
+
+Pour plus d’informations sur les erreurs d’installation des applications Intune, voir [Erreurs d’installation des applications](troubleshoot-app-install.md#app-installation-errors).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

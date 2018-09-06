@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d147bc5ee22718ecce102cc549b29faa17a617e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 49fd06d4f0f75f1aeff434ce3b271284ec1a0340
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025910"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251876"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -28,6 +28,9 @@ ms.locfileid: "31025910"
 Il existe deux types d’accès conditionnel avec Intune : l’accès conditionnel basé sur l’appareil et l’accès conditionnel basé sur l’application. Vous devez configurer les stratégies de conformité associées pour déterminer l’accès conditionnel au niveau de votre organisation. L’accès conditionnel est couramment utilisé pour, par exemple, autoriser ou bloquer l’accès à Exchange sur site, contrôler l’accès au réseau ou intégrer une solution Mobile Threat Defense.
 
 Les informations ci-dessous vous aident à comprendre comment utiliser les fonctionnalités de conformité des *appareils* mobiles et les fonctionnalités de gestion des *applications* mobiles d’Intune. 
+
+> [!NOTE]
+> L’accès conditionnel est une fonctionnalité d’Azure Active Directory fournie avec la licence Azure Active Directory Premium. Intune améliore cette fonctionnalité en ajoutant la conformité des appareils mobiles et la gestion des applications mobiles à la solution.
 
 ## <a name="device-based-conditional-access"></a>Accès conditionnel basé sur l’appareil
 
@@ -106,7 +109,7 @@ L’accès par les utilisateurs peut être accepté ou refusé lors de la tentat
 
 ### <a name="conditional-access-based-on-device-risk"></a>Accès conditionnel basé sur les risques que présente l’appareil
 
-Intune fait équipe avec des fournisseurs de défense contre les menaces mobiles qui fournissent une solution de sécurité pour détecter les logiciels malveillants, les chevaux de Troie et autres menaces sur les appareils mobiles.
+Intune fait équipe avec des fournisseurs de défense contre les menaces mobiles qui proposent une solution de sécurité visant à détecter les programmes malveillants, les chevaux de Troie et d’autres menaces sur les appareils mobiles.
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Comment fonctionne l’intégration entre Intune et la défense contre les menaces mobiles ?
 
@@ -118,13 +121,13 @@ L’intégration entre Intune et la défense contre les menaces mobiles joue un 
 
 ### <a name="conditional-access-for-windows-pcs"></a>Accès conditionnel pour les PC Windows
 
-L’accès conditionnel pour PC offre des fonctionnalités similaires à celles disponibles pour les appareils mobiles. Examinons les façons dont vous pouvez utiliser l’accès conditionnel lors de la gestion des PC avec Intune.
+L’accès conditionnel pour PC offre des fonctionnalités similaires à celles des appareils mobiles. Examinons les façons dont vous pouvez utiliser l’accès conditionnel lors de la gestion des PC avec Intune.
 
 #### <a name="corporate-owned"></a>Appartenant à l’entreprise
 
--   **Domaine Active Directory local joint :** il s’agit de l’option de déploiement de l’accès conditionnel la plus courante pour les organisations qui sont à l’aise avec le fait qu’elles gèrent déjà leurs PC via des stratégies de groupe Active Directory et/ou avec System Center Configuration Manager.
+-   **Jonction à un domaine Active Directory local :** cette option est généralement utilisée par les organisations qui sont à l’aise avec la manière dont elles gèrent déjà leurs PC avec des stratégies de groupe AD ou System Center Configuration Manager.
 
--   **Domaine Azure AD joint et gestion par Intune :** ce scénario est généralement conçu pour le CYOD (choisissez votre propre appareil) et les scénarios d’itinérance sur ordinateur portable où ces appareils sont rarement connectés au réseau d’entreprise. L’appareil est joint à Azure AD et est inscrit sur Intune, ce qui supprime les dépendances sur l’instance AD locale et les contrôleurs de domaine. Cela peut servir de critère d’accès conditionnel lors de l’accès aux ressources d’entreprise.
+-   **Jonction à un domaine Azure AD et gestion Intune :** ce cas de figure est généralement conçu pour le CYOD (Choisissez votre propre appareil) et les scénarios d’itinérance sur ordinateur portable dans lesquels ces appareils sont rarement connectés au réseau d’entreprise. L’appareil est joint à Azure AD et est inscrit sur Intune, ce qui supprime les dépendances sur l’instance AD locale et les contrôleurs de domaine. Cela peut servir de critère d’accès conditionnel lors de l’accès aux ressources d’entreprise.
 
 -   **Active Directory joint et System Center Configuration Manager :** à partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
 

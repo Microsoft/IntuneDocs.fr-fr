@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,32 +13,29 @@ ms.technology: ''
 ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5658bf2e1ee250ef9fd405b3f7ec1772b166f338
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6b66cd00f734cab3ca85f6d87f056f8c482a377d
+ms.sourcegitcommit: 2811df0f851ca6b08f6ae8c926fb2e6971c41690
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020994"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251731"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Utiliser Fresh Start pour réinitialiser les appareils Windows 10 avec Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-L’action de l’appareil **Redémarrage à zéro** supprime toutes les applications installées sur un PC Windows 10 exécutant Creators Update. Elle met alors automatiquement à jour le PC vers la dernière version de Windows.
+L’action d’appareil **Redémarrage à zéro** supprime toutes les applications installées sur un PC Windows 10 (version 1703 ou ultérieure). Elle permet de supprimer les applications préinstallées (OEM) qui sont généralement installées avec un nouveau PC.  
 
-Cette action permet de supprimer les applications préinstallées (OEM) qui sont généralement installées avec un nouveau PC. Pour conserver le contenu du dossier de base de l’utilisateur et supprimer uniquement les applications et les paramètres, utilisez le paramètre `if user data is retained`.
-
-> [!IMPORTANT]
-> Le Redémarrage à zéro désinscrit l’appareil d’Intune, mais l’appareil est toujours joint dans Azure Active Directory.
-
-## <a name="use-fresh-start"></a>Utiliser le Redémarrage à zéro
-
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Appareils**, puis **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, choisissez un appareil de bureau Windows 10, puis sélectionnez **Redémarrage à zéro**.
-
-## <a name="next-steps"></a>Étapes suivantes
-
-Pour consulter l’état de cette action, sélectionnez**Actions de l’appareil** (**Microsoft Intune** > **Appareils**).
+1. Connectez-vous au [Portail Azure](https://portal.azure.com) et accédez à > **Microsoft Intune** > **Appareils** > **Tous les appareils**.
+2. Dans la liste des appareils que vous gérez, choisissez un appareil de bureau Windows 10.
+3. Cliquez sur **Redémarrage à zéro**. 
+4. Sélectionnez **Conserver les données utilisateur sur cet appareil** pour que :
+   * l’appareil reste joint à Azure AD ;
+    * l’appareil reste inscrit à la gestion des appareils mobiles ; 
+    * le contenu du dossier de base de l’utilisateur de l’appareil soit conservé, et les applications et les paramètres supprimés.  
+  > [!IMPORTANT]
+ > Si vous ne conservez pas les données utilisateur, l’appareil sera restauré à son état d’origine. Il sera désinscrit d’Azure AD et de la gestion des appareils mobiles. 
+ 
+5. Cliquez sur **OK**.   
+6. Pour afficher l’état de cette action, revenez à **Appareils** et cliquez sur **Actions d’appareil**.  

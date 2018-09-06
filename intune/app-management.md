@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906105"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255391"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -38,23 +38,22 @@ Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer
 
 ## <a name="app-management-capabilities-by-platform"></a>Fonctionnalités de gestion d’application par plateforme
 
-||||||
-|-|-|-|-|-|
-| |Android|iOS|Windows Phone 8.1|Windows 10|
-|Ajout et affectation d’applications pour des appareils et utilisateurs|Oui|Oui|Oui|Oui|
-|Affectation d’applications pour les appareils non inscrits avec Intune|Oui|Oui|Non|Non|
-|Utilisation de stratégies de configuration d’application pour contrôler le comportement des applications au démarrage|Non|Oui|Non|Non|
-|Utilisation de stratégies de configuration d’application mobile pour renouveler les applications arrivées à expiration|Non|Oui|Non|Non|
-|Protection des données dans les applications avec des stratégies de protection d’application|Oui|Oui|Non|Non<sup>1</sup>|
-|Suppression des données d’entreprise uniquement à partir d’une application installée (réinitialisation sélective d’application)|Oui|Oui|Oui|Oui|
-|Surveillance des affectations d’applications|Oui|Oui|Oui|Oui|
-|Affectation et suivi des applications achetées en volume dans un App Store|Non|Non|Non|Oui|
-|Installation imposée d’applications sur des appareils (obligatoire)<sup>2</sup>|Oui|Oui|Oui|Oui|
-|Installation facultative sur les appareils à partir du Portail d’entreprise (installation disponible)|Oui|Oui|Oui|Oui|
-|Installer un raccourci vers une application sur le Web (lien Web)|Oui|Oui|Oui|Oui|
-|Applications métier internes|Oui|Oui|Non|Oui|
-|Applications de Store|Oui|Oui|Oui|Oui|
-|Mettre à jour des applications|Oui|Oui|Oui|Oui|
+|  | Android | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| Ajouter et affecter des applications à des appareils et à des utilisateurs | Oui | Oui | Oui | Oui | Oui |
+| Affecter des applications à des appareils non inscrits auprès d’Intune | Oui | Oui | Non | Non | Non |
+| Utiliser des stratégies de configuration d’application pour contrôler le comportement des applications au démarrage | Non | Oui | Non | Non | Non |
+| Utiliser des stratégies d’approvisionnement d’application mobile pour renouveler les applications arrivées à expiration | Non | Oui | Non | Non | Non |
+| Protéger les données de l’entreprise dans les applications avec des stratégies de protection d’applications | Oui | Oui | Non | Non1 | Non |
+| Supprimer exclusivement les données d’entreprise d’une application installée (effacement d’application sélectif) | Oui | Oui | Non | Oui | Oui |
+| Effectuer le monitoring des affectations d’applications | Oui | Oui | Oui | Oui | Oui |
+| Affecter et suivre des applications achetées en volume dans un App Store | Non | Non | Non | Oui | Non |
+| Installation obligatoire d’applications sur les appareils (obligatoire)2 | Oui | Oui | Oui | Oui | Oui |
+| Installation facultative sur les appareils à partir du Portail d’entreprise (installation disponible) | Oui | Oui | Oui | Oui | Oui |
+| Installer un raccourci vers une application sur le web (lien web) | Oui | Oui | Oui | Oui | Oui |
+| Applications métier internes | Oui | Oui | Oui | Oui | Non |
+| Applications issues d’un magasin | Oui | Oui | Non | Oui | Oui |
+| Mettre à jour des applications | Oui | Oui | Non | Oui | Oui |
 
 <sup>1</sup> Envisagez d’utiliser [Windows Information Protection](windows-information-protection-configure.md) pour protéger les applications sur les appareils qui exécutent Windows 10.
 
@@ -95,8 +94,8 @@ Pour plus d’informations sur cette section, consultez [Gérer des applications
 - **Licences d’applications** : affichez, affectez et surveillez les applications achetées en volume dans les App Stores. Pour plus d'informations, voir :
     - [Applications du Programme d’achat en volume (VPP) iOS](vpp-apps-ios.md).
     - [Applications achetées en volume sur le Microsoft Store pour Entreprises](windows-store-for-business.md).
-- **Applications découvertes** : affichez toutes les applications affectées par Intune et installées sur un appareil.
-- **État de l’installation de l’application** : affichez l’état d’une affectation d’application que vous avez créée.
+- **Applications découvertes** : affichez toutes les applications affectées par Intune et installées sur un appareil. Pour plus d’informations, voir [Effectuer le monitoring des affectations et des informations sur les applications avec Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **État de l’installation de l’application** : affichez l’état d’une affectation d’application que vous avez créée. Pour plus d’informations, voir [Effectuer le monitoring des affectations et des informations sur les applications avec Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **État de protection de l’application** : affichez l’état d’une stratégie de protection d’application pour l’utilisateur sélectionné.
 - **Journaux d’audit** : affichez les activités liées à l’application Intune et effectuées par tous les administrateurs informatiques.
 

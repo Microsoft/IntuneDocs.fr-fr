@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff55b013d863d1676b9b83ec93e38defe222e2d7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905238"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251599"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Ajouter des applications web à Microsoft Intune
 
@@ -45,7 +45,11 @@ Pour ajouter une application à Intune comme raccourci vers une application sur 
 6. Dans le volet **Ajouter une application**, dans la liste déroulante **Type d’application**, sélectionnez le type **Lien web**.
 7. Sélectionnez **Configurer**.
 8. Dans le volet **Informations sur l’application**, ajoutez les informations suivantes :
-    - **Nom** : entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise.
+    - **Nom** : entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. 
+    
+        > [!NOTE]
+        > Si vous modifiez le nom de l’application sur le portail Intune Azure après l’avoir déployée et installée, vous ne pourrez plus la cibler à l’aide de commandes.
+    
     - **Description :** entrez la description de l’application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
     - **Éditeur** : entrez le nom de l’éditeur de cette application.
     - **URL de l’application** : entrez l’URL du site web qui héberge l’application que vous souhaitez affecter.

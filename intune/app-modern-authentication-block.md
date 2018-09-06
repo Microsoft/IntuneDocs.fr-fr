@@ -15,12 +15,12 @@ ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dcdc7628f75221228d788c2cb1995189ea8f81f0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 354109cc4d84e34eebd5df6df86919f386e143f6
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223099"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251964"
 ---
 # <a name="block-apps-that-do-not-use-modern-authentication-adal"></a>Bloquer les applications qui n’utilisent pas l’authentification moderne (ADAL)
 
@@ -31,11 +31,7 @@ Les stratégies d’accès conditionnel basé sur l’application avec protectio
 Pour bloquer l’accès à ces applications, nous vous recommandons de procéder comme suit :
 
 * Configurez des règles de revendications AD FS pour bloquer les protocoles autres que l’authentification moderne. Des instructions détaillées sont fournies dans le scénario 3 : [bloquer tout accès à O365, à l’exception des applications basées sur un navigateur](https://technet.microsoft.com/library/dn592182.aspx).
-* Pour **SharePoint Online**, désactivez l’authentification plus ancienne dans le service SharePoint Online à l’aide de l’applet de commande PowerShell [Set-SPOTenant](https://technet.microsoft.com/library/fp161390.aspx) pour définir la propriété des protocoles d’authentification existants sur false :
-
-```
- Set-SPOTenant -LegacyAuthProtocolsEnabled $false
-```
+* Pour **Exchange et SharePoint Online**, utilisez l’accès conditionnel Azure Active Directory et la cmdlet PowerShell Set-SPOTenant pour SharePoint Online. Pour des instructions détaillées, voir [Configurer SharePoint Online et Exchange Online pour l’accès conditionnel Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication#legacy-authentication-protocols).
 
 
 >[!IMPORTANT]

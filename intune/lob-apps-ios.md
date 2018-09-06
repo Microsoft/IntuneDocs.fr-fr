@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e76e8940334e90f41fe5e5132f9210d69359f74a
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 9ee132a1b1c79e9829e5d28dc33b5cac2e52c8ac
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224243"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251899"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier iOS à Microsoft Intune
 
@@ -72,6 +72,9 @@ Aidez-vous des informations contenues dans cet article pour ajouter une applicat
 2. Sélectionnez **Ajouter** pour charger l’application sur Intune.
 
 L’application que vous avez créée apparaît à présent dans la liste des applications. Dans la liste, vous pouvez affecter les applications aux groupes de votre choix. Pour plus d’aide, consultez [Guide pratique pour attribuer des applications à des groupes](apps-deploy.md).
+
+> [!NOTE]
+> Les profils d’approvisionnement des applications métier iOS comportent un préavis de 30 jours avant expiration.
 
 ## <a name="step-5-update-a-line-of-business-app"></a>Étape 5 : Mettre à jour une application métier
 

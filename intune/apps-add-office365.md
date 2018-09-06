@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 9db79e9d0dc82cd823663274aa02dbe097db74d4
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321473"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251500"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Assigner des applications Office 365 à des appareils Windows 10 à l’aide de Microsoft Intune
 
@@ -29,8 +29,8 @@ Ce type d’application vous permet d’assigner facilement des applications Off
 
 ## <a name="before-you-start"></a>Avant de commencer
 
->[!IMPORTANT]
->Cette méthode d’installation d’Office est uniquement prise en charge si aucune autre version de Microsoft Office n’est installée sur l’appareil.
+> [!IMPORTANT]
+> S’il existe des applications Office .msi sur l’appareil de l’utilisateur final, utilisez la fonctionnalité **Supprimer MSI** pour les désinstaller en toute sécurité. Sinon, l’installation des applications Office 365 distribuées par Intune risque d’échouer.
 
 - Les appareils sur lesquels vous déployez ces applications doivent exécuter Windows 10 Creators Update ou ultérieur.
 - Intune prend uniquement en charge l’ajout d’applications Office provenant de la suite Office 365.
@@ -91,6 +91,7 @@ Dans cette étape, configurez les options d’installation de la suite d’appli
         - **Mensuel (ciblé)**
         - **Semestriel**
         - **Semestriel (ciblé)**
+    - **Supprimer d’autres versions d’Office (MSI) à partir d’appareils d’utilisateurs finals** : cette fonctionnalité permet de supprimer tout Office préexistant (MSI) sur les ordinateurs des utilisateurs finals. Cette suppression ne se limite pas aux applications sélectionnées pour l’installation dans **Configurer la suite d’applications** : elle concerne toutes les applications Office (MSI) de l’appareil de l’utilisateur final.
     - **Accepter automatiquement le contrat de licence utilisateur final de l’application** : sélectionnez cette option si les utilisateurs finaux ne sont pas tenus d’accepter le contrat de licence. Intune accepte alors automatiquement le contrat.
     - **Utiliser l’activation d’ordinateurs partagés** : sélectionnez cette option quand plusieurs utilisateurs partagent un ordinateur. Pour plus d’informations, consultez [Vue d’ensemble de l’activation d’ordinateurs partagés pour Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Langues** : Office est automatiquement installé dans toute langue prise en charge installée avec Windows sur l’appareil de l’utilisateur final. Sélectionnez cette option pour installer des langues supplémentaires avec la suite d’applications.
