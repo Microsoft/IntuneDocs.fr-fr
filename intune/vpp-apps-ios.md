@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 115486f02a86616fdf2c340fa7e0e2ff6e505afa
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: cbe9f28b66031f6eddef4804c157f01ca79ad81d
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42823067"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347516"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS achetées par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -83,9 +83,9 @@ Vérifiez que quand vous configurez un appareil pour un nouvel utilisateur Intun
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-1.  Dans le volet **Intune**, choisissez **Applications mobiles** > **Jetons VPP iOS** sous **Installation**.
-2.  Dans le volet qui présente la liste des jetons VPP, sélectionnez **Créer**.
-4. Dans le volet **Créer un jeton VPP**, spécifiez les informations suivantes :
+3.  Dans le volet **Intune**, choisissez **Applications clientes** > **Jetons VPP iOS** sous **Installation**.
+4.  Dans le volet qui présente la liste des jetons VPP, sélectionnez **Créer**.
+5. Dans le volet **Créer un jeton VPP**, spécifiez les informations suivantes :
     - **Fichier de jeton VPP** : si vous ne l’avez pas encore fait, inscrivez-vous au Programme d’achat en volume Apple pour les entreprises ou au programme pour les organismes éducatifs. Après inscription, téléchargez le jeton VPP Apple de votre compte et sélectionnez-le ici.
     - **ID Apple** : saisissez l’ID Apple du compte associé au programme d’achats en volume.
     - **Pays/région** : sélectionnez le Store du pays VPP.  Intune synchronise les applications VPP pour tous les paramètres régionaux à partir du magasin du pays/région VPP spécifié.
@@ -93,9 +93,10 @@ Vérifiez que quand vous configurez un appareil pour un nouvel utilisateur Intun
         > Si vous changez de pays/région, les métadonnées des applications et l’URL du Store sont mises à jour lors de la prochaine synchronisation avec le service Apple pour les applications créées avec ce jeton. L’application n’est pas mise à jour si elle n’existe pas dans le Store du nouveau pays/région.
 
     - **Type de compte VPP** : choisissez **Entreprise** ou **Éducation**.
-    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune met à jour toutes les applications achetées pour le jeton spécifié via le service Intune quand l’appareil s’enregistre.
-détecte les mises à jour des applications VPP dans l’App Store et les envoie (push) automatiquement à l’appareil quand celui-ci s’enregistre.
-4. Quand vous avez terminé, sélectionnez **Créer**.
+    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre.
+        > [!NOTE]
+        > Les mises à jour automatiques des applications fonctionnent pour les applications sous licence d’appareil et d’utilisateur pour iOS version 11.0 et ultérieure.
+6. Quand vous avez terminé, sélectionnez **Créer**.
 
 Le jeton est affiché dans le volet de la liste de jetons.
 
@@ -103,7 +104,7 @@ Vous pouvez synchroniser les données détenues par Apple avec Intune à tout mo
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Pour affecter une application achetée en volume
 
-1.  Dans le volet **Intune**, choisissez **Applications mobiles** > **Applications** sous **Gérer**.
+1.  Dans le volet **Intune**, choisissez **Applications clientes** > **Applications** sous **Gérer**.
 2.  Dans le volet qui présente la liste des applications, choisissez l’application que vous voulez assigner, puis choisissez **Attributions**.
 3.  Dans le volet ***Nom de l’application*** - **Attributions**, choisissez **Ajouter des groupes** puis, dans le volet **Ajouter des groupes**, choisissez un **Type d’attribution** et choisissez les groupes d’utilisateurs ou d’appareils Azure AD auxquels vous voulez assigner l’application.
 5.  Pour chaque groupe que vous avez sélectionné, choisissez les paramètres suivants :
@@ -153,9 +154,17 @@ Pour révoquer la licence de toutes les applications VPP pour un jeton VPP donn�
 
 Vous pouvez renouveler un jeton Apple VPP en en téléchargeant un nouveau sur le portail du Programme d’achat en volume d’Apple et en mettant à jour le jeton actuel dans Intune.
 
-## <a name="further-information"></a>Informations supplémentaires
+## <a name="deleting-an-ios-vpp-app"></a>Suppression d’une application VPP iOS
+
+Actuellement, vous ne pouvez pas supprimer une application VPP iOS à partir de Microsoft Intune.
+
+## <a name="additional-information"></a>Informations supplémentaires
 
 Quand un utilisateur avec un appareil éligible essaie pour la première fois d’installer une application VPP sur un appareil, il est invité à participer au programme VPP d’Apple. Il doit accepter pour que l’installation de l’application se poursuive. L’invitation à participer au Programme d’achat en volume (VPP) Apple nécessite que l’utilisateur puisse utiliser l’application iTunes sur l’appareil iOS. Si vous avez défini une stratégie pour désactiver l’application iTunes Store, la gestion des licences par utilisateur pour le programme VPP ne fonctionne pas. La solution consiste à autoriser l’application iTunes en supprimant la stratégie ou à utiliser la gestion des licences par appareil.
+
+Apple fournit une assistance directe pour créer et renouveler des jetons VPP. Pour plus d’informations, consultez [Distribuer du contenu à vos utilisateurs avec le programme VPP (Volume Purchase Program)](https://go.microsoft.com/fwlink/?linkid=2014661) dans la documentation Apple. 
+
+Si **Affecté à une gestion MDM externe** est indiqué dans le portail Intune, vous (l’administrateur) devez supprimer le jeton VPP de la gestion MDM de tiers avant d’utiliser le jeton VPP dans Intune.
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 

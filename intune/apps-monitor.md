@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bedd1108ce0c9e173e6e9519a29d3948f1320c3a
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: a1cf7fbdee6e6dc0cb280c8f9473c48608485737
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251812"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329902"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -30,7 +30,7 @@ Intune propose plusieurs façons de surveiller les propriétés des applications
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le menu **Intune**, sélectionnez **Applications mobiles**.
+3. Dans le menu **Intune**, sélectionnez **Applications clientes**.
 4. Dans la section **Gérer** du menu, sélectionnez **Applications**.
 5. Dans la liste des applications, sélectionnez une application à surveiller. Le volet de l’application s’affiche alors, avec une vue d’ensemble de l’état de l’appareil et de l’état de l’utilisateur.
 
@@ -80,7 +80,7 @@ Une listes des états de l’appareil s’affiche quand vous sélectionnez **Ét
 | **Version**          | Numéro de version de l’application. Pour les applications métier, le numéro de version complet de l’application s’affiche. Le numéro de version complet identifie une version spécifique de l’application. Le numéro apparaît sous la forme _Version_(_Build_). Par exemple, 2.2(2.2.17560800). |
 | **Statut**           | État de l’application.                                                                                                                                                                                                                                     |
 | **Détails de l’état**   | Détails de l’état.                                                                                                                                                                                                                                     |
-| **Dernier archivage**    | Date de la dernière synchronisation de l’appareil avec Intune.                                                                                                                                                                                                                  |
+| **Dernier enregistrement**    | Date de la dernière synchronisation de l’appareil avec Intune.                                                                                                                                                                                                                  |
 
 
 ### <a name="user-install-status"></a>État de l’installation de l’utilisateur

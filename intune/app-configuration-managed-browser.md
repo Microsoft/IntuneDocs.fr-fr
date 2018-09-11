@@ -15,12 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d39dca2a464886ae6752450636fe25a5f5701858
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 25d4bdc51f2dc12cddbfb30c82baa22aa8c4540b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251692"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329750"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Gérer l'accès à Internet à l'aide de stratégies de navigateur protégé avec Microsoft Intune
 
@@ -108,7 +108,7 @@ L’authentification unique dans Intune Managed Browser exige l’inscription de
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3.  Dans le panneau **Applications mobiles** de la liste Gérer, choisissez **Stratégies de configuration des applications**.
+3.  Dans le panneau **Applications clientes** de la liste Gérer, choisissez **Stratégies de configuration des applications**.
 4.  Dans le panneau **Stratégies de configuration des applications**, choisissez **Ajouter**.
 5.  Dans le panneau **Ajouter une stratégie de configuration**, entrez un **Nom** et une **Description** facultative pour les paramètres de configuration de l’application.
 6.  Pour **Inscription de l’appareil**, choisissez **Applications gérées**.
@@ -126,7 +126,7 @@ L’authentification unique dans Intune Managed Browser exige l’inscription de
 
 Vous affectez les paramètres à des groupes d’utilisateurs Azure AD. Si cet utilisateur a installé l’application de navigateur protégé ciblée, cette dernière est gérée par les paramètres que vous avez spécifiés.
 
-1. Dans le panneau **Applications mobiles** du tableau de bord de gestion des applications mobiles Intune, choisissez **Stratégies de configuration des applications**.
+1. Dans le panneau **Applications clientes** du tableau de bord de gestion des applications mobiles Intune, choisissez **Stratégies de configuration des applications**.
 2. Dans la liste de configurations de l’application, sélectionnez celle que vous souhaitez affecter.
 3. Dans le panneau suivant, choisissez **Affectations**.
 4. Dans le panneau **Affectations**, sélectionnez le groupe Azure AD auquel vous voulez affecter la configuration d’application, puis choisissez **OK**.

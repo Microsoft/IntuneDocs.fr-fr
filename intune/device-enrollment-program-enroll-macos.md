@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b913cc2f667cb2bb16d6f810d7449ce8ee752e8
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 18b4ab35627e1ccb694104f3f5800e5fb07dd1c7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751732"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313424"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple
 
@@ -106,7 +106,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 1. Dans Intune, sur le Portail Azure, choisissez **Inscription des appareil** > **Inscription Apple** > **Jetons du programme d’inscription**.
 2. Sélectionnez un jeton et choisissez **Profils**, puis **Créer un profil**.
 
-    ![Capture d’écran Créer un profil.](./media/device-enrollment-program-enroll-ios/image04.png)
+    ![Capture d’écran de création d’un profil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
 3. Dans **Créer un profil**, entrez le **Nom** et la **Description** du profil qui serviront à des fins d’administration. Les utilisateurs ne voient pas ces détails. Vous pouvez utiliser ce champ **Nom** pour créer un groupe dynamique dans Azure Active Directory. Utilisez le nom du profil pour définir le paramètre enrollmentProfileName et attribuer des appareils avec ce profil d’inscription. En savoir plus sur les [groupes dynamiques Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
@@ -119,7 +119,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
     - **Inscrire sans affinité utilisateur** : choisissez cette option pour les appareils non affiliés à un seul utilisateur, qui effectuent des tâches sans accéder aux données de l’utilisateur local. Les applications telles que l’application Portail d’entreprise ne fonctionnent pas.
 
-6. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres macOS qui permettent de supprimer le profil de gestion du menu **Préférences système** ou via le **Terminal**. Après l’inscription de l’appareil, vous ne pourrez plus modifier ce paramètre sans réinitialiser l’appareil aux paramètres d’usine.
+6. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres macOS qui permettent de supprimer le profil de gestion du menu **Préférences système** ou via le **Terminal**. Une fois l’appareil inscrit, vous ne pouvez plus modifier ce paramètre sans réinitialiser l’appareil.
 
     ![Capture d’écran Paramètres de gestion des appareils.](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
  
@@ -128,13 +128,14 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 8. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Paramètres du service | Description |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |---|---|
     | <strong>Nom du service</strong> | S’affiche quand l’utilisateur appuie sur <strong>À propos de la configuration</strong> pendant l’activation. |
-    |    <strong>Numéro de téléphone du service</strong>     |                                                          S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
+    | <strong>Numéro de téléphone du service</strong> | S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
 
-    Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
-    - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur pourra toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
-    - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il pourra ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
+  Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
+  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur pourra toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
+  - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il pourra ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
+
 
     | Paramètres des écrans de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
     |------------------------------------------|------------------------------------------|
@@ -152,6 +153,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     | <strong>Diagnostics iCloud</strong> | Donne à l’utilisateur la possibilité d’envoyer des données de diagnostic iCloud à Apple. |
     | <strong>Inscription</strong>| Oblige l’utilisateur à inscrire l’appareil. |
 
+   
 
 10. Choisissez **OK**.
 
@@ -172,7 +174,7 @@ Vous devez affecter un profil de programme d’inscription aux appareils pour po
 
 1. Dans Intune, sur le Portail Azure, sélectionnez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Appareils** > choisissez des appareils dans la liste > **Attribuer un profil**.
-3. Sous **Attribuer un profil**, choisissez un profil pour les appareils, puis sélectionnez **Attribuer**.
+3. Sous **Attribuer un profil**, choisissez un profil pour les appareils > **Attribuer**.
 
 ### <a name="assign-a-default-profile"></a>Attribuer un profil par défaut
 
@@ -182,7 +184,7 @@ Vous pouvez choisir un profil macOS et iOS à appliquer par défaut à tous les 
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
 ## <a name="distribute-devices"></a>Distribuer des appareils
-Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer de profil d’inscription tant que l’appareil n’est pas réinitialisé aux paramètres d’usine.
+Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
 
 ## <a name="renew-a-dep-token"></a>Renouveler un jeton DEP  
 1. Accédez à deploy.apple.com.  
@@ -204,4 +206,4 @@ Vous avez activé la gestion et la synchronisation entre Apple et Intune, et aff
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Après l’inscription des appareils macOS, vous pouvez démarrer [leur gestion](device-management.md).
+Après l’inscription d’appareils macOS, vous pouvez commencer à [les gérer](device-management.md).

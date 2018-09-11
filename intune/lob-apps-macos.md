@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: f907ddb631c974a9c7626483446600eae149a12c
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255492"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347394"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Guide pratique pour ajouter des applications métier macOS à Microsoft Intune
 
@@ -60,8 +60,8 @@ Vous devez télécharger un outil externe pour pré-traiter vos fichiers *.pkg* 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, choisissez **Gérer** > **Applications**.
+3. Dans le volet **Intune**, choisissez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Applications**.
 5. Au-dessus de la liste des applications, choisissez **Ajouter**.
 6. Dans le volet **Ajouter une application**, choisissez **Application métier**.
 

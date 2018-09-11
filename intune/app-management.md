@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: aebfea2f52540b4193811121334e3cebf916175b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255391"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330141"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -61,16 +61,16 @@ Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer
 
 ## <a name="get-started"></a>Prise en main
 
-Vous trouverez la plupart des informations relatives aux applications dans la charge de travail **Applications mobiles**, à laquelle vous pouvez accéder comme suit :
+Vous pouvez trouver la plupart des informations relatives aux applications dans la charge de travail **Applications clientes**, à laquelle vous pouvez accéder comme suit :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**.  
     Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Microsoft Intune**, sélectionnez **Applications mobiles**.
+3. Dans le volet **Microsoft Intune**, sélectionnez **Applications clientes**.
 
     ![Volet de la charge de travail « Applications mobiles »](./media/apps-workload.png)
 
-Les quatre prochaines sections décrivent les options disponibles dans le volet **Applications mobiles**.
+Les quatre prochaines sections décrivent les options disponibles dans le volet **Applications clientes**.
 
 ### <a name="manage"></a>Gestion
 - **Applications** : sélectionnez cette option pour ajouter, afficher, affecter et analyser les applications que le personnel utilise. Pour plus d'informations, voir :

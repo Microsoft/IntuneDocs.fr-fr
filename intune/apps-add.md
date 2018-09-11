@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: cf6e7098462931000ce4cd5546390d27d68677f1
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251934"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330158"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune
 
@@ -62,7 +62,7 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 | Application Android intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
 | Applications web  | Application web  | Sélectionnez **Lien web** comme **type d’application**, puis entrez une URL valide pointant vers l’application web.  |
 
-Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications mobiles** > **Applications** > **Ajouter**. Le panneau **Ajouter une application** s’affiche et vous permet de sélectionner le **type d’application**. 
+Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications clientes** > **Applications** > **Ajouter**. Le panneau **Ajouter une application** s’affiche et vous permet de sélectionner le **type d’application**. 
 
 >[!TIP]
 > Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. Par exemple, pour installer une application métier iOS, ajoutez l’application en sélectionnant **Application métier** comme **Type d’application** dans le panneau **Ajouter une application**. Sélectionnez ensuite le fichier de package d’application (extension .ipa). Ces types d’applications sont généralement écrites en interne.
@@ -148,8 +148,8 @@ Lorsque vous ajoutez une application à Intune, vous avez la possibilité de sé
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans le volet de la charge de travail **Applications mobiles**, sous **Installation**, sélectionnez **Catégories d’applications**.  
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans le volet de la charge de travail **Applications clientes**, sous **Installation**, sélectionnez **Catégories d’applications**.  
     Le volet **Catégories d’applications** affiche la liste des catégories actuelles. 
 5. Effectuez l'une des opérations suivantes :
     - Pour ajouter une catégorie, dans le volet **Créer une catégorie**, sélectionnez **Ajouter**, puis entrez un nom de catégorie.  

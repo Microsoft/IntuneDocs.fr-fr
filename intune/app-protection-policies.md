@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a66ed41442e89ed40850f5b9cd56cbc004a43d0
-ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
+ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251840"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329663"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -37,7 +37,7 @@ Si vous recherchez une liste d’applications prises en charge par la gestion de
 Pour plus d’informations sur l’ajout d’applications métier professionnelles à Microsoft Intune dans le but de préparer des stratégies de protection d’applications, voir [Ajouter des applications à Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Créer une stratégie de protection des applications
-1. Dans la charge de travail **Applications mobiles**, sélectionnez **Stratégies de protection des applications** dans la section **Gérer**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
+1. Dans la charge de travail **Applications clientes**, sélectionnez **Stratégies de protection des applications** dans la section **Gérer**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
 2. Choisissez **Ajouter une stratégie**.
 
    ![Capture d’écran du panneau « Ajouter une stratégie »](./media/app-protection-add-policy.png)
@@ -125,7 +125,7 @@ Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs 
 
 Étant donné que les stratégies de protection d’applications Intune sont ciblées sur l’identité d’un utilisateur, les paramètres de protection pour un utilisateur s’appliquent généralement aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non-MDM). Ainsi, vous pouvez cibler une stratégie de protection d’application Intune sur des appareils iOS et Android inscrits ou désinscrits dans Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. 
 
-Pour créer ces stratégies, accédez à **Applications mobiles** > **Stratégies de protection d’application** dans la console Intune, puis cliquez sur **Add a policy** (Ajouter une stratégie). Vous pouvez également modifier une stratégie de protection d’application existante. Si vous souhaitez que la stratégie de protection d’application s’applique à la fois aux appareils gérés et aux appareils non gérés, vérifiez que l’option **Cibler sur tous les types d’application** est définie sur **Oui** (valeur par défaut). Si vous souhaitez effectuer une affectation précise en fonction de l’état de la gestion, définissez l’option **Cibler sur tous les types d’application** sur **Non**. 
+Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection d’application** dans la console Intune, puis cliquez sur **Ajouter une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Si vous souhaitez que la stratégie de protection d’application s’applique à la fois aux appareils gérés et aux appareils non gérés, vérifiez que l’option **Cibler sur tous les types d’application** est définie sur **Oui** (valeur par défaut). Si vous souhaitez effectuer une affectation précise en fonction de l’état de la gestion, définissez l’option **Cibler sur tous les types d’application** sur **Non**. 
 
 Pour que les applications iOS soient considérées comme « managées », le paramètre de stratégie de configuration **IntuneMAMUPN** doit être déployé pour chaque application. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 

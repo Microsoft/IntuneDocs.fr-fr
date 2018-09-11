@@ -15,20 +15,20 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7cff6c777de4a35aa6825d1d37fdd0c2f2d0b72
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 5653e5fda04295041ebc549977007e7060b5508b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751715"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312678"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Inscrire des appareils iOS à l’aide de l’outil Apple Configurator
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Intune prend en charge l’inscription d’appareils iOS à l’aide d’[Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) s’exécutant sur un ordinateur Mac. L’inscription avec Apple Configurator requiert que vous connectiez par USB chaque appareil iOS à un ordinateur Mac pour configurer l’inscription d’entreprise. Vous pouvez inscrire des appareils sur Intune avec Apple Configurator de deux manières :
-- **Inscription de l’Assistant Configuration** : réinitialise l’appareil aux paramètres d’usine et le prépare à l’inscription durant l’Assistant Configuration.
-- **Inscription directe** : ne réinitialise pas l’appareil aux paramètres d’usine et l’inscrit avec les paramètres iOS. Cette méthode prend seulement en charge les appareils **sans affinité utilisateur**.
+- **Inscription de l’Assistant Configuration** : réinitialise l’appareil et le prépare à l’inscription avec l’Assistant Configuration.
+- **Inscription directe** : ne réinitialise pas l’appareil et l’inscrit avec les paramètres iOS. Cette méthode prend seulement en charge les appareils **sans affinité utilisateur**.
 
 Vous ne pouvez pas utiliser les méthodes d’inscription Apple Configurator avec le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
 
@@ -134,7 +134,7 @@ Les appareils sont désormais prêts pour l'inscription d'entreprise. Éteignez 
 Après avoir reçu leur appareil, les utilisateurs doivent exécuter l’Assistant Configuration. Des appareils configurés avec une affinité utilisateur peuvent installer et exécuter l’application Portail d’entreprise pour télécharger des applications et gérer des appareils.
 
 ## <a name="direct-enrollment"></a>Inscription directe
-Quand vous inscrivez directement des appareils iOS avec Apple Configurator, vous pouvez inscrire un appareil sans obtenir son numéro de série. Vous pouvez également nommer l’appareil à des fins d’identification avant qu’Intune capture son nom lors de l’inscription. L’application Portail d’entreprise n’est pas prise en charge pour les appareils inscrits directement. Cette méthode n’effectue pas une réinitialisation des paramètres d’usine de l’appareil.
+Quand vous inscrivez directement des appareils iOS avec Apple Configurator, vous pouvez inscrire un appareil sans obtenir son numéro de série. Vous pouvez également nommer l’appareil à des fins d’identification avant qu’Intune capture son nom lors de l’inscription. L’application Portail d’entreprise n’est pas prise en charge pour les appareils inscrits directement. Cette méthode ne réinitialise pas l’appareil.
 
 Vous ne pouvez pas installer d’applications nécessitant l’affiliation de l’utilisateur (notamment l’application Portail d’entreprise utilisée pour installer des applications métier).
 

@@ -15,12 +15,12 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59449efd592f3c47bdf2350b495f81c23f442999
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 2d099d049892d71c36e4b01fb1a8af6f7ad25df1
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751800"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313407"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Activer l’inscription des appareils iOS avec Apple School Manager
 
@@ -113,7 +113,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
      > [!NOTE]
      > Seul Apple Configurator permet de rétablir la supervision sur un appareil inscrit sans supervision. Pour cela, l’appareil iOS doit être relié à un Mac par câble USB. Découvrez plus d’informations sur ceci dans la [documentation d’Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Choisissez si vous souhaitez ou non que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Après l’inscription de l’appareil, vous ne pourrez plus modifier ce paramètre sans réinitialiser l’appareil aux paramètres d’usine. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
+7. Choisissez si vous souhaitez ou non que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Une fois l’appareil inscrit, vous ne pouvez plus modifier ce paramètre sans réinitialiser l’appareil. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
 
 8. Si vous voulez que plusieurs utilisateurs puissent s’authentifier sur des iPad inscrits avec un ID Apple géré, choisissez **Oui** sous **iPad partagé** (cette option nécessite une **inscription sans affinité utilisateur** et le mode **supervisé** défini sur **Oui**.) Les ID Apple gérés sont créés dans le portail Apple School Manager. En savoir plus sur l’option [iPad partagé](education-settings-configure-ios-shared.md) et les [spécifications pour iPad partagé d’Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
@@ -179,4 +179,4 @@ Un profil d’inscription doit être affecté aux appareils Apple School Manager
 
 ## <a name="distribute-devices-to-users"></a>Distribuer des appareils aux utilisateurs
 
-Vous avez activé la gestion et la synchronisation entre Apple et Intune, et attribué un profil permettant aux appareils Apple School de s’inscrire. Vous pouvez désormais distribuer les appareils aux utilisateurs. Quand un appareil Apple School Manager iOS est activé, il est inscrit pour être géré par Intune. Si l’appareil a été activé et est en cours d’utilisation, le profil ne peut pas être appliqué jusqu'à ce que l’appareil soit réinitialisé aux paramètres d’usine.
+Vous avez activé la gestion et la synchronisation entre Apple et Intune, et attribué un profil permettant aux appareils Apple School de s’inscrire. Vous pouvez désormais distribuer les appareils aux utilisateurs. Quand un appareil Apple School Manager iOS est activé, il est inscrit pour être géré par Intune. Si l’appareil a été activé et est en cours d’utilisation, le profil ne peut pas être appliqué tant que l’appareil n’est pas réinitialisé.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/20/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9db79e9d0dc82cd823663274aa02dbe097db74d4
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: c8c87b5a76a69809e46fe3f4c5d74019546a819d
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251500"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330226"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Assigner des applications Office 365 à des appareils Windows 10 à l’aide de Microsoft Intune
 
@@ -38,14 +38,15 @@ Ce type d’application vous permet d’assigner facilement des applications Off
 - Cette méthode d’installation n’est pas prise en charge sur les appareils Windows 10 S, Windows Famille, Windows Collaboration, Windows Holographique ou Windows Holographic for Business.
 - Intune ne prend pas en charge l’installation d’applications de bureau Office 365 à partir du Microsoft Store (appelées applications Office Centennial) sur un appareil sur lequel vous avez déjà déployé des applications Office 365 avec Intune. Si vous installez cette configuration, cela peut entraîner une perte ou une altération des données.
 - Plusieurs affectations d’applications obligatoires ou disponibles ne s’additionnent pas. La dernière affectation d’applications remplace les affectations d’applications préexistantes installées. Par exemple, si le premier ensemble d’applications Office contient Word, mais que ce n’est pas le cas du dernier ensemble, Word est désinstallé. Cette condition ne s’applique pas aux applications Visio ou Project.
-
+- **Version d’Office** : choisissez si vous voulez affecter la version 32 bits ou 64 bits d’Office. Vous pouvez installer la version 32 bits sur des appareils 32 bits et 64 bits, mais vous ne pouvez installer la version 64 bits que sur des appareils 64 bits.
+- **Supprimer MSI des appareils des utilisateurs finaux** : choisissez si vous voulez supprimer les applications .MSI Office préexistantes des appareils des utilisateurs finaux. L’installation échoue si des applications .MSI préexistantes sont présentes sur les appareils des utilisateurs finaux. Les applications à désinstaller ne sont pas limitées aux applications sélectionnées pour l’installation dans **Configurer la suite d’applications**, car cela supprime toutes les applications Office (MSI) de l’appareil des utilisateurs finaux. Pour plus d’informations, consultez [Supprimer les versions MSI existantes d’Office lors de la mise à niveau vers Office 365 ProPlus](https://docs.microsoft.com/en-us/deployoffice/upgrade-from-msi-version). 
 
 ## <a name="get-started"></a>Prise en main
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans le volet de la charge de travail **Applications mobiles**, sous **Gérer**, sélectionnez **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**.
 5. Sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter des applications**, dans la liste **Type d’application**, sous **Suite Office 365**, sélectionnez **Windows 10**.
 
@@ -91,7 +92,16 @@ Dans cette étape, configurez les options d’installation de la suite d’appli
         - **Mensuel (ciblé)**
         - **Semestriel**
         - **Semestriel (ciblé)**
-    - **Supprimer d’autres versions d’Office (MSI) à partir d’appareils d’utilisateurs finals** : cette fonctionnalité permet de supprimer tout Office préexistant (MSI) sur les ordinateurs des utilisateurs finals. Cette suppression ne se limite pas aux applications sélectionnées pour l’installation dans **Configurer la suite d’applications** : elle concerne toutes les applications Office (MSI) de l’appareil de l’utilisateur final.
+
+        Après avoir choisi un canal, vous pouvez aussi sélectionner **Spécifique** pour installer une version spécifique d’Office pour le canal sélectionné sur les appareils des utilisateurs finaux. Sélectionnez ensuite la **Version spécifique** d’Office à utiliser.
+        
+        Les versions disponibles changeront au fil du temps. Par conséquent, quand vous créez un déploiement, les versions disponibles peuvent être plus récentes et ne pas disposer de certaines versions antérieures. Les déploiements actuels continuent de déployer l’ancienne version, mais la liste des versions est en permanence actualisée par canal.
+        
+        Pour les appareils qui mettent à jour leur version épinglée (ou qui mettent à jour n’importe quelle autre propriété) et qui sont déployés comme étant disponibles, l’état de la création de rapports est « Installé » s’ils ont installé la version précédente jusqu’à ce que l’enregistrement de l’appareil se produise. Quand l’enregistrement de l’appareil se produit, l’état passe temporairement à « Inconnu », mais il n’est pas montré à l’utilisateur. Quand l’utilisateur lance l’installation pour la version plus récente disponible, l’utilisateur voit l’état passer à « Installé ».
+        
+        Pour plus d’informations, consultez [Présentation des canaux de mise à jour pour Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+
+    - **Supprimer MSI des appareils des utilisateurs finaux** : choisissez si vous voulez supprimer les applications .MSI Office préexistantes des appareils des utilisateurs finaux. L’installation échoue si des applications .MSI préexistantes sont présentes sur les appareils des utilisateurs finaux. Les applications à désinstaller ne sont pas limitées aux applications sélectionnées pour l’installation dans **Configurer la suite d’applications**, car cela supprime toutes les applications Office (MSI) de l’appareil des utilisateurs finaux. Pour plus d’informations, consultez [Supprimer les versions MSI existantes d’Office lors de la mise à niveau vers Office 365 ProPlus](https://docs.microsoft.com/en-us/deployoffice/upgrade-from-msi-version). 
     - **Accepter automatiquement le contrat de licence utilisateur final de l’application** : sélectionnez cette option si les utilisateurs finaux ne sont pas tenus d’accepter le contrat de licence. Intune accepte alors automatiquement le contrat.
     - **Utiliser l’activation d’ordinateurs partagés** : sélectionnez cette option quand plusieurs utilisateurs partagent un ordinateur. Pour plus d’informations, consultez [Vue d’ensemble de l’activation d’ordinateurs partagés pour Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Langues** : Office est automatiquement installé dans toute langue prise en charge installée avec Windows sur l’appareil de l’utilisateur final. Sélectionnez cette option pour installer des langues supplémentaires avec la suite d’applications.

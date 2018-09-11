@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9ee132a1b1c79e9829e5d28dc33b5cac2e52c8ac
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 1461089beafd6501d6ebc87ab1a89963fa4aac57
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251899"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347771"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier iOS à Microsoft Intune
 
@@ -35,8 +35,8 @@ Aidez-vous des informations contenues dans cet article pour ajouter une applicat
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, sélectionnez **Gérer** > **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Applications**.
 5. Au-dessus de la liste des applications, sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter une application**, sélectionnez **Application métier**.
 
