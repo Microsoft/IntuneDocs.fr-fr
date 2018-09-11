@@ -41,7 +41,7 @@ Vous pouvez gérer des appareils qui exécutent les systèmes d’exploitation s
 Pour éviter les erreurs d’activation Knox qui empêchent l’inscription MDM, l’application Portail d’entreprise tente l’activation de Samsung Knox lors de l’inscription à MDM uniquement si l’appareil figure dans la [liste des appareils Knox pris en charge](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Les appareils qui ne prennent pas en charge l’activation de Samsung Knox s’inscrivent en tant qu’appareils Android standard. Un appareil Samsung peut avoir des numéros de modèles qui prennent en charge Knox, alors que d’autres ne le prennent pas en charge. Vérifiez la compatibilité de Knox auprès du revendeur de votre appareil avant d’acheter et de déployer des appareils Samsung.
 
 > [!NOTE]
-> L’inscription des appareils Samsung Knox peut vous obliger à [activer l’accès aux serveurs de Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+> L’inscription des appareils Samsung Knox peut vous obliger à [activer l’accès aux serveurs de Samsung](https://support.samsungknox.com/hc/en-us/articles/115013575167-Our-corporate-devices-are-behind-a-firewall-How-do-I-allow-Knox-services-to-contact-Samsung-servers-). 
 
 Les modèles d’appareils Samsung figurant dans la liste suivante ne prennent pas en charge Knox. Ils sont inscrits comme appareils Android natifs par l’application Portail d’entreprise pour Android :
 
