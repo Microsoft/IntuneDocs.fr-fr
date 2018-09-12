@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b3c374e4ce6baeab8cc6fde3f6c45c63c48e34dd
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 4c268f9061ae624c1f85e386e5633b14334860b7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903073"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313136"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows avec Windows AutoPilot
 Windows AutoPilot simplifie le provisionnement des appareils. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et AutoPilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils AutoPilot, vous pouvez gérer des stratégies, des profils, des applications, etc. une fois ceux-ci inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -72,11 +72,13 @@ Les profils de déploiement AutoPilot sont utilisés pour configurer les apparei
     - **Auto-déploiement (préversion)** : les appareils (Windows 10 Insider Preview build 17672 ou ultérieure) avec ce profil ne sont pas associés à l’utilisateur qui inscrit l’appareil. Vous n’avez pas à fournir des informations d’identification d’utilisateur pour provisionner l’appareil.
 4. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
 5. Choisissez **OOBE (Out-Of-Box Experience)**, configurez les options suivantes, puis choisissez **Enregistrer** :
-    - **Langue (région)**\* : choisissez la langue à utiliser pour l’appareil. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
-    - **Configurer le clavier automatiquement**\* : si **Langue (région)** est sélectionné, vous pouvez ignorer la page de sélection du clavier. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
+    - **Langue (région)*** : choisissez la langue à utiliser pour l’appareil. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
+    - **Configurer le clavier automatiquement***: si **Langue (région)** est sélectionné, choisissez **Oui** pour ignorer la page de sélection du clavier. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
     - **Contrat de licence utilisateur final (CLUF)** : (Windows 10, version 1709 ou ultérieure) choisissez s’il faut montrer le CLUF aux utilisateurs.
     - **Paramètres de confidentialité** : choisissez si vous voulez montrer les paramètres de confidentialité aux utilisateurs.
-    - **Type de compte d’utilisateur** : choisissez si le type de compte d’utilisateur est **Administrateur** ou **Standard**. 
+    - **Masquer les options de changement de compte (Windows Insider uniquement)** : choisissez **Masquer** pour empêcher l’affichage des options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Ces options nécessitent la [configuration de la marque de société dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Type de compte d’utilisateur** : choisissez si le type de compte d’utilisateur est **Administrateur** ou **Standard**.
+    - **Appliquer le modèle de nom d’ordinateur (Windows Insider uniquement)** : choisissez **Oui** pour créer un modèle à utiliser lors du nommage de l’appareil au moment du provisionnement. Les noms doivent comporter au plus 15 caractères, et ils peuvent contenir des lettres, des chiffres et des traits d’union. Les noms ne peuvent pas être constitués uniquement de chiffres. Utilisez la [macro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter un numéro de série spécifique au matériel. Vous pouvez également utiliser la [macro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter une chaîne aléatoire de chiffres, où x représente le nombre de chiffres à ajouter. 
 
 6. Choisissez **Créer** pour créer le profil. Le profil de déploiement AutoPilot est maintenant disponible pour être attribué à des appareils.
 
@@ -105,6 +107,22 @@ Une fois que vous avez créé un profil de déploiement AutoPilot, vous pouvez m
 Vous pouvez afficher une alerte pour voir combien d’appareils du programme AutoPilot ne sont pas affectés à des profils de déploiement AutoPilot. Utilisez les informations de l’alerte pour créer des profils et les affecter aux appareils non affectés. Quand vous cliquez sur l’alerte, une liste complète des appareils Windows AutoPilot et des informations détaillées les concernant s’affichent.
 
 Pour afficher les alertes concernant les appareils non affectés, accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription d’appareil** > **Vue d’ensemble** > **Appareils non affectés**.  
+
+
+## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Affecter un utilisateur à un appareil Autopilot spécifique
+
+Vous pouvez affecter un utilisateur à un appareil Autopilot spécifique. Cette affectation préremplit un utilisateur provenant d’Azure Active Directory dans la page de connexion [avec marque de société](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) lors de la configuration de Windows. Elle vous permet également de définir un nom d’accueil personnalisé. Ceci ne préremplit pas ou ne modifie pas le nom de connexion Windows. Seuls les utilisateurs Intune sous licence peuvent être affectés de cette manière.
+
+Prérequis : le portail d’entreprise Azure Active Directory a été configuré.
+
+1. Dans [Intune dans le portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > choisissez l’appareil > **Affecter un utilisateur**.
+    ![Capture d’écran : Affecter un utilisateur](media/enrollment-autopilot/assign-user.png)
+2. Choisissez un utilisateur Azure sous licence pour utiliser Intune et choisissez **Sélectionner**.
+    ![Capture d’écran : Sélectionner un utilisateur](media/enrollment-autopilot/select-user.png)
+3. Dans la zone **Nom convivial de l’utilisateur**, tapez un nom convivial ou acceptez simplement la valeur par défaut. Il s’agit du nom convivial qui s’affiche quand l’utilisateur se connecte lors de la configuration de Windows.
+    ![Capture d’écran : Nom convivial](media/enrollment-autopilot/friendly-name.png)
+4. Choisissez **OK**.
+
 
 ## <a name="delete-autopilot-devices"></a>Supprimer des appareils AutoPilot
 
