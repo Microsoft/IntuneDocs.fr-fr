@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ee53dd02fa008a2e885b789439e88c766205d13
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 3596d539319a5a91a1647555a89004683874aa06
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268870"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329459"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android gérés
 
@@ -33,7 +33,7 @@ Utilisez des stratégies de configuration des applications dans Microsoft Intune
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Choisissez la charge de travail **Applications mobiles**.
+3. Choisissez la charge de travail **Applications clientes**.
 4. Choisissez **Stratégies de configuration des applications** dans le groupe **Gérer**, puis choisissez **Ajouter**.
 5. Définissez les détails suivants :
     - **Nom** : nom du profil qui s’affiche dans le portail Azure.
@@ -88,7 +88,7 @@ Vous pouvez également préconfigurer l’autorisation pour les applications d�
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Choisissez **Applications mobiles**.
+3. Choisissez **Applications clientes**.
 3. Sous **Gérer**, choisissez **Stratégies de configuration des applications**, puis **Ajouter**.
 4. Définissez les détails suivants :
     - **Nom**. Nom du profil qui s’affiche dans le portail Azure.

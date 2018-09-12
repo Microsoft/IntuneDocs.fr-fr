@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254482"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329408"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Intune
 
@@ -33,7 +33,7 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**.  
     Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles** > **Stratégie de protection d’application**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Stratégie de protection d’application**.
 4. Cliquez sur **Ajouter une stratégie** (vous pouvez également modifier une stratégie existante). 
 5. Cliquez sur **Configurer les paramètres requis** pour afficher la liste des paramètres configurables pour la stratégie. 
 6. En faisant défiler vers le bas le volet Paramètres, vous verrez une section intitulée **Actions d’accès** avec une table modifiable.

@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
-ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
+ms.openlocfilehash: b37c210425fd5abf8fd0b0501966fef8196b451b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39356571"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312619"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Ignorer le verrouillage d’activation sur les appareils iOS supervisés avec Intune
 
@@ -78,9 +78,9 @@ L’action d’appareil à distance **Contourner le verrou d’activation** d’
 6. Accédez à la section « Matériel » de l’appareil, puis copiez la valeur **Code de contournement du verrou d’activation** sous **Accès conditionnel**.
 
     >[!NOTE]
-    >Copiez le code de contournement avant de procéder à une réinitialisation des paramètres d’usine de l’appareil. Si vous réinitialisez les paramètres de l’appareil avant de copier le code, celui-ci est supprimé d’Azure.
+    >Copiez le code de contournement avant de réinitialiser l’appareil. Si vous réinitialisez les paramètres de l’appareil avant de copier le code, celui-ci est supprimé d’Azure.
 
-7.  Accédez au panneau **Vue d’ensemble** de l’appareil, puis sélectionnez **Réinitialisation aux paramètres d'usine**.
+7.  Accédez au panneau **Vue d’ensemble** de l’appareil, puis sélectionnez **Réinitialiser**.
 8.  Une fois l’appareil réinitialisé, vous êtes invité à fournir l’*ID Apple* et le *mot de passe*. Laissez le champ *ID* vide, puis entrez le **code de contournement** pour le *mot de passe*. Cela supprime le compte de l’appareil. 
 
 

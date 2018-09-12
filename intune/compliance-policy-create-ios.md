@@ -14,12 +14,12 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f711a6bec9be0ac1fd94183931070f9988d49e3
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1ee08c77fe085ad0f238d63481dd682ea15aa5ce
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442642"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313083"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils iOS dans Intune
 
@@ -106,6 +106,11 @@ Pour plus d’informations sur les profils de messagerie, consultez [Configurer 
 - **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe.
 - **Expiration du mot de passe (jours)**  : sélectionnez le nombre de jours avant l’expiration du mot de passe de l’utilisateur et l’obligation d’en créer un autre.
 - **Nombre de mots de passe précédents avant d’autoriser leur réutilisation** : entrez le nombre d’anciens mots de passe qui ne peuvent pas être réutilisés.
+
+### <a name="restricted-applications"></a>Applications restreintes 
+Vous pouvez restreindre les applications en ajoutant leurs ID de bundle à la stratégie. Ainsi, si l’application est installée sur l’appareil, celui-ci est marqué comme non conforme. 
+- **Nom de l’application** : entrez un nom convivial pour faciliter l’identification de l’ID de bundle. 
+- **ID d’ensemble d’applications** : entrez l’identificateur unique du bundle affecté par le fournisseur de l’application. Pour trouver l’ID de bundle, consultez [Guide pratique pour trouver l’ID de bundle pour une application iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
 
 ## <a name="assign-user-groups"></a>Affectation de groupes d’utilisateurs
 

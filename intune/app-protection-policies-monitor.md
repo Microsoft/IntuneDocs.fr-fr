@@ -15,12 +15,12 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 282666de444e9da0dd5e406cb45cdf1b9e66c1b2
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: b7dea97ef74489e3caae7433e8ebbe2b9ed39aa3
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833152"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330039"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Guide pratique de surveillance des stratégies de protection des applications
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,8 +42,8 @@ Vous pouvez surveiller l’état de conformité à trois endroits différents :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, choisissez **Surveiller** > **État de la protection des applications** pour afficher la vue récapitulative :
+3. Dans le volet **Intune**, choisissez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Surveiller** > **État de la protection des applications** pour afficher la vue récapitulative :
 
 ![Vignette Résumé sur le volet Gestion des applications mobiles Intune](./media/app-protection-user-status-summary.png)
 

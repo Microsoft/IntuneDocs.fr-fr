@@ -15,12 +15,12 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 859194b364a64854922993d2d798f318b260fc80
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e070e80bb9575154aded12f0992d04bd7a4718f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836334"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329952"
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Bien démarrer avec Microsoft Intune dans le portail Azure
 
@@ -53,7 +53,7 @@ Cette fonctionnalité est plus pertinente une fois que vous avez ajouté davanta
 
 ## <a name="using-services"></a>Utilisation des services
 
-Chaque fois que vous ouvrez Intune ou un autre service dans Azure, le service s’affiche dans un **volet**. Certaines des premières charges de travail que vous utilisez dans Intune, comme **Utilisateurs**, **Groupes** et **Applications mobiles**, apparaissent dans un volet en plein écran. Quand vous sélectionnez la charge de travail, ce volet s’ouvre en pleine page. D’autres volets s’ouvrent en glissant à partir de la droite du volet et sont réduits sous le volet principal d’où ils proviennent.
+Chaque fois que vous ouvrez Intune ou un autre service dans Azure, le service s’affiche dans un **volet**. Certaines des premières charges de travail que vous utilisez dans Intune, comme **Utilisateurs**, **Groupes** et **Applications clientes**, apparaissent dans un volet en plein écran. Quand vous sélectionnez la charge de travail, ce volet s’ouvre en pleine page. D’autres volets s’ouvrent en glissant à partir de la droite du volet et sont réduits sous le volet principal d’où ils proviennent.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

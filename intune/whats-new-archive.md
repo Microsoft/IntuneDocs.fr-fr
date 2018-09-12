@@ -16,12 +16,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45933ecab26a9c2a4139cdcd16400467bbdd5bf8
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: ea9f8662faad1f8ef70fbba4c3706930d31157ac
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321691"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347710"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nouveautés de la préversion de Microsoft Intune - mois précédents
 
@@ -88,7 +88,7 @@ Les applications gérées par le SDK d’application Intune peuvent envoyer des 
 
 ### <a name="app-install-report-updated-to-include-install-pending-status----1249446---"></a>Mise à jour du rapport d’installation de l’application pour inclure l’état Installation en attente <!-- 1249446 -->  
 
-Le rapport **État de l’installation de l’application** accessible pour chaque application par le biais de la liste **Application** dans la charge de travail **Applications mobiles** contient désormais un nombre **Installation en attente** pour les utilisateurs et les appareils.
+Le rapport **État de l’installation de l’application** accessible pour chaque application via la liste **Application** dans la charge de travail **Applications clientes** contient désormais un comptage **Installation en attente** pour les utilisateurs et les appareils.
 
 ### <a name="ios-11-app-inventory-api-for-mobile-threat-detection----1391759---"></a>API d’inventaire des applications iOS 11 pour la détection des menaces mobiles <!-- 1391759 -->
 

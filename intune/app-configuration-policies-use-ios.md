@@ -15,12 +15,12 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 65f249f05f389d8f05395cb46677d5f5fa53835e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8abaef622fcf633eecde3a2bb2ee261cb7c8fc9e
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905833"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330260"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -47,7 +47,7 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Choisissez la charge de travail **Applications mobiles**.
+3. Choisissez la charge de travail **Applications clientes**.
 4. Choisissez **Stratégies de configuration des applications** dans le groupe **Gérer**, puis choisissez **Ajouter**.
 5. Définissez les détails suivants :
     - **Nom** : nom du profil qui s’affiche dans le portail Azure.
@@ -133,6 +133,8 @@ Quand vous créez un fichier de configuration d’application, vous pouvez spéc
   <string>{{serialnumberlast4digits}}</string>
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
+  <key>aaddeviceid</key>
+  <string>{{aaddeviceid}}</string>
 </dict>
 ```
 ### <a name="supported-xml-plist-data-types"></a>Types de données PList XML pris en charge
@@ -158,6 +160,7 @@ De plus, Intune prend en charge les types de jetons suivants dans la liste de pr
 - \{\{username\}\} : par exemple, **John Doe**
 - \{\{serialnumber\}\} : par exemple, **F4KN99ZUG5V2** (pour les appareils iOS)
 - \{\{serialnumberlast4digits\}\} : par exemple, **G5V2** (pour les appareils iOS)
+- \{\{aaddeviceid\}\} : par exemple **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Suivre l’état de configuration d’applications iOS par appareil 
 Une fois qu’une stratégie de configuration a été affectée, vous pouvez suivre l’état de configuration d’applications iOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le panneau correspondant. Dans le panneau de l’appareil, sélectionnez **Configuration de l’application**.  

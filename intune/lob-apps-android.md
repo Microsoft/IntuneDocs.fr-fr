@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: baf7ee4f1178b555a0fe311f0e3977941e1491fe
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a49811200cd84882fe9f80708edefde7614e5cee
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905034"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347863"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Android à Microsoft Intune
 
@@ -35,8 +35,8 @@ Une application métier est une application que vous ajoutez à Intune à partir
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, sélectionnez **Gérer** > **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Applications**.
 5. Au-dessus de la liste des applications, sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter une application**, sélectionnez **Application métier**.
 

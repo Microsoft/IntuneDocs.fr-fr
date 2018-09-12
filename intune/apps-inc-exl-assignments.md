@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 47922a30d8106c4d60b6caa43c8855195e3a0220
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905408"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330243"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inclure et exclure des affectations d’applications dans Microsoft Intune
 
@@ -44,8 +44,8 @@ Intune ne prend pas en compte l’association entre utilisateurs et appareils qu
 Pour affecter une application à des groupes à l’aide de l’affectation d’inclusion et d’exclusion :
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le menu **Intune**, sélectionnez **Applications mobiles**.
-4. Dans le volet **Applications mobiles**, sélectionnez **Applications**. La liste des applications ajoutées s’affiche.
+3. Dans le menu **Intune**, sélectionnez **Applications clientes**.
+4. Dans le volet **Applications clientes**, sélectionnez **Applications**. La liste des applications ajoutées s’affiche.
 5. Sélectionnez l’application que vous voulez attribuer. Un tableau de bord contient des informatinos sur l’application. 
 6. Dans la section **Gérer** du menu, sélectionnez **Affectations**. 
 

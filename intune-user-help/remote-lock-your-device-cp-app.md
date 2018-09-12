@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4774cdc54a526f25b006c0c3d1a745ab96005c3a
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: 5b3fbd677eea9143bf5cb297253303330129ef25
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33676628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148576"
 ---
-# <a name="lock-your-device-from-company-portal-app-for-windows-10"></a>Verrouiller un appareil à partir de l’application Portail d’entreprise pour Windows 10
+# <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Verrouiller un appareil à partir de l’application Portail d’entreprise pour Windows 10
 
-Verrouillez à distance un appareil perdu ou volé à partir de l’application Portail d’entreprise pour Windows 10. Si votre appareil prend en charge cette fonctionnalité, l’application Portail d’entreprise verrouille l’écran de l’appareil (où qu’il se trouve). Son déverrouillage nécessite la saisie d’un code secret.
+Verrouillez à distance un appareil perdu ou volé à partir de l’application Portail d’entreprise pour Windows 10. Si votre appareil prend en charge cette fonctionnalité, ce paramètre verrouille l’écran de l’appareil (où qu’il se trouve). Un utilisateur doit entrer le mot de passe correct pour que l’appareil puisse être déverrouillé et réutilisé.
 
 Le verrouillage à distance est pris en charge sur les appareils :
 
@@ -43,4 +43,4 @@ Le verrouillage à distance est pris en charge sur les appareils :
    ![Capture d’écran de l’application Portail d’entreprise, page Détails de l’appareil, invite de confirmation du verrouillage à distance.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 4. Si vous localisez votre appareil, entrez votre code secret pour le déverrouiller.  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog).
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

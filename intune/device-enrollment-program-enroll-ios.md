@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf1b47b578c5abe0051b94c9f4c2127cd48f0e76
-ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
+ms.openlocfilehash: 27995fb643e4373e2fa6a34c7147c69905f9ccc0
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43092275"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312642"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -133,13 +133,13 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     >
     > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
 
-
 6. Si vous avez choisi **Oui** pour l’option **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration Apple**, vous avez la possibilité d’utiliser un jeton du programme d’achat en volume (VPP, Volume Purchase Program) pour installer automatiquement le portail d’entreprise sur l’appareil sans que l’utilisateur ne fournisse un identifiant Apple. Pour installer le portail d’entreprise avec un jeton VPP, choisissez un jeton sous **Installer le portail d’entreprise avec un jeton VPP**. Vérifiez que le jeton n’arrive pas à expiration et que vous avez suffisamment de licences d’appareil pour l’application Portail d’entreprise. Si le jeton arrive à expiration ou s’il manque des licences, Intune installe le portail d’entreprise de l’App Store à la place (et demande un identifiant Apple).
 
     ![Capture d’écran de l’installation du portail d’entreprise avec un jeton VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
+7. Si vous avez choisi un jeton pour **Installer le portail d’entreprise avec VPP**, vous avez la possibilité de verrouiller l’appareil en mode Application unique (plus précisément l’application Portail d’entreprise) immédiatement après la fin de l’Assistant Configuration. Choisissez **Oui** pour **Exécuter le portail d’entreprise en mode Application unique jusqu’à l’authentification** pour définir cette option. Pour utiliser l’appareil, l’utilisateur doit d’abord s’authentifier en se connectant avec le portail d’entreprise.
 
-7. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
+8. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
 
     ![Capture d’écran Paramètres de gestion des appareils.](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
 
@@ -153,26 +153,28 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
      > [!NOTE]
      > Seul Apple Configurator permet de rétablir la supervision sur un appareil inscrit sans supervision. Pour cela, l’appareil iOS doit être relié à un Mac par câble USB. Découvrez plus d’informations sur ceci dans la [documentation d’Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-8. Choisissez si vous souhaitez ou non que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Après l’inscription de l’appareil, vous ne pourrez plus modifier ce paramètre sans réinitialiser l’appareil aux paramètres d’usine. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
+9. Choisissez si vous souhaitez ou non que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Une fois l’appareil inscrit, vous ne pouvez plus modifier ce paramètre sans réinitialiser l’appareil. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
 
-9. Choisissez si vous souhaitez ou non que les appareils possédant ce profil puissent **Se synchroniser avec des ordinateurs**. Si vous choisissez **Autoriser Apple Configurator par certificat**, vous devez choisir un certificat sous **Certificats Apple Configurator**.
+10. Choisissez si vous souhaitez ou non que les appareils possédant ce profil puissent **Se synchroniser avec des ordinateurs**. Si vous choisissez **Autoriser Apple Configurator par certificat**, vous devez choisir un certificat sous **Certificats Apple Configurator**.
 
-10. Si vous avez sélectionné **Autoriser Apple Configurator par certificat** à l’étape précédente, choisissez un certificat Apple Configurator à importer.
+11. Si vous avez sélectionné **Autoriser Apple Configurator par certificat** à l’étape précédente, choisissez un certificat Apple Configurator à importer.
 
-11. Choisissez **OK**.
+12. Choisissez **OK**.
 
-12. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+13. Choisissez **Personnalisation de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+
 
     | Paramètres du service | Description |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |---|---|
     | <strong>Nom du service</strong> | S’affiche quand l’utilisateur appuie sur <strong>À propos de la configuration</strong> pendant l’activation. |
-    |    <strong>Numéro de téléphone du service</strong>     |                                                          S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
+    |    <strong>Numéro de téléphone du service</strong>     | S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
 
   Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
-  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur peut toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
-  - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il peut ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
+  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas lors de la configuration. Après avoir configuré l’appareil, l’utilisateur peut toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
+  - Si vous choisissez **Afficher**, l’écran s’affiche lors de la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il peut ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
 
-| Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil... |
+
+    | Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
     |------------------------------------------|------------------------------------------|
     | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
     | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
@@ -186,9 +188,9 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     | <strong>Données de diagnostic</strong> | Affiche l’écran **Diagnostics** à l’utilisateur. Cet écran permet à l’utilisateur d’envoyer des données de diagnostic à Apple. |
 
 
-13. Choisissez **OK**.
+14. Choisissez **OK**.
 
-14. Pour enregistrer le profil, choisissez **Créer**.
+15. Pour enregistrer le profil, choisissez **Créer**.
 
 ## <a name="sync-managed-devices"></a>Synchroniser des appareils gérés
 Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchroniser Intune avec Apple pour voir vos appareils gérés dans le portail Azure d’Intune.
@@ -218,7 +220,7 @@ Vous pouvez choisir un profil à appliquer par défaut à tous les appareils qui
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
 ## <a name="distribute-devices"></a>Distribuer des appareils
-Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer de profil d’inscription tant que l’appareil n’est pas réinitialisé aux paramètres d’usine.
+Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
 
 Consultez [Inscrire un appareil iOS dans Intune avec le Programme d’inscription des appareils](/intune-user-help/enroll-your-device-dep-ios).
 

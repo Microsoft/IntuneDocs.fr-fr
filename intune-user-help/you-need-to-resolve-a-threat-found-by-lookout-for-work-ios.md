@@ -1,11 +1,11 @@
 ---
 title: Résolution des menaces trouvées par Lookout for Work sur iOS | Microsoft Docs
-description: Découvrez comment résoudre une menace détectée par Lookout for Work sur iOS.
+description: Découvrez comment résoudre une menace détectée sur votre appareil iOS par l’application Lookout for Work.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,36 +15,40 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: be7d54cdde7e82cd0e0d4820ecfddff171e5984a
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150199"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work  
 
-Lookout for Work a détecté la présence d’une menace potentielle sur votre appareil, et vous devez corriger le problème pour récupérer l’accès aux e-mails, applications et fichiers de votre entreprise ou établissement scolaire.
+L’application Lookout for Work est un service Mobile Threat Defender qui identifie les menaces potentielles sur votre appareil iOS. Ces menaces sont signalées à l’application Portail d’entreprise et y apparaissent comme des problèmes non résolus et non conformes. Tant que ces menaces sont présentes, vous risquez de ne pas pouvoir :
 
-Pour résoudre ce problème, ouvrez l’application Lookout for Work et suivez les instructions indiquées dans l’application.
+* Vous connecter à la messagerie d’entreprise.
+* Vous connecter au réseau Wi-Fi d’entreprise.
+* Vous connecter à SharePoint Online.
+* Synchroniser des fichiers d’entreprise avec OneDrive.
+* Accéder aux applications d’entreprise.
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Ce que vous pouvez voir si votre appareil inscrit ne peut pas accéder aux fichiers ou aux e-mails
+Cet article décrit comment reconnaître les alertes de menace Lookout for Work et ce que vous devez faire pour les résoudre. 
 
-Si un virus ou une autre menace de sécurité est présent sur votre appareil inscrit et que vous essayez d’accéder aux e-mails ou fichiers de votre entreprise, vous pouvez voir un message comme celui-ci :
+## <a name="troubleshoot-virus-or-security-threat"></a>Résoudre les menaces de sécurité ou de virus  
+Récupérez l’accès aux ressources de votre entreprise quand l’application Lookout for Work détecte une menace de sécurité ou de virus.  
 
-![Message d’erreur Lookout for Work avec un lien vers le site web du Portail d’entreprise](./media/mtd-go-to-device-management-portal-android.png)
+1. Si une menace de sécurité ou de virus est détectée, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous. Appuyez sur le lien **portail de gestion des appareils** pour ouvrir le [site web du portail d’entreprise](https://portal.manage.microsoft.com/devices).  
 
-Appuyez sur le lien **portail de gestion des appareils** pour accéder au [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog), où vous pouvez obtenir des instructions sur la façon de résoudre le problème.
+    ![Capture d’écran d’un message d’erreur Lookout for Work, avec un lien vers le site web du portail d’entreprise et un bouton bleu OK.](./media/mtd-go-to-device-management-portal-android.png)  
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Exemple d’application que Lookout for Work considère comme une menace
+2. Sélectionnez votre appareil.  
+3. Lisez l’avertissement affiché au-dessous de votre appareil. Il vous invite à ouvrir Lookout for Work pour résoudre la menace de virus ou de sécurité.   
 
-Si vous avez installé une application que Lookout for Work considère comme une menace, vous voyez s’afficher un écran semblable à celui-ci :
+## <a name="troubleshoot-an-app-threat"></a>Résoudre une menace liée à une application   
+Si vous installez une application que Lookout for Work identifie comme une menace, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous.  
 
-![Exemple de message d’alerte de virus envoyé par Lookout for Work](./media/ios-lfw-threat-example.png)
+![Capture d’écran montrant une liste des menaces d’application actives et résolues détectées par Lookout for Work.](./media/ios-lfw-threat-example.png)    
+Sélectionnez le nom de l’application affiché en haut de votre écran. Suivez ensuite les instructions pour supprimer et désinstaller l’application. Tant que l’application se trouve sur votre appareil, vous ne pourrez pas accéder aux ressources de l’entreprise.    
 
-Si vous voyez quelque chose comme ceci, appuyez sur le nom de l’application qui apparaît en haut de l’écran et suivez les instructions pour supprimer la menace.
-
-Après avoir désinstallé l’application, vous récupérez immédiatement l’accès à vos e-mails et autres données de votre entreprise ou établissement scolaire. Si vous ignorez la demande de désinstallation de l’application, vous perdez l’accès à vos e-mails et données d’entreprise jusqu’à ce que vous désinstalliez l’application.
-
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog).
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

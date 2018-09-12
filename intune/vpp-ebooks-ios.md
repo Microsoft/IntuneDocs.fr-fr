@@ -15,12 +15,12 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c00904097986d1cf70031f1b17171221da64abc0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1b43e7df72e709cfdd929085b1d6718f1afcdf9f
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224798"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347350"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les livres électroniques iOS que vous avez achetés par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -55,8 +55,8 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Applications mobiles**.
-1.  Dans la charge de travail **Applications mobiles**, choisissez **Installation** > **Jetons VPP iOS**.
+3. Dans le volet **Intune**, choisissez **Applications clientes**.
+1.  Dans la charge de travail **Applications clientes**, choisissez **Installation** > **Jetons VPP iOS**.
 2.  Dans la liste du volet des jetons VPP, cliquez sur **Créer**.
 3.  Dans le volet **Nouveau jeton VPP**, spécifiez les informations suivantes :
     - **Fichier de jeton VPP** : vérifiez que vous êtes inscrit au Programme d’achat en volume (VPP) Apple pour les entreprises ou au Programme d’achat en volume (VPP) Apple pour l’éducation. Ensuite, téléchargez le jeton Apple VPP pour votre compte et sélectionnez-le ici.

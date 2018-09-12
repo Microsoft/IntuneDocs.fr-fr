@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,28 +15,48 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9180bf70c114a9bb1f034b51ee3a3d96bef253fa
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
+ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279489"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347692"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les mises à jour apportées à l’interface utilisateur des applications présentées aux utilisateurs finaux dans cette version de Microsoft Intune. Comprendre ces mises à jour peut vous aider dans vos communications avec les utilisateurs et dans la mise à jour de la documentation personnalisée que vous avez créée pour accompagner votre déploiement. Cela peut aussi vous être utile pour mieux résoudre les problèmes auxquels font face vos utilisateurs s’ils font appel au support technique à l’aide du Portail d’entreprise.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-august-27-2018"></a>Semaine du 27 août 2018  
+
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nouvelle mise à jour de l’expérience utilisateur du site web Portail d’entreprise<!--2000968 -->  
+En nous basant sur les commentaires que nous ont envoyés des clients, nous avons ajouté de nouvelles fonctionnalités au site web Portail d’entreprise. Vous allez constater une nette amélioration des fonctionnalités existantes et de la facilité d’utilisation sur vos appareils. Les différentes zones du site, comme les détails de l’appareil, le feedback et le support, ainsi que la vue d’ensemble de l’appareil, bénéficient d’une nouvelle présentation interactive et moderne. La [documentation du site web Portail d’entreprise Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website) a été mise à jour pour refléter ces modifications.   
+
+Vous pouvez voir les mises à jour suivantes :  
+
+- Flux de travail simplifiés sur toutes les plateformes d’appareils
+- Flux d’identification et d’inscription des appareils améliorés
+- Plus de messages d’erreur utiles
+- Langage plus convivial, avec moins de jargon technique
+- Possibilité de partager des liens directs vers les applications
+- Performances améliorées des grands catalogues d’applications
+- Accessibilité accrue pour tous les utilisateurs  
+
+|Mis à jour|Précédent|
+|---|---|
+|![La page de l’appareil mis à jour montre l’appareil correctement aligné au-dessus des informations le concernant et ne surgit plus au-dessus de la liste complète.](./media/iwp-device-after-1803.png)|![Version précédente de la page de l’appareil.](./media/iwp-device-before-1803.png)|
+|![La page d’installation de l’application mise à jour présente l’application au-dessus de sa description et de diverses informations d’installation, comme la date de publication, la version et le type d’application.](./media/iwp-app-install-after-1803.png)|![Version précédente de la page d’installation de l’application.](./media/iwp-app-install-before-1803.png)|  
+
 ## <a name="week-of-july-16-2018"></a>Semaine du 16 juillet 2018  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Nouvelles opportunités de synchronisation dans l’application Portail d’entreprise pour Windows   
 L’application Portail d’entreprise pour Windows vous permet désormais de lancer une synchronisation directement à partir de la barre des tâches Windows et du menu Démarrer. Cette fonctionnalité est particulièrement utile si votre seule tâche consiste à synchroniser des appareils et à accéder aux ressources d’entreprise. Pour accéder à la nouvelle fonctionnalité, cliquez avec le bouton droit sur l’icône Portail d’entreprise épinglée à votre barre des tâches ou au menu Démarrer. Dans les options de menu (également appelées liste de raccourcis), sélectionnez **Synchroniser cet appareil**. Le portail d’entreprise s’ouvre à la page **Paramètres** et lance la synchronisation.  
 
-![Capture d’écran de la barre des tâches Windows sur le Bureau d’un appareil. L’utilisateur a cliqué sur l’icône de programme de l’application Portail entreprise pour afficher un menu avec les options « Épingler à la barre des tâches » et « Fermer la fenêtre », et l’action « Synchroniser cet appareil ».](./media/sync-device-from-start-menu-1807.png)  
+![Capture d’écran de la barre des tâches Windows sur le Bureau d’un appareil. L’utilisateur a cliqué sur l’icône du programme de l’application Portail entreprise pour afficher un menu avec les options « Épingler à la barre des tâches » et « Fermer la fenêtre », et l’action « Synchroniser cet appareil ».](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nouvelles expériences d’exploration dans l’application Portail d’entreprise pour Windows  
 
-Désormais, quand vous parcourez ou rechercher des applications dans l’application Portail d’entreprise pour Windows, vous pouvez basculer entre la vue **Vignettes** existante et la nouvelle vue **Détails**. La nouvelle vue répertorie les détails des applications, tels que le nom, l’éditeur, la date de publication et l’état d’installation.  
+Désormais, quand vous parcourez ou recherchez des applications dans l’application Portail d’entreprise pour Windows, vous pouvez basculer entre la vue **Vignettes** existante et la nouvelle vue **Détails**. La nouvelle vue répertorie les détails des applications, tels que le nom, l’éditeur, la date de publication et l’état d’installation.  
 
 La vue **Installée** de la page **Applications** vous permet de voir les détails concernant les installations d’application terminées et en cours.  
 
@@ -109,10 +129,10 @@ Si vous avez activé le [mappage de groupe d’appareils](device-group-mapping.m
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Améliorations apportées au workflow de configuration des appareils dans le portail d’entreprise pour iOS dans la version 2.9.0 <!-- 1417174 -->
 
-Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour iOS. La langue est plus conviviale, et nous avons regroupé des écrans dans la mesure du possible. Nous avons également personnalisé le texte en fonction de votre société en utilisant le nom de cette dernière durant tout le processus de configuration.
+Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour iOS. La langue est plus conviviale, et nous avons regroupé des écrans dans la mesure du possible. La langue est également plus adaptée à l’entreprise, car nous utilisons à chaque fois son nom dans le texte de configuration.
 
 > [!NOTE]
-> Nous utilisons le nom de société que vous avez défini dans le portail Azure sous **Microsoft Intune** > **Mobile Apps** > **Personnalisation du portail d'entreprise** > **Nom de la société**. Si vous n’avez pas défini cette valeur, nous utiliserons le nom de locataire défini sous **Azure Active Directory** > **Propriétés** > **Nom**. Si vous n’avez pas défini de nom de société dans l’onglet Personnalisation du portail d’entreprise et si vous ne souhaitez pas que votre nom de locataire s’affiche, nous vous recommandons de définir le nom de la société dans ce même onglet. Si vous ne souhaitez pas que ce nom s’affiche dans l’en-tête du portail d’entreprise, vous pouvez décocher la case « Afficher le nom de la société à côté du logo ».
+> Nous utilisons le nom d’entreprise que vous avez défini dans le portail Azure sous **Microsoft Intune** > **Applications clientes** > **Personnalisation du portail d’entreprise** > **Nom de l’entreprise**. Si vous n’avez pas défini cette valeur, nous utiliserons le nom de locataire défini sous **Azure Active Directory** > **Propriétés** > **Nom**. Si vous n’avez pas défini de nom de société dans l’onglet Personnalisation du portail d’entreprise et si vous ne souhaitez pas que votre nom de locataire s’affiche, nous vous recommandons de définir le nom de la société dans ce même onglet. Si vous ne souhaitez pas que ce nom s’affiche dans l’en-tête du portail d’entreprise, vous pouvez décocher la case « Afficher le nom de la société à côté du logo ».
 
 |Avant|Après|
 |---|---|
@@ -458,12 +478,7 @@ Nous avons ajouté de nouvelles fonctionnalités en nous basant sur les commenta
 -   Possibilité de partager des liens directs vers les applications
 - Performances améliorées des grands catalogues d’applications
 
-Vous n’avez rien à faire pour vous préparer à ce changement. Nous vous informons au moment où le site web Portail d’entreprise est mis à jour et à votre disposition. Toutefois, vous devrez éventuellement mettre à jour les documents destinés à l’utilisateur final avec des captures d’écran actualisées. Notez que vous devez également mettre à jour la documentation de l’application Portail d’entreprise sur iOS, étant donné que le site web alimente la section **Applications** de l’application iOS.
-
-|Mis à jour|Précédent|
-|---|---|
-|![La page de l’appareil mis à jour montre l’appareil correctement aligné au-dessus des informations le concernant et ne surgit plus au-dessus de la liste complète.](./media/iwp-device-after-1803.png)|![Version précédente de la page de l’appareil.](./media/iwp-device-before-1803.png)|
-|![La page d’installation de l’application mise à jour présente l’application au-dessus de sa description et de diverses informations d’installation, comme la date de publication, la version et le type d’application.](./media/iwp-app-install-after-1803.png)|![Version précédente de la page d’installation de l’application.](./media/iwp-app-install-before-1803.png)|
+Vous n’avez rien à faire pour vous préparer à ce changement. Nous vous informons au moment où le site web Portail d’entreprise est mis à jour et à votre disposition. Toutefois, vous devrez éventuellement mettre à jour les documents destinés à l’utilisateur final avec des captures d’écran actualisées. Notez que vous devez également mettre à jour la documentation de l’application Portail d’entreprise sur iOS, étant donné que le site web alimente la section **Applications** de l’application iOS.  
 
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Mises à jour apportées à l’interface utilisateur sur le site web Portail d’entreprise <!--1313244 part 2-->
 

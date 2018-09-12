@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c3d0e31520aa2f73eabfce5ebc1d55d4df73946
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: d7207b84dacc47b567c0fc86c3215605965fda6d
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329924"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312796"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -112,10 +112,12 @@ Le PIN (numéro d’identification personnel) est un code secret utilisé pour v
 
     - **Le code PIN est partagé entre les applications du même éditeur de façon à améliorer la facilité d’utilisation :** sur iOS, un même code PIN d’application est partagé entre toutes les applications **du même éditeur d’applications**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
     - **Le comportement de « Revérifier les exigences d’accès après (minutes) » après un redémarrage de l’appareil :** un « minuteur de code PIN » suit le nombre de minutes d’inactivité qui déterminent quand redemander le code confidentiel de l’application Intune. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
-    - **La nature cyclique du minuteur associé au code PIN :** une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte. 
+    - **La nature cyclique du minuteur associé au code PIN :** une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
+
+Pour les appareils iOS, même si le code PIN est partagé entre les applications de différents éditeurs, l’invite s’affiche à nouveau quand la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est à nouveau atteinte pour l’application qui n’a pas le focus d’entrée principal. Par exemple, un utilisateur a application _A_ de l’éditeur _X_ et l’application _B_ de l’éditeur _Y_, et ces deux applications partagent le même code PIN. L’utilisateur travaille avec l’application _A_ (au premier plan) et l’application _B_ est réduite. Une fois que la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est atteinte et que l’utilisateur passe à l’application _B_, celui-ci doit entrer le code PIN.
 
       >[!NOTE] 
-      > Afin de vérifier plus souvent les exigences d’accès de l’utilisateur (p. ex., en demandant un code PIN), en particulier pour les applications fréquemment utilisées, il est recommandé de réduire la valeur du paramètre « Revérifier les exigences d’accès après (minutes) ». 
+      > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting. 
       
 - **Comment fonctionne le code PIN Intune avec les codes PIN des applications intégrées pour Outlook et OneDrive ?**<br></br>
 Le code PIN Intune fonctionne sur la base d’un minuteur d’inactivité (c’est-à-dire la valeur de « Revérifier les exigences d’accès après (minutes) »). Ainsi, la demande de code PIN Intune s’affiche indépendamment des demandes de code PIN de l’application intégrée pour Outlook et OneDrive, qui sont souvent liées par défaut au démarrage de l’application. Si l’utilisateur reçoit en même temps les deux demandes de code PIN, le comportement attendu doit être que le code PIN Intune est prioritaire. 
@@ -137,13 +139,13 @@ Les administrateurs informatiques peuvent déployer une stratégie de protection
 - **Quelles sont les données chiffrées ?**<br></br> Seules les données marquées comme « d’entreprise » sont chiffrées en fonction de la stratégie de protection des applications de l’administrateur. Les données sont considérées comme « d’entreprise » lorsqu’elles proviennent d’un emplacement de l’entreprise. Pour les applications Office, Intune considère les sites d’entreprise suivants : e-mail (Exchange) ou stockage cloud (application OneDrive avec un compte OneDrive Entreprise). Dans le cas des applications métier gérées par l’outil de création de packages d’applications Intune, toutes les données sont considérées comme étant de type « entreprise ».
 
 **Comment Intune réinitialise-t-il des données à distance ?**<br></br>
-Intune peut effacer des données d’application de trois manières différentes : réinitialisation complète de l’appareil, réinitialisation sélective pour la gestion des appareils mobiles et réinitialisation sélective pour la gestion des applications mobiles. Pour plus d’informations sur la réinitialisation à distance dans le cadre de la gestion MDM, consultez la section [Supprimer des appareils par réinitialisation aux paramètres d’usine ou supprimer des données d’entreprise](devices-wipe.md#factory-reset). Pour plus d’informations sur la réinitialisation sélective avec la gestion MAM, consultez la section [Supprimer des données d’entreprise](devices-wipe.md#remove-company-data) et [Guide pratique pour effacer uniquement les données d’entreprise dans les applications](apps-selective-wipe.md).
+Intune peut effacer des données d’application de trois manières différentes : réinitialisation complète de l’appareil, réinitialisation sélective pour la gestion des appareils mobiles et réinitialisation sélective pour la gestion des applications mobiles. Pour plus d’informations sur la réinitialisation à distance pour MDM, consultez [Supprimer des appareils avec la réinitialisation ou la mise hors service](devices-wipe.md). Pour plus d’informations sur la réinitialisation sélective avec la gestion des applications mobiles, consultez [Action Mettre hors service](devices-wipe.md#retire) et [Guide pratique pour effacer uniquement les données d’entreprise dans les applications](apps-selective-wipe.md).
 
-- **Qu’est-ce que la réinitialisation aux paramètres d’usine ?**<br></br> La [réinitialisation aux paramètres d’usine](devices-wipe.md) supprime toutes les données et tous les paramètres utilisateur de **l’appareil** en le réinitialisant aux paramètres d’usine par défaut. L’appareil est supprimé d’Intune.
+- **Présentation de la réinitialisation**<br></br> La [réinitialisation ](devices-wipe.md) supprime toutes les données et tous les paramètres utilisateur de **l’appareil** en rétablissant les paramètres d’usine par défaut de l’appareil. L’appareil est supprimé d’Intune.
   >[!NOTE]
-  > La réinitialisation aux paramètres d’usine n’est possible que sur les appareils inscrits à la gestion des appareils mobiles (MDM) Intune.
+  > La réinitialisation est possible seulement sur les appareils inscrits auprès de la gestion MDM d’Intune.
 
-- **Qu’est-ce que la réinitialisation sélective pour la gestion des appareils mobiles ?**<br></br> Consultez la section [Supprimer des appareils - Supprimer des données d’entreprise](devices-wipe.md#remove-company-data) pour plus d’informations sur la suppression de données d’entreprise.
+- **Qu’est-ce que la réinitialisation sélective pour la gestion des appareils mobiles ?**<br></br> Pour plus d’informations sur la suppression des données d’entreprise, consultez [Supprimer des appareils - Mettre hors service](devices-wipe.md#retire).
 
 - **Qu’est-ce que la réinitialisation sélective pour la gestion des applications mobiles ?**<br></br> La réinitialisation sélective pour la gestion des applications mobiles supprime simplement les données d’applications d’entreprise à partir d’une application. La requête est lancée à l’aide du portail Intune Azure. Pour savoir comment effectuer une demande de réinitialisation, consultez la section [Guide pratique pour effacer uniquement les données d’entreprise des applications](apps-selective-wipe.md).
 

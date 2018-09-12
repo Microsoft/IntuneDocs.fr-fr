@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117920"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313176"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -34,11 +34,14 @@ Cet article vous explique comment afficher tous les appareils, ainsi que leurs p
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
 3. Sélectionnez **Appareils** > **Tous les appareils** > sélectionnez l’un des appareils listés pour afficher les détails correspondants :
 
-   - **Vue d’ensemble** permet d’afficher le nom de l’appareil et de lister certaines de ses propriétés clés, notamment s’il s’agit d’un appareil BYOD (« Apportez votre propre appareil »), la date/heure de son enregistrement, etc. Sélectionnez **Plus** pour :
-     - Supprimer les données d’entreprise
-     - Supprimer l’appareil
-     - Verrouiller l’appareil à distance
-     - Effacer
+   - **Vue d’ensemble** permet d’afficher le nom de l’appareil et de lister certaines de ses propriétés clés, notamment s’il s’agit d’un appareil BYOD (« Apportez votre propre appareil »), la date/heure de son enregistrement, etc. Vous pouvez effectuer les actions suivantes sur l’appareil :
+      - [Mettre hors service](devices-wipe.md#retire)
+        - [Réinitialisation](devices-wipe.md#wipe)
+        - [Verrouillage à distance](device-remote-lock.md)
+        - [Synchroniser l’appareil](device-sync.md)
+        - [Réinitialiser le code secret](device-passcode-reset.md)
+        - [Redémarrer](device-restart.md) (Windows uniquement)
+        - [Redémarrage à zéro](device-fresh-start.md) (Windows uniquement)
      - Démarrer une session d’assistance à distance
    - Utilisez **Propriétés** pour affecter une [catégorie d’appareil créée](device-group-mapping.md) et changer le type de propriété d’un appareil. Par exemple, remplacez un appareil personnel par un appareil d’entreprise.
    - **Matériel** comprend de nombreux détails sur l’appareil, notamment l’ID, le système d’exploitation et la version, l’espace de stockage, le modèle et le fabricant, les paramètres d’accès conditionnel et bien d’autres informations.
@@ -64,7 +67,7 @@ Intune collecte une liste des applications uniquement sur les appareils apparten
 |Détail|Description|  
 |--------------|----------------------|  
 |Nom|Nom de l’appareil|
-|Nom de la gestion|Nom de l’appareil utilisé uniquement dans la console. Si vous changez ce nom, celui-ci ne change pas sur l’appareil.|
+|Nom de la gestion|Nom de l’appareil utilisé uniquement dans la console. Changer ce nom ne change pas le nom sur l’appareil.|
 |UDID|Identificateur unique de l’appareil|
 |ID d’appareil Intune|GUID qui identifie de façon unique l’appareil|
 |Numéro de série|Numéro de série de l’appareil attribué par le fabricant|

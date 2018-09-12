@@ -5,7 +5,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 08/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f49b5050f4ce182699f0955bed6224309a4d7c7c
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073833"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347795"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Problèmes connus dans Microsoft Intune
 
@@ -33,6 +33,13 @@ Si vous souhaitez signaler un bogue qui n’est pas répertorié ici, [créez un
 Si vous souhaitez voir une nouvelle fonctionnalité dans Intune, envoyez un rapport sur le site [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migration
+
+### <a name="export-azure-classic-portal-compliance-policies-to-recreate-these-policies-in-the-intune-azure-portal"></a>Exporter des stratégies de conformité du portail Azure Classic pour recréer ces stratégies dans le portail Azure Intune
+
+Les stratégies de conformité créées dans le portail Azure Classic seront dépréciées. Vous pouvez examiner et supprimer des stratégies de conformité existantes, mais vous ne pouvez pas les mettre à jour. Si vous avez besoin migrer des stratégies de conformité vers le portail Azure Intune actuel, vous pouvez exporter les stratégies sous forme de fichier avec la virgule comme séparateur (fichier .csv). Ensuite, utilisez les informations détaillées du fichier pour recréer ces stratégies dans le portail Azure Intune.
+
+> [!IMPORTANT]
+> Une fois le portail Azure Classic mis hors service, vous ne pourrez plus accéder à ou afficher vos stratégies de conformité. Veillez donc à exporter et à recréer vos stratégies dans le portail Azure avant la mise hors service du portail Azure Classic.
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Les fonctionnalités du client PC hérité Intune sont uniquement disponibles dans la console Silverlight
 
@@ -52,7 +59,7 @@ Vous ne pouvez pas voir les informations d’état des stratégies qui ont été
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Affichage de plusieurs invites d’installation pour certaines applications VPP
 Il est possible que vous receviez plusieurs invites d’installation pour certaines applications VPP déjà installées sur les appareils d’utilisateurs finaux. Ce problème se produit si l’option **Mises à jour automatiques des applications** est **activée** pour le jeton VPP que vous avez chargé sur Intune dans le portail Azure.    
 
-Pour contourner ce problème, vous pouvez désactiver l’option **Mises à jour automatiques des applications** pour le jeton VPP. Pour cela, dans le portail Azure, ouvrez Microsoft Intune. Dans Intune, sélectionnez **Applications mobiles** > **Jetons VPP iOS**. Ensuite, sélectionnez le jeton VPP qui a déployé l’application concernée et sélectionnez **Modifier** > **Mises à jour automatiques des applications** > **Désactivé** > **Enregistrer**. Vous pouvez également arrêter le déploiement de l’application concernée comme application VPP, ce qui entraîne l’arrêt des invites.    
+Pour contourner ce problème, vous pouvez désactiver l’option **Mises à jour automatiques des applications** pour le jeton VPP. Pour cela, dans le portail Azure, ouvrez Microsoft Intune. Dans Intune, sélectionnez **Applications clientes** > **Jetons VPP iOS**. Ensuite, sélectionnez le jeton VPP qui a déployé l’application concernée et sélectionnez **Modifier** > **Mises à jour automatiques des applications** > **Désactivé** > **Enregistrer**. Vous pouvez également arrêter le déploiement de l’application concernée comme application VPP, ce qui entraîne l’arrêt des invites.    
 
 Il s’agit d’un problème connu dans la version actuelle. Un correctif sera bientôt publié pour résoudre ce problème. Une fois ce correctif implémenté, vos utilisateurs ne recevront plus plusieurs invites leur demandant d’installer une application.
 

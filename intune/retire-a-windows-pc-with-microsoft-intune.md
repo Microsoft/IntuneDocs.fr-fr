@@ -15,18 +15,18 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: c3b0ba5fc46ad489dcb004554abfee4044a74195
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: 95525e66cce1e9691c60799df3da184954d6bf4b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310434"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312659"
 ---
 # <a name="retire-a-windows-pc"></a>Mettre hors service un PC Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Procédez comme suit pour mettre hors service les ordinateurs de bureau que vous gérez comme PC en y exécutant le client logiciel Intune. Lorsque vous mettez un PC hors service, celui-ci est supprimé de la gestion Intune. Vous ne pouvez pas réinitialiser les paramètres d'usine d'un PC depuis Intune.
+Procédez comme suit pour mettre hors service les ordinateurs de bureau que vous gérez comme PC en y exécutant le client logiciel Intune. Lorsque vous mettez un PC hors service, celui-ci est supprimé de la gestion Intune. Vous ne pouvez pas mettre hors service un PC depuis Intune pour le rétablir à ses paramètres d’usine.
 
 1.  Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Groupes** &gt; **Tous les appareils** (ou un autre groupe qui contient l’ordinateur que vous voulez mettre hors service).
 

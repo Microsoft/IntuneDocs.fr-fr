@@ -15,12 +15,12 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ccc1f25d137675ba8e5f984a16324f4b0771dc9c
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: a7d7554cad04dcca0d7f56986aef4c4b30193c18
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224985"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347605"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows Phone à Microsoft Intune
 
@@ -32,8 +32,8 @@ Utilisez les informations contenues dans cet article pour ajouter une applicatio
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, sélectionnez **Gérer** > **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Applications**.
 5. Au-dessus de la liste des applications, sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter une application**, sélectionnez **Application métier**.
 

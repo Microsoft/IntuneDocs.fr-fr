@@ -1,11 +1,11 @@
 ---
 title: Résolution des menaces trouvées par Lookout for Work sur Android | Microsoft Docs
-description: Découvrez comment résoudre une menace détectée par Lookout for Work sur Android.
+description: Découvrez comment résoudre une menace détectée sur un appareil Android par l’application Lookout for Work.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,35 +15,43 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: df7055f031fb7661cc0fa3bf2d00b16fc0a082dc
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0e8f10bac2c7ffc75f81572da60249842c8f4cc1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148519"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work  
 
-Lookout for Work a détecté la présence d’une menace potentielle sur votre appareil, et vous devez corriger le problème pour récupérer l’accès aux e-mails, applications et fichiers de votre entreprise ou établissement scolaire. Le message que vous voyez peut ressembler à celui-ci :
+L’application Lookout for Work est un service Mobile Threat Defender qui identifie les menaces potentielles sur vos appareils Android. Ces menaces sont signalées à l’application Portail d’entreprise et y apparaissent comme des problèmes non résolus et non conformes. Tant que ces menaces sont présentes, vous risquez de ne pas pouvoir :
 
-![L’application Lookout for Work a détecté une menace sur votre appareil](./media/lookout-threat-found-android.png)
+* Vous connecter à la messagerie d’entreprise.
+* Vous connecter au réseau Wi-Fi d’entreprise.
+* Vous connecter à SharePoint Online.
+* Synchroniser des fichiers d’entreprise avec OneDrive.
+* Accéder aux applications d’entreprise.
 
-Pour résoudre ce problème, ouvrez l’application Lookout for Work et suivez les instructions indiquées dans l’application.
+Cet article décrit comment reconnaître les alertes de menace Lookout for Work et ce que vous devez faire pour les résoudre. 
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Ce que vous pouvez voir si votre appareil inscrit ne peut pas accéder aux fichiers ou aux e-mails
+## <a name="troubleshoot-virus-or-security-threat"></a>Résoudre les menaces de sécurité ou de virus  
+Récupérez l’accès aux ressources de votre entreprise quand l’application Lookout for Work détecte une menace de sécurité ou de virus.  
 
-Si un virus ou une autre menace de sécurité est présent sur votre appareil inscrit et que vous essayez d’accéder aux e-mails ou fichiers de votre entreprise, vous pouvez voir un message comme celui-ci :
+1. Si une menace de sécurité ou de virus est détectée, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous. Appuyez sur le lien **portail de gestion des appareils** pour ouvrir le [site web du portail d’entreprise](https://portal.manage.microsoft.com/devices).  
 
-![Message d’erreur Lookout for Work avec un lien vers le site web du Portail d’entreprise](./media/mtd-go-to-device-management-portal-android.png)
+    ![Capture d’écran d’un message d’erreur Lookout for Work, avec un lien vers le site web du portail d’entreprise et un bouton bleu OK.](./media/mtd-go-to-device-management-portal-android.png)
 
-Appuyez sur le lien **portail de gestion des appareils** pour accéder au [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog), où vous pouvez obtenir des instructions sur la façon de résoudre le problème.
+2. Sélectionnez votre appareil.  
+3. Lisez l’avertissement affiché au-dessous de votre appareil. Il vous invite à ouvrir Lookout for Work pour résoudre la menace de virus ou de sécurité. 
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Exemple d’application que Lookout for Work considère comme une menace
+    ![Capture d’écran de la page d’appareil du portail d’entreprise montrant l’avertissement Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
-Si vous avez installé une application que Lookout for Work considère comme une menace, vous voyez s’afficher un écran semblable à celui-ci :
+## <a name="troubleshoot-an-app-threat"></a>Résoudre une menace liée à une application  
 
-![Exemple de message d’alerte de virus envoyé par Lookout for Work](./media/lookout-virus-alert-android.png)
+Si vous installez une application que Lookout for Work identifie comme une menace, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous.  
 
-Après avoir désinstallé l’application, vous récupérez immédiatement l’accès aux e-mails et données de votre entreprise. Si vous ignorez la demande de désinstallation de l’application, vous perdez l’accès à vos e-mails et données jusqu’à ce que vous désinstalliez l’application.
+![Capture d’écran montrant un message d’alerte de virus dans l’interface d’application Lookout for Work. Montre trois boutons : « Fermer, » « Plus d’informations » et « Désinstaller ».](./media/lookout-virus-alert-android.png)  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog).
+Pour récupérer l’accès à la messagerie et aux données d’entreprise, désinstallez l’application douteuse. Tant que l’application se trouve sur votre appareil, vous ne pourrez pas accéder aux ressources de l’entreprise.    
+
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

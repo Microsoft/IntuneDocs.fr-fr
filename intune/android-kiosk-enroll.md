@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 515853864236638bc2732f6539d087bd125e3c56
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903141"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313459"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Configurer l’inscription d’appareils kiosque d’entreprise Android
 
@@ -112,7 +112,7 @@ Pour les appareils Android 5.1 et ultérieur qui prennent en charge NFC, vous p
 
 Pour les appareils Android 6 et ultérieur, vous pouvez utiliser le jeton pour inscrire l’appareil. Android 6.1 et versions ultérieures peuvent également tirer profit de l’analyse de code QR quand la méthode d’inscription **aft#setup** est utilisée.
 
-1. Allumez votre appareil réinitialisé aux paramètres d’usine.
+1. Allumez votre appareil réinitialisé.
 2. Sur l’écran de **Bienvenue**, sélectionnez votre langue.
 3. Connectez-vous à votre réseau **Wi-Fi**, puis choisissez **Suivant**.
 4. Acceptez les conditions de Google, puis choisissez **Suivant**.

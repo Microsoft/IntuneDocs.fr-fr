@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bea51227798e239bb74154e4d97e3efd6d55f807
-ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
+ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232265"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313596"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditer, exporter ou supprimer des données personnelles dans Intune
 
@@ -64,8 +64,8 @@ La réinitialisation des paramètres d’usine restaure tous les paramètres et 
 ### <a name="user-self-removal-from-intune-management"></a>Auto-suppression des utilisateurs de la gestion Intune
 Les utilisateurs peuvent supprimer leurs appareils personnel [Android, Apple ou Windows](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) de la gestion Intune sans l’assistance d’un administrateur.   
 
-### <a name="remove-company-data"></a>Supprimer les données d’entreprise
-La suppression des données d’entreprise supprime les données provisionnées par Intune comme les applications d’entreprise, les données sur des applications gérées par Intune, les paramètres de stratégie et les profils de messagerie provisionnés à l’aide d’Intune. Cette action laisse les données personnelles de l’utilisateur sur l’appareil.
+### <a name="retire"></a>Mettre hors service
+L’action **Mettre hors service** supprime les données provisionnées par Intune comme les applications d’entreprise, les données sur les applications gérées par Intune, les paramètres de stratégie et les profils de messagerie provisionnés via Intune. Cette action laisse les données personnelles de l’utilisateur sur l’appareil.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Supprimer un locataire de Microsoft Intune
 

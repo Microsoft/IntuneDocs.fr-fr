@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f1aa88264ef277863f58d21baaa136c140c5c287
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949541"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329381"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Paramètres kiosque pour les appareils Android dans Intune
 
@@ -55,7 +55,7 @@ Pour configurer un appareil kiosque Android avec plusieurs applications, suivez 
 
 1. Accédez à la [page Managed Home Screen sur Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) et connectez-vous avec le même compte que celui que vous utilisez pour d’autres applications Google Play gérées.
 2. Choisissez **Approuver**.
-3. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Applications mobiles** > **Google Play géré** > **Synchroniser**.
+3. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Applications clientes** > **Google Play géré** > **Synchroniser**.
 4. Choisissez **Applications** > **Managed Home Screen** > **Affectations** > **Ajouter un groupe**.
 5. Sous **Type d’affectation**, choisissez **Obligatoire**.
 6. Choisissez **Groupes inclus** > **Sélectionner les groupes à inclure** > choisissez le groupe d’appareils que vous avez créé pour vos appareils kiosque > **Sélectionner** > **OK** > **OK** > **Enregistrer**.
@@ -65,13 +65,13 @@ Pour configurer un appareil kiosque Android avec plusieurs applications, suivez 
 Pour chaque application que vous souhaitez rendre disponible sur les appareils kiosque, effectuez les étapes suivantes :
 
 1. [Ajoutez l’application à Intune](store-apps-android.md).
-2. Choisissez **Applications mobiles** > **Applications** > choisissez l’application > **Affectations** > **Ajouter un groupe**.
+2. Choisissez **Applications clientes** > **Applications** > choisissez l’application > **Affectations** > **Ajouter un groupe**.
 3. Sous **Type d’affectation**, choisissez **Obligatoire**.
 4. Choisissez **Groupes inclus** > **Sélectionner les groupes à inclure** > choisissez le groupe d’appareils que vous avez créé pour vos appareils kiosque > **Sélectionner** > **OK** > **OK** > **Enregistrer**.
 
 ### <a name="add-web-links-that-can-be-used-in-kiosk-mode"></a>Ajouter des liens web qui peuvent être utilisés en mode kiosque
 
-1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Applications mobiles** > **Applications** > **Ajouter**.
+1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Applications clientes** > **Applications** > **Ajouter**.
 2. Sous **Type d’application**, choisissez **Lien web**.
 3. Choisissez **Configurer** et fournissez les informations requises. Vous n’avez pas besoin d’ajouter une image de logo, car elle est récupérée automatiquement à partir de favicon.ico sur le site web.
 4. Choisissez **OK** > **Ajouter**.

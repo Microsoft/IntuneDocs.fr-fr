@@ -1,11 +1,11 @@
 ---
-title: Résolution des menaces détectées par SandBlast Mobile Protect sur Android | Microsoft Docs
-description: Découvrez comment résoudre une menace détectée par Mobile Protect sur Android.
+title: Résolution des menaces détectées par SandBlast Mobile Protect pour Android | Microsoft Docs
+description: Découvrez comment résoudre une menace détectée par SandBlast Mobile Protect pour Android.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,40 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 3413ebed27bc11c88616c4c2f07d5cf182ccf1f0
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: be3f728a4f2764a0c2494686c943cdfb43b32bd2
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30753717"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147553"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Résoudre une menace détectée par SandBlast Mobile Protect
 
-SandBlast Mobile Protect a détecté la présence d’une menace potentielle sur votre appareil, et vous devez corriger le problème pour récupérer l’accès aux e-mails, applications et fichiers de votre entreprise ou établissement scolaire. Le message affiché varie en fonction du problème détecté par SandBlast Mobile Protect sur votre appareil.
+SandBlast Mobile Protect est un service Mobile Threat Defender qui identifie les menaces potentielles sur vos appareils Android. Il signale les menaces, que vous pouvez ensuite visualiser à partir de l’application Portail d’entreprise. Les menaces sons affichées dans l’application en tant que problèmes non résolus et non conformes. Tant que ces menaces sont présentes, vous risquez de ne pas pouvoir :   
 
-Pour résoudre ce problème, ouvrez l’application SandBlast Mobile Protect et suivez les instructions affichées.
+* Vous connecter à la messagerie d’entreprise.
+* Vous connecter au réseau Wi-Fi d’entreprise.
+* Vous connecter à SharePoint Online.
+* Synchroniser des fichiers d’entreprise avec OneDrive.
+* Accéder aux applications d’entreprise.
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Ce que vous pouvez voir si votre appareil inscrit ne peut pas accéder aux fichiers ou aux e-mails
+Cet article décrit comment reconnaître les alertes de menace Sandblast Mobile Protect et ce que vous devez faire pour les résoudre.  
 
-Si un virus ou une autre menace de sécurité est présent sur votre appareil inscrit et que vous essayez d’accéder aux e-mails ou fichiers de votre entreprise, SandBlast Mobile Protect vous envoie un message pour vous inviter à prendre les mesures nécessaires.
+## <a name="troubleshoot-virus-or-security-threat"></a>Résoudre les menaces de sécurité ou de virus  
+Si une menace de sécurité ou de virus est détectée, l’application SandBlast Mobile Protect agit conformément aux stratégies d’accès de votre organisation. Celles-ci peuvent vous empêcher d’accéder au réseau, aux applications et à la messagerie d’entreprise.  
 
-Appuyez sur le lien **portail de gestion des appareils** pour accéder au [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog), où vous pouvez obtenir des instructions sur la façon de résoudre le problème.
+![Capture d’écran d’un message d’alerte de l’application SEP Mobile.](./media/skycure-list-of-potential-issues-android.png)  
 
-## <a name="example-of-an-app-that-sandblast-mobile-protect-sees-as-a-threat"></a>Exemple d’application considérée comme une menace par SandBlast Mobile Protect
+Toutefois, SandBlast Mobile Protect vous invitera également à prendre des mesures afin de récupérer l’accès que vous avez perdu. Sélectionnez la menace et suivez les instructions de l’application pour résoudre le problème.
 
-Si vous avez installé une application que SandBlast Mobile Protect considère comme une menace, vous recevez une alerte indiquant qu’une application non fiable est installée sur votre appareil.
+L’application étant intégrée au fournisseur de gestion des appareils mobiles de votre entreprise, vous verrez également un avertissement concernant la restriction de l’accès dans l’application Portail d’entreprise. Cet avertissement vous invite à ouvrir Sandblast Mobile Protect pour corriger la menace de virus ou de sécurité.
 
-Dans ce cas, désinstallez l’application pour récupérer immédiatement l’accès aux e-mails et données de votre entreprise. Si vous ne désinstallez pas l’application, vous perdez l’accès à vos e-mails et données jusqu’à ce que vous désinstalliez l’application.
+  ![Capture d’écran de la page d’appareil du portail d’entreprise montrant l’avertissement SandBlast Mobile Protect.](./media/CP-lookout-virus-banner-1808.png)  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog).
+## <a name="troubleshoot-an-app-threat"></a>Résoudre une menace liée à une application  
+
+Si vous installez une application considérée comme une menace pour votre appareil, vous recevrez une notification dans SandBlast Mobile Protect. Si l’application affectée reste sur votre appareil, vous ne pourrez pas accéder aux ressources de l’entreprise.  
+
+Pour résoudre le problème, sélectionnez l’application dans la liste des menaces dans SandBlast Mobile Protect. Suivez ensuite les instructions pour supprimer et désinstaller l’application.     
+
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

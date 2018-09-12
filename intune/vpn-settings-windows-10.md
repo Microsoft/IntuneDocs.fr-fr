@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 61310f5baa64c43d2e818df6c61a36d232922c1c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744735"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312848"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Paramètres VPN de Windows 10 dans Intune
 
@@ -42,6 +42,8 @@ Selon les paramètres que vous choisissez, toutes les valeurs ne sont pas néces
   - **Serveur par défaut** : active ce serveur comme serveur par défaut que les appareils utilisent pour établir la connexion. Ne définissez qu’un seul serveur par défaut.
   - **Importer** : accédez à un fichier séparé par des virgules contenant une liste de serveurs au format description, adresse IP ou nom de domaine complet, serveur par défaut. Choisissez **OK** pour importer ces serveurs dans la liste **Serveurs**.
   - **Exporter** : exporte la liste des serveurs dans un fichier de valeurs séparées par des virgules (csv).
+
+- **Inscrire les adresses IP au DNS interne** : sélectionnez **Activer** pour configurer le profil VPN Windows 10 pour inscrire dynamiquement les adresses IP affectées à l’interface VPN auprès du DNS interne, ou sélectionnez  **Désactiver** pour ne pas inscrire dynamiquement les adresses IP.
 
 - **Type de connexion** : sélectionnez le type de connexion VPN dans la liste de fournisseurs suivante :
 

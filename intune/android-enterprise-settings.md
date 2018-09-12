@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15ac6adbcf262fd14edf11107b032aeda106a15b
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039333"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312894"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Paramètres du mode kiosque Android Entreprise dans Intune
 
@@ -33,14 +33,14 @@ Les profils du mode kiosque Android prennent en charge les paramètres de config
     - **Accorder automatiquement** : les autorisations sont automatiquement accordées.
     - **Refuser automatiquement** : les autorisations sont automatiquement refusées.
 - **Changements du volume** : choisissez **Bloquer** pour empêcher les utilisateurs de changer le volume de l’appareil.
-- **Réinitialisation aux paramètres d’usine** : choisissez **Bloquer** pour empêcher les utilisateurs de réinitialiser l’appareil aux paramètres d’usine.
+- **Réinitialiser** : choisissez **Bloquer** pour empêcher les utilisateurs de réinitialiser l’appareil.
 - **Démarrage sans échec** : choisissez **Bloquer** pour empêcher les utilisateurs de redémarrer l’appareil en mode sans échec.
 - **Barre d’état** : choisissez **Bloquer** pour empêcher les utilisateurs d’accéder à la barre d’état, notamment aux notifications et aux paramètres rapides.
 - **Changements des paramètres Wi-Fi** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier les configurations Wi-Fi créées par le propriétaire de l’appareil. Les utilisateurs peuvent créer leurs propres configurations Wi-Fi.
 - **Configuration du point d’accès Wi-Fi** : choisissez **Bloquer** pour empêcher les utilisateurs de créer ou de modifier des configurations Wi-Fi.
 - **Fonctionnalités de débogage** : choisissez **Autoriser** pour permettre aux utilisateurs d’utiliser les fonctionnalités de débogage.
 - **Réglage du microphone** : choisissez **Bloquer** pour empêcher les utilisateurs de régler le volume ou de désactiver le microphone.
-- **E-mails de protection contre la réinitialisation aux paramètres d’usine** : choisissez **Adresses e-mail du compte Google** pour définir des adresses e-mail (séparées par des points-virgules) permettant de déverrouiller l’appareil après une réinitialisation aux paramètres d’usine. Si aucun e-mail n’est spécifié, tout le monde peut déverrouiller l’appareil après une réinitialisation aux paramètres d’usine.
+- **E-mails de protection contre la réinitialisation** : choisissez **Adresses e-mail du compte Google** pour définir des adresses e-mail (séparées par des points-virgules) permettant de déverrouiller l’appareil après une réinitialisation. Si aucun e-mail n’est spécifié, tout le monde peut déverrouiller l’appareil après une réinitialisation.
 - **Trappe de secours du réseau** : choisissez **Activer** pour autoriser l’activation de la fonctionnalité de trappe de secours du réseau. Si une connexion réseau n’est pas possible au moment du démarrage, la trappe de secours invite l’utilisateur à se connecter temporairement à un réseau afin d’actualiser la stratégie de l’appareil. Une fois la stratégie appliquée, le réseau temporaire est oublié et l’appareil continue de démarrer. Vous n’avez plus la possibilité de vous connecter à un réseau s’il n’existe pas de réseau approprié dans la dernière stratégie et que l’appareil démarre dans une application en mode de verrouillage de tâche, ou si l’utilisateur ne peut pas atteindre les paramètres de l’appareil.
 - **Autoriser l’installation à partir de sources inconnues** : choisissez **Autoriser** pour permettre aux utilisateurs d’effectuer l’installation à partir de sources inconnues.
 - **Mise à jour système** : choisissez une option pour définir la façon dont l’appareil traite les mises à jour à distance :

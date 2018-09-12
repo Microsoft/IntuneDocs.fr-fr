@@ -1,11 +1,11 @@
 ---
-title: Supprimer des données d’entreprise sur des appareils à l’aide de Microsoft Intune - Azure | Microsoft Docs
-description: Découvrez comment supprimer des données d’entreprise sur un appareil ou effectuer une réinitialisation aux paramètres d’usine sur un appareil Android, avec profil professionnel Android, iOS, macOS ou Windows à l’aide de Microsoft Intune. Découvrez également comment supprimer un appareil d’Azure Active Directory.
+title: Mettre hors service ou réinitialiser des appareils avec Microsoft Intune - Azure | Microsoft Docs
+description: Mettez hors service ou réinitialisez un appareil sur un appareil Android, Profil professionnel Android, iOS, macOS ou Windows avec Microsoft Intune. Découvrez également comment supprimer un appareil d’Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,47 +13,47 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41d8f70dd72e845663f39e151c393f5edc0ad394
-ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
+ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028743"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312815"
 ---
-# <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Supprimer des appareils en réinitialisant les paramètres d’usine, en supprimant les données d’entreprise ou en désinscrivant manuellement l’appareil
+# <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Avec les actions **Supprimer les données d’entreprise** et **Réinitialisation aux paramètres d’usine**, vous pouvez supprimer d’Intune les appareils dont vous n’avez plus besoin, qui ont été réaffectés ou qui ont disparu. Les utilisateurs peuvent également émettre une commande à distance à partir de l’application Portail d’entreprise Intune sur les appareils personnels inscrits dans Intune.
+Avec les actions **Mettre hors service** et **Réinitialiser**, vous pouvez supprimer d’Intune les appareils dont vous n’avez plus besoin, qui ont été réaffectés ou qui sont manquants. Les utilisateurs peuvent également émettre une commande à distance à partir de l’application Portail d’entreprise Intune sur les appareils personnels inscrits dans Intune.
 
 > [!NOTE]
-> Avant de supprimer un utilisateur d’Azure Active Directory (Azure AD), utilisez l’action **Réinitialisation aux paramètres d’usine** ou **Supprimer les données d’entreprise** pour tous les appareils qui sont associés à cet utilisateur. Si vous supprimez d’Azure Active Directory des utilisateurs avec des appareils gérés, Intune ne peut plus émettre de commande de réinitialisation aux paramètres d’usine ou de suppression des données d’entreprise pour ces appareils.
+> Avant de supprimer un utilisateur d’Azure Active Directory (Azure AD), utilisez l’action **Réinitialiser** ou **Mettre hors service** pour tous les appareils qui sont associés à cet utilisateur. Si vous supprimez d’Azure Active Directory des utilisateurs avec des appareils gérés, Intune ne peut plus réinitialiser ou mettre hors service ces appareils.
 
-## <a name="factory-reset"></a>Réinitialisation des paramètres d’usine
+## <a name="wipe"></a>Réinitialisation
 
-L’action **Réinitialisation aux paramètres d’usine** rétablit les paramètres d’usine d’un appareil. Les données utilisateur sont conservées si vous avez coché la case **Conserver le compte d’utilisateur et l’état d’inscription**. Sinon, le lecteur est effacé de manière sécurisée.
+L’action **Réinitialiser** rétablit les paramètres d’usine d’un appareil. Les données utilisateur sont conservées si vous avez coché la case **Conserver le compte d’utilisateur et l’état d’inscription**. Sinon, le lecteur est effacé de manière sécurisée.
 
-|Action Réinitialisation aux paramètres d’usine|**Conserver le compte d’utilisateur et l’état d’inscription**|Supprimé de la gestion Intune|Description|
+|Action Réinitialiser|**Conserver le compte d’utilisateur et l’état d’inscription**|Supprimé de la gestion Intune|Description|
 |:-------------:|:------------:|:------------:|------------|
-|**Réinitialisation aux paramètres d’usine**| Désactivée | Oui | Efface tous les comptes d’utilisateur, les données, les stratégies de gestion des appareils mobiles et les paramètres. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
-|**Réinitialisation aux paramètres d’usine**| Désactivée | Non | Réinitialise toutes les stratégies de gestion des appareils mobiles. Conserve les données et les comptes d’utilisateur. Réinitialise les paramètres utilisateur par défaut. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
+|**Réinitialisation**| Désactivée | Oui | Efface tous les comptes d’utilisateur, les données, les stratégies de gestion des appareils mobiles et les paramètres. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
+|**Réinitialisation**| Désactivée | Non | Réinitialise toutes les stratégies de gestion des appareils mobiles. Conserve les données et les comptes d’utilisateur. Réinitialise les paramètres utilisateur par défaut. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
 
 L’option **Conserver le compte d’utilisateur et l’état d’inscription** est disponible uniquement pour Windows 10 version 1709 ou ultérieure.
 
 Les stratégies MDM seront réappliquées lors de la prochaine connexion de l’appareil à Intune.
 
-La réinitialisation aux paramètres d’usine est utile pour réinitialiser un appareil avant de le donner à un nouvel utilisateur ou en cas de perte ou de vol de l’appareil. Faites attention lors de la sélection de la **Réinitialisation aux paramètres d’usine**. Les données sur l’appareil ne peuvent pas être récupérées.
+Une réinitialisation est utile pour réinitialiser un appareil avant de le donner à un nouvel utilisateur, ou en cas de perte ou de vol de l’appareil. Soyez prudent quand vous sélectionnez **Réinitialiser**. Les données sur l’appareil ne peuvent pas être récupérées.
 
-### <a name="factory-reset-a-device"></a>Réinitialiser un appareil aux paramètres d’usine
+### <a name="wiping-a-device"></a>Réinitialisation d’un appareil
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
 3. Sélectionnez **Appareils** > **Tous les appareils**.
-4. Sélectionnez le nom de l’appareil à réinitialiser aux paramètres d’usine.
-5. Dans le volet qui affiche le nom de l’appareil, sélectionnez **Réinitialisation aux paramètres d’usine**.
+4. Sélectionnez le nom de l’appareil à réinitialiser.
+5. Dans le volet qui montre le nom de l’appareil, sélectionnez **Réinitialiser**.
 6. Pour Windows 10 version 1709 ou ultérieure, vous avez également l’option **Conserver le compte d’utilisateur et l’état d’inscription**. 
     
-    |Éléments conservés pendant une réinitialisation aux paramètres d’usine|Éléments non conservés|
+    |Éléments conservés lors d’une réinitialisation |Éléments non conservés|
     | -------------|------------|
     |Comptes d’utilisateur associés à l’appareil|Fichiers utilisateur|
     |État de l’ordinateur \(jonction de domaine, jonction à Azure AD)| Applications installées par l’utilisateur \(applications Win32 et du Store)|
@@ -64,17 +64,17 @@ La réinitialisation aux paramètres d’usine est utile pour réinitialiser un 
     |Ouverture de session automatique de l’utilisateur|| 
     
          
-7. Pour confirmer la réinitialisation aux paramètres d’usine, sélectionnez **Oui**.
+7. Pour confirmer la réinitialisation, sélectionnez **Oui**.
 
-Si l’appareil est allumé et connecté, la propagation de l’action **Réinitialisation aux paramètres d’usine** prend moins de 15 minutes, quel que soit le type de l’appareil.
+Si l’appareil est allumé et connecté, la propagation de l’action **Réinitialiser** prend moins de 15 minutes, quel que soit le type de l’appareil.
 
-## <a name="remove-company-data"></a>Supprimer les données d’entreprise
+## <a name="retire"></a>Mettre hors service
 
-L’action **Supprimer les données d’entreprise** supprime les paramètres, les profils de messagerie et les données de l’application gérée (le cas échéant) qui ont été affectés à l’aide d’Intune. L’appareil n’est plus géré par Intune. Cela se produit la prochaine fois que l’appareil se connecte et reçoit l’action **Supprimer les données d’entreprise** à distance.
+L’action **Mettre hors service** supprime les paramètres, les profils de messagerie et les données de l’application gérée (le cas échéant) qui ont été affectés avec Intune. L’appareil n’est plus géré par Intune. Cela se produit la prochaine fois que l’appareil s’enregistre et qu’il reçoit l’action **Mettre hors service** à distance.
 
-**Supprimer les données d’entreprise** conserve les données personnelles de l’utilisateur sur l’appareil.  
+**Mettre hors service** laisse les données personnelles de l’utilisateur sur l’appareil.  
 
-Les tableaux suivants décrivent la nature des données supprimées et l’effet de l’action **Supprimer les données d’entreprise** sur les données qui restent sur l’appareil après la suppression des données d’entreprise.
+Les tableaux suivants décrivent quelles données sont supprimées et l’effet de l’action **Mettre hors service** sur les données qui restent sur l’appareil après la suppression des données d’entreprise.
 
 ### <a name="ios"></a>iOS
 
@@ -110,11 +110,11 @@ Les tableaux suivants décrivent la nature des données supprimées et l’effet
 
 ### <a name="android-work-profile"></a>Profil professionnel Android
 
-La suppression des données d’entreprise d’un appareil avec profil professionnel Android supprime l’ensemble des données, applications et paramètres dans le profil professionnel de l’appareil. L’appareil est retiré de la gestion avec Intune. La réinitialisation aux paramètres d’usine n’est pas prise en charge pour les profils professionnels Android.
+La suppression des données d’entreprise d’un appareil avec profil professionnel Android supprime l’ensemble des données, applications et paramètres dans le profil professionnel de l’appareil. L’appareil est retiré de la gestion avec Intune. La réinitialisation n’est pas prise en charge pour les profils professionnels Android.
 
-### <a name="android-enterprise-kiosk-devices"></a>Appareils kiosque Android entreprise
+### <a name="android-enterprise-kiosk-devices"></a>Appareils kiosque Android Entreprise
 
-Vous pouvez uniquement réinitialiser aux paramètres d’usine les appareils kiosque Android. Vous ne pouvez pas supprimer de données des appareils kiosque Android.
+Vous pouvez réinitialiser seulement des appareils en mode kiosque. Vous ne pouvez pas mettre hors service des appareils Android en mode kiosque.
 
 
 ### <a name="macos"></a>macOS
@@ -137,16 +137,16 @@ Vous pouvez uniquement réinitialiser aux paramètres d’usine les appareils ki
 |Paramètres de profil Wi-Fi et VPN|Supprimé.|Supprimé.|Non pris en charge.|Supprimé.|
 |Paramètres de profil de certificat|Les certificats sont supprimés et révoqués.|Les certificats sont supprimés et révoqués.|Non pris en charge.|Les certificats sont supprimés et révoqués.|
 |E-mail|Supprime les e-mails qui sont activés pour le système EFS. Cela comprend les e-mails et pièces jointes dans l’application Courrier pour Windows.|Non pris en charge.|Les profils de messagerie provisionnés par le biais d’Intune sont supprimés. Les e-mails mis en cache sur l’appareil sont supprimés.|Supprime les e-mails qui sont activés pour le système EFS. Cela comprend les e-mails et pièces jointes dans l’application Courrier pour Windows. Supprime les comptes de messagerie approvisionnés par Intune.|
-|Disjonction d’Azure AD|Non.|Non.|L’enregistrement Azure AD est supprimé.|Non applicable. Sur Windows 10, vous ne pouvez pas supprimer les données d’entreprise pour les appareils joints à Azure AD.|
+|Disjonction d’Azure AD|Non.|Non.|L’enregistrement Azure AD est supprimé.|Non applicable. Sur Windows 10, vous ne pouvez pas mettre hors service des appareils joints à Azure AD.|
 
-### <a name="remove-company-data"></a>Supprimer les données d’entreprise
+### <a name="retire"></a>Mettre hors service
 
 1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
 2. Dans le volet **Appareils**, sélectionnez **Tous les appareils**.
-3. Sélectionnez le nom de l’appareil dont vous souhaitez supprimer les données d’entreprise.
-4. Dans le volet qui affiche le nom de l’appareil, sélectionnez **Supprimer les données d’entreprise**. Pour confirmer, sélectionnez **Oui**.
+3. Sélectionnez le nom de l’appareil à mettre hors service.
+4. Dans le volet qui montre le nom de l’appareil, sélectionnez **Mettre hors service**. Pour confirmer, sélectionnez **Oui**.
 
-Si l’appareil est allumé et connecté, la propagation de l’action **Supprimer les données d’entreprise** prend moins de 15 minutes, quel que soit le type de l’appareil.
+Si l’appareil est allumé et connecté, la propagation de l’action **Mettre hors service** prend moins de 15 minutes, quel que soit le type de l’appareil.
 
 ## <a name="delete-devices-from-the-intune-portal"></a>Supprimer des appareils à partir du portail Intune
 
@@ -181,8 +181,8 @@ Vous devrez peut-être supprimer des appareils d’Azure AD en cas de problèmes
 Si vous souhaitez supprimer complètement un appareil Apple DEP pour qu’il ne soit plus géré par Intune, effectuez les étapes suivantes :
 
 1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
-2. Choisissez **Appareils** > **Tous les appareils** > choisissez l’appareil > **Supprimer les données d’entreprise**.
-![Capture d’écran de suppression des données d’entreprise](./media/devices-wipe/remove-company-data.png)
+2. Choisissez **Appareils** > **Tous les appareils** > choisissez l’appareil > **Mettre hors service**.
+![Capture d’écran : Mettre hors service](./media/devices-wipe/retire.png)
 3. Choisissez **Inscription de l’appareil** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez le jeton > **Appareils** > cochez la case correspondant à l’appareil > **Supprimer** > **Oui**.
 ![Capture d’écran de suppression de l’appareil](./media/devices-wipe/delete-device.png)
 4. Visitez [deploy.apple.com](http://deploy.apple.com) et recherchez l’appareil par son numéro de série.

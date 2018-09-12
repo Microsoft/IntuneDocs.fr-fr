@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3f9c59b1bfccabd8489cd466c645dc4a0051e97c
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 00b5c1ededa0b5dbc3df5786e583738fb2c2008e
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147732"
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Réinitialiser votre appareil à partir du site web du portail d’entreprise
 
@@ -33,16 +33,18 @@ Lorsque vous restaurez ses paramètres d’usine, l’appareil n’apparaît plu
 > [!Note]
 > Vous pouvez également effectuer les étapes suivantes à partir d’un autre appareil inscrit. Ouvrez l’application Portail d’entreprise sur cet appareil et effectuez les étapes de réinitialisation.  
 
-1. Accédez au [site web Portail d’entreprise](https://portal.manage.microsoft.com/#helpdeskDeskDialog), puis sélectionnez le bouton __Menu__ > __Mes appareils__.
+1. Accédez au site web du portail d’entreprise, puis sélectionnez le bouton __Menu__ > __Appareils__.  
 
 2. Sélectionnez l’appareil à réinitialiser.
 
-    ![Capture d’écran de la page Mes appareils, avec deux vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/macOS_enroll_002_tap_here_banner.png)
+    ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png)  
 
-3. L’appareil s’ouvre dans une fenêtre contextuelle. Sélectionnez **Réinitialiser**.  
+3. Sélectionnez **Réinitialiser**. Si l’option de réinitialisation n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Réinitialiser**.  
 
- ![Capture d’écran de la page Mes appareils, avec quelques appareils non identifiés au-dessus de la bannière invitant à inscrire les appareils non listés ou à identifier ceux qui ne le sont pas.](./media/macOS_enroll_002_tap_here_banner.png)
+     ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)  
+
+    ![Zoom avant sur l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)  
 
 4. Un message s’affiche pour vous avertir que vous êtes sur le point d’effacer tout le contenu de votre appareil. Pour confirmer, appuyez sur **Réinitialiser**.  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com/#helpdeskDeskDialog).
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

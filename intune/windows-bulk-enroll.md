@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: a1d0c445c2e6e5f2e4227d1b04ead416bf73d737
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 937fdd2130a0ae85421a4310fe6a0dc70986d2de
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34444878"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313236"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscription en bloc des appareils Windows
 
@@ -85,10 +85,10 @@ Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs
 ## <a name="troubleshooting-windows-bulk-enrollment"></a>Résolution des problèmes d’inscription en bloc sous Windows
 
 ### <a name="provisioning-issues"></a>Problèmes d’approvisionnement
-L’approvisionnement est destiné aux nouveaux appareils Windows. Les échecs d’approvisionnement peuvent nécessiter une réinitialisation de l’appareil ou une récupération de l’appareil à partir d’une image de démarrage. Voici quelques raisons qui peuvent expliquer un échec de l’approvisionnement :
+L’approvisionnement est destiné aux nouveaux appareils Windows. Les échecs de provisionnement peuvent nécessiter une réinitialisation de l’appareil ou une récupération de l’appareil à partir d’une image de démarrage. Voici quelques raisons qui peuvent expliquer un échec de l’approvisionnement :
 
 - Un package d’approvisionnement qui tente de rejoindre un domaine Active Directory ou un client Azure Active Directory qui ne crée pas de compte local peut rendre l’appareil inaccessible si le processus de jonction de domaine échoue en raison d’un manque de connectivité réseau.
-- Les scripts exécutés par le package de mise en service sont exécutés dans le contexte système. Les scripts peuvent apporter des modifications arbitraires au système de fichiers et aux configurations de l’appareil. Un script malveillant ou incorrect peut faire basculer l’appareil dans un état dont il ne pourra récupérer que par une réinitialisation de l’image ou par une restauration des paramètres d’usine de l’appareil.
+- Les scripts exécutés par le package de mise en service sont exécutés dans le contexte système. Les scripts peuvent apporter des modifications arbitraires au système de fichiers et aux configurations de l’appareil. Un script malveillant ou incorrect peut faire basculer l’appareil dans un état dont il ne peut récupérer que par réimageage ou par réinitialisation de l’appareil.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problèmes liés à l’inscription en bloc et au portail d’entreprise
 Si un utilisateur tente d’inscrire un appareil qui a précédemment été inscrit en bloc à l’aide du portail d’entreprise, il recevra un message d’avertissement indiquant que son appareil a besoin d’actions supplémentaires, soit une installation, soit une inscription. L’appareil est inscrit, mais l’inscription n’est pas reconnue par l’application Portail d’entreprise ou le site web.

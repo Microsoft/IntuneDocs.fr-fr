@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 644d5966f653e4b98e6a5e8c507dd5e7399ff9cd
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 5c64b915f240cab2faac84a6a78b213a5fffa0a6
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321116"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347896"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -32,19 +32,15 @@ Une application métier est une application que vous ajoutez à partir d’un fi
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans la charge de travail **Applications mobiles**, sélectionnez **Gérer** > **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Applications**.
 5. Au-dessus de la liste des applications, sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter une application**, sélectionnez **Application métier**.
 
 ## <a name="step-2-configure-the-app-package-file"></a>Étape 2 : Configurer le fichier de package d’application
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Fichier de package d’application**.
-2. Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Ensuite, sélectionnez un fichier d’installation Windows ayant l’extension **.msi**, **.appx**, **.appxbundle**, **.msix** ou **. msixbundle**.
-
-    > [!NOTE]
-    > Les extensions de fichier des applications Windows sont **.msi**, **.appx**, **.appxbundle**, **.msix** et **.msixbundle**.  
-
+2. Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Sélectionnez ensuite un fichier d’installation Windows ayant l’extension **.msi**, **.appx** ou **.appxbundle**.
 3. Une fois que vous avez fini, sélectionnez **OK**.
 
 

@@ -14,12 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f0c35caf841729aae8ce6ccdbf1c9709258a8f5b
-ms.sourcegitcommit: 2e08887c07d29979300e80e6a40372aec6287103
+ms.openlocfilehash: ab88c99694df95eeaf4b5529faec73dacd1a208c
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39249724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241879"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guide du Kit SDK d’application Microsoft Intune pour les développeurs iOS
 
@@ -465,7 +465,7 @@ Utilisez la constante `IntuneMAMSaveLocationLocalDrive` quand l’application en
 
 ### <a name="copy-to-actions"></a>Actions « Copier vers »
 
-Quand vous partagez des documents par le biais d’`UIActivityViewController` et `UIDocumentInteractionController`, iOS affiche les actions « Copier vers » pour chaque application prenant en charge l’ouverture du document partagé. Les applications déclarent les types de document qu’elles prennent en charge par le biais du paramètre `CFBundleDocumentTypes` dans leur fichier Info.plist. Ce type de partage n’est plus disponible si la stratégie interdit le partage avec les applications non gérées. À la place, les applications doivent ajouter une extension d’action non-IU à leur application, et la lier au kit SDK d’application Intune. L’extension d’action est simplement un stub. Le SDK implémente le comportement de partage des fichiers. Effectuez les étapes ci-dessous :
+Quand vous partagez des documents par le biais d’`UIActivityViewController` et `UIDocumentInteractionController`, iOS affiche les actions « Copier vers » pour chaque application prenant en charge l’ouverture du document partagé. Les applications déclarent les types de document qu’elles prennent en charge par le biais du paramètre `CFBundleDocumentTypes` dans leur fichier Info.plist. Ce type de partage n’est plus disponible si la stratégie interdit le partage avec les applications non gérées. À la place, l’utilisateur doit ajouter une extension d’action non-IU à son application, et la lier au SDK de l’application Intune. L’extension d’action est simplement un stub. Le SDK implémente le comportement de partage des fichiers. Effectuez les étapes ci-dessous :
 
 1. Votre application doit avoir au moins un schemeURL défini sous `CFBundleURLTypes` dans le fichier Info.plist.
 

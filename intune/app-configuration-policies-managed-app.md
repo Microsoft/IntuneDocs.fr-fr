@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b514efa27a2a037f2fa0492ae519e6b8c774e369
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: cad4e1d6bcb47981dfb40a1146a3f5148724e08a
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869540"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330090"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil
 
@@ -30,7 +30,7 @@ Vous pouvez utiliser des stratégies de configuration d’applications avec des 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Choisissez la charge de travail **Applications mobiles**.
+3. Choisissez la charge de travail **Applications clientes**.
 4. Choisissez **Stratégies de configuration des applications** dans le groupe **Gérer**, puis choisissez **Ajouter**.
 5. Définissez les détails suivants :
     - **Nom**  

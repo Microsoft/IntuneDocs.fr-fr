@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 08/28/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: da220e1f82c59f3181d64dc01d071867d62df397
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335824"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313970"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Que sont les profils d’appareil Microsoft Intune ?
 
@@ -54,6 +54,7 @@ Cette fonctionnalité prend en charge :
 - iOS 
 - macOS
 
+
 ## <a name="device-restrictions"></a>Restrictions d’appareil
 Le profil [Restrictions d’appareil](device-restrictions-configure.md) contrôle la sécurité, le matériel, le partage de données et d’autres paramètres sur les appareils. Par exemple, vous créez un profil de restriction d’appareil qui empêche les utilisateurs d’appareils iOS d’utiliser l’appareil photo. 
 
@@ -72,6 +73,13 @@ Pour intégrer Windows Defender - Protection avancée contre les menaces avec Mi
 
 Cette fonctionnalité prend en charge :
 - Windows 10 et versions ultérieures
+
+## <a name="identity-protection"></a>Protection des identités
+[Identity Protection](identity-protection-configure.md) contrôle l’expérience Windows Hello Entreprise sur les appareils Windows 10 et Windows 10 Mobile. Configurez ces paramètres pour rendre Windows Hello Entreprise disponible aux utilisateurs et aux appareils, et pour spécifier les exigences relatives aux codes PIN des appareils et aux mouvements.  
+
+Cette fonctionnalité prend en charge :  
+- Windows 10 et versions ultérieures
+- Windows Holographic for Business  
 
 ## <a name="kiosk"></a>Kiosk
 

@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 71ed2458e35934de9da297140d49d6d4128b0784
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321490"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329816"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Paramètres de restriction des appareils iOS de Microsoft Intune
 
@@ -81,7 +81,7 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 - Appairage avec Apple Watch 
 
 > [!NOTE]
-> Apple a confirmé que certains paramètres passeront en mode supervisé uniquement en 2018. Nous recommandons de prendre ceci en considération lors de l’utilisation de ces paramètres, au lieu d’attendre qu’Apple les migre en mode supervisé uniquement :
+> Apple a confirmé que certains paramètres passeront en mode supervisé uniquement en 2019. Nous recommandons de prendre ceci en considération lors de l’utilisation de ces paramètres, au lieu d’attendre qu’Apple les migre en mode supervisé uniquement :
 > - Installation de l’application par les utilisateurs finaux
 > - Suppression d’applications
 > - FaceTime
@@ -91,6 +91,7 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 > - Documents et données iCloud
 > - Jeux multijoueur
 > - Ajouter des amis du centre de jeux
+> - Siri
 
 ## <a name="password"></a>Mot de passe
 -   **Mot de passe** - Demande à l’utilisateur final d’entrer un mot de passe pour accéder à l’appareil.
@@ -166,7 +167,7 @@ Pour configurer la liste, cliquez sur **Ajouter**, puis spécifiez un nom de vot
 Pour insérer une URL d’application dans la liste des applications, utilisez le format suivant :
 
 À l’aide d’un moteur de recherche, recherchez l’application à utiliser dans l’App Store iTunes, puis ouvrez la page de l’application.
-Copiez l’URL de la page et utilisez-la en tant qu’adresse permettant de configurer la liste des applications autorisées ou interdites, ou une application à exécuter en mode plein écran.
+Copiez l’URL de la page et utilisez-la en tant qu’adresse permettant de configurer la liste des applications autorisées ou interdites, ou une application à exécuter en mode kiosque.
 Les profils d’appareil qui contiennent des paramètres d’applications restreintes doivent être attribués à des groupes d’utilisateurs.
 
 Exemple : rechercher Microsoft Word pour iPad. L’URL que vous utilisez est https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
@@ -192,7 +193,7 @@ Pour configurer la liste, cliquez sur **Ajouter**, puis spécifiez un nom de vot
 Pour insérer une URL d’application dans la liste des applications, utilisez le format suivant :
 
 À l’aide d’un moteur de recherche, recherchez l’application à utiliser dans l’App Store iTunes, puis ouvrez la page de l’application.
-Copiez l’URL de la page et utilisez-la en tant qu’adresse permettant de configurer la liste des applications autorisées ou interdites, ou une application à exécuter en mode plein écran.
+Copiez l’URL de la page et utilisez-la en tant qu’adresse permettant de configurer la liste des applications autorisées ou interdites, ou une application à exécuter en mode kiosque.
 
 Exemple : rechercher Microsoft Word pour iPad. L’URL que vous utilisez est https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 

@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42e0798b0c2941d9ea45e75b367b69bc7dab548f
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6aa2ade550a01a9e4758024213a67e6a7ddd8f03
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321218"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313851"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Paramètres de restriction des appareils pour Windows 10 (et versions ultérieures) dans Intune
 Cet article décrit tous les paramètres des restrictions d’appareils de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 10.
@@ -37,7 +37,7 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Stockage amovible** - Spécifie si des appareils de stockage externe comme une carte SD peuvent être utilisés avec l’appareil.
 - **Géolocalisation** - Spécifie si l’appareil peut utiliser les informations des services d’emplacement.
 - **Partage Internet** - Autorise l’utilisation du partage de connexion Internet sur l’appareil.
-- **Réinitialisation du téléphone** - Détermine si l’utilisateur peut rétablir les paramètres d’usine de son appareil.
+- **Réinitialisation du téléphone** : détermine si l’utilisateur peut réinitialiser son appareil.
 - **Connexion USB (mobile uniquement)** - Détermine si les appareils peuvent accéder à des appareils de stockage externe par le biais d’une connexion USB.
 - **Mode antivol (mobile uniquement)** - Détermine si le mode antivol Windows est activé.
 - **Cortana** - Active ou désactive l’assistant vocal Cortana.
@@ -50,6 +50,7 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)** - Empêche un message d’erreur de s’afficher sur l’appareil si aucune carte SIM n’est détectée.
 - **Espace de travail Windows Ink** - Empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. Quand ce paramètre n’est pas configuré, l’espace de travail Windows Ink est activé (fonctionnalité activée), et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : permet aux utilisateurs avec des droits d’administration de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **Ctrl+Win+R** sur l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
+- **Require users to connect to network during device setup (Windows Insider only)**  (Exiger des utilisateurs qu’ils se connectent au réseau pendant la configuration de l’appareil (Windows Insider uniquement)) : choisissez **Exiger** pour exiger que l’appareil se connecte à un réseau avant de passer à la page Réseau pendant la configuration de Windows 10. Même si cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
 
 ## <a name="password"></a>Mot de passe
 -   **Mot de passe** - Demande à l’utilisateur final d’entrer un mot de passe pour accéder à l’appareil.

@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268836"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313494"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Configurer des stratégies de mise à jour iOS dans Intune
 
@@ -32,7 +32,7 @@ Cette fonctionnalité prend en charge les appareils exécutant iOS 10.3 et vers
 4. Entrez un nom et une description pour la stratégie.
 5. Cliquez sur **Paramètres**. 
 
-    Indiquez quand les appareils iOS ne sont pas forcés à installer les dernières mises à jour. Ces paramètres créent une plage de temps limitée. Vous pouvez configurer les jours de la semaine, le fuseau horaire, l’heure de début et l’heure de fin.
+    Indiquez quand les appareils iOS ne sont pas forcés à installer les dernières mises à jour. Ces paramètres créent une plage de temps limitée. Vous pouvez configurer les **Jours** de la semaine, le **Fuseau horaire**, **l’heure de début**, **l’heure de fin** et s’il faut **Retarder la visibilité des mises à jour logicielles (en jours)** pour entrer des utilisateurs. Vous pouvez sélectionner une plage de délai des mises à jour logicielles comprise entre 1 et 90 jours. Pour ne pas définir de délai pour les mises à jour logicielles, entrez 0. Ces paramètres de mise à jour s’appliquent seulement aux appareils iOS supervisés.
 
 6. Cliquez sur **OK** pour enregistrer vos modifications. Sélectionnez **Créer** pour créer la stratégie.
 

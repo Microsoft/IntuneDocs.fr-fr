@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,53 +17,51 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: feba62cac464af75a0f0d249022edb6bd5d031f3
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 2f8a65d05ecffcf87d7a84ab23ad215256286dd0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225372"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150070"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Verrouiller à distance un appareil à partir du site web du portail d’entreprise
 
-Des accidents se produisent et des appareils peuvent parfois disparaître. Si votre appareil a été perdu ou volé, vous devez d’abord vous demander si les informations qu’il contient sont accessibles à n’importe qui, quel que soit l’endroit où se trouve votre appareil.
+Verrouillez à distance un appareil perdu ou volé à partir du site web de portail d’entreprise. Si votre appareil prend en charge cette fonctionnalité, ce paramètre verrouille l’écran de l’appareil (où qu’il se trouve). Un utilisateur doit entrer le mot de passe correct pour que l’appareil puisse être déverrouillé et réutilisé.   
 
-[!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
-
-Pour plus de sécurité, vous pouvez le verrouiller en utilisant l’option Verrouillage à distance sur le [site web du portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog). L’option Verrouillage à distance fonctionne pour :
+Le paramètre de verrouillage à distance fonctionne pour :
 
 * Android
 * iOS
 * macOS
 * Windows 10
 * Windows 10 Mobile (si un code secret avait déjà été défini sur l’appareil)
-* Windows Phone 8.1 (si un code secret avait déjà été défini sur l’appareil)
+* Windows Phone 8.1 (si un code secret avait déjà été défini sur l’appareil)  
 
-## <a name="to-use-remote-lock-to-lock-your-device"></a>Pour utiliser l’option Verrouillage à distance pour verrouiller votre appareil
+1. Sur le [site web du portail d’entreprise](https://portal.manage.microsoft.com), sélectionnez le bouton __Menu__ > __Appareils__.  
 
-1. Sur le [site web du portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog), appuyez sur le bouton __menu__, puis sélectionnez __Mes appareils__.
+2. Sélectionnez l’appareil à verrouiller.  
 
-2. Dans la page __Mes appareils__, sélectionnez le nom de l’appareil à verrouiller.
+    ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
-   ![Capture d’écran de la page Mes appareils, avec quelques appareils non identifiés au-dessus de la bannière invitant à inscrire les appareils non listés ou à identifier ceux qui ne le sont pas.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Sélectionnez **Verrouillage à distance**. Si l’option de verrouillage n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Verrouillage à distance**.  
 
-3. L’appareil s’ouvre dans une fenêtre contextuelle. Appuyez sur le bouton **Verrouillage à distance**.
+   ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png) 
 
-   ![Toutes les options disponibles pour un appareil sélectionné sur le site web Portail d’entreprise, notamment Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/iwp-screen-with-all-options.png)
+    ![Zoom avant sur l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)    
 
-4. Une notification s’affiche pour vous informer que vous êtes sur le point de verrouiller votre appareil. Appuyez sur **Verrouillage à distance** et le site web du portail d’entreprise tente de verrouiller votre appareil.
+4. Un message s’affiche pour vous avertir que vous êtes sur le point de verrouiller votre appareil. Appuyez sur **Verrouillage à distance** pour confirmer.
 
-   Une fois que vous avez sélectionné **Verrouillage à distance**, le message « Verrouillage à distance en attente » s’affiche.  Si le verrouillage à distance aboutit, l’état passe à « Verrouillage à distance réussi ».
+Après la confirmation, le portail d’entreprise tente de verrouiller votre appareil. Un message « Verrouillage à distance en attente » s’affiche pendant ce temps. Quand votre appareil est verrouillé, l’état affiché est « Verrouillage à distance réussi ».  
 
-   L’état Verrouillage à distance s’affiche à trois emplacements :
+L’état Verrouillage à distance s’affiche à trois emplacements :
 
    * La zone de notification du site web.
    * La page **Détails** de l’appareil.
-   * La vignette qui affiche le nom de l’appareil dans la section **Mes appareils** de la page.
+   * La vignette qui affiche le nom de l’appareil dans la section **Appareils** de la page.  
 
 > [!Note]
-> Si vous voyez une notification « Échec du verrouillage à distance », attendez quelques minutes et essayez à nouveau de verrouiller votre appareil. Dès le début de la nouvelle tentative, l’état passe à « Verrouillage à distance en attente ». Si la nouvelle tentative ne fonctionne pas, vous devez contacter le support de votre entreprise.
+> Si vous recevez une notification signalant que le verrouillage à distance a échoué, patientez quelques minutes, puis réessayez de verrouiller votre appareil. L’état passe à « Verrouillage à distance en attente ». Si la nouvelle tentative ne fonctionne pas, contactez le support technique de votre entreprise.
 
-Si vous retrouvez votre appareil et que vous souhaitez le déverrouiller après avoir utilisé le verrouillage à distance, il vous suffit d’entrer votre code secret.
+Si vous retrouvez votre appareil et que vous souhaitez le déverrouiller après avoir utilisé le verrouillage à distance, il vous suffit d’entrer votre code secret.  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://portal.manage.microsoft.com#HelpDeskDialog).
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -15,12 +15,12 @@ ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8b3e34e72775061dcc3b40f60e75243972cedd2
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1ae7723e29d23575314fc632c75af01eb9e59f72
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223592"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347658"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Ajouter des applications du Windows Phone 8.1 Store à Microsoft Intune
 
@@ -34,8 +34,8 @@ Vous pouvez ajouter une application du Windows Phone 8.1 Store à Intune à part
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**.  
     Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, sélectionnez **Applications mobiles**.
-4. Dans le volet de la charge de travail **Applications mobiles**, sous **Gérer**, sélectionnez **Applications**.
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
+4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**.
 5. Dans le volet **Applications**, sélectionnez **Ajouter**.
 6. Dans le volet **Ajouter une application**, sélectionnez **Windows Phone 8.1** comme **Type d’application**, puis sélectionnez **Informations sur l’application**.
 7. Renseignez le volet **Informations sur l’application**. Selon l’application choisie, certaines valeurs de ce volet peuvent avoir été renseignées automatiquement :

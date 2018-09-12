@@ -15,12 +15,12 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5d3cc718c0bfd0bba68480b4cd4003cd52489a50
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 5ed39a13c8866786ac044d77ca61d91becd5b89f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225036"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329562"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Utiliser les profils de provisionnement d’application iOS pour empêcher l’expiration de vos applications
 
@@ -43,9 +43,9 @@ En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécu
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Applications mobiles**.
-1.  Dans la charge de travail **Applications mobiles**, choisissez **Gérer** > **Profils de provisionnement d’application iOS**.
-2.  Dans le volet de la liste des profils, sélectionnez **Créer un profil**.
+3. Dans le volet **Intune**, choisissez **Applications clientes**.
+1.  Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Profils de provisionnement d’application iOS**.
+2.  Dans le volet de la liste des profils, choisissez **Créer un profil**.
 3. Dans le volet **Créer un profil**, configurez les valeurs suivantes :
     - **Nom** : nommez ce profil de configuration mobile.
     - **Description** : vous pouvez également fournir une description de la stratégie (facultatif).

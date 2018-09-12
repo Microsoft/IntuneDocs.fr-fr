@@ -14,12 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 287e644e50b1f6b41f404cfd2102a8efc0fbaad9
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 2a0c230e89944b4330582fe4c6933ca1fe717aec
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474562"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329988"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -79,7 +79,7 @@ Les rôles suivants sont intégrés dans Intune ; vous pouvez les affecter à de
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Rôles Intune**, puis **Tous les rôles**.
+3. Dans le volet **Intune**, choisissez **Rôles** > **Tous les rôles**.
 1. Dans **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous souhaitez affecter.
 
 2. Dans le volet <*nom_rôle*> - **Vue d’ensemble**, choisissez **Gérer**, puis **Affectations**.
@@ -114,17 +114,15 @@ Vous pouvez créer un rôle personnalisé qui inclut toutes les autorisations re
 
 2. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
 
-3. Choisissez **Intune**. Le tableau de bord d’Intune s’affiche : sélectionnez alors **Rôles Intune**.
+3. Choisissez **Intune** > **Rôles** > **Tous les rôles** > **Ajouter un élément personnalisé**.
 
-4. Dans le volet **Rôles Intune**, choisissez **Toues les rôles**, puis **Ajouter un rôle personnalisé**.
+4. Dans le volet **Ajouter un rôle personnalisé**, entrez le nom et la description du nouveau rôle, puis cliquez sur **Autorisations**.
 
-5. Dans le volet **Ajouter un rôle personnalisé**, entrez le nom et la description du nouveau rôle, puis cliquez sur **Autorisations**.
+5. Dans le volet **Autorisations**, choisissez les autorisations que vous souhaitez utiliser avec ce rôle. Utilisez le [Tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) comme référence pour déterminer quelles autorisations vous souhaitez appliquer.
 
-3. Dans le volet **Autorisations**, choisissez les autorisations que vous souhaitez utiliser avec ce rôle. Utilisez le [Tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) comme référence pour déterminer quelles autorisations vous souhaitez appliquer.
+6. Une fois que vous avez terminé, choisissez **Enregistrer**.
 
-4. Une fois que vous avez terminé, choisissez **Enregistrer**.
-
-5. Dans le volet **Ajouter un rôle personnalisé**, cliquez sur **Créer**. Le nouveau rôle s’affiche dans la liste dans le volet **Rôles Intune - Tous les rôles**.
+7. Dans le volet **Ajouter un rôle personnalisé**, cliquez sur **Créer**. Le nouveau rôle s’affiche dans la liste dans le volet **Rôles Intune - Tous les rôles**.
 
 ### <a name="to-assign-a-custom-role"></a>Pour affecter un rôle personnalisé
 

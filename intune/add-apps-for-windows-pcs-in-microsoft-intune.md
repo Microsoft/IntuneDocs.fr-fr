@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 041b31373e774c86373762a6365b913de9708b51
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: df8b6effea08bcb03022511158cde2d4da4ca2e6
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310502"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241910"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Ajouter des applications pour les PC Windows exécutant le logiciel client Intune
 
@@ -33,6 +33,8 @@ Cette rubrique montre comment ajouter des applications à Intune avant de les d�
 
 Les applications que vous installez sur des PC doivent prendre en charge l’installation sans assistance (sans aucune intervention de l’utilisateur). Dans le cas contraire, l’installation échoue.
 
+## <a name="additional-security-settings-for-windows-installer"></a>Paramètres de sécurité supplémentaires pour le programme d’installation de Windows
+Vous pouvez permettre aux utilisateurs de contrôler les installations d’applications. Si cette fonctionnalité est activée, les installations qui sinon pourraient être arrêtées en raison d’une violation de sécurité sont autorisées à poursuivre leur exécution. Vous pouvez indiquer au programme d’installation de Windows d’utiliser des autorisations élevées quand il installe un programme sur un système. Vous pouvez en outre autoriser l’indexation des éléments de la Protection des informations Windows et le stockage de leurs métadonnées dans un emplacement non chiffré. Quand la stratégie est désactivée, les éléments protégés par la Protection des informations Windows ne sont pas indexés et n’apparaissent pas dans les résultats de Cortana ou de l’Explorateur de fichiers. Les fonctionnalités de ces options sont désactivées par défaut. 
 
 ## <a name="add-the-app"></a>Ajouter l’application
 Vous utilisez l’Éditeur de logiciel Microsoft Intune pour configurer les propriétés de l’application et la charger vers votre espace de stockage cloud. Voici la procédure à suivre :
@@ -46,7 +48,7 @@ Vous utilisez l’Éditeur de logiciel Microsoft Intune pour configurer les prop
 
    - **Sélectionnez le type de fichier du programme d’installation du logiciel**. Indique le type de logiciel que vous souhaitez déployer. Pour un PC Windows, choisissez **Windows Installer**.
    - **Spécifier l’emplacement des fichiers d’installation du logiciel**. Entrez l’emplacement des fichiers d’installation ou choisissez **Parcourir** pour sélectionner l’emplacement dans la liste.
-   - **Inclure les autres fichiers et sous-dossiers du dossier**. Certains logiciels qui utilisent Windows Installer nécessitent des fichiers de prise en charge. Ils doivent se trouver dans le même dossier que le fichier d’installation. Sélectionnez cette option si vous souhaitez également déployer ces fichiers de prise en charge.
+   - **Inclure les autres fichiers et sous-dossiers du dossier**. Certains logiciels qui utilisent Windows Installer nécessitent des fichiers de prise en charge. Il doivent se trouver dans le même dossier que le fichier d’installation. Sélectionnez cette option si vous souhaitez également déployer ces fichiers de prise en charge.
 
    Par exemple, si vous souhaitez publier une application nommée Application.msi dans Intune, la page ressemble à ceci : ![Page d’installation du logiciel de l’éditeur](media/publisher-for-pc.png)
 

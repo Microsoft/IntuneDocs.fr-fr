@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
-ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
+ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587021"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313697"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Paramètres de restriction des appareils Android et Samsung Knox Standard - Intune
 
@@ -35,7 +35,7 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Copier et coller (Samsung Knox uniquement)** - Autorise les fonctions Copier et Coller sur l’appareil.
 - **Partage du Presse-papiers entre applications (Samsung Knox uniquement)** - Autorise l’utilisation du Presse-papiers pour copier-coller entre les applications.
 - **Envoi des données de diagnostic (Samsung Knox uniquement)** - Empêche l’utilisateur d’envoyer des données de diagnostic depuis l’appareil.
-- **Réinitialisation aux paramètres d’usine (Samsung Knox uniquement)** - Autorise l’utilisateur à rétablir les paramètres d’usine sur l’appareil.
+- **Réinitialiser (Samsung Knox uniquement)** : Autorise l’utilisateur à effectuer une [réinitialisation](devices-wipe.md) sur l’appareil.
 - **Géolocalisation (Samsung Knox uniquement)** - Permet à l’appareil d’utiliser les informations de localisation.
 - **Mise hors tension (Samsung Knox uniquement)** - Autorise l’utilisateur à mettre l’appareil hors tension.<br>Si vous désactivez cette option, vous ne pouvez pas définir le **Nombre d’échecs de connexion avant réinitialisation de l’appareil**.
 - **Capture d’écran (Samsung Knox uniquement)** - Autorise l’utilisateur à capturer le contenu de l’écran comme image.

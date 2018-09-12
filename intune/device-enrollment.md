@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7aabb010baa4a5e53ad5e4264edc43e3ca111c70
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1bd9cff2148857ab6b0ea6d6e3c940e1e731c44b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909199"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313159"
 ---
 # <a name="what-is-device-enrollment"></a>Qu’est-ce que l’inscription d’appareils ?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,7 +34,7 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 
 | **Méthode** |  **Réinitialisation requise** |    [**Affinité utilisateur**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) |   **Verrouillé** | **Détails** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Les appareils sont réinitialisés aux paramètres d’usine lors de l’inscription. |  Associe chaque appareil à un utilisateur.| Les utilisateurs ne peuvent pas désinscrire les appareils.  | |
+| | Les appareils sont réinitialisés lors de l’inscription. |  Associe chaque appareil à un utilisateur.| Les utilisateurs ne peuvent pas désinscrire les appareils.  | |
 |**[BYOD](#bring-your-own-device)** | Non|   Oui |   Non | [Plus d’informations](./apple-mdm-push-certificate-get.md)|
 |**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager)**| Non |Non |Non  | [Plus d’informations](./device-enrollment-program-enroll-ios.md)|
 |**[DEP](#apple-device-enrollment-program)**|   Oui |   Facultatif |  Facultatif|[Plus d’informations](./device-enrollment-program-enroll-ios.md)|
@@ -87,7 +87,7 @@ Pour en savoir plus sur l’inscription DEP iOS :
 ### <a name="usb-sa"></a>USB-SA
 Les administrateurs utilisent Apple Configurator, via un port USB, pour préparer manuellement chaque appareil d’entreprise à l’inscription à l’aide de l’Assistant Configuration. Ils créent un profil d’inscription et l’exportent vers Apple Configurator. Lorsque les utilisateurs reçoivent leurs appareils, ils sont invités à exécuter l’Assistant Configuration pour inscrire leurs appareils. Cette méthode prend en charge le mode **iOS supervisé**, qui active les fonctionnalités suivantes :
   - Inscription verrouillée
-  - Mode kiosque et autres configurations et restrictions avancées
+  - Mode plein écran et autres configurations et restrictions avancées
 
 Découvrez l’inscription d’Apple Configurator iOS avec l’Assistant Configuration :
 
@@ -95,7 +95,7 @@ Découvrez l’inscription d’Apple Configurator iOS avec l’Assistant Configu
 - [Inscrire des appareils iOS avec Configurator et l’Assistant Configuration](apple-configurator-setup-assistant-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB-Direct
-Pour les inscriptions directes, l’administrateur doit inscrire manuellement chaque appareil en créant une stratégie d’inscription et en l’exportant vers Apple Configurator. Les appareils d’entreprise connectés par USB sont inscrits directement et aucune réinitialisation aux paramètres d’usine n’est nécessaire. Les appareils sont gérés comme des appareils sans utilisateur. Ils ne sont pas verrouillés ni supervisés et ne peuvent pas prendre en charge l’accès conditionnel, la détection de jailbreak ou la gestion des applications mobiles.
+Pour les inscriptions directes, l’administrateur doit inscrire manuellement chaque appareil en créant une stratégie d’inscription et en l’exportant vers Apple Configurator. Les appareils d’entreprise connectés via USB sont inscrits directement et ne nécessitent pas de réinitialisation. Les appareils sont gérés comme des appareils sans utilisateur. Ils ne sont pas verrouillés ni supervisés et ne peuvent pas prendre en charge l’accès conditionnel, la détection de jailbreak ou la gestion des applications mobiles.
 
 Pour en savoir plus sur l’inscription d’appareils iOS, consultez :
 
