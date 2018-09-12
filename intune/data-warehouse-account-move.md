@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 7b13cfdcaa29edfc780126f3d1d76f5a9e46360f
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b34bb7c3f3db9ebb3cdd89b429aaeb530d7ad796
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330294"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141625"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Déplacer les données de votre compte Intune Data Warehouse 
 
@@ -63,8 +63,6 @@ Certains graphiques de tendances dans votre affichage du portail Azure vont êtr
 ## <a name="device-enrollment-charts"></a>Graphiques d’inscription des appareils
 1. Dans le portail Azure, accédez à **Microsoft Intune** -> **Inscription de l’appareil**.
 2. À l’aide de l’[Afficheur Graph](https://developer.microsoft.com/graph/graph-explorer) Microsoft, téléchargez les données des graphiques.
-    - Pour connaître l’état de l’inscription, consultez 
-    - Pour connaître le top des échecs d’inscription de cette semaine, 
     - Pour connaître l’état de l’inscription, copiez cette [requête d’état d’inscription](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content), puis collez-la dans l’[Afficheur Graph](https://developer.microsoft.com/graph/graph-explorer).
     - Pour connaître le top des échecs d’inscription de cette semaine, copiez cette [requête d’échecs d’inscription](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content), puis collez-la dans l’[Afficheur Graph](https://developer.microsoft.com/graph/graph-explorer).
 
