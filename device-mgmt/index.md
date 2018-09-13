@@ -1,0 +1,1 @@
+# <a name="welcome-to-device-mgmt"></a>Bienvenue dans la gestion des appareils !
