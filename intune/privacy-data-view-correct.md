@@ -14,12 +14,12 @@ ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9bead87f80cf8d1f102f396bdd6c9573786c1b9e
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: b9efb60d169ba6f88b4765d3fc651f3a0596b230
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474630"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028577"
 ---
 # <a name="view-and-correct-personal-data"></a>Afficher et corriger des données personnelles
 
@@ -33,7 +33,7 @@ Les administrateurs Intune peuvent visualiser certaines données personnelles en
 Les administrateurs peuvent voir des informations personnelles de l’utilisateur final dans différents panneaux de l’interface utilisateur d’Intune. Les articles suivants expliquent à quelles informations les administrateurs ont accès ou non :
 - Consultez [Détails de l’appareil](device-inventory.md) dans Intune, qui explique comment vous pouvez consulter des informations détaillées sur l’appareil d’un utilisateur final.
 - [Surveiller les informations sur les applications et les affectations](apps-monitor.md) explique comment visualiser des informations détaillées sur les applications installées sur l’appareil d’un utilisateur final.
-- L’article [Quelles informations mon entreprise peut-elle voir quand j’inscris mon appareil ?](https://docs.microsoft.com/en-us/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) donne aux utilisateurs finaux une liste des données que leur entreprise peut voir ou pas. Il est préférable d’indiquer clairement à vos utilisateurs quel type de données vous collectez et pourquoi. Cet article peut être la première étape de cette démarche de transparence.
+- L’article [Quelles informations mon entreprise peut-elle voir quand j’inscris mon appareil ?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) donne aux utilisateurs finaux une liste des données que leur entreprise peut voir ou pas. Il est préférable d’indiquer clairement à vos utilisateurs quel type de données vous collectez et pourquoi. Cet article peut être la première étape de cette démarche de transparence.
 
 ### <a name="who-can-view-the-data"></a>Qui peut voir les données ?
 

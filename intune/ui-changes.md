@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 140b19ac64003f9ddf481a33e0cf4d423e106ffd
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905374"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028628"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Où se trouve ma fonctionnalité Intune dans Azure ?
 Lors du transfert d’Intune vers le portail Azure, nous en avons profité pour organiser certaines tâches de manière plus logique. Toutefois, ces améliorations nécessitent de se familiariser avec la nouvelle organisation. Ce guide de référence est destiné à ceux d’entre vous qui connaissent parfaitement Intune dans le portail classique et qui se demandent comment effectuer certaines tâches spécifiques dans Intune dans le portail Azure. Si cet article ne couvre pas l’une des fonctionnalités que vous recherchez, laissez-nous un commentaire à la fin de l’article pour que nous puissions le mettre à jour.
@@ -70,12 +70,12 @@ Les nouvelles fonctionnalités de restriction sont ajoutées uniquement au porta
 ## <a name="where-did-my-conditional-access-policies-go"></a>Où se trouvent mes stratégies d’accès conditionnel ?
 Une fois que votre locataire migre vers le portail Azure, ses stratégies d’accès conditionnel continuent d’être appliquées. Toutefois, vous ne pouvez pas les afficher ou les modifier à partir d’Intune dans le portail Azure.
 
-Si vous voulez afficher des stratégies d’accès conditionnel et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour plus d’informations sur la migration de stratégies d’accès conditionnel, consultez [Migrer des stratégies classiques dans le portail Azure](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+Si vous voulez afficher des stratégies d’accès conditionnel et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour plus d’informations sur la migration de stratégies d’accès conditionnel, consultez [Migrer des stratégies classiques dans le portail Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Où se trouvent mes stratégies de conformité ?
 Une fois que votre locataire migre vers le portail Azure, ses stratégies de conformité continuent d’être appliquées. Toutefois, vous ne pouvez pas les afficher ou les modifier à partir d’Intune dans le portail Azure.
 
-Si vous voulez afficher des stratégies de conformité et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
+Si vous voulez afficher des stratégies de conformité et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](https://docs.microsoft.com/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Où est passé le programme Apple DEP ?
 Dans le portail classique, vous pouviez configurer Intune pour l’intégrer au programme DEP (Programme d’inscription des appareils) d’Apple et demander manuellement la synchronisation avec le service d’Apple :
