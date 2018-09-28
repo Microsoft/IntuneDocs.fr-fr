@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce785ad7898f9e792feeadcd1623bd0989f0d6d0
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: 8e0d8d6aba74a37d1c07fa8445aa98adf5943be2
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255563"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141607"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils avec un compte de gestionnaire d’inscription d’appareil
 
@@ -53,7 +53,7 @@ Les appareils inscrits avec un compte de gestionnaire d’inscription d’appare
   - L’utilisateur du gestionnaire d’inscription d’appareil ne peut pas annuler l’inscription des appareils inscrits auprès du gestionnaire d’inscription d’appareil sur l’appareil lui-même à l’aide du portail d’entreprise. L’administrateur Intune peut annuler l’inscription.
   - Seul l’appareil local s’affiche dans l’application Portail d’entreprise ou le site web.
   - Les utilisateurs ne peuvent pas utiliser les applications du programme d’achat en volume (VPP) Apple avec des licences utilisateur en raison des critères des identifiants Apple par utilisateur pour la gestion des applications.
-  - (iOS uniquement) Si vous utilisez le gestionnaire d’inscription d’appareil pour inscrire des appareils iOS, vous ne pouvez pas utiliser Apple Configurator, Apple School Manager (ASM) ou le programme d’inscription des appareils Apple pour inscrire des appareils.
+  - (iOS uniquement) Si vous utilisez le gestionnaire d’inscription d’appareil pour inscrire des appareils iOS, vous ne pouvez pas utiliser Apple Configurator, Apple School Manager (ASM) ou le programme d’inscription des appareils Apple pour inscrire des appareils. Cela signifie que vous ne pouvez pas mettre l’appareil en mode supervisé et que vous n’aurez donc pas accès à certaines options de configuration.
   - (Android uniquement) Le nombre d’appareils avec profil professionnel Android est limité à 10 appareils inscrits par compte DEM. Cette limitation ne s’applique pas à l’inscription Android héritée.
   - Les appareils peuvent installer des applications VPP s’ils ont des licences d’appareil.
   - Vous n’avez pas besoin d’une licence appareil Intune pour pouvoir utiliser DEM. Apprenez-en davantage sur les [licences utilisateur et d’appareil](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
