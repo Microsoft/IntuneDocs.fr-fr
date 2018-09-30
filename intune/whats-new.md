@@ -7,20 +7,20 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/29/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
-/ms.custom: intune-azure
-ms.openlocfilehash: 0205715a8e35d009401886af4bd0bf88fb9cf662
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.custom: intune-azure; get-started
+ms.openlocfilehash: e3049fe461553ad1ba2e714d2274e0d39d169852
+ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347285"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44254086"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -90,7 +90,8 @@ Vous pouvez désormais activer le mode FIPS (Federal Information Processing Stan
 #### <a name="control-s-mode-on-windows-10-and-later-devices---public-preview----1958649---"></a>Contrôler le mode S sur des appareils Windows 10 et ultérieur- préversion publique <!-- 1958649 -->
 Avec la mise à jour de cette fonctionnalité, vous pouvez créer un profil de configuration d’appareil qui sort un appareil Windows 10 du mode S ou empêcher les utilisateurs de sortir l’appareil du mode S. Cette fonctionnalité se trouve dans Intune > **Configuration de l’appareil** > **Profils** >  **Windows 10 et ultérieur** > **Mise à niveau d’édition et changement de mode**.
 [Présentation de Windows 10 en mode S](https://www.microsoft.com/windows/s-mode) propose d’autres informations sur le mode S.
-S’applique à : Windows 10 et ultérieur (1809 et ultérieur)
+S’applique : au build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) le plus récent (dans la préversion).
+
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Ajout automatique du package de configuration de Windows Defender ATP au profil de configuration <!-- 2144658 -->
 Lors de l’utilisation [d’ATP (Advanced Threat Protection) et de l’intégration d’appareils](advanced-threat-protection.md#onboard-devices-using-a-configuration-profile) dans Intune, vous deviez auparavant télécharger un package de configuration et l’ajouter à votre profil de configuration. Avec cette mise à jour, Intune reçoit automatiquement le package du Centre de sécurité Windows Defender et l’ajoute à votre profil.
@@ -98,6 +99,8 @@ S’applique à Windows 10 et versions ultérieures.
 
 #### <a name="require-users-to-connect-during-device-setup---2311457--"></a>Exiger que les utilisateurs se connectent pendant la configuration de l’appareil <!--2311457-->
 Vous pouvez maintenant définir des profils d’appareil de façon à exiger que l’appareil se connecte à un réseau avant de continuer au-delà de la page Réseau lors de la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
+S’applique : au build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) le plus récent (dans la préversion).
+
 
 #### <a name="restricts-apps-and-block-access-to-company-resources-on-ios-and-android-enterprise-devices----2451462---"></a>Restreindre des applications et bloquer l’accès aux ressources d’entreprise sur les appareils iOS et Android Entreprise<!-- 2451462 -->
 Dans **Conformité de l’appareil** > **Stratégies** > **Créer une stratégie** > **iOS** > **Sécurité système**, il existe un nouveau paramètre, **Applications restreintes**. Ce nouveau paramètre utilise une stratégie de conformité pour bloquer l’accès aux ressources d’entreprise si certaines applications sont installées sur l’appareil. L’appareil est considéré comme non conforme jusqu’à ce que les applications restreintes soient supprimées de l’appareil.
@@ -129,19 +132,24 @@ Vous avez désormais la possibilité d’exécuter le portail d’entreprise en 
 
 #### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Affecter un utilisateur et un nom convivial à un appareil Autopilot <!--1346521 -->
 Vous pouvez désormais [affecter un utilisateur à un appareil Autopilot spécifique](enrollment-autopilot.md). Les administrateurs pourront également donner des noms conviviaux pour accueillir l’utilisateur lors de la configuration de leur appareil avec Autopilot.
-S’applique à : Windows Insider 1809 ou ultérieur (dans la préversion).
+S’applique : au build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) le plus récent (dans la préversion).
 
 #### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Utilisation de licences d’appareil VPP pour préprovisionner le portail d’entreprise lors d’une inscription DEP <!-- 1608345 -->
 Vous pouvez maintenant utiliser des licences d’appareil du programme d’achat en volume (VPP, Volume Purchase Program) pour préprovisionner le portail d’entreprise pendant les inscriptions au Programme d’inscription des appareils (DEP, Device Enrollment Program). Pour ce faire, quand vous [créez ou modifiez un profil d’inscription](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile), spécifiez le jeton VPP que vous souhaitez utiliser pour installer le portail d’entreprise. Assurez-vous que votre jeton n’expire pas et que vous avez suffisamment de licences pour l’application Portail d’entreprise. Si le jeton arrive à expiration ou s’il manque des licences, Intune pousse le Portail d’entreprise de l’App Store à la place (un identifiant Apple vous sera demandé).
 
+### <a name="confirmation-required-to-delete-vpp-token-that-is-being-used-for-company-portal-pre-provisioning----2237634---"></a>Confirmation obligatoire pour supprimer un jeton VPP utilisé pour le préprovisionnement du portail d'entreprise <!-- 2237634 -->
+Une confirmation est maintenant obligatoire pour supprimer un jeton VPP (Volume Purchase Program) si celui-ci est utilisé pour approvisionner préalablement le portail d’entreprise lors d’une inscription DEP.
+
 #### <a name="block-windows-personal-device-enrollments----1849498---"></a>Bloquer les inscriptions d’appareils personnels Windows <!-- 1849498 -->
-Vous pouvez [bloquer l’inscription des appareils personnels Windows](enrollment-restrictions-set.md#set-device-type-restrictions) avec la [gestion des appareils mobiles](windows-enroll.md) dans Intune. Les appareils inscrits avec [l’agent de PC Intune](manage-windows-pcs-with-microsoft-intune.md) ne peuvent pas être bloqués avec cette fonctionnalité.
+Vous pouvez [bloquer l’inscription des appareils personnels Windows](enrollment-restrictions-set.md#set-device-type-restrictions) avec la [gestion des appareils mobiles](windows-enroll.md) dans Intune. Les appareils inscrits avec [l’agent de PC Intune](manage-windows-pcs-with-microsoft-intune.md) ne peuvent pas être bloqués avec cette fonctionnalité. Cette fonctionnalité sera déployée dans les prochaines semaines et il est possible que vous ne la voyiez pas immédiatement dans l’interface utilisateur.
 
 #### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Spécifier des modèles de nom d’ordinateur dans un profil Autopilot <!--1849855-->
-Vous pouvez [spécifier un modèle de nom d’ordinateur](enrollment-autopilot.md#create-an-autopilot-deployment-profile) pour générer et définir le [nom de l’ordinateur](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) lors de l’inscription Autopilot.
+Vous pouvez [spécifier un modèle de nom d’ordinateur](enrollment-autopilot.md#create-an-autopilot-deployment-profile) pour générer et définir le [nom de l’ordinateur](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) lors de l’inscription Autopilot. S’applique : au build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) le plus récent (dans la préversion).
+
 
 #### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>Pour les profils Windows Autopilot, masquer les options de changement de compte dans la page de connexion de l’entreprise et la page d’erreur de domaine <!--1901669 -->
-De [nouvelles options de profil Windows Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile) permettent aux administrateurs de masquer les options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Pour masquer ces options, il est nécessaire de configurer la marque de société dans Azure Active Directory. S’applique à : Windows Insider 1809 ou version ultérieure (dans la préversion).
+De [nouvelles options de profil Windows Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile) permettent aux administrateurs de masquer les options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Pour masquer ces options, il est nécessaire de configurer la marque de société dans Azure Active Directory. S’applique : au build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) le plus récent (dans la préversion).
+
 
 #### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Utilisation de licences d’appareil VPP pour préprovisionner le portail d’entreprise lors d’une inscription DEP <!-- 1608345 -->
 Vous pouvez maintenant utiliser des licences d’appareil du programme d’achat en volume (VPP, Volume Purchase Program) pour préprovisionner le portail d’entreprise pendant les inscriptions au Programme d’inscription des appareils (DEP, Device Enrollment Program). Pour ce faire, quand vous [créez ou modifiez un profil d’inscription](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile), spécifiez le jeton VPP que vous souhaitez utiliser pour installer le portail d’entreprise. Assurez-vous que votre jeton n’expire pas et que vous avez suffisamment de licences pour l’application Portail d’entreprise. Si le jeton arrive à expiration ou s’il manque des licences, Intune pousse le Portail d’entreprise de l’App Store à la place (un identifiant Apple vous sera demandé).
@@ -182,8 +190,8 @@ Les états du paramètre de détection de jailbreak améliorée apparaissent dé
 
 ### <a name="role-based-access-control"></a>Contrôle d'accès en fonction du rôle
 
-#### <a name="scope-tags-for-policies---1081974-eeready--"></a>Étiquettes de délimitation pour les stratégies <!--1081974 eeready-->
-Vous pouvez [créer des étiquettes de délimitation](scope-tags.md) pour limiter l’accès aux ressources Intune. Ajoutez une étiquette de délimitation à une attribution de rôle, puis l’étiquette de délimitation à un profil de configuration. Le rôle a uniquement accès aux ressources avec des profils de configuration qui ont des étiquettes de délimitation correspondantes (ou aucune étiquette de délimitation).
+#### <a name="scope-tags-for-policies---1081974-eeready--"></a>Balises d’étendue pour les stratégies <!--1081974 eeready-->
+Vous pouvez [créer des étiquettes de délimitation](scope-tags.md) pour limiter l’accès aux ressources Intune. Ajoutez une balise d’étendue à une attribution de rôle, puis la balise d’étendue à un profil de configuration. Le rôle a uniquement accès aux ressources avec des profils de configuration qui ont des balises d’étendue correspondantes (ou aucune balise d’étendue).
 
 ## <a name="week-of-august-14-2018"></a>Semaine du 14 août 2018
 
@@ -197,8 +205,8 @@ Intune prend maintenant en charge l’inscription d’appareils macOS dans le Pr
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Prise en charge des applications métier pour macOS <!-- 1895847 -->
 Microsoft Intune permet aux applications métier macOS d’être déployées en mode **Obligatoire** ou **Disponible avec inscription**. Pour les utilisateurs finaux, les applications peuvent être déployées en mode **Disponible** à l’aide du Portail d’entreprise pour macOS ou du [site web Portail d’entreprise](https://portal.manage.microsoft.com).
 
-#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode kiosque <!-- 2051098 -->
-En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode kiosque sur un appareil iOS.
+#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode plein écran <!-- 2051098 -->
+En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode plein écran sur un appareil iOS.
 
 #### <a name="edit-your-office-365-pro-plus-app-deployments----2150145---"></a>Modifier vos déploiements d’applications Office 365 Pro Plus <!-- 2150145 -->
 En tant qu’administrateur Microsoft Intune, vous avez une plus grande capacité de modification de vos déploiements d’applications Office 365 Pro Plus. En outre, vous n’avez plus à supprimer vos déploiements pour modifier des propriétés de la suite. Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications**. Dans la liste des applications, sélectionnez votre suite Office 365 Pro Plus.  
@@ -1273,6 +1281,25 @@ Vous pouvez spécifier les applications refusées dans Intune. Si une applicatio
 
 
 ## <a name="notices"></a>Remarques
+
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Modification planifiée : nouvelle expérience de support Intune pour les clients Premier 
+En tant que client Microsoft Premier, vous pouvez actuellement utiliser le portail en ligne Microsoft Premier (MPO) (premier.microsoft.com) et Intune sur Azure (portal.azure.com) pour créer des requêtes de support pour Intune. À compter du 3 décembre 2018, pour continuer à améliorer l’expérience de support Premier, vous ne pourrez créer des demandes de support que dans Intune sur Azure.
+
+#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
+Après le 3 décembre, vous ne pourrez plus créer de demandes de support dans MPO.  Si vous essayez de le faire, vous verrez une invite, que vous ne pourrez pas faire disparaître, indiquant une redirection vers Intune sur Azure. Ici, vous pouvez créer une demande de support qui sera acheminée vers le Support Microsoft dédié à Intune, pour diagnostiquer et résoudre votre problème en temps voulu. Comme les demandes de support créées dans le portail MPO ne peuvent pas être affichées dans le portail Azure, vous devez arrêter de créer des demandes de support dans MPO.  
+
+Si vous utilisez la gestion hybride des appareils mobiles (GPM hybride) ou utilisez la cogestion, vous pouvez continuer à utiliser MPO pour créer des demandes de support pour ConfigMgr, mais utiliser le portail Azure pour créer des demandes de support pour Intune. Nous vous rappelons que la GPM hybride est déconseillée et que vous devez prévoir de passer à Intune sur Azure dès que possible. Pour plus d’informations, consultez Passer de la gestion hybride des appareils mobiles à Intune sur Azure.
+
+Notez que seuls les utilisateurs avec des rôles d’administrateur général, d’administrateur de service Intune et d’administrateur de support de service peuvent créer des tickets de support dans le portail Azure.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que puis-je faire pour me préparer à cette modification ?
+- Cessez d’utiliser MPO et utilisez Intune sur Azure pour créer et gérer toutes vos demandes de support Intune.  
+- Informez votre support technique et mettez la documentation à jour si nécessaire.
+- Si vous avez des utilisateurs sans rôles d’administrateur général ou d’administrateur de services qui créent actuellement des demandes de support dans MPO, attribuez-leur le rôle d’administrateur de support de service dans Azure Active Directory afin qu’ils puissent continuer à créer des tickets de support dans le portail Azure.
+- Cliquez sur Informations supplémentaires pour afficher des informations supplémentaires et des liens utiles.
+
+#### <a name="additional-information"></a>Informations supplémentaires
+[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
 
 ### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Prenez des mesures : mettez à jour les paramètres de mot de passe de stratégie de conformité ou de restriction de votre appareil Android dans Intune
 Intune va supprimer le type de mot de passe disponible « Paramètres par défaut de l’appareil » pour les appareils Android 4.4 et ultérieurs. En raison des différences qui existent entre les plateformes Android et les paramètres par défaut des appareils, cette stratégie est souvent considérée comme facultative par l’appareil. Pour dissiper toute confusion quant au moment où ce paramètre est appliqué sur Android, nous allons le supprimer de l’interface utilisateur dans une prochaine version. 
