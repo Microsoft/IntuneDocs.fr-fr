@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5866314c03eff5613b4c0cc5d46d2f2eace29a13
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150199"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828021"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work  
 
@@ -42,7 +42,9 @@ Récupérez l’accès aux ressources de votre entreprise quand l’application 
     ![Capture d’écran d’un message d’erreur Lookout for Work, avec un lien vers le site web du portail d’entreprise et un bouton bleu OK.](./media/mtd-go-to-device-management-portal-android.png)  
 
 2. Sélectionnez votre appareil.  
-3. Lisez l’avertissement affiché au-dessous de votre appareil. Il vous invite à ouvrir Lookout for Work pour résoudre la menace de virus ou de sécurité.   
+3. Lisez l’avertissement affiché au-dessous de votre appareil. Il vous invite à ouvrir Lookout for Work pour résoudre la menace de virus ou de sécurité.     
+
+    ![Capture d’écran de la page d’appareil du portail d’entreprise montrant l’avertissement Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
 ## <a name="troubleshoot-an-app-threat"></a>Résoudre une menace liée à une application   
 Si vous installez une application que Lookout for Work identifie comme une menace, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous.  
@@ -50,5 +52,5 @@ Si vous installez une application que Lookout for Work identifie comme une menac
 ![Capture d’écran montrant une liste des menaces d’application actives et résolues détectées par Lookout for Work.](./media/ios-lfw-threat-example.png)    
 Sélectionnez le nom de l’application affiché en haut de votre écran. Suivez ensuite les instructions pour supprimer et désinstaller l’application. Tant que l’application se trouve sur votre appareil, vous ne pourrez pas accéder aux ressources de l’entreprise.    
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Vous trouverez ses coordonnées sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).    
 

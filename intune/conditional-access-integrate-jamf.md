@@ -3,8 +3,8 @@ title: Intégrer Jamf Pro à Microsoft Intune pour des raisons de conformité
 titlesuffix: ''
 description: Utilisez des stratégies de conformité Microsoft Intune avec l’accès conditionnel Azure Active Directory pour permettre de sécuriser les appareils gérés par Jamf.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/04/2018
 ms.topic: article
@@ -15,12 +15,12 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cdeb3a21af2b4cf020d3e5029eeb5b0bc31db062
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 516e2f935225b7142c75b01967977fe97297c8e2
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232174"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Intégrer Jamf Pro à Intune pour des raisons de conformité
 
@@ -76,14 +76,14 @@ Vous pouvez connecter Intune à Jamf Pro en :
 
 1. Dans le portail Microsoft Azure, ouvrez **Microsoft Intune** > **Conformité de l’appareil** > **Gestions des appareils de partenaire**.
 2. Activez le connecteur de conformité de Jamf en collant l’ID d’application dans le champ **ID d’application Jamf Azure Active Directory**.
-3. Cliquez sur **Enregistrer**.
+3. Cliquez sur **Save**.
 
 ## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Configurer l’intégration de Microsoft Intune dans Jamf Pro
 
 1. Dans Jamf Pro, accédez à **Gestion globale** > **Accès conditionnel**. Cliquez sur le bouton **Modifier** sous l’onglet **Intégration de Microsoft Intune**.
 2. Cochez la case **Activer l’intégration de Microsoft Intune**.
 3. Saisissez les informations requises sur votre client Azure, notamment **Emplacement**, **Nom de domaine**, **ID d’application** et **Clé d’application** (tous deux enregistrés lors des étapes précédentes).
-4. Cliquez sur **Enregistrer**. Jamf Pro testera vos paramètres et vérifiera que tout fonctionne.
+4. Cliquez sur **Save**. Jamf Pro testera vos paramètres et vérifiera que tout fonctionne.
 
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Configurer des stratégies de conformité et inscrire des appareils
 
@@ -95,7 +95,7 @@ Jamf Pro capture des données d’inventaire sur les appareils macOS gérés. Ja
 
 * ID d’appareil Azure AD
 * État de l’inventaire Jamf (état de l’inventaire d’un ordinateur enregistré auprès de Jamf Pro au cours des dernières 24 heures)
-* Version du système d'exploitation
+* Version de système d'exploitation
 * ID d’utilisateur Azure AD
 * Chiffré (FileVault 2)
 * État de l’opérateur de contrôle d’appels

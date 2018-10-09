@@ -3,8 +3,8 @@ title: Configurer l’intégration de Lookout à Microsoft Intune
 titlesuffix: ''
 description: Découvrez-en plus sur l’intégration d’Intune avec Lookout Mobile Threat Defense (MTD) pour contrôler l’accès des appareils mobiles aux ressources de votre entreprise.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,12 +15,12 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b34bde9ef7817310c25b9a699fa4e18d3151d944
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: fe8a55153ccc2b28c23ec2f32a4285d20afaaf6a
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232175"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Configurer l’intégration de Lookout Mobile Threat Defense avec Intune
 
@@ -88,12 +88,12 @@ Consultez les étapes suivantes pour savoir comment collecter les informations d
     > [!NOTE] 
     > Tous les appareils pris en charge par Lookout, inscrits auprès d’Intune au sein d’un groupe d’inscription dans Azure AD, et qui sont identifiés et pris en charge, sont inscrits et activables dans la console MTD Lookout.
 
-2. Dans la [console Lookout](https://aad.lookout.com), dans le module **Système**, choisissez l'onglet **Connecteurs**, puis sélectionnez **Gestion de l’inscription** pour définir un ensemble d’utilisateurs dont les appareils doivent être inscrits auprès de Lookout. Ajoutez le groupe de sécurité Azure AD **Nom d'affichage** pour l’inscription.
+2. Dans la [console Lookout](https://aad.lookout.com), à partir du module **Système**, choisissez l’onglet **Connecteurs**, puis sélectionnez **Enrollment Management** (Gestion de l’inscription) pour définir un ensemble d’utilisateurs dont les appareils doivent être inscrits auprès de Lookout. Ajoutez le groupe de sécurité Azure AD **Nom d'affichage** pour l’inscription.
 
     ![capture d’écran de la page d’inscription dans le connecteur Intune](./media/lookout-mtp-enrollment.png)
 
     >[!IMPORTANT]
-    > Le **Nom d’affichage** respecte la casse comme indiqué dans les **Propriétés** du groupe de sécurité sur le portail Azure. Comme indiqué dans l’image ci-dessous, le **Nom d'affichage** du groupe de sécurité utilise une casse mixte tandis que le titre est entièrement en minuscules. Dans la console Lookout, respectez a casse de **Nom d'affichage** pour le groupe de sécurité.
+    > Le **Nom d’affichage** respecte la casse comme indiqué dans les **Propriétés** du groupe de sécurité sur le portail Azure. Comme le montre l’image ci-dessous, le **nom complet** du groupe de sécurité a une casse mixte, et le titre est entièrement en minuscules. Dans la console Lookout, respectez a casse de **Nom d'affichage** pour le groupe de sécurité.
     >![capture d’écran de la page des propriétés du service Azure Active Directory dans le portail Azure](./media/aad-group-display-name.png)
 
     >[!NOTE] 
