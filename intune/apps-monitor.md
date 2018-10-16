@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/16/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a1cf7fbdee6e6dc0cb280c8f9473c48608485737
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 09e4cfc314ea21294cd3de62611a089ec724a683
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329902"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075625"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -80,7 +80,7 @@ Une listes des états de l’appareil s’affiche quand vous sélectionnez **Ét
 | **Version**          | Numéro de version de l’application. Pour les applications métier, le numéro de version complet de l’application s’affiche. Le numéro de version complet identifie une version spécifique de l’application. Le numéro apparaît sous la forme _Version_(_Build_). Par exemple, 2.2(2.2.17560800). |
 | **Statut**           | État de l’application.                                                                                                                                                                                                                                     |
 | **Détails de l’état**   | Détails de l’état.                                                                                                                                                                                                                                     |
-| **Dernier enregistrement**    | Date de la dernière synchronisation de l’appareil avec Intune.                                                                                                                                                                                                                  |
+| **Dernier archivage**    | Date de la dernière synchronisation de l’appareil avec Intune.                                                                                                                                                                                                                  |
 
 
 ### <a name="user-install-status"></a>État de l’installation de l’utilisateur
