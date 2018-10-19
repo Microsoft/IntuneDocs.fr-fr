@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7cf005b225dd11ca6b95dbed0a82330544575f92
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 87c3313fd7b5fc0705460e539164ac70779bebeb
+ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347472"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46505765"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Configurer un VPN par application dans Intune pour les appareils iOS
 
@@ -162,16 +162,16 @@ Après avoir ajouté votre profil VPN, associez l’application et le groupe Azu
 
     ![Associer une application au VPN](./media/vpn-per-app-app-to-vpn.png)
 
-Une association entre une application et un profil sera supprimée au prochain enregistrement de l’appareil si les conditions suivantes sont réunies :
+Une association entre une application et un profil sera supprimée au prochain archivage de l’appareil si les conditions suivantes sont réunies :
 - L’application a été ciblée avec l’intention « installation requise ».
 - Le profil et l’application sont ciblés vers le même groupe.
 - Vous supprimez la configuration du VPN par application de l’affectation d'applications.
 
-Une association entre une application et un profil sera conservée jusqu'à ce que l’utilisateur final demande une réinstallation à partir du portail d’entreprise si les conditions suivantes sont réunies :
+Une association entre une application et un profil est conservée jusqu’à ce que l’utilisateur final demande une réinstallation du Portail d’entreprise, quand les conditions suivantes sont réunies :
 - L’application a été ciblée avec l’intention « installation disponible ».
 - Le profil et l’application sont ciblés vers le même groupe.
 - L’utilisateur final a demandé l’installation de l’application sur le portail d’entreprise ; l’application et le profil sont donc installés sur l’appareil.
-- Vous supprimez la configuration du VPN par application de l’affectation d'applications.
+- Vous supprimez ou changez la configuration VPN par application dans l’affectation d’applications.
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Vérifier la connexion sur l’appareil iOS
 

@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 010ed8511b042d6f764ba947f616d76521588f42
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: bdc7f4f8f796d04f5c709298cd654bc2cdc32d0e
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864606"
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Configurer Microsoft Intune pour l’authentification unique des appareils iOS
 
@@ -84,7 +84,7 @@ Par exemple, quand un utilisateur se connecte à l’un de ces sites, l’appare
 > [!NOTE]
 > Ces URL doivent être spécifiées sous la forme de noms de domaine complets correctement mis en forme. Apple exige qu’elles soient spécifiées au format `http://<yourURL.domain>`.
 
-Les modèles de correspondance d’URL doivent commencer par `http://` ou `https://`. Une correspondance de chaîne simple est effectuée. Par conséquent, le préfixe d’URL `http://www.contoso.com/` ne correspond pas à `http://www.contoso.com:80/`. Avec iOS 9.0 ou ultérieur, en revanche, vous pouvez utiliser un caractère générique (\*) pour spécifier toutes les valeurs correspondantes. Par exemple, `http://*.contoso.com/` correspond à la fois à `http://store.contoso.com/` et à `http://www.contoso.com`.
+Les modèles de correspondance d’URL doivent commencer par `http://` ou `https://`. Une correspondance de chaîne simple est effectuée. Par conséquent, le préfixe d’URL `http://www.contoso.com/` ne correspond pas à `http://www.contoso.com:80/`. Toutefois, avec iOS 10.0 ou version ultérieure, vous pouvez utiliser un seul caractère générique (\*) pour spécifier toutes les valeurs correspondantes. Par exemple, `http://*.contoso.com/` correspond à la fois à `http://store.contoso.com/` et à `http://www.contoso.com`.
 Les modèles `http://.com` et `https://.com` correspondent respectivement à toutes les URL HTTP et HTTPS.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Applications qui utiliseront l’authentification unique

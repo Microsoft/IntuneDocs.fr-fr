@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,19 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c8c87b5a76a69809e46fe3f4c5d74019546a819d
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 95c9e2282336e565ddd5bd3cc4484776aa45a6eb
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330226"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828395"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Assigner des applications Office 365 à des appareils Windows 10 à l’aide de Microsoft Intune
 
 Ce type d’application vous permet d’assigner facilement des applications Office 365 à des appareils que vous gérez exécutant Windows 10. Vous pouvez également installer des applications pour le client de bureau Microsoft Project Online et Microsoft Visio Pro pour Office 365 si vous disposez des licences appropriées. Les applications souhaitées sont affichées sous la forme d’une entrée unique dans la liste des applications de la console Intune.
 
+> [!NOTE]
+> Vous devez utiliser des licences Office 365 ProPlus pour activer les applications Office 365 ProPlus déployées par le biais Microsoft Intune. Office 365 Édition Business n’est pas pris en charge par Intune.
 
 ## <a name="before-you-start"></a>Avant de commencer
 
@@ -104,7 +106,8 @@ Dans cette étape, configurez les options d’installation de la suite d’appli
     - **Supprimer MSI des appareils des utilisateurs finaux** : choisissez si vous voulez supprimer les applications .MSI Office préexistantes des appareils des utilisateurs finaux. L’installation échoue si des applications .MSI préexistantes sont présentes sur les appareils des utilisateurs finaux. Les applications à désinstaller ne sont pas limitées aux applications sélectionnées pour l’installation dans **Configurer la suite d’applications**, car cela supprime toutes les applications Office (MSI) de l’appareil des utilisateurs finaux. Pour plus d’informations, consultez [Supprimer les versions MSI existantes d’Office lors de la mise à niveau vers Office 365 ProPlus](https://docs.microsoft.com/en-us/deployoffice/upgrade-from-msi-version). 
     - **Accepter automatiquement le contrat de licence utilisateur final de l’application** : sélectionnez cette option si les utilisateurs finaux ne sont pas tenus d’accepter le contrat de licence. Intune accepte alors automatiquement le contrat.
     - **Utiliser l’activation d’ordinateurs partagés** : sélectionnez cette option quand plusieurs utilisateurs partagent un ordinateur. Pour plus d’informations, consultez [Vue d’ensemble de l’activation d’ordinateurs partagés pour Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
-    - **Langues** : Office est automatiquement installé dans toute langue prise en charge installée avec Windows sur l’appareil de l’utilisateur final. Sélectionnez cette option pour installer des langues supplémentaires avec la suite d’applications.
+    - **Langues** : Office est automatiquement installé dans toute langue prise en charge installée avec Windows sur l’appareil de l’utilisateur final. Sélectionnez cette option pour installer des langues supplémentaires avec la suite d’applications. <p></p>
+    Vous pouvez déployer des langues supplémentaires pour les applications Office 365 Pro Plus gérées par le biais d’Intune. La liste des langues disponibles inclut le **Type** du module linguistique (principal, partiel et de vérification). Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications** > **Ajouter**. Dans la liste **Type d’application** du panneau **Ajouter une application**, sélectionnez **Windows 10** sous la **Suite Office 365**. Sélectionnez **Langues** dans le panneau **Paramètres de la suite d’applications**. Pour plus d’informations, consultez [Vue d’ensemble du déploiement de langues dans Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## <a name="finish-up"></a>Terminer
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/13/2017
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,41 +15,39 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 8a83602d992ff7ea08be84272eee086ea364be0a
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 452ee2b386130a4c7ca6dc5026d3e2489c5ea33a
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147041"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863040"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Guide pratique pour mettre à jour l’application Portail d’entreprise
 
 Cet article décrit comment mettre à jour votre version de l’application Portail d’entreprise quand :  
-* Une version plus récente de l’application Portail d’entreprise est disponible.
-* Votre version de l’application Portail d’entreprise n’est plus prise en charge.
+* Une version plus récente de Portail d’entreprise est disponible.
+* Votre version de Portail d’entreprise n’est plus prise en charge.
 
-Ces étapes décrivent comment mettre à jour l’application sur les appareils Android, iOS et Windows.    
+Ces étapes décrivent comment mettre à jour votre version avec la dernière version de l’application sur les appareils Android, iOS et Windows, ou comment obtenir cette version.    
 
-## <a name="update-the-intune-company-portal-app-on-your-android-device"></a>Mettre à jour l’application Portail d’entreprise d’Intune sur votre appareil Android
+## <a name="update-the-company-portal-app-on-your-android-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil Android  
 
-Le Play Store vous avertit quand une nouvelle version du portail d’entreprise est disponible. Vous ne verrez pas d’invite de commandes dans l’application Portail d’entreprise elle-même. Sélectionnez l’alerte et suivez ses instructions pour mettre à jour votre appareil.  
+Google Play Store vous avertit quand une nouvelle version de l’application Portail d’entreprise est disponible. Vous ne verrez pas d’invite de commandes dans l’application Portail d’entreprise elle-même. Sélectionnez l’alerte du Store et suivez les instructions fournies pour mettre à jour l’application. 
 
-## <a name="update-the-intune-company-portal-app-on-your-ios-device"></a>Mettre à jour l’application Portail d’entreprise d’Intune sur votre appareil Android
+## <a name="update-the-company-portal-app-on-your-ios-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil iOS  
 
-Quand une nouvelle version est disponible, l’option « update » s’affiche à côté de l’application dans la liste des applications installées.  
+Quand une nouvelle version est disponible, une option **Mettre à jour** apparaît dans la liste des applications installées, à côté de l’application Portail d’entreprise.  
 
-1. Ouvrez l’App Store et recherchez **intune**.
+1. Ouvrez l’App Store et recherchez **Intune**.  
+2. Quand vous avez trouvé l’application, appuyez sur **Mettre à jour**.  
 
-2. Quand vous avez trouvé l’application, appuyez sur **Mettre à jour**.
+## <a name="update-the-company-portal-app-on-your-windows-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil Windows
+Pour obtenir automatiquement les mises à jour dès leur mise à disposition, ouvrez Microsoft Store et accédez à **Paramètres**. Activez ensuite l’option **Mises à jour des applications**. Pour afficher les mises à jour récentes et les applications figurant dans la file d’attente de téléchargement, accédez à **Téléchargements et mises à jour**.  
 
-## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Mettre à jour l’application Portail d’entreprise d’Intune sur votre appareil Windows
-
-1.  Accédez au Microsoft Store et recherchez le **portail d’entreprise Intune**.
-
-2.  Suivez la procédure d’installation.
-
-    > [!NOTE]
-    > Si vous ne parvenez pas à accéder au Microsoft Store, contactez le support technique de votre entreprise.
+Effectuez les étapes suivantes si vous préférez mettre à jour manuellement l’application, ou si l’option **Mises à jour des applications** est désactivée par votre entreprise.  
+1. Ouvrez Microsoft Store.
+2. Dans la barre de recherche, tapez **Portail d’entreprise**.
+3. Cliquez sur l’application pour installer la dernière version sur votre appareil. 
 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

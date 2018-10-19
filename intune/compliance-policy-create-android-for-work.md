@@ -2,10 +2,10 @@
 title: Créer une stratégie de conformité de profil professionnel Android dans Microsoft Intune - Azure | Microsoft Docs
 description: Créez ou configurez une stratégie de conformité des appareils Microsoft Intune pour les appareils avec profil professionnel Android. Choisissez d’autoriser les appareils jailbreakés, définissez le niveau de menace acceptable, vérifiez la présence de Google Play, entrez la version minimale et maximale du système d’exploitation, choisissez vos exigences de mot de passe et autorisez le chargement indépendant des applications.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 0c7f1c7c47f2fa4c950cbffeaf8fe274fe239a63
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905085"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828157"
 ---
 # <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils avec profil professionnel Android dans Intune
 
@@ -113,7 +113,11 @@ Si votre entreprise utilise des profils professionnels Android, vous pouvez acti
 - **Bloquer les applications provenant de sources inconnues** : vous n’avez pas à configurer ce paramètre, car les appareils avec profil professionnel Android bloquent toujours les installations à partir de sources inconnues.
 - **Intégrité du runtime de l’application Portail d’entreprise** : vérifie si l’environnement de runtime par défaut de l’application Portail d’entreprise est installé, s’il est correctement signé, s’il n’est pas en mode de débogage et s’il est installé à partir d’une source connue.
 - **Bloquer le débogage USB sur l’appareil** : vous n’avez pas à configurer ce paramètre, car le débogage USB est déjà désactivé sur les appareils avec profil professionnel Android.
-- **Niveau minimal du correctif de sécurité** : sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format `YYYY-MM-DD`.
+- **Niveau minimal du correctif de sécurité** : sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format *AAAA-MM-JJ*.
+- **Applications restreintes** : vous pouvez restreindre les applications en ajoutant leurs ID de bundle à la stratégie. Ainsi, si l’application est installée sur l’appareil, celui-ci est marqué comme non conforme. 
+   - **Nom de l’application** : entrez un nom convivial pour faciliter l’identification de l’ID de bundle. 
+   - **ID d’ensemble d’applications** : entrez l’identificateur de bundle unique du fournisseur d’applications. Pour Android, l’ID de bundle d’applications provient de l’URL de l’application dans le Store. Par exemple, si l’URL de l’application dans le Store est *https://play.google.com/store/apps/details?id=com.Slack*, l’ID de bundle d’applications est *com.Slack*.
+
 
 ## <a name="assign-user-groups"></a>Affectation de groupes d’utilisateurs
 

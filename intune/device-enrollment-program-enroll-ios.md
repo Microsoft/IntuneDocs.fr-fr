@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 27995fb643e4373e2fa6a34c7147c69905f9ccc0
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: af1804f657041055467e302c4dc8913e1035749d
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312642"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799657"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -35,7 +35,7 @@ Notez que l’inscription DEP ne fonctionne pas avec le [gestionnaire d’inscri
 ## <a name="what-is-supervised-mode"></a>Qu’est-ce que le mode supervisé ?
 Apple a introduit le mode supervisé dans iOS 5. Un appareil iOS en mode supervisé peut être géré avec plus de contrôles. Il est donc particulièrement utile pour les appareils d’entreprise. Intune prend en charge la configuration des appareils pour le mode supervisé dans le cadre du Programme d’inscription des appareils Apple. 
 
-La prise en charge d’appareils DEP non supervisés a été déconseillée dans iOS 11. Dans iOS 11 et versions ultérieures, les appareils DEP configurés doivent toujours être supervisés. L’indicateur DEP is_supervised sera ignoré dans une version ultérieure d’iOS.
+La prise en charge d’appareils DEP non supervisés a été dépréciée dans iOS 11. Dans iOS 11 et versions ultérieures, les appareils DEP configurés doivent toujours être supervisés. L’indicateur DEP is_supervised sera ignoré dans une version ultérieure d’iOS.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -61,7 +61,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Étape 1. Téléchargez le certificat de clé publique Intune nécessaire à la création du jeton.
 
-1. Dans [Intune sur le portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
+1. Dans [Intune, sur le Portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
 
     ![Récupérez un jeton du programme d’inscription.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -129,7 +129,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     > Si vous souhaitez effectuer l’une des options suivantes, définissez **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration Apple** sur **Oui**.
     >    - utiliser l’authentification multifacteur
     >    - inviter les utilisateurs à changer leur mot de passe lors de leur première connexion
-    >    - demander aux utilisateurs de réinitialiser leurs mots de passe expirés lors de l’inscription
+    >    - demander aux utilisateurs de réinitialiser leurs mots de passe arrivés à expiration lors de l’inscription
     >
     > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
 
@@ -138,6 +138,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     ![Capture d’écran de l’installation du portail d’entreprise avec un jeton VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
 7. Si vous avez choisi un jeton pour **Installer le portail d’entreprise avec VPP**, vous avez la possibilité de verrouiller l’appareil en mode Application unique (plus précisément l’application Portail d’entreprise) immédiatement après la fin de l’Assistant Configuration. Choisissez **Oui** pour **Exécuter le portail d’entreprise en mode Application unique jusqu’à l’authentification** pour définir cette option. Pour utiliser l’appareil, l’utilisateur doit d’abord s’authentifier en se connectant avec le portail d’entreprise.
+    Cette fonctionnalité fonctionne mieux avec iOS versions 11.3.1 et ultérieures. L’installation peut s’avérer plus longue avec des versions antérieures.
 
 8. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
 
@@ -170,22 +171,22 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     |    <strong>Numéro de téléphone du service</strong>     | S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
 
   Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
-  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas lors de la configuration. Après avoir configuré l’appareil, l’utilisateur peut toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
-  - Si vous choisissez **Afficher**, l’écran s’affiche lors de la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il peut ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
+  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur pourra toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
+  - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il pourra ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
 
 
-    | Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
+    | Paramètres des écrans de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
     |------------------------------------------|------------------------------------------|
     | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
     | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
     | <strong>Restauration</strong> | Affiche l’écran **Applications et données**. Cet écran donne à l’utilisateur la possibilité de restaurer ou de transférer des données à partir de la sauvegarde iCloud pendant la configuration de l’appareil. |
-    | <strong>ID Apple et iCloud</strong> | Donne à l’utilisateur les options lui permettant de se connecter avec son **Identifiant Apple** et d’utiliser **iCloud**.                         |
+    | <strong>ID Apple et iCloud</strong> | Donne à l’utilisateur la possibilité de se connecter avec son **Identifiant Apple** et d’utiliser **iCloud**.                         |
     | <strong>Conditions générales</strong> | Oblige l’utilisateur à accepter les conditions générales d’Apple. |
     | <strong>Touch ID</strong> | Donne à l’utilisateur la possibilité de configurer l’identification par empreinte digitale sur l’appareil. |
     | <strong>Apple Pay</strong> | Donne à l’utilisateur la possibilité de configurer Apple Pay sur l’appareil. |
     | <strong>Zoom</strong> | Donne à l’utilisateur la possibilité d’effectuer un zoom sur l’affichage pendant la configuration de l’appareil. |
     | <strong>Siri</strong> | Donne à l’utilisateur la possibilité de configurer Siri. |
-    | <strong>Données de diagnostic</strong> | Affiche l’écran **Diagnostics** à l’utilisateur. Cet écran permet à l’utilisateur d’envoyer des données de diagnostic à Apple. |
+    | <strong>Données de diagnostic</strong> | Affiche l’écran **Diagnostics**. Cet écran permet à l’utilisateur d’envoyer des données de diagnostic à Apple. |
 
 
 14. Choisissez **OK**.

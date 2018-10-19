@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4e523e4fb6505b2faaa0aa776b89454524130ba8
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347795"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187850"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Problèmes connus dans Microsoft Intune
 
@@ -106,6 +106,15 @@ Pour plus d’informations, consultez [Qu’est-ce que la compatibilité des app
 
 <!-- ## Enrollment -->
 
+## <a name="conditional-access"></a>Accès conditionnel
+
+### <a name="conditional-access-settings-from-intune-do-not-show-up-in-new-console"></a>Les paramètres d’accès conditionnel d’Intune n’apparaissent pas dans la nouvelle console
+
+Une fois votre locataire migré vers le Portail Azure, vos paramètres d’accès conditionnel continuent d’être appliqués. Toutefois, ils n’apparaissent pas dans le Portail Azure Intune. 
+
+Pour afficher et gérer ces paramètres dans le Portail Azure, vous devez supprimer les anciens paramètres du portail classique, et les recréer dans le Portail Azure. 
+
+Pour plus d’informations, consultez [Bonnes pratiques pour l’accès conditionnel dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices).
 
 ## <a name="data-protection"></a>Protection des données
 

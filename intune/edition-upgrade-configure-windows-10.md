@@ -1,35 +1,35 @@
 ---
-title: Mettre à niveau des appareils Windows 10 avec Microsoft Intune - Azure | Microsoft Docs
-description: Créez un profil d’appareil dans Microsoft Intune pour mettre à niveau des appareils Windows 10 avec des versions plus récentes. Découvrez également les chemins de mise à niveau pris en charge pour Windows 10 Professionnel, Édition N, Éducation, Cloud, Entreprise, Standard, Holographique et Mobile.
+title: Mettre à niveau des appareils Windows 10 ou les utiliser en mode S avec Microsoft Intune - Azure | Microsoft Docs
+description: Créez un profil d’appareil dans Microsoft Intune pour mettre à niveau les appareils Windows 10 vers d’autres éditions. Par exemple, vous pouvez effectuer une mise à niveau de Windows 10 Professionnel vers Windows 10 Entreprise. Vous pouvez également activer le mode S sur un appareil, ou sortir de ce mode, à l’aide du profil de configuration. Découvrez également les chemins de mise à niveau pris en charge pour Windows 10 Professionnel, Édition N, Éducation, Cloud, Entreprise, Standard, Holographique et Mobile.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 09/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
-ms.reviewer: coryfe
+ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 994ab8e7d955d18b293e4d9e9661e0c44baaaa1f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f0e4ba42559a068ebefb453aba18060803dc36e0
+ms.sourcegitcommit: f3974c810e172f345853dacd7f2ca0abc11b1a5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025431"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44389623"
 ---
-# <a name="configure-windows-10-edition-upgrade-profile-in-intune"></a>Configurer un profil de mise à niveau d’édition Windows 10 dans Intune
+# <a name="use-a-configuration-profile-to-upgrade-windows-10-or-switch-from-s-mode-in-intune"></a>Utiliser un profil de configuration pour mettre à niveau Windows 10, ou pour sortir du mode S dans Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Configurez un profil de mise à niveau dans Intune pour mettre à niveau automatiquement les appareils qui exécutent Windows 10 vers une version différente. Découvrez également les chemins de mise à niveau pris en charge.
 
 ## <a name="before-you-begin"></a>Avant de commencer
-Avant de mettre à niveau des appareils vers la dernière version, vous avez besoin de l’un des éléments suivants :
+Avant de mettre à niveau des appareils vers la dernière version, vous devez connaître les prérequis suivants :
 
-- Une clé de produit valide pour installer la version de Windows mise à jour sur tous les appareils que vous ciblez avec la stratégie (pour les éditions Windows 10 Desktop). Vous pouvez utiliser des clés MAK (Multiple Activation Key) ou KMS (Key Management Server) ou un fichier de licence Microsoft qui contient les informations de licence permettant d’installer la version de Windows mise à jour sur tous les appareils que vous ciblez avec la stratégie (pour les éditions Windows 10 Mobile et Windows 10 Holographique).
+- Une clé de produit valide pour installer la version de Windows mise à jour sur tous les appareils que vous ciblez avec la stratégie (pour les éditions Windows 10 Desktop). Vous pouvez utiliser les touches Clés d’activation multiple (MAK) ou Serveur gestionnaire de clés (KMS). Pour les éditions Windows 10 Mobile et Windows 10 Holographique, vous pouvez utiliser un fichier de licence Microsoft comprenant les informations de licence afin d’installer la version mise à jour de Windows sur tous les appareils ciblés avec la stratégie.
 - Les appareils Windows 10 auxquels vous affectez la stratégie sont inscrits dans Microsoft Intune. Vous ne pouvez pas utiliser la stratégie de mise à niveau d’édition avec des PC qui exécutent le logiciel client PC Intune.
 
 ## <a name="supported-upgrade-paths"></a>Chemins de mise à niveau pris en charge
@@ -37,15 +37,15 @@ Le tableau suivant indique les chemins de mise à niveau pris en charge pour le 
 
 | Mise à niveau à partir de | Mise à niveau vers |
 |---|---|
-| Windows 10 Professionnel | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation |
+| Windows 10 Professionnel | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation |
 | Windows 10 Professionnel N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Pro Éducation N | 
-| Windows 10 Pro Éducation | Windows 10 Éducation | 
+| Windows 10 Pro Éducation | Windows 10 Éducation | 
 | Windows 10 Pro Éducation N | Windows 10 Éducation N |
-| Windows 10 Cloud | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Professionnel <br/>Windows 10 Pro Éducation | 
+| Windows 10 Cloud | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Professionnel <br/>Windows 10 Pro Éducation | 
 | Windows 10 Cloud N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Professionnel N <br/>Windows 10 Pro Éducation N | 
-| Windows 10 Entreprise | Windows 10 Éducation | 
+| Windows 10 Entreprise | Windows 10 Éducation | 
 | Windows 10 Édition Entreprise N | Windows 10 Éducation N | 
-| Windows 10 Core | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation | 
+| Windows 10 Core | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation | 
 | Windows 10 Core N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Pro Éducation N | 
 | Windows 10 Holographique | Windows 10 Holographique pour entreprises |
 | Windows 10 Mobile | Windows 10 Mobile Entreprise |
@@ -121,25 +121,45 @@ The following lists provide the supported upgrade paths for the Windows 10 editi
 |Mobile|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|
 |Holographic|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png) -->
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Créer un profil d’appareil contenant des paramètres de restriction de l’appareil
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Configuration de l’appareil**, **Profils**, puis **Créer un profil**.
-4. Entrez un **Nom** et une **Description** pour le profil de mise à niveau d’édition.
-5. À partir de la liste déroulante **Plateforme**, sélectionnez **Windows 10 et versions ultérieures**.
-6. À partir de la liste déroulante **Type de profil**, sélectionnez **Mise à niveau d’édition**.
-7. Dans les propriétés **Mise à niveau d’édition**, entrez les paramètres suivants :
-   - **Édition vers laquelle mettre à niveau** : dans la liste déroulante, sélectionnez la version de Windows 10 Desktop, Windows 10 Holographique ou Windows 10 Mobile vers laquelle vous mettez à niveau les appareils ciblés.
-   - **Clé de produit** : entrez la clé de produit fournie par Microsoft pouvant être utilisée pour mettre à niveau tous les appareils Windows 10 Desktop ciblés. 
-    Une fois que vous avez créé une stratégie qui contient une clé de produit, la clé ne peut plus être mise à jour et est masquée pour des raisons de sécurité. Pour changer la clé de produit, retapez-la en entier.
-   - **Fichier de licence** : choisissez **Parcourir** pour sélectionner le fichier de licence fourni par Microsoft. Ce fichier de licence contient des informations de licence pour l’édition Windows Holographique ou Windows 10 Mobile vers laquelle vous mettez à niveau les appareils ciblés.
-8. Une fois que vous avez terminé, sélectionnez **Créer** pour enregistrer les modifications.
+## <a name="upgrade-the-edition"></a>Mettre à niveau l’édition
+
+1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. Entrez un **Nom** et une **Description** pour le profil. Par exemple, entrez quelque chose du genre `Windows 10 edition upgrade`
+4. Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
+5. Pour **Type de profil**, sélectionnez **Mise à niveau d’édition**.
+6. Dans les propriétés **Mise à niveau d’édition**, entrez les paramètres suivants :
+
+   - **Édition vers laquelle la mise à niveau est effectuée** : sélectionnez l’édition de Windows 10 vers laquelle vous effectuez la mise à niveau. Les appareils ciblés par cette stratégie sont mis à niveau vers l’édition de votre choix.
+   - **Clé de produit** : entrez la clé de produit fournie par Microsoft. Une fois que vous avez créé la stratégie basée sur la clé de produit, la clé ne peut plus être mise à jour et est masquée pour des raisons de sécurité. Pour changer la clé de produit, retapez-la en entier.
+   - **Fichier de licence** : pour **Windows 10 Holographic for Business** ou **Windows 10 Mobile**, choisissez **Parcourir** afin de sélectionner le fichier de licence fourni par Microsoft. Ce fichier de licence contient des informations de licence pour les éditions vers lesquelles vous mettez à niveau les appareils ciblés.
+
+7. Cliquez sur **OK** pour enregistrer vos modifications. Sélectionnez **Créer** pour créer le profil.
+
+## <a name="switch-out-of-s-mode"></a>Sortir du mode S
+
+Le [mode S de Windows 10](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) est conçu pour la sécurité et les performances. Si vos appareils exécutent uniquement des applications provenant du Microsoft Store, vous pouvez utiliser le mode S pour sécuriser ces appareils. Si vos appareils nécessitent des applications qui ne sont pas disponibles dans le Microsoft Store, vous pouvez sortir du mode S. La sortie du mode S est définitive. Une fois que vous êtes sorti du mode S, vous ne pouvez plus revenir au mode S Windows 10.
+
+Les étapes suivantes montrent comment créer un profil qui contrôle le mode S sur des appareils Windows 10 (1809 ou version ultérieure).
+
+1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. Entrez un **Nom** et une **Description** pour le profil. Par exemple, entrez quelque chose du genre `Windows 10 switch off S mode`
+4. Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
+5. Pour **Type de profil**, sélectionnez **Mise à niveau d’édition**.
+6. Sélectionnez **Changement de mode (Windows Insider uniquement)**, puis définissez la propriété **Sortir du mode S**. Les options disponibles sont les suivantes :
+
+    - **Aucune configuration** : un appareil en mode S reste en mode S. Un utilisateur final peut sortir l’appareil du mode S.
+    - **Rester en mode S** : empêche l’utilisateur final de sortir l’appareil du mode S.
+    - **Changer** : permet de sortir l’appareil du mode S.
+
+7. Cliquez sur **OK** pour enregistrer vos modifications. Sélectionnez **Créer** pour créer le profil.
 
 Le profil est créé et apparaît dans la liste des profils.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour attribuer ce profil à des groupes, consultez [Guide pratique pour attribuer des profils d’appareil](device-profile-assign.md).
+[Affectez ce profil](device-profile-assign.md) à vos groupes.
 
 >[!NOTE]
->Si vous supprimez par la suite l’affectation de stratégie, la version de Windows sur l’appareil n’est pas annulée et continue de fonctionner normalement.
+>Si vous supprimez plus tard l’affectation de stratégie, la version de Windows de l’appareil n’est pas restaurée et continue de fonctionner normalement.

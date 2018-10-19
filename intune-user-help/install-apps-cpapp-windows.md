@@ -1,11 +1,11 @@
 ---
-title: Installation d’applications à partir de l’application Portail d’entreprise pour Windows
-description: ''
+title: Installation d’applications à partir de l’application Portail d’entreprise Intune pour Windows
+description: Découvrez comment installer et partager des applications à partir de l’application Portail d’entreprise pour Windows
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/07/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,28 +17,50 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5d77a4c2b5d55a3cd6086af61de0804afc3e5245
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: e2bf5ffd5c913b4e2c51c9efd0aa40ba3d3f0fa7
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43149616"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863091"
 ---
-# <a name="install-apps-on-your-device"></a>Installer des applications sur votre appareil
+# <a name="install-and-share-apps-on-your-device"></a>Installer et partager des applications sur votre appareil
 Installez des applications sur votre appareil à partir de l’application Portail d’entreprise pour Windows.
 
-1. Ouvrez l’application Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire.
-![Page d’accueil de l’application Portail d’entreprise pour Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)
-2. Recherchez et installez des applications à partir de l’une des sections suivantes de l’application Portail d’entreprise :
-    * **Applications** : sélectionnez parmi la liste des applications proposées par votre organisation. 
-    * **Afficher tout** : dans la section **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.
-    * **Rechercher des applications** : une barre de recherche statique se trouve dans le menu de navigation sur le côté gauche de l’application. Tapez le nom d’une application pour savoir si elle est disponible.
-    * **Toutes les applications** : affichez, triez et filtrez toutes les applications disponibles.
-3. Sélectionnez l’application à installer.
-4. Dans la page Détails de l’application, cliquez sur **Installer**. Une fois l’installation terminée, la page affiche l’état **Installé**.
-![Application Portail d’entreprise pour Windows 10, page de détails de l’application.](./media/RS1_AppDetailsPage_Installed_02.png)  
-![Application Portail d’entreprise pour Windows 10, page de détails de l’application, état Installé affiché.](./media/RS1_AppDetailsPage_Installed_01.png)    
+## <a name="install-apps"></a>Installer des applications
 
- Selon la taille de votre entreprise, plusieurs versions d’Office sont peut-être disponibles en téléchargement à partir du portail d’entreprise. Pour des informations spécifiques sur la suite Office pour les appareils Windows, consultez [Installation d’Office 365 sur votre appareil Windows](./install-office-windows.md).
+1. Ouvrez l’application Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire.  
+
+    ![Page d’accueil de l’application Portail d’entreprise pour Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)    
+2. Recherchez et installez des applications à partir de l’une des sections suivantes de l’application Portail d’entreprise :  
+
+    * **Page d’accueil**  : sélectionnez une application parmi la liste des applications proposées par votre organisation.  
+    * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
+    * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (à savoir celles déjà installées et celles proposées).  
+    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application.  Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
+    * **Toutes les applications** : affichez, triez et filtrez toutes les applications disponibles. Les résultats de la recherche sont automatiquement triés selon la pertinence.  
+
+3. Sélectionnez une application.   
+4. Dans la page Détails de l’application, cliquez sur **Installer**. Une fois son installation terminée, l’application présente l’état **Installé**.  
+
+    ![Application Portail d’entreprise pour Windows 10, sélection de l’application, page Détails de l’application.](./media/RS1_AppDetailsPage_Installed_02.png)  
+    
+    ![Application Portail d’entreprise pour Windows 10, page Détails de l’application, état « Installé » affiché une fois l’application installée. Le bouton Installer se change en bouton Réinstaller.](./media/RS1_AppDetailsPage_Installed_01.png)    
+
+ Selon la taille de votre entreprise, vous pouvez voir plusieurs versions d’Office disponibles en téléchargement à partir de l’application Portail d’entreprise. Pour obtenir des informations spécifiques sur la suite Office pour les appareils Windows, consultez [Installation d’Office 365 sur votre appareil Windows](./install-office-windows.md).
+
+## <a name="share-apps-with-others"></a>Partager des applications avec d’autres utilisateurs  
+Partagez des applications avec d’autres personnes de votre entreprise ou établissement scolaire, et recommandez-leur des applications. Effectuez les étapes suivantes pour partager un lien directement à partir de Portail d’entreprise.
+
+1. Dans Portail d’entreprise, appuyez de façon prolongée sur l’application souhaitée, ou cliquez dessus avec le bouton droit, pour ouvrir le [menu contextuel](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) associé.  
+
+    ![Application Portail d’entreprise pour Windows 10, page d’accueil affichant une liste d’applications et d’appareils. Le menu contextuel « Partager » interactif s’affiche sur l’icône de l’exemple d’application. ](./media/1808_ShareContext_CP_Windows.png)  
+
+2. Sélectionnez **Partager**.
+3. Choisissez un contact, ou sélectionnez un autre programme, comme OneNote, pour envoyer le lien à un groupe. Si vous ne trouvez pas l’application que vous souhaitez utiliser, sélectionnez **Obtenir des applications dans le Store** pour voir les autres applications disponibles.  
+
+    ![Exemple de capture d’écran de l’application Portail d’entreprise pour Windows 10, menu contextuel Partager. La page affiche « En savoir plus sur <nom de l’exemple d’application> dans l’application Portail d’entreprise ». Elle montre un contact et deux applications à choisir pour l’envoi du lien, ainsi qu’un lien « Obtenir des applications dans le Store ». ](./media/1808_ShareApps_CP_Windows.png) 
+
+Une fois que vous avez partagé l’application, le destinataire reçoit un lien et un message lui permettant d’afficher les détails de l’application. Le lien ouvre la page **Détails de l’application** dans Portail d’entreprise. 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

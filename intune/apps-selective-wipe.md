@@ -15,12 +15,12 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 66f26811f5021b71c62a2e994c73e2144409d199
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 3f72747b1a30494304521b23054533b9f360b2fc
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329543"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562746"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Guide pratique pour effacer uniquement les données d’entreprise des applications gérées par Intune
 
@@ -44,7 +44,7 @@ Pour supprimer des données d’application d’entreprise de manière sélectiv
 
     ![Capture d’écran du volet Microsoft Intune](./media/apps-selective-wipe01.png)
 
-3.  Dans le **volet Applications mobiles**, choisissez **Réinitialisation sélective des applications**.
+3.  Dans le volet **Applications clientes**, choisissez **Réinitialisation sélective des applications**.
 
 4.  Choisissez **Nouvelle demande de réinitialisation**. Le volet **Nouvelle demande de réinitialisation** s’ouvre.
 
@@ -62,7 +62,7 @@ Le service crée une demande de réinitialisation distincte pour chaque applicat
 
 Vous pouvez obtenir un rapport de synthèse indique l’état global de la demande de réinitialisation et inclut le nombre de demandes en attente et d’échecs. Pour obtenir plus de détails, procédez comme suit :
 
-1.  Le volet **Applications mobiles - Réinitialisation sélective des applications** affiche la liste de vos demandes regroupées par utilisateur. Étant donné que le système crée une demande de réinitialisation pour chaque application protégée en cours d’exécution sur l’appareil, vous pouvez voir plusieurs demandes pour un même utilisateur. L’état de la demande de réinitialisation est indiquée : **en attente**, **échec**ou **réussite**.
+1.  Dans le volet **Applications clientes - Réinitialisation sélective des applications**, vous pouvez voir la liste de vos demandes regroupées par utilisateurs. Étant donné que le système crée une demande de réinitialisation pour chaque application protégée en cours d’exécution sur l’appareil, vous pouvez voir plusieurs demandes pour un même utilisateur. L’état de la demande de réinitialisation est indiquée : **en attente**, **échec**ou **réussite**.
 
     ![Capture d’écran de l’état de demande de réinitialisation dans le volet Réinitialisation sélective des applications](./media/wipe-request-status-1.png)
 
@@ -75,7 +75,7 @@ En outre, vous pouvez voir le nom de l’appareil et son type, ce qui peut être
 
 Les réinitialisations en attente sont affichées jusqu’à ce que vous les supprimiez manuellement. Pour supprimer manuellement une demande de réinitialisation :
 
-1.  Dans le volet **Applications mobiles -Réinitialisation sélective des applications**.
+1.  Dans le volet **Applications clientes - Réinitialisation sélective des applications**.
 
 2.  Dans la liste, cliquez avec le bouton droit sur la demande de réinitialisation à supprimer, puis choisissez **Supprimer la demande de réinitialisation**.
 

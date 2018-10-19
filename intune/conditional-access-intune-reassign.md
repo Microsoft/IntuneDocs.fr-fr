@@ -3,10 +3,10 @@ title: Migrer l’accès conditionnel vers le portail Azure
 titlesuffix: Microsoft Intune
 description: Réaffectez les stratégies d’accès conditionnel précédemment créées dans le portail classique Intune vers le portail Azure.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 09/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 00c657700cd8c27e4758b9cc94292ba83b2db3cd
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231710"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
@@ -179,6 +179,9 @@ Si vous avez configuré les paramètres EAS (Exchange Active Sync) dans le cadre
 12. Dans le panneau de la stratégie d’accès conditionnel **Nouveau**, activez la bascule **Activer la stratégie**, puis cliquez sur **Créer**.
 
     ![Image montrant une comparaison de l’interface utilisateur d’activation de la stratégie d’accès conditionnel entre les portails Intune et Azure](./media/reassign-ca-17.png)
+
+> [!NOTE]
+> Si vous configurez des **Plateformes d’appareils**, l’enregistrement de la stratégie échoue avec l’erreur « La configuration de la stratégie n’est pas prise en charge ». Exchange ActiveSync ne peut pas identifier la plateforme utilisée par l’appareil qui se connecte. Par conséquent, la configuration de plateformes d’appareils spécifiques n’est pas prise en charge lors de la création d’une stratégie pour les appareils Exchange ActiveSync.
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Désactiver les stratégies d’accès conditionnel dans le portail classique Intune
 

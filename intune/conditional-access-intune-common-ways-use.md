@@ -3,10 +3,10 @@ title: Accès conditionnel avec Microsoft Intune
 titlesuffix: ''
 description: Découvrez comment l’accès conditionnel Intune est couramment utilisé pour l’accès conditionnel basé sur l’application et sur l’appareil.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 59cba4ead614fe0b5deac535efb9bcb303d5810d
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: db63d79a81de03a459a910a23fb9f999f33f0251
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231652"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -45,6 +45,13 @@ Vous configurez les stratégies d’accès conditionnel basées sur l’appareil
 -   Découvrez plus d’informations sur la [conformité des appareils Intune](device-compliance.md).
 
 -   Découvrez-en davantage sur [la protection de l’e-mail, d’Office 365 et d’autres services à l’aide de l’accès conditionnel avec Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+
+> [!NOTE]
+> Sur les appareils Android, quand vous activez l’accès basé sur l’appareil pour Sharepoint Online, les utilisateurs doivent activer l’option **Activer l’accès au navigateur** sur l’appareil inscrit, en effectuant les opérations suivantes :
+> 1. Lancer l’**application Portail d’entreprise**.
+> 2. Accédez à la page **Paramètres** via les trois points (...) ou le bouton de menu matériel.
+> 3. Appuyez sur le bouton **Activer l’accès du navigateur** . 
+> 4. Dans le navigateur Chrome, se déconnecter d’Office 365 et redémarrer Chrome.
 
 ### <a name="conditional-access-for-exchange-on-premises"></a>Accès conditionnel pour Exchange sur site
 

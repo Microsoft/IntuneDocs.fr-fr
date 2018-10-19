@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
-ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
+ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39481119"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562865"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Paramètres kiosque pour Windows 10 (et versions ultérieures) dans Intune
 
@@ -45,7 +45,7 @@ Les profils kiosque servent à configurer les appareils Windows 10 pour exécut
 #### <a name="single-full-screen-app-kiosks"></a>Kiosques avec une seule application en plein écran
 entrez les paramètres suivants :
 
-- **Identificateur d’application de plateforme Windows universelle (UWP)** : Entrez **l’ID de modèle utilisateur d’application (AUMID)** de l’application kiosque. Sinon, sélectionnez une application gérée existante que vous avez ajoutée à l’aide de [Mobile Apps](apps-add.md).
+- **Identificateur d’application de plateforme Windows universelle (UWP)** : Entrez **l’ID de modèle utilisateur d’application (AUMID)** de l’application kiosque. Sinon, sélectionnez une application gérée existante que vous avez ajoutée via [Applications clientes](apps-add.md).
 
     Consultez [Rechercher l’ID de modèle utilisateur d’application d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -62,7 +62,7 @@ Les [Applications multiples plein écran](https://docs.microsoft.com/windows/con
 entrez les paramètres suivants :
 
 - **Ajouter une application Win32** : Une application Win32 est une application de bureau traditionnelle. Entrez le **Nom d’application** et **l’Identificateur**. **L’Identificateur** est le nom du chemin complet de l’exécutable sur l’appareil.
-- [Ajouter des applications gérées](apps-add.md) : Sélectionnez une application gérée existante que vous avez ajoutée à l’aide de **Mobile Apps dans Intune**.
+- [Ajouter des applications gérées](apps-add.md) : sélectionnez une application gérée existante que vous avez ajoutée via **Applications clientes dans Intune**.
 - **Ajouter une application par AUMID** : Entrez [l’AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (applications UWP).
 - **Barre des tâches** : choisissez de montrer (**Activer**) la barre des tâches ou de la garder masquée (**Non configurée**) sur l’appareil plein écran.
 - **Disposition du menu Démarrer** : Entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer, notamment l’ordre des applications. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
@@ -75,7 +75,7 @@ entrez les paramètres suivants :
 
 ## <a name="kiosk-web-browser-settings"></a>Paramètres du navigateur web kiosque
 
-Ces paramètres contrôlent une application de navigateur web sur le kiosque. Vérifiez que vous avez déployé une application de navigateur web sur les appareils kiosque à l’aide de [Mobile Apps](apps-add.md).
+Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à déployer une application de navigateur web sur les appareils de type borne via [Applications clientes](apps-add.md).
 
 1. entrez les paramètres suivants :
 
@@ -115,7 +115,7 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
 entrez les paramètres suivants :
 
-- [Ajouter des applications gérées](apps-add.md) : Sélectionnez une application gérée existante que vous avez ajoutée à l’aide de **Mobile Apps dans Intune**.
+- [Ajouter des applications gérées](apps-add.md) : sélectionnez une application gérée existante que vous avez ajoutée via **Applications clientes dans Intune**.
 - **Ajouter une application par AUMID** : Entrez [l’AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (applications UWP).
 - **Disposition du menu Démarrer** : Entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer, notamment l’ordre des applications. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) fournit quelques conseils et inclut un fichier XML spécifique pour les appareils Windows Holographic for Business.
 - **Type de compte d’utilisateur** : Ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Les options prises en charge sont les suivantes : 

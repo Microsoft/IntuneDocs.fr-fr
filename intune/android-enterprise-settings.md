@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: f49e0bc496f176434577d42d3a372fc4e8bc22d3
+ms.sourcegitcommit: 7063072c94e43aefc6be0072780622a1da8485d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46119101"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Paramètres du mode kiosque Android Entreprise dans Intune
 
@@ -45,9 +45,9 @@ Les profils du mode kiosque Android prennent en charge les paramètres de config
 - **Autoriser l’installation à partir de sources inconnues** : choisissez **Autoriser** pour permettre aux utilisateurs d’effectuer l’installation à partir de sources inconnues.
 - **Mise à jour système** : choisissez une option pour définir la façon dont l’appareil traite les mises à jour à distance :
     - **Paramètre par défaut de l’appareil** : utiliser le paramètre par défaut de l’appareil.
-    - **Automatique** : les mises à jour logicielles sont installées automatiquement.
-    - **Différé** : les mises à jour sont remises à une date ultérieure.
-    - **Fenêtre de maintenance** : les utilisateurs sont invités à approuver la mise à jour dans une fenêtre de maintenance.
+    - **Automatique** : les mises à jour sont installées automatiquement, sans interaction de l’utilisateur. La définition de cette stratégie entraîne l’installation immédiate des mises à jour en attente.
+    - **Différé** : les mises à jour sont reportées de 30 jours. À la fin des 30 jours, l’utilisateur est invité par Android à installer la mise à jour. Il est possible pour les fabricants ou les opérateurs d’appareils d’empêcher (exempter) le report des mises à jour de sécurité importantes. Une mise à jour exemptée affiche une notification système sur l’appareil de l’utilisateur. 
+    - **Fenêtre de maintenance** : permet d’installer les mises à jour automatiquement durant une fenêtre de maintenance quotidienne définie dans Intune. L’installation est tentée quotidiennement pendant 30 jours. Il est possible qu’elle ne se déroule pas correctement en raison d’un espace ou d’un niveau de batterie insuffisant. Après 30 jours, l’utilisateur est invité par Android à effectuer l’installation. Cette fenêtre est également utilisée pour installer les mises à jour des applications Play. Cette option est recommandée pour les appareils dédiés, par exemple les bornes, car les applications d’avant-plan de bornes monoapplication peuvent être mises à jour. 
 
 ## <a name="kiosk-settings"></a>Paramètres kiosque
 

@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: c646e134f6311e7c365fe38301a9015a752b553f
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313596"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028611"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditer, exporter ou supprimer des données personnelles dans Intune
 
@@ -56,16 +56,16 @@ Il existe trois façons de supprimer des données personnelles de la gestion Int
 
 ### <a name="delete-a-user-from-intune"></a>Supprimer un utilisateur d’Intune
 
-Pour supprimer les données personnelles de l’utilisateur final d’Intune, un administrateur doit [supprimer l’utilisateur d’Azure Active Directory (AAD)](https://docs.microsoft.com/en-us/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). Quand l’utilisateur est supprimé d’AAD (supprimé de manière définitive), Intune reçoit le signal de suppression d’AAD, puis commence automatiquement à purger toutes les données personnelles de cet utilisateur du service Intune. Les informations de l’utilisateur sont supprimées du service Intune dans les 30 jours suivant l’action de suppression.
+Pour supprimer les données personnelles de l’utilisateur final d’Intune, un administrateur doit [supprimer l’utilisateur d’Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). Quand l’utilisateur est supprimé d’AAD (supprimé de manière définitive), Intune reçoit le signal de suppression d’AAD, puis commence automatiquement à purger toutes les données personnelles de cet utilisateur du service Intune. Les informations de l’utilisateur sont supprimées du service Intune dans les 30 jours suivant l’action de suppression.
 
 ### <a name="reset-device-to-factory-settings"></a>Réinitialiser les paramètres d’usine de l’appareil
 La réinitialisation des paramètres d’usine restaure tous les paramètres et données d’entreprise et personnelles par défaut. Cette option est utile pour fournir un appareil à l’employé suivant. Les fichiers utilisateur, les applications installées par l’utilisateur et les paramètres définis sur des valeurs autres que les valeurs par défaut sont supprimés, et ces données sont supprimées du service Intune dans les 30 jours suivant l’action de suppression.
 
 ### <a name="user-self-removal-from-intune-management"></a>Auto-suppression des utilisateurs de la gestion Intune
-Les utilisateurs peuvent supprimer leurs appareils personnel [Android, Apple ou Windows](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) de la gestion Intune sans l’assistance d’un administrateur.   
+Les utilisateurs peuvent supprimer leurs appareils personnel [Android, Apple ou Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android.md) de la gestion Intune sans l’assistance d’un administrateur.   
 
 ### <a name="retire"></a>Mettre hors service
-L’action **Mettre hors service** supprime les données provisionnées par Intune comme les applications d’entreprise, les données sur les applications gérées par Intune, les paramètres de stratégie et les profils de messagerie provisionnés via Intune. Cette action laisse les données personnelles de l’utilisateur sur l’appareil.
+L’action **Mettre hors service** supprime les données provisionnées par Intune telles que les applications d’entreprise, les données relatives aux applications gérées par Intune, les paramètres de stratégie, ainsi que les profils d’e-mail provisionnés via Intune. Cette action laisse les données personnelles de l’utilisateur sur l’appareil.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Supprimer un locataire de Microsoft Intune
 

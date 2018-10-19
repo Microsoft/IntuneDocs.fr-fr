@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b5395ed4095280230c9cf678395df03bbce41ea
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
+ms.openlocfilehash: 5bcaabd66a2a9a24c3ee3f7c49cf7689d1f60eed
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141675"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863142"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune
 
@@ -61,6 +61,7 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 | Application iOS intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
 | Application Android intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
 | Applications web  | Application web  | Sélectionnez **Lien web** comme **type d’application**, puis entrez une URL valide pointant vers l’application web.  |
+| Application Windows (Win32)  | Application métier  | Sélectionnez **Application Windows (Win32)** comme **type d’application**, sélectionnez le **fichier Package d’application**, puis sélectionnez un fichier d’installation avec l’extension **.intunewin**.  |
 
 Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications clientes** > **Applications** > **Ajouter**. Le panneau **Ajouter une application** s’affiche et vous permet de sélectionner le **type d’application**. 
 
@@ -90,7 +91,7 @@ Pour plus d’informations, consultez [Comparer MDM et MAM](byod-technology-deci
 
 Vous devez d’abord déterminer le groupe qui doit avoir accès à l’application en fonction de la sensibilité des données que l’application contient. Vous devrez peut-être inclure ou exclure certains types de rôles au sein de votre organisation. Par exemple, seules certaines applications métier peuvent être nécessaires pour votre groupe de ventes, alors que les personnes travaillant essentiellement dans l’ingénierie, la finance, les ressources humaines ou le secteur juridique n’ont peut-être pas besoin d’utiliser les applications métier. De plus, votre groupe de ventes peut nécessiter une protection des données supplémentaires et un accès aux services d’entreprise internes sur leurs appareils mobiles. Vous devez déterminer la façon dont ce groupe se connectera aux ressources à l’aide de l’application. Les données auxquelles l’application accède sont-elles dans le cloud ou locales ? Par ailleurs, comment les utilisateurs vont-ils se connecter aux ressources avec l’application ? 
 
-Intune prend également en charge l’activation de l’accès aux applications mobiles qui nécessitent un accès sécurisé aux données locales, comme un serveur d’applications métier. Vous fournissez généralement ce type d’accès à l’aide de [certificats gérés par Intune](certificates-configure.md) pour le contrôle d’accès, combinés à une passerelle VPN standard ou à un proxy dans le périmètre, comme le proxy d’application Azure Active Directory. [L’outil de création de wrapping d’applications et le SDK d’application](apps-prepare-mobile-application-management.md) Intune peuvent vous aider à limiter les données utilisées dans votre application métier pour ne pas transmettre des données d’entreprise à des applications ou services de particuliers.
+Intune prend également en charge l’activation de l’accès aux applications clientes qui nécessitent un accès sécurisé aux données locales, comme un serveur d’applications métier. Vous fournissez généralement ce type d’accès à l’aide de [certificats gérés par Intune](certificates-configure.md) pour le contrôle d’accès, combinés à une passerelle VPN standard ou à un proxy dans le périmètre, comme le proxy d’application Azure Active Directory. [L’outil de création de wrapping d’applications et le SDK d’application](apps-prepare-mobile-application-management.md) Intune peuvent vous aider à limiter les données utilisées dans votre application métier pour ne pas transmettre des données d’entreprise à des applications ou services de particuliers.
 
 Utilisez le [Guide de planification, de conception et d’implémentation du déploiement Intune](planning-guide.md) pour déterminer la façon dont vous identifiez les groupes d’organisation qui sont associés à chaque scénario d’utilisation d’application principal et secondaire. Pour plus d’informations sur l’affectation d’applications à des groupes, consultez [Affecter des applications à des groupes avec Microsoft Intune](apps-deploy.md).
 
@@ -174,7 +175,7 @@ Intune réinstalle, met à jour ou supprime automatiquement une application obli
 - Un administrateur met une application à la disposition d’un groupe d’utilisateurs, et un utilisateur final l’installe à partir du Portail d’entreprise sur l’appareil. L’administrateur fait ensuite passer l’application de la version v1 à la version v2. Une fois ce délai écoulé, Intune met à jour l’application si une version précédente de celle-ci est encore présente sur l’appareil.
 - Si l’administrateur déploie une intention de désinstallation et que la désinstallation de l’application, présente sur l’appareil, échoue, Intune évalue la conformité et désinstalle l’application une fois ce délai écoulé.   
 
-## <a name="app-installation-errors"></a>Erreurs d'installation des applications
+## <a name="app-installation-errors"></a>Erreurs d’installation des applications
 
 Pour plus d’informations sur les erreurs d’installation des applications Intune, voir [Erreurs d’installation des applications](troubleshoot-app-install.md#app-installation-errors).
 
@@ -194,3 +195,4 @@ Pour savoir comment ajouter des applications pour chaque plateforme à Intune, c
 - [Applications Office 365 pour Windows 10](apps-add-office365.md)
 - [Applications Office 365 pour macOS](apps-add-office365-macos.md)
 - [Applications intégrées](apps-add-built-in.md)
+- [Applications Win32](apps-win32-app-management.md) 

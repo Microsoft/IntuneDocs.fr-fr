@@ -3,10 +3,10 @@ title: Créer et déployer une stratégie de protection des applications Protect
 titlesuffix: Microsoft Intune
 description: Créer et déployer une stratégie de protection des applications Protection des informations Windows (WIP) avec Microsoft Intune
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: c1d530059d7c5b5f759516e86d4ee3dbf8512aa5
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347305"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799623"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune
 
@@ -46,19 +46,27 @@ Vous devez comprendre certains concepts lors de l’ajout d’une stratégie WIP
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devez configurer le fournisseur GAM avant de pouvoir créer une stratégie de protection d’application WIP. En savoir plus sur la façon de [configurer le fournisseur MAM avec Intune](app-protection-policies-configure-windows-10.md).
+Vous devez configurer le fournisseur GAM avant de pouvoir créer une stratégie de protection d’application WIP. En savoir plus sur la façon de [configurer le fournisseur MAM avec Intune](app-protection-policies-configure-windows-10.md).  
+
+> [!IMPORTANT]
+> WIP ne prend pas en charge les identités multiples, une seule identité gérée peut exister à la fois.
 
 Vous devez aussi disposer des licences et des mises à jour suivantes :
 
 -   Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
 -   [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-> [!IMPORTANT]
-> WIP ne prend pas en charge les identités multiples, une seule identité gérée peut exister à la fois.
+
+
+
 
 ## <a name="to-add-a-wip-app-protection-policy"></a>Pour ajouter une stratégie de protection des applications WIP
 
 Une fois Intune configuré dans votre organisation, vous pouvez créer une stratégie propre à WIP.
+
+> [!TIP]  
+> Pour plus d’informations sur la création de stratégies WIP pour Intune, notamment les paramètres disponibles et la façon de les configurer, consultez [Créer une stratégie Protection des informations Windows (WIP) avec GAM à l’aide du portail Azure pour Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) dans la bibliothèque de documentation sur la sécurité Windows. 
+
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**.
@@ -123,7 +131,7 @@ Quand vous utilisez des applications WIP et des applications inconnues de WIP, n
 ### <a name="what-are-the-protection-modes"></a>Quels sont les modes de protection ?
 
 #### <a name="block"></a>Bloquer
-WIP recherche des pratiques de partage de données inappropriées et empêche l’utilisateur de terminer l’action. Cela peut inclure le partage d’informations entre des applications non protégées pas votre entreprise, ou le partage de données d’entreprise entre des personnes et appareils en dehors de votre organisation.
+WIP recherche des pratiques de partage de données inappropriées et empêche l’utilisateur de terminer l’action. Les actions bloquées peuvent inclure le partage d’informations entre des applications non protégées pas votre entreprise, ou le partage de données d’entreprise entre des personnes et appareils en dehors de votre organisation.
 
 #### <a name="allow-overrides"></a>Autoriser l’utilisateur à ignorer les avertissements
 WIP recherche les partages de données inappropriés, et avertit les utilisateurs quand ils font quelque chose de potentiellement dangereux. Toutefois, ce mode permet à l’utilisateur de remplacer la stratégie et de partager les données. L’action est alors consignée dans votre journal d’audit.

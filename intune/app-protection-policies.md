@@ -3,10 +3,10 @@ title: Créer et déployer des stratégies de protection d’applications
 titleSuffix: Microsoft Intune
 description: Découvrez comment créer et affecter des stratégies de protection des applications Microsoft Intune.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 368c804fa044dc303b22e2ae9cf8d273d6cd051a
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231812"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -56,24 +56,22 @@ Pour plus d’informations sur l’ajout d’applications métier professionnell
    Pour bien démarrer, les paramètres de stratégie sont définis par défaut. Si les valeurs par défaut répondent à vos besoins, vous n’avez pas besoin de les changer.
 
    > [!TIP]
-   > Ces paramètres de stratégie sont appliqués uniquement quand vous utilisez des applications dans le contexte de travail. Quand l’utilisateur final utilise l’application pour effectuer une tâche personnelle, il n’est pas affecté par ces stratégies.
+   > Ces paramètres de stratégie sont appliqués uniquement quand vous utilisez des applications dans le contexte de travail. Quand l’utilisateur final utilise l’application pour effectuer une tâche personnelle, il n’est pas affecté par ces stratégies. Notez que quand vous créez un fichier, ce dernier est considéré comme étant un fichier personnel. 
 
-7. Choisissez **OK** pour enregistrer cette configuration. Vous êtes maintenant de retour dans le volet **Ajouter une stratégie**. Choisissez **Créer** pour créer la stratégie et enregistrer vos paramètres.
-8. Choisissez **OK** pour enregistrer cette configuration. Vous êtes maintenant de retour dans le panneau **Ajouter une stratégie**.
-9. Choisissez **Créer** pour créer la stratégie et enregistrer vos paramètres.
+7. Choisissez **OK** pour enregistrer cette configuration. Vous êtes maintenant de retour dans le panneau **Ajouter une stratégie**.
+8. Choisissez **Créer** pour créer la stratégie et enregistrer vos paramètres.
 
 Quand vous avez fini de créer une stratégie comme décrit dans la procédure précédente, elle n’est pas déployée sur les utilisateurs. Pour déployer une stratégie, consultez [Déployer une stratégie pour les utilisateurs](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Déployer une stratégie sur les utilisateurs
 
-
 1. Dans le volet **Stratégies de protection des applications**, sélectionnez une stratégie.
 
-1. Dans le volet **Stratégie**, choisissez **Affectations** pour ouvrir le volet **Protection des applications Intune - Affectations**. Choisissez **Sélectionner les groupes à inclure** dans le volet **Affectations** pour ouvrir le volet **Sélectionner les groupes à inclure**.
+2. Dans le volet **Stratégie**, choisissez **Affectations** pour ouvrir le volet **Protection des applications Intune - Affectations**. Choisissez **Sélectionner les groupes à inclure** dans le volet **Affectations** pour ouvrir le volet **Sélectionner les groupes à inclure**.
 
    ![Capture d’écran du volet Affectations avec l’option de menu Sélectionner les groupes à inclure en surbrillance](./media/app-protection-policy-add-users.png)
 
-2.  La liste de groupes d’utilisateurs s’affiche sur le volet **Ajouter un groupe d’utilisateurs**. Il s’agit de la liste de tous les groupes de sécurité figurant dans votre **Azure Active Directory**. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. Si vous choisissez **Sélectionner**, la stratégie est déployée pour les utilisateurs.
+3.  La liste de groupes d’utilisateurs s’affiche sur le volet **Ajouter un groupe d’utilisateurs**. Il s’agit de la liste de tous les groupes de sécurité figurant dans votre **Azure Active Directory**. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. Si vous choisissez **Sélectionner**, la stratégie est déployée pour les utilisateurs.
 
     ![Capture d’écran du volet Ajouter un groupe d’utilisateurs montrant la liste des utilisateurs Azure Active Directory](./media/azure-ad-user-group-list.png)
 
@@ -127,10 +125,12 @@ Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs 
 
 Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection d’application** dans la console Intune, puis cliquez sur **Ajouter une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Si vous souhaitez que la stratégie de protection d’application s’applique à la fois aux appareils gérés et aux appareils non gérés, vérifiez que l’option **Cibler sur tous les types d’application** est définie sur **Oui** (valeur par défaut). Si vous souhaitez effectuer une affectation précise en fonction de l’état de la gestion, définissez l’option **Cibler sur tous les types d’application** sur **Non**. 
 
-Pour que les applications iOS soient considérées comme « managées », le paramètre de stratégie de configuration **IntuneMAMUPN** doit être déployé pour chaque application. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+![Capture d’écran du panneau Ajouter une stratégie dans lequel l’option Cibler sur tous les types d’application est sélectionnée](./media/app-protection-policies-target-all.png)
+
+Pour que les applications iOS soient considérées comme « managées », le paramètre de stratégie de configuration **IntuneMAMUPN** doit être déployé pour chaque application. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
-> Pour plus d’informations sur la prise en charge iOS des stratégies de protection d’application basées sur l’état de la gestion des appareils, consultez [MAM protection policies targeted based on management state](whats-new.md#mam-protection-policies-targeted-based-on-management-state-) (Ciblage des stratégies de protection MAM en fonction de l’état de la gestion).
+> Pour plus d’informations sur la prise en charge iOS des stratégies de protection d’application basées sur l’état de la gestion des appareils, consultez [Ciblage des stratégies de protection MAM en fonction de l’état de la gestion](whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-).
 
 ## <a name="policy-settings"></a>Paramètres de stratégie
 Pour afficher la liste complète des paramètres de stratégie pour iOS et Android, sélectionnez l’un des liens suivants :

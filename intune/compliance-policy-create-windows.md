@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2018
+ms.date: 09/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8d06b5120bc3ff3e3e14d1c5b089bbebc7b53558
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 11ccace4ca8e43e09b8aebeb92530629cf50a472
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909335"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602314"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils Windows dans Intune
 
@@ -111,6 +111,10 @@ Les PC Windows 8.1 retournent la version **3**. Si la règle de la version du sy
 
 - **Exiger BitLocker** : quand BitLocker est activé, l’appareil peut protéger les données stockées sur le disque contre tout accès non autorisé au moment de la désactivation ou de la mise en veille prolongée du système. Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le module de plateforme sécurisée (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il permet également de protéger l’ordinateur contre les tentatives de falsification, même si celui-ci est laissé sans surveillance, perdu ou volé. Si l’ordinateur est équipé d’un module de plateforme sécurisée compatible, BitLocker utilise ce module pour verrouiller les clés de chiffrement qui protègent les données. Ainsi, les clés ne sont accessibles qu’une fois que le module de plateforme sécurisée a vérifié l’état de l’ordinateur.
 - **Exiger l’activation du démarrage sécurisé sur l’appareil** : quand le démarrage sécurisé est activé, le système est obligé de démarrer dans un état approuvé basé sur les paramètres d’usine. De plus, quand le démarrage sécurisé est activé, les principaux composants utilisés pour démarrer l’ordinateur doivent avoir des signatures de chiffrement appropriées qui sont approuvées par l’organisation ayant fabriqué l’appareil. Le microprogramme UEFI vérifie la signature avant de laisser la machine démarrer. Si des fichiers ont été falsifiés et que leur signature a été rompue, le système ne démarre pas.
+
+  > [!NOTE]
+  > Le paramètre **Exiger l’activation du démarrage sécurisé sur l’appareil** est pris en charge sur les appareils TPM 1.2 et 2.0. Pour les appareils qui ne prennent pas en charge TPM 2.0 ou une version ultérieure, l’état de la stratégie dans Intune s’affiche sous la forme **Non conforme**. Il s’agit d’une limitation du service [Attestation d’intégrité de l’appareil](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) dans Windows 10.
+
 - **Exiger l’intégrité du code** : l’intégrité du code est une fonctionnalité qui valide l’intégrité d’un fichier de pilote ou d’un fichier système, chaque fois qu’il est chargé en mémoire. L’intégrité du code détecte si un fichier système ou un pilote non signé est chargé dans le noyau. Cette fonctionnalité détecte également si un fichier système a été modifié par un logiciel malveillant exécuté par un compte d’utilisateur ayant des privilèges d’administrateur.
 
 Pour plus d’informations sur le fonctionnement du service HAS, consultez [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).

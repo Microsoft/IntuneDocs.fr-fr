@@ -2,8 +2,8 @@
 title: Accès conditionnel basé sur l’application avec Intune
 description: Découvrez le fonctionnement de l’accès conditionnel basé sur l’application avec Intune.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 05/31/2017
 ms.topic: article
@@ -14,12 +14,12 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c467d20a3bf4f2cfb94db5cecfae78b1717993d
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 95458642f60dfb8c7ba18078ef4bd238c53502aa
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34561971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231302"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Accès conditionnel basé sur l’application avec Intune
 
@@ -27,7 +27,7 @@ ms.locfileid: "34561971"
 
 Les [stratégies de protection des applications Intune](app-protection-policy.md) vous aident à protéger vos données d’entreprise sur les appareils qui sont inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez toujours vous assurer que les données et ressources de votre entreprise sont protégées.
 
-L’accès conditionnel basé sur l’application et la gestion d’applications mobiles ajoutent une couche de sécurité en vous assurant que seules les applications mobiles qui prennent en charge les stratégies de protection des applications Intune peuvent accéder aux services Exchange en ligne et autres services d’Office 365.
+L’accès conditionnel basé sur l’application et la gestion d’applications clientes ajoutent une couche de sécurité en vous assurant que seules les applications clientes qui prennent en charge les stratégies de protection des applications Intune peuvent accéder aux services Exchange en ligne et autres services d’Office 365.
 
 > [!NOTE]
 > Une application gérée est une application à laquelle des stratégies de protection d’application sont appliquées et pouvant être gérée par Intune.

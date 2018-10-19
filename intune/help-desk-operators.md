@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
+ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251662"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229073"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise
 
@@ -48,7 +48,7 @@ Dans le volet de dépannage, choisissez **Sélectionner un utilisateur** pour af
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
 3. Dans le volet **Intune**, choisissez **Dépanner**.
 4. Cliquez sur **Sélectionnez** pour sélectionner un utilisateur à dépanner.
-5. Sélectionnez un utilisateur en tapant son nom ou son adresse e-mail. Cliquez sur **Sélectionner**. Les informations sur le dépannage pour l’utilisateur s’affichent dans le volet Dépannage. Les tableaux qui suivent expliquent les informations.
+5. Sélectionnez un utilisateur en tapant son nom ou son adresse e-mail. Cliquez sur **Sélectionner**. Les informations sur le dépannage pour l’utilisateur s’affichent dans le volet Dépannage. Le tableau suivant explique les informations.
 
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -64,16 +64,18 @@ Vous pouvez utiliser le volet **Dépanner** pour consulter les informations de l
 | 1.   | État du compte  | Affiche l’état du locataire Intune actif comme étant **Actif** ou **Inactif**.       |
 | 2.   | Sélection de l'utilisateur  | Nom de l’utilisateur actuellement sélectionné. Cliquez sur **Changer d’utilisateur** pour choisir un autre utilisateur.       |
 | 3.   | État de l’utilisateur  | Affiche pour cet utilisateur l’état de la licence Intune, le nombre d’appareils, la conformité de chaque appareil, le nombre d’applications et la conformité des applications.       |
-| 4.   | Informations utilisateur  | Utilisez la liste pour sélectionner les détails à consulter dans le volet. <br>Vous pouvez sélectionner : <ul><li>Applications mobiles<li>Stratégies de protection des applications<li>Stratégies de conformité<li> Stratégies de configuration</ul>      |
+| 4.   | Informations utilisateur  | Utilisez la liste pour sélectionner les détails à consulter dans le volet. <br>Vous pouvez sélectionner : <ul><li>Applications clientes<li>Stratégies de conformité<li> Stratégies de configuration<li>Stratégies de protection des applications <li>Restrictions d’inscription</ul>      |
 | 5.   | Appartenance aux groupes  | Affiche les groupes dont l’utilisateur sélectionné est membre.       |
 
-## <a name="mobile-apps-reference"></a>Informations de référence sur les applications mobiles
+## <a name="client-apps-reference"></a>Informations de référence sur les applications clientes
 
-Applications qui s’exécutent sur les appareils, ou les appareils appartenant aux utilisateurs gérés par Intune et Azure Active Directory (AD).
+Applications qui exécutent des appareils
+- Gérés par Intune et Azure Active Directory (AD) 
+- Appartenant à des utilisateurs et gérés par Intune et Azure Active Directory (AD)
 
 ### <a name="properties"></a>Propriétés
 
-Propriétés des applications mobiles.
+Propriétés des applications clientes.
 
 | Propriété      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +93,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 | Nom de l'appareil        | Nom du type d’appareil.                                                                                                     |
 | Géré par         | Horodatage de la modification de la stratégie.                                                                                              |
 | Type de jonction à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
-| Propriété          | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Propriété          | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Conforme à Intune   | Nom du type d’appareil.                                                                                                     |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Système d’exploitation                 | Système d’exploitation installé sur l’appareil.                                                                                       |
@@ -100,20 +102,20 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 
 ### <a name="app-protection-status"></a>État de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies Enterprise Mobility Solution (EMS). Ceci donne une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies Enterprise Mobility Solution (EMS). Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| État      | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| État      | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Nom de l’application    | Nom de l’application                                                           |
 | Nom de l'appareil | Nom du type d’appareil.                                                       |
 | Type d'appareil | Nom du type d’appareil.                                                       |
-| Stratégies    | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| Stratégies    | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Dernière synchronisation   | Horodatage de la dernière synchronisation de l’appareil avec Intune.                   |
 
 ## <a name="app-protection-policies-reference"></a>Informations de référence sur les stratégies de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ceci donne une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection d’application est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une protection de base de référence pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 ### <a name="properties"></a>Propriétés
 
@@ -123,7 +125,7 @@ Le tableau récapitule l’état des stratégies de protection des applications 
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Nom        | Nom de l’application.                                                                                                        |
 | Déployé    | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
-| Plate-forme    | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Plate-forme    | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Inscription  | Nom du type d’appareil.                                                                                                     |
 | Dernière mise à jour | Horodatage de la modification de la stratégie.                                                                                              |
 
@@ -136,7 +138,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 | Nom du périphérique        | Nom du type d’appareil.                                                                                                     |
 | Géré par         | Horodatage de la modification de la stratégie.                                                                                              |
 | Type de jonction à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
-| Propriété          | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Propriété          | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Conforme à Intune   | Nom du type d’appareil.                                                                                                     |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
@@ -157,7 +159,7 @@ Propriétés des stratégies de conformité.
 | Affectation    | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Nom          | Nom de l’application.                                                                                                        |
 | Système d’exploitation            | Système d’exploitation installé sur l’appareil.                                                                                       |
-| Type de stratégie   | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Type de stratégie   | Type de propriété des appareils (**Société**, **Personnel** et **Inconnu**).                                               |
 | Dernière modification le | Nom du type d’appareil.                                                                                                     |
 
 ### <a name="devices"></a>Appareils
@@ -169,7 +171,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 | Nom de l'appareil        | Nom du type d’appareil.                                                                                                     |
 | Géré par         | Horodatage de la modification de la stratégie.                                                                                              |
 | Type de jonction à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
-| Propriété          | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Propriété          | Type de propriété des appareils (**Société**, **Personnel** et **Inconnu**).                                               |
 | Conforme à Intune   | Nom du type d’appareil.                                                                                                     |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Système d’exploitation                 | Système d’exploitation installé sur l’appareil.                                                                                       |
@@ -178,15 +180,15 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 
 ### <a name="app-protection-policies"></a>Stratégies de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ceci donne une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| État      | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| État      | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Nom de l’application    | Nom de l’application                                                           |
 | Nom de l'appareil | Nom du type d’appareil.                                                       |
 | Type d'appareil | Nom du type d’appareil.                                                       |
-| Stratégies    | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| Stratégies    | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Dernière synchronisation   | Horodatage de la dernière synchronisation de l’appareil avec Intune.                   |
 
 ## <a name="configuration-policies-reference"></a>Informations de référence sur les stratégies de configuration
@@ -202,7 +204,7 @@ Propriétés des stratégies de configuration.
 | Affectation    | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Nom          | Nom de l’application.                                                                                                        |
 | Système d’exploitation            | Système d’exploitation installé sur l’appareil.                                                                                       |
-| Type de stratégie   | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Type de stratégie   | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Dernière modification le | Nom du type d’appareil.                                                                                                     |
 
 ### <a name="devices"></a>Appareils
@@ -214,7 +216,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 | Nom de l'appareil        | Nom du type d’appareil.                                                                                                     |
 | Géré par         | Horodatage de la modification de la stratégie.                                                                                              |
 | Type de jonction à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
-| Propriété          | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**.                                               |
+| Propriété          | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Conforme à Intune   | Nom du type d’appareil.                                                                                                     |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
 | Système d’exploitation                 | Système d’exploitation installé sur l’appareil.                                                                                       |
@@ -224,16 +226,53 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 
 ### <a name="app-protection-policies"></a>Stratégies de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ceci donne une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| État      | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| État      | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Nom de l’application    | Nom de l’application                                                           |
 | Nom de l'appareil | Nom du type d’appareil.                                                       |
 | Type d'appareil | Nom du type d’appareil.                                                       |
-| Stratégies    | Type de propriété des appareils. Les valeurs peuvent être **Entreprise**, **Personnel**, et **Inconnu**. |
+| Stratégies    | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**). |
 | Dernière synchronisation   | Horodatage de la dernière synchronisation de l’appareil avec Intune.                   |
+
+## <a name="enrollment-failure-reference"></a>Informations de référence sur les échecs d’inscription
+
+Le tableau Erreurs d’inscription liste les tentatives d’inscription qui n’ont pas pu s’effectuer correctement. Un appareil listé dans le tableau ci-dessous peut réussir à s’inscrire par la suite au cours d’une nouvelle tentative. Certaines tentatives infructueuses ne sont peut-être pas listées. Les informations d’atténuation ne sont pas disponibles pour tous les échecs.
+
+| Colonne de tableau | Description |
+|-------------|----------|
+| Début de l’inscription | Heure de début de l’inscription effectuée pour la première fois par l’utilisateur. |
+| Système d’exploitation | Système d’exploitation de l’appareil. |
+| Version du système d'exploitation | Version du système d’exploitation de l’appareil. |
+| Échec | Cause de l’échec. |
+
+### <a name="failure-details"></a>Détails de l’échec
+
+Quand vous choisissez une ligne d’échec, des détails supplémentaires sont fournis.
+
+| Section | Description |
+|-------------|----------|
+| Détails de l’échec | Explication plus détaillée de l’échec. |
+| Corrections potentielles | Étapes suggérées pour résoudre l’erreur. Il est possible que certains échecs ne puissent pas être corrigés. |
+| Ressources (facultatif) | Liens vers de la documentation supplémentaires ou vers des zones du portail permettant d’entreprendre des actions. |
+
+### <a name="enrollment-errors"></a>Erreurs d’inscription
+
+| Erreur | Détails |
+|-------------|----------|
+| Délai d’expiration ou échec d’iOS | Expiration du délai d’attente entre l’appareil et Intune en raison de la lenteur de l’utilisateur à effectuer l’inscription. |
+| Utilisateur introuvable ou avec licence | Il manque une licence à l’utilisateur, ou celle-ci a été supprimée du service. |
+| Appareil déjà inscrit | Une personne a tenté d’inscrire un appareil à l’aide du Portail d’entreprise sur un appareil encore inscrit par un autre utilisateur. |
+| Non intégré à Intune | Une inscription a été tentée alors que l’autorité MDM (Gestion des appareils mobiles) Intune n’était pas configurée. |
+| Échec de l’autorisation d’inscription | Une inscription a été tentée à l’aide d’une ancienne version du Portail d’entreprise. |
+| Appareil non pris en charge | L’appareil ne répond pas aux exigences minimales de l’inscription à Intune. |
+| Restrictions d’inscription non respectées | Cette inscription a été bloquée en raison d’une restriction d’inscription, configurée par un administrateur. |
+| Plafond d’appareils atteint | Cette inscription a été bloquée en raison d’une restriction du nombre limite d’appareils, configurée par un administrateur. |
+| Intégration d’Apple | L’inscription de tous les appareils iOS a été bloquée pour le moment en raison de l’absence ou de l’expiration d’un certificat Push MDM Apple dans Intune. |
+| Appareil non préinscrit | L’appareil n’a pas été préinscrit en tant qu’appareil de société, et toutes les inscriptions personnelles ont été bloquées par un administrateur. |
+| Fonctionnalité non prise en charge | L’utilisateur a probablement tenté de s’inscrire via une méthode non compatible avec votre configuration d’Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Collecter les données disponibles à partir d’un appareil mobile
 

@@ -6,21 +6,21 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 10/3/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
-ms.reviewer: mghadial
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: f96ca3075bab5c8bacaea62bb4fc04bd957cf01e
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329408"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863176"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Intune
 
@@ -61,7 +61,7 @@ Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l�
 -  Modèle(s) d’appareil
 
 Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans la [documentation sur la prise en charge d’HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
-Exemple d’entrée : *iPhone5,2; iPhone5,3*
+Exemple d’entrée : *iPhone5,2;iPhone5,3*
 
 Sur les appareils de l’utilisateur final, le client Intune effectuerait une action sur la base d’une mise en correspondance simple des chaînes de modèle d’appareil spécifiées dans Intune pour les stratégies de protection d’application. La mise en correspondance dépend entièrement de ce que signale l’appareil. En tant qu’administrateur informatique, vous êtes encouragé à vérifier que le comportement souhaité se produit. Pour cela, testez ce paramètre sur une variété de modèles et de fabricants d’appareils en ciblant un petit groupe d’utilisateurs. La valeur par défaut est **Non configuré**.<br>
 Effectuez l’une des actions suivantes : 
@@ -69,7 +69,7 @@ Effectuez l’une des actions suivantes :
 - Autoriser spécifié (réinitialiser non spécifié)
 
 **Que se passe-t-il si l’administrateur informatique entre une liste différente d’identificateurs de modèles iOS dans des stratégies ciblant les mêmes applications d’un même utilisateur Intune ?**<br>
-Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application cible en cours d’ouverture par l’utilisateur Intune ciblé est donc une intersection des identificateurs de modèles iOS répertoriés dans la *stratégie A* et la *stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « iPhone5,2; iPhone5,3 » et que la *stratégie B* spécifie « iPhone5,3 », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « iPhone5,3 ». 
+Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application cible en cours d’ouverture par l’utilisateur Intune ciblé est donc une intersection des identificateurs de modèles iOS répertoriés dans la *stratégie A* et la *stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « iPhone5,2;iPhone5,3 » et si la *stratégie B* spécifie « iPhone5,3 », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « iPhone5,3 ». 
 
 ### <a name="android-policy-settings"></a>Paramètres de stratégie Android
 
@@ -83,10 +83,10 @@ Pour Android, vous pouvez configurer des actions pour les paramètres suivants �
 -  Fabricant(s) d’appareil
 
 Pour utiliser le paramètre **Fabricant(s) d’appareil**, entrez une liste de fabricants Android séparés par des points-virgules. Le fabricant d’un appareil Android se trouve sous les paramètres de l’appareil.<br>
-Exemple d’entrée : *Fabricant A; Fabricant B* 
+Exemple d’entrée : *Fabricant A;Fabricant B* 
 
 >[!NOTE]
-> Voici quelques fabricants courants signalés par des appareils utilisant Intune, et pouvant être utilisés comme entrée : Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
+> Voici quelques fabricants courants signalés par des appareils utilisant Intune, et pouvant être utilisés comme entrée : Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 Sur les appareils de l’utilisateur final, le client Intune effectuerait une action sur la base d’une mise en correspondance simple des chaînes de modèle d’appareil spécifiées dans Intune pour les stratégies de protection d’application. La mise en correspondance dépend entièrement de ce que signale l’appareil. En tant qu’administrateur informatique, vous êtes encouragé à vérifier que le comportement souhaité se produit. Pour cela, testez ce paramètre sur une variété de modèles et de fabricants d’appareils en ciblant un petit groupe d’utilisateurs. La valeur par défaut est **Non configuré**.<br>
 Effectuez l’une des actions suivantes : 
@@ -94,7 +94,7 @@ Effectuez l’une des actions suivantes :
 - Autoriser spécifié (bloquer non spécifié)
 
 **Que se passe-t-il si l’administrateur informatique entre une liste différente de fabricants Android dans des stratégies ciblant les mêmes applications d’un même utilisateur Intune ?**<br>
-Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application cible en cours d’ouverture par l’utilisateur Intune ciblé est donc une intersection des fabricants Android répertoriés dans la *stratégie A* et la *stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « Google, Samsung » et que la *stratégie B* spécifie « Google », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « Google ». 
+Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application cible en cours d’ouverture par l’utilisateur Intune ciblé est donc une intersection des fabricants Android répertoriés dans la *stratégie A* et la *stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « Google;Samsung » et si la *stratégie B* spécifie « Google », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « Google ». 
 
 ### <a name="additional-settings-and-actions"></a>Actions et paramètres supplémentaires 
 
@@ -119,5 +119,3 @@ Pour en savoir plus sur les stratégies de protection des applications, consulte
 - [Guide pratique pour créer et affecter des stratégies de protection des applications](app-protection-policies.md)
 - [Paramètres de stratégie de protection des applications iOS](app-protection-policy-settings-ios.md)
 - [Paramètres de stratégie de protection des applications Android dans Microsoft Intune](app-protection-policy-settings-android.md) 
-
-

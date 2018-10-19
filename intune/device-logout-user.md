@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 08/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 223906d37159ba4081f5a5c055392321ac02e0ab
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d80d7a05dc01298dc7bc347098cf85fbdfc3689f
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020620"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403491"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Déconnecter l’utilisateur actuel sur les appareils iOS gérés par Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-L’action **Déconnecter l’utilisateur actuel** déconnecte l’utilisateur actuel sur un appareil iPad partagé et configuré pour gérer l’application iOS Classroom avec un [profil d’éducation iOS](education-settings-configure-ios.md). 
+L’action **Déconnecter l’utilisateur actuel** déconnecte l’utilisateur actuel d’un appareil iPad partagé. 
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -36,7 +36,7 @@ L’action **Déconnecter l’utilisateur actuel** déconnecte l’utilisateur a
 - macOS - Non prise en charge
 - Android - Non prise en charge
 
-## <a name="how-to-logout-the-current-user"></a>Comment déconnecter l’utilisateur actuel
+## <a name="how-to-log-out-the-current-user"></a>Guide pratique pour déconnecter l’utilisateur actuel
 
 1.  Connectez-vous au portail Azure.
 2.  Choisissez **Autres services** > **Surveillance + Gestion** > **Intune**.

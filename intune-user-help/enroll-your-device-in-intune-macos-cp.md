@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af5c7492563c8df0168eff3250ae1bbad2cc323e
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147715"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260247"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
 
@@ -80,8 +80,17 @@ Utilisez les étapes suivantes pour inscrire des appareils macOS exécutant OS X
 
 9. Le premier écran qui apparaît dans l’application Portail d’entreprise vous invite à **vous connecter**. Utilisez le même compte professionnel ou scolaire que celui avec lequel vous vous êtes connecté au site web du portail d’entreprise.
 
-10. Le portail d’entreprise vérifie vos informations de compte, puis affiche vos états **Inscription de l’appareil** et **Conformité de l’appareil**. Des triangles jaunes signalent les actions que vous devez effectuer pour sécuriser votre appareil macOS professionnel ou scolaire. Cliquez sur **Commencer** pour démarrer l’inscription. Découvrez [ce que votre organisation peut voir](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) quand vous inscrivez un appareil.
+10. Le Portail d’entreprise vérifie vos informations de compte, puis affiche les états **Inscription de l’appareil** et **Conformité de l’appareil**. Des triangles jaunes signalent les actions que vous devez effectuer pour sécuriser votre appareil macOS professionnel ou scolaire. Cliquez sur **Commencer** pour démarrer l’inscription. 
 
-11. Vous pouvez être invité à fournir les informations de connexion de votre ordinateur. L’inscription de votre appareil peut prendre quelques minutes. Pendant ce temps, vous pouvez effectuer d’autres tâches sur votre appareil. Un message s’affiche une fois la configuration de l’application Portail d’entreprise terminée pour vous informer que vous avez fini.  
+11. Si vous y êtes invité, tapez les informations de connexion de votre ordinateur.  
+
+L’inscription de votre appareil pour la gestion peut prendre plusieurs minutes. Pendant ce temps, vous pouvez effectuer d’autres tâches sur votre appareil. Un message s’affiche une fois la configuration de l’application Portail d’entreprise terminée pour vous informer que vous avez fini.  
+
+## <a name="unverified-profiles"></a>Profils non vérifiés
+Quand vous affichez les profils de gestion des appareils mobiles (MDM) installés pour votre appareil macOS, vous verrez peut-être certains profils présentant l’état **Non vérifié**. Cela n’est pas un problème tant que le **profil de gestion** affiche l’état **Vérifié**.  
+
+Le profil de gestion définit la connexion au canal MDM. Quand le profil de gestion est vérifié, tous les autres profils remis à l’ordinateur, par le biais de ce canal, héritent les caractéristiques de sécurité du profil de gestion.
+
+De plus, comme ces autres profils n’ont alors pas besoin d’être vérifiés individuellement, ils sont générés et remis aux appareils plus rapidement. 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Vous trouverez ses coordonnées sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

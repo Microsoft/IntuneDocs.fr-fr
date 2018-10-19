@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329381"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602178"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Paramètres kiosque pour les appareils Android dans Intune
 
@@ -25,9 +25,9 @@ Vous pouvez configurer un appareil kiosque avec une ou plusieurs applications à
 
 ## <a name="restrict-an-android-kiosk-device-to-a-single-app"></a>Restreindre un appareil Android kiosque à une seule application
 
-Si le profil de restriction d’un appareil kiosque est défini sur **Mode kiosque** = **Kiosque à application unique**, les utilisateurs ne peuvent accéder qu’à une seule application. Quand un appareil configuré dans ce mode démarre, l’application spécifique démarre. Les utilisateurs ne peuvent pas ouvrir de nouvelles applications ou basculer vers une autre application.
+Si le profil de restriction d’un appareil kiosque est défini sur **Mode kiosque** = **Kiosque à application unique**, les utilisateurs ne peuvent accéder qu’à une seule application. Quand un appareil configuré dans ce mode démarre, l’application spécifique démarre. Les utilisateurs ne peuvent pas ouvrir de nouvelles applications, ni changer l’application en cours d’exécution.
 
-1. Vérifiez que l’application que vous souhaitez utiliser sur l’appareil kiosque a été [déployée sur l’appareil](apps-deploy.md) et que vous avez affecté l’application au groupe d’appareils que vous avez créé pour vos appareils kiosque.
+1. Vérifiez que l’application souhaitée sur la borne est [déployée sur l’appareil](apps-deploy.md), et qu’elle est affectée au groupe d’appareils que vous avez créé pour vos appareils de type borne.
 2. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. Dans le panneau **Créer un profil**, définissez les champs suivants :
      - **Nom**
@@ -51,7 +51,7 @@ Pour configurer un appareil kiosque Android avec plusieurs applications, suivez 
 2. [Ajouter et affecter des applications qui peuvent être utilisées en mode kiosque](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Facultatif) [Ajouter des liens web qui peuvent être utilisés en mode kiosque](#add-web-links-that-can-be-used-in-kiosk-mode)
 
-### <a name="import-and-deply-the-managed-home-screen-app"></a>Importer et déployer l’application Managed Home Screen
+### <a name="import-and-deploy-the-managed-home-screen-app"></a>Importer et déployer l’application Managed Home Screen
 
 1. Accédez à la [page Managed Home Screen sur Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) et connectez-vous avec le même compte que celui que vous utilisez pour d’autres applications Google Play gérées.
 2. Choisissez **Approuver**.
@@ -59,6 +59,9 @@ Pour configurer un appareil kiosque Android avec plusieurs applications, suivez 
 4. Choisissez **Applications** > **Managed Home Screen** > **Affectations** > **Ajouter un groupe**.
 5. Sous **Type d’affectation**, choisissez **Obligatoire**.
 6. Choisissez **Groupes inclus** > **Sélectionner les groupes à inclure** > choisissez le groupe d’appareils que vous avez créé pour vos appareils kiosque > **Sélectionner** > **OK** > **OK** > **Enregistrer**.
+
+> [!NOTE]
+> Quand vous ajoutez l’application Managed Home Screen au profil de borne multiapplication, une icône est ajoutée. Toutefois, il ne se passe rien quand vous sélectionnez l’icône. Vous n’avez donc pas besoin d’ajouter l’application Managed Home Screen au profil de borne multiapplication.
 
 ### <a name="add-and-assign-apps-that-can-be-used-in-kiosk-mode"></a>Ajouter et affecter des applications qui peuvent être utilisées en mode kiosque
 
@@ -76,7 +79,7 @@ Pour chaque application que vous souhaitez rendre disponible sur les appareils k
 3. Choisissez **Configurer** et fournissez les informations requises. Vous n’avez pas besoin d’ajouter une image de logo, car elle est récupérée automatiquement à partir de favicon.ico sur le site web.
 4. Choisissez **OK** > **Ajouter**.
 
-Vérifiez que vous avez déployé une application de navigateur web sur les appareils kiosque à l’aide de [Mobile Apps](apps-add.md).
+Veillez à déployer une application web sur les appareils de type borne. Pour plus d’informations, consultez [Ajouter des applications web à Microsoft Intune](web-app.md).
 
 ### <a name="create-a-multi-app-kiosk-profile"></a>Créer un profil de kiosque multi-application
 

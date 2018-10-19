@@ -1,42 +1,40 @@
 ---
-title: Gérer l’accès web avec l’application Managed Browser
+title: Gérer l’accès web avec un navigateur protégé par une stratégie
 titlesuffix: Microsoft Intune
-description: Déployez l’application Managed Browser pour limiter la navigation sur le web et le transfert de données du web vers d’autres applications.
+description: Utilisez un navigateur protégé par une stratégie pour limiter la navigation sur le web et le transfert de données web.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
-ms.reviewer: maxles
+ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d11356c16965e3ba7631275368c9723a2db0ecc9
-ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
+ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43675013"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863159"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Gérer l'accès à Internet à l'aide de stratégies de navigateur protégé avec Microsoft Intune
+# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Gérer l'accès à Internet à l'aide de stratégies de navigateur protégé avec Microsoft Intune  
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Parmi les navigateurs protégés figurent Microsoft Edge et Intune Managed Browser. Edge et Managed Browser sont des applications de navigation web téléchargeables dans les magasins d'applications publics et utilisables dans le cadre professionnel. Lorsqu’il est configuré avec Intune, un navigateur protégé peut être :
-- Utilisé pour accéder aux sites d’entreprise et aux applications SaaS avec l’authentification unique via le service MyApps, tout en assurant la protection des données web.
-- Préconfiguré avec une liste d’URL et de domaines pour restreindre les sites auxquels l’utilisateur peut accéder dans le contexte de l’entreprise.
-- Préconfiguré avec une page d’accueil et des signets que vous spécifiez.
+En utilisant un navigateur protégé par une stratégie Intune (Microsoft Edge ou Intune Managed Browser), vous avez la garantie que les sites web d’entreprise sont toujours accessibles avec des dispositifs de protection en place.  Quand ils sont configurés avec Intune, les navigateurs protégés peuvent tirer parti des avantages suivants :
 
-Edge et Managed Browser étant intégrés au Kit de développement logiciel (SDK) Intune, vous pouvez également leur appliquer des stratégies de protection d’applications, notamment :
-- Contrôle de l’utilisation des fonctions Copier, Couper et Coller
-- Prévention des captures d’écran
-- Vérification que les liens vers du contenu que les utilisateurs sélectionnent s’ouvrent uniquement dans d’autres applications gérées
+- Stratégies de protection des applications
+- Accès conditionnel.
+- Authentification unique
+- Paramètres de configuration d’application
+- Intégration du proxy d’application dans Azure
 
-Pour plus d’informations, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
+## <a name="getting-started"></a>Mise en route
 
 Vous pouvez appliquer ces paramètres :
 
@@ -53,14 +51,11 @@ Il est possible de créer des stratégies de navigateur protégé pour les types
 
 -   Appareils qui exécutent Android 4 et versions ultérieures
 
--   Appareils qui exécutent iOS 8.0 et versions ultérieures
+-   Appareils qui exécutent iOS 10.0 et versions ultérieures
 
 >[!IMPORTANT]
->À compter d’octobre 2017, l’application Intune Managed Browser sur l’application Android prend en charge seulement les appareils exécutant Android 4.4 et ultérieur. L’application Intune Managed Browser sur iOS prendra en charge seulement les appareils exécutant iOS 9.0 et ultérieur.
 >Les versions antérieures d’Android et d’iOS pourront encore utiliser Managed Browser, mais elles ne pourront pas installer les nouvelles versions de l’application et n’auront peut-être pas accès à toutes les fonctionnalités. Nous vous encourageons à mettre à jour le système d’exploitation de ces appareils avec une version prise en charge.
-
-
-Microsoft Edge et Intune Managed Browser prennent en charge l’ouverture de contenu web des [partenaires d’application Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Accès conditionnel pour les navigateurs protégés
 
@@ -95,11 +90,11 @@ Une fois que la stratégie ci-dessus est configurée, les utilisateurs sont obli
 
 Managed Browser ne prend pas en charge les stratégies d’accès conditionnel classiques. Pour plus d’informations, consultez [Migrer les stratégies classiques dans le portail Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration).
 
-##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Authentification unique auprès des applications web connectées à Azure AD dans Intune Managed Browser
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Authentification unique auprès des applications web connectées à Azure AD dans les navigateurs protégés par une stratégie
 
-L’application Intune Managed Browser sur iOS et Android peut à présent exploiter l’authentification unique auprès de toutes les applications web (locales et SaaS) connectées à Azure AD. Quand l’application Microsoft Authenticator sur iOS ou Portail d’entreprise Intune sur Android est installée, les utilisateurs d’Intune Managed Browser peuvent accéder aux applications web connectées à AD Azure sans avoir à retaper leurs informations d’identification.
+Microsoft Edge et Intune Managed Browser sur iOS et Android peuvent tirer parti de la fonctionnalité SSO (authentification unique) auprès de toutes les applications web (SaaS et locales) connectées à Azure AD. Quand l’application Microsoft Authenticator est présente sur iOS ou l’application Portail d’entreprise Intune sur Android, les utilisateurs d’un navigateur protégé par une stratégie peuvent accéder aux applications web connectées à Azure AD sans avoir à entrer de nouveau leurs informations d’identification.
 
-L’authentification unique dans Intune Managed Browser exige l’inscription de votre appareil par l’application Microsoft Authenticator sur iOS ou Portail d’entreprise Intune sur Android. Les utilisateurs dotés de l’application Authenticator ou Portail d’entreprise Intune sont invités à inscrire leur appareil quand ils accèdent à une application web connectée à Azure AD dans Intune Managed Browser, si ce dernier n’est pas déjà inscrit par une autre application. Une fois que l’appareil est inscrit avec le compte géré par Intune, l’authentification unique est activée dans ce compte pour les applications web connectées à Azure AD. 
+Pour permettre l’utilisation de SSO, votre appareil doit être inscrit par l’application Microsoft Authenticator sur iOS ou le Portail d’entreprise Intune sur Android. Les utilisateurs disposant de l’application Authenticator ou Portail d’entreprise Intune sont invités à inscrire leur appareil quand ils accèdent à une application web connectée à Azure AD dans un navigateur protégé par une stratégie, si ce dernier n’est pas déjà inscrit par une autre application. Une fois que l’appareil est inscrit avec le compte géré par Intune, l’authentification unique est activée dans ce compte pour les applications web connectées à Azure AD. 
 
 > [!NOTE]
 > L’inscription d’un appareil est un simple enregistrement auprès du service Azure AD. Elle ne nécessite pas une inscription complète et ne donne aucun autre privilège supplémentaire sur l’appareil.

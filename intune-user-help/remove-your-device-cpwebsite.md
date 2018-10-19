@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0ea421c63cbb6c2228ea94bf82d795ece01f46ac
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: fd58fae2f48791e8c63b9391a825838040b1202f
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150322"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863108"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Supprimer votre appareil du portail d’entreprise
 
@@ -30,18 +30,19 @@ Si vous ne voulez plus que votre appareil soit géré par votre entreprise ou vo
 
 Pour supprimer votre appareil :
 
-1. Sur le [site web Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980), cliquez sur le bouton de __menu__ ![Petite image du bouton de menu, représentant trois barres horizontales empilées les unes sur les autres.](/Intune/whats-new/media/CP_hamburger_menu.png), puis sélectionnez __Mes appareils__.
+1. Sur le [site web du portail d’entreprise](https://portal.manage.microsoft.com), sélectionnez le bouton __Menu__ > __Appareils__.  
 
-   ![Image du site web Portail d’entreprise avec un menu latéral développé sur le côté gauche de l’écran, contenant les boutons Accueil, Toutes les applications, Mes appareils, Support technique et Déconnexion.](/media/iwp-expanded-sidebar.png)
+2. Sélectionnez l’appareil à supprimer.  
 
-2. Dans la page __Mes appareils__, sélectionnez le nom de l’appareil à supprimer.
+    ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
-    ![Capture d’écran de la page Mes appareils, avec quelques appareils non identifiés au-dessus de la bannière invitant à inscrire les appareils non listés ou à identifier ceux qui ne le sont pas.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Sélectionnez **Supprimer**. Si l’option de suppression n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Supprimer**.  
 
-3. L’appareil s’ouvre dans une fenêtre contextuelle. Appuyez sur le bouton **Supprimer**.
+   ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)  
+  
 
-   ![Toutes les options disponibles pour un appareil sélectionné sur le site web Portail d’entreprise, notamment Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/iwp-screen-with-all-options.png)
+    ![Zoom avant sur l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)   
 
-4. Lisez le message d’avertissement, puis appuyez sur **Supprimer** pour supprimer votre appareil du portail d’entreprise.
+4. Un message s’affiche pour vous avertir que vous êtes sur le point de supprimer votre appareil. Sélectionnez **Supprimer** pour confirmer l’opération.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

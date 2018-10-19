@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76c0b96a1759caad4a1052a7233c7dcc8cecfa3b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: de77ad92eac4aa869aec504f1762ad6f216c74d2
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313715"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602144"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -83,29 +83,31 @@ Pour changer les paramètres d’une restriction de type d’appareil, effectuez
 8. Choisissez s’il faut **Autoriser** ou **Bloquer** les appareils **personnels** pour chaque plateforme listée.
 9. Choisissez **OK**.
 
-### <a name="android-device-type-restrictions"></a>Restrictions des types d’appareils Android
+### <a name="blocking-personal-android-devices"></a>Blocage des appareils Android personnels
 - Si vous bloquez l’inscription des appareils Android personnels, les appareils avec profil professionnel Android personnels peuvent quand même être inscrits.
 - Par défaut, les paramètres de vos appareils avec profil professionnel Android sont identiques à ceux de vos appareils Android. Ce ne sera plus le cas une fois que vous aurez modifié vos paramètres de profil professionnel Android.
 - Si vous bloquez l’inscription du profil professionnel Android personnel, seuls les appareils Android d’entreprise peuvent s’inscrire en tant que profil professionnel Android.
 
-### <a name="windows-device-type-restrictions"></a>Restrictions des types d’appareils Windows
-Une fois que la restriction des types d’appareils Windows est définie sur **Bloquer**, Intune vérifie que chaque nouvelle demande d’inscription Windows a été autorisée comme inscription d’entreprise. Les inscriptions non autorisées seront bloquées.
+### <a name="blocking-personal-windows-devices"></a>Blocage des appareils Windows personnels
+Si vous bloquez l’inscription d’appareils Windows personnels, Intune vérifie que chaque nouvelle demande d’inscription Windows est autorisée en tant qu’inscription d’entreprise. Les inscriptions non autorisées seront bloquées.
 
 Les méthodes suivantes sont qualifiées comme étant autorisées en tant qu’inscription d’entreprise Windows :
  - L’utilisateur qui s’inscrit utilise un [compte de gestionnaire d’inscription d’appareil]( device-enrollment-manager-enroll.md).
 - L’appareil s’inscrit via [Windows AutoPilot](enrollment-autopilot.md).
+- L’appareil est inscrit auprès de Windows Autopilot mais cela ne représente pas la seule option d’inscription MDM dans les paramètres Windows.
 - Le numéro IMEI de l’appareil est listé dans **Inscription de l’appareil** > **[Identificateurs d’appareil d’entreprise](corporate-identifiers-add.md)**. (Non pris en charge pour Windows Phone 8.1)
 - L’appareil s’inscrit via un [package de provisionnement en bloc](windows-bulk-enroll.md).
 - L’appareil s’inscrit via [l’inscription automatique à partir de SCCM pour la cogestion](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Les inscriptions suivantes sont marquées comme étant d’entreprise par Intune mais, dans la mesure où elles n’offrent pas le contrôle par appareil d’administrateur Intune, elles seront bloquées :
- - [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory lors de la configuration de Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
-- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md).
+ - [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory durant la configuration de Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md)\*.
+- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md)*.
  
 Les méthodes d’inscription personnelle suivantes seront également bloquées :
-- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [Ajouter un compte professionnel à partir de Paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md).
+- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [ajout de compte professionnel à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md)\*.
 - Option [Inscription à MDM uniquement]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) à partir de Paramètres Windows.
 
+\* Ces appareils ne sont pas bloqués s’ils sont inscrits auprès d’Autopilot.
 
 ## <a name="set-device-limit-restrictions"></a>Définition des restrictions de limite d'appareil
 

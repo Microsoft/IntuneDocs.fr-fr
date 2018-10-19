@@ -1,11 +1,11 @@
 ---
-title: Utilisation de votre appareil Windows avec Intune | Microsoft Docs
-description: Cette rubrique fournit une liste de liens menant aux tâches que les utilisateurs peuvent effectuer sur leur appareil mobile Windows quand ce dernier est inscrit dans Intune
+title: Utilisation de votre appareil Windows avec le Portail d’entreprise Intune | Microsoft Docs
+description: Liste de liens pour la gestion et le dépannage de vos appareils Windows à partir du Portail d’entreprise
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 10/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,41 +17,61 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 645e87ef731cf911824ab16673c01e962c91fb70
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a28f12bc57fdf134554a65518f24a79287058eeb
+ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017255"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866335"
 ---
-# <a name="using-your-windows-device-with-intune"></a>Utilisation de votre appareil Windows avec Intune
+# <a name="using-your-windows-device-with-intune-company-portal"></a>Utilisation de votre appareil Windows avec le Portail d’entreprise Intune
 
-Vous pouvez effectuer un certain nombre d’opérations avec Intune qui faciliteront votre travail. Voici la liste des opérations les plus courantes que votre entreprise peut vous demander d’effectuer.
+Cette section décrit les tâches et les informations relatives au Portail d’entreprise pour Windows. Elle peut vous aider à gérer et dépanner vos appareils Windows à partir du Portail d’entreprise. Cliquez sur un lien ci-dessous pour consulter des informations détaillées, des étapes et des captures d’écran supplémentaires.  
+
+## <a name="how-to-get-company-portal"></a>Comment obtenir Portail d’entreprise
+Portail d’entreprise est disponible en version site web, mais aussi comme application à télécharger. Pour [accéder au site web Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980), connectez-vous à l’aide de vos informations d’identification professionnelles ou scolaires.  
+
+Consultez [Se connecter au Portail d’entreprise](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal) pour obtenir des instructions détaillées et des captures d’écran.
 
 ## <a name="supported-versions"></a>Versions prises en charge
 
-Intune prend actuellement en charge les versions suivantes de Windows.
+Portail d’entreprise prend actuellement en charge les appareils exécutant les versions suivantes de Windows :
 
-* Windows 10 (versions Famille, Professionnel, Éducation, S et Entreprise)
+* Windows 10 (versions Famille, Professionnel, Éducation, mode S et Entreprise)
 * Windows Phone 8.1 et versions ultérieures
 * Windows 8.1 RT
 * Windows 8.1
 
-Il existe d’autres versions de Windows, telles que [Windows 10 Holographique](https://www.microsoft.com/hololens), qui sont également prises en charge par Intune. Elles ne sont pas répertoriées ici car elles sont réservées à des usages très spécifiques.
+D’autres versions de Windows, telles que [Windows 10 Holographique](https://www.microsoft.com/hololens) sont prises en charge dans le Portail d’entreprise. Ces versions ne sont pas mentionnées dans cet article, car elles sont conçues pour des usages particuliers.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
+## <a name="set-up-your-device-in-the-company-portal"></a>Configurer votre appareil dans le Portail d’entreprise
+- [Passer mon appareil Windows en mode géré dans Portail d’entreprise](enroll-your-device-in-intune-windows.md)
+- [Que signifie passer mon appareil *en mode géré* ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+- [Quelles informations sur mon appareil mon entreprise peut-elle voir ?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Chiffrer mon appareil](encrypt-your-device-windows.md)
+- [Définir ou changer le mot de passe de l’appareil](set-or-change-your-password-windows.md)
 
-- [Inscrire un appareil Windows dans Intune](enroll-your-device-in-intune-windows.md)
-- [Que se passe-t-il si vous installez l’application Portail d’entreprise et inscrivez votre appareil dans Intune ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-- [Quelles informations votre entreprise peut-elle voir quand vous inscrivez votre appareil dans Intune ?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
-- [Réinitialiser (effacer) votre appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
-
-## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Ce que vous pouvez faire quand votre appareil est inscrit dans Intune
-
-- [Chiffrer votre appareil](encrypt-your-device-windows.md)
-- [Définir ou modifier votre mot de passe](set-or-change-your-password-windows.md)
-- [Désinscrire votre appareil d’Intune](unenroll-your-device-from-intune-windows.md)
-- [Que se passe-t-il quand vous désinscrivez votre appareil d’Intune ?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
-- [Effets de la réinitialisation de votre appareil via le portail d’entreprise](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+## <a name="things-you-can-do-after-your-device-is-enrolled-in-management"></a>Actions possibles après l’inscription de votre appareil dans la gestion
+- [Synchroniser mon appareil manuellement](sync-your-device-manually-windows.md)
 - [Désactiver la collecte de données d’utilisation Microsoft](turn-off-microsoft-usage-data-collection-windows.md)
-- [Synchroniser votre appareil manuellement](sync-your-device-manually-windows.md)
+- [Effacer les données d’un appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
+- [Que se passe-t-il une fois que j’ai réinitialisé mon appareil dans Portail d’entreprise ?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+- [Supprimer mon appareil de la gestion](unenroll-your-device-from-intune-windows.md)
+- [Que se passe-t-il si je supprime mon appareil du Portail d’entreprise ?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+
+## <a name="troubleshoot-and-maintain-your-device"></a>Dépanner et tenir à jour votre appareil
+* [Résoudre des restrictions de point d’accès](resolve-access-point-restrictions.md)
+* [Mon appareil Windows 10 ne s’inscrit pas](troubleshoot-your-windows-10-device-windows.md)
+* [Ma version de Windows n’est pas prise en charge](your-windows-version-isnt-yet-supported.md)
+* [Mettre à jour mon appareil Windows](you-need-to-update-your-windows-device.md)
+* [Envoyer des journaux à partir de l’application Portail d’entreprise](send-logs-to-your-it-admin-cp-windows.md)
+* [Envoyer des journaux à partir de l’application Paramètres de l’appareil](send-logs-to-your-it-admin-settings-windows.md)
+* [Installer Office 365 sur mon appareil Windows 10](install-office-windows.md)
+* [Mon appareil doit être chiffré](you-need-to-enable-windows-encryption.md)
+* [Obtenir un logiciel anti-programme malveillant](your-device-needs-antimalware-software.md)
+* [Activer le démarrage sécurisé](you-need-to-enable-secure-boot-windows.md)
+* [Activer l’intégrité du code](you-need-to-enable-code-integrity.md)
+* [Activer le Pare-feu Windows](you-need-to-enable-defender-firewall-windows.md)
+* [Activer le contrôle d’accès utilisateur](you-need-to-enable-uac-windows.md)
+* [Mettre à jour les versions de build du système d’exploitation](you-need-to-update-os-build-version-windows.md)
+* [Activer Windows Defender](turn-on-defender-windows.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/26/2018
+ms.date: 9/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: faf07b58c4480689d5f6f44bf09d6100a2eae9db
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312848"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48827851"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Paramètres VPN de Windows 10 dans Intune
 
@@ -40,10 +40,10 @@ Selon les paramètres que vous choisissez, toutes les valeurs ne sont pas néces
   - **Description** : entrez un nom descriptif pour le serveur, comme **Serveur VPN Contoso**.
   - **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet du serveur VPN auquel les appareils se connectent, comme **192.168.1.1** ou **vpn.contoso.com**.
   - **Serveur par défaut** : active ce serveur comme serveur par défaut que les appareils utilisent pour établir la connexion. Ne définissez qu’un seul serveur par défaut.
-  - **Importer** : accédez à un fichier séparé par des virgules contenant une liste de serveurs au format description, adresse IP ou nom de domaine complet, serveur par défaut. Choisissez **OK** pour importer ces serveurs dans la liste **Serveurs**.
+  - **Importer** : accédez à un fichier séparé par des virgules incluant une liste de serveurs au format description, adresse IP ou nom de domaine complet, serveur par défaut. Choisissez **OK** pour importer ces serveurs dans la liste **Serveurs**.
   - **Exporter** : exporte la liste des serveurs dans un fichier de valeurs séparées par des virgules (csv).
 
-- **Inscrire les adresses IP au DNS interne** : sélectionnez **Activer** pour configurer le profil VPN Windows 10 pour inscrire dynamiquement les adresses IP affectées à l’interface VPN auprès du DNS interne, ou sélectionnez  **Désactiver** pour ne pas inscrire dynamiquement les adresses IP.
+- **Inscrire les adresses IP au DNS interne** : sélectionnez **Activer** pour configurer le profil VPN Windows 10 pour inscrire dynamiquement les adresses IP affectées à l’interface VPN auprès du DNS interne. Sélectionnez **Désactiver** pour ne pas inscrire dynamiquement les adresses IP.
 
 - **Type de connexion** : sélectionnez le type de connexion VPN dans la liste de fournisseurs suivante :
 
@@ -59,7 +59,7 @@ Selon les paramètres que vous choisissez, toutes les valeurs ne sont pas néces
   - **PPTP**
 
   Lorsque vous choisissez un type de connexion VPN, vous pouvez également être invité à entrer les paramètres suivants :  
-    - **Always On** : activez cette option pour vous connecter automatiquement à la connexion VPN dans les cas suivants : 
+    - **Always On** : **activez** cette option pour vous connecter automatiquement à la connexion VPN quand les événements suivants se produisent : 
       - À la connexion des utilisateurs à leurs appareils
       - Au changement du réseau sur l’appareil
       - À la réactivation de l’écran de l’appareil 
@@ -114,7 +114,7 @@ Pour plus d’informations sur la création de code XML EAP personnalisé, consu
 
 ## <a name="conditional-access"></a>Accès conditionnel
 
-- **Accès conditionnel pour cette connexion VPN** : active le flux de conformité des appareils à partir du client. Quand cette option est activée, le client VPN tente de communiquer avec Azure Active Directory (AD) pour obtenir un certificat à utiliser pour l’authentification. Le VPN doit être configuré pour utiliser l’authentification par certificat, et le serveur VPN doit approuver le serveur retourné par Azure AD.
+- **Accès conditionnel pour cette connexion VPN** : active le flux de conformité des appareils à partir du client. Quand cette option est activée, le client VPN communique avec Azure Active Directory (AD) pour obtenir un certificat à utiliser pour l’authentification. Le VPN doit être configuré pour utiliser l’authentification par certificat, et le serveur VPN doit approuver le serveur retourné par Azure AD.
 
 - **Authentification unique avec certificat de remplacement** : pour la conformité des appareils, utilisez un certificat autre que le certificat d’authentification VPN pour l’authentification Kerberos. Entrez le certificat avec les paramètres suivants :
 
@@ -124,14 +124,24 @@ Pour plus d’informations sur la création de code XML EAP personnalisé, consu
 
 ## <a name="dns-settings"></a>Paramètres DNS
 
-**Domaine et serveurs pour cette connexion VPN** : ajoutez le domaine et le serveur DNS pour la connexion VPN à utiliser. Vous pouvez choisir les serveurs DNS qu’utilise la connexion VPN quand celle-ci est établie. Pour chaque serveur, entrez :
+- **Liste de recherche de suffixes DNS** : dans **Suffixes DNS**, entrez un suffixe DNS, puis cliquez sur **ajouter**. Vous pouvez ajouter plusieurs suffixes.
+
+  Lorsque vous utilisez des suffixes DNS, vous pouvez rechercher une ressource réseau à l’aide de son nom court, au lieu du nom de domaine complet (FQDN). Si vous effectuez la recherche à l’aide du nom court, le suffixe est déterminé automatiquement par le serveur DNS. Par exemple, `utah.contoso.com` se trouve dans la liste de suffixes DNS. Vous effectuez un test ping sur `DEV-comp`. Dans ce scénario, le test est résolu en `DEV-comp.utah.contoso.com`.
+
+  Les suffixes DNS sont résolus dans l’ordre indiqué, et l’ordre peut être changé. Par exemple, `colorado.contoso.com` et `utah.contoso.com` se trouvent dans la liste de suffixes DNS et ont une ressource appelée `DEV-comp`. Dans la mesure où `colorado.contoso.com` apparaît en premier dans la liste, il est résolu en `DEV-comp.colorado.contoso.com`.
+  
+  Pour changer l’ordre, cliquez sur les points à gauche du suffixe DNS, puis faites-le glisser vers le haut :
+
+  ![Sélectionner les trois points et cliquer-déplacer pour déplacer le suffixe dns](./media/vpn-settings-windows10-move-dns-suffix.png)
+
+- **Domaine et serveurs pour cette connexion VPN** : ajoutez le domaine et le serveur DNS pour la connexion VPN à utiliser. Vous pouvez choisir les serveurs DNS qu’utilise la connexion VPN quand celle-ci est établie. Pour chaque serveur, entrez :
 - **Domaine**
 - **Serveur DNS**
 - **Proxy**
 
 ## <a name="proxy-settings"></a>Paramètres du proxy
 
-- **Script de configuration automatique** : utilisez un fichier de configuration pour configurer le serveur proxy. Entrez l’**URL du serveur Proxy**, comme `http://proxy.contoso.com`, qui contient le fichier de configuration.
+- **Script de configuration automatique** : utilisez un fichier de configuration pour configurer le serveur proxy. Entrez l’**URL du serveur Proxy**, comme `http://proxy.contoso.com`, qui inclut le fichier de configuration.
 - **Adresse** : entrez l’adresse du serveur proxy, comme une adresse IP ou `vpn.contoso.com`
 - **Numéro de port** : entrez le numéro de port TCP utilisé par votre serveur proxy
 - **Contourner le proxy pour les adresses locales** : si vous ne souhaitez pas utiliser un serveur proxy pour les adresses locales, choisissez Activer. Ce paramètre s’applique si votre serveur VPN nécessite un serveur proxy pour la connexion.

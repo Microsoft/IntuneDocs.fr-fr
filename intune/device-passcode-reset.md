@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 09/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,32 +13,45 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a233c62b76901d9bad00aa6d8b2a8a4dd45dea96
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 3bb891b2a602cde4510953ce00c4e206d1135fce
+ms.sourcegitcommit: a89af1f0dad61320ab3e31cb64708f14514a5081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46300457"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pour créer un nouveau code secret pour un appareil, utilisez l’action **Supprimer le code secret**. Cette action vous invite à réinitialiser le code PIN du profil de travail uniquement. La réinitialisation du code PIN d’un appareil n’est pas prise en charge pour les profils professionnels Android.
+Ce document décrit à la fois la réinitialisation du code secret au niveau de l’appareil et la réinitialisation du code secret du profil professionnel sur les appareils Android Entreprise (anciennement Android for Work ou AfW). Il est important de noter cette distinction, car les exigences varient selon le cas. Une réinitialisation du code secret au niveau de l’appareil entraîne une réinitialisation du code secret pour l’intégralité de l’appareil. La réinitialisation du code secret du profil professionnel entraîne une réinitialisation du code secret uniquement pour le profil professionnel de l’utilisateur sur les appareils Android Entreprise.
 
-## <a name="work-profile-pin-reset-supported-platforms"></a>Plateformes prenant en charge la réinitialisation du code PIN d’un profil professionnel
+## <a name="supported-platforms-for-device-level-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret au niveau de l’appareil
 
-- Appareils Android inscrits avec un profil professionnel, version 8.0 et ultérieure 
-- Appareils Android version 6.0 ou antérieure
-- Appareils kiosque Android Entreprise
-- iOS 
-     
-## <a name="unsupported-platforms"></a>Plateformes non prises en charge
+| Plate-forme | Pris en charge ? |
+| ---- | ---- |
+| Appareils Android version 6.x ou antérieure | Oui |
+| Appareils Android Entreprise en mode plein écran | Oui |
+| Périphériques iOS | Oui |
+| Appareils Android inscrits avec un profil professionnel, version 7.0 et antérieure | Non |
+| Appareils Android version 7.0 ou supérieure | Non |
+| macOS | Non |
+| Windows | Non |
 
-- Appareils Android inscrits avec un profil professionnel, version 7.0 et antérieure
-- Appareils Android version 7.0 ou supérieure
-- macOS
-- Windows
+Pour les appareils Android, cela signifie effectivement que la réinitialisation du code secret au niveau de l’appareil est prise en charge uniquement sur les appareils exécutant la version 6.x ou antérieure, ou sur les appareils Android Entreprise en mode plein écran. En effet, Google a supprimé la prise en charge de la réinitialisation du code secret/mot de passe d’un appareil Android 7 à partir d’une application disposant de droits d’administrateur d’appareils. Cela s’applique à tous les fournisseurs MDM.
+
+## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret du profil professionnel d’un appareil Android Entreprise
+
+| Plate-forme | Pris en charge ? |
+| ---- | ---- |
+| Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 8.0 et ultérieures | Oui |
+| Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 7.x et antérieures | Non |
+| Appareils Android exécutant les versions 7.x et antérieures | Non |
+| iOS | Non |
+| macOS | Non |
+| iOS | Non |
+
+Pour créer un code secret de profil professionnel, utilisez l’action Réinitialiser le code secret. Cette action entraîne une réinitialisation du code secret et la création d’un code secret temporaire pour le profil professionnel uniquement. 
 
 ## <a name="reset-a-passcode"></a>Réinitialiser un code secret
 
@@ -47,15 +60,16 @@ Pour créer un nouveau code secret pour un appareil, utilisez l’action **Suppr
 3. Sélectionnez **Appareils**, puis **Tous les appareils**.
 4. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **... Plus**. Ensuite, choisissez l’action à distance **Supprimer le code secret**.
 
-## <a name="resetting-android-work-profile-passcodes"></a>Réinitialisation des codes secrets pour les profils professionnels Android
+## <a name="reset-android-work-profile-passcodes"></a>Réinitialiser les codes secrets des profils professionnels Android
 
-Les appareils de profil professionnel Android pris en charge reçoivent un nouveau mot de passe de déverrouillage de profil géré ou sont soumis à une vérification du profil géré pour l’utilisateur final. 
+Les appareils Android Entreprise pris en charge et inscrits avec un profil professionnel reçoivent un nouveau mot de passe de déverrouillage de profil géré, ou sont soumis à une vérification du profil géré pour l’utilisateur final.
 
-Pour les appareils avec profil professionnel Android 8.0, les utilisateurs finaux sont invités à activer leur code secret de réinitialisation une fois l’inscription terminée. La notification s’affiche si un mot de passe de profil professionnel est imposé et défini. Une fois le code secret entré, la notification disparaît.
+Pour les appareils Android Entreprise exécutant la version 8.x ou ultérieure, et inscrits avec un profil professionnel, les utilisateurs finaux reçoivent une notification les invitant à activer leur code secret de réinitialisation une fois l’inscription effectuée. La notification s’affiche si un mot de passe de profil professionnel est imposé et défini. Une fois le code secret entré, la notification disparaît.
 
-## <a name="resetting-ios-passcodes"></a>Réinitialisation des codes secrets iOS
 
-Les codes secrets sont supprimés des appareils iOS. Si une stratégie de conformité relative au code secret est définie, l’appareil invite l’utilisateur à définir un nouveau mot de passe dans les paramètres. 
+## <a name="remove-ios-passcodes"></a>Supprimer les codes secrets iOS
+
+Au lieu d’être réinitialisés, les codes secrets sont supprimés des appareils iOS. Si une stratégie de conformité relative au code secret est définie, l’appareil invite l’utilisateur à définir un nouveau mot de passe dans les paramètres.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

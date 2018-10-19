@@ -3,8 +3,8 @@ title: Configurer l’intégration de Better Mobile à Intune
 titleSuffix: Intune on Azure
 description: Intégration du connecteur Better Mobile à Intune
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 7/25/2018
 ms.topic: article
@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 5aad0e4aa0f3377c0d46f241d92712d81e4cfbd6
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: a677bab1f18fc0d0e0d159f2b40fae314b292e0f
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42823326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231112"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Intégrer Better Mobile à Intune
 
@@ -73,4 +73,4 @@ Le processus d’autorisation de l’application Better Mobile est le suivant :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
--   [Configurer les applications Better Mobile](mtd-apps-ios-app-configuration-policy-add-assign.md)
+-   [Configurer des applications Better clientes](mtd-apps-ios-app-configuration-policy-add-assign.md)

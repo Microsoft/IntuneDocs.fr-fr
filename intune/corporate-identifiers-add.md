@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bf9eaef010879835abb7cec57c2fbdce6aa1e0a
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: e46951be5048e0bcf2af5b2d4320744f6d6e47e8
+ms.sourcegitcommit: 3785e506ef5fbc474b3e09e87412d4b673bbdbb8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905867"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541953"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifier les appareils comme appartenant à l’entreprise
 
@@ -33,7 +33,7 @@ Au moment de l’inscription, Intune affecte automatiquement l’état « Appart
 - Appareil inscrit avec un compte de [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md) (toutes les plateformes)
 - Appareil inscrit avec le [programme d’inscription des appareils](device-enrollment-program-enroll-ios.md) Apple, [Apple School Manager](apple-school-manager-set-up-ios.md) ou [Apple Configurator](apple-configurator-enroll-ios.md) (iOS uniquement)
 - [Appareil identifiés comme appartenant à l’entreprise avant l’inscription](#identify-corporate-owned-devices-with-imei-or-serial-number) avec un numéro IMEI (International Mobile Equipment Identifier) (pour toutes les plateformes avec des numéros IMEI) ou un numéro de série (iOS et Android)
-- Appareil inscrit dans Azure Active Directory ou Enterprise Mobility + Security comme appareil Windows 10 Entreprise
+- Joints à Azure Active Directory en tant qu’appareils Windows 10 Entreprise
 - Définis comme appartenant à l’entreprise dans la [liste des propriétés de l’appareil](#change-device-ownership)
 
 Après l’inscription, vous pouvez [changer le paramètre de propriété](#change-device-ownership) en **Personnel** ou **Entreprise**.

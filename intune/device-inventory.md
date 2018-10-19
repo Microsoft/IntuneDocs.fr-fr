@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313176"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187799"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -63,44 +63,38 @@ Intune collecte une liste des applications uniquement sur les appareils apparten
 
 ## <a name="hardware-device-details"></a>Informations sur les appareils matériels
 
-### <a name="windows-and-ios-device-details"></a>Informations sur les appareils Windows et iOS :
-|Détail|Description|  
-|--------------|----------------------|  
-|Nom|Nom de l’appareil|
-|Nom de la gestion|Nom de l’appareil utilisé uniquement dans la console. Changer ce nom ne change pas le nom sur l’appareil.|
-|UDID|Identificateur unique de l’appareil|
-|ID d’appareil Intune|GUID qui identifie de façon unique l’appareil|
-|Numéro de série|Numéro de série de l’appareil attribué par le fabricant|
-|Appareil partagé|Si l’option **Oui** est sélectionnée, l’appareil est partagé par plusieurs utilisateurs.|
-|Inscription approuvée par l’utilisateur|Si l’option **Oui** est sélectionnée, l’appareil dispose d’une inscription approuvée par l’utilisateur, qui permet aux administrateurs de gérer certains paramètres de sécurité.|
-|Système d'exploitation|Système d’exploitation utilisé sur l’appareil.|
-|Version du système d'exploitation|Version du système d’exploitation de l’appareil.|
-|Langue du système d’exploitation|Langue définie dans le système d’exploitation de l’appareil|
-|Espace de stockage total|Espace de stockage total sur l’appareil (en Go).|
-|Espace de stockage libre|Espace de stockage non utilisé sur l’appareil (en Go)|
-
-
-### <a name="windows-ios-and-macos-device-details"></a>Informations sur les appareils Windows, iOS et macOS
-|Détail|Description|  
-|--------------|----------------------|  
-|IMEI|IMEI (International Mobile Equipment Identity) de l’appareil|
-|MEID|MEID (Mobile Equipment Identifier) de l’appareil|
-|Fabricant|Fabricant de l’appareil|
-|Modèle|Modèle de l’appareil|
-|Numéro de téléphone|Numéro de téléphone attribué à l’appareil.|
-|Opérateur de l’abonné|Opérateur sans fil de l’appareil|
-|Technologie mobile|Système radio utilisé par l’appareil|
-|Adresse MAC du réseau Wi-Fi|Adresse MAC de l’appareil|
-|ICCID|Identifiant ICCID, qui correspond au numéro d’identification unique d’une carte SIM|
-|Date d’inscription|Date et heure de l’inscription de l’appareil dans Intune|
-|Dernier contact|Date et heure de dernière connexion de l’appareil à Intune|
-|Code de contournement du verrou d’activation|Code qui peut être utilisé pour contourner le verrou d’activation|
-|Inscrit à AAD|Si l’option **Oui** est sélectionnée, l’appareil est inscrit auprès d’Azure Active Directory.|
-|Compatibilité|État de conformité de l’appareil.|
-|Avec activation d’EAS|Si l’option **Oui** est sélectionnée, l’appareil est synchronisé avec une boîte aux lettres Exchange.|
-|ID d’activation EAS|Identificateur Exchange ActiveSync de l’appareil|
-|Supervisé|Si l’option **Oui** est sélectionnée, les administrateurs ont un meilleur contrôle sur l’appareil.|
-|Chiffré|Si l’option **Oui** est sélectionnée, les données stockées sur l’appareil sont chiffrées.|
+|Détail|Description|Plate-forme| 
+|--------------|----------------------|----|  
+|Nom|Nom de l’appareil|Windows, iOS|
+|Nom de la gestion|Nom de l’appareil utilisé uniquement dans la console. Changer ce nom ne change pas le nom sur l’appareil.|Windows, iOS|
+|UDID|Identificateur unique de l’appareil|Windows, iOS|
+|ID d’appareil Intune|GUID qui identifie de façon unique l’appareil|Windows, iOS|
+|Numéro de série|Numéro de série de l’appareil attribué par le fabricant|Windows, iOS|
+|Appareil partagé|Si l’option **Oui** est sélectionnée, l’appareil est partagé par plusieurs utilisateurs.|Windows, iOS|
+|Inscription approuvée par l’utilisateur|Si l’option **Oui** est sélectionnée, l’appareil dispose d’une inscription approuvée par l’utilisateur, qui permet aux administrateurs de gérer certains paramètres de sécurité.|Windows, iOS|
+|Système d'exploitation|Système d’exploitation utilisé sur l’appareil.|Windows, iOS|
+|Version du système d'exploitation|Version du système d’exploitation de l’appareil.|Windows, iOS|
+|Langue du système d’exploitation|Langue définie dans le système d’exploitation de l’appareil|Windows, iOS|
+|Espace de stockage total|Espace de stockage total sur l’appareil (en Go).|Windows, iOS|
+|Espace de stockage libre|Espace de stockage non utilisé sur l’appareil (en Go)|Windows, iOS|
+|IMEI|IMEI (International Mobile Equipment Identity) de l’appareil|Windows, iOS, Android|
+|MEID|MEID (Mobile Equipment Identifier) de l’appareil|Windows, iOS, Android|
+|Fabricant|Fabricant de l’appareil|Windows, iOS, Android|
+|Modèle|Modèle de l’appareil|Windows, iOS, Android|
+|Numéro de téléphone|Numéro de téléphone attribué à l’appareil.|Windows, iOS, Android|
+|Opérateur de l’abonné|Opérateur sans fil de l’appareil|Windows, iOS, Android|
+|Technologie mobile|Système radio utilisé par l’appareil|Windows, iOS, Android|
+|Adresse MAC du réseau Wi-Fi|Adresse MAC de l’appareil|Windows, iOS, Android|
+|ICCID|Identifiant ICCID, qui correspond au numéro d’identification unique d’une carte SIM|Windows, iOS, Android|
+|Date d’inscription|Date et heure de l’inscription de l’appareil dans Intune|Windows, iOS, Android|
+|Dernier contact|Date et heure de dernière connexion de l’appareil à Intune|Windows, iOS, Android|
+|Code de contournement du verrou d’activation|Code qui peut être utilisé pour contourner le verrou d’activation|Windows, iOS, Android|
+|Inscrit à AAD|Si l’option **Oui** est sélectionnée, l’appareil est inscrit auprès d’Azure Active Directory.|Windows, iOS, Android|
+|Compatibilité|État de conformité de l’appareil.|Windows, iOS, Android|
+|Avec activation d’EAS|Si l’option **Oui** est sélectionnée, l’appareil est synchronisé avec une boîte aux lettres Exchange.|Windows, iOS, Android|
+|ID d’activation EAS|Identificateur Exchange ActiveSync de l’appareil|Windows, iOS, Android|
+|Supervisé|Si l’option **Oui** est sélectionnée, les administrateurs ont un meilleur contrôle sur l’appareil.|Windows, iOS, Android|
+|Chiffré|Si l’option **Oui** est sélectionnée, les données stockées sur l’appareil sont chiffrées.|Windows, iOS, Android|
 
 
 
