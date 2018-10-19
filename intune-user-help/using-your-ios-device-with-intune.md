@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,19 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 51bca0c2aa10f15511e1644eda9ca6dd11c36f8b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 99570a30130d35a651701749628cd918acf858e0
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864556"
 ---
-# <a name="using-your-ios-device-with-intune"></a>Utilisation de votre appareil iOS avec Intune
-
-Vous pouvez effectuer un certain nombre d’opérations avec Intune qui faciliteront votre travail. Voici la liste des opérations les plus courantes que votre entreprise peut vous demander d’effectuer.
+# <a name="using-your-ios-device-with-intune-company-portal"></a>Utilisation de votre appareil iOS avec le Portail d’entreprise Intune
+Cet article répertorie les tâches et les informations relatives au Portail d’entreprise pour iOS. Il peut vous aider à gérer et dépanner votre appareil iOS. Cliquez sur un lien pour consulter des informations détaillées, des étapes et des captures d’écran supplémentaires.
 
 ## <a name="supported-versions"></a>Versions prises en charge
 
-Intune prend actuellement en charge iOS 9.0 et ultérieur.
+Le Portail d’entreprise pour iOS prend actuellement en charge iOS 10.0 et versions ultérieures.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
 
@@ -41,7 +40,7 @@ Intune prend actuellement en charge iOS 9.0 et ultérieur.
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Ce que vous pouvez faire quand votre appareil est inscrit dans Intune
 
 - [Utiliser des applications gérées sur votre appareil](use-managed-apps-on-your-device-ios.md)
-- [Définir ou modifier votre code secret](set-or-change-your-passcode-ios.md)
+- [Définir ou changer votre code secret](set-or-change-your-passcode-ios.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Réinitialiser (effacer) votre appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
 - [Désactiver la collecte de données d’utilisation Microsoft](turn-off-microsoft-usage-data-collection-ios.md)

@@ -1,11 +1,11 @@
 ---
 title: Utilisation de votre appareil Android avec Intune | Microsoft Docs
-description: Cette rubrique fournit une liste de liens menant aux tâches que les utilisateurs finaux peuvent effectuer sur leur appareil mobile Android quand ce dernier est inscrit dans Intune
+description: Liste de liens pour la gestion et le dépannage des appareils Android inscrits dans Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 347757a333bcfd8e649cb621f0a95c83f24cdc88
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018666"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168945"
 ---
-# <a name="using-your-android-device-with-intune"></a>Utilisation de votre appareil Android avec Intune
+# <a name="using-your-android-device-with-intune-company-portal"></a>Utilisation de votre appareil Android avec le Portail d’entreprise Intune
 
-Vous pouvez effectuer un certain nombre d’opérations avec Intune qui faciliteront votre travail. Voici la liste des opérations les plus courantes que votre entreprise peut vous demander d’effectuer.
+Cet article liste les tâches et les informations relatives au Portail d’entreprise pour Android. Il peut vous aider à gérer et dépanner votre appareil Android. Cliquez sur un lien pour consulter des informations détaillées, des étapes et des captures d’écran supplémentaires. 
 
 ## <a name="supported-versions"></a>Versions prises en charge
 
-Intune prend actuellement en charge Android 4.4 et ultérieur. Ceci inclut les appareils Samsung Knox 4.4 et ultérieur.
+Le Portail d’entreprise prend actuellement en charge Android 4.4 et ultérieur. La prise en charge des appareils Samsung Knox 4.4 et ultérieur est également incluse.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
 
@@ -44,12 +44,12 @@ Intune prend actuellement en charge Android 4.4 et ultérieur. Ceci inclut les a
 - [Chiffrer votre appareil](encrypt-your-device-android.md)
 - [Définir votre code confidentiel ou mot de passe](set-your-pin-or-password-android.md)
 - [Installer le réseau privé virtuel (VPN) de votre entreprise](install-your-companys-virtual-private-network-VPN-android.md)
-- [Définir la période de temps qui doit s’écouler avant le verrouillage de l’appareil](set-the-amount-of-time-before-your-device-is-locked-android.md)
+- [Définir le délai avant le verrouillage de votre appareil](set-the-amount-of-time-before-your-device-is-locked-android.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Réinitialiser (effacer) votre appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
 - [Désactiver la collecte de données d’utilisation Microsoft](turn-off-microsoft-usage-data-collection-android.md)
 - [Désinscrire votre appareil d’Intune](unenroll-your-device-from-intune-android.md)
 - [Annuler l’inscription de votre appareil si vous avez refusé les conditions d’utilisation](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Que se passe-t-il quand vous désinscrivez votre appareil d’Intune ?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
-- [Que se passe-t-il si vous réinitialisez votre appareil Android à l’aide de l’application Portail d’entreprise ?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+- [Que se passe-t-il si vous réinitialisez votre appareil Android à l’aide de l’application Portail d’entreprise ?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
   <!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
