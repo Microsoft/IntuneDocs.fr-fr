@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: b0b35ed6e32feb29748e023371ed1b2628f2da0d
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863159"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075799"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Gérer l'accès à Internet à l'aide de stratégies de navigateur protégé avec Microsoft Intune  
+# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Gérer l’accès à Internet à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -36,26 +36,37 @@ En utilisant un navigateur protégé par une stratégie Intune (Microsoft Edge o
 
 ## <a name="getting-started"></a>Mise en route
 
+Microsoft Edge et Intune Managed Browser sont des applications de navigation web que vos utilisateurs finaux et vous-même pouvez télécharger dans les app stores publics pour les utiliser dans votre organisation. 
+
+Configuration requise du système d’exploitation pour les stratégies de navigateur :
+- Android 4 et ultérieur ou
+- iOS 8.0 et ultérieur.
+
+Les versions antérieures d’Android et d’iOS pourront encore utiliser Managed Browser, mais elles ne pourront pas installer les nouvelles versions de l’application et n’auront peut-être pas accès à toutes les fonctionnalités. Nous vous encourageons à mettre à jour le système d’exploitation de ces appareils avec une version prise en charge.
+
+>[!NOTE]
+>Managed Browser ne prend pas en charge le protocole de chiffrement SSLv3 (Secure Sockets Layer version 3).
+
+
+## <a name="application-protection-policies-for-protected-browsers"></a>Stratégies de protection d’application pour les navigateurs protégés
+
+Edge et Managed Browser étant intégrés au Kit de développement logiciel (SDK) Intune, vous pouvez également leur appliquer des stratégies de protection d’applications, notamment :
+- Contrôle de l’utilisation des fonctions Copier, Couper et Coller.
+- Blocage des captures d’écran.
+- Garantie que les liens d’entreprise s’ouvrent uniquement dans les applications et les navigateurs gérés.
+
+Pour plus d’informations, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
+
 Vous pouvez appliquer ces paramètres :
 
 - aux appareils inscrits auprès d’Intune ;
 - aux appareils inscrits auprès d’un autre produit MDM ;
 - aux appareils qui ne sont pas gérés.
 
-Si les utilisateurs installent Managed Browser à partir de l’App Store et qu’Intune ne le prend pas en charge, vous pouvez l’utiliser comme navigateur web de base, avec prise en charge de l’authentification unique via le site Microsoft MyApps. Les utilisateurs sont directement dirigés vers le site MyApps, où ils peuvent voir toutes leurs applications SaaS provisionnées.
+>[!NOTE]
+>Si les utilisateurs installent Managed Browser à partir de l’App Store et qu’Intune ne le prend pas en charge, vous pouvez l’utiliser comme navigateur web de base, avec prise en charge de l’authentification unique via le site Microsoft MyApps. Les utilisateurs sont directement dirigés vers le site MyApps, où ils peuvent voir toutes leurs applications SaaS provisionnées.
 Quand Managed Browser et Edge ne sont pas gérés par Intune, ils ne peuvent pas accéder aux données des applications gérées par Intune. 
 
-Managed Browser ne prend pas en charge le protocole de chiffrement SSLv3 (Secure Sockets Layer version 3).
-
-Il est possible de créer des stratégies de navigateur protégé pour les types d'appareils suivants :
-
--   Appareils qui exécutent Android 4 et versions ultérieures
-
--   Appareils qui exécutent iOS 10.0 et versions ultérieures
-
->[!IMPORTANT]
->Les versions antérieures d’Android et d’iOS pourront encore utiliser Managed Browser, mais elles ne pourront pas installer les nouvelles versions de l’application et n’auront peut-être pas accès à toutes les fonctionnalités. Nous vous encourageons à mettre à jour le système d’exploitation de ces appareils avec une version prise en charge.
-    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Accès conditionnel pour les navigateurs protégés
 
@@ -82,7 +93,7 @@ Pour obliger les applications web connectées à Azure AD à utiliser Intune Man
 8. Dans la section **Affectations**, sélectionnez **Utilisateurs et groupes**, puis choisissez les utilisateurs ou groupes à affecter à cette stratégie. 
 
     > [!NOTE]
-    > Les utilisateurs doivent aussi être ciblés avec la stratégie de protection des applications Intune. Pour plus d’informations sur la création de stratégies Intune App Protection, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
+    > Les utilisateurs doivent aussi être ciblés avec la stratégie Intune App Protection afin de recevoir des stratégies de configuration d’applications. Pour plus d’informations sur la création de stratégies Intune App Protection, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
 
 9. Dans la section **Affectations**, sélectionnez **Applications cloud** pour choisir les applications à protéger avec cette stratégie.
 
@@ -101,6 +112,9 @@ Pour permettre l’utilisation de SSO, votre appareil doit être inscrit par l�
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Créer une configuration d’application de navigateur protégé
 
+>[!IMPORTANT]
+>Pour les configurations d’application à appliquer, le navigateur protégé de l’utilisateur ou une autre application sur l’appareil doivent déjà être gérés par la [stratégie de protection des applications Intune]( app-protection-policy.md).
+
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
 3.  Dans le panneau **Applications clientes** de la liste Gérer, choisissez **Stratégies de configuration des applications**.
@@ -114,8 +128,6 @@ Pour permettre l’utilisation de SSO, votre appareil doit être inscrit par l�
 11. Dans le panneau **Ajouter une stratégie de configuration**, choisissez **Ajouter**.
 12. La nouvelle configuration est créée et s’affiche dans le panneau **Configuration des applications**.
 
->[!IMPORTANT]
->Actuellement, Managed Browser s’appuie sur l’inscription automatique. Pour les configurations d’application à appliquer, une autre application sur l’appareil doit déjà être gérée par les stratégies de protection des applications Intune.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Affecter les paramètres de configuration que vous avez créés
 
