@@ -15,12 +15,12 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: eb1599085687c258c6853eacf269e2d1b11cbaf1
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347692"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425085"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les mises à jour apportées à l’interface utilisateur des applications présentées aux utilisateurs finaux dans cette version de Microsoft Intune. Comprendre ces mises à jour peut vous aider dans vos communications avec les utilisateurs et dans la mise à jour de la documentation personnalisée que vous avez créée pour accompagner votre déploiement. Cela peut aussi vous être utile pour mieux résoudre les problèmes auxquels font face vos utilisateurs s’ils font appel au support technique à l’aide du Portail d’entreprise.
@@ -30,16 +30,16 @@ Découvrez les mises à jour apportées à l’interface utilisateur des applica
 ## <a name="week-of-august-27-2018"></a>Semaine du 27 août 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nouvelle mise à jour de l’expérience utilisateur du site web Portail d’entreprise<!--2000968 -->  
-En nous basant sur les commentaires que nous ont envoyés des clients, nous avons ajouté de nouvelles fonctionnalités au site web Portail d’entreprise. Vous allez constater une nette amélioration des fonctionnalités existantes et de la facilité d’utilisation sur vos appareils. Les différentes zones du site, comme les détails de l’appareil, le feedback et le support, ainsi que la vue d’ensemble de l’appareil, bénéficient d’une nouvelle présentation interactive et moderne. La [documentation du site web Portail d’entreprise Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website) a été mise à jour pour refléter ces modifications.   
+En nous basant sur les commentaires que nous ont envoyés des clients, nous avons ajouté de nouvelles fonctionnalités au site web Portail d’entreprise. Vous allez constater une nette amélioration des fonctionnalités existantes et de la facilité d’utilisation sur vos appareils. Les différentes zones du site, comme les détails de l’appareil, le feedback et le support, ainsi que la vue d’ensemble de l’appareil, bénéficient d’une nouvelle présentation interactive et moderne. La [documentation du site web Portail d’entreprise Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) a été mise à jour pour refléter ces modifications.   
 
 Vous pouvez voir les mises à jour suivantes :  
 
 - Flux de travail simplifiés sur toutes les plateformes d’appareils
 - Flux d’identification et d’inscription des appareils améliorés
 - Plus de messages d’erreur utiles
-- Langage plus convivial, avec moins de jargon technique
-- Possibilité de partager des liens directs vers les applications
-- Performances améliorées des grands catalogues d’applications
+- Un langage plus convivial, avec moins de jargon technique
+- La possibilité de partager des liens directs vers les applications
+- Des performances améliorées pour les grands catalogues d’applications
 - Accessibilité accrue pour tous les utilisateurs  
 
 |Mis à jour|Précédent|

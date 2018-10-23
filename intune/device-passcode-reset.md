@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb891b2a602cde4510953ce00c4e206d1135fce
-ms.sourcegitcommit: a89af1f0dad61320ab3e31cb64708f14514a5081
+ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46300457"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49424915"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -28,7 +28,7 @@ Ce document décrit à la fois la réinitialisation du code secret au niveau de 
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret au niveau de l’appareil
 
-| Plate-forme | Pris en charge ? |
+| Plateforme | Pris en charge ? |
 | ---- | ---- |
 | Appareils Android version 6.x ou antérieure | Oui |
 | Appareils Android Entreprise en mode plein écran | Oui |
@@ -42,14 +42,13 @@ Pour les appareils Android, cela signifie effectivement que la réinitialisation
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret du profil professionnel d’un appareil Android Entreprise
 
-| Plate-forme | Pris en charge ? |
+| Plateforme | Pris en charge ? |
 | ---- | ---- |
 | Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 8.0 et ultérieures | Oui |
 | Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 7.x et antérieures | Non |
 | Appareils Android exécutant les versions 7.x et antérieures | Non |
 | iOS | Non |
 | macOS | Non |
-| iOS | Non |
 
 Pour créer un code secret de profil professionnel, utilisez l’action Réinitialiser le code secret. Cette action entraîne une réinitialisation du code secret et la création d’un code secret temporaire pour le profil professionnel uniquement. 
 

@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: d709681519f2e68d38958d6ec2082b762e22cf60
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255236"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425153"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
 
@@ -25,7 +25,7 @@ ms.locfileid: "40255236"
 
 Windows en tant que service permet de mettre à jour des appareils Windows 10. Avec Windows 10, les nouvelles mises à jour de fonctionnalités et mises à jour qualité incluent le contenu de toutes les mises à jour précédentes. Du moment que vous avez installé la dernière mise à jour, vous savez que vos appareils Windows 10 sont à jour. À la différence des versions précédentes de Windows, vous devez maintenant installer la mise à jour complète au lieu d’une partie seulement.
 
-Avec Windows Update pour Entreprise, vous simplifiez l’expérience utilisateur de gestion des mises à jour. Vous n’avez pas besoin d’approuver des mises à jour individuelles pour des groupes d’appareils. Vous pouvez gérer les risques dans vos environnements en configurant une stratégie de lancement des mises à jour. Windows Update vérifie que les mises à jour sont installées au bon moment. Microsoft Intune vous permet de configurer les paramètres de mise à jour des appareils et de reporter l’installation des mises à jour. Intune ne stocke pas les mises à jour, seulement l’attribution des stratégies de mise à jour. Les appareils accèdent directement à Windows Update pour les mises à jour. Utilisez Intune pour configurer et gérer les **anneaux de mise à jour de Windows 10**. Un anneau de mise à jour contient un groupe de paramètres qui permettent de configurer la planification et le mode d’installation des mises à jour de Windows 10. Par exemple, vous pouvez configurer les paramètres suivants :
+Avec Windows Update pour Entreprise, vous simplifiez l’expérience utilisateur de gestion des mises à jour. Vous n’avez pas besoin d’approuver des mises à jour individuelles pour des groupes d’appareils. Vous pouvez gérer les risques dans vos environnements en configurant une stratégie de lancement des mises à jour. Windows Update vérifie que les mises à jour sont installées au bon moment. Microsoft Intune vous permet de configurer les paramètres de mise à jour des appareils et de reporter l’installation des mises à jour. Intune ne stocke pas les mises à jour, seulement l’attribution des stratégies de mise à jour. Les appareils accèdent directement à Windows Update pour les mises à jour. Utilisez Intune pour configurer et gérer les **anneaux de mise à jour de Windows 10**. Un anneau de mise à jour contient un groupe de paramètres qui permettent de configurer la planification et le mode d’installation des mises à jour de Windows 10. Par exemple, vous pouvez configurer les paramètres suivants :
 
 - **Canal de maintenance Windows 10** : choisissez le canal de maintenance à partir duquel vous souhaitez que les groupes d’appareils reçoivent des mises à jour. Les canaux suivants sont disponibles : 
   - Canal semi&#8208;annuel
@@ -34,7 +34,7 @@ Avec Windows Update pour Entreprise, vous simplifiez l’expérience utilisateur
   - Windows Insider &#8208; Lent
   - Publier Windows Insider 
       
-  Pour plus d’informations sur les canaux de maintenance disponibles, consultez [Vue d’ensemble de Windows as a Service](https://docs.microsoft.com/en-us/windows/deployment/update/waas-overview#servicing-channels).
+  Pour plus d’informations sur les canaux de maintenance disponibles, consultez [Vue d’ensemble de Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 - **Deferral Settings (Paramètres de report)**  : configurez les paramètres de report des mises à jour pour différer l’installation des mises à jour pour des groupes d’appareils. Utilisez ces paramètres pour organiser le déploiement de vos mises à jour par étapes et suivre leur progression.
 - **Suspension** : reportez l’installation des mises à jour si vous détectez un problème à tout moment lors du déploiement des mises à jour.
 - **Fenêtre de maintenance** : configurez les heures d’installation des mises à jour.

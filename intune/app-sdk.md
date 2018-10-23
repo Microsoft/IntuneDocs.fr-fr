@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 55df1b152ee32456d577afacedd034583e591e3e
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: fc49d7ba7cdc5b986c06f8a84ececc8339a812a2
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058713"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425102"
 ---
 # <a name="intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Intune
 Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet d'appliquer des stratégies de protection des applications Intune sur votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience utilisateur et administrateur, vous pouvez utiliser les API pour personnaliser le comportement de votre application pour les fonctionnalités nécessitant sa participation.
@@ -44,7 +44,7 @@ Les administrateurs informatiques peuvent appliquer une stratégie garantissant 
 Les administrateurs informatiques peuvent réinitialiser à distance des données d’entreprise dans une application gérée par Intune. Cette fonctionnalité est basée sur l’identité et supprime seulement les fichiers associés à l’identité d’entreprise de l’utilisateur final. Pour cela, la fonctionnalité nécessite la participation de l’application. L’application peut spécifier l’identité pour laquelle la réinitialisation doit se produire en fonction des paramètres utilisateur. Si ces paramètres utilisateur ne sont pas spécifiés dans l’application, le comportement par défaut est de réinitialiser le répertoire de l’application et d’avertir l’utilisateur final que l’accès a été supprimé.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Imposer l’utilisation de Managed Browser
-Les administrateurs informatiques peuvent forcer l'ouverture des liens web dans l’application avec l'[application Intune Managed Browser](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies). Cette fonctionnalité garantit que les liens qui apparaissent dans un environnement d’entreprise sont conservés dans le domaine des applications gérées par Intune.
+Les administrateurs informatiques peuvent forcer l'ouverture des liens web dans l’application avec l'[application Intune Managed Browser](app-configuration-managed-browser.md). Cette fonctionnalité garantit que les liens qui apparaissent dans un environnement d’entreprise sont conservés dans le domaine des applications gérées par Intune.
 
 ### <a name="enforce-a-pin-policy"></a>Appliquer une stratégie de code confidentiel
 Les administrateurs informatiques peuvent obliger l’utilisateur final à entrer un code confidentiel pour accéder aux données d’entreprise dans l’application. Ceci garantit que la personne qui utilise l’application est celle qui s’est initialement connectée avec un compte professionnel ou scolaire. Quand un utilisateur final configure son code confidentiel, le SDK d’application Intune utilise Azure Active Directory pour comparer les informations d’identification de l’utilisateur final à celles du compte Intune inscrit.
