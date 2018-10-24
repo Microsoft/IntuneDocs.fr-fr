@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/02/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8abaef622fcf633eecde3a2bb2ee261cb7c8fc9e
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b39afeaf6daf8b08c58becd0b4af07299bd79e7a
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330260"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101987"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -31,7 +31,8 @@ Utilisez des stratégies de configuration des applications dans Microsoft Intune
 Dès que vous ajoutez une stratégie de configuration d’application, vous pouvez définir les affectations de la stratégie de configuration d’application. Quand vous définissez les affectations de la stratégie, vous pouvez choisir d’inclure et d’exclure les groupes d’utilisateurs auxquels la stratégie s’applique. Quand vous choisissez d’inclure un ou plusieurs groupes, vous pouvez choisir de sélectionner des groupes spécifiques à inclure ou sélectionner des groupes intégrés. Les groupes intégrés sont notamment **Tous les utilisateurs**, **Tous les appareils** et **Tous les utilisateurs + Tous les appareils**. 
 
 >[!NOTE]
->Intune fournit des groupes **Tous les utilisateurs** et **Tous les appareils** précréés dans la console avec des optimisations intégrées pour votre commodité. Nous vous recommandons vivement d’utiliser ces groupes pour cibler tous les utilisateurs et tous les appareils au lieu de créer vous-même des groupes « Tous les utilisateurs » ou « Tous les appareils ».
+>Intune fournit des groupes **Tous les utilisateurs** et **Tous les appareils** précréés dans la console avec des optimisations intégrées pour votre commodité. Nous vous recommandons vivement d’utiliser ces groupes pour cibler tous les utilisateurs et tous les appareils au lieu de créer vous-même des groupes « Tous les utilisateurs » ou « Tous les appareils ».<p></p>
+>En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.
 
 Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de configuration d’application, vous pouvez aussi choisir les groupes spécifiques à exclure. Pour plus d’informations, consultez [Inclure et exclure des affectations d’applications dans Microsoft Intune](apps-inc-exl-assignments.md).
 
@@ -58,7 +59,7 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 8.  Dans le volet **Ajouter une stratégie de configuration**, choisissez **Paramètres de configuration**.
 9. Sélectionnez **Format des paramètres de configuration**. Sélectionnez une des options suivantes pour ajouter des informations XML :
     - **Utiliser le concepteur de configuration**
-    - **Entrer des données XML**<br></br>
+    - **Entrer des données XML**<br><br>
     Pour plus d’informations sur l’utilisation du concepteur de configuration, consultez [Utiliser le concepteur de configuration](#use-configuration-designer). Pour plus d’informations sur l’entrée de données XML, consultez [Entrer des données XML](#enter-xml-data). 
 10. Après avoir ajouté vos informations XML, choisissez **OK**, puis **Ajouter** pour ajouter la stratégie de configuration. Le volet de vue d’ensemble de la stratégie de configuration s’affiche.
 11. Sélectionnez **Affectations** pour afficher les options d’inclusion et d’exclusion. 
@@ -95,6 +96,17 @@ Microsoft Intune fournit des paramètres de configuration qui sont uniques pour 
 2. Sélectionnez **Supprimer**.
 
 Les caractères \{\{ et \}\} sont utilisés uniquement par les types de jetons. Ils ne doivent pas être utilisés à d’autres fins.
+
+### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Autoriser uniquement les comptes d’organisation configurés dans les applications avec plusieurs identités 
+
+Pour les appareils Android, utilisez les paires clé/valeur suivantes :
+
+| **Key** | IntuneMAMAllowedAccountsOnly |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Valeurs** | <ul><li>**Activé** : le seul compte autorisé est le compte utilisateur managé défini par la clé [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Désactivé** (ou toute valeur qui n’est pas une correspondance ne respectant pas la casse de la valeur **Activé**) : n’importe quel compte est autorisé.</li></ul> |
+
+   > [!NOTE]
+   > Vous devez utiliser OneDrive pour iOS 10.34 ou version ultérieure et Outlook pour iOS 2.99.0 ou version ultérieure lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités.
 
 ## <a name="enter-xml-data"></a>Entrer des données XML
 

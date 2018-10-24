@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: fdd33ea0b5d8189712c6390861131c684cfaa67d
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313494"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101951"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Configurer des stratégies de mise à jour iOS dans Intune
 
@@ -23,7 +23,7 @@ Les stratégies de mise à jour logicielle vous permettent de forcer les apparei
 
 L’appareil effectue une vérification auprès d’Intune toutes les huit heures. Si une mise à jour est disponible, et qu’il ne s’agit pas d’une période limitée, l’appareil télécharge et installe la dernière mise à jour du système d’exploitation. Aucune interaction utilisateur n’est nécessaire pour mettre à jour l’appareil. La stratégie n’empêche pas un utilisateur de mettre à jour le système d’exploitation manuellement.
 
-Cette fonctionnalité prend en charge les appareils exécutant iOS 10.3 et versions ultérieures.
+Cette fonctionnalité prend en charge les appareils exécutant iOS 10.3 et versions ultérieures. Le paramètre de délai est disponible dans iOS 11.3 et les versions ultérieures.
 
 ## <a name="configure-the-policy"></a>Configurer la stratégie
 1. Connectez-vous au [portail Azure](https://portal.azure.com).

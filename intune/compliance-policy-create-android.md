@@ -14,12 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85f11e3a9bfd43affde35806d9aeaf40dcbfe03d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: ed2dcda510c455be1ad532228bfbcbeb898d971a
+ms.sourcegitcommit: b7789fd2f34528275c13a717699cf53a289ed04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906190"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891027"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils Android dans Intune
 
@@ -77,7 +77,7 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 - **Analyse des menaces sur les applications** : la fonctionnalité Android **Vérifier les applications** doit être impérativement activée.
 
   > [!NOTE]
-  > Sur la plateforme Android héritée, cette fonctionnalité constitue un paramètre de conformité. Intune ne peut que vérifier si ce paramètre est activé au niveau de l’appareil. Sur les appareils dotés de profils professionnels Android, ce paramètre correspond à un paramètre de stratégie de configuration. Ceci permet aux administrateurs d’activer le paramètre pour un appareil.
+  > Sur la plateforme Android héritée, cette fonctionnalité constitue un paramètre de conformité. Intune ne peut que vérifier si ce paramètre est activé au niveau de l’appareil. Sur les appareils avec des profils professionnels Android, ce paramètre correspond à un paramètre de stratégie de configuration. Ceci permet aux administrateurs d’activer le paramètre pour un appareil.
 
   Si votre entreprise utilise des profils professionnels Android, vous pouvez activer **Analyse des menaces sur les applications** pour vos appareils inscrits. Établissez un profil d’appareil et demandez le paramètre de sécurité système. Pour plus d’informations, consultez [Paramètres de restriction appareil professionnel dans Intune](device-restrictions-android-for-work.md).
 

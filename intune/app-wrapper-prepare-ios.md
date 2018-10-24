@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
-ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.openlocfilehash: 652157f41f0fbefa14e9f22fea01c918cb7704a1
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40251842"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169496"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -39,13 +39,13 @@ Avant d’exécuter l’outil de création de package de restrictions d’applic
 
 * Téléchargez l’outil [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) (Outil de création de package de restrictions d’application Microsoft Intune pour iOS) à partir de GitHub.
 
-* Un ordinateur macOS qui exécute OS X 10.8.5 ou ultérieur et sur lequel est installé l’ensemble d’outils Xcode version 5 ou ultérieure.
+* Un ordinateur macOS qui exécute OS X 10.8.5 ou ultérieur et sur lequel est installé l’ensemble d’outils Xcode version 9 ou ultérieure.
 
 * L'application iOS d'entrée doit être développée et signée par votre entreprise ou par un éditeur de logiciels indépendant (ISV).
 
   * Le fichier de l'application d’entrée doit avoir l’extension **.ipa** ou **.app**.
 
-  * L’application d’entrée doit être compilée pour iOS 8.0. ou version ultérieure.
+  * L’application d’entrée doit être compilée pour iOS 10 ou version ultérieure.
 
   * L’application d’entrée ne peut pas être chiffrée.
 

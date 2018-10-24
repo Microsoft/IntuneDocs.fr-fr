@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cbe9f28b66031f6eddef4804c157f01ca79ad81d
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4a5333f4e94db0b41b81dcb2589133956c040725
+ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347516"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48903503"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS achetées par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -93,7 +93,8 @@ Vérifiez que quand vous configurez un appareil pour un nouvel utilisateur Intun
         > Si vous changez de pays/région, les métadonnées des applications et l’URL du Store sont mises à jour lors de la prochaine synchronisation avec le service Apple pour les applications créées avec ce jeton. L’application n’est pas mise à jour si elle n’existe pas dans le Store du nouveau pays/région.
 
     - **Type de compte VPP** : choisissez **Entreprise** ou **Éducation**.
-    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre.
+    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre. Les mises à jour d’applications automatiques pour les applications Apple VPP mettent automatiquement à jour uniquement les applications déployées avec l’intention d’installation **Obligatoire**. Pour les applications déployées avec l’intention d’installation **Disponible**, la mise à jour automatique génère une notification pour vous (l’administrateur) vous informant qu’une nouvelle version de l’application est disponible. L’utilisateur doit cliquer sur Installer pour installer la version la plus récente de l’application. En outre, l’utilisateur verra que l’application n’est pas installée sur le portail d’entreprise, même si une version antérieure de l’application est installée. Dans ce cas, l’utilisateur peut réinstaller l’application.
+    
         > [!NOTE]
         > Les mises à jour automatiques des applications fonctionnent pour les applications sous licence d’appareil et d’utilisateur pour iOS version 11.0 et ultérieure.
 6. Quand vous avez terminé, sélectionnez **Créer**.

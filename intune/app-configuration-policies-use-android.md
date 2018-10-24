@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdf927eff77b6a97e4c763ec0d75c7e44e4c6840
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: e7e740d03453a437572f8f960ed21927f4fcbace
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799574"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102036"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android gérés
 
@@ -29,7 +29,9 @@ ms.locfileid: "48799574"
 Utilisez des stratégies de configuration des applications dans Microsoft Intune pour fournir des paramètres aux applications avec profil professionnel Android. Le développeur d’applications doit exposer les paramètres de configuration d’application gérés Android pour spécifier les paramètres de configuration de l’application. Affectez la stratégie de configuration d’applications au groupe d’utilisateurs pour lequel vous souhaitez appliquer les paramètres.  Les paramètres de stratégie sont utilisés quand l’application les vérifie, en général, à sa première exécution.
 
 > [!Note]  
-> Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application a été conçue pour prendre en charge les stratégies de configuration des applications.
+> Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application a été conçue pour prendre en charge les stratégies de configuration des applications.<p></p>
+> En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.<p></p>
+> Pour Microsoft Word, Microsoft Excel, Microsoft PowerPoint, vous devez utiliser Android 16.0.9327.1000 et versions ultérieures.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
@@ -69,6 +71,16 @@ Vous pouvez choisir les options suivantes si vous choisissez une variable comme 
 - ID d’utilisateur — par exemple, **3ec2c00f-b125-4519-acf0-302ac3761822**
 - Nom d’utilisateur —par exemple, **John Doe**
 
+### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Autoriser uniquement les comptes d’organisation configurés dans les applications avec plusieurs identités 
+
+Pour les appareils Android, utilisez les paires clé/valeur suivantes :
+
+| **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Valeurs** | <ul><li>Un ou plusieurs UPN <code>;</code> délimités.</li><li>Le ou les seuls comptes autorisés sont le ou les comptes utilisateur managés définis par cette clé.</li><li> Pour les appareils inscrits à Intune, le jeton <code>{{userprincipalname}}</code> peut être utilisé pour représenter le compte utilisateur inscrit.</li></ul> |
+
+   > [!NOTE]
+   > Vous devez utiliser Outlook pour Android 2.2.222 ou version ultérieure lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités. 
 
 ## <a name="enter-the-json-editor"></a>Utiliser l’éditeur JSON
 
