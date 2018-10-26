@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2defc433ef39562750c4579f302a9c5367c6464a
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
+ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828242"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307404"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -61,7 +61,7 @@ Entrez les informations de support de votre entreprise afin de fournir à vos em
 
 
 ## <a name="company-branding-customization"></a>Personnalisation de l’image de la société       
-Vous pouvez personnaliser votre Portail d’entreprise avec le logo et le nom de votre société, un thème chromatique et un arrière-plan.     
+Vous pouvez personnaliser votre Portail d’entreprise avec le logo et le nom de votre société, un thème chromatique et un arrière-plan. Pour afficher un aperçu rapide de la configuration de marque sans un appareil de test, vous pouvez accéder au site [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Notez que le logo que vous chargez sera utilisé pour les modèles d’e-mail.      
 
 ### <a name="theme-color"></a>Couleur de thème
 Appliquez une couleur de thème au portail d’entreprise. Sélectionnez une couleur standard ou entrez le code hexadécimal à six chiffres d’une couleur personnalisée.
@@ -82,3 +82,30 @@ Chargez le logo de votre société pour le rendre visible dans l’ensemble de l
 |**Afficher le nom de la société à côté du logo**| Sélectionnez cette option pour afficher le nom de société que vous avez entré à côté du logo chargé. |
 
 Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres dans le portail web Intune** en haut du panneau pour voir à quoi ressemblent vos configurations.
+
+## <a name="windows-company-portal-keyboard-shortcuts"></a>Raccourcis clavier du Portail d’entreprise Windows
+
+Les utilisateurs finaux peuvent déclencher des actions de navigation, d’application et d’appareil dans le Portail d’entreprise Windows à l’aide de raccourcis clavier (accélérateurs).
+
+Les raccourcis clavier suivants sont disponibles dans l’application Portail d’entreprise Windows.
+
+| Domaine | Description | Raccourci clavier |
+|:------------------:|:--------------:|:-----------------:|
+| Menu de navigation | Navigation | Alt+M |
+|  | Accueil | Alt+H |
+|  | Toutes les applications | Alt+A |
+|  | Applications installées | Alt+I |
+|  | Envoyer des commentaires | Alt+F |
+|  | Mon profil | Alt+U |
+|  | Paramètres | Alt+T |
+| Accueil - Vignette de l’appareil | Renommer | F2 |
+|  | Supprimer | Ctrl+D ou Supprimer |
+|  | Vérifier l’accès | Ctrl+M ou F9 |
+| Détails sur l'appareil | Renommer | F2 |
+|  | Supprimer | Ctrl+D ou Supprimer |
+|  | Vérifier l’accès | Ctrl+M ou F9 |
+| Détails de l’application | Installer | Ctrl+I |
+
+## <a name="next-steps"></a>Étapes suivantes
+
+- [Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune](store-apps-company-portal-app.md)

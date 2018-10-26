@@ -4,6 +4,7 @@ description: Créez une stratégie de configuration pour définir les paramètre
 keywords: ''
 author: Erikre
 ms.author: erikre
+ms.reviewer: smithre4
 manager: dougeby
 ms.date: 10/04/2018
 ms.topic: article
@@ -12,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7fc9f34bbd3d14ac4291582247b1e45169c2cccc
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 24ed1a895dd3e4cad6111b40913b43fa9c6a3cec
+ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828728"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48903520"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Paramètres de configuration Microsoft Outlook 
 
@@ -29,27 +30,15 @@ Pour créer une stratégie de configuration des applications pour les appareils 
 
 Quand vous ajoutez une stratégie de configuration dans Intune, vous pouvez définir des paramètres spécifiques pour configurer Microsoft Outlook. Dans le volet **Paramètres de configuration**, vous pouvez définir la configuration du compte e-mail.
 
-### <a name="email-account-settings"></a>Paramètres de compte e-mail
+### <a name="basic-authentication-email-account-settings"></a>Paramètres de compte de messagerie d’authentification de base
+Outlook pour iOS et Android permet aux administrateurs Exchange de d’envoyer (« push ») des configurations de compte à leurs utilisateurs locaux qui utilisent l’authentification de base avec le protocole ActiveSync. Pour plus d’informations, consultez [Configuration de compte dans Outlook pour iOS et Android à l’aide de l’authentification de base](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/account-setup). Pour activer la configuration des paramètres d’un compte, vous pouvez configurer les paramètres suivants :
 
-Les paramètres de configuration suivants sont spécifiques à Microsoft Outlook.
-
-- **Serveur de messagerie** : entrez le nom d’hôte de votre serveur Exchange.
+- **Serveur de messagerie** : entrez le nom d’hôte de votre serveur Exchange local (par exemple, mail.contoso.com).
 - **Nom du compte e-mail** : entrez le nom d’affichage du compte e-mail. Ce nom est présenté aux utilisateurs sur leurs appareils.
-- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (AAD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
+- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (Azure AD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Parmi les options, citons :
   - **Nom d’utilisateur principal** : obtient le nom, comme `user1` ou `user1@contoso.com`
   - **Adresse SMTP principale** : obtient le nom au format d’une adresse e-mail, comme `user1@contoso.com`.
-  - **Nom de compte SAM** : nécessite le domaine, comme `domain\user1`.
-
-    Entrez également :  
-    - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
-
-      Quand vous choisissez d’obtenir les attributs auprès **d’AAD**, entrez :
-      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur
-
-      Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
-      - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`
-
-- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange.
+- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange. Il est recommandé de sélectionner **Adresse SMTP principale**.
 - **Domaine du compte** : (facultatif) domaine du compte.
 
 ## <a name="next-steps"></a>Étapes suivantes

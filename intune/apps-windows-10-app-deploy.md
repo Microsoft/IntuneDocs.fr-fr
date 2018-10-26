@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,21 +15,23 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 61bb874fd914c69669197110ee5901ccfbc3f594
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866352"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075608"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
 Microsoft Intune prend en charge une variété de types d’applications et de scénarios de déploiement sur les appareils Windows 10. Une fois que vous avez ajouté une application à Intune, vous pouvez l’attribuer à des utilisateurs et des appareils. Les informations suivantes fournissent plus de détails concernant les scénarios Windows 10 pris en charge. Elles fournissent également des détails importants à noter lors du déploiement d’applications sur Windows. 
 
-Les applications métier et Microsoft Store pour Entreprises sont les types d’applications pris en charge sur les appareils Windows 10. Les extensions de fichier des applications Windows sont **.msi**, **.appx**, **.appxbundle**, **.msix** et **.msixbundle**.  
+Les applications métier et Microsoft Store pour Entreprises sont les types d’applications pris en charge sur les appareils Windows 10. Les extensions de fichier des applications Windows incluent **.msi**, **.appx** et **.appxbundle**.  
 
 > [!Note]
-> La mise à jour de Windows 10 minimale nécessaire pour déployer des applications dans le contexte d’appareil est celle du [23 mai 2018 — KB4100403 (build du système d’exploitation 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
+> Les mises à jour Windows 10 minimales nécessaires pour déployer des applications modernes sont les suivantes :
+> - Pour Windows 10 1803, [23 mai 2018 - KB4100403 (build du système d’exploitation 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
+> - Pour Windows 10 1709, [21 juin 2018 - KB4284822 (build du système d’exploitation 16299.522)](https://support.microsoft.com/help/4284822).
 
 ## <a name="windows-10-line-of-business-apps"></a>Applications métier Windows 10
 
@@ -44,8 +46,13 @@ En fonction du type d’application, l’application peut être installée sur u
 
 - **Contexte utilisateur** : quand une application est déployée dans le contexte utilisateur, l’application gérée est installée pour cet utilisateur sur l’appareil quand il se connecte à l’appareil. Notez que l’installation de l’application ne réussit qu’une fois l’utilisateur connecté à l’appareil. 
     - Les applications métier modernes et les applications Microsoft Store pour Entreprises (en ligne et hors connexion) peuvent être déployées dans le contexte utilisateur et prennent en charge les intentions Obligatoire et Disponible.
+    - Les applications Win32 générées en **Mode utilisateur** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge les intentions **Obligatoire** et **Disponible**. 
 - **Contexte d’appareil** : quand une application est déployée dans le contexte d’appareil, l’application gérée est installée directement sur l’appareil par Intune.
     - Seules les applications métier modernes et les applications Microsoft Store pour Entreprises sous licence en ligne peuvent être déployées dans le contexte d’appareil, et elles prennent uniquement en charge l’intention Obligatoire.
+    - Les applications Win32 générées en **Mode machine** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge uniquement l’intention **Obligatoire**.
+
+> [!NOTE]
+> Pour les applications Win32 générées en **Mode double**, vous (l’administrateur) devez choisir si l’application fonctionnera comme une application en **Mode utilisateur** ou en **Mode machine** pour toutes les attributions associées à cette instance. Le contexte de déploiement ne peut pas être changé par attribution.  
 
 Quand une application est déployée dans le contexte d’appareil, l’installation réussit uniquement quand elle cible un appareil qui prend en charge le contexte d’appareil. En outre, le déploiement dans le contexte d’appareil prend en charge les conditions suivantes :
 - Si une application est déployée dans le contexte d’appareil et qu’elle cible un utilisateur, l’installation échoue avec l’état suivant et l’erreur suivante s’affiche dans la console d’administration :

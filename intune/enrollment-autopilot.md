@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b6381a7a5a8032340910d2c8ff2a0f7db91ef2dd
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: aa51cbea1ab1ea5f1bfc903a17638192aca59326
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828123"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075895"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -152,6 +152,16 @@ Si la gestion des appareils mobiles ne vous intéresse pas, vous pouvez utiliser
 - Afficher les modifications apportées aux attributions de profils effectuées dans un autre portail
 - Synchroniser les attributions de profils effectuées dans un autre portail
 - Afficher les modifications apportées à la liste des appareils effectuées dans un autre portail
+
+## <a name="redeploying-windows-autopilot"></a>Redéploiement de Windows Autopilot
+
+Vous pouvez regrouper des appareils Windows par ID de corrélation lors de l’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) par le biais de Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. [L’attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) est automatiquement défini pour être égal à « OfflineAutopilotprofile-<correlator ID> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation à l’aide de l’attribut enrollmentprofileName pour les inscriptions Autopilot hors connexion.
+
+Si vous mettez à niveau des anciennes versions de Windows qui ne prennent pas en charge l’inscription Autopilot, vous pouvez utiliser un profil Autopilot hors connexion. Autopilot peut faciliter une nouvelle installation de Windows 10 version 1809 ou supérieure. Dans le cadre du profil hors connexion, vous pouvez spécifier un ID de corrélation. 
+
+AVERTISSEMENT : Étant donné que l’ID de corrélation n’est pas prélisté dans Intune, les utilisateurs peuvent choisir de s’inscrire sous n’importe quel ID de corrélation de leur choix. Si l’utilisateur crée un ID de corrélation correspondant à un nom de profil DEP Apple ou Autopilot, l’appareil est ajouté à n’importe quel groupe d’appareils Azure AD dynamiques basé sur l’attribut enrollmentProfileName. Pour éviter ce conflit :
+- Créez toujours des règles de groupe dynamiques correspondant à la *totalité* de la valeur enrollmentProfileName
+- Ne faites jamais commencer les noms de profils DEP Apple ou Autopilot par « OfflineAutopilotprofile- ».
 
 ## <a name="next-steps"></a>Étapes suivantes
 Une fois que vous avez configuré Windows Autopilot pour les appareils Windows 10 inscrits, découvrez comment les gérer. Pour plus d’informations, consultez [Qu’est-ce que la gestion des appareils Microsoft Intune ?](https://docs.microsoft.com/intune/device-management)

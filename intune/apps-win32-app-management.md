@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c2774a8172eb389742a3fdbf805717b6bc134b43
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 9513673b68522c6838a2f2090c597343d65d7004
+ms.sourcegitcommit: b7789fd2f34528275c13a717699cf53a289ed04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866369"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890993"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Intune autonome - Gestion des applications Win32 (préversion publique)
 
@@ -32,7 +32,7 @@ Intune autonome offre de meilleures fonctionnalités de gestion des applications
 - Le client Windows 10 doit avoir les caractéristiques suivantes : 
     - Joint à Azure Active Directory (AAD) ou de manière hybride à Azure Active Directory et
     - Inscrit dans Intune (géré par MDM)
-- La taille d’application Windows est limitée à 8 Go par application dans la préversion publique 
+- La taille d’application Windows est limitée à 2 Go par application dans la préversion publique 
 
 > [!NOTE]
 > Nous testons actuellement les éditions Professionnel et Éducation de Windows 10 version 1607 et seront heureux de recevoir vos commentaires.

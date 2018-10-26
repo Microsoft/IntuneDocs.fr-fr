@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 48bf2e6daf05dba6baebbd49be45a17a5a56e820
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 838ed3a932d6ff495b9a433d3cabedfa6227ad32
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828293"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169513"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -38,9 +38,11 @@ Le serveur NDES doit être joint au domaine qui héberge l’autorité de certif
 
   - Le connecteur NDES Certificate prend également en charge FIPS le mode FIPS (Federal Information Processing Standard). FIPS n’est pas obligatoire, mais vous pouvez émettre et révoquer des certificats quand il est activé.
 
-- **Serveur proxy d’application web** (facultatif) : utilisez un serveur qui exécute Windows Server 2012 R2 ou version ultérieure comme serveur proxy d’application web (WAP). Cette configuration :
+- **Serveur proxy d’application web** (facultatif) : utilisez un serveur qui exécute Windows Server 2012 R2 ou ultérieur comme serveur proxy d’application web. Cette configuration :
   - Permet aux appareils de recevoir des certificats à l'aide d'une connexion Internet.
   - Est une recommandation de sécurité lorsque les appareils se connectent via Internet pour recevoir et renouveler les certificats.
+  
+- **Proxy d’application Azure AD** (facultatif) : le proxy d’application Azure AD peut être utilisé à la place d’un serveur proxy d’application web dédié pour publier le serveur NDES sur Internet. Pour plus d’informations, consultez le [Guide pratique pour offrir un accès à distance sécurisé aux applications locales](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Supplémentaire
 
@@ -138,7 +140,7 @@ Configurer l’autorité de certification et permettre au demandeur d’entrer l
    - **net start certsvc**
 
 2. Sur l'autorité de certification émettrice, utilisez le composant logiciel enfichable Autorité de Certification pour publier le modèle de certificat.
-   Sélectionnez le nœud **Modèles de certificats**, cliquez sur **Action** > **Nouveau** > **Modèle de certificat à délivrer**, puis sélectionnez le modèle que vous avez créé à l’étape 2.
+   Sélectionnez le nœud **Modèles de certificats**, cliquez sur **Action** > **Nouveau** > **Modèle de certificat à délivrer**, puis sélectionnez le modèle que vous avez créé à l’étape 2.
 
 3. Validez le modèle publié en l'affichant sous le dossier **Modèles de certificats** .
 
@@ -166,7 +168,7 @@ Au cours de cette étape, vous allez :
 
    6. **Outils de gestion** > **IIS 6 Management Compatibility** > **Compatibilité avec la métabase de données IIS 6**
 
-   7. **Outils de gestion** > **IIS 6 Management Compatibility** > **Compatibilité WMI d’IIS 6**
+   7. **Outils de gestion** > **IIS 6 Management Compatibility** > **Compatibilité WMI d’IIS 6**
 
    8. Sur le serveur, ajoutez le compte de service NDES en tant que membre du groupe **IIS_IUSR**.
 
@@ -403,13 +405,14 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         "{{MEID}}",
         ```
 
-        Ces variables peuvent être ajoutées avec du texte statique dans une zone de texte de valeur personnalisée. Par exemple, l’attribut DNS peut être ajouté en tant que `DNS = {{AzureADDeviceId}}.domain.com`.
+        Ces variables peuvent être ajoutées avec du texte statique dans une zone de texte de valeur personnalisée. Par exemple, le nom commun peut être ajouté sous la forme `CN = {{DeviceName}}text`.
 
         > [!IMPORTANT]
-        >  - Dans le texte statique du SAN, les accolades **{}**, les barres verticales **|** et les points-virgules **;** ne fonctionnent pas. 
+        >  - Dans le texte statique de l’objet, des accolades  **{ }** qui n’englobent pas une variable sont résolues en erreur. 
         >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }**.
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
         >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
+        >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans le nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue. 
 
 
    - **Autre nom de l’objet** : entrez comment Intune crée automatiquement les valeurs pour l’autre nom de l’objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
@@ -428,8 +431,6 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         Une zone de texte au format tableau que vous pouvez personnaliser. Les attributs suivants sont disponibles :
 
         - DNS
-        - Adresse de messagerie
-        - Nom d'utilisateur principal (UPN)
 
         Avec le type de certificat **Appareil**, vous pouvez utiliser les variables de certificat d’appareil suivantes pour la valeur :  
 
@@ -447,13 +448,14 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         "{{MEID}}",
         ```
 
-        Ces variables peuvent être ajoutées avec du texte statique dans la zone de texte de valeur personnalisée. Par exemple, l’attribut DNS peut être ajouté en tant que `DNS = {{AzureADDeviceId}}.domain.com`.
+        Ces variables peuvent être ajoutées avec du texte statique dans la zone de texte de valeur personnalisée. Par exemple, l’attribut DNS peut être ajouté en tant que `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
         >  - Dans le texte statique du SAN, les accolades **{}**, les barres verticales **|** et les points-virgules **;** ne fonctionnent pas. 
         >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }**.
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
         >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
+        >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans l’autre nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  
 
    - **Période de validité du certificat** : si vous avez exécuté la commande `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` sur l’Autorité de certification émettrice, ce qui autorise une période de validité personnalisée, vous pouvez entrer le temps restant avant l’expiration du certificat.<br>Vous pouvez entrer une valeur inférieure à la période de validité du modèle de certificat, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez entrer une valeur de 1 an, mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice. 
    - **Fournisseur de stockage de clés** (Windows Phone 8.1, Windows 8.1, Windows 10) : entrez l’emplacement de stockage de la clé du certificat. Choisissez l'une des valeurs suivantes :
