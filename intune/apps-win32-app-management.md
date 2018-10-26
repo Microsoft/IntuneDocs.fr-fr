@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9513673b68522c6838a2f2090c597343d65d7004
-ms.sourcegitcommit: b7789fd2f34528275c13a717699cf53a289ed04e
+ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890993"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357102"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Intune autonome - Gestion des applications Win32 (préversion publique)
 
@@ -51,7 +51,7 @@ Vous pouvez télécharger [l’outil de préparation de chargement des applicati
 |    `-h`     |    Aide    |
 |    `-c <setup_folder>`     |    Dossier d’installation de tous les fichiers d’installation.    |
 |   ` -s <setup_file>`     |    Fichier d’installation (comme *setup.exe* ou *setup.msi*).    |
-|    `-o <output_file>`     |    Dossier de sortie du fichier *.intunewin* généré.    |
+|    `-o <output_folder>`     |    Dossier de sortie du fichier *.intunewin* généré.    |
 |    `-q`       |    Mode silencieux    |
 
 ### <a name="example-commands"></a>Exemples de commandes

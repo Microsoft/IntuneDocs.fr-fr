@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 606005c3d8abafe989b35841cebf8c11e1f6b04e
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075878"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652136"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Édition préliminaire pour Microsoft Intune - Octobre 2018
 
@@ -44,9 +44,6 @@ Cette page est mise à jour périodiquement. Consultez-la régulièrement pour s
 ### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Utiliser les paramètres recommandés par Microsoft avec les lignes de base de sécurité <!-- 2055484 -->
 Intune s’intègre à d’autres services axés sur la sécurité, notamment Windows Defender ATP et Office 365 ATP. Les utilisateurs demandent une stratégie commune et un ensemble cohérent de flux de travail de sécurité de bout en bout entre les services Microsoft 365. Notre objectif est d’aligner les stratégies afin de créer des solutions qui opèrent la liaison entre les opérations de sécurité et les tâches d’administration courantes. Dans Intune, nous souhaitons atteindre cet objectif en publiant un ensemble de « Lignes de base de sécurité » recommandées par Microsoft (**Intune** > **Lignes de base de sécurité**).  Un administrateur pourra créer des stratégies de sécurité directement à partir de ces lignes de base, et les déployer ensuite pour ses utilisateurs. Il pourra également personnaliser les recommandations en fonction des besoins de son organisation. Intune garantit que les appareils restent conformes avec ces lignes de base, et signale aux administrateurs les utilisateurs ou appareils qui ne sont pas conformes.
 
-### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Supprimer la capacité des administrateurs à réinitialiser les appareils personnels et les codes secrets <!-- 2934699 -->
-Pour éviter que les utilisateurs ne craignent que les administrateurs d’entreprise puissent réinitialiser leurs appareils personnels, les actions à distance [Réinitialiser](devices-wipe.md#wipe) et [Réinitialiser le code secret](device-passcode-reset.md) ne s’appliqueront plus aux appareils personnels. Les utilisateurs peuvent réinitialiser leurs codes secrets et effacer leurs appareils de tout appareil à l’aide du site web Portail d’entreprise.
-
 ### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Prise en charge d’Autopilot pour les appareils hybrides joints à Azure Active Directory <!-- 1048100 -->
 Vous pourrez configurer les appareils hybrides joints à Azure Active Directory à l’aide d’Autopilot. Les appareils doivent être joints au réseau de votre organisation afin d’utiliser la fonctionnalité Autopilot hybride.
 
@@ -56,7 +53,7 @@ Pour créer une balise d’étendue, choisissez **Rôles Intune** > **Étendue (
 Pour ajouter une balise d’étendue à une attribution de rôle, choisissez **Rôles Intune** > **Tous les rôles** > **Gestionnaire de stratégies et de profils** > **Attributions** > **Étendue (balises)**.
 Pour ajouter une balise d’étendue à un profil de configuration, choisissez **Configuration de l’appareil** > **Profils** > choisissez un profil > **Propriétés** > **Étendue (balises)**.
 
-## <a name="tenant-health-dashboard----1124854---"></a>Tableau de bord d’intégrité du locataire <!-- 1124854 -->
+### <a name="tenant-health-dashboard----1124854---"></a>Tableau de bord d’intégrité du locataire <!-- 1124854 -->
 La page État du locataire dans Intune vous fournira des informations sur l’état du locataire dans un emplacement unique. La page est divisée en quatre sections :  
 - **Détails du locataire** : contient des informations telles que votre autorité MDM, le nombre total d’appareils inscrits dans votre locataire et le nombre de licences. Cette section indique également la version actuelle du service pour votre locataire.
 - **État du connecteur** : contient des informations sur les connecteurs configurés, tels qu’Apple VPP, Windows Store pour Entreprises et les connecteurs de certificat. En fonction de leur état actuel, les connecteurs sont marqués comme *Sain*, *Avertissement* ou *Défectueux*.
