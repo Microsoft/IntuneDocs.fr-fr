@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/17/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 73e1e0a27d128d567a924e6f2b343026b11f1a44
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 9d9169ab353da30e0f7b292cea4f5b9c93e316aa
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581580"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391550"
 ---
 # <a name="quickstart-add-a-device-compliance-policy-for-a-windows-10-device"></a>Démarrage rapide : Ajouter une stratégie de conformité des appareils pour un appareil Windows 10
 Une stratégie de conformité de l’appareil Intune pour Windows spécifie les règles et les paramètres que les appareils Windows doivent satisfaire pour être considérés comme conformes. Vous pouvez utiliser ces stratégies avec un [accès conditionnel](https://docs.microsoft.com/intune/conditional-access) pour autoriser ou bloquer l’accès aux ressources de l’entreprise. Vous pouvez également obtenir des rapports sur les appareils et prendre des mesures en cas de non-conformité.
@@ -28,7 +28,7 @@ Dans ce guide de démarrage rapide, vous allez créer une stratégie de conformi
 
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 - Pour effectuer les opérations décrites dans ce guide de démarrage rapide, vous devez d’abord [créer un utilisateur](quickstart-create-user.md) et [créer un groupe](quickstart-create-group.md).
 
 
@@ -53,4 +53,4 @@ Quand la stratégie n’est plus nécessaire, supprimez-la. Pour ce faire, séle
 Dans ce guide de démarrage rapide, vous avez créé et affecté une stratégie de conformité des appareils toute simple. Pour inscrire un appareil Windows 10 destiné à recevoir la stratégie, suivez le guide de démarrage rapide jusqu’à la configuration de l’inscription automatique. 
  
 > [!div class="nextstepaction"]
-> [Configurer l’inscription automatique](quickstart-setup-auto-enrollment.md)
+> [Définir la longueur des mots de passe des appareils](quickstart-set-password-length-android.md)

@@ -5,19 +5,19 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 1c0c197536cb6d6b452ff5e3607ad1af2d5a4ca8
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 0c1daa93ff38d1f76ab8c203bf2d989318ecdf62
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058895"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425221"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signer des applications métier afin de pouvoir les déployer sur des appareils Windows avec Intune
 
@@ -51,7 +51,7 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 
     ![Exporter le certificat de signature](./media/wit-walk-cert2.gif)
 
-    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Effectuez toutes les étapes de l'Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](http://go.microsoft.com/fwlink/?LinkID=203031).
+    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Terminez l’Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](http://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Charger l’application sur Intune**<br>
     Chargez le fichier d’application signé et votre certificat de signature de code pour rendre l’application disponible pour vos utilisateurs finaux.
@@ -66,7 +66,7 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 
 ## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Exemple : Télécharger, signer et déployer l’application Portail d’entreprise pour les appareils Windows
 
-Vous pouvez déployer l’application Portail d’entreprise sur les appareils Windows, y compris les appareils Windows Phone et Windows 10 Mobile avec Intune, au lieu de l’installer à partir du Microsoft Store. Vous devez télécharger l’application Portail d’entreprise et la signer avec votre certificat.  Cela n'est nécessaire que si vos utilisateurs ne sont pas appelés à utiliser le Store d'entreprise et si vous souhaitez déployer le Portail d'entreprise sur des appareils Windows Phone 8.1.
+Vous pouvez déployer l’application Portail d’entreprise sur les appareils Windows, y compris les appareils Windows Phone et Windows 10 Mobile avec Intune, au lieu de l’installer à partir du Microsoft Store. Vous devez télécharger l’application Portail d’entreprise et la signer avec votre certificat.  Cela n'est nécessaire que si vos utilisateurs ne sont pas appelés à utiliser le Store d'entreprise et si vous souhaitez déployer le Portail d'entreprise sur des appareils Windows Phone 8.1.
 
 
 1.  **Télécharger le Portail d'entreprise**
@@ -77,7 +77,7 @@ Vous pouvez déployer l’application Portail d’entreprise sur les appareils W
 
     -   WinPhoneCompanyPortal.ps1 : script PowerShell que vous pouvez utiliser pour signer le fichier de l'application Portail d'entreprise à des fins de déploiement vers des appareils Windows Phone 8.1
 
-    Vous pouvez également télécharger le portail d’entreprise Windows Phone 8.1 (package sous licence hors connexion) ou le portail d’entreprise Windows 10 (package sous licence hors connexion) à partir du [Microsoft Store pour Entreprises](http://businessstore.microsoft.com/). L’application Portail d’entreprise doit être acquise avec une licence en mode hors connexion et le package approprié téléchargé pour une utilisation hors connexion. Les listes de plateformes Windows 8 et Windows Phone 8 dans la sélection font référence à leurs équivalents de la version 8.1. Pour plus d’informations sur la procédure à suivre avec Intune, consultez [Gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Vous pouvez également télécharger le portail d’entreprise Windows Phone 8.1 (package sous licence hors connexion) ou le portail d’entreprise Windows 10 (package sous licence hors connexion) à partir du [Microsoft Store pour Entreprises](http://businessstore.microsoft.com/). L’application Portail d’entreprise doit être acquise avec une licence en mode hors connexion et le package approprié téléchargé pour une utilisation hors connexion. Les listes de plateformes Windows 8 et Windows Phone 8 dans la sélection font référence à leurs équivalents de la version 8.1. Pour plus d’informations sur la procédure à suivre avec Intune, consultez [Gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises](windows-store-for-business.md).
 
 2.  **Télécharger le SDK Windows Phone** Téléchargez le SDK Windows Phone 8.0](http://go.microsoft.com/fwlink/?LinkId=615570) et installez-le sur votre ordinateur. Ce SDK est nécessaire pour générer un jeton d'inscription d'application.
 
@@ -119,7 +119,7 @@ Vous pouvez déployer l’application Portail d’entreprise sur les appareils W
 
     -   `-EnterpriseId` : ID d’entreprise. Vous devez spécifier cet argument ou 'AetxPath'. Si cet argument n'est pas fourni, l'ID d'entreprise est lu dans le fichier AETX. Par exemple, 1000000001.
 
-6.  Déployez l'application Portail d'entreprise Windows Phone 8.1 (SSP.appx). Pour plus d’instructions, consultez [Guide pratique pour ajouter des applications métier Windows Phone](lob-apps-windows-phone.md) ([portail classique](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Déployez l'application Portail d'entreprise Windows Phone 8.1 (SSP.appx). Pour plus d’instructions, consultez [Guide pratique pour ajouter des applications métier Windows Phone](lob-apps-windows-phone.md).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Comment renouveler le certificat de signature du code d'entreprise Symantec
 

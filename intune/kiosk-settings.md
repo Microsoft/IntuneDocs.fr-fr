@@ -5,23 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/2/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: 59e2ab4635c8488b99781ac123aacd0854967dc8
+ms.sourcegitcommit: c3ac9e5f6240223cb5dfed8b44c7425066d6ea86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562865"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49380029"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Paramètres kiosque pour Windows 10 (et versions ultérieures) dans Intune
 
-Les profils kiosque servent à configurer les appareils Windows 10 pour exécuter une ou plusieurs applications. Quand vous créez un profil kiosque, vous choisissez également si un menu de démarrage doit être affiché, si un navigateur web est installé, et bien plus encore.
+Sur les appareils Windows 10, vous pouvez utiliser Intune pour exécuter ces appareils comme kiosque. Le kiosque peut exécuter une application ou de nombreuses applications. Vous pouvez également afficher et personnaliser un menu de démarrage, ajouter des applications différentes, y compris les applications Win32, ajouter une page d’accueil spécifique à un navigateur web et bien plus encore. 
+
+Utilisez la procédure décrite dans cet article pour créer un kiosque mono-application ou multi-application dans Intune.
+
+Intune prend en charge un profil de kiosque par appareil. Si vous avez besoin de plusieurs profils de kiosque sur un seul appareil, vous pouvez utiliser un [OMA-URI personnalisé](custom-settings-windows-10.md).
 
 ## <a name="kiosk-settings"></a>Paramètres kiosque
 
@@ -30,100 +34,161 @@ Les profils kiosque servent à configurer les appareils Windows 10 pour exécut
 3. Entrez les propriétés suivantes :
 
    - **Nom** : attribuez un nom descriptif au nouveau profil.
-   - **Description :** entrez une description pour le profil. Ceci est facultatif, mais recommandé.
+   - **Description :** entrez une description pour le profil. Ce paramètre est facultatif, mais recommandé.
    - **Plateforme** : sélectionnez **Windows 10 et ultérieur**
    - **Type de profil** : sélectionnez **Kiosque (préversion)**
-   
-4. Sélectionnez **Kiosque** > **Ajouter**.
-5. Entrez un **Nom de configuration kiosque** pour votre kiosque. Ce nom identifie un groupe d’applications, la disposition de ces applications dans le menu de démarrage et les utilisateurs affectés à cette configuration kiosque.
-6. Sélectionnez le **mode kiosque**. **Mode kiosque** : identifie le type de mode kiosque pris en charge par la stratégie. Les options sont les suivantes :
+
+4. Sélectionnez un **mode kiosque**. **Mode kiosque** : identifie le type de mode kiosque pris en charge par la stratégie. Les options sont les suivantes :
 
     - **Non configuré** (par défaut) : La stratégie n’active pas de mode kiosque.
-    - **Kiosque avec une seule application en plein écran**: Le profil permet à l’appareil de s’exécuter comme un seul compte d’utilisateur et le verrouille sur une seule application de plateforme Windows universelle (UWP). De cette façon, quand l’utilisateur se connecte, une application spécifique démarre. Ce mode empêche également l’utilisateur d’ouvrir de nouvelles applications ou de basculer vers une autre application.
-    - **Kiosk multiapplication** : Le profil permet à l’appareil d’exécuter plusieurs applications de plateforme Windows universelle (UWP) ou d’applications Win32. Vous pouvez aussi affecter différentes applications à différents comptes d’utilisateur. Seules les applications que vous ajoutez sont disponibles pour l’utilisateur. L’avantage d’un kiosque multiapplication ou d’un appareil à usage fixe est que l’utilisateur accède uniquement aux applications dont il a besoin. Celles dont il n’a pas besoin sont retirées de sa vue.
+    - **Application unique, kiosque plein écran** : l’appareil s’exécute comme compte d’utilisateur unique et le verrouille sur une seule application Store. De cette façon, quand l’utilisateur se connecte, une application spécifique démarre. Ce mode empêche également l’utilisateur d’ouvrir de nouvelles applications ou de basculer vers une autre application.
+    - **Kiosque multi-application** : l’appareil exécute plusieurs applications Store, des applications Win32 ou des applications de boîte de réception Windows à l’aide de l’identifiant AUMID de l’application. Seules les applications que vous ajoutez sont disponibles sur l’appareil.
 
-#### <a name="single-full-screen-app-kiosks"></a>Kiosques avec une seule application en plein écran
-entrez les paramètres suivants :
+        L’avantage d’un kiosque multiapplication ou d’un appareil à usage fixe est que l’utilisateur accède uniquement aux applications dont il a besoin. Celles dont il n’a pas besoin sont retirées de sa vue.
 
-- **Identificateur d’application de plateforme Windows universelle (UWP)** : Entrez **l’ID de modèle utilisateur d’application (AUMID)** de l’application kiosque. Sinon, sélectionnez une application gérée existante que vous avez ajoutée via [Applications clientes](apps-add.md).
+## <a name="single-full-screen-app-kiosks"></a>Kiosques avec une seule application en plein écran
+Lorsque vous choisissez le mode kiosque à application unique, entrez les paramètres suivants :
 
-    Consultez [Rechercher l’ID de modèle utilisateur d’application d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Type d’ouverture de session utilisateur** : les applications que vous ajoutez s’exécutent comme le compte d’utilisateur que vous entrez. Les options disponibles sont les suivantes :
 
-- **Type de compte d’utilisateur** : Options disponibles :
+  - **Ouverture de session automatique (Windows 10 version 1803 et versions ultérieures)**  : pour les kiosques dans des environnements publics qui ne nécessitent pas d’ouverture de session par l’utilisateur, similaire à un compte invité. Ce paramètre utilise le [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Compte d’utilisateur local** : entrez le compte d’utilisateur local (sur l’appareil). Le compte que vous entrez est utilisé pour la connexion au kiosque.
 
-  - **Ouverture de session automatique** : Pour les kiosques dans des environnements publics où l’ouverture de session automatique est activée, un utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode plein écran, utilisez le format `AzureAD\user@contoso.com`.
-  - **Compte d’utilisateur local** : Entrez le compte d’utilisateur local (pour l’appareil) ou la connexion au compte Azure Active Directory associé à l’application kiosque. Pour les comptes liés à des domaines Azure AD, entrez le compte en utilisant le format `domain\username@tenant.org`.
+- **Type d’application** : sélectionnez **application Store**.
 
-#### <a name="multi-app-kiosks"></a>Applications multiples plein écran
-Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir. 
+- **Application à exécuter en mode kiosque** : choisissez **Ajouter une application Store**, puis sélectionnez une application dans la liste.
 
-Les [Applications multiples plein écran](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) utilisent une configuration plein écran qui répertorie les applications autorisées et d’autres paramètres.
+    Aucune application n’est répertoriée ? En ajouter à l’aide de la procédure sous [Applications clientes](apps-add.md).
 
-entrez les paramètres suivants :
+    Cliquez sur **OK** pour enregistrer vos modifications.
 
-- **Ajouter une application Win32** : Une application Win32 est une application de bureau traditionnelle. Entrez le **Nom d’application** et **l’Identificateur**. **L’Identificateur** est le nom du chemin complet de l’exécutable sur l’appareil.
-- [Ajouter des applications gérées](apps-add.md) : sélectionnez une application gérée existante que vous avez ajoutée via **Applications clientes dans Intune**.
-- **Ajouter une application par AUMID** : Entrez [l’AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (applications UWP).
-- **Barre des tâches** : choisissez de montrer (**Activer**) la barre des tâches ou de la garder masquée (**Non configurée**) sur l’appareil plein écran.
-- **Disposition du menu Démarrer** : Entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer, notamment l’ordre des applications. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
+- **Paramètres de navigateur du kiosque** : ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à obtenir l’[application de navigateur kiosque](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) dans le Store, ajoutez-la à Intune en tant qu’[application cliente](apps-add.md), puis affectez l’application aux appareils du kiosque.
 
-  [Créer une borne Windows10 qui exécute plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) fournit plus de détails sur l’utilisation et la création de fichiers XML.
+  entrez les paramètres suivants :
 
-- **Type de compte d’utilisateur** : Ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Quand le compte se connecte, seules les applications définies dans la configuration sont disponibles. Le compte peut être local sur l’appareil ou il peut s’agir d’une connexion de compte Azure AD associée à l’application kiosque.
+  - **URL de la page d’accueil par défaut** : entrez l’URL par défaut affichée à l’ouverture ou au redémarrage du navigateur du kiosque. Par exemple, entrez `http://bing.com` ou `http://www.contoso.com`.
 
-    Pour les kiosques dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode plein écran, utilisez le format `domain\user@tenant.com`.
+  - **Bouton Accueil** : **Afficher** ou **Masquer** le bouton Accueil du navigateur du kiosque. Par défaut, le bouton ne s’affiche pas.
 
-## <a name="kiosk-web-browser-settings"></a>Paramètres du navigateur web kiosque
+  - **Boutons de navigation** : **Afficher** ou **Masquer** les boutons Suivant et Précédent. Par défaut, les boutons de navigation ne s’affichent pas.
 
-Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à déployer une application de navigateur web sur les appareils de type borne via [Applications clientes](apps-add.md).
+  - **Bouton Terminer la session** : **Afficher** ou **Masquer** le bouton de fin de session. Quand ce bouton est affiché et que l’utilisateur le sélectionne, l’application l’invite à mettre fin à la session. Après confirmation, le navigateur efface toutes les données de navigation (cookies, cache, etc.), puis ouvre l’URL par défaut. Par défaut, le bouton ne s’affiche pas.
 
-1. entrez les paramètres suivants :
+  - **Actualiser le navigateur après la durée d’inactivité** : entrez la durée d’inactivité (1 à 1 440 minutes) avant le redémarrage du navigateur de kiosque dans un nouvel état. La durée d’inactivité est le nombre de minutes écoulées depuis la dernière interaction de l’utilisateur. Par défaut, la valeur est vide, ce qui signifie qu’il n’y a pas d’expiration du délai d’inactivité.
 
-    - **URL de la page d’accueil par défaut** : Entrez l’URL par défaut affichée à l’ouverture ou au redémarrage du navigateur kiosque.
+  - **Sites web autorisés** : utilisez ce paramètre pour autoriser l’ouverture de sites web spécifiques. En d’autres termes, utilisez cette fonctionnalité pour restreindre ou empêcher des sites web sur l’appareil. Par exemple, vous pouvez autoriser l’ouverture de tous les sites web sur `http://contoso.com*`. Par défaut, tous les sites web sont autorisés.
 
-    - **Afficher le bouton Accueil** : Affichez (**Autoriser**) ou masquez (**Non configuré**) le bouton Accueil du navigateur kiosque. Par défaut, le bouton est Non configuré.
+    Pour autoriser des sites web spécifiques, chargez un fichier .csv qui inclut une liste des sites web autorisés. Si vous n’ajoutez pas de fichier .csv, tous les sites web sont autorisés. Intune prend en charge * (astérisque) comme caractère générique.
 
-    - **Afficher les boutons de navigation** : Affichez (**Autoriser**) ou masquez (**Non configuré**) les boutons Suivant et Précédent. Par défaut, les boutons de navigation sont « Non configuré ».
+  Cliquez sur **OK** pour enregistrer vos modifications.
 
-    - **Afficher le Bouton Terminer la session** : Affichez (**Autoriser**) ou masquez (**Non configuré**) le bouton Terminer la session. Quand ce bouton est affiché et que l’utilisateur le sélectionne, l’application l’invite à mettre fin à la session. Après confirmation, le navigateur efface toutes les données de navigation (cookies, cache, et ainsi de suite) et retourne à l’URL par défaut. Par défaut, le bouton est Non configuré. 
+## <a name="multi-app-kiosks"></a>Applications multiples plein écran
 
-    - **Actualiser le navigateur quand l’utilisateur dépasse la limite du délai d’inactivité** : Entrez la durée d’inactivité de session en minutes avant que le redémarrage du navigateur kiosque dans un nouvel état. La valeur est un entier compris entre 1 et 1440 minutes. Par défaut, la valeur est vide, ce qui signifie qu’il n’y a pas d’expiration du délai d’inactivité.
+Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir.
 
-    - **Sites web bloqués** : Liste des URL de site web bloqué (avec prise en charge des caractères génériques). Utilisez ce paramètre pour empêcher le navigateur d’ouvrir des sites spécifiques. Vous pouvez aussi **Importer** un fichier .csv contenant une liste. Sinon, créez un fichier .csv (**Exporter**) qui contient les sites que vous ajoutez.
+Lorsque vous choisissez le mode kiosque multi-application, entrez les paramètres suivants :
 
-    - **Exceptions de site web** : Liste d’exceptions pour les URL de site web bloqué (avec prise en charge des caractères génériques). Utilisez ce paramètre pour autoriser le navigateur à ouvrir des sites spécifiques. Ces exceptions sont un sous-ensemble des URL bloquées. Si une URL est dans la liste des sites web bloqués et dans la liste des exceptions de site web, l’exception est prioritaire.
+- **Cibler Windows 10 dans les appareils en mode S** : choisissez **Oui** pour autoriser les applications Store et AUMID (excepté pour les applications Win32) dans le profil de kiosque. Choisissez **Non** pour autoriser les applications Store, les applications Win32 et les applications AUMID dans le profil de kiosque. Lorsque vous choisissez **Non**, ce profil de kiosque n’est pas déployé sur des appareils en mode S.
 
-    Vous pouvez aussi **Importer** un fichier .csv contenant une liste. Sinon, créez un fichier .csv (**Exporter**) qui contient les sites que vous ajoutez.
+- **Type d’ouverture de session utilisateur** : les applications que vous ajoutez s’exécutent comme le compte d’utilisateur que vous entrez. Les options disponibles sont les suivantes :
 
-2. Cliquez sur **OK** pour enregistrer vos modifications.
+  - **Ouverture de session automatique (Windows 10 version 1803 et versions ultérieures)**  : pour les kiosques dans des environnements publics qui ne nécessitent pas d’ouverture de session par l’utilisateur, similaire à un compte invité. Ce paramètre utilise le [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Compte d'utilisateur local** : **Ajouter** le compte d'utilisateur local (à l’appareil). Le compte que vous entrez est utilisé pour la connexion au kiosque.
+  - **Utilisateur Azure AD ou groupe (Windows 10 version 1803 et versions ultérieures)**  : sélectionnez **Ajouter** pour choisir des utilisateurs Azure AD ou des groupes dans la liste. Vous pouvez sélectionner plusieurs utilisateurs et groupes. Choisissez **Sélectionner** pour enregistrer vos changements.
+  - **Visiteur HoloLens** : Le compte visiteur est un compte invité ne nécessitant pas d’informations d’identification de l’utilisateur ou d’authentification, comme décrit dans [Concepts du mode PC partagé](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+
+- **Applications** : ajoutez les applications à exécuter sur l’appareil kiosque. N’oubliez pas que vous pouvez ajouter plusieurs applications.
+
+  - **Ajouter une application de Store** : ajoutez une application de Microsoft Store pour Entreprises. Si vous n’avez aucune application répertoriée, vous pouvez obtenir des applications et [les ajouter à Intune](store-apps-windows.md). Par exemple, vous pouvez ajouter Kiosk Browser, Excel, OneNote et bien plus encore.
+
+  - **Application Win32** : une application Win32 est une application de bureau traditionnelle, telle que Visual Studio Code ou Google Chrome. Entrez les propriétés suivantes :
+
+    - **Nom de l’application** : requis. Entrez un nom pour l'application.
+    - **Chemin d’accès local** : requis. Entrez le chemin d’accès au fichier exécutable, par exemple `C:\Program Files (x86)\Microsoft VS Code\Code.exe` ou `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
+    - **Identifiant AUMID de l’application (AUMID)**  : facultatif. Entrez l’identifiant AUMID de l’application Win32. Ce paramètre détermine la mise en page de démarrage de la mosaïque sur le bureau. Pour obtenir cet ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
+  
+  - **Ajouter par AUMID** : utilisez cette option pour ajouter des applications Windows de boîte de réception, telles que le bloc-notes ou la calculatrice. Entrez les propriétés suivantes : 
+
+    - **Nom de l’application** : requis. Entrez un nom pour l'application.
+    - **Identifiant du modèle utilisateur de l’application (AUMID)**  : requis. Entrez l’identifiant AUMID de l’application Windows. Pour obtenir cet ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
+
+  > [!TIP]
+  > Après avoir ajouté toutes les applications, vous pouvez modifier l’ordre d’affichage en cliquant sur les applications et en les faisant glisser dans la liste.  
+
+  Cliquez sur **OK** pour enregistrer vos modifications.
+
+- **Paramètres de navigateur du kiosque** : ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à déployer une application de navigateur web sur les appareils de type kiosque via des [Applications clientes](apps-add.md).
+
+  entrez les paramètres suivants :
+
+  - **URL de la page d’accueil par défaut** : entrez l’URL par défaut affichée à l’ouverture ou au redémarrage du navigateur du kiosque. Par exemple, entrez `http://bing.com` ou `http://www.contoso.com`.
+
+  - **Bouton Accueil** : **Afficher** ou **Masquer** le bouton Accueil du navigateur du kiosque. Par défaut, le bouton ne s’affiche pas.
+
+  - **Boutons de navigation** : **Afficher** ou **Masquer** les boutons Suivant et Précédent. Par défaut, les boutons de navigation ne s’affichent pas.
+
+  - **Bouton Terminer la session** : **Afficher** ou **Masquer** le bouton de fin de session. Quand ce bouton est affiché et que l’utilisateur le sélectionne, l’application l’invite à mettre fin à la session. Après confirmation, le navigateur efface toutes les données de navigation (cookies, cache, etc.), puis ouvre l’URL par défaut. Par défaut, le bouton ne s’affiche pas.
+
+  - **Actualiser le navigateur après la durée d’inactivité** : entrez la durée d’inactivité (1 à 1 440 minutes) avant le redémarrage du navigateur de kiosque dans un nouvel état. La durée d’inactivité est le nombre de minutes écoulées depuis la dernière interaction de l’utilisateur. Par défaut, la valeur est vide, ce qui signifie qu’il n’y a pas d’expiration du délai d’inactivité.
+
+  - **Sites web autorisés** : utilisez ce paramètre pour autoriser l’ouverture de sites web spécifiques. En d’autres termes, utilisez cette fonctionnalité pour restreindre ou empêcher des sites web sur l’appareil. Par exemple, vous pouvez autoriser l’ouverture de tous les sites web sur `contoso.com*`. Par défaut, tous les sites web sont autorisés.
+
+    Pour autoriser des sites web spécifiques, chargez un fichier .csv qui inclut une liste des sites web autorisés. Si vous n’ajoutez pas de fichier .csv, tous les sites web sont autorisés.
+
+  Cliquez sur **OK** pour enregistrer vos modifications.
+
+- **Utiliser une autre mise en page de démarrage** : choisissez **Oui** pour entrer un fichier XML qui décrit comment les applications s’affichent dans le menu Démarrer, notamment l’ordre des applications. Utilisez cette option si vous avez besoin de davantage de personnalisation dans votre menu Démarrer. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
+
+- **Barre des tâches Windows** : choisissez d’**Afficher** ou de **Masquer** la barre des tâches. Par défaut, la barre des tâches ne s’affiche pas.
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
-Vous pouvez configurer les appareils Windows Holographic for Business pour qu’ils s’exécutent en mode kiosque mono-application ou en mode kiosque multi-application. 
+Vous pouvez configurer les appareils Windows Holographic for Business pour qu’ils s’exécutent en mode kiosque mono-application ou en mode kiosque multi-application. Certaines fonctionnalités ne sont pas prises en charge sur Windows Holographic for Business.
 
 #### <a name="single-full-screen-app-kiosks"></a>Kiosques avec une seule application en plein écran
-entrez les paramètres suivants :
+Lorsque vous choisissez le mode kiosque à application unique, entrez les paramètres suivants :
 
-- **Identificateur d’application de plateforme Windows universelle (UWP)** : Entrez **l’ID de modèle utilisateur d’application (AUMID)** de l’application kiosque. Sinon, sélectionnez une application gérée existante que vous avez ajoutée à l’aide de [Mobile Apps](apps-add.md).
+- **Type d’ouverture de session d’utilisateur** : sélectionnez **Compte d’utilisateur local** pour entrer le compte d’utilisateur local (sur l’appareil) ou un compte Microsoft Account (MSA) associé à l’application kiosque. Les types de comptes d’utilisateur **Ouverture de session automatique** ne sont pas pris en charge sur Windows Holographic for Business.
 
-    Pour obtenir l’ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Type d’application** : sélectionnez **application Store**.
 
-- **Type de compte d’utilisateur** : Sélectionnez **Compte d’utilisateur local** pour entrer le compte d’utilisateur local (sur l’appareil) ou une connexion de compte Microsoft Account (MSA) associée à l’application kiosque. Les types de comptes d’utilisateur **Ouverture de session automatique** ne sont pas pris en charge sur Windows Holographic for Business.
+- **Application à exécuter en mode kiosque** : choisissez **Ajouter une application Store**, puis sélectionnez une application dans la liste.
+
+    Aucune application n’est répertoriée ? En ajouter à l’aide de la procédure sous [Applications clientes](apps-add.md).
+
+    Cliquez sur **OK** pour enregistrer vos modifications.
 
 #### <a name="multi-app-kiosks"></a>Applications multiples plein écran
-Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir.
+Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir. Lorsque vous choisissez le mode kiosque multi-application, entrez les paramètres suivants :
 
-entrez les paramètres suivants :
+- **Cibler Windows 10 dans les appareils en mode S** : choisissez **Non**. Le mode S n’est pas pris en charge sur Windows Holographic for Business.
 
-- [Ajouter des applications gérées](apps-add.md) : sélectionnez une application gérée existante que vous avez ajoutée via **Applications clientes dans Intune**.
-- **Ajouter une application par AUMID** : Entrez [l’AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (applications UWP).
-- **Disposition du menu Démarrer** : Entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer, notamment l’ordre des applications. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) fournit quelques conseils et inclut un fichier XML spécifique pour les appareils Windows Holographic for Business.
-- **Type de compte d’utilisateur** : Ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Les options prises en charge sont les suivantes : 
+- **Type d’ouverture de session d’utilisateur** : ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Les options disponibles sont les suivantes : 
+
+  - **Ouverture de session automatique** : pas prise en charge sur Windows Holographic for Business.
+  - **Comptes d'utilisateurs locaux** : **Ajouter** le compte d'utilisateur local (à l’appareil). Le compte que vous entrez est utilisé pour la connexion au kiosque.
+  - **Utilisateur ou groupe Azure AD (Windows 10, version 1803 et versions ultérieures)**  : nécessite des informations d’identification de l’utilisateur pour se connecter à l’appareil. Sélectionnez **Ajouter** pour choisir les utilisateurs ou groupes Azure AD dans la liste. Vous pouvez sélectionner plusieurs utilisateurs et groupes. Choisissez **Sélectionner** pour enregistrer vos changements.
   - **Visiteur HoloLens** : Le compte visiteur est un compte invité ne nécessitant pas d’informations d’identification de l’utilisateur ou d’authentification, comme décrit dans [Concepts du mode PC partagé](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
-  - **Utilisateurs Azure AD** : nécessite des informations d’identification de l’utilisateur pour se connecter à l’appareil. Utilisez le format `domain\user@tenant.com`.
-  - **Comptes d’utilisateur locaux** : nécessite des informations d’identification de l’utilisateur pour se connecter à l’appareil. 
 
-Quand le compte se connecte, seules les applications définies dans la configuration sont disponibles.
+- **Applications** : ajoutez les applications à exécuter sur l’appareil kiosque. N’oubliez pas que vous pouvez ajouter plusieurs applications.
+
+  - **Ajouter des applications Store** : sélectionnez une application existante que vous avez ajoutée avec [Applications clientes](apps-add.md). Si vous n’avez aucune application répertoriée, vous pouvez obtenir des applications et [les ajouter à Intune](store-apps-windows.md).
+  - **Ajouter une application Win32** : pas pris en charge sur Windows Holographic for Business.
+  - **Ajouter par AUMID** : utilisez cette option pour ajouter des applications Windows de boîte de réception. Entrez les propriétés suivantes : 
+
+    - **Nom de l’application** : requis. Entrez un nom pour l'application.
+    - **Identifiant du modèle utilisateur de l’application (AUMID)**  : requis. Entrez l’identifiant AUMID de l’application Windows. Pour obtenir cet ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
+
+- **Paramètres du navigateur de kiosque** : pas pris en charge sur Windows Holographic for Business.
+
+- **Utiliser une autre mise en page de démarrage** : choisissez **Oui** pour entrer un fichier XML qui décrit comment les applications s’affichent dans le menu Démarrer, notamment l’ordre des applications. Utilisez cette option si vous avez besoin de davantage de personnalisation dans votre menu Démarrer. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) fournit quelques conseils et inclut un fichier XML spécifique pour les appareils Windows Holographic for Business.
+
+- **Barre des tâches Windows** : pas prise en charge sur Windows Holographic for Business.
+
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).

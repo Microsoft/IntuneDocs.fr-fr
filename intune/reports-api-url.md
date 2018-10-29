@@ -15,12 +15,12 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c6709d68ce4bf847be3eb5cd5ae427db6d11aba8
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: d552ec61d148d0489dc263405eac52448c10f9ef
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903588"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642875"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Point de terminaison de l’API d’entrepôt de données Intune
 
@@ -28,7 +28,7 @@ Pour utiliser l’API d’entrepôt de données Intune, vous devez disposer d’
 
 [!INCLUDE [reports-credential-reqs](./includes/reports-credential-reqs.md)]
 
-## <a name="authorization"></a>Autorisation
+## <a name="authorization"></a>Authorization
 
 Azure Active Directory (Azure AD) utilise OAuth 2.0 pour vous permettre d'autoriser l'accès aux applications et API Web dans votre locataire Azure AD. Ce guide, indépendant du langage, décrit comment envoyer et recevoir des messages HTTP sans utiliser de bibliothèque open source. Le flux du code d’autorisation OAuth 2.0 est décrit dans la [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) de la spécification OAuth 2.0.
 

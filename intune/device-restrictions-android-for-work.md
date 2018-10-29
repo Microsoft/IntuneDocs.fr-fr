@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6a633b73856b5f9f50ffe0b9993713b888b969b
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 2a521eadea2bcf118b4b0c643802fd8478f7ace2
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828140"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652102"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Paramètres de restriction appareil professionnel dans Intune
 
@@ -124,6 +124,7 @@ Cet article liste les paramètres de restriction d’appareil de Microsoft Intun
     > [!IMPORTANT]
     >  - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
     >  - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
+    >  - Il existe des problèmes connus lors de l’utilisation de VPN par application avec un accès F5 pour Android 3.0.3. Consultez [Notes de publication F5 sur l’accès F5 pour Android 3.0.3](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-3.html#relnotes_known_issues_f5_access_android) pour plus d’informations.
 
 - **Mode de verrouillage** : vous pouvez l’**activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
 

@@ -15,12 +15,12 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b6161540b4b05ebab35942a1657adc30bce6afdb
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
+ms.openlocfilehash: 1ce1d429b830ac6f494346697bd7e44ac250d9b6
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727473"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642944"
 ---
 # <a name="reference-for-user-entity"></a>Informations de référence sur l’entité User
 
@@ -38,7 +38,7 @@ La collection d’entités **Utilisateur** contient les données des utilisateur
 | UserId |Identificateur unique de l’utilisateur (semblable à UserKey, mais il s’agit d’une clé naturelle). |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Adresse e-mail de l’utilisateur. |John@constoso.com |
 | UPN | Nom d'utilisateur principal de l'utilisateur. | John@constoso.com |
-| DisplayName |Nom d’affichage de l’utilisateur. |Jean |
+| DisplayName |Nom d’affichage de l’utilisateur. |John |
 | IntuneLicensed |Spécifie si cet utilisateur dispose d’une licence Intune ou non. |Vrai/Faux |
 | IsDeleted | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a de ce fait été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. |Vrai/Faux |
 | StartDateInclusiveUTC |Si IsDeleted = FALSE, DateHeure UTC à laquelle l’utilisateur a obtenu une licence et a commencé à être présent sur Intune. Si IsDeleted = TRUE, DateHeure UTC à laquelle l’utilisateur a vu sa licence expirer et a été supprimé d’Intune. |11/23/2016 12:00:00 AM |
@@ -48,4 +48,4 @@ La collection d’entités **Utilisateur** contient les données des utilisateur
 
 ## <a name="next-steps"></a>Étapes suivantes
  - Il est possible d’utiliser la collection d’entités **Utilisateur actuel** pour limiter les données utilisateurs aux seuls utilisateurs actuellement actifs. Pour plus d’informations, consultez la page [Informations de référence sur l’entité Utilisateur en cours](reports-ref-current-user.md).
- - Pour en savoir plus sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
+ - Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).

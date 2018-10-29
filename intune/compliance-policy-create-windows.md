@@ -1,6 +1,6 @@
 ---
 title: Créer une stratégie de conformité de l’appareil Windows dans Microsoft Intune - Azure | Microsoft Docs
-description: Créez ou configurez une stratégie de conformité des appareils Microsoft Intune pour Windows Phone 8.1, Windows 8.1 et versions ultérieures, ainsi que Windows 10 et versions ultérieures. Vérifiez la conformité des versions minimale et maximale du système d’exploitation, définissez des restrictions et des longueurs pour les mots de passe, imposez BitLocker, vérifier les solutions antivirus tierces, définissez le niveau de menace acceptable et activez le chiffrement du stockage de données, notamment pour Surface Hub et Windows Holographic for Business.
+description: Créez ou configurez une stratégie de conformité des appareils Microsoft Intune pour Windows Phone 8.1, Windows 8.1 et versions ultérieures, ainsi que Windows 10 et versions ultérieures. Vérifiez la conformité des versions minimale et maximale du système d’exploitation, définissez des restrictions et des longueurs pour les mots de passe, imposez BitLocker, vérifiez les solutions antivirus tierces, définissez le niveau de menace acceptable et activez le chiffrement du stockage de données, notamment pour Surface Hub et Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11ccace4ca8e43e09b8aebeb92530629cf50a472
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: e38e6f615220135e9c4c9c786ab260f5921890ea
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602314"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642878"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils Windows dans Intune
 
@@ -65,7 +65,7 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 
 Ces paramètres de stratégie s’appliquent aux appareils qui exécutent les plateformes suivantes :
 
-- Windows Phone 8.1
+- Windows Phone 8.1
 - Windows 8.1 et versions ultérieures
 
 ### <a name="device-properties"></a>Propriétés des appareils
@@ -107,10 +107,10 @@ Les PC Windows 8.1 retournent la version **3**. Si la règle de la version du sy
 
 ## <a name="windows-10-and-later-policy-settings"></a>Paramètres de stratégie pour Windows 10 et versions ultérieures
 
-### <a name="device-health"></a>Device health
+### <a name="device-health"></a>Intégrité des appareils
 
-- **Exiger BitLocker** : quand BitLocker est activé, l’appareil peut protéger les données stockées sur le disque contre tout accès non autorisé au moment de la désactivation ou de la mise en veille prolongée du système. Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le module de plateforme sécurisée (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il permet également de protéger l’ordinateur contre les tentatives de falsification, même si celui-ci est laissé sans surveillance, perdu ou volé. Si l’ordinateur est équipé d’un module de plateforme sécurisée compatible, BitLocker utilise ce module pour verrouiller les clés de chiffrement qui protègent les données. Ainsi, les clés ne sont accessibles qu’une fois que le module de plateforme sécurisée a vérifié l’état de l’ordinateur.
-- **Exiger l’activation du démarrage sécurisé sur l’appareil** : quand le démarrage sécurisé est activé, le système est obligé de démarrer dans un état approuvé basé sur les paramètres d’usine. De plus, quand le démarrage sécurisé est activé, les principaux composants utilisés pour démarrer l’ordinateur doivent avoir des signatures de chiffrement appropriées qui sont approuvées par l’organisation ayant fabriqué l’appareil. Le microprogramme UEFI vérifie la signature avant de laisser la machine démarrer. Si des fichiers ont été falsifiés et que leur signature a été rompue, le système ne démarre pas.
+- **Exiger BitLocker** : quand BitLocker est activé, l’appareil peut protéger les données stockées sur le disque contre tout accès non autorisé au moment de la désactivation ou de la mise en veille prolongée du système. Le chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume hébergeant le système d’exploitation Windows. BitLocker utilise le module de plateforme sécurisée (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il permet également de protéger l’ordinateur contre les tentatives de falsification, même si celui-ci est laissé sans surveillance, perdu ou volé. Si l’ordinateur est équipé d’un TPM compatible, BitLocker utilise celui-ci pour verrouiller les clés de chiffrement qui protègent les données. Par conséquent, les clés sont inaccessibles tant que le TPM n’a pas vérifié l’état de l’ordinateur.
+- **Exiger l’activation du démarrage sécurisé sur l’appareil** : quand le démarrage sécurisé est activé, le système est obligé de démarrer dans un état approuvé basé sur les paramètres d’usine. En outre, lorsque le démarrage sécurisé est activé, les composants principaux utilisés pour démarrer la machine doivent avoir des signatures de chiffrement appropriées, approuvées par le fabricant de l’appareil. Le microprogramme UEFI vérifie la signature avant de laisser la machine démarrer. Si des fichiers ont été falsifiés, avec pour effet d’annuler leur signature, le système ne démarre pas.
 
   > [!NOTE]
   > Le paramètre **Exiger l’activation du démarrage sécurisé sur l’appareil** est pris en charge sur les appareils TPM 1.2 et 2.0. Pour les appareils qui ne prennent pas en charge TPM 2.0 ou une version ultérieure, l’état de la stratégie dans Intune s’affiche sous la forme **Non conforme**. Il s’agit d’une limitation du service [Attestation d’intégrité de l’appareil](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) dans Windows 10.
@@ -118,8 +118,6 @@ Les PC Windows 8.1 retournent la version **3**. Si la règle de la version du sy
 - **Exiger l’intégrité du code** : l’intégrité du code est une fonctionnalité qui valide l’intégrité d’un fichier de pilote ou d’un fichier système, chaque fois qu’il est chargé en mémoire. L’intégrité du code détecte si un fichier système ou un pilote non signé est chargé dans le noyau. Cette fonctionnalité détecte également si un fichier système a été modifié par un logiciel malveillant exécuté par un compte d’utilisateur ayant des privilèges d’administrateur.
 
 Pour plus d’informations sur le fonctionnement du service HAS, consultez [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
-
-Pour configurer Windows Defender ATP (Advanced Threat Protection) comme service de défense contre les menaces, consultez [Activer Windows Defender ATP avec l’accès conditionnel](advanced-threat-protection.md).
 
 ### <a name="device-properties"></a>Propriétés des appareils
 
@@ -183,6 +181,8 @@ Pour configurer Windows Defender ATP (Advanced Threat Protection) comme service 
   - **Faible** : l’appareil est évalué comme conforme uniquement si les menaces détectées sont de niveau faible. La présence de menaces de niveau supérieur rend l’appareil non conforme.
   - **Moyen** : l’appareil est jugé conforme si les menaces présentes sur celui-ci sont de niveau faible ou moyen. La présence de menaces de niveau élevé rend l’appareil non conforme.
   - **Élevé** : cette option est la moins sécurisée, elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
+  
+  Pour configurer Windows Defender ATP (Advanced Threat Protection) comme service de défense contre les menaces, consultez [Activer Windows Defender ATP avec l’accès conditionnel](advanced-threat-protection.md).
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

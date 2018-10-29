@@ -15,12 +15,12 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3ba8caa74b673127a17a431d5b821d52f9767c49
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
+ms.openlocfilehash: 5680e0c53a9decfa5b172e08c04fbfe4025f2d7c
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727456"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642861"
 ---
 # <a name="data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données
 
@@ -61,6 +61,6 @@ L’entrepôt est en aval des données Intune. Intune prend un instantané quoti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
- - Pour en savoir plus sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
+ - Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
  - Pour plus d’informations sur l’utilisation des entrepôts de données, consultez la page [Créer un premier entrepôt de données](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
  - Pour plus d’informations sur l’utilisation de Power BI et d’un entrepôt de données, consultez la page [Créer un rapport Power BI en important un jeu de données](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

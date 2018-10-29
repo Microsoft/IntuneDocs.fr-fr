@@ -12,17 +12,20 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6aa2ade550a01a9e4758024213a67e6a7ddd8f03
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3a3fd4c57edba6f4d9abfdd4188c94627543cb43
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313851"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652153"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Paramètres de restriction des appareils pour Windows 10 (et versions ultérieures) dans Intune
 Cet article décrit tous les paramètres des restrictions d’appareils de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 10.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
+
+> [!Note]
+> Toutes les options ne sont pas disponibles dans toutes les éditions de Windows.
 
 ## <a name="general"></a>Général
 - **Capture d’écran (mobile uniquement)** - Autorise l’utilisateur à capturer le contenu de l’écran d’appareil en tant qu’image.
@@ -50,7 +53,7 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)** - Empêche un message d’erreur de s’afficher sur l’appareil si aucune carte SIM n’est détectée.
 - **Espace de travail Windows Ink** - Empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. Quand ce paramètre n’est pas configuré, l’espace de travail Windows Ink est activé (fonctionnalité activée), et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : permet aux utilisateurs avec des droits d’administration de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **Ctrl+Win+R** sur l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
-- **Require users to connect to network during device setup (Windows Insider only)**  (Exiger des utilisateurs qu’ils se connectent au réseau pendant la configuration de l’appareil (Windows Insider uniquement)) : choisissez **Exiger** pour exiger que l’appareil se connecte à un réseau avant de passer à la page Réseau pendant la configuration de Windows 10. Même si cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
+- **Require users to connect to network during device setup (Windows Insider only)**  (Exiger des utilisateurs qu’ils se connectent au réseau pendant la configuration de l’appareil (Windows Insider uniquement)) : choisissez **Exiger** pour exiger que l’appareil se connecte à un réseau avant de passer à la page Réseau pendant la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
 
 ## <a name="password"></a>Mot de passe
 -   **Mot de passe** - Demande à l’utilisateur final d’entrer un mot de passe pour accéder à l’appareil.
@@ -400,3 +403,6 @@ Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas suppr
 - **Synchronisation des messages (mobile uniquement)** - Désactiver Messages sur tous les appareils et sauvegarder/restaurer les SMS.
 - **MMS (mobile uniquement)** - Désactiver la fonctionnalité d'envoi/de réception de MMS sur l'appareil.
 - **RCS (mobile uniquement)** - Désactiver la fonctionnalité d'envoi/de réception de RCS (Rich Communication Services) sur l'appareil.
+
+## <a name="more-information"></a>Plus d'informations
+Pour plus de détails techniques sur chaque paramètre et sur les éditions de Windows prises en charge, consultez [Référence CSP de stratégie Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider)

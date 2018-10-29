@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0af5fb071c6abb01a2819a5d9c73f4e01bf7cb7a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
+ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312830"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410361"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -140,6 +140,9 @@ Le rapport **Conformité des appareils** > **Définition de la conformité** vou
 ![Voir une liste de tous les paramètres dans les différentes stratégies](./media/compliance-policy-monitor/idc-10.png)
 
 Quand vous sélectionnez un paramètre spécifique, vous pouvez voir **l’état de conformité**, **l’alias d’e-mail de l’utilisateur**, le **modèle d’appareil** et **l’emplacement** pour chaque appareil ciblé par ce paramètre.
+
+> [!NOTE]
+> Les appareils Windows 10 qui sont joints à Azure AD peuvent afficher le compte système en tant qu'utilisateur non conforme. Ce comportement est normal et n’affecte pas la conformité globale des appareils. 
 
 ## <a name="view-status-of-device-policies"></a>Voir l’état des stratégies d’appareil
 

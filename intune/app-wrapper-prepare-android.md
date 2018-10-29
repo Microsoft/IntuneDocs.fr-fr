@@ -14,12 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3025c673f695282611fdd0ded6f466036847c4a7
-ms.sourcegitcommit: a474a6496209ff3b60e014a91526f3d163a45438
+ms.openlocfilehash: b4b10d3dfa83e3fcfda6ba34bebc1257b19d83ac
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031148"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642971"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -139,7 +139,7 @@ Pour empêcher l'usurpation d'identité, la divulgation d'informations et les at
 
 -   Vérifiez que l’application métier d’entrée, l’application de sortie et le magasin de clés Java se trouvent sur le même ordinateur Windows que celui sur lequel l’outil de création de package de restrictions d’application est en cours d’exécution.
 
--   Importez l’application de sortie dans Intune sur l’ordinateur où l’outil est en cours d’exécution. Pour plus d’informations sur l’utilitaire Java keytool, consultez [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
+-   Importez l’application de sortie dans Intune sur l’ordinateur où l’outil est en cours d’exécution. Voir [Keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) pour en savoir plus sur Java Keytool.
 
 -   Si l’application de sortie et l’outil se trouvent sur un chemin d’accès UNC (Universal Naming Convention) et que vous n’exécutez pas l’outil et les fichiers d’entrée sur le même ordinateur, sécurisez l’environnement en utilisant la [sécurité du protocole Internet (IPsec)](http://wikipedia.org/wiki/IPsec) ou la [signature SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 

@@ -1,7 +1,7 @@
 ---
-title: Configurer des paramètres Wi-Fi pour les appareils Android dans Microsoft Intune - Azure | Microsoft Docs
+title: Configurer des paramètres Wi-Fi pour des appareils Android Enterprise et de kiosque dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Créez ou ajoutez un profil de configuration d’appareil Wi-Fi pour Android. Consultez les différents paramètres, y compris l’ajout de certificats, le choix d’un type EAP et la sélection d’une méthode d’authentification dans Microsoft Intune.
+description: Créez ou ajoutez un profil de configuration d’appareil Wi-Fi pour Android Enterprise et Android Kiosk. Consultez les différents paramètres, y compris l’ajout de certificats, le choix d’un type EAP et la sélection d’une méthode d’authentification dans Microsoft Intune. Pour les appareils de kiosques, entrez également entrer la clé prépartagée de votre réseau.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -13,18 +13,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7c0d11e7670134c6a2cd9ce2eb72714ba64aa03
+ms.openlocfilehash: c2983f2f7b7079f73c857bf7caafe4236373c5dc
 ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424983"
+ms.locfileid: "49431925"
 ---
-# <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Ajouter des paramètres Wi-Fi dans Microsoft Intune pour les appareils exécutant Android dans Microsoft Intune
+# <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Configurer des paramètres Wi-Fi pour des appareils exécutant Android Entreprise et Android Kiosk dans Microsoft Intune
 
-Vous pouvez créer un profil avec des paramètres Wi-Fi spécifiques, puis le déployer sur vos appareils Android. Microsoft Intune offre de nombreuses fonctionnalités, notamment l’authentification auprès de votre réseau, l’ajout d’un certificat PKS ou SCEP et bien plus encore.
-
-Ces paramètres Wi-Fi sont séparés en deux catégories : les paramètres de base et les paramètres d’entreprise.
+Vous pouvez créer un profil avec des paramètres Wi-Fi spécifiques, puis le déployer sur vos appareils Android Entreprise et Android Kiosk. Microsoft Intune offre de nombreuses fonctionnalités, notamment l’authentification auprès de votre réseau à l’aide d’une clé prépartagée.
 
 Cet article décrit ces paramètres.
 
@@ -32,7 +30,25 @@ Cet article décrit ces paramètres.
 
 [Créez un profil d’appareil](device-profile-create.md).
 
-## <a name="basic-profile"></a>Profil de base
+## <a name="device-owner-only---kiosk"></a>Propriétaire de l’appareil uniquement - kiosque
+
+Sélectionnez cette option si vous utilisez un appareil Android Entreprise comme kiosque.
+
+- **Nom du réseau** : entrez un nom pour cette connexion Wi-Fi. Cette valeur est le nom que voient les utilisateurs quand ils parcourent la liste des connexions disponibles sur leur appareil.
+- **SSID** : abréviation d’**identificateur SSID (Service Set Identifier)**. Ce paramètre correspond au nom réel du réseau sans fil auquel les appareils se connectent. Toutefois, les utilisateurs voient uniquement le **nom de réseau** que vous avez configuré quand ils choisissent la connexion.
+- **Se connecter automatiquement** : choisissez **Activer** pour vous connecter automatiquement à ce réseau lorsque celui-ci se trouve à votre portée. Choisissez **Désactiver** pour empêcher la connexion automatique des appareils.
+- **Réseau masqué** : choisissez **Activer** pour que ce réseau ne s’affiche pas dans la liste des réseaux disponibles sur l’appareil. Le SSID n’est pas diffusé. Choisissez **désactiver** pour afficher ce réseau dans la liste des réseaux disponibles sur l’appareil.
+- **Type de Wi-Fi** : sélectionnez le protocole de sécurité à utiliser pour s’authentifier sur le réseau Wi-Fi. Les options disponibles sont les suivantes :
+
+  - **Ouvert (aucune authentification)** : utilisez cette option uniquement si le réseau n’est pas sécurisé.
+  - **Clé WEP prépartagée** : entrez le mot de passe dans **Clé prépartagée**. Lorsque le réseau de votre organisation est configuré ou configuré, un mot de passe ou une clé réseau sont également configurés. Entrez cette clé de mot de passe ou de réseau pour la valeur PSK.
+  - **Clé WPA prépartagée** : entrez le mot de passe dans **Clé prépartagée**. Lorsque le réseau de votre organisation est configuré ou configuré, un mot de passe ou une clé réseau sont également configurés. Entrez cette clé de mot de passe ou de réseau pour la valeur PSK.
+
+Cliquez sur **OK** pour enregistrer vos modifications.
+
+## <a name="work-profile-only"></a>Profil professionnel uniquement
+
+### <a name="basic-settings"></a>Paramètres de base
 
 - **Type de Wi-Fi** : choisissez **De base**.
 - **SSID** : abréviation d’**identificateur SSID (Service Set Identifier)**. Ce paramètre correspond au nom réel du réseau sans fil auquel les appareils se connectent.
@@ -103,6 +119,5 @@ Le profil est créé, mais il ne fait rien. Ensuite, [affectez ce profil](device
 
 ## <a name="more-resources"></a>Ressources complémentaires
 
+- Consultez les paramètres disponibles pour les appareils Android sous [Paramètres Wi-Fi pour les appareils exécutant Android](wi-fi-settings-android.md).
 - [Vue d’ensemble des paramètres Wi-Fi](wi-fi-settings-configure.md), y compris d’autres plateformes.
-
-- À l’aide d’appareils Android Enterprise ou Android Kiosk ? Si ou, examinez les [paramètres Wi-Fi pour des appareils exécutant Android Entreprise et Android Kiosk](wi-fi-settings-android-enterprise.md).
