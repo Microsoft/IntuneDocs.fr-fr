@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3778675366a19eb6ba1774f26bbb3523cdcdf92f
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: ae031f601792251f1dcf7b93fb914a740bc36300
+ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828327"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136979"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Paramètres de la stratégie de protection des applications Android dans Microsoft Intune
 Cet article décrit les paramètres de stratégie de protection d’application pour les appareils Android. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure.
@@ -61,6 +61,7 @@ Il existe deux catégories de paramètres de stratégie : réadressage des donn
   | com.android.webview |[WebView](https://developer.android.com/reference/android/webkit/WebView.html), nécessaire pour de nombreuses applications, notamment Outlook.|
   | com.google.android.tts | Synthèse vocale de Google |
   | com.android.providers.settings | Paramètres système Android |
+  | com.android.settings | Paramètres système Android |
   | com.azure.authenticator | Application Azure Authenticator, nécessaire pour l’authentification dans de nombreux scénarios. |
   | com.microsoft.windowsintune.companyportal | Portail d'entreprise Intune|
 
