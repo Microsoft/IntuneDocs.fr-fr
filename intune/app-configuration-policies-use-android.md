@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f41c228e7b5dd4084e7ebb2fab1148913b76880f
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: f08e6275bb8f3dfb689dcc7e14d92ab65d588471
+ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642943"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50149102"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android gérés
 
@@ -29,9 +29,7 @@ ms.locfileid: "49642943"
 Utilisez des stratégies de configuration des applications dans Microsoft Intune pour fournir des paramètres aux applications avec profil professionnel Android. Le développeur d’applications doit exposer les paramètres de configuration d’application gérés Android pour spécifier les paramètres de configuration de l’application. Affectez la stratégie de configuration d’applications au groupe d’utilisateurs pour lequel vous souhaitez appliquer les paramètres.  Les paramètres de stratégie sont utilisés quand l’application les vérifie, en général, à sa première exécution.
 
 > [!Note]  
-> Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application a été conçue pour prendre en charge les stratégies de configuration des applications.<p></p>
-> En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.<p></p>
-> Pour Microsoft Word, Microsoft Excel, Microsoft PowerPoint, vous devez utiliser l’application version 16.0.9327.1000 et versions ultérieures.
+> Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application a été conçue pour prendre en charge les stratégies de configuration des applications.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
@@ -80,7 +78,9 @@ Pour les appareils Android, utilisez les paires clé/valeur suivantes :
 | **Valeurs** | <ul><li>Un ou plusieurs UPN <code>;</code> délimités.</li><li>Le ou les seuls comptes autorisés sont le ou les comptes utilisateur managés définis par cette clé.</li><li> Pour les appareils inscrits à Intune, le jeton <code>{{userprincipalname}}</code> peut être utilisé pour représenter le compte utilisateur inscrit.</li></ul> |
 
    > [!NOTE]
-   > Vous devez utiliser Outlook pour Android 2.2.222 ou version ultérieure lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités. 
+   > Vous devez utiliser Outlook pour Android 2.2.222 ou version ultérieure lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités.<p></p>
+   > En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.<p></p>
+   > Pour Microsoft Word, Microsoft Excel, Microsoft PowerPoint, vous devez utiliser l’application version 16.0.9327.1000 et versions ultérieures. 
 
 ## <a name="enter-the-json-editor"></a>Utiliser l’éditeur JSON
 
@@ -96,7 +96,7 @@ Quand l’application affectée est exécutée sur un appareil, elle s’exécut
 
 ## <a name="preconfigure-the-permissions-grant-state-for-apps"></a>Préconfigurer l’état d’octroi d’autorisations pour les applications
 
-Vous pouvez également préconfigurer l’autorisation pour les applications d’accéder aux fonctionnalités des appareils Android. Par défaut, les applications Android qui nécessitent des autorisations d’appareils (telles que l’accès à la géolocalisation ou à l’appareil photo) invitent les utilisateurs à accepter ou à refuser les autorisations. Par exemple, si une application utilise le microphone de l’appareil, l’utilisateur final est invité à autoriser l’application à utiliser le microphone.
+Vous pouvez également préconfigurer l’autorisation pour les applications d’accéder aux fonctionnalités des appareils Android. Par défaut, les applications Android qui nécessitent des autorisations d’appareils (telles que l’accès à la géolocalisation ou à l’appareil photo) invitent les utilisateurs à accepter ou à refuser les autorisations. Par exemple, si une application utilise le microphone de l’appareil, l’utilisateur final est invité à autoriser l’application à utiliser le microphone.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
