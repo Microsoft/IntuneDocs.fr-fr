@@ -1,11 +1,11 @@
 ---
 title: Forum Aux Questions sur la Gestion des applications mobiles (MAM) et la protection des applications
-description: Cet article fournit des réponses à certaines questions fréquemment posées sur la gestion des applications mobiles (GAM) Intune et la protection des applications Intune.
+description: Cet article fournit des réponses à certaines questions fréquemment posées sur la gestion des applications mobiles (MAM) Intune et la protection des applications Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 635853cb744395e6ae519985eaed62b53e88578e
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307421"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643023"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -169,7 +169,11 @@ Les stratégies de protection des applications Intune pour l’accès sont appli
 Lors du traitement de différents types de paramètres, une exigence de version d’application est prioritaire, suivie de l’exigence de version de système d’exploitation Android, puis de l’exigence de version de correctif Android. Ensuite, tous les avertissements pour tous les types de paramètres dans le même ordre sont vérifiés.
 
 ## <a name="app-experience-on-ios"></a>Expérience d'application sur iOS
-
+**Que se passe-t-il si j’ajoute ou supprime une empreinte digitale ou un visage sur mon appareil ?**
+Les stratégies Intune de protection des applications permettent de restreindre l’accès aux utilisateurs qui disposent d’une licence Intune. L’un des moyens de contrôler l’accès à une application est d’exiger un Touch ID ou un Face ID Apple sur les appareils pris en charge. Le comportement suivant est implémenté: si un changement est apporté à la base de données biométrique de l’appareil, Intune invite l’utilisateur à entrer un code PIN la prochaine fois que le délai d’attente d’inactivité est atteint. Les changements apportés aux données biométriques incluent l’ajout et la suppression d’une empreinte digitale ou d’un visage. Si l’utilisateur Intune n’a pas défini de code PIN, il est dirigé vers la page de configuration d’un code PIN Intune.
+ 
+L’objectif est de sécuriser les données de votre organisation au sein de l’application. Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS 9.0.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être ajouté aux applications ciblées. Cette intégration se produit par propagation et dépend des équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer. 
+  
 **Je suis en mesure d’utiliser l’extension de partage iOS pour ouvrir des données professionnelles ou scolaires dans des applications non gérées, même si la stratégie de transfert de données est définie sur les « applications gérées uniquement » ou sur « Aucune application ». Cela ne provoque-t-il pas de fuite de données ?**<br></br>
 La stratégie de protection des applications Intune ne peut pas contrôler l’extension de partage iOS sans gérer l’appareil. Par conséquent, Intune _**chiffre les données « d’entreprise » avant de les partager à l’extérieur de l’application**_. Vous pouvez valider cette action en essayant d’ouvrir le fichier « d’entreprise » en dehors de l’application gérée. Le fichier doit être chiffré et ne peut pas être ouvert en dehors de l’application gérée.
 
