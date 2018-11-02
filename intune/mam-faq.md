@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 57c69c1610168aa25d33c8124c38f585eb715251
+ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643023"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225452"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -172,7 +172,7 @@ Lors du traitement de différents types de paramètres, une exigence de version 
 **Que se passe-t-il si j’ajoute ou supprime une empreinte digitale ou un visage sur mon appareil ?**
 Les stratégies Intune de protection des applications permettent de restreindre l’accès aux utilisateurs qui disposent d’une licence Intune. L’un des moyens de contrôler l’accès à une application est d’exiger un Touch ID ou un Face ID Apple sur les appareils pris en charge. Le comportement suivant est implémenté: si un changement est apporté à la base de données biométrique de l’appareil, Intune invite l’utilisateur à entrer un code PIN la prochaine fois que le délai d’attente d’inactivité est atteint. Les changements apportés aux données biométriques incluent l’ajout et la suppression d’une empreinte digitale ou d’un visage. Si l’utilisateur Intune n’a pas défini de code PIN, il est dirigé vers la page de configuration d’un code PIN Intune.
  
-L’objectif est de sécuriser les données de votre organisation au sein de l’application. Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS 9.0.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être ajouté aux applications ciblées. Cette intégration se produit par propagation et dépend des équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer. 
+L’objectif est de sécuriser les données de votre organisation au sein de l’application. Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS 9.0.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être ajouté aux applications ciblées. Cette intégration se produit en continu et repose sur les équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer. 
   
 **Je suis en mesure d’utiliser l’extension de partage iOS pour ouvrir des données professionnelles ou scolaires dans des applications non gérées, même si la stratégie de transfert de données est définie sur les « applications gérées uniquement » ou sur « Aucune application ». Cela ne provoque-t-il pas de fuite de données ?**<br></br>
 La stratégie de protection des applications Intune ne peut pas contrôler l’extension de partage iOS sans gérer l’appareil. Par conséquent, Intune _**chiffre les données « d’entreprise » avant de les partager à l’extérieur de l’application**_. Vous pouvez valider cette action en essayant d’ouvrir le fichier « d’entreprise » en dehors de l’application gérée. Le fichier doit être chiffré et ne peut pas être ouvert en dehors de l’application gérée.
@@ -181,6 +181,15 @@ La stratégie de protection des applications Intune ne peut pas contrôler l’e
 Les stratégies de protection des applications Intune pour l’accès sont appliquées dans un ordre spécifique sur les appareils des utilisateurs finaux quand ceux-ci tentent d’accéder à une application cible à partir de leur compte d’entreprise. En règle générale, une réinitialisation est prioritaire, suivie d’un blocage, puis d’un message d’avertissement. Par exemple, si cela s’applique à l’utilisateur/application en question, un paramètre de système d’exploitation iOS minimal qui signale à un utilisateur qu’il doit mettre à niveau sa version d’iOS est appliqué après le paramètre de système d’exploitation iOS minimal qui bloque l’accès à l’utilisateur. Ainsi, dans le scénario où l’administrateur informatique configure le système d’exploitation iOS minimal sur 11.0.0.0 et le système d’exploitation iOS minimal (Avertissement uniquement) sur 11.1.0.0, alors que l’appareil qui tente d’accéder à l’application utilise iOS 10, l’utilisateur final est bloqué sur la base du paramètre le plus restrictif pour la version de système d’exploitation iOS minimal qui provoque un blocage de l’accès.
 
 Lors du traitement de différents types de paramètres, une exigence de version de SDK d’application Intune est prioritaire, suivie d’une exigence de version d’application, puis d’une exigence de version de système d’exploitation iOS. Ensuite, tous les avertissements pour tous les types de paramètres dans le même ordre sont vérifiés. Nous vous recommandons de configurer l’exigence de version de SDK d’application Intune uniquement sur recommandation de l’équipe de produit Intune pour les principaux scénarios de blocage.
+
+## <a name="app-protection-policies---policy-refresh"></a>Stratégies de protection des applications - Actualisation des stratégies
+- Les applications sont archivées dans App Service toutes les 30 minutes.
+- Le seuil de 30 minutes est basé sur un minuteur.
+    - Si l’application est active à la 30e minute, elle est archivée à la 30e minute.
+    - Si l’application est en veille à la 30e minute, elle est archivée à la mise au point suivante.
+- Si aucune stratégie n’est affectée à un utilisateur, l’archivage se produit toutes les huit heures.
+- Si aucune licence Intune n’est attribuée, l’archivage se produit toutes les 24 heures.
+
 
 ## <a name="see-also"></a>Voir aussi
 - [Implémenter un plan Intune](planning-guide-onboarding.md)
