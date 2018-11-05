@@ -1,42 +1,68 @@
 ---
-title: Paramètres personnalisés dans Microsoft Intune pour les appareils exécutant Windows Phone 8.1
+title: Ajouter des paramètres personnalisés aux appareils Windows Phone 8.1 dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Découvrez les paramètres que vous pouvez utiliser dans un profil personnalisé Windows Phone 8.1.
+description: Ajoutez ou créez un profil personnalisé pour utiliser les paramètres OMA-URI sur les appareils exécutant Windows Phone 8.1 dans Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b21464016dff3396b25861af568fa90d8b7a260f
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f2202d7abf80c6a78fd365a4629e970bc9ec36ce
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834751"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983089"
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-phone-81"></a>Paramètres d’appareil personnalisés dans Microsoft Intune pour les appareils exécutant Windows Phone 8.1
+# <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows Phone 8.1 dans Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+À l’aide de Microsoft Intune, vous pouvez ajouter ou créer des paramètres personnalisés pour vos appareils Windows Phone 8.1 au moyen de « profils personnalisés ». Les profils personnalisés sont une fonctionnalité dans Intune. Ils sont conçus pour ajouter des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune.
 
-Utilisez le profil **Personnalisé** Windows Phone 8.1 de Microsoft Intune pour affecter les paramètres OMA-URI qui peuvent être utilisés pour contrôler les fonctionnalités sur les appareils Windows Phone 8.1. Il s'agit de paramètres standard qui sont utilisés par de nombreux fabricants d'appareils mobiles pour contrôler les fonctionnalités des appareils.
+Les profils personnalisés Windows Phone 8.1 utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer différentes fonctionnalités. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler les fonctionnalités sur l’appareil.
 
-Cette fonctionnalité est conçue pour vous permettre d’affecter les paramètres qui ne sont pas configurables avec d’autres stratégies Intune.
+Cet article vous montre comment créer un profil personnalisé pour les appareils Windows Phone 8.1. 
 
-## <a name="custom-policy-settings-for-windows-phone-81-devices"></a>Paramètres de stratégie personnalisés pour les appareils Windows Phone 8.1
+## <a name="create-the-profile"></a>Créer le profil
 
-1. Suivez les instructions figurant dans [Configuration de paramètres d'appareil personnalisés dans Microsoft Intune](custom-settings-configure.md) pour commencer.
-2. Dans le volet **Paramètres OMA-URI personnalisés**, choisissez **Ajouter** pour ajouter un ou plusieurs paramètres OMA-URI.
-3. Dans le volet **Ajouter une ligne**, configurez les valeurs suivantes pour chaque paramètre :
-    - **Nom** : affectez un nom unique au paramètre OMA-URI pour vous aider à l'identifier dans la liste des paramètres.
-    - **Description** - Entrez une description générale du paramètre et d'autres informations pertinentes pour faciliter sa localisation.
-    - **OMA-URI** : spécifiez l'identificateur OMA-URI pour lequel vous souhaitez fournir un paramètre.
-    - **Type de données** : sélectionnez le type de données pour lequel spécifier ce paramètre OMA-URI. Choisissez parmi **Chaîne**, **Chaîne (XML)**, **Date et heure**, **Entier**, **Virgule flottante**, **Booléen** et **Base64**.
-    - **Valeur** : entrez la valeur ou le fichier à associer à l’identificateur OMA-URI que vous avez entré.
+1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. entrez les paramètres suivants :
 
-4. Cliquez sur **OK** lorsque vous avez terminé, puis continuez à ajouter d’autres paramètres si nécessaire.
+    - **Nom** : entrez un nom pour le profil, par exemple `windows phone custom profile`.
+    - **Description :** entrez une description pour le profil.
+    - **Plateforme** : choisissez **Windows Phone 8.1**.
+    - **Type de profil** : choisissez **Personnalisé**.
+
+4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
+
+    - **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
+    - **Description** : entrez une description générale du paramètre et toute information pertinente pour faciliter la recherche du profil.
+    - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
+    - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
+
+        - Chaîne
+        - Chaîne (fichier XML)
+        - Date et heure
+        - Entier
+        - Virgule flottante
+        - Booléen
+        - Base64 (fichier)
+
+    - **Valeur** : entrez la valeur de données à associer à l’identificateur OMA-URI que vous avez entré. La valeur dépend du type de données que vous avez sélectionné. Par exemple, si vous choisissez **Date et heure**, sélectionnez la valeur à partir d’un sélecteur de dates.
+
+    Une fois que vous avez ajouté des paramètres, vous pouvez sélectionner **Exporter**. L’option **Exporter** crée une liste de toutes les valeurs que vous avez ajoutées dans un fichier de valeurs séparées par des virgules (.csv).
+
+5. Cliquez sur **OK** pour enregistrer vos modifications. Continuez à ajouter d’autres paramètres si besoin.
+6. Quand vous avez terminé, choisissez **OK** > **Créer** pour créer le profil Intune. Quand vous avez terminé, votre profil apparaît dans la liste **Configuration de l’appareil - Profils**.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Le profil est créé, mais il ne fait rien pour le moment. À présent, [affectez le profil](device-profile-assign.md).
+
+Découvrez comment créer un profil personnalisé sur les [appareils Windows 10](custom-settings-windows-10.md).

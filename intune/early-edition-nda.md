@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
-ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
+ms.openlocfilehash: a13d9b6ee37dc42e90d7c99538c9fd2e5e0d1b7b
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49652136"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001590"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Édition préliminaire pour Microsoft Intune - Octobre 2018
 
@@ -118,8 +118,9 @@ Les utilisateurs finaux pourront accéder à des actions importantes sur le comp
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Jeton VPP Apple utilisé par une autre gestion MDM <!-- 1488946 -->
 Intune détectera et affichera des détails si un jeton du Programme d’achat en volume (VPP) Apple est utilisé à la fois par Intune et une autre gestion MDM.
 
-### <a name="ios-version-number-and-build-number-are-shown----1892471---"></a>Le numéro de version et le numéro de build d’iOS sont affichés <!-- 1892471 -->
-Dans **Conformité de l’appareil** > **Conformité de l’appareil**, la version du système d’exploitation iOS s’affiche. Dans une prochaine mise à jour, le numéro de build sera également affiché.
+### <a name="ios-and-macos-version-numbers-and-build-numbers-are-shown----1892471---"></a>Les numéros de version et de build iOS et macOS sont affichés <!-- 1892471 -->
+Dans **Conformité de l’appareil** > **Conformité de l’appareil**, les versions des systèmes d’exploitation iOS et macOS s’affichent. Dans une prochaine mise à jour, le numéro de build sera également affiché pour les deux plateformes.
+
 Quand des mises à jour de sécurité sont publiées, Apple laisse généralement le numéro de version tel quel, mais met à jour le numéro de build. En affichant le numéro de build, vous pouvez vérifier facilement si une mise à jour des vulnérabilités est installée.
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Appareils mis hors service dans le tableau de bord de conformité des appareils <!-- 1981119 -->

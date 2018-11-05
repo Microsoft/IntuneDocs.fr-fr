@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/23/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,42 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 683b5ec7b07d7c270ea30ac438e7fc839b13d5fc
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: d932005c955afed7f16e9766b559b77b2cd43182
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150342"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959483"
 ---
-# <a name="how-to-remove-your-android-device-from-intune"></a>Guide pratique pour supprimer un appareil Android d’Intune
+# <a name="unenroll-your-android-device-from-management"></a>Désinscrire votre appareil Android de la gestion  
 
-Quand vous supprimez votre appareil Android d’Intune, celui-ci ne peut plus accéder aux ressources de l’entreprise.  Pour plus d’informations sur ce qui se passe lors de la suppression de votre appareil de la gestion, consultez [Que se passe-t-il quand vous désinscrivez votre appareil d’Intune ?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+Supprimez un appareil Android inscrit afin qu’il ne soit plus géré par votre organisation. Cet article explique comment supprimer l’appareil de l’application Portail d’entreprise. Une fois que vous avez supprimé l’appareil :  
 
-## <a name="removing-the-device-from-the-company-portal-app"></a>Suppression de l’appareil de l’application Portail d’entreprise
+* Il perd l’accès aux ressources et aux données protégées de votre organisation.
+* Il n’apparaît plus dans l’application Portail d’entreprise.
+* Vous ne pouvez pas installer d’applications à partir de l’application Portail d’entreprise.
+* Tous les paramètres qui ont été modifiés sur votre appareil quand vous l’avez ajouté (par exemple la désactivation de l’appareil photo ou l’exigence d’une certaine longueur de mot de passe) ne s’appliquent plus.  
 
-Pour supprimer votre appareil d’Intune et de l’application Portail d’entreprise, suivez ces étapes :
+1. Dans l’application Portail d’entreprise, en haut à droite, appuyez sur les trois points verticaux. Le menu Action s’ouvre.
 
-1. Ouvrez le **menu d’action** en appuyant sur les trois points verticaux dans l’angle supérieur droit de l’application Portail d’entreprise.
+   ![Une image de l’application Portail d’entreprise Android, avec le menu Action ouvert en haut à droite. La nouvelle option « Supprimer le portail d’entreprise » est disponible en tant que troisième option, sous « Mon profil » et « Paramètres », et au-dessus de « Conditions générales », « Aide et commentaires » et « À propos ».](./media/android_remove_cp_menu_action_after_1705.png)
 
-   ![Image de l’application Portail d’entreprise Android, avec le menu d’action ouvert dans l’angle supérieur droit. La nouvelle option « Supprimer le portail d’entreprise » est disponible en tant que troisième option, sous « Mon profil » et « Paramètres », et au-dessus de « Conditions générales », « Aide et commentaires » et « À propos ».](./media/android_remove_cp_menu_action_after_1705.png)
+2. Appuyez sur **Supprimer le portail d’entreprise**.  
 
-2. Appuyez sur **Supprimer le portail d’entreprise**.
-
-3. Une confirmation s’affiche, vous demandant si vous êtes sûr de vouloir supprimer le portail d’entreprise. Cette fenêtre fournit des informations sur ce qui se passe lorsque vous désinscrivez votre appareil. Après avoir lu ce message, appuyez sur **OK** pour supprimer l’application.
+3. Un message s’affiche, indiquant ce qui se passe une fois votre appareil désinscrit. Appuyez sur **OK** pour confirmer que vous souhaitez supprimer l’appareil de l’application Portail d’entreprise.
 
    ![Une image de la boîte de dialogue de confirmation, qui est disponible après avoir sélectionné la nouvelle option « Supprimer le portail d’entreprise » dans le menu Action. La boîte de dialogue informe l’utilisateur que « en supprimant le portail d’entreprise, votre appareil ne sera plus géré par le support technique de votre entreprise et pourrait perdre l’accès à la messagerie, aux applications et aux données de l’entreprise ». L’utilisateur doit ensuite confirmer qu’il souhaite supprimer l’application Portail d’entreprise en sélectionnant « Oui ».](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-## <a name="removing-data-collected-by-the-company-portal-app"></a>Suppression des données collectées par l’application Portail d’entreprise
+## <a name="removing-data-collected-by-the-company-portal-app"></a>Suppression des données collectées par l’application Portail d’entreprise  
 
 Pour supprimer toutes les données que stocke l’application Portail d’entreprise pour Android sur votre appareil :
 
 -   Effacer les données d’application dans Applications -> Cliquer sur l’application -> bouton « Effacer les données »
 -   Supprimer le dossier '\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal'
+
+## <a name="uninstall-the-company-portal-app"></a>Désinstaller l’application Portail d’entreprise  
+Portail d’entreprise étant une application de gestion d’appareils, vous ne pouvez pas la désinstaller tant que vous n’avez pas [désinscrit votre appareil de la gestion](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Une fois cette opération terminée, appuyez sur l’icône de l’application Portail d’entreprise jusqu’à ce que vous voyiez **Désinstaller**. Appuyez sur **Désinstaller** pour supprimer l’application de votre appareil.  
+
+Ou bien, appuyez sur **Paramètres** > **Applications** > **Portail d’entreprise** > **Désinstaller**.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

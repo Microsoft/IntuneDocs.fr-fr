@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c94357d90f89e77be03df0db9ba9e2d89836623b
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: 57de118c2e13182a0d26aa36d1dc5b1f7ea9c4e9
+ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799521"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136962"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil
 
@@ -39,7 +39,7 @@ Vous pouvez utiliser des stratégies de configuration d’applications avec des 
       Description du profil qui s’affiche dans le portail Azure.
     - **Type d’inscription de l’appareil**  
       Choisissez **Gérer les applications**.
-6. Sélectionnez **Application associée** pour choisir l’application que vous vous apprêtez à configurer. Sélectionnez l’application dans la liste d’applications que vous avez approuvées et synchronisées avec Intune.
+6. Sélectionnez  **Application associée** pour choisir l’application que vous vous apprêtez à configurer. Sélectionnez l’application dans la liste d’applications que vous avez approuvées et synchronisées avec Intune.
 7. Pour chaque paramètre de configuration pris en charge par l’application, tapez le **Nom** et la **Valeur**, puis choisissez les points de suspension (**...** ).  
     Pour supprimer une configuration, choisissez les points de suspension (**...**), puis sélectionnez **Supprimer**.  
     
@@ -51,13 +51,13 @@ Intune peut générer certains jetons et les envoyer à l’application gérée.
 
 Intune prend en charge les types de jetons suivants dans les paramètres de configuration. Aucune autre paire clé-valeur personnalisée n’est prise en charge.
 
-- \{\{userprincipalname\}\} : par exemple, **John@contoso.com**
-- \{\{mail\}\} : par exemple, **John@contoso.com**
-- \{\{partialupn\}\} : par exemple, **John**
-- \{\{accountid\}\} : par exemple, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- \{\{userid\}\} : par exemple, **3ec2c00f-b125-4519-acf0-302ac3761822**
-- \{\{username\}\} : par exemple, **John Doe**
-- \{\{PrimarySMTPAddress\}\} : par exemple, **testuser@ad.domain.com** 
+- \{\{userprincipalname\}\} : par exemple, John@contoso.com
+- \{\{mail\}\} : par exemple, John@contoso.com
+- \{\{partialupn\}\} : par exemple, John
+- \{\{accountid\}\} : par exemple, fc0dc142-71d8-4b12-bbea-bae2a8514c81
+- \{\{userid\}\} : par exemple, 3ec2c00f-b125-4519-acf0-302ac3761822
+- \{\{username\}\} : par exemple, John Doe
+- \{\{PrimarySMTPAddress\}\} : par exemple, testuser@ad.domain.com
 
 
 > [!Note]  

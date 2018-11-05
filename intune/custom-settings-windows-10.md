@@ -1,62 +1,87 @@
 ---
-title: Paramètres personnalisés pour les appareils Windows 10 dans Microsoft Intune - Azure | Microsoft Docs
-description: Configurez des paramètres personnalisés OMA-URI sur des appareils exécutant Windows 10 avec un profil personnalisé dans Microsoft Intune.
+title: Ajouter des paramètres personnalisés pour les appareils Windows 10 dans Microsoft Intune - Azure | Microsoft Docs
+description: Ajoutez ou créez un profil personnalisé pour utiliser les paramètres OMA-URI sur les appareils exécutant Windows 10 dans Microsoft Intune. Utilisez un profil personnalisé pour ajouter des paramètres personnalisés.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/18/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdbb6643a4ee8aace0db22cd7f9189f7ac6445f0
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 78ed923c7502744ccd7f23e341049ce8ee8a8d86
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232824"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983208"
 ---
-# <a name="custom-oma-uri-settings-for-windows-10-devices---intune"></a>Paramètres OMA-URI personnalisés pour les appareils Windows 10 - Intune
+# <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows 10 dans Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+À l’aide de Microsoft Intune, vous pouvez ajouter ou créer des paramètres personnalisés pour vos appareils Windows 10 au moyen de « profils personnalisés ». Les profils personnalisés sont une fonctionnalité dans Intune. Ils sont conçus pour ajouter des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune.
 
-Utilisez le profil Microsoft Intune **personnalisé** pour Windows 10 et Windows 10 Mobile pour déployer des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Ces paramètres sont utilisés pour contrôler les fonctionnalités sur les appareils. De nombreux paramètres de fournisseur de services de configuration (CSP) sont disponibles dans Windows 10, comme [Fournisseur CSP de stratégie](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Les profils personnalisés Windows 10 utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer différentes fonctionnalités. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler les fonctionnalités sur l’appareil. 
 
-Si vous recherchez un paramètre spécifique, n’oubliez pas que le [profil de restriction d’appareil Windows 10](device-restrictions-windows-10.md) contient de nombreux paramètres intégrés à Intune et ne nécessitent pas de valeurs personnalisées.
+De nombreux paramètres de fournisseur de services de configuration (CSP) sont disponibles dans Windows 10, comme [Fournisseur CSP de stratégie](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 
-## <a name="configure-custom-settings"></a>Configurer des paramètres personnalisés
+Si vous recherchez un paramètre spécifique, n’oubliez pas que le [profil de restriction d’appareil Windows 10](device-restrictions-windows-10.md) comporte de nombreux paramètres intégrés. Vous n’aurez donc peut-être pas besoin d’entrer des valeurs personnalisées.
 
-1. Créez un profil de configuration avec le type de profil **Personnalisé**. [Guide pratique pour configurer des paramètres d’appareils personnalisés](custom-settings-configure.md) répertorie les étapes.
-2. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter** pour créer un paramètre. Vous pouvez également cliquer sur **Exporter** pour créer une liste de toutes les valeurs que vous avez configurées dans un fichier de valeurs séparées par des virgules (.csv).
-3. Pour chaque paramètre OMA-URI à ajouter, entrez les informations suivantes :
+Cet article :
 
-- **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
-- **Description** : (facultatif) entrez une description du paramètre.
-- **OMA-URI (sensible à la casse)**  : Entrez l’identificateur OMA-URI pour lequel vous voulez fournir un paramètre.
-- **Type de données** : Choisissez parmi :
-  - **Chaîne**
-  - **Chaîne (XML)**
-  - **Date et heure**
-  - **Entier**
-  - **Virgule flottante**
-  - **Booléen**
-  - **Base64**
-- **Valeur** : entrez la valeur ou le fichier à associer à l’identificateur OMA-URI que vous avez entré.
+- Montre comment créer un profil personnalisé pour les appareils Windows 10
+- Inclut une liste des paramètres OMA-URI recommandés
+- Fournit un exemple d’un profil personnalisé qui ouvre une connexion VPN
 
-4. Quand vous avez terminé, sélectionnez **OK**. Dans **Créer un profil**, sélectionnez **Créer**. Le profil est créé et apparaît dans la liste des profils.
+## <a name="create-the-profile"></a>Créer le profil
+
+1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. entrez les paramètres suivants :
+
+    - **Nom** : entrez un nom pour le profil, par exemple `windows 10 custom profile`.
+    - **Description :** entrez une description pour le profil.
+    - **Plateforme** : choisissez **Windows 10 et ultérieur**.
+    - **Type de profil** : choisissez **Personnalisé**.
+
+4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
+
+    - **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
+    - **Description** : entrez une description qui donne une vue d’ensemble du paramètre et tout autre détail important.
+    - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
+    - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
+
+        - Chaîne
+        - Chaîne (fichier XML)
+        - Date et heure
+        - Entier
+        - Virgule flottante
+        - Booléen
+        - Base64 (fichier)
+
+    - **Valeur** : entrez la valeur de données à associer à l’identificateur OMA-URI que vous avez entré. La valeur dépend du type de données que vous avez sélectionné. Par exemple, si vous choisissez **Date et heure**, sélectionnez la valeur à partir d’un sélecteur de dates.
+
+    Une fois que vous avez ajouté des paramètres, vous pouvez sélectionner **Exporter**. L’option **Exporter** crée une liste de toutes les valeurs que vous avez ajoutées dans un fichier de valeurs séparées par des virgules (.csv).
+
+5. Cliquez sur **OK** pour enregistrer vos modifications. Continuez à ajouter d’autres paramètres si besoin.
+6. Quand vous avez terminé, choisissez **OK** > **Créer** pour créer le profil Intune. Quand vous avez terminé, votre profil apparaît dans la liste **Configuration de l’appareil - Profils**.
 
 ## <a name="example"></a>Exemple
+
 Dans l’exemple suivant, le paramètre **Connectivity/AllowVPNOverCellular** est activé. Il permet à un appareil Windows 10 d’ouvrir une connexion VPN sur un réseau de téléphonie mobile.
 
 ![Exemple de stratégie personnalisée contenant des paramètres VPN](./media/custom-policy-example.png)
 
 ## <a name="find-the-policies-you-can-configure"></a>Trouver les stratégies que vous pouvez configurer
 
-Vous pouvez trouver une liste complète de tous les fournisseurs de services de configuration pris en charge par Windows 10 dans les [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
+La liste complète de tous les fournisseurs de services de configuration pris en charge par Windows 10 est disponible dans les [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
 
 Les paramètres ne sont pas tous compatibles avec toutes les versions de Windows 10. [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) vous indique quelles versions sont prises en charge pour chaque fournisseur de services de configuration.
 
-En outre, Intune ne prend pas en charge tous les paramètres répertoriés. Pour savoir si Intune prend en charge le paramètre de votre choix, ouvrez l’article relatif à ce paramètre. Chaque page de paramètre indique ses opérations prises en charge. Pour fonctionner avec Intune, le paramètre doit prendre en charge les opérations **Ajouter** ou **Remplacer**.
+De plus, Intune ne prend pas en charge tous les paramètres listés dans les [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pour savoir si Intune prend en charge le paramètre de votre choix, ouvrez l’article relatif à ce paramètre. Chaque page de paramètre indique ses opérations prises en charge. Pour fonctionner avec Intune, le paramètre doit prendre en charge les opérations **Ajouter** ou **Remplacer**.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Le profil est créé, mais il ne fait rien pour le moment. À présent, [affectez le profil](device-profile-assign.md).

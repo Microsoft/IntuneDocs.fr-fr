@@ -1,12 +1,12 @@
 ---
 title: Ajouter des applications Win32 à Microsoft Intune
 titlesuffix: ''
-description: Découvrez comment ajouter et gérer des applications Win32 dans Microsoft Intune.
+description: Découvrez comment ajouter, livrer et gérer des applications Win32 avec Microsoft Intune. Cette rubrique fournit une vue d’ensemble des fonctionnalités de livraison et de gestion d’application Intune Win32, ainsi que des informations sur le dépannage des applications Win32.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
-ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
+ms.openlocfilehash: d5a678e76db516034c8b6d20d58855fd281f31f8
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357102"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959585"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Intune autonome - Gestion des applications Win32 (préversion publique)
 
-Intune autonome offre de meilleures fonctionnalités de gestion des applications Win32. S’il est possible pour les clients connectés au cloud d’utiliser Configuration Manager pour gérer les applications Win32, les clients Intune uniquement ont de meilleures fonctionnalités de gestion pour leurs applications métier Win32. Ce document fournit une vue d’ensemble de la fonctionnalité de gestion d’application Win32 dans Intune ainsi que des informations de dépannage.
+Intune autonome offre de meilleures fonctionnalités de gestion des applications Win32. S’il est possible pour les clients connectés au cloud d’utiliser Configuration Manager pour gérer les applications Win32, les clients Intune uniquement ont de meilleures fonctionnalités de gestion pour leurs applications métier Win32. Cette rubrique fournit une vue d’ensemble de la fonctionnalité de gestion d’application Win32 dans Intune ainsi que des informations de dépannage.
 
 ## <a name="prerequisites-for-public-preview"></a>Prérequis de la préversion publique
 

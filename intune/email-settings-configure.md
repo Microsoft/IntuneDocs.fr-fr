@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 9aac9d7523673d6907bf75bf91e1e9802a381ec2
+ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905306"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50149051"
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Guide pratique pour configurer des paramètres de messagerie dans Microsoft Intune
 
@@ -67,9 +67,13 @@ Si vous souhaitez continuer et attribuer ce profil à des groupes, consultez [Gu
 
 ## <a name="further-information"></a>Informations supplémentaires
 
-### <a name="remove-an-email-profile"></a>Supprimer un profil de messagerie
+## <a name="remove-an-email-profile"></a>Supprimer un profil de messagerie
 
-Si vous souhaitez supprimer un profil de messagerie d’un appareil, modifiez l’attribution et supprimez les groupes dont l’appareil est membre. Vous ne pouvez pas supprimer un profil de messagerie de cette manière s’il est le seul profil de messagerie sur un appareil.
+Les profils d’e-mail sont affectés à des groupes d’appareils, et non à des groupes d’utilisateurs. Il existe différentes façons de supprimer un profil d’e-mail d’un appareil, même si celui-ci ne contient qu’un seul profil d’e-mail :
+
+- **Option 1** : ouvrez le profil d’e-mail (**Configuration de l’appareil** > **Profils**), puis choisissez **Affectations**. L’onglet **Inclure** affiche les groupes auxquels le profil a été affecté. Cliquez avec le bouton droit sur le groupe, puis choisissez **Supprimer**. Veillez à **Enregistrer** vos modifications.
+
+- **Option 2** : [réinitialisez l’appareil ou mettez-le hors service](devices-wipe.md). Vous pouvez utiliser ces actions pour supprimer des données et des paramètres en totalité ou de manière sélective.
 
 ### <a name="securing-email-access"></a>Sécurisation de l’accès à la messagerie
 
