@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
-ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
+ms.openlocfilehash: 6df3f16940a9478756cc1f268ad98b7c9d3f044e
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168945"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001556"
 ---
 # <a name="using-your-android-device-with-intune-company-portal"></a>Utilisation de votre appareil Android avec le Portail d’entreprise Intune
 
@@ -30,9 +30,9 @@ Cet article liste les tâches et les informations relatives au Portail d’entre
 
 ## <a name="supported-versions"></a>Versions prises en charge
 
-Le Portail d’entreprise prend actuellement en charge Android 4.4 et ultérieur. La prise en charge des appareils Samsung Knox 4.4 et ultérieur est également incluse.
+Le Portail d’entreprise prend actuellement en charge Android 4.4 et ultérieur. Cela inclut les appareils Samsung Knox qui exécutent Android 4.4 et versions ultérieures.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
+## <a name="enrolling-in-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
 
 - [Inscrire votre appareil dans Intune](enroll-your-device-in-Intune-android.md)
 - [Créer un profil professionnel et inscrire votre appareil dans Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
