@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307404"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236286"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -60,28 +60,48 @@ Entrez les informations de support de votre entreprise afin de fournir à vos em
 | **Informations supplémentaires**| 120 | S’affiche dans la page **Contacter le service informatique**. |
 
 
-## <a name="company-branding-customization"></a>Personnalisation de l’image de la société       
-Vous pouvez personnaliser votre Portail d’entreprise avec le logo et le nom de votre société, un thème chromatique et un arrière-plan. Pour afficher un aperçu rapide de la configuration de marque sans un appareil de test, vous pouvez accéder au site [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Notez que le logo que vous chargez sera utilisé pour les modèles d’e-mail.      
+## <a name="company-identity-branding-customization"></a>Personnalisation de l’identité de la société      
+Vous pouvez personnaliser votre Portail d’entreprise avec le logo et le nom de votre société, un thème chromatique et un arrière-plan.     
 
-### <a name="theme-color"></a>Couleur de thème
+### <a name="theme-color-and-logo-in-the-company-portal"></a>Couleur de thème et logo dans le Portail d’entreprise
 Appliquez une couleur de thème au portail d’entreprise. Sélectionnez une couleur standard ou entrez le code hexadécimal à six chiffres d’une couleur personnalisée.
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Type de couleur**| Sélectionnez une couleur de thème à appliquer au Portail d’entreprise. Vous pouvez choisir une couleur standard ou entrer un code hexadécimal spécifique. |
-|**Choisir une couleur** ou un **code de couleur hexadécimal**| Sélectionnez une couleur de thème à appliquer au Portail d’entreprise. Vous pouvez choisir une couleur standard ou entrer un code hexadécimal spécifique. Ces options sont fournies en fonction du **type de couleur** sélectionné.  |
+|**Sélectionnez une couleur standard ou entrez un code hexadécimal à six chiffres**| Choisissez **Standard** pour sélectionner une couleur visuellement. Choisissez **Personnalisé** pour sélectionner une couleur spécifique basée sur une valeur de code hexadécimale.|
+|**Couleur du thème**| Sélectionnez une couleur de thème à appliquer au Portail d’entreprise. Vous pouvez choisir une couleur standard ou entrer un code hexadécimal spécifique. |
+|**Affichage**| Indiquez si vous souhaitez afficher les **Logo et nom d’entreprise**, le **Logo d’entreprise uniquement** ou le **Nom d’entreprise uniquement**. |
+|**Charger le logo de votre entreprise**|Vous pouvez charger le logo de votre entreprise pour qu’il apparaisse sur le Portail de celle-ci. Notez que la couleur du texte est automatiquement choisie pour fournir le plus haut niveau de contraste. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
-### <a name="company-logo"></a>Logo de la société
-Chargez le logo de votre société pour le rendre visible dans l’ensemble de l’expérience utilisateur Intune.
+Une fois le logo chargé, la zone d’aperçu l’affiche avec la couleur de thème. Si vous avez choisi d’afficher le nom de votre société, il apparaît en noir ou blanc dans le Portail d’entreprise, la couleur automatiquement sélectionnée étant celle qui fournit le plus haut niveau de contraste avec votre couleur de thème. La zone d’aperçu à l’écran n’affiche pas le nom de votre société. 
+
+### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logo à utiliser sur des arrière-plans blancs ou clairs
+Choisissez un logo qui ressort bien sur un arrière-plan blanc ou clair.
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Afficher le logo de la société**|Lorsque vous activez cette option, vous pouvez télécharger le logo de votre entreprise pour qu’il apparaisse sur le Portail de celle-ci. Vous pouvez télécharger deux logos : un qui s’affiche quand l’arrière-plan du Portail d’entreprise est blanc, et un autre qui s’affiche quand l’arrière-plan du Portail d’entreprise utilise la couleur de thème que vous avez sélectionnée. |
-|**Charger un logo à utiliser sur les arrière-plans en couleur des thèmes**| Cette option est disponible si vous avez choisi d’afficher le logo de la société. Chaque logo doit être un fichier de type .png ou .jpg, et avoir une résolution maximale de 400 x 400 pixels ainsi qu’une taille inférieure ou égale à 750 Ko. |
-|**Charger le logo à utiliser sur les arrière-plans clairs**| Cette option est disponible si vous avez choisi d’afficher le logo de la société. Chaque logo doit être un fichier de type .png ou .jpg, et avoir une résolution maximale de 400 x 400 pixels ainsi qu’une taille inférieure ou égale à 750 Ko. |
-|**Afficher le nom de la société à côté du logo**| Sélectionnez cette option pour afficher le nom de société que vous avez entré à côté du logo chargé. |
+|**Charger votre logo**| Cette option est disponible si vous avez choisi d’afficher le logo de la société. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
-Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres dans le portail web Intune** en haut du panneau pour voir à quoi ressemblent vos configurations.
+### <a name="brand-image-for-company-portal"></a>Image de marque pour le Portail d’entreprise
+
+Affichez une image de marque qui reflète la marque de votre société. La prise en charge d’une image de marque est ajoutée aux applications Portail d’entreprise, mais l’image peut ne pas être visible sur toutes les plateformes.
+
+|Nom du champ|Plus d’informations|
+|---|---|
+|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p><ul><li>Largeur recommandée pour l’image : supérieure à 1125 px, (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+
+Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-vis du Portail d’entreprise en présentant votre société de manière affirmée. Voici quelques conseils que vous pouvez suivre pour acquérir, choisir et optimiser l’image dans le Portail d’entreprise. 
+
+- Contactez votre service marketing ou artistique. Peut-être a-t-il déjà un ensemble approuvé d’images de marque personnalisées. Il peut également être en mesure de vous aider à optimiser les images en fonction de vos besoins. 
+
+- Envisagez des compositions avec orientation paysage et orientation portrait. L’image doit avoir suffisamment d’arrière-plan autour du point focal. L’image peut être rognée en fonction de l’orientation et de la taille de l’appareil. 
+
+- Évitez d’utiliser une image générique, tirée d’une banque d’images. L’image doit refléter la marque de votre société et sembler familière aux utilisateurs. Si vous n’en avez pas, il est préférable de ne pas en utiliser plutôt que de recourir à une image générique dénuée de sens pour l’utilisateur. 
+
+- Supprimez les métadonnées inutiles. Le fichier image peut être accompagné de métadonnées telles que le profil de l’appareil photo, l’emplacement géographique, le titre ou la légende. Utilisez un outil d’optimisation d’image pour éliminer ces informations afin de conserver la qualité tout en respectant la limite de taille de fichier. 
+
+Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du panneau pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
+
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Raccourcis clavier du Portail d’entreprise Windows
 

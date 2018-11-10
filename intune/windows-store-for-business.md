@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 11/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d1fe40b1cb5a496b3111b2630718a3dd17486ab
-ms.sourcegitcommit: 63b74a60aafa8d2d6af0594448ae0471fbd79194
+ms.openlocfilehash: c30d20592a95f7894bb040f9e8fe5a2e3ddd0166
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494011"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915748"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises avec Microsoft Intune
 
@@ -89,4 +89,15 @@ Quand vous affectez une application Microsoft Store pour Entreprises, une licenc
 * Réduisez la portée de l’attribution actuelle pour cibler uniquement les utilisateurs pour lesquels vous avez suffisamment de licences.
 * Achetez plus de copies de l’application dans le Microsoft Store pour Entreprises.
 
+## <a name="remove-apps"></a>Supprimer des applications
 
+Pour supprimer une application qui est synchronisée à partir du Microsoft Store pour Entreprises, vous devez vous connecter au Microsoft Store pour Entreprises et restituer l’application.
+
+![Capture d’écran des détails de la suppression d’une application](./media/microsoft-store-for-business-01.png)
+
+> [!NOTE]
+> La suppression de la visibilité d’une application dans le magasin privé n’empêche pas Intune de les synchroniser. Vous devez restituer l’application.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+- [Gérer les applications et les livres achetés en volume avec Microsoft Intune](vpp-apps.md)

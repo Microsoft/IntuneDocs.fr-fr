@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87ae986e1f7a2b00c1a29208a163ee449e114f17
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 03d52c53b6e3152a5a262ca8bd6d158d5980b2c8
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425289"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236388"
 ---
 # <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser les appareils Windows Holographic et HoloLens avec Intune
 
@@ -68,6 +68,10 @@ Voir aussi **[Bien démarrer avec les stratégies de conformité](device-complia
 
 Microsoft Intune peut déployer des applications Windows universelles sur les appareils Microsoft HoloLens exécutant Windows Holographic for Business. Vous pouvez charger directement vos packages d’application sur le portail Azure Intune, ou les déployer à partir du Microsoft Store pour Entreprises. Pour plus d’informations sur les domaines connexes, consultez les articles suivants :
 - Pour déployer des applications métier à l’aide du portail Azure Intune, consultez [Guide pratique pour ajouter des applications métier Windows à Microsoft Intune](lob-apps-windows.md).
+
+    > [!NOTE]
+    > Intune autorise une taille maximale de package de 8 Go. Cette taille de package est uniquement disponible pour les applications métier chargées sur Intune.
+
 - Pour déployer des applications à l’aide du Microsoft Store pour Entreprises, consultez [Guide pratique pour gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises avec Microsoft Intune](windows-store-for-business.md). 
 - Pour en savoir plus sur la gestion des applications avec Microsoft Intune, consultez [Qu’est-ce que la gestion des applications Microsoft Intune ?](app-management.md).
 - Pour en savoir plus sur le développement d’applications pour Microsoft HoloLens, consultez [Applications de réalité mixte pour Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 

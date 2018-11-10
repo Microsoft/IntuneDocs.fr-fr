@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 66426e9e22c2624b9828440906e3b1b947f4b60a
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410767"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et attribuer un rôle personnalisé
 
@@ -47,7 +47,7 @@ Quand vous créez un rôle personnalisé, vous pouvez définir des autorisations
 
 Pour permettre à votre opérateur de sécurité d’utiliser les nouvelles autorisations, vous devez attribuer le rôle à un groupe qui contient l’utilisateur de sécurité.
 
-1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > **Support technique des appareils distants**.
+1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > **Opérations de sécurité**.
 2. Sous **Rôles Intune**, choisissez **Affectations** > **Attribuer**.
 3. Dans la zone **Nom de l’attribution**, entrez *Opérateurs de sécurité*.
 4. Choisissez **Membre (groupes)** > **Ajouter**.

@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: ad949cc9d20e0e46ab986b4646059af733018255
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679251"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Quelles informations mon entreprise peut-elle voir quand j’inscris mon appareil ?
 
@@ -50,5 +50,5 @@ Votre entreprise ne peut pas voir vos informations personnelles quand vous inscr
 
 -  Numéro de téléphone : pour les appareils appartenant à **l’entreprise**, votre numéro de téléphone complet peut être consulté. Pour les appareils **personnels**, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles pour votre entreprise. Vous pouvez voir le **Type de propriété** pour chaque appareil en ouvrant la page **Détails sur l’appareil** de l’appareil.
 -  Emplacement : votre entreprise ne peut jamais voir l’emplacement de votre appareil, sauf si vous possédez un appareil iOS qui est contrôlé et que vous l’avez perdu. [Comment savoir ?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Inventaire des applications : si votre entreprise utilise Mobile Threat Defense, elle peut voir plus de détails sur les applications présentes sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Inventaire des applications : si votre entreprise utilise Mobile Threat Defense, elle peut voir plus de détails sur les applications de votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
 - Informations sur le réseau : des informations sur les connexions réseau des appareils Android peuvent être disponibles pour la prise en charge de votre entreprise. Par exemple, si votre entreprise exige que les appareils se trouvent au sein d’un bâtiment spécifique, votre appareil identifierait le réseau auquel il est connecté. 

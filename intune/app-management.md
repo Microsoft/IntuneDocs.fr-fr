@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 99d217c2d1960a1ca163bf697bfbd28e5406b58f
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 25236453f0440978eda34e3a1a8b1b93daf4c6e1
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075844"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025166"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -94,7 +94,7 @@ Pour plus d’informations sur cette section, consultez [Gérer des applications
 - **Licences d’applications** : affichez, affectez et surveillez les applications achetées en volume dans les App Stores. Pour plus d'informations, voir :
     - [Applications du Programme d’achat en volume (VPP) iOS](vpp-apps-ios.md).
     - [Applications achetées en volume sur le Microsoft Store pour Entreprises](windows-store-for-business.md).
-- **Applications découvertes** : affichez toutes les applications affectées par Intune et installées sur un appareil. Pour plus d’informations, voir [Effectuer le monitoring des affectations et des informations sur les applications avec Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Applications découvertes** : affichez les applications affectées par Intune ou installées sur un appareil. Pour plus d’informations, consultez [Afficher les détails de l’appareil avec Microsoft Intune](device-inventory.md).
 - **État de l’installation de l’application** : affichez l’état d’une affectation d’application que vous avez créée. Pour plus d’informations, voir [Effectuer le monitoring des affectations et des informations sur les applications avec Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **État de protection de l’application** : affichez l’état d’une stratégie de protection d’application pour l’utilisateur sélectionné.
 - **Journaux d’audit** : affichez les activités liées à l’application Intune et effectuées par tous les administrateurs informatiques.

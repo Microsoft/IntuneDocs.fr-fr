@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c9a413e0aaf13b2dab7b211a568fbd15ce43df3a
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
+ms.openlocfilehash: 47917943188b2b3d0448845b1e356d181ec8f3af
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410835"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Comment obtenir un support technique pour Microsoft Intune
 
@@ -96,6 +96,64 @@ Vous pouvez afficher une demande de support à partir du Portail Azure. Pour cel
 1. Connectez-vous à Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez <strong>?</strong> en haut à droite du portail, puis sélectionnez <strong>Aide + support</strong> pour accéder à la page [Aide + support Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 2. Dans la page **Aide + support**, vous pouvez afficher la liste des **Demandes de support récentes** et les sélectionner pour afficher des informations supplémentaires.
+
+
+## <a name="new-help-and-support-experience"></a>Nouvelle expérience utilisateur d’aide et de support 
+*Les informations suivantes s’appliquent uniquement quand vous utilisez le portail de gestion des appareils. Elles sont liées au lancement de la nouvelle expérience d’aide et de support. Les participants à ce lancement sont choisis au hasard parmi les locataires Intune disponibles.*  
+
+La mise à jour de la fonctionnalité Aide et support d’Intune correspond à une nouvelle expérience utilisateur disponible dans le [portail de Gestion des appareils Microsoft 365](http://devicemanagement.microsoft.com) pour certains locataires. Cette nouvelle expérience utilisateur est similaire à celle du [Centre d’administration Microsoft 365](https://portal.office.com/AdminPortal/Home). Elle remplace l’expérience précédente d’aide et de support accessible à partir de certains emplacements de la console de gestion des appareils.  
+
+Dans le portail de gestion des appareils, vous accédez à la nouvelle expérience utilisateur en sélectionnant **Aide et support** à partir de n’importe quel panneau sous **Tous les services** > **Gestion des appareils**, à l’exception du panneau **Résolution des problèmes**. Quand vous accédez à Aide et support depuis d’autres emplacements, par exemple **Résolution des problèmes**, via l’option **?** dans le coin supérieur droit de la bannière de la console, ou quand vous sélectionnez **Aide + support** dans la liste des services du volet gauche, vous accédez à l’expérience utilisateur d’origine.  
+
+Dans la nouvelle expérience utilisateur, vous avez accès à l’affichage **Besoin d’aide ?**, comme le montre l’image suivante :  
+![Tableau de bord de gestion des appareils et page Besoin d’aide ?](./media/get-support/help-support-dashboard.png)
+
+Dans cet affichage, vous pouvez effectuer les actions suivantes :
+
+1. [Spécifier les détails](#specify-details-about-an-issue) du problème spécifique pour lequel vous souhaitez obtenir de l’aide  
+2. [Afficher l’aide contextuelle](#view-context-sensitive-help) et les solutions associées en fonction des informations que vous avez spécifiées  
+3. [Obtenir un support](#get-support) par e-mail ou par téléphone  
+4. [Afficher les incidents](#view-support-cases) nécessitant un support, que vous avez ouverts à l’aide de ce nouveau flux de travail  
+
+### <a name="specify-details-about-an-issue"></a>Spécifier les détails d’un problème
+Quand vous ouvrez Aide et support depuis un emplacement pris en charge par la nouvelle expérience utilisateur, la page **Besoin d’aide ?**  s’ouvre. Dans cette page, vous pouvez spécifier les détails relatifs à un problème. Quand vous entrez les détails, la console propose des requêtes courantes basées sur vos mots clés. Vous pouvez sélectionner un choix proposé, ou indiquer votre propre description du problème. Si vous entrez votre propre description, sélectionnez **Obtenir de l’aide** pour l’envoyer. Une fois que vous avez envoyé une requête, la console retourne des informations contextuelles pouvant vous aider à résoudre le problème.
+
+Voici des exemples de requêtes que vous pouvez envoyer :
+  
+- *Impossible de restaurer un appareil iOS*  
+- *Impossible de créer une stratégie d’accès conditionnel*  
+
+![Spécifier le problème dans la page Besoin d’aide ?](./media/get-support/describe-the-issue.png)
+
+
+### <a name="view-context-sensitive-help"></a>Afficher une aide contextuelle
+Une fois que vous avez sélectionné un choix proposé, ou que vous avez envoyé votre propre requête, des résultats contextuels apparaissent sous **Afficher les solutions**. Ces résultats incluent à la fois du support autonome spécifique à Intune, et des résultats supplémentaires retournés par une recherche web en fonction des critères de la requête.  
+![Afficher les résultats](./media/get-support/view-results.png)
+
+### <a name="get-support"></a>Obtenir un support  
+Si le support autonome ou l’aide basée sur le web ne vous aident pas à résoudre le problème, vous pouvez utiliser la console pour ouvrir un incident nécessitant un support par e-mail ou par téléphone.  
+Dans la page **Besoin d’aide ?**, sélectionnez l’option à utiliser.  
+
+- Pour une demande par e-mail, indiquez votre adresse e-mail et, éventuellement, ajoutez des pièces jointes à votre envoi. Sélectionnez **Envoyer** pour ouvrir la demande.  
+
+  ![Demande par e-mail](./media/get-support/email-support.png)
+  
+- Pour une demande par téléphone, indiquez votre numéro de téléphone. Vous pouvez éventuellement inclure votre adresse e-mail et ajouter des pièces jointes à votre envoi. Sélectionnez M’appeler pour envoyer la demande.  
+
+   ![Demande par téléphone](./media/get-support/phone-support.png)
+
+### <a name="view-support-cases"></a>Afficher les incidents nécessitant un support
+Sélectionnez le bouton d’historique pour voir les incidents que vous avez créés pour obtenir un support.  
+
+![Afficher les incidents nécessitant un support](./media/get-support/view-support-tickets.png)
+
+- Seuls les incidents de support que vous ouvrez à l’aide du nouveau flux de travail sont visibles depuis ce flux de travail. Pour les voir, utilisez l’affichage Aide et support de la console de gestion des appareils faisant partie de la nouvelle expérience utilisateur. Ces incidents ont des numéros dont la longueur est de huit chiffres. Vous pouvez également voir ces incidents à partir du Centre d’administration Microsoft 365.  
+
+- Les incidents que vous avez ouverts avant l’ajout de votre compte à la nouvelle expérience utilisateur d’aide et de support restent inchangés. Pour les voir, vous devez utiliser un affichage de la fonctionnalité Aide et support qui ne fait pas partie du lancement de la nouvelle expérience utilisateur. Ces incidents ont des numéros qui commencent par **117** ou **118**, et dont la longueur est de 15 chiffres.  Pour voir un incident nécessitant un support, ouvert avant que vous ne soyez ajouté à la nouvelle expérience utilisateur, utilisez le Portail Azure. Pour cela :
+
+    1. Connectez-vous à Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez *?* en haut à droite du portail, puis sélectionnez *Aide + support* pour accéder à la page [Aide + support Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+
+    2. Dans la page **Aide + support**, vous pouvez afficher la liste des **Demandes de support récentes** et les sélectionner pour afficher des informations supplémentaires.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 - [Contacter le support par téléphone pour Microsoft Intune](phone-support-contact.md)

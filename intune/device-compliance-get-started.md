@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a70b6369bab130918bad472172995e6296ee4a6
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 226713d893e05c2c2aeea49cde2ce92591d06391
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391567"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915697"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Bien démarrer avec les stratégies de conformité des appareils dans Intune
 
@@ -153,7 +153,7 @@ Vous pouvez également utiliser des stratégies de conformité d’appareils san
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Déploiement des stratégies de conformité des appareils
 Vous pouvez déployer une stratégie de conformité pour des utilisateurs dans des groupes d’utilisateurs ou sur des appareils dans des groupes d’appareils. Quand une stratégie de conformité est déployée sur un utilisateur, la conformité de tous ses appareils est vérifiée. Sur les appareils Windows 10 version 1803 et les appareils plus récents, il est recommandé de déployer sur des groupes d’appareils *si* l’utilisateur principal n’a pas inscrit l’appareil. L’utilisation de groupes d’appareils dans ce scénario permet la création de rapports de conformité.
 
-Les **paramètres de stratégie de conformité** par défaut (portail Azure > Conformité de l’appareil) sont les suivants :
+Un ensemble de **Paramètres de stratégie de conformité** intégrés (portail Azure > Conformité de l’appareil) est évalué sur tous les appareils inscrits auprès d’Intune. Par exemple :
 
 - **Marquer les appareils sans stratégie de conformité comme étant** : cette propriété a deux valeurs:
 
@@ -171,7 +171,7 @@ Les **paramètres de stratégie de conformité** par défaut (portail Azure > Co
 
 - **Période de validité de l’état de conformité (jours)** : entrez la période pendant laquelle les appareils signalent l’état de toutes les stratégies de conformité reçues. Les appareils qui ne retournent pas l’état au cours de cette période sont considérés comme non conformes. La valeur par défaut est de 30 jours.
 
-Tous les appareils ont une **Stratégie de conformité des appareils par défaut** (portail Azure > Conformité de l’appareil > Conformité à la stratégie). Utilisez cette stratégie par défaut pour surveiller ces paramètres.
+Tous les appareils ont une **Stratégie de conformité d’appareil intégrée** (portail Azure > Conformité de l’appareil > Conformité à la stratégie). Utilisez cette stratégie intégrée pour superviser ces paramètres.
 
 Pour savoir le temps qu’il faut pour que les appareils mobiles reçoivent une stratégie une fois celle-ci déployée, consultez [Résoudre les problèmes de profils d’appareil](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 

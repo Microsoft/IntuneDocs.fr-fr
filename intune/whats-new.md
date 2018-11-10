@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 800d044860a8a264facdeb49f1f59526ee53acdd
-ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
+ms.openlocfilehash: d7fd8c7f6f2c3dd5e6e8af323ccbb41a1ab779df
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50149119"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025234"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,16 +41,124 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 ### Role-based access control
 
 -->     
-## <a name="week-of-october-22-2018"></a>Semaine du 22 octobre 2018
+## <a name="week-of-october-29-2018"></a>Semaine du 29 octobre 2018
 
-### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile----1818139---"></a>Supprimer un profil de messagerie d’un appareil, même en présence d’un seul profil de messagerie<!-- 1818139 -->
+
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="require-non-biometric-pin-after-a-specified-timeout----1506985---"></a>Demander un code PIN non biométrique après le délai d’expiration spécifié <!-- 1506985 -->
+En demandant un code PIN non biométrique après un délai d’expiration spécifié par l’administrateur, Intune offre une sécurité renforcée pour les applications compatibles avec GAM (gestion des applications mobiles) en limitant l’utilisation de l’identification biométrique pour l’accès aux données d’entreprise. Les paramètres affectent les utilisateurs qui s’appuient sur Touch ID (iOS), Face ID (iOS), Android Biometric ou d’autres méthodes d’authentification biométriques à venir pour accéder à leurs applications compatibles APP/GAM. Ces paramètres permettent aux administrateurs Intune d’avoir un contrôle plus précis sur l’accès utilisateur, en supprimant les cas où un appareil avec plusieurs empreintes digitales ou d’autres méthodes d’accès biométriques peut révéler des données d’entreprise à un utilisateur inapproprié. Dans le portail Azure, ouvrez **Microsoft Intune**. Sélectionnez **Applications clientes** > **Stratégies de protection des applications** > **Ajouter une stratégie** > **Paramètres**. Recherchez la section **Accès** pour des paramètres spécifiques. Pour plus d’informations sur les paramètres d’accès, consultez [Paramètres iOS](app-protection-policy-settings-ios.md#access-settings) et [Paramètres Android](app-protection-policy-settings-android.md#access-settings).
+
+#### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices----2244713---"></a>Paramètres de transfert de données Intune APP sur les appareils inscrits à la GPM iOS <!-- 2244713 -->
+Vous pouvez séparer le contrôle des paramètres de transfert de données d’Intune APP sur les appareils inscrits à la solution MDM pour iOS de la spécification de l’identité de l’utilisateur inscrit, également appelé UPN (nom d’utilisateur principal). Les administrateurs qui n’utilisent pas IntuneMAMUPN ne verront aucun changement de comportement. Lorsque cette fonctionnalité est disponible, les administrateurs qui utilisent IntuneMAMUPN pour contrôler le comportement du transfert de données sur les appareils inscrits doivent consulter les nouveaux paramètres et mettre à jour leurs paramètres APP si nécessaire.
+
+#### <a name="windows-10-win32-apps----2617325---"></a>Applications Windows 10 Win32 <!-- 2617325 -->
+Vous pouvez configurer vos applications Win32 pour qu’elles soient installées dans un contexte d’utilisateur individuel, au lieu d’être installées pour tous les utilisateurs de l’appareil.
+
+#### <a name="windows-win32-apps-and-powershell-scripts----2617330---"></a>Applications Windows Win32 et scripts PowerShell <!-- 2617330 -->
+Les utilisateurs finaux ne sont plus obligés de se connecter à l’appareil pour installer des applications Win32 ou exécuter des scripts PowerShell. 
+
+#### <a name="troubleshooting-client-app-installation----1363711---"></a>Résolution des problèmes d’installation des applications clientes <!-- 1363711 -->
+Vous pouvez résoudre les problèmes d’installation des applications clientes en consultant la colonne intitulée **Installation de l’application** dans le panneau **Résoudre les problèmes**. Pour voir le panneau **Résoudre les problèmes**, accédez au portail Intune, puis sélectionnez **Résoudre les problèmes** sous **Aide et support**.
+
+### <a name="device-configuration"></a>Configuration des appareils
+
+#### <a name="network-access-control-support-on-ios-vpn-clients----1333693-wnready---"></a>Prise en charge du contrôle d’accès réseau sur les clients VPN iOS <!-- 1333693 wnready -->
+Avec cette mise à jour, un nouveau paramètre permet d’activer le NAC (contrôle d’accès réseau) quand vous créez un profil de configuration VPN pour Cisco AnyConnect, F5 Access et Citrix SSO pour iOS. Ce paramètre permet d’inclure l’ID NAC de l’appareil dans le profil VPN. Pour le moment, il n’existe aucun client VPN, ni aucune solution partenaire NAC prenant en charge ce nouvel ID NAC. Toutefois, nous vous tiendrons informés via notre [billet de blog de support](ttps://aka.ms/iOS12_and_vpn) le moment venu.
+
+Pour utiliser NAC, vous devez :
+1. Autoriser Intune à inclure des ID d’appareil dans les profils VPN
+2. Mettre à jour le logiciel/microprogramme de votre fournisseur NAC, avec l’aide directe de ce dernier
+
+Pour plus d’informations sur ce paramètre dans un profil VPN iOS, consultez [Ajouter des paramètres VPN sur des appareils iOS dans Microsoft Intune](vpn-settings-ios.md). Pour plus d’informations sur le contrôle d’accès réseau, consultez [Intégration du NAC (contrôle d’accès réseau) avec Intune](network-access-control-integrate.md). 
+
+S’applique à : iOS
+
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile----1818139---"></a>Supprimer un profil de messagerie d’un appareil, même en présence d’un seul profil de messagerie<!-- 1818139 -->
 Avant, vous ne pouviez pas supprimer un profil de messagerie d’un appareil *si* celui-ci était le seul profil de messagerie. Avec cette mise à jour, ce comportement change. Maintenant, vous pouvez supprimer un profil de messagerie, même si ce profil de messagerie est le seul sur l’appareil. Pour plus d’informations, consultez [Ajouter des paramètres de messagerie à des appareils à l’aide d’Intune](email-settings-configure.md).
 
-### <a name="remove-pkcs-and-scep-certificates-from-your-devices----3218390---"></a>Supprimer des certificats PKCS et SCEP de vos appareils <!-- 3218390 -->
+#### <a name="powershell-scripts-and-aad----2309469---"></a>Scripts PowerShell et AAD <!-- 2309469 -->
+Les scripts PowerShell dans Intune peuvent être ciblés sur les groupes de sécurité des appareils AAD.
+
+#### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nouveau paramètre par défaut « Type de mot de passe obligatoire » pour Android et Android Entreprise<!-- 2649963 -->
+Quand vous créez une stratégie de conformité (**Intune** > **Conformité de l’appareil** > **Stratégies** > **Créer une stratégie** > **Android** ou **Android Entreprise** pour Plateforme > Sécurité du système), la valeur par défaut de **Type de mot de passe obligatoire** change :
+
+Elle passe de Appareil par défaut à Au moins numérique
+
+S’applique à : Android, Android Entreprise
+
+Pour voir ces paramètres, accédez à [Android](compliance-policy-create-android.md) et [Android Entreprise](compliance-policy-create-android-for-work.md).
+
+#### <a name="use-a-pre-shared-key-in-a-windows-10-wi-fi-profile----2662938---"></a>Utiliser une clé prépartagée dans un profil Wi-Fi Windows 10 <!-- 2662938 -->
+Via cette mise à jour, vous pouvez utiliser une clé prépartagée (PSK) avec le protocole de sécurité WPA/WPA2-Personnel afin d’authentifier un profil de configuration Wi-Fi pour Windows 10. Vous pouvez également spécifier la configuration des coûts d’une connexion réseau limitée pour les appareils dans la mise à jour d’octobre 2018 de Windows 10.
+
+Actuellement, vous devez importer un profil Wi-Fi ou créer un profil personnalisé pour utiliser une clé prépartagée. Les paramètres actuels sont répertoriés dans [Paramètres Wi-Fi pour Windows 10](wi-fi-settings-windows.md). 
+
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices----3218390---"></a>Supprimer des certificats PKCS et SCEP de vos appareils <!-- 3218390 -->
 Dans certains scénarios, les certificats PKCS et SCEP restaient sur les appareils, même après le retrait d’une stratégie d’un groupe, la suppression d’un déploiement de configuration ou de conformité, ou la mise à jour administrative d’un profil SCEP ou PKCS existant. Cette mise à jour change le comportement. Il existe des scénarios où les certificats PKCS et SCEP sont supprimés des appareils et d’autres scénarios où ces certificats restent sur l’appareil. Pour en savoir plus sur ces scénarios, consultez [Supprimer des certificats SCEP et PKCS dans Microsoft Intune](remove-certificates.md).
+
+#### <a name="use-gatekeeper-on-macos-devices-for-compliance----2504381---"></a>Utiliser Gatekeeper sur les appareils macOS pour évaluer la conformité <!-- 2504381 -->
+Cette mise à jour inclut macOS Gatekeeper pour évaluer la conformité des appareils. Pour définir la propriété Gatekeeper, vous devez [ajouter une stratégie de conformité des appareils pour les appareils macOS](compliance-policy-create-mac-os.md).
+
+
+### <a name="device-enrollment"></a>Inscription des appareils
+
+#### <a name="enrollment-abandonment-report----1382924---"></a>Rapport d’abandon de l’inscription <!-- 1382924 -->
+Un nouveau rapport contenant des informations détaillées sur les inscriptions abandonnées est disponible sous **Inscription de l’appareil** > **Surveiller**. Pour plus d’informations, consultez le [rapport d’abandon du portail d’entreprise](enrollment-report-company-portal-abandon.md).
+
+#### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Affecter des profils Autopilot au groupe virtuel Tous les appareils <!--2715522 -->
+Vous pourrez affecter des profils Autopilot au groupe virtuel Tous les appareils. Pour ce faire, choisissez **Inscription de l’appareil** > **Inscription Windows** > **Profils de déploiement** > choisissez un profil >  **Affectations** > sous **Affecter à** choisissez **Tous les appareils**. Pour plus d’informations sur les profils Autopilot, consultez [Inscrire des appareils Windows à l’aide de Windows Autopilot](enrollment-autopilot.md).
+
+#### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nouvelle fonctionnalité Conditions d’utilisation dans Azure Active Directory <!-- 2870393 -->
+Azure Active Directory comporte une fonctionnalité relative aux conditions d’utilisation que vous pouvez utiliser à la place des conditions générales Intune existantes. La fonctionnalité Conditions d’utilisation d’Azure AD offre davantage de flexibilité quant aux choix des conditions d’utilisation à afficher et au moment où elles sont affichées, une meilleure prise en charge de la localisation, un meilleur contrôle de l’affichage des conditions générales, ainsi que des fonctionnalités améliorées de création de rapports. La fonctionnalité Conditions d’utilisation d’Azure AD nécessite Azure Active Directory Premium P1, qui fait également partie de la suite Enterprise Mobility + Security E3. Pour en savoir plus, consultez l’article [Gérer les conditions générales de votre entreprise pour l’accès utilisateur](terms-and-conditions-create.md).
+
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Prise en charge d’Autopilot pour les appareils joints à un domaine Azure Active Directory hybride (préversion) <!-- 1048100-->
+Vous pouvez désormais configurer les appareils joints à un domaine Azure Active Directory hybride à l’aide d’Autopilot. Les appareils doivent être joints au réseau de votre organisation afin d’utiliser la fonctionnalité Autopilot hybride. Pour plus d’informations, consultez [Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot](windows-autopilot-hybrid.md).
+Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
+
+### <a name="android-device-owner-mode-support---3188762--"></a>Prise en charge du mode Device Owner pour Android <!--3188762-->
+Pour l’inscription Samsung Knox Mobile, Intune prend désormais en charge l’inscription d’appareils en mode de gestion Device Owner pour Android. Les utilisateurs sur des réseaux Wi-Fi ou mobiles peuvent s’inscrire en quelques clics quand ils allument leurs appareils pour la première fois. Pour plus d’informations, consultez [Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung](android-samsung-knox-mobile-enroll.md).
+
+### <a name="device-management"></a>Gestion des appareils
+
+### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Grouper les appareils Windows inscrits auprès d’Autopilot par ID de corrélation <!-- 2075110 -->
+Intune prend désormais en charge le regroupement d’appareils Windows par ID de corrélation en cas d’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. Intune définit automatiquement l’[attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) pour qu’il ait la valeur « OfflineAutopilotprofile-<correlator ID> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation par le biais de l’attribut enrollmentprofilename pour les inscriptions Autopilot hors connexion. Pour plus d’informations, consultez [Windows Autopilot pour les appareils existants](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+
+### <a name="intune-app-protection-policies----2984657---"></a>Stratégies de protection des applications Intune <!-- 2984657 -->
+Les stratégies de protection des applications Intune vous permettent de configurer divers paramètres de protection des données pour des applications protégées Intune, par exemple Microsoft Outlook et Microsoft Word. Nous avons changé l’aspect de ces paramètres pour [iOS](app-protection-policy-settings-ios.md) et [Android](app-protection-policy-settings-android.md) afin de faciliter la recherche de paramètres individuels. Il existe trois catégories pour les paramètres de stratégie :
+- **Réadressage des données** - Ce groupe comprend les contrôles DLP (protection contre la perte de données), par exemple les restrictions d’opérations consistant à couper, copier, coller et enregistrer sous. Ces paramètres déterminent la manière dont les utilisateurs interagissent avec les données dans les applications.
+- **Conditions d’accès** - Ce groupe contient les options de code PIN par application, qui déterminent le mode d’accès de l’utilisateur final aux applications dans un contexte professionnel.  
+- **Lancement conditionnel** - Ce groupe contient des paramètres tels que les paramètres minimum du système d’exploitation, la détection d’appareils jailbreakés/rootés, ainsi que les périodes de grâce hors connexion.  
+  
+La fonctionnalité des paramètres ne change pas, mais il est plus facile de les trouver quand vous utilisez le flux de création de stratégies. 
+
+### <a name="intune-apps"></a>Applications Intune
+
+#### <a name="intune-will-support-a-maximum-package-size-of-8-gb-for-lob-apps----1727158---"></a>Intune prend en charge une taille maximale de package de 8 Go pour les applications métier <!-- 1727158 -->
+Intune a augmenté la taille maximale de package à 8 Go pour les applications métier. Pour plus d’informations, consultez [Ajouter des applications à Microsoft Intune](apps-add.md).
+
+#### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Ajouter une image de marque personnalisée pour l’application Portail d’entreprise <!-- 1916266 -->
+En tant qu’administrateur Microsoft Intune, vous pouvez charger une image de marque personnalisée, qui est affichée en tant qu’image d’arrière-plan dans la page de profil de l’utilisateur au sein de l’application Portail d’entreprise iOS. Pour plus d’informations sur la configuration de l’application Portail d’entreprise, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](company-portal-app.md).
+
+#### <a name="intune-will-maintain-the-office-localized-language-when-updating-office-on-end-users-machines----2971030---"></a>Intune conservera la langue localisée d’Office lors de la mise à jour d’Office sur les ordinateurs des utilisateurs finaux <!-- 2971030 -->
+Quand Intune installe Office sur les machines de vos utilisateurs finaux, ceux-ci obtiennent automatiquement les mêmes modules linguistiques que ceux qu’ils avaient avec les installations .MSI Office précédentes. Pour plus d’informations, consultez [Assigner des applications Office 365 à des appareils Windows 10 à l’aide de Microsoft Intune](apps-add-office365.md).
+
+### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
+
+#### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal----3076965---"></a>Nouvelle expérience utilisateur de support Intune dans le portail de Gestion des appareils Microsoft 365 <!-- 3076965 -->
+Nous lançons une nouvelle expérience utilisateur d’aide et de support pour Intune dans le [portail de Gestion des appareils Microsoft 365]( http://devicemanagement.microsoft.com). Cette nouvelle expérience utilisateur vous permet de décrire le problème avec vos propres mots et de recevoir des insights de résolution de problème, ainsi qu’un contenu de correction basé sur le web. Ces solutions sont proposées via un algorithme d’apprentissage automatique basé sur des règles, piloté par les requêtes des utilisateurs.  
+
+En plus de recevoir une aide spécifique à chaque problème, vous pouvez également utiliser le nouveau flux de travail de création d’incident pour ouvrir un incident nécessitant un support par e-mail ou par téléphone.  
+
+Pour les clients concernés par le lancement, cette nouvelle expérience utilisateur remplace l’expérience actuelle d’aide et de support incluant un ensemble statique d’options présélectionnées en fonction de la zone de la console où vous vous trouvez quand vous ouvrez Aide et support.  
+
+*Cette nouvelle expérience utilisateur d’aide et de support est en cours de lancement sur certains locataires. Elle est disponible dans le portail de gestion des appareils. Les participants à cette nouvelle expérience sont choisis au hasard parmi les locataires Intune disponibles. De nouveaux locataires vont être ajoutés au fur et à mesure que nous étendrons le lancement.*  
+
+Pour plus d’informations, consultez [Nouvelle expérience utilisateur d’aide et de support](get-support.md#new-help-and-support-experience) dans Guide pratique pour obtenir un support technique pour Microsoft Intune.  
 
 ### <a name="powershell-module-for-intune--preview-available----wnready-951068---"></a>Module PowerShell pour Intune – Préversion disponible <!-- wnready 951068 -->
 Un nouveau module PowerShell, qui offre une prise en charge de l’API Intune via Microsoft Graph, est désormais disponible en préversion sur [GitHub]( https://aka.ms/intunepowershell). Pour plus d’informations sur l’utilisation de ce module, consultez le fichier README à cet emplacement. 
+
 
 ## <a name="week-of-october-15-2018"></a>Semaine du 15 octobre 2018
 
@@ -369,8 +477,8 @@ Intune prend maintenant en charge l’inscription d’appareils macOS dans le Pr
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Prise en charge des applications métier pour macOS <!-- 1895847 -->
 Microsoft Intune permet aux applications métier macOS d’être déployées en mode **Obligatoire** ou **Disponible avec inscription**. Pour les utilisateurs finaux, les applications peuvent être déployées en mode **Disponible** à l’aide du Portail d’entreprise pour macOS ou du [site web Portail d’entreprise](https://portal.manage.microsoft.com).
 
-#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode plein écran <!-- 2051098 -->
-En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode plein écran sur un appareil iOS.
+#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode kiosque <!-- 2051098 -->
+En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode kiosque sur un appareil iOS.
 
 #### <a name="edit-your-office-365-pro-plus-app-deployments----2150145---"></a>Modifier vos déploiements d’applications Office 365 Pro Plus <!-- 2150145 -->
 En tant qu’administrateur Microsoft Intune, vous avez une plus grande capacité de modification de vos déploiements d’applications Office 365 Pro Plus. En outre, vous n’avez plus à supprimer vos déploiements pour modifier des propriétés de la suite. Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications**. Dans la liste des applications, sélectionnez votre suite Office 365 Pro Plus.  

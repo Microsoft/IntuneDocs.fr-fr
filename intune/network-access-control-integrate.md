@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2017
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8d78d850d68b8c6eb6e5b1282acddb3b93963ca4
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: e1adfdba49ab8ac5ae55f792e71a99f4aef4c8a6
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959517"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236150"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
@@ -27,7 +27,7 @@ Intune s’intègre avec les partenaires de contrôle d’accès réseau pour ai
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Comment les solutions de contrôle d’accès réseau et Intune aident-ils à protéger les ressources de votre organisation ?
 
-Les solutions de contrôle d’accès réseau vérifient l’état de conformité et d’inscription des appareils auprès d’Intune pour prendre les décisions relatives au contrôle d’accès. Si l’appareil n’est pas inscrit, ou s’il est inscrit mais qu’il ne respecte pas les stratégies de conformité des appareils Intune, il doit être redirigé vers Intune pour l’inscription et/ou pour une vérification de conformité.
+Les solutions de contrôle d’accès réseau vérifient l’état de conformité et d’inscription des appareils auprès d’Intune pour prendre les décisions relatives au contrôle d’accès. Si l’appareil n’est pas inscrit, ou s’il est inscrit mais qu’il ne respecte pas les stratégies de conformité des appareils Intune, il doit être redirigé vers Intune pour l’inscription ou pour une vérification de conformité.
 
 ### <a name="example"></a>Exemple
 
@@ -37,7 +37,7 @@ Si l’appareil est inscrit et conforme avec Intune, la solution de contrôle d�
 
 Les appareils qui se synchronisent activement avec Intune ne peuvent pas passer de l’état **Conforme** / **Non conforme** à l’état **Non synchronisé** (ou **Inconnu**). L’état **Inconnu** est réservé aux appareils récemment inscrits, dont la conformité n’a pas encore été évaluée.
 
-Pour les appareils dont l’accès aux ressources est bloqué, le service de blocage doit rediriger tous les utilisateurs vers le [portail de gestion](https://portal.manage.microsoft.com) pour déterminer l’origine du blocage de l’appareil.  Si les utilisateurs consultent cette page, la conformité de leurs appareils est réévaluée de façon synchrone.
+Pour les appareils dont l’accès aux ressources est bloqué, le service de blocage doit rediriger tous les utilisateurs vers le [portail de gestion](https://portal.manage.microsoft.com) pour déterminer l’origine du blocage de l’appareil.  Si les utilisateurs consultent cette page, la conformité de leurs appareils est réévaluée de façon synchrone.
 
 ## <a name="nac-and-conditional-access"></a>Contrôle d’accès réseau et accès conditionnel
 
@@ -55,9 +55,19 @@ La liste suivante présente le fonctionnement du contrôle d’accès réseau qu
 4. L’utilisateur se connecte au point d’accès Wi-Fi d’entreprise ou effectue une demande de connexion VPN.
 5. La solution du partenaire de contrôle d’accès réseau transfère les informations de l’appareil à Intune et demande à Intune quel est l’état d’inscription et de conformité de l’appareil.
 6. Si l’appareil n’est pas conforme ou pas inscrit, la solution du partenaire de contrôle d’accès réseau demande à l’utilisateur d’inscrire l’appareil ou de corriger sa conformité.
-7. L’appareil tente de revérifier sa conformité et/ou l’état d’inscription.
+7. Le cas échéant, l’appareil essaie de revérifier ses conformité et état d’inscription.
 8. Une fois l’appareil inscrit et conforme, la solution du partenaire de contrôle d’accès réseau obtient l’état auprès d’Intune.
 9. La connexion est établie, ce qui permet à l’appareil d’accéder aux ressources d’entreprise.
+
+## <a name="use-nac-on-your-ios-devices"></a>Utiliser le contrôle d’accès réseau sur vos appareils iOS
+
+Le contrôle d’accès réseau n’est pas pris en charge pour les clients VPN suivants sur iOS :
+-   Cisco AnyConnect
+-   Accès F5
+-   Citrix SSO  
+
+Nous travaillons avec nos partenaires à la publication d’une solution de contrôle d’accès réseau pour ces clients plus récents. Quand des solutions seront prêtes, nous mettrons à jour cet article avec des détails supplémentaires. 
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
-ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
+ms.openlocfilehash: 90756da72ecdcbd049b14b45014433bb5843a5ed
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229073"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236660"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise
 
@@ -96,13 +96,14 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 | Propriété          | Type de propriété des appareils (**Société**, **Personnel** ou **Inconnu**).                                               |
 | Conforme à Intune   | Nom du type d’appareil.                                                                                                     |
 | Conforme à Azure AD | L’état de chacune des applications de protection d’application des utilisateurs. Les états possibles des applications sont **Archivé** et **Non archivé**. |
+| Installation de l’application | Indique si l’installation d’une application a échoué ou réussi sur l’appareil individuel. |
 | Système d’exploitation                 | Système d’exploitation installé sur l’appareil.                                                                                       |
 | Version du système d'exploitation         | Numéro de version du système d’exploitation de l’appareil.                                                                                  |
 | Dernier archivage      | Nom du type d’appareil.                                                                                                     |
 
 ### <a name="app-protection-status"></a>État de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies Enterprise Mobility Solution (EMS). Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies Enterprise Mobility Solution (EMS). Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -115,7 +116,7 @@ Une stratégie de protection des applications est disponible pour les applicatio
 
 ## <a name="app-protection-policies-reference"></a>Informations de référence sur les stratégies de protection des applications
 
-Une stratégie de protection d’application est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une protection de base de référence pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection d’application est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une protection de base de référence pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 ### <a name="properties"></a>Propriétés
 
@@ -180,7 +181,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 
 ### <a name="app-protection-policies"></a>Stratégies de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -193,7 +194,7 @@ Une stratégie de protection des applications est disponible pour les applicatio
 
 ## <a name="configuration-policies-reference"></a>Informations de référence sur les stratégies de configuration
 
-Une stratégie de configuration des applications est disponible pour les applications mobiles avec des configurations spécifiques au fournisseur. 
+Une stratégie de configuration des applications est disponible pour les applications mobiles avec des configurations spécifiques au fournisseur. 
 
 ### <a name="properties"></a>Propriétés
 
@@ -226,7 +227,7 @@ Appareils gérés par Intune, ou par les utilisateurs gérés par Intune ou Azur
 
 ### <a name="app-protection-policies"></a>Stratégies de protection des applications
 
-Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
+Une stratégie de protection des applications est disponible pour les applications mobiles qui s’intègrent aux technologies EMS. Ces stratégies fournissent une base de référence de protection pour vos données d’entreprise quand elles sont téléchargées vers des applications mobiles, notamment les applications mobiles Office. 
 
 | Propriété    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|

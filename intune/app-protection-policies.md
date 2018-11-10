@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 10/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d7dbb0214bb80fa0f72808c15eacc6799c0807cc
-ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
+ms.openlocfilehash: 3a7285edfa2dcb50cc5fd28e4fefc1be4c3b9e10
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679268"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -30,48 +30,50 @@ Découvrez comment créer des stratégies de protection des applications Microso
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Les stratégies de protection d'application peuvent être appliquées à des applications qui s’exécutent sur des appareils gérés ou non par Intune. Pour une description plus détaillée du fonctionnement des stratégies de protection d’applications et la liste des scénarios pris en charge par les stratégies Intune App Protection, voir [Présentation des stratégies Microsoft Intune App Protection](app-protection-policy.md).
+Vous pouvez appliquer les stratégies de protection des applications aux applications qui s’exécutent sur des appareils gérés ou non par Intune. Pour une description plus détaillée du fonctionnement des stratégies de protection des applications et des scénarios pris en charge par les stratégies Intune App Protection, consultez [Présentation des stratégies Microsoft Intune App Protection](app-protection-policy.md).
 
 Si vous recherchez une liste d’applications prises en charge par la gestion des applications mobiles, consultez [Liste d’applications de gestion des applications mobiles](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 Pour plus d’informations sur l’ajout d’applications métier professionnelles à Microsoft Intune dans le but de préparer des stratégies de protection d’applications, voir [Ajouter des applications à Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Créer une stratégie de protection des applications
-1. Dans la charge de travail **Applications clientes**, sélectionnez **Stratégies de protection des applications** dans la section **Gérer**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
-2. Choisissez **Ajouter une stratégie**.
+1. Dans le portail Intune, accédez à **Applications clientes** > **Stratégies de protection des applications**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
+2. Sélectionnez **Créer une stratégie**.
 
    ![Capture d’écran du panneau « Ajouter une stratégie »](./media/app-protection-add-policy.png)
 
-3. Tapez un nom pour la stratégie, ajoutez une brève description et sélectionnez le type de plateforme. Vous pouvez créer plusieurs stratégies pour chaque plateforme, selon vos besoins.
+3. Spécifiez un nom pour la stratégie, ajoutez une brève description, puis sélectionnez le type de plateforme de votre stratégie. Vous pouvez créer plusieurs stratégies pour chaque plateforme.
 
-4. Choisissez **Applications** pour ouvrir le panneau **Applications** qui contient la liste des applications disponibles. Dans cette liste, sélectionnez une ou plusieurs applications à associer à la stratégie que vous créez.
+4. Sélectionnez **Applications** pour ouvrir le panneau **Applications**, qui contient la liste des applications disponibles. Dans cette liste, sélectionnez une ou plusieurs applications à associer à la stratégie que vous créez. Sélectionnez au moins une application pour créer une stratégie.  
+
 5. Une fois que vous avez sélectionné les applications, choisissez **Sélectionner** pour enregistrer votre sélection.
 
-    > [!IMPORTANT]
-    > Vous devez sélectionner au moins une application pour créer une stratégie.
+6. Dans le panneau **Ajouter une stratégie**, sélectionnez **Configurer les paramètres requis** pour ouvrir **Paramètres**.
 
-6. Choisissez **Configurer les paramètres nécessaires** dans le panneau **Ajouter une stratégie** pour ouvrir **Paramètres**.
+   Il existe trois catégories pour les paramètres de stratégie :
+   - **Réadressage des données** - Ce groupe comprend les contrôles DLP (protection contre la perte de données), par exemple les restrictions d’opérations consistant à couper, copier, coller et enregistrer sous. Ces paramètres déterminent la manière dont les utilisateurs interagissent avec les données dans les applications.
+   - **Conditions d’accès** - Ce groupe contient les options de code PIN par application, qui déterminent le mode d’accès de l’utilisateur final aux applications dans un contexte professionnel.  
+   - **Lancement conditionnel** - Ce groupe contient des paramètres tels que les paramètres minimum du système d’exploitation, la détection d’appareils jailbreakés/rootés, ainsi que les périodes de grâce hors connexion.
 
-   Il existe deux catégories de paramètres de stratégie : **Réadressage des données** et **Accès**.  Les stratégies de réadressage des données sont applicables au déplacement des données dans et en dehors des applications. Les stratégies d’accès déterminent la façon dont l’utilisateur final accède aux applications dans un contexte professionnel.
    Pour bien démarrer, les paramètres de stratégie sont définis par défaut. Si les valeurs par défaut répondent à vos besoins, vous n’avez pas besoin de les changer.
 
    > [!TIP]
    > Ces paramètres de stratégie sont appliqués uniquement quand vous utilisez des applications dans le contexte de travail. Quand l’utilisateur final utilise l’application pour effectuer une tâche personnelle, il n’est pas affecté par ces stratégies. Notez que quand vous créez un fichier, ce dernier est considéré comme étant un fichier personnel. 
 
-7. Choisissez **OK** pour enregistrer cette configuration. Vous êtes maintenant de retour dans le panneau **Ajouter une stratégie**.
-8. Choisissez **Créer** pour créer la stratégie et enregistrer vos paramètres.
+7. Sélectionnez **OK** pour enregistrer cette configuration. Vous êtes maintenant de retour dans le panneau **Ajouter une stratégie**.
+8. Sélectionnez **Créer** pour créer la stratégie et enregistrer vos paramètres.
 
-Quand vous avez fini de créer une stratégie comme décrit dans la procédure précédente, elle n’est pas déployée sur les utilisateurs. Pour déployer une stratégie, consultez [Déployer une stratégie pour les utilisateurs](app-protection-policies.md#deploy-a-policy-to-users).
+Les nouvelles stratégies que vous créez ne sont pas déployées sur les utilisateurs, tant que vous ne le faites pas explicitement. Pour déployer une stratégie, consultez [Déployer une stratégie pour les utilisateurs](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Déployer une stratégie sur les utilisateurs
 
 1. Dans le volet **Stratégies de protection des applications**, sélectionnez une stratégie.
 
-2. Dans le volet **Stratégie**, choisissez **Affectations** pour ouvrir le volet **Protection des applications Intune - Affectations**. Choisissez **Sélectionner les groupes à inclure** dans le volet **Affectations** pour ouvrir le volet **Sélectionner les groupes à inclure**.
+2. Dans le volet ***Protection d’application Intune**, sélectionnez **Affectations** pour ouvrir le volet **Protection d’application Intune - Affectations**. Sous l’onglet *Inclure*, sélectionnez **Sélectionner les groupes à inclure**. 
 
    ![Capture d’écran du volet Affectations avec l’option de menu Sélectionner les groupes à inclure en surbrillance](./media/app-protection-policy-add-users.png)
 
-3.  La liste de groupes d’utilisateurs s’affiche sur le volet **Ajouter un groupe d’utilisateurs**. Il s’agit de la liste de tous les groupes de sécurité figurant dans votre **Azure Active Directory**. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. Si vous choisissez **Sélectionner**, la stratégie est déployée pour les utilisateurs.
+3.  Une liste de tous les groupes de sécurité de votre domaine **Azure Active Directory** s’affiche. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. Si vous choisissez **Sélectionner**, la stratégie est déployée pour les utilisateurs.
 
     ![Capture d’écran du volet Ajouter un groupe d’utilisateurs montrant la liste des utilisateurs Azure Active Directory](./media/azure-ad-user-group-list.png)
 
@@ -87,24 +89,24 @@ Les utilisateurs finaux peuvent télécharger les applications à partir de l’
 * [Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application](app-protection-enabled-apps-ios.md)
 
 ##  <a name="change-existing-policies"></a>Modifier des stratégies existantes
-Vous pouvez modifier une stratégie existante et l’appliquer aux utilisateurs ciblés. Toutefois, quand vous modifiez des stratégies existantes, les utilisateurs déjà connectés aux applications ne voient pas les changements pendant 8 heures.
+Vous pouvez modifier une stratégie existante et l’appliquer aux utilisateurs ciblés. Toutefois, quand vous changez des stratégies existantes, les utilisateurs déjà connectés aux applications ne voient pas ces changements pendant une période de huit heures.
 
-Pour voir immédiatement l’effet des changements, l’utilisateur final doit se déconnecter de l’application et se reconnecter.
+Pour voir immédiatement l’effet des changements, l’utilisateur final doit se déconnecter de l’application, puis se reconnecter.
 
 ### <a name="to-change-the-list-of-apps-associated-with-the-policy"></a>Pour modifier la liste des applications associées à la stratégie
 
-1.  Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier pour ouvrir le volet spécifique de cette stratégie.
+1.  Dans le volet **Stratégies de protection des applications**, sélectionnez la stratégie à changer.
 
-2.  Dans le volet de la stratégie, choisissez **Applications ciblées** pour ouvrir la liste des applications.
+2.  Dans le volet *Protection d’application Intune*, sélectionnez **Applications ciblées** pour ouvrir la liste des applications.
 
-3.  Supprimez ou ajoutez des applications dans la liste et choisissez l’icône **Enregistrer** pour enregistrer les modifications.
+3.  Supprimez ou ajoutez des applications dans la liste, puis sélectionnez l’icône **Enregistrer** pour enregistrer vos changements.
 
 ### <a name="to-change-the-list-of-user-groups"></a>Pour modifier la liste des groupes d’utilisateurs
 
 
-1.  Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier pour ouvrir le volet spécifique de cette stratégie.
+1.  Dans le volet **Stratégies de protection des applications**, sélectionnez la stratégie à changer.
 
-2.  Dans le volet de la stratégie, choisissez **Affectations** pour ouvrir le volet **Protection des applications Intune - Affectations** qui affiche la liste des groupes d’utilisateurs actuels qui ont cette stratégie.
+2.  Dans le volet *Protection d’application Intune*, sélectionnez **Affectations** pour ouvrir le volet **Protection d’application Intune - Affectations**, qui affiche la liste des groupes d’utilisateurs actuels ayant cette stratégie.
 
 3.  Pour ajouter un nouveau groupe d’utilisateurs à la stratégie, sous l’onglet **Inclure**, choisissez **Sélectionner les groupes à inclure**, puis sélectionnez le groupe d’utilisateurs. Choisissez **Sélectionner** pour déployer la stratégie pour le groupe que vous avez sélectionné.
 
@@ -112,24 +114,26 @@ Pour voir immédiatement l’effet des changements, l’utilisateur final doit s
 
 ### <a name="to-change-policy-settings"></a>Pour modifier les paramètres d’une stratégie
 
-1.  Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier pour ouvrir le volet spécifique de cette stratégie.
+1.  Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à changer.
 
-2.  Choisissez **Paramètres de stratégie** pour ouvrir le volet **Paramètres de stratégie**.
+2.  Dans le volet *Protection d’application Intune*, sélectionnez **Propriétés** pour ouvrir la liste des zones de paramètres que vous pouvez modifier. 
 
-3.  Modifiez les paramètres, puis choisissez l’icône **Enregistrer** pour enregistrer les modifications.
+3.  Sélectionnez la zone de paramètres qui comporte les paramètres à changer, par exemple **Réadressage des données** ou **Conditions d’accès**. Affectez ensuite de nouvelles paramètres aux paramètres.
+
+4.  Sélectionnez l’icône **Enregistrer** pour enregistrer vos changements. Répétez le processus pour sélectionner une zone de paramètres, la modifier, puis enregistrer vos changements, jusqu’à ce que vous ayez effectué tous les changements nécessaires. Vous pouvez ensuite fermer le volet *Protection d’application Intune - Propriétés*. 
 
 ## <a name="target-app-protection-policies-based-on-device-management-state"></a>Cibler les stratégies de protection d’application en fonction de l’état de la gestion des appareils
-Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs finaux à se servir à la fois d’appareils gérés par Intune Mobile Device Management (MDM), tels que les appareils d’entreprise, et les appareils non gérés protégés uniquement avec des stratégies de protection d’application Intune, tels que les appareils BYOD.
+Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs finaux à se servir à la fois d’appareils gérés par Intune MDM (Mobile Device Management), par exemple les appareils d’entreprise, et d’appareils non gérés, protégés uniquement à l’aide des stratégies de protection des applications Intune. Les appareils non gérés sont souvent appelés appareils BYOD (Apportez votre propre appareil).
 
-Étant donné que les stratégies de protection d’applications Intune sont ciblées sur l’identité d’un utilisateur, les paramètres de protection pour un utilisateur s’appliquent généralement aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non-MDM). Ainsi, vous pouvez cibler une stratégie de protection d’application Intune sur des appareils iOS et Android inscrits ou désinscrits dans Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. 
+Dans la mesure où les stratégies de protection des applications Intune ciblent l’identité d’un utilisateur, les paramètres de protection d’un utilisateur peuvent s’appliquer à la fois aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non gérés par MDM). Ainsi, vous pouvez cibler une stratégie de protection des applications Intune sur des appareils iOS et Android inscrits ou non inscrits auprès d’Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. 
 
-Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection d’application** dans la console Intune, puis cliquez sur **Ajouter une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Si vous souhaitez que la stratégie de protection d’application s’applique à la fois aux appareils gérés et aux appareils non gérés, vérifiez que l’option **Cibler sur tous les types d’application** est définie sur **Oui** (valeur par défaut). Si vous souhaitez effectuer une affectation précise en fonction de l’état de la gestion, définissez l’option **Cibler sur tous les types d’application** sur **Non**. 
+Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection des applications** dans la console Intune, puis sélectionnez **Créer une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Pour que la stratégie de protection des applications s’applique aux appareils gérés et non gérés, vérifiez que **Cibler sur tous les types d’application** a la valeur par défaut **Oui**. Si vous souhaitez effectuer une affectation précise en fonction de l’état de gestion, affectez à l’option **Cibler sur tous les types d’application** la valeur **Non**. 
 
-![Capture d’écran du panneau Ajouter une stratégie dans lequel l’option Cibler sur tous les types d’application est sélectionnée](./media/app-protection-policies-target-all.png)
+![Capture d’écran du panneau Ajouter une stratégie, dans lequel l’option Cibler sur tous les types d’application est sélectionnée](./media/app-protection-policies-target-all.png)
 
 Pour iOS, des paramètres de configuration d’application supplémentaires sont nécessaires pour cibler les paramètres d’application sur des applications se trouvant sur des appareils inscrits auprès d’Intune :
-- **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles.  Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** doit être configuré pour toutes les applications managées de gestion des appareils mobiles tierces et métier. Le paramètre **IntuneMAMDeviceID** doit être configuré avec, comme valeur, le jeton d’ID d’appareil. Par exemple, `key=IntuneMAMDeviceID, value={{deviceID}}`. Pour plus d’informations, consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
+- **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- **IntuneMAMDeviceID** doit être configuré pour toutes les applications managées MDM tierces et métier. Le paramètre **IntuneMAMDeviceID** doit être configuré avec, comme valeur, le jeton d’ID d’appareil. Par exemple, `key=IntuneMAMDeviceID, value={{deviceID}}`. Pour plus d’informations, consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
 - Si seul le paramètre **IntuneMAMDeviceID** est configuré, l’application Intune considère l’appareil comme non géré.  
 
 > [!NOTE]

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 2e3b356cc7c09b00916c24340dbbe1923540889b
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313697"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915731"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Paramètres de restriction des appareils Android et Samsung Knox Standard - Intune
 
@@ -39,7 +39,7 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Géolocalisation (Samsung Knox uniquement)** - Permet à l’appareil d’utiliser les informations de localisation.
 - **Mise hors tension (Samsung Knox uniquement)** - Autorise l’utilisateur à mettre l’appareil hors tension.<br>Si vous désactivez cette option, vous ne pouvez pas définir le **Nombre d’échecs de connexion avant réinitialisation de l’appareil**.
 - **Capture d’écran (Samsung Knox uniquement)** - Autorise l’utilisateur à capturer le contenu de l’écran comme image.
-- **Assistant vocal (Samsung Knox uniquement)** - Autorise l’utilisation du logiciel Assistant vocal sur l’appareil.
+- **Assistant vocal (Samsung Knox uniquement)** - Autorise l’utilisation du service et de l’application S Voice sur l’appareil. Bixby ou l’assistant vocal d’accessibilité qui lit le contenu de l’écran à haute voix ne sont pas concernés.
 - **YouTube (Samsung Knox uniquement)** - Autorise l’utilisation de l’application YouTube sur l’appareil.
 - **Appareils partagés(Samsung Knox uniquement)** - Permet de configurer un appareil Samsung Knox standard géré en tant qu’appareil partagé. Dans ce mode, les utilisateurs finaux peuvent se connecter et se déconnecter de l’appareil avec leurs informations d’identification Azure AD. L’appareil reste géré, qu’il soit en cours d’utilisation ou non.<br>Utilisée conjointement avec un profil de certificat SCEP, cette fonctionnalité permet aux utilisateurs finaux de partager un appareil avec le même ensemble d’applications pour tous les utilisateurs, mais avec leur propre certificat utilisateur SCEP.  Quand les utilisateurs se déconnectent, toutes les données d’application sont effacées.  Cette fonctionnalité est limitée aux applications métier.
 - **Empêcher les changements de date et d'heure (Samsung Knox)** : empêchez l’utilisateur de modifier la date et l’heure sur l’appareil. 

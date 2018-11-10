@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d013ad2aefbfee5eea8f240277b0f84c2c6bf05a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 05dfd1e756a7c05d29116cd9077182225f3b9fa5
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679302"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Problèmes courants avec les profils d’appareil dans Microsoft Intune et résolutions
 
@@ -130,9 +130,9 @@ Quand vous supprimez un profil ou retirez un appareil d’un groupe qui a le pro
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>J’ai modifié un profil de restriction d’appareil, mais les modifications n’ont pas pris effet
 Les appareils Windows Phone n’autorisent pas l’assouplissement des stratégies de sécurité définies par MDM ou EAS a posteriori. Par exemple, si vous définissez le **Nombre minimal de caractères des mots de passe** sur 8, vous ne pouvez plus le réduire à 4. Le profil le plus restrictif a déjà été appliqué à l’appareil.
 
-Selon la plateforme d’appareil, si vous voulez attribuer au profil une valeur moins sûre, réinitialisez les stratégies de sécurité. Par exemple, dans Windows, sur le Bureau, effectuez un balayage à partir de la droite et sélectionnez **Paramètres** > **Panneau de configuration**. Sélectionnez l’applet **Comptes d’utilisateurs**.
+Si vous voulez attribuer au profil une valeur moins sûre, réinitialisez les stratégies de sécurité. Par exemple, dans Windows 8.1, sur le Bureau, balayez à partir de la droite et sélectionnez **Paramètres** > **Panneau de configuration**. Sélectionnez l’applet **Comptes d’utilisateurs**. En bas du menu de navigation de gauche figure le lien **Réinitialiser les stratégies de sécurité**. Sélectionnez-le, puis choisissez **Réinitialiser les stratégies**.
 
-En bas du menu de navigation de gauche figure le lien **Réinitialiser les stratégies de sécurité**. Sélectionnez-le, puis choisissez **Réinitialiser les stratégies**. Pour pouvoir appliquer un profil moins restrictif sur les autres appareils MDM (Android, Windows Phone 8.1 et versions ultérieures, et iOS), vous devez peut-être les mettre hors service, puis les réinscrire dans le service.
+Pour pouvoir appliquer un profil moins restrictif sur les autres appareils MDM (Android, Windows Phone 8.1 et ultérieur, iOS et Windows 10), vous devez peut-être les mettre hors service, puis les réinscrire au service.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Besoin d’aide supplémentaire ? Consultez [Guide pratique pour obtenir un support technique pour Microsoft Intune](get-support.md).

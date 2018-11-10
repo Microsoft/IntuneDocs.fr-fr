@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 11/01/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37445cb2536e02937cf3002dc1cb56ab4b78f12f
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2f150db2e1d5fbc8e08bb7f7fcee50f0eda23ca7
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581391"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915680"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Démarrage rapide : Essayer gratuitement Microsoft Intune 
 
 Microsoft Intune vous aide à protéger les données d’entreprise de vos équipes en vous permettant de gérer les appareils et les applications. Dans ce guide de démarrage rapide, vous allez créer un abonnement gratuit pour essayer Intune dans un environnement de test.
 
-Intune fournit une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles) à partir d’un service cloud sécurisé, administré via le Portail Microsoft Azure. À l’aide d’Intune, vous pouvez vérifier que les ressources d’entreprise de vos équipes (données, appareils et applications) sont correctement configurées, accessibles et mises à jour, en fonction des critères et stratégies de conformité de votre entreprise. 
+Intune fournit une solution MDM (gestion des appareils mobiles) et une solution MAM (gestion des applications mobiles) à partir d’un service cloud sécurisé, administré via le Portail Microsoft Azure. À l’aide d’Intune, vous pouvez vérifier que les ressources d’entreprise de vos équipes (données, appareils et applications) sont correctement configurées, accessibles et mises à jour, en fonction des critères et stratégies de conformité de votre entreprise. 
 
 ## <a name="prerequisites"></a>Prérequis
 Avant de configurer Microsoft Intune, passez en revue les exigences suivantes :
@@ -70,20 +70,27 @@ L’essai d’Intune est gratuit pendant 30 jours. Si vous disposez déjà d’
 
 Quand vous vous inscrivez à une version d’essai, vous recevez également un e-mail contenant les informations de votre compte à l’adresse e-mail que vous avez fournie durant la procédure d’inscription. Cet e-mail confirme que votre version d’évaluation est active.
 
+> [!TIP]
+> Quand vous utilisez le portail Azure, vous pouvez obtenir de meilleurs résultats avec un navigateur en mode normal, plutôt qu’en mode privé.
+
 ## <a name="set-the-mdm-authority-to-intune"></a>Définir Intune en tant qu’autorité MDM
 
-Le paramètre d’autorité de gestion des appareils mobiles (MDM) détermine la façon dont vous gérez vos appareils. En tant qu’administrateur informatique, vous devez définir une autorité de gestion des appareils mobiles (MDM) avant que les utilisateurs puissent inscrire des appareils pour la gestion.
+Une fois que vous vous êtes connecté au portail Azure et que vous avez sélectionné Intune, vous pouvez voir une bannière orange indiquant que vous n’avez pas encore défini l’autorité MDM. Le paramètre d’autorité de gestion des appareils mobiles (MDM) détermine la façon dont vous gérez vos appareils. L’autorité MDM doit être définie avant que les utilisateurs puissent inscrire des appareils pour la gestion.
 
 Pour définir Intune en tant qu’autorité MDM, effectuez les étapes suivantes.
 
 1. Ouvrez une nouvelle fenêtre de navigateur, et entrez **https://portal.azure.com** dans la barre d’adresses. 
 2. Choisissez **Tous les services** > **Microsoft Intune**.
-3. Sélectionnez la bannière orange pour ouvrir le paramètre **Autorité de gestion des appareils mobiles**. 
+3. Sélectionnez la bannière indiquant que vous n’avez pas activé la gestion des appareils, ou si vous ne voyez pas immédiatement la bannière, sélectionnez **Inscription de l’appareil**. Le panneau **Sélectionner une autorité MDM** s’affiche si vous n’avez pas encore activé la gestion des appareils.
 
     > [!NOTE]
     > La bannière orange s’affiche seulement si vous n’avez pas encore défini l’autorité MDM.
 
-4. Sous **Autorité de gestion des appareils mobiles**, définissez l’autorité MDM en tant qu’**Autorité MDM Intune**.
+    ![Image du panneau Sélectionner une autorité MDM](./media/choose-mdm-authority.png) 
+
+4. Sous **Sélectionner une autorité MDM**, définissez l’autorité MDM en tant qu’**Autorité MDM Intune**.
+
+Pour plus d’informations sur l’autorité MDM, consultez [Définir l’autorité de gestion des appareils mobiles](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Configurer votre nom de domaine personnalisé (facultatif)
 
@@ -120,4 +127,4 @@ Vous pouvez utiliser deux portails :
 Dans ce guide de démarrage rapide, vous avez créé un abonnement gratuit pour essayer Intune dans un environnement de test, et vous avez éventuellement configuré un nom de domaine personnalisé. Pour en savoir plus sur Microsoft Intune, passez au prochain guide de démarrage rapide afin d’ajouter des utilisateurs et affecter des licences.
 
 > [!div class="nextstepaction"]
-> [Créer un utilisateur](get-started-users.md)
+> [Créer un utilisateur](quickstart-create-user.md)
