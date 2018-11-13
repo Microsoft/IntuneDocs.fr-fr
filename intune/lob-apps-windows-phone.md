@@ -15,12 +15,12 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e86db15fb4c69b57a1dc572d5a7e4f06eee3b760
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: ff63e3cdf670156c66c156e3defe6d67e7c04044
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602110"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212357"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows Phone à Microsoft Intune
 
@@ -51,7 +51,6 @@ Utilisez les informations contenues dans cet article pour ajouter une applicatio
     - **Nom** : entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Assurez-vous que tous les noms d'application que vous utilisez sont uniques. Si le même nom d’application existe deux fois, une seule des applications apparaît dans le portail d’entreprise.
     - **Description :** entrez la description de l’application. La description s’affiche dans le portail d’entreprise.
     - **Éditeur :** entrez le nom de l’éditeur de l’application.
-    - **Ignorer la version de l’application** : choisissez **Oui** si le développeur de l’application met celle-ci automatiquement à jour.
     - **Catégorie** : sélectionnez une ou plusieurs catégories d’application intégrée, ou une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver l’application plus facilement quand ils parcourent le portail d’entreprise.
     - **Proposer cette application dans le portail d’entreprise** : met en évidence l’application sur la page principale du portail d’entreprise quand les utilisateurs recherchent des applications.
     - **URL d’information** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations sur cette application. L’URL s’affiche dans le portail d’entreprise.

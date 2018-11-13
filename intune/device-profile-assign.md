@@ -14,12 +14,12 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa1a1b1085d196411a03a6228eefa808399397ea
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 439c89f7b0158111f63d2d8327291c2b5a5c1e38
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024802"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298069"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -48,9 +48,6 @@ Par exemple, vous souhaitez attribuer un profil d’appareil à tous les apparei
 L’exclusion examine uniquement les membres directs des groupes et n’inclut pas les appareils qui sont associés à un utilisateur. Toutefois, les appareils qui n’ont pas d’utilisateur n’obtiennent pas la stratégie. En effet, ces appareils n’ont aucune relation au groupe **Tous les utilisateurs**.
 
 Si vous incluez **Tous les appareils** et que vous excluez **Tous les utilisateurs**, tous les appareils reçoivent alors la stratégie. Dans ce scénario, le but est d’exclure les appareils associés à un utilisateur de cette stratégie. Toutefois, les appareils ne sont pas exclus car l’exclusion ne compare que les membres directs des groupes.
-
->[!TIP]
->Les exclusions ne sont pas disponibles pour l’affectation d’applications ni pour les stratégies de conformité. Pour exclure des membres d’une affectation, vous pouvez utiliser les affectations **Disponible** et **Non applicable**. Par exemple, vous affectez une application à **tous les utilisateurs de l’entreprise** avec l’intention **Disponible**, et affectez l’application aux **cadres supérieurs** avec l’intention **Non applicable**. L’application est attribuée à tous les utilisateurs *sauf* ceux du groupe des **cadres supérieurs**. Si vous attribuez l’application à **tous les utilisateurs de l’entreprise** avec l’intention **Obligatoire**, les utilisateurs du groupe des **cadres supérieurs** sont également inclus.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir de l’aide sur la surveillance des attributions de profils d’appareils, consultez [Guide pratique pour surveiller des profils d’appareils](device-profile-monitor.md).

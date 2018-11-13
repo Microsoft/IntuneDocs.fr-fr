@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: e54b35d677d34067bfbd0ad6aad86e3dfe17fb90
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 5fb0de1af9c8336cb277572faf526f1471108591
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50971480"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225949"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -165,7 +165,7 @@ L’entité **DeviceConfigurationProfileDeviceActivity** répertorie le nombre d
 | Failed    | Nombre d’appareils uniques en état d’échec.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
-L’entité  **DeviceConfigurationProfileUserActivity**  répertorie le nombre quotidien d’utilisateurs dans un état de réussite, d’attente, d’échec ou d’erreur. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un utilisateur sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si un utilisateur a deux profils affectés, l’un dans un état de réussite et l’autre dans un état d’erreur, l’utilisateur dans l’état d’erreur est pris en compte. L’entité  **DeviceConfigurationProfileUserActivity**  répertorie le nombre d’utilisateurs dans chaque état à une date donnée au cours des 30 derniers jours. 
+L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d’utilisateurs, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un utilisateur sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si un utilisateur a deux profils affectés, l’un dans un état de réussite et l’autre dans un état d’erreur, l’utilisateur dans l’état d’erreur est pris en compte. L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d’utilisateurs dans chaque état pour un jour donné au cours des 30 derniers jours. 
 
 | Propriété  | Description  | Exemple  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
