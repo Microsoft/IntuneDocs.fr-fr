@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2018
+ms.date: 11/5/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bacaf8ff4119d4cd40483b65ea45e283d98a51f1
-ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
+ms.openlocfilehash: 2f21df636ab429969429c6dbdf540daaa67a8f88
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51025200"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576764"
 ---
 # <a name="the-early-edition-for-microsoft-intune---november-2018"></a>Édition préliminaire pour Microsoft Intune - Novembre 2018
 
@@ -44,11 +44,6 @@ Cette page est mise à jour périodiquement. Consultez-la régulièrement pour s
 ### <a name="uninstalling-apps-on-corporate-owned-supervised-ios-devices----1281677---"></a>Désinstallation d’applications sur des appareils iOS supervisés appartenant à l’entreprise <!-- 1281677 -->
 Vous allez pouvoir supprimer les applications de votre choix sur les appareils iOS supervisés appartenant à l’entreprise. Vous pouvez supprimer une application en ciblant des groupes d’utilisateurs ou des groupes d’appareils ayant le type d’affectation **Désinstaller**. Pour les appareils iOS personnels ou non supervisés, vous êtes toujours limité à la suppression des applications installées à l’aide d’Intune.
 
-### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Prise en charge d’iOS 12 OAuth dans les profils de messagerie iOS <!--2155106 -->
-Les profils de messagerie iOS d’Intune prendront en charge iOS 12 OAuth. Pour voir cette fonctionnalité, choisissez **Intune** > **Configuration de l’appareil** > **Profils** > **Créer un profil**. Dans le panneau de création de profil, vous pouvez activer ou désactiver **OAuth**. Si ce paramètre est activé, deux choses se produisent :
-1. Un nouveau profil sera émis aux appareils qui sont déjà ciblés
-2. Les utilisateurs finaux seront invités à redonner leurs informations d’identification
-
 ### <a name="track-installation-of-office-proplus---2620217--"></a>Effectuer le suivi de l’installation d’Office ProPlus <!--2620217-->
 Vous allez pouvoir suivre la progression de l’installation d’[Office ProPlus](apps-add-office365.md) à l’aide de la [Page d’état d’inscription](windows-enrollment-status.md).
 
@@ -69,7 +64,7 @@ Un nouveau paramètre permet aux utilisateurs d’appuyer sur un bouton programm
 Vous aurez un meilleur contrôle de vos affectations de stratégies de protection des applications. En enregistrant et en appliquant vos affectations de stratégies de protection des applications, seuls les utilisateurs visés sont directement impactés par une affectation de stratégie de protection des applications.
 
 ### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nouveaux paramètres du navigateur Microsoft Edge pour Windows 10 et versions ultérieures <!-- 3174639 -->
-Un nouveau paramètre va être ajouté pour vous aider à contrôler et gérer le navigateur Microsoft Edge sur vos appareils. Pour obtenir la liste des paramètres actuels, consultez [Restriction des appareils pour Windows 10 (et versions ultérieures)](device-restrictions-windows-10.md#edge-browser).
+Un nouveau paramètre va être ajouté pour vous aider à contrôler et gérer le navigateur Microsoft Edge sur vos appareils. Pour obtenir la liste des paramètres actuels, consultez [Restriction des appareils pour Windows 10 (et versions ultérieures)](device-restrictions-windows-10.md#microsoft-edge-browser).
 
 ### <a name="select-apps-tracked-on-the-enrollment-status-page---2531007---"></a>Sélectionner les applications suivies dans la Page d’état d’inscription<!-- 2531007 -->
 Vous pouvez choisir les applications à suivre dans la Page d’état d’inscription.
@@ -113,10 +108,10 @@ Les paramètres de stratégie de protection des applications pour le contenu web
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Jeton VPP Apple utilisé par une autre gestion MDM <!-- 1488946 -->
 Intune détectera et affichera des détails si un jeton du Programme d’achat en volume (VPP) Apple est utilisé à la fois par Intune et une autre gestion MDM.
 
-### <a name="ios-and-macos-version-numbers-and-build-numbers-are-shown----1892471---"></a>Les numéros de version et de build iOS et macOS sont affichés <!-- 1892471 -->
-Dans **Conformité de l’appareil** > **Conformité de l’appareil**, les versions des systèmes d’exploitation iOS et macOS s’affichent. Dans une prochaine mise à jour, le numéro de build sera également affiché pour les deux plateformes.
+### <a name="ios-and-macos-version-numbers-and-build-numbers-are-available-in-compliance-policies----1892471---"></a>Les numéros de version et de build iOS et macOS sont disponibles dans les stratégies de conformité <!-- 1892471 -->
+Dans **Conformité de l’appareil** > **Conformité de l’appareil**, les versions des systèmes d’exploitation iOS et macOS indiquées peuvent être utilisées dans les stratégies de conformité. Dans une prochaine mise à jour, le numéro de build sera également configurable pour les deux plateformes.
 
-Quand des mises à jour de sécurité sont publiées, Apple laisse généralement le numéro de version tel quel, mais met à jour le numéro de build. En affichant le numéro de build, vous pouvez vérifier facilement si une mise à jour des vulnérabilités est installée.
+Quand des mises à jour de sécurité sont publiées, Apple laisse généralement le numéro de version tel quel, mais met à jour le numéro de build. En utilisant le numéro de build dans une stratégie de conformité, vous pouvez facilement vérifier si une mise à jour des vulnérabilités est installée.
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Appareils mis hors service dans le tableau de bord de conformité des appareils <!-- 1981119 -->
 Dans une prochaine mise à jour, les appareils mis hors service seront retirés du tableau de bord de conformité des appareils. Cela changera vos numéros de conformité.

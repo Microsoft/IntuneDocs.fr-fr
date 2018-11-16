@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 11/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2a4b4a4b2b0df706504e76b418c5b87eb66b1111
-ms.sourcegitcommit: 23997b701365bb514347d75edc2357eff1f1443f
+ms.openlocfilehash: 87f49c9aafa8b6f9f281a00e4d7bd297c354f90b
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237661"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51511029"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Intune
 
@@ -391,6 +391,28 @@ Une fois que vous avez résolu les problèmes liés au jeton VPP, vous devez ré
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Indiquer aux utilisateurs de redémarrer le processus d’inscription
 Une fois que vous avez réinitialisé les appareils bloqués, vous pouvez demander aux utilisateurs de redémarrer le processus d’inscription.
+
+## <a name="macos-issues"></a>Problèmes liés à macOS
+
+### <a name="macos-enrollment-errors"></a>Erreurs d’inscription macOS
+**Message d’erreur 1 :** *Vous semblez utiliser une machine virtuelle. Veillez à effectuer une configuration complète de votre machine virtuelle en spécifiant notamment le numéro de série et le modèle de matériel. S’il ne s’agit pas d’une machine virtuelle, contactez le support.*  
+
+**Message d’erreur 2 :** *Votre appareil ne peut pas être géré. Ce problème peut avoir l’une des causes suivantes : vous utilisez une machine virtuelle, votre appareil a un numéro de série restreint ou l’appareil est déjà attribué à une autre personne. Découvrez comment résoudre ces problèmes ou contactez le support de votre entreprise.*
+
+**Problème :** Ce message peut s’afficher pour l’une des raisons suivantes :  
+* Une machine virtuelle macOS n’est pas configurée correctement  
+* Vous avez activé des restrictions d’appareil qui exigent que l’appareil appartienne à l’entreprise ou qu’il porte un numéro de série inscrit dans Intune  
+* L’appareil a déjà été inscrit, mais il est encore attribué à un autre utilisateur dans Intune  
+
+**Résolution :** Commencez par vérifier auprès de l’utilisateur lequel de ces problèmes concerne son appareil. Choisissez ensuite la solution la plus pertinente parmi les solutions suivantes :
+* Si l’utilisateur souhaite inscrire une machine virtuelle pour des tests, assurez-vous que cette machine est entièrement configurée pour que Intune puisse reconnaître son numéro de série et le modèle de matériel. Découvrez-en davantage sur la [configuration des machines virtuelles](macos-enroll.md#enroll-virtual-macos-machines-for-testing) dans Intune.  
+* Si votre organisation a activé des restrictions d’inscription qui bloquent les appareils macOS personnels, vous devez manuellement [ajouter le numéro de série de l’appareil personnel](corporate-identifiers-add.md#manually-enter-corporate-identifiers) dans Intune.  
+* Si l’appareil est encore attribué à un autre utilisateur dans Intune, son propriétaire précédent n’a pas utilisé l’application Portail d’entreprise pour supprimer ou réinitialiser l’appareil. Pour supprimer l’entrée d’appareil obsolète dans Intune :  
+
+    1. Accédez à [Intune dans le portail Azure](https://portal.manage.microsoft.com) et connectez-vous à l’aide de vos informations d’identification d’administration.
+    2. Accédez à Intune > **Appareils** > **Tous les appareils**.  
+    3. Recherchez l’appareil qui rencontre le problème d’inscription. Recherchez l’appareil par son nom ou son adresse MAC/HW pour limiter les résultats.
+    4. Sélectionnez l’appareil > **Supprimer**. Supprimez toutes les autres entrées associées à l’appareil.  
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problèmes quand vous utilisez System Center Configuration Manager avec Intune
 ### <a name="mobile-devices-disappear"></a>Les appareils mobiles disparaissent

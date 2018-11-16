@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7fd8c7f6f2c3dd5e6e8af323ccbb41a1ab779df
-ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
+ms.openlocfilehash: 1180e085c0584f3da535947cad60c41d06a8026a
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51025234"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576968"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez également découvrir les [modifications à venir](#whats-coming), les [avis importants](#notices) sur le service et des informations sur les [versions précédentes](whats-new-archive.md). Le lancement de certaines fonctionnalités peut s’étaler sur plusieurs semaines. Ces fonctionnalités risquent de ne pas être accessibles à tous les clients la première semaine.
+Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez également trouver les changements à venir, les [annonces importantes](#notices) et des informations sur les [versions précédentes](whats-new-archive.md). Le lancement de certaines fonctionnalités peut s’étaler sur plusieurs semaines. Ces fonctionnalités risquent de ne pas être accessibles à tous les clients la première semaine.
 
 > [!Note]
 > Pour plus d’informations sur les nouvelles fonctionnalités de gestion des appareils mobiles (MDM) hybride, consultez la page sur les [nouveautés de la gestion hybride](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
@@ -41,6 +41,21 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 ### Role-based access control
 
 -->     
+## <a name="week-of-november-5-2018"></a>Semaine du 5 novembre 2018
+
+### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Prise en charge d’iOS 12 OAuth dans les profils de messagerie iOS <!--2155106 -->
+
+Les profils de messagerie iOS d’Intune prennent en charge iOS 12 OAuth (Open Authorization). Pour voir cette fonctionnalité, créez un profil (**Configuration de l’appareil** > **Profils** > **Créer un profil**  >  **iOS** comme plateforme > **E-mail** comme type de profil). Vous pouvez également mettre à jour un profil de messagerie iOS existant. Si vous activez OAuth dans un profil qui est déjà déployé sur des utilisateurs, ces derniers sont invités à se réauthentifier et à retélécharger leurs e-mails.
+
+[Profils de messagerie iOS](email-settings-ios.md) comprend davantage d’informations sur l’utilisation d’OAuth dans un profil de messagerie.
+
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Prise en charge d’Autopilot pour les appareils joints à un domaine Azure Active Directory hybride (préversion) <!-- 1048100-->
+Vous pouvez désormais configurer les appareils joints à un domaine Azure Active Directory hybride à l’aide d’Autopilot. Les appareils doivent être joints au réseau de votre organisation afin d’utiliser la fonctionnalité Autopilot hybride. Pour plus d’informations, consultez [Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot](windows-autopilot-hybrid.md).
+Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
+
+### <a name="app-protection-policy-app-settings-for-web-data----2662995----"></a>Paramètres de stratégie de protection des applications pour les données du web <!-- 2662995  -->
+Les paramètres de stratégie de protection des applications pour le contenu web sur les appareils iOS et Android ont été mis à jour afin de mieux gérer les liens web HTTP et HTTPS, ainsi que le transfert de données au moyen de liens universels iOS et de liens d’application Android.  
+
 ## <a name="week-of-october-29-2018"></a>Semaine du 29 octobre 2018
 
 
@@ -112,10 +127,6 @@ Vous pourrez affecter des profils Autopilot au groupe virtuel Tous les appareils
 #### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nouvelle fonctionnalité Conditions d’utilisation dans Azure Active Directory <!-- 2870393 -->
 Azure Active Directory comporte une fonctionnalité relative aux conditions d’utilisation que vous pouvez utiliser à la place des conditions générales Intune existantes. La fonctionnalité Conditions d’utilisation d’Azure AD offre davantage de flexibilité quant aux choix des conditions d’utilisation à afficher et au moment où elles sont affichées, une meilleure prise en charge de la localisation, un meilleur contrôle de l’affichage des conditions générales, ainsi que des fonctionnalités améliorées de création de rapports. La fonctionnalité Conditions d’utilisation d’Azure AD nécessite Azure Active Directory Premium P1, qui fait également partie de la suite Enterprise Mobility + Security E3. Pour en savoir plus, consultez l’article [Gérer les conditions générales de votre entreprise pour l’accès utilisateur](terms-and-conditions-create.md).
 
-### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Prise en charge d’Autopilot pour les appareils joints à un domaine Azure Active Directory hybride (préversion) <!-- 1048100-->
-Vous pouvez désormais configurer les appareils joints à un domaine Azure Active Directory hybride à l’aide d’Autopilot. Les appareils doivent être joints au réseau de votre organisation afin d’utiliser la fonctionnalité Autopilot hybride. Pour plus d’informations, consultez [Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot](windows-autopilot-hybrid.md).
-Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
-
 ### <a name="android-device-owner-mode-support---3188762--"></a>Prise en charge du mode Device Owner pour Android <!--3188762-->
 Pour l’inscription Samsung Knox Mobile, Intune prend désormais en charge l’inscription d’appareils en mode de gestion Device Owner pour Android. Les utilisateurs sur des réseaux Wi-Fi ou mobiles peuvent s’inscrire en quelques clics quand ils allument leurs appareils pour la première fois. Pour plus d’informations, consultez [Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung](android-samsung-knox-mobile-enroll.md).
 
@@ -130,7 +141,10 @@ Les stratégies de protection des applications Intune vous permettent de configu
 - **Conditions d’accès** - Ce groupe contient les options de code PIN par application, qui déterminent le mode d’accès de l’utilisateur final aux applications dans un contexte professionnel.  
 - **Lancement conditionnel** - Ce groupe contient des paramètres tels que les paramètres minimum du système d’exploitation, la détection d’appareils jailbreakés/rootés, ainsi que les périodes de grâce hors connexion.  
   
-La fonctionnalité des paramètres ne change pas, mais il est plus facile de les trouver quand vous utilisez le flux de création de stratégies. 
+La fonctionnalité des paramètres ne change pas, mais il est plus facile de les trouver quand vous utilisez le flux de création de stratégies.
+
+### <a name="new-intune-device-subscription-sku---3312071--"></a>Nouvelle référence (SKU) d’abonnement d’appareil Intune !--3312071-->
+Pour aider les entreprises à réduire le coût de la gestion des appareils, une nouvelle référence (SKU) d’abonnement basée sur les appareils est désormais disponible. Cette référence (SKU) d’appareil Intune est concédée sous licence par appareil sur une base mensuelle. Les prix varient selon le programme de licence. Elle est disponible dans les programmes Canal direct, Contrat entreprise (EA), Microsoft Products and Services Agreements (MPSA), Fournisseur de solutions cloud et Open.
 
 ### <a name="intune-apps"></a>Applications Intune
 
@@ -146,7 +160,7 @@ Quand Intune installe Office sur les machines de vos utilisateurs finaux, ceux-c
 ### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal----3076965---"></a>Nouvelle expérience utilisateur de support Intune dans le portail de Gestion des appareils Microsoft 365 <!-- 3076965 -->
-Nous lançons une nouvelle expérience utilisateur d’aide et de support pour Intune dans le [portail de Gestion des appareils Microsoft 365]( http://devicemanagement.microsoft.com). Cette nouvelle expérience utilisateur vous permet de décrire le problème avec vos propres mots et de recevoir des insights de résolution de problème, ainsi qu’un contenu de correction basé sur le web. Ces solutions sont proposées via un algorithme d’apprentissage automatique basé sur des règles, piloté par les requêtes des utilisateurs.  
+Nous lançons une nouvelle expérience utilisateur d’aide et de support pour Intune dans le [portail de Gestion des appareils Microsoft 365]( http://devicemanagement.microsoft.com). Cette nouvelle expérience utilisateur vous permet de décrire le problème avec vos propres mots et de recevoir des insights de résolution de problème, ainsi qu’un contenu de correction basé sur le web. Ces solutions sont proposées par le biais d’un algorithme d’apprentissage automatique basé sur des règles, piloté par les recherches des utilisateurs.  
 
 En plus de recevoir une aide spécifique à chaque problème, vous pouvez également utiliser le nouveau flux de travail de création d’incident pour ouvrir un incident nécessitant un support par e-mail ou par téléphone.  
 
@@ -477,8 +491,8 @@ Intune prend maintenant en charge l’inscription d’appareils macOS dans le Pr
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Prise en charge des applications métier pour macOS <!-- 1895847 -->
 Microsoft Intune permet aux applications métier macOS d’être déployées en mode **Obligatoire** ou **Disponible avec inscription**. Pour les utilisateurs finaux, les applications peuvent être déployées en mode **Disponible** à l’aide du Portail d’entreprise pour macOS ou du [site web Portail d’entreprise](https://portal.manage.microsoft.com).
 
-#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode kiosque <!-- 2051098 -->
-En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode kiosque sur un appareil iOS.
+#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode plein écran <!-- 2051098 -->
+En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode plein écran sur un appareil iOS.
 
 #### <a name="edit-your-office-365-pro-plus-app-deployments----2150145---"></a>Modifier vos déploiements d’applications Office 365 Pro Plus <!-- 2150145 -->
 En tant qu’administrateur Microsoft Intune, vous avez une plus grande capacité de modification de vos déploiements d’applications Office 365 Pro Plus. En outre, vous n’avez plus à supprimer vos déploiements pour modifier des propriétés de la suite. Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications**. Dans la liste des applications, sélectionnez votre suite Office 365 Pro Plus.  
@@ -619,7 +633,7 @@ Vous pouvez utiliser le **SamAccountName** local comme nom d’utilisateur de co
 
 Pour utiliser cette fonctionnalité, vous devez synchroniser l’attribut `sAMAccountName` de votre environnement Active Directory local avec Azure AD.
 
-S’applique à : [Andoid](email-settings-android.md), [iOS](email-settings-ios.md) et [Windows 10 et versions ultérieures](email-settings-windows-10.md)
+S’applique à [Android](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 et ultérieur](email-settings-windows-10.md)
 
 #### <a name="see-device-configuration-profiles-in-conflict----1556983---"></a>Affichage des profils de configuration d’appareil en conflit <!-- 1556983 -->
 Dans **Configuration de l’appareil**, vous voyez une liste des profils existants. Avec cette mise à jour, une nouvelle colonne qui fournit des détails sur les profils en conflit a été ajoutée. Vous pouvez sélectionner une ligne en conflit pour voir le paramètre et le profil en conflit. 
@@ -675,7 +689,7 @@ Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’en
 
 ## <a name="week-of-june-18-2018"></a>Semaine du 18 juin 2018
 
-### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Prise en charge mobile Edge pour les stratégies de protection des applications Intune <!-- 1817882 -->
+### <a name="microsoft-edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Prise en charge mobile Microsoft Edge pour les stratégies de protection des applications Intune <!-- 1817882 -->
 
 Le navigateur Microsoft Edge pour appareils mobiles prend maintenant en charge les stratégies de protection des applications définies dans Intune.
 
@@ -784,7 +798,7 @@ Pour voir l’identificateur unique de l’appareil (UDID) pour les appareils iO
 Sur les appareils gérés par MDM Microsoft Intune, les installations d’applications peuvent parfois échouer. Quand ces installations d’applications échouent, il peut être difficile de comprendre la raison de l’échec ou de résoudre le problème. Nous publions une préversion publique de nos fonctionnalités de résolution des problèmes d’application. Vous remarquerez sous chaque appareil un nouveau nœud appelé **Applications gérées**. Il liste les applications qui ont été distribuées via MDM Intune. À l’intérieur du nœud figure une liste d’états d’installations d’applications. Si vous sélectionnez une application, vous verrez la vue de résolution des problèmes de cette application spécifique. Dans la vue de résolution des problèmes, vous verrez le cycle de vie de bout en bout de l’application, par exemple quand l’application a été créée, modifiée, ciblée et remise à un appareil. De plus, si l’installation de l’application a échoué, vous verrez le code d’erreur et un message utile sur la cause de l’erreur. 
 
 #### <a name="intune-app-protection-policies-and-microsoft-edge----1818968---"></a>Stratégies de protection des applications Intune et Microsoft Edge <!-- 1818968 -->
-Le navigateur Microsoft Edge pour les appareils mobiles (iOS et Android) prend désormais en charge les stratégies de protection des applications Microsoft Intune. Les utilisateurs d’appareils iOS et Android qui se connectent avec leur compte d’entreprise Azure AD dans l’application Edge seront protégés par Intune. Sur les appareils iOS, la stratégie **Exiger un navigateur géré pour le contenu web** permet aux utilisateurs d’ouvrir des liens dans Edge quand il est géré.
+Le navigateur Microsoft Edge pour les appareils mobiles (iOS et Android) prend désormais en charge les stratégies de protection des applications Microsoft Intune. Les utilisateurs d’appareils iOS et Android qui se connectent avec leur compte d’entreprise Azure AD dans l’application Edge seront protégés par Intune. Sur les appareils iOS, la stratégie **Exiger un navigateur géré pour le contenu web** permet aux utilisateurs d’ouvrir des liens dans Microsoft Edge quand il est géré.
 
 ## <a name="week-of-may-14-2018"></a>Semaine du 14 mai 2018
 
@@ -1010,6 +1024,21 @@ Pour voir à quoi ressemble la mise à jour, accédez à [Nouveautés de l’int
 Vous pouvez désormais utiliser les fonctionnalités APP (stratégie de protection des applications) et CA (accès conditionnel) d’Intune pour protéger l’accès aux données Exchange locales avec Outlook Mobile. Pour ajouter ou modifier une stratégie de protection des applications dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Stratégies de protection des applications**. Avant d’utiliser cette fonctionnalité, vérifiez que vous répondez aux [exigences relatives à Outlook pour iOS et Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
 
 ## <a name="notices"></a>Remarques
+
+### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Modification planifiée : mises à jour visant à améliorer les performances d’Intune pour l’Éducation <!--1750215-->
+Nous ajoutons des mises à jour à Intune pour l’Éducation afin de vous permettre d’affecter des paramètres à vos utilisateurs ou appareils de manière plus rapide et plus fiable. Dans le cadre de ce changement, nous déplacerons fin novembre vos stratégies ou affectations de paramètres dans de nouveaux groupes.
+
+#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
+
+En tant que client Intune pour l’Éducation, vous disposez de deux groupes Azure AD (Azure Active Directory) dynamiques : « Tous les utilisateurs » et « Tous les appareils ». Avec ces mises à jour, les groupes Azure AD « Tous les utilisateurs » et « Tous les appareils » ne seront pas visibles dans la console Intune pour l’Éducation. Toutefois, ils apparaîtront toujours dans la console Intune sur Azure où ils seront renommés « Tous les utilisateurs (obsolète, ne pas utiliser) » et « Tous les appareils (obsolète, ne pas utiliser) ».
+
+Une fois les mises à jour déployées, vous n’aurez plus besoin d’utiliser les groupes Azure AD pour affecter des applications et des paramètres dans Intune. Au lieu de cela, vous trouverez vos affectations de paramètres dans de nouveaux groupes que nous créerons pour vous dans la console Intune pour l’Éducation et qui apparaîtront toujours sous la forme « Tous les utilisateurs » et « Tous les appareils », comme avant. Ces changements étant apportés au niveau du backend, vous ne remarquerez aucune différence dans la console Intune pour l’Éducation. Vos utilisateurs finaux et vos appareils inscrits ne devraient pas être impactés. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
+Le déplacement de vos affectations de stratégie ne nécessite aucune intervention de votre part. Si vous affectez actuellement des stratégies dans la console Intune pour l’Éducation, continuez à le faire.
+
+Si vous affectez actuellement des stratégies aux groupes Azure AD indiqués plus haut dans Intune sur Azure, commencez à les affecter aux groupes Tous les utilisateurs et Tous les appareils dans la console Intune pour l’Éducation. Quand vous constatez que les groupes Azure AD sont renommés dans la console (mention « obsolète »), arrêtez d’affecter des stratégies dans Azure AD. Si vous n’utilisez pas les groupes renommés à d’autres fins, supprimez-les.
+
 
 ### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Changement planifié : Intune prendra en charge macOS 10.12 et versions ultérieures en décembre <!--2970975--> 
 

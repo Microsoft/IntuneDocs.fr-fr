@@ -1,6 +1,6 @@
 ---
 title: Restrictions d’appareil pour Windows Holographic for Business dans Microsoft Intune - Azure | Microsoft Docs
-description: Découvrez et configurez les paramètres de restriction d’appareil dans Microsoft Intune pour Windows Holographic for Business, notamment la désinscription, la géolocalisation, les mots de passe, l’installation des applications depuis un app store, les cookies et les fenêtres contextuelles dans Edge, Windows Defender, la recherche, le cloud et le stockage, la connectivité bluetooth, l’heure système et les données d’utilisation dans Azure.
+description: Découvrez et configurez les paramètres de restriction d’appareil dans Microsoft Intune pour Windows Holographic for Business, notamment la désinscription, la géolocalisation, les mots de passe, l’installation des applications à partir d’un Store, les cookies et les fenêtres contextuelles dans Microsoft Edge, Windows Defender, la recherche, le cloud et le stockage, la connectivité Bluetooth, l’heure système et les données d’utilisation dans Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d7f54ce0e288025a4a7f0f45bf5b10de5323021
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: f79985c9854af462fa9a456304a3184128283b9c
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321674"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576798"
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Paramètres de restriction d’appareil pour Windows Holographic for Business dans Intune
 
@@ -41,17 +41,17 @@ Les paramètres de restriction d’appareil suivants sont pris en charge sur les
 -   **Installation d’applications approuvées** - Permet de charger indépendamment les applications signées avec un certificat approuvé.
 -   **Déverrouillage de développement** - Autorise les paramètres de développement Windows, par exemple pour autoriser l’utilisateur à modifier des applications qui ont été chargées indépendamment.
 
-## <a name="edge-browser"></a>Navigateur Microsoft Edge
+## <a name="microsoft-edge-browser"></a>Navigateur Microsoft Edge
 
 -   **Cookies** - Permet au navigateur d’enregistrer les cookies internet sur l’appareil.
 -   **Fenêtres contextuelles** : Bloque les fenêtres publicitaires dans le navigateur (s’applique à Windows 10 Desktop uniquement).
 -   **Suggestions de recherche** - Permet à votre moteur de recherche de suggérer des sites à mesure que vous saisissez des expressions de recherche.
--   **Gestionnaire de mots de passe** - Activer ou désactiver la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
-- **Envoyer un en-tête Do Not Track** - Configure le navigateur Microsoft Edge pour envoyer des en-êtes Do Not Track aux sites web que les utilisateurs visitent.
+-   **Gestionnaire de mots de passe** : activez ou désactivez la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
+- **Envoyer un en-tête Do Not Track** : configure le navigateur Microsoft Edge pour envoyer des en-têtes Do Not Track aux sites web que les utilisateurs visitent.
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
-- **SmartScreen pour Microsoft Edge** - Activer Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
+- **SmartScreen pour Microsoft Edge** : activez Microsoft Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
 
 ## <a name="search"></a>Recherche
 - **Emplacement de recherche** : Spécifie si la recherche peut utiliser l’emplacement. Informations

@@ -14,12 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cc378a4f484852d84943b4d1094b71df5b7a530d
-ms.sourcegitcommit: 006fa8dd4d605e2873fba6e3a965ef794d6f3764
+ms.openlocfilehash: 1a7c7ebca1c6472b58021a57b1b4a59fc42966b0
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36945478"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576951"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Paramètres Endpoint Protection pour Windows 10 (et versions ultérieures) dans Intune
 
@@ -33,7 +33,7 @@ Utilisez les informations de cet article pour créer des profils Endpoint Protec
 
 Pris en charge sur les éditions de Windows 10 suivantes :
 
-- Entreprise 
+- Enterprise 
 - Professionnel
 
 Lors de l’utilisation de Microsoft Edge, Windows Defender Application Guard protège votre environnement des sites qui ne sont pas approuvés par votre organisation. Quand des utilisateurs visitent des sites qui ne figurent pas dans la liste des limites de votre réseau isolé, les sites sont ouverts dans une session de navigation virtuelle Hyper-V. Les sites approuvés sont définis par une limite réseau, qui peut être configurée dans Configuration de l'appareil.
@@ -98,7 +98,7 @@ Ces paramètres s’appliquent à des types de réseaux spécifiques, notamment 
 
 ## <a name="windows-defender-smartscreen-settings"></a>Paramètres Windows Defender SmartScreen
 
-Pris en charge sur les éditions de Windows 10 sur lesquelles Edge est installé :
+Pris en charge sur les éditions de Windows 10 sur lesquelles Microsoft Edge est installé :
 - Accueil
 - Professionnel
 - Professionnel

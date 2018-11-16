@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 ms.custom: intune-azure
-ms.openlocfilehash: 5b2c2bb6e76bd6b2da7ee7c12282c0ff22d7d3e3
-ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
+ms.openlocfilehash: 270f19b6f0babb347b04731ca270a3c5bea18217
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31617207"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225665"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Exiger l’authentification multifacteur pour l’inscription d’appareils dans Intune
 
@@ -48,24 +48,18 @@ Pour exiger l’authentification multifacteur à l’inscription d’un appareil
 >Ne configurez pas les **règles d’accès basées sur les appareils** pour l’inscription à Microsoft Intune.
 
 1. Connectez-vous à votre [portail Microsoft Azure](https://portal.azure.com) avec vos informations d’identification.
-2. Dans le portail, choisissez **Azure Active Directory**.
-2. Dans **Azure Active Directory**, choisissez **Gérer** > **Applications d’entreprise**.
-3. Dans **Applications d’entreprise**, choisissez **Gérer** > **Toutes les applications**. Vous voyez une liste de toutes les applications Azure que vous gérez.
-3. Dans la liste, choisissez **Inscription à Microsoft Intune**.
-4. Dans **Inscription à Microsoft Intune**, choisissez **Sécurité** > **Accès conditionnel**.
-5. Choisissez **Nouvelle stratégie**.
-6. Dans **Nouvelle** stratégie, tapez un nom descriptif pour la stratégie.
-7. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**.
-8. Dans **Utilisateurs et groupes**, choisissez les utilisateurs ou les groupes qui doivent recevoir cette stratégie, puis choisissez **OK**.
-9. Dans la section **Affectations**, choisissez **Applications cloud**.
-10. Sous l’onglet **Inclure** des **Applications cloud**, choisissez **Sélectionner les applications**, puis **Sélectionner** > **Inscription à Microsoft Intune**, puis choisissez **OK**.
-11. Dans la section **Affectations**, choisissez **Conditions**.
-12. Dans **Conditions**, vous n’avez pas besoin de configurer de paramètres pour MFA.
-13. Dans la section **Contrôles d’accès**, choisissez **Accorder**.
-14. Dans **Accorder**, choisissez **Accorder l’accès**, puis sélectionnez **Exiger l’authentification multifacteur**.
-    Ne sélectionnez pas **Exiger que l’appareil soit marqué comme conforme**, car la conformité d’un appareil ne peut pas être évaluée tant que celui-ci n’est pas inscrit.
-15. Choisissez **Sélectionner**.
-16. Dans **Nouvelle stratégie**, choisissez **Activer la stratégie** > **Activée**, puis choisissez **Créer**.
+2. Dans le portail, accédez à **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
+3. Dans **Azure Active Directory** sous Sécurité, choisissez **[Accès conditionnel](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+4. Choisissez **Nouvelle stratégie**.
+5. Dans **Nouvelle** stratégie, tapez un nom descriptif pour la stratégie.
+6. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**.
+7. Dans **Utilisateurs et groupes**, choisissez **Sélectionner les utilisateurs ou les groupes** et cochez **Utilisateurs et groupes**. Sélectionnez ensuite les utilisateurs et/ou les groupes auxquels attribuer cette stratégie, puis choisissez **Terminé**.
+8. Dans la section **Affectations**, choisissez **Applications cloud**.
+9. Sous l’onglet **Inclure** des **Applications cloud**, choisissez **Sélectionner les applications**, puis **Sélectionner** > **Inscription à Microsoft Intune**, puis choisissez **OK**.
+10. Dans la section **Affectations**, pour **Conditions**, vous n’avez pas besoin de configurer des paramètres MFA.
+11. Dans la section **Contrôles d’accès**, choisissez **Accorder**.
+12. Dans **Accorder**, choisissez **Accorder l’accès**, puis sélectionnez **Exiger l’authentification multifacteur**. Ne sélectionnez pas **Exiger que l’appareil soit marqué comme conforme**, car la conformité d’un appareil ne peut pas être évaluée tant que celui-ci n’est pas inscrit. Choisissez ensuite **Sélectionner**.
+13. Dans **Nouvelle stratégie**, choisissez **Activer la stratégie** > **Activée**, puis choisissez **Créer**.
 
 
 

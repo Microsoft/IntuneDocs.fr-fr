@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d4287322fd494c97cf24feb8cc16435a4405f2af
-ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
+ms.openlocfilehash: a823ea2f04d8e3a8f1ca5a2f1364060840686501
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150101"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561939"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Supprimer des certificats SCEP et PKCS dans Microsoft Intune
 
@@ -81,7 +81,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - La stratégie de conformité est supprimée de l’affectation de groupe 
 
 
-## <a name="ios-devices"></a>Appareils iOS
+## <a name="ios-devices"></a>Périphériques iOS
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
@@ -131,7 +131,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
   - L’administrateur change ou met à jour le profil PKCS
 
-## <a name="android--android-enterprise-devices"></a>Appareils Android et Android Entreprise
+## <a name="android-knox-devices"></a>Appareils Android Knox
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
@@ -177,6 +177,10 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur change ou met à jour le profil PKCS
   - Le profil de configuration est supprimé de l’affectation de groupe
   - La stratégie de conformité est supprimée de l’affectation de groupe 
+  
+  
+> [!NOTE]
+> Les scénarios ci-dessus ne s’appliquent pas aux appareils Android for Work. Les appareils Android d’ancienne génération (tous les appareils autres que Samsung, avec un profil non professionnel) ne sont pas activés pour la suppression de certificat. 
 
 ## <a name="macos-certificates"></a>Certificats macOS
 

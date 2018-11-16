@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: 5c83af252b1c728b9e3d4015cdc8bb4fd3668ad1
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410767"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561922"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et attribuer un rôle personnalisé
 
@@ -64,7 +64,9 @@ Si vous ne souhaitez plus utiliser le nouveau rôle personnalisé, vous pouvez l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce guide de démarrage rapide, vous avez créé un rôle d’opérations de sécurité personnalisé, et vous l’avez attribué à un groupe. Pour en savoir plus sur les problèmes de sécurité, consultez l’article suivant.
+Dans ce guide de démarrage rapide, vous avez créé un rôle d’opérations de sécurité personnalisé, et vous l’avez attribué à un groupe. Pour plus d’informations sur les rôles dans Intune, consultez [Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune](role-based-access-control.md).
+
+Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Bien démarrer avec les stratégies de conformité des appareils](device-compliance-get-started.md)
+> [Démarrage rapide : Créer un profil d’appareil e-mail pour iOS](quickstart-email-profile.md)

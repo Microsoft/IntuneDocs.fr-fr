@@ -1,12 +1,12 @@
 ---
-title: Démarrage rapide –Ddéfinir une longueur de mot de passe requise pour les appareils Android
+title: 'Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android'
 titlesuffix: Microsoft Intune
-description: Dans ce démarrage rapide vous allez utiliser Microsoft Intune pour définir une longueur de mot de passe requise pour les appareils Android.
+description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour définir une longueur de mot de passe minimale pour les appareils Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,18 @@ ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f925df731c3ddd45b13d976b0686d76d941c71e6
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 438121e0375559455547f4cc5453d272576681ca
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49395282"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51510803"
 ---
-# <a name="quickstart-set-a-required-password-length-for-android-devices"></a>Démarrage rapide : définir une longueur de mot de passe requise pour les appareils Android
+# <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android
 
 Dans ce démarrage rapide, vous allez utiliser Microsoft Intune pour exiger de votre personnel utilisant Android qu’il entre un mot de passe d’une longueur spécifique avant de pouvoir accéder aux informations sur ses appareils Android. 
+
+Une stratégie de conformité des appareils Intune spécifie les règles et les paramètres que ces appareils doivent respecter pour être considérés conformes. Vous pouvez utiliser ces stratégies de conformité avec un accès conditionnel pour autoriser ou bloquer l’accès aux ressources de l’entreprise. Vous pouvez également obtenir des rapports sur les appareils et prendre des mesures en cas de non-conformité.
 
 > [!IMPORTANT]
 > En plus des paramètres de mot de passe, vous devez également prendre en compte d'autres paramètres de sécurité système pour protéger votre personnel. Pour plus d'informations, consultez [Paramètres de sécurité système](compliance-policy-create-android-for-work.md#system-security-settings).
@@ -33,27 +35,34 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Pour accéder à Intune dans le Portail Azure, choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. 
 
 ## <a name="create-a-device-compliance-policy"></a>Créer une stratégie de conformité des appareils
-1. Une fois que vous avez ouvert le panneau **Microsoft Intune**, sélectionnez **Conformité des appareils** > **Stratégies** > **Créer une stratégie**.
+
+Dans ce guide de démarrage rapide, vous allez utiliser Intune pour demander aux utilisateurs d’appareils Android de votre organisation d’entrer un mot de passe d’une longueur donnée afin de pouvoir accéder aux informations stockées sur leurs appareils Android.
+
+1. Dans Intune, sélectionnez **Conformité des appareils** > **Stratégies** > **Créer une stratégie**.
 2. Ajoutez **Conformité Android** comme **Nom**. Ajoutez également une **Description**.
 3. Pour l’option **Plateforme**, sélectionnez **Android**. 
 4. Sélectionnez **Paramètres** > **Sécurité système** pour afficher le panneau Android **Sécurité système**.
-5. Dans la section **Mot de passe**, en regard d’**Exiger un mot de passe pour déverrouiller des appareils mobiles**, cliquez sur **Requérir**.
-6. En regard de **Longueur minimale du mot de passe**, entrez **6**.  
+5. Cliquez sur **Exiger** à côté de **Exiger un mot de passe pour déverrouiller des appareils mobiles**.
+6. Entrez **6** à côté de **Longueur minimale du mot de passe**. 
 
-    ![Capture d’écran de création d’un groupe dans Microsoft Intune](./media/quickstart-set-password-length-android-01.png)
+    ![Capture d’écran de création d’un groupe dans Microsoft Intune](media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-7. Lorsque vous avez terminé, cliquez sur **OK** pour fermer le panneau **Sécurité système**. 
-8. Cliquez sur **OK** pour fermer le panneau **Stratégie de conformité Android**. 
-9. Cliquez sur **Créer** pour créer la stratégie.
+7. Quand vous avez terminé, cliquez sur **OK** > **OK** > **Créer** pour créer la stratégie.
 
-Lorsque vous avez réussi à créer la stratégie, elle apparaît dans la liste **Conformité des appareils : stratégies**. 
+Une fois que la stratégie a été créée, elle apparaît dans votre liste de stratégies de conformité des appareils. 
+
+## <a name="clean-up-resources"></a>Nettoyer les ressources
+
+Quand la stratégie n’est plus nécessaire, supprimez-la. Pour ce faire, sélectionnez la stratégie de conformité et cliquez sur **Supprimer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour ce démarrage rapide, vous avez utilisé Intune pour créer une stratégie de conformité pour les appareils Android de votre personnel afin d’exiger un mot de passe d’au moins six caractères.
+Pour ce démarrage rapide, vous avez utilisé Intune pour créer une stratégie de conformité pour les appareils Android de votre personnel afin d’exiger un mot de passe d’au moins six caractères. Pour en savoir plus sur la création de stratégies de conformité, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md).
+
+Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Configurer l’inscription automatique](quickstart-setup-auto-enrollment.md)
+> [Démarrage rapide : Envoyer des notifications aux appareils non conformes](quickstart-send-notification.md)

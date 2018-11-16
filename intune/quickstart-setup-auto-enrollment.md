@@ -5,14 +5,14 @@ services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: quickstart
-ms.date: 09/21/2018
+ms.date: 11/05/2018
 ms.author: erikje
-ms.openlocfilehash: 3b713f090fb6ada884a269e286f55f6e1b1087c4
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: c219629968fbd66ee14abf61786a791bf7f5e2e0
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581575"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51510786"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Démarrage rapide : Configurer l’inscription automatique pour les appareils Windows 10
 
@@ -22,6 +22,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="prerequisites"></a>Prérequis
 
+- Abonnement Microsoft Intune : [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 - Pour effectuer les opérations décrites dans ce guide de démarrage rapide, vous devez d’abord [créer un utilisateur](quickstart-create-user.md) et [créer un groupe](quickstart-create-group.md).
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
@@ -30,17 +31,33 @@ Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrat
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurer l’inscription automatique Windows 10
 
-Pour cet exemple, vous allez utiliser l’inscription MDM afin de permettre l’inscription automatique des appareils d’entreprise et des appareils BYOD (Apportez votre propre appareil).
+Dans cet exemple, vous allez utiliser l’inscription à MDM pour inscrire automatiquement les appareils d’entreprise et les appareils BYOD (Apportez votre propre appareil). Vous vous inscrirez à un abonnement Azure Active Directory Premium gratuit.
 
-1. Dans Azure, choisissez **Azure Active Directory** > **Mobilité (gestion des données de référence et gestion des applications mobiles)** > **Microsoft Intune** > **Certain(e)s**.
-![Navigateur](media/quickstart-setup-auto-enrollment/setup-automatic-enrollment-win10.png)
-2. Choisissez **Sélectionner des groupes** > **Testeurs Contoso** > **Sélectionner**.
-3. Utilisez les valeurs par défaut pour les URL suivantes :
-    - URL des conditions d’utilisation de MDM
-    - URL de détection MDM
-    - URL de conformité de MDM
-4. Choisissez **Enregistrer**.
-5. Connectez-vous en tant qu’utilisateur du groupe sur un appareil Windows 10, puis suivez les instructions.
+1. Dans Azure, choisissez **Azure Active Directory** > **Mobility (MDM et MAM)**.
+2. Sélectionnez **Obtenir une version d’évaluation Premium gratuite pour utiliser cette fonctionnalité**. Cette option permet l’inscription automatique avec l’essai gratuit d’Azure Active Directory Premium. 
+
+    ![Sélectionner l’essai gratuit d’Azure Active Directory Premium](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
+
+    Choisissez l’option d’essai gratuit **Enterprise Mobility + Security E5**. Vous devez aussi **activer** l’essai gratuit.
+
+    ![Choisir l’option d’essai gratuit Enterprise Mobility + Security E5](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-02.png)
+
+3. Sélectionnez **Microsoft Intune**. 
+
+    ![Choisir Microsoft Intune dans la liste](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
+
+4. Sélectionnez **Certains** dans **Portée de l’utilisateur GDR** pour utiliser l’inscription automatique à MDM et gérer les données d’entreprise sur les appareils Windows de votre personnel. L’inscription automatique à MDM sera configurée pour les appareils joints à AAD et les scénarios d’appareils BYOD (Apportez votre propre appareil).
+
+    ![Sélectionner « Certains » dans la liste Configurer](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
+
+5. Choisissez **Sélectionner des groupes** > **Testeurs Contoso** > **Sélectionner** comme groupe attribué.
+
+    ![Sélectionner le groupe à inscrire](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
+
+6. Sélectionnez **Certains** dans **Portée de l’utilisateur Gestion des applications mobiles** pour gérer les données sur les appareils de votre personnel.
+7. Choisissez **Sélectionner des groupes** > **Testeurs Contoso** > **Sélectionner** comme groupe attribué. 
+8. Utilisez les valeurs par défaut pour les options de configuration restantes.
+9. Choisissez **Enregistrer**.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
@@ -48,7 +65,9 @@ Pour reconfigurer l’inscription automatique à Intune, consultez [Configurer l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce guide de démarrage rapide, vous avez appris à configurer l’inscription automatique pour des appareils Windows 10. Vous pouvez découvrir d’autres moyens d’inscrire des appareils sur toutes les plateformes.
+Dans ce guide de démarrage rapide, vous avez appris à configurer l’inscription automatique pour des appareils Windows 10. Pour plus d’informations sur l’inscription des appareils, consultez [Qu’est-ce que l’inscription d’appareils ?](device-enrollment.md)
+
+Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Article Qu’est-ce que l’inscription d’appareils ?](device-enrollment.md)
+> [Démarrage rapide : Inscrire votre appareil Windows 10](quickstart-enroll-windows-device.md)

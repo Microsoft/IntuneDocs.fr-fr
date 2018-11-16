@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
-ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
+ms.openlocfilehash: 8711b4c71c3581bde9ed1de8a5cc02f6b1a07ca7
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410361"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576900"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -88,9 +88,7 @@ Il vous montre plus de détails sur les appareils dans cet état, notamment la p
 
 ![Image du tableau de bord montrant plus d’informations sur l’appareil dans cet état spécifique](./media/compliance-policy-monitor/drill-down-details.png)
 
-Si vous voulez voir tous les appareils détenus par un utilisateur spécifique, vous pouvez filtrer le rapport graphique en tapant l’e-mail de l’utilisateur :
-
-![Filtrer sur l’adresse e-mail pour voir tous les appareils de cet utilisateur spécifique](./media/compliance-policy-monitor/idc-3.png)
+Si vous voulez voir tous les appareils appartenant à un utilisateur spécifique, vous pouvez aussi filtrer le rapport graphique en tapant l’e-mail de l’utilisateur.
 
 #### <a name="filter-and-columns"></a>Filtrer et Colonnes
 

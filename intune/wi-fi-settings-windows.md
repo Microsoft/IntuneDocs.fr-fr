@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/8/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 2252c81757b7745ed15ca86a4e7db310f03df19d
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236473"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298154"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Ajouter des paramètres Wi-Fi pour appareils Windows 10 (et ultérieurs) dans Intune
 
@@ -57,6 +57,9 @@ Cet article décrit ces paramètres.
   - **WPA/WPA2-Personnel** : option plus sécurisée, couramment utilisée pour la connectivité Wi-Fi. Pour plus de sécurité, vous pouvez également entrer une clé de réseau ou de mot de passe prépartagée. 
 
     - **Clé prépartagée** : facultatif. Affichée quand vous choisissez **WPA/WPA2-Personnel** comme type de sécurité. Lorsque le réseau de votre organisation est configuré ou configuré, un mot de passe ou une clé réseau sont également configurés. Entrez cette clé de mot de passe ou de réseau pour la valeur PSK. Entrez une chaîne comportant entre 8 et 64 caractères. Si votre clé de mot de passe ou réseau comprend 64 caractères, entrez des caractères hexadécimaux.
+    
+      > [!NOTE]
+      > Quand vous enregistrez le profil WiFi, la clé prépartagée que vous avez entrée est masquée pour des raisons de sécurité. Le filigrane de la clé prépartagée affiche toujours **Non configuré** même si la clé prépartagée a été enregistrée dans le profil. Pour changer la clé prépartagée, entrez une nouvelle clé, puis enregistrez le profil. Si vous enregistrez une clé prépartagée, modifiez la stratégie et ne renseignez pas le champ de clé prépartagée afin de continuer à utiliser la clé prépartagée existante.
 
 - **Paramètres du proxy de l’entreprise** : pour utiliser les paramètres proxy au sein de votre organisation. Les options disponibles sont les suivantes :
   - **Aucun** : aucun paramètre de proxy n’est configuré.

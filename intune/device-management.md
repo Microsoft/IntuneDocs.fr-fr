@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 8ae7a15f623b82cabed5314c4770c2edef902414
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 891b50b2280636c7a5df8ecc1a01bb10723122b5
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253559"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576725"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Qu’est-ce que la gestion des appareils Microsoft Intune ?
 
@@ -37,7 +37,7 @@ La charge de travail **Appareils** vous donne des informations sur les appareils
    - **Vue d’ensemble** affiche un aperçu des appareils inscrits et indique également le nombre d’appareils qui utilisent les différentes plateformes, dont Android et iOS.
    - **Tous les appareils** montre la liste des appareils inscrits que vous gérez.
 
-     Utilisez la fonctionnalité **Exporter** pour créer une liste .csv de tous les appareils, par incréments de 10 000 (Internet Explorer) ou 30 000 (Edge, Chrome).
+     Utilisez la fonctionnalité **Exporter** pour créer une liste .csv de tous les appareils, par incréments de 10 000 (Internet Explorer) ou 30 000 (Microsoft Edge, Chrome).
 
      Sélectionnez un appareil pour [voir plus d’informations sur cet appareil](device-inventory.md), dont les détails sur le matériel, les applications installées et son état de stratégie de conformité.
 

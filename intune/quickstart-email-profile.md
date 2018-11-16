@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/29/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,22 +15,22 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b797951c878dd90cbb7bb716b5108f94f48921c5
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 21dda51d2ddde74f07fcc173c5a4dd2a13c9c8b8
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231948"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225745"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil e-mail pour iOS
 
 Dans ce guide de démarrage rapide, vous verrez comment créer un profil d’appareil e-mail pour les appareils iOS. Ce profil spécifie les paramètres dont a besoin l’application e-mail intégrée sur l’appareil iOS pour se connecter à l’e-mail d’entreprise. Les profils d’appareil e-mail aident à standardiser les paramètres parmi les appareils et permettent aux utilisateurs finaux d’accéder à l’e-mail d’entreprise sur leurs appareils personnels sans aucune autre configuration de leur part. Pour protéger davantage votre e-mail, vous pouvez utiliser un profil e-mail pour déterminer si les appareils sont conformes, puis configurer l’accès conditionnel pour n’autoriser que les appareils conformes à accéder à l’e-mail. Pour plus d’informations sur les profils e-mail, consultez [Guide pratique pour configurer des paramètres de messagerie dans Microsoft Intune](email-settings-configure.md).
 
-Si vous n’avez pas d’abonnement Intune, [inscrivez-vous pour créer un compte d’essai gratuit](free-trial-sign-up.md).
+Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou administrateur de service Intune. Pour accéder à Intune, dans le portail Azure, choisissez **Tous les services** > **Intune**.
+Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Pour accéder à Intune, dans le portail Azure, choisissez **Tous les services** > **Intune**.
 
 ## <a name="create-an-ios-email-profile"></a>Créer un profil e-mail iOS
 1. Dans Intune, sélectionnez **Configuration de l’appareil**, puis **Profils**.
@@ -69,7 +69,7 @@ Si vous n’envisagez pas d’utiliser le profil que vous avez créé pour d’a
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce guide de démarrage rapide, vous avez créé un profil e-mail pour les appareils iOS. Maintenant, vous pouvez utiliser ce profil pour déterminer si un appareil iOS est conforme en créant une stratégie de conformité qui marque comme non conforme tout appareil iOS qui ne correspond pas au profil. Pour une protection accrue, vous pouvez créer une stratégie d’accès conditionnel qui empêche les appareils iOS non conformes d’accéder à l’e-mail.
+Dans ce guide de démarrage rapide, vous avez créé un profil e-mail pour les appareils iOS. Maintenant, vous pouvez utiliser ce profil pour déterminer si un appareil iOS est conforme en créant une stratégie de conformité qui marque comme non conforme tout appareil iOS qui ne correspond pas au profil. Pour une protection accrue, vous pouvez créer une stratégie d’accès conditionnel qui empêche les appareils iOS non conformes d’accéder à l’e-mail. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md)
+> [Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés](tutorial-protect-email-on-enrolled-devices.md)

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/26/2018
+ms.date: 11/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a95f68f0a9794047b8adb7f9ab729bb4905f2379
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: ac0348736e5975633776c86dee88555dfceb6919
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679387"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576883"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Paramètres de restriction des appareils pour Windows 10 (et versions ultérieures) dans Intune
 Cet article décrit tous les paramètres des restrictions d’appareils de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 10.
@@ -31,8 +31,8 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Capture d’écran (mobile uniquement)** - Autorise l’utilisateur à capturer le contenu de l’écran d’appareil en tant qu’image.
 - **Copier et coller (mobile uniquement)** - Autorise les actions copier-coller entre les applications sur l’appareil.
 - **Inscription manuelle** - Permet à l’utilisateur de supprimer manuellement le compte d’espace de travail de l’appareil.
-   - Ce paramètre de stratégie n’est pas appliqué si l’ordinateur est joint à Azure Active Directory et que l’inscription automatique est activée. 
-   - Ce paramètre de stratégie ne s’applique pas aux ordinateurs qui exécutent Windows 10 Famille.
+   - Ce paramètre de stratégie n’est pas appliqué si l’ordinateur est joint à Azure AD et que l’inscription automatique est activée. 
+   - Ce paramètre de stratégie ne s’applique pas aux ordinateurs Windows 10 Famille.
 - **Installation manuelle du certificat racine (mobile uniquement)** -Empêche l’utilisateur d’installer manuellement les certificats racines et les certificats CAP intermédiaires.
 
 - **Appareil photo** - Autorise ou bloque l’utilisation de l’appareil photo sur l’appareil.
@@ -51,9 +51,9 @@ Cet article décrit tous les paramètres des restrictions d’appareils de Micro
 - **Découverte d’appareil** - Empêche un appareil d’être détecté par d’autres appareils.
 - **Sélecteur de tâches (mobile uniquement)** - Bloque le sélecteur de tâches sur l’appareil.
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)** - Empêche un message d’erreur de s’afficher sur l’appareil si aucune carte SIM n’est détectée.
-- **Espace de travail Windows Ink** - Empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. Quand ce paramètre n’est pas configuré, l’espace de travail Windows Ink est activé (fonctionnalité activée), et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
+- **Espace de travail Windows Ink** - Empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. S’il a la valeur **Non configuré**, l’espace de travail Windows Ink est activé (fonctionnalité activée) et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : permet aux utilisateurs avec des droits d’administration de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **Ctrl+Win+R** sur l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
-- **Require users to connect to network during device setup (Windows Insider only)**  (Exiger des utilisateurs qu’ils se connectent au réseau pendant la configuration de l’appareil (Windows Insider uniquement)) : choisissez **Exiger** pour exiger que l’appareil se connecte à un réseau avant de passer à la page Réseau pendant la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
+- **Demander aux utilisateurs de se connecter au réseau pendant la configuration de l’appareil (Windows Insider uniquement)** : choisissez **Exiger** pour que l’appareil se connecte à un réseau avant de passer à la page Réseau durant la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
 
 ## <a name="password"></a>Mot de passe
 -   **Mot de passe** - Demande à l’utilisateur final d’entrer un mot de passe pour accéder à l’appareil.
@@ -70,14 +70,14 @@ Pour les appareils exécutant Windows 10 Mobile : après le nombre d’échecs
 
 ## <a name="personalization"></a>Personalization
 
-- **URL de l’image d’arrière-plan du poste de travail (Desktop uniquement)** - Spécifie l’URL d’une image au format JPEG que vous souhaitez utiliser comme papier peint du Bureau Windows. Les utilisateurs ne peuvent pas modifier cette option.
+- **URL de l’image d’arrière-plan du poste de travail (Desktop uniquement)** - Entrez l’URL d’une image au format JPEG que vous souhaitez utiliser comme papier peint du Bureau Windows. Les utilisateurs ne peuvent pas changer d’image.
 
 ## <a name="privacy"></a>Confidentialité
 
 -   **Personnalisation des entrées** – Ne pas autoriser l’utilisation des services cloud de reconnaissance vocale pour les applications du Microsoft Store, la dictée ou Cortana. Si vous autorisez ces services, Microsoft peut collecter des données vocales pour améliorer le service.
 -   **Acceptation automatique des invites de consentement de l’utilisateur pour le couplage et la confidentialité** – Autoriser Windows à accepter automatiquement les messages de consentement de couplage et de confidentialité lors de l’exécution des applications.
-- **Publier les activités de l’utilisateur** : affectez la valeur **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches.
-- **Activités locales uniquement** : affectez la valeur **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches en fonction uniquement de l’activité locale.
+- **Publier les activités de l’utilisateur** : sélectionnez **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches.
+- **Activités locales uniquement** : sélectionnez **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches en fonction uniquement de l’activité locale.
 
 Vous pouvez définir les informations auxquelles toutes les applications sur l’appareil peuvent accéder. Vous pouvez définir des exceptions pour chaque application à l’aide de l’option **Exceptions de confidentialité par application**.
 
@@ -98,8 +98,8 @@ Vous pouvez définir les informations auxquelles toutes les applications sur l�
 - **Téléphone** - Définir si cette application peut accéder au téléphone.
 - **Radios** - Certaines applications utilisent des signaux radio, comme Bluetooth, dans votre appareil pour envoyer et recevoir des données, et doivent activer et désactiver ces signaux radio. Définissez si cette application peut contrôler ces signaux radio.
 - **Tâches** - Définir si cette application peut accéder à vos tâches.
-- **Appareils approuvés** - Définir si cette application peut utiliser des appareils approuvés (matériel auquel vous vous êtes déjà connecté ou fourni avec ce PC, cette tablette ou ce téléphone), par exemple, des téléviseurs, des projecteurs, etc.
-- **Commentaires et diagnostics** - Définir si cette application peut accéder aux informations de diagnostic.
+- **Appareils approuvés** - Choisir si cette application peut utiliser des appareils approuvés (matériel auquel vous vous êtes déjà connecté ou fourni avec ce PC, cette tablette ou ce téléphone), par exemple, des téléviseurs, des projecteurs, etc.
+- **Commentaires et diagnostics** - Choisir si cette application peut accéder aux informations de diagnostic.
 - **Synchroniser avec les appareils** - Définir si cette application peut automatiquement partager et synchroniser des informations avec des appareils sans fil qui ne sont pas explicitement jumelés avec ce PC, cette tablette ou ce téléphone.
 
 ## <a name="per-app-privacy-exceptions"></a>Exceptions de confidentialité par application
@@ -153,38 +153,38 @@ Vous pouvez ajouter des applications qui doivent avoir un comportement de confid
 -   **Jeux DVR (Desktop uniquement)** - Détermine si l’enregistrement et la diffusion des jeux sont autorisés ou non.
 -   **Applications du Store uniquement** -Détermine si les utilisateurs peuvent installer des applications à partir d’emplacements autres que l’App Store.
 
-## <a name="edge-browser"></a>Navigateur Microsoft Edge
+## <a name="microsoft-edge-browser"></a>Navigateur Microsoft Edge
 
--   **Navigateur Microsoft Edge (mobile uniquement)** - autorise l’utilisation du navigateur web Edge sur l’appareil.
--   **Liste déroulante des barres d’adresse (Desktop uniquement)** – Permet d’empêcher Edge d’afficher une liste de suggestions dans une liste déroulante quand vous tapez. Cela aide à réduire l’utilisation de la bande passante réseau entre Microsoft Edge et les services Microsoft.
--   **Synchroniser les favoris entre les navigateurs Microsoft (Desktop uniquement)** – Permet à Windows de synchroniser les Favoris entre Internet Explorer et Edge.
--   **Envoyer un en-tête Do Not Track** - Configure le navigateur Microsoft Edge pour envoyer des en-êtes Do Not Track aux sites web que les utilisateurs visitent.
+-   **Navigateur Microsoft Edge (mobile uniquement)** - Autorise l’utilisation du navigateur web Microsoft Edge sur l’appareil.
+-   **Liste déroulante des barres d’adresse (Desktop uniquement)** – Empêche Microsoft Edge d’afficher une liste de suggestions dans une liste déroulante quand vous tapez. Cette option aide à réduire l’utilisation de la bande passante réseau entre Microsoft Edge et les services Microsoft.
+-   **Synchroniser les favoris entre les navigateurs Microsoft (Desktop uniquement)** – Permet à Windows de synchroniser les Favoris entre Internet Explorer et Microsoft Edge.
+-   **Envoyer un en-tête Do Not Track** : configure le navigateur Microsoft Edge pour envoyer des en-têtes Do Not Track aux sites web que les utilisateurs visitent.
 -   **Cookies** - Permet au navigateur d’enregistrer les cookies internet sur l’appareil.
 -   **JavaScript** - Autorise l’exécution de scripts, tels que JavaScript, dans le navigateur Microsoft Edge.
 -   **Fenêtres contextuelles** - Bloque les fenêtres publicitaires dans le navigateur (s’applique à Windows 10 Desktop uniquement).
 -   **Suggestions de recherche** - Permet à votre moteur de recherche de suggérer des sites à mesure que vous saisissez des expressions de recherche.
 -   **Envoyer le trafic intranet vers Internet Explorer** - Permet aux utilisateurs d’ouvrir des sites web intranet dans Internet Explorer (Windows 10 Desktop uniquement).
 -   **Remplissage automatique** - Autoriser les utilisateurs à modifier les paramètres de saisie semi-automatique dans le navigateur (Windows 10 Desktop uniquement).
--   **Gestionnaire de mots de passe** - Activer ou désactiver la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
+-   **Gestionnaire de mots de passe** : activez ou désactivez la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
 -   **Emplacement de la liste des sites en mode entreprise** - Indique où trouver la liste des sites web qui s’ouvrent en Mode entreprise. Les utilisateurs ne peuvent pas modifier cette liste.<br>(Windows 10 Desktop uniquement).
--   **Outils de développement** - Empêche l’utilisateur final d’ouvrir les outils de développement Edge.
--   **Extensions** - Autoriser l’utilisateur final à installer des extensions Edge sur l’appareil.
+-   **Outils de développement** - Empêche l’utilisateur final d’ouvrir les outils de développement Microsoft Edge.
+-   **Extensions** - Autoriser l’utilisateur final à installer des extensions Microsoft Edge sur l’appareil.
 -   **Navigation inPrivate** - Empêche l’utilisateur final d’ouvrir des sessions de navigation InPrivate.
--   **Afficher la page de la première exécution** – Empêche l’affichage de la page d’introduction lors de la première exécution d’Edge.
+-   **Afficher la page de la première exécution** – Empêche l’affichage de la page d’introduction lors de la première exécution de Microsoft Edge.
     -   **URL de la première exécution** – Spécifie l’URL d’une page qui s’affiche la première fois qu’un utilisateur exécute Microsoft Edge (Windows 10 Mobile uniquement).
--   **Pages d’accueil** - Ajoute une liste de sites que vous souhaitez utiliser comme pages d’accueil dans le navigateur Microsoft Edge (poste de travail uniquement).
+-   **Pages d’accueil** - Ajoute une liste de sites que vous souhaitez utiliser comme pages d’accueil dans le navigateur Microsoft Edge (poste de travail uniquement).
 -   **Changement des pages de démarrage** – Permet aux utilisateurs de changer les pages de démarrage affichées quand Microsoft Edge est ouvert. Utilisez le paramètre Pages d’accueil pour créer la page, ou liste de pages, qui est ouverte quand Microsoft Edge démarre.
--   **Bloquer l'accès aux indicateurs about** - Empêcher l’utilisateur final d’accéder à la page des indicateurs about: dans Microsoft Edge, qui contient les paramètres expérimentaux et de développement.
--   **Adresse IP localhost WebRTC** - Bloque l’affichage de l’adresse IP localhost des utilisateurs lors d’appels téléphoniques effectués à l’aide du protocole RTC web.
+-   **Bloquer l’accès aux indicateurs about** - Empêcher l’utilisateur final d’accéder à la page about:flags dans Microsoft Edge, qui contient les paramètres expérimentaux et de développement.
+-   **Adresse IP localhost WebRTC** - Bloquer l’affichage de l’adresse IP localhost des utilisateurs lors d’appels téléphoniques effectués à l’aide du protocole RTC web.
 -   **Moteur de recherche par défaut** - Spécifie le moteur de recherche par défaut à utiliser. Les utilisateurs finaux peuvent modifier cette valeur à tout moment.
--   **Effacer les données de navigation à la sortie** – Efface l’historique et les données de navigation quand l’utilisateur quitte Edge.
+-   **Effacer les données de navigation à la sortie** – Efface l’historique et les données de navigation quand l’utilisateur quitte Microsoft Edge.
 -   **Collecte de données pour les vignettes dynamiques** – Empêche Windows de collecter des informations sur la vignette dynamique quand les utilisateurs épinglent un site au menu Démarrer à partir de Microsoft Edge.
 -  **Liste des favoris** - Définit le chemin au fichier de favoris. Par exemple, http://contoso.com/favorites.html.
 -  **Limiter les modifications des favoris** - Choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter, d’importer, de trier ou de modifier la liste des favoris. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
-- **SmartScreen pour Microsoft Edge** - Activer Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
+- **SmartScreen pour Microsoft Edge** : activez Microsoft Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
 - **Accès à un site malveillant** - Empêcher les utilisateurs d'ignorer les avertissements concernant le filtre Windows Defender SmartScreen et d’accéder au site.
 - **Téléchargement des fichiers non vérifiés** - Empêcher les utilisateurs d'ignorer les avertissements concernant le filtre Windows Defender SmartScreen et de télécharger des fichiers non vérifiés.
 
@@ -235,7 +235,27 @@ Vous pouvez ajouter des applications qui doivent avoir un comportement de confid
 
 ## <a name="start"></a>Démarrer
 
-- **Désépingler les applications de la barre des tâches** - Empêche l’utilisateur de désépingler des applications à partir du menu Démarrer.
+- **Disposition du menu Démarrer** - Pour personnaliser le menu Démarrer sur les appareils de bureau, vous pouvez charger un fichier XML qui inclut vos personnalisations, notamment l’ordre dans lequel les applications sont listées. Les utilisateurs ne peuvent pas changer la disposition du menu Démarrer que vous entrez.
+- **Épingler des sites web à des vignettes dans le menu Démarrer** - Importez des images provenant de Microsoft Edge et affichez-les sous forme de liens dans le menu Démarrer de Windows pour les appareils de bureau.
+- **Désépingler les applications de la barre des tâches** - Choisissez **Bloquer** pour empêcher l’utilisateur de désépingler des applications du menu Démarrer.
+- **Changement rapide d’utilisateur** - Choisissez **Bloquer** pour empêcher le passage d’un utilisateur connecté à un autre sans déconnexion.
+- **Applications les plus utilisées** - Choisissez **Bloquer** pour ne pas afficher les applications les plus utilisées dans le menu Démarrer. Le bouton bascule correspondant dans l’application Paramètres est également désactivé.
+- **Applications ajoutées récemment** - Choisissez **Bloquer** pour ne pas afficher les applications ajoutées récemment dans le menu Démarrer. Le bouton bascule correspondant dans l’application Paramètres est également désactivé.
+- **Mode de l’écran de démarrage** - Choisissez comment afficher l’écran de démarrage. Vous avez le choix entre **Plein écran** et **Ne pas utiliser le plein écran**.
+- **Éléments ouverts récemment dans les listes de raccourcis** - Choisissez **Bloquer** pour ne pas afficher les listes de raccourcis dans le menu Démarrer et la barre des tâches. Le bouton bascule correspondant dans l’application Paramètres est également désactivé.
+- **Liste d’applications** - Choisissez comment afficher l’application Paramètres. Les options disponibles sont les suivantes : 
+  - Réduire
+  - Réduire et désactiver l’application Paramètres 
+  - Supprime et désactive l’application Paramètres
+- **Bouton d’alimentation** - Choisissez **Bloquer** pour ne pas afficher le bouton d’alimentation dans le menu Démarrer.
+- **Vignette de l’utilisateur** - Choisissez **Bloquer** pour ne pas afficher la vignette de l’utilisateur dans le menu Démarrer.
+  - **Verrouiller** - Choisissez **Bloquer** pour ne pas afficher l’option `Lock` dans la vignette de l’utilisateur du menu Démarrer.
+  - **Déconnexion** - Choisissez **Bloquer** pour ne pas afficher l’option `Sign out` dans la vignette de l’utilisateur du menu Démarrer.
+- **Arrêter** - Choisissez **Bloquer** pour ne pas afficher les options `Update and shut down` et `Shut down` dans le bouton d’alimentation du menu Démarrer.
+- **Veille** - Choisissez **Bloquer** pour ne pas afficher l’option `Sleep` dans le bouton d’alimentation du menu Démarrer.
+- **Mettre en veille prolongée** - Choisissez **Bloquer** pour ne pas afficher l’option `Hibernate` dans le bouton d’alimentation du menu Démarrer.
+- **Changer de compte** - Choisissez **Bloquer** pour ne pas afficher `Switch account` dans la vignette de l’utilisateur du menu Démarrer.
+- **Options de redémarrage** - Choisissez **Bloquer** pour ne pas afficher les options `Update and restart` et `Restart` dans le bouton d’alimentation du menu Démarrer.
 - **Documents sur Démarrer** - Permet de masquer ou d’afficher le dossier Documents dans le menu Démarrer de Windows.
 - **Téléchargements sur Démarrer** - Permet de masquer ou d’afficher le dossier Téléchargements dans le menu Démarrer de Windows.
 - **Explorateur de fichiers sur Démarrer** - Permet de masquer ou d’afficher l’application Explorateur de fichiers dans le menu Démarrer de Windows.
@@ -269,25 +289,25 @@ Un appareil plein écran exécute généralement une application ou un ensemble 
 #### <a name="single-app-kiosks"></a>Applications uniques plein écran
 entrez les paramètres suivants :
 
-- **Compte d’utilisateur** : entrez le compte d’utilisateur local (pour l’appareil), un compte de domaine AD ou une connexion de compte Azure AD associée à l’application plein écran.
+- **Compte d’utilisateur** : entrez le compte d’utilisateur local (pour l’appareil), un compte de domaine AD ou un compte Azure AD associé à l’application plein écran.
   - Compte local : entrez-le sous la forme `devicename\accountname`, `.\accountname` ou `accountname`
   - Compte de domaine : entrez-le sous la forme `domain\accountname`
   - Compte Azure AD : entrez-le sous la forme `AzureAD\emailaddress`. Veillez à entrer « AzureAD », car c’est un nom de domaine fixe. Faites-le suivre de l’adresse e-mail d’Azure AD. Par exemple, entrez `AzureAD\user@contoso.onmicrosoft.com`.
 
-    Pour les appareils plein écran dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Si vous utilisez un compte Azure AD pour le mode plein écran, veillez à entrer `AzureAD\user@yourorganization.com`.
+    Pour les appareils kiosques dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Si vous utilisez un compte Azure AD pour le mode kiosque, veillez à entrer `AzureAD\user@yourorganization.com`.
 
-- **Identifiant AUMID de l’application** : entrez l’identifiant AUMID de l’application plein écran. Pour plus d’informations, consultez [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Rechercher l’identifiant AUMID d’une application installée).
+- **Identifiant AUMID de l’application** : entrez l’identifiant AUMID de l’application kiosque. Pour plus d’informations, consultez [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Rechercher l’identifiant AUMID d’une application installée).
 
-#### <a name="multi-app-kiosks"></a>Applications multiples plein écran
-Les [Applications multiples plein écran](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) utilisent une configuration plein écran qui répertorie les applications autorisées et d’autres paramètres. 
+#### <a name="multi-app-kiosks"></a>Kiosques multi-applications
+Les [Kiosques multi-applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) utilisent une configuration kiosque qui liste les applications autorisées et d’autres paramètres. 
 
 Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou sélectionnez une configuration existante). Ensuite, entrez les paramètres suivants :
 
 - **Nom de configuration plein écran** : entrez un nom convivial utilisé pour identifier la configuration.
 
-- **Applications plein écran** : entrez les applications qui sont disponibles dans le menu Démarrer. Les applications que vous ajoutez sont les seules que l’utilisateur peut ouvrir.
+- **Applications Kiosque** : entrez les applications qui sont disponibles dans le menu Démarrer. Les applications que vous ajoutez sont les seules que l’utilisateur peut ouvrir.
 
-  - **Type d’application** : choisissez le type de l’application plein écran :
+  - **Type d’application** : choisissez le type de l’application kiosque :
     - **Application Win32** : application de bureau traditionnelle. Vous avez besoin du chemin qualifié complet de l’exécutable, en ce qui concerne l’appareil.
     - **Application UWP** : application Windows universelle. Vous avez besoin de [l’identifiant AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -298,11 +318,11 @@ Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou s�
 - **Disposition du menu Démarrer** : entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
 
 
-  [Créer une borne Windows10 qui exécute plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) fournit plus de détails sur l’utilisation et la création de fichiers XML.
+  [Créer un kiosque Windows10 qui exécute plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) fournit plus de détails sur l’utilisation et la création de fichiers XML.
 
-- **Utilisateurs attribués** : ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Quand le compte se connecte, seules les applications définies dans la configuration sont disponibles. Le compte peut être local sur l’appareil, ou il peut s’agir d’une connexion de compte Azure AD associée à l’application plein écran.
+- **Utilisateurs attribués** : ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Quand le compte se connecte, seules les applications définies dans la configuration sont disponibles. Le compte peut être local sur l’appareil, ou il peut s’agir d’un compte Azure AD associé à l’application kiosque.
 
-    Pour les appareils plein écran dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode plein écran, utilisez le format `domain\user@tenant.com`.
+    Pour les kiosques dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode kiosque, utilisez le format `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Antivirus Windows Defender
 
@@ -347,9 +367,9 @@ Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas suppr
 ## <a name="network-proxy"></a>Proxy réseau
 
 -   **Détecter automatiquement les paramètres du proxy** - Quand cette option est activée, l’appareil tente de trouver le chemin d’un script PAC.
--   **Utiliser un script de proxy** - Sélectionnez cette option si vous souhaitez spécifier un chemin d’accès à un script PAC pour configurer le serveur proxy.
+-   **Utiliser un script de proxy** - Sélectionnez cette option pour entrer un chemin à un script PAC pour configurer le serveur proxy.
     -   **URL de l’adresse du script de configuration** - Entrez l’URL d’un script PAC que vous souhaitez utiliser pour configurer le serveur proxy.
--   **Utiliser un serveur proxy manuel** - Sélectionnez cette option si vous souhaitez renseigner manuellement les informations du serveur proxy.
+-   **Utiliser un serveur proxy manuel** - Sélectionnez cette option pour entrer manuellement les informations du serveur proxy.
     -   **Adresse** - Entrez le nom ou l’adresse IP du serveur proxy.
     -   **Numéro de port** - Saisissez le numéro de port de votre serveur proxy.
     -   **Exceptions du proxy** - Entrez les URL qui ne doivent pas utiliser le serveur proxy. Utilisez des points-virgules pour séparer chaque élément.
@@ -374,12 +394,15 @@ Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas suppr
 
 ## <a name="cloud-printer"></a>Imprimante cloud
 
-- **URL de découverte d'imprimantes** - Point de terminaison pour la découverte des imprimantes cloud.
-- **URL d'autorisation d'accès à l'imprimante** : point de terminaison d'authentification pour acquérir des jetons OAuth.
-- **GUID de l'application cliente native Azure** : GUID identifiant l'application cliente autorisée à récupérer des jetons OAuth à partir d'OAuthAuthority.
-- **URI de ressource du service d’impression** -URI de ressource OAuth pour le service d'impression tel que configuré dans le portail Azure.
-- **Nombre maximal d'imprimantes à interroger (Mobile uniquement)** - Nombre maximal d'imprimantes à interroger à partir d'un point de terminaison de découverte.
-- **URI de ressource du service de découverte d’imprimantes** - 	URI de ressource OAuth pour le service de découverte d'imprimantes tel que configuré dans le portail Azure.
+- **URL de découverte d’imprimantes** - Entrez l’URL de découverte des imprimantes cloud.
+- **URL d’autorisation d’accès à l’imprimante** : Entrez l’URL du point de terminaison d’authentification pour obtenir des jetons OAuth. Par exemple, entrez quelque chose du genre `https://login.microsoftonline.com/your Azure AD Tenant ID`.
+- **GUID de l’application cliente native Azure** : Entrez le GUID identifiant l’application cliente autorisée à obtenir des jetons OAuth à partir d’OAuthAuthority.
+- **URI de ressource du service d’impression** - Entrez l’URI de ressource OAuth pour le service d’impression configuré dans le portail Azure. Par exemple, entrez quelque chose du genre `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
+- **Nombre maximal d’imprimantes à interroger (Mobile uniquement)** - Entrez le nombre maximal d’imprimantes à interroger. Par exemple, entrez `10`.
+- **URI de ressource du service de découverte d’imprimantes** - Entrez l’URI de ressource OAuth pour le service de découverte d’imprimantes configuré dans le portail Azure. Par exemple, entrez quelque chose du genre `http://MopriaDiscoveryService/CloudPrint`.
+
+> [!TIP]
+> Après avoir configuré une [impression cloud hybride Windows Server](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview), vous pouvez configurer ces paramètres et les déployer sur des appareils Windows.
 
 ## <a name="local-printer"></a>Imprimante locale
 - **Imprimantes** - Liste des imprimantes locales qui ont été ajoutées.
@@ -405,4 +428,4 @@ Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas suppr
 - **RCS (mobile uniquement)** - Désactiver la fonctionnalité d'envoi/de réception de RCS (Rich Communication Services) sur l'appareil.
 
 ## <a name="more-information"></a>Plus d’informations
-Pour plus de détails techniques sur chaque paramètre et sur les éditions de Windows prises en charge, consultez [Référence CSP de stratégie Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).
+Pour plus de détails techniques sur chaque paramètre et sur les éditions de Windows prises en charge, consultez [Référence CSP de stratégie Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).

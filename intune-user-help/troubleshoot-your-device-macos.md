@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 003bf4046a997e3633105e4dc41c93a82e16ee40
-ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
+ms.openlocfilehash: 17b99c4a089fc426ecfeea803737fa8704f3b0a6
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46505714"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212306"
 ---
 # <a name="fix-common-issues-with-your-macos-device"></a>Résoudre les problèmes courants rencontrés avec votre appareil macOS
 
@@ -33,3 +33,6 @@ Apprenez à résoudre les problèmes courants que vous rencontrez pendant et apr
 - [Mon appareil géré par Jamf n’est pas conforme](device-little-different-jamf.md)
 - [Je ne trouve pas le numéro de série](how-do-i-find-the-serial-number-on-my-device-macos.md)
 - [J’ai reçu une demande d’identification de mon appareil](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+- [J’ai reçu une erreur lors de l’inscription d’une machine virtuelle macOS](unable-to-get-macOS-device-managed.md)  
+- [J’ai reçu un message indiquant que mon appareil macOS a un numéro de série restreint](unable-to-get-macOS-device-managed.md)  
+- [Mon appareil est déjà attribué à un autre utilisateur](unable-to-get-macOS-device-managed.md)  
