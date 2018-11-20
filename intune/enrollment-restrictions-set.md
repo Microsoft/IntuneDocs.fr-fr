@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de77ad92eac4aa869aec504f1762ad6f216c74d2
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: 97543ec74225ef86208000bccb2a8ad7852dd9c1
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602144"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610054"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -66,7 +66,7 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
 
 ## <a name="set-device-type-restrictions"></a>Définition des restrictions de type d'appareil
 
-Pour changer les paramètres d’une restriction de type d’appareil, effectuez les étapes ci-dessous. Ces restrictions n’ont pas d’effet sur les appareils qui ont déjà été inscrits. Les appareils inscrits avec [l’agent de PC Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune.md) ne peuvent pas être bloqués avec cette fonctionnalité.
+Pour changer les paramètres d’une restriction de type d’appareil, effectuez les étapes ci-dessous. Ces restrictions n’ont pas d’effet sur les appareils qui ont déjà été inscrits. Les appareils inscrits avec [l’agent de PC Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) ne peuvent pas être bloqués avec cette fonctionnalité.
 
 1. Connectez-vous au portail Azure.
 2. Sélectionnez **Autres services**, recherchez **Intune**, puis choisissez **Intune**.
@@ -100,11 +100,11 @@ Les méthodes suivantes sont qualifiées comme étant autorisées en tant qu’i
 - L’appareil s’inscrit via [l’inscription automatique à partir de SCCM pour la cogestion](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Les inscriptions suivantes sont marquées comme étant d’entreprise par Intune mais, dans la mesure où elles n’offrent pas le contrôle par appareil d’administrateur Intune, elles seront bloquées :
- - [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory durant la configuration de Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md)\*.
-- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md)*.
+ - [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory durant la configuration de Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
 Les méthodes d’inscription personnelle suivantes seront également bloquées :
-- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [ajout de compte professionnel à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md)\*.
+- [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [ajout de compte professionnel à partir des paramètres Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
 - Option [Inscription à MDM uniquement]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) à partir de Paramètres Windows.
 
 \* Ces appareils ne sont pas bloqués s’ils sont inscrits auprès d’Autopilot.

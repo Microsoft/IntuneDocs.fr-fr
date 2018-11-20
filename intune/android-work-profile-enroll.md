@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1943781dcf95209b575cdb6e36d5065275626f
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: a38c5db1e608cb5d9a047dc72ee9109e840096e0
+ms.sourcegitcommit: 4d5e811d451aeb6307e0f64818e182e471ae1ed4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255085"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51618988"
 ---
 # <a name="set-up-enrollment-of-android-work-profile-devices"></a>Configurer l’inscription des appareils avec profil professionnel Android
 
@@ -56,5 +56,5 @@ Pour approuver le portail d’entreprise Intune, effectuez les étapes suivantes
 5.  Sélectionnez **Keep approved when app requests new permissions** (Laisser approuvé quand l’application demande de nouvelles autorisations), puis cliquez sur **Enregistrer.**
 
 ## <a name="next-steps-for-android-work-profiles"></a>Prochaines étapes pour les profils professionnels Android
-- [Déployer des applications de profil professionnel Android](store-apps-android.md)
+- [Déployer des applications de profil professionnel Android](apps-add-android-for-work.md)
 - [Ajouter des stratégies de configuration de profil professionnel Android](device-profiles.md)
