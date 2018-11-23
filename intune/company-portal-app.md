@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 6a249962c4ac75e51be082112b884a5825d4ef2a
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236286"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811510"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "50236286"
 Le portail d’entreprise Microsoft Intune permet aux utilisateurs d’accéder aux données de l’entreprise et d’effectuer des tâches courantes, notamment l’inscription d’appareils ou l’installation d’applications, et d’accéder à des informations d’assistance fournies par le département informatique.        
 
 > [!Tip]        
-> Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise.       
+> Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise. Notez que les utilisateurs doivent disposer d’une licence Intune pour accéder au site web Portail d’entreprise.
 
 La personnalisation du Portail d’entreprise permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour cela, à partir de la charge de travail **Applications clientes**, choisissez **Configuration** > **Personnalisation de Portail d’entreprise**, puis configurez les paramètres nécessaires.  
 
@@ -48,7 +48,7 @@ Les champs marqués d’un astérisque (*) sont obligatoires.
 | **URL de la déclaration de confidentialité** |     79     | Vous pouvez spécifier la déclaration de confidentialité de votre entreprise qui s’affiche lorsque les utilisateurs cliquent sur les liens de confidentialité à partir du Portail d’entreprise. Vous devez entrer une URL valide au format `<https://www.contoso.com>`. |
 
 ## <a name="support-information"></a>Informations concernant le support      
-Entrez les informations de support de votre entreprise afin de fournir à vos employés un contact pour les questions relatives à Intune.       
+Entrez les informations de support de votre entreprise afin de fournir à vos employés un contact pour les questions relatives à Intune.          
 
 |Nom du champ|Longueur maximale|Plus d’informations|
 |---|---|---|
@@ -84,24 +84,33 @@ Choisissez un logo qui ressort bien sur un arrière-plan blanc ou clair.
 
 ### <a name="brand-image-for-company-portal"></a>Image de marque pour le Portail d’entreprise
 
-Affichez une image de marque qui reflète la marque de votre société. La prise en charge d’une image de marque est ajoutée aux applications Portail d’entreprise, mais l’image peut ne pas être visible sur toutes les plateformes.
+Affichez une image de marque qui reflète la marque de votre société. Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du panneau pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p><ul><li>Largeur recommandée pour l’image : supérieure à 1125 px, (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p>*Remarque* : l’image peut s’afficher différemment pour différentes plateformes.<p><ul><li>Largeur recommandée pour l’image : supérieure à 1125 px, (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-vis du Portail d’entreprise en présentant votre société de manière affirmée. Voici quelques conseils que vous pouvez suivre pour acquérir, choisir et optimiser l’image dans le Portail d’entreprise. 
 
-- Contactez votre service marketing ou artistique. Peut-être a-t-il déjà un ensemble approuvé d’images de marque personnalisées. Il peut également être en mesure de vous aider à optimiser les images en fonction de vos besoins. 
+- Contactez votre service marketing ou artistique. Peut-être a-t-il déjà un ensemble approuvé d’images de marque. Il peut également être en mesure de vous aider à optimiser les images en fonction de vos besoins. 
 
-- Envisagez des compositions avec orientation paysage et orientation portrait. L’image doit avoir suffisamment d’arrière-plan autour du point focal. L’image peut être rognée en fonction de l’orientation et de la taille de l’appareil. 
+- Envisagez des compositions avec orientation paysage et orientation portrait. L’image doit avoir suffisamment d’arrière-plan autour du point focal. L’image peut être rognée en fonction de l’orientation, de la taille et de la plateforme de l’appareil. 
 
 - Évitez d’utiliser une image générique, tirée d’une banque d’images. L’image doit refléter la marque de votre société et sembler familière aux utilisateurs. Si vous n’en avez pas, il est préférable de ne pas en utiliser plutôt que de recourir à une image générique dénuée de sens pour l’utilisateur. 
 
 - Supprimez les métadonnées inutiles. Le fichier image peut être accompagné de métadonnées telles que le profil de l’appareil photo, l’emplacement géographique, le titre ou la légende. Utilisez un outil d’optimisation d’image pour éliminer ces informations afin de conserver la qualité tout en respectant la limite de taille de fichier. 
 
-Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du panneau pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
+Lorsqu’une image de marque est ajoutée ou modifiée dans Intune, l’utilisateur final peut ne pas voir la modification sur les appareils iOS jusqu'à ce que le Portail d’entreprise ait reconnu la modification au démarrage, puis a été redémarré pour afficher l’image de marque. 
 
+### <a name="brand-image-examples"></a>Exemples d’image de marque
+
+L’image suivante représente un exemple de personnalisation d’image iPad :
+
+![Capture d’écran d’exemple de personnalisation d’image iPhone](media/company-portal-app/company-portal-app-03.png)
+
+L’image suivante représente un exemple de personnalisation d’image iPhone :
+
+![Capture d’écran d’exemple de personnalisation d’image iPad](media/company-portal-app/company-portal-app-02.png)
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Raccourcis clavier du Portail d’entreprise Windows
 
@@ -125,6 +134,10 @@ Les raccourcis clavier suivants sont disponibles dans l’application Portail d�
 |  | Supprimer | Ctrl+D ou Supprimer |
 |  | Vérifier l’accès | Ctrl+M ou F9 |
 | Détails de l’application | Installer | Ctrl+I |
+
+Les utilisateurs finaux pourront également voir les raccourcis disponibles dans l’application Portail d’entreprise Windows.
+
+![Capture d’écran des raccourcis disponibles dans l’application Portail d’entreprise Windows](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

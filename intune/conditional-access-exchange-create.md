@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d44b7483d65eeb7b2a39783fb113c444184db4f3
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: b1e07bd67d4bf8b776500be01571deddb1e5e58f
+ms.sourcegitcommit: 630dfe1413c1819f35aa941ffc888a7084771a55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51709136"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Créer une stratégie d’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité
 
@@ -66,7 +66,7 @@ Avant de configurer l’accès conditionnel, vérifiez les éléments suivants :
 - Clients de messagerie EAS sur les **appareils avec profil professionnel Android :** seules les applications **Gmail** et **Nine Work for Android Enterprise** dans le **profil professionnel** sont prises en charge sur les appareils avec profil professionnel Android. Pour que l’accès conditionnel fonctionne avec les profils professionnels Android, vous devez déployer un profil de messagerie pour l’application Gmail ou Nine Work for Android Enterprise, et également déployer ces applications comme installation obligatoire.
 
 > [!NOTE]
-> L’application Microsoft Outlook pour Android et iOS n’est pas prise en charge. 
+> Microsoft Outlook pour Android et iOS n’est pas pris en charge via le connecteur local Exchange. Si vous souhaitez tirer parti des stratégies d’accès conditionnel d’Azure Active Directory et des stratégies Intune App Protection avec Outlook pour iOS et Android pour vos boîtes aux lettres locales, consultez [Utilisation de l’authentification hybride moderne avec Outlook pour iOS et Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
 
 ### <a name="support-for-pcs"></a>Prise en charge des PC
 
@@ -77,11 +77,11 @@ L'application native **Courrier** sur Windows 8.1 et les versions ultérieures (
 
 1. Accédez au [portail Azure](https://portal.azure.com/) et connectez-vous avec vos informations d’identification Intune.
 
-1. Une fois correctement connecté, le **tableau de bord Azure** apparaît.
+1. Une fois que vous êtes connecté, vous voyez le **tableau de bord Azure**.
 
-1. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
+1. Choisissez  **Tous les services**  dans le menu de gauche, puis entrez  **Intune**  dans le filtre de la zone de texte.
 
-1. Choisissez **Intune**, vous voyez le **tableau de bord Intune**.
+1. Choisissez  **Intune**, vous voyez le **tableau de bord Intune**.
 
 1. Choisissez **Accès local**. Le volet **Accès local** affiche l’état de la stratégie d’accès conditionnel et les appareils qui en sont affectés.
 

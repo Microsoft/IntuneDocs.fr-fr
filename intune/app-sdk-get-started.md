@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: a8cbe80154e5eac6a48c86101c76faed4602288a
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
+ms.openlocfilehash: 3362de6231aa8b045d064d1f3764cb2b13f5be3c
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915714"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167431"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune
 
@@ -106,9 +106,6 @@ Microsoft Intune collecte des données sur les statistiques d’utilisation pour
 
     * Si les utilisateurs finaux choisissent de ne pas envoyer ces données, ils doivent désactiver la télémétrie sous Paramètres dans l’application Portail d’entreprise. Pour en savoir plus, consultez [Désactiver la collecte de données d’utilisation Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
-
- Le numéro de version des applications métier iOS et Android est visible <!-- 1380712 -->
-
 ## <a name="line-of-business-app-version-numbers"></a>Numéros de version des applications métier
 
 Les applications métier dans Intune affichent désormais le numéro de version des applications Android et iOS. Le numéro s’affiche dans le portail Azure, dans la liste des applications et dans le panneau de vue d’ensemble des applications. Les utilisateurs finaux peuvent voir le numéro d’application dans l’application Portail d’entreprise et dans le portail web.
@@ -164,6 +161,23 @@ Après avoir terminé les étapes nécessaires pour intégrer votre application 
 * **Stratégies de protection des applications Intune**: pour tester votre application avec toutes les stratégies de protection des applications Intune, vous devez connaître le comportement attendu pour chaque paramètre de la stratégie. Consultez les descriptions des [stratégies de protection des applications iOS](app-protection-policy-settings-ios.md) et des [stratégies de protection des applications Android](app-protection-policy-settings-android.md).
 
 * **Dépannage** : si vous rencontrez des problèmes pendant les tests manuels de l’expérience utilisateur lors de l’installation de votre application, consultez [Résoudre les problèmes d’installation d’applications](troubleshoot-app-install.md). 
+
+### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Autoriser votre application à accéder au service de protection d’application Intune (facultatif)
+
+Si votre application utilise ses propres paramètres Azure Active Directory (AAD) personnalisés pour l’authentification, les étapes suivantes doivent être effectuées pour les applications de magasin public, ainsi que les applications métier internes. Les étapes **n’ont pas besoin d’être effectuées si votre application utilise l’ID client par défaut du SDK Intune**. 
+
+Une fois que vous avez inscrit votre application auprès d’un locataire Azure, et qu’elle s’affiche sous **Toutes les applications**, vous devez autoriser votre application à accéder au service de protection d’application Intune (précédemment appelé service MAM). Dans le portail Azure :
+
+1.  Accédez au panneau **Azure Active Directory**.
+2.  Sélectionnez la configuration d’**Inscription d’application** pour l’application.
+3.  Dans **Paramètres**, sous l’en-tête **Accès d’API**, sélectionnez **Autorisation requise**. 
+4.  Cliquez sur **+ Ajouter**.
+5.  Cliquez sur **Sélectionner une API**. 
+6.  Dans la zone de recherche, entrez **Gestion des applications mobiles Microsoft**.
+7.  Sélectionnez **Gestion des applications mobiles Microsoft** dans la liste des API et cliquez sur Sélectionner.
+8.  Sélectionnez **Lire et écrire les données de gestion d’application de l’utilisateur**.
+9.  Cliquez sur **Terminé**.
+10. Cliquez sur **Accorder des autorisations**, puis sur **Oui**. 
 
 ### <a name="badge-your-app-optional"></a>Badger votre application (facultatif)
 

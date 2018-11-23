@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 1180e085c0584f3da535947cad60c41d06a8026a
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: b96e9b79d70c538982aac52ca822b403d1c0e4f8
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576968"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167584"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,15 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-november-12-2018"></a>Semaine du 12 novembre 2018
+
+### <a name="network-access-control-nac-support-for-citrix-sso-for-ios----3259404---"></a>Prise en charge du contrôle d’accès réseau (NAC) pour Citrix SSO pour iOS <!-- 3259404 -->
+
+Citrix a publié une mise à jour de Citrix Gateway pour permettre le contrôle d’accès réseau (NAC) pour Citrix SSO pour iOS dans Intune. Vous pouvez choisir d’inclure un ID d’appareil au sein d’un profil VPN dans Intune, puis d’envoyer (Push) ce profil à vos appareils iOS. Vous devrez installer la dernière mise à jour de Citrix Gateway pour utiliser cette fonctionnalité.
+
+[Configurer les paramètres VPN sur les appareils iOS](vpn-settings-ios.md#base-vpn-settings) fournit plus d’informations sur l’utilisation du contrôle d’accès réseau, notamment certaines exigences supplémentaires. 
+
 ## <a name="week-of-november-5-2018"></a>Semaine du 5 novembre 2018
 
 ### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Prise en charge d’iOS 12 OAuth dans les profils de messagerie iOS <!--2155106 -->
@@ -53,11 +62,7 @@ Les profils de messagerie iOS d’Intune prennent en charge iOS 12 OAuth (Open A
 Vous pouvez désormais configurer les appareils joints à un domaine Azure Active Directory hybride à l’aide d’Autopilot. Les appareils doivent être joints au réseau de votre organisation afin d’utiliser la fonctionnalité Autopilot hybride. Pour plus d’informations, consultez [Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot](windows-autopilot-hybrid.md).
 Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
 
-### <a name="app-protection-policy-app-settings-for-web-data----2662995----"></a>Paramètres de stratégie de protection des applications pour les données du web <!-- 2662995  -->
-Les paramètres de stratégie de protection des applications pour le contenu web sur les appareils iOS et Android ont été mis à jour afin de mieux gérer les liens web HTTP et HTTPS, ainsi que le transfert de données au moyen de liens universels iOS et de liens d’application Android.  
-
 ## <a name="week-of-october-29-2018"></a>Semaine du 29 octobre 2018
-
 
 ### <a name="app-management"></a>Gestion d'applications
 
@@ -120,9 +125,6 @@ Cette mise à jour inclut macOS Gatekeeper pour évaluer la conformité des appa
 
 #### <a name="enrollment-abandonment-report----1382924---"></a>Rapport d’abandon de l’inscription <!-- 1382924 -->
 Un nouveau rapport contenant des informations détaillées sur les inscriptions abandonnées est disponible sous **Inscription de l’appareil** > **Surveiller**. Pour plus d’informations, consultez le [rapport d’abandon du portail d’entreprise](enrollment-report-company-portal-abandon.md).
-
-#### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Affecter des profils Autopilot au groupe virtuel Tous les appareils <!--2715522 -->
-Vous pourrez affecter des profils Autopilot au groupe virtuel Tous les appareils. Pour ce faire, choisissez **Inscription de l’appareil** > **Inscription Windows** > **Profils de déploiement** > choisissez un profil >  **Affectations** > sous **Affecter à** choisissez **Tous les appareils**. Pour plus d’informations sur les profils Autopilot, consultez [Inscrire des appareils Windows à l’aide de Windows Autopilot](enrollment-autopilot.md).
 
 #### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nouvelle fonctionnalité Conditions d’utilisation dans Azure Active Directory <!-- 2870393 -->
 Azure Active Directory comporte une fonctionnalité relative aux conditions d’utilisation que vous pouvez utiliser à la place des conditions générales Intune existantes. La fonctionnalité Conditions d’utilisation d’Azure AD offre davantage de flexibilité quant aux choix des conditions d’utilisation à afficher et au moment où elles sont affichées, une meilleure prise en charge de la localisation, un meilleur contrôle de l’affichage des conditions générales, ainsi que des fonctionnalités améliorées de création de rapports. La fonctionnalité Conditions d’utilisation d’Azure AD nécessite Azure Active Directory Premium P1, qui fait également partie de la suite Enterprise Mobility + Security E3. Pour en savoir plus, consultez l’article [Gérer les conditions générales de votre entreprise pour l’accès utilisateur](terms-and-conditions-create.md).
@@ -504,17 +506,6 @@ Une version mise à jour du SDK d’application Intune pour Android est disponib
 
 
 ### <a name="device-configuration"></a>Configuration des appareils
-
-#### <a name="use-smime-to-encrypt-and-sign-a-users-multiple-devices-----1333642---"></a>Utiliser S/MIME pour chiffrer et signer les appareils d’un utilisateur  <!-- 1333642 -->
-Cette mise à jour inclut le chiffrement S/MIME des e-mails à l’aide d’un nouveau profil de certificat importé (**Configuration de l’appareil** > **Profils** > **Créer un profil** > sélectionner la plateforme > type de profil **Certificat PKCS importé**). Dans Intune, vous pouvez importer des certificats au format PFX. Intune peut alors émettre ces mêmes certificats à plusieurs appareils inscrits par un seul utilisateur. Cela comprend également :
-
-- Le profil de messagerie iOS natif prend en charge l’activation du chiffrement S/MIME avec des certificats importés au format PFX.
-- L’application de messagerie native sur les appareils Windows Phone 10 utilise automatiquement le certificat S/MIME.
-- Les certificats privés peuvent être émis sur plusieurs plateformes. Toutefois, les applications de messagerie ne prennent pas toutes en charge S/MIME.
-- Sur d’autres plateformes, vous devrez peut-être configurer manuellement l’application de messagerie pour activer S/MIME.  
-- Les applications de messagerie qui prennent en charge le chiffrement S/MIME peuvent gérer la récupération de certificats pour le chiffrement S/MIME des e-mails d’une manière que MDM ne peut pas prendre en charge, comme la lecture à partir du magasin de certificats de leur éditeur.
-
-Prise en charge sur : Windows, Windows Phone 10, macOS, iOS, Android
 
 #### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices----1497640---"></a>Créer une stratégie de conformité des appareils à l’aide de paramètres de pare-feu sur ses appareils macOS <!-- 1497640 -->
 Quand vous créez une stratégie de conformité macOS (**Conformité de l’appareil** > **Stratégies** > **Créer une stratégie** > **Plateforme : macOS** > **Sécurité du système**), de nouveaux paramètres **Pare-feu** sont disponibles : 

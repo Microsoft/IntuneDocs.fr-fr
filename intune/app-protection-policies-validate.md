@@ -6,8 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/23/2017
-ms.topic: article
+ms.date: 11/13/2018
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cac03f35cdec3c1a4815559abc83108bd27d3472
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 5e0a207d3e845e3983dfe6ce3abbb70fcbbe65cf
+ms.sourcegitcommit: 4d5e811d451aeb6307e0f64818e182e471ae1ed4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231115"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51618971"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Guide pratique de validation de votre configuration de stratégie de protection d’application
 
@@ -34,7 +33,7 @@ Les utilisateurs ont peu de chances de signaler des problèmes étant donné que
 
 ### <a name="what-to-check"></a>Les points à vérifier
 
-Si les tests montrent que le comportement de votre stratégie de protection d’application n’est pas conforme à ce qui est prévu, nous vous recommandons de vérifier les éléments suivants :
+Si les tests montrent que le comportement de votre stratégie de protection d’application n’est pas conforme à ce qui est prévu, vérifiez les éléments suivants :
 
 - Les utilisateurs disposent-ils d’une licence pour la protection d’application ?
 - Les utilisateurs disposent-ils d’une licence pour O365 ?
@@ -42,10 +41,10 @@ Si les tests montrent que le comportement de votre stratégie de protection d’
 
 #### <a name="user-app-protection-status"></a>État de protection d’application utilisateur
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-1. Choisissez **Gérer les applications** > **Surveiller** >  **État de protection de l’application** > **Utilisateurs affectés**.
-
-2. Choisissez un utilisateur dans la liste ou recherchez et sélectionnez un utilisateur, puis choisissez **Sélectionner un utilisateur**. En haut de la colonne **Rapports d’application**, vous voyez si l’utilisateur a une licence pour la protection d’application. Vous voyez aussi si l’utilisateur a une licence pour O365, et l’état de l’application pour tous les appareils de l’utilisateur est indiqué.
+2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+3. Sélectionnez **Applications clientes** > **Surveiller** >  **État de protection d’application**, puis sélectionnez la vignette **Utilisateurs attribués**. 
+4. Sur la page **Rapports d’application**, sélectionnez **Sélectionner un utilisateur** pour afficher la liste des utilisateurs et des groupes. 
+5. Recherchez et sélectionnez un utilisateur dans la liste, puis choisissez **Sélectionner un utilisateur**. En haut du volet **Rapports d’application**, vous voyez si l’utilisateur a une licence pour la protection d’application. Vous voyez aussi si l’utilisateur a une licence pour O365, et l’état de l’application pour tous les appareils de l’utilisateur est indiqué.
 
 
 

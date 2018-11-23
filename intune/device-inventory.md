@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
+ms.openlocfilehash: 2c47cd8ea136bcead14e70769f63df7b9b8f0e20
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187799"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610088"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -45,7 +45,7 @@ Cet article vous explique comment afficher tous les appareils, ainsi que leurs p
      - Démarrer une session d’assistance à distance
    - Utilisez **Propriétés** pour affecter une [catégorie d’appareil créée](device-group-mapping.md) et changer le type de propriété d’un appareil. Par exemple, remplacez un appareil personnel par un appareil d’entreprise.
    - **Matériel** comprend de nombreux détails sur l’appareil, notamment l’ID, le système d’exploitation et la version, l’espace de stockage, le modèle et le fabricant, les paramètres d’accès conditionnel et bien d’autres informations.
-   - **Applications découvertes** permet de lister toutes les applications dont Intune a détecté l’installation sur l’appareil, ainsi que leurs versions. Vous pouvez également **Exporter** la liste des applications dans un fichier .csv.
+   - **Applications découvertes** permet de lister toutes les applications dont Intune a détecté l’installation sur l’appareil, ainsi que leurs versions. Vous pouvez également **Exporter** la liste des applications dans un fichier .csv. Cette liste est mise à jour tous les 7 jours.
    - **Conformité de l’appareil** permet de lister toutes les stratégies de conformité affectées, et de déterminer si l’appareil est conforme ou non conforme.
    - **Configuration de l’appareil** permet d’afficher toutes les stratégies de configuration affectées à l’appareil, et de déterminer si la stratégie a réussi ou non.
 
@@ -60,8 +60,10 @@ Intune collecte une liste des applications uniquement sur les appareils apparten
 |iOS|Uniquement les applications gérées|Toutes les applications installées sur l’appareil|
 |macOS|Toutes les applications installées sur l’appareil|Toutes les applications installées sur l’appareil|  
 |Android|Uniquement les applications gérées|Toutes les applications installées sur l’appareil|  
+|Android Entreprise|Uniquement les applications gérées|Uniquement les applications installées dans le profil professionnel|  
 
 ## <a name="hardware-device-details"></a>Informations sur les appareils matériels
+En fonction de l’opérateur utilisé par les appareils, tous les détails peuvent ne pas être collectés
 
 |Détail|Description|Plate-forme| 
 |--------------|----------------------|----|  
