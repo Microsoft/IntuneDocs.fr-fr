@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 932feb064552e05536821d0e75e27059387bcf56
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9a15c84ded066a26254737f75293b0d743fe5eab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029806"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181222"
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Guide pratique pour configurer les paramètres d’Intune Education pour les appareils iPad partagés
 
@@ -183,7 +184,7 @@ L’appareil est maintenant associé à la catégorie d’appareils. Répétez c
 5. Dans le volet de profils, choisissez **Créer un profil**.
 6. Dans le volet **Créer une association**, entrez un **Nom** et une **Description**.
 7. Choisissez **Sélectionner des classes** > **Configurer** pour associer des groupes au profil de panier.
-8. Choisissez les classes à inclure au profil de panier, puis choisissez **Sélectionnez**. 
+8. Choisissez les classes à inclure au profil de panier, puis choisissez **Sélectionnez**. 
 9. Choisissez **Sélectionner des paniers** > **Configurer** pour associer des groupes au profil de panier.
 10. Choisissez les groupes à inclure au profil de panier, puis choisissez **Sélectionnez**.
 11. Dans le volet **Créer une association**, choisissez **Enregistrer** pour enregistrer le profil de panier.
@@ -198,7 +199,7 @@ Le profil est créé et apparaît dans le volet de la liste des profils.
 4. Dans le volet **Configuration de l’appareil**, choisissez **Surveiller** > **État de l’attribution**.
 5. Dans le volet **État de l’attribution**, sélectionnez le **Profil de panier** que vous avez créé.
 6. Dans le volet **Profil de panier**, choisissez **Affectations** puis, sous **Inclure**, choisissez **Sélectionner les groupes à inclure**.
-7. Sélectionnez les classes que vous voulez que le profil de panier cible (ne sélectionnez pas un groupe), puis choisissez **Sélectionner**. 
+7. Sélectionnez les classes que vous voulez que le profil de panier cible (ne sélectionnez pas un groupe), puis choisissez **Sélectionner**. 
 8. Lorsque vous avez terminé, choisissez **Enregistrer**.
 
 L’affectation se termine et Intune déploie le profil de classe sur les appareils ciblés en fonction de l’attribution de classe.

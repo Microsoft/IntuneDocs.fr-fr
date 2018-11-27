@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5e88108d6c438bf2c192516be44908c4d76dfa9f
-ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
+ms.openlocfilehash: 2c23ad2c63fad8c74666e3c1ae9acc543e48f8e8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49652119"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181868"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -32,7 +33,7 @@ Dans ce tutoriel, vous apprendrez à :
 
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
   - Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
     - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
     - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
@@ -119,7 +120,7 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
 
 9.  Sélectionnez **Créer**.
 
-## <a name="try-it-out"></a>Essai
+## <a name="try-it-out"></a>Faîtes un essai
 Avec les stratégies que vous avez créées, n’importe quel appareil iOS qui tente de se connecter à la messagerie Office 365 devra s’inscrire dans Intune et utiliser l’application mobile Outlook pour iOS. Pour tester ce scénario sur un appareil iOS, essayez de vous connecter à Exchange Online à l’aide des informations d’identification d’un utilisateur dans votre locataire de test. Vous serez invité à inscrire l’appareil et à installer l’application mobile Outlook.
 1. Pour tester sur un iPhone, accédez à **Paramètres** > **Mots de passe et comptes** > **Ajouter un compte** > **Exchange** .
 2. Entrez l’adresse e-mail d’un utilisateur dans votre locataire de test, puis appuyez sur **Suivant**.

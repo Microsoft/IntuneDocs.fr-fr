@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2252c81757b7745ed15ca86a4e7db310f03df19d
-ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.openlocfilehash: 76d9efc969f68188d9752996267ff7a88363f76f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51298154"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180814"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Ajouter des paramètres Wi-Fi pour appareils Windows 10 (et ultérieurs) dans Intune
 
