@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28eb86a1924dc72df4c77cc3f8a05aacd61e0fbd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 927da6f2e7584cb3b43bede77cfbc19ec91b568a
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025669"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189467"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Obtenir un certificat Push MDM Apple
 
@@ -40,24 +41,24 @@ Lors de l’expiration d’un certificat push, vous devez le renouveler. Lors du
 ## <a name="steps-to-get-your-certificate"></a>Procédure pour obtenir le certificat
 Dans le [portail Azure](https://portal.azure.com), choisissez **Inscription d’appareil** > **Inscription Apple** > **Certificat Push MDM Apple**, puis suivez les étapes ci-après dans le [portail Azure](https://portal.azure.com).
 
-### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Étape 1. Autoriser Microsoft à envoyer des informations d’utilisateur et d’appareil à Apple
+### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Étape 1. Autoriser Microsoft à envoyer des informations d’utilisateur et d’appareil à Apple
 Sélectionnez **J’accepte.** pour autoriser Microsoft à envoyer des données à Apple.
 
 ![Écran Configurer le certificat Push MDM avec Push MDM non configuré.](./media/create-mdm-push-certificate.png)
 
-### <a name="step-2-download-the-intune-certificate-signing-request-required-to-create-an-apple-mdm-push-certificate"></a>Étape 2. Télécharger la demande de signature de certificat Intune nécessaire à la création d’un certificat Push MDM Apple
+### <a name="step-2-download-the-intune-certificate-signing-request-required-to-create-an-apple-mdm-push-certificate"></a>Étape 2. Télécharger la demande de signature de certificat Intune nécessaire à la création d’un certificat Push MDM Apple
 Sélectionnez **Télécharger votre CSR** pour télécharger et enregistrer le fichier de demande en local. Le fichier est utilisé pour demander un certificat de relation d’approbation à partir du portail Apple Push Certificates.
 
-  ### <a name="step-3-create-an-apple-mdm-push-certificate"></a>Étape 3. Créer un certificat Push MDM Apple
+  ### <a name="step-3-create-an-apple-mdm-push-certificate"></a>Étape 3. Créer un certificat Push MDM Apple
 Sélectionnez **Créer votre certificat Push MDM** pour accéder au portail Apple Push Certificates. Connectez-vous avec votre identifiant Apple d’entreprise, puis cliquez sur **Créer un certificat**. Sélectionnez **Choisir un fichier** et accédez au fichier de demande de signature de certificat, puis choisissez **Charger**. Dans la page Confirmation, choisissez **Télécharger** pour télécharger le fichier de certificat (.pem), puis enregistrez-le localement.
 
 > [!NOTE]
 > Le certificat est associé à l’identifiant Apple utilisé pour le créer. Comme meilleure pratique, utilisez un ID Apple d’entreprise pour les tâches de gestion et assurez-vous que la boîte aux lettres est analysée par plusieurs personnes comme une liste de distribution. N’utilisez jamais un identifiant Apple personnel.
 
-### <a name="step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate"></a>Étape 4. Entrer l’identifiant Apple utilisé pour créer votre certificat Push MDM Apple
+### <a name="step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate"></a>Étape 4. Entrer l’identifiant Apple utilisé pour créer votre certificat Push MDM Apple
 Notez cet identifiant qui vous servira quand vous devrez renouveler ce certificat.
 
-### <a name="step-5-browse-to-your-apple-mdm-push-certificate-to-upload"></a>Étape 5. Accéder à votre certificat Push MDM Apple à charger
+### <a name="step-5-browse-to-your-apple-mdm-push-certificate-to-upload"></a>Étape 5. Accéder à votre certificat Push MDM Apple à charger
 Accédez au fichier du certificat (.pem), choisissez **Ouvrir**, puis **Télécharger**. Avec le certificat Push, Intune peut inscrire et gérer des appareils Apple.
 
 ## <a name="renew-apple-mdm-push-certificate"></a>Renouveler un certificat Push MDM Apple

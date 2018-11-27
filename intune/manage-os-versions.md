@@ -11,12 +11,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-ms.openlocfilehash: 763cc61aae50de893461d1ed137025fa1e6b00b9
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+search.appverid: MET150
+ms.openlocfilehash: c75956cd1e3e9bba0017a624b99dcc090d32978b
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231654"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182225"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Gérer les versions de système d’exploitation avec Intune
 Sur les plateformes mobiles et de bureau modernes, le rythme de publication des mises à jour importantes, des correctifs et des nouvelles versions est soutenu. Vous disposez d’outils pour gérer entièrement les mises à jour et les correctifs sur Windows, mais d’autres plateformes telles qu’iOS et Android exigent la participation de vos utilisateurs finaux.  Microsoft Intune offre des fonctionnalités qui vous permettent de structurer la gestion des versions de vos systèmes d’exploitation sur différentes plateformes.

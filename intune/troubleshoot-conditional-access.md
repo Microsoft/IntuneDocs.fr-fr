@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 5fa59501-5f33-46b7-a5f5-75eeae9f1209
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f7f8e9d4fb6c6ce551d30623db864eb1784b7a54
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 642a4da6a1ca3c368e90f2d3007c1fc6a068af78
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231625"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189229"
 ---
 # <a name="troubleshoot-conditional-access"></a>Résoudre les problèmes d’accès conditionnel
 
@@ -33,7 +34,7 @@ Les conditions suivantes doivent être remplies pour que l’accès conditionnel
 - L’utilisateur et l’appareil doivent être conformes aux stratégies de conformité Intune attribuées
 - Par défaut, une stratégie de conformité doit être affectée à l’utilisateur. Cela peut dépendre de la façon dont le paramètre **Marquer les appareils sans stratégie de conformité comme étant** est configuré sous **Conformité de l’appareil** > **Paramètres de stratégie de conformité** dans le portail d’administration Intune
 -   Exchange ActiveSync doit être activé sur l’appareil si l’utilisateur utilise le client d’e-mail natif de l’appareil plutôt qu’Outlook. Cela se fait automatiquement pour les appareils iOS, Windows Phone et Android
--   Votre connecteur Exchange Intune doit être configuré correctement. Pour plus d’informations, consultez [Dépannage du connecteur Exchange dans Microsoft Intune](troubleshoot-exchange-connector.md)
+-   Votre connecteur Exchange Intune doit être configuré correctement. Pour plus d’informations, consultez [Dépannage du connecteur Exchange dans Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure et dans le rapport d’inventaire des appareils.
 

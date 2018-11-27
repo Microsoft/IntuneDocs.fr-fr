@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 654c9af4d72ca5d07a9852ba4a653d9404ea16d2
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: ba60df2dcec51e1c45e6a84a8fc9831937f70aef
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642886"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190059"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
 
@@ -91,7 +92,7 @@ Lors de l’utilisation du fichier csv contenant les codes d’activation, veill
 2. La deuxième ligne et toutes les suivantes correspondent à des codes d’activation à usage unique qui incluent deux valeurs :
 
     1. La première colonne correspond à l’ICCID unique (l’identificateur de la puce SIM)
-    2. La deuxième colonne correspond à l’ID de mise en correspondance, avec uniquement une virgule de séparation (pas de virgule à la fin) Consultez l'exemple suivant :
+    2. La deuxième colonne correspond à l’ID de mise en correspondance, avec uniquement une virgule de séparation (pas de virgule à la fin) Voir l’exemple suivant :
 
         ![Exemple de fichier csv de code d’activation d’opérateur mobile](./media/esim-device-configuration/url-activation-code-examples.png)
 

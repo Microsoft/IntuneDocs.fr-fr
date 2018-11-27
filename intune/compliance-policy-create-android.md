@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1108a208a324b5ed4c46248dc986dcf08e6293fe
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: cb5fc7256e68b8ea10ba1b3ddd7cfe6ed44bd544
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236541"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180610"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils Android dans Intune
 
@@ -39,7 +40,7 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 | --- | ----|
 | **Configuration d’un code confidentiel ou mot de passe** |  En quarantaine |
 | **Chiffrement de l’appareil** | En quarantaine |
-| **Appareil jailbreaké ou rooté** | En quarantaine (pas un paramètre) |
+| **Appareil jailbroken ou rooté** | En quarantaine (pas un paramètre) |
 | **profil de messagerie** | Non applicable |
 | **Version minimale du système d’exploitation** | En quarantaine |
 | **Version maximale du système d’exploitation** |   En quarantaine |
@@ -58,25 +59,25 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
 4. Pour l’option **Plateforme**, sélectionnez **Android**. 
-5. Choisissez **Paramètres Configurer**. Entrez les paramètres nécessaires pour les options **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système**, comme décrit dans cet article.
+5. Choisissez**Paramètres Configurer**. Entrez les paramètres nécessaires pour les options **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système**, comme décrit dans cet article.
 
 ## <a name="device-health"></a>Device health
 
-- **Appareils rootés** : choisissez **Bloquer** pour marquer les appareils rootés (jailbreakés) comme non conformes. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
-- **Exiger que l’appareil se situe au niveau de menace d’appareil ou en dessous** : utilisez ce paramètre pour considérer l’évaluation des risques de la solution Lookout MTP comme une condition de conformité. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité. Pour utiliser ce paramètre, choisissez le niveau de menace autorisée :
-  - **Sécurisé** : cette option est la plus sécurisée, car l’appareil ne doit présenter aucune menace. Si des menaces d’un autre niveau sont détectées sur l’appareil, celui-ci est évalué comme non conforme.
+- **Appareils rootés** : choisissez **Bloquer** pour marquer les appareils rootés (jailbreakés) comme étant non conformes. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
+- **Exiger que l’appareil se situe au niveau de menace d’appareil ou en dessous** : utilisez ce paramètre pour considérer l’évaluation des risques de la solution Lookout MTP comme une condition de conformité. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité. Pour utiliser ce paramètre, choisissez le niveau de menace autorisé :
+  - **Sécurisé** : cette option est la plus sécurisée, car l’appareil ne doit présenter aucune menace. Si le moindre niveau de menace est détecté sur l’appareil, celui-ci est considéré comme non conforme.
   - **Faible** : l’appareil est évalué comme conforme uniquement si les menaces détectées sont de niveau faible. La présence de menaces de niveau supérieur rend l’appareil non conforme.
-  - **Moyen** : l’appareil est jugé conforme si les menaces présentes sur celui-ci sont de niveau faible ou moyen. La présence de menaces de niveau élevé rend l’appareil non conforme.
+  - **Moyen** : l’appareil est jugé conforme si les menaces présentes sur celui-ci sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées sur l’appareil, celui-ci est considéré comme non conforme.
   - **Élevé** : cette option est la moins sécurisée, elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
-- **Google Play Services est configuré** : l’application Google Play Services **doit être impérativement** installée et activée. Google Play Services autorise les mises à jour de sécurité et constitue une dépendance de niveau de base pour de nombreuses fonctionnalités de sécurité sur les appareils Google certifiés. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Google Play Services est configuré** : l’application Google Play Services **doit être impérativement** installée et activée. Google Play Services autorise les mises à jour de sécurité et constitue une dépendance de niveau de base pour de nombreuses fonctionnalités de sécurité sur les appareils Google certifiés. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 - **Fournisseur de sécurité à jour** : un fournisseur de sécurité à jour **doit** protéger l’appareil contre les vulnérabilités connues. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
-- **Analyse des menaces sur les applications** : la fonctionnalité Android **Vérifier les applications** **doit** être impérativement activée. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Analyse des menaces sur les applications** : la fonctionnalité Android **Vérifier les applications** **doit** être impérativement activée. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 
   > [!NOTE]
   > Sur la plateforme Android héritée, cette fonctionnalité constitue un paramètre de conformité. Intune ne peut que vérifier si ce paramètre est activé au niveau de l’appareil.
 
 - **Attestation d’appareil SafetyNet** : entrez le niveau d’[attestation SafetyNet](https://developer.android.com/training/safetynet/attestation.html) à respecter. Les options disponibles sont les suivantes :
-  - **Non configuré** (option par défaut) : le paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+  - **Non configuré** (par défaut) : le paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Vérifier l’intégrité de base**
   - **Vérifier l’intégrité de base et les appareils certifiés**
 
@@ -89,48 +90,48 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 
 ### <a name="password"></a>Mot de passe
 
-- **Exiger un mot de passe pour déverrouiller les appareils mobiles** : permet d’**obliger** les utilisateurs à entrer un mot de passe pour pouvoir accéder à leur appareil. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Exiger un mot de passe pour déverrouiller les appareils mobiles** : permet d’**obliger** les utilisateurs à entrer un mot de passe pour pouvoir accéder à leur appareil. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 - **Longueur minimale du mot de passe** : entrez le nombre minimal de chiffres ou de caractères du mot de passe de l’utilisateur.
-- **Type de mot de passe obligatoire** : choisissez si un mot de passe doit avoir uniquement des caractères numériques ou un mélange de chiffres et d’autres caractères. Les options disponibles sont les suivantes :
+- **Type de mot de passe obligatoire** : choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
   - **Paramètre par défaut de l’appareil**
   - **Sécurité biométrique faible**
-  - **Au moins numérique** (valeur par défaut)
+  - **Au moins numérique** (par défaut)
   - **Chiffres complexes** : les chiffres répétés ou consécutifs, comme `1111` ou `1234`, ne sont pas autorisés.
   - **Au moins alphabétique** 
   - **Au moins alphanumérique**
   - **Au moins alphanumérique avec des symboles**
 
-- **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 - **Expiration du mot de passe (jours)**  : sélectionnez le nombre de jours avant que le mot de passe n’expire et que l’utilisateur ne doive en créer un autre.
 - **Nombre de mots de passe précédents avant d’autoriser leur réutilisation** : entrez le nombre de mots de passe récents qui ne peuvent pas être réutilisés. Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.
 
 ### <a name="encryption"></a>Chiffrement
 
-- **Chiffrement du stockage de données sur l’appareil** (Android 4.0 et versions ultérieures ou KNOX 4.0 et versions ultérieures) : choisissez **Exiger** pour chiffrer le stockage des données sur vos appareils. Les appareils sont chiffrés quand vous choisissez le paramètre **Exiger un mot de passe pour déverrouiller les appareils mobiles**. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Chiffrement du stockage de données sur l’appareil** (Android 4.0 et versions ultérieures ou KNOX 4.0 et versions ultérieures) : choisissez **Exiger** pour chiffrer le stockage des données sur vos appareils. Les appareils sont chiffrés quand vous choisissez le paramètre **Exiger un mot de passe pour déverrouiller les appareils mobiles**. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 
 ### <a name="device-security"></a>Sécurité du périphérique
 
-- **Bloquer les applications provenant de sources inconnues** : choisissez de **bloquer** les appareils où « Sécurité > Sources inconnues » est activé (option prise en charge sur Android 4.0 à Android 7.x, mais pas sur Android versions 8.0 et ultérieures). Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Bloquer les applications provenant de sources inconnues** : choisissez de **bloquer** les appareils où « Sécurité > Sources inconnues » est activé (pris en charge par Android 4.0 - Android 7.x ; non pris en charge par Android 8.0 et les versions ultérieures). Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 
-  Pour effectuer un chargement indépendant des applications, vous devez autoriser les sources inconnues. Si vous n’effectuez pas de chargement indépendant des applications Android, définissez cette fonctionnalité sur **Bloquer** pour activer cette stratégie de conformité. 
+  Pour effectuer un chargement indépendant des applications, vous devez autoriser les sources inconnues. Si vous n’effectuez pas de chargement indépendant des applications Android, configurez la fonctionnalité sur **Bloquer** pour activer cette stratégie de conformité. 
 
   > [!IMPORTANT]
   > Pour permettre le chargement indépendant des applications, le paramètre **Bloquer les applications provenant de sources inconnues** doit être activé. Appliquez cette stratégie de conformité uniquement si vous n’effectuez aucun chargement indépendant d’applications Android sur les appareils.
 
 - **Intégrité du runtime de l’application Portail d’entreprise** : choisissez **Exiger** pour vérifier que l’application Portail d’entreprise remplit toutes les conditions suivantes :
 
-  - A l’environnement de runtime par défaut
-  - Est correctement signée
+  - Comporte l’installation de l’environnement d’exécution par défaut
+  - Est signée correctement
   - N’est pas en mode de débogage
   - Est installée à partir d’une source connue
 
   Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
 
-- **Bloquer le débogage USB sur l’appareil** (Android 4.2 ou version ultérieure) : choisissez **Bloquer** pour empêcher les appareils d’utiliser la fonctionnalité de débogage USB. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
+- **Bloquer le débogage USB sur l’appareil** (Android 4.2 ou version ultérieure) : choisissez **Bloquer** pour empêcher les appareils d’utiliser la fonctionnalité de débogage USB. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 - **Niveau minimal du correctif de sécurité** (Android 6.0 ou version ultérieure) : sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format `YYYY-MM-DD`.
 - **Applications restreintes** : entrez le **Nom de l’application** et l’**ID d’ensemble d’applications** des applications à restreindre. Choisissez **Ajouter**. Un appareil doté d’au moins une application limitée est marqué comme non conforme.
 
-Une fois que vous avez terminé, sélectionnez **OK** > **OK** pour enregistrer les modifications.
+Une fois que vous avez terminé, sélectionnez **OK** > **OK** pour enregistrer vos changements.
 
 ## <a name="locations"></a>Emplacements
 
@@ -152,17 +153,17 @@ Par exemple, vous utilisez la fonctionnalité Emplacements et ajoutez un emplace
 
 ## <a name="scope-tags"></a>Balises d'étendue
 
-Les balises d’étendue sont un excellent moyen pour affecter des stratégies à des groupes spécifiques, tels que Ventes, Ingénierie ou Ressources humaines. Vous pouvez ajouter des balises d’étendue aux stratégies de conformité. Consultez [Utiliser des balises d’étendue pour filtrer les stratégies](scope-tags.md). 
+Les étiquettes de délimitation sont un excellent moyen d’affecter des stratégies à des groupes spécifiques, par exemple Ventes, Ingénierie, Ressources humaines, etc. Vous pouvez ajouter des étiquettes de délimitation aux stratégies de conformité. Consultez [Utiliser des étiquettes de délimitation pour filtrer les stratégies](scope-tags.md). 
 
 ## <a name="assign-user-groups"></a>Affectation de groupes d’utilisateurs
 
-Une fois que vous avez créé une stratégie, vous devez l’affecter pour qu’elle agisse. Pour affecter la stratégie : 
+Une fois qu’une stratégie est créée, elle ne fait rien tant que vous ne l’avez pas affectée. Pour affecter la stratégie : 
 
 1. Choisissez une stratégie que vous avez configurée. Les stratégies existantes se trouvent dans **Conformité de l’appareil** > **Stratégies**.
 2. Choisissez la stratégie, puis **Affectations**. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
 3. Choisissez **Groupes sélectionnés** pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Enregistrer** pour déployer la stratégie auprès des utilisateurs.
 
-Vous avez appliqué la stratégie à des utilisateurs. La conformité des appareils utilisés par les utilisateurs ciblés par la stratégie est évaluée.
+Vous avez appliqué la stratégie aux utilisateurs. La conformité des appareils utilisés par les utilisateurs ciblés par la stratégie est évaluée.
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md)  

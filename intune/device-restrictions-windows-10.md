@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac0348736e5975633776c86dee88555dfceb6919
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: c49da9c323e1c4124ad76ae64e63a177edfcaa71
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576883"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189977"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Paramètres de restriction des appareils pour Windows 10 (et versions ultérieures) dans Intune
 Cet article décrit tous les paramètres des restrictions d’appareils de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 10.
@@ -294,20 +295,20 @@ entrez les paramètres suivants :
   - Compte de domaine : entrez-le sous la forme `domain\accountname`
   - Compte Azure AD : entrez-le sous la forme `AzureAD\emailaddress`. Veillez à entrer « AzureAD », car c’est un nom de domaine fixe. Faites-le suivre de l’adresse e-mail d’Azure AD. Par exemple, entrez `AzureAD\user@contoso.onmicrosoft.com`.
 
-    Pour les appareils kiosques dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Si vous utilisez un compte Azure AD pour le mode kiosque, veillez à entrer `AzureAD\user@yourorganization.com`.
+    Pour les appareils plein écran dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Si vous utilisez un compte Azure AD pour le mode plein écran, veillez à entrer `AzureAD\user@yourorganization.com`.
 
-- **Identifiant AUMID de l’application** : entrez l’identifiant AUMID de l’application kiosque. Pour plus d’informations, consultez [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Rechercher l’identifiant AUMID d’une application installée).
+- **Identifiant AUMID de l’application** : entrez l’identifiant AUMID de l’application plein écran. Pour plus d’informations, consultez [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Rechercher l’identifiant AUMID d’une application installée).
 
-#### <a name="multi-app-kiosks"></a>Kiosques multi-applications
-Les [Kiosques multi-applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) utilisent une configuration kiosque qui liste les applications autorisées et d’autres paramètres. 
+#### <a name="multi-app-kiosks"></a>Applications multiples plein écran
+Les [Applications multiples plein écran](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) utilisent une configuration plein écran qui répertorie les applications autorisées et d’autres paramètres. 
 
 Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou sélectionnez une configuration existante). Ensuite, entrez les paramètres suivants :
 
 - **Nom de configuration plein écran** : entrez un nom convivial utilisé pour identifier la configuration.
 
-- **Applications Kiosque** : entrez les applications qui sont disponibles dans le menu Démarrer. Les applications que vous ajoutez sont les seules que l’utilisateur peut ouvrir.
+- **Applications plein écran** : entrez les applications qui sont disponibles dans le menu Démarrer. Les applications que vous ajoutez sont les seules que l’utilisateur peut ouvrir.
 
-  - **Type d’application** : choisissez le type de l’application kiosque :
+  - **Type d’application** : choisissez le type de l’application plein écran :
     - **Application Win32** : application de bureau traditionnelle. Vous avez besoin du chemin qualifié complet de l’exécutable, en ce qui concerne l’appareil.
     - **Application UWP** : application Windows universelle. Vous avez besoin de [l’identifiant AUMID de l’application](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -318,11 +319,11 @@ Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou s�
 - **Disposition du menu Démarrer** : entrez un fichier XML qui décrit comment les applications apparaissent dans le menu Démarrer. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
 
 
-  [Créer un kiosque Windows10 qui exécute plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) fournit plus de détails sur l’utilisation et la création de fichiers XML.
+  [Créer une borne Windows10 qui exécute plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) fournit plus de détails sur l’utilisation et la création de fichiers XML.
 
 - **Utilisateurs attribués** : ajoutez un ou plusieurs comptes d’utilisateurs qui peuvent utiliser les applications que vous ajoutez. Quand le compte se connecte, seules les applications définies dans la configuration sont disponibles. Le compte peut être local sur l’appareil, ou il peut s’agir d’un compte Azure AD associé à l’application kiosque.
 
-    Pour les kiosques dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode kiosque, utilisez le format `domain\user@tenant.com`.
+    Pour les appareils plein écran dans des environnements publics où l’ouverture de session automatique est activée, un type d’utilisateur avec les privilèges minimum (par exemple, le compte d’utilisateur standard local) doit être utilisé. Pour configurer un compte Azure Active Directory (AD) pour le mode plein écran, utilisez le format `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Antivirus Windows Defender
 

@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 573cdf8746b9eaf593a33cd943b69a2dd83030ae
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 70d1594220b3315db2c7d7eeb01a915aaf2ec995
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391601"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186730"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -114,7 +115,7 @@ Pour l’authentification avec un VPN, un réseau Wi-Fi ou d’autres ressources
 
 ## <a name="download-install-and-configure-the-certificate-connectors"></a>Télécharger, installer et configurer les connecteurs de certificats
 
-### <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connector
+### <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connecavec la valeurr
 
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **doit** être installé sur un serveur Windows distinct. Il ne peut pas être installé sur l’autorité de certification émettrice (CA).

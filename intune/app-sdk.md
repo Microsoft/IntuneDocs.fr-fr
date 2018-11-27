@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: fc49d7ba7cdc5b986c06f8a84ececc8339a812a2
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 02f276c5ddcd77b2800eb7b83a269b47a0ba5233
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425102"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180678"
 ---
 # <a name="intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Intune
 Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet d'appliquer des stratégies de protection des applications Intune sur votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience utilisateur et administrateur, vous pouvez utiliser les API pour personnaliser le comportement de votre application pour les fonctionnalités nécessitant sa participation.

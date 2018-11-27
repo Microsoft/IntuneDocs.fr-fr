@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fe8a55153ccc2b28c23ec2f32a4285d20afaaf6a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: f0ff43e5a25a2f2d7d97564e638d01b014ab81cb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232175"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181045"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Configurer l’intégration de Lookout Mobile Threat Defense avec Intune
 
@@ -50,11 +51,11 @@ Votre locataire Lookout Mobility Endpoint Security sera associé à votre abonne
 
 Consultez les étapes suivantes pour savoir comment collecter les informations demandées par l’équipe du support technique Lookout.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) et sélectionnez votre abonnement. 
+1. Connectez-vous au [portail Azure](https://portal.azure.com) et sélectionnez votre abonnement. 
 
-2. Lorsque vous choisissez le nom de votre abonnement, l’URL inclut l’ID d’abonnement.  Si vous ne trouvez pas votre ID d’abonnement, consultez cet [article du support technique Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) qui fournit des conseils à cette fin.
+2. Lorsque vous choisissez le nom de votre abonnement, l’URL inclut l’ID d’abonnement.  Si vous ne trouvez pas votre ID d’abonnement, consultez cet [article du support technique Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) qui fournit des conseils à cette fin.
 
-3. Obtenez votre ID de groupe Azure AD. La console Lookout offre deux niveaux d’accès :  
+3. Obtenez votre ID de groupe Azure AD. La console Lookout offre deux niveaux d’accès :  
    * **Accès complet** : l’administrateur Azure AD peut créer pour les utilisateurs qui ont un accès complet et éventuellement créer un autre groupe pour les utilisateurs qui ont un accès restreint.  Seuls les utilisateurs qui sont membres de ces groupes seront autorisés à se connecter à la **console Lookout**.
    * **Accès restreint** : les utilisateurs de ce groupe n’ont pas accès à plusieurs modules d’inscription et de configuration dans la console Lookout, et peuvent accéder en lecture seule au module **Stratégie de sécurité** de la console Lookout.  
 

@@ -11,39 +11,40 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 04834f21e5fd2f6ed0f7454988936397d3249987
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 849e3feed23b46585f9b737cb0ee91ecdf47ecae
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37904966"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186135"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10---intune"></a>Paramètres de profil de messagerie pour les appareils exécutant Windows 10 - Intune
 
 Utilisez les paramètres de profil de messagerie pour configurer vos appareils Windows 10.
 
 - **Serveur de messagerie** : entrez le nom d’hôte de votre serveur Exchange.
-- **Nom du compte** : entrez le nom complet du compte de messagerie. Ce nom est présenté aux utilisateurs sur leurs appareils.
-- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune à partir d’Azure Active Directory (AAD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
-  - **Nom d’utilisateur principal** : obtient le nom, tel que `user1` ou `user1@contoso.com`.
-  - **Adresse SMTP principale** : obtient le nom au format d’adresse e-mail, tel que `user1@contoso.com`.
-  - **Nom de compte SAM** : exige le domaine, tel que `domain\user1`.
+- **Nom du compte** : entrez le nom d’affichage du compte de messagerie. Ce nom est présenté aux utilisateurs sur leurs appareils.
+- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (AAD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
+  - **Nom d’utilisateur principal** : obtient le nom, comme `user1` ou `user1@contoso.com`
+  - **Adresse SMTP principale** : obtient le nom au format d’une adresse e-mail, comme `user1@contoso.com`.
+  - **Nom de compte SAM** : nécessite le domaine, comme `domain\user1`.
 
-    Entrez également :  
-    - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
+    Entrez également :  
+    - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
 
-      Quand vous choisissez d’obtenir les attributs à partir d’**AAD**, entrez :
-      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur.
+      Quand vous choisissez d’obtenir les attributs auprès **d’AAD**, entrez :
+      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur
 
-      Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
-      - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, telle que `contoso.com` ou `contoso`
+      Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
+      - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`
 
-- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` or `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange.
+- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange.
 
 ## <a name="security-settings"></a>Paramètres de sécurité
 
-- **SSL** : utilisez la communication SSL (Secure Sockets Layer) pour envoyer et recevoir des e-mails, et communiquer avec le serveur Exchange.
+- **SSL** : utilisez une communication SSL (Secure Sockets Layer) pour envoyer et recevoir des e-mails, et communiquer avec le serveur Exchange.
 
 ## <a name="synchronization-settings"></a>Paramètres de synchronisation
 
@@ -52,7 +53,7 @@ Utilisez les paramètres de profil de messagerie pour configurer vos appareils W
 
 ## <a name="content-sync-settings"></a>Paramètres de synchronisation du contenu
 
-- **Type de contenu à synchroniser** : sélectionnez les types de contenu à synchroniser avec les appareils :
+- **Type de contenu à synchroniser** : sélectionnez les types de contenu à partir desquels vous voulez synchroniser les appareils :
   - **Contacts**
   - **Calendrier**
   - **Tâches**

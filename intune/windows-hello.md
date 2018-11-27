@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 183518caed7276719204830a38b1b9d552a79428
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 4499e0540c81e3c0cf5f02af6691df2455a41e43
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642864"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187071"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Intégrer Windows Hello Entreprise à Microsoft Intune
 
@@ -27,7 +28,7 @@ ms.locfileid: "49642864"
 
 Vous pouvez intégrer Windows Hello Entreprise (anciennement Microsoft Passport for Work) à Microsoft Intune.
 
- Hello Entreprise est une méthode de connexion alternative qui utilise Active Directory ou un compte Azure Active Directory en remplacement d’un mot de passe, d’une carte à puce ou d’une carte à puce virtuelle. Il vous permet d’utiliser un *mouvement de l’utilisateur* pour la connexion, au lieu d’un mot de passe. Un geste utilisateur peut être un simple code confidentiel, une authentification biométrique telle que Windows Hello ou un appareil externe tel qu’un lecteur d’empreintes digitales.
+ Hello Entreprise est une méthode de connexion alternative qui utilise Active Directory ou un compte Azure Active Directory en remplacement d’un mot de passe, d’une carte à puce ou d’une carte à puce virtuelle. Il vous permet d’utiliser un *mouvement de l’utilisateur* pour la connexion, au lieu d’un mot de passe. Un mouvement utilisateur peut être un simple code confidentiel, une authentification biométrique telle que Windows Hello ou un appareil externe tel qu’un lecteur d’empreintes digitales.
 
 Intune s’intègre à Hello Entreprise de deux manières :
 

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1a10d434fbdb5d827c7ecb89d1ae2f7e43c0f951
-ms.sourcegitcommit: 1e6fee4032c50ab41a5166db39fbea80a731c541
+ms.openlocfilehash: 77a0c3f3a2e1ed0ee2dbc652049bb7057c736010
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51654906"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189960"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot (préversion)
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory hybride. Pour ce faire, suivez les étapes ci-dessous.

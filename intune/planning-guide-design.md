@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 8e73a9cf189ba44a9f093559b9175dfa947a38e1
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864589"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186492"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -34,11 +35,11 @@ Votre conception Intune est basée sur les informations que vous collectez et le
 
 -   Considérations relatives aux plateformes d'appareils
 
--   Conditions requises pour la remise  
+-   Conditions requises pour la remise  
 
 Bien qu’il existe des conditions minimales concernant l’infrastructure en local, un plan de conception est toujours utile pour vérifier que vous disposez d’une solution de gestion d’appareils mobiles adéquate qui répond à vos objectifs et exigences.
 
-Examinons chacun de ces domaines plus en détail. 
+Examinons chacun de ces domaines plus en détail. 
 
 ## <a name="record-your-current-environment"></a>Enregistrer votre environnement actuel
 Il est par ailleurs courant de changer de conception pendant les phases de test et d’implémentation. Utilisez votre plan de conception pour documenter ces changements et les raisons qui les motivent.

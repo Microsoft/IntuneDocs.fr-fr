@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0c1daa93ff38d1f76ab8c203bf2d989318ecdf62
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: c96d66a11f49db68d20511aeae9b2abbab53b172
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425221"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181240"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signer des applications métier afin de pouvoir les déployer sur des appareils Windows avec Intune
 
@@ -51,7 +52,7 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 
     ![Exporter le certificat de signature](./media/wit-walk-cert2.gif)
 
-    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Terminez l’Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](http://go.microsoft.com/fwlink/?LinkID=203031).
+    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Effectuez toutes les étapes de l'Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](http://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Charger l’application sur Intune**<br>
     Chargez le fichier d’application signé et votre certificat de signature de code pour rendre l’application disponible pour vos utilisateurs finaux.
@@ -66,7 +67,7 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 
 ## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Exemple : Télécharger, signer et déployer l’application Portail d’entreprise pour les appareils Windows
 
-Vous pouvez déployer l’application Portail d’entreprise sur les appareils Windows, y compris les appareils Windows Phone et Windows 10 Mobile avec Intune, au lieu de l’installer à partir du Microsoft Store. Vous devez télécharger l’application Portail d’entreprise et la signer avec votre certificat.  Cela n'est nécessaire que si vos utilisateurs ne sont pas appelés à utiliser le Store d'entreprise et si vous souhaitez déployer le Portail d'entreprise sur des appareils Windows Phone 8.1.
+Vous pouvez déployer l’application Portail d’entreprise sur les appareils Windows, y compris les appareils Windows Phone et Windows 10 Mobile avec Intune, au lieu de l’installer à partir du Microsoft Store. Vous devez télécharger l’application Portail d’entreprise et la signer avec votre certificat.  Cela n'est nécessaire que si vos utilisateurs ne sont pas appelés à utiliser le Store d'entreprise et si vous souhaitez déployer le Portail d'entreprise sur des appareils Windows Phone 8.1.
 
 
 1.  **Télécharger le Portail d'entreprise**

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 24cf9d97-db39-4b95-a664-4aa2e33edb87
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: f76e227037efd6ea8ee7ea95d61f3358698af1d9
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 10598f4868a42b9736b6b33a6d9b5c4b4b308967
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "29961460"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189348"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Déterminer les objectifs et les défis liés au déploiement
 
@@ -78,7 +79,7 @@ Les objectifs du déploiement sont les actions que votre organisation peut mener
 
 Les défis liés au déploiement représentent des problèmes cruciaux pour une organisation et ils peuvent avoir un impact négatif sur le déploiement. Parfois, ils peuvent être liés à des problèmes rencontrés lors de projets précédents, et vous devez éviter que de tels problèmes n'affectent le déploiement actuel. Vous trouverez ci-dessous quelques exemples de problèmes de déploiement affectant Intune, ainsi que les solutions d'atténuation possibles.
 
--   La disponibilité du support et l’expérience de l'utilisateur final ne sont pas prises en compte dans l'élaboration du projet initial. Cela conduit à une mauvaise adoption par les utilisateurs finaux et à des défis pour votre organisation de support.
+-   La disponibilité du support et l’expérience de l'utilisateur final ne sont pas prises en compte dans l'élaboration du projet initial. Cela conduit à une mauvaise adoption par les utilisateurs finaux et à des défis pour votre organisation de support.
 
     -   **Atténuation :** intégrez une formation de support. Validez l’expérience utilisateur avec des critères de réussite dans votre plan de déploiement.
 

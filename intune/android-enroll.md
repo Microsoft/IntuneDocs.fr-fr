@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3b7652c8c4f471a0a0c32da23d8ac1859e84eb13
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
+ms.openlocfilehash: 2b2b3ba5443cd95cd81bdca6d386ab95a2c831eb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400349"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190113"
 ---
 # <a name="enroll-android-devices"></a>Inscrire des appareils Android
 
@@ -30,7 +31,7 @@ En tant qu’administrateur Intune, vous pouvez gérer les appareils Android sui
 - Appareils Android, notamment les appareils Samsung Knox Standard.
 - Appareils d’entreprise Android, notamment les [appareils avec profil professionnel Android](#enable-enrollment-of-android-for-work-devices) et les appareils en mode kiosque Android.
 
-Les appareils qui exécutent Samsung Knox Standard sont pris en charge pour la gestion des utilisateurs multiples par Intune. Cela signifie que les utilisateurs finaux peuvent se connecter et se déconnecter d’un appareil avec leurs informations d’identification Azure AD. L’appareil est géré de manière centralisée, qu’il soit en cours d’utilisation ou non. Quand les utilisateurs se connectent, ils ont accès aux applications et les éventuelles stratégies sont appliquées à ces applications. Quand les utilisateurs se déconnectent, toutes les données d’application sont effacées.
+Les appareils qui exécutent Samsung Knox Standard sont pris en charge pour la gestion des utilisateurs multiples par Intune. Cela signifie que les utilisateurs finaux peuvent se connecter et se déconnecter d’un appareil avec leurs informations d’identification Azure AD. L’appareil est géré de manière centralisée, qu’il soit en cours d’utilisation ou non. Quand les utilisateurs se connectent, ils ont accès aux applications et les éventuelles stratégies sont appliquées à ces applications. Quand les utilisateurs se déconnectent, toutes les données d’application sont effacées.
 
 ## <a name="prerequisite"></a>Prérequis
 

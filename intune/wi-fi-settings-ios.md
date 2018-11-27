@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fa81e8979f48a0b027f4860cfc5d2a88e3b30772
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 6d84c64e93f986a86e90cd9b7b5341fd8ea97d12
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425238"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180202"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ajouter des paramètres Wi-Fi pour les appareils iOS dans Microsoft Intune
 

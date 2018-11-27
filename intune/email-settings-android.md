@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 136ccb6079b16c13098c1dbd6ca49e8254c14f89
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: b8ab8dfadb113d81922119a54aefcac43d15b5a1
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905765"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187427"
 ---
 # <a name="email-profile-settings-for-devices-running-android-and-android-enterprise---intune"></a>Paramètres de profil de messagerie pour les appareils exécutant Android et Android Entreprise - Intune
 
@@ -41,7 +42,7 @@ En tant qu’administrateur Intune, vous pouvez créer et affecter des paramètr
     - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
 
       Quand vous choisissez d’obtenir les attributs auprès **d’AAD**, entrez :
-      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur.
+      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur
 
       Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
       - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`

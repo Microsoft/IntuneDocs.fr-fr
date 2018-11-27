@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 8b5f86a8f0d9beaef9e55d2281e3500e0c298a16
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424915"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182396"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -28,7 +29,7 @@ Ce document décrit à la fois la réinitialisation du code secret au niveau de 
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret au niveau de l’appareil
 
-| Plateforme | Pris en charge ? |
+| Plate-forme | Pris en charge ? |
 | ---- | ---- |
 | Appareils Android version 6.x ou antérieure | Oui |
 | Appareils Android Entreprise en mode plein écran | Oui |
@@ -42,7 +43,7 @@ Pour les appareils Android, cela signifie effectivement que la réinitialisation
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Plateformes prises en charge pour la réinitialisation du code secret du profil professionnel d’un appareil Android Entreprise
 
-| Plateforme | Pris en charge ? |
+| Plate-forme | Pris en charge ? |
 | ---- | ---- |
 | Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 8.0 et ultérieures | Oui |
 | Appareils Android Entreprise inscrits avec un profil professionnel et exécutant les versions 7.x et antérieures | Non |

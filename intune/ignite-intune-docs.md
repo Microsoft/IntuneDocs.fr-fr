@@ -13,13 +13,14 @@ ms.technology: ''
 ms.reviewer: ''
 ROBOTS: NOINDEX,NOFOLLOW
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 600c6a00910647983cc2329f9256b613560aaf14
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: ec5127adcb12bc1196604d27ae2ac6501de03d08
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866318"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187104"
 ---
 # <a name="microsoft-intune-documentation-40ignite-special-edition41"></a>Documentation de Microsoft Intune &#40;Édition spéciale Ignite&#41;
 Bienvenue dans Microsoft Ignite 2018 ! Nous sommes heureux de vous accueillir. Dans Microsoft Ignite 2018, vous allez pouvoir découvrir quelques-unes des ressources Intune que nous avons rassemblées pour vous.
@@ -37,7 +38,7 @@ Nous avons mis à jour quelques guides de démarrage rapide et en avons créé d
 - [Affecter des stratégies](get-started-policies.md) : créez une stratégie de conformité pour un appareil Windows 10 et affectez un groupe à la stratégie.
 - [Configurer l’inscription automatique](quickstart-setup-auto-enrollment.md) : configurez Microsoft Intune pour inscrire automatiquement des appareils quand des utilisateurs spécifiques se connectent à des appareils Windows 10.
 - [Créer et affecter un rôle personnalisé](quickstart-create-custom-role.md) : créez et affectez un rôle personnalisé avec des autorisations spécifiques pour un département d’opérations de sécurité. 
-- [Créer un profil d’appareil de messagerie pour iOS](quickstart-email-profile.md) : créez un profil d’appareil de messagerie pour les appareils iOS.
+- [Créer un profil d’appareil e-mail pour iOS](quickstart-email-profile.md) - Créez un profil d’e-mail pour les appareils iOS.
 
 ## <a name="learn"></a>Apprendre
 - [Nouveautés d’Intune](whats-new.md)
@@ -47,7 +48,7 @@ Nous avons mis à jour quelques guides de démarrage rapide et en avons créé d
 - [Devenir contributeur de la documentation Intune](https://github.com/MicrosoftDocs/IntuneDocs/blob/master/README.md)  
 - [Principaux contributeurs de la documentation Intune ce mois-ci](https://github.com/MicrosoftDocs/IntuneDocs/graphs/contributors?from=2018-09-01&to=2018-11-30&type=c)  
 
-## <a name="start-using-intune"></a>Commencer à utiliser Intune
+## <a name="start-using-intune"></a>Prise en main d'Intune
 - [Licences incluant Intune](licenses.md)
 - [Essayer Intune gratuitement](free-trial-sign-up.md)
 - [Configurer Intune](setup-steps.md)
