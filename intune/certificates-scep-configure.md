@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b0ee2b2ad8d25d1040577a7f8abff4377704d2d5
-ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
+ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52167533"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303870"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -66,7 +67,7 @@ Nous vous recommandons vivement de publier le serveur NDES par le biais d’un p
 |**Modèle de certificat**|Configurez ce modèle sur votre autorité de certification émettrice.|
 |**Certificat d’authentification client**|Demandé auprès de votre autorité de certification émettrice ou de votre autorité de certification publique ; ce certificat doit être installé sur le serveur NDES.|
 |**Certificat d’authentification serveur**|Demandé auprès de votre autorité de certification émettrice ou autorité de certification publique ; ce certificat doit être installé et lié dans IIS sur le serveur NDES. Si les utilisations des clés d’authentification du client et du serveur sont définies pour le certificat (**utilisations améliorées de la clé**), vous pouvez utiliser le même certificat.|
-|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux appareils à l’aide du profil de certificat d’autorité de certification approuvé.<br /><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez.<br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
+|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux utilisateurs, aux appareils ou aux deux à l’aide du profil de certificat d’autorité de certification approuvé.<br /><b>Remarque :<b />Quand un profil de certificat SCEP est affecté, veillez à affecter le profil de certificat racine approuvé référencé dans votre profil de certificat SCEP au même groupe d’utilisateurs ou d’appareils.<br /><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez.<br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
 
 ### <a name="accounts"></a>Comptes
 
@@ -481,7 +482,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
      - **Signature numérique** : autorisez l’échange de clés uniquement quand une signature numérique contribue à protéger la clé
    - **Taille de la clé (bits)** : sélectionnez le nombre de bits contenus dans la clé
    - **Algorithme de hachage** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) : sélectionnez l’un des types d’algorithme de hachage disponibles avec ce certificat. Permet de sélectionner le niveau le plus élevé de sécurité pris en charge par les appareils se connectant.
-   - **Certificat racine** : choisissez un profil de certificat d’autorité de certification racine que vous avez configuré et attribué à l’utilisateur ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat.
+   - **Certificat racine** : choisissez un profil de certificat d’autorité de certification racine que vous avez configuré et attribué à l’utilisateur et/ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat. Veillez à affecter ce profil de certificat racine approuvé au même groupe affecté dans le profil de certificat SCEP.
    - **Utilisation de la clé étendue** : **ajoutez** des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une **authentification client** pour que l’utilisateur ou l’appareil puisse être authentifié auprès d’un serveur. Toutefois, vous pouvez ajouter d'autres utilisations de la clé en fonction de vos besoins.
    - **Paramètres d’inscription**
      - **Seuil de renouvellement (%)** : entrez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.

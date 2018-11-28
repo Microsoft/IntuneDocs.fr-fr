@@ -12,13 +12,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 322a60101132d5ef435752079bb5c52a7a4b3a78
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425017"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179071"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installer le logiciel client Intune sur des PC Windows
 
@@ -249,14 +250,14 @@ Consultez « %ProgramFiles%\Microsoft\OnlineManagement » et vérifiez que seu
 
 - AgentInstaller
 - Logs
-- Mises à jour
+- Updates
 - Common
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Supprimer le dossier OnlineManagement
 
 Le processus d’annulation de l’inscription ne supprime pas le dossier OnlineManagement. Attendez 30 minutes après la désinstallation, puis exécutez cette commande. Si vous l’exécutez trop tôt, la désinstallation peut rester dans un état inconnu. Pour supprimer le dossier, démarrez une invite de commandes avec élévation des privilèges et exécutez :
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Étapes suivantes
 [Gérer des appareils avec Microsoft Intune](device-management.md)

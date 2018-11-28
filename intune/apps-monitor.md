@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 09e4cfc314ea21294cd3de62611a089ec724a683
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075625"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181885"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -67,7 +68,9 @@ Les graphiques indiquent le nombre d’applications liées aux états suivants 
 >    - Une modification de ciblage d’une application managée installée peut faire baisser le nombre d’installations dans le panneau d’état, tandis que l’application reste comptée parmi les applications détectées.
 >    - Si plusieurs instances de la même application sont ciblées dans un locataire, le chevauchement potentiel d’utilisateurs ou d’appareils entraîne des disparités dans les volumes. Chaque instance de l’application compte les utilisateurs qui se chevauchent, mais les applications découvertes sont comptées plusieurs fois.
 >    - Les applications découvertes et leur état sont collectés à différents intervalles de temps, ce qui peut causer des écarts dans le nombre d’applications.
- 
+> 
+> De plus, n’oubliez pas que les applications Android déployées comme **Disponible avec ou sans inscription** signalent leur état d’installation seulement pour les appareils inscrits. L’état d’installation des applications n’est pas disponible pour les appareils qui ne sont pas inscrits dans Intune.
+
 ### <a name="device-install-status"></a>État de l’installation de l’appareil
 
 Une listes des états de l’appareil s’affiche quand vous sélectionnez **État de l’installation de l’appareil** dans la section **Surveiller** du menu. Le tableau des détails inclut les colonnes suivantes :

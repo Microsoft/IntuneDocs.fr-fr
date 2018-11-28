@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2017
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,17 +14,26 @@ ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 05502c901f01ba134475ec69df3c42aa6e0e7480
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: eedbc17147c6f9e2988d954308f2332de10d00ab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231740"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189841"
 ---
 # <a name="review-client-app-protection-logs"></a>Consulter les journaux de la protection des applications clientes
 
-Découvrez plus en détail les paramètres disponibles dans les journaux de protection d’application. Accédez aux journaux en activant le mode de diagnostic Intune pour une application sur un client mobile. Le tableau suivant affiche le nom et une description des paramètres enregistrés dans le journal.
+Découvrez plus en détail les paramètres disponibles dans les journaux de protection d’application. Accédez aux journaux en activant Diagnostics Intune sur un client mobile. 
+
+Le processus pour activer et collecter les journaux varie selon la plateforme :
+- **Appareils Android** - Utilisez le *Portail d’entreprise*. Consultez [Envoyer des journaux au support technique de votre entreprise par e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
+- **Appareils iOS** - Utilisez Managed Browser ou *Microsoft Edge* pour collecter les journaux. Pour plus d’informations, consultez le blog de l’équipe de support Intune [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser). 
+- **Appareils Windows 10** - Utilisez *MDMDiag* et les journaux des événements. Consultez [Diagnostiquer les échecs MDM dans Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) dans le contenu Gestion des clients Windows et le blog [Troubleshooting Windows 10 Intune Policy Failures](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
+
+
+Le tableau suivant liste le nom et la description des paramètres enregistrés dans le journal.
 
 ## <a name="app-protection-policy-settings"></a>Paramètres de stratégie de protection d’application
 
@@ -43,7 +52,7 @@ Découvrez plus en détail les paramètres disponibles dans les journaux de prot
 | DisableShareSense           | N/A                                                                                                                                                                                                                                                                                                         | N/A : paramètre non utilisé activement par le service Intune.                                                                                                                                                |
 | FileEncryptionLevel         | 0 = Quand l’appareil est verrouillé<br>1 = Quand l'appareil est verrouillé et que des fichiers sont ouverts<br>2 = Après le redémarrage de l'appareil<br>3 = Utiliser les paramètres de l'appareil                                                                                                                                                                      | [Réadressage des données] Chiffre les données de l’application.                                                                                                                                                      |
 | FileSharingSaveAsDisabled   | 0 = Non<br>1 = Oui                                                                                                                                                                                                                                                                                           | [Réadressage des données] Empêche « Enregistrer sous ».                                                                                                                                                     |
-| IntuneIdentityUPN           | UPN de l’utilisateur GAM Intune.                                                                                                                                                                                                                                                                                  | N/A                                                                                                                                                                                     |
+| IntuneIdentityUPN           | UPN de l’utilisateur MAM Intune.                                                                                                                                                                                                                                                                                  | N/A                                                                                                                                                                                     |
 | ManagedBrowserRequired      | 0 = Non<br>1 = Oui                                                                                                                                                                                                                                                                                           | [Réadressage des données] Affiche le contenu Web uniquement dans l’application Managed Browser.                                                                                                     |
 | ManagedLocations            | Une valeur représentant le nombre d’emplacements de stockage gérés dans lesquels l’application peut enregistrer des données. <br>1 = OneDrive<br>2 = SharePoint<br>3 = OneDrive et SharePoint<br>32 = Stockage local<br>33 = Stockage local et OneDrive<br>34 = Stockage local et SharePoint<br>35 = Stockage local, OneDrive et SharePoint | [Réadressage des données] Sélectionnez les services de stockage dans lesquels les données d'entreprise peuvent être enregistrées.                                                                                                          |
 | MinAppVersion               | « 0.0 » = Aucune version minimale de l’application exigée<br>Autre valeur = Version minimale de l’application exigée                                                                                                                                                                                                                                       | [Accès] Exige une version minimale de l’application.                                                                                                                                                    |

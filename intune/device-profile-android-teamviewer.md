@@ -5,20 +5,21 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 60d9398b80a30adee194470ac4e5c6c1efc0bd4c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744633"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186178"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Utiliser TeamViewer pour administrer à distance des appareils Intune
 
@@ -58,7 +59,10 @@ Après avoir configuré le connecteur, vous êtes prêt à administrer à distan
 
 ![Utiliser TeamViewer pour administrer à distance un appareil Android (exemple)](./media/android-teamviewer.png)
 
-Quand vous démarrez une session à distance, un utilisateur final voit un indicateur de notification sur l’icône de l’application Portail d’entreprise sur son appareil. Une notification s’affiche également quand l’application s’ouvre. L’utilisateur peut alors accepter la demande d’assistance à distance.
+Quand vous démarrez une session à distance, les utilisateurs finaux voient un indicateur de notification sur l’icône de l’application Portail d’entreprise sur leur appareil. Une notification apparaît également quand l’application s’ouvre. Les utilisateurs peuvent alors accepter la demande d’assistance à distance.
+
+> [!NOTE]
+> Les appareils Windows qui sont inscrits à l’aide de méthodes « sans utilisateur », comme DEM et WCD, n’affichent pas la notification TeamViewer dans l’application Portail d’entreprise. Dans ces scénarios, il est recommandé d’utiliser le portail TeamViewer pour générer la session.
 
 Dans TeamViewer, vous pouvez effectuer diverses actions sur l’appareil, notamment prendre son contrôle. Pour tout savoir sur ce que vous pouvez faire, consultez [l’aide de TeamViewer](https://www.teamviewer.com/support/documents/).
 

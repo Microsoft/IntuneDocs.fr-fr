@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6deed5de94b72ec3dfb5e8336cc2a58678b4748f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231472"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187459"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Connecteur Zimperium Mobile Threat Defense avec Intune
 
@@ -58,7 +59,7 @@ Lorsque des applications malveillantes, des logiciels malveillants par exemple, 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), sur le réseau et protégez l’accès aux réseaux Wi-Fi compte tenu du risque de l’appareil.
+Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et protégez l’accès aux réseaux Wi-Fi compte tenu du risque de l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 
@@ -70,7 +71,7 @@ Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), su
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Contrôler l’accès à SharePoint Online en fonction de la menace pour le réseau
 
-Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), sur le réseau et empêchez la synchronisation des fichiers d’entreprise compte tenu du risque de l’appareil.
+Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et empêchez la synchronisation des fichiers d’entreprise compte tenu du risque de l’appareil.
 
 **Bloquer SharePoint Online lorsque des menaces réseau sont détectées :**
 
@@ -94,7 +95,7 @@ Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), su
 
 -   Abonnement Zimperium Mobile Threat Defense
 
-    -   Pour plus d’informations, consultez le [site web Zimperium](https://www.zimperium.com/zips-mobile-ips).
+    -   Pour plus d’informations, consultez le  [site web de Zimperium](https://www.zimperium.com/zips-mobile-ips) .
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312815"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189195"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -130,7 +131,7 @@ Vous pouvez réinitialiser seulement des appareils en mode kiosque. Vous ne pouv
 
 ### <a name="windows"></a>Windows
 
-|Type de données|Windows 8.1 (MDM) et Windows RT 8.1|Windows RT|Windows Phone 8.1 et Windows Phone 8|Windows 10|
+|Type de données|Windows 8.1 (MDM) et Windows RT 8.1|Windows RT|Windows Phone 8.1 et Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Applications d’entreprise et données associées installées par Intune|Les clés sont révoquées pour les fichiers protégées par EFS. L’utilisateur ne peut pas ouvrir les fichiers.|Les applications d’entreprise ne sont pas supprimées.|Les applications installées à l’origine par le biais du portail d’entreprise sont désinstallées. Les données des applications de l'entreprise sont supprimées.|Les applications sont désinstallées. Les clés de chargement indépendant (sideloading) sont supprimées.<br>Pour Windows 10 versions 1703 (Creator Update) et ultérieures, les applications Office 365 ProPlus ne sont pas supprimées.|
 |Paramètres|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|

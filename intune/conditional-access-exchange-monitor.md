@@ -13,17 +13,18 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ff5686e2d83831259bd21bee164b3c187e1c0ee
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 20a99290d2a84c22bc2bee823d7a3bb42e43aced
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231353"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180576"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Surveiller la conformité des accès conditionnels pour Exchange local et Exchange Online dans Intune
 
-À compter d’Intune version 1704, les administrateurs peuvent voir les informations de rapport liées aux enregistrements d’appareils Exchange ActiveSync qui sont synchronisés avec Intune via le Connecteur Exchange local ou le connecteur service à service Intune (connecteur Exchange Online). Les rapports de conformité de l’accès conditionnel offrent un résumé des appareils avec différents états de synchronisation :
+À compter d’Intune version 1704, les administrateurs peuvent voir les informations de rapport liées aux enregistrements d’appareils Exchange ActiveSync qui sont synchronisés avec Intune via le Connecteur Exchange local ou le connecteur service à service Intune (connecteur Exchange Online). Les rapports de conformité de l’accès conditionnel offrent un résumé des appareils avec différents états de synchronisation :
 
 -   **Autoriser**
 
@@ -35,11 +36,11 @@ ms.locfileid: "48231353"
 
 1.  Accédez au [portail Azure](https://portal.azure.com/) et connectez-vous avec vos informations d’identification Intune.
 
-2.  Une fois correctement connecté, le **tableau de bord Azure** apparaît.
+2.  Une fois que vous êtes connecté, vous voyez le **tableau de bord Azure**.
 
-3.  Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
+3.  Choisissez  **Tous les services**  dans le menu de gauche, puis entrez  **Intune**  dans le filtre de la zone de texte.
 
-4.  Choisissez **Intune**, vous voyez le **tableau de bord Intune**.
+4.  Choisissez  **Intune**, vous voyez le **tableau de bord Intune**.
 
 5.  Choisissez **Accès conditionnel**, puis **Vue d’ensemble**.
 
@@ -49,7 +50,7 @@ ms.locfileid: "48231353"
 
 Une fois que vous avez choisi l’une des trois zones, vous pouvez voir plus de détails sur les appareils autorisés, bloqués ou mis en quarantaine.
 
-Vous pouvez également rechercher des appareils spécifiques pour afficher plus de détails. Par exemple, l’appareil sélectionné sur l’image ci-dessous est bloqué. Intune vous donne la possibilité de supprimer les données d’entreprise du volet de rapports de conformité de l’accès conditionnel.
+Vous pouvez également rechercher des appareils spécifiques pour voir plus de détails. Par exemple, l’appareil sélectionné sur l’image ci-dessous est bloqué. Intune vous donne la possibilité de supprimer les données d’entreprise du volet de rapports de conformité de l’accès conditionnel.
 
 ![Image des rapports détaillés des appareils pour l’accès conditionnel](./media/CA-reporting-intune-3.png)
 

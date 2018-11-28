@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e4330d8e8095df49b14ab60c4b08aae44d134452
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: ffb7ecc9bfd183c6fa7a863a5b1440ee7d25b0f3
+ms.sourcegitcommit: 0dbce0415e53fe963dc7f927ac4b0c06411f199c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679217"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281069"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-macos"></a>Configurer les paramètres VPN dans Microsoft Intune pour les appareils exécutant macOS
 
@@ -56,6 +57,6 @@ Si vous avez sélectionné **VPN personnalisé**, configurez ces paramètres sup
 
 ## <a name="proxy-settings"></a>Paramètres du proxy
 
-- **Script de configuration automatique** : utilisez un fichier de configuration pour configurer le serveur proxy. Entrez l’**URL du serveur proxy** (par exemple `** http://proxy.contoso.com**`) qui contient le fichier config.
+- **Script de configuration automatique** : utilisez un fichier de configuration pour configurer le serveur proxy. Entrez l’**URL du serveur Proxy** qui contient le fichier de configuration. Par exemple, entrez `http://proxy.contoso.com`.
 - **Adresse** : saisissez l’adresse du serveur proxy (comme une adresse IP).
 - **Numéro de port** : saisissez le numéro de port associé au serveur proxy.
