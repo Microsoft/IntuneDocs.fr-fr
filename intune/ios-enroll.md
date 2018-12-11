@@ -1,5 +1,5 @@
 ---
-title: Choisir comment inscrire des appareils iOS dans Intune
+title: Inscrire des appareils iOS dans Intune
 titlesuffix: Microsoft Intune
 description: Configurez l’inscription des appareils iOS dans Microsoft Intune.
 keywords: ''
@@ -15,13 +15,13 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: bc1ae3f545f840f9ebfa1b7b75b56862691d900e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 22951d6e129b50d37fb16d865f0b9ad9aada012f
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182735"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032280"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Inscrire des appareils iOS dans Intune
 
@@ -77,7 +77,7 @@ Une affinité utilisateur est nécessaire pour prendre en charge les éléments 
 4. Les utilisateurs doivent lancer l’application Portail d’entreprise et se connecter à l’aide des informations d’identification (par exemple, l’UPN) qui sont associées à leur abonnement dans Intune. 
 5. Une fois que vous êtes connecté, l’inscription est terminée. Les utilisateurs peuvent désormais utiliser cet appareil avec l’ensemble complet des fonctionnalités.
 
-### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>À propos des appareils gérés d’entreprise sans aucune affinité utilisateur
+### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>À propos des périphériques gérés d’entreprise sans aucune affinité utilisateur
 
 Les appareils configurés sans aucune affinité utilisateur ne prennent pas en charge le Portail d’entreprise et ne doivent pas être dotés de l’application. Le Portail d’entreprise est conçu pour les utilisateurs détenteurs d’informations d’identification d’entreprise, qui ont besoin d’accéder à des ressources d’entreprise personnalisées (par exemple, aux e-mails). Les appareils inscrits sans aucune affinité utilisateur ne sont pas destinés à un utilisateur dédié. Une borne, un point de vente (PDV) ou un appareil à usage partagé sont des exemples typiques d’utilisation d’appareils inscrits sans aucune affinité utilisateur.
 

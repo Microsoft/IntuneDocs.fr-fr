@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
-ms.openlocfilehash: a23f5fb9e05cf9a7fe46456b642aef76b6a79b70
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 048b8472be00c544611fe2ea8763b16019cebc0b
+ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183109"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52887047"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Vue d’ensemble du cycle de vie des applications dans Microsoft Intune
 
@@ -34,7 +34,7 @@ Le cycle de vie des applications Microsoft Intune commence quand une application
 
 La première étape du déploiement d’applications consiste à ajouter celles que vous voulez gérer et affecter dans Intune. Il existe certes différents types d’applications avec lesquels vous pouvez travailler, mais les procédures de base sont les mêmes. Avec Intune, vous pouvez ajouter différents types d’applications, notamment des applications écrites en interne (applications métier), des applications du Windows Store, des applications intégrées et des applications sur le web. Pour plus d’informations sur chacun de ces types d’application, consultez [Guide pratique pour ajouter une application à Microsoft Intune](apps-add.md). 
 
-## <a name="deploy"></a>Déploiement
+## <a name="deploy"></a>Déployez
 
 Une fois que vous avez ajouté l’application à Intune, vous pouvez [l’affecter aux utilisateurs et appareils que vous gérez](apps-deploy.md). Intune facilite ce processus et, une fois que l’application est déployée, vous pouvez [surveiller la réussite](apps-monitor.md) du déploiement à partir de la console d’administration Intune dans le portail Azure. Certains magasins d’applications, tels que l’[Apple App Store](vpp-apps-ios.md) et le [Windows Store](windows-store-for-business.md), vous permettent également d’acheter des licences d’application en bloc pour votre société. Intune peut synchroniser des données grâce à ces magasins pour vous permettre de déployer des licences et d’effectuer leur suivi pour ces types d’applications directement à partir de la console d’administration Intune.
 
@@ -54,6 +54,6 @@ Intune propose différentes manières de protéger les données dans vos applica
 
 Enfin, il est probable que des applications que vous avez déployées deviennent obsolètes et doivent être supprimées. Intune facilite [la mise hors service d’applications](device-management.md).
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 - En savoir plus sur la [gestion des applications dans Microsoft Intune](app-management.md)

@@ -15,13 +15,13 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 2b2b3ba5443cd95cd81bdca6d386ab95a2c831eb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 79a1a03f74db8e44dc3ee4d6575e193ce7841e24
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190113"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031889"
 ---
 # <a name="enroll-android-devices"></a>Inscrire des appareils Android
 
@@ -33,7 +33,7 @@ En tant qu’administrateur Intune, vous pouvez gérer les appareils Android sui
 
 Les appareils qui exécutent Samsung Knox Standard sont pris en charge pour la gestion des utilisateurs multiples par Intune. Cela signifie que les utilisateurs finaux peuvent se connecter et se déconnecter d’un appareil avec leurs informations d’identification Azure AD. L’appareil est géré de manière centralisée, qu’il soit en cours d’utilisation ou non. Quand les utilisateurs se connectent, ils ont accès aux applications et les éventuelles stratégies sont appliquées à ces applications. Quand les utilisateurs se déconnectent, toutes les données d’application sont effacées.
 
-## <a name="prerequisite"></a>Prérequis
+## <a name="prerequisite"></a>Composant requis
 
 Pour préparer la gestion des appareils mobiles, vous devez définir l’autorité de gestion des appareils mobiles (MDM) sur **Microsoft Intune**. Consultez la page [Configurer l’autorité MDM](mdm-authority-set.md) pour obtenir des instructions. Cet élément ne se définit qu’une seule fois, quand vous configurez pour la première fois Intune pour la gestion des appareils mobiles.
 
