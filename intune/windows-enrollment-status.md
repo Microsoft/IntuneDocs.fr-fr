@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ada9fee575824d27a6bfdd8f14d4845d228467db
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186074"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52729039"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
@@ -61,6 +61,16 @@ Un appareil ou un utilisateur peut se trouver dans plusieurs groupes et avoir pl
 2. Pointez sur le profil dans la liste.
 3. À l’aide des trois points verticaux, faites glisser le profil à la position souhaitée dans la liste.
 
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Bloquer l’accès à un appareil tant qu’une certaine application n’est pas installée
+
+Vous pouvez spécifier quelles applications doivent être installés pour que l’utilisateur puisse accéder au bureau.
+
+1. Dans Intune, choisissez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription (préversion)**.
+2. Choisissez un profil > **Paramètres**.
+3. Choisissez **Oui** pour **Afficher la progression de l’installation des profils et des applications**.
+4. Choisissez **Oui** pour **Bloquer l’utilisation de l’appareil jusqu’à ce que toutes les applications et tous les profils soient installés**.
+5. Choisissez **Sélectionnées** pour **Bloquer l’utilisation de l’appareil jusqu’à ce que ces applications requises soient installées si elles sont affectées à l’utilisateur/l’appareil**.
+ 6. Choisissez **Sélectionner des applications** > choisissez les applications > **Sélectionner** > **Enregistrer**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informations de suivi de la page d’état d’inscription
 

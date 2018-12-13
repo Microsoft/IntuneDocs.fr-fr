@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 12c48a00e4b755409b698d5f2ee6182403802f23
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c556bab6deadc0db0ea625ee3c26bba636ea497d
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190402"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829179"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -639,21 +639,9 @@ Vous n’avez besoin de configurer aucune autre valeur du manifeste.
 
 Authority et NonBrokerRedirectURI peuvent être spécifiés si nécessaire.
 
-Inscrivez votre application auprès d’Azure AD en effectuant les étapes suivantes.
-
-Dans le portail Azure :
-1.  Accédez au panneau **Azure Active Directory**.
-2.  Sélectionnez la configuration d’**Inscription d’application** pour l’application.
-3.  Dans **Paramètres**, sous l’en-tête **Accès d’API**, sélectionnez **Autorisation requise**. 
-4.  Cliquez sur **+ Ajouter**.
-5.  Cliquez sur **Sélectionner une API**. 
-6.  Dans la zone de recherche, entrez **Gestion des applications mobiles Microsoft**.
-7.  Sélectionnez **Gestion des applications mobiles Microsoft** dans la liste des API et cliquez sur Sélectionner.
-8.  Sélectionnez **Lire et écrire les données de gestion d’application de l’utilisateur**.
-9.  Cliquez sur **Terminé**.
-10. Cliquez sur **Accorder des autorisations**, puis sur **Oui**. 
-
-Pour plus d’informations sur l’inscription d’une application avec Azure AD, consultez [cette page](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
+Inscrivez votre application auprès d’Azure AD en suivant les étapes ci-dessous :
+* Pour plus d’informations sur l’inscription d’une application avec Azure AD, consultez [cette page](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
+* Veillez à ce que les étapes à suivre pour accorder à votre application Android des autorisations vis-à-vis du service de stratégie App Protection (APP) soient respectées. Suivez les instructions de la [mise en route avec le guide du SDK Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) sous « Autoriser votre application à accéder au service de protection d’application Intune (facultatif) ». 
 
 Consultez aussi les exigences pour [l’accès conditionnel](#conditional-access) ci-dessous.
 

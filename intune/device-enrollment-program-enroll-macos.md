@@ -1,12 +1,12 @@
 ---
-title: Inscrire des appareils macOS - Programme d’inscription des appareils
+title: Inscrire les appareils macOS – Programme d’inscription des appareils ou Apple School Manager
 titleSuffix: Microsoft Intune
 description: Découvrez comment inscrire des appareils macOS d’entreprise à l’aide du Programme d’inscription des appareils.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,22 +16,22 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 92ddad3e7e8de4a10c67f9feae10d2441ec560bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 12a59165cd9ebe43826f8ec63ed5b045e5f3e991
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180763"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728750"
 ---
-# <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple
+# <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Cet article vous montre comment activer l’inscription d’appareils macOS pour les appareils achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple. Vous pouvez configurer l’inscription DEP pour un grand nombre d’appareils sans jamais les toucher. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
+Cet article explique comment configurer l’inscription des appareils macOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple ou [d’Apple School Manager](https://school.apple.com/). Vous pouvez utiliser ces deux types d’inscriptions pour un grand nombre d’appareils sans jamais avoir à les manipuler. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
 
-Pour configurer l’inscription DEP, vous utilisez à la fois le portail Intune et le portail DEP Apple. Vous créez des profils d’inscription DEP contenant les paramètres appliqués aux appareils lors de l’inscription.
+Pour configurer l’inscription, on utilise à la fois le portail Intune et le portail DEP Apple. Des profils d’inscription contenant les paramètres appliqués aux appareils lors de l’inscription sont créés.
 
-L’inscription DEP ne fonctionne pas avec le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md) ou [Apple School Manager](apple-school-manager-set-up-ios.md).
+Ni l’inscription DEP ni Apple School Manager ne fonctionnent avec le [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -42,19 +42,19 @@ L’inscription DEP ne fonctionne pas avec le [gestionnaire d’inscription d’
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## <a name="prerequisites"></a>Prérequis
-- Appareils achetés dans le cadre du [Programme d’inscription des appareils d’Apple](http://deploy.apple.com)
+- Appareils achetés dans le cadre [d’Apple School Manager](https://school.apple.com/) ou du [Programme d’inscription des appareils d’Apple](http://deploy.apple.com)
 - Liste de numéros de série ou numéro de bon de commande. 
 - [Autorité MDM](mdm-authority-set.md)
 - [Certificat Push MDM Apple](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-dep-token"></a>Obtenir un jeton DEP Apple
 
-Avant de pouvoir inscrire des appareils macOS à l’aide du programme DEP, vous devez obtenir un fichier de jeton (.p7m) DEP auprès d’Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils DEP appartenant à votre entreprise. Il permet également à Intune de charger des profils d’inscription sur Apple et d’attribuer des appareils à ces profils.
+Pour pouvoir inscrire des appareils macOS à l’aide du programme DEP ou d’Apple School Manager, vous devez obtenir un fichier de jeton (.p7m) DEP auprès d’Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils appartenant à l’entreprise. Il permet également à Intune de charger des profils d’inscription sur Apple et d’attribuer des appareils à ces profils.
 
-Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez également le portail DEP pour affecter des appareils à Intune à des fins de gestion.
+Le portail Apple permet de créer un jeton et d’affecter des appareils à Intune à des fins de gestion.
 
 > [!NOTE]
-> Si vous supprimez le jeton du portail classique Intune avant de migrer vers Azure, Intune risque de restaurer le jeton Apple DEP supprimé. Vous pouvez supprimer à nouveau le jeton DEP du portail Azure.
+> Si vous supprimez le jeton du portail classique Intune avant de migrer vers Azure, Intune risque de restaurer le jeton Apple supprimé. Vous pouvez supprimer à nouveau le jeton sur le Portail Azure.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Étape 1. Téléchargez le certificat de clé publique Intune nécessaire à la création du jeton.
 
@@ -66,15 +66,14 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
    ![Capture d’écran du volet Jeton de programme d’inscription dans l’espace de travail Certificats Apple pour télécharger une clé publique.](./media/device-enrollment-program-enroll-ios-newui/add-enrollment-program-token-pane.png)
 
-3. Choisissez **Télécharger votre clé publique** pour télécharger et enregistrer le fichier de clé de chiffrement (.pem) en local. Le fichier .pem est utilisé pour demander un certificat de relation d'approbation à partir du portail du programme d'inscription d'appareils d'Apple.
+3. Choisissez **Télécharger votre clé publique** pour télécharger et enregistrer le fichier de clé de chiffrement (.pem) en local. Le fichier .pem est utilisé pour demander un certificat de relation d’approbation auprès du portail Apple.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Étape 2. Utilisez votre clé pour télécharger un jeton auprès d’Apple.
 
-1. Choisissez **Créer un jeton pour le Programme d’inscription des appareils d’Apple** pour ouvrir le portail du programme de déploiement d’Apple, et connectez-vous avec votre ID Apple d’entreprise. Vous pouvez utiliser cet ID Apple pour renouveler votre jeton DEP.
-2.  Dans le portail des [programmes de déploiement](https://deploy.apple.com) d’Apple, choisissez **Get Started** (Prise en main) pour **Programme d’inscription des appareils**.
-
-3. Dans la page **Gérer les serveurs** choisissez **Ajouter un serveur MDM**.
+1. Choisissez **Créer un jeton pour le Programme d’inscription des appareils d’Apple** ou **Créer un jeton avec Apple School Manager** pour ouvrir le portail Apple correspondant, et connectez-vous avec votre ID Apple d’entreprise. Vous pouvez utiliser cet ID Apple pour renouveler votre jeton.
+2.  Côté programme DEP, choisissez **Bien démarrer** pour **Programme d’inscription des appareils** > **Gérer les serveurs** > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
+3.  Pour Apple School Manager, choisissez **Serveurs de gestion des appareils mobiles (MDM)** > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
 4. Entrez le **Nom du serveur MDM**, puis choisissez **Suivant**. Le nom du serveur vous permet d’identifier le serveur de gestion des appareils mobiles (MDM) uniquement. Il ne s’agit pas du nom ou de l’URL du serveur Microsoft Intune.
 
 5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;**  s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
@@ -89,9 +88,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
 8. Pour **Choisir une action**, choisissez **Affecter au serveur**, le &lt;nom_serveur&gt; spécifié pour Microsoft Intune, puis **OK**. Le portail Apple affecte les appareils spécifiés au serveur Intune pour la gestion, puis affiche **Affectation terminée**.
 
-   Dans le portail Apple, accédez à **Programmes de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Afficher l’historique d’affectation** pour afficher la liste des appareils et leur affectation aux serveurs MDM.
-
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Étape 3. Enregistrez l’ID Apple utilisé pour créer le jeton.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Étape 3. Enregistrer l’ID Apple utilisé pour créer le jeton
 
 Dans le portail Azure d’Intune, fournissez l’ID Apple pour référence ultérieure.
 
@@ -102,7 +99,7 @@ Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisiss
 
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 
-Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils DEP. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
+Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
 
 1. Dans Intune, sur le Portail Azure, choisissez **Inscription des appareil** > **Inscription Apple** > **Jetons du programme d’inscription**.
 2. Sélectionnez un jeton et choisissez **Profils**, puis **Créer un profil**.
@@ -134,11 +131,11 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     | <strong>Numéro de téléphone du service</strong> | S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation. |
 
   Vous pouvez choisir d’afficher ou de masquer différents écrans de l’Assistant Configuration sur l’appareil quand l’utilisateur le configure.
-  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur pourra toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
+  - Si vous choisissez **Masquer**, l’écran ne s’affiche pas pendant la configuration. Après avoir configuré l’appareil, l’utilisateur peut toujours accéder au menu **Paramètres** pour configurer la fonctionnalité.
   - Si vous choisissez **Afficher**, l’écran s’affiche pendant la configuration. L’utilisateur peut parfois ignorer l’écran et n’entreprendre aucune action. Mais il pourra ensuite accéder au menu **Paramètres** de l’appareil pour configurer la fonctionnalité. 
 
 
-    | Paramètres des écrans de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil… |
+    | Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil... |
     |------------------------------------------|------------------------------------------|
     | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
     | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
@@ -185,7 +182,7 @@ Vous pouvez choisir un profil macOS et iOS à appliquer par défaut à tous les 
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
 ## <a name="distribute-devices"></a>Distribuer des appareils
-Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
+Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil permettant d’inscrire les appareils. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
 
 ## <a name="renew-a-dep-token"></a>Renouveler un jeton DEP  
 1. Accédez à deploy.apple.com.  

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 79df4e20a1dcd4a5cbc30ab0c887d53bf205ebbf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ff7876ef5c04eb59d1e89ac03b640d4f443cca6
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184741"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728954"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Paramètres de stratégie de protection d’application iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -30,7 +30,7 @@ Les paramètres de stratégie décrits dans cet article peuvent être [configur�
 
 Il existe trois catégories de paramètres de stratégie : *Réadressage des données*, *Conditions d’accès* et *Lancement conditionnel*. Dans cet article, le terme ***applications gérées par la stratégie*** fait référence aux applications qui sont configurées avec des stratégies de protection d’application.
 
-##  <a name="data-relocation-settings"></a>Paramètres de réadressage des données
+##  <a name="data-protection-settings"></a>Paramètres de protection des données
 
 | Paramètre | Procédure d'utilisation |  
 |------|------| 
@@ -47,7 +47,7 @@ Il existe trois catégories de paramètres de stratégie : *Réadressage des do
 
 
 > [!NOTE]
-> Aucun des paramètres de réadressage des données ne contrôle la fonctionnalité Open In d’Apple sur les appareils iOS. Pour gérer la fonctionnalité « Open In », consultez [Gérer les transferts de données entre applications iOS avec Microsoft Intune](data-transfer-between-apps-manage-ios.md).
+> Aucun des paramètres de protection des données ne contrôle la fonctionnalité Ouvrir dans d’Apple sur les appareils iOS. Pour gérer la fonctionnalité « Open In », consultez [Gérer les transferts de données entre applications iOS avec Microsoft Intune](data-transfer-between-apps-manage-ios.md).
 
 ## <a name="data-transfer-exemptions"></a>Exemptions au transfert de données
 

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2407225bfd0cdb5892663bf2e66de36157aaf4e0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 24b64d4d7b2ccd376f666e9d7961706025b6eaad
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182004"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829095"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil
 
@@ -40,7 +40,7 @@ Vous pouvez utiliser des stratégies de configuration d’applications avec des 
       Description du profil qui s’affiche dans le portail Azure.
     - **Type d’inscription de l’appareil**  
       Choisissez **Gérer les applications**.
-6. Sélectionnez  **Application associée** pour choisir l’application que vous vous apprêtez à configurer. Sélectionnez l’application dans la liste d’applications que vous avez approuvées et synchronisées avec Intune.
+6. Sélectionnez **Application associée**  pour choisir l’application que vous allez configurer. Sélectionnez l’application dans la liste d’applications que vous avez approuvées et synchronisées avec Intune.
 7. Pour chaque paramètre de configuration pris en charge par l’application, tapez le **Nom** et la **Valeur**, puis choisissez les points de suspension (**...** ).  
     Pour supprimer une configuration, choisissez les points de suspension (**...**), puis sélectionnez **Supprimer**.  
     

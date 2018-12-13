@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9b84877d37d26dababda2987801fc7267cb3c2e6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 11b241a14ed70a2e999fa505449cd12cdd1e025e
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181205"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728784"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurer des paramètres de restriction d’appareils dans Microsoft Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Les restrictions de l’appareil vous permettent de contrôler un large éventail de paramètres et de fonctionnalités que vous gérez dans diverses catégories comme :
 - Sécurité
@@ -36,20 +34,24 @@ Découvrez les principes de base des profils de restriction, puis lisez d’autr
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Créer un profil d’appareil contenant des paramètres de restriction de l’appareil
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
-4. Entrez un **Nom** et une **Description** pour le profil de restriction de l’appareil.
-5. À partir de la liste déroulante **Plateforme**, sélectionnez la plateforme de l’appareil auquel vous souhaitez appliquer les paramètres personnalisés. Actuellement, vous pouvez choisir l’une des plateformes suivantes pour les paramètres de restriction de l’appareil :
+1. Sur le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. Entrez un **Nom** et une **Description** pour le profil de restriction de l’appareil.
+4. À partir de la liste déroulante **Plateforme**, sélectionnez la plateforme de l’appareil auquel vous souhaitez appliquer les paramètres personnalisés. Actuellement, vous pouvez choisir l’une des plateformes suivantes pour les paramètres de restriction de l’appareil :
+
     - **Android**
+    - **Android Entreprise**
     - **iOS**
     - **MacOS**
     - **Windows Phone 8.1**
     - **Windows 8.1 et versions ultérieures**
     - **Windows 10 et versions ultérieures**
-6. Dans la liste déroulante **Type de profil**, choisissez **Restrictions de l’appareil**. Si vous souhaitez créer un profil de restrictions de l’appareil pour les appareils Windows 10 Collaboration comme un appareil Surface Hub, choisissez **Restrictions de l’appareil (Windows 10 Collaboration)**.
-7. Selon la plateforme que vous choisissez, les paramètres que vous pouvez configurer diffèrent. Accédez à l’une des rubriques suivantes pour obtenir les paramètres détaillés pour chaque plateforme :
+
+5. Dans la liste déroulante **Type de profil**, choisissez **Restrictions de l’appareil**. Si vous souhaitez créer un profil de restrictions pour des appareils Windows 10 Collaboration, par exemple Surface Hub, choisissez **Restrictions des appareils (Windows 10 Collaboration)**.
+6. Selon la plateforme que vous choisissez, les paramètres que vous pouvez configurer diffèrent. Choisissez les paramètres détaillés de votre plateforme :
+
     - [Paramètres Android](device-restrictions-android.md)
+    - [Paramètres Android pour les entreprises](device-restrictions-android-for-work.md)
     - [Paramètres iOS](device-restrictions-ios.md)
     - [Paramètres macOS](device-restrictions-macos.md)
     - [Paramètres Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
@@ -57,11 +59,14 @@ Découvrez les principes de base des profils de restriction, puis lisez d’autr
     - [Paramètres Windows 10](device-restrictions-windows-10.md)
     - [Paramètres Windows 10 Collaboration](device-restrictions-windows-10-teams.md)
     - [Paramètres Windows Holographic for Business](device-restrictions-windows-holographic.md)
-    - [Paramètres de profil professionnel Android](device-restrictions-android-for-work.md)
-8. Quand vous avez terminé, revenez à la page **Créer un profil**, puis cliquez sur **Créer**.
 
-Le profil est créé et apparaît dans la page de la liste des profils.
-Si vous souhaitez continuer et attribuer ce profil à des groupes, consultez [Guide pratique pour l’attribution de profils d’appareils](device-profile-assign.md).
+7. Quand vous avez terminé, revenez à la page **Créer un profil**, puis sélectionnez **Créer**.
+
+Le profil est créé et apparaît dans la page de la liste des profils. 
+
+## <a name="next-step"></a>Étape suivante
+
+Une fois créé, le profil est prêt à être affecté. Pour connaître les étapes à suivre, voir [Affecter des profils d’appareils](device-profile-assign.md). 
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 
