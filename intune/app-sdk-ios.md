@@ -15,19 +15,19 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: db9f0ca860186222491906aa35baf1e92d14e548
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0fc0e5bdb261b3cfbc2e5507e1206354d8cc4051
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181338"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630049"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guide du Kit SDK d’application Microsoft Intune pour les développeurs iOS
 
 > [!NOTE]
 > Vous pouvez d’abord lire l’article [Bien démarrer avec le SDK d’application Intune](app-sdk-get-started.md), qui explique comment préparer l’intégration sur chaque plateforme prise en charge.
 
-Le kit SDK d’application Microsoft Intune pour iOS vous permet d’incorporer des stratégies de protection des applications Intune (également appelées **stratégies APP** ou **MAM**) dans votre application iOS native. Une application MAM est une application intégrée au SDK des applications Intune. Les administrateurs informatiques peuvent déployer des stratégies de protection des applications sur votre application mobile quand celle-ci est activement gérée par Intune.
+Le kit SDK d’application Microsoft Intune pour iOS vous permet d’incorporer des stratégies de protection des applications Intune (également appelées **stratégies APP** ou **GAM**) dans votre application iOS native. Une application MAM est une application intégrée au SDK des applications Intune. Les administrateurs informatiques peuvent déployer des stratégies de protection des applications sur votre application mobile quand celle-ci est activement gérée par Intune.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -199,15 +199,16 @@ Si votre application utilise déjà ADAL, les configurations suivantes sont requ
 
 3. Également sous le dictionnaire **IntuneMAMSettings** avec le nom de clé `ADALRedirectUri`, spécifiez l’URI de redirection à utiliser pour les appels ADAL. Vous pouvez également spécifier à la place `ADALRedirectScheme`, si l’URI de redirection de l’application est au format `scheme://bundle_id`.
 
-
 En outre, les applications peuvent remplacer ces paramètres Azure AD lors de l’exécution. Pour ce faire, il vous suffit de définir les propriétés `aadAuthorityUriOverride`, `aadClientIdOverride` et `aadRedirectUriOverride` sur l’instance `IntuneMAMPolicyManager`.
+
+4. Vérifiez que les étapes pour donner des autorisations à votre application iOS pour le service de stratégie de protection d’application (APP) sont respectées. Suivez les instructions de la [mise en route avec le guide du SDK Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) sous « Autoriser votre application à accéder au service de protection d’application Intune (facultatif) ».  
 
 > [!NOTE]
 > L’approche du fichier Info.plist est recommandée pour tous les paramètres statiques et qui n’ont pas besoin d’être définis lors de l’exécution. Les valeurs affectées aux propriétés `IntuneMAMPolicyManager` prévalent sur toutes les valeurs correspondantes spécifiées dans le fichier Info.plist et persistent même après le redémarrage de l’application. Le Kit SDK continue à les utiliser pour les archivages de stratégie, jusqu'à ce que l’utilisateur soit désinscrit ou que les valeurs soient effacées ou modifiées.
 
 ### <a name="if-your-app-does-not-use-adal"></a>Si votre application n’utilise pas ADAL
 
-Comme mentionné plus haut, le SDK d’application Intune utilise la [Bibliothèque d’authentification Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) pour ses scénarios d’authentification et de lancement conditionnel. Il s’appuie également sur la bibliothèque ADAL pour inscrire l’identité de l’utilisateur auprès du service MAM pour les scénarios sans inscription des appareils. Si **votre application n’utilise pas ADAL pour son propre mécanisme d’authentification**, le SDK d’application Intune fournit des valeurs par défaut pour les paramètres ADAL et gère l’authentification auprès d’Azure AD. Il est inutile de spécifier des valeurs pour les paramètres ADAL répertoriés ci-dessus. Tout mécanisme d’authentification éventuellement utilisé par votre application s’affiche en haut des invites ADAL. 
+Comme mentionné plus haut, le SDK d’application Intune utilise la [Bibliothèque d’authentification Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) pour ses scénarios d’authentification et de lancement conditionnel. Il s’appuie également sur la bibliothèque ADAL pour inscrire l’identité de l’utilisateur auprès du service GAM pour les scénarios sans inscription des appareils. Si **votre application n’utilise pas ADAL pour son propre mécanisme d’authentification**, le SDK d’application Intune fournit des valeurs par défaut pour les paramètres ADAL et gère l’authentification auprès d’Azure AD. Il est inutile de spécifier des valeurs pour les paramètres ADAL répertoriés ci-dessus. Tout mécanisme d’authentification éventuellement utilisé par votre application s’affiche en haut des invites ADAL. 
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Configurer des paramètres pour le SDK d’application Intune
 
@@ -346,7 +347,7 @@ Exemple :
 
 ## <a name="status-result-and-debug-notifications"></a>Notifications d’état, de résultat et de débogage
 
-L’application peut recevoir des notifications d’état, de résultat et de débogage concernant les demandes suivantes adressées au service MAM Intune :
+L’application peut recevoir des notifications d’état, de résultat et de débogage concernant les demandes suivantes adressées au service GAM Intune :
 
 * Demandes d’inscription
 * Demandes de mise à jour de stratégie
@@ -413,7 +414,7 @@ Voici des exemples d’implémentation des méthodes déléguées :
 
 ## <a name="application-restart"></a>Redémarrage de l’application
 
-Quand une application reçoit des stratégies MAM pour la première fois, elle doit redémarrer pour appliquer les hooks nécessaires. Pour signaler à l’application qu’un redémarrage doit être effectué, le SDK fournit une méthode déléguée dans `IntuneMAMPolicyDelegate.h`.
+Quand une application reçoit des stratégies GAM pour la première fois, elle doit redémarrer pour appliquer les hooks nécessaires. Pour signaler à l’application qu’un redémarrage doit être effectué, le SDK fournit une méthode déléguée dans `IntuneMAMPolicyDelegate.h`.
 
 ```objc
  - (BOOL) restartApplication
@@ -570,7 +571,7 @@ Pour plus d’informations sur la façon de créer une stratégie de configurati
 
 Par défaut, le SDK d’application Intune pour iOS collecte des données de télémétrie pour les types d’événements suivants :
 
-* **Lancement d’applications** : Pour aider Microsoft Intune à en savoir plus sur l’utilisation des applications compatibles MAM par type de gestion (MAM avec MDM, MAM sans inscription à MDM, etc.).
+* **Lancement d’applications** : Pour aider Microsoft Intune à en savoir plus sur l’utilisation des applications compatibles GAM par type de gestion (GAM avec MDM, GAM sans inscription à MDM, etc.).
 
 * **Appels d’inscription** : Pour aider Microsoft Intune à en savoir plus sur les taux de réussite et d’autres mesures de performances des appels d’inscription initiés à partir du côté client.
 
@@ -581,7 +582,7 @@ Par défaut, le SDK d’application Intune pour iOS collecte des données de té
 
 ## <a name="enable-multi-identity-optional"></a>Activer plusieurs identités (facultatif)
 
-Par défaut, le SDK applique une stratégie à l’application dans son ensemble. La multi-identité est une fonctionnalité MAM que vous pouvez activer pour appliquer une stratégie par niveau d’identité. Ceci nécessite davantage de participation de l’application que d’autres fonctionnalités MAM.
+Par défaut, le SDK applique une stratégie à l’application dans son ensemble. La multi-identité est une fonctionnalité GAM que vous pouvez activer pour appliquer une stratégie par niveau d’identité. Ceci nécessite davantage de participation de l’application que d’autres fonctionnalités GAM.
 
 L’application doit informer le SDK d’application quand elle va changer l’identité active. Le SDK notifie aussi l’application quand un changement d’identité est nécessaire. Actuellement, une seule identité gérée est prise en charge. Une fois que l’utilisateur inscrit l’appareil ou l’application, le SDK utilise cette identité et la considère comme l’identité gérée principale. Les autres utilisateurs de l’application sont considérés comme non gérés avec des paramètres de stratégie non limités.
 
@@ -677,13 +678,13 @@ Non. En fait, seuls les comptes professionnels ou scolaires doivent être inscri
 
 ### <a name="what-about-users-that-have-already-signed-in-to-the-application-do-they-need-to-be-enrolled"></a>Qu’en est-il des utilisateurs qui se sont déjà connectés à l’application ? Doivent-ils être inscrits ?
 
-L’application est responsable de l’inscription des utilisateurs une fois qu’ils sont authentifiés. L’application est également responsable de l’inscription des comptes existants qui étaient présents avant que l’application ne dispose des fonctionnalités MAM sans MDM.
+L’application est responsable de l’inscription des utilisateurs une fois qu’ils sont authentifiés. L’application est également responsable de l’inscription des comptes existants qui étaient présents avant que l’application ne dispose des fonctionnalités GAM sans MDM.
 
-Pour ce faire, l’application doit utiliser la méthode `registeredAccounts:`. Cette méthode retourne un NSDictionary contenant tous les comptes inscrits dans le service MAM Intune. Si des comptes existants dans l’application ne sont pas dans la liste, l’application doit inscrire ces comptes par le biais de `registerAndEnrollAccount:`.
+Pour ce faire, l’application doit utiliser la méthode `registeredAccounts:`. Cette méthode retourne un NSDictionary contenant tous les comptes inscrits dans le service GAM Intune. Si des comptes existants dans l’application ne sont pas dans la liste, l’application doit inscrire ces comptes par le biais de `registerAndEnrollAccount:`.
 
 ### <a name="how-often-does-the-sdk-retry-enrollments"></a>À quelle fréquence le SDK réessaye-t-il les inscriptions ?
 
-Le SDK réessaye automatiquement toutes les inscriptions ayant échoué selon un intervalle de 24 heures. Le SDK procède ainsi pour garantir que si l’organisation d’un utilisateur a activé MAM après que l’utilisateur s’est connecté à l’application, cet utilisateur est inscrit et reçoit les stratégies avec succès.
+Le SDK réessaye automatiquement toutes les inscriptions ayant échoué selon un intervalle de 24 heures. Le SDK procède ainsi pour garantir que si l’organisation d’un utilisateur a activé GAM après que l’utilisateur s’est connecté à l’application, cet utilisateur est inscrit et reçoit les stratégies avec succès.
 
 Le SDK arrête les nouvelles tentatives quand il détecte qu’un utilisateur a inscrit l’application avec succès. La raison en est qu’un seul utilisateur peut inscrire une application à un moment donné. Si l’utilisateur est désinscrit, les nouvelles tentatives reprennent selon le même intervalle de 24 heures.
 
@@ -692,7 +693,7 @@ Le SDK arrête les nouvelles tentatives quand il détecte qu’un utilisateur a 
 Le SDK effectue périodiquement ces actions en arrière-plan :
 
 * Si l’application n’est pas encore inscrite, il tente d’inscrire tous les comptes inscrits toutes les 24 heures.
-* Si l’application est inscrite, le SDK recherche les mises à jour des stratégies MAM toutes les 8 heures.
+* Si l’application est inscrite, le SDK recherche les mises à jour des stratégies GAM toutes les 8 heures.
 
 La désinscription d’un utilisateur indique au SDK que l’utilisateur n’utilise plus l’application et qu’il peut arrêter les événements périodiques ci-dessus pour ce compte d’utilisateur. Elle déclenche également une désinscription de l’application et une réinitialisation sélective si nécessaire.
 

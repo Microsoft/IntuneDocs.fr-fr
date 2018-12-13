@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d974e6db3543ef3ba0b11cf67989260e429dde4c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
+ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179165"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389867"
 ---
 # <a name="what-are-app-protection-policies"></a>Que sont les stratégies de protection des applications ?
 
@@ -66,9 +66,9 @@ Il existe d’autres avantages à utiliser la gestion des appareils mobiles (MDM
 
 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Plateformes prises en charge pour les stratégies de protection des applications
-La prise en charge de la plateforme des stratégies de protection des applications Intune s’aligne sur la prise en charge de la plateforme des applications mobiles Office. Pour plus d’informations, consultez la section **Applications mobiles** de la [Configuration requise pour Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
+La prise en charge de la plateforme des stratégies de protection des applications Intune s’aligne sur la prise en charge de la plateforme des applications mobiles Office pour les appareils Android et iOS. Pour plus d’informations, consultez la section **Applications mobiles** de la [Configuration requise pour Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Les appareils Windows ne sont pas pris en charge actuellement. Toutefois, quand vous inscrivez des appareils Windows 10 auprès d’Intune, vous pouvez utiliser la Protection des informations Windows, qui offre des fonctionnalités similaires. Pour plus d’informations, consultez [Protéger vos données d’entreprise à l’aide de la Protection des informations Windows (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+Les appareils Windows ne sont pas pris en charge actuellement. Toutefois, vous pouvez utiliser Windows Information Protection, qui offre des fonctionnalités similaires. Pour plus d’informations, consultez [Protéger vos données d’entreprise à l’aide de la Protection des informations Windows (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>Comment les stratégies de protection d’application protègent les données d’application
@@ -146,7 +146,9 @@ Bien que la stratégie **Globale** s’applique à tous les utilisateurs dans vo
 
 Les applications qui prennent en charge plusieurs identités vous permettent d’utiliser des comptes différents (professionnels et personnels) pour accéder aux mêmes applications, alors que les stratégies de protection des applications s’appliquent uniquement quand les applications sont utilisées dans le contexte professionnel.
 
-Considérons, par exemple, un utilisateur qui démarre l’application OneDrive à l’aide de son compte professionnel. Dans le contexte professionnel, il ne peut pas déplacer des fichiers vers un emplacement de stockage personnel. Plus tard, quand il utilise OneDrive avec son compte personnel, il peut copier et déplacer des données à partir de son compte personnel OneDrive sans restrictions.
+Pour un exemple de contexte personnel, pensez à un utilisateur qui démarre un nouveau document dans Word, ceci est considéré comme un contexte personnel, donc les stratégies Intune App Protection ne sont pas appliquées. Une fois que le document est enregistré sur le compte OneDrive d’entreprise, il est considéré comme contexte d’entreprise et les stratégies Intune App Protection sont appliquées.
+
+Pour un exemple de contexte professionnel, pensez à un utilisateur qui démarre l’application OneDrive à l’aide de son compte professionnel. Dans le contexte professionnel, il ne peut pas déplacer des fichiers vers un emplacement de stockage personnel. Plus tard, quand il utilise OneDrive avec son compte personnel, il peut copier et déplacer des données à partir de son compte personnel OneDrive sans restrictions.
 
 - En savoir plus sur les applications qui prennent en charge [GAM et plusieurs identités](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) avec Intune.
 

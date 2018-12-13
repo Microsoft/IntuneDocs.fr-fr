@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dabd5b6ca2f8bb01421c24cb7c16ab57cf59ef56
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
+ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52579164"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Supprimer des certificats SCEP et PKCS dans Microsoft Intune
 
@@ -43,8 +43,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
   - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
-  - Le profil de configuration est supprimé de l’affectation de groupe
+  - Le profil de certificat est supprimé de l’affectation de groupe
 
 - Un certificat SCEP est révoqué quand :
   - L’administrateur change ou met à jour le profil SCEP
@@ -53,7 +52,6 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - Un utilisateur final se désinscrit
   - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
 
 - Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
   - Un utilisateur final perd la licence Intune
@@ -78,8 +76,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur retire la licence Intune
   - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
   - L’administrateur change ou met à jour le profil PKCS
-  - Le profil de configuration est supprimé de l’affectation de groupe
-  - La stratégie de conformité est supprimée de l’affectation de groupe 
+  - Le profil de certificat est supprimé de l’affectation de groupe
 
 
 ## <a name="ios-devices"></a>Périphériques iOS
@@ -92,8 +89,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
   - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
-  - Le profil de configuration est supprimé de l’affectation de groupe
+  - Le profil de certificat est supprimé de l’affectation de groupe
 
 - Un certificat SCEP est révoqué quand :
   - L’administrateur change ou met à jour le profil SCEP
@@ -102,7 +98,6 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - Un utilisateur final se désinscrit
   - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
 
 - Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
   - Un utilisateur final perd la licence Intune
@@ -118,8 +113,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
 
 - Un certificat PKCS est supprimé quand :
-  - La stratégie de conformité est supprimée de l’affectation de groupe
-  - Le profil de configuration est supprimé de l’affectation de groupe
+  - Le profil de certificat est supprimé de l’affectation de groupe
   
 - Le certificat racine est supprimé quand :
   - Un utilisateur final se désinscrit
@@ -143,8 +137,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
 - Un certificat SCEP est révoqué quand :
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
   - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
-  - Le profil de configuration est supprimé de l’affectation de groupe
+  - Le profil de certificat est supprimé de l’affectation de groupe
   - L’administrateur supprime l’utilisateur ou le groupe d’Azure Active Directory (AD)
   - L’administrateur change ou met à jour le profil SCEP
 
@@ -176,8 +169,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - L’administrateur retire la licence Intune
   - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
   - L’administrateur change ou met à jour le profil PKCS
-  - Le profil de configuration est supprimé de l’affectation de groupe
-  - La stratégie de conformité est supprimée de l’affectation de groupe 
+  - Le profil de certificat est supprimé de l’affectation de groupe
   
   
 > [!NOTE]
@@ -191,8 +183,7 @@ Cet article liste quelques scénarios courants et leur impact sur les certificat
   - Un utilisateur final se désinscrit
   - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
   - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - La stratégie de conformité est supprimée de l’affectation de groupe
-  - Le profil de configuration est supprimé de l’affectation de groupe
+  - Le profil de certificat est supprimé de l’affectation de groupe
 
 - Un certificat SCEP est révoqué quand :
   - L’administrateur change ou met à jour le profil SCEP

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 650a358281f89c511bbd56f3807f2ef4a6ba582c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 94e7bc3e3b936489ea34170616d1ab0ad49bafd3
+ms.sourcegitcommit: 8ddd3b0d4636a4516b2a05fa83c60ec111903c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52546038"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -81,7 +81,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 3. Dans la page **Gérer les serveurs** choisissez **Ajouter un serveur MDM**.
 4. Entrez le **Nom du serveur MDM**, puis choisissez **Suivant**. Le nom du serveur vous permet d’identifier le serveur de gestion des appareils mobiles (MDM) uniquement. Il ne s’agit pas du nom ou de l’URL du serveur Microsoft Intune.
 
-5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;**  s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
+5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
 
 6. Accédez à **Programme de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Gérer les appareils**.
 7. Sous **Choisir les appareils par**, spécifiez comment les appareils sont identifiés :
@@ -139,7 +139,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     ![Capture d’écran de l’installation du portail d’entreprise avec un jeton VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
 7. Si vous avez choisi un jeton pour **Installer le portail d’entreprise avec VPP**, vous avez la possibilité de verrouiller l’appareil en mode Application unique (plus précisément l’application Portail d’entreprise) immédiatement après la fin de l’Assistant Configuration. Choisissez **Oui** pour **Exécuter le portail d’entreprise en mode Application unique jusqu’à l’authentification** pour définir cette option. Pour utiliser l’appareil, l’utilisateur doit d’abord s’authentifier en se connectant avec le portail d’entreprise.
-    Cette fonctionnalité fonctionne mieux avec iOS versions 11.3.1 et ultérieures. L’installation peut s’avérer plus longue avec des versions antérieures.
+    Cette fonctionnalité est uniquement pris en charge pour iOS 11.3.1 et versions ultérieures.
 
 8. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
 

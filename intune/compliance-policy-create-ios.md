@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56427f5b6d72d952ce9c388b4d5289d3075b7df0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 35091139e3afaabac4fad0b22fc6096cf7ada7c3
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182265"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728869"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils iOS dans Intune
 
@@ -54,7 +54,8 @@ La table suivante décrit la façon dont les paramètres non conformes sont gér
 ## <a name="create-a-device-compliance-policy"></a>Créer une stratégie de conformité des appareils
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. Pour l’option **Plateforme**, sélectionnez **iOS**. Choisissez **Paramètres Configurer**, puis entrez les paramètres nécessaires pour les options **E-mail**, **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système**. Une fois que vous avez fini, sélectionnez **OK**, puis **Créer**.
+4. Pour l’option **Plateforme**, sélectionnez **iOS**. 
+5. Choisissez **Paramètres Configurer**, puis entrez les paramètres nécessaires pour les options **E-mail**, **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système** décrites dans cette rubrique. Une fois que vous avez fini, sélectionnez **OK**, puis **Créer**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -88,6 +89,8 @@ Pour plus d’informations sur les profils de messagerie, consultez [Configurer 
 
 - **Système d’exploitation minimal requis** : quand un appareil ne satisfait pas à la condition de version minimale du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur peut choisir de mettre à niveau son appareil. Ensuite, il peut accéder aux ressources de l’entreprise.
 - **Version maximale autorisée du système d’exploitation** : quand un appareil utilise une version du système d’exploitation ultérieure à celle spécifiée dans la règle, l’accès aux ressources de l’entreprise est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant que la règle pour autoriser la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’entreprise.
+- **Version de build du système d’exploitation minimale** : quand Apple publie des mises à jour de sécurité, le numéro de build est généralement mis à jour, pas la version du système d’exploitation. Cette fonctionnalité permet d’entrer un numéro de build autorisé minimal sur l’appareil. Cette vérification de conformité prend en charge les appareils exécutant iOS 8.0 et versions ultérieures. 
+- **Version de build du système d’exploitation maximale** : quand Apple publie des mises à jour de sécurité, le numéro de build est généralement mis à jour, pas la version du système d’exploitation. Cette fonctionnalité permet d’entrer un numéro de build autorisé maximal sur l’appareil. Cette vérification de conformité prend en charge les appareils exécutant iOS 8.0 et versions ultérieures.
 
 ## <a name="system-security"></a>Sécurité système
 

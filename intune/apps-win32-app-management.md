@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/15/2018
+ms.date: 12/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc1974a57e5a5aa6808936c37e02fd31a7cac7b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187291"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829145"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Intune autonome - Gestion des applications Win32 (préversion publique)
 
@@ -29,15 +29,11 @@ Intune autonome offre de meilleures fonctionnalités de gestion des applications
 
 ## <a name="prerequisites-for-public-preview"></a>Prérequis de la préversion publique
 
-- Windows 10 version 1607 ou supérieure (Entreprise)
+- Windows 10 version 1607 ou ultérieure (versions Entreprise, Professionnel et Éducation)
 - Le client Windows 10 doit avoir les caractéristiques suivantes : 
     - Joint à Azure Active Directory (AAD) ou de manière hybride à Azure Active Directory et
     - Inscrit dans Intune (géré par MDM)
 - La taille d’application Windows est limitée à 8 Go par application dans la préversion publique 
-
-> [!NOTE]
-> Nous testons actuellement les éditions Professionnel et Éducation de Windows 10 version 1607 et seront heureux de recevoir vos commentaires.
-
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Préparer le contenu d’application Win32 pour le chargement
 
@@ -186,7 +182,7 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
     - **Utiliser un script de détection personnalisé** : Spécifiez le script PowerShell pour détecter cette application. 
     
         1.  **Fichier de script** : Sélectionner un script PowerShell pour détecter la présence de l’application sur le client. L’application est détectée quand le script retourne un code de sortie égal à 0 et écrit une valeur de chaîne dans STDOUT.
-        2.  **Exécutez le script comme processus 32 bits sur les clients 64 bits** : Sélectionnez **Oui** pour exécuter le script à l’aide des informations d’identification de l’utilisateur final qui a ouvert la session. Sélectionnez **Non** (valeur par défaut) pour exécuter le script dans le contexte système.
+        2.  **Exécutez le script comme processus 32 bits sur les clients 64 bits** : sélectionnez **Oui** pour exécuter le script à l’aide des informations d’identification de l’utilisateur final qui a ouvert la session. Sélectionnez **Non** (valeur par défaut) pour exécuter le script dans le contexte système.
         3.  **Appliquer la vérification de signature de script** : Sélectionnez **Oui** pour vérifier que le script est signé par un éditeur approuvé, ce qui permet d’exécuter le script sans avertissement ni invite. Le script s’exécute sans blocage. Sélectionnez **Non** (valeur par défaut) pour exécuter le script avec la confirmation de l’utilisateur final sans vérification de signature.
     
         Intune sidecar vérifie les résultats du script. Il lit les valeurs écrites par le script dans le flux de sortie standard (STDOUT), le flux d’erreurs standard (STDERR) et le code de sortie. Si le script se termine par une valeur non nulle, il échoue et l’état de la détection de l’application est Non installé. Si le code de sortie est égal à zéro et STDOUT contient des données, l’état de la détection d’application est installé. 
@@ -200,7 +196,7 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Codes de retour** pour ajouter les codes de retour permettant de spécifier le comportement de nouvelle tentative d’installation de l’application ou le comportement de postinstallation. Les entrées de code de retour sont ajoutées par défaut à la création de l’application. Toutefois, vous pouvez ajouter des codes de retour supplémentaires ou changer les codes de retour existants. 
 2.  Dans le volet **Codes de retour**, ajoutez des codes de retour supplémentaires ou modifiez des codes de retour existants.
-    - **Échec** : Valeur de retour qui indique l’échec de l’installation de l’application.
+    - **Échec** : valeur de retour qui indique l’échec de l’installation de l’application.
     - **Redémarrage matériel** : Le code de retour du redémarrage matériel ne permet pas aux applications Win32 suivantes d’être installées sur le client sans redémarrage. 
     - **Redémarrage logiciel** : Le code de retour du redémarrage logiciel permet à la prochaine application Win32 d’être installée sans redémarrage du client. Le redémarrage est nécessaire pour terminer l’installation de l’application actuelle.
     - **Nouvelle tentative** : L’agent de code de retour de nouvelle tentative tente d’installer l’application trois fois. Il attend 5 minutes entre chaque tentative. 
@@ -227,6 +223,10 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 8.  Dans le volet **Affectations** de l’application, sélectionnez **Enregistrer**.
 
 À ce stade, vous avez effectué les étapes permettant d’ajouter une application Win32 à Intune. Pour plus d’informations sur l’affectation et la supervision d’applications, consultez [Affecter des applications à des groupes avec Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) et [Superviser les informations et les affectations d’application avec Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+
+## <a name="delivery-optimization"></a>Optimisation de la distribution
+
+Les clients Windows 10 RS3 et versions ultérieures téléchargent du contenu d’application Intune Win32 à l’aide d’un composant de l’optimisation de distribution sur le client Windows 10. L’optimisation de la distribution fournit la fonctionnalité pair à pair qui est activée par défaut. L’optimisation de la distribution peut être configurée par la stratégie de groupe et à l’avenir via Intune MDM. Pour plus d’informations, consultez [Optimisation de la distribution pour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Installer des applications obligatoires et disponibles sur les appareils
 

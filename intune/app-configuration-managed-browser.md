@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d86df4c38e0d4313dbff6ff2cd9111b2126dbaba
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180933"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630015"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Gérer l’accès à Internet à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
@@ -175,7 +175,12 @@ Pour plus d’informations sur la manière d’utiliser conjointement Managed Br
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Configurer la page d’accueil d’un navigateur protégé
 
-Ce paramètre permet de configurer la page d’accueil que voient les utilisateurs quand ils lancent un navigateur protégé ou créent un onglet. Suivant la procédure de création d’une configuration d’application Managed Browser ou Microsoft Edge, indiquez la paire clé/valeur suivante :
+Ce paramètre permet de configurer la page d’accueil que voient les utilisateurs quand ils lancent un navigateur protégé ou créent un onglet. 
+- Ce paramètre affiche la page web dans Managed Browser.  Edge affiche à la place un raccourci de la page d’accueil.
+- L’icône de raccourci de page d’accueil s’affiche en tant qu’icône sous la commande de recherche.  Elle ne peut pas être modifiée ou supprimée.
+- Le raccourci de la page d’accueil affiche le nom de votre organisation pour le distinguer.  Il apparaît toujours comme la première icône.
+
+Suivant la procédure de création d’une configuration d’application Managed Browser ou Microsoft Edge, indiquez la paire clé/valeur suivante :
 
 |                                Clé                                |                                                           Valeur                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

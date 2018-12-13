@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 14588563dd261063071c09c1bbd3b428fb375830
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 583a64b5dd91df2ef9e5acbaf129b447aca7f2d9
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184180"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52828992"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils macOS avec Intune
 
@@ -49,7 +49,8 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 ## <a name="create-a-device-compliance-policy"></a>Créer une stratégie de conformité des appareils
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. Pour l’option **Plateforme**, sélectionnez **macOS**. Choisissez **Paramètres Configurer**, puis entrez les paramètres nécessaires pour les options **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système**. Une fois que vous avez fini, sélectionnez **OK**, puis **Créer**.
+4. Pour l’option **Plateforme**, sélectionnez **macOS**. 
+5. Choisissez **Paramètres Configurer**, puis entrez les paramètres nécessaires pour les options **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système** décrites dans cet article. Une fois que vous avez fini, sélectionnez **OK**, puis **Créer**.
 
 ## <a name="device-health"></a>Intégrité de l’appareil
 
@@ -59,6 +60,8 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 
 - **Version minimale du système d’exploitation** : quand un appareil ne répond pas aux exigences minimales relatives à la version du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau apparaît. L’utilisateur final peut choisir de mettre à niveau son appareil pour pouvoir accéder aux ressources de l’entreprise.
 - **Version maximale du système d’exploitation** : quand un appareil utilise une version du système d’exploitation postérieure à la version spécifiée dans la règle, l’accès aux ressources de l’entreprise est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant que la règle autorisant la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’entreprise.
+- **Version de build du système d’exploitation minimale** : quand Apple publie des mises à jour de sécurité, le numéro de build est généralement mis à jour, pas la version du système d’exploitation. Cette fonctionnalité permet d’entrer un numéro de build autorisé minimal sur l’appareil.
+- **Version de build du système d’exploitation maximale** : quand Apple publie des mises à jour de sécurité, le numéro de build est généralement mis à jour, pas la version du système d’exploitation. Cette fonctionnalité permet d’entrer un numéro de build autorisé maximal sur l’appareil.
 
 ## <a name="system-security-settings"></a>Paramètres de sécurité système
 

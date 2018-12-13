@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2018
+ms.date: 11//28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e0331210a10727ff5753e6c227777cd1ebb16d9
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185957"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728818"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -74,10 +74,14 @@ Les nouvelles stratégies que vous créez ne sont pas déployées sur les utilis
 
    ![Capture d’écran du volet Affectations avec l’option de menu Sélectionner les groupes à inclure en surbrillance](./media/app-protection-policy-add-users.png)
 
-3.  Une liste de tous les groupes de sécurité de votre domaine **Azure Active Directory** s’affiche. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. Si vous choisissez **Sélectionner**, la stratégie est déployée pour les utilisateurs.
+3.  Une liste de tous les groupes de sécurité de votre domaine **Azure Active Directory** s’affiche. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. 
 
     ![Capture d’écran du volet Ajouter un groupe d’utilisateurs montrant la liste des utilisateurs Azure Active Directory](./media/azure-ad-user-group-list.png)
 
+4.  Une fois que vous incluez et excluez des groupes, sélectionnez **Enregistrer** pour enregistrer la configuration et déployer la stratégie aux utilisateurs. Si vous sélectionnez **Ignorer** avant d’enregistrer votre configuration, vous abandonnez toutes les modifications apportées aux onglets *Inclure* et *Exclure*.   
+ 
+     ![Capture d’écran illustrant les options Enregistrer et Ignorer](./media/save-assignment.png)
+  
 Vous avez créé une stratégie et l’avez déployée pour les utilisateurs.
 
 Seuls les utilisateurs avec des licences Microsoft Intune sont affectés par la stratégie. Les utilisateurs du groupe de sécurité sélectionné qui n’ont pas de licence Intune ne sont pas affectés.
@@ -109,9 +113,13 @@ Pour voir immédiatement l’effet des changements, l’utilisateur final doit s
 
 2.  Dans le volet *Protection d’application Intune*, sélectionnez **Affectations** pour ouvrir le volet **Protection d’application Intune - Affectations**, qui affiche la liste des groupes d’utilisateurs actuels ayant cette stratégie.
 
-3.  Pour ajouter un nouveau groupe d’utilisateurs à la stratégie, sous l’onglet **Inclure**, choisissez **Sélectionner les groupes à inclure**, puis sélectionnez le groupe d’utilisateurs. Choisissez **Sélectionner** pour déployer la stratégie pour le groupe que vous avez sélectionné.
+3.  Pour ajouter un nouveau groupe d’utilisateurs à la stratégie, sous l’onglet *Inclure*, choisissez **Sélectionner les groupes à inclure**, puis sélectionnez le groupe d’utilisateurs. Choisissez **Sélectionner** pour ajouter le groupe. 
 
-4.  Pour supprimer un groupe d’utilisateurs, sous l’onglet **Exclure**, choisissez **Sélectionner les groupes à exclure**, puis sélectionnez le groupe d’utilisateurs. Choisissez **Sélectionner** pour supprimer le groupe d’utilisateurs.
+4.  Pour exclure un groupe d’utilisateurs, sous l’onglet *Exclure*, choisissez **Sélectionner les groupes à exclure**, puis sélectionnez le groupe d’utilisateurs. Choisissez **Sélectionner** pour supprimer le groupe d’utilisateurs.  
+
+5.  Pour supprimer des groupes qui ont été ajoutés précédemment, dans l’onglet *Inclure* ou l’onglet *Exclure*, sélectionnez les points de suspension (...) et sélectionnez **Supprimer**. 
+
+5.  Une fois vos modifications aux affectations prêtes, sélectionnez **Enregistrer** pour enregistrer la configuration et déployer la stratégie vers le nouvel ensemble d’utilisateurs. Si vous sélectionnez **Ignorer** avant d’enregistrer votre configuration, vous abandonnez toutes les modifications apportées aux onglets *Inclure* et *Exclure*.
 
 ### <a name="to-change-policy-settings"></a>Pour modifier les paramètres d’une stratégie
 
