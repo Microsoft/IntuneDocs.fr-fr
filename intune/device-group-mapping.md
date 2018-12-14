@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour catégoriser les appareils en groupes dans Intune
+title: Catégoriser les appareils en groupes dans Intune
 titleSuffix: Microsoft Intune
 description: Découvrez comment catégoriser les appareils en groupes pour faciliter la gestion.
 keywords: ''
@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 159079686507815ad4cf1738ca4157467352f681
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 0abc42de95f90b3690e91908f92bb53d11a802d8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189518"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031753"
 ---
-# <a name="categorize-devices-into-groups-for-easier-management"></a>Catégoriser les appareils en groupes pour faciliter la gestion
+# <a name="categorize-devices-into-groups"></a>Catégoriser les appareils en groupes
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Utilisez des catégories d’appareil Microsoft Intune pour ajouter automatiquement des appareils à des groupes en fonction des catégories que vous définissez. Vous pouvez ainsi plus facilement gérer ces appareils.
+Pour faciliter la gestion des appareils, vous pouvez utiliser des catégories d’appareils Microsoft Intune pour ajouter automatiquement des appareils à des groupes en fonction des catégories que vous définissez.
 
 Les catégories d'appareils suivent le processus suivant :
 1. Créez des catégories parmi lesquelles les utilisateurs effectuent leur choix quand ils inscrivent leurs appareils.
@@ -42,7 +42,7 @@ Vous pouvez créer toute catégorie d’appareils souhaitée. Par exemple :
 
 ## <a name="how-to-configure-device-categories"></a>Comment configurer des catégories d'appareils
 
-### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Étape 1 : Créer des catégories d’appareils dans le panneau Intune du portail Azure
+### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Étape 1 : Créer des catégories d’appareils dans le panneau Intune du portail Azure
 1. Dans [Intune du portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils**.
 2. Dans le panneau **Inscription de l’appareil** choisissez **Catégories d’appareils**.
 3. Dans la page **Catégories d’appareils**, choisissez **Créer** pour ajouter une nouvelle catégorie.
@@ -51,7 +51,7 @@ Vous pouvez créer toute catégorie d’appareils souhaitée. Par exemple :
 
 Vous utiliserez le nom de catégorie d’appareil quand vous créerez des groupes de sécurité Active Directory Azure (Azure AD) à l’étape 2.
 
-### <a name="step-2-create-azure-active-directory-security-groups"></a>Étape 2 : Créer des groupes de sécurité Active Directory
+### <a name="step-2-create-azure-active-directory-security-groups"></a>Étape 2 : Créer des groupes de sécurité Azure Active Directory
 Au cours de cette étape, vous allez créer des groupes dynamiques dans le portail Azure, basés sur la catégorie d’appareil et le nom de la catégorie d’appareil.
 
 Pour continuer, reportez-vous à [Utilisation d’attributs pour créer des règles avancées](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) dans la documentation d’Azure AD.

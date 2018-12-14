@@ -16,12 +16,12 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 034919a7ae7d223a30b11b4c3aa1f495e028e89c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 00e8b0e35514fe583027d15fdcc810295aa9fa9e
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184622"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977284"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -45,11 +45,11 @@ Les applications Microsoft Store pour Entreprises sont des applications modernes
 ## <a name="installing-apps-on-windows-10-devices"></a>Installation d’applications sur les appareils Windows 10
 En fonction du type d’application, l’application peut être installée sur un appareil Windows 10 de deux manières :
 
-- **Contexte utilisateur** : quand une application est déployée dans le contexte utilisateur, l’application gérée est installée pour cet utilisateur sur l’appareil quand il se connecte à l’appareil. Notez que l’installation de l’application ne réussit qu’une fois l’utilisateur connecté à l’appareil. 
+- **Contexte utilisateur** : Quand une application est déployée dans le contexte utilisateur, l’application gérée est installée pour cet utilisateur sur l’appareil quand il se connecte à l’appareil. Notez que l’installation de l’application ne réussit qu’une fois l’utilisateur connecté à l’appareil. 
     - Les applications métier modernes et les applications Microsoft Store pour Entreprises (en ligne et hors connexion) peuvent être déployées dans le contexte utilisateur et prennent en charge les intentions Obligatoire et Disponible.
     - Les applications Win32 générées en **Mode utilisateur** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge les intentions **Obligatoire** et **Disponible**. 
-- **Contexte d’appareil** : quand une application est déployée dans le contexte d’appareil, l’application gérée est installée directement sur l’appareil par Intune.
-    - Seules les applications métier modernes et les applications Microsoft Store pour Entreprises sous licence en ligne peuvent être déployées dans le contexte d’appareil, et elles prennent uniquement en charge l’intention Obligatoire.
+- **Contexte d’appareil** : Quand une application est déployée dans le contexte d’appareil, l’application gérée est installée directement sur l’appareil par Intune.
+    - Seules les applications métier modernes et les applications Microsoft Store pour Entreprises sous licence hors connexion peuvent être déployées dans le contexte d’appareil, et elles prennent uniquement en charge l’intention Obligatoire.
     - Les applications Win32 générées en **Mode machine** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge uniquement l’intention **Obligatoire**.
 
 > [!NOTE]

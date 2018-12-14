@@ -1,6 +1,6 @@
 ---
-title: Accès conditionnel avec Microsoft Intune
-titlesuffix: ''
+title: Scénarios d’accès conditionnel
+titlesuffix: Microsoft Intune
 description: Découvrez comment l’accès conditionnel Intune est couramment utilisé pour l’accès conditionnel basé sur l’application et sur l’appareil.
 keywords: ''
 author: brenduns
@@ -14,13 +14,13 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7c47e7e82928ea40d0b39dfbb17472441eac4f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; get-started; seodec18
+ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187665"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112474"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -45,14 +45,14 @@ Vous configurez les stratégies d’accès conditionnel basées sur l’appareil
 
 -   Découvrez plus d’informations sur la [conformité des appareils Intune](device-compliance.md).
 
--   Découvrez-en davantage sur [la protection de l’e-mail, d’Office 365 et d’autres services à l’aide de l’accès conditionnel avec Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   Découvrez-en davantage sur [la protection de l’e-mail, d’Office 365 et d’autres services à l’aide de l’accès conditionnel avec Intune](app-based-conditional-access-intune.md).
 
 > [!NOTE]
 > Sur les appareils Android, quand vous activez l’accès basé sur l’appareil pour Sharepoint Online, les utilisateurs doivent activer l’option **Activer l’accès au navigateur** sur l’appareil inscrit, en effectuant les opérations suivantes :
-> 1. Lancer l’**application Portail d’entreprise**.
+> 1. Lancez **l’application Portail d’entreprise**.
 > 2. Accédez à la page **Paramètres** via les trois points (...) ou le bouton de menu matériel.
 > 3. Appuyez sur le bouton **Activer l’accès du navigateur** . 
-> 4. Dans le navigateur Chrome, se déconnecter d’Office 365 et redémarrer Chrome.
+> 4. Dans le navigateur Chrome, déconnectez-vous d’Office 365 et redémarrez Chrome.
 
 ### <a name="conditional-access-for-exchange-on-premises"></a>Accès conditionnel pour Exchange sur site
 
@@ -125,7 +125,7 @@ Lorsqu’il est installé sur un appareil, l’agent de défense contre les mena
 
 L’intégration entre Intune et la défense contre les menaces mobiles joue un rôle dans les décisions d’accès conditionnel basé sur les risques posés par les appareils.
 
--   Découvrez-en davantage sur la [défense contre les menaces mobiles](https://docs.microsoft.com/intune-classic/deploy-use/mobile-threat-defense).
+-   Découvrez-en davantage sur la [défense contre les menaces mobiles](mobile-threat-defense.md).
 
 ### <a name="conditional-access-for-windows-pcs"></a>Accès conditionnel pour les PC Windows
 
@@ -133,11 +133,11 @@ L’accès conditionnel pour PC offre des fonctionnalités similaires à celles 
 
 #### <a name="corporate-owned"></a>Appartenant à l’entreprise
 
--   **Jonction à un domaine Active Directory local :** cette option est généralement utilisée par les organisations qui sont à l’aise avec la manière dont elles gèrent déjà leurs PC avec des stratégies de groupe AD ou System Center Configuration Manager.
+-   **Jonction à un domaine Active Directory local** : cette option est généralement utilisée par les organisations qui sont déjà habituées à gérer leurs PC avec des stratégies de groupe AD et/ou System Center Configuration Manager.
 
--   **Jonction à un domaine Azure AD et gestion Intune :** ce cas de figure est généralement conçu pour le CYOD (Choisissez votre propre appareil) et les scénarios d’itinérance sur ordinateur portable dans lesquels ces appareils sont rarement connectés au réseau d’entreprise. L’appareil est joint à Azure AD et est inscrit sur Intune, ce qui supprime les dépendances sur l’instance AD locale et les contrôleurs de domaine. Cela peut servir de critère d’accès conditionnel lors de l’accès aux ressources d’entreprise.
+-   **Jonction à un domaine Azure AD et gestion Intune** : cette option s’utilise généralement dans les scénarios CYOD (Choisissez votre propre appareil) et dans les scénarios d’itinérance sur ordinateur portable où ces appareils sont rarement connectés au réseau d’entreprise. L’appareil est joint à Azure AD et est inscrit sur Intune, ce qui supprime les dépendances sur l’instance AD locale et les contrôleurs de domaine. Cela peut servir de critère d’accès conditionnel lors de l’accès aux ressources d’entreprise.
 
--   **Active Directory joint et System Center Configuration Manager :** à partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
+-   **Joint au domaine AD et System Center Configuration Manager** : à partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
 
     -   Le PC est-il chiffré ?
 
@@ -147,7 +147,7 @@ L’accès conditionnel pour PC offre des fonctionnalités similaires à celles 
 
 #### <a name="bring-your-own-device-byod"></a>Apportez votre propre appareil (BYOD)
 
--   **Jonction d’espace et gestion Intune :** ici, l’utilisateur peut joindre ses appareils personnels pour accéder aux ressources et services de l’entreprise. Vous pouvez utiliser le rattachement à l’espace de travail et inscrire des appareils dans Intune pour recevoir des stratégies au niveau de l’appareil, ce qui est également une option pour évaluer les critères d’accès conditionnel.
+-   **Workplace Join et gestion Intune** : ici, l’utilisateur peut joindre ses appareils personnels pour accéder aux ressources et services de l’entreprise. Vous pouvez utiliser le rattachement à l’espace de travail et inscrire des appareils dans Intune pour recevoir des stratégies au niveau de l’appareil, ce qui est également une option pour évaluer les critères d’accès conditionnel.
 
 ## <a name="app-based-conditional-access"></a>Accès conditionnel basé sur l’application
 

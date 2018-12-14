@@ -15,15 +15,15 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: e407b2059d986841541c969e387d77e71c5e5b4b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181358"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032297"
 ---
-# <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Gérer les conditions générales de votre entreprise pour l’accès utilisateur
+# <a name="terms-and-conditions-for-user-access"></a>Conditions générales de l’accès utilisateur
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -48,17 +48,17 @@ Effectuez ces étapes pour créer les conditions générales. Le nom d’afficha
 ![Capture d’écran du portail Azure montrant le bouton Créer pour les conditions générales](media/terms-create-terms.png)
 3. Dans le volet étendu, spécifiez les informations suivantes :
 
-   - **Nom d’affichage** : nom pour les conditions générales dans le portail Azure. Les utilisateurs ne voient pas ce nom.
+   - **Nom d’affichage** : Nom donné aux conditions générales dans le portail Azure. Les utilisateurs ne voient pas ce nom.
 
-   - **Description** : détails facultatifs qui vous aident à identifier cet ensemble de conditions générales dans le portail Azure.
+   - **Description** : Informations facultatives qui vous aident à identifier cet ensemble de conditions générales dans le portail Azure.
 
 4. Choisissez la flèche en regard de **Définir la condition d’utilisation** pour ouvrir le volet Conditions générales, puis entrez les informations suivantes :
 
    ![Capture de l’écran d’acceptation des conditions générales de l’utilisateur final avec récapitulatif des conditions](./media/terms-summary-create.png)
 
-   - **Titre** : nom de vos conditions générales que les utilisateurs voient dans le portail d’entreprise, au-dessus du **résumé**.
-   - **Résumé des conditions** : texte qui explique la signification de l'acceptation par les utilisateurs des conditions générales. Par exemple, « En inscrivant votre appareil, vous acceptez les conditions d’utilisation définies par Contoso. Lisez les termes du contrat avec soin avant de continuer. ».
-   - **Conditions générales** : conditions générales que les utilisateurs voient et doivent accepter ou rejeter.
+   - **Titre** : Nom de vos conditions générales que les utilisateurs voient dans le portail d’entreprise, au-dessus du **résumé**.
+   - **Résumé des conditions** : Texte qui explique la signification de l’acceptation des conditions générales par les utilisateurs. Par exemple, « En inscrivant votre appareil, vous acceptez les conditions d’utilisation définies par Contoso. Lisez les termes du contrat avec soin avant de continuer. ».
+   - **Conditions générales** : Conditions générales que les utilisateurs voient et doivent accepter ou refuser.
 
 5. Choisissez **OK** > **Créer**.
 

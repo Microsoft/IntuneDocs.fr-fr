@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: df84438ca93e50c392b085eb439abe02f074e5c3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd238a7b779dd5e52e3cf8fb06c8f89db1f76559
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189722"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112917"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Intune
 
@@ -53,7 +53,7 @@ Les utilisateurs d’appareils gérés peuvent recueillir des journaux d’inscr
 Ces problèmes peuvent se produire sur toutes les plateformes.
 
 ### <a name="device-cap-reached"></a>Plafond d’appareils atteint
-**Problème :** un utilisateur reçoit une erreur durant l’inscription (par exemple **Portail d’entreprise temporairement indisponible**), et le journal DMPdownloader.log de Configuration Manager contient l’erreur **DeviceCapReached**.
+**Problème :** Un utilisateur reçoit une erreur durant l’inscription (par exemple **Portail d’entreprise temporairement indisponible**), et le journal DMPdownloader.log de Configuration Manager contient l’erreur **DeviceCapReached**.
 
 **Résolution :**
 
@@ -73,7 +73,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
 > [!NOTE]
 > 
-> Pour éviter d’atteindre le plafond d’inscription d’appareils, vous pouvez utiliser le compte de gestionnaire d’inscription d’appareil, comme décrit dans [Inscrire des appareils d’entreprise avec le gestionnaire d’inscription d’appareil dans Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+> Pour éviter d’atteindre le plafond d’inscription d’appareils, vous pouvez utiliser le compte de gestionnaire d’inscription d’appareil, comme décrit dans [Inscrire des appareils d’entreprise avec le gestionnaire d’inscription d’appareil dans Microsoft Intune](device-enrollment-manager-enroll.md).
 > 
 > Un compte d’utilisateur ajouté au compte des gestionnaires d’inscription d’appareil ne peut pas effectuer d’inscription si la stratégie d’accès conditionnel est appliquée à cette connexion d’utilisateur spécifique.
 
@@ -92,8 +92,8 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
 5.  Si la connexion aboutit, l’appareil iOS vous invite à installer l’application Portail d’entreprise Intune et à procéder à l’inscription. Sur un appareil Android, vous devez d’abord installer manuellement l’application Portail d’entreprise Intune avant de retenter l’inscription.
 
-### <a name="mdm-authority-not-defined"></a>Autorité MDM non définie
-**Problème :** Un utilisateur reçoit l’erreur **Autorité MDM non définie**.
+### <a name="mdm-authority-not-defined"></a>Autorité GPM non définie
+**Problème :** Un utilisateur reçoit l’erreur **Autorité MDM non définie**.
 
 **Résolution :**
 
@@ -120,7 +120,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
     4.  Dans la partie supérieure, choisissez **Nouvelle requête** et exécutez les requêtes suivantes :
 
-        -   Pour afficher tous les utilisateurs : `select * from [CM_ DBName].[dbo].[User_DISC]`
+        -   Pour afficher tous les utilisateurs : `select * from [CM_ DBName].[dbo].[User_DISC]`
 
         -   Pour afficher des utilisateurs spécifiques, utilisez la requête suivante, où %testuser1% est un espace réservé correspondant à username@domain.com pour l’utilisateur que vous recherchez : `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
@@ -128,15 +128,15 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
         Une fois que les résultats ont été retournés, recherchez l’ID d’utilisateur cloud.  Si vous n’en trouvez pas, c’est que l’utilisateur n’a pas de licence Intune.
 
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Impossible de créer une stratégie ou d’inscrire des appareils si le nom de l’entreprise contient des caractères spéciaux
-**Problème :** Vous ne pouvez pas créer des stratégies, ni inscrire des appareils.
+**Problème :** Vous ne pouvez pas créer de stratégies, ni inscrire d’appareils.
 
-**Résolution :** Dans le [Centre d’administration Office 365](https://portal.office.com/), supprimez les caractères spéciaux du nom de l’entreprise et enregistrez les informations de l’entreprise.
+**Résolution :** Dans le [Centre d’administration Office 365](https://portal.office.com/), supprimez les caractères spéciaux dans le nom de l’entreprise et enregistrez les informations de l’entreprise.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Impossible de se connecter ou d’inscrire des appareils quand vous avez plusieurs domaines vérifiés
-**Problème :** ce problème peut se produire quand vous ajoutez un deuxième domaine vérifié à votre ADFS. Les utilisateurs dotés du suffixe UPN (nom d’utilisateur principal) du deuxième domaine risquent de ne pas pouvoir se connecter aux portails ou d’inscrire des appareils.
+**Problème :** Ce problème peut se produire quand vous ajoutez un deuxième domaine vérifié à votre ADFS. Les utilisateurs dotés du suffixe UPN (nom d’utilisateur principal) du deuxième domaine risquent de ne pas pouvoir se connecter aux portails ou d’inscrire des appareils.
 
 
-<strong>Résolution :</strong> les clients Microsoft Office 365 doivent déployer une instance distincte du service de fédération AD FS 2.0 pour chaque suffixe :
+<strong>Résolution :</strong> Les clients Microsoft Office 365 doivent déployer une instance distincte du service de fédération AD FS 2.0 pour chaque suffixe :
 - S’ils utilisent SSO (authentification unique) via AD FS 2.0, et
 - S’ils ont plusieurs domaines de premier niveau pour les suffixes UPN des utilisateurs dans l’organisation (par exemple @contoso.com ou @fabrikam.com)
 
@@ -150,14 +150,14 @@ Un [correctif cumulatif pour AD FS 2.0](http://support.microsoft.com/kb/260749
 
 Le tableau suivant répertorie les erreurs auxquelles les utilisateurs finaux peuvent être confrontés durant l’inscription d’appareils Android dans Intune.
 
-|Message d'erreur|Problème|Résolution|
+|Message d'erreur|Problème|Solution|
 |---|---|---|
 |**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies :<ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Pour plus d’informations, consultez [Attribuer des licences Intune à vos comptes d’utilisateur](/intune/licenses-assign).|
 |**L’administrateur informatique doit définir une autorité MDM**<br>Apparemment, votre administrateur informatique n’a pas défini d’autorité MDM. Demandez-lui de l’aide ou réessayez plus tard.|L’autorité de gestion des appareils mobiles n’a pas été définie.|L’autorité de gestion des appareils mobiles n’a pas été définie dans Intune. Découvrez comment [définir l’autorité de gestion des appareils mobiles](/intune/mdm-authority-set).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Les appareils ne parviennent pas à se connecter au service Intune et affichent le message « Défectueux » dans la console d’administration Intune
-**Problème :** Certains appareils Samsung exécutant des versions Android 4.4.x et 5.x peuvent interrompre la connexion au service Intune. Si les appareils ne sont pas connectés :
+**Problème :** Certains appareils Samsung exécutant des versions Android 4.4.x et 5.x peuvent interrompre la connexion au service Intune. Si les appareils ne sont pas connectés :
 
 - Ils ne peuvent pas recevoir la stratégie, les applications et les commandes à distance du service Intune.
 - Ils affichent un état de gestion **Défectueux** dans la console Administrateur.
@@ -206,7 +206,7 @@ Si la résolution #2 ne fonctionne pas, indiquez à vos utilisateurs de suivre 
 
 
 ### <a name="profile-installation-failed"></a>Échec de l’installation du profil
-**Problème :** Un utilisateur reçoit l’erreur **Échec de l’installation du profil** sur un appareil Android.
+**Problème :** Un utilisateur reçoit l’erreur **Échec de l’installation du profil** sur un appareil Android.
 
 **Résolution :**
 
@@ -220,7 +220,7 @@ Si la résolution #2 ne fonctionne pas, indiquez à vos utilisateurs de suivre 
 
 ### <a name="android-certificate-issues"></a>Problèmes touchant les certificats Android
 
-**Problème** : les utilisateurs reçoivent le message suivant sur leur appareil : *Vous ne pouvez pas vous connecter, car il manque un certificat obligatoire à votre appareil.*
+**Problème** : Les utilisateurs reçoivent le message suivant sur leur appareil : *Vous ne pouvez pas vous connecter, car il manque un certificat obligatoire à votre appareil.*
 
 **Résolution 1**:
 
@@ -263,7 +263,7 @@ Si le certificat de serveur est installé correctement, toutes les coches s’af
 ### <a name="ios-enrollment-errors"></a>Erreurs d'inscription iOS
 Le tableau suivant répertorie les erreurs que les utilisateurs finaux peuvent rencontrer lors de l’inscription d’appareils iOS dans Intune.
 
-|Message d'erreur|Problème|Résolution|
+|Message d'erreur|Problème|Solution|
 |-------------|-----|----------|
 |NoEnrollmentPolicy|Aucune stratégie d’inscription détectée|Vérifiez que tous les prérequis de l’inscription, comme le certificat Apple Push Notification Service (APNs), ont été configurés et que l’option « iOS comme plateforme » est activée. Pour obtenir des instructions, consultez [Configurer la gestion des appareils iOS et Mac](ios-enroll.md).|
 |DeviceCapReached|Vous avez trop d’appareils mobiles déjà inscrits.|L’utilisateur doit supprimer un de ses appareils mobiles actuellement inscrits du portail d’entreprise avant d’en inscrire un autre. Consultez les instructions correspondant au type d’appareil que vous utilisez : [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
@@ -271,7 +271,7 @@ Le tableau suivant répertorie les erreurs que les utilisateurs finaux peuvent r
 |AccountNotOnboarded|En raison d’un problème lié au certificat, l’appareil mobile peut communiquer avec le réseau de votre entreprise.<br /><br />|Le service APNs (Apple Push Notification Service) fournit un canal permettant de contacter les appareils iOS inscrits. L’inscription n’aboutit pas, et ce message s’affiche si :<ul><li>Les étapes d’obtention d’un certificat APNs n’ont pas été effectuées, ou</li><li>Le certificat APNs est arrivé à expiration</li></ul>Pour plus d’informations, consultez [Configurer la gestion des appareils iOS et Mac avec Microsoft Intune](ios-enroll.md).|
 |DeviceTypeNotSupported|L’utilisateur a peut-être tenté une inscription en utilisant un appareil non-iOS. Le type d’appareil mobile que vous essayez d’inscrire n’est pas pris en charge.<br /><br />Vérifiez que l’appareil exécute iOS version 8.0 ou ultérieure.<br /><br />|Vérifiez que l’appareil de l’utilisateur exécute iOS version 8.0 ou ultérieure.|
 |UserLicenseTypeInvalid|Impossible d’inscrire l’appareil, car le compte de l’utilisateur n’est pas encore membre d’un groupe d’utilisateurs obligatoire.<br /><br />|Pour pouvoir inscrire leurs appareils, les utilisateurs doivent être membres du groupe d’utilisateurs approprié. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies :<ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager</li></ol>Pour plus d’informations, passez en revue les articles suivants :<br /><br />Consultez [Configurer la gestion des appareils iOS et Mac avec Microsoft Intune](ios-enroll.md) et passez en revue les informations sur la façon de configurer les utilisateurs dans [Synchroniser Active Directory et ajouter des utilisateurs à Intune](users-add.md) et [Organisation des utilisateurs et des appareils](groups-add.md).|
-|MdmAuthorityNotDefined|L’autorité de gestion des appareils mobiles n’a pas été définie.<br /><br />|L’autorité de gestion des appareils mobiles n’a pas été définie dans Intune.<br /><br />Consultez l’élément 1 de la section « Étape 6 : Inscrire des appareils mobiles et installer une application » dans [Prise en main de la version d’évaluation de 30 jours de Microsoft Intune](free-trial-sign-up.md).|
+|MdmAuthorityNotDefined|L’autorité de gestion des appareils mobiles n’a pas été définie.<br /><br />|L’autorité de gestion des appareils mobiles n’a pas été définie dans Intune.<br /><br />Examinez l’élément 1 de la section « Étape 6 : Inscrire des appareils mobiles et installer une application » dans [Démarrage rapide : Essayer gratuitement Microsoft Intune pendant 30 jours](free-trial-sign-up.md).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cant-communicate-with-them"></a>Les appareils sont inactifs ou la console d’administration ne peut pas communiquer avec eux
 **Problème :** Les appareils iOS ne sont pas enregistrés auprès du service Intune. Les appareils doivent être régulièrement enregistrés auprès du service pour conserver l’accès aux ressources d’entreprise protégées. Si les appareils ne sont pas enregistrés :
@@ -280,7 +280,7 @@ Le tableau suivant répertorie les erreurs que les utilisateurs finaux peuvent r
 - Ils affichent un état de gestion **Défectueux** dans la console Administrateur.
 - Les utilisateurs qui sont protégés par des stratégies d’accès conditionnel peuvent perdre l’accès aux ressources d’entreprise.
 
-**Solution :** Partagez les solutions suivantes avec les utilisateurs finaux pour les aider à récupérer l’accès aux ressources d’entreprise.
+**Résolution :** Partagez les solutions suivantes avec les utilisateurs finaux pour les aider à récupérer l’accès aux ressources d’entreprise.
 
 Quand les utilisateurs démarrent l’application Portail d’entreprise iOS, celle-ci peut leur indiquer si leur appareil a perdu le contact avec Intune. Si elle détecte une absence de contact, elle essaie automatiquement de se synchroniser avec Intune pour se reconnecter (les utilisateurs voient le message **Tentative de synchronisation** s’afficher).
 
@@ -315,7 +315,7 @@ Pour plus d’informations, consultez [Meilleures pratiques pour la sécurisatio
 
 
 ### <a name="profile-installation-failed"></a>Échec de l’installation du profil
-**Problème :** Un utilisateur reçoit l’erreur **Échec de l’installation du profil** sur un appareil iOS.
+**Problème :** Un utilisateur reçoit l’erreur **Échec de l’installation du profil** sur un appareil iOS.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Procédure de dépannage en cas d’échec de l’installation d’un profil
 
@@ -330,14 +330,14 @@ Pour plus d’informations, consultez [Meilleures pratiques pour la sécurisatio
 5.  Vérifiez que Safari pour iOS est le navigateur par défaut et que les cookies sont activés.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>L’appareil iOS inscrit n’apparaît pas dans la console lors de l’utilisation de System Center Configuration Manager avec Intune
-**Problème :** l’utilisateur inscrit l’appareil iOS, mais celui-ci n’apparaît pas dans la console d’administration de Configuration Manager. L’appareil n’indique pas qu’il a été inscrit. Causes possibles :
+**Problème :** L’utilisateur inscrit l’appareil iOS, mais celui-ci n’apparaît pas dans la console d’administration de Configuration Manager. L’appareil n’indique pas qu’il a été inscrit. Causes possibles :
 
 - Le connecteur Microsoft Intune sur votre site Configuration Manager ne communique pas avec le service Intune.
 - Le composant Data Discovery Manager (ddm) ou le composant State Manager (statmgr) ne traite pas les messages du service Intune.
 - Vous avez peut-être téléchargé le certificat de gestion des appareils mobiles à partir d’un compte et vous l’avez utilisé dans un autre compte.
 
 
-**Résolution :** Passez en revue les fichiers journaux suivants pour détecter les erreurs possibles :
+**Résolution :** Passez en revue les fichiers journaux suivants pour détecter les erreurs possibles :
 
 - dmpdownloader.log
 - ddm.log
@@ -348,7 +348,7 @@ Des exemples seront bientôt ajoutés concernant les éléments à rechercher da
 
 ### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>L’appareil iOS de l’utilisateur est bloqué sur un écran d’inscription pendant plus de 10 minutes
 
-**Problème** : un appareil qui tente de s’inscrire peut rester bloqué sur l’un des deux écrans suivants :
+**Problème** : Un appareil en cours d’inscription peut rester bloqué sur l’un des deux écrans suivants :
 - En attente de configuration finale de « Microsoft »
 - Application d’accès guidé non disponible. Contactez l’administrateur.
 
@@ -364,7 +364,7 @@ Ce problème peut se produire dans les cas suivants :
 | Installer le Portail d’entreprise avec VPP | Utilisez le jeton : adresse du jeton |
 | Exécuter le Portail d’entreprise en mode Application unique jusqu’à l’authentification | Oui |
 
-**Résolution** : pour résoudre le problème, vous devez :
+**Résolution** : Pour résoudre le problème, vous devez :
 1. Déterminer s’il existe un problème avec le jeton VPP et le corriger
 2. Identifier les appareils bloqués
 3. Réinitialiser les appareils affectés
@@ -396,16 +396,16 @@ Une fois que vous avez réinitialisé les appareils bloqués, vous pouvez demand
 ## <a name="macos-issues"></a>Problèmes liés à macOS
 
 ### <a name="macos-enrollment-errors"></a>Erreurs d’inscription macOS
-**Message d’erreur 1 :** *Vous semblez utiliser une machine virtuelle. Veillez à effectuer une configuration complète de votre machine virtuelle en spécifiant notamment le numéro de série et le modèle de matériel. S’il ne s’agit pas d’une machine virtuelle, contactez le support.*  
+**Message d’erreur 1 :** *Vous semblez utiliser une machine virtuelle. Veillez à effectuer une configuration complète de votre machine virtuelle en spécifiant notamment le numéro de série et le modèle de matériel. S’il ne s’agit pas d’une machine virtuelle, contactez le support.*  
 
-**Message d’erreur 2 :** *Votre appareil ne peut pas être géré. Ce problème peut avoir l’une des causes suivantes : vous utilisez une machine virtuelle, votre appareil a un numéro de série restreint ou l’appareil est déjà attribué à une autre personne. Découvrez comment résoudre ces problèmes ou contactez le support de votre entreprise.*
+**Message d’erreur 2 :** *Votre appareil ne peut pas être géré. Ce problème peut avoir l’une des causes suivantes : vous utilisez une machine virtuelle, votre appareil a un numéro de série restreint ou l’appareil est déjà attribué à une autre personne. Découvrez comment résoudre ces problèmes ou contactez le support de votre entreprise.*
 
-**Problème :** Ce message peut s’afficher pour l’une des raisons suivantes :  
+**Problème :** Ce message peut s’afficher pour l’une des raisons suivantes :  
 * Une machine virtuelle macOS n’est pas configurée correctement  
 * Vous avez activé des restrictions d’appareil qui exigent que l’appareil appartienne à l’entreprise ou qu’il porte un numéro de série inscrit dans Intune  
 * L’appareil a déjà été inscrit, mais il est encore attribué à un autre utilisateur dans Intune  
 
-**Résolution :** Commencez par vérifier auprès de l’utilisateur lequel de ces problèmes concerne son appareil. Choisissez ensuite la solution la plus pertinente parmi les solutions suivantes :
+**Résolution :** Commencez par vérifier auprès de l’utilisateur lequel de ces problèmes concerne son appareil. Choisissez ensuite la solution la plus pertinente parmi les solutions suivantes :
 * Si l’utilisateur souhaite inscrire une machine virtuelle pour des tests, assurez-vous que cette machine est entièrement configurée pour que Intune puisse reconnaître son numéro de série et le modèle de matériel. Découvrez-en davantage sur la [configuration des machines virtuelles](macos-enroll.md#enroll-virtual-macos-machines-for-testing) dans Intune.  
 * Si votre organisation a activé des restrictions d’inscription qui bloquent les appareils macOS personnels, vous devez manuellement [ajouter le numéro de série de l’appareil personnel](corporate-identifiers-add.md#manually-enter-corporate-identifiers) dans Intune.  
 * Si l’appareil est encore attribué à un autre utilisateur dans Intune, son propriétaire précédent n’a pas utilisé l’application Portail d’entreprise pour supprimer ou réinitialiser l’appareil. Pour supprimer l’entrée d’appareil obsolète dans Intune :  
@@ -417,9 +417,9 @@ Une fois que vous avez réinitialisé les appareils bloqués, vous pouvez demand
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problèmes quand vous utilisez System Center Configuration Manager avec Intune
 ### <a name="mobile-devices-disappear"></a>Les appareils mobiles disparaissent
-**Problème :** une fois l’inscription d’un appareil mobile réussie dans Configuration Manager, celui-ci disparaît du regroupement d’appareils mobiles. Toutefois, l’appareil a toujours le profil de gestion et est listé dans la passerelle CSS.
+**Problème :** Après avoir inscrit un appareil mobile dans Configuration Manager, cet appareil disparaît du regroupement d’appareils mobiles. Toutefois, l’appareil a toujours le profil de gestion et est listé dans la passerelle CSS.
 
-**Résolution :** ce problème peut se produire pour les raisons suivantes :
+**Résolution :** Ce problème peut se produire pour les raisons suivantes :
 - Vous avez un processus personnalisé qui supprime les appareils non membres d’un domaine, ou 
 - L’utilisateur a mis hors service l’appareil en le retirant de l’abonnement
 Pour identifier le processus ou le compte d’utilisateur qui a supprimé l’appareil de la console Configuration Manager, procédez comme suit.
@@ -443,14 +443,14 @@ La liste des erreurs d’inscription iOS est fournie dans notre documentation, d
 
 ## <a name="pc-issues"></a>Problèmes liés aux PC
 
-|Message d'erreur|Problème|Résolution|
+|Message d'erreur|Problème|Solution|
 |---|---|---|
 |**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies : <ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Découvrez comment [attribuer des licences Intune à vos comptes d’utilisateur](https://docs.microsoft.com/intune/licenses-assign).|
 
 
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>L’ordinateur est déjà inscrit - Erreur hr 0x8007064c
-**Problème :** L’inscription échoue avec l’erreur **L’ordinateur est déjà inscrit**. Le journal d’inscription affiche l’erreur **hr 0x8007064c**.
+**Problème :** L’inscription échoue avec l’erreur **L’ordinateur est déjà inscrit**. Le journal d’inscription affiche l’erreur **hr 0x8007064c**.
 
 Cette défaillance peut se produire, car l’ordinateur :
 - A été déjà inscrit, ou
@@ -464,9 +464,9 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 1. Double-cliquez sur **Certificats**, choisissez **Compte ordinateur** > **Suivant**, puis sélectionnez **Ordinateur local**.
 1. Double-cliquez sur **Certificats (ordinateur local)**, puis choisissez **Personnel / certificats**.
 1. Recherchez le certificat Intune émis par Sc_Online_Issuing et supprimez-le, le cas échéant.
-1. Supprimez la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** si elle existe, ainsi que toutes les sous-clés.
+1. Si la clé de Registre suivante existe, supprimez-la : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** et toutes les sous-clés.
 1. Tentez la réinscription.
-1. Si le PC ne peut toujours pas être inscrit, recherchez la clé **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95** et supprimez-la, si elle existe.
+1. Si vous n’arrivez toujours pas à inscrire l’ordinateur, recherchez cette clé et supprimez-la, si elle existe : **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
 1. Tentez la réinscription.
 
     > [!IMPORTANT]
@@ -475,7 +475,7 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 
 ## <a name="general-enrollment-error-codes"></a>Codes généraux des erreurs d’inscription
 
-|Code d'erreur|Problème possible|Solution suggérée|
+|Code d’erreur|Problème possible|Solution suggérée|
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |L’horloge de l’ordinateur client n’est pas réglée sur la bonne heure.|Assurez-vous que l'horloge et le fuseau horaire de l'ordinateur client sont correctement réglés.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Connexion impossible au service Intune. Vérifiez les paramètres de proxy du client.|Vérifiez qu’Intune prend en charge la configuration du proxy sur l’ordinateur client. Vérifiez que l’ordinateur client dispose d’un accès à Internet.|
@@ -491,7 +491,7 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 |0x80043008, 0x80CF3008|Échec du démarrage du service des mises à jour de gestion Microsoft Online.|Contactez le support Microsoft comme décrit dans [Comment obtenir un support technique pour Microsoft Intune](get-support.md).|
 |0x80043009, 0x80CF3009|L'ordinateur client est déjà inscrit dans le service.|Vous devez mettre hors service l'ordinateur client avant de le réinscrire dans le service.|
 |0x8004300B, 0x80CF300B|Impossible d’exécuter le package d’installation du logiciel client, car la version de Windows exécutée sur le client n’est pas prise en charge.|Intune ne prend pas en charge la version de Windows en cours d’exécution sur l’ordinateur client.|
-|0xAB2|Windows Installer n’a pas pu accéder au runtime de VBScript pour une action personnalisée.|Cette erreur est générée par une action personnalisée basée sur des DLL (Dynamic-Link Libraries). Pour résoudre les problèmes liés aux DLL, vous pouvez avoir besoin d’utiliser les outils décrits dans [Microsoft Support KB198038: Useful Tools for Package and Deployment Issues](https://support.microsoft.com/kb/198038) (KB198038 du support technique Microsoft : Outils utiles en cas de problèmes de package et de déploiement).|
+|0xAB2|Windows Installer n’a pas pu accéder au runtime de VBScript pour une action personnalisée.|Cette erreur est générée par une action personnalisée basée sur des DLL (Dynamic-Link Libraries). Pour résoudre les problèmes avec la DLL, vous devrez peut-être utiliser les outils décrits dans l’article [KB198038 du support technique Microsoft : Useful Tools for Package and Deployment Issues (Outils utiles en cas de problèmes de package et de déploiement)](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|La connexion au point de terminaison de service s'est terminée.|Le compte d’évaluation ou payant est suspendu. Créez un nouveau compte d’évaluation ou payant et recommencez l’inscription.|
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9a15c84ded066a26254737f75293b0d743fe5eab
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 24fb627d0fcf0fe3b24a8242d8ac22ccf6f3ff91
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181222"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032369"
 ---
-# <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Guide pratique pour configurer les paramètres d’Intune Education pour les appareils iPad partagés
+# <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Configurer les paramètres d’Intune Education pour les appareils iPad partagés
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
+
+> [!NOTE]
+> Les paramètres Intune de l’application Classroom sont obsolètes dans Intune. Cet article s’applique uniquement aux utilisateurs ayant des profils Éducation existants dans Intune.
 
 Intune prend en charge l’application iOS Classroom, qui permet aux enseignants d’orienter l’apprentissage et de contrôler les appareils des étudiants dans la salle de classe. En outre, pour l’application Classroom, Apple prend en charge la possibilité de configurer les appareils iPad des étudiants de sorte que plusieurs étudiants puissent partager un même appareil. Ce document vous explique comment atteindre cet objectif avec Intune.
 
@@ -99,7 +102,7 @@ Sous **Certificat PKCS#12 d’enseignant**, configurez les valeurs suivantes :
 - **Nom de l’autorité de certification** : entrez le nom de votre autorité de certification.
 - **Nom du modèle de certificat** : entrez le nom d’un modèle de certificat qui a été ajouté à une autorité de certification émettrice.
 - **Seuil de renouvellement (%)** : spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.
-- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
+- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
 
 Quand vous avez terminé la configuration des certificats d’enseignants, choisissez **OK**.
 
@@ -121,7 +124,7 @@ Sous **Certificat PKCS#12 d’étudiant**, configurez les valeurs suivantes :
 - **Nom de l’autorité de certification** : entrez le nom de votre autorité de certification.
 - **Nom du modèle de certificat** : entrez le nom d’un modèle de certificat qui a été ajouté à une autorité de certification émettrice.
 - **Seuil de renouvellement (%)** : spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.
-- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
+- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
 
 Quand vous avez terminé la configuration des certificats, choisissez **OK**.
 

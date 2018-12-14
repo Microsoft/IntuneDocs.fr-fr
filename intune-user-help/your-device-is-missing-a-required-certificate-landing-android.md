@@ -1,11 +1,12 @@
 ---
 title: Il manque un certificat obligatoire à votre appareil | Microsoft Docs
-description: ''
+titlesuffix: Microsoft Intune
+description: Un certificat exigé par le support technique de votre entreprise est manquant sur votre appareil.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,13 +17,13 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.custom: intune-enduser
-ms.openlocfilehash: 043b04688630f345be625456fb9cfec586e2f790
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.custom: intune-enduser; seodec18
+ms.openlocfilehash: e40ac2fd81375b84084dd229f4cb5a6ab3e9915f
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150750"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032212"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Un certificat obligatoire est manquant sur votre appareil
 
@@ -38,6 +39,6 @@ Si votre appareil Android n’est pas inscrit dans Intune et qu’il manque un c
 
 La première étape consiste à vérifier si [un certificat qui est généralement préinstallé sur votre appareil manque](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Si cela ne fonctionne pas, le support technique de votre entreprise peut [vous obliger à installer un deuxième certificat pour renforcer la sécurité](your-device-is-missing-an-IT-required-certificate-android.md).
+Si la résolution des problèmes liés aux certificats ne fonctionne pas, le support de votre entreprise peut [vous demander à installer un deuxième certificat pour renforcer la sécurité](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

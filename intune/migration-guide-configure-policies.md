@@ -1,5 +1,5 @@
 ---
-title: Configurer des stratégies de gestion des applications et de la conformité des appareils lors d’une migration Intune
+title: Configurer la conformité des applications et des appareils durant une migration Intune
 titlesuffix: Microsoft Intune
 description: Cet article décrit les étapes nécessaires pour configurer des stratégies de gestion des applications et de conformité des appareils durant une migration Microsoft Intune.
 keywords: ''
@@ -15,12 +15,13 @@ ms.assetid: 0062d08e-e5b3-4f73-8b64-5ad95adbe945
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 651612ac403db01ff2c5b7574216459c7ee2bd16
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 99f8f1eb297ac1530f9379dd4f033b72eee0b0f4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183792"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031821"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Configurer des stratégies de gestion des applications et de conformité lors de la migration vers Microsoft Intune
 
@@ -41,7 +42,7 @@ Chaque plate-forme d’appareil peut proposer des paramètres différents, mais 
 
 ## <a name="task-list-for-device-compliance-policies"></a>Liste de tâches relatives aux stratégies de conformité des appareils
 
-### <a name="task-1-add-device-groups-optional"></a>Tâche 1 : Ajouter des groupes d’appareils (facultatif)
+### <a name="task-1-add-device-groups-optional"></a>Tâche 1 : Ajouter des groupes d’appareils (facultatif)
 
 Vous pouvez créer des groupes d’appareils quand vous devez exécuter des tâches d’administration en fonction de l’identité de l’appareil, et non de l’utilisateur.
 
@@ -49,7 +50,7 @@ Les groupes d’appareils sont utiles pour la gestion des appareils sans utilisa
 
 En configurant des groupes d’appareils avant l’inscription, vous pouvez utiliser des catégories d’appareils pour les ajouter automatiquement à des groupes au moment de l’inscription. Les appareils se voient ensuite affecter automatiquement les stratégies du groupe auxquels ils appartiennent. [Bien démarrer avec les groupes](groups-get-started.md)
 
-### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Tâche 2 : Utiliser des profils d’accès aux ressources (Wi-Fi, VPN et certificats de messagerie)
+### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Tâche 2 : Utiliser des profils d’accès aux ressources (WiFi, VPN et certificats de messagerie)
 
 Les profils d’accès aux ressources fournissent des certificats et des configurations d’accès aux appareils inscrits. Si vous utilisez l’authentification basée sur les certificats, [configurez des certificats](certificates-configure.md).
 
@@ -61,7 +62,7 @@ Vous devez créer un profil de configuration d’appareil pour appliquer des par
 
 -   **Profils iOS Apple Configurator (iOS 7.1 et versions ultérieures) :** si votre solution MDM utilise des profils Apple Configurator (fichiers .mobileconfig), Intune peut les importer directement comme stratégies de configuration personnalisées.
 
--   **Stratégies de configuration des applications mobiles iOS :** si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS, Intune peut les importer directement, tant que les listes de propriétés présentent le format XML spécifié par Apple.
+-   **Stratégies de configuration des applications mobiles iOS :** si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS, Intune peut les importer directement, à condition que les listes de propriétés présentent le format XML spécifié par Apple.
 
 - Découvrez comment ajouter une stratégie personnalisée pour [iOS](custom-settings-ios.md).
 
@@ -89,7 +90,7 @@ Quand vous utilisez Intune MDM, vous pouvez fournir des applications en demandan
 
 -   [Guide pratique pour déployer des applications](apps-deploy.md)
 
-### <a name="task-6-enable-device-enrollment"></a>Tâche 6 : Activer l’inscription des appareils
+### <a name="task-6-enable-device-enrollment"></a>Tâche 6 : Activer l’inscription d’appareil
 
 Pour gérer un appareil, vous devez l’inscrire. Découvrez comment [inscrire des appareils d’entreprise et personnels](device-enrollment.md).
 

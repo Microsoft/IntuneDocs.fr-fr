@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 5ea4d41477f2f0c6dc1314e47072d2c4cf862e23
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184826"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031991"
 ---
-# <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Configurer l’inscription d’appareils kiosque d’entreprise Android
+# <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Configurer l’inscription d’appareils kiosque d’entreprise Android dans Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -57,7 +57,7 @@ Vous devez créer un profil d’inscription afin de pouvoir inscrire vos apparei
 1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Inscriptions d’appareils en mode kiosque et tâche**.
 2. Choisissez **Créer** et remplissez les champs requis.
     - **Nom** : tapez un nom que vous utiliserez lors de l’affectation du profil au groupe d’appareils dynamique.
-    - **Date d’expiration du jeton** : date à laquelle le jeton expire. Google applique un maximum de 90 jours.
+    - **Date d’expiration du jeton** : Date à laquelle le jeton expirera. Google applique un maximum de 90 jours.
 3. Sélectionnez **Créer** pour enregistrer le profil.
 
 ### <a name="create-a-device-group"></a>Créer un groupe d'appareils
@@ -67,11 +67,11 @@ Vous pouvez cibler des applications et des stratégies à des groupes d’appare
 1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Groupes** > **Tous les groupes** > **Nouveau groupe**.
 2. Dans le panneau **Groupe**, renseignez les champs obligatoires comme suit :
     - **Type de groupe** : Sécurité
-    - **Nom du groupe** : tapez un nom intuitif (par exemple « appareils de l’usine n°1 »)
-    - **Type d’appartenance** : Appareil dynamique
+    - **Nom du groupe** : tapez un nom intuitif (par exemple, « appareils de l’usine n°1 »)
+    - **Type d’appartenance** : appareil dynamique
 3. Choisissez **Ajouter une requête dynamique**.
 4. Dans le panneau **Règles d’appartenance dynamique**, renseignez les champs comme suit :
-    - **Ajouter une règle d’appartenance dynamique** : Règle simple
+    - **Ajouter une règle d’appartenance dynamique** : règle simple
     - **Ajouter des appareils où** : nom_profil_inscription
     - Dans la zone du milieu, choisissez **Correspondance**.
     - Dans le dernier champ, entrez le nom du profil d’inscription que vous avez créé.
@@ -82,8 +82,8 @@ Vous pouvez cibler des applications et des stratégies à des groupes d’appare
 
 Vous pouvez remplacer ou supprimer des jetons et des codes QR.
 
-- **Remplacer le jeton** : Vous pouvez générer un nouveau jeton/code QR quand sa date d’expiration approche à l’aide de l’option Remplacer le jeton.
-- **Révoquer le jeton** : Vous pouvez faire en sorte que le jeton/code QR expire immédiatement. À partir de ce moment-là, le jeton/code QR n’est plus utilisable. Vous pouvez utiliser cette option si vous :
+- **Remplacer le jeton** : vous pouvez générer un nouveau jeton/code QR quand sa date d’expiration approche à l’aide de l’option Remplacer le jeton.
+- **Révoquer le jeton** : vous pouvez révoquer le jeton/code QR pour qu’il expire immédiatement. À partir de ce moment-là, le jeton/code QR n’est plus utilisable. Vous pouvez utiliser cette option si vous :
     - partagez accidentellement le jeton/code QR avec un tiers non autorisé.
     - effectuez toutes les inscriptions et n’avez plus besoin du jeton/code QR.
 

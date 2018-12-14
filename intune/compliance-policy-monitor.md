@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f835f2bd2802454bbcdb27251524dfa4d2400f1a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e26de8691e78e4b35e8618c48f38c7972af233f8
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178370"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977301"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -56,25 +56,28 @@ En explorant ce rapport, vous pouvez également voir toutes les stratégies et p
 
 ### <a name="device-compliance-status-report"></a>Rapport d’état de conformité des appareils
 
-Le graphique montre les états de conformité pour tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory. 
+Le graphique montre les états de conformité pour tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory. 
+
+> [!IMPORTANT]
+> Intune suit la planification des enregistrements de l’appareil pour toutes les évaluations de conformité sur l’appareil. [Découvrez-en plus sur la planification des enregistrements d’appareils](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 
 Descriptions des différents états des stratégies de conformité des appareils :
 
-- **Conforme** : l’appareil a correctement appliqué un ou plusieurs paramètres de stratégie de conformité d’appareil.
+- **Conforme** : l’appareil a correctement appliqué un ou plusieurs paramètres de stratégie de conformité d’appareil.
 
-- **Période de grâce :** l’appareil est ciblé par un ou plusieurs paramètres de stratégie de conformité d’appareil. L’utilisateur n’a cependant pas encore appliqué les stratégies. Cela signifie que l’appareil n’est pas conforme, mais qu’il est dans la période de grâce définie par l’administrateur.
+- **Période de grâce** : l’appareil est ciblé par un ou plusieurs paramètres de stratégie de conformité d’appareil. L’utilisateur n’a cependant pas encore appliqué les stratégies. Cela signifie que l’appareil n’est pas conforme, mais qu’il est dans la période de grâce définie par l’administrateur.
 
   - Découvrez plus d’informations sur les [Actions destinées aux appareils non conformes](actions-for-noncompliance.md).
 
-- **Non évalué** : un état initial pour les appareils nouvellement inscrits. Il peut aussi s’agir d’appareils auxquels aucune stratégie de conformité n’a été affectée et qui n’ont pas de déclencheur pour vérifier leur conformité.
+- **Non évalué** : état initial des nouveaux appareils inscrits. Il peut aussi s’agir d’appareils auxquels aucune stratégie de conformité n’a été affectée et qui n’ont pas de déclencheur pour vérifier leur conformité.
 
-- **Non conforme** : l’appareil a échoué à appliquer un ou plusieurs paramètres de stratégie de conformité d’appareil. L’autre possibilité est que l’utilisateur ne s’est pas conformé aux stratégies.
+- **Non conforme** : l’appareil n’a pas pu appliquer un ou plusieurs paramètres de stratégie de conformité d’appareil. L’autre possibilité est que l’utilisateur ne s’est pas conformé aux stratégies.
 
-- **Appareil non synchronisé :** échec de signalement par l’appareil de son l’état de sa stratégie de conformité des appareils pour l’une des raisons suivantes :
+- **Appareil non synchronisé** : l’appareil n’a pas pu signaler l’état de sa stratégie de conformité d’appareil pour l’une des raisons suivantes :
 
   - **Inconnu** : l’appareil est hors connexion ou n’a pas pu communiquer avec Intune ou Azure AD pour d’autres raisons.
 
-  - **Erreur** : l’appareil n’a pas pu communiquer avec Intune et Azure AD et a reçu un message d’erreur avec une explication.
+  - **Erreur** : l’appareil n’a pas pu communiquer avec Intune et Azure AD, et a reçu un message d’erreur avec la raison.
 
 > [!IMPORTANT]
 > Les appareils inscrits dans Intune, mais non ciblés par des stratégies de conformité des appareils, sont inclus dans ce rapport sous le compartiment **Conforme**.
@@ -155,7 +158,7 @@ Cette fonctionnalité est incluse dans le rapport d’état des appareils :
     - Réussite : la stratégie est appliquée
     - Erreur : impossible d’appliquer la stratégie. Ce message s’affiche généralement avec un code d’erreur qui établit un lien vers une explication. 
     - Conflit : deux paramètres sont appliqués au même appareil et Intune ne peut pas résoudre le conflit. Un administrateur doit examiner le problème.
-    - En attente : l’appareil n’a pas vérifié auprès d’Intune pour recevoir la stratégie. 
+    - En attente : l’appareil n’est pas encore enregistré dans Intune pour recevoir la stratégie. 
     - Non applicable : l’appareil ne peut pas recevoir la stratégie. Par exemple, la stratégie met à jour un paramètre spécifique à iOS 11.1, mais l’appareil utilise iOS 10. 
 
 3. Pour voir les détails sur les appareils utilisant cette stratégie, sélectionnez un des états. Par exemple, sélectionnez **Réussi**. La fenêtre suivante montre les détails propres aux appareils, notamment leur nom et l’état du déploiement.

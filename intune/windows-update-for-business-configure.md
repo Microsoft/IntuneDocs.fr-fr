@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: a715fe518331d20b9a47d8374a37ce66ec59055d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c39faf6bb6a22cb861eb655edd6358b345b87c7e
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189278"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112763"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
 
@@ -36,12 +36,12 @@ Avec Windows Update pour Entreprise, vous simplifiez l’expérience utilisateur
   - Publier Windows Insider 
       
   Pour plus d’informations sur les canaux de maintenance disponibles, consultez [Vue d’ensemble de Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
-- **Deferral Settings (Paramètres de report)**  : configurez les paramètres de report des mises à jour pour différer l’installation des mises à jour pour des groupes d’appareils. Utilisez ces paramètres pour organiser le déploiement de vos mises à jour par étapes et suivre leur progression.
+- **Paramètres de report** : configurez les paramètres de report des mises à jour si vous souhaitez différer l’installation des mises à jour pour des groupes d’appareils. Utilisez ces paramètres pour organiser le déploiement de vos mises à jour par étapes et suivre leur progression.
 - **Suspension** : si un problème se produit durant le lancement de la mise à jour, vous pouvez reporter son installation. 
 - **Fenêtre de maintenance** : configurez les heures d’installation des mises à jour.
 - **Type de mise à jour** : choisissez le type des mises à jour installées. Par exemple, les mises à jour qualité, des fonctionnalités ou des pilotes.
 - **Comportement d’installation** : permet de configurer la façon dont la mise à jour est installée. Par exemple, l’appareil redémarre-t-il automatiquement après l’installation ?
-- **Téléchargement par des pairs** : vous choisissez de configurer le téléchargement par des pairs. Si cette option est activée, lorsqu’un appareil a terminé le téléchargement d’une mise à jour, les autres appareils peuvent télécharger la mise à jour à partir de celui-ci. Ce paramètre accélère le processus de téléchargement.
+- **Téléchargement par des pairs** : vous pouvez configurer le téléchargement par des pairs. Si cette option est activée, lorsqu’un appareil a terminé le téléchargement d’une mise à jour, les autres appareils peuvent télécharger la mise à jour à partir de celui-ci. Ce paramètre accélère le processus de téléchargement.
 
 Une fois que vous avez créé les anneaux de mise à jour, affectez-les à des groupes d’appareils. En utilisant les anneaux de mise à jour, vous pouvez créer une stratégie de mise à jour qui reflète les besoins de votre entreprise. Pour plus d’informations, consultez [Gérer les mises à jour à l’aide de Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
@@ -50,7 +50,7 @@ Une fois que vous avez créé les anneaux de mise à jour, affectez-les à des g
 - Pour mettre à jour les PC Windows 10, ceux-ci doivent exécuter au minimum Windows 10 Professionnel avec la mise à jour anniversaire de Windows.
 
 - Windows Update prend en charge les versions suivantes de Windows 10 :
-  - Windows 10
+  - Windows 10
   - Windows 10 Collaboration (pour les appareils Surface Hub)
   - [Windows Holographic for Business](#windows-holographic-for-business-support)
 
@@ -79,24 +79,24 @@ Une fois que vous avez créé les anneaux de mise à jour, affectez-les à des g
 4. Dans **Paramètres**, entrez les informations suivantes :
 
    - **Canal de maintenance** : définissez le canal à partir duquel l’appareil reçoit les mises à jour Windows.
-   - **Mises à jour de produits Microsoft** : choisissez si vous souhaitez rechercher les mises à jour des applications à partir de Microsoft Update.
-   - **Pilotes Windows** : choisissez si vous souhaitez exclure les pilotes Windows Update pendant les mises à jour.
+   - **Mises à jour de produits Microsoft** : choisissez si vous souhaitez rechercher les mises à jour d’applications à partir de Microsoft Update.
+   - **Pilotes Windows** : choisissez si vous souhaitez exclure des pilotes Windows Update pendant les mises à jour.
    - **Comportement des mises à jour automatiques** : choisissez le mode d’installation des mises à jour automatiques, ainsi que la planification du redémarrage. Pour plus d’informations, consultez [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
-     - **Fréquence de comportement automatique** : si vous sélectionnez **Installation et redémarrage automatiques à l’heure planifiée** pour le comportement de mise à jour, ce paramètre s’affiche. Utilisez ce paramètre pour planifier l’installation des mises à jour, notamment la semaine, le jour et l’heure.
+     - **Fréquence de comportement automatique** : si vous sélectionnez **Installation et redémarrage automatiques à l’heure planifiée** pour les mises à jour, ce paramètre s’affiche. Utilisez ce paramètre pour planifier l’installation des mises à jour, notamment la semaine, le jour et l’heure.
 
-   - **Vérifications de redémarrage** : option activée par défaut. Quand vous redémarrez un appareil, certaines vérifications sont effectuées : utilisateurs actifs, niveau de batterie, jeux en cours d’exécution, etc. Pour ignorer ces vérifications quand vous redémarrez un appareil, sélectionnez **Ignorer**.
+   - **Vérifications de redémarrage** : Activé par défaut. Quand vous redémarrez un appareil, certaines vérifications sont effectuées : utilisateurs actifs, niveau de batterie, jeux en cours d’exécution, etc. Pour ignorer ces vérifications quand vous redémarrez un appareil, sélectionnez **Ignorer**.
 
-   - **Période de report des mises à jour qualité (jours)**  : entrez le nombre de jours pendant lesquels les mises à jour qualité sont reportées. Vous pouvez différer la réception de ces mises à jour qualité jusqu’à 30 jours après leur publication.
+   - **Période de report des mises à jour qualité (jours)**  : entrez le nombre de jours durant lesquels les mises à jour qualité sont différées. Vous pouvez différer la réception de ces mises à jour qualité jusqu’à 30 jours après leur publication.
 
      En règle générale, les mises à jour qualité sont des correctifs et des améliorations apportées aux fonctionnalités existantes de Windows. Elles sont publiées le deuxième mardi de chaque mois. Les mises à jour qualité proposées par Windows Update pour Entreprise reçoivent uniquement ces mises à jour (version « B »). Toutefois, Microsoft peut en publier d’autres à tout moment. Vous pouvez définir si, et pendant combien de temps, vous souhaitez différer la réception des mises à jour qualité après leur mise à disposition sur Windows Update. Pour plus d’informations, consultez [Déployer les mises à jour à l’aide de Windows Update pour Entreprise](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).
 
-   - **Période de report des mises à jour des fonctionnalités (jours)**  : entrez le nombre de jours pendant lesquels les mises à jour de fonctionnalités sont reportées. Vous pouvez différer la réception de ces mises à jour de fonctionnalités jusqu’à 180 jours après leur publication.
+   - **Période de report des mises à jour des fonctionnalités (jours)**  : entrez le nombre de jours durant lesquels les mises à jour de fonctionnalités sont différées. Vous pouvez différer la réception de ces mises à jour de fonctionnalités jusqu’à 180 jours après leur publication.
 
      En règle générale, les mises à jour de fonctionnalités correspondent à de nouvelles fonctionnalités de Windows. Après avoir configuré le paramètre **Canal de maintenance**, vous pouvez définir si, et pendant combien de temps, vous souhaitez différer la réception des mises à jour de fonctionnalités après leur mise à disposition sur Windows Update.
 
-     Par exemple : **Si le canal de maintenance est défini sur Canal semi-annuel (ciblé) et si la période de report est de 30 jours** : partons de l’hypothèse que la mise à jour de fonctionnalité X est d’abord publiquement disponible sur Windows Update en tant que Canal semi-annuel (ciblé) en janvier. L’appareil ne reçoit pas la mise à jour avant février (soit 30 jours plus tard).
+     Par exemple : **Si le canal de maintenance est défini sur Canal semi-annuel (ciblé) et la période de report sur 30 jours** : partons de l’hypothèse que la mise à jour de fonctionnalité X est d’abord disponible publiquement sur Windows Update comme canal semi-annuel (ciblé) en janvier. L’appareil ne reçoit pas la mise à jour avant février (soit 30 jours plus tard).
 
-     **Si le canal de maintenance est défini sur Canal semi-annuel et si la période de report est de 30 jours** : partons de l’hypothèse que la mise à jour de fonctionnalité X est d’abord publiquement disponible sur Windows Update en tant que Canal semi-annuel (ciblé) en janvier. Quatre mois plus tard, en avril, la mise à jour de fonctionnalité X est publiée sur le Canal semi-annuel. L’appareil reçoit la mise à jour de fonctionnalité 30 jours après cette publication sur le Canal semi-annuel et se met à jour en mai.
+     **Si le canal de maintenance est défini sur Canal semi-annuel et la période de report sur 30 jours** : partons de l’hypothèse que la mise à jour de fonctionnalité X est d’abord disponible publiquement sur Windows Update comme canal semi-annuel (ciblé) en janvier. Quatre mois plus tard, en avril, la mise à jour de fonctionnalité X est publiée sur le Canal semi-annuel. L’appareil reçoit la mise à jour de fonctionnalité 30 jours après cette publication sur le Canal semi-annuel et se met à jour en mai.
 
    - **Mode de téléchargement de l’optimisation de la distribution** : choisissez la méthode selon laquelle les appareils téléchargent les mises à jour Windows. Pour plus d’informations, consultez [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
 
@@ -131,16 +131,16 @@ Vous pouvez afficher la conformité des mises à jour dans Intune ou avec une so
 ### <a name="review-update-compliance-using-oms"></a>Examiner la conformité des mises à jour en utilisant OMS
 Pour surveiller les déploiements de mises à jour Windows 10, vous pouvez utiliser une solution gratuite nommée Update Compliance. Pour plus d’informations, consultez [Analyse des mises à jour Windows avec la conformité de la mise à jour](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Lorsque vous utilisez cette solution, vous pouvez déployer un ID commercial dans un des appareils Windows 10 gérés par Intune pour lequel vous souhaitez générer des rapports sur la conformité des mises à jour.
 
-Dans Intune, vous pouvez utiliser les paramètres OMA-URI d’une stratégie personnalisée pour configurer l’ID commercial. Pour plus d’informations, consultez [Paramètres de stratégie Intune pour les appareils Windows 10 dans Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
+Dans Intune, vous pouvez utiliser les paramètres OMA-URI d’une stratégie personnalisée pour configurer l’ID commercial. Pour plus d’informations, consultez [Paramètres de stratégie Intune pour les appareils Windows 10 dans Microsoft Intune](custom-settings-windows-10.md).   
 
 Le chemin OMA-URI (qui respecte la casse) pour la configuration de l’ID commercial est : ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
 
 Par exemple, vous pouvez utiliser les valeurs suivantes dans **Ajouter ou modifier un paramètre OMA-URI** :
 
 - **Nom du paramètre** : ID commercial Windows Analytics
-- **Description du paramètre** : configuration d’un ID commercial pour les solutions Windows Analytics
+- **Description du paramètre** : configuration d’un ID commercial pour les solutions Windows Analytics
 - **OMA-URI** (sensible à la casse) : ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
-- **Type de données :**  chaîne
+- **Type de données** : String
 - **Valeur** : *utilisez le GUID indiqué sous l’onglet Télémétrie Windows dans votre espace de travail OMS*>
 
 ![Paramètres OMA-URI - Modifier une ligne](./media/commID-edit.png)
@@ -149,7 +149,7 @@ Par exemple, vous pouvez utiliser les valeurs suivantes dans **Ajouter ou modifi
 > Pour plus d’informations sur MS DM Server, consultez [Fournisseur de services de configuration DMClient](https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
 
 ## <a name="pause-updates"></a>Suspendre les mises à jour
-Vous pouvez suspendre la réception des mises à jour qualité ou de fonctionnalités d’un appareil pendant une période allant jusqu’à 35 jours à partir du moment où vous interrompez les mises à jour. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité mise en pause expire automatiquement et l’appareil recherche les mises à jour applicables dans Windows Update. Suite à cette analyse, vous pouvez suspendre à nouveau les mises à jour.
+Vous pouvez suspendre la réception des mises à jour qualité ou de fonctionnalités d’un appareil pendant une période allant jusqu’à 35 jours à partir du moment où vous interrompez les mises à jour. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité mise en pause expire automatiquement et l’appareil recherche les mises à jour applicables dans Windows Update. Suite à cette analyse, vous pouvez à nouveau suspendre les mises à jour.
 
 1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
 2. Sélectionnez **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10**.
@@ -174,4 +174,4 @@ Windows Holographic for Business prend en charge les paramètres suivants :
 
 - **Comportement des mises à jour automatiques**
 - **Mises à jour de produit Microsoft**
-- **Canal de maintenance** : prend en charge les options **Canal semi-annuel** et **Canal semi-annuel (ciblé)**
+- **Canal de maintenance** : prend en charge les options **Canal semi-annuel** et **Canal semi-annuel (ciblé)**

@@ -1,11 +1,12 @@
 ---
-title: Bienvenue dans Ignite
+title: Bienvenue dans Ignite 2018
+titlesuffix: Microsoft Intune
 description: ''
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/08/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,30 +15,34 @@ ms.reviewer: ''
 ROBOTS: NOINDEX,NOFOLLOW
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: ec5127adcb12bc1196604d27ae2ac6501de03d08
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 5735a2059690655a76425b049eff9e26f5ab8179
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187104"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032569"
 ---
-# <a name="microsoft-intune-documentation-40ignite-special-edition41"></a>Documentation de Microsoft Intune &#40;Édition spéciale Ignite&#41;
+# <a name="microsoft-intune-documentation-40ignite-2018-special-edition41"></a>Documentation de Microsoft Intune &#40;Édition spéciale Ignite 2018&#41;
 Bienvenue dans Microsoft Ignite 2018 ! Nous sommes heureux de vous accueillir. Dans Microsoft Ignite 2018, vous allez pouvoir découvrir quelques-unes des ressources Intune que nous avons rassemblées pour vous.
 
-## <a name="try-our-hands-on-labs-at-ignite"></a>Essayez nos ateliers Ignite !
-- **HOL3004** : Sécuriser vos données d’entreprise sur les appareils mobiles avec Microsoft 365 et Microsoft Intune, notamment l’accès conditionnel et Windows Defender - Protection avancée contre les menaces
+## <a name="try-our-hands-on-labs-at-ignite-2018"></a>Essayez nos ateliers Ignite 2018 !
+- **HOL3004** : Sécuriser les données de votre entreprise sur les appareils mobiles avec Microsoft 365 et Microsoft Intune, notamment l’accès conditionnel et Windows Defender Advanced Threat Protection (ATP)
 - **WRK3007** : Bien démarrer avec la cogestion à l’aide de System Center Configuration Manager et Intune
 
-## <a name="quickstarts"></a>Guides de démarrage rapide
+## <a name="quickstarts"></a>Démarrages rapides
 Nous avons mis à jour quelques guides de démarrage rapide et en avons créé de nouveaux. Effectuez les guides de démarrage rapide suivants (dans l’ordre) pour vous familiariser avec Intune et exécuter certaines tâches courantes en un minimum de temps.
 
-- [Essayer Intune gratuitement](free-trial-sign-up.md) : créez un abonnement gratuit pour essayer Intune dans un environnement de test.    
-- [Créer un utilisateur](quickstart-create-user.md) : créez un utilisateur, puis affectez-lui une licence.
-- [Créer un groupe](quickstart-create-group.md) : utilisez Intune pour créer un groupe basé sur un utilisateur existant.
-- [Affecter des stratégies](get-started-policies.md) : créez une stratégie de conformité pour un appareil Windows 10 et affectez un groupe à la stratégie.
-- [Configurer l’inscription automatique](quickstart-setup-auto-enrollment.md) : configurez Microsoft Intune pour inscrire automatiquement des appareils quand des utilisateurs spécifiques se connectent à des appareils Windows 10.
-- [Créer et affecter un rôle personnalisé](quickstart-create-custom-role.md) : créez et affectez un rôle personnalisé avec des autorisations spécifiques pour un département d’opérations de sécurité. 
+- [Essayer Intune gratuitement](free-trial-sign-up.md) : Créez un abonnement gratuit pour essayer Intune dans un environnement de test.    
+- [Créer un utilisateur](quickstart-create-user.md) : Créez un utilisateur, puis affectez-lui une licence.
+- [Créer un groupe](quickstart-create-group.md) : Utilisez Intune pour créer un groupe basé sur un utilisateur existant.
+- [Configurer l’inscription automatique](quickstart-setup-auto-enrollment.md) : Configurez Microsoft Intune pour inscrire automatiquement les appareils quand des utilisateurs spécifiques se connectent à des appareils Windows 10.
+- [Inscrire votre appareil Windows 10](quickstart-enroll-windows-device.md) : En jouant le rôle d’un utilisateur Intune, vous inscrivez votre appareil Windows 10 dans Microsoft Intune, puis revenez à Intune pour confirmer l’appareil inscrit.
+- [Créer une stratégie de conformité des appareils](quickstart-set-password-length-android.md) : Créez une stratégie de conformité des appareils pour demander aux utilisateurs d’entrer un mot de passe d’une longueur donnée afin de pouvoir accéder aux informations stockées sur leurs appareils Android.
+- [Envoyer des notifications aux appareils non conformes](quickstart-send-notification.md) : Créez un message de notification. Ensuite, ajoutez et attribuez une stratégie de non-conformité.
+- [Ajouter et attribuer une application cliente](quickstart-add-assign-app.md) : Ajoutez une application cliente et attribuez-la au personnel de votre entreprise.
+- [Créer et affecter une stratégie de protection des applications](quickstart-create-assign-app-policy.md) : Créez une stratégie de protection des applications et attribuez-la à une application cliente sur l’appareil d’un utilisateur final. 
+- [Créer et attribuer un rôle personnalisé](quickstart-create-custom-role.md) : Créez et attribuez un rôle personnalisé avec des autorisations spécifiques pour un service d’opérations de sécurité. 
 - [Créer un profil d’appareil e-mail pour iOS](quickstart-email-profile.md) - Créez un profil d’e-mail pour les appareils iOS.
 
 ## <a name="learn"></a>Apprendre
@@ -46,7 +51,7 @@ Nous avons mis à jour quelques guides de démarrage rapide et en avons créé d
 
 ## <a name="contribute-to-docs"></a>Contribuer à la documentation
 - [Devenir contributeur de la documentation Intune](https://github.com/MicrosoftDocs/IntuneDocs/blob/master/README.md)  
-- [Principaux contributeurs de la documentation Intune ce mois-ci](https://github.com/MicrosoftDocs/IntuneDocs/graphs/contributors?from=2018-09-01&to=2018-11-30&type=c)  
+- [Principaux contributeurs de la documentation d’Intune](https://github.com/MicrosoftDocs/IntuneDocs/graphs/contributors?from=2018-10-01&to=2019-12-31&type=c)  
 
 ## <a name="start-using-intune"></a>Prise en main d'Intune
 - [Licences incluant Intune](licenses.md)

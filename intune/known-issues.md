@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: db655c49277051267036d76e518cc870757f67c2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fafc9381f59ceb4e78e3e76d24694cd0acdcf8d0
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183041"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112372"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Problèmes connus dans Microsoft Intune
 
@@ -29,9 +29,9 @@ ms.locfileid: "52183041"
 
 Utilisez cet article pour connaître les problèmes connus dans Microsoft Intune.
 
-Si vous souhaitez signaler un bogue qui n’est pas répertorié ici, [créez une demande de support](get-support.md).
+Si vous souhaitez signaler un bogue qui n’est pas listé ici, [créez une demande de support](get-support.md).
 
-Si vous souhaitez voir une nouvelle fonctionnalité dans Intune, envoyez un rapport sur le site [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+Si vous souhaitez voir une nouvelle fonctionnalité dans Intune, envoyez un rapport sur la page [Commentaires sur Microsoft Intune](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migration
 
@@ -44,13 +44,13 @@ Les stratégies de conformité créées dans le portail Azure Classic seront dé
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Les fonctionnalités du client PC hérité Intune sont uniquement disponibles dans la console Silverlight
 
-La capacité à gérer Windows 10 dans Intune sur le portail Azure est disponible par le biais de l’inscription MDM Windows. Pour plus d’informations, consultez [Intune dans la console Azure et PC client Intune hérité](https://docs.microsoft.com/intune-classic/deploy-use/intune-on-azure).
+La capacité à gérer Windows 10 dans Intune sur le portail Azure est disponible par le biais de l’inscription MDM Windows. Pour plus d’informations, consultez [Intune dans la console Azure et PC client Intune hérité](intune-legacy-pc-client.md).
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Les groupes créés par Intune pendant la migration peuvent affecter les fonctionnalités d’autres produits Microsoft
 
 Lorsque vous migrez depuis Intune vers le portail Azure, un nouveau groupe nommé **Tous les utilisateurs - b0b08746-4dbe-4a37-9adf-9e7652c0b421** peut s’afficher. Ce groupe contient tous les utilisateurs dans votre Azure Active Directory, pas seulement les utilisateurs Intune sous licence. Cette utilisation peut entraîner des problèmes avec d’autres produits Microsoft si vous prévoyez que certains utilisateurs existants ou nouveaux ne soient membres d’aucun groupe.
 
-### <a name="status-blades-for-migrated-policies-do-not-work"></a>Les panneaux d’état pour les stratégies migrées ne fonctionnent pas
+### <a name="status-blades-for-migrated-policies-dont-work"></a>Les panneaux d’état pour les stratégies migrées ne fonctionnent pas
 
 Vous ne pouvez pas voir les informations d’état des stratégies qui ont été migrées à partir du portail classique Azure dans le portail Azure. Toutefois, vous pouvez continuer à afficher des rapports pour ces stratégies dans le portail classique. Pour afficher les informations d’état pour les stratégies de configuration migrées, recréez-les dans le portail Azure.
 
@@ -75,7 +75,7 @@ Il existe un problème connu lié à l’intégration de Managed Browser et du p
 
 <!-- ## Groups -->
 
-## <a name="device-configuration"></a>Configuration des appareils
+## <a name="device-configuration"></a>Configuration de l’appareil
 
 ### <a name="you-cannot-save-a-windows-information-protection-policy-for-some-devices"></a>Vous ne pouvez pas enregistrer une stratégie de protection des informations Windows pour certains appareils
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9a7ad5d77f0c085fc1e91b6991657e6b848b3f3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187835"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112950"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -67,7 +67,7 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
 
 ## <a name="set-device-type-restrictions"></a>Définition des restrictions de type d'appareil
 
-Pour changer les paramètres d’une restriction de type d’appareil, effectuez les étapes ci-dessous. Ces restrictions n’ont pas d’effet sur les appareils qui ont déjà été inscrits. Les appareils inscrits avec [l’agent de PC Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) ne peuvent pas être bloqués avec cette fonctionnalité.
+Pour changer les paramètres d’une restriction de type d’appareil, effectuez les étapes ci-dessous. Ces restrictions n’ont pas d’effet sur les appareils qui ont déjà été inscrits. Les appareils inscrits avec [l’agent de PC Intune](manage-windows-pcs-with-microsoft-intune.md) ne peuvent pas être bloqués avec cette fonctionnalité.
 
 1. Connectez-vous au portail Azure.
 2. Sélectionnez **Autres services**, recherchez **Intune**, puis choisissez **Intune**.
@@ -123,7 +123,7 @@ Pour changer les paramètres d’une restriction de limite d’appareils, effect
 6. Sélectionnez **Enregistrer**.
 
 
-Les utilisateurs reçoivent une notification qui leur indique qu’ils ont atteint le nombre limite d’appareils inscrits. Par exemple, sur iOS, la notification ressemble à ce qui suit :
+Durant des inscriptions BYOD, les utilisateurs reçoivent une notification qui les informe qu’ils ont atteint le nombre limite d’appareils inscrits. Par exemple, sur iOS, la notification ressemble à ce qui suit :
 
 ![Notification du nombre limite d’appareils iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
 

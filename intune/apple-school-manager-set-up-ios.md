@@ -1,12 +1,12 @@
 ---
-title: Configurer l’inscription au programme Apple School Manager pour les appareils iOS
+title: Inscription au programme Apple School Manager pour les appareils iOS
 titleSuffix: Microsoft Intune
 description: Découvrez comment configurer l’inscription au programme Apple School Manager pour les appareils iOS d’entreprise avec Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,25 +15,25 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: ecd669f534fac9d359b542cbf1f2e6b543ed34f2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: fdda0edd8c7bf67dbfce9d428f1b3ce0266b3726
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190334"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032416"
 ---
-# <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Activer l’inscription des appareils iOS avec Apple School Manager
+# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Configurer l’inscription des appareils iOS avec Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Cet article vous aide à activer l’inscription d’appareils iOS pour les appareils achetés dans le cadre du programme [Apple School Manager](https://school.apple.com/). En utilisant Intune avec Apple School Manager, vous pouvez inscrire de grandes quantités d’appareils iOS sans jamais les avoir en main. Quand un étudiant ou un enseignant active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion.
+Vous pouvez configurer Intune pour inscrire des appareils iOS achetés dans le cadre du programme [Apple School Manager](https://school.apple.com/). En utilisant Intune avec Apple School Manager, vous pouvez inscrire de grandes quantités d’appareils iOS sans jamais les avoir en main. Quand un étudiant ou un enseignant active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion.
 
 Pour activer l’inscription Apple School Manager, vous utilisez à la fois les portails Intune et Apple School Manager. Une liste de numéros de série ou un numéro de bon de commande est nécessaire pour que vous puissiez affecter des appareils à Intune à des fins de gestion. Vous créez des profils d’inscription DEP contenant les paramètres appliqués aux appareils lors de l’inscription.
 
 L’inscription à Apple School Manager n’est pas compatible avec le [Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md) ni avec le [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
 
-**Prérequis**
+**Conditions préalables**
 - [Certificat Push MDM Apple](apple-mdm-push-certificate-get.md)
 - [Autorité MDM](mdm-authority-set.md)
 - [Certificat Push MDM Apple](apple-mdm-push-certificate-get.md)

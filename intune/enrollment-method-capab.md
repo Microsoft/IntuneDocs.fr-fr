@@ -1,7 +1,7 @@
 ---
-title: Fonctionnalités Intune par méthode d’inscription pour les appareils Windows
+title: Fonctionnalités des méthodes d’inscription dans Intune pour les appareils Windows
 titlesuffix: Microsoft Intune
-description: Consultez les fonctionnalités prises en charge par chaque méthode d’inscription pour les appareils Windows.
+description: Découvrez les fonctionnalités de chaque méthode d’inscription disponible pour les appareils Windows.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -14,21 +14,21 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 38bb88015261aa50d6c27aec026614f1205aebe8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f32a0967c094c16b76ad4c4572ebd8e80c6115b2
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189807"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032127"
 ---
-# <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Fonctionnalités par méthode d’inscription pour les appareils Windows
+# <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Fonctionnalités des méthodes d’inscription dans Intune pour les appareils Windows
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Intune vous permet de gérer les appareils et les applications des membres de votre personnel, et comment ils accèdent aux données de votre entreprise. Les appareils doivent d’abord être inscrits auprès du service Intune. Plusieurs méthodes permettent d’inscrire les appareils de votre personnel. Chaque méthode a ses bonnes pratiques et fonctionnalités, comme indiqué dans les tableaux ci-dessous.
+Plusieurs méthodes permettent d’inscrire les appareils de votre personnel dans Intune. Chaque méthode a ses bonnes pratiques et fonctionnalités, comme indiqué dans les tableaux ci-dessous.
 
 ## <a name="best-practices-by-enrollment-method"></a>Bonnes pratiques par méthode d’inscription
-| **Bonnes pratiques** | **[Joint à Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Joint à Azure AD avec Autopilot](enrollment-autopilot.md)** |**[En bloc](windows-bulk-enroll.md)**|**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
+| **Bonnes pratiques** | **[Joint à Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Joint à Azure AD avec Autopilot](enrollment-autopilot.md)** |**[En bloc](windows-bulk-enroll.md)**|**[Gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Couramment utilisé dans EDU|![X](media/xmark.png)|![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
 |Les appareils peuvent être utilisés en tant qu’appareils partagés|![X](media/xmark.png)|![X](media/xmark.png)|![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
@@ -37,7 +37,7 @@ Intune vous permet de gérer les appareils et les applications des membres de vo
 
 ## <a name="capabilities-by-enrollment-method"></a>Fonctionnalités par méthode d’inscription
 
-| **Fonctionnalités** | **[Joint à Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Joint à Azure AD avec Autopilot](enrollment-autopilot.md)** |**[En bloc](windows-bulk-enroll.md)**|**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
+| **Fonctionnalités** | **[Joint à Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Joint à Azure AD avec Autopilot](enrollment-autopilot.md)** |**[En bloc](windows-bulk-enroll.md)**|**[Gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Accès conditionnel                                      |![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|
 |L’utilisateur est associé à l’appareil                    |![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Coche](media/checkmark.png)|![Coche](media/checkmark.png)|

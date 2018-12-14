@@ -1,11 +1,12 @@
 ---
-title: Utiliser des API pour intégrer des autorités de certification tierces - Microsoft Intune - Azure | Microsoft Docs
+title: API d’intégration d’autorités de certification tierces
+titlesuffix: Microsoft Intune
 description: Ajoutez ou intégrez la solution SCEP GitHub afin de permettre à des autorités de certification tierces de délivrer des certificats SCEP à des appareils dans Microsoft Intune. Cette solution inclut des API Java et C# qui valident, envoient des notifications de réussite et d’échec à Intune, et utilisent une fabrique de socket SSL lors de la communication avec Intune. Découvrez également une vue d’ensemble des étapes nécessaires pour tester votre configuration d’autorité de certification SCEP.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 054342994a75965b3e1bcb13884af07131ab0122
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 4109c437ae5a096c78c19aef489218cf7286eb01
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181919"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032331"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Utiliser des API pour ajouter des autorités de certification tierces pour SCEP à Intune
 
@@ -112,7 +113,7 @@ IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Description :
+Description :
 
 Instancie et configure un objet `IntuneScepServiceClient`.
 
@@ -154,7 +155,7 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Description :
+Description :
 
 Valide une demande de certificat SCEP.
 
@@ -191,7 +192,7 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Description :
+Description :
 
 Signale à Intune qu’un certificat est créé dans le cadre du traitement d’une requête SCEP.
 
@@ -230,7 +231,7 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Description :
+Description :
 
 Signale à Intune qu’une erreur s’est produite lors du traitement d’une requête SCEP. Cette méthode ne doit pas être appelée pour les exceptions levées par les méthodes de cette classe.
 
@@ -264,7 +265,7 @@ void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Description :
+Description :
 
 Utilisez cette méthode pour signaler au client qu’il doit utiliser la fabrique de socket SSL spécifiée (au lieu de la fabrique par défaut) lors des communications avec Intune.
 

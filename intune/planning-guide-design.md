@@ -1,5 +1,5 @@
 ---
-title: Créer un design
+title: Créer votre conception Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Cet article vous permet de créer une conception dans le cadre de la conception et de l'implémentation d'un cloud Microsoft Intune uniquement.
 keywords: ''
@@ -15,13 +15,13 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.custom: ''
-ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186492"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112984"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -178,9 +178,9 @@ Informations supplémentaires :
 
 Examinez de plus près les aspects suivants de vos appareils pour comprendre comment les gérer correctement.
 
--   Plateformes d’appareil prises en charge
+-   Plateformes d’appareils prises en charge
 
--   Appareils
+-   Périphériques
 
 -   Propriété des appareils
 
@@ -194,7 +194,7 @@ Vous devez identifier les appareils qui seront utilisés dans l’environnement 
 
 [Liste complète des appareils pris en charge par Intune](supported-devices-browsers.md).
 
-### <a name="devices"></a>Appareils
+### <a name="devices"></a>Périphériques
 
 Intune gère les appareils mobiles pour sécuriser les données d’entreprise et permettre aux utilisateurs de travailler depuis plusieurs endroits. Comme Intune prend en charge de nombreuses plateformes d’appareils, nous vous recommandons de documenter les appareils ainsi que les plateformes et versions de système d’exploitation pris en charge dans la conception de votre organisation. Par exemple :
 
@@ -211,7 +211,7 @@ Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.tech
 
 Intune prend en charge les appareils d’entreprise et les appareils personnels. Un appareil est considéré comme appartenant à l’entreprise s’il est inscrit par un gestionnaire d’inscription des appareils ou par un programme d’inscription des appareils. Par exemple, un appareil peut être inscrit auprès du Programme d’inscription des appareils Apple (DEP), marqué comme appartenant à l’entreprise et placé dans un groupe d’appareils auquel s’appliquent des stratégies d’entreprise et des applications ciblées.
 
-Pour plus d’informations sur les scénarios d’utilisation d’entreprise et BYOD, consultez la [Section 3 : déterminer les exigences du scénario d’utilisation](planning-guide-requirements.md).
+Consultez la [Section 3 : déterminer les exigences du scénario d’utilisation](planning-guide-requirements.md) pour plus d’informations sur les scénarios d’utilisation d’entreprise et BYOD.
 
 ### <a name="bulk-enrollment"></a>Inscription en bloc
 
@@ -402,7 +402,7 @@ L’accès conditionnel est utilisé pour autoriser uniquement les appareils com
 
 Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs ciblés par les stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer/configurer le connecteur service à service Intune pour Exchange Online ou Exchange sur site. Découvrez comment installer et configurer les connecteurs service à service Intune : <!---these links are correct--->
 
--   [Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
+-   [Exchange Online](exchange-service-connector-configure.md)
 
 -   [Exchange local](exchange-connector-install.md)
 

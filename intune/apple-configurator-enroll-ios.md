@@ -1,5 +1,5 @@
 ---
-title: Inscrire des appareils iOS - Apple Configurator - Assistant Configuration
+title: Inscription d’appareils iOS - Apple Configurator - Assistant Configuration
 titleSuffix: Microsoft Intune
 description: Découvrez comment utiliser Apple Configurator pour inscrire des appareils iOS d’entreprise à l’aide de l’Assistant Configuration.
 keywords: ''
@@ -15,15 +15,15 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: c36a87f6b0bd3e869275f5ac8089cc4fa4926698
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 6a49ee917540c9378f69dc6a025fbe5f8429767c
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180367"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112814"
 ---
-# <a name="enroll-ios-devices-with-apple-configurator"></a>Inscrire des appareils iOS à l’aide de l’outil Apple Configurator
+# <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Configurer l’inscription des appareils iOS avec Apple Configurator
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -33,7 +33,7 @@ Intune prend en charge l’inscription d’appareils iOS à l’aide d’[Apple 
 
 Vous ne pouvez pas utiliser les méthodes d’inscription Apple Configurator avec le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 - Accès physique aux appareils iOS
 - [Définir l’autorité MDM](mdm-authority-set.md)
@@ -129,8 +129,8 @@ Une fois que vous avez créé le profil et affecté des numéros de série, vous
 9. Dans le panneau **Configure iOS Setup Assistant** (Configurer l’Assistant Configuration iOS), choisissez les étapes à présenter à l’utilisateur, puis sélectionnez **Prepare** (Préparer). Si vous y êtes invité, authentifiez-vous pour mettre à jour les paramètres d’approbation.  
 10. Une fois la préparation de l’appareil iOS terminée, déconnectez le câble USB.  
 
-### <a name="distribute-devices"></a>Distribuer des appareils
-Les appareils sont désormais prêts pour l'inscription d'entreprise. Éteignez les appareils et distribuez-les aux utilisateurs. Quand les utilisateurs allument leur appareil, l’Assistant Configuration démarre.
+### <a name="distribute-devices"></a>Distribuer les appareils
+Les appareils sont désormais prêts pour l’inscription d’entreprise. Éteignez les appareils et distribuez-les aux utilisateurs. Quand les utilisateurs allument leur appareil, l’Assistant Configuration démarre.
 
 Après avoir reçu leur appareil, les utilisateurs doivent exécuter l’Assistant Configuration. Des appareils configurés avec une affinité utilisateur peuvent installer et exécuter l’application Portail d’entreprise pour télécharger des applications et gérer des appareils.
 

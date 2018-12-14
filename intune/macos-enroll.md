@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 85a05f4816692d3bccfe695c7e69f54d007f3b59
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 7a54a72afb6052ed11566c2d2ada596ebde2159b
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187002"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112406"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configurer l’inscription des appareils macOS dans Intune
 
@@ -31,13 +31,13 @@ Intune permet de gérer les appareils macOS de façon à donner aux utilisateurs
 
 En tant qu’administrateur Intune, vous pouvez configurer l’inscription des appareils macOS détenus par l’entreprise et par les employés (« Apportez votre propre appareil » ou BYOD). 
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de configurer l’inscription des appareils macOS, effectuez les prérequis suivants :
 
 - [Configurer des domaines](custom-domain-name-configure.md)
 - [Configurer l’autorité MDM](mdm-authority-set.md)
-- [Créer des groupes](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
+- [Créer des groupes](groups-add.md)
 - [Configurer le portail d’entreprise](company-portal-app.md)
 - Attribuer des licences utilisateur dans le [portail Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Obtenir un certificat Push MDM Apple](apple-mdm-push-certificate-get.md)
@@ -47,7 +47,7 @@ Avant de configurer l’inscription des appareils macOS, effectuez les prérequi
 Vous pouvez laisser les utilisateurs inscrire leurs appareils personnels à la gestion Intune, approche communément appelée BYOD (« Apportez votre propre appareil »). Une fois les prérequis remplis et les licences affectées aux utilisateurs, ces derniers peuvent inscrire leurs appareils de deux manières :
 - en accédant au [site web Portail d’entreprise](https://portal.manage.microsoft.com) ;
 - en téléchargeant l'application du Portail d'entreprise.
-Vous pouvez également leur envoyer un lien vers les étapes d’inscription en ligne : [Inscrire votre appareil Mac OS dans Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Vous pouvez également leur envoyer un lien vers les étapes d’inscription en ligne : [Inscrire votre appareil macOS dans Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Pour plus d’informations sur les autres tâches de l’utilisateur final, consultez les articles suivants :
 
@@ -56,8 +56,8 @@ Pour plus d’informations sur les autres tâches de l’utilisateur final, cons
 
 ## <a name="company-owned-macos-devices"></a>Appareils macOS détenus par l’entreprise
 Dans le cas des organisations qui achètent des appareils pour leurs utilisateurs, Intune prend en charge les méthodes d’inscription des appareils macOS détenus par l’entreprise suivantes :
-- [Programme d’inscription des appareils (DEP) d’Apple](device-enrollment-program-enroll-macos.md) : les organisations peuvent acheter des appareils macOS par le biais du Programme d’inscription des appareils (DEP) d’Apple. DEP vous permet de déployer un profil d’inscription « à distance » pour inscrire des appareils à la gestion.
-- [Gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md) : un compte DEM permet d’inscrire jusqu’à 1 000 appareils.
+- [Programme d’inscription des appareils Apple (DEP)](device-enrollment-program-enroll-macos.md) : les organisations peuvent acheter des appareils macOS par le biais du Programme d’inscription des appareils (DEP) d’Apple. DEP vous permet de déployer un profil d’inscription « à distance » pour inscrire des appareils à la gestion.
+- [Gestionnaire d’inscription d’appareil (DEM)](device-enrollment-manager-enroll.md) : avec un compte DEM, vous pouvez inscrire jusqu’à 1 000 appareils.
 
 ## <a name="block-macos-enrollment"></a>Bloquer l’inscription macOS
 Par défaut, Intune permet aux appareils macOS de s’inscrire. Pour empêcher l’inscription des appareils Mac OS, consultez [Définir des restrictions de type d’appareil](enrollment-restrictions-set.md).

@@ -5,22 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: fd99a168747bd4a0f5852404e767d658b8400ba2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure, seodec18
+ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180831"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032263"
 ---
-# <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser les appareils Windows Holographic et HoloLens avec Intune
+# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
 Microsoft Intune inclut de nombreuses fonctionnalités pour aider à gérer les appareils qui exécutent Windows Holographic for Business, comme [Microsoft HoloLens](https://docs.microsoft.com/hololens/). À l’aide d’Intune, vous pouvez vérifier que les appareils sont conformes aux règles de votre organisation, et vous pouvez personnaliser l’appareil en ajoutant un profil Wi-Fi ou VPN. Une autre fonctionnalité clé consiste à utiliser l’appareil comme une borne et exécuter une application spécifique, ou un ensemble spécifique d’applications.
 
@@ -32,11 +32,11 @@ Pour utiliser des appareils Windows Holographic avec Intune, créez un profil Mi
 
 Azure Active Directory (AD) est un bonne ressource pour vous aider à gérer et à contrôler vos appareils Windows Holographic for Business. À l’aide d’Intune et d’Azure AD, vous pouvez : 
 
-- **[Configurer des appareils joints à Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)** : dans Azure Active Directory (AD), vous pouvez ajouter vos appareils Windows 10 professionnels, notamment ceux exécutant Windows Holographic for Business. Cette fonctionnalité permet à Azure AD de contrôler l’appareil. Elle permet de vérifier que les utilisateurs accèdent aux ressources de votre entreprise à partir d’appareils qui répondent à vos exigences de sécurité et de conformité.
+- **[Joindre des appareils à Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**  : dans Azure Active Directory (AD), vous ajoutez vos appareils Windows 10 professionnels, notamment ceux exécutant Windows Holographic for Business. Cette fonctionnalité permet à Azure AD de contrôler l’appareil. Elle permet de vérifier que les utilisateurs accèdent aux ressources de votre entreprise à partir d’appareils qui répondent à vos exigences de sécurité et de conformité.
 
-  La [présentation de la gestion des appareils dans Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction) fournit plus de détails.
+  Pour plus d’informations, consultez [Gestion des appareils dans Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview).
 
-- **[Inscription en bloc des appareils Windows](windows-bulk-enroll.md)** : vous pouvez joindre un grand nombre de nouveaux appareils Windows à Azure AD et à Intune. Cette fonctionnalité, appelée « inscription en bloc », utilise des packages de provisionnement. Ces packages joignent les appareils exécutant Windows Holographic for Business à votre locataire Azure AD et les inscrivent auprès d’Intune.
+- **[Inscription en bloc des appareils Windows](windows-bulk-enroll.md)**  : vous pouvez joindre un grand nombre de nouveaux appareils Windows à Azure AD et à Intune. Cette fonctionnalité, appelée « inscription en bloc », utilise des packages de provisionnement. Ces packages joignent les appareils exécutant Windows Holographic for Business à votre locataire Azure AD et les inscrivent auprès d’Intune.
 
 ## <a name="company-portal"></a>Portail d'entreprise
 **[Configurer l’application Portail d’entreprise](company-portal-app.md)**
@@ -49,7 +49,6 @@ Dans l’application Portail d’entreprise, vous pouvez également effectuer l�
 - [Renommer un appareil](/intune-user-help/rename-your-device-cpapp)
 - [Installer des applications](/intune-user-help/install-apps-cpapp-windows) sur un appareil
 - [Synchroniser des appareils manuellement](/intune-user-help/sync-your-device-manually-windows) à partir de l’application Paramètres ou de l’application Portail d’entreprise
-
 
 ## <a name="compliance-policy"></a>Stratégie de conformité
 **[Créer une stratégie de conformité des appareils](compliance-policy-create-windows.md)**
@@ -85,11 +84,11 @@ Intune intègre certaines actions qui permettent aux administrateurs informatiqu
 
 Si vous utilisez des appareils exécutant Windows Holographic for Business, les actions suivantes sont disponibles : 
 
-- **[Réinitialiser](devices-wipe.md#wipe)** : l’action **Réinitialiser** supprime l’appareil d’Intune et restaure les paramètres par défaut de l’appareil. Utilisez cette action avant de donner l’appareil à un nouvel utilisateur, ou si l’appareil a été perdu ou volé.
+- **[Réinitialiser](devices-wipe.md#wipe)**  : l’action **Réinitialiser** supprime l’appareil d’Intune et restaure les paramètres d’usine de l’appareil. Utilisez cette action avant de donner l’appareil à un nouvel utilisateur, ou si l’appareil a été perdu ou volé.
 
-- **[Mettre hors service](devices-wipe.md#retire)**: l’action **Mettre hors service** supprime l’appareil d’Intune. Elle supprime également les données, les paramètres et les profils de messagerie de l’application managée qui ont été affectés par Intune. Les données personnelles de l’utilisateur restent sur l’appareil.
+- **[Mettre hors service](devices-wipe.md#retire)**  : l’action **Mettre hors service** supprime l’appareil d’Intune. Elle supprime également les données, les paramètres et les profils de messagerie de l’application managée qui ont été affectés par Intune. Les données personnelles de l’utilisateur restent sur l’appareil.
 
-- **[Synchroniser les appareils pour obtenir les dernières stratégies et actions](device-sync.md)** : l’action **Synchroniser** force l’appareil à s’enregistrer immédiatement auprès d’Intune. Quand un appareil s’enregistre, il reçoit immédiatement les actions ou les stratégies en attente qui sont affectées. Cette fonctionnalité vous aide à valider et à corriger les stratégies que vous avez affectées, sans attendre le prochain enregistrement planifié.
+- **[Synchroniser les appareils pour obtenir les dernières stratégies et actions](device-sync.md)**  : l’action **Synchroniser** force l’appareil à s’enregistrer immédiatement auprès d’Intune. Quand un appareil s’enregistre, il reçoit immédiatement les actions ou les stratégies en attente qui sont affectées. Cette fonctionnalité vous aide à valider et à corriger les stratégies que vous avez affectées, sans attendre le prochain enregistrement planifié.
 
 La ressource **[Qu’est-ce que la gestion des appareils Microsoft Intune ?](device-management.md)** est un bon point de départ pour découvrir comment gérer des appareils à l’aide du portail Azure. 
 
@@ -130,7 +129,7 @@ Vous pouvez également créer un profil Wi-Fi dans Intune pour affecter des para
 
 Intune inclut une fonctionnalité appelée anneaux de mise à jour pour les appareils Windows 10. Ces anneaux de mise à jour comportent un groupe de paramètres qui déterminent l’installation des mises à jour. Par exemple, vous pouvez créer une fenêtre de maintenance pour installer les mises à jour, ou choisir de redémarrer l’appareil après l’installation des mises à jour. Vous pouvez appliquer un anneau de mise à jour à plusieurs appareils exécutant Windows Holographic for Business.
 
-## <a name="terms-and-conditions"></a>Conditions générales
+## <a name="terms-and-conditions"></a>Terms and conditions
 **[Définir les conditions générales de votre entreprise pour l’accès utilisateur](terms-and-conditions-create.md)**
 
 Pour que les utilisateurs puissent inscrire des appareils et accéder aux applications de votre entreprise, notamment les e-mails, vous pouvez leur demander d’accepter d’abord les conditions générales de l’entreprise. Dans Intune, définissez la manière dont les conditions générales s’affichent dans le Portail d’entreprise, et affectez également ces conditions générales aux appareils exécutant Windows Holographic for Business.

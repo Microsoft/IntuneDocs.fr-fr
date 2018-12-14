@@ -15,21 +15,21 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic; get-started
-ms.openlocfilehash: 5983a31aeb2bf6c10d3f6fe828157c88a5a9364f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 0cea1b958849d6c2422461e85eba57577a65e884
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179267"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112593"
 ---
-# <a name="supported-operating-systems-and-browsers"></a>Navigateurs et systèmes d’exploitation pris en charge
+# <a name="supported-operating-systems-and-browsers-in-intune"></a>Systèmes d’exploitation et navigateurs pris en charge dans Intune
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Avant de configurer Microsoft Intune, passez en revue les systèmes d’exploitation et les navigateurs pris en charge.
 
-Pour obtenir de l’aide sur l’installation d’Intune sur votre appareil, consultez [Utilisation d’appareils gérés pour réaliser vos tâches](/intune-user-help/company-portal-frequently-asked-questions) et [Utilisation de la bande passante réseau Intune](network-bandwidth-use.md) ([portail Classic](/intune-classic/get-started/network-bandwidth-use)).
+Pour obtenir de l’aide sur l’installation d’Intune sur votre appareil, consultez [Utilisation d’appareils gérés pour réaliser vos tâches](/intune-user-help/company-portal-frequently-asked-questions) et [Utilisation de la bande passante réseau Intune](network-bandwidth-use.md).
 
 ## <a name="intune-supported-operating-systems"></a>Systèmes d’exploitation pris en charge Intune
 
@@ -86,11 +86,11 @@ Les modèles d’appareils Samsung figurant dans la liste suivante ne prennent p
 
 ### <a name="windows-pc-software-client"></a>Logiciel client pour PC Windows
 
-Vous pouvez déployer et installer un [logiciel client Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) sur les PC Windows en guise d’alternative à l’inscription. Cette fonctionnalité est uniquement disponible dans le portail classique Intune. Vous pouvez utiliser le logiciel client Intune pour gérer des PC Windows 7 et versions ultérieures, à l’exception de Windows 10 Édition familiale.
+Vous pouvez déployer et installer un [logiciel client Intune](manage-windows-pcs-with-microsoft-intune.md) sur les PC Windows en guise d’alternative à l’inscription. Cette fonctionnalité est uniquement disponible dans le portail classique Intune. Vous pouvez utiliser le logiciel client Intune pour gérer des PC Windows 7 et versions ultérieures, à l’exception de Windows 10 Édition familiale.
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>Navigateurs web pris en charge par Intune
 

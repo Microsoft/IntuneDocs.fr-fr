@@ -14,18 +14,18 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de80092647462f83fb92303080239fd30198bd3c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180232"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53167992"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Activer Windows Defender ATP avec accès conditionnel dans Intune
 
 Windows Defender Advanced Threat Protection (ATP) et Microsoft Intune fonctionnent de concert pour empêcher les violations de la sécurité et limiter leur impact au sein d’une organisation.
 
-Cette fonctionnalité s’applique aux appareils Windows 10
+Cette fonctionnalité s’applique à : Appareils Windows 10
 
 Prenons l’exemple d’une personne qui envoie une pièce jointe Word incorporant du code malveillant à un utilisateur de votre organisation. L’utilisateur ouvre la pièce jointe et active le contenu. C’est le début d’une attaque avec privilèges élevés. Un attaquant qui se trouve sur un ordinateur distant dispose alors de droits d’administrateur sur l’appareil de la victime. L’attaquant accède ensuite à distance aux autres appareils de l’utilisateur.
 
@@ -41,7 +41,7 @@ Cet article vous montre comment :
 - Créer la stratégie de conformité dans Intune.
 - Activer l’accès conditionnel dans Azure Active Directory (AD) sur les appareils en fonction de leur niveau de menace.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour utiliser ATP avec Intune, les éléments suivants doivent être configurés et opérationnels :
 
@@ -89,13 +89,13 @@ Si vous avez intégré un appareil à l’aide du package de configuration, vous
 5. Pour **Type de profil**, sélectionnez **Windows Defender ATP (Windows 10 Desktop)**.
 6. Configurez les paramètres :
 
-  - **Type de package de configuration des clients Windows Defender ATP** : sélectionnez **Intégrer** pour ajouter le package de configuration au profil. Sélectionnez **Désintégrer** pour supprimer le package de configuration du profil.
+  - **Type de package de configuration des clients Windows Defender ATP** : Sélectionnez **Intégrer** pour ajouter le package de configuration au profil. Sélectionnez **Désintégrer** pour supprimer le package de configuration du profil.
   
     > [!NOTE] 
-    > Si vous avez correctement établi une connexion avec Windows Defender ATP, Intune **intègre** automatiquement le profil de configuration pour vous.
+    > Si vous avez correctement établi une connexion avec Windows Defender ATP, Intune **intègre** automatiquement le profil de configuration, et le paramètre **Type de package de configuration des clients Windows Defender ATP** n’est alors pas disponible.
   
-  - **Partage d’exemples pour tous les fichiers** : **permet** de collecter des exemples et de les partager avec Windows Defender ATP. Par exemple, si vous constatez la présence d’un fichier suspect, vous pouvez le soumettre à Windows Defender ATP pour effectuer une analyse approfondie. **Non configuré** ne partage pas les exemples avec Windows Defender ATP.
-  - **Augmenter la fréquence des rapports de télémétrie** : si vous avez des appareils à haut risque, **activez** ce paramètre pour qu’ils envoient des données de télémétrie au service Windows Defender ATP plus fréquemment.
+  - **Partage d’exemples pour tous les fichiers** : Si ce paramètre est **activé**, permet de collecter des exemples et de les partager avec Windows Defender ATP. Par exemple, si vous constatez la présence d’un fichier suspect, vous pouvez le soumettre à Windows Defender ATP pour effectuer une analyse approfondie. **Non configuré** ne partage pas les exemples avec Windows Defender ATP.
+  - **Augmenter la fréquence des rapports de télémétrie** : si vous avez des appareils à haut risque, **activez** ce paramètre pour qu’ils envoient des données de télémétrie au service Windows Defender ATP plus fréquemment.
 
     [Intégrer des ordinateurs Windows 10 à l’aide de System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) offre plus de détails sur ces paramètres Windows Defender ATP.
 
@@ -110,10 +110,10 @@ La stratégie de conformité détermine un niveau acceptable de risque sur un ap
 4. Dans **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
 5. Dans les paramètres **Windows Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix :
 
-  - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme.
-  - **Faible** : l’appareil est conforme seulement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
-  - **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
-  - **Élevé** : ce niveau est le moins sécurisé et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
+  - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme.
+  - **Faible** : l’appareil est conforme uniquement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
+  - **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
+  - **Élevé** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
 
 6. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer la stratégie.
 

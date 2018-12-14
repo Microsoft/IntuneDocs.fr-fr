@@ -1,11 +1,11 @@
 ---
-title: Décider comment préparer les applications pour la gestion des applications mobiles avec Microsoft Intune
+title: Préparer les applications pour la gestion d’applications mobiles avec Microsoft Intune
 description: Cette rubrique présente des informations pour vous aider à déterminer quand utiliser l’outil de création de package de restrictions d’application et le SDK d’application pour permettre à vos applications métier personnalisées d’utiliser les stratégies de gestion d’applications mobiles.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: 8841354b268f70634a61040fb06ed857120e9cfc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181970"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112423"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -35,7 +35,7 @@ Vous n’avez pas besoin du code source pour utiliser l’outil, mais vous avez 
 
 L’outil de création de package de restrictions d’application ne prend **pas** en charge les applications de l’Apple App Store ou du Google Play Store. Il ne prend pas non plus en charge certaines fonctionnalités qui nécessitent une intégration de développement (consultez le tableau comparatif des fonctionnalités suivant).
 
-Pour plus d’informations sur l’outil de création de package de restrictions d’application pour les stratégies de protection des applications sur des appareils qui ne sont pas inscrits dans Intune, consultez [Protéger les données et applications métier sur des appareils non inscrits dans Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
+Pour plus d’informations sur l’outil de création de package de restrictions d’application pour les stratégies de protection des applications sur des appareils qui ne sont pas inscrits dans Intune, consultez [Protéger les données et applications métier sur des appareils non inscrits dans Microsoft Intune](apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Raisons d’utiliser l’outil de création de package de restrictions d’application
 * Votre application n’a pas de fonctionnalités de protection des données intégrées
@@ -78,7 +78,7 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 > [!NOTE]
 > Vous pouvez utiliser l’outil de création de package de restrictions d’application avec Intune autonome ou Intune avec Configuration Manager.
 
-|Composant|Kit SDK d’application|Outil de création de package de restrictions d’application|
+|Fonctionnalité|Kit SDK d’application|Outil de création de package de restrictions d’application|
 |-----------|---------------------|-----------|
 |Afficher le contenu web uniquement dans Managed Browser|X|X|
 |Empêcher les sauvegardes Android, iTunes ou iCloud|X|X|
@@ -117,4 +117,4 @@ Pour plus d’informations sur les stratégies de protection des applications et
 
   - [Outil de création de package de restrictions d’application Android](app-wrapper-prepare-android.md)</br>
   - [Outil de création de package de restrictions d’application iOS](app-wrapper-prepare-ios.md)</br>
-  - [Utiliser le SDK pour activer des applications pour la gestion des applications mobiles](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+  - [Utiliser le SDK pour activer des applications pour la gestion des applications mobiles](app-sdk.md)

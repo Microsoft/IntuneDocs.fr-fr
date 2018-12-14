@@ -1,11 +1,11 @@
 ---
-title: Licences Intune
+title: Licences disponibles pour Microsoft Intune
 description: Intune est disponible avec ces licences
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/14/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
 ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: 30918cb407f6290baeaf24bd9d5e9a2c3976e23c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: d6020207ab32a4e7c18f59f74caeedc9e4f17bf4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178995"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031685"
 ---
 # <a name="licenses-that-include-intune"></a>Licences incluant Intune
 
@@ -39,10 +39,10 @@ Le tableau suivant indique la version d’Intune disponible dans chaque licence 
 | Microsoft 365 E3 | Intune | [En savoir plus](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
 | Microsoft 365 E5 | Intune | [En savoir plus](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
 | Microsoft 365 F1 | Intune | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
-| Office 365 F1 | Aucune | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
+| Office 365 F1 | Aucun | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
 | Microsoft 365 Business | Intune | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/business) |
-| Office 365 Business Premium | Aucune | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/business) |
-| Azure Active Directory gratuit, De base, Premium P1, Premium P2 | Aucune | [En savoir plus](https://azure.microsoft.com/pricing/details/active-directory/) |
+| Office 365 Business Premium | Aucun | [En savoir plus](https://www.microsoft.com/en-us/microsoft-365/business) |
+| Azure Active Directory gratuit, De base, Premium P1, Premium P2 | Aucun | [En savoir plus](https://azure.microsoft.com/pricing/details/active-directory/) |
 
 Une licence appropriée est nécessaire si un utilisateur bénéficie directement ou indirectement d’une fonctionnalité couverte par cette licence.
 

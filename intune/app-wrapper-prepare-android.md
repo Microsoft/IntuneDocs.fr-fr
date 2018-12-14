@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 74ef09c8979e6867d49c119668ad329570cee424
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 42b554f025f80546a0a2dd93de92549f2f037b3f
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189824"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112860"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -28,7 +28,7 @@ ms.locfileid: "52189824"
 
 Utilisez l’outil de création de package de restrictions d’application Microsoft Intune pour Android pour changer le comportement de vos applications Android internes en limitant les fonctionnalités de l’application sans modifier le code de l’application proprement dit.
 
-L’outil est une application en ligne de commande Windows qui s’exécute dans PowerShell et crée un wrapper autour de votre application Android. Une fois l’application encapsulée, vous pouvez modifier sa fonctionnalité en configurant des [stratégies de gestion des applications mobiles](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) dans Intune.
+L’outil est une application en ligne de commande Windows qui s’exécute dans PowerShell et crée un wrapper autour de votre application Android. Une fois l’application encapsulée, vous pouvez modifier sa fonctionnalité en configurant des [stratégies de gestion des applications mobiles](app-protection-policies.md) dans Intune.
 
 
 Avant d’exécuter l’outil, passez en revue les [considérations en matière de sécurité pour l’exécution de l’outil de création de package de restrictions d’application](#security-considerations-for-running-the-app-wrapping-tool). Pour télécharger l’outil, accédez à la page [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) (Outil de création de package de restrictions d’application Microsoft Intune pour Android) sur GitHub.
@@ -63,7 +63,7 @@ Avant d’exécuter l’outil, passez en revue les [considérations en matière 
 
 2.  Acceptez le contrat de licence, puis terminez l’installation.
 
-Notez le dossier dans lequel vous avez installé l'outil. L’emplacement par défaut est : C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Notez le dossier dans lequel vous avez installé l'outil. L'emplacement par défaut est : C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>exécuter l'outil de création de package de restrictions d'application
 
