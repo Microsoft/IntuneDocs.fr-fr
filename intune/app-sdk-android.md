@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 12/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c556bab6deadc0db0ea625ee3c26bba636ea497d
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: c073040275f63b4623ea28a25ad0940dea563b75
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829179"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168026"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -35,14 +35,14 @@ Le Kit de développement logiciel SDK (SDK) d’application Microsoft Intune po
 Le SDK d’application Intune se compose des fichiers suivants :
 
 * **Microsoft.Intune.MAM.SDK.aar** : composants du SDK, à l’exception des fichiers JAR de la bibliothèque de prise en charge.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v4 Android.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v7 Android.
-* **Microsoft.Intune.MAM.SDK.Support.v17.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v17 Android. 
+* **Microsoft.Intune.MAM.SDK.Suppou det.v4.jar**: classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v4.
+* **Microsoft.Intune.MAM.SDK.Suppou det.v7.jar**: classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v7.
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v17. 
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent les classes de la bibliothèque de prise en charge Android dans le package `android.support.text`.
-* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar** : Ce fichier jar contient des stubs pour les classes système Android qui sont présentes uniquement sur les appareils récents, mais qui sont référencées par des méthodes dans MAMActivity. Les appareils récents ignorent ces classes stub. Ce fichier jar n’est nécessaire que si votre application effectue une réflexion sur des classes dérivant de MAMActivity. La plupart des applications n’ont pas besoin de l’inclure. Si vous utilisez ce fichier jar, veillez à exclure toutes ses classes de ProGuard. Elles se trouvent toutes sous le package racine « android ».
-* **com.Microsoft.Intune.mam.Build.jar** : plug-in Gradle qui [contribue à l’intégration du SDK](#build-tooling).
+* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar** : ce fichier jar contient des stubs pour les classes système Android qui sont présentes uniquement sur les appareils récents, mais qui sont référencées par des méthodes dans MAMActivity. Les appareils récents ignorent ces classes stub. Ce fichier jar n’est nécessaire que si votre application effectue une réflexion sur des classes dérivant de MAMActivity. La plupart des applications n’ont pas besoin de l’inclure. Si vous utilisez ce fichier jar, veillez à exclure toutes ses classes de ProGuard. Elles se trouvent toutes sous le package racine « android ».
+* **com.microsoft.intune.mam.build.jar** : plug-in Gradle qui [contribue à l’intégration du SDK](#build-tooling).
 * **CHANGELOG.txt** : contient un historique des modifications apportées dans chaque version du SDK.
-* **THIRDPARTYNOTICES.TXT** : avis d’attribution qui reconnaît que le code tiers et/ou OSS sera compilé dans votre application.
+* **THIRDPARTYNOTICES. TXT** :  avis d’attribution qui reconnaît le code tiers et/ou OSS qui sera compilé dans votre application.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -451,7 +451,7 @@ String toString();
 > [!NOTE]
 > `MAMPolicyManager.getPolicy` retourne toujours une stratégie d’application non null, même si l’appareil ou l’application n’est pas placé sous une stratégie de gestion Intune.
 
-### <a name="example-determine-if-pin-is-required-for-the-app"></a>Exemple : Déterminer si le code PIN est nécessaire pour l’application
+### <a name="example-determine-if-pin-is-required-for-the-app"></a>Exemple : Déterminer si le code PIN est nécessaire pour l’application
 
 Si l’application a sa propre expérience utilisateur de code PIN, vous souhaiterez peut-être la désactiver si l’administrateur informatique a configuré le SDK pour demander un code PIN d’application. Pour déterminer si l’administrateur informatique a déployé la stratégie de code PIN d’application sur cette application, pour l’utilisateur final actuel, appelez la méthode suivante :
 
@@ -573,11 +573,11 @@ Les notifications suivantes sont envoyées à l’application et certaines d’e
 
 * **WIPE_USER_DATA** : cette notification est envoyée dans une classe `MAMUserNotification`. Quand cette notification est reçue, l’application est censée supprimer toutes les données associées à l’identité « d’entreprise » passée avec le `MAMUserNotification`. Cette notification est actuellement envoyée lors de l’annulation de l’inscription APP-WE. Le nom principal de l’utilisateur est généralement spécifié au cours du processus d’inscription. Si vous vous inscrivez à cette notification, votre application doit s’assurer que toutes les données de l’utilisateur ont été supprimées. Si vous ne vous inscrivez pas à cette notification, le comportement de réinitialisation sélective par défaut est adopté.
 
-* **WIPE_USER_AUXILIARY_DATA** : les applications peuvent s’inscrire à cette notification si elles souhaitent que le SDK d’application Intune adopte le comportement de réinitialisation sélective par défaut, tout en ayant la possibilité de supprimer des données auxiliaires au moment de la réinitialisation. Cette notification n’est pas disponible pour les applications à identité unique : elle est envoyée seulement aux applications à plusieurs identités.
+* **WIPE_USER_AUXILIARY_DATA** : les applications peuvent s’inscrire à cette notification si elles souhaitent que le SDK de l’application Intune adopte le comportement de réinitialisation sélective par défaut, tout en ayant la possibilité de supprimer des données auxiliaires au moment de la réinitialisation. Cette notification n’est pas disponible pour les applications à identité unique : elle est envoyée seulement aux applications à plusieurs identités.
 
 * **REFRESH_POLICY** : cette notification est envoyée dans un `MAMUserNotification`. Quand cette notification est reçue, toute stratégie Intune mise en cache doit être invalidée et mise à jour. C’est le kit de développement logiciel (SDK) qui s’en charge ; toutefois, cette tâche peut revenir à l’application si la stratégie est utilisée de façon permanente.
 
-* **MANAGEMENT_REMOVED** : cette notification est envoyée dans un `MAMUserNotification` et signale à l’application qu’elle est sur le point de devenir non gérée. Une fois non gérée, elle ne pourra plus lire les fichiers chiffrés, lire des données chiffrées avec MAMDataProtectionManager, interagir avec le Presse-papiers chiffré, ni participer à l’écosystème d’applications gérées.
+* **MANAGEMENT_REMOVED** : cette notification est envoyée dans un `MAMUserNotification` et signale à l’application qu’elle est sur le point de devenir non managée. Une fois non gérée, elle ne pourra plus lire les fichiers chiffrés, lire des données chiffrées avec MAMDataProtectionManager, interagir avec le Presse-papiers chiffré, ni participer à l’écosystème d’applications gérées.
 
 
 > [!NOTE]
@@ -844,7 +844,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 * La prise en charge des clouds souverains nécessite la spécification de l’autorité.
 #### <a name="registration"></a>Inscription
 
-* Par souci pratique, les méthodes d’inscription sont idempotent. Par exemple, `registerAccountForMAM()` inscrit un compte et tente d’inscrire l’application uniquement si le compte n’est pas encore inscrit, et `unregisterAccountForMAM()` annule l’inscription d’un compte uniquement s’il est actuellement inscrit. Les appels suivants étant non-opérationnels, il n’y a aucun risque à appeler ces méthodes plusieurs fois. En outre, la correspondance entre les appels à ces méthodes et les notifications de résultats n’est pas garantie : autrement dit, si `registerAccountForMAM` est appelé pour une identité déjà inscrite, la notification peut ne pas être envoyée à nouveau pour cette identité. Il est possible que des notifications envoyées ne correspondent à aucun appel à ces méthodes, car le SDK peut tenter d’effectuer périodiquement des inscriptions en arrière-plan, et des annulations d’inscription peuvent être déclenchées par des demandes de réinitialisation envoyées par le service Intune.
+* Par souci pratique, les méthodes d’inscription sont idempotent. Par exemple, `registerAccountForMAM()` inscrit un compte et tente d’inscrire l’application uniquement si le compte n’est pas encore inscrit, et `unregisterAccountForMAM()` annule l’inscription d’un compte uniquement s’il est actuellement inscrit. Les appels suivants étant non-opérationnels, il n’y a aucun risque à appeler ces méthodes plusieurs fois. En outre, la correspondance entre les appels à ces méthodes et les notifications de résultats n’est pas garantie : Autrement dit, si `registerAccountForMAM` est appelé pour une identité qui est déjà inscrite, la notification ne pourra pas être renvoyée pour cette identité. Il est possible que des notifications envoyées ne correspondent à aucun appel à ces méthodes, car le SDK peut tenter d’effectuer périodiquement des inscriptions en arrière-plan, et des annulations d’inscription peuvent être déclenchées par des demandes de réinitialisation envoyées par le service Intune.
 
 * Les méthodes d’inscription peuvent être appelées pour un nombre quelconque d’identités différentes, mais à l’heure actuelle un seul compte d’utilisateur peut être inscrit. Si plusieurs comptes d’utilisateur disposant d’une licence Intune et ciblés par la stratégie de protection des applications sont inscrits simultanément (ou presque), il n’existe aucun moyen de savoir lequel l’emportera.
 
@@ -916,7 +916,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
 
 4. Ensuite, vous _**devez**_ copier tout ce que vous mettez dans `android:fullBackupContent` dans une balise de métadonnées nommée `com.microsoft.intune.mam.FullBackupContent` dans le manifeste.
 
-    **Exemple 1** : Si vous souhaitez que votre application ait des sauvegardes complètes sans exclusions, affectez la valeur **true** à l’attribut `android:fullBackupContent` et à la balise de métadonnées `com.microsoft.intune.mam.FullBackupContent` :
+    **Exemple 1** : si vous souhaitez que votre application ait des sauvegardes complètes sans exclusions, affectez la valeur **true** à l’attribut `android:fullBackupContent` et à l’étiquette de métadonnées `com.microsoft.intune.mam.FullBackupContent` :
 
     ```xml
     android:fullBackupContent="true"
@@ -924,7 +924,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="true" />  
     ```
 
-    **Exemple 2** : Si vous souhaitez que votre application utilise son BackupAgent personnalisé et ne participe pas aux sauvegardes automatiques complètes et conformes aux stratégies Intune, vous devez affecter la valeur **false** à l’attribut et à la balise de métadonnées :
+    **Exemple 2 :** si vous souhaitez que votre application utilise son BackupAgent personnalisé et ne participe pas aux sauvegardes automatiques complètes et conformes aux stratégies Intune, vous devez affecter la valeur **false** à l’attribut et à l’étiquette de métadonnées :
 
     ```xml
     android:fullBackupContent="false"
@@ -932,7 +932,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="false" />  
     ```
 
-    **Exemple 3** : Si vous souhaitez que votre application ait des sauvegardes complètes conformément à vos règles personnalisées définies dans un fichier XML, affectez à l’attribut et à la balise de métadonnées la même ressource XML :
+    **Exemple 3** : si vous souhaitez que votre application ait des sauvegardes complètes conformément aux règles personnalisées définies dans un fichier XML, affectez à l’attribut et à la balise de métadonnées la même ressource XML :
 
     ```xml
     android:fullBackupContent="@xml/my_scheme"
@@ -1114,7 +1114,7 @@ Outre la possibilité pour l’application de définir l’identité, l’identi
 
   En outre, l’interaction utilisateur avec une activité peut entraîner un changement d’identité implicite.
 
-  **Exemple :** Si un utilisateur annule une invite d’autorisation pendant `Resume`, un changement implicite en faveur d’une identité vide a lieu.
+  **Exemple :** si un utilisateur annule une invite d’autorisation pendant `Resume`, un changement implicite en faveur d’une identité vide a lieu.
 
   L’application peut être informée de ces modifications et, si elle le doit, elle peut les interdire. `MAMService` et `MAMContentProvider` exposent la méthode suivante, que les sous-classes peuvent substituer :
 
@@ -1616,9 +1616,8 @@ Ces instructions sont spécifiques à tous les développeurs d’applications An
 4. Activez la stratégie GAM requise en insérant la valeur suivante dans le manifeste : ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
    > [!NOTE] 
    > Cela oblige l’utilisateur à télécharger l’application Portail d’entreprise sur l’appareil et à effectuer le flux d’inscription par défaut avant utilisation.
-
-> [!NOTE]
-    > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits se produisent.
+   >
+   > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits se produisent.
 
 3. Activez la stratégie MAM requise en insérant la valeur suivante dans le manifeste :
 ```xml
@@ -1639,7 +1638,7 @@ Pour les grandes bases de code qui s’exécutent sans [ProGuard](http://proguar
 
 ### <a name="policy-enforcement-limitations"></a>Limitations concernant l’application de la stratégie
 
-* **Capture d’écran**: le SDK ne peut pas appliquer une nouvelle valeur de capture d’écran dans les activités qui sont déjà passées par Activity.onCreate. Il peut en résulter une période au cours de laquelle l’application est configurée pour désactiver les captures d’écran ; toutefois, il est toujours possible d’en prendre.
+* **Capture d’écran** : le SDK ne peut pas appliquer une nouvelle valeur de capture d’écran dans les activités qui sont déjà passées par Activity.onCreate. Il peut en résulter une période au cours de laquelle l’application est configurée pour désactiver les captures d’écran ; toutefois, il est toujours possible d’en prendre.
 
 * **Utilisation de programmes de résolution de contenu** : la stratégie Intune de transfert ou de réception peut bloquer entièrement ou en partie l’utilisation d’un programme de résolution de contenu pour accéder au fournisseur de contenu dans une autre application. Par conséquent, les méthodes ContentResolver retournent null ou lèvent une valeur d’échec (par exemple, `openOutputStream` lève `FileNotFoundException` en cas de blocage). L’application peut déterminer si l’échec de l’écriture des données par le biais d’un programme de résolution de contenu est causé par une stratégie (ou pourrait être causé par une stratégie) en appelant :
     ```java

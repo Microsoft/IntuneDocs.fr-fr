@@ -1,12 +1,12 @@
 ---
 title: Inscrire les appareils macOS – Programme d’inscription des appareils ou Apple School Manager
-titleSuffix: Microsoft Intune
+titleSuffix: ''
 description: Découvrez comment inscrire des appareils macOS d’entreprise à l’aide du Programme d’inscription des appareils.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 12a59165cd9ebe43826f8ec63ed5b045e5f3e991
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: seodec18
+ms.openlocfilehash: 2bd9b244947f5f0b8fcb832682951c7a241f96a4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728750"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032348"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Cet article explique comment configurer l’inscription des appareils macOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple ou [d’Apple School Manager](https://school.apple.com/). Vous pouvez utiliser ces deux types d’inscriptions pour un grand nombre d’appareils sans jamais avoir à les manipuler. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
+Vous pouvez configurer l’inscription Intune des appareils macOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple ou d’[Apple School Manager](https://school.apple.com/). Vous pouvez utiliser ces deux types d’inscriptions pour un grand nombre d’appareils sans jamais avoir à les manipuler. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
 
 Pour configurer l’inscription, on utilise à la fois le portail Intune et le portail DEP Apple. Des profils d’inscription contenant les paramètres appliqués aux appareils lors de l’inscription sont créés.
 
@@ -123,7 +123,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
  
 7. Choisissez **OK**.
 
-8. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+8. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants :  ![Personnalisation de l’Assistant Configuration.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Paramètres du service | Description |
     |---|---|
@@ -137,7 +137,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
     | Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
+    | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode kiosque qui limite l’appareil à une seule application). |
     | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
     | <strong>Restauration</strong> | Affiche l’écran **Applications et données**. Cet écran donne à l’utilisateur la possibilité de restaurer ou de transférer des données à partir de la sauvegarde iCloud pendant la configuration de l’appareil. |
     | <strong>ID Apple et iCloud</strong> | Donne à l’utilisateur la possibilité de se connecter avec son **Identifiant Apple** et d’utiliser **iCloud**.                         |

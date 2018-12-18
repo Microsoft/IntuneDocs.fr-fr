@@ -1,7 +1,7 @@
 ---
 title: Configurer une page d’état d’inscription
 titleSuffix: Microsoft Intune
-description: Affichez un message d’accueil aux utilisateurs qui inscrivent des appareils Windows 10.
+description: Configurez une page d’accueil pour les utilisateurs qui inscrivent des appareils Windows 10.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,19 +15,19 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: seodec18
+ms.openlocfilehash: b87e0d24c000e3083eaebeac1a4cf6026d495ccf
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52729039"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032093"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
  
-Durant la configuration de l’appareil, la Page d’état d’inscription affiche des informations relatives à l’installation sur l’appareil. Il est possible que des applications, profils et certificats ne soient pas installés avant qu’un utilisateur effectue l’inscription automatisée et se connecte à l’appareil. Une page d’état d’inscription peut aider les utilisateurs à comprendre l’état de leur appareil pendant la configuration de ce dernier. Vous pouvez créer plusieurs profils de page d’état d’inscription et les appliquer à différents groupes. Vous pouvez définir des profils pour :
+Durant la configuration de l’appareil à l’aide d’Intune, la page État d’inscription affiche des informations relatives à l’installation sur l’appareil. Il est possible que des applications, profils et certificats ne soient pas installés avant qu’un utilisateur effectue l’inscription automatisée et se connecte à l’appareil. Une page d’état d’inscription peut aider les utilisateurs à comprendre l’état de leur appareil pendant la configuration de ce dernier. Vous pouvez créer plusieurs profils de page d’état d’inscription et les appliquer à différents groupes. Vous pouvez définir des profils pour :
 - Afficher la progression de l’installation.
 - Bloquer l’utilisation jusqu’à ce que l’installation soit terminée.
 - Spécifier ce qu’un utilisateur peut faire si la configuration de l’appareil échoue.

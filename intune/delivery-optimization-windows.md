@@ -5,34 +5,36 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36cfb5ac05b2d69b5c7349f4ebc6054848a08fc8
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 1b83a380620704e9e3f616cee77b33d577c86c0d
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52730400"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977267"
 ---
 # <a name="windows-10-and-newer-delivery-optimization-settings-in-microsoft-intune"></a>Paramètres d’optimisation de la distribution de Windows 10 (et versions ultérieures) dans Microsoft Intune
 
-Cet article liste et décrit tous les paramètres d’optimisation de la distribution configurables sur des appareils Windows 10. Ces paramètres sont ajoutés à un profil de configuration d’appareil, puis affectés ou déployés sur les appareils avec Microsoft Intune.
+Cet article liste et décrit tous les paramètres d’optimisation de la distribution configurables sur des appareils Windows 10. Ces paramètres sont ajoutés à un profil de configuration d’appareil, puis affectés ou déployés sur les appareils avec Microsoft Intune. 
+
+Pour plus d’informations sur l’optimisation de la distribution sur Windows 10, consultez [Configurer l’optimisation de la distribution des mises à jour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization).
 
 ## <a name="settings"></a>Paramètres
 
-**Mode de téléchargement de l’optimisation de la distribution** : choisissez la façon dont les mises à jour sont distribuées aux appareils. Les options disponibles sont les suivantes :
+**Mode de téléchargement de l’optimisation de la distribution** : choisissez la façon dont les mises à jour sont distribuées sur vos appareils. Les options disponibles sont les suivantes :
 
-- **Non configuré** : les utilisateurs finaux mettent à jour leurs appareils suivant la méthode de leur choix (**Windows Update** ou paramètres **Optimisation de la distribution** proposés par le système d’exploitation).
-- **HTTP uniquement, sans peering** : recevez exclusivement les mises à jour issues d’Internet, et non celles qui proviennent d’autres ordinateurs présents sur le réseau (peering ou pair à pair).
-- **Mélange HTTP/peering derrière le même protocole HTTP NAT fusionné avec le peering sur un groupe privé** : recevez les mises à jour provenant d’Internet et d’autres ordinateurs présents sur le réseau. Le peering se produit sur les appareils du même site Active Directory (s’il existe) ou du même domaine. Lorsque cette option est sélectionnée, il croise les adresses IP de la traduction d’adresses réseau (NAT).
-- **Mélange HTTP/peering Internet** : recevez les mises à jour provenant d’Internet et d’autres ordinateurs présents sur réseau.
-- **Mode de téléchargement simple sans peering** : recevez les mises à jour provenant d’Internet et émises par le propriétaire des mises à jour, par exemple, Microsoft. Il ne contacte pas les services de cloud d’optimisation de la distribution.
-- **Mode de contournement**  : utilisez le Service de transfert intelligent en arrière-plan (BITS) pour recevoir des mises à jour. N’utilisez pas l’optimisation de la distribution.
+- **Non configuré** : les utilisateurs finaux mettent à jour leurs appareils suivant la méthode de leur choix (**Windows Update** ou paramètres **Optimisation de la distribution** proposés par le système d’exploitation).
+- **HTTP uniquement, sans appairage** : recevez exclusivement les mises à jour issues d’Internet. et non celles qui proviennent d’autres ordinateurs présents sur le réseau (peering ou pair à pair).
+- **HTTP fusionné avec un appairage derrière le même NAT et HTTP fusionné avec un appairage sur un groupe privé** : recevez les mises à jour provenant d’Internet et d’autres ordinateurs présents sur le réseau. Le peering se produit sur les appareils du même site Active Directory (s’il existe) ou du même domaine. Lorsque cette option est sélectionnée, il croise les adresses IP de la traduction d’adresses réseau (NAT).
+- **HTTP fusionné avec un appairage Internet** : recevez les mises à jour provenant d’Internet et d’autres ordinateurs présents sur le réseau.
+- **Mode de téléchargement simple sans appairage** : recevez les mises à jour provenant d’Internet et émises par le propriétaire des mises à jour, par exemple, Microsoft. Il ne contacte pas les services de cloud d’optimisation de la distribution.
+- **Mode contournement** : utilisez le Service de transfert intelligent en arrière-plan (BITS) pour recevoir des mises à jour. N’utilisez pas l’optimisation de la distribution.
 
 ## <a name="move-from-existing-update-rings-to-delivery-optimization"></a>Passer des boucles de mise à jour à l’optimisation de la distribution
 
