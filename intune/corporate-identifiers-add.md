@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 38c1d982dc627ccddf2844bf7a6334157e1f0b92
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 83baf13b42cd67e682227d6310b7057bdbd6bf1e
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032246"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324856"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifier les appareils comme appartenant à l’entreprise
 
@@ -43,7 +43,7 @@ Après l’inscription, vous pouvez [changer le paramètre de propriété](#chan
 
 Les administrateurs Intune peuvent créer et importer un fichier de valeurs séparées par des virgules (.csv) qui répertorie les numéros de série ou les numéros IMEI. Intune utilise ces identificateurs pour spécifier l’entreprise comme propriétaire des appareils lors de l’inscription de l’appareil. Vous pouvez déclarer des numéros IMEI pour toutes les plateformes prises en charge. Vous pouvez déclarer un numéro de série seulement pour les appareils iOS, macOS et Android. Chaque numéro IMEI ou numéro de série peut contenir des détails spécifiés dans la liste pour des raisons administratives.
 
-<!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
 [Découvrez comment trouver un numéro de série d’appareil Apple](https://support.apple.com/HT204308).<br>
 [Découvrez comment trouver votre numéro de série d’appareil Android](https://support.google.com/store/answer/3333000).

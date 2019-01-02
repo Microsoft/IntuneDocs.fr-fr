@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 69c8b4a5b786768d315bfe6ec707b8c4b915c93a
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 44dc3f82b8d51007d3eaf1d71f1a416ebfe319b4
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112923"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738067"
 ---
 # <a name="reference-for-devices-entities"></a>Référence pour les entités d’appareils
 
 La catégorie **Appareils** contient des entités pour appareils mobiles qui font le suivi d’informations, notamment les suivantes :
 
-  -  Type de périphérique
+  -  Type d'appareil
   -  État de l’inscription des appareils
   -  Propriété des appareils
   -  État de la gestion des appareils
@@ -44,11 +44,11 @@ L’entité **DeviceTypes** représente le type d’appareil référencé par d�
 |---------|------------|
 | DeviceTypeID |Identificateur unique du type d’appareil |
 | DeviceTypeKey |Identificateur unique du type d’appareil dans l’entrepôt de données (clé de substitution) |
-| DeviceTypeName |Type de périphérique |
+| DeviceTypeName |Type d'appareil |
 
 ## <a name="example"></a>Exemple
 
-| deviceTypeID  | Name | Description |
+| deviceTypeID  | Nom | Description |
 |---------|------------|--------|
 | 0 |Bureau |Appareil Windows Desktop |
 | 1 |WindowsRT |Appareil Windows RT |
@@ -83,7 +83,7 @@ L’entité **ClientRegistrationStateTypes** représente le type d’inscription
 
 ## <a name="example"></a>Exemple
 
-| ClientRegistrationStateID  | Name | Description |
+| ClientRegistrationStateID  | Nom | Description |
 |---------|------------|--------|
 | 0 |NotRegistered |Non inscrit |
 | 1 |SMSIDConflict |Conflit d’ID SMS |
@@ -107,7 +107,7 @@ L’entité **EnrollmentTypes** indique la façon dont un appareil a été inscr
 
 ## <a name="example"></a>Exemple
 
-| enrollmentTypeID  | Name | Description |
+| enrollmentTypeID  | Nom | Description |
 |---------|------------|--------|
 | 0 |Unknown |Le type d’inscription n’a pas été collecté |
 | 1 |UserEnrollment |Inscription lancée par l’utilisateur |
@@ -163,7 +163,7 @@ L’entité **ManagementStates** fournit des détails sur l’état de l’appar
 
 ## <a name="example"></a>Exemple
 
-| managementStateID  | Name | Description |
+| managementStateID  | Nom | Description |
 |---------|------------|--------|
 | 0 |Géré | Géré sans action à distance en attente. |
 | 1 |RetirePending | Commande de mise hors service en attente pour l’appareil. |
@@ -190,7 +190,7 @@ L’entité **WorkPlaceJoinStateTypes** représente l’état d’Azure Active D
 
 ## <a name="example"></a>Exemple
 
-| workPlaceJoinStateID  | Name | Description |
+| workPlaceJoinStateID  | Nom | Description |
 |---------|------------|--------|
 | 0 |Unknown |Si un appareil n’est pas rattaché à l’espace de travail, son état est Unknown |
 | 1 |Réussi |Rattachement à l’espace de travail effectué |
@@ -214,7 +214,7 @@ L’entité **ManagementAgentTypes** représente les agents utilisés pour gére
 
 ## <a name="example"></a>Exemple
 
-| ManagementAgentTypeID  | Name | Description |
+| ManagementAgentTypeID  | Nom | Description |
 |---------|------------|--------|
 | 1 |EAS | L’appareil est géré par le biais d’Exchange Active Sync |
 | 2 |GESTION DES APPAREILS MOBILES | L’appareil est géré à l’aide d’un agent MDM |
@@ -224,7 +224,7 @@ L’entité **ManagementAgentTypes** représente les agents utilisés pour gére
 | 8 |ConfigManagerClient | L’appareil est géré par l’agent System Center Configuration Manager |
 | 16 |Unknown | Type d’agent de gestion inconnu |
 
-## <a name="devices"></a>Périphériques
+## <a name="devices"></a>Appareils
 
 L’entité **Devices** répertorie tous les appareils inscrits à la gestion et leurs propriétés correspondantes.
 
@@ -342,7 +342,7 @@ L’entité **MdmDeviceInventoryHistories** contient des instantanés quotidiens
 | OSManufacturer |Fabricant du système d’exploitation. |
 | OSProductSuite |Suite de produits du système d’exploitation. |
 | OSProductType |Type de produit du système d’exploitation. |
-| Paramètres régionaux |Paramètres régionaux du système d’exploitation. |
+| Locale |Paramètres régionaux du système d’exploitation. |
 | PhysicalMemoryCapacity |Capacité de mémoire physique (en octets). |
 | PhysicalMemoryRemovable |Mémoire amovible physique (en octets). |
 | SystemEnclosureChassisTypesInnerText |Définit le type de châssis du système pour cet appareil. Les nombres indiquent les valeurs suivantes :  <br>0 ou Vide = Inconnu   <br>1 = Ordinateur de bureau   <br>2 = Ordinateur portable  <br>3 = Station de travail  <br>4 = Serveur d’entreprise  <br>100 = Téléphone  <br>101 = Tablette  <br>102/103 = Autre type inconnu d’appareil mobile |
@@ -386,7 +386,7 @@ L’entité **MdmDeviceInventoryHistories** contient des instantanés quotidiens
 | RemovableStorageTotal |Stockage amovible total (en octets) |
 | DeviceMemoryDeviceCapacity |Capacité mémoire de l’appareil |
 | DeviceMemoryAvailableDeviceCapacity |Capacité mémoire de l’appareil disponible |
-| DeviceOSVersion |Version du système d'exploitation |
+| DeviceOSVersion |Version de système d'exploitation |
 | DeviceOSPlatform |Plateforme du système d’exploitation |
 | DeviceOSLanguage |Langue du système d’exploitation |
 | PasswordMaxAttemptsBeforeWipe |Nombre maximum de tentatives de saisie du mot de passe avant la réinitialisation de l’appareil |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c7d5d29df0f91a4cff1060cd10a5d2355e196e39
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180135"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305928"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Affecter des applications à des appareils avec profil professionnel Android en utilisant Intune
 
@@ -56,7 +56,7 @@ Vérifiez que vous avez configuré des profils Intune et des profils professionn
 
     ![Options de gestion des nouvelles demandes d’autorisation d’application](media/approve-app-settings.png)
 
-    L’application est approuvée et s’affiche dans votre console d’administration informatique. Vous pouvez ensuite [synchroniser l’application de profil professionnel Android avec Intune](apps-add-android-for-work.md#sync-an-android-for-work-app-with-intune). 
+    L’application est approuvée et s’affiche dans votre console d’administration informatique. Vous pouvez ensuite [synchroniser l’application de profil professionnel Android avec Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchroniser une application de Google Play géré avec Intune
 
@@ -84,7 +84,7 @@ Quand un développeur d’applications met à jour des autorisations avec une no
 
 Consultez régulièrement la console Google Play gérée pour y rechercher l’existence de nouvelles autorisations. Vous pouvez configurer Google Play pour vous envoyer à vous-même ou à d’autres un e-mail quand de nouvelles autorisations sont exigées pour une application approuvée. Si vous affectez une application et que vous constatez qu’elle n’est pas installée sur les appareils, recherchez les nouvelles autorisations en effectuant ces étapes :
 
-1. Accédez à [Google Play](http://play.google.com/work).
+1. Accédez à [Google Play](https://play.google.com/work).
 2. Connectez-vous avec le compte Google que vous avez utilisé pour publier et approuver les applications.
 3. Sélectionnez l’onglet **Mises à jour** et vérifiez si toutes les applications nécessitent une mise à jour.  
     Les applications répertoriées nécessitent de nouvelles autorisations et ne sont pas affectées avant l’application de ces autorisations.

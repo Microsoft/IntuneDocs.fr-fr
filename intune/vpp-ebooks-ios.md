@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a4d40915cce17846ca2aaab29bb597c6580e8920
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 30155227f68f5b98eb1808cfc255b368f134ce91
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180661"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305911"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les livres électroniques iOS que vous avez achetés par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -35,7 +35,7 @@ Microsoft Intune vous permet de synchroniser, de gérer et d’affecter des livr
 Les procédures permettant de gérer les livres sont similaires à celles de la [gestion des applications VPP](vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Gérer les livres achetés en volume pour les appareils iOS
-Vous achetez plusieurs licences pour des livres iOS par le biais du [Programme d’achat en volume (VPP) Apple pour les entreprises](http://www.apple.com/business/vpp/) ou du [Programme d’achat en volume (VPP) Apple pour l’éducation](http://volume.itunes.apple.com/us/store). Cela implique la configuration d’un compte Apple VPP à partir du site web Apple et l’importation du jeton Apple VPP dans Intune.  Vous pouvez ensuite synchroniser vos informations d’achat en volume avec Intune et suivre votre utilisation des livres achetés en volume.
+Vous achetez plusieurs licences pour des livres iOS par le biais du [Programme d’achat en volume (VPP) Apple pour les entreprises](https://www.apple.com/business/vpp/) ou du [Programme d’achat en volume (VPP) Apple pour l’éducation](https://volume.itunes.apple.com/us/store). Cela implique la configuration d’un compte Apple VPP à partir du site web Apple et l’importation du jeton Apple VPP dans Intune.  Vous pouvez ensuite synchroniser vos informations d’achat en volume avec Intune et suivre votre utilisation des livres achetés en volume.
 
 ## <a name="before-you-start"></a>Avant de commencer
 Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’importer dans votre compte Intune. En outre :

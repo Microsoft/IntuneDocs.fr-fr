@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9562eb2c8fae49628ac042f28f172fb9f8fd5106
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112542"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626035"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -34,7 +34,7 @@ En tant qu’administrateur Intune, vous pouvez simplifier l’inscription de pl
 - [Inscription CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Activer l’inscription en bloc](windows-bulk-enroll.md) (Azure AD Premium et le Concepteur de configuration Windows sont nécessaires)
 
-Deux facteurs déterminent la façon dont vous pouvez simplifier l’inscription des appareils Windows :
+Deux facteurs déterminent la manière dont vous pouvez simplifier l’inscription des appareils Windows :
 
 - **Utilisez-vous Azure Active Directory Premium ?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) est inclus avec Enterprise Mobility + Security et d’autres plans de licence.
 - **Quelles versions des clients Windows les utilisateurs vont-ils inscrire ?** <br>Les appareils Windows 10 peuvent s’inscrire automatiquement quand vous ajoutez un compte professionnel ou scolaire. L’inscription des versions antérieures doit s’effectuer à l’aide de l’application Portail d’entreprise.
@@ -58,7 +58,7 @@ Pour simplifier l’inscription, créez un alias DNS (serveur de noms de domaine
 **Étape 1 : Créer des enregistrements CNAME** (facultatif)<br>
 Créez des enregistrements de ressources CNAME DNS pour le domaine de votre entreprise. Par exemple, si le site web de votre entreprise est contoso.com, vous devez créer un enregistrement CNAME DNS qui redirige EnterpriseEnrollment.contoso.com vers EnterpriseEnrollment-s.manage.microsoft.com.
 
-La création d’entrées CNAME dans DNS est facultative, mais les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur de gestion des appareils mobiles (enrollment.manage.microsoft.com).
+Bien que la création d’entrées DNS CNAME soit facultative, les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur MDM (enrollment.manage.microsoft.com).
 
 |Type|Nom de l'hôte|Pointe vers|TTL|
 |----------|---------------|---------------|---|
@@ -69,7 +69,7 @@ Si l’entreprise utilise plusieurs suffixes UPN, vous devez créer un enregistr
 
 - name@contoso.com
 - name@us.contoso.com
-- name@eu.constoso.com\
+- name@eu.contoso.com
 
 L’administrateur DNS Contoso doit créer les enregistrements CNAME suivants :
 
