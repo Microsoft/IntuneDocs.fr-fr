@@ -1,5 +1,6 @@
 ---
 title: Configurer une stratégie d’accès conditionnel basée sur l’application avec Intune
+titlesuffix: Microsoft Intune
 description: Découvrez comment créer une stratégie d’accès conditionnel basée sur l’application avec Intune.
 keywords: ''
 author: brenduns
@@ -15,12 +16,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 32044422943282d9cf813192405a335ee756e44e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 079671064c09c22d151ea71f8b3fb385652aef0f
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177928"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816920"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurer des stratégies d’accès conditionnel basées sur des applications avec Intune
 
