@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829145"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734287"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Intune autonome - Gestion des applications Win32 (préversion publique)
 
@@ -69,20 +69,20 @@ Faites référence au fichier *license.txt* en utilisant le chemin d’accès re
 
 Tout comme une application métier, vous pouvez ajouter une application Win32 à Microsoft Intune. Ce type d’application est généralement écrit en interne ou par un tiers. Les étapes suivantes fournissent des conseils pour ajouter une application Windows à Intune.
 
-### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d’installation du logiciel
+### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 
 1.  Connectez-vous au [portail Azure](https://portal.azure.com/).
 2.  Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
 3.  Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications** > **Ajouter**.
 4.  Dans le volet d’application **Ajouter**, sélectionnez **Application Windows (Win32) - préversion** dans la liste déroulante fournie.
 
-    ![Capture d’écran Ajouter une application - Zone de liste déroulante Ajouter un type](./media/apps-win32-app-01.png)
+    ![Capture d’écran du panneau Ajouter une application - Liste déroulante Ajouter un type](./media/apps-win32-app-01.png)
 
-### <a name="step-2-upload-the-app-package-file"></a>Étape 2 : Charger le fichier de package d’application
+### <a name="step-2-upload-the-app-package-file"></a>Étape 2 : Charger le fichier de package d’application
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Fichier de package d’application** pour sélectionner un fichier. Le volet Fichier de package d’application s’affiche.
 
-    ![Capture d’écran de Fichier de package d’application](./media/apps-win32-app-02.png)
+    ![Capture d’écran du volet Fichier de package d’application](./media/apps-win32-app-02.png)
 
 2.  Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Ensuite, sélectionnez un fichier d’installation Windows avec l’extension *.intunewin*.
 3.  Une fois que vous avez fini, sélectionnez **OK**.
@@ -91,20 +91,20 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Informations sur l’application** pour configurer l’application.
 2.  Dans le volet **Informations sur l’application**, configurez les informations suivantes. Certaines valeurs de ce volet sont éventuellement renseignées automatiquement.
-    - **Nom** : entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Si le nom d’application existe deux fois, chaque application s’affiche dans le portail d’entreprise.
-    - **Description :** entrez la description de l’application. La description s’affiche dans le portail d’entreprise.
-    - **Éditeur** : Entrez le nom de l’éditeur de l’application.
-    - **Catégorie** : Sélectionnez une ou plusieurs catégories d’application intégrées, ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver l’application plus facilement quand ils parcourent le portail d’entreprise.
-    - **Proposer cette application dans le portail d’entreprise** : met en évidence l’application sur la page principale du portail d’entreprise quand les utilisateurs recherchent des applications.
-    - **URL d’information** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations sur l’application. L’URL s’affiche dans le portail d’entreprise.
-    - **URL de déclaration de confidentialité** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations de confidentialité relatives à l’application. L’URL s’affiche dans le portail d’entreprise.
-    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
-    - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application. Exemple : **Service des ressources humaines**.
-    - **Remarques** : entrez les remarques à associer à cette application.
-    - **Logo** : chargez une icône associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
+    - **Nom** : Entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Si le nom d’application existe deux fois, chaque application s’affiche dans le portail d’entreprise.
+    - **Description** : Entrez une description de l'application. La description s’affiche dans le portail d’entreprise.
+    - **Éditeur** : Entrez le nom de l'éditeur de l'application.
+    - **Catégorie** : sélectionnez une ou plusieurs catégories d’application intégrées, ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver l’application plus facilement quand ils parcourent le portail d’entreprise.
+    - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
+    - **URL d'information** : entrez éventuellement l’URL d’un site web qui contient des informations sur l’application. L’URL s’affiche dans le portail d’entreprise.
+    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
+    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
+    - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application. Exemple : **Service des ressources humaines**.
+    - **Remarques** : entrez les remarques à associer à cette application.
+    - **Logo** : chargez une icône associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 3.  Une fois que vous avez fini, sélectionnez **OK**.
 
-### <a name="step-4-configure-app-installation-details"></a>Étape 4 : Configurer les détails d’installation de l’application
+### <a name="step-4-configure-app-installation-details"></a>Étape 4 : Configurer les détails d’installation de l’application
 1.  Dans le volet **Ajouter une application**, sélectionnez **Programme** pour configurer les commandes d’installation et de suppression de l’application.
 2.  Ajoutez la ligne de commande d’installation complète pour installer l’application. 
 
@@ -121,19 +121,19 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 
 4.  Une fois que vous avez fini, sélectionnez **OK**.
 
-### <a name="step-5-configure-app-requirements"></a>Étape 5 : Configurer les exigences de l’application
+### <a name="step-5-configure-app-requirements"></a>Étape 5 : Configurer les exigences de l’application
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Exigences** afin de configurer les exigences que les appareils doivent satisfaire pour installer l’application.
 2.  Dans le volet **Exigences**, configurez les informations suivantes. Certaines valeurs de ce volet sont éventuellement renseignées automatiquement.
-    - **Architecture de système d’exploitation** : Choisissez les architectures nécessaires pour installer l’application.
-    - **Système d'exploitation minimum** : Sélectionnez le système d’exploitation minimal nécessaire pour installer cette application.
-    - **Espace disque nécessaire (Mo)** : Vous pouvez ajouter l’espace disque sur le lecteur système nécessaire pour installer l’application.
-    - **Mémoire physique nécessaire (Mo)** : Vous pouvez ajouter la mémoire physique (RAM) nécessaire pour installer l’application.
-    - **Nombre minimal de processeurs logiques nécessaires** : Vous pouvez ajouter le nombre minimal de processeurs logiques nécessaires pour installer l’application.
-    - **Vitesse minimale du processeur nécessaire (MHz)** : Vous pouvez ajouter la vitesse de processeur minimale nécessaire pour installer l’application.
+    - **Architecture du système d'exploitation** : choisissez les architectures nécessaires pour installer l’application.
+    - **Système d’exploitation minimal** : sélectionnez le système d’exploitation minimal nécessaire pour installer cette application.
+    - **Espace disque nécessaire (Mo)** : vous pouvez ajouter l’espace disque sur le lecteur système nécessaire pour installer l’application.
+    - **Mémoire physique nécessaire (Mo)** : vous pouvez ajouter la mémoire physique (RAM) nécessaire pour installer l’application.
+    - **Nombre minimal de processeurs logiques nécessaires** : vous pouvez ajouter le nombre minimal de processeurs logiques nécessaires pour installer l’application.
+    - **Vitesse minimale du processeur nécessaire (MHz)** : vous pouvez ajouter la vitesse de processeur minimale nécessaire pour installer l’application.
 3.  Une fois que vous avez fini, sélectionnez **OK**.
 
-### <a name="step-6-configure-app-detection-rules"></a>Étape 6 : Configurer des règles de détection d’application
+### <a name="step-6-configure-app-detection-rules"></a>Étape 6 : Configurer des règles de détection d’application
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Règles de détection** pour configurer les règles permettant de détecter la présence de l’application.
 2.  Dans le champ **Format de règles**, sélectionnez le mode de détection de la présence de l’application. Vous pouvez choisir de configurer manuellement les règles de détection ou d’utiliser un script personnalisé pour détecter la présence de l’application. Vous devez choisir au moins une règle de détection. 
@@ -182,17 +182,19 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
     - **Utiliser un script de détection personnalisé** : Spécifiez le script PowerShell pour détecter cette application. 
     
         1.  **Fichier de script** : Sélectionner un script PowerShell pour détecter la présence de l’application sur le client. L’application est détectée quand le script retourne un code de sortie égal à 0 et écrit une valeur de chaîne dans STDOUT.
-        2.  **Exécutez le script comme processus 32 bits sur les clients 64 bits** : sélectionnez **Oui** pour exécuter le script à l’aide des informations d’identification de l’utilisateur final qui a ouvert la session. Sélectionnez **Non** (valeur par défaut) pour exécuter le script dans le contexte système.
+
+        2.  **Exécutez le script comme processus 32 bits sur les clients 64 bits** : sélectionnez **Oui** pour exécuter le script dans un processus 32 bits sur les clients 64 bits. Sélectionnez **Non** (valeur par défaut) pour exécuter le script dans un processus 64 bits sur les clients 64 bits. Les clients 32 bits exécutent le script dans un processus 32 bits.
+
         3.  **Appliquer la vérification de signature de script** : Sélectionnez **Oui** pour vérifier que le script est signé par un éditeur approuvé, ce qui permet d’exécuter le script sans avertissement ni invite. Le script s’exécute sans blocage. Sélectionnez **Non** (valeur par défaut) pour exécuter le script avec la confirmation de l’utilisateur final sans vérification de signature.
     
-        Intune sidecar vérifie les résultats du script. Il lit les valeurs écrites par le script dans le flux de sortie standard (STDOUT), le flux d’erreurs standard (STDERR) et le code de sortie. Si le script se termine par une valeur non nulle, il échoue et l’état de la détection de l’application est Non installé. Si le code de sortie est égal à zéro et STDOUT contient des données, l’état de la détection d’application est installé. 
-    
-        > [!NOTE]
-        > Quand le script se termine par la valeur 0, l’exécution du script est réussie. Le deuxième canal de sortie indique que l’application a été détectée : les données STDOUT indiquent que l’application a été trouvée sur le client. Nous ne recherchons pas de chaîne en particulier dans STDOUT.
-    
-3.  Une fois que vous avez ajouté votre ou vos règles, sélectionnez **Ajouter** > **OK**.
+            L’agent Intune vérifie les résultats du script. Il lit les valeurs écrites par le script dans le flux de sortie standard (STDOUT), le flux d’erreurs standard (STDERR) et le code de sortie. Si le script se termine par une valeur non nulle, il échoue et l’état de la détection de l’application est Non installé. Si le code de sortie est égal à zéro et STDOUT contient des données, l’état de la détection d’application est installé. 
 
-### <a name="step-7-configure-app-return-codes"></a>Étape 7 : Configurer des codes de retour d’application
+            > [!NOTE]
+            > Quand le script se termine par la valeur 0, l’exécution du script est réussie. Le deuxième canal de sortie indique que l’application a été détectée : les données STDOUT indiquent que l’application a été trouvée sur le client. Nous ne recherchons pas de chaîne en particulier dans STDOUT.
+
+        4.  Une fois que vous avez ajouté votre ou vos règles, sélectionnez **Ajouter** > **OK**.
+
+### <a name="step-7-configure-app-return-codes"></a>Étape 7 : Configurer des codes de retour d’application
 
 1.  Dans le volet **Ajouter une application**, sélectionnez **Codes de retour** pour ajouter les codes de retour permettant de spécifier le comportement de nouvelle tentative d’installation de l’application ou le comportement de postinstallation. Les entrées de code de retour sont ajoutées par défaut à la création de l’application. Toutefois, vous pouvez ajouter des codes de retour supplémentaires ou changer les codes de retour existants. 
 2.  Dans le volet **Codes de retour**, ajoutez des codes de retour supplémentaires ou modifiez des codes de retour existants.
@@ -203,17 +205,17 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
     - **Réussite** : Valeur de retour qui indique que l’application a été installée.
 3.  Sélectionnez **OK** une fois que vous avez ajouté ou modifié votre liste de codes de retour.
 
-### <a name="step-8-add-the-app"></a>Étape 8 : Ajouter l’application
+### <a name="step-8-add-the-app"></a>Étape 8 : Ajouter l’application
 
 1.  Dans le volet **Ajouter une application**, vérifiez que vous avez correctement configuré les informations de l’application.
 2.  Sélectionnez **Ajouter** pour charger l’application sur Intune.
 
-### <a name="step-9-assign-the-app"></a>Étape 9 : Affecter l’application
+### <a name="step-9-assign-the-app"></a>Étape 9 : Affecter l’application
 
 1.  Dans le volet d’application, sélectionnez **Affectations**.
 2.  Sélectionnez **Ajouter un groupe** pour ouvrir le volet **Ajouter un groupe** lié à l’application.
 3.  Pour l’application spécifique, sélectionnez un **type d’affectation** :
-    - **Disponible pour les appareils inscrits** : Les utilisateurs installent l’application à partir de l’application ou du site web Portail d’entreprise.
+    - **Disponible pour les appareils inscrits** : les utilisateurs effectuent l’installation de l’application à la demande à partir de l’application Portail d'entreprise ou du site web de portail d’entreprise.
     - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés.
     - **Désinstaller** : l’application est désinstallée des appareils dans les groupes sélectionnés.
 4.  Sélectionnez **Groupes inclus** et affectez les groupes qui doivent utiliser cette application.
@@ -232,16 +234,16 @@ Les clients Windows 10 RS3 et versions ultérieures téléchargent du contenu d�
 
 L’utilisateur final voit des notifications toast Windows pour l’installation des applications obligatoires et disponibles. L’image suivante montre un exemple de notification toast où l’installation de l’application n’est pas terminée tant que l’appareil n’est pas redémarré. 
 
-![Exemple de capture d’écran de notifications toast Windows pour l’installation d’une application](./media/apps-win32-app-08.png)    
+![Capture d’écran de notifications toast Windows pour l’installation d’une application](./media/apps-win32-app-08.png)    
 
 L’image suivante indique à l’utilisateur final que des changements sont effectués sur l’application sur l’appareil.
 
-![Exemple de capture d’écran indiquant à l’utilisateur final que des changements sont effectués sur l’application sur l’appareil](./media/apps-win32-app-09.png)    
+![Capture d’écran d’une notification faite à l’utilisateur concernant des modifications de l’application](./media/apps-win32-app-09.png)    
 
 ## <a name="troubleshoot-win32-app-issues"></a>Résoudre les problèmes d’application Win32
 Les journaux de l’agent sur l’ordinateur client sont souvent dans `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Vous pouvez utiliser `CMTrace.exe` pour voir ces fichiers journaux. Vous pouvez télécharger *CMTrace.exe* à partir des [Outils du client SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
 
-![Capture d’écran des journaux de l’agent](./media/apps-win32-app-10.png)    
+![Capture d’écran des journaux de l’agent sur l’ordinateur client](./media/apps-win32-app-10.png)    
 
 ### <a name="troubleshooting-areas-to-consider"></a>Zones de résolution de problèmes à prendre en compte
 - Vérifiez le ciblage pour être sûr que l’agent est installé sur l’appareil : une application Win32 ciblée sur un groupe ou un script PowerShell ciblé sur un groupe crée une stratégie d’installation d’agent pour le groupe de sécurité.

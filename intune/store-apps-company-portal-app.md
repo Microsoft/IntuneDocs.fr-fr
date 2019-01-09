@@ -1,12 +1,12 @@
 ---
 title: Ajouter manuellement l’application Portail d’entreprise Windows 10
 titleSuffix: Microsoft Intune
-description: Découvrez comment ajouter manuellement l’application Portail d’entreprise Windows 10.
+description: Découvrez comment votre personnel peut ajouter manuellement l’application Portail d’entreprise Windows 10 à leur PC à partir du Microsoft Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7808d9c189f429e15cdf916d18412ba951c7e696
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190266"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642589"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune
 
@@ -51,7 +51,7 @@ Pour gérer des appareils et installer des applications, vos utilisateurs peuven
 
 7. Sélectionnez **Télécharger** pour télécharger tous les packages sous « Infrastructures requises ».  
     Vous devez effectuer cette opération pour les architectures x86, x64 et ARM, soit un total de 12 packages.
-8. Avant de charger l’application Portail d’entreprise dans Intune, créez un dossier (par exemple, C:\Portail Entreprise) en structurant les packages comme ceci :
+8. Avant de charger l’application Portail d’entreprise sur Intune, créez un dossier (par exemple : C:\Company Portal) avec les packages structurés de la façon suivante :
    - Placez le package Portail d’entreprise dans C:\Portail Entreprise. Créez également un sous-dossier *Dépendances* à cet emplacement.  
 
      ![Dossier Dépendances enregistré avec le fichier APPXBUN](./media/Win10CP-Dependencies-save.png)

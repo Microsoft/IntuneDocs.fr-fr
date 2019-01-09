@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a0fb9aca406c1a49c979b59e5d879d66a730c1c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9cd03d4953376d20e96ec146ece91120d592cb99
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185885"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429778"
 ---
-# <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune
+# <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -118,9 +118,9 @@ Les applications gérées par Intune peuvent également activer la protection de
 
 ### <a name="understanding-licensed-apps"></a>Présentation des applications sous licence
 En plus des applications Web, des applications de store et des applications métier, vous devez avoir connaissance de la destination des applications du programme d’achat en volume et des applications sous licence, notamment : 
-- **Programme d’achat en volume Apple pour les entreprises (iOS)**  : l’App Store iOS vous permet d’acheter plusieurs licences d’une application que vous voulez exécuter dans votre entreprise. Le fait d’acheter plusieurs copies aide à gérer efficacement les applications de l’entreprise. Pour plus d’informations, consultez [Gérer les applications iOS achetées en volume](vpp-apps-ios.md).
-- **Profil professionnel Android** : la façon dont vous affectez des applications à des appareils de profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Toutes les applications que vous installez pour des profils professionnels Android proviennent du Managed Google Play Store. Vous vous connectez au store, recherchez les applications souhaitées et les approuvez. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
-- **Microsoft Store pour Entreprises (Windows 10)** : le Microsoft Store pour Entreprises vous permet de rechercher et d’acheter des applications pour votre organisation, individuellement ou en volume. En connectant le store à Microsoft Intune, vous pouvez gérer les applications achetées en volume dans le portail Azure. Pour plus d’informations, consultez [Gérer des applications à partir du Microsoft Store pour Entreprises](windows-store-for-business.md).
+- **Programme d’achat en volume Apple pour les entreprises (iOS)** : l’App Store iOS vous permet d’acheter plusieurs licences pour une application que vous souhaitez exécuter dans votre entreprise. Le fait d’acheter plusieurs copies aide à gérer efficacement les applications de l’entreprise. Pour plus d’informations, consultez [Gérer les applications iOS achetées en volume](vpp-apps-ios.md).
+- **Profil professionnel Android** : La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Toutes les applications que vous installez pour des profils professionnels Android proviennent du Managed Google Play Store. Vous vous connectez au store, recherchez les applications souhaitées et les approuvez. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
+- **Microsoft Store pour Entreprises (Windows 10)**: Le Microsoft Store pour Entreprises propose un emplacement dans lequel vous pouvez trouver et acheter des applications pour votre organisation, individuellement ou en volume. En connectant le store à Microsoft Intune, vous pouvez gérer les applications achetées en volume dans le portail Azure. Pour plus d’informations, consultez [Gérer des applications à partir du Microsoft Store pour Entreprises](windows-store-for-business.md).
 
     > [!NOTE]
     > Les extensions de fichier des applications Windows sont **.msi**, **.appx**, **.appxbundle**, **.msix** et **.msixbundle**.  

@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031991"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626082"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Configurer l’inscription d’appareils kiosque d’entreprise Android dans Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android prend en charge les appareils kiosque avec son ensemble de solutions appartenant à l’entreprise et à usage unique. Ces appareils sont destinés à un usage unique, tel que la signalisation numérique, l’impression de ticket ou la gestion des stocks, pour n’en nommer que quelques-uns. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
+Android prend en charge les appareils kiosque avec son ensemble de solutions [Appareils dédiés](https://developers.google.com/android/work/overview#company-owned-devices-for-dedicated-use). Ces appareils sont destinés à un usage unique, tel que la signalisation numérique, l’impression de ticket ou la gestion des stocks, pour n’en nommer que quelques-uns. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
 
 Intune vous aide à déployer des applications et des paramètres sur des appareils kiosque Android. Pour plus d’informations sur Android Entreprise, consultez [Android enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 

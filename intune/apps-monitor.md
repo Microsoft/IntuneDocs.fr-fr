@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325175"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -36,7 +36,7 @@ Intune propose plusieurs façons de surveiller les propriétés des applications
 5. Dans la liste des applications, sélectionnez une application à surveiller. Le volet de l’application s’affiche alors, avec une vue d’ensemble de l’état de l’appareil et de l’état de l’utilisateur.
 
 > [!NOTE]
-> Les applications de l’Android Store qui sont déployées comme étant **disponibles** ne signalent pas leur état d’installation.
+> Les applications du Android Store qui sont déployées comme étant **disponibles** et les applications métier Android déployées comme étant **disponibles avec ou sans inscription** ne signalent pas leur état d’installation.
 
 ## <a name="app-overview-pane"></a>Volet de vue d’ensemble de l’application
 

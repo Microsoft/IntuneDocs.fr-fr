@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de l’entrepôt de données Intune
 titlesuffix: Microsoft Intune
-description: Liste des modifications dans l’API de l’entrepôt de données Intune.
+description: Cette rubrique fournit une liste des modifications pour l’API Entrepôt de données Intune de Microsoft.
 keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: dfdbaffeb8872e8b121d138ee0aca0315279e718
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189943"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642759"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Journal des modifications pour l’API de l’entrepôt de données Intune
 
@@ -95,4 +95,4 @@ Vous pouvez désormais générer des rapports et des visualisations des données
 
 ## <a name="next-steps"></a>Étapes suivantes
  - Découvrez les [nouveautés hebdomadaires dans Intune](whats-new.md). Vous pouvez également découvrir les modifications à venir, les annonces importantes sur le service et des informations sur les versions précédentes.
- - Consultez le [Blog de Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882).
+ - Consultez le [Blog de Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

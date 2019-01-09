@@ -1,12 +1,12 @@
 ---
 title: Obtenir des données à partir de l’API d’entrepôt de données avec un client REST
 titlesuffix: Microsoft Intune
-description: Récupérez des données à partir de l’entrepôt de données Intune à l’aide d’une API RESTful.
+description: Cette rubrique décrit comment récupérer des données à partir de l’entrepôt de données Microsoft Intune à l’aide d’une API RESTful.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: bcd4d9177bcefc1e026bc55831e589a5bcb57105
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185985"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642878"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtenir des données à partir de l’API d’entrepôt de données Intune avec un client REST
 

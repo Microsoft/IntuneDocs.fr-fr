@@ -1,12 +1,12 @@
 ---
 title: Ajouter des applications web à Microsoft Intune
 titleSuffix: ''
-description: Découvrez comment ajouter des applications web à Microsoft Intune.
+description: Découvrez comment ajouter des applications web (applications client-serveur) à Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ace65aab5ded1449b1e1fd092936e9e2a019f6c1
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4f0c5d79c17c3cc2ada275337d266c134eed7e91
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187631"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642538"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Ajouter des applications web à Microsoft Intune
 
@@ -46,18 +46,18 @@ Pour ajouter une application à Intune comme raccourci vers une application sur 
 6. Dans le volet **Ajouter une application**, dans la liste déroulante **Type d’application**, sélectionnez le type **Lien web**.
 7. Sélectionnez **Configurer**.
 8. Dans le volet **Informations sur l’application**, ajoutez les informations suivantes :
-    - **Nom** : entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. 
+    - **Nom** :  Entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. 
     
         > [!NOTE]
         > Si vous modifiez le nom de l’application sur le portail Intune Azure après l’avoir déployée et installée, vous ne pourrez plus la cibler à l’aide de commandes.
     
-    - **Description :** entrez la description de l’application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
-    - **Éditeur** : entrez le nom de l’éditeur de cette application.
+    - **Description** : Entrez une description de l'application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
+    - **Éditeur** : entrez le nom de l'éditeur de cette application.
     - **URL de l’application** : entrez l’URL du site web qui héberge l’application que vous souhaitez affecter.
     - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs des catégories d’applications intégrées ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver facilement l’application quand ils parcourent le portail d’entreprise.
-    - **Proposer cette application dans le portail d’entreprise** : sélectionnez cette option pour afficher la suite d’applications dans la page principale du portail d’entreprise quand les utilisateurs cherchent des applications.
+    - **Afficher en tant qu’application proposée dans le portail d’entreprise** : sélectionnez cette option pour afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **Exiger l’ouverture de ce lien dans Managed Browser** : sélectionnez cette option pour affecter aux utilisateurs un lien vers un site web ou une application web qu’ils peuvent ouvrir dans Intune Managed Browser. Ce navigateur doit être installé sur leur appareil.
-    - **Logo** : chargez une icône qui sera associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
+    - **Logo** : Chargez une icône qui sera associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 9. Sélectionnez **OK**.
 10. Dans le volet **Ajouter une application**, sélectionnez **Ajouter**.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c96d66a11f49db68d20511aeae9b2abbab53b172
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4e37675186ef21d219627ec3ec1973e6e9944d1d
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181240"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737965"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signer des applications métier afin de pouvoir les déployer sur des appareils Windows avec Intune
 
@@ -34,10 +34,10 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 
 
 1. **S'inscrire comme développeur Microsoft**<br>
-   [Inscrivez-vous comme développeur Microsoft](http://go.microsoft.com/fwlink/?LinkId=268442) en utilisant les informations de compte d’entreprise que vous avez utilisées quand vous vous êtes connecté pour acheter votre compte d’entreprise. Cette demande devra être autorisée par un responsable de l'entreprise avant que vous ne receviez un certificat de signature de code.
+   [Inscrivez-vous comme développeur Microsoft](https://go.microsoft.com/fwlink/?LinkId=268442) en utilisant les informations de compte d’entreprise que vous avez utilisées quand vous vous êtes connecté pour acheter votre compte d’entreprise. Cette demande devra être autorisée par un responsable de l'entreprise avant que vous ne receviez un certificat de signature de code.
 
 2. **Obtenir un certificat Symantec d'entreprise**<br>
-  Achetez un certificat sur le [site web de Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) à l'aide de votre identifiant Symantec. Après avoir acheté le certificat, l'approbateur d'entreprise que vous avez désigné lors de votre inscription en tant que développeur Microsoft recevra un e-mail lui demandant d'approuver la demande de certificat. Pour plus d’informations sur la nécessité d’obtenir un certificat Symantec, consultez la rubrique [Pourquoi Windows Phone requiert-il un certificat Symantec ?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Forum Aux Questions sur l'inscription des appareils Windows.
+  Achetez un certificat sur le [site web de Symantec](https://go.microsoft.com/fwlink/?LinkId=268441) à l'aide de votre identifiant Symantec. Après avoir acheté le certificat, l'approbateur d'entreprise que vous avez désigné lors de votre inscription en tant que développeur Microsoft recevra un e-mail lui demandant d'approuver la demande de certificat. Pour plus d’informations sur la nécessité d’obtenir un certificat Symantec, consultez la rubrique [Pourquoi Windows Phone requiert-il un certificat Symantec ?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Forum Aux Questions sur l'inscription des appareils Windows.
 
 3.  **Importer les certificats**<br>
     Une fois la demande approuvée, vous recevrez un e-mail contenant des instructions pour importer les certificats. Suivez les instructions de l'e-mail pour importer les certificats.
@@ -45,14 +45,14 @@ Les étapes ci-dessous vous aideront à obtenir les certificats requis et à sig
 4.  **Vérifier les certificats importés**<br>
     Pour vérifier que les certificats ont été importés correctement, accédez au composant logiciel enfichable **Certificats** , cliquez avec le bouton droit sur **Certificats**, puis sélectionnez **Find Certificats**. Dans le champ **Contient** , indiquez « Symantec » et cliquez sur **Rechercher**. Les certificats que vous avez importés doivent apparaître dans les résultats.
 
-    ![Rechercher le certificat Symantec](./media/wit.gif)
+    ![Les résultats des certificats sont répertoriés dans la boîte de dialogue Rechercher des certificats](./media/wit.gif)
 
 5. **Exporter un certificat de signature**<br>
     Après avoir vérifié que les certificats sont présents, vous pouvez exporter le fichier .pfx pour vous connecter au portail d'entreprise. Sélectionnez le certificat Symantec dont le **Rôle prévu** est « Signature du code ». Cliquez avec le bouton droit sur le certificat de signature de code et sélectionnez **Exporter**.
 
     ![Exporter le certificat de signature](./media/wit-walk-cert2.gif)
 
-    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Effectuez toutes les étapes de l'Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](http://go.microsoft.com/fwlink/?LinkID=203031).
+    Dans l' **Assistant Exportation de certificat**, sélectionnez **Oui, exporter la clé privée**, puis cliquez sur **Suivant**. Sélectionnez**Échange d’informations personnelles - PKCS #12 (.PFX)** et activez **Inclure tous les certificats dans le chemin d'accès de certification si possible**. Effectuez toutes les étapes de l'Assistant. Pour plus d'informations, voir [Comment exporter un certificat avec la clé privée](https://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Charger l’application sur Intune**<br>
     Chargez le fichier d’application signé et votre certificat de signature de code pour rendre l’application disponible pour vos utilisateurs finaux.
@@ -72,32 +72,32 @@ Vous pouvez déployer l’application Portail d’entreprise sur les appareils W
 
 1.  **Télécharger le Portail d'entreprise**
 
-    Pour déployer l’application Portail d’entreprise avec Intune, vous pouvez télécharger [l’application Portail d’entreprise Microsoft Intune pour Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkId=615799) à partir du Centre de téléchargement et exécuter le fichier à extraction automatique (.exe). Ce fichier contient deux fichiers :
+    Pour déployer l’application Portail d’entreprise avec Intune, vous pouvez télécharger [l’application Portail d’entreprise Microsoft Intune pour Windows Phone 8.1](https://go.microsoft.com/fwlink/?LinkId=615799) à partir du Centre de téléchargement et exécuter le fichier à extraction automatique (.exe). Ce fichier contient deux fichiers :
 
     -   CompanyPortal.appx : application d'installation du Portail d'entreprise pour Windows Phone 8.1
 
     -   WinPhoneCompanyPortal.ps1 : script PowerShell que vous pouvez utiliser pour signer le fichier de l'application Portail d'entreprise à des fins de déploiement vers des appareils Windows Phone 8.1
 
-    Vous pouvez également télécharger le portail d’entreprise Windows Phone 8.1 (package sous licence hors connexion) ou le portail d’entreprise Windows 10 (package sous licence hors connexion) à partir du [Microsoft Store pour Entreprises](http://businessstore.microsoft.com/). L’application Portail d’entreprise doit être acquise avec une licence en mode hors connexion et le package approprié téléchargé pour une utilisation hors connexion. Les listes de plateformes Windows 8 et Windows Phone 8 dans la sélection font référence à leurs équivalents de la version 8.1. Pour plus d’informations sur la procédure à suivre avec Intune, consultez [Gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises](windows-store-for-business.md).
+    Vous pouvez également télécharger le portail d’entreprise Windows Phone 8.1 (package sous licence hors connexion) ou le portail d’entreprise Windows 10 (package sous licence hors connexion) à partir du [Microsoft Store pour Entreprises](https://businessstore.microsoft.com/). L’application Portail d’entreprise doit être acquise avec une licence en mode hors connexion et le package approprié téléchargé pour une utilisation hors connexion. Les listes de plateformes Windows 8 et Windows Phone 8 dans la sélection font référence à leurs équivalents de la version 8.1. Pour plus d’informations sur la procédure à suivre avec Intune, consultez [Gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises](windows-store-for-business.md).
 
-2.  **Télécharger le SDK Windows Phone** Téléchargez le SDK Windows Phone 8.0](http://go.microsoft.com/fwlink/?LinkId=615570) et installez-le sur votre ordinateur. Ce SDK est nécessaire pour générer un jeton d'inscription d'application.
+2.  **Télécharger le SDK Windows Phone** Téléchargez le SDK Windows Phone 8.0](https://go.microsoft.com/fwlink/?LinkId=615570) et installez-le sur votre ordinateur. Ce SDK est nécessaire pour générer un jeton d'inscription d'application.
 
 3.  **Générer un fichier AETX** Générez un fichier de jeton d’inscription d’application (.aetx) à partir du fichier PFX Symantec. Pour cela, utilisez le fichier AETGenerator.exe inclus dans Windows Phone 8.0 SDK. Pour obtenir des instructions sur la création d'un fichier AETX, consultez [Comment générer un jeton d'inscription d'application pour Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj735576.aspx).
 
-4.  **Télécharger le SDK Windows pour Windows 8.1** Téléchargez et installez le [SDK Windows Phone](http://go.microsoft.com/fwlink/?LinkId=613525) (http://go.microsoft.com/fwlink/?LinkId=613525). Notez que le script PowerShell inclus avec l'application Portail d'entreprise utilise l'emplacement d'installation par défaut, à savoir `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Si vous effectuez l'installation à un autre emplacement, vous devez inclure celui-ci dans un paramètre d'applet de commande.
+4.  **Télécharger le SDK Windows pour Windows 8.1** Téléchargez et installez le [SDK Windows Phone](https://go.microsoft.com/fwlink/?LinkId=613525) (https://go.microsoft.com/fwlink/?LinkId=613525). Notez que le script PowerShell inclus avec l'application Portail d'entreprise utilise l'emplacement d'installation par défaut, à savoir `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Si vous effectuez l'installation à un autre emplacement, vous devez inclure celui-ci dans un paramètre d'applet de commande.
 
 5.  **Signer le code de l’application à l’aide de PowerShell** En tant qu’administrateur, ouvrez **Windows PowerShell** sur l’ordinateur hôte sur lequel sont installés le SDK Windows et le certificat de signature de code Symantec Enterprise Mobile, accédez au fichier Sign-WinPhoneCompanyPortal.ps1, puis exécutez le script.
 
     **Exemple 1**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -AetxPath 'C:\signing\cert.aetx'
     ```
     Cet exemple signe le fichier CompanyPortal.appx à l'emplacement C:\temp\ et produit le fichier CompanyPortalEnterpriseSigned.appx. Il utilise le mot de passe PFX 1234 et lit l'ID d'éditeur dans le fichier PFX. Il lit aussi l'ID d'entreprise dans le fichier cert.aetx.
 
     **Exemple 2**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -PublisherId 'OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1' -EnterpriseId 1000000001
     ```
     Cet exemple signe le fichier CompanyPortal.appx à l'emplacement C:\temp\ et produit le fichier CompanyPortalEnterpriseSigned.appx. Il utilise le mot de passe PFX 1234 et utilise l'ID d'éditeur spécifié.
@@ -128,7 +128,7 @@ Le certificat Symantec utilisé pour déployer des applications mobiles Windows 
 
 1.  Recherchez un e-mail de renouvellement envoyé par Symantec 14 jours environ avant l'expiration du certificat. Ce courrier électronique contient les instructions de Symantec sur le renouvellement du certificat de votre entreprise.
 
-    Pour plus d'informations sur les certificats Symantec, visitez [www.symantec.com](http://www.symantec.com) ou appelez le 1-877-438-8776 ou le 1-650-426-3400.
+    Pour plus d'informations sur les certificats Symantec, visitez [www.symantec.com](https://www.symantec.com) ou appelez le 1-877-438-8776 ou le 1-650-426-3400.
 
 2.  Accédez au site web (exemple : [https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do](https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do)) et connectez-vous à l’aide de l’ID d’éditeur Symantec et de l’adresse e-mail associée au certificat. Pensez à utiliser le même ordinateur pour démarrer le renouvellement que vous allez utiliser pour télécharger le certificat.
 
@@ -155,7 +155,7 @@ Vous pouvez déployer manuellement l’application Portail d’entreprise Window
 1. Connectez-vous à votre compte dans le [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) et acquérez la version avec **licence hors connexion** de l’application Portail d’entreprise.  
 2. Une fois que l’application a été acquise, sélectionnez l’application dans la page **Inventorier**.  
 3. Sélectionnez **Tous les appareils Windows 10** comme **plateforme**, puis l’**architecture** appropriée et procédez au téléchargement. Un fichier de licence d’application n’est pas nécessaire pour cette application.
-![Image de tous les appareils Windows 10 et des détails du package d’architecture X86 à télécharger](./media/Win10CP-all-devices.png)
+![Image des détails du package de Windows 10 X86 pour le téléchargement](./media/Win10CP-all-devices.png)
 4. Téléchargez tous les packages sous « Infrastructures requises ». Vous devez effectuer cette opération pour les architectures x86, x64 et ARM, soit un total de 9 packages, comme indiqué ci-dessous.
 
 ![Image des fichiers de dépendance à télécharger ](./media/Win10CP-dependent-files.png)
@@ -164,7 +164,7 @@ Vous pouvez déployer manuellement l’application Portail d’entreprise Window
    ![Image du dossier Dépendances enregistré avec le fichier APPXBUN](./media/Win10CP-Dependencies-save.png)
    2. Placez les neuf packages de dépendances dans le dossier Dépendances.  
    Si les dépendances ne sont pas placées dans ce format, Intune ne peut pas les reconnaître ni les charger et le chargement du package échoue avec l’erreur suivante.  
-   ![La dépendance d’application Windows pour ce programme d’installation logicielle est introuvable dans le dossier de l’application. Vous pouvez poursuivre la création et le déploiement de l’application, mais cette dernière ne pourra pas fonctionner tant que la dépendance d’application Windows manquante ne sera pas spécifiée.](./media/Win10CP-error-message.png)
+   ![Message d’erreur - la dépendance d’application Windows doit être fournie.](./media/Win10CP-error-message.png)
 6. Revenez à Intune, puis chargez l’application Portail d’entreprise en tant que nouvelle application. Déployez-la en tant qu’application requise pour l’ensemble souhaité d’utilisateurs cibles.  
 
 Pour plus d’informations sur la façon dont Intune gère les dépendances pour les applications universelles, consultez [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Déploiement d’un appxbundle avec dépendances via Microsoft Intune MDM).  

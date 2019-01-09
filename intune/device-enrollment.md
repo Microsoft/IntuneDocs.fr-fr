@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/13/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: e677b62c7610739079184bc5ef59e47544f833bb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 73caf328bd25cb31bacea6b964c1db7601f3aec6
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190215"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570806"
 ---
 # <a name="what-is-device-enrollment"></a>Qu’est-ce que l’inscription d’appareils ?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -47,6 +47,7 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Non| Oui | Non | [Plus d’informations](./macos-enroll.md)|
 |**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager)**| Non |Non |Non  | [Plus d’informations](./device-enrollment-manager-enroll.md)|
+|**[DEP](#apple-device-enrollment-program)**|   Oui |   Facultatif |  Facultatif|[Plus d’informations](./device-enrollment-program-enroll-macos.md)|
 
 
 ## <a name="windows-enrollment-methods"></a>Méthodes d’inscription de Windows
@@ -56,10 +57,10 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 |**[BYOD](#bring-your-own-device)** | Non |  Oui |   Non | [Plus d’informations](windows-enroll.md)|
 |**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager)**| Non |Non |Non  |[Plus d’informations](device-enrollment-manager-enroll.md)|
 |**Inscription automatique** | Non |Oui |Non | [Plus d’informations](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Oui |Oui |Non | [Autres informations](enrollment-autopilot.md)]
+|**Autopilot** |Oui |Oui |Non | [Plus d’informations](enrollment-autopilot.md)
 |**Inscription en bloc** |Non |Non |Non | [Plus d’informations](./windows-bulk-enroll.md) |
-|**Cogestion** |Non |Oui |Non | [Autres informations](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
-|**GPO** |Non |Oui |Non | [Autres informations](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+|**Cogestion** |Non |Oui |Non | [Plus d’informations](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**GPO** |Non |Oui |Non | [Plus d’informations](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 
 ## <a name="android-enrollment-methods"></a>Méthodes d’inscription d’Android
@@ -81,7 +82,7 @@ Les [appareils de l’entreprise](corporate-identifiers-add.md) incluent les té
 Le gestionnaire d’inscription d’appareil est un compte d’utilisateur spécial permettant d’inscrire et de gérer plusieurs appareils d’entreprise. Les responsables peuvent installer le Portail d’entreprise et inscrire de nombreux appareils sans utilisateur. Ces types d’appareils sont adaptés par exemple aux applications utilitaires ou de point de vente, mais ne conviennent pas pour les utilisateurs qui doivent accéder à la messagerie ou à des ressources de l’entreprise. En savoir plus sur le [gestionnaire d’inscription d’appareil](./device-enrollment-manager-enroll.md). 
 
 ### <a name="apple-device-enrollment-program"></a>Programme d'inscription d'appareils Apple
-Le programme d’inscription d’appareils Apple (ou DEP) vous permet de créer et déployer une stratégie « à distance » sur des appareils iOS achetés et gérés avec DEP. L’appareil est inscrit quand l’utilisateur le démarre pour la première fois et exécute l’Assistant d’installation iOS. Cette méthode prend en charge le mode iOS supervisé, qui permet la configuration d’un appareil avec des fonctionnalités spécifiques.
+Le programme d’inscription d’appareils Apple (ou DEP) vous permet de créer et déployer une stratégie « à distance » sur des appareils iOSet macOS achetés et gérés avec DEP. L’appareil est inscrit quand l’utilisateur le démarre pour la première fois et exécute l’Assistant d’installation. Cette méthode prend en charge le mode iOS supervisé, qui permet la configuration d’un appareil avec des fonctionnalités spécifiques.
 
 Pour en savoir plus sur l’inscription DEP iOS :
 

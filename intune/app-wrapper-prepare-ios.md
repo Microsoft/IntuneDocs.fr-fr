@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 26bf759722b5cb92bda28b0e60c9365a7edc7710
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 94e4f955a57f5a505bfbbdc84ae236bbfb85fe8b
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112859"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738050"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -100,9 +100,9 @@ Vous aurez besoin des éléments suivants pour distribuer des applications encap
 
 4. Cliquez sur **Certificates, IDs & Profiles** (Certificats, identifiants et profils).
 
-   ![Portail des développeurs Azure](./media/iOS-signing-cert-1.png)
+   ![Portail des développeurs Apple - Certificats, ID et profils](./media/iOS-signing-cert-1.png)
 
-5. Cliquez sur l'onglet ![signe plus du portail des développeurs Apple](./media/iOS-signing-cert-2.png) dans le coin supérieur droit pour ajouter un certificat iOS.
+5. Cliquez sur l’onglet ![signe plus du portail des développeurs Apple](./media/iOS-signing-cert-2.png) dans le coin supérieur droit pour ajouter un certificat iOS.
 
 6. Choisissez de créer un certificat **In-House and Ad Hoc** (interne et ad-hoc) sous **Production**.
 
@@ -125,7 +125,7 @@ Vous aurez besoin des éléments suivants pour distribuer des applications encap
 
 11. Suivez les instructions du site des développeur Apple ci-dessus pour créer un fichier CSR. Enregistrez le fichier CSR sur votre ordinateur macOS.
 
-    ![Pour demander un certificat à une autorité de certificat dans Trousseau d'accès](./media/iOS-signing-cert-6.png)
+    ![Entrez les informations pour le certificat que vous demandez](./media/iOS-signing-cert-6.png)
 
 12. Retourner sur le site des développeurs Apple. Cliquez sur **Continue** (Continuer). Puis téléchargez le fichier CSR.
 
@@ -141,7 +141,7 @@ Vous aurez besoin des éléments suivants pour distribuer des applications encap
 
 16. Une fenêtre d’information s’affiche. Faites défiler vers le bas et regardez sous l'étiquette **Empreintes**. Copiez la chaîne **SHA1** (floue) à utiliser comme paramètre pour « -c » pour l’outil de création de package de restrictions d’application.
 
-    ![Ajouter votre certificat à un trousseau d’accès](./media/iOS-signing-cert-9.png)
+    ![Informations iPhone - chaîne d’empreintes digitales SHA1](./media/iOS-signing-cert-9.png)
 
 
 
@@ -151,13 +151,13 @@ Vous aurez besoin des éléments suivants pour distribuer des applications encap
 
 2. Cliquez sur **Certificates, IDs & Profiles** (Certificats, identifiants et profils).
 
-3. Cliquez sur l'onglet ![signe plus du portail des développeurs Apple](./media/iOS-signing-cert-2.png) dans le coin supérieur droit pour ajouter un profil de configuration iOS.
+3. Cliquez sur l’onglet ![signe plus du portail des développeurs Apple](./media/iOS-signing-cert-2.png) dans le coin supérieur droit pour ajouter un profil de configuration iOS.
 
 4. Choisissez de créer un profil de configuration **In House** (interne) sous **Distribution**.
 
    ![Sélectionner un profil d’approvisionnement interne](./media/iOS-provisioning-profile-1.png)
 
-5. Cliquez sur **Continuer**. Veillez à lier le certificat de signature généré précédemment au profil de configuration.
+5. Cliquez sur **Continue** (Continuer). Veillez à lier le certificat de signature généré précédemment au profil de configuration.
 
 6. Suivez les étapes pour télécharger votre profil (avec l’extension .mobileprovision) sur votre ordinateur macOS.
 
@@ -179,7 +179,7 @@ Vous aurez besoin des éléments suivants pour distribuer des applications encap
 
 Ouvrez le terminal macOS et exécutez la commande suivante :
 
-```
+```bash
 /Volumes/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 ```
 
@@ -188,7 +188,7 @@ Ouvrez le terminal macOS et exécutez la commande suivante :
 
 **Exemple :** L’exemple de commande suivant exécute l’outil de création de package de restrictions d’application sur l’application nommée MyApp.ipa. Un profil de configuration et le hachage SHA-1 du certificat de signature sont spécifiés et utilisés pour signer l’application encapsulée. L’application de sortie (MyApp_Wrapped.ipa) est créée et stockée dans votre dossier Bureau.
 
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
 ```
 
@@ -214,17 +214,17 @@ Placer tous les arguments de commande dans un fichier [plist](https://developer.
 
 Dans le dossier IntuneMAMPackager/contenu/MacOS, ouvrez `Parameters.plist` (un modèle plist vide) à l’aide d’un éditeur de texte ou Xcode. Entrez vos arguments pour les clés suivantes :
 
-| Clé plist |  Valeur par défaut| Remarques |
+| Clé plist |  Valeur par défaut| Remarques |
 |------------------|--------------|-----|
-| Chemin du package d’application d’entrée  |vide| Identique à -i|
-| Chemin du package d’application de sortie |vide| Identique à -o|
-| Chemin du profil d’approvisionnement |vide| Identique à -p|
-| Hachage du certificat SHA-1 |vide| Identique à -c|
+| Chemin du package d’application d’entrée  |empty| Identique à -i|
+| Chemin du package d’application de sortie |empty| Identique à -o|
+| Chemin du profil d’approvisionnement |empty| Identique à -p|
+| Hachage du certificat SHA-1 |empty| Identique à -c|
 | Mode détaillé activé |false| Identique à -v|
 | Supprimer les droits manquants | false| Identique à -c|
 | Empêcher la build par défaut |false | Équivaut à utiliser -b sans arguments|
 |Générer le remplacement de chaîne | empty| Valeur CFBundleVersion personnalisée de l’application de sortie encapsulée |
-|Chemins des profils d’approvisionnement d’extension | vide| Tableau de profils d’approvisionnement d’extension pour l’application.
+|Chemins des profils d’approvisionnement d’extension | empty| Tableau de profils d’approvisionnement d’extension pour l’application.
 
 
 Exécutez la commande IntuneMAMPackager avec le fichier plist comme unique argument :
@@ -260,7 +260,7 @@ Aidez-vous des informations suivantes pour résoudre les problèmes que vous ren
 ### <a name="error-messages"></a>Messages d'erreur
 Si l’outil de création de package de restrictions d’application échoue, l’un des messages d’erreur suivants s’affiche dans la console :
 
-|Message d'erreur|Autres informations|
+|Message d'erreur|Plus d’informations|
 |-----------------|--------------------|
 |Vous devez spécifier un profil de configuration iOS valide.|Votre profil de configuration n'est peut-être pas valide. Vérifiez que vous avez les autorisations appropriées pour les appareils et que votre profil cible correctement le développement ou la distribution. Votre profil de configuration a peut être aussi expiré.|
 |Spécifiez un nom d'application d'entrée valide.|Assurez-vous que le nom de l'application d'entrée spécifié est correct.|
@@ -289,7 +289,7 @@ Les applications qui ont été encapsulées à l’aide de l’outil de créatio
 
 3.  Filtrez les journaux enregistrés pour la sortie de Restrictions d'application en entrant le script suivant dans la console :
 
-    ```
+    ```bash
     grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
     ```
     Vous pouvez envoyer les journaux filtrés à Microsoft.
@@ -316,7 +316,7 @@ Avant d’encapsuler votre application, vous pouvez lui accorder des *droits* da
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Fonctionnalités prises en charge pour App Wrapping Tool for iOS
 
-|Capability|Description|Recommandation|
+|Fonctionnalité|Description|Recommandation|
 |--------------|---------------|------------------------|
 |Groupes d’applications|Utilisez des groupes d’applications pour autoriser plusieurs applications à accéder à des conteneurs partagés et autoriser une communication interprocessus supplémentaire entre les applications.<br /><br />Pour activer les groupes d’applications, ouvrez le volet **Capabilities** (Fonctionnalités), puis cliquez sur **ON** (Activer) dans **App Groups** (Groupes d’applications). Vous pouvez ajouter des groupes d’applications en ou sélectionner des existants.|Quand vous utilisez App Groups, utilisez la notation DNS inverse :<br /><br />*group.com.companyName.AppGroup*|
 |Modes d’arrière-plan|L’activation des modes d’arrière-plan permet à votre application iOS de continuer à s’exécuter en arrière-plan.||
@@ -354,7 +354,7 @@ Avant d’encapsuler votre application, vous pouvez lui accorder des *droits* da
 ### <a name="troubleshoot-common-errors-with-entitlements"></a>Résoudre les erreurs courantes liées aux droits
 Si App Wrapping Tool for iOS affiche une erreur de droit, essayez d’exécuter les étapes de dépannage suivantes.
 
-|Problème|Cause|Solution|
+|Problème|Cause|Résolution|
 |---------|---------|--------------|
 |Impossible d’analyser les droits générés à partir de l’application d’entrée.|L’outil de création de package de restrictions d’application ne peut pas lire le fichier de droits qui a été extrait de l’application. Le fichier de droits est peut être incorrect.|Examinez le fichier de droits de votre application. Les instructions suivantes expliquent comment effectuer cette opération. Au moment d’inspecter le fichier de droits, assurez-vous que la syntaxe est correcte. Le fichier doit être au format XML.|
 |Il manque des droits dans le profil de configuration (les droits manquants sont répertoriés). Recréez le package de l’application avec un profil de configuration qui contienne ces droits.|Il y a une incohérence entre les droits activés dans le profil de configuration et les fonctionnalités activées dans l’application. Cette incohérence vaut aussi pour les ID associés à des fonctionnalités particulières (telles que les groupes d’applications et l’accès à un trousseau).|En règle générale, vous pouvez créer un nouveau profil de configuration qui active les mêmes fonctionnalités que l’application. Quand les ID du profil et de l’application ne correspondent pas, l’outil de création de package de restrictions d’application remplace les ID, dans la mesure du possible. Si vous obtenez encore cette erreur après avoir créé un profil de configuration, vous pouvez essayer de supprimer les droits de l’application à l’aide du paramètre –e (voir la section Utilisation du paramètre –e pour supprimer les droits d’accès).|
@@ -368,20 +368,20 @@ Pour examiner les droits existants d’une application signée et le profil de c
 
 3.  Utilisez l’outil codesign pour vérifier les droits de l’ensemble .app, où `YourApp.app` correspond au nom réel de votre ensemble .app :
 
-    ```
+    ```bash
     $ codesign -d --entitlements :- "Payload/YourApp.app"
     ```
 
 4.  Utilisez l’outil de sécurité pour vérifier les droits du profil de configuration incorporé de l’application, où `YourApp.app` correspond au nom réel de votre ensemble .app.
 
-    ```
+    ```bash
     $ security -D -i "Payload/YourApp.app/embedded.mobileprovision"
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Supprimer les droits d’accès d’une application à l’aide du paramètre –e
 Cette commande supprime toutes les fonctionnalités activées dans l’application qui ne figurent pas dans le fichier de droits. Si vous supprimez des fonctionnalités qui sont utilisées par l’application, elle risque de se bloquer. Vous pourriez par exemple supprimer des fonctionnalités manquantes dans une application générée par un fournisseur qui dispose de toutes les fonctionnalités par défaut.
 
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
 ```
 
@@ -405,7 +405,7 @@ Respectez les bonnes pratiques de sécurité et de confidentialité suivantes qu
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Intune App Wrapping Tool pour iOS avec mVPN Citrix MDX
 Cette fonctionnalité est une intégration avec le wrapper d’applications Citrix MDX pour iOS. Cette intégration consiste simplement en un indicateur de ligne de commande supplémentaire et facultatif, `-citrix`, ajouté à la version générale d’Intune App Wrapping Tools.
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Configuration requise
 
 Pour pouvoir utiliser l’indicateur `-citrix`, il est nécessaire d’installer également le [wrapper d’applications Citrix MDX pour iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) sur le même ordinateur macOS. Les téléchargements se trouvent sur [Téléchargements Citrix XenMobile](https://www.citrix.com/downloads/xenmobile/) et sont réservés aux clients de Citrix une fois connectés. Vérifiez que l’installation s’effectue dans l’emplacement par défaut : `/Applications/Citrix/MDXToolkit`. 
 
@@ -416,12 +416,12 @@ Pour pouvoir utiliser l’indicateur `-citrix`, il est nécessaire d’installer
 Exécutez simplement votre commande générale d’inclusion d’applications dans un wrapper en ajoutant l’indicateur `-citrix`. L’indicateur `-citrix` ne prend à l’heure actuelle pas d’arguments.
 
 **Format d’utilisation** :
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
 **Exemple de commande** :
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
 

@@ -14,12 +14,12 @@ ms.reviewer: kmyrup
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
+ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303870"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597373"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -27,7 +27,7 @@ Cet article vous montre comment configurer votre infrastructure, puis comment cr
 
 ## <a name="configure-on-premises-infrastructure"></a>Configurer l’infrastructure locale
 
-- **Domaine Active Directory** : tous les serveurs répertoriés dans cette section (à l’exception du serveur du proxy d’application web) doivent être joints à votre domaine Active Directory.
+- **Domaine Active Directory** : Tous les serveurs répertoriés dans cette section (à l'exception du serveur du proxy d'application web) doivent être joints à votre domaine Active Directory.
 
 - **Autorité de certification** : il doit s’agir d’une autorité de certification d’entreprise Microsoft qui s’exécute sur une édition Entreprise de Windows Server 2008 R2 ou ultérieur. Une autorité de certification autonome n'est pas prise en charge. Pour plus d’informations, consultez [Installer l’autorité de certification](http://technet.microsoft.com/library/jj125375.aspx).
     Si votre autorité de certification exécute Windows Server 2008 R2, vous devez [installer le correctif logiciel à partir de KB2483564](http://support.microsoft.com/kb/2483564/).
@@ -35,15 +35,15 @@ Cet article vous montre comment configurer votre infrastructure, puis comment cr
 - **Serveur NDES** : sur un serveur Windows Server 2012 R2 ou ultérieur, configurez le service d’inscription de périphérique réseau (NDES). Intune ne prend pas en charge le service NDES sur un serveur qui exécute également l’autorité de certification d’entreprise. Consultez le [Guide du service d’inscription de périphérique réseau](http://technet.microsoft.com/library/hh831498.aspx) pour obtenir des instructions sur la configuration de Windows Server 2012 R2 en vue d’héberger NDES.
 Le serveur NDES doit être joint à un domaine au sein de la même forêt que l’autorité de certification d’entreprise. Vous trouverez plus d’informations sur le déploiement du serveur NDES dans une forêt distincte, un réseau isolé ou un domaine interne dans [Utilisation d’un module de stratégie avec le service d’inscription de périphérique réseau](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector** : téléchargez le programme d’installation de **Certificate Connector** (**NDESConnectorSetup.exe**) à partir du portail d’administration Intune. Vous allez exécuter ce programme d’installation sur le serveur avec le rôle NDES.  
+- **Microsoft Intune Certificate Connector** : téléchargez le programme d’installation de **Certificate Connector** (**NDESConnectorSetup.exe**) à partir du portail d’administration Intune. Vous allez exécuter ce programme d’installation sur le serveur avec le rôle NDES.  
 
   - Le connecteur NDES Certificate prend également en charge FIPS le mode FIPS (Federal Information Processing Standard). FIPS n’est pas obligatoire, mais il vous permet d’émettre et de révoquer des certificats.
 
-- **Serveur proxy d’application web** (facultatif) : utilisez un serveur qui exécute Windows Server 2012 R2 ou ultérieur comme serveur proxy d’application web. Cette configuration :
+- **Serveur proxy d'application web** (facultatif) : utilisez un serveur exécutant Windows Server 2012 R2 ou une version ultérieure en tant que serveur proxy d'application Web. Cette configuration :
   - Permet aux appareils de recevoir des certificats à l'aide d'une connexion Internet.
   - Est une recommandation de sécurité lorsque les appareils se connectent via Internet pour recevoir et renouveler les certificats.
   
-- **Proxy d’application Azure AD** (facultatif) : le proxy d’application Azure AD peut être utilisé à la place d’un serveur proxy d’application web dédié pour publier le serveur NDES sur Internet. Pour plus d’informations, consultez le [Guide pratique pour offrir un accès à distance sécurisé aux applications locales](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Proxy d'application Azure AD** (facultatif) : le proxy d’application Azure AD peut être utilisé à la place d’un serveur proxy d’application web dédié pour publier le serveur NDES sur Internet. Pour plus d’informations, consultez le [Guide pratique pour offrir un accès à distance sécurisé aux applications locales](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Supplémentaire
 
@@ -261,7 +261,7 @@ Au cours de cette étape, vous allez :
 
     Le certificat d'authentification client doit avoir les propriétés suivantes :
 
-    - **Utilisation améliorée de la clé** : cette valeur doit inclure **l’Authentification du client**
+    - **Utilisation améliorée de la clé** : Cette valeur doit inclure l'**authentification du client**
 
     - **Nom de l’objet** : cette valeur doit être équivalente au nom DNS du serveur sur lequel vous installez le certificat (serveur NDES)
 
@@ -362,13 +362,13 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
 5. Dans la liste déroulante **Type de profil**, sélectionnez **Certificat SCEP**.
 6. entrez les paramètres suivants :
 
-   - **Type de certificat** : choisissez **Utilisateur** pour les certificats utilisateur. Choisissez **Appareil** pour les appareils sans utilisateur, tels que les kiosques. Les certificat d’**Appareil** sont disponibles pour les plateformes suivantes :  
+   - **Type de certificat** : choisissez **Utilisateur** pour les certificats utilisateur. Choisissez **Appareil** pour les appareils sans utilisateur, tels que les kiosques. Les certificat d’**Appareil** sont disponibles pour les plateformes suivantes :  
      - iOS
      - Windows 8.1 et versions ultérieures
      - Windows 10 et versions ultérieures
      - Android Entreprise
 
-   - **Format du nom de l’objet** : sélectionnez comment Intune crée automatiquement le nom de l’objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
+   - **Format du nom de l'objet** : sélectionnez la manière dont Intune crée automatiquement le nom de l'objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
 
         **Type de certificat Utilisateur**  
 
@@ -380,17 +380,17 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         - **Nom commun comme adresse e-mail**
         - **IMEI (International Mobile Equipment Identity)**
         - **Numéro de série**
-        - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Le format personnalisé prend en charge deux variables : **Nom courant (cn)** et **Message électronique (e)**. **Nom courant (cn)** peut être défini sur une des variables suivantes :
+        - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Un format personnalisé prend en charge deux variables : **Nom commun (CN)** et **E-mail (E)**. **Nom courant (cn)** peut être défini sur une des variables suivantes :
 
-            - **CN = {{UserName}}** : nom d’utilisateur principal de l’utilisateur, tel que janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}** : ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
+            - **CN={{UserName}}**: Le nom d'utilisateur principal de l’utilisateur, tel que janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}**: ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
             - **CN={{SERIALNUMBER}}** : numéro de série unique (SN) généralement utilisé par le fabricant pour identifier un appareil
             - **CN={{IMEINumber}}** : numéro IMEI (International Mobile Equipment Identity) unique utilisé pour identifier un téléphone mobile
             - **CN={{OnPrem_Distinguished_Name}}** : séquence de noms uniques relatifs séparés par des virgules, par exemple `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Pour utiliser la variable `{{OnPrem_Distinguished_Name}}`, veillez à synchroniser l’attribut utilisateur `onpremisesdistingishedname` qui utilise [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) avec Azure AD.
 
-            - **CN = {{onPremisesSamAccountName}}**  : les administrateurs peuvent synchroniser l’attribut samAccountName d’Active Directory à Azure AD à l’aide d’Azure AD Connect dans un attribut appelé `onPremisesSamAccountName`. Intune peut remplacer cette variable dans le cadre d’une demande d’émission de certificat dans le sujet d’un certificat SCEP.  L’attribut samAccountName est le nom d’ouverture de session de l’utilisateur utilisé pour prendre en charge les clients et serveurs à partir d’une version antérieure de Windows (antérieure à Windows 2000). Le format du nom d’ouverture de session de l’utilisateur est : `DomainName\testUser`, ou uniquement `testUser`.
+            - **CN={{onPremisesSamAccountName}}** : les administrateurs peuvent synchroniser l’attribut samAccountName d’Active Directory à Azure AD à l’aide d’Azure AD Connect dans un attribut appelé `onPremisesSamAccountName`. Intune peut remplacer cette variable dans le cadre d’une demande d’émission de certificat dans le sujet d’un certificat SCEP.  L’attribut samAccountName est le nom d’ouverture de session de l’utilisateur utilisé pour prendre en charge les clients et serveurs à partir d’une version antérieure de Windows (antérieure à Windows 2000). Le format du nom d’ouverture de session de l’utilisateur est : `DomainName\testUser`, ou uniquement `testUser`.
 
                 Pour utiliser la variable `{{onPremisesSamAccountName}}`, veillez à synchroniser l’attribut utilisateur `onPremisesSamAccountName` qui utilise [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) avec Azure AD.
 
@@ -428,7 +428,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans le nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue. 
 
 
-   - **Autre nom de l’objet** : entrez comment Intune crée automatiquement les valeurs pour l’autre nom de l’objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
+   - **Autre nom de l'objet** : entrez la manière dont Intune crée automatiquement les valeurs de l'autre nom de l'objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
 
         **Type de certificat Utilisateur**  
 
@@ -470,23 +470,23 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans l’autre nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  
 
-   - **Période de validité du certificat** : si vous avez exécuté la commande `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` sur l’Autorité de certification émettrice, ce qui autorise une période de validité personnalisée, vous pouvez entrer le temps restant avant l’expiration du certificat.<br>Vous pouvez entrer une valeur inférieure à la période de validité du modèle de certificat, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez entrer une valeur de 1 an, mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice. 
-   - **Fournisseur de stockage de clés** (Windows Phone 8.1, Windows 8.1, Windows 10) : entrez l’emplacement de stockage de la clé du certificat. Choisissez l'une des valeurs suivantes :
+   - **Période de validité du certificat** : si vous avez exécuté la commande `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` sur l'Autorité de certification émettrice, qui autorise une période de validité personnalisée, vous pouvez entrer le temps restant avant l'expiration du certificat.<br>Vous pouvez entrer une valeur inférieure à la période de validité du modèle de certificat, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez entrer une valeur de 1 an, mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice. 
+   - **Fournisseur de stockage de clés (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) : entrez l'emplacement de stockage de la clé du certificat. Choisissez l'une des valeurs suivantes :
      - **Inscrire auprès du fournisseur de stockage de clés (KSP) du module de plateforme sécurisée (TPM) s’il est présent ; sinon, inscrire auprès du fournisseur de stockage de clés du logiciel**
      - **Inscrire auprès du fournisseur de stockage de clés (KSP) du module de plateforme sécurisée (TPM), sinon mettre en échec**
      - **Inscrire auprès de Passport, sinon mettre en échec (Windows 10 et versions ultérieures)**
      - **Inscrire auprès du fournisseur de stockage de clés du logiciel**
 
    - **Utilisation de la clé** : entrez les options d’utilisation de la clé pour le certificat. Les options disponibles sont les suivantes :
-     - **Chiffrage de clés** : autorisez l’échange de clés uniquement quand la clé est chiffrée
-     - **Signature numérique** : autorisez l’échange de clés uniquement quand une signature numérique contribue à protéger la clé
+     - **Chiffrement de la clé** : autoriser l'échange de clés uniquement lorsque la clé est chiffrée
+     - **Signature numérique** : autoriser l'échange de clés uniquement lorsqu'une signature numérique contribue à la protection de la clé
    - **Taille de la clé (bits)** : sélectionnez le nombre de bits contenus dans la clé
-   - **Algorithme de hachage** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) : sélectionnez l’un des types d’algorithme de hachage disponibles avec ce certificat. Permet de sélectionner le niveau le plus élevé de sécurité pris en charge par les appareils se connectant.
-   - **Certificat racine** : choisissez un profil de certificat d’autorité de certification racine que vous avez configuré et attribué à l’utilisateur et/ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat. Veillez à affecter ce profil de certificat racine approuvé au même groupe affecté dans le profil de certificat SCEP.
-   - **Utilisation de la clé étendue** : **ajoutez** des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une **authentification client** pour que l’utilisateur ou l’appareil puisse être authentifié auprès d’un serveur. Toutefois, vous pouvez ajouter d'autres utilisations de la clé en fonction de vos besoins.
+   - **Algorithme de hachage** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) : Vous avez le choix entre les types d'algorithmes de hachage disponibles avec ce certificat. Permet de sélectionner le niveau le plus élevé de sécurité pris en charge par les appareils se connectant.
+   - **Certificat racine** : choisissez un profil de certificat d’autorité de certification racine que vous avez configuré et attribué à l’utilisateur et/ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat. Veillez à affecter ce profil de certificat racine approuvé au même groupe affecté dans le profil de certificat SCEP.
+   - **Utilisation avancée de la clé** : **Ajoutez** des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une **authentification client** pour que l’utilisateur ou l’appareil puisse être authentifié auprès d’un serveur. Toutefois, vous pouvez ajouter d'autres utilisations de la clé en fonction de vos besoins.
    - **Paramètres d’inscription**
-     - **Seuil de renouvellement (%)** : entrez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.
-     - **URL du serveur SCEP** : entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP.
+     - **Seuil de renouvellement (%)** : entrez le pourcentage de durée de vie restante du certificat avant que l'appareil ne demande le renouvellement du certificat.
+     - **URL du serveur SCEP** : entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP. Par exemple, entrez quelque chose similaire à `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Sélectionnez **OK** et **créez** votre profil.
 
 Le profil est créé et apparaît dans le volet de la liste des profils.

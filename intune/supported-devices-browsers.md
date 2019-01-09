@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 0cea1b958849d6c2422461e85eba57577a65e884
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 2d47a8f61c85b390ae53311154f27d2d85860840
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112593"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626037"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systèmes d’exploitation et navigateurs pris en charge dans Intune
 
@@ -30,6 +30,8 @@ ms.locfileid: "53112593"
 Avant de configurer Microsoft Intune, passez en revue les systèmes d’exploitation et les navigateurs pris en charge.
 
 Pour obtenir de l’aide sur l’installation d’Intune sur votre appareil, consultez [Utilisation d’appareils gérés pour réaliser vos tâches](/intune-user-help/company-portal-frequently-asked-questions) et [Utilisation de la bande passante réseau Intune](network-bandwidth-use.md).
+
+Pour plus d’informations sur la prise en charge d’un fournisseur de services de configuration, consultez la [référence de fournisseur de services de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="intune-supported-operating-systems"></a>Systèmes d’exploitation pris en charge Intune
 

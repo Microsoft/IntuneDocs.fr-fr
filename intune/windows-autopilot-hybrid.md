@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ced67b2dcdd5720a9708868808ec885938b8ddcd
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 9de47f996706255c072926524860cfcc833e8b8b
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112440"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642555"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot (préversion)
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory hybride. Pour ce faire, suivez les étapes ci-dessous.
@@ -29,7 +29,7 @@ Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils j
 > [!NOTE]
 > Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 - Configurez correctement les [appareils joints à un domaine Azure Active Directory hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
     - Veillez à [vérifier l’inscription à l’aide de l’applet de commande Get-MsolDevice]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration).
@@ -44,24 +44,24 @@ Les appareils à inscrire doivent également :
 
 1. Connectez-vous au [Portail Azure](https://portal.azure.com), puis sélectionnez **Azure Active Directory**.
 
-   ![Capture d’écran montrant le portail Azure](./media/auto-enroll-azure-main.png)
+   ![Capture d’écran du portail Azure](./media/auto-enroll-azure-main.png)
 
-2. Sélectionnez **Mobilité (gestion des données de référence et gestion des applications mobiles)**.
+2. Sélectionnez **Mobilité (MDM et GAM)**.
 
-   ![Capture d’écran montrant le portail Azure](./media/auto-enroll-mdm.png)
+   ![Capture d’écran du portail Azure](./media/auto-enroll-mdm.png)
 
 3. Sélectionnez **Microsoft Intune**.
 
-   ![Capture d’écran montrant le portail Azure](./media/auto-enroll-intune.png)
+   ![Capture d’écran du portail Azure](./media/auto-enroll-intune.png)
 
 4. Vérifiez que les utilisateurs qui déploient des appareils joints à Azure Active Directory à l’aide d’Intune et de Windows sont membres d’un groupe inclus dans votre **étendue d’utilisateurs MDM**.
 
-   ![Capture d’écran montrant le portail Azure](./media/auto-enroll-scope.png)
+   ![Capture d’écran du portail Azure](./media/auto-enroll-scope.png)
 
 5. Utilisez les valeurs par défaut pour les URL suivantes :
-    - **URL des conditions d’utilisation de la gestion des données de référence**
-    - **URL de détection MDM**
-    - **URL de conformité GAM**
+    - **URL des conditions d'utilisation de MDM**
+    - **URL de détection de MDM**
+    - **URL de conformité de MDM**
 6. Choisissez **Enregistrer**.
 
 ## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Augmenter la limite du nombre de comptes d’ordinateur dans l’unité d’organisation
@@ -204,7 +204,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
    - **Description** : Entrez la description du profil.
    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
    - **Type de profil** : Choisissez **Jonction de domaine (préversion)**.
-3. Choisissez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et une **Unité d’organisation** (facultatif). 
+3. Choisissez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et une **Unité d’organisation** au format DN (facultatif). 
 4. Choisissez **OK** > **Créer**. Le profil est créé et apparaît dans la liste.
 5. Pour affecter le profil, suivez les étapes décrites dans [Attribuer un profil d’appareil](device-profile-assign.md#assign-a-device-profile). 
 

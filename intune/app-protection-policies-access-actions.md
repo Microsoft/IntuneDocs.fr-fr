@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 5a28cdcf4d19aec62cd05808f4fb3cda68e083ea
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 3f53ce0b2afd214dec98082c23f7187b4e69317b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032049"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734236"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Intune
 
@@ -110,7 +110,7 @@ La liste suivante indique les actions les plus courantes :
 
 Dans certains cas, comme pour le paramètre **Version min. de l’OS**, vous pouvez configurer le paramètre de façon à effectuer toutes les actions applicables en fonction de différents numéros de version. 
 
-![Capture d’écran des actions d’accès de protection des applications Intune - Version min. de l’OS](./media/apps-selective-wipe-access-actions05.png)
+![Capture d’écran des actions d’accès de protection des applications - Version min. de l’OS](./media/apps-selective-wipe-access-actions05.png)
 
 Une fois qu’un paramètre est entièrement configuré, la ligne apparaît dans une vue en lecture seule et est modifiable à tout moment. Une liste déroulante est également ajoutée à cette ligne dans la colonne **Paramètre**. Les paramètres ayant déjà été configurés et n’autorisant pas plusieurs actions ne peuvent pas être sélectionnés dans la liste déroulante.
 

@@ -14,19 +14,19 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 66402d9e2bc66ec96de88f64dd61c41e1ddb34e5
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179071"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553637"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installer le logiciel client Intune sur des PC Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Vous pouvez utiliser Microsoft Intune pour gérer les PC Windows comme [appareils mobiles avec la gestion des appareils mobiles (MDM)](windows-enroll.md) ou comme ordinateurs avec le logiciel client Intune, comme décrit ci-dessous. Cependant, Microsoft recommande aux clients [d’utiliser la solution de gestion MDM](windows-enroll.md) quand c’est possible.
+> Vous pouvez utiliser Microsoft Intune pour gérer les PC Windows comme [appareils mobiles avec la gestion des appareils mobiles (MDM)](windows-enroll.md) ou comme ordinateurs avec le logiciel client Intune, comme décrit ci-dessous. Cependant, Microsoft recommande aux clients [d’utiliser la solution de gestion MDM](windows-enroll.md) quand c’est possible. Pour plus d’informations, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md) 
 
 
 Les PC Windows peuvent être inscrits en installant le logiciel client Intune. Le logiciel client Intune peut être installé à l'aide des méthodes suivantes :
@@ -124,8 +124,8 @@ Si les utilisateurs ont reçu une licence Intune et que l’autorité MDM de l�
 
 - Deux options d’inscription s’affichent pour les utilisateurs de PC Windows 10 ou Windows 8.1 :
 
-  -  **Inscrire le PC comme appareil mobile** : les utilisateurs choisissent le bouton **En savoir plus sur l’inscription** et accèdent à des instructions pour inscrire leur PC comme appareil mobile. Ce bouton s’affiche bien en évidence, car l’inscription MDM est considérée comme étant l’option d’inscription par défaut et préférée. Toutefois, l’option MDM n’est pas applicable à cette rubrique, qui couvre uniquement l’installation du logiciel client.
-  - **Inscrire le PC à l’aide du logiciel client Intune** : vous devez indiquer à vos utilisateurs de sélectionner le lien **Cliquez ici pour télécharger**, qui les guidera tout au long de l’installation du logiciel client.
+  -  **Inscrire le PC comme appareil mobile** : les utilisateurs choisissent le bouton **En savoir plus sur l’inscription** et accèdent à des instructions pour inscrire leur PC comme appareil mobile. Ce bouton s’affiche bien en évidence, car l’inscription MDM est considérée comme étant l’option d’inscription par défaut et préférée. Toutefois, l’option MDM n’est pas applicable à cette rubrique, qui couvre uniquement l’installation du logiciel client.
+  - **Inscrire le PC à l’aide du logiciel client Intune** : vous devez indiquer à vos utilisateurs de sélectionner le lien **Cliquez ici pour télécharger**, qui les guidera tout au long de l’installation du logiciel client.
 
 Le tableau suivant récapitule les options.
 
@@ -260,4 +260,4 @@ Le processus d’annulation de l’inscription ne supprime pas le dossier Online
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Étapes suivantes
-[Gérer des appareils avec Microsoft Intune](device-management.md)
+[Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

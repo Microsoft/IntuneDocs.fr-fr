@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 06031b8085e50caa2092287c97b3eab0ead366ee
-ms.sourcegitcommit: 5e4c7da8ce62d5a5720316ef4068c1920f8f5b67
+ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200604"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553688"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -45,11 +45,20 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 
 ## <a name="week-of-december-10-2018"></a>Semaine du 10 décembre 2018
 
-### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>La mise à jour automatique Microsoft version 4.50 doit être appliquée aux appareils macOS <!-- 3503442 -->
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="updates-for-application-transport-security----748318---"></a>Mises à jour pour Application Transport Security<!-- 748318 -->
+
+Microsoft Intune prend en charge le protocole TLS (Transport Layer Security) 1.2+ pour fournir un chiffrement de qualité, garantir une meilleure sécurisation par défaut et s’aligner avec d’autres services Microsoft comme Microsoft Office 365. Pour répondre à cette exigence, les portails d’entreprise iOS et macOS vont appliquer les impératifs de la fonctionnalité ATS (Application Transport Security) mise à jour d’Apple, celle-ci nécessitant également TLS 1.2+. ATS est utilisé pour renforcer la sécurité de toutes les communications d’application via le protocole HTTPS. Ce changement impacte les clients Intune qui utilisent les applications du portail d’entreprise iOS et macOS. Pour plus d’informations, voir le [blog du support Intune](https://aka.ms/compportalats).
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Le kit SDK Intune App prendra en charge les clés de chiffrement 256 bits<!-- 1832174 -->
+Le kit de développement logiciel (SDK) Intune App pour Android utilise maintenant des clés de chiffrement 256 bits lorsque le chiffrement sera activé par des stratégies App Protection. Le kit SDK continuera de prendre en charge les clés 128 bits pour assurer la compatibilité avec le contenu et les applications qui utilisent des versions antérieures du kit SDK.
+
+### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>La mise à jour automatique Microsoft version 4.5.0 doit être appliquée aux appareils macOS <!-- 3503442 -->
 Pour continuer à recevoir des mises à jour pour le portail d’entreprise et les applications Office, les appareils macOS gérés par Intune doivent être mis à niveau à l’aide de la mise à jour automatique Microsoft 4.5.0. Il est possible que les utilisateurs disposent déjà de cette version pour leurs applications Office.
 
 ### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Intune nécessite macOS 10.12 ou une version ultérieure <!-- 2827778 -->
-Intune nécessite désormais macOS 10.12 ou une version ultérieure. Les appareils sur lesquels est installée une version macOS antérieure à celle-ci ne peuvent pas utiliser le portail d’entreprise pour s’inscrire auprès d’Intune. Pour bénéficier du support et pour profiter des nouvelles fonctionnalités, les utilisateurs doivent mettre à niveau leur appareil vers macOS 10.12 ou une version ultérieure, mais également mettre à niveau le portail d’entreprise vers la version la plus récente.
+Intune nécessite désormais macOS 10.12 ou une version ultérieure. Les appareils sur lesquels est installée une version macOS antérieure à celle-ci ne peuvent pas utiliser le portail d’entreprise pour s’inscrire auprès d’Intune. P)our recevoir une assistance technique et pour profiter des nouvelles fonctionnalités, les utilisateurs doivent mettre à niveau leur appareil vers macOS 10.12 ou une version ultérieure, mais également mettre à niveau le portail d’entreprise vers la version la plus récente.
 
 ## <a name="week-of-november-26-2018"></a>Semaine du 26 novembre 2018
 
@@ -66,8 +75,8 @@ Les clients Windows 10 RS3 (et versions ultérieures) téléchargent du contenu 
 Les utilisateurs finaux peuvent désormais utiliser le menu contextuel sur l’appareil et dans les applications pour déclencher des actions courantes telles que la modification du nom d’un appareil ou la vérification de la conformité.
 
 #### <a name="set-custom-background-in-managed-home-screen-app-----3041945---"></a>Définir un arrière-plan personnalisé dans l’application Managed Home Screen <!-- 3041945 -->
-Nous ajoutons un paramètre permettant de personnaliser l’apparence de l’arrière-plan de l’application Managed Home Screen sur les appareils Android pour les entreprises en mode kiosque multi-application.  Pour configurer l’**l’arrière-plan de l’URL personnalisée**, accédez à Intune dans Portail Azure > Configuration de l’appareil. Sélectionnez un profil de configuration d’appareil, ou créez-en un autre pour modifier ses paramètres de mode kiosque.
-Pour connaître les paramètres du mode kiosque, consultez [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
+Nous ajoutons un paramètre permettant de personnaliser l’apparence de l’arrière-plan de l’application Managed Home Screen sur les appareils Android pour les entreprises en mode plein écran multiapplication.  Pour configurer l’**l’arrière-plan de l’URL personnalisée**, accédez à Intune dans Portail Azure > Configuration de l’appareil. Sélectionnez un profil de configuration d’appareil, ou créez-en un autre pour modifier ses paramètres de mode kiosque.
+Pour connaître les paramètres du mode plein écran, voir [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
 
 #### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Enregistrement et application des affectations de stratégies de protection des applications <!-- 3104570 -->
 Vous avez maintenant un meilleur contrôle de vos [affectations de stratégies App Protection](app-protection-policies.md#deploy-a-policy-to-users). Lorsque vous sélectionnez *Affectations* afin de définir ou de modifier les affectations d’une stratégie, vous devez **Enregistrer** votre configuration pour que la modification s’applique. Utilisez **Ignorer** pour effacer toutes les modifications apportées sans les enregistrer dans les listes Inclure et Exclure.  Comme il est obligatoire de choisir entre Enregistrer et Ignorer, seuls les utilisateurs souhaités se voient affecter une stratégie App Protection.
@@ -103,6 +112,23 @@ Pour utiliser cette fonctionnalité, voir les stratégies de conformité [iOS](c
 L’optimisation de la distribution est un nouveau profil de configuration pour Windows 10 (et versions ultérieures). Cette fonctionnalité simplifie l’expérience de distribution des mises à jour de logiciels aux appareils de l’organisation. Cette mise à jour permet également de fournir les paramètres dans les boucles de mise à jour nouvelles et actuelles à l’aide d’un profil de configuration.
 Pour configurer un profil de configuration d’optimisation de la distribution, voir [Paramètres d’optimisation de la distribution de Windows 10 (et versions ultérieures)](delivery-optimization-windows.md).
 
+#### <a name="new-device-restriction-settings-added-to-ios-and-macos-devices----2827760---"></a>Nouveaux paramètres de restriction d’appareil ajoutés aux appareils iOS et macOS <!-- 2827760 -->
+Cette mise à jour comprend de nouveaux paramètres pour vos appareils iOS et macOS qui sont publiés avec iOS 12 :
+
+**Paramètres iOS** : 
+- Général : Bloquer la suppression d’applications (mode supervisé uniquement)
+- Général : Bloquer le mode USB restreint (mode supervisé uniquement)
+- Général : Forcer une date et une heure automatiques (mode supervisé uniquement)
+- Mot de passe : Bloquer le remplissage automatique du mot de passe (mode supervisé uniquement)
+- Mot de passe : Bloquer les demandes de proximité du mot de passe (mode supervisés uniquement)
+- Mot de passe : Bloquer le partage de mot de passe (mode supervisé uniquement)
+
+**Paramètres macOS** : 
+- Mot de passe : Bloquer le remplissage automatique du mot de passe
+- Mot de passe : Bloquer les demandes de proximité du mot de passe
+- Mot de passe : Bloquer le partage de mot de passe
+
+Pour en savoir plus sur ces paramètres, consultez les paramètres de restriction d’appareil [iOS](device-restrictions-ios.md) et [macOS](device-restrictions-macos.md).
 
 ### <a name="device-enrollment"></a>Inscription des appareils
 
@@ -127,12 +153,12 @@ Pour aider les entreprises à réduire le coût de la gestion des appareils, une
 ### <a name="device-management"></a>Gestion des appareils
 
 #### <a name="temporarily-pause-kiosk-mode-on-android-devices-to-make-changes----3041935---"></a>Suspendre temporairement le mode kiosque sur les appareils Android pour apporter des changements <!-- 3041935 -->
-Pendant que vous utilisez un appareil Android en mode kiosque multiapplication, un administrateur informatique peut être amené à effectuer des changements sur l’appareil. Cette mise à jour comporte de nouveaux paramètres de mode kiosque multi-application permettant à un administrateur informatique de suspendre temporairement le mode kiosque à l’aide d’un code PIN et d’accéder à la totalité de l’appareil.
-Pour connaître les paramètres du mode kiosque, consultez [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
+Pendant que vous utilisez un appareil Android en mode kiosque multiapplication, un administrateur informatique peut être amené à effectuer des changements sur l’appareil. Cette mise à jour comporte de nouveaux paramètres de mode plein écran multiapplication permettant à un administrateur informatique de suspendre temporairement le mode plein écran à l’aide d’un code PIN et d’accéder à la totalité de l’appareil.
+Pour connaître les paramètres du mode plein écran, voir [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
 
 #### <a name="enable-virtual-home-button-on-android-enterprise-kiosk-devices-----3042021---"></a>Activer le bouton d’accueil virtuel sur les appareils Android Entreprise en mode kiosque <!-- 3042021 -->
 Un nouveau paramètre permet aux utilisateurs d’appuyer sur un bouton programmable de leur appareil pour passer de l’application Managed Home Screen à d’autres applications affectées (et inversement) sur leur appareil en mode kiosque multiapplication. Ce paramètre est particulièrement utile dans les scénarios où l’application en mode kiosque d’un utilisateur ne répond pas correctement au bouton Précédent. Vous allez pouvoir configurer ce paramètre pour les appareils Android à usage unique appartenant à l’entreprise. Pour activer ou désactiver le **bouton d’accueil virtuel**, accédez à Intune dans Portail Azure > Configuration de l’appareil. Sélectionnez un profil de configuration d’appareil, ou créez-en un autre pour modifier ses paramètres de mode kiosque.
-Pour connaître les paramètres du mode kiosque, consultez [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
+Pour connaître les paramètres du mode plein écran, voir [Restrictions des appareils Android pour les entreprises](device-restrictions-android-for-work.md).
 
 ## <a name="week-of-november-12-2018"></a>Semaine du 12 novembre 2018
 
@@ -585,8 +611,8 @@ Intune prend maintenant en charge l’inscription d’appareils macOS dans le Pr
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Prise en charge des applications métier pour macOS <!-- 1895847 -->
 Microsoft Intune permet aux applications métier macOS d’être déployées en mode **Obligatoire** ou **Disponible avec inscription**. Pour les utilisateurs finaux, les applications peuvent être déployées en mode **Disponible** à l’aide du Portail d’entreprise pour macOS ou du [site web Portail d’entreprise](https://portal.manage.microsoft.com).
 
-#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode kiosque <!-- 2051098 -->
-En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode kiosque sur un appareil iOS.
+#### <a name="ios-built-in-app-support-for-kiosk-mode----2051098---"></a>Prise en charge des applications intégrées iOS pour le mode plein écran <!-- 2051098 -->
+En plus des applications du Store et des applications gérées, vous pouvez maintenant sélectionner une application intégrée (par exemple, Safari) qui s’exécute en mode plein écran sur un appareil iOS.
 
 #### <a name="edit-your-office-365-pro-plus-app-deployments----2150145---"></a>Modifier vos déploiements d’applications Office 365 Pro Plus <!-- 2150145 -->
 En tant qu’administrateur Microsoft Intune, vous avez une plus grande capacité de modification de vos déploiements d’applications Office 365 Pro Plus. En outre, vous n’avez plus à supprimer vos déploiements pour modifier des propriétés de la suite. Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications**. Dans la liste des applications, sélectionnez votre suite Office 365 Pro Plus.  
@@ -1143,35 +1169,6 @@ Le déplacement de vos affectations de stratégie ne nécessite aucune intervent
 
 Si vous affectez actuellement des stratégies aux groupes Azure AD indiqués plus haut dans Intune sur Azure, commencez à les affecter aux groupes Tous les utilisateurs et Tous les appareils dans la console Intune pour l’Éducation. Quand vous constatez que les groupes Azure AD sont renommés dans la console (mention « obsolète »), arrêtez d’affecter des stratégies dans Azure AD. Si vous n’utilisez pas les groupes renommés à d’autres fins, supprimez-les.
 
-
-### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Modification planifiée : Intune prendra en charge macOS 10.12 et ultérieur en décembre <!--2970975--> 
-
-Apple vient de publier macOS 10.14. En conséquence, Intune prendra en charge macOS 10.12 et versions ultérieures en décembre 2018. 
-
-#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
-
-À compter du mois de décembre, les utilisateurs finaux d’appareils exécutant macOS 10.11 et versions antérieures ne pourront plus utiliser le Portail d’entreprise pour s’inscrire dans Intune. Ils devront mettre à niveau leur appareil vers macOS 10.12 ou version ultérieure et mettre à niveau l’application Portail d’entreprise vers la dernière version afin de continuer à recevoir les nouvelles fonctionnalités et à bénéficier du support. 
-
-macOS 10.12 et versions ultérieures sont actuellement pris en charge sur : 
-- MacBook (fin 2009 ou version ultérieure) 
-- iMac (fin 2009 ou version ultérieure)
-- MacBook Air (fin 2010 ou version ultérieure)  
-- MacBook Pro (fin 2010 ou version ultérieure) 
-- Mac Mini (fin 2010 ou version ultérieure) 
-- Mac Pro (fin 2010 ou version ultérieure) 
-
-Après décembre, les utilisateurs finaux ayant des appareils autres que ceux répertoriés ci-dessus ne pourront plus accéder à la dernière version de l’application Portail d’entreprise pour macOS. Les appareils inscrits existants qui exécutent des versions non prises en charge antérieures à macOS 10.12 continueront à être gérés et répertoriés dans la Console d’administration Intune.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
-
-- Demandez aux utilisateurs finaux de mettre à niveau leurs appareils vers une version de système d’exploitation prise en charge avant décembre 2018. 
-- Consultez les rapports Intune dans la console Intune sur Azure pour savoir quels sont les appareils ou les utilisateurs concernés. Accédez à Appareils > Tous les appareils, puis filtrez par système d’exploitation. Vous pouvez ajouter des colonnes supplémentaires pour aider à identifier les membres de votre organisation disposant d’appareils macOS 10.11. 
-- Si vous utilisez la gestion des appareils mobiles (MDM) hybride, accédez à Ressources et conformité > Appareils dans la console Configuration Manager, cliquez avec le bouton droit sur les colonnes pour ajouter les colonnes Système d’exploitation et Version du client, et triez par système d’exploitation. Notez que la gestion des appareils mobiles hybride est dépréciée, et que vous devez passer à Intune sur Azure dès que possible. 
- 
-#### <a name="additional-information"></a>Informations supplémentaires
-Pour plus d’informations, consultez [Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
- 
-
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Modification planifiée : nouvelle expérience de support Intune pour les clients Premier 
 Mise à jour du 04/12/18 : Pour éviter que ce processus n’affecte votre travail, la création de demande de support dans MPO ne sera pas désactivée le 3 décembre, mais à une date ultérieure. Nous vous informerons bientôt de la nouvelle date choisie via le Centre de messages.
 
@@ -1204,28 +1201,3 @@ Vérifiez les paramètres de mot de passe dans vos stratégies de conformité et
 #### <a name="additional-information"></a>Informations supplémentaires
 https://aka.ms/PasswordSettings 
 
-### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Mises à jour requises par Apple pour Application Transport Security <!--748318-->
-La société Apple a annoncé qu’elle appliquera des exigences spécifiques pour ATS (Application Transport Security). ATS est utilisé pour renforcer la sécurité de toutes les communications d’application via le protocole HTTPS. Cette modification a une incidence sur les clients Intune qui utilisent les applications de portail d’entreprise iOS. Nous donnerons tous les détails nécessaires sur notre [Blog pour le support Intune](https://aka.ms/compportalats).
-
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Modification planifiée : Intune passe à TLS 1.2
-À compter du 31 octobre 2018, Intune prendra en charge le protocole TLS (Transport Layer Security) version 1.2 pour fournir le meilleur chiffrement, afin de garantir que notre service est plus sécurisé par défaut et de s’aligner avec d’autres services Microsoft tels que Microsoft Office 365. Office a communiqué ce changement dans MC128929.
-
-Le Portail d’entreprise prendra également en charge TLS 1.2 à compter du 31 octobre 2018.
-
-#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
-À compter du 31 octobre 2018, Intune ne prendra plus en charge les versions 1.0 ou 1.1 du protocole TLS. Toutes les combinaisons client-serveur et navigateur-serveur doivent utiliser TLS version 1.2 afin de garantir une connexion sans problèmes à Intune. Notez que ce changement aura un impact sur les appareils des utilisateurs finaux qui ne sont plus pris en charge par Intune, mais qui reçoivent toujours la stratégie par le biais d’Intune et qui ne peut pas utiliser le protocole TLS version 1.2. Il s’agit d’appareils comme ceux exécutant Android 4.3 et des versions antérieures. Pour obtenir la liste des appareils et navigateurs concernés, consultez la section Informations supplémentaires ci-dessous.
-
-Après le 31 octobre 2018, si vous rencontrez un problème lié à l’utilisation d’une ancienne version de TLS, vous devrez effectuer une mise à jour vers TLS 1.2 ou vers un appareil qui prend en charge TLS 1.2 dans le cadre du processus de résolution.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
-Nous vous recommandons de supprimer de façon proactive les dépendances TLS 1.0 et 1.1 dans vos environnements, et de désactiver, dans la mesure du possible, TLS 1.0 et 1.1 au niveau du système d’exploitation. Commencez à planifier votre migration vers TLS 1.2 dès aujourd’hui. Consultez le billet de blog de support ci-dessous pour obtenir la liste des appareils qui ne sont pas pris en charge par Intune aujourd’hui, mais qui peuvent encore recevoir la stratégie et qui ne pourront pas communiquer à l’aide du protocole TLS version 1.2. Vous devrez informer ces utilisateurs qu’ils perdront l’accès aux ressources d’entreprise.
-
-**Informations complémentaires :** [Intune passe à TLS 1.2 pour le chiffrement](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
-
-
-
-## <a name="see-also"></a>Voir aussi
-* [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Feuille de route de la plateforme cloud](https://www.microsoft.com/cloud-platform/roadmap)
-* [Nouveautés de l’interface utilisateur du portail d’entreprise](whats-new-app-ui.md)
-* [Nouveautés des mois précédents](whats-new-archive.md)

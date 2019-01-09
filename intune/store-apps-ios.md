@@ -1,12 +1,12 @@
 ---
 title: Ajouter des applications de l’App Store iOS dans Microsoft Intune
 titlesuffix: ''
-description: Découvrez comment ajouter des applications de l’App Store iOS à Microsoft Intune.
+description: Découvrez comment ajouter des applications de l’App Store iOS à Microsoft Intune. Vous pouvez affecter des applications à l’aide de cette méthode si elles sont gratuites dans l’App Store.
 keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 508ddd91a44b3cf0e210c22e48a2de5b0ddd7397
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5f1423b0f2f216f65026d2b1a7bf52dda39c9f88
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181612"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642504"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Ajouter des applications de l’App Store iOS dans Microsoft Intune
 
@@ -53,19 +53,19 @@ Vous pouvez affecter des applications à l’aide de cette méthode uniquement s
 10. Dans la liste des résultats, sélectionnez l’application de votre choix, puis **Sélectionner**.
 11. Dans le volet **Ajouter une application**, sélectionnez **Informations sur l’application** pour configurer l’application.
 12. Renseignez le volet **Informations sur l’application**. Selon l’application choisie, certaines valeurs de ce volet peuvent avoir été renseignées automatiquement :
-    - **Nom** : entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. Veillez à choisir un nom d’application unique. Si vous utilisez un nom d’application qui existe déjà, un seul sera présenté aux utilisateurs dans le portail d’entreprise.
-    - **Description :** entrez la description de l’application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
-    - **Éditeur :** entrez le nom de l’éditeur de l’application.
+    - **Nom** : Entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. Veillez à choisir un nom d’application unique. Si vous utilisez un nom d’application qui existe déjà, un seul sera présenté aux utilisateurs dans le portail d’entreprise.
+    - **Description** : Entrez une description de l'application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
+    - **Éditeur** : Entrez le nom de l'éditeur de l'application.
     - **URL de l’App Store** : tapez l’URL de l’App Store de l’application à créer.
     - **Système d’exploitation minimal** : dans la liste, choisissez la version de système d’exploitation la plus ancienne sur laquelle l’application peut être installée. Si vous affectez l’application à un appareil avec un système d’exploitation antérieur, elle ne sera pas installée.
-    - **Type d’appareil applicable** : dans la liste, sélectionnez les appareils qui sont utilisés par l’application.
+    - **Type d’appareil applicable** : dans la liste, sélectionnez les appareils qui sont utilisés par l’application.
     - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs des catégories d’applications intégrées ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver facilement l’application quand ils parcourent le portail d’entreprise.
-    - **Proposer cette application dans le portail d’entreprise** : sélectionnez cette option pour afficher la suite d’applications dans la page principale du portail d’entreprise quand les utilisateurs cherchent des applications.
-    - **URL d’information** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de déclaration de confidentialité** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations de confidentialité relatives à cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application. Ce champ est visible uniquement par les administrateurs. Les utilisateurs ne le voient pas.
+    - **Afficher en tant qu’application proposée dans le portail d’entreprise** : sélectionnez cette option pour afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
+    - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application. Ce champ est visible uniquement par les administrateurs. Les utilisateurs ne le voient pas.
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple, *Ressources humaines*). Ce champ est visible uniquement par les administrateurs. Les utilisateurs ne le voient pas.
-    - **Notes** : entrez les éventuelles notes à associer à cette application. Ce champ est visible seulement par un administrateur ; les utilisateurs finaux ne le voient pas.
+    - **Remarques** : entrez les éventuelles remarques à associer à cette application. Ce champ est visible seulement par un administrateur ; les utilisateurs finaux ne le voient pas.
     - **Logo** : si vous le souhaitez, chargez une icône à associer à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 13. Sélectionnez **OK**.
 14. Sélectionnez **Ajouter**.

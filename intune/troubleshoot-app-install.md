@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 86f0892fe855201b9bdb28d61301353f6588954a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd43bfda69b42fb81a72d520d169fe1785161f65
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188124"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267004"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -84,6 +84,19 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 |    L’utilisateur a refusé la mise à jour de l’application. (0x87D13B63)    |    L’utilisateur final a cliqué sur Annuler pendant le processus de mise à jour.     |
 |    Erreur inconnue   (0x87D103E8)    |    Une erreur inconnue liée à l’installation de l’application s’est produite. C’est l’erreur qui s’affiche lorsqu’une erreur autre que celles connues se produit.    |
 
+### <a name="other-installation-errors"></a>Autres erreurs d’installation
+
+|    Message/Code d’erreur    |    Description    |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    0x80073CFF,   0x80CF201C (erreur du client)    |    Pour installer cette application, vous devez disposer d'un système compatible avec le chargement de versions tests. Assurez-vous que le package d’application dispose d’une signature approuvée et qu’il est installé sur un ordinateur appartenant à un domaine sur lequel la stratégie **AllowAllTrustedApps** est activée ou sur un ordinateur qui a une licence de chargement indépendant Windows sur lequel la stratégie **AllowAllTrustedApps** est activée. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).     |
+|    0x80073CF0    |    Le package n'a pas pu être ouvert. Causes possibles :<ul><li> Le package n'est pas signé.</li><li> Le nom de l'éditeur ne correspond pas à l'objet de signature du certificat.</li></ul> Consultez le journal des événements **AppxPackagingOM** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x80073CF3    |    Échec de la mise à jour du package, d'une dépendance ou validation de conflit. Causes possibles :<ul><li> Le package entrant est en conflit avec un package installé.</li><li> Une dépendance de package spécifiée est introuvable.</li><li> Ce package ne prend pas en charge la bonne architecture de processeur.</li></ul> Consultez le journal des événements **AppXDeployment-Server** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x80073CFB    |    Le package fourni est déjà installé, et la réinstallation du package est bloquée. Cette erreur peut s'afficher si vous installez un package qui n'est pas identique au package déjà installé. Confirmez que la signature numérique fait également partie du package. Lorsqu'un package est reconstruit ou resigné, ce package n'est plus identique au niveau des bits au package déjà installé. Deux options possibles s'offrent à vous pour corriger cette erreur :<ul><li> incrémenter le numéro de version de l'application, puis reconstruire et resigner le package ;</li><li> supprimer l'ancien package pour chaque utilisateur sur le système avant d'installer le nouveau package.</li></ul> Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x87D1041C    |    Installation de l’application réussie mais l’application n’est pas détectée. L’application a été déployée correctement par Intune, puis désinstallée par la suite. Voici quelques raisons pour lesquelles l’application est désinstallée :<ul><li> L’utilisateur final a désinstallé l’application.</li><li> Les informations d’identité dans le package ne correspondent pas à ce que l’appareil signale pour les applications incorrectes.</li><li>Pour les fichiers MSI à mise à jour automatique, la version du produit ne correspond pas aux informations de l’application après une mise à jour externe à Intune.</li></ul> Demandez à l’utilisateur de réinstaller l’application depuis le portail d’entreprise. Notez que les applications obligatoires sont automatiquement réinstallées au prochain enregistrement de l’appareil.    |
+
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Résolution des problèmes liés aux applications du Microsoft Store
+
+Les informations de la rubrique [Résolution des problèmes d’empaquetage, de déploiement et de requête des applications du Microsoft Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vous aident à résoudre les problèmes courants que vous pouvez rencontrer durant l’installation d’applications du Microsoft Store, en utilisant Intune ou par tout autre moyen.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

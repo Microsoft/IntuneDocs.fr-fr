@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 931aa360b82efcf4ef643fb40bc4982c05e589ee
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182990"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429710"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Créer un rapport à partir du flux OData avec Power BI
 
@@ -45,7 +45,7 @@ Les termes _entité_ et _table_ peuvent prêter à confusion. Le modèle de donn
 
 ## <a name="install-power-bi-desktop"></a>Installer Power BI Desktop
 
-Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Se connecter au flux OData pour l’entrepôt de données Intune de votre locataire
 
@@ -106,7 +106,7 @@ Vous disposez maintenant d’un visuel qui montre la distribution des fabricants
 Pour répondre à des questions supplémentaires à l’aide de votre application, vous pouvez ajouter un filtre à votre treemap.
 
 
-1. Pour ajouter un filtre, sélectionnez le canevas de rapport, puis l’**icône Segment** (![Treemap avec des données](media/reports-create-slicer.png)) sous **Visualisations**.
+1. Pour ajouter un filtre, sélectionnez le canevas de rapport, puis l’**icône Segment** (![Treemap avec le modèle de données et les relations prises en charge](media/reports-create-slicer.png)) sous **Visualisations**.
 2. Recherchez la table **ownerTypes** et faites glisser le champ de données **ownerTypeName** sous la section **Filtres** dans le panneau **Visualisations**.  
 
    Sous la table des appareils, recherchez le champ de données **OwnerTypeKey**. Celui-ci contient un code indiquant si l’appareil appartient à l’entreprise ou à un individu. Pour afficher des noms conviviaux dans ce filtre, recherchez la table **ownerTypes** et faites glisser le champ de données **ownerTypeName**. Cet exemple montre comment le modèle de données prend en charge les relations entre les tables.

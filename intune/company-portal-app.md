@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1d645de0dfa9c215a9670246f43375de5153286
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185421"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738016"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -72,7 +72,7 @@ Appliquez une couleur de thème au portail d’entreprise. Sélectionnez une cou
 |**Sélectionnez une couleur standard ou entrez un code hexadécimal à six chiffres**| Choisissez **Standard** pour sélectionner une couleur visuellement. Choisissez **Personnalisé** pour sélectionner une couleur spécifique basée sur une valeur de code hexadécimale.|
 |**Couleur du thème**| Sélectionnez une couleur de thème à appliquer au Portail d’entreprise. Vous pouvez choisir une couleur standard ou entrer un code hexadécimal spécifique. |
 |**Affichage**| Indiquez si vous souhaitez afficher les **Logo et nom d’entreprise**, le **Logo d’entreprise uniquement** ou le **Nom d’entreprise uniquement**. |
-|**Charger le logo de votre entreprise**|Vous pouvez charger le logo de votre entreprise pour qu’il apparaisse sur le Portail de celle-ci. Notez que la couleur du texte est automatiquement choisie pour fournir le plus haut niveau de contraste. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger le logo de votre entreprise**|Vous pouvez charger le logo de votre entreprise pour qu’il apparaisse sur le Portail de celle-ci. Notez que la couleur du texte est automatiquement choisie pour fournir le plus haut niveau de contraste. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 Une fois le logo chargé, la zone d’aperçu l’affiche avec la couleur de thème. Si vous avez choisi d’afficher le nom de votre société, il apparaît en noir ou blanc dans le Portail d’entreprise, la couleur automatiquement sélectionnée étant celle qui fournit le plus haut niveau de contraste avec votre couleur de thème. La zone d’aperçu à l’écran n’affiche pas le nom de votre société. 
 
@@ -81,7 +81,7 @@ Choisissez un logo qui ressort bien sur un arrière-plan blanc ou clair.
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Charger votre logo**| Cette option est disponible si vous avez choisi d’afficher le logo de la société. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger votre logo**| Cette option est disponible si vous avez choisi d’afficher le logo de la société. Pour améliorer l’apparence, chargez un logo avec un arrière-plan transparent.<p><ul><li>Taille maximale de l’image : 400 px x 400 px</li><li>Taille maximale du fichier : 750 Ko</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Image de marque pour le Portail d’entreprise
 
@@ -89,7 +89,7 @@ Affichez une image de marque qui reflète la marque de votre société. Après a
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p>*Remarque* : l’image peut s’afficher différemment pour différentes plateformes.<p><ul><li>Largeur recommandée pour l’image : supérieure à 1125 px, (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p>*Remarque* : l’image peut s’afficher différemment pour différentes plateformes.<p><ul><li>Largeur recommandée pour l’image : supérieure à 1 125 px, (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-vis du Portail d’entreprise en présentant votre société de manière affirmée. Voici quelques conseils que vous pouvez suivre pour acquérir, choisir et optimiser l’image dans le Portail d’entreprise. 
 
@@ -138,7 +138,7 @@ Les raccourcis clavier suivants sont disponibles dans l’application Portail d�
 
 Les utilisateurs finaux pourront également voir les raccourcis disponibles dans l’application Portail d’entreprise Windows.
 
-![Capture d’écran des raccourcis disponibles dans l’application Portail d’entreprise Windows](media/company-portal-app/company-portal-app-01.png)
+![Capture d’écran des raccourcis disponibles dans le Portail d’entreprise Windows](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -15,12 +15,12 @@ ms.reviewer: erikre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb6e5e603b353be5d3c0d3fdaca4f1d8af675ad
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1e2b97970a7ab440a032eb29f5307e4dbeddc3bc
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181188"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306013"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -37,9 +37,9 @@ La MAM protège les données d’une organisation au sein d’une application. L
 
 **Quelles configurations d’appareil la MAM prend-elle en charge ?**<br></br>
 La MAM Intune prend en charge deux configurations :
-- **MDM + MAM Intune** : les administrateurs informatiques ne peuvent gérer les applications à l’aide des stratégies de gestion et de protection des applications que sur les appareils inscrits à la gestion des appareils mobiles (MDM) Intune. Pour gérer des applications en utilisant à la fois la gestion MDM et la gestion MAM, les clients doivent utiliser la console Intune sur le portail Azure, à l’adresse https://portal.azure.com.
+- **Gestion des appareils mobiles et gestion des applications mobiles Intune** : Les administrateurs informatiques peuvent uniquement gérer des applications à l’aide de la MAM et des stratégies de protection des applications sur des appareils inscrits à la gestion des périphériques mobiles (MDM). Pour gérer des applications en utilisant à la fois la gestion MDM et la gestion MAM, les clients doivent utiliser la console Intune sur le portail Azure, à l’adresse https://portal.azure.com.
 
-- **MAM sans inscription d’appareils** : la MAM sans inscription d’appareils (ou MAM-WE en anglais), permet aux administrateurs informatiques de gérer des applications à l’aide de la MAM et de stratégies de protection des applications sur les appareils qui ne sont ne pas inscrits à la MDM Intune. Cela signifie que les applications peuvent être gérées par Intune sur des appareils inscrits avec des fournisseurs EMM tiers. Pour gérer des applications à l’aide de la MAM sans inscription d’appareils, les clients doivent utiliser la console Intune dans le portail Azure à l’adresse http://portal.azure.com. Il est également possible de gérer les applications avec Intune sur les appareils inscrits auprès de fournisseurs tiers de gestion de la mobilité d’entreprise (EMM) ou non inscrits à un quelconque service de gestion MDM.
+- **MAM sans inscription d’appareils** : la MAM sans inscription d’appareils (ou MAM-WE en anglais), permet aux administrateurs informatiques de gérer des applications à l’aide de la MAM et de stratégies de protection des applications sur les appareils qui ne sont ne pas inscrits à la MDM Intune. Cela signifie que les applications peuvent être gérées par Intune sur des appareils inscrits avec des fournisseurs EMM tiers. Pour gérer des applications à l’aide de la MAM sans inscription d’appareils, les clients doivent utiliser la console Intune dans le portail Azure à l’adresse https://portal.azure.com. Il est également possible de gérer les applications avec Intune sur les appareils inscrits auprès de fournisseurs tiers de gestion de la mobilité d’entreprise (EMM) ou non inscrits à un quelconque service de gestion MDM.
 
 
 ## <a name="app-protection-policies"></a>Stratégies de protection des applications
@@ -61,7 +61,7 @@ Toute application intégrée avec le [Kit de développement logiciel (SDK) d’a
 
 - L’utilisateur final doit disposer d’une licence pour Microsoft Intune, attribuée à son compte Azure Active Directory. Consultez la section [Gérer les licences Intune](/intune/licenses-assign) pour apprendre à attribuer des licences Intune à des utilisateurs finaux.
 
-- L’utilisateur final doit appartenir à un groupe de sécurité ciblé par une stratégie de protection des applications. La même stratégie de protection des applications doit cibler l’application spécifique utilisée. Des stratégies de protection des applications peuvent être créées et déployées dans la console Intune dans le [portail Azure](http://portal.azure.com). Des groupes de sécurité peuvent actuellement être créés dans le [portail Office](http://portal.office.com).
+- L’utilisateur final doit appartenir à un groupe de sécurité ciblé par une stratégie de protection des applications. La même stratégie de protection des applications doit cibler l’application spécifique utilisée. Des stratégies de protection des applications peuvent être créées et déployées dans la console Intune dans le [portail Azure](https://portal.azure.com). Des groupes de sécurité peuvent actuellement être créés dans le [portail Office](https://portal.office.com).
 
 - L’utilisateur final doit se connecter à l’application à l’aide de son compte AAD.
 
@@ -76,7 +76,7 @@ Toute application intégrée avec le [Kit de développement logiciel (SDK) d’a
 
 **Quelles sont les exigences supplémentaires pour pouvoir utiliser les applications [Word, Excel et PowerPoint](https://products.office.com/business/office) ?**
 
-- L’utilisateur final doit disposer d’une licence pour [Office 365 Business ou Entreprise](https://products.office.com/business/compare-more-office-365-for-business-plans), associée à son compte Azure Active Directory. L’abonnement doit inclure les applications Office sur des appareils mobiles et peut inclure un compte de stockage cloud avec [OneDrive Entreprise](https://onedrive.live.com/about/business/). Des licences Office 365 peuvent être attribuées dans le [portail Office](http://portal.office.com) en tenant compte des [instructions suivantes](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- L’utilisateur final doit disposer d’une licence pour [Office 365 Business ou Entreprise](https://products.office.com/business/compare-more-office-365-for-business-plans), associée à son compte Azure Active Directory. L’abonnement doit inclure les applications Office sur des appareils mobiles et peut inclure un compte de stockage cloud avec [OneDrive Entreprise](https://onedrive.live.com/about/business/). Des licences Office 365 peuvent être attribuées dans le [portail Office](https://portal.office.com) en tenant compte des [instructions suivantes](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - L’utilisateur final doit avoir configuré un emplacement géré à l’aide de la fonctionnalité granulaire Enregistrer sous, qui se trouve sous le paramètre de stratégie de protection des applications « Empêcher Enregistrer sous ». Si, par exemple, l’emplacement géré est OneDrive, l’application [OneDrive](https://onedrive.live.com/about/) doit être configurée dans l’application Word, Excel ou PowerPoint de l’utilisateur final.
 
@@ -109,8 +109,8 @@ Le PIN (numéro d’identification personnel) est un code secret utilisé pour v
 
 - **À quelle fréquence le code PIN Intune est-il demandé à l’utilisateur ?**<br></br> L’administrateur informatique peut définir le paramètre de stratégie de protection des applications Intune « Revérifier les exigences d’accès après (minutes) » dans la console d’administration Intune. Ce paramètre spécifie le délai avant que les conditions d’accès ne soient vérifiées sur l’appareil et que l’écran du code PIN de l’application ne réapparaisse. Voici cependant des informations importantes sur le code PIN qui affectent la fréquence à laquelle il est demandé à l’utilisateur : 
 
-    - **Le code PIN est partagé entre les applications du même éditeur de façon à améliorer la facilité d’utilisation :** sur iOS, un même code PIN d’application est partagé entre toutes les applications **du même éditeur d’applications**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
-    - **Le comportement de « Revérifier les exigences d’accès après (minutes) » après un redémarrage de l’appareil :** un « minuteur de code PIN » suit le nombre de minutes d’inactivité qui déterminent quand redemander le code PIN de l’application Intune. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
+    - **Le code PIN est partagé entre les applications du même éditeur pour améliorer la facilité d’utilisation :** Sur iOS, un code PIN d’application est partagé entre toutes les applications **du même éditeur d’application**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
+    - **Le comportement « Revérifier les exigences d’accès après (minutes) », après un redémarrage de l’appareil :** Un « minuteur de code PIN » suit le nombre de minutes d’inactivité déterminant quand le code PIN d’application Intune suivant doit être affiché. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
     - **La nature cyclique du minuteur associé au code PIN :** une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
 
 Pour les appareils iOS, même si le code PIN est partagé entre les applications de différents éditeurs, l’invite s’affiche à nouveau quand la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est à nouveau atteinte pour l’application qui n’a pas le focus d’entrée principal. Par exemple, un utilisateur a application _A_ de l’éditeur _X_ et l’application _B_ de l’éditeur _Y_, et ces deux applications partagent le même code PIN. L’utilisateur travaille avec l’application _A_ (au premier plan) et l’application _B_ est réduite. Une fois que la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est atteinte et que l’utilisateur passe à l’application _B_, celui-ci doit entrer le code PIN.

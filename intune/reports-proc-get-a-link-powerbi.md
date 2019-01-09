@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: e2c4335b17397833fdae9e95fecc2677c8068150
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 145b4ba18325d82942eb4ebf5fbfe17ffc8e653b
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187342"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737897"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Se connecter à l’entrepôt de données avec Power BI
 
@@ -45,7 +45,7 @@ Les étapes suivantes vous montrent comment télécharger le fichier Power BI e
 
 ## <a name="install-power-bi"></a>Installer Power BI
 
-Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Charger les données et les rapports à l’aide du fichier Power BI (pbix)
 

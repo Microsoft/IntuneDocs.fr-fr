@@ -1,12 +1,12 @@
 ---
 title: Attribuer des applications à des groupes dans Microsoft Intune
 titlesuffix: ''
-description: Apprenez à attribuer une application Intune à des groupes d’utilisateurs ou d’appareils.
+description: Apprenez à attribuer une application Intune à des groupes d’utilisateurs ou d’appareils en utilisant Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267252"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734270"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -29,20 +29,22 @@ ms.locfileid: "52267252"
 
 Une fois que vous avez [ajouté une application](apps-add.md) à Microsoft Intune, vous pouvez l’attribuer à des utilisateurs et des appareils. Il est important de noter que vous pouvez attribuer une application à un appareil, que celui-ci soit géré par Intune ou pas. 
 
+> [!NOTE]
+> L’intention de déploiement disponible n’est pas prise en charge pour les groupes d’appareils, seuls les groupes d’utilisateurs sont pris en charge.
+
 Le tableau suivant répertorie les différentes options disponibles pour attribuer des applications à des utilisateurs et des appareils :
 
-||||
-|-|-|-|-|
-|&nbsp;|**Appareils inscrits avec Intune**|**Appareils non inscrits avec Intune**|
-|Attribuer aux utilisateurs|Oui|Oui|
-|Attribuer aux appareils|Oui|Non|
-|Attribuer des applications encapsulées ou des applications incorporant le SDK Intune (pour les stratégies de protection d’application)|Oui|Oui|
-|Attribuer des applications en tant qu’applications disponibles|Oui|Oui|
-|Attribuer des applications en tant qu’applications requises|Oui|Non|
-|Désinstallation d’applications|Oui|Non|
-|Recevoir des mises à jour de l’application d’Intune|Oui|Non|
-|Les utilisateurs finaux installent les applications disponibles à partir de l’application Portail d’entreprise|Oui|Non|
-|Les utilisateurs finaux installent les applications disponibles à partir du Portail d’entreprise web|Oui|Oui|
+|   | Appareils inscrits avec Intune | Appareils non inscrits avec Intune |
+|-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
+| Attribuer aux utilisateurs | Oui | Oui |
+| Attribuer aux appareils | Oui | Non |
+| Attribuer des applications encapsulées ou des applications incorporant le SDK Intune (pour les stratégies de protection d’application) | Oui | Oui |
+| Attribuer des applications en tant qu’applications disponibles | Oui | Oui |
+| Attribuer des applications en tant qu’applications requises | Oui | Non |
+| Désinstallation d’applications | Oui | Non |
+| Recevoir des mises à jour de l’application d’Intune | Oui | Non |
+| Les utilisateurs finaux installent les applications disponibles à partir de l’application Portail d’entreprise | Oui | Non |
+| Les utilisateurs finaux installent les applications disponibles à partir du Portail d’entreprise web | Oui | Oui |
 
 > [!NOTE]
 > Actuellement, vous pouvez attribuer des applications iOS et Android (applications métier ou achetées dans un Store) pour les appareils qui ne sont pas inscrits avec Intune.
@@ -60,14 +62,14 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 7. Sélectionnez **Ajouter un groupe** pour ouvrir le volet **Ajouter un groupe** lié à l’application.
 8. Pour l’application spécifique, sélectionnez un **type d’affectation** :
    - **Disponible pour les appareils inscrits** : attribuez l’application à des groupes d’utilisateurs qui peuvent installer l’application à partir de l’application ou du site web Portail d’entreprise.
-   - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les applications de Google Play géré ne prennent pas en charge cette option. 
-   - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés.
-   - **Désinstaller** : l’application est désinstallée des appareils dans les groupes sélectionnés.
+   - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les applications de Google Play géré ne prennent pas en charge cette option. Les utilisateurs doivent disposer d’une licence Intune, consultez [Licences Intune](licenses.md).
+   - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés. Certaines plateformes peuvent avoir des invites supplémentaires dont l’utilisateur final doit accuser réception avant le démarrage de l’installation.
+   - **Désinstaller** : L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution « disponible pour les appareils inscrits » ou « Requis » en utilisant le même déploiement. Les liens Web ne peuvent pas être supprimés après le déploiement.
 
      > [!NOTE]
-     > **Pour les applications iOS uniquement** : si vous avez créé un profil VPN iOS qui contient des paramètres VPN par application, vous pouvez le sélectionner sous **VPN**. Quand l’application est exécutée, la connexion VPN est ouverte. Pour plus d’informations, consultez [Paramètres VPN pour les appareils iOS](vpn-settings-ios.md).
+     > **Pour les applications iOS uniquement**  : si vous avez créé un profil VPN iOS qui contient des paramètres VPN par application, vous pouvez le sélectionner sous **VPN**. Quand l’application est exécutée, la connexion VPN est ouverte. Pour plus d’informations, consultez [Paramètres VPN pour les appareils iOS](vpn-settings-ios.md).
      >
-     > **Pour les applications Android uniquement** : Si vous déployez une application Android comme **Disponible avec ou sans inscription**, vous pourrez en connaître l’état uniquement sur les appareils inscrits.
+     > **Pour les applications Android uniquement** : si vous déployez une application Android comme **Disponible avec ou sans inscription**, vous pourrez en connaître l’état uniquement sur les appareils inscrits.
 
 9. Sélectionnez **Groupes inclus** pour choisir les groupes d’utilisateurs concernés par cette attribution d’application.
 10. Cliquez sur **Sélectionner** une fois que vous avez sélectionné un ou plusieurs groupes à inclure.
@@ -83,9 +85,8 @@ L’application est maintenant attribuée aux groupes que vous avez sélectionn�
 
 Parfois, la même application est attribuée à plusieurs groupes, mais avec des intentions différentes. Les informations contenues dans le tableau suivant peuvent vous aider à comprendre l’intention qui en résulte lorsque cela se produit :
 
-||||
-|-|-|-|
-|**Intention du groupe 1**|**Intention du groupe 2**|**Intention résultante**|
+| Intention du groupe 1 | Intention du groupe 2 | Intention résultante |
+|-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Utilisateur obligatoire|Utilisateur disponible|Obligatoire et disponible|
 |Utilisateur obligatoire|Utilisateur non disponible|Obligatoire|
 |Utilisateur obligatoire|Désinstallation utilisateur|Obligatoire|

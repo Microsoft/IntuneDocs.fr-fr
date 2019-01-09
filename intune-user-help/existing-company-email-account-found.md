@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,23 +17,32 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f44b281bc8a0edd39e25bf966841a5f458c6677e
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: 3c06bb8efd0d6f7795094f36dcb513c5dca63e77
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903469"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570789"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Compte de messagerie d’entreprise existant détecté
 
-Vous avez déjà un compte de messagerie avec votre organisation ou votre société, et vous souhaitez maintenant accéder à ce compte sur votre appareil mobile. Le support technique de votre entreprise a besoin de votre aide pour assurer la sécurité de l’accès aux e-mails sur son cheminement entre la personne qui l’envoie et votre appareil. Tout a peut-être bien fonctionné pour votre e-mail actuel, mais vos informations seront plus en sécurité en procédant comme suit.
+Vous avez peut-être eu accès à votre compte de messagerie scolaire ou professionnel depuis un appareil mobile *avant* que celui-ci ne soit géré. Si votre appareil est maintenant géré, nous vous recommandons de suivre la procédure suivante :
 
-1.  Recherchez l’option **Paramètres** pour votre appareil et supprimez la connexion que vous avez précédemment configurée pour votre messagerie d’entreprise.  Par exemple, sur un appareil iOS, appuyez sur **Réglages** > **Mail** > **Comptes**. Sélectionnez votre compte de messagerie professionnel, puis appuyez sur **Supprimer**.
+* Déconnectez le compte de messagerie professionnel sur votre appareil.
+* Faites une nouvelle synchronisation des paramètres de l’appareil à partir de l’application Portail d’entreprise.  
 
-2.  Quittez **Paramètres** et ouvrez l’application Portail d’entreprise sur votre appareil.  
+Ces étapes garantissent que votre appareil est conforme aux exigences de sécurité de votre entreprise et que vos e-mails restent sécurisés.
 
-3. Accédez à **Appareil** et sélectionnez l’appareil que vous voulez mettre à jour.
+1.  Sur votre appareil, accédez aux **Paramètres** et recherchez vos comptes connectés. Par exemple, sur un appareil iOS 11 (ou une version ultérieure), sélectionnez **Mot de passe et comptes**.
+ 
+2. Sélectionnez et supprimez votre compte de messagerie professionnel.
 
-4. Sélectionnez **Vérifier les paramètres**. Au bout de quelques instants, votre appareil est mis à jour avec les nouveaux paramètres de messagerie.
+3. Ouvrez l'application Portail d'entreprise sur votre appareil.  
+
+4. Dans la liste de vos appareils, sélectionnez l'appareil que vous voulez mettre à jour.
+
+5. Sélectionnez **Vérifier les paramètres**. Au bout de quelques instants, votre appareil synchronise vos nouveaux paramètres de messagerie.
+
+6. Connectez-vous à votre compte de messagerie professionnel ou scolaire.
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses informations de contact, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
