@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 01/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
-ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
+ms.openlocfilehash: 3599146aaebc2e3788fa96e8e04657ce4db41c4f
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429710"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067446"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Créer un rapport à partir du flux OData avec Power BI
 
@@ -61,7 +61,7 @@ Installez la dernière version de Power BI Desktop. Power BI Desktop est dispon
 7. Collez l’URL du flux personnalisé dans la zone URL de la fenêtre **Flux OData**.
 8. Sélectionnez **De base**.
 
-    ![Flux OData](media/reports-create-01-odatafeed.png)
+    ![Flux OData pour l’entrepôt de données Intune de votre abonné](media/reports-create-01-odatafeed.png)
 
 9. Sélectionnez **OK**.
 10. Sélectionnez **Compte professionnel**, puis connectez-vous avec vos informations d’identification Intune.
@@ -70,7 +70,7 @@ Installez la dernière version de Power BI Desktop. Power BI Desktop est dispon
 
 11. Sélectionnez **Connexion**. Le Navigateur s’ouvre et affiche la liste des tables dans l’entrepôt de données Intune.
 
-    ![Navigateur](media/reports-create-02-loadentities.png)
+    ![Capture d’écran du navigateur - liste des tables de l’entrepôt de données](media/reports-create-02-loadentities.png)
 
 12. Sélectionnez les tables **devices** et **ownerTypes**.  Sélectionnez **Charger**. Power BI charge les données dans le modèle.
 
@@ -78,7 +78,7 @@ Installez la dernière version de Power BI Desktop. Power BI Desktop est dispon
 
 Vous pouvez importer plusieurs tables pour analyser non seulement les données dans une table unique, mais aussi les données connexes contenues dans plusieurs tables.  Power BI comprend une fonctionnalité appelée **Détection automatique** qui recherche et crée des relations pour vous. Les tables de l’entrepôt de données sont générées pour fonctionner avec la fonctionnalité de détection automatique de Power BI. Même si Power BI ne trouve pas automatiquement de relations, c’est vous qui gérez les relations.
 
-![Gérer les relations](media/reports-create-03-managerelationships.png)
+![Gérer les relations des données associées entre les tables](media/reports-create-03-managerelationships.png)
 
 1. Sélectionnez **Gérer les relations**.
 2. Sélectionnez **Détection automatique** si Power BI n’a pas encore détecté les relations.
@@ -99,7 +99,7 @@ Un graphique treemap affiche les données hiérarchiques sous forme de zones dan
 
 Vous disposez maintenant d’un visuel qui montre la distribution des fabricants d’appareils dans votre organisation.
 
-![Treemap avec des données](media/reports-create-06-treemapwdata.png)
+![TreeMap avec des données - distribution des fabricants d’appareils](media/reports-create-06-treemapwdata.png)
 
 ## <a name="add-a-filter"></a>Ajouter un filtre
 
@@ -111,7 +111,7 @@ Pour répondre à des questions supplémentaires à l’aide de votre applicatio
 
    Sous la table des appareils, recherchez le champ de données **OwnerTypeKey**. Celui-ci contient un code indiquant si l’appareil appartient à l’entreprise ou à un individu. Pour afficher des noms conviviaux dans ce filtre, recherchez la table **ownerTypes** et faites glisser le champ de données **ownerTypeName**. Cet exemple montre comment le modèle de données prend en charge les relations entre les tables.
 
-![Treemap avec filtre](media/reports-create-08_ownertype.png)
+![TreeMap avec un filtre - prise en charge des relations entre les tables](media/reports-create-08_ownertype.png)
 
 Vous disposez maintenant d’un filtre interactif qui vous permet de basculer entre les appareils d’entreprise et les appareils personnels. Utilisez ce filtre pour voir comment la distribution change.
 

@@ -1,12 +1,11 @@
 ---
-title: Comment obtenir un support technique pour Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Guide pratique pour obtenir un support technique pour Microsoft Intune | Microsoft Intune
 description: Obtenez du support en ligne et par téléphone pour les abonnements d’essai gratuit et payants de Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2feb18f9c21929d803bbb3605842effa8f63d75d
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 6a57a3a26a786e86775ce1509c5f751d2856f95b
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247167"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817294"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Comment obtenir un support technique pour Microsoft Intune
 
@@ -49,11 +48,11 @@ Si les solutions courantes ne vous aident pas, vous pouvez sélectionner **Deman
 
 1. Connectez-vous au Portail Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez **?** en haut à droite du portail, puis sélectionnez **Aide + support** pour accéder à la page [Aide + support Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
-   ![Capture d’écran du lien d’aide et support dans le portail Azure, avec le lien Aide + support mis en surbrillance](./media/azure-get-support.png)
+   ![Image du lien point d’interrogation avec lien Aide + support entouré](./media/azure-get-support.png)
 
 2. Dans la page **Aide + support** d’Azure, sélectionnez **Nouvelle demande de support**.
 
-   ![Capture d’écran de la page Aide et support d’Azure avec le lien Nouvelle demande de support mis en surbrillance](media/azure-support-ticket-link.png)
+   ![Image du lien Nouvelle demande de support mis en surbrillance sur la page Aide et support](media/azure-support-ticket-link.png)
 
 3. Dans l’onglet **Fonctions de base**, pour la plupart des questions de support technique Intune, choisissez les options suivantes :
    - **Type de problème** : **Technique**
@@ -63,18 +62,18 @@ Si les solutions courantes ne vous aident pas, vous pouvez sélectionner **Deman
    - **Sous-type de problème** : Choisissez le sous-type de problème dans le menu déroulant.
    - **Objet** : Décrivez brièvement le problème que vous rencontrez.
 
-   ![Capture d’écran de l’onglet Fonctions de base sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-basics.png)
+   ![Image de l’onglet Fonctions de base sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-basics.png)
 
    Choisissez **Suivant : Solutions** pour continuer.
 4. Dans l’onglet **Solutions**, passez en revue les étapes recommandées qui peuvent vous aider à résoudre votre problème sans ouvrir de ticket. Si vous souhaitez toujours créer une demande de support après être passé au travers de ces étapes, cliquez sur **Suivant : Détails**.
 
-   ![Capture d’écran de l’onglet Solutions sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-solutions.png)
+   ![Image de l’onglet Solutions sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-solutions.png)
 5. Dans l’onglet **Détails**, renseignez les détails de votre problème, la méthode de support, vos informations de contact, puis cliquez sur **Suivant : Vérifier + créer**.
 
-   ![Capture d’écran de l’onglet Détails sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-details.png)
+   ![Image de l’onglet Détails sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-details.png)
 6. Passez en revue les informations, vérifiez qu’elles sont correctes, puis choisissez **Créer** pour envoyer votre demande de support.
 
-   ![Capture d’écran de l’onglet Vérifier + créer sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-create.png)
+   ![Image de l’onglet Vérifier + créer sur la page Nouvelle demande de support](./media/get-support/help-new-support-case-create.png)
 
 <!--
   - **Support plan**: **Technical support - included** (for Intune technical issues, support is complimentary) or **Premier**
@@ -117,7 +116,7 @@ Vous pouvez afficher une demande de support à partir du Portail Azure. Pour cel
 ## <a name="new-help-and-support-experience"></a>Nouvelle expérience utilisateur d’aide et de support
 *Les informations suivantes s’appliquent uniquement quand vous utilisez le portail de gestion des appareils. Elles sont liées au lancement de la nouvelle expérience d’aide et de support. Les participants à ce lancement sont choisis au hasard parmi les locataires Intune disponibles.*  
 
-La mise à jour de la fonctionnalité Aide et support d’Intune correspond à une nouvelle expérience utilisateur disponible dans le [portail de Gestion des appareils Microsoft 365](http://devicemanagement.microsoft.com) pour certains locataires. Cette nouvelle expérience utilisateur est similaire à celle du [Centre d’administration Microsoft 365](https://portal.office.com/AdminPortal/Home). Elle remplace l’expérience précédente d’aide et de support accessible à partir de certains emplacements de la console de gestion des appareils.  
+La mise à jour de la fonctionnalité Aide et support d’Intune correspond à une nouvelle expérience utilisateur disponible dans le [portail de Gestion des appareils Microsoft 365](https://devicemanagement.microsoft.com) pour certains locataires. Cette nouvelle expérience utilisateur est similaire à celle du [Centre d’administration Microsoft 365](https://portal.office.com/AdminPortal/Home). Elle remplace l’expérience précédente d’aide et de support accessible à partir de certains emplacements de la console de gestion des appareils.  
 
 Dans le portail de gestion des appareils, vous accédez à la nouvelle expérience utilisateur en sélectionnant **Aide et support** à partir de n’importe quel panneau sous **Tous les services** > **Gestion des appareils**, à l’exception du panneau **Résolution des problèmes**. Quand vous accédez à Aide et support depuis d’autres emplacements, par exemple **Résolution des problèmes**, via l’option **?** dans le coin supérieur droit de la bannière de la console, ou quand vous sélectionnez **Aide + support** dans la liste des services du volet gauche, vous accédez à l’expérience utilisateur d’origine.  
 
@@ -143,7 +142,7 @@ Voici des exemples de requêtes que vous pouvez envoyer :
 
 ### <a name="view-context-sensitive-help"></a>Afficher une aide contextuelle
 Une fois que vous avez sélectionné un choix proposé, ou que vous avez envoyé votre propre requête, des résultats contextuels apparaissent sous **Afficher les solutions**. Ces résultats incluent à la fois du support autonome spécifique à Intune, et des résultats supplémentaires retournés par une recherche web en fonction des critères de la requête.  
-![Afficher les résultats](./media/get-support/view-results.png)
+![Image du volet Afficher les solutions](./media/get-support/view-results.png)
 
 ### <a name="get-support"></a>Obtenir un support
 Si le support autonome ou l’aide basée sur le web ne vous aident pas à résoudre le problème, vous pouvez utiliser la console pour ouvrir un incident nécessitant un support par e-mail ou par téléphone.  
@@ -151,16 +150,16 @@ Dans la page **Besoin d’aide ?**, sélectionnez l’option à utiliser.
 
 - Pour une demande par e-mail, indiquez votre adresse e-mail et, éventuellement, ajoutez des pièces jointes à votre envoi. Sélectionnez **Envoyer** pour ouvrir la demande.  
 
-  ![Demande par e-mail](./media/get-support/email-support.png)
+  ![Image du volet Demande par e-mail](./media/get-support/email-support.png)
   
 - Pour une demande par téléphone, indiquez votre numéro de téléphone. Vous pouvez éventuellement inclure votre adresse e-mail et ajouter des pièces jointes à votre envoi. Sélectionnez M’appeler pour envoyer la demande.  
 
-   ![Demande par téléphone](./media/get-support/phone-support.png)
+   ![Image du volet Demande par téléphone](./media/get-support/phone-support.png)
 
 ### <a name="view-support-cases"></a>Afficher les incidents nécessitant un support
 Sélectionnez le bouton d’historique pour voir les incidents que vous avez créés pour obtenir un support.  
 
-![Afficher les incidents nécessitant un support](./media/get-support/view-support-tickets.png)
+![Image du volet Afficher les incidents nécessitant un support](./media/get-support/view-support-tickets.png)
 
 - Seuls les incidents de support que vous ouvrez à l’aide du nouveau flux de travail sont visibles depuis ce flux de travail. Pour les voir, utilisez l’affichage Aide et support de la console de gestion des appareils faisant partie de la nouvelle expérience utilisateur. Ces incidents ont des numéros dont la longueur est de huit chiffres. Vous pouvez également voir ces incidents à partir du Centre d’administration Microsoft 365.  
 
@@ -173,5 +172,5 @@ Sélectionnez le bouton d’historique pour voir les incidents que vous avez cr�
 ## <a name="additional-resources"></a>Ressources supplémentaires
 - [Contacter le support par téléphone pour Microsoft Intune](phone-support-contact.md)
 - [Support relatif à la gestion de la facturation et des abonnements](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Licences en volume](http://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Licences en volume](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Résoudre les problèmes d’Intune](help-desk-operators.md)

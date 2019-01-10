@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
-ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
+ms.openlocfilehash: a84683531481410d54f527ddd35400dcfe504fc5
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553688"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996029"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -58,7 +58,7 @@ Le kit de développement logiciel (SDK) Intune App pour Android utilise maintena
 Pour continuer à recevoir des mises à jour pour le portail d’entreprise et les applications Office, les appareils macOS gérés par Intune doivent être mis à niveau à l’aide de la mise à jour automatique Microsoft 4.5.0. Il est possible que les utilisateurs disposent déjà de cette version pour leurs applications Office.
 
 ### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Intune nécessite macOS 10.12 ou une version ultérieure <!-- 2827778 -->
-Intune nécessite désormais macOS 10.12 ou une version ultérieure. Les appareils sur lesquels est installée une version macOS antérieure à celle-ci ne peuvent pas utiliser le portail d’entreprise pour s’inscrire auprès d’Intune. P)our recevoir une assistance technique et pour profiter des nouvelles fonctionnalités, les utilisateurs doivent mettre à niveau leur appareil vers macOS 10.12 ou une version ultérieure, mais également mettre à niveau le portail d’entreprise vers la version la plus récente.
+Intune nécessite désormais macOS 10.12 ou une version ultérieure. Les appareils sur lesquels est installée une version macOS antérieure à celle-ci ne peuvent pas utiliser le portail d’entreprise pour s’inscrire auprès d’Intune. Pour recevoir une assistance technique et pour profiter des nouvelles fonctionnalités, les utilisateurs doivent mettre à niveau leur appareil vers macOS 10.12 ou une version ultérieure, mais également mettre à niveau le portail d’entreprise vers la version la plus récente.
 
 ## <a name="week-of-november-26-2018"></a>Semaine du 26 novembre 2018
 
@@ -93,13 +93,6 @@ Vous pouvez maintenant gérer les applications suivantes avec les [stratégies I
 
 Utilisez des stratégies App Protection pour protéger les données d’entreprise et en contrôler le transfert pour ces applications, comme les autres applications gérées par la stratégie Intune. Remarque : Si Flow n’apparaît pas encore dans la console, ajoutez-le lorsque vous créez ou modifiez des stratégies de protection des données. Pour cela, utilisez l’option **+ Plus d’applications** et spécifiez *l’ID d’application* Flow dans le champ d’entrée : *com.microsoft.flow* pour Android et *com.microsoft.procsimo* pour iOS.
 
-#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Mise à jour de l’IU des stratégies de protection des applications Intune <!-- 3251427 -->
-Nous avons modifié les étiquettes des paramètres et des boutons d’Intune App Protection pour qu’ils soient tous plus faciles à comprendre. Quelques exemples de modifications :  
-
-- Les contrôles **Oui** / **Non** sont principalement remplacés par des contrôles **Bloquer** / ** Autoriser** et **Désactiver** / **Activer**. Les étiquettes sont également mises à jour.  
-- Les paramètres ont également été remis en forme pour qu’ils apparaissent à côté de l’étiquette correspondante dans le contrôle, ce qui facilite la navigation.   
-
-Les paramètres par défaut et le nombre de paramètres restent identiques. Toutefois, ce changement permet à l’utilisateur de comprendre, de parcourir et d’utiliser les paramètres plus facilement pour appliquer les stratégies App Protection sélectionnées.
 
 ### <a name="device-configuration"></a>Configuration des appareils
 
@@ -116,9 +109,9 @@ Pour configurer un profil de configuration d’optimisation de la distribution, 
 Cette mise à jour comprend de nouveaux paramètres pour vos appareils iOS et macOS qui sont publiés avec iOS 12 :
 
 **Paramètres iOS** : 
-- Général : Bloquer la suppression d’applications (mode supervisé uniquement)
-- Général : Bloquer le mode USB restreint (mode supervisé uniquement)
-- Général : Forcer une date et une heure automatiques (mode supervisé uniquement)
+- Général : Bloquer la suppression d’applications (mode supervisé uniquement)
+- Général : Bloquer le mode USB restreint (mode supervisé uniquement)
+- Général : Forcer une date et une heure automatiques (mode supervisé uniquement)
 - Mot de passe : Bloquer le remplissage automatique du mot de passe (mode supervisé uniquement)
 - Mot de passe : Bloquer les demandes de proximité du mot de passe (mode supervisés uniquement)
 - Mot de passe : Bloquer le partage de mot de passe (mode supervisé uniquement)
