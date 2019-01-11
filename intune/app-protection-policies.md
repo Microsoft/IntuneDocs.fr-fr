@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11//28/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 35fd4650d5508995f879f4d83030f70fe9c550b8
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817362"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -72,11 +72,11 @@ Les nouvelles stratégies que vous créez ne sont pas déployées sur les utilis
 
 2. Dans le volet ***Protection d’application Intune**, sélectionnez **Affectations** pour ouvrir le volet **Protection d’application Intune - Affectations**. Sous l’onglet *Inclure*, sélectionnez **Sélectionner les groupes à inclure**. 
 
-   ![Capture d’écran du volet Affectations avec l’option de menu Sélectionner les groupes à inclure en surbrillance](./media/app-protection-policy-add-users.png)
+   ![Capture d’écran du volet Affectations avec le menu Sélectionner les groupes à inclure](./media/app-protection-policy-add-users.png)
 
 3.  Une liste de tous les groupes de sécurité de votre domaine **Azure Active Directory** s’affiche. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Sélectionner**. 
 
-    ![Capture d’écran du volet Ajouter un groupe d’utilisateurs montrant la liste des utilisateurs Azure Active Directory](./media/azure-ad-user-group-list.png)
+    ![Capture d’écran du volet Ajouter un groupe d’utilisateurs avec la liste des utilisateurs Azure AD](./media/azure-ad-user-group-list.png)
 
 4.  Une fois que vous incluez et excluez des groupes, sélectionnez **Enregistrer** pour enregistrer la configuration et déployer la stratégie aux utilisateurs. Si vous sélectionnez **Ignorer** avant d’enregistrer votre configuration, vous abandonnez toutes les modifications apportées aux onglets *Inclure* et *Exclure*.   
  
@@ -138,7 +138,7 @@ Dans la mesure où les stratégies de protection des applications Intune ciblent
 
 Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection des applications** dans la console Intune, puis sélectionnez **Créer une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Pour que la stratégie de protection des applications s’applique aux appareils gérés et non gérés, vérifiez que **Cibler sur tous les types d’application** a la valeur par défaut **Oui**. Si vous souhaitez effectuer une affectation précise en fonction de l’état de gestion, affectez à l’option **Cibler sur tous les types d’application** la valeur **Non**. 
 
-![Capture d’écran du panneau Ajouter une stratégie, dans lequel l’option Cibler sur tous les types d’application est sélectionnée](./media/app-protection-policies-target-all.png)
+![Capture d’écran du panneau Ajouter une stratégie avec l’option Cibler sur tous les types d’application](./media/app-protection-policies-target-all.png)
 
 Pour iOS, des paramètres de configuration d’application supplémentaires sont nécessaires pour cibler les paramètres d’application sur des applications se trouvant sur des appareils inscrits auprès d’Intune :
 - **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).

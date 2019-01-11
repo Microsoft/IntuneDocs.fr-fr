@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
-ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
+ms.openlocfilehash: 49ecdebc2777112ce8c8c97af1f98b3c12b200e1
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389867"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006282"
 ---
 # <a name="what-are-app-protection-policies"></a>Que sont les stratégies de protection des applications ?
 
@@ -37,14 +37,14 @@ Vous pouvez utiliser des stratégies de protection des applications Intune **ind
 
 Vous pouvez configurer des stratégies de protection des applications pour les applications qui s’exécutent sur des appareils qui sont :
 
-- **inscrits dans Microsoft Intune :** ces appareils sont généralement possédés par une entreprise ;
+- **Inscrits dans Microsoft Intune :** ces appareils appartiennent généralement à l’entreprise.
 
-- **inscrits dans une solution de gestion des appareils mobiles (GAM) tierce :** ces appareils sont généralement possédés par une entreprise.
+- **Inscrits dans une solution de gestion des appareils mobiles (MDM) tierce :** ces appareils appartiennent généralement à l’entreprise.
 
   > [!NOTE]
   > Les stratégies de gestion des applications mobiles ne doivent pas être utilisées avec des solutions de gestion des applications mobiles tierces ni des solutions de conteneur sécurisé.
 
-- **non inscrits dans une solution de gestion des appareils mobiles :** ces appareils sont généralement la propriété d’employés et ne sont pas gérés ou inscrits dans Intune ou d’autres solutions de gestion des appareils mobiles.
+- **Non inscrits dans une solution de gestion des appareils mobiles (MDM) :** ces appareils sont généralement la propriété d’employés et ne sont pas gérés ou inscrits dans Intune ou d’autres solutions MDM.
 
 > [!IMPORTANT]
 > Vous pouvez créer des stratégies de gestion des applications mobiles pour les applications mobiles Office qui se connectent aux services Office 365. Vous pouvez également protéger l’accès aux boîtes aux lettres Exchange sur site en créant des stratégies Intune App Protection pour Outlook sous iOS et Android avec authentification moderne hybride. Avant d’utiliser cette fonctionnalité, vérifiez que vous répondez aux [exigences relatives à Outlook pour iOS et Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Les stratégies de protection d’applications ne sont pas prises en charge pour les autres applications qui se connectent à des services Exchange ou SharePoint sur site.
@@ -75,14 +75,14 @@ Les appareils Windows ne sont pas pris en charge actuellement. Toutefois, vous p
 
 #### <a name="apps-without-app-protection-policies"></a>Applications sans stratégies de protection des applications
 
-![L’image qui affiche des données peut se déplacer librement entre les applications si aucune stratégie de protection des applications n’est mise en place](./media/apps-without-protection-policies.png)
+![Image conceptuelle du déplacement des données entre des applications sans stratégies de protection](./media/apps-without-protection-policies.png)
 
 Lorsque les applications sont utilisées sans aucune restriction, les données d’entreprise et personnelles peuvent se mélanger. Les données de l’entreprise peuvent finir dans des emplacements de stockage personnels ou être transmises à des applications hors de votre portée, ce qui peut entraîner une perte de données. Dans le diagramme précédent, les flèches indiquent un déplacement des données sans restriction entre des applications aussi bien professionnelles que personnelles, et vers des emplacements de stockage.
 
 
 ### <a name="data-protection-with-app-protection-policies"></a>Protection des données avec stratégies de protection des applications
 
-![Image qui montre comment les données d’entreprise sont protégées quand des stratégies de protection des applications sont appliquées ](./media/apps-with-protection-policies.png)
+![Image conceptuelle montrant des données d’entreprise protégées par des stratégies](./media/apps-with-protection-policies.png)
 
 
 Vous pouvez utiliser des stratégies de protection des applications pour empêcher l’enregistrement des données de l’entreprise sur le stockage local de l’appareil. Vous pouvez également limiter le déplacement de données vers d’autres applications qui ne sont pas protégées par des stratégies de protection des applications. Les paramètres de stratégie de protection d’application comprennent :

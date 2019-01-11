@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bfde1e935c782643e06030659082907365b1903e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e3d0b47bcb8ecbf3d8f76a83f0247f98c0c698f3
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179983"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006350"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
@@ -53,7 +53,7 @@ Vous disposez de deux options pour indiquer la façon dont vous souhaitez utilis
 
 Vous pouvez utiliser des stratégies de configuration d’applications pour les applications qui les prennent en charge. Pour que la configuration d’application soit prise en charge dans Intune, les applications doivent avoir été écrites afin de prendre en charge l’utilisation des configurations d’applications. Pour plus de détails, consultez l’éditeur de l’application.
 
-Vous pouvez préparer votre application métier en incorporant le SDK d’application Intune dans l’application ou en enveloppant (wrap) l’application une fois qu’elle a été développée. Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet d’appliquer des stratégies de configuration d’application Intune sur votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](app-sdk.md).
+Vous pouvez préparer votre application métier en incorporant le SDK d’application Intune dans l’application ou en enveloppant (wrap) l’application une fois qu’elle a été développée. Le SDK d’application Intune, disponible pour iOS et Android, permet d’appliquer des stratégies de configuration d’application Intune à votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Prise en charge de l’API Graph pour la configuration d’application
 

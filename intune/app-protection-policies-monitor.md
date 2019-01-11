@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 765fae6f0e860935f5ceccadfdf1d9c3fe45d60e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181902"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816838"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Guide pratique de surveillance des stratégies de protection des applications
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -48,15 +48,15 @@ Vous pouvez surveiller l’état de conformité à trois endroits différents :
 
 ![Vignette Résumé sur le volet Gestion des applications mobiles Intune](./media/app-protection-user-status-summary.png)
 
--   **Utilisateurs** : nombre total d’utilisateurs dans votre société qui utilisent une application associée à une stratégie dans un contexte professionnel.
+-   **Utilisateurs** : nombre total d’utilisateurs dans votre entreprise qui utilisent une application associée à une stratégie dans un contexte professionnel.
 
--   **GÉRÉ PAR STRATÉGIE** : nombre d’utilisateurs qui ont utilisé une application et auxquels une stratégie a été affectée dans un contexte professionnel.
+-   **GÉRÉ PAR STRATÉGIE** : nombre d’utilisateurs qui ont utilisé une application et auxquels une stratégie a été assignée dans un contexte professionnel.
 
--   **AUCUNE STRATÉGIE** : nombre d’utilisateurs qui utilisent une application qui n’est ciblée par aucune stratégie dans un contexte professionnel. Vous pouvez envisager d’ajouter ces utilisateurs à la stratégie.
+-   **AUCUNE STRATÉGIE** : nombre d’utilisateurs qui utilisent une application qui n’est ciblée par aucune stratégie dans un contexte professionnel. Vous pouvez envisager d’ajouter ces utilisateurs à la stratégie.
     > [!NOTE]
     > Si vous avez plusieurs stratégies par plateforme, un utilisateur est considéré comme étant géré par une stratégie quand au moins une stratégie lui a été affectée.
 
-- **Utilisateurs marqués d’un indicateur** : le nombre d’utilisateurs ayant rencontré des problèmes. Seuls les utilisateurs avec des appareils jailbreakés sont répertoriés sous **Utilisateurs marqués d’un indicateur**.
+- **Utilisateurs marqués d’un indicateur** : nombre d’utilisateurs ayant rencontré des problèmes. Seuls les utilisateurs avec des appareils jailbreakés sont répertoriés sous **Utilisateurs marqués d’un indicateur**.
 
 
 ## <a name="detailed-view"></a>Vue détaillée
@@ -72,7 +72,7 @@ Vous pouvez rechercher un utilisateur et vérifier son état de conformité. Le 
 
   - **Activé** : la stratégie a été déployée pour l’utilisateur, et l’application a été utilisée au moins une fois dans le contexte professionnel.
 
-  - **Non activé** : la stratégie a été déployée pour l’utilisateur, mais l’application n’a pas été utilisée au moins une fois dans le contexte professionnel depuis.
+  - **Non activé** : la stratégie a été déployée pour l’utilisateur, mais l’application n’a depuis jamais été utilisée dans le contexte professionnel.
 
 >[!NOTE]
 > Si la stratégie MAM n’est pas déployée pour l’utilisateur que vous recherchez, un message vous informe que l’utilisateur n’est ciblé par aucune stratégie MAM.
@@ -81,11 +81,11 @@ Pour afficher le rapport d’un utilisateur, procédez comme suit :
 
 1.  Pour sélectionner un utilisateur, choisissez la vignette **Résumé**.
 
-    ![Capture d’écran mettant en évidence la vignette Résumé sur le panneau Gestion des applications mobiles Intune, Paramètres](./media/MAM-reporting-6.png)
+    ![Capture d’écran de la vignette Résumé dans Gestion des applications mobiles Intune](./media/MAM-reporting-6.png)
 
 2. Dans le volet **Rapport d’application**, choisissez **Sélectionner un utilisateur** pour rechercher un utilisateur Azure Active Directory.
 
-    ![Capture d’écran mettant en évidence l’option Sélectionner un utilisateur dans le volet Rapport d’application](./media/MAM-reporting-2.png)
+    ![Capture d’écran de l’option Sélectionner un utilisateur dans le volet Rapport d’application](./media/MAM-reporting-2.png)
 
 3. Sélectionnez l’utilisateur dans la liste. Vous pouvez voir les détails de l’état de conformité pour cet utilisateur.
 
@@ -98,9 +98,9 @@ Vous trouverez les mêmes rapports dans la vue détaillée, plus d’autres rapp
 
 ![Capture d’écran mettant en évidence 2 rapports disponibles dans le volet Paramètres](./media/MAM-reporting-7.png)
 
--   **Rapport d’utilisateur de protection des applications :** il présente les mêmes informations qui figurent dans le rapport **État de l’utilisateur** sous la section Vue détaillée ci-dessus.
+-   **Rapport de l’utilisateur sur la protection de l’application :** il présente les mêmes informations qui figurent dans le rapport **État de l’utilisateur** sous la section Vue détaillée ci-dessus.
 
--   **Rapport d’application de protection des applications :** il fournit deux états de protection des applications différents que les administrateurs peuvent sélectionner avant de générer le rapport. Les états peuvent être protégés ou non protégés.
+-   **Rapport de l’application sur la protection de l’application :** il fournit deux états de protection de l’application différents, que les administrateurs peuvent sélectionner avant de générer le rapport. Les états peuvent être protégés ou non protégés.
 
     -   État de l’utilisateur pour l’activité GAM gérée (protégé) : ce rapport présente l’activité de chaque application GAM gérée, par utilisateur.
 
@@ -112,14 +112,14 @@ Vous trouverez les mêmes rapports dans la vue détaillée, plus d’autres rapp
 
         -   Toutes les applications sont enregistrées, mais ne reçoivent aucune stratégie GAM.
 
-![Capture d’écran montrant le panneau Rapport d’application d’un utilisateur avec un tableau de détails pour 3 applications inscrites](./media/MAM-reporting-4.png)
+![Capture d’écran du panneau Rapport d’application d’un utilisateur, affichant les détails de trois applications](./media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Regroupement de tables
 
 Une fois que les données du **rapport d’utilisateur de la protection des applications** s’affichent, vous pouvez les regrouper selon les éléments suivants :
 
-- **Résultat de la validation :** les données s’affichent groupées selon l'état de protection de l’application, qui peut être réussite, avertissement ou échec.
-- **Nom de l’application :** les données s’affichent regroupées par applications (le véritable nom de l’application) avec succès, avertissement ou échec.
+- **Résultat de la validation :** les données affichées sont regroupées en fonction de l’état de protection de l’application (échec, avertissement ou succès).
+- **Nom de l’application :** les données affichées sont regroupées par application (nom réel de l’application) avec l’état (échec, avertissement ou succès).
 
 ## <a name="export-app-protection-activities-to-csv"></a>Exportation des activités de protection d’application au format CSV
 
@@ -129,7 +129,7 @@ Suivez ces étapes pour générer le rapport de protection des applications :
 
 1. Dans le volet Gestion des applications mobiles Intune, choisissez **Rapport de protection des applications**.
 
-    ![Capture d’écran mettant en évidence le lien de téléchargement du rapport de protection des applications dans le volet Gestion des applications mobiles Intune](./media/app-protection-report-csv-2.png)
+    ![Capture d’écran du lien de téléchargement de la protection d’application](./media/app-protection-report-csv-2.png)
 
 2. Choisissez Oui pour enregistrer votre rapport, puis cliquez sur Enregistrer sous et sélectionnez le dossier dans lequel vous souhaitez enregistrer le rapport.
 

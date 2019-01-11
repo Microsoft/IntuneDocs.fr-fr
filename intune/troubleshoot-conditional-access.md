@@ -1,5 +1,5 @@
 ---
-title: Résoudre les problèmes d’accès conditionnel
+title: Résoudre les problèmes d’accès conditionnel | Microsoft Intune
 description: Cette rubrique décrit les actions à entreprendre quand vos utilisateurs ne parviennent pas à accéder à des ressources par le biais de l’accès conditionnel Intune.
 keywords: ''
 author: brenduns
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 642a4da6a1ca3c368e90f2d3007c1fc6a068af78
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d24b96408ed02413f25957e2558704385c5e1bfd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189229"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817141"
 ---
 # <a name="troubleshoot-conditional-access"></a>Résoudre les problèmes d’accès conditionnel
 

@@ -1,6 +1,5 @@
 ---
-title: Surveiller l’accès conditionnel Exchange dans Microsoft Intune
-titlesuffix: ''
+title: Surveiller l’accès conditionnel Exchange dans Microsoft Intune | Microsoft Intune
 description: Surveillez la conformité de l’accès conditionnel pour Exchange local et Exchange Online par le biais du portail Intune Azure.
 keywords: ''
 author: brenduns
@@ -15,12 +14,12 @@ ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 20a99290d2a84c22bc2bee823d7a3bb42e43aced
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8c9602dbe183501cc779fcb9b5d5a1e6e4bf6154
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180576"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816768"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Surveiller la conformité des accès conditionnels pour Exchange local et Exchange Online dans Intune
 

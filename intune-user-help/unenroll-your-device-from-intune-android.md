@@ -1,11 +1,11 @@
 ---
 title: Guide pratique pour supprimer un appareil Android d’Intune | Microsoft Docs
-description: Cette rubrique explique comment désinscrire un appareil Android d’Intune
+description: Supprimer un appareil Android dans Portail d’entreprise Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d932005c955afed7f16e9766b559b77b2cd43182
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: 75b26e178badbaa7905199eb91490134d2b72ba9
+ms.sourcegitcommit: 61ed365f7f8826451c41bcab5e19bef97b5a3c72
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959483"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54057336"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Désinscrire votre appareil Android de la gestion  
 
@@ -51,8 +51,23 @@ Pour supprimer toutes les données que stocke l’application Portail d’entrep
 -   Supprimer le dossier '\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal'
 
 ## <a name="uninstall-the-company-portal-app"></a>Désinstaller l’application Portail d’entreprise  
-Portail d’entreprise étant une application de gestion d’appareils, vous ne pouvez pas la désinstaller tant que vous n’avez pas [désinscrit votre appareil de la gestion](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Une fois cette opération terminée, appuyez sur l’icône de l’application Portail d’entreprise jusqu’à ce que vous voyiez **Désinstaller**. Appuyez sur **Désinstaller** pour supprimer l’application de votre appareil.  
+Portail d’entreprise est une application de gestion des appareils. Vous ne pouvez pas la désinstaller tant que vous n’avez pas [désinscrit votre appareil de la gestion](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Une fois cette opération terminée, appuyez sur l’icône de l’application Portail d’entreprise jusqu’à ce que vous voyiez **Désinstaller**. Appuyez sur **Désinstaller** pour supprimer l’application de votre appareil.  
 
 Ou bien, appuyez sur **Paramètres** > **Applications** > **Portail d’entreprise** > **Désinstaller**.  
+
+### <a name="remove-company-portal-app-as-device-administrator"></a>Supprimer l’application Portail d’entreprise en tant qu’administrateur de l’appareil  
+En dernier recours, vous pouvez désinstaller l’application sur votre appareil en la supprimant en tant qu’administrateur de l’appareil.  
+
+Si vous utilisez un appareil appartenant à l’entreprise, votre organisation peut exiger que l’application Portail d’entreprise reste toujours installée sur votre appareil. Si vous désinstallez l’application, vous risquez de ne plus pouvoir accéder aux ressources métier protégées (comme la messagerie, les applications, le Wi-Fi ou le VPN) tant que vous ne réinstallez pas l’application. Pour plus d’informations sur l’installation, la mise à jour ou la suppression des applications obligatoires, consultez [Ajouter des applications à Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+
+Effectuez les étapes ci-dessous pour désactiver l’application Portail d’entreprise en tant qu’un administrateur de l’appareil. Les noms réels des paramètres peuvent varier en fonction de votre appareil Android.  
+
+**Étapes Android, option 1** :  
+1. Sélectionnez **Paramètres** > **Sécurité** > **Paramètres de sécurité supplémentaires** > **Administrateurs d’appareils**.  
+2. Désélectionnez l’option **Portail d’entreprise**.  
+
+**Étapes Android, option 2** :  
+1. Sélectionnez **Paramètres** > **Écran de verrouillage et sécurité** > **Autres paramètres de sécurité** > **Applications des administrateurs d’appareils**.  
+2. Désélectionnez l’option **Portail d’entreprise**.    
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

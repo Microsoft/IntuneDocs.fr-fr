@@ -1,6 +1,5 @@
 ---
-title: Scénarios d’accès conditionnel
-titlesuffix: Microsoft Intune
+title: Scénarios d’accès conditionnel | Microsoft Intune
 description: Découvrez comment l’accès conditionnel Intune est couramment utilisé pour l’accès conditionnel basé sur l’application et sur l’appareil.
 keywords: ''
 author: brenduns
@@ -15,12 +14,12 @@ ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
-ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 753ad125e541936586f2939985a23ed3b06ea7ea
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112474"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817158"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -49,10 +48,10 @@ Vous configurez les stratégies d’accès conditionnel basées sur l’appareil
 
 > [!NOTE]
 > Sur les appareils Android, quand vous activez l’accès basé sur l’appareil pour Sharepoint Online, les utilisateurs doivent activer l’option **Activer l’accès au navigateur** sur l’appareil inscrit, en effectuant les opérations suivantes :
-> 1. Lancez **l’application Portail d’entreprise**.
+> 1. Lancer l’**application Portail d’entreprise**.
 > 2. Accédez à la page **Paramètres** via les trois points (...) ou le bouton de menu matériel.
 > 3. Appuyez sur le bouton **Activer l’accès du navigateur** . 
-> 4. Dans le navigateur Chrome, déconnectez-vous d’Office 365 et redémarrez Chrome.
+> 4. Dans le navigateur Chrome, se déconnecter d’Office 365 et redémarrer Chrome.
 
 ### <a name="conditional-access-for-exchange-on-premises"></a>Accès conditionnel pour Exchange sur site
 

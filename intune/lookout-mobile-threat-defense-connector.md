@@ -1,6 +1,5 @@
 ---
-title: Connecteur Lookout MTD avec Microsoft Intune
-titlesuffix: ''
+title: Connecteur Lookout MTD avec Microsoft Intune | Microsoft Intune
 description: Découvrez-en plus sur l’intégration d’Intune avec Lookout Mobile Threat Defense (MTD) pour contrôler l’accès des appareils mobiles aux ressources de votre entreprise.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d7a545fe08acc9ab88086fa92be934c860ae4716
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bd61b10ee60e1f9413c22d0d618bc5c270dc76a6
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179539"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817073"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Connecteur de protection contre les menaces mobiles pour Lookout avec Intune
 
@@ -63,34 +62,34 @@ Lorsque des applications malveillantes telles que des logiciels malveillants son
 
 **Blocage lorsque des applications malveillantes sont détectées :**
 
-![diagramme illustrant une stratégie d’accès conditionnel bloquant l’accès quand l’appareil est déterminé comme non conforme parce qu’il contient des applications malveillantes](./media/malicious-apps-blocked.png)
+![Image conceptuelle de la stratégie bloquant l’accès en raison de la détection d’applications malveillantes](./media/malicious-apps-blocked.png)
 
 **Accès accordé après correction :**
 
-![diagramme montrant l’accès accordé par la stratégie d’accès conditionnel quand l’appareil est évalué comme conforme après la correction](./media/malicious-apps-unblocked.png)
+![Image conceptuelle montrant l’accès accordé aux appareils après correction](./media/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 Détectez les menaces pour votre réseau, telles que les attaques de l’intercepteur (« Man-in-the-middle »), et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 
-![Diagramme illustrant l’accès conditionnel interdisant l’accès par Wi-Fi en fonction des menaces pour le réseau](./media/network-wifi-blocked.png)
+![Image montrant le blocage de l’accès par Wi-Fi en fonction des menaces pour le réseau](./media/network-wifi-blocked.png)
 
 **Accès accordé après correction :**
 
-![diagramme montrant l’accès accordé par la stratégie d’accès conditionnel après correction de la menace](./media/network-wifi-unblocked.png)
+![Image conceptuelle de l’accès conditionnel autorisant l’accès après correction](./media/network-wifi-unblocked.png)
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Contrôler l’accès à SharePoint Online en fonction de la menace pour le réseau
 
 Détectez les menaces pour votre réseau, telles que les attaques de l’intercepteur, et empêchez la synchronisation des fichiers d’entreprise en fonction du risque évalué pour l’appareil.
 
 **Bloquer SharePoint Online lorsque des menaces réseau sont détectées :**
 
-![Diagramme montrant l’accès à SharePoint Online bloqué par la stratégie d’accès conditionnel en raison de la menace détectée](./media/network-spo-blocked.png)
+![Image conceptuelle du blocage de l’accès à SharePoint Online](./media/network-spo-blocked.png)
 
 
 **Accès accordé après correction :**
 
-![Diagramme montrant l’accès accordé par la stratégie d’accès conditionnel après correction de la menace](./media/network-spo-unblocked.png)
+![Image conceptuelle de l’accès accordé après correction de la menace réseau](./media/network-spo-unblocked.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Voici les principales étapes à effectuer pour implémenter cette solution :

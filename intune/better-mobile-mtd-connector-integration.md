@@ -6,19 +6,19 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
-ms.openlocfilehash: aa447721449b2b3733e20d9f65f0253e9123228b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 761605a74e6aeda65d9c6361b18b51e255873ac1
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816529"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Intégrer Better Mobile à Intune
 
@@ -62,7 +62,7 @@ Le processus d’autorisation de l’application Better Mobile est le suivant :
 1. Accédez à la [console d’administration de Better Mobile](https://aad.bmobi.net), puis connectez-vous avec vos informations d’identification.
 2. Choisissez **Intégration** > **EMM/MDM** > **AJOUTER UN COMPTE**.
 
-     ![Console d'administration de Better Mobile](media/better_mobile_console.png)
+     ![Image de la console d’administration de Better Mobile](media/better_mobile_console.png)
  
 3. Choisissez **Intune**.
 4. À côté de **NOM DU COMPTE**, tapez un descripteur. 

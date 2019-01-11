@@ -1,12 +1,11 @@
 ---
-title: Paramètres de Protection des informations Windows dans Microsoft Intune
-titleSuffix: ''
+title: Paramètres de la Protection des informations Windows dans Microsoft Intune | Microsoft Intune
 description: Découvrez les paramètres Microsoft Intune que vous pouvez utiliser pour gérer la Protection des informations Windows.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1505c48d8605f2ac53b0d93ca933137fac981e3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2d1d5468779bf300ad4f2713c363d4ca723b80da
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179216"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817005"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Guide pratique pour configurer la Protection des informations Windows dans Microsoft Intune
 
@@ -35,7 +34,7 @@ Cette stratégie Intune gère la liste des applications protégées par la Prote
 >[!NOTE]
 > Pour utiliser l’application Portail d’entreprise de Windows 10 avec la Protection des informations Windows, vous devez ajouter cette application sous le mode **Exempté** de la Protection des informations Windows. 
 
-### <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Pour plus d'informations, voir :
 -  [Protéger vos données d’entreprise à l’aide de la Protection des informations Windows](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 - [Créer une stratégie Protection des informations Windows (WIP) à l’aide de la console classique pour Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)

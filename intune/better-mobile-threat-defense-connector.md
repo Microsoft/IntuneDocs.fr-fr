@@ -6,19 +6,19 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
-ms.openlocfilehash: 8eeb55ca9e2c698d2d9e1814e9ea17f779326732
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 313c20699c30d20d1bbc9bb6aea9189a83b61f53
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178489"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816631"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Connecteur Better Mobile Threat Defense avec Intune
 
@@ -48,7 +48,7 @@ Quand des applications malveillantes telles que des programmes malveillants sont
 
 **Blocage lorsque des applications malveillantes sont détectées :**
 
-![Applications malveillantes détectées](./media/better_mobile_maliciousapps_blocked.png)
+![Image montrant des applications malveillantes détectées](./media/better_mobile_maliciousapps_blocked.png)
 
 **Accès accordé après correction :**
 
@@ -64,7 +64,7 @@ Détectez les menaces pour votre réseau, comme les **attaques de l’intercepte
 
 **Accès accordé après correction :**
 
-![Accès accordé après correction](./media/better_mobile_network_wifi_unblocked.png)
+![Image montrant l’accès accordé après correction](./media/better_mobile_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Contrôler l’accès à SharePoint Online en fonction de la menace pour le réseau
 

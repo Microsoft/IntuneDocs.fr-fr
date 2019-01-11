@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3da4208b3036b0252e2e5bd26d8361d04642183a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 83371d14215eb9ed2298796279d232ffbc7d129f
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189697"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817039"
 ---
-# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil e-mail pour iOS
+# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS
 
 Dans ce guide de démarrage rapide, vous verrez comment créer un profil d’appareil e-mail pour les appareils iOS. Ce profil spécifie les paramètres dont a besoin l’application e-mail intégrée sur l’appareil iOS pour se connecter à l’e-mail d’entreprise. Les profils d’appareil e-mail aident à standardiser les paramètres parmi les appareils et permettent aux utilisateurs finaux d’accéder à l’e-mail d’entreprise sur leurs appareils personnels sans aucune autre configuration de leur part. Pour protéger davantage votre e-mail, vous pouvez utiliser un profil e-mail pour déterminer si les appareils sont conformes, puis configurer l’accès conditionnel pour n’autoriser que les appareils conformes à accéder à l’e-mail. Pour plus d’informations sur les profils e-mail, consultez [Guide pratique pour configurer des paramètres de messagerie dans Microsoft Intune](email-settings-configure.md).
 
@@ -45,16 +45,16 @@ Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrat
    - Pour l’option **Plateforme**, sélectionnez **iOS**.
    - Pour **Type de profil**, sélectionnez **E-mail**.
     
-     ![Créer un profil e-mail pour iOS](media/quickstart-email-profile/ios-email-profile-name.png)
+     ![Créer un profil de messagerie pour iOS](media/quickstart-email-profile/ios-email-profile-name.png)
 
 5. Sélectionnez **Paramètres**, puis entrez les paramètres suivants (laissez les valeurs par défaut pour les autres paramètres) :
-   - **Serveur e-mail** : pour ce guide de démarrage rapide, entrez **outlook.office365.com**. Ce paramètre spécifie l’emplacement Exchange (URL) du serveur e-mail que l’application e-mail iOS utilisera pour se connecter à l’e-mail.
-   - **Nom du compte** : entrez **Company Email** (E-mail d’entreprise).
+   - **Serveur de messagerie** : pour ce guide de démarrage rapide, entrez **outlook.office365.com**. Ce paramètre spécifie l’emplacement Exchange (URL) du serveur e-mail que l’application e-mail iOS utilisera pour se connecter à l’e-mail.
+   - **Nom du compte** : entrez **E-mail de l’entreprise**.
    - **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (Azure AD). Intune génère dynamiquement le nom d’utilisateur pour ce profil en utilisant ce nom. Pour ce guide de démarrage rapide, nous supposons que le **Nom d’utilisateur principal** doit être utilisé comme nom d’utilisateur pour le profil (par exemple, user1@contoso.com).
    - **Attribut d’adresse e-mail d’AAD** : ce paramètre est l’adresse e-mail issue d’Azure AD qui est utilisée pour la connexion à Exchange. Pour ce guide de démarrage rapide, sélectionnez **Nom d’utilisateur principal**.
    - **Méthode d’authentification** : pour ce guide de démarrage rapide, sélectionnez **Nom d’utilisateur et mot de passe**. (Vous pouvez également choisir **Certificat** si vous avez déjà configuré un certificat pour Intune.)
     
-     ![Créer un profil e-mail pour iOS](media/quickstart-email-profile/ios-email-profile.png)
+     ![Créer un profil de messagerie pour iOS](media/quickstart-email-profile/ios-email-profile.png)
 
 6. Sélectionnez **OK**.
 7. Sélectionnez **Créer**. Le nouveau profil apparaît dans la liste des profils, et le tableau de bord affiché afin que vous puissiez superviser l’affectation du profil aux appareils iOS et aux utilisateurs d’iOS.
@@ -73,4 +73,4 @@ Si vous n’envisagez pas d’utiliser le profil que vous avez créé pour d’a
 Dans ce guide de démarrage rapide, vous avez créé un profil e-mail pour les appareils iOS. Maintenant, vous pouvez utiliser ce profil pour déterminer si un appareil iOS est conforme en créant une stratégie de conformité qui marque comme non conforme tout appareil iOS qui ne correspond pas au profil. Pour une protection accrue, vous pouvez créer une stratégie d’accès conditionnel qui empêche les appareils iOS non conformes d’accéder à l’e-mail. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés](tutorial-protect-email-on-enrolled-devices.md)
+> [Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés](tutorial-protect-email-on-enrolled-devices.md)

@@ -15,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c6ab669b1f9331d0bd0a70ca5f86ac7f3f190fb6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bda8512bd28351c384bfe53b46db62e5a86fe9bd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180374"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817277"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
@@ -48,7 +48,7 @@ Le contrôle d’accès réseau fonctionne avec l’accès conditionnel pour fou
 
 La liste suivante présente le fonctionnement du contrôle d’accès réseau quand il est intégré à Intune. Les trois premières étapes (1 à 3) expliquent le processus d’intégration. Une fois la solution de contrôle d’accès réseau intégrée à Intune, les étapes 4 à 9 décrivent l’opération en cours.
 
-![Fonctionnement du contrôle d’accès réseau avec Intune](./media/ca-intune-common-ways-2.png)
+![Image conceptuelle du fonctionnement du contrôle d’accès réseau avec Intune](./media/ca-intune-common-ways-2.png)
 
 1. Inscrivez la solution du partenaire de contrôle d’accès réseau auprès d’Azure Active Directory (AAD) et accordez des autorisations déléguées à l’API de contrôle d’accès réseau Intune.
 2. Configurez la solution du partenaire de contrôle d’accès réseau avec les paramètres appropriés, notamment l’URL de découverte Intune.

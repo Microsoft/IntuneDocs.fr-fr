@@ -1,6 +1,5 @@
 ---
-title: Créer et déployer une stratégie de protection des applications Protection des informations Windows (WIP)
-titlesuffix: Microsoft Intune
+title: Créer et déployer une stratégie de protection des applications WIP | Microsoft Intune
 description: Créer et déployer une stratégie de protection des applications Protection des informations Windows (WIP) avec Microsoft Intune
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b5599e98b9712d30979c327167b19b159d3ff5dc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 57d0aaebd0ed07a78b32eec64a6dc2817bf5e7f5
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181325"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817311"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune
 
@@ -35,13 +34,13 @@ Vous devez comprendre certains concepts lors de l’ajout d’une stratégie WIP
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Liste des applications autorisées et exemptes
 
--   **Applications protégées** : il s’agit des applications qui doivent adhérer à cette stratégie.
+-   **Applications protégées** : il s’agit des applications qui doivent se conformer à cette stratégie.
 
--   **Applications exemptes** Ces applications sont exemptes de cette stratégie et peuvent accéder aux données d’entreprise sans restrictions.
+-   **Applications exemptes** : ces applications sont exemptes de cette stratégie et peuvent accéder aux données d’entreprise sans restrictions.
 
 ### <a name="types-of-apps"></a>Types d’applications
 
--   **Applications recommandées :**  une liste préremplie d’applications (principalement Microsoft Office) que vous pouvez facilement importer dans la stratégie.
+-   **Applications recommandées** : liste préremplie d’applications (principalement Microsoft Office) que vous pouvez facilement importer dans la stratégie.
 -   **Applications du Store** : vous pouvez ajouter n’importe quelle application du Windows Store à la stratégie.
 -   **Applications de bureau Windows** : vous pouvez ajouter n’importe quelle application de bureau Windows traditionnelle à la stratégie (.exe, .dll, etc.).
 
@@ -76,9 +75,9 @@ Une fois Intune configuré dans votre organisation, vous pouvez créer une strat
 5. Sélectionnez **Ajouter une stratégie** pour afficher le panneau **Ajouter une stratégie**.
 6. Ajoutez les valeurs suivantes :
     - **Nom :** tapez un nom (obligatoire) pour votre nouvelle stratégie.
-    - **Description :** (facultatif) entrez une description.
-    - **Plateforme :** choisissez **Windows 10** comme plateforme prise en charge pour votre stratégie de protection d’application.
-    - **État d’inscription :** choisissez **Sans inscription** en tant qu’état d’inscription de votre stratégie.
+    - **Description :** entrez une description (facultatif).
+    - **Plateforme :** choisissez **Windows 10** comme plateforme prise en charge pour votre stratégie de protection d’application.
+    - **État d’inscription :** choisissez **Sans inscription** comme état d’inscription de votre stratégie.
 7.  Choisissez **Créer**. La stratégie est créée et apparaît dans le tableau du panneau **Stratégies de protection des applications**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Pour ajouter les applications recommandées à votre liste d’applications protégées
@@ -149,7 +148,7 @@ Après avoir désactivé WIP, une tentative est effectuée pour déchiffrer les 
 
 1.  Dans le panneau **Stratégie d’application**, choisissez le nom de votre stratégie, puis **Paramètres obligatoires**.
 
-    ![Capture d’écran du mode d’apprentissage](./media/learning-mode-sc1.png)
+    ![Capture d’écran du volet Mode d’apprentissage](./media/learning-mode-sc1.png)
 
 1.  Sélectionnez un paramètre, puis choisissez **Enregistrer**.
 

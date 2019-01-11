@@ -1,12 +1,12 @@
 ---
-title: Stratégie de conformité d’appareil pour les appareils Jamf
+title: Stratégie de conformité d’appareil pour les appareils Jamf | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Utilisez des stratégies de conformité Microsoft Intune avec l’accès conditionnel Azure Active Directory pour permettre de sécuriser les appareils gérés par Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,22 +16,22 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6fa89e96b05e5344dec32fb452be8ebeaa58bc12
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d7d054b11a4abc969ad411169d0222be37fd6711
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182021"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817226"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Appliquer la conformité sur les Mac gérés par Jamf Pro
 
-S’applique à : Intune dans le portail Azure
+S'applique à : Intune dans le portail Azure
 
 Vous pouvez utiliser Azure Active Directory et les stratégies d’accès conditionnel de Microsoft Intune. Assurez-vous que vos utilisateurs finaux respectent les exigences de l’organisation. Vous pouvez appliquer ces stratégies à des Mac [gérés par Jamf Pro](conditional-access-integrate-jamf.md). Cela nécessite à la fois un accès aux consoles Intune et Jamf Pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configuration des stratégies de conformité d’appareils dans Intune
 
-1. Ouvrez Microsoft Azure, puis accédez à **Intune** > **Conformité de l’appareil** > **Stratégies**. Vous pouvez créer des stratégies pour macOS, y compris sélectionner une série d’actions (par exemple, l’envoi d’avertissements par e-mail) aux utilisateurs et groupes non conformes.
+1. Ouvrez Microsoft Azure, puis accédez à **Intune** > **Conformité de l’appareil** > **Stratégies**. Vous pouvez créer des stratégies pour macOS, notamment choisir une série d’actions (par exemple, l’envoi d’avertissements par e-mail) pour les utilisateurs et groupes non conformes.
 2. Recherchez les groupes désirés et appliquez-leur les stratégies.
 
 > [!Note]
@@ -57,7 +57,7 @@ Vous devez déployer l’application Portail d’entreprise pour macOS dans Jamf
 ## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Créer une stratégie dans Jamf Pro pour que les utilisateurs inscrivent leurs appareils auprès d’Azure Active Directory
 
 > [!NOTE]
-> Vous devez [déployer le portail d’entreprise](conditional-access-assign-jamf.md#require-the-company-portal-app-for-macos) pour macOS avant de passer aux étapes suivantes.  
+> Vous devez [déployer le portail d’entreprise](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) pour macOS avant de passer aux étapes suivantes.  
 
 Les utilisateurs finaux doivent lancer l’application Portail d’entreprise via le libre-service Jamf pour inscrire l’appareil auprès d’Azure AD en tant qu’appareil géré par Jamf Pro. Cette opération oblige les utilisateurs finaux à agir. Nous vous recommandons de [contacter l’utilisateur final](end-user-educate.md) par e-mail, à l’aide d’une notification Jamf Pro ou au moyen d’une autre méthode de notification pour l’inviter à cliquer sur le bouton dans Jamf Self Service.
 

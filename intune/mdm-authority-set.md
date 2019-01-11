@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6f0138da6e9ea427ad07ad3b41dd22b7319bb044
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 889e298d3d04429c1b9be2ee70519d68063953ab
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112576"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006299"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Définir l’autorité de gestion des appareils mobiles
 
@@ -36,7 +36,7 @@ Les configurations possibles sont les suivantes :
 - **Intune hybride** : intégration de la solution cloud Intune à System Center Configuration Manager. Vous configurez Intune à l’aide de la console Configuration Manager. [Configurez l’autorité MDM dans Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-intune-subscription). 
 
     > [!Important]
-    >L’intégration de nouveaux clients GPM hybrides sera désactivée dans une prochaine version. Pour plus d’informations, consultez le [plan MC146431 pour le blog des modifications](https://blogs.technet.microsoft.com/intunesupport/2018/08/14/move-from-hybrid-mobile-device-management-to-intune-on-azure/).
+    >L’intégration de nouveaux clients GPM hybrides sera désactivée dans une prochaine version. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
 - **Gestion des appareils mobiles pour Office 365** : intégration d’Office 365 à la solution cloud Intune. Vous configurez Intune à partir de votre Centre d’administration Office 365. Comprend un sous-ensemble des fonctionnalités disponibles avec Intune autonome. Configurez l’autorité MDM dans le Centre d'administration Office 365.
 
@@ -53,7 +53,7 @@ Si vous n’avez pas encore défini l’autorité MDM, suivez les étapes ci-des
 4. Sous **Autorité de gestion des appareils mobiles**, choisissez votre autorité de gestion des appareils mobiles parmi les options suivantes :
    - **Autorité MDM Intune**
    - **Autorité MDM Configuration Manager**
-   - **Aucun**
+   - **Aucune.**
 
    ![Capture de l’écran Intune Définir l’autorité de gestion des appareils mobiles](media/set-mdm-auth.png)
 
@@ -137,7 +137,7 @@ L’autorité MDM ne peut pas être rétablie à Inconnu. L’autorité MDM est 
 
 - Les utilisateurs peuvent rapidement basculer vers la nouvelle autorité MDM en lançant manuellement un enregistrement de l’appareil vers le service. Les utilisateurs peuvent facilement effectuer cette modification à l’aide de l’application du portail d’entreprise, en lançant une vérification de conformité d’appareil.
 - Pour confirmer que tout fonctionne correctement une fois les appareils enregistrés et synchronisés avec le service après le changement d’autorité MDM, recherchez les appareils dans la console Configuration Manager. Les appareils précédemment gérés par Intune apparaissent désormais en tant qu’appareils gérés dans la console Configuration Manager.    
-- Il existe une période temporaire pendant laquelle un appareil est hors ligne lors du changement d’autorité MDM et lorsque cet appareil s’enregistre auprès du service. Pour que l’appareil reste protégé et opérationnel pendant cet intervalle, les profils suivants restent dessus pendant sept jours maximum (ou jusqu’à ce que l’appareil se connecte à la nouvelle autorité MDM et reçoive les nouveaux paramètres qui remplacent les paramètres existants) :
+- Il existe une période temporaire pendant laquelle un appareil est hors ligne lors du changement d’autorité MDM et lorsque cet appareil s’enregistre auprès du service. Pour que l’appareil reste protégé et opérationnel pendant cet intervalle, les profils suivants y sont conservés pendant sept jours maximum (ou jusqu’à ce que l’appareil se connecte à la nouvelle autorité MDM et reçoive les nouveaux paramètres qui remplacent les paramètres existants) :
     - Profil de messagerie
     - Profil VPN
     - Profil de certificat

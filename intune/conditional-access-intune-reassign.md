@@ -1,12 +1,11 @@
 ---
-title: Migrer l’accès conditionnel vers le portail Azure
-titlesuffix: Microsoft Intune
+title: Migrer l’accès conditionnel vers le portail Azure | Microsoft Intune
 description: Réaffectez les stratégies d’accès conditionnel précédemment créées dans le portail classique Intune vers le portail Azure.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: chrisgree
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6dbd7d9079bdb826f83cce76650cacebee056b68
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d319ff39574565c3f326bd6b03b346e989bdc488
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184486"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817430"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
@@ -46,7 +45,7 @@ Si vous êtes prêt à passer au portail Azure, suivez les étapes dans cette ru
             - Supprimez progressivement des utilisateurs des groupes de sécurité qui sont la cible des stratégies d’accès conditionnel dans le portail classique Intune.
             - Une fois que vous avez confirmé que la nouvelle stratégie fonctionne pour ces utilisateurs, vous pouvez désactiver la stratégie dans le portail classique Intune. 
 <br /><br />
-- Si vous avez des paramètres de stratégie d’accès conditionnel configurés pour utiliser EAS (Exchange Active Sync) dans le portail classique Intune, consultez les [instructions de cette rubrique](#to-reassign-intune-device-based-conditional-access-policies-for-eas-clients) pour **réaffecter les paramètres de stratégie d’accès conditionnel EAS dans le portail Azure**.
+- Si vous avez des paramètres de stratégie d’accès conditionnel configurés pour utiliser EAS (Exchange Active Sync) dans le portail classique Intune, consultez les [instructions de cette rubrique](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) pour **réaffecter les paramètres de stratégie d’accès conditionnel EAS dans le portail Azure**.
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Pour vérifier vos stratégies d’accès conditionnel basé sur l’appareil dans le portail classique Intune
 
@@ -81,7 +80,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 4. Sous la section **Affectations**, choisissez **Utilisateurs et groupes** pour cibler la nouvelle stratégie d’accès conditionnel.
     
-    ![Image montrant une comparaison de l’interface utilisateur des groupes d’utilisateurs entre les portails Intune et Azure](./media/reassign-ca-1.png)
+    ![Image comparant l’interface utilisateur des groupes d’utilisateurs dans les portails Intune et Azure](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
     > La sélection que vous effectuez pour le portail Azure doit correspondre à celle que vous avez effectuée pour le portail Classic. Par exemple, si tous les utilisateurs sont sélectionnés dans le portail classique Intune, sélectionnez **Tous les utilisateurs** dans le portail Azure. En outre, si vous avez choisi l’option **Groupes exempts** dans le portail classique Intune, excluez aussi ces groupes sélectionnés dans le portail Azure.
@@ -96,7 +95,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 9. Cliquez sur **Terminé**.
 
-    ![Image montrant une comparaison de l’interface utilisateur des applications cloud entre les portails Intune et Azure](./media/reassign-ca-3.png)
+    ![Image comparant l’interface utilisateur des applications cloud dans les portails Intune et Azure](./media/reassign-ca-3.png)
 
     > [!TIP] 
     > Si vous avez plusieurs applications avec la même stratégie, envisagez de les regrouper dans une seule stratégie dans le portail Azure.
@@ -107,7 +106,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 12. Une fois les plateformes d’appareils choisies, cliquez sur **Terminé** à deux reprises.
 
-    ![Image montrant une comparaison de l’interface utilisateur des plateformes d’appareils entre les portails Intune et Azure](./media/reassign-ca-4.png)
+    ![Image comparant l’interface utilisateur des plateformes d’appareils dans les portails Intune et Azure](./media/reassign-ca-4.png)
 
     > [!TIP] 
     > Si vous avez choisi des plateformes individuelles dans le portail classique Intune, choisissez les plateformes individuelles dans le portail Azure.
@@ -121,7 +120,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 15. Une fois l’application cliente choisie, cliquez sur **Terminé** à deux reprises.
 
-    ![Image montrant une comparaison de l’interface utilisateur des applications clientes entre les portails Intune et Azure](./media/reassign-ca-6.png)
+    ![Image comparant l’interface utilisateur des applications clientes dans les portails Intune et Azure](./media/reassign-ca-6.png)
 
 16. Si vous avez choisi les paramètres du navigateur dans le portail classique Intune, sélectionnez à la fois **Navigateur** et **Applications mobiles et clients de bureau** dans le portail Azure. Si vous n’avez pas choisi les paramètres du navigateur dans le portail classique Intune, choisissez uniquement **Applications mobiles et clients de bureau**. 
 
@@ -135,7 +134,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 21. Dans le panneau de la stratégie d’accès conditionnel **Nouveau**, activez la bascule **Activer la stratégie**, puis cliquez sur **Créer**.
 
-    ![Image montrant une comparaison de l’interface utilisateur d’activation de la stratégie d’accès conditionnel entre les portails Intune et Azure](./media/reassign-ca-11.png)
+    ![Image comparant l’interface utilisateur des stratégies d’accès conditionnel dans Intune et Azure](./media/reassign-ca-11.png)
 
 ## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Réaffecter des stratégies d’accès conditionnel basé sur l’appareil Intune pour les clients EAS
 
@@ -160,7 +159,7 @@ Si vous avez configuré les paramètres EAS (Exchange Active Sync) dans le cadre
 
 7. Dans le panneau **Applications cloud**, cliquez sur **Sélectionner les applications**, puis choisissez **Exchange Online**. Cliquez ensuite sur **Sélectionner**, puis sur **Terminé**.
 
-    ![Image montrant une comparaison de l’interface utilisateur des applications cloud entre les portails Intune et Azure](./media/reassign-ca-14.png)
+    ![Image comparant l’interface utilisateur des applications cloud dans les portails Intune et Azure](./media/reassign-ca-14.png)
 
     > [!IMPORTANT] 
     > Les stratégies d’accès conditionnel pour les clients EAS ne peuvent inclure aucune autre application cloud.
@@ -175,11 +174,11 @@ Si vous avez configuré les paramètres EAS (Exchange Active Sync) dans le cadre
 
 11. Sous **Accorder les contrôles d’accès**, choisissez **Exiger que l’appareil soit marqué comme conforme**, puis cliquez sur **Sélectionner**.
 
-    ![Image montrant une comparaison de l’interface utilisateur de l’octroi de l’accès entre les portails Intune et Azure](./media/reassign-ca-16.png)
+    ![Image comparant l’interface utilisateur pour accorder l’accès dans les portails Intune et Azure](./media/reassign-ca-16.png)
 
 12. Dans le panneau de la stratégie d’accès conditionnel **Nouveau**, activez la bascule **Activer la stratégie**, puis cliquez sur **Créer**.
 
-    ![Image montrant une comparaison de l’interface utilisateur d’activation de la stratégie d’accès conditionnel entre les portails Intune et Azure](./media/reassign-ca-17.png)
+    ![Comparaison de l’interface utilisateur pour activer les stratégies d’accès conditionnel dans Intune et Azure](./media/reassign-ca-17.png)
 
 > [!NOTE]
 > Si vous configurez des **Plateformes d’appareils**, l’enregistrement de la stratégie échoue avec l’erreur « La configuration de la stratégie n’est pas prise en charge ». Exchange ActiveSync ne peut pas identifier la plateforme utilisée par l’appareil qui se connecte. Par conséquent, la configuration de plateformes d’appareils spécifiques n’est pas prise en charge lors de la création d’une stratégie pour les appareils Exchange ActiveSync.
@@ -201,7 +200,7 @@ Une fois que vous avez réaffecté vos stratégies d’accès conditionnel dans 
 
 4.  Décochez l’option **Activer la stratégie d’accès conditionnel**, puis cliquez sur **Enregistrer**.
 
-    ![Image montrant Désactiver les stratégies d’accès conditionnel dans le portail classique Intune](./media/reassign-ca-18.png)
+    ![Image de la désactivation des stratégies d’accès conditionnel dans le portail classique Intune](./media/reassign-ca-18.png)
 
 ## <a name="see-also"></a>Voir aussi
 

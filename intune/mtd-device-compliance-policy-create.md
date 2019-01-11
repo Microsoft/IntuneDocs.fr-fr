@@ -1,12 +1,11 @@
 ---
-title: Créer une stratégie de conformité des appareils MTD avec Microsoft Intune
-titlesuffix: ''
+title: Créer une stratégie de conformité des appareils MTD avec Microsoft Intune | Microsoft Intune
 description: Créez une stratégie de conformité des appareils Intune qui utilise les niveaux de menace MTD partenaires afin de déterminer si un appareil mobile peut accéder aux ressources de l’entreprise.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +15,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aaa02c397ca17011dd231c98018ca86c190f49ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5962ff96b9c92bcf69a75221f1b7c5a5ab2f2634
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186172"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53995978"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Créer une stratégie de conformité des appareils Mobile Threat Defense (MTD) avec Intune
 
 > [!NOTE] 
 > Ces informations s’appliquent à tous les partenaires Mobile Threat Defense.
 
-Intune avec MTD vous aide à détecter les menaces et à évaluer les risques sur les appareils mobiles. Vous pouvez créer une règle de stratégie de conformité de l’appareil Intune qui évalue les risques et détermine si l’appareil est conforme. Vous pouvez ensuite utiliser une stratégie d’accès conditionnel pour autoriser ou bloquer l’accès à des services en fonction de la conformité de l’appareil.
+Intune avec MTD vous aide à détecter les menaces et à évaluer les risques sur les appareils mobiles. Vous pouvez créer une règle de stratégie de conformité de l’appareil Intune qui évalue les risques et détermine si l’appareil est conforme. Vous pouvez ensuite utiliser une [stratégie d’accès conditionnel](create-conditional-access-intune.md) pour autoriser ou bloquer l’accès à des services en fonction de la conformité de l’appareil.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -56,11 +55,11 @@ Conditions préalables pour la stratégie de conformité de l’appareil avec MT
 
     a.  **Sécurisé** : ce niveau est le plus sûr. L'appareil ne peut pas avoir de menace présente et accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme.
 
-    b.  **Faible** : l’appareil est conforme seulement si les menaces détectées sont de niveau faible. La présence de menaces de niveau supérieur rend l’appareil non conforme.
+    b.  **Faible** : l’appareil est conforme seulement si les menaces détectées sont de niveau faible. La présence de menaces de niveau supérieur rend l’appareil non conforme.
 
     c.  **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
 
-    d.  **Élevé** : ce niveau est le moins sûr. Cela active tous les niveaux de menace et utilise la défense contre les menaces mobiles uniquement à des fins de création de rapport. L’application MTD doit être activée avec ce paramètre sur les appareils.
+    d.  **Élevé** : ce niveau est le moins sûr. Cela active tous les niveaux de menace et utilise la défense contre les menaces mobiles uniquement à des fins de création de rapport. L’application MTD doit être activée avec ce paramètre sur les appareils.
 
 8.  Cliquez sur **OK** à deux reprises, puis choisissez **Créer**.
 

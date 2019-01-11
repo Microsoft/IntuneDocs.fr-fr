@@ -1,5 +1,5 @@
 ---
-title: Créer une stratégie d’accès conditionnel Exchange
+title: Créer une stratégie d’accès conditionnel Exchange | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Configurer l’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité dans Intune
 keywords: ''
@@ -15,12 +15,12 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0a539000153ad45b5256e4e63086fa72fee44947
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186093"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817056"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Créer une stratégie d’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité
 
@@ -64,7 +64,7 @@ Avant de configurer l’accès conditionnel, vérifiez les éléments suivants :
 - Windows Phone 8.1 et versions ultérieures
 - Application de messagerie native sur iOS.
 - Clients de messagerie EAS, comme Gmail sur Android 4 ou ultérieur.
-- Clients de messagerie EAS sur les **appareils avec profil professionnel Android :** seules les applications **Gmail** et **Nine Work for Android Enterprise** dans le **profil professionnel** sont prises en charge sur les appareils avec profil professionnel Android. Pour que l’accès conditionnel fonctionne avec les profils professionnels Android, vous devez déployer un profil de messagerie pour l’application Gmail ou Nine Work for Android Enterprise, et également déployer ces applications comme installation obligatoire.
+- Clients de messagerie EAS sur les **appareils avec profil professionnel Android** : seules les applications **Gmail** et **Nine Work for Android Enterprise** dans le **profil professionnel** sont prises en charge sur les appareils avec profil professionnel Android. Pour que l’accès conditionnel fonctionne avec les profils professionnels Android, vous devez déployer un profil de messagerie pour l’application Gmail ou Nine Work for Android Enterprise, et également déployer ces applications comme installation obligatoire.
 
 > [!NOTE]
 > Microsoft Outlook pour Android et iOS n’est pas pris en charge via le connecteur local Exchange. Si vous souhaitez tirer parti des stratégies d’accès conditionnel d’Azure Active Directory et des stratégies Intune App Protection avec Outlook pour iOS et Android pour vos boîtes aux lettres locales, consultez [Utilisation de l’authentification hybride moderne avec Outlook pour iOS et Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
