@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 742b4892c4dbe9ee2dfa2bb03eebb2667803c6bf
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112423"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210752"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -78,7 +78,7 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 > [!NOTE]
 > Vous pouvez utiliser l’outil de création de package de restrictions d’application avec Intune autonome ou Intune avec Configuration Manager.
 
-|Fonctionnalité|Kit SDK d’application|Outil de création de package de restrictions d’application|
+|Composant|Kit SDK d’application|Outil de création de package de restrictions d’application|
 |-----------|---------------------|-----------|
 |Afficher le contenu web uniquement dans Managed Browser|X|X|
 |Empêcher les sauvegardes Android, iTunes ou iCloud|X|X|
@@ -98,7 +98,7 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 |Bloquer la capture d’écran (Android uniquement)|X|X|
 |Prise en charge de GAM sans inscription de l’appareil|X|X|
 |Réinitialisation complète|X|X|
-|Réinitialisation sélective <br></br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
+|Réinitialisation sélective <br><br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
 |Empêcher « Enregistrer sous »|X||
 |Configuration d'application ciblée|X||
 |Prise en charge des identités multiples|X||
@@ -115,6 +115,6 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 
 Pour plus d’informations sur les stratégies de protection des applications et Intune, consultez les rubriques suivantes :
 
-  - [Outil de création de package de restrictions d’application Android](app-wrapper-prepare-android.md)</br>
-  - [Outil de création de package de restrictions d’application iOS](app-wrapper-prepare-ios.md)</br>
+  - [Outil de création de package de restrictions d’application Android](app-wrapper-prepare-android.md)<br>
+  - [Outil de création de package de restrictions d’application iOS](app-wrapper-prepare-ios.md)<br>
   - [Utiliser le SDK pour activer des applications pour la gestion des applications mobiles](app-sdk.md)
