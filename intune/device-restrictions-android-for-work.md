@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: c9e2e0df79625329310171c509327395989f3a7c
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 671c713be805038c7c2f2608dbadd9d8afdce344
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032535"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203601"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -77,13 +77,17 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
   - **Wi-Fi uniquement**
   - **Toujours**
 
+- **Fenêtres de notification** : quand cette option a la valeur **Désactiver**, les notifications, notamment les toasts, les appels entrants, les appels sortants, les alertes système et les erreurs système, ne sont pas affichées sur l’appareil. quand elle a la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage des notifications).
+- **Ignorer les premiers conseils d’utilisation** : choisissez **Activer** pour masquer ou ignorer les suggestions des applications concernant l’exécution de tutoriels ou la lecture de conseils d’introduction lors du démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
+
+
 ### <a name="system-security-settings"></a>Paramètres de sécurité système
 
 - **Exiger l’analyse des menaces sur les applications** : l’option **Exiger** applique la règle indiquant que le paramètre **Vérifier les applications** est activé pour les profils professionnels et personnels.
 
 ### <a name="kiosk-settings"></a>Paramètres kiosque
 
-Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications. Quand un appareil est en mode kiosque, seules les applications que vous ajoutez sont disponibles.
+Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications. Quand un appareil est en mode plein écran, seules les applications que vous ajoutez sont disponibles.
 
 **Mode kiosque** : choisissez si l’appareil doit exécuter une ou plusieurs applications.
 
@@ -119,14 +123,15 @@ Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications.
     
     L’option **Désactiver** empêche la suspension du mode kiosque. Si l’administrateur continue sélectionner le bouton Précédent jusqu’au bouton « Quitter kiosque », un message indique qu’un code secret est requis.
     
-    - **Code permettant de quitter le mode kiosque**  : entrez un code PIN numérique de 4 à 6 chiffres. L’administrateur utilise ce code PIN pour interrompre temporairement le mode kiosque.
+    - **Code permettant de quitter le mode kiosque ** : entrez un code PIN numérique de 4 à 6 chiffres. L’administrateur utilise ce code PIN pour interrompre temporairement le mode kiosque.
  
   - **Définir l’arrière-plan de l’URL personnalisée** : entrez une URL pour personnaliser l’arrière-plan de l’appareil en mode kiosque.
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
 
 - **Keyguard** : choisissez **Désactiver** pour empêcher l’utilisation de la fonctionnalité de verrouillage d’écran Keyguard sur l’appareil. L’option **Non configuré** permet l’utilisation des fonctionnalités Keyguard.
-- **Type de mot de passe obligatoire** : définissez le type de mot de passe demandé pour l’appareil. Les options disponibles sont les suivantes :
+- **Fonctionnalités keyguard désactivées** : quand keyguard est activé sur l’appareil, choisissez les fonctionnalités à désactiver. Par exemple, quand l’option **Sécuriser l’appareil photo** est cochée, la fonctionnalité appareil photo est désactivée sur l’appareil. Toutes les fonctionnalités non cochées sont activées sur l’appareil.
+- **Type de mot de passe requis** : définissez le type de mot de passe demandé pour l’appareil. Les options disponibles sont les suivantes :
   - **Au moins numérique**
   - **Chiffres complexes** : les chiffres répétés ou consécutifs (comme « 1111 » ou « 1234 ») ne sont pas autorisés.
   - **Au moins alphabétique**
@@ -146,6 +151,32 @@ Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications.
 - **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
 - **Changements de compte** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
 
+### <a name="connectivity"></a>Connectivité
+
+- **VPN AlwaysOn** : choisissez **Activer** pour indiquer à un client VPN de se connecter et de se reconnecter automatiquement au réseau VPN. Les connexions VPN Always On restent activées ou s’activent immédiatement quand l’utilisateur verrouille ou redémarre son appareil, ou quand le réseau sans fil change. 
+
+  Choisissez **Non configuré** pour désactiver en permanence la fonctionnalité VPN Always On pour tous les clients VPN.
+
+  > [!IMPORTANT]
+  > Veillez à ne déployer qu’une seule stratégie VPN Always On sur un seul appareil. Le déploiement de plusieurs stratégies VPN Always On sur un seul appareil n’est pas pris en charge.
+
+- **Client VPN** : choisissez un client VPN qui prend en charge AlwaysOn. Les options disponibles sont les suivantes :
+  - Cisco AnyConnect
+  - Accès F5
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - Personnalisé
+    - **ID de package** : entrez l’ID de package de l’application dans le Google Play Store. Par exemple, si l’URL de l’application dans le Play Store est `https://play.google.com/store/details?id=com.contosovpn.android.prod`, l’ID de package est `com.contosovpn.android.prod`.
+
+  > [!IMPORTANT]
+  >  - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
+  >  - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
+  >  - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
+
+- **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
+
+  Choisissez **Non configuré** pour permettre au trafic de passer par le tunnel VPN ou le réseau mobile.
+
 ## <a name="work-profile-only"></a>Profil professionnel uniquement 
 
 ### <a name="work-profile-settings"></a>Paramètres de profil professionnel
@@ -156,7 +187,7 @@ Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications.
 - **Partage de données entre profils professionnels et personnels** : choisissez cette option pour autoriser les applications du profil professionnel à partager des données avec les applications du profil personnel. Par exemple, vous pouvez contrôler les actions de partage dans les applications, notamment l’option **Partager** dans l’application de navigateur Chrome. Ce paramètre ne s’applique pas au comportement du Presse-papiers pour les opérations de type copier/coller. Voici vos options de partage :
   - **Restrictions de partage par défaut** : comportement de partage par défaut de l’appareil, qui varie en fonction de la version d’Android. Par défaut, le partage du profil personnel vers le profil professionnel est autorisé. Le partage du le profil professionnel vers le profil personnel est aussi bloqué par défaut. Ce paramètre empêche les partages de données du profil professionnel vers le profil personnel. Sur les appareils exécutant les versions 6.0 et ultérieures, Google ne bloque pas le partage du profil personnel vers le profil professionnel.
   - **Les applications du profil professionnel peuvent gérer une demande de partage venant d’un profil personnel** : active la fonctionnalité intégrée Android qui autorise le partage des données entre le profil personnel et le profil professionnel. Lorsque cette option est activée, une demande de partage à partir d’une application du profil personnel peut partager avec les applications associées au profil professionnel. Ce paramètre est le comportement par défaut des appareils Android exécutant des versions antérieures à 6.0.
-  - **Autoriser le partage au-delà des limites**  : permet le partage dans les deux sens au-delà de la limite du profil professionnel. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
+  - **Autoriser le partage au-delà des limites ** : permet le partage dans les deux sens au-delà de la limite du profil professionnel. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
 
 - **Notifications du profil professionnel quand l’appareil est verrouillé** : permet de déterminer si les applications du profil professionnel peuvent afficher des données dans des notifications quand l’appareil est verrouillé. L’option **Bloquer** n’affiche pas les données. L’option **Non configuré** affiche les données.
 - **Autorisations des applications par défaut** : Définit la stratégie d’autorisation par défaut pour toutes les applications dans le profil professionnel. À compter d’Android 6, l’utilisateur est invité à accorder certaines autorisations requises par les applications lorsque l’application est lancée. Ce paramètre de stratégie vous permet de décider si les utilisateurs sont invités à accorder des autorisations pour toutes les applications du profil professionnel. Par exemple, vous pouvez affecter au profil professionnel une application qui nécessite un accès à l’emplacement. Normalement, cette application invite l’utilisateur à approuver ou refuser l’accès à l’emplacement pour l’application. Utilisez cette stratégie pour accorder automatiquement les autorisations sans invite, refuser automatiquement les autorisations sans invite, ou laisser l’utilisateur final décider. Choisissez parmi :
@@ -249,7 +280,7 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
   >  - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
   >  - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
 
-- **Mode de verrouillage** : vous pouvez **activer** cette option pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
+- **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
 
   Choisissez **Non configuré** pour permettre au trafic de passer par le tunnel VPN ou le réseau mobile.
 
@@ -257,4 +288,4 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
 
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
-Vous pouvez également créer des profils kiosque pour des appareils [Android](device-restrictions-android.md#kiosk) et [Windows 10](kiosk-settings.md).
+Vous pouvez également créer des profils plein écran pour des appareils [Android](device-restrictions-android.md#kiosk) et [Windows 10](kiosk-settings.md).

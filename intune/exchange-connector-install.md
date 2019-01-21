@@ -15,16 +15,16 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28886382da00f5c07129f4e69e0bbadf97634420
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 3e66dd3d77cc36a6d311afea82e0f2087b469495
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817260"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239589"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Configurer le connecteur Exchange local Intune dans Microsoft Intune Azure
 
-Dans un environnement Exchange Server local, l’accès conditionnel Intune peut être utilisé pour autoriser ou bloquer l’accès à des boîtes aux lettres locales Exchange. Utilisez des connecteurs locaux Exchange Active Sync pour connecter Intune à vos organisations Exchange, et configurer l’accès conditionnel Intune ainsi que des stratégies de conformité des appareils. Ensuite, quand un appareil tente de se connecter à Exchange, Intune détermine si l’appareil est inscrit dans Intune et conforme. Pour déterminer quels appareils sont inscrits dans Intune, le connecteur Exchange local mappe les enregistrements Exchange Active Sync (EAS) dans Exchange Server à des enregistrements Intune. Pour plus d’informations sur la manière dont cela fonctionne, consultez [Pour Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?](conditional-access-intune-common-ways-use.md)
+Dans un environnement Exchange Server local, l’accès conditionnel Intune peut être utilisé pour autoriser ou bloquer l’accès à des boîtes aux lettres locales Exchange. Utilisez des connecteurs locaux Exchange Active Sync pour connecter Intune à vos organisations Exchange, et configurer l’accès conditionnel Intune ainsi que des stratégies de conformité des appareils. Ensuite, quand un appareil tente de se connecter à Exchange, Intune détermine si l’appareil est conforme et inscrit dans Intune. Pour déterminer quels appareils sont inscrits dans Intune, le connecteur Exchange local mappe les enregistrements Exchange Active Sync (EAS) dans Exchange Server à des enregistrements Intune. Pour plus d’informations sur la manière dont cela fonctionne, consultez [Pour Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?](conditional-access-intune-common-ways-use.md)
 
 > [!IMPORTANT]
 > Intune prend désormais en charge plusieurs connecteurs Exchange locaux par abonnement. Si vous avez plusieurs organisations Exchange locales, vous pouvez configurer un connecteur distinct pour chacune d’elles.
@@ -42,7 +42,7 @@ Le tableau suivant indique la configuration requise pour l’ordinateur sur lequ
 
 |            Condition requise             |                                                                                                                                                                                                        Plus d’informations                                                                                                                                                                                                        |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Systèmes d'exploitation          |                                                               Intune prend en charge le connecteur Exchange local sur un ordinateur qui exécute une édition de Windows Server 2008 SP2 64 bits, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 ou Windows Server 2016.<br /><br />Le connecteur n'est pas pris en charge sur une installation Server Core.                                                                |
+|         Systèmes d'exploitation          |                                                               Intune prend en charge le connecteur Exchange local sur un ordinateur qui exécute une édition de Windows Server 2008 SP2 64 bits, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 ou Windows Server 2016.<br /><br />Le connecteur n’est pas pris en charge sur les installations Server Core.                                                                |
 |         Microsoft Exchange         |                                                                           Pour utiliser les connecteurs locaux, vous devez avoir Microsoft Exchange 2010 SP3 ou ultérieur ou la version de Microsoft Exchange Online Dedicated existante. Pour déterminer si votre environnement Exchange Online Dedicated présente la <strong>nouvelle</strong> configuration ou une configuration <strong>héritée</strong>, contactez votre responsable de comptes.                                                                           |
 | Autorité de gestion des appareils mobiles |                                                                                                                              [Définit Intune comme autorité de gestion des appareils mobiles](mdm-authority-set.md).                                                                                                                               |
 |              Matériel              |                                                                                                                                                     L’ordinateur sur lequel vous installez le connecteur nécessite un processeur 1,6 GHz avec 2 Go de mémoire RAM et 10 Go d’espace disque libre.                                                                                                                                                      |
@@ -116,20 +116,20 @@ Effectuez les étapes suivantes pour installer le connecteur Exchange local d’
 
        4. Choisissez **OK**.
 
-   5. Dans les champs **Utilisateur (Domaine\utilisateur)** et **Mot de passe**, entrez les informations d’identification nécessaires pour la connexion à votre serveur Exchange.
+4. Dans les champs **Utilisateur (Domaine\utilisateur)** et **Mot de passe**, entrez les informations d’identification nécessaires pour la connexion à votre serveur Exchange.
 
-   6.  Fournissez les informations d’identification nécessaires pour envoyer des notifications à la boîte aux lettres Exchange Server d’un utilisateur. Cet utilisateur peut être dédié aux notifications seulement. Il a besoin d’une boîte aux lettres Exchange pour pouvoir envoyer des notifications par e-mail. Vous pouvez configurer ces notifications avec des stratégies d’accès conditionnel dans Intune.  
+5. Fournissez les informations d’identification nécessaires pour envoyer des notifications à la boîte aux lettres Exchange Server d’un utilisateur. Cet utilisateur peut être dédié aux notifications seulement. Il a besoin d’une boîte aux lettres Exchange pour pouvoir envoyer des notifications par e-mail. Vous pouvez configurer ces notifications avec des stratégies d’accès conditionnel dans Intune.  
 
-       Vérifiez que le service de découverte automatique et les services web Exchange sont configurés sur le serveur d'accès au client Exchange. Pour plus d’informations, consultez [Serveur d’accès au client](https://technet.microsoft.com/library/dd298114.aspx).
+       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 
-   7.  Dans le champ **Mot de passe** , entrez le mot de passe de ce compte pour permettre à Intune d’accéder au serveur Exchange Server.
+6. Dans le champ **Mot de passe** , entrez le mot de passe de ce compte pour permettre à Intune d’accéder au serveur Exchange Server.
 
-   8. Choisissez **Se connecter**.
+7. Choisissez **Se connecter**.
 
    > [!NOTE]
    > La configuration de la connexion peut prendre quelques minutes.
 
-Lors de la configuration, le connecteur Exchange stocke vos paramètres de proxy pour permettre l’accès à Internet. Si vos paramètres de proxy changent, vous devez reconfigurer le connecteur Exchange pour lui appliquer les paramètres de proxy mis à jour.
+Lors de la configuration, le connecteur Exchange stocke vos paramètres de proxy pour permettre l’accès à Internet. Si vos paramètres de proxy changent, vous devez reconfigurer le connecteur Exchange pour lui appliquer les nouveaux paramètres de proxy.
 
 Une fois la connexion configurée par le connecteur Exchange, les appareils mobiles qui sont associés à des utilisateurs gérés dans Exchange sont automatiquement synchronisés et ajoutés au connecteur Exchange. Cette synchronisation peut prendre un certain temps.
 
@@ -142,7 +142,7 @@ Intune prend en charge plusieurs connecteurs Exchange locaux par abonnement. Pou
 Les fonctionnalités de haute disponibilité, de surveillance et de synchronisation manuelle décrites dans les sections suivantes sont prises en charge pour chaque organisation Exchange connectée à Intune.
 
 ## <a name="on-premises-exchange-connector-high-availability-support"></a>Prise en charge d’un haut niveau de disponibilité pour le connecteur Exchange local 
-Une fois que le connecteur Exchange crée une connexion à Exchange en utilisant l’autorité de certification spécifiée, le connecteur a la possibilité de découverte d’autres autorités de certification. Si l’autorité de certification principale est indisponible, le connecteur bascule vers une autre autorité de certification disponible, jusqu'à ce que l’autorité de certification principale redevienne disponible. Cette fonctionnalité est activée par défaut. Vous pouvez désactiver cette fonctionnalité en procédant comme suit :
+Une fois que le connecteur Exchange a créé une connexion à Exchange en utilisant l’autorité de certification spécifiée, il peut découvrir d’autres autorités de certification. Si l’autorité de certification principale est indisponible, le connecteur bascule vers une autre autorité de certification disponible, jusqu'à ce que l’autorité de certification principale redevienne disponible. Cette fonctionnalité est activée par défaut. Vous pouvez désactiver cette fonctionnalité en procédant de la façon suivante :
 1. Sur le serveur où est installé le connecteur Exchange, accédez à %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. À l’aide d’un éditeur de texte, ouvrez **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 3. Remplacez &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; par &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt; pour désactiver la fonctionnalité.    
@@ -157,12 +157,12 @@ Une fois que vous avez correctement configuré les connecteurs Exchange, vous po
 
 Vous pouvez également vérifier la date et l'heure de la dernière tentative de synchronisation réussie.
 
-### <a name="system-center-operations-manager-scom-management-pack"></a>Pack d’administration de System Center Operations Manager (SCOM)
+### <a name="system-center-operations-manager-management-pack"></a>Pack d’administration de System Center Operations Manager
 
-À partir de la version Intune 1710, vous pouvez utiliser le [pack d’administration SCOM pour le connecteur Exchange et Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Ce pack offre différents moyens de surveiller le connecteur Exchange quand vous devez résoudre des problèmes.
+À compter de la version 1710 d’Intune, vous pouvez utiliser le [pack d’administration Operations Manager pour le connecteur Exchange et Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Ce pack offre différents moyens de surveiller le connecteur Exchange quand vous devez résoudre des problèmes.
 
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Forcer manuellement une synchronisation rapide ou une synchronisation complète
-Un connecteur Exchange local synchronise automatiquement les enregistrements d’appareils EAS et Intune de façon régulière. Si l’état de conformité d’un appareil change, le processus de synchronisation automatique met régulièrement à jour les enregistrements afin que l’accès à l’appareil puisse être bloqué ou autorisé en conséquence.
+Un connecteur Exchange local synchronise automatiquement et régulièrement Intune et les enregistrements d’appareils EAS. Si l’état de conformité d’un appareil change, le processus de synchronisation automatique met régulièrement à jour les enregistrements afin que l’accès à l’appareil puisse être bloqué ou autorisé en conséquence.
 
    - La **synchronisation rapide** est exécutée régulièrement, plusieurs fois par jour. Une synchronisation rapide récupère les informations sur l’appareil pour les utilisateurs sous licence Intune et ciblés par l’accès conditionnel Exchange local qui ont changés depuis la dernière synchronisation.
 

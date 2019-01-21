@@ -14,16 +14,16 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 080205e601b857d4765eb6b97eeeeeb8f4e6fc1b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0da6861b6c49fc37691b8c6e464a506670643fa3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187155"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203329"
 ---
 # <a name="use-scope-tags-to-filter-policies"></a>Utiliser des étiquettes de délimitation pour filtrer les stratégies
 
-Les étiquettes de délimitation vous permettent de filtrer les stratégies avec des étiquettes que vous personnalisez.
+Les étiquettes de délimitation vous permettent de filtrer les stratégies avec des étiquettes que vous personnalisez. Vous pouvez appliquer des étiquettes de délimitation aux rôles et aux applications.
 
 Par exemple, créez une étiquette de délimitation appelée « Service Ingénierie », puis affectez-la aux profils de configuration liés au service d’ingénierie. Affectez cette même étiquette à un rôle « Administrateurs Ingénierie ». Ceux-ci verront uniquement les stratégies avec l’étiquette « Département Ingénierie ».
 
@@ -38,6 +38,11 @@ Choisissez **Configuration de l’appareil** > **Profils** > choisissez un profi
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Pour affecter une étiquette de délimitation à un rôle
 
 Choisissez **Rôles** > **Tous les rôles** > **Policy and Profile Manager (Gestionnaire des stratégies et des profils)** > **Affectations** > **Délimitation (étiquettes)**.
+
+## <a name="to-assign-a-scope-tag-to-an-app"></a>Pour affecter une étiquette de délimitation à une application
+
+Choisissez **Applications clientes** > **Applications** > choisissez une application > **Propriétés** > **Étendue (balises)** > **Ajouter** > choisissez les étiquettes > **Sélectionner** > **OK** > **Enregistrer**.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

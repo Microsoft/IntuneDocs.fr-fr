@@ -14,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65457a65504b633018bb61851f16c8c65fa1c806
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185676"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203091"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
 
@@ -30,7 +30,7 @@ Les fonctionnalités de l’appareil vous permettent de contrôler une gamme de 
 - paramètres AirPrint et AirPlay
 - disposition de l’écran d’accueil
 - notifications à partir d’applications
-- configuration de l'appareil partagé
+- Message d’écran de verrouillage
 - Configuration de l’authentification unique
 - Filtrage du contenu web
 
@@ -43,19 +43,19 @@ Cet article explique les notions de base de la configuration des profils de fonc
 3. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 4. Entrez les propriétés suivantes :
 
-   - **Nom** : attribuez un nom descriptif au nouveau profil.
-   - **Description :** entrez une description pour le profil. (Ceci est facultatif mais recommandé.)
+   - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+   - **Description** : Entrez la description du profil. (Ce paramètre est facultatif, mais recommandé.)
    - **Plateforme** : sélectionnez le type de plateforme :
      - **iOS**
      - **MacOS**
    - **Type de profil** : sélectionnez **Fonctionnalités de l’appareil**.
-   - **Paramètres** : les paramètres varient selon la plateforme que vous choisissez. Les articles suivants décrivent les paramètres pour chaque type de profil :
+   - **Paramètres** : les paramètres varient en fonction de la plateforme que vous choisissez. Les articles suivants décrivent les paramètres pour chaque type de profil :
 
      - [Paramètres Intune AirPrint pour appareils iOS et Mac OS](air-print-settings-ios-macos.md)
      - [Paramètres Intune AirPlay pour appareils iOS](airplay-settings-ios.md)
      - [Paramètres de disposition de l’écran d’accueil Intune pour les appareils iOS](home-screen-settings-ios.md)
      - [Paramètres de notification des applications Intune pour les appareils iOS](app-notification-settings-ios.md)
-     - [Paramètres de configuration des appareils Intune partagés pour iOS](shared-device-settings-ios.md)
+     - [Paramètres de message d’écran de verrouillage pour iOS](shared-device-settings-ios.md)
      - [Configurer Intune pour l’authentification unique des appareils iOS](sso-ios.md)
      - [Paramètres de filtrage de contenu web Intune pour les appareils iOS](web-content-filter-settings-ios.md)
 

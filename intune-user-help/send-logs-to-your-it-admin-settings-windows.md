@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/25/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1e9b9908fcc48e9137c07f9a5397661d66e5be95
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 88107a580eb72f647bb7c32d52ed5d3c848cd392
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146737"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203312"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Envoyer les journaux au support technique de votre entreprise à partir de l’application Paramètres pour Windows 10
 
-Si vous recevez une erreur pendant que vous utilisez l’appareil Windows 10 géré par votre entreprise, vous pouvez aider le support technique de votre entreprise à résoudre le problème en lui envoyant des informations par e-mail. Ces informations sont conservées sur votre appareil dans un document spécifique appelé _journal de diagnostic_.
+Utilisez l’application Paramètres pour résoudre les problèmes du Portail d’entreprise pour Windows 10. Si vous rencontrez un problème durant l’utilisation de l’application sur votre appareil Windows 10, vous pouvez envoyer un e-mail à votre équipe de support pour obtenir de l’aide. Les événements et les erreurs qui se produisent dans l’application Portail d’entreprise sont enregistrés sur votre appareil dans un document spécial nommé _journal de diagnostic_. Ces journaux peuvent contenir des insights supplémentaires sur l’erreur. Quand ils sont exportés, ils sont utiles aux équipes de support.
 
-1. Pour ouvrir l’application **Paramètres** Windows, accédez au menu **Démarrer**, puis sélectionnez le bouton **Paramètres**. Vous pouvez également rechercher « paramètres » dans la barre de recherche.
+1. Pour ouvrir l’application **Paramètres**, accédez au menu **Démarrer** > **Paramètres**. Vous pouvez également rechercher *paramètres* dans la barre de recherche.
 2. Accédez à **Comptes** > **Accès scolaire ou professionnel**.
-3. Sélectionnez « Exporter vos fichiers journaux de gestion ».
+3. Sélectionnez **Exporter vos fichiers journaux de gestion**.
 
    ![Écran « Accès scolaire ou professionnel », qui montre l’option d’exportation sous le titre « Paramètres associés ».](./media/w10-export-logs.png)
 

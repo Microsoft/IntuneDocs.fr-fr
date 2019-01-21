@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,184 +14,184 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
-ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
+ms.openlocfilehash: f653cd8c7eb0181581d9c21b7f9bc35a008c6df6
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52579164"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122540"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Supprimer des certificats SCEP et PKCS dans Microsoft Intune
 
-Dans Microsoft Intune, vous pouvez ajouter des certificats SCEP et PKCS à des appareils. En outre, vous pouvez supprimer ces certificats quand vous [réinitialisez](devices-wipe.md#wipe) ou [mettez hors service](devices-wipe.md#retire) l’appareil. Il existe d’autres scénarios où les certificats sont automatiquement supprimés et d’autres encore où les certificats restent sur l’appareil.
+Dans Microsoft Intune, vous pouvez ajouter des certificats SCEP (Simple Certificate Enrollment Protocol) et PKCS (Public Key Cryptography Standards) à des appareils. En outre, vous pouvez supprimer ces certificats quand vous [réinitialisez](devices-wipe.md#wipe) ou [mettez hors service](devices-wipe.md#retire) l’appareil. 
 
-Cet article liste quelques scénarios courants et leur impact sur les certificats PKCS et SCEP.
+Il existe d’autres scénarios où les certificats sont automatiquement supprimés et d’autres encore où les certificats restent sur l’appareil. Cet article liste quelques scénarios courants et leur impact sur les certificats PKCS et SCEP.
 
 > [!NOTE]
-> Pour supprimer et révoquer des certificats pour un utilisateur qui est en cours de suppression d’Active Directory (AD) ou d’Azure AD, veillez à suivre les étapes dans l’ordre :
+> Pour supprimer et révoquer des certificats pour un utilisateur qui est supprimé du service Azure AD (Azure Active Directory) ou Active Directory local, effectuez les étapes suivantes dans l’ordre :
 >
->    1. Réinitialiser ou mettre hors service l’appareil de l’utilisateur
->    2. Supprimer l’utilisateur d’AD ou d’Azure AD
+> 1. Réinitialiser ou mettre hors service l’appareil de l’utilisateur.
+> 2. Supprimer l’utilisateur du service Azure AD ou Active Directory local.
 
 ## <a name="windows-devices"></a>Appareils Windows
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
-- Un certificat SCEP est révoqué *et* supprimé quand :
+Un certificat SCEP est révoqué *et* supprimé quand :
 
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - Le profil de certificat est supprimé de l’affectation de groupe
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
+- L’appareil est supprimé d’un groupe Azure AD.
+- Un profil de certificat est supprimé de l’affectation de groupe.
 
-- Un certificat SCEP est révoqué quand :
-  - L’administrateur change ou met à jour le profil SCEP
+Un certificat SCEP est révoqué quand :
+- Un administrateur change ou met à jour le profil SCEP.
 
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
+Les certificats SCEP *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
 
 #### <a name="pkcs-certificates"></a>Certificats PKCS
 
-- Un certificat PKCS est révoqué *et* supprimé quand :
+Un certificat PKCS est révoqué *et* supprimé quand :
 
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats PKCS **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
-  - L’administrateur change ou met à jour le profil PKCS
-  - Le profil de certificat est supprimé de l’affectation de groupe
+Les certificats PKCS *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
+- Un administrateur change ou met à jour le profil PKCS.
+- Un profil de certificat est supprimé de l’affectation de groupe.
 
 
 ## <a name="ios-devices"></a>Périphériques iOS
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
-- Un certificat SCEP est révoqué *et* supprimé quand :
+Un certificat SCEP est révoqué *et* supprimé quand :
 
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - Le profil de certificat est supprimé de l’affectation de groupe
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
+- L’appareil est supprimé du groupe Azure AD.
+- Un profil de certificat est supprimé de l’affectation de groupe.
 
-- Un certificat SCEP est révoqué quand :
-  - L’administrateur change ou met à jour le profil SCEP
+Un certificat SCEP est révoqué quand :
+- Un administrateur change ou met à jour le profil SCEP.
 
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
+Les certificats SCEP *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
 
 #### <a name="pkcs-certificates"></a>Certificats PKCS
 
-- Un certificat PKCS est révoqué *et* supprimé quand :
+Un certificat PKCS est révoqué *et* supprimé quand :
 
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Un certificat PKCS est supprimé quand :
-  - Le profil de certificat est supprimé de l’affectation de groupe
+Un certificat PKCS est supprimé quand :
+- Un profil de certificat est supprimé de l’affectation de groupe.
   
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats PKCS **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
-  - L’administrateur change ou met à jour le profil PKCS
+Les certificats PKCS *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
+- Un administrateur change ou met à jour le profil PKCS.
 
 ## <a name="android-knox-devices"></a>Appareils Android Knox
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
-- Un certificat SCEP est révoqué *et* supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
+Un certificat SCEP est révoqué *et* supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
 
-- Un certificat SCEP est révoqué quand :
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - Le profil de certificat est supprimé de l’affectation de groupe
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure Active Directory (AD)
-  - L’administrateur change ou met à jour le profil SCEP
+Un certificat SCEP est révoqué quand :
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
+- L’appareil est supprimé d’un groupe Azure AD.
+- Un profil de certificat est supprimé de l’affectation de groupe.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
+- Un administrateur change ou met à jour le profil SCEP.
 
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
+Les certificats SCEP *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
 
 #### <a name="pkcs-certificates"></a>Certificats PKCS
 
-- Un certificat PKCS est révoqué *et* supprimé quand :
+Un certificat PKCS est révoqué *et* supprimé quand :
 
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Le certificat racine est supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [réinitialisation](devices-wipe.md#wipe)
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
+Un certificat racine est supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute l’action de [réinitialisation](devices-wipe.md#wipe).
+- Un administrateur exécute l’action de [mise hors service](devices-wipe.md#retire).
 
-- Les certificats PKCS **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
-  - L’administrateur change ou met à jour le profil PKCS
-  - Le profil de certificat est supprimé de l’affectation de groupe
+Les certificats PKCS *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
+- Un administrateur change ou met à jour le profil PKCS.
+- Un profil de certificat est supprimé de l’affectation de groupe.
   
   
 > [!NOTE]
-> Les scénarios ci-dessus ne s’appliquent pas aux appareils Android for Work. Les appareils Android d’ancienne génération (tous les appareils autres que Samsung, avec un profil non professionnel) ne sont pas activés pour la suppression de certificat. 
+> Les scénarios précédents ne s’appliquent pas aux appareils Android for Work. Les appareils Android d’ancienne génération (tous les appareils autres que Samsung, avec un profil non professionnel) ne sont pas activés pour la suppression de certificat. 
 
 ## <a name="macos-certificates"></a>Certificats macOS
 
 #### <a name="scep-certificates"></a>Certificats SCEP
 
-- Un certificat SCEP est révoqué *et* supprimé quand :
-  - Un utilisateur final se désinscrit
-  - L’administrateur exécute une action de [mise hors service](devices-wipe.md#retire)
-  - L’appareil est supprimé du groupe Azure Active Directory (AD)
-  - Le profil de certificat est supprimé de l’affectation de groupe
+Un certificat SCEP est révoqué *et* supprimé quand :
+- Un utilisateur se désinscrit.
+- Un administrateur exécute une action de [mise hors service](devices-wipe.md#retire).
+- L’appareil est supprimé d’un groupe Azure AD.
+- Un profil de certificat est supprimé de l’affectation de groupe.
 
-- Un certificat SCEP est révoqué quand :
-  - L’administrateur change ou met à jour le profil SCEP
+Un certificat SCEP est révoqué quand :
+- Un administrateur change ou met à jour le profil SCEP.
 
-- Les certificats SCEP **restent** sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
-  - Un utilisateur final perd la licence Intune
-  - L’administrateur retire la licence Intune
-  - L’administrateur supprime l’utilisateur ou le groupe d’Azure AD
+Les certificats SCEP *restent* sur l’appareil (ils ne sont pas révoqués ni supprimés) quand :
+- Un utilisateur perd la licence Intune.
+- Un administrateur retire la licence Intune.
+- Un administrateur supprime l’utilisateur ou le groupe d’Azure AD.
 
 > [!NOTE]
 > L’utilisation de l’action de [réinitialisation](devices-wipe.md#wipe) pour réinitialiser des appareils macOS aux paramètres d’usine n’est pas prise en charge.

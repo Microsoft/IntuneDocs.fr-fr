@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 12d050bb7ef959b940e2b758284863319282f179
-ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
+ms.openlocfilehash: ad2d2842672853587da1396cae6c15ebd7ade44a
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553654"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122636"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -37,7 +37,7 @@ L’action **Réinitialiser** rétablit les paramètres d’usine d’un apparei
 |Action Réinitialiser|**Conserver le compte d’utilisateur et l’état d’inscription**|Supprimé de la gestion Intune|Description|
 |:-------------:|:------------:|:------------:|------------|
 |**Réinitialisation**| Désactivée | Oui | Efface tous les comptes d’utilisateur, les données, les stratégies de gestion des appareils mobiles et les paramètres. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
-|**Réinitialisation**| Désactivée | Non | Réinitialise toutes les stratégies de gestion des appareils mobiles. Conserve les données et les comptes d’utilisateur. Réinitialise les paramètres utilisateur par défaut. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
+|**Réinitialisation**| Activée | Non | Réinitialise toutes les stratégies de gestion des appareils mobiles. Conserve les données et les comptes d’utilisateur. Réinitialise les paramètres utilisateur par défaut. Réinitialise le système d’exploitation à son état et ses paramètres par défaut.|
 
 L’option **Conserver le compte d’utilisateur et l’état d’inscription** est disponible uniquement pour Windows 10 version 1709 ou ultérieure.
 
@@ -192,6 +192,10 @@ Si vous souhaitez supprimer complètement un appareil Apple DEP pour qu’il ne 
 6. Choisissez **Reassign** (Réaffecter).
 
     ![Capture d’écran de réaffectation Apple](./media/devices-wipe/apple-reassign.png)
+
+## <a name="fresh-start"></a>Nouvelle version
+
+Applicable aux appareils Windows 10. Apprenez-en davantage sur [Nouvelle version](https://docs.microsoft.com/intune/device-fresh-start).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

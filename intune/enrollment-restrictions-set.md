@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122539"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -81,6 +81,8 @@ Pour changer les paramètres d’une restriction de type d’appareil, effectuez
     - Profil professionnel Android prend en charge majeur.mineur.révision.build.
     - iOS prend en charge major.minor.rev. Les versions du système d’exploitation ne s’appliquent pas aux appareils Apple inscrits par le biais du Programme d’inscription des appareils, d’Apple School Manager ou de l’application Apple Configurator.
     - Windows prend en charge major.minor.rev.build pour Windows 10 uniquement.
+> [!Note]
+> Windows 10 ne fournit pas le numéro de build au cours de l’inscription. Par conséquent, si vous entrez par exemple 10.0.17134.100 et que l’appareil correspond à 10.0.17134.174, il est bloqué lors de l’inscription.
 8. Choisissez s’il faut **Autoriser** ou **Bloquer** les appareils **personnels** pour chaque plateforme listée.
 9. Choisissez **OK**.
 

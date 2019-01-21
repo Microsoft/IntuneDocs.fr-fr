@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ef84a77961dafc1a881bdb54208fae602857ae32
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: 807bc306848a731e63f7f854a9d4b451264e21a8
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067463"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210803"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Quelle sera l’expérience de protection de base de vos utilisateurs sur des applications Office 365 gérées dans Microsoft Intune ?
 
@@ -89,33 +89,32 @@ Cet article utilise OneDrive Entreprise comme exemple pour montrer l’expérien
 
 ## <a name="what-policies-does-this-wizard-set"></a>Quelles sont les stratégies définies par cet Assistant ?
 
-|     |       | |
-|----|--------|-|
-|**Nom**|Gérer les applications Office 365| |
-| **Description**|Créé par l’Assistant d’applications Gérer Office 365| |
-| |  | |
-| **Nom du paramètre** |**Valeur de la stratégie iOS** | **Valeur de la stratégie Android** |
-|Interdire les sauvegardes iTunes et iCloud| Non | N/A |
-|Interdire les sauvegardes Android |N/A | Non|
-|Autoriser l'application à transférer des données vers d'autres applications | Toutes les applications | Toutes les applications|
-|Autoriser l'application à recevoir des données d'autres applications| Toutes les applications | Toutes les applications|
-|Interdire l’option Enregistrer sous | Non | Non|
-|Restreindre les opérations Couper, Copier et Coller avec d’autres applications | N’importe quelle application | N’importe quelle application |
-|Afficher le contenu web uniquement dans Managed Browser | Non| Non|
-|Chiffrer les données de l'application | Quand l’appareil est verrouillé | Oui|
-|Désactiver la synchronisation des contacts | Non| Non|
-|Désactiver l’impression | Non | Non|
-|Exiger un code confidentiel d’accès | Non | Oui|
-|Nombre de tentatives avant réinitialisation du code confidentiel | N/A |5|
-|Autoriser un code PIN simple | N/A |Oui|
-|Longueur du code PIN | N/A | 4|
-|Autoriser une empreinte digitale à la place du code confidentiel | N/A | Oui |
-|Exiger des informations d'identification d'entreprise pour l'accès | Non | Non|
-|Bloquer l’exécution des applications gérées sur les appareils jailbroken ou rootés | Non | Non|
-|Revérifier les exigences d'accès après (minutes) - Délai | 30 | 30|
-|Revérifier les exigences d'accès après (minutes) - Période de grâce hors connexion | 720 |720|
-|Intervalle hors connexion (jours) avant la réinitialisation des données d'application | 90 | 90|
-|Bloquer la capture d'écran (appareils Android uniquement) | N/A | Non |
+**Nom** : Gérer les applications Office 365<br>
+**Description** : Créé par l’Assistant d’applications Gérer Office 365
+
+| Nom du paramètre | Valeur de la stratégie iOS | Valeur de la stratégie Android |
+|------------------------------------------------------------------------|-----------------------|----------------------|
+| Interdire les sauvegardes iTunes et iCloud | Non | N/A |
+| Interdire les sauvegardes Android | N/A | Non |
+| Autoriser l'application à transférer des données vers d'autres applications | Toutes les applications | Toutes les applications |
+| Autoriser l'application à recevoir des données d'autres applications | Toutes les applications | Toutes les applications |
+| Interdire l’option Enregistrer sous | Non | Non |
+| Restreindre les opérations Couper, Copier et Coller avec d’autres applications | N’importe quelle application | N’importe quelle application |
+| Afficher le contenu web uniquement dans Managed Browser | Non | Non |
+| Chiffrer les données de l'application | Quand l’appareil est verrouillé | Oui |
+| Désactiver la synchronisation des contacts | Non | Non |
+| Désactiver l’impression | Non | Non |
+| Exiger un code confidentiel d’accès | Non | Oui |
+| Nombre de tentatives avant réinitialisation du code confidentiel | N/A | 5 |
+| Autoriser un code PIN simple | N/A | Oui |
+| Longueur du code PIN | N/A | 4 |
+| Autoriser une empreinte digitale à la place du code confidentiel | N/A | Oui |
+| Exiger des informations d'identification d'entreprise pour l'accès | Non | Non |
+| Bloquer l’exécution des applications gérées sur les appareils jailbroken ou rootés | Non | Non |
+| Revérifier les exigences d'accès après (minutes) - Délai | 30 | 30 |
+| Revérifier les exigences d'accès après (minutes) - Période de grâce hors connexion | 720 | 720 |
+| Intervalle hors connexion (jours) avant la réinitialisation des données d'application | 90 | 90 |
+| Bloquer la capture d'écran (appareils Android uniquement) | N/A | Non |
 
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Pourquoi une stratégie de code PIN d'application est-elle configurée uniquement pour les appareils Android ?
 Le chiffrement fonctionne différemment sur iOS et Android.

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1af474063ec7b6ccac2a36afbec421767f79444a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: afddf57f93ef2308ce8e8fd8aab8d74c3419a3ea
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642844"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203414"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -192,7 +192,15 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     | <strong>Zoom</strong> | Donne à l’utilisateur la possibilité d’effectuer un zoom sur l’affichage pendant la configuration de l’appareil. |
     | <strong>Siri</strong> | Donne à l’utilisateur la possibilité de configurer Siri. |
     | <strong>Données de diagnostic</strong> | Affiche l’écran **Diagnostics**. Cet écran permet à l’utilisateur d’envoyer des données de diagnostic à Apple. |
-
+    | <strong>Afficher la sonnerie</strong> | Donner à l’utilisateur la possibilité d’activer Afficher la sonnerie |
+    | <strong>Confidentialité</strong> | Afficher l’écran de confidentialité. |
+    | <strong>Migration Android</strong> | Donner à l’utilisateur la possibilité de migrer des données à partir d’un appareil Android. |
+    | <strong>iMessage et FaceTime</strong> | Donner à l’utilisateur la possibilité de configurer iMessage et FaceTime. |
+    | <strong>Intégration</strong> | Afficher des écrans d’information sur l’intégration à des fins de formation des utilisateurs, par exemple pour Cover Sheet, le multitâche et le centre de contrôle. |
+    | <strong>Surveiller la migration</strong> | Donner à l’utilisateur la possibilité de migrer des données à partir d’une montre. |
+    | <strong>Heure de l’écran</strong> | Afficher l’écran Heure de l’écran. |
+    | <strong>Mise à jour logicielle</strong> | Afficher l’écran de mise à jour logicielle obligatoire. |
+    | <strong>Configuration SIM</strong> | Donner à l’utilisateur la possibilité d’ajouter un plan de téléphonie mobile. |
 
 14. Choisissez **OK**.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,26 +17,26 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150664"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203144"
 ---
-# <a name="use-managed-devices-to-get-work-done"></a>Utiliser des appareils gérés pour réaliser vos tâches
-Microsoft Intune est un logiciel qui permet aux organisations de gérer des appareils (tels que des smartphones, des tablettes et des PC), des applications et d’autres ressources d’entreprise telles que des e-mails. Cela permet aux employés d’accéder à leurs informations de travail à partir de pratiquement n’importe où sur presque n’importe quel appareil tout en contribuant à sécuriser les données d’entreprise.
+# <a name="use-managed-devices-to-access-work-or-school-resources"></a>Utiliser des appareils gérés pour accéder aux ressources professionnelles ou scolaires
+Microsoft Intune est un système de gestion d’appareils qui permet aux organisations de gérer l’accès aux appareils, aux applications et aux e-mails. Avec la gestion d’appareils, vous (employés, étudiants ou autres) pouvez accéder à vos informations professionnelles quasiment où que vous soyez et sur presque tous les appareils. Même quand vous travaillez à distance, vos informations ou celles de votre organisation sont sécurisées.
 
-Quand vous inscrivez un appareil à la gestion avec Intune, le service informatique peut gérer ces ressources professionnelles ou pédagogiques, les sécuriser et vous donner, à vous en tant qu’employé, la liberté d’utiliser l’appareil de votre choix pour effectuer votre travail. Une des principales méthodes pour le faire est d’inscrire l’appareil à la gestion dans le portail d’entreprise.
+Microsoft Intune est le logiciel que votre entreprise utilise pour répondre aux exigences de sécurité de ses appareils. Une fois que vous êtes prêt à gérer votre appareil, utilisez l’application Portail d’entreprise Intune. Avec cette application, vous pouvez utiliser votre appareil favori pour accéder à des ressources professionnelles ou scolaires. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Quelles informations mon entreprise peut-elle voir quand j’inscris mon appareil dans Intune ?
-Le service de support technique de votre entreprise peut consulter les informations professionnelles, mais pas vos informations personnelles. Il est particulièrement important de le savoir si vous inscrivez un appareil personnel en vue de l’utiliser au travail. Nous détaillons ce qu’il [peut voir et ce qu’il ne peut pas voir dans le prochain article de l’aide utilisateur](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+## <a name="what-information-can-my-company-see-when-i-get-my-device-managed"></a>Quelles sont les informations que mon entreprise peut voir quand je fais gérer mon appareil ?
+Une fois la configuration effectuée dans l’application Portail d’entreprise, l’équipe de support de votre entreprise voit uniquement les informations pertinentes. Vos informations personnelles ne sont pas visibles. Il est particulièrement important de le savoir si vous inscrivez un appareil personnel en vue de l’utiliser au travail. Découvrez exactement ce qui est [visible ou non dans le prochain article](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
-## <a name="how-do-i-get-the-company-portal"></a>Comment obtenir l’application Portail d’entreprise ?
-Vous pouvez obtenir le portail d’entreprise de deux façons différentes :
+## <a name="how-do-i-get-company-portal"></a>Comment obtenir l’application Portail d’entreprise ?
+Vous pouvez obtenir l’application Portail d’entreprise de plusieurs façons :
 
 - En installant l’application Portail d’entreprise sur votre appareil. Vous obtenez généralement l’application Portail d’entreprise en accédant à l’App Store sur votre appareil, mais le support technique de votre entreprise peut également l’installer pour vous.
-- En accédant au [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) que le support technique de votre entreprise a configuré.
+- En accédant au [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) que le support de votre entreprise a configuré.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Quelle est la différence entre l’application et le site web ?
 Il existe quelques différences mineures entre l’application Portail d’entreprise et le site web Portail d’entreprise, mais les deux permettent d’effectuer presque toutes les mêmes tâches . Exemples de tâche que vous pouvez effectuer :

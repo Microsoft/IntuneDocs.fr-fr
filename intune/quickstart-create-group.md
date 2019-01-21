@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 01/11/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d6c51a2823e95526b76e5e71e35420d1744b70f6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 6f7d7ccb4c94300d00f02dcace5c3a089cd9f2a2
+ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178376"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270569"
 ---
-# <a name="quickstart-create-a-group-to-manage-users"></a>Démarrage rapide : Créer un groupe pour gérer les utilisateurs
+# <a name="quickstart-create-a-group-to-manage-users"></a>Démarrage rapide : Créer un groupe pour gérer les utilisateurs
 
 Dans ce guide de démarrage rapide, vous allez utiliser Intune pour créer un groupe basé sur un utilisateur existant. Les groupes permettent de gérer vos utilisateurs et de contrôler l’accès des employés aux ressources de votre entreprise. Ces ressources peuvent faire partie de l’intranet de votre entreprise ou correspondre à des ressources externes, par exemple des sites SharePoint, des applications SaaS ou des applications web.
 
@@ -38,7 +38,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’[administrateur général ou administrateur de services Intune](users-add.md#types-of-administrators). Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
+Connectez-vous au [portail Intune](https://aka.ms/intuneportal) comme [administrateur général ou administrateur de service Intune](users-add.md#types-of-administrators). Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="create-a-group"></a>Créer un groupe
 
@@ -60,7 +60,7 @@ Une fois le groupe créé, il apparaît dans la liste **Tous les groupes**.
 
 Dans ce guide de démarrage rapide, vous avez utilisé Intune pour créer un groupe basé sur un utilisateur existant. Pour plus d’informations sur l’ajout de groupes dans Intune, consultez [Ajouter des groupes pour organiser des utilisateurs et des appareils](groups-add.md).
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Configurer l’inscription automatique pour les appareils Windows 10](quickstart-setup-auto-enrollment.md)
+> [Démarrage rapide : Configurer l’inscription automatique pour les appareils Windows 10](quickstart-setup-auto-enrollment.md)

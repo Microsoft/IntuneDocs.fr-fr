@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0c09a80f97056f7cb08d69d6a8deedc4e421a556
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 37483f0fa33db109510ee537772a7bdead79e4f3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190300"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203550"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise
 
@@ -66,7 +66,7 @@ Vous pouvez utiliser le volet **Dépanner** pour consulter les informations de l
 | 2.   | Sélection de l'utilisateur  | Nom de l’utilisateur actuellement sélectionné. Cliquez sur **Changer d’utilisateur** pour choisir un autre utilisateur.       |
 | 3.   | État de l’utilisateur  | Affiche pour cet utilisateur l’état de la licence Intune, le nombre d’appareils, la conformité de chaque appareil, le nombre d’applications et la conformité des applications.       |
 | 4.   | Informations utilisateur  | Utilisez la liste pour sélectionner les détails à consulter dans le volet. <br>Vous pouvez sélectionner : <ul><li>Applications clientes<li>Stratégies de conformité<li> Stratégies de configuration<li>Stratégies de protection des applications <li>Restrictions d’inscription</ul>      |
-| 5.   | Appartenance aux groupes  | Affiche les groupes dont l’utilisateur sélectionné est membre.       |
+| 5.   | Appartenance au groupe  | Affiche les groupes dont l’utilisateur sélectionné est membre.       |
 
 ## <a name="client-apps-reference"></a>Informations de référence sur les applications clientes
 
@@ -271,6 +271,15 @@ Quand vous choisissez une ligne d’échec, des détails supplémentaires sont f
 | Échec de l’autorisation d’inscription | Une inscription a été tentée à l’aide d’une ancienne version du Portail d’entreprise. |
 | Appareil non pris en charge | L’appareil ne répond pas aux exigences minimales de l’inscription à Intune. |
 | Restrictions d’inscription non respectées | Cette inscription a été bloquée en raison d’une restriction d’inscription, configurée par un administrateur. |
+| Version d’appareil trop basse | L’administrateur a configuré une restriction d’inscription nécessitant une version plus élevée de l’appareil. |
+| Version d’appareil trop élevée | L’administrateur a configuré une restriction d’inscription nécessitant une version plus basse de l’appareil. |
+| L’appareil ne peut pas être inscrit comme appareil personnel | L’administrateur a configuré une restriction d’inscription afin de bloquer les inscriptions personnelles, et l’appareil défaillant n’a pas été prédéfini en tant qu’appareil d’entreprise. |
+| Plateforme d’appareil bloquée | L’administrateur a configuré une restriction d’inscription qui bloque la plateforme de cet appareil. |
+| Expiration du jeton en bloc | Le jeton en bloc dans le package de provisionnement a expiré. |
+| Appareil Autopilot ou détails introuvables | L’appareil Autopilot n’a pas été trouvé lors de la tentative d’inscription. |
+| Profil Autopilot introuvable ou non affecté | L’appareil n’a pas de profil Autopilot actif. |
+| Méthode d’inscription Autopilot inattendue | L’appareil a tenté de s’inscrire à l’aide d’une méthode non autorisée. |
+| Appareil Autopilot supprimé | L’appareil tentant de s’inscrire a été supprimé d’Autopilot pour ce compte. |
 | Plafond d’appareils atteint | Cette inscription a été bloquée en raison d’une restriction du nombre limite d’appareils, configurée par un administrateur. |
 | Intégration d’Apple | L’inscription de tous les appareils iOS a été bloquée pour le moment en raison de l’absence ou de l’expiration d’un certificat Push MDM Apple dans Intune. |
 | Appareil non préinscrit | L’appareil n’a pas été préinscrit en tant qu’appareil de société, et toutes les inscriptions personnelles ont été bloquées par un administrateur. |

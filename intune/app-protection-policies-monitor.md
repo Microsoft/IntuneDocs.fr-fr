@@ -3,10 +3,10 @@ title: Guide pratique de surveillance des stratégies de protection des applicat
 titleSuffix: Microsoft Intune
 description: Surveillez l’état de conformité des stratégies de gestion des applications mobiles dans Intune.
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: f86ebd91125ec60d2ad0a28b47f5ac01fb62e8e2
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816838"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297296"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Guide pratique de surveillance des stratégies de protection des applications
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -44,20 +44,16 @@ Vous pouvez surveiller l’état de conformité à trois endroits différents :
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
 3. Dans le volet **Intune**, choisissez **Applications clientes**.
-4. Dans la charge de travail **Applications clientes**, choisissez **Surveiller** > **État de la protection des applications** pour afficher la vue récapitulative :
+4. Dans la charge de travail **Applications clientes**, choisissez **État de la protection des applications** dans la section **Surveiller** pour afficher la vue récapitulative :
 
 ![Vignette Résumé sur le volet Gestion des applications mobiles Intune](./media/app-protection-user-status-summary.png)
 
--   **Utilisateurs** : nombre total d’utilisateurs dans votre entreprise qui utilisent une application associée à une stratégie dans un contexte professionnel.
+-   **Utilisateurs attribués** : indique le nombre total d’utilisateurs attribués dans votre société, qui se servent d’une application associée à une stratégie dans un contexte de travail et qui sont dotés d’une protection ainsi que d’une licence. Représente également le nombre d’utilisateurs attribués sans protection et sans licence.
+-   **Utilisateurs marqués d’un indicateur** : nombre d’utilisateurs ayant rencontré des problèmes. Les appareils jailbreakés sont signalés sous **Utilisateurs avec indicateur**.
+-   **Statut de l’utilisateur pour iOS** et **Statut de l’utilisateur pour Android** : nombre d’utilisateurs qui ont utilisé une application, et auxquels une stratégie a été affectée dans un contexte professionnel pour la plateforme associée. Ces informations indiquent le nombre d’utilisateurs gérés par la stratégie ainsi que le nombre d’utilisateurs qui se servent d’une application non ciblée par une stratégie dans un contexte professionnel. Vous pouvez envisager d’ajouter ces utilisateurs à la stratégie.
 
--   **GÉRÉ PAR STRATÉGIE** : nombre d’utilisateurs qui ont utilisé une application et auxquels une stratégie a été assignée dans un contexte professionnel.
-
--   **AUCUNE STRATÉGIE** : nombre d’utilisateurs qui utilisent une application qui n’est ciblée par aucune stratégie dans un contexte professionnel. Vous pouvez envisager d’ajouter ces utilisateurs à la stratégie.
     > [!NOTE]
     > Si vous avez plusieurs stratégies par plateforme, un utilisateur est considéré comme étant géré par une stratégie quand au moins une stratégie lui a été affectée.
-
-- **Utilisateurs marqués d’un indicateur** : nombre d’utilisateurs ayant rencontré des problèmes. Seuls les utilisateurs avec des appareils jailbreakés sont répertoriés sous **Utilisateurs marqués d’un indicateur**.
-
 
 ## <a name="detailed-view"></a>Vue détaillée
 Vous pouvez accéder à la vue détaillée du résumé en choisissant les vignettes **État de l’utilisateur** (selon la plateforme de système d’exploitation de l’appareil) et **Utilisateurs marqués d’un indicateur**.
@@ -66,7 +62,7 @@ Vous pouvez accéder à la vue détaillée du résumé en choisissant les vignet
 Vous pouvez rechercher un utilisateur et vérifier son état de conformité. Le volet **Rapport d’application** montre les informations suivantes sur un utilisateur sélectionné :
 - Les appareils associés au compte d’utilisateur
 
-- Applications avec une stratégie GAM sur l’appareil
+- Applications avec une stratégie MAM sur l’appareil
 
 - État :
 
@@ -79,7 +75,7 @@ Vous pouvez rechercher un utilisateur et vérifier son état de conformité. Le 
 
 Pour afficher le rapport d’un utilisateur, procédez comme suit :
 
-1.  Pour sélectionner un utilisateur, choisissez la vignette **Résumé**.
+1.  Pour sélectionner un utilisateur, choisissez la vignette récapitulative **État de l’utilisateur**.
 
     ![Capture d’écran de la vignette Résumé dans Gestion des applications mobiles Intune](./media/MAM-reporting-6.png)
 
@@ -94,23 +90,29 @@ La vue détaillée montre le message d’erreur, l’application à laquelle l�
 
 ## <a name="reporting-view"></a>Vue Rapports
 
-Vous trouverez les mêmes rapports dans la vue détaillée, plus d’autres rapports qui vous aideront pour l’état de conformité de la stratégie GAM :
+Vous trouverez les mêmes rapports dans le panneau **État de protection de l’application**.
 
-![Capture d’écran mettant en évidence 2 rapports disponibles dans le volet Paramètres](./media/MAM-reporting-7.png)
+> [!NOTE]
+> Intune fournit des champs de rapport supplémentaires sur les appareils, notamment l’ID d’inscription d’application, le fabricant Android, le modèle et la version du correctif de sécurité ainsi que le modèle iOS. Dans Intune, ces champs sont disponibles quand vous sélectionnez **Applications clientes** > **État de protection de l’application**, et que vous choisissez **Rapport de protection d’application : iOS, Android**. Ces paramètres vous aideront par ailleurs à configurer la liste **Autoriser** pour le fabricant d’appareil (Android), la liste **Autoriser** pour le modèle d’appareil (Android et iOS) et le paramètre de version minimale de la mise à jour de sécurité Android. 
 
--   **Rapport de l’utilisateur sur la protection de l’application :** il présente les mêmes informations qui figurent dans le rapport **État de l’utilisateur** sous la section Vue détaillée ci-dessus.
+Des rapports supplémentaires sont disponibles pour vous aider à d’obtenir l’état de conformité de la stratégie MAM. Pour voir ces rapports, sélectionnez **Applications clientes** > **État de protection de l’application** > **Rapports**. 
 
--   **Rapport de l’application sur la protection de l’application :** il fournit deux états de protection de l’application différents, que les administrateurs peuvent sélectionner avant de générer le rapport. Les états peuvent être protégés ou non protégés.
+Le panneau **Rapports** fournit plusieurs rapports basés sur l’utilisateur et l’application, notamment :
 
-    -   État de l’utilisateur pour l’activité GAM gérée (protégé) : ce rapport présente l’activité de chaque application GAM gérée, par utilisateur.
 
-        -   Il affiche toutes les applications ciblées par les stratégies GAM de chaque utilisateur et détaille l’état de chaque application enregistrée dans les stratégies GAM ou ciblée par une stratégie GAM mais jamais enregistrée.
-<br></br>
-    -   État de l’utilisateur pour l’activité GAM non gérée (non protégé) : ce rapport présente l’activité des applications compatibles avec GAM qui ne sont actuellement pas gérées, par utilisateur. Cela peut se produire pour les raisons suivantes :
+-   **Rapport utilisateur** : il présente les mêmes informations que celles qui figurent dans le rapport **État de l’utilisateur** sous la section Vue détaillée ci-dessus.
 
-        -   Ces applications sont utilisées par un utilisateur ou une application qui n’est actuellement pas ciblée par une stratégie GAM.
+-   **Rapport de l’application** : il fournit deux états distincts de protection de l’application, que les administrateurs peuvent sélectionner avant de générer le rapport. Les états peuvent être protégés ou non protégés.
 
-        -   Toutes les applications sont enregistrées, mais ne reçoivent aucune stratégie GAM.
+    -   État de l’utilisateur pour l’activité MAM gérée (protégé) : ce rapport présente l’activité de chaque application MAM gérée, par utilisateur.
+
+        -   Il affiche toutes les applications ciblées par les stratégies MAM de chaque utilisateur et détaille l’état de chaque application enregistrée dans les stratégies MAM ou ciblée par une stratégie MAM mais jamais enregistrée.
+<br><br>
+    -   État de l’utilisateur pour l’activité MAM non gérée (non protégé) : ce rapport présente l’activité des applications compatibles avec MAM qui ne sont actuellement pas gérées, par utilisateur. Cela peut se produire pour les raisons suivantes :
+
+        -   Ces applications sont utilisées par un utilisateur ou une application qui n’est actuellement pas ciblée par une stratégie MAM.
+
+        -   Toutes les applications sont enregistrées, mais ne reçoivent aucune stratégie MAM.
 
 ![Capture d’écran du panneau Rapport d’application d’un utilisateur, affichant les détails de trois applications](./media/MAM-reporting-4.png)
 

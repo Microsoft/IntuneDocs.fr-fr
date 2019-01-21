@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,27 +15,28 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6bc6f5d2f32ff060eb2eec568b0048628ad0e09c
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: cb6e3f0a9f62348d55b5dc2284c1007ea7faf088
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303853"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203210"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Créer un profil d’appareil dans Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Créer le profil
-1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, puis recherchez **Microsoft Intune**.
 
-2. Dans **Microsoft Intune**, sélectionnez **Configuration de l’appareil**, puis **Profils**. Ensuite, sélectionnez **Créer un profil**.
+1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 
 3. Entrez les propriétés suivantes :
 
-   - **Nom** : attribuez un nom descriptif au nouveau profil.
-   - **Description :** entrez une description pour le profil. (Ceci est facultatif mais recommandé.)
-   - **Plateforme** : sélectionnez le type de plateforme.  
+   - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+   - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
+   - **Plateforme** : sélectionnez le type de plateforme :  
 
        - **Android**
        - **Android Entreprise**
@@ -45,8 +46,8 @@ ms.locfileid: "52303853"
        - **Windows 8.1 et versions ultérieures**
        - **Windows 10 et versions ultérieures**
 
-   - **Type de profil** : sélectionnez le type que vous souhaitez créer. La liste dépend de la plateforme que vous choisissez.
-   - **Paramètres** : les rubriques suivantes décrivent les paramètres pour chaque type de profil.
+   - **Type de profil** : sélectionnez le type que vous souhaitez créer. La liste dépend de la plateforme que vous choisissez.
+   - **Paramètres** : Les articles suivants décrivent les paramètres pour chaque type de profil :
 
        -  [Fonctionnalités de l’appareil](device-features-configure.md)
        -  [Restrictions relatives aux appareils](device-restrictions-configure.md)

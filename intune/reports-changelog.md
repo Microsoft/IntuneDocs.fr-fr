@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 01/11/2010
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,25 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 3fce49decb7574d32d1923a77bb2cca28384ce11
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642759"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297228"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Journal des modifications pour l’API de l’entrepôt de données Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Suivez les mises à jour de l’entrepôt de données Intune.
+
+## <a name="1812"></a>1812 
+_Publication : décembre 2018_
+
+### <a name="enrollment-activities-collection-released-to-v10"></a>Collection des activités d’inscription version 1.0 
+
+La collection des activités d’inscription est désormais disponible en version 1.0. Vous pouvez utiliser cette collection pour mieux comprendre le volume des échecs d’inscription et les tendances de votre environnement. Pour plus d’informations, consultez [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities), [enrollmentEventStatuses](intune-data-warehouse-collections.md#enrollmenteventstatuses), [enrollmentFailureCategories](intune-data-warehouse-collections.md#enrollmentfailurecategories) et [enrollmentFailureReasons](intune-data-warehouse-collections.md#enrollmentfailurereasons).
 
 ## <a name="1808"></a>1808
 _Publication : août 2018_
@@ -36,9 +43,9 @@ _Publication : août 2018_
 
 Vous pouvez maintenant utiliser la version v1.0 d’Intune Data Warehouse en définissant le paramètre de requête `api-version=v1.0`. Les mises à jour de collections dans l’entrepôt de données sont additives par nature et n’interrompent pas les scénarios existants.
 
-### <a name="enrollment-failure-collection-released-to-beta"></a>Collection des échecs d’inscriptions mise en production comme version bêta
+### <a name="enrollment-activities-collection-released-to-beta"></a>Collection des activités d’inscription version bêta
 
-La nouvelle collection `Enrollment Failure` est mise en production comme version bêta. Vous pouvez utiliser cette collection pour comprendre comment votre inscription se déroule en affichant les échecs les plus courants. 
+La nouvelle collection `Enrollment Activities` est mise en production comme version bêta. Vous pouvez utiliser cette collection pour comprendre comment votre inscription se déroule en affichant les échecs les plus courants. 
 
 
 ## <a name="1805"></a>1805

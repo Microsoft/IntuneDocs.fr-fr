@@ -16,18 +16,15 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9de47f996706255c072926524860cfcc833e8b8b
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642555"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149659"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot (préversion)
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory hybride. Pour ce faire, suivez les étapes ci-dessous.
-
-> [!NOTE]
-> Cette fonctionnalité va être lancée parmi la base d’utilisateurs au cours des prochains jours. Vous ne pourrez donc peut-être pas suivre ces étapes tant que la fonctionnalité n’aura pas été lancée pour votre compte.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -204,7 +201,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
    - **Description** : Entrez la description du profil.
    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
    - **Type de profil** : Choisissez **Jonction de domaine (préversion)**.
-3. Choisissez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et une **Unité d’organisation** au format DN (facultatif). 
+3. Choisissez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et (facultatif) une **Unité d’organisation** au [Format DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 4. Choisissez **OK** > **Créer**. Le profil est créé et apparaît dans la liste.
 5. Pour affecter le profil, suivez les étapes décrites dans [Attribuer un profil d’appareil](device-profile-assign.md#assign-a-device-profile). 
 

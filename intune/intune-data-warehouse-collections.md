@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 01/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: d290fadf92ee112a1f663c6894861b393b81f74d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190317"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297500"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -117,7 +117,7 @@ Le tableau suivant récapitule l’état d’affectation des stratégies de conf
 |    Unknown         |    Inconnue.                                                                        |
 |    Conforme       |    Conforme.                                                                      |
 |    Non conforme    |       L’appareil n’est pas conforme et est bloqué par les ressources d’entreprise.             |
-|    Conflict        |    Conflit avec d'autres règles.                                                      |
+|    Conflit        |    Conflit avec d'autres règles.                                                      |
 |    Erreur           |       Erreur.                                                                       |
 |    ConfigManager   |    Géré par Configuration Manager.                                                      |
 |    InGracePeriod   |       L’appareil n’est pas conforme, mais a toujours accès aux ressources d’entreprise.          |
@@ -312,6 +312,92 @@ L’entité **deviceEnrollmentType** indique la façon dont un appareil a été 
 | 9                | WindowsCoManagement                | Cogestion sur Windows 10 déclenchée par AutoPilot ou par une stratégie de groupe.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Jonction d’Azure AD sur Windows 10 avec autorisation de l’appareil.                                            |
 
+## <a name="enrollmentactivities"></a>enrollmentActivities 
+L’entité **EnrollmentActivity** indique l’activité d’une inscription d’appareil.
+
+| Propriété                      | Description                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| dateKey                       | Clé de la date d’enregistrement de cette activité d’inscription.               |
+| deviceEnrollmentTypeKey       | Clé du type de l’inscription.                                        |
+| deviceTypeKey                 | Clé du type d’appareil.                                                |
+| enrollmentEventStatusKey      | Clé de l’état indiquant la réussite ou l’échec de l’inscription.    |
+| enrollmentFailureCategoryKey  | Clé de la catégorie d’échec d’inscription (en cas d’échec de l’inscription).        |
+| enrollmentFailureReasonKey    | Clé de la raison de l’échec d’inscription (en cas d’échec de l’inscription).          |
+| osVersion                     | Version du système d’exploitation de l’appareil.                               |
+| count                         | Nombre total d’activités d’inscription correspondant aux classifications ci-dessus.  |
+
+## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
+L’entité **EnrollmentEventStatus** indique le résultat d’une inscription d’appareil.
+
+| Propriété                   | Description                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| enrollmentEventStatusKey   | Identificateur unique de l’état d’inscription dans l’entrepôt de données (clé de substitution).  |
+| enrollmentEventStatusName  | Nom de l’état d’inscription. Voir les exemples ci-dessous.                            |
+
+### <a name="example"></a>Exemple
+
+| enrollmentEventStatusName  | Description                            |
+|----------------------------|----------------------------------------|
+| Opération réussie                    | Une inscription d’appareil ayant réussi         |
+| Failed                     | Une inscription d’appareil ayant échoué             |
+| Non disponible              | L’état de l’inscription n’est pas disponible.  |
+
+## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
+L’entité **EnrollmentFailureCategory** indique pourquoi une inscription d’appareil a échoué. 
+
+| Propriété                       | Description                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| enrollmentFailureCategoryKey   | Identificateur unique de la catégorie d’échec d’inscription dans l’entrepôt de données (clé de substitution).  |
+| enrollmentFailureCategoryName  | Nom de la catégorie d’échec d’inscription. Voir les exemples ci-dessous.                            |
+
+### <a name="example"></a>Exemple
+
+| enrollmentFailureCategoryName   | Description                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Non applicable                  | La catégorie d’échec d’inscription n’est pas applicable.                                                            |
+| Non disponible                   | La catégorie d’échec d’inscription n’est pas disponible.                                                             |
+| Unknown                         | Erreur inconnue.                                                                                                |
+| Authentification                  | Échec de l’authentification.                                                                                        |
+| Autorisation                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
+| AccountValidation               | Impossible de valider le compte pour l’inscription. (Compte bloqué, inscription non activée)                      |
+| UserValidation                  | Impossible de valider l’utilisateur. (L’utilisateur n’existe pas, absence de licence)                                           |
+| DeviceNotSupported              | L’appareil n’est pas pris en charge pour la gestion des appareils mobiles.                                                         |
+| InMaintenance                   | Le compte est en maintenance.                                                                                    |
+| BadRequest                      | Le client a envoyé une requête qui n’est pas comprise/prise en charge par le service.                                        |
+| FeatureNotSupported             | Les fonctionnalités utilisées par cette inscription ne sont pas prises en charge pour ce compte.                                        |
+| EnrollmentRestrictionsEnforced  | Des restrictions d’inscription configurées par l’administrateur ont bloqué l’inscription.                                          |
+| ClientDisconnected              | Le délai d’attente du client a expiré ou l’inscription a été abandonnée par l’utilisateur final.                                                        |
+| UserAbandonment                 | L’inscription a été abandonnée par l’utilisateur final. (L’utilisateur final a commencé l’intégration mais ne l’a pas terminée en temps voulu)  |
+
+## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
+L’entité **EnrollmentFailureReason** indique une raison plus détaillée pour un échec d’inscription d’appareil au sein d’une catégorie d’échec donnée.  
+
+| Propriété                     | Description                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------|
+| enrollmentFailureReasonKey   | Identificateur unique de la raison de l’échec d’inscription dans l’entrepôt de données (clé de substitution).  |
+| enrollmentFailureReasonName  | Nom de la raison de l’échec d’inscription. Voir les exemples ci-dessous.                            |
+
+### <a name="example"></a>Exemple
+
+| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Non applicable                   | La raison de l’échec d’inscription n’est pas applicable.                                                                                                                                                       |
+| Non disponible                    | La raison de l’échec d’inscription n’est pas disponible.                                                                                                                                                        |
+| Unknown                          | Erreur inconnue.                                                                                                                                                                                         |
+| UserNotLicensed                  | L’utilisateur est introuvable dans Intune ou ne dispose pas d’une licence valide.                                                                                                                                     |
+| UserUnknown                      | Intune ne connaît pas l’utilisateur.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Un seul utilisateur peut inscrire un appareil. Cet appareil a déjà été inscrit par un autre utilisateur.                                                                                                                |
+| EnrollmentOnboardingIssue        | Aucune autorité de gestion des appareils mobiles (MDM) Intune n’a encore été configurée.                                                                                                                                 |
+| AppleChallengeIssue              | L’installation du profil de gestion iOS a été retardée ou a échoué.                                                                                                                                         |
+| AppleOnboardingIssue             | Un certificat Push MDM Apple est nécessaire pour l’inscription dans Intune.                                                                                                                                       |
+| DeviceCap                        | L’utilisateur a tenté d’inscrire plus d’appareils que la quantité maximale autorisée.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Le service d’inscription Intune n’a pas pu autoriser cette requête.                                                                                                                                            |
+| UnsupportedDeviceType            | Cet appareil ne répond pas aux exigences minimales de l’inscription à Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Échec de l’inscription de cet appareil en raison d’une règle de restriction d’inscription configurée.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Le numéro de série ou numéro IMEI (International Mobile Equipment Identifier) de cet appareil est introuvable.  Sans cet identificateur, les appareils sont identifiés comme des appareils personnels actuellement bloqués.  |
+| FeatureNotSupported              | L’utilisateur a tenté d’accéder à une fonctionnalité qui n’a pas encore été publiée pour tous les clients ou n’est pas compatible avec votre configuration Intune.                                                            |
+| UserAbandonment                  | L’inscription a été abandonnée par l’utilisateur final. (L’utilisateur final a commencé l’intégration mais ne l’a pas terminée en temps voulu)                                                                                           |
+| APNSCertificateExpired           | Les appareils Apple ne peuvent pas être gérés avec un certificat Push MDM Apple ayant expiré.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 **intuneManagementExtension** répertorie l’intégrité d’**intuneManagementExtension** sur chaque appareil Windows 10 par jour. Les données sont conservées pendant les 60 derniers jours.
@@ -419,7 +505,7 @@ L’entité **ownerType** indique si un appareil est un appareil d’entreprise,
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Identificateur unique du type de propriétaire.                                                                                                                                               |                            |
 | ownerTypeKey  | Identificateur unique du type de propriétaire dans l’entrepôt de données (clé de substitution).                                                                                                       |                            |
-| ownerTypeName | Représente le type de propriétaire des appareils. Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Entreprise Personnel Inconnu |
+| ownerTypeName | Représente le type de propriétaire des appareils :  Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Entreprise Personnel Inconnu |
 
 ## <a name="policies"></a>stratégies
 L’entité **Policy** répertorie les profils de configuration d’appareil, les profils de configuration d’application et les profils de conformité. Vous pouvez affecter les stratégies à un groupe de votre entreprise à l’aide de la gestion des appareils mobiles (MDM).
@@ -526,7 +612,7 @@ La collection d’entités **user** contient les données des utilisateurs. Parm
 | UserKey                    | Identificateur unique de l’utilisateur dans l’entrepôt de données (clé de substitution).                                                                                                                                                         | 123                                  |
 | UserId                     | Identificateur unique de l’utilisateur (semblable à UserKey, sauf qu’il s’agit d’une clé naturelle).                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Adresse e-mail de l’utilisateur.                                                                                                                                                                                                     | John@constoso.com                    |
-| UPN                        | Nom d'utilisateur principal de l'utilisateur.                                                                                                                                                                                               | John@constoso.com                    |
+| UPN                        | Nom d’utilisateur principal de l’utilisateur.                                                                                                                                                                                               | John@constoso.com                    |
 | DisplayName                | Nom d’affichage de l’utilisateur.                                                                                                                                                                                                      | Jean                                 |
 | IntuneLicensed             | Spécifie si cet utilisateur dispose d’une licence Intune ou non.                                                                                                                                                                              | Vrai/Faux                           |
 | IsDeleted                  | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a, de ce fait, été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. | Vrai/Faux                           |

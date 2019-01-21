@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: d5b07262dad3eaab76dd4854b82f0e45b3921b26
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959500"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203499"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Utiliser des applications gérées sur votre appareil Android
 Les applications gérées sont configurées pour répondre aux exigences de sécurité de votre organisation et protéger les données professionnelles et scolaires. Vous pouvez installer ou utiliser ces applications automatiquement sur votre appareil. 
@@ -56,10 +56,18 @@ Tout d’abord, vous devez installer le Portail d’entreprise et, si nécessair
 * Votre organisation met des applications gérées à votre disposition dans le Portail d’entreprise. Accédez au site web ou à l’application Portail d’entreprise pour rechercher, afficher et installer ces applications. 
 * Vous installez une application à partir de Google Play Store, puis vous vous y connectez avec votre compte professionnel ou scolaire.  
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?
+ ## <a name="available-apps"></a>Applications disponibles   
+ Votre organisation sélectionne les applications appropriées qui vous sont utiles dans votre environnement professionnel ou scolaire. Ces applications sont les seules que vous trouverez dans le Portail d’entreprise.   
+
+ Des applications sont également mises à votre disposition en fonction de votre type d’appareil. Par exemple, si vous utilisez l’application Portail d’entreprise pour Android, vous avez accès aux applications Android, mais pas aux applications iOS.   
+
+ ## <a name="request-an-app-for-work-or-school"></a>Demander une application dans le cadre professionnel ou scolaire   
+ Si vous avez besoin d’une application qui ne figure pas dans le Portail d’entreprise, vous pouvez la demander. Recherchez les coordonnées de votre **Support technique** sous l’onglet **Contacter le service informatique** de l’application Portail d’entreprise. Vous trouverez les mêmes informations de contact sur le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).   
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?  
 La liste suivante décrit les paramètres que le support technique de votre entreprise peut gérer au sein d’une application. Ces paramètres affectent la façon dont vous affichez, parcourez et utilisez les données professionnelles ou scolaires sur votre appareil :
 
-* Accès à des sites web spécifiques  
+* Accès à des sites Web spécifiques  
 
 * Accès aux sites web d’entreprise internes à l’aide d’Edge et du proxy Azure Active Directory  
 
@@ -71,7 +79,7 @@ La liste suivante décrit les paramètres que le support technique de votre entr
 
 * Fonction copier-coller  
 
-* Conditions d'accès par code PIN  
+* Conditions d'accès de code confidentiel  
 
 * Comment vous vous connectez à l’aide d’informations d’identification d’entreprise  
 
@@ -79,6 +87,6 @@ La liste suivante décrit les paramètres que le support technique de votre entr
 
 * Possibilité de prendre des captures d’écran  
 
-* Exigences de chiffrement des données  
+* Cryptage des données  
 
 Pour plus d’informations sur les applications gérées sur votre appareil, contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032263"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203380"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
@@ -124,12 +124,17 @@ Les réseaux privés virtuels (ou VPN) donnent à vos utilisateurs un accès dis
 
 Vous pouvez également créer un profil Wi-Fi dans Intune pour affecter des paramètres de réseau sans fil à vos appareils Windows Holographic for Business. Quand vous affectez un profil Wi-Fi, vos utilisateurs finaux bénéficient d’un accès au réseau d’entreprise, sans aucune configuration réseau. Par exemple, vous pouvez créer un réseau Wi-Fi dédié uniquement aux appareils Windows Holographic for Business.
 
+## <a name="shared-multi-user-devices"></a>Appareils multi-utilisateurs partagés
+[Appareils partagés](shared-user-device-settings-windows-holographic.md)
+
+Les appareils qui exécutent Windows Holographic for Business, tels que Microsoft HoloLens, peuvent avoir plusieurs utilisateurs. Intune comprend des paramètres pour contrôler différentes fonctionnalités sur ces appareils partagés, comme la gestion de l’alimentation, l’utilisation du stockage local et la gestion des comptes. Les profils de configuration peuvent également être appliqués à des appareils avec différents systèmes d’exploitation. Par exemple, un même groupe d’appareils peut compter des appareils qui exécutent RS2 et RS3.
+
 ## <a name="software-updates"></a>Mises à jour logicielles
 **[Gérer les mises à jour logicielles](windows-update-for-business-configure.md)**
 
 Intune inclut une fonctionnalité appelée anneaux de mise à jour pour les appareils Windows 10. Ces anneaux de mise à jour comportent un groupe de paramètres qui déterminent l’installation des mises à jour. Par exemple, vous pouvez créer une fenêtre de maintenance pour installer les mises à jour, ou choisir de redémarrer l’appareil après l’installation des mises à jour. Vous pouvez appliquer un anneau de mise à jour à plusieurs appareils exécutant Windows Holographic for Business.
 
-## <a name="terms-and-conditions"></a>Terms and conditions
+## <a name="terms-and-conditions"></a>Conditions générales
 **[Définir les conditions générales de votre entreprise pour l’accès utilisateur](terms-and-conditions-create.md)**
 
 Pour que les utilisateurs puissent inscrire des appareils et accéder aux applications de votre entreprise, notamment les e-mails, vous pouvez leur demander d’accepter d’abord les conditions générales de l’entreprise. Dans Intune, définissez la manière dont les conditions générales s’affichent dans le Portail d’entreprise, et affectez également ces conditions générales aux appareils exécutant Windows Holographic for Business.

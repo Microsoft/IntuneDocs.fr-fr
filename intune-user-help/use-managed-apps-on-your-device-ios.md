@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/14/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0f8139d5a17d1a6594354994fda6c0eef64a22f3
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: c3f1c28fb94823dd3370080c62c0d6f3d0da521e
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147500"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203261"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Utiliser des applications gérées sur votre appareil iOS
 
@@ -34,7 +34,7 @@ Quand vous accédez à des données d’entreprise dans une application gérée,
 
 ![managed-apps-message-ios](./media/managed-apps-message.png)
 
-### <a name="how-do-i-get-managed-apps"></a>Comment obtenir des applications gérées ?
+## <a name="how-do-i-get-managed-apps"></a>Comment obtenir des applications gérées ?  
 Vous obtenez des applications gérées de deux façons différentes :
 
 -   Quand votre appareil est inscrit dans Microsoft Intune, vous installez l’application à partir de votre application Portail d’entreprise ou du site web du portail d’entreprise, ou bien le support technique de votre entreprise peut l’installer sur votre appareil. Pour en savoir plus sur l’inscription, consultez [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md) ou [Inscrire votre appareil macOS dans Intune](enroll-your-device-in-intune-macos.md).
@@ -43,7 +43,16 @@ Vous obtenez des applications gérées de deux façons différentes :
 
 Le support technique de votre entreprise peut parfois acheter plusieurs licences pour une application que vous installez. Si vous voyez un message vous demandant d’accepter le contrat Programme d’achat en volume (VPP) Apple, ceci est tout à fait normal, et vous pouvez accepter le contrat. Si vous ne l’acceptez pas, vous ne pouvez pas installer l’application.
 
-### <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?
+## <a name="available-apps"></a>Applications disponibles   
+ Votre organisation sélectionne les applications appropriées qui vous sont utiles dans votre environnement professionnel ou scolaire. Ces applications sont les seules que vous trouverez dans le Portail d’entreprise.   
+
+ Des applications sont également mises à votre disposition en fonction de votre type d’appareil. Par exemple, si vous utilisez l’application Portail d’entreprise pour iOS, vous avez accès aux applications iOS, mais pas aux applications Android.   
+
+## <a name="request-an-app-for-work-or-school"></a>Demander une application dans le cadre professionnel ou scolaire   
+ Si vous avez besoin d’une application qui ne figure pas dans le Portail d’entreprise, vous pouvez la demander. Recherchez les coordonnées de votre **Support technique** sous l’onglet **Support** de l’application Portail d’entreprise. Vous trouverez les mêmes informations de contact sur le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ 
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?  
 Voici quelques exemples d’options que le support technique de votre entreprise peut gérer dans une application et qui peuvent affecter vos interactions avec les données d’entreprise sur votre appareil :
 
 -   Accès à des sites Web spécifiques

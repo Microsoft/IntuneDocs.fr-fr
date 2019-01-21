@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f587fdf7c1690dbb0a31388a9c70b780179e541e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642878"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210871"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtenir des données à partir de l’API d’entrepôt de données Intune avec un client REST
 
@@ -47,7 +47,7 @@ Créez une application native dans Azure. Cette application native est l’appli
     3.  Tapez une URL pour **l’URL de connexion**. L’URL de connexion dépend du scénario. Toutefois, si vous prévoyez d’utiliser Postman, tapez `https://www.getpostman.com/oauth2/callback`. Vous utilisez le rappel pour l’étape d’authentification du client au moment de l’authentification à Azure AD.
 4.  Sélectionnez **Créer**.
 
-     ![API d’entrepôt de données Intune](./media/reports-get_rest_data_client_overview.png)
+     ![Application cliente Intune Data Warehouse](./media/reports-get_rest_data_client_overview.png)
 
 5. Notez **l’ID d’application** de cette application. Vous utilisez l’ID à l'étape suivante.
 
@@ -82,7 +82,7 @@ Vous avez besoin des informations suivantes pour effectuer un appel REST à l’
 | Attribut        | Description                                                                                                                                                                          | Exemple                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | URL de rappel     | Définissez cette URL comme URL de rappel dans la page de paramètres de votre application.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
-| Nom du jeton       | Chaîne utilisée pour transmettre les informations d’identification à l’application Azure. Le processus génère votre jeton pour vous permettre d’effectuer un appel à l’API d’entrepôt de données.                          | Support                                                                                        |
+| Nom du jeton       | Chaîne utilisée pour transmettre les informations d’identification à l’application Azure. Le processus génère votre jeton pour vous permettre d’effectuer un appel à l’API d’entrepôt de données.                          | Porteur                                                                                        |
 | URL d’authentification         | Il s’agit de l’URL utilisée pour l’authentification. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | URL de jeton d'accès | Il s’agit de l’URL utilisée pour accorder le jeton.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | ID client        | Vous l’avez créé, et l’avez noté, quand vous avez créé l’application native dans Azure.                                                                                               | 4184c61a-e324-4F51-83d7-022b6a81b991                                                          |
@@ -134,7 +134,7 @@ Pour obtenir un nouveau jeton d’accès pour Postman, vous devez ajouter l’UR
 
 12. Sélectionnez **Demander un jeton**.
 
-    ![Informations pour le jeton](./media/reports-postman_getnewtoken.png)
+    ![Informations pour le jeton d’accès](./media/reports-postman_getnewtoken.png)
 
 13. Tapez vos informations d’identification dans la page d’autorisation Azure AD. La liste des jetons dans Postman contient désormais le jeton nommé `Bearer`.
 14. Sélectionnez **Utiliser le jeton**. La liste des en-têtes contient la nouvelle valeur de clé d’autorisation et la valeur `Bearer <your-authorization-token>`.
@@ -144,7 +144,7 @@ Pour obtenir un nouveau jeton d’accès pour Postman, vous devez ajouter l’UR
 1.  Sélectionnez **Envoyer**.
 2.  Les données de retour s’affichent dans le corps de la réponse Postman.
 
-    ![Postman 200OK](./media/reports-postman_200OK.png)
+    ![L’état du client postman est égal à 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Créer un client REST (C#) pour obtenir des données de l’entrepôt de données Intune
 
@@ -161,7 +161,7 @@ L’exemple suivant contient un client REST simple. Le code utilise la classe **
 6. Sélectionnez **J’accepte** pour accepter la licence du package NuGet.
 7. Ouvrez `Program.cs` dans l’Explorateur de solutions.
 
-    ![Projet dans Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Progam.cs et l’Explorateur de solutions dans Visual Studio](./media/reports-get_rest_data_in.png)
 
 8. Remplacez le code dans Program.cs par le code suivant :  
    ```csharp

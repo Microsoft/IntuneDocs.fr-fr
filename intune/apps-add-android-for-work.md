@@ -1,12 +1,12 @@
 ---
-title: Affecter des applications à des appareils avec profil professionnel Android
+title: Affecter des applications gérées Google Play à des appareils d’entreprise Android
 titlesuffix: Microsoft Intune
-description: Découvrez comment synchroniser et affecter des applications à des appareils avec profil professionnel Android à partir du store Google Play géré.
+description: Découvrez comment synchroniser et affecter des applications à des appareils d’entreprise Android à partir du store Google Play géré.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
-ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
+ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305928"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239572"
 ---
-# <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Affecter des applications à des appareils avec profil professionnel Android en utilisant Intune
+# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Affecter des applications gérées Google Play à des appareils d’entreprise Android avec Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android Entreprise est un programme pour les appareils avec profil professionnel Android et les appareils en mode kiosque. Pour les appareils avec profil professionnel Android, Android Entreprise est un ensemble de fonctionnalités et de services qui séparent les applications et les données personnelles des applications et des données professionnelles. Android Entreprise offre des options de gestion et une confidentialité supplémentaires quand les personnes utilisent leurs appareils Android à titre professionnel. Intune vous permet de déployer des applications et des paramètres sur des appareils avec profil professionnel Android de manière à ce que les informations professionnelles soient séparées des informations personnelles. Toutes les applications que vous installez sur des appareils avec profil professionnel Android proviennent du store Google Play géré. La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Vous vous connectez au store, recherchez les applications souhaitées et les approuvez. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
+Android Entreprise est un programme pour les appareils avec profil professionnel Android, les appareils kiosques/dédiés et les appareils entièrement gérés. Pour les appareils avec profil professionnel Android, Android Entreprise est un ensemble de fonctionnalités et de services qui séparent les applications et les données personnelles des applications et des données professionnelles. Android Entreprise offre des options de gestion et une confidentialité supplémentaires quand les personnes utilisent leurs appareils Android à titre professionnel. Intune vous permet de déployer des applications et des paramètres sur des appareils avec profil professionnel Android de manière à ce que les informations professionnelles soient séparées des informations personnelles. Toutes les applications que vous installez sur des appareils avec profil professionnel Android proviennent du store Google Play géré. La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Vous vous connectez au store, recherchez les applications souhaitées et les approuvez. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
 
 En outre, si vous avez créé vos propres applications métier, vous pouvez les affecter comme suit :
 - Inscrivez-vous à un compte de développeur Google qui vous permet de publier des applications dans une zone privée dans Google Play.

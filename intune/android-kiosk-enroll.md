@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: 5a84bcd820b7596d1b1df01342604562c7853140
+ms.sourcegitcommit: a44359b426e19b8bf4b99eca6af2755c6d3c6fb8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626082"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54098315"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Configurer l’inscription d’appareils kiosque d’entreprise Android dans Intune
 
@@ -112,7 +112,7 @@ Pour les appareils Android 5.1 et ultérieur qui prennent en charge NFC, vous p
 
 ### <a name="enroll-by-using-a-token"></a>Inscrire à l’aide d’un jeton
 
-Pour les appareils Android 6 et ultérieur, vous pouvez utiliser le jeton pour inscrire l’appareil. Android 6.1 et versions ultérieures peuvent également tirer profit de l’analyse de code QR quand la méthode d’inscription **aft#setup** est utilisée.
+Pour les appareils Android 6 et ultérieur, vous pouvez utiliser le jeton pour inscrire l’appareil. Android version 6.1 et ultérieure peut également tirer profit de l’analyse de code QR quand la méthode d’inscription **afw#setup** est utilisée.
 
 1. Allumez votre appareil réinitialisé.
 2. Sur l’écran de **Bienvenue**, sélectionnez votre langue.
