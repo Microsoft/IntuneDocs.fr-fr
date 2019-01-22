@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: e7b60ecbf2a9a110b68807f8d1dce4db21f8f61d
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324903"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316914"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -147,39 +147,6 @@ Pour empêcher l'usurpation d'identité, la divulgation d'informations et les at
 -   Vérifiez que l’application provient d’une source approuvée.
 
 -   Sécurisez le répertoire de sortie qui a l’application encapsulée. Envisagez d'utiliser un répertoire au niveau utilisateur pour la sortie.
-
-## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-wrapped-android-lob-app-and-enabling-adal-sso-optional"></a>Nécessité d’une invite de connexion utilisateur pour une inscription au service APP-WE automatique, nécessité des stratégies de protection des applications Intune afin d’utiliser votre application métier Android empaquetée et activation de l’authentification unique ADAL (facultatif)
-
-Vous trouverez ci-dessous des conseils afin d’exiger une invite utilisateur au lancement de l’application pour une inscription au service APP-WE automatique (désignée comme **inscription par défaut** dans cette section), ainsi que des stratégies de protection des applications Intune pour autoriser uniquement les utilisateurs protégés par Intune à utiliser votre application métier Android empaquetée. Ces conseils portent également sur l’activation de l’authentification unique pour votre application métier Android empaquetée. 
-
-> [!NOTE] 
-> Les avantages de **l’inscription par défaut** incluent une méthode simplifiée d’obtention de stratégie à partir du service APP-WE pour une application sur l’appareil.
-
-### <a name="general-requirements"></a>Conditions générales requises
-* L’équipe du kit SDK Intune nécessite l’ID de votre application. Vous pouvez le localiser par le biais du [portail Azure](https://portal.azure.com/), sous **Toutes les applications**, dans la colonne **ID d’application**. Pour contacter l’équipe du kit SDK Intune, envoyez un e-mail à l’adresse msintuneappsdk@microsoft.com.
-     
-### <a name="working-with-the-intune-sdk"></a>Utilisation du kit SDK Intune
-Ces instructions sont spécifiques à toutes les applications Android et Xamarin qui souhaitent exiger des stratégies de protection des applications Intune à utiliser sur l’appareil d’un utilisateur final.
-
-1. Configurez la bibliothèque ADAL à l’aide de la procédure définie dans le [Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
-
-> [!NOTE]
-> Le terme « ID client » associé à votre application est le même que le terme « ID d’application » du portail Azure associé à votre application. 
-> * Pour activer l’authentification unique, la configuration numéro 2 dans « Configurations ADAL courantes » est celle dont vous avez besoin.
-
-2. Activez l’inscription par défaut en insérant la valeur suivante dans le manifeste :
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits peuvent se produire.
-
-3. Activez la stratégie MAM requise en insérant la valeur suivante dans le manifeste :
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Cela oblige l’utilisateur à télécharger l’application Portail d’entreprise sur l’appareil et à effectuer le flux d’inscription par défaut avant utilisation.
 
 ### <a name="see-also"></a>Voir aussi
 - [Décider comment préparer les applications pour la gestion des applications mobiles avec Microsoft Intune](apps-prepare-mobile-application-management.md)
