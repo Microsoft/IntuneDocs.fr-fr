@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c32effb645b329c8095ec8757a980b1f3d80a4d7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 698bc4e7e2d2cf8ece1b1c17b091a91c76a7d178
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184284"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386888"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Connecter votre compte Intune à votre compte professionnel Android
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pour prendre en charge les appareils avec profil professionnel Android et les appareils kiosque Android, vous devez connecter votre compte de locataire Intune à votre compte professionnel Android. 
+Pour prendre en charge les [appareils Android avec profil professionnel](android-work-profile-enroll.md), les [appareils Android entièrement gérés](android-fully-managed-enroll.md) et les [appareils Android dédiés](android-kiosk-enroll.md), vous devez connecter votre compte de locataire Intune à votre compte professionnel Android.  
 
 > [!NOTE]
 > En raison de l’interaction entre les domaines Google et Microsoft, cette étape peut nécessiter un réglage des paramètres de votre navigateur.  Vérifiez que « portal.azure.com » et « play.google.com » sont dans la même zone de sécurité de votre navigateur.

@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: a698d7a57c59a27dbd39036b1e2607e80570029f
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 65a461928c377dd4a674f8f3f2eeeef148ab56b2
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210769"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316897"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Liaisons Xamarin du kit SDK d’application Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "54210769"
 ## <a name="overview"></a>Vue d’ensemble
 Les [liaisons Xamarin du kit SDK d’application Intune](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) activent la [stratégie de protection des applications Intune](app-protection-policy.md) dans les applications iOS et Android générées avec Xamarin. Les liaisons permettent aux développeurs de générer facilement des fonctionnalités de protection des applications Intune dans leur application Xamarin.
 
-Les liaisons Xamarin du kit SDK d’application Microsoft Intune vous permettent d’incorporer des stratégies de protection des applications Intune (également appelées stratégies APP ou MAM) dans vos applications développées avec Xamarin. Une application prenant en charge la gestion MAM est une application intégrée au kit SDK d’application Intune. Les administrateurs informatiques peuvent déployer des stratégies de protection des applications sur votre application mobile quand celle-ci est activement gérée par Intune.
+Les liaisons Xamarin du kit SDK d’application Microsoft Intune vous permettent d’incorporer des stratégies de protection des applications Intune (également appelées stratégies APP ou MAM) dans vos applications développées avec Xamarin. Une application prenant en charge la gestion GAM est une application intégrée au kit SDK d’application Intune. Les administrateurs informatiques peuvent déployer des stratégies de protection des applications sur votre application mobile quand celle-ci est activement gérée par Intune.
 
 ## <a name="whats-supported"></a>Ce qui est pris en charge
 
@@ -67,7 +67,7 @@ Si votre application est déjà configurée pour utiliser la bibliothèque ADAL 
       ```csharp
       using Microsoft.Intune.MAM;
       ```
-4. Pour commencer à recevoir des stratégies de protection d’application, votre application doit s’inscrire auprès du service MAM d’Intune. Si votre application n’utilise pas la [bibliothèque d’authentification Azure Active Directory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) ou la [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) pour authentifier les utilisateurs, et souhaitez que le SDK Intune gère l’authentification, votre application doit fournir l’UPN de l’utilisateur à la méthode LoginAndEnrollAccount d’IntuneMAMEnrollmentManager :
+4. Pour commencer à recevoir des stratégies de protection d’application, votre application doit s’inscrire auprès du service GAM d’Intune. Si votre application n’utilise pas la [bibliothèque d’authentification Azure Active Directory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) ou la [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) pour authentifier les utilisateurs, et souhaitez que le SDK Intune gère l’authentification, votre application doit fournir l’UPN de l’utilisateur à la méthode LoginAndEnrollAccount d’IntuneMAMEnrollmentManager :
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
@@ -88,7 +88,7 @@ Si votre application est déjà configurée pour utiliser la bibliothèque ADAL 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Activation de stratégies de protection des applications Intune dans votre application mobile Android
 
-Pour les applications Android basées sur Xamarin qui n’utilisent pas un framework d’interface utilisateur, vous devez lire et suivre le [Guide du kit SDK d’application Intune pour les développeurs Android](app-sdk-android.md). Pour votre application Android basée sur Xamarin, vous devez remplacer la classe, les méthodes et les activités par leurs équivalents MAM conformément au [tableau des remplacements de classe et de méthode](app-sdk-android.md#class-and-method-replacements) inclus dans le guide. Si votre application ne définit pas de classe `android.app.Application`, vous devez en créer une et vérifier que vous héritez de `MAMApplication`. Les valeurs de configuration ADAL sont communiquées au SDK par le biais de métadonnées AndroidManifest. Lisez notre documentation sur la [configuration d’ADAL pour votre application](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
+Pour les applications Android basées sur Xamarin qui n’utilisent pas un framework d’interface utilisateur, vous devez lire et suivre le [Guide du kit SDK d’application Intune pour les développeurs Android](app-sdk-android.md). Pour votre application Android basée sur Xamarin, vous devez remplacer la classe, les méthodes et les activités par leurs équivalents GAM conformément au [tableau des remplacements de classe et de méthode](app-sdk-android.md#class-and-method-replacements) inclus dans le guide. Si votre application ne définit pas de classe `android.app.Application`, vous devez en créer une et vérifier que vous héritez de `MAMApplication`. Les valeurs de configuration ADAL sont communiquées au SDK par le biais de métadonnées AndroidManifest. Lisez notre documentation sur la [configuration d’ADAL pour votre application](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
 
 ### <a name="xamarinandroid-integration"></a>Intégration de Xamarin.Android
 
@@ -113,12 +113,10 @@ Pour les applications Android basées sur Xamarin qui n’utilisent pas un frame
 
 1.  Ajoutez le paquet NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) à votre projet. Des liaisons Xamarin du SDK d’application Intune sont automatiquement ajoutées si elle n’ont pas déjà été incluses.
 
-2.  Ajoutez un appel à `Xamarin.Forms.Forms.Init(Context, Bundle)` dans la fonction `OnMAMCreate` de la classe `MAMApplication` que vous avez créée à l’étape 2.2 ci-dessus. Cette opération est nécessaire, car avec Intune, la gestion de votre application peut être démarrée en arrière-plan.
+2.  Ajoutez un appel à `Xamarin.Forms.Forms.Init(Context, Bundle)` dans la fonction `OnMAMActivity` de la classe `MAMApplication` que vous avez créée à l’étape 2.2 ci-dessus. Cette opération est nécessaire, car avec Intune, la gestion de votre application peut être démarrée en arrière-plan.
 
 > [!NOTE]
 > Étant donné que cette opération réécrit une dépendance que Visual Studio utilise pour la saisie semi-automatique Intellisense, vous devrez peut-être redémarrer Visual Studio après la première exécution du remappeur pour qu’Intellisense reconnaisse correctement les changements. 
-
-Vous avez terminé les étapes élémentaires de la génération du composant dans votre application. Maintenant, vous pouvez suivre les étapes incluses dans l’exemple d’application Android. Nous avons fourni deux exemples, un pour Xamarin.Forms et un autre pour Android.
 
 ## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Exigence de stratégies de protection d’application Intune afin d’utiliser votre application métier Android basée sur Xamarin (facultatif) 
 
@@ -136,7 +134,7 @@ Ces instructions sont spécifiques à toutes les applications Android et Xamarin
 > [!NOTE] 
 > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits peuvent se produire.
 
-3. Activez la stratégie MAM requise en insérant la valeur suivante dans le manifeste : ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+3. Activez la stratégie GAM requise en insérant la valeur suivante dans le manifeste : ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
 > [!NOTE] 
 > Cela oblige les applications à télécharger l’application Portail d’entreprise sur l’appareil et à effectuer le flux d’inscription par défaut avant utilisation.
 
@@ -144,8 +142,14 @@ Ces instructions sont spécifiques à toutes les applications Android et Xamarin
 Vous devez suivre ces instructions pour les applications .NET/Xamarin qui souhaitent exiger des stratégies de protection des applications Intune à utiliser sur l’appareil d’un utilisateur final.
 
 1. Suivez toutes les étapes définies dans la documentation ADAL sous [Authentification répartie pour Android](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android).
-> [!NOTE] 
-> La prochaine version (3.17.4) que publiera .NET ADAL devrait contenir le correctif nécessaire.
+
+## <a name="potential-compilation-errors"></a>Erreurs de compilation potentielles
+Voici quelques-unes des erreurs de compilation couramment rencontrées durant le développement d’une application basée sur Xamarin.
+
+* [Erreur du compilateur CS0239](https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0239) : cette erreur apparaît couramment dans ce formulaire ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+Quand le remappeur modifie l’héritage des classes Xamarin, certaines fonctions sont rendues `sealed` et une nouvelle variante MAM est ajoutée au remplacement à la place. Renommez simplement vos remplacements comme décrit [ici](https://docs.microsoft.com/en-us/intune/app-sdk-android#renamed-methods). Par exemple `MainActivity.OnCreate()` est renommé `MainActivity.OnMAMCreate()`
+
+* [Erreur du compilateur CS0507](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0507) : cette erreur apparaît couramment dans ce formulaire ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Comme l’outil de remappage change l’héritage de certaines classes Xamarin, certaines fonctions membres sont changées en `public`. Si vous remplacez l’une de ces fonctions, vous devrez peut-être changer ces remplacements pour qu’ils soient également `public`.
 
 ## <a name="support"></a>Prise en charge
 Si votre organisation est déjà un client Intune, contactez votre conseiller du support Microsoft pour ouvrir un ticket de support et créer un enregistrement [dans la page des problèmes GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). Nous vous aiderons dès que possible. 

@@ -14,12 +14,12 @@ ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8b5f86a8f0d9beaef9e55d2281e3500e0c298a16
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2992dbfef4c51b8550e748bde453c85070b6910b
+ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182396"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418174"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -55,7 +55,8 @@ Pour créer un code secret de profil professionnel, utilisez l’action Réiniti
 
 ## <a name="reset-a-passcode"></a>Réinitialiser un code secret
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
+
+1. Connectez-vous au [Portail Azure](https://portal.azure.com) avec l’un des rôles suivants : administrateur général Azure Active Directory, administrateur du service Intune Azure Active Directory, support technique ou administrateur de rôle. Pour obtenir la liste complète des rôles et des autorisations, consultez le [tableau des RBAC Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
 3. Sélectionnez **Appareils**, puis **Tous les appareils**.
 4. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **... Plus**. Ensuite, choisissez l’action à distance **Supprimer le code secret**.

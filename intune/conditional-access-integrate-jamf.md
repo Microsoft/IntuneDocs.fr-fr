@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e607dc612f71cdf72322b9fa7ecf14abb5fd809
-ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
+ms.openlocfilehash: 971dc851714045a8a3b60dfe8ff6c6acc4419294
+ms.sourcegitcommit: 7c41f42d6e398ed46aa602ec8aaa4f39aaf92772
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270586"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54325013"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Intégrer Jamf Pro à Intune pour des raisons de conformité
 
@@ -83,51 +83,9 @@ Pour connecter Intune à Jamf Pro, vous devez effectuer les actions suivantes :
 
 Une fois que vous avez configuré l’intégration entre Intune et Jamf, vous devez [appliquer des stratégies de conformité aux appareils gérés par Jamf](conditional-access-assign-jamf.md).
 
-## <a name="information-shared-from-jamf-pro-to-intune"></a>Informations partagées par Jamf Pro avec Intune
 
-Jamf Pro capture des données d’inventaire sur les appareils macOS gérés. Jamf Pro fournit les informations suivantes à Intune :
-
-* ID d’appareil Azure AD
-* État de l’inventaire Jamf (état de l’inventaire d’un ordinateur enregistré auprès de Jamf Pro au cours des dernières 24 heures)
-* Version de système d'exploitation
-* ID d’utilisateur Azure AD
-* Chiffré (FileVault 2)
-* État de l’opérateur de contrôle d’appels
-* Mot de passe : nombre minimal de jeux de caractères
-* Expiration du mot de passe (jours)
-* Type de mot de passe : simple, alphanumérique ou inconnu
-* Empêcher la connexion automatique
-* Longueur de mot de passe requise
-* Mot de passe : nombre de mots de passe précédents pour empêcher la réutilisation
-* Protection de l’intégrité du système
-* Dernière heure d’enregistrement
-* Type d’architecture
-* Emplacements de mémoire RAM disponibles
-* Capacité de la batterie
-* ROM de démarrage
-* Vitesse du bus
-* Taille de cache
-* Nom du périphérique
-* Jonction de domaine
-* ID Jamf
-* Adresse MAC
-* Make
-* Modèle
-* Identificateur du modèle
-* Vitesse de la carte réseau
-* Nombre de cœurs
-* Nombre de processeurs
-* Système d’exploitation
-* Plate-forme
-* vitesse du processeur
-* Type de processeur
-* Adresse MAC secondaire
-* Numéro de série
-* Version SMC
-* RAM totale
-* UDID
-* Adresse e-mail de l’utilisateur
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Appliquer des stratégies de conformité aux appareils gérés par Jamf](conditional-access-assign-jamf.md)
+- [Données envoyées par Jamf à Intune](data-jamf-sends-to-intune.md)

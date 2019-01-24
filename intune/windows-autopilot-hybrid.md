@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
-ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
+ms.openlocfilehash: f81875afffa461e036bc319febc9a6141967c440
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149659"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380472"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD hybride à l’aide d’Intune et de Windows Autopilot (préversion)
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory hybride. Pour ce faire, suivez les étapes ci-dessous.
@@ -116,6 +116,9 @@ Le connecteur Intune pour Active Directory doit être installé sur un ordinateu
 6. Choisissez **Connexion**.
 7. Entrez les informations d’identification du rôle utilisateur Administrateur général ou Administrateur Intune.
 8. Accédez à **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory (préversion)**, puis vérifiez que l’état de la connexion indique **Actif**.
+
+ > [!NOTE]
+ > Une fois **connecté** au Connecteur, vous devrez peut-être attendre quelques minutes avant qu’il n’apparaisse dans [Intune](https://aka.ms/intuneportal). Sachez que le Connecteur ne s’affiche que s’il parvient à communiquer avec le service Intune.
 
 ### <a name="configure-web-proxy-settings"></a>Configuration des paramètres de proxy web
 

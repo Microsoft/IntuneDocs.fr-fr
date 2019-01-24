@@ -15,12 +15,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: db499f2d55318919f420e03be0883ec70d949d20
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 576e690e6f77480756e1406e6c0bea8696c422ea
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180358"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380445"
 ---
 # <a name="set-up-intune"></a>Configurer Intune
 
@@ -30,7 +30,7 @@ Ces étapes de configuration vous permettent d’activer la gestion des appareil
 
 Certaines étapes, comme la configuration d’un abonnement Intune et la définition de l’autorité de gestion des appareils mobiles, sont nécessaires dans la plupart des scénarios. D’autres étapes, comme la configuration d’un domaine personnalisé ou l’ajout d’applications, sont facultatives selon les besoins de votre entreprise.
 
-Si vous utilisez actuellement Microsoft System Center Configuration Manager pour gérer vos ordinateurs et serveurs, vous pouvez [étendre Configuration Manager pour gérer les appareils mobiles](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Si vous utilisez actuellement Microsoft System Center Configuration Manager pour gérer vos ordinateurs et serveurs, vous pouvez [attacher Configuration Manager au cloud grâce à la cogestion](https://docs.microsoft.com/sccm/comanage/overview).
 
 >[!TIP]
 >Si vous achetez au moins 150 licences pour Intune dans le cadre d’un plan éligible, vous pouvez utiliser *l’offre du Centre FastTrack*. Avec ce service, les spécialistes Microsoft vous accompagnent dans la préparation de votre environnement pour Intune. Consultez la section [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).

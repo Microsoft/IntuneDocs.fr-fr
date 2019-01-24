@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2018
+ms.date: ''
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad2d2842672853587da1396cae6c15ebd7ade44a
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: 1866d658503cb2dcdf482a050d7bbd73a914858b
+ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122636"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54400022"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -81,22 +81,20 @@ Les tableaux suivants décrivent quelles données sont supprimées et l’effet 
 
 |Type de données|iOS|
 |-------------|-------|
-|Applications d’entreprise et données associées installées par Intune|**Applications installées à l’aide du portail d’entreprise :** toutes les données d’application et les applications sont supprimées. Ces applications comprennent les applications installées à l’origine à partir de l’App Store et gérées par la suite comme applications d’entreprise. <br /><br /> **Applications Microsoft qui utilisent la gestion des applications mobiles et ont été installées à partir de l’App Store :** Les données des applications de l'entreprise sont supprimées. Les données d’application personnelles et les applications ne sont pas supprimées.|
+|Applications d’entreprise et données associées installées par Intune|**Applications installées à l’aide du Portail d’entreprise :** Pour les applications épinglées au profil de gestion, toutes les applications et données de ces applications sont supprimées. Ces applications comprennent les applications installées à l’origine à partir de l’App Store et gérées par la suite comme applications d’entreprise. <br /><br /> **Applications Microsoft qui utilisent la gestion des applications mobiles et ont été installées à partir de l’App Store :** Pour les applications qui ne sont pas gérées par le Portail d’entreprise, les données d’entreprise protégées par le chiffrement de la gestion des applications mobiles (MAM) dans le stockage local des applications sont supprimées. Les données protégées par le chiffrement MAM extérieures à l’application restent chiffrées et inutilisables, mais ne sont pas supprimées. Les données d’application personnelles et les applications ne sont pas supprimées.|
 |Paramètres|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|
 |Paramètres de profil Wi-Fi et VPN|Supprimé.|
 |Paramètres de profil de certificat|Les certificats sont supprimés et révoqués.|
 |Agent de gestion|Le profil de gestion est supprimé.|
 |E-mail|Les profils de messagerie provisionnés par le biais d’Intune sont supprimés. Les e-mails mis en cache sur l’appareil sont supprimés.|
-|Outlook|Les e-mails reçus par l’application Microsoft Outlook pour iOS sont supprimés. Cela nécessite que l’application mobile Outlook soit d’abord déployée en tant qu’application requise pour les utilisateurs iOS.|
 |Disjonction d’Azure AD|L’enregistrement Azure AD est supprimé.|
-|Contacts |Les contacts synchronisés avec le carnet d’adresses natif directement à partir de l’application sont supprimés. Les contacts synchronisés à partir du carnet d’adresses natif vers une autre source externe ne peuvent pas être supprimés. <br /> <br />Actuellement, seule l’application Outlook est prise en charge.
 
 ### <a name="android"></a>Android
 
 |Type de données|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Liens web|Supprimé.|Supprimé.|
-|Applications Google Play non gérées|Les applications et les données sont toujours installées.|Les applications et les données sont toujours installées.|
+|Applications Google Play non gérées|Les applications et les données sont toujours installées. <br /> <br />Les données d’applications d’entreprise protégées par le chiffrement de la gestion des applications mobiles (MAM) dans le stockage local des applications sont supprimées. Les données protégées par le chiffrement MAM extérieures à l’application restent chiffrées et inutilisables, mais ne sont pas supprimées. |Les applications et les données sont toujours installées. <br /> <br />Les données d’applications d’entreprise protégées par le chiffrement de la gestion des applications mobiles (MAM) dans le stockage local des applications sont supprimées. Les données protégées par le chiffrement MAM extérieures à l’application restent chiffrées et inutilisables, mais ne sont pas supprimées.|
 |Applications métier non gérées|Les applications et les données sont toujours installées.|Les applications sont désinstallées et les données locales propres aux applications sont supprimées. Aucune donnée extérieure à l’application (par exemple, sur une carte SD) n’est supprimée.|
 |Applications Google Play gérées|Les données d’application sont supprimées. L’application n’est pas supprimée. Les données protégées par le chiffrement MAM (Gestion des applications mobiles) extérieures à l’application (par exemple, une carte SD) restent chiffrées et inutilisables, mais ne sont pas supprimées.|Les données d’application sont supprimées. L’application n’est pas supprimée. Les données protégées par le chiffrement MAM extérieures à l’application (par exemple, une carte SD) restent chiffrées, mais ne sont pas supprimées.|
 |Applications métier gérées|Les données d’application sont supprimées. L’application n’est pas supprimée. Les données protégées par le chiffrement MAM extérieures à l’application (par exemple, une carte SD) restent chiffrées et inutilisables, mais ne sont pas supprimées.|Les données d’application sont supprimées. L’application n’est pas supprimée. Les données protégées par le chiffrement MAM extérieures à l’application (par exemple, une carte SD) restent chiffrées et inutilisables, mais ne sont pas supprimées.|
@@ -105,9 +103,7 @@ Les tableaux suivants décrivent quelles données sont supprimées et l’effet 
 |Paramètres de profil de certificat|Les certificats sont révoqués, mais pas supprimés.|Les certificats sont supprimés et révoqués.|
 |Agent de gestion|Le privilège d'administrateur d'appareil est révoqué.|Le privilège d'administrateur d'appareil est révoqué.|
 |E-mail|N/A (les profils de messagerie ne sont pas pris en charge par les appareils Android)|Les profils de messagerie provisionnés par le biais d’Intune sont supprimés. Les e-mails mis en cache sur l’appareil sont supprimés.|
-|Outlook|Les e-mails reçus par l’application Outlook pour Android sont supprimés, mais uniquement si Outlook est protégé par des stratégies MAM. Dans le cas contraire, Outlook n’est pas réinitialisé quand l’appareil est désinscrit.|Les e-mails reçus par l’application Outlook pour Android sont supprimés, mais uniquement si Outlook est protégé par des stratégies MAM. Dans le cas contraire, Outlook n’est pas réinitialisé quand l’appareil est désinscrit.|
 |Disjonction d’Azure AD|L’enregistrement Azure AD est supprimé.|L’enregistrement Azure AD est supprimé.|
-|Contacts |Les contacts synchronisés avec le carnet d’adresses natif directement à partir de l’application sont supprimés. Les contacts synchronisés à partir du carnet d’adresses natif vers une autre source externe ne peuvent pas être supprimés. <br /> <br />Actuellement, seule l’application Outlook est prise en charge.|Les contacts synchronisés avec le carnet d’adresses natif directement à partir de l’application sont supprimés. Les contacts synchronisés à partir du carnet d’adresses natif vers une autre source externe ne peuvent pas être supprimés. <br /> <br />Actuellement, seule l’application Outlook est prise en charge.
 
 ### <a name="android-work-profile"></a>Profil professionnel Android
 

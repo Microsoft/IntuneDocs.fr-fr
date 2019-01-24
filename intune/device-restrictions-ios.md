@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d6fb1c65199b68f7492b1f397c4f6075e345d3e8
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 80eb088063522ba3acb293776064fd98846b9a3e
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203669"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380501"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -51,7 +51,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Verrou d’activation (mode supervisé uniquement)**  : choisissez **Autoriser** pour activer le verrou d’activation sur les appareils iOS supervisés. Le verrouillage d'activation rend plus difficile la réactivation d'un appareil perdu ou volé.
 - **Bloquer la suppression d’applications (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des applications. L’option **Non configuré** autorise les utilisateurs à supprimer des applications de l’appareil.
 - **Bloquer le mode USB restreint (mode supervisé uniquement)**  : choisissez **Bloquer** pour désactiver le mode USB restreint sur les appareils supervisés. Le mode USB restreint empêche les accessoires USB d'échanger des données avec un appareil verrouillé depuis plus d'une heure. L’option **Non configuré** autorise le mode USB restreint.
-- **Forcer une date et une heure automatiques (mode supervisé uniquement)**  : choisissez l’option **Exiger** pour forcer les appareils supervisés à définir automatiquement la date et l’heure. Le fuseau horaire de l’appareil est mis à jour quand l’appareil se connecte à des réseaux mobiles ou si les services de localisation ont été activés en mode Wi-Fi.
+- **Forcer une date et une heure automatiques (mode supervisé uniquement)**  : choisissez l’option **Exiger** pour forcer les appareils supervisés à définir automatiquement la date et l’heure. Le fuseau horaire de l’appareil est mis à jour quand l’appareil se connecte à des réseaux cellulaires ou si les services de localisation ont été activés en mode Wi-Fi.
 - **Obliger les élèves à demander une autorisation pour quitter un cours En classe (mode supervisé uniquement)**  : choisissez l’option **Exiger** pour obliger les étudiants inscrits à un cours non géré dans l’application Classroom à demander à l’enseignant l’autorisation de quitter le cours. Uniquement disponible sous iOS 11.3+. L’option **Non configuré** dispense les étudiants de demander l’autorisation.
 - **Autoriser les mises à jour PKI à distance** : choisissez l’option **Autoriser** pour permettre aux utilisateurs de recevoir les mises à jour logicielles sans avoir à connecter leurs appareils à un ordinateur.
 - **Limiter le suivi des publicités** : choisissez **Limiter** pour désactiver l’identificateur de publicité d’appareil. **Non configuré** : cette option reste activée.
@@ -151,12 +151,12 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 - **Contenu iTunes explicite (musique, podcast ou actualités) (mode supervisé uniquement)**  : choisissez l’option **Bloquer** pour bloquer la musique, les podcasts ou les actualités iTunes à contenu explicite. L’option **Non configuré** autorise l’appareil à accéder au contenu réservé aux adultes depuis le magasin.
 - **Télécharger du contenu de l’iBooks Store indiqué comme étant de la « Littérature érotique » (mode supervisé uniquement)**  : choisissez l’option **Bloquer** pour empêcher les utilisateurs de télécharger du contenu de l’iBooks Store indiqué comme étant de la littérature érotique. L’option **Non configuré** autorise l’utilisateur à télécharger des livres de la catégorie « Littérature érotique ».
 - **Affichage des documents d’entreprise dans les applications non gérées** : choisissez l’option **Bloquer** pour empêcher l’affichage de documents externes à l’entreprise dans les applications non gérées. L’option **Non configuré** autorise l’affichage de documents d’entreprise depuis toute application. Par exemple, vous voulez empêcher les utilisateurs d’enregistrer des fichiers de OneDrive dans Dropbox. Attribuez la valeur **Bloquer** à ce paramètre. Une fois que l’appareil a reçu la stratégie (par exemple, après un redémarrage), il cesse d’autoriser l’enregistrement.
-  - **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés (mode supervisé uniquement)**  : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter ou de synchroniser les informations de tous les contacts Outlook, y compris des contacts professionnels et d’entreprise, dans l’application Contacts intégrée sur l’appareil. Avec l’option **Non configuré**, les utilisateurs ne sont pas autorisés à ajouter des contacts Outlook dans l’application Contacts intégrée sur l’appareil.
+  - **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés** : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter ou de synchroniser les informations de tous les contacts Outlook, y compris des contacts professionnels et d’entreprise, dans l’application Contacts intégrée sur l’appareil. Avec l’option **Non configuré**, les utilisateurs ne sont pas autorisés à ajouter des contacts Outlook dans l’application Contacts intégrée sur l’appareil.
   
     Pour utiliser ce paramètre, définissez le paramètre **Affichage des documents d’entreprise dans les applications non gérées**  sur **Bloquer**.
   
 - **Affichage de documents externes à l’entreprise dans les applications d’entreprise** : choisissez l’option **Bloquer** pour empêcher l’affichage de documents externes à l’entreprise dans les applications d’entreprise. L’option **Non configuré** autorise tout document à être affiché dans les applications d’entreprise gérées.
-  - **Autoriser les applications non gérées à lire à partir de comptes de contacts gérés (mode supervisé uniquement)**  : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter des informations de contact de l’application iContacts dans Outlook. L’option **Non configuré** empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.
+  - **Autoriser les applications non gérées à lire à partir de comptes de contacts gérés** : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter des informations de contact de l’application iContacts dans Outlook. L’option **Non configuré** empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.
   
     Pour utiliser ce paramètre, définissez le paramètre **Affichage de documents externes à l’entreprise dans les applications d’entreprise**  sur **Bloquer**.
   
@@ -224,11 +224,11 @@ Pour ajouter des applications à ces listes, vous pouvez :
 
 ## <a name="wireless"></a>Sans fil
 
-- **Itinérance de données** : choisissez **Bloquer** pour empêcher l’itinérance de données sur le réseau mobile. L’option **Non configuré** autorise l’itinérance de données quand l’appareil se trouve sur un réseau mobile.
-- **Récupération en arrière-plan globale en cas d’itinérance** : choisissez l’option **Bloquer** pour empêcher l’utilisation de la fonctionnalité de récupération en arrière-plan globale lors de l’itinérance sur le réseau mobile. L’option **Non configuré** autorise l’appareil à récupérer des données comme les courriers électroniques lorsqu’il est en mode itinérance sur un réseau mobile.
+- **Itinérance de données** : choisissez **Bloquer** pour empêcher l’itinérance de données sur le réseau cellulaire. L’option **Non configuré** autorise l’itinérance de données quand l’appareil se trouve sur un réseau cellulaire.
+- **Récupération en arrière-plan globale en cas d’itinérance** : choisissez l’option **Bloquer** pour empêcher l’utilisation de la fonctionnalité de récupération en arrière-plan globale lors de l’itinérance sur le réseau mobile. L’option **Non configuré** autorise l’appareil à récupérer des données comme les courriers électroniques lorsqu’il est en mode itinérance sur un réseau cellulaire.
 - **Numérotation vocale** : choisissez l’option **Bloquer** pour empêcher l’utilisation de la fonctionnalité de numérotation vocale sur l’appareil. L’option **Non configuré** autorise la numérotation vocale sur l’appareil.
-- **Itinérance vocale** : choisissez l’option **Bloquer** pour empêcher l’itinérance vocale sur le réseau mobile. L’option **Non configuré** autorise l’itinérance vocale quand l’appareil se trouve sur un réseau mobile.
-- **Modifications des paramètres d’utilisation des données mobiles des applications (mode supervisé uniquement)**  : choisissez l’option **Bloquer** pour empêcher les modifications des paramètres d’utilisation des données mobiles des applications. L’option **Non configuré** permet à l’utilisateur de contrôler les applications qui sont autorisées à utiliser des données mobiles.
+- **Itinérance vocale** : choisissez l’option **Bloquer** pour empêcher l’itinérance vocale sur le réseau mobile. L’option **Non configuré** autorise l’itinérance vocale quand l’appareil se trouve sur un réseau cellulaire.
+- **Modifications des paramètres d’utilisation des données mobiles des applications (mode supervisé uniquement)**  : choisissez l’option **Bloquer** pour empêcher les modifications des paramètres d’utilisation des données mobiles des applications. L’option **Non configuré** permet à l’utilisateur de contrôler les applications qui sont autorisées à utiliser des données cellulaires.
 - **Point d’accès personnel** : choisissez l’option **Bloquer** pour empêcher l’appareil d’être utilisé comme point d’accès personnel. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. L’option **Non configuré** autorise cette fonctionnalité.
 - **Rejoindre uniquement les réseaux Wi-Fi utilisant des profils de configuration (mode supervisé uniquement)**  : choisissez l’option **Exiger** pour forcer l’appareil à utiliser uniquement les réseaux WiFi définis par les profils de configuration Intune. L’option **Non configuré** autorise l’appareil à utiliser d’autres réseaux Wi-Fi.
 - **Règles d’utilisation des données mobiles (applications gérées uniquement)**  : définissez les types de données que les applications managées peuvent utiliser sur les réseaux mobiles. Les options disponibles sont les suivantes :

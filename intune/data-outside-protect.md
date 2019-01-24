@@ -16,12 +16,12 @@ ms.reviewer: pchacon
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d8ae737ee11f176c036382fbe77122ecebb722d2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: a6048ebd793b1325e3a3320e388135bc63cda2cf
+ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190011"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418157"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Empêcher l’accès non autorisé aux données d’entreprise à l’aide de Microsoft Intune
 
@@ -48,5 +48,5 @@ Vous pouvez partager des informations sur [la façon et le moment de protéger d
 
 Au cours des étapes suivantes, vous pouvez découvrir plus en détail les autres méthodes qui vous permettent de renforcer la protection des données de votre entreprise, notamment les suivantes : 
 
-* Découvrez comment utiliser [Azure Information Protection sur des appareils iOS et Android](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
+* Découvrez comment utiliser [Azure Information Protection sur des appareils iOS et Android](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
 * Pour Windows Phone et les ordinateurs Mac, découvrez plus d’informations sur [l’application de partage Microsoft Rights Management](https://technet.microsoft.com/dn451248).
