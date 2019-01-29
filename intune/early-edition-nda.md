@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: d1b553d262200e58a4c06dd0f4bcb72ca1398080
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 8cd32a7ec99064a36d58a5a714406659d9d16675
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54386973"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072437"
 ---
 # <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Édition anticipée pour Microsoft Intune - Janvier 2019
 
@@ -43,39 +43,10 @@ Cette page est mise à jour périodiquement. Consultez-la régulièrement pour s
 
 <!-- 1901 start -->
 
-### <a name="android-enterprise-apps----1352553----"></a>Applications Android Entreprise <!-- 1352553  -->
-Vous serez en mesure de supprimer les applications gérées Google Play depuis Microsoft Intune. Pour supprimer une application Google Play gérée, vous ouvrirez Microsoft Intune dans le portail Azure et sélectionnerez **Applications clientes** > **Applications**. À partir de la liste des applications, vous sélectionnerez les points de suspension (...) à droite de l’application Google Play gérée, puis **Supprimer** dans la liste affichée. Lorsque vous supprimez une application Google Play gérée à partir de la liste des applications, l’application Google Play gérée devient automatiquement non approuvée.
-
-### <a name="managed-google-play-app-type----1352580---"></a>Type d’application Google Play gérée <!-- 1352580 -->
-Le type d’application **Google Play géré** vous permet d’ajouter spécifiquement [les applications Google Play gérées](https://play.google.com/work/search?q=microsoft&c=apps) à Intune. En tant qu’administrateur Intune, vous pourrez désormais parcourir, rechercher, approuver, synchroniser et attribuer des applications approuvées Google Play gérées dans Intune. Vous n’aurez plus besoin d’accéder séparément à la console Google Play gérée, ni de vous authentifier de nouveau. Dans Intune, sélectionnez **Applications clientes** > **Applications** > **Ajouter**. Dans la liste **Type d’application**, sélectionnez le type d’application **Google Play géré**.
 
 ### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----1672660----"></a>Déploiement en ligne d’un Microsoft Store sous licence pour les applications métier <!-- 1672660  -->
 Vous serez en mesure d’assigner un Microsoft Store sous licence en ligne obligatoire pour les applications métier dans le contexte d’appareil. Un Microsoft Store pour une application métier déployé de cette façon permet à l’application d’être installée pour tous les utilisateurs sur l’appareil. Seuls les appareils de bureau Windows 10 version RS4 et ultérieures sont concernés. L’option d’installation dans le contexte d’appareil est disponible dans la page d’affectation des applications clientes pour les applications sous licence en ligne MSFB.
 
-### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470----"></a>Configurer le profil pour ignorer certains écrans lors de l’exécution de l’Assistant Configuration <!-- 2276470  -->
-Lors de la création d’un profil d’inscription macOS, vous serez en mesure de le configurer pour ignorer tout ou partie de la liste d’écrans suivants lorsqu’un utilisateur exécute l’Assistant Configuration :
-- Migration Android
-- Display Tone (Indiquer la tonalité)
-- Confidentialité
-- iCloudStorage
-
-### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522----"></a>Affecter des profils Autopilot au groupe virtuel Tous les appareils <!--2715522  -->
-Vous pourrez affecter des profils Autopilot au groupe virtuel Tous les appareils. Pour ce faire, choisissez **Inscription de l’appareil** > **Inscription Windows** > **Profils de déploiement** > choisissez un profil >  **Affectations** > sous **Affecter à** choisissez **Tous les appareils**. Pour plus d’informations sur les profils Autopilot, consultez [Inscrire des appareils Windows à l’aide de Windows Autopilot](enrollment-autopilot.md).
-
-### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile----2809324----"></a>Personnaliser le papier peint sur les appareils iOS supervisés à l’aide d’un profil de configuration de l’appareil <!-- 2809324  -->
-Lorsque vous créez un profil de configuration d’appareil pour les appareils iOS, vous serez en mesure d’autoriser ou restreindre certains paramètres dans **Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS** pour la plateforme > **Restrictions d’appareil** pour le type de profil. Cette mise à jour inclut de nouveaux paramètres de **Papier peint** qui permettent à un administrateur d’utiliser une image .png, .jpg ou .jpeg comme papier peint, d’afficher un aperçu de l’image et d’interdire aux utilisateurs de changer de papier peint. Les paramètres de papier peint s’appliquent uniquement aux appareils supervisés. Pour obtenir la liste des paramètres actuels, consultez [Paramètres de restriction des appareils iOS](device-restrictions-ios.md).
-
-### <a name="toast-notifications-for-win32-apps----3136566-----"></a>Notifications toast pour les applications Win32 <!-- 3136566   -->
-Vous pouvez supprimer l’affichage des notifications toast à l’utilisateur final par affectation d’applications. À partir d’Intune, sélectionnez **Applications clientes** > **Applications** > sélectionnez l’application > **Affectations** > **Inclure les groupes**. 
-
-### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396---"></a>Supprimez le partage de contacts via Bluetooth dans Restrictions d’appareil > Propriétaire de l’appareil pour Android Entreprise <!-- 3598396 -->
-Lorsque vous créez un profil de restrictions d’appareil pour les appareils Android Enterprise, vous disposez d’un paramètre **Partage de contacts via Bluetooth**. Dans cette mise à jour, le paramètre **Partage de contacts via Bluetooth** sera supprimé (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Enterprise** pour la plateforme > **Restrictions d’appareil > Propriétaire de l’appareil** pour le type de profil > **Général**). 
-
-Le paramètre **Partage de contacts via Bluetooth** n’est pas pris en charge pour la gestion du Propriétaire de l’appareil Android Enterprise. Par conséquent, la suppression de ce paramètre n’affectera aucun périphérique ni aucun client, même si ce paramètre est activé et configuré dans votre environnement.
-
-Pour consulter la liste actuelle des paramètres, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités](device-restrictions-android-for-work.md).
-
-S'applique à : Propriétaire d’appareil Android Entreprise
 
 <!-- 1812 start -->
 
@@ -96,23 +67,6 @@ Sur les appareils déjà inscrits via l’Assistant Configuration avec l’une d
 Les utilisateurs qui installeront l’application Portail d’entreprise à partir de l’App Store, puis essayeront d’inscrire ces appareils par ce biais recevront une erreur. Ces appareils ne devront utiliser le Portail d’entreprise que lorsqu’il est transmis, automatiquement, par Intune lors de l’inscription. Les profils d’inscription dans Intune sur le Portail Azure seront mis à jour : il sera ainsi possible de spécifier la façon dont les appareils s’authentifieront et d’indiquer s’ils recevront l’application Portail d’entreprise. Si vous souhaitez que les utilisateurs d’appareils DEP disposent du Portail d’entreprise, vous devrez spécifier vos préférences dans un profil d’inscription. Par ailleurs, l’écran **Identifier votre appareil** de l’application Portail d’entreprise sera bientôt obsolète.  
 Pour installer le Portail d’entreprise sur des appareils DEP déjà inscrits, il faudra accéder à Intune > Applications clientes et le transmettre sous forme d’application managée avec les stratégies de configuration des applications. D’autres informations sur la procédure à suivre seront données dans la documentation à venir.
 
-### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379---"></a>Les utilisateurs non administrateurs peuvent activer BitLocker sur des appareils Windows 10 joints à Azure AD<!-- 2147379 -->
-Lorsque vous activez les paramètres BitLocker sur des appareils Windows 10 (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10 et versions ultérieures** comme plateforme > **Endpoint Protection** comme type de profil > **Chiffrement Windows**), vous ajoutez des paramètres BitLocker. Cette mise à jour comprend un nouveau paramètre BitLocker permettant aux utilisateurs standard (non administrateurs) d’activer le chiffrement. Pour voir les paramètres actuels, voir [Paramètres Endpoint Protection pour Windows 10](endpoint-protection-windows-10.md#windows-encryption).
-
-
-### <a name="additional-settings-for-outlook----3301182---"></a>Paramètres supplémentaires pour Outlook <!-- 3301182 -->
-Vous pouvez désormais configurer des paramètres supplémentaires pour Outlook pour iOS et Android via Intune.  Les paramètres sont les suivants :
-- Autoriser uniquement les comptes professionnels ou scolaires à être utilisés dans Outlook sur iOS et Android
-- Déployer une authentification moderne pour Office 365 et une authentification moderne hybride pour les comptes locaux
-- Utiliser `SAMAccountName` pour le champ de nom d’utilisateur dans le profil d’e-mail quand l’authentification de base est sélectionnée
-- Autoriser l’enregistrement des contacts
-- Configurer la fonctionnalité Infos-courrier pour les destinataires externes
-- Configurer la **Boîte de réception Prioritaire**
-- Imposer la biométrie pour accéder à Outlook pour iOS 
-- Bloquer les images externes
-
-> [!NOTE]
-> Si vous utilisez des stratégies Intune App Protection pour gérer l’accès aux identités d’entreprise, n’activez pas la **biométrie obligatoire**. Pour plus d’informations, consultez **Exiger des informations d’identification d’entreprise pour l’accès** dans le cadre des [exigences d’accès iOS](app-protection-policy-settings-ios.md#access-settings) et des [exigences d’accès Android](app-protection-policy-settings-android.md#access-settings).
 
 ### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Les modèles d’administration, en préversion publique, sont déplacés vers leur propre profil de configuration<!-- 3322847 -->
 Les modèles d’administration dans Intune (**Configuration de l’appareil** > **Modèles d’administration**) sont actuellement en préversion privée. Avec cette mise à jour : Les modèles administratifs comportent environ 300 paramètres qui peuvent être gérés dans Intune. Auparavant, ces paramètres se trouvaient uniquement dans l’Éditeur d’objets de stratégie de groupe.
@@ -121,14 +75,6 @@ La création de rapports est activée. S’applique à : Windows 10 et version
 
 ### <a name="intune-macos-company-portal-dark-mode----3300524---"></a>Mode sombre du Portail d’entreprise Intune macOS <!-- 3300524 -->
 Le portail d’entreprise Intune macOS prend désormais en charge le Mode sombre pour macOS. Lorsque vous activez le Mode sombre sur un appareil macOS 10.14 ou version ultérieure, le portail d’entreprise ajuste son apparence aux couleurs de ce mode.
-
-<!-- 1810 start -->
-
-### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Utiliser les paramètres recommandés par Microsoft avec les lignes de base de sécurité <!-- 2055484 -->
-Intune s’intègre à d’autres services axés sur la sécurité, notamment Windows Defender ATP et Office 365 ATP. Les utilisateurs demandent une stratégie commune et un ensemble cohérent de flux de travail de sécurité de bout en bout entre les services Microsoft 365. Notre objectif est d’aligner les stratégies afin de créer des solutions qui opèrent la liaison entre les opérations de sécurité et les tâches d’administration courantes. Dans Intune, nous souhaitons atteindre cet objectif en publiant un ensemble de « Lignes de base de sécurité » recommandées par Microsoft (**Intune** > **Lignes de base de sécurité**).  Un administrateur pourra créer des stratégies de sécurité directement à partir de ces lignes de base, et les déployer ensuite pour ses utilisateurs. Il pourra également personnaliser les recommandations en fonction des besoins de son organisation. Intune garantit que les appareils restent conformes avec ces lignes de base, et signale aux administrateurs les utilisateurs ou appareils qui ne sont pas conformes.
-
-### <a name="selective-wipe-support-for-wip-without-enrollment-devices----1434452---"></a>Prise en charge de la réinitialisation sélective des appareils WIP sans inscription <!-- 1434452 -->
-WIP-WE (Windows Information Protection Without Enrollment) permet aux clients de protéger leurs données d’entreprise sur des appareils Windows 10 sans nécessiter une inscription complète à MDM. Une fois les documents protégés par une stratégie WIP-WE, les données protégées peuvent être réinitialisées de manière sélective par un administrateur Intune. En sélectionnant l’utilisateur et l’appareil, et en envoyant une demande de réinitialisation, vous rendrez inutilisables toutes les données qui étaient protégées par la stratégie WIP-WE. À partir d’Intune dans le portail Azure, sélectionnez **Application mobile** > **Réinitialisation sélective des applications**.
 
 <!-- 1809 start -->  
 
@@ -142,18 +88,6 @@ Intune détectera et affichera des détails si un jeton du Programme d’achat e
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Appareils mis hors service dans le tableau de bord de conformité des appareils <!-- 1981119 -->
 Dans une prochaine mise à jour, les appareils mis hors service seront retirés du tableau de bord de conformité des appareils. Cela changera vos numéros de conformité.
-
-
-
-<!-- 1807 start -->
-
-### <a name="check-for-configuration-manager-compliance----2192052---"></a>Vérifier la conformité de Configuration Manager <!-- 2192052 -->
-Une prochaine mise à jour va offrir un nouveau paramètre de conformité System Center Configuration Manager (**Conformité de l’appareil** > **Stratégies** > **Créer une stratégie**   >  **Windows 10**). Configuration Manager envoie des signaux pour la conformité Intune. À l’aide du paramètre Intune, vous pouvez exiger que tous les signaux Configuration Manager retournent la valeur « conforme ».
-
-Par exemple, vous voulez que toutes les mises à jour logicielles soient installées sur les appareils. Dans Configuration Manager, cette exigence présente l’état « Installé ». Si les programmes de l’appareil sont dans un état inconnu, l’appareil est non conforme dans Intune.
-
-S’applique à Windows 10 et ultérieur
-
 
 
 ## <a name="notices"></a>Remarques

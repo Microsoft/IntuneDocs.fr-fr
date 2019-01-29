@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: cdac4623c6c5c9e7258897e1536856e6b24492ea
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 8479e69d661b163778a4d0b4eb1f68e729436f4e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831494"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows Holographic for Business pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -28,15 +28,15 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-[Créez un profil de configuration d’appareil](device-restrictions-configure.md).
+[Créez un profil de configuration d’appareil](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Général
 
 - **Désinscription manuelle** : Permet à l'utilisateur de supprimer manuellement le compte d'espace de travail de l'appareil
-- **Cortana** : Activer ou désactiver l’Assistant vocal Cortana.
+- **Cortana** : Active ou désactive l'assistant vocal Cortana.
 - **Géolocalisation** : Spécifie si l'appareil peut utiliser les informations des services d'emplacement.
 
-## <a name="password"></a>Password
+## <a name="password"></a>Mot de passe
 
 - **Mot de passe** : Demande à l’utilisateur final de saisir un mot de passe pour pouvoir accéder à l’appareil.
 - **Exiger un mot de passe quand l’appareil quitte un état inactif** : Spécifie que l’utilisateur doit entrer un mot de passe pour déverrouiller l’appareil.
@@ -51,7 +51,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
 - **Cookies** : Permet au navigateur d’enregistrer les cookies internet sur l’appareil.
 - **Fenêtres contextuelles** : Bloque les fenêtres contextuelles dans le navigateur (s’applique à Windows 10 Desktop uniquement).
-- **Suggestions de recherche** : Permet à votre moteur de recherche de suggérer des sites lorsque vous tapez des expressions de recherche.
+- **Suggestions de recherche** : Permet à votre moteur de recherche de suggérer des sites à mesure que vous saisissez des expressions de recherche.
 - **Gestionnaire de mots de passe** : Activez ou désactivez la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
 - **Envoyer des en-têtes Do Not Track** : Configure le navigateur Microsoft Edge pour envoyer des en-êtes Do Not Track aux sites web que les utilisateurs visitent.
 
@@ -59,7 +59,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
 - **SmartScreen pour Microsoft Edge** : Activer Microsoft Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
 
-## <a name="search"></a>Rechercher
+## <a name="search"></a>Recherche
 
 - **Emplacement de recherche** : Spécifie si la recherche peut utiliser l’emplacement. Informations
 
@@ -79,11 +79,11 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
 ## <a name="kiosk---obsolete"></a>Plein écran - obsolète
 
-Ces paramètres sont en lecture seule et ne peuvent pas être modifiés. Pour configurer le mode Plein écran, consultez [Paramètres kiosque](kiosk-settings.md#windows-holographic-for-business).
+Ces paramètres sont en lecture seule et ne peuvent pas être modifiés. Pour configurer le mode Plein écran, consultez [Paramètres kiosque](kiosk-settings-holographic.md).
 
 Un appareil plein écran exécute généralement une application spécifique. Les utilisateurs ne peuvent pas accéder aux fonctionnalités ou fonctions sur l’appareil en dehors de l’application plein écran.
 
-- **Mode kiosque** : Identifie le type de mode kiosque pris en charge par la stratégie. Les options disponibles sont les suivantes :
+- **Mode kiosque** : Identifie le type de mode kiosque pris en charge par la stratégie. Les options sont les suivantes :
 
   - **Non configuré** (par défaut) : La stratégie n’active pas de mode kiosque. 
   - **Kiosque à application unique** : Le profil autorise l’appareil à exécuter une seule application. Quand l’utilisateur se connecte, une application spécifique démarre. Ce mode empêche également l’utilisateur d’ouvrir de nouvelles applications ou de basculer vers une autre application.
@@ -104,3 +104,7 @@ entrez les paramètres suivants :
 ## <a name="reporting-and-telemetry"></a>Création de rapports et les données de télémétrie
 
 - **Partager les données d’utilisation** : Permet de sélectionner le niveau d’envoi des données de diagnostic.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).

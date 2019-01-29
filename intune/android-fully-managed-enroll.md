@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 45c1d1f293454b32b97c8147f08809565714743a
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: d457ca413f3069e8528dc6f4951f834e3f1dac6a
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387203"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146908"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Configurer l’inscription Intune des appareils Android entièrement gérés (préversion)
 
@@ -38,7 +38,7 @@ Vous devez disposer d’un locataire autonome Intune pour gérer des appareils A
 
 Les appareils doivent respecter les exigences suivantes pour pouvoir être gérés en tant qu’appareils Android entièrement gérés :
 
-- Système d’exploitation Android versions 6.0 et ultérieures.
+- Système d’exploitation Android version 5.1 et ultérieures.
 - Les appareils doivent exécuter une build d’Android disposant d’une connectivité à GMS (Google Mobile Services). Les appareils doivent avoir accès à GMS et doivent pouvoir s’y connecter.
 
 Aucune restriction ne vise le fabricant de l’appareil/OEM si les exigences ci-dessus sont remplies.

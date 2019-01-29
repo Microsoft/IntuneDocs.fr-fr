@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 2bd9b244947f5f0b8fcb832682951c7a241f96a4
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 91d85182ccb51968915511d6d1941a350e3a9695
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032348"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068286"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
 
@@ -76,7 +76,7 @@ Le portail Apple permet de créer un jeton et d’affecter des appareils à Intu
 3.  Pour Apple School Manager, choisissez **Serveurs de gestion des appareils mobiles (MDM)** > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
 4. Entrez le **Nom du serveur MDM**, puis choisissez **Suivant**. Le nom du serveur vous permet d’identifier le serveur de gestion des appareils mobiles (MDM) uniquement. Il ne s’agit pas du nom ou de l’URL du serveur Microsoft Intune.
 
-5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;**  s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
+5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
 
 6. Accédez à **Programme de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Gérer les appareils**.
 7. Sous **Choisir les appareils par**, spécifiez comment les appareils sont identifiés :
@@ -137,7 +137,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
     | Paramètres de l’écran de l’Assistant Configuration | Si vous choisissez **Afficher**, pendant la configuration, l’appareil... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode kiosque qui limite l’appareil à une seule application). |
+    | <strong>Code secret</strong> | Invite l’utilisateur à entrer un code secret. Exige toujours un code secret, sauf si l’appareil doit être sécurisé ou si son accès doit être contrôlé d’une autre façon (c’est-à-dire, en mode plein écran qui limite l’appareil à une seule application). |
     | <strong>Services d’emplacement</strong> | Invite l’utilisateur à entrer son emplacement. |
     | <strong>Restauration</strong> | Affiche l’écran **Applications et données**. Cet écran donne à l’utilisateur la possibilité de restaurer ou de transférer des données à partir de la sauvegarde iCloud pendant la configuration de l’appareil. |
     | <strong>ID Apple et iCloud</strong> | Donne à l’utilisateur la possibilité de se connecter avec son **Identifiant Apple** et d’utiliser **iCloud**.                         |
@@ -150,7 +150,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     | <strong>FileVault</strong> | Donne à l’utilisateur la possibilité de configurer le chiffrement FileVault. |
     | <strong>Diagnostics iCloud</strong> | Donne à l’utilisateur la possibilité d’envoyer des données de diagnostic iCloud à Apple. |
     | <strong>Inscription</strong>| Oblige l’utilisateur à inscrire l’appareil. |
-
+    
    
 
 10. Choisissez **OK**.

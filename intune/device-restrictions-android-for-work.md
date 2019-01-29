@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 91f338a768ef67106a9b65de759dd74da2902138
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387009"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072556"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -48,7 +48,6 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 - **Changements des paramètres Wi-Fi** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier les paramètres Wi-Fi créés par le propriétaire de l’appareil. Les utilisateurs peuvent créer leurs propres configurations Wi-Fi. L’option **Non configuré** autorise les utilisateurs à modifier les paramètres Wi-Fi sur l’appareil.
 - **Configuration du point d’accès Wi-Fi** : choisissez **Bloquer** pour empêcher les utilisateurs de créer ou de modifier des configurations Wi-Fi. L’option **Non configuré** autorise les utilisateurs à modifier les paramètres Wi-Fi sur l’appareil.
 - **Configuration Bluetooth** : choisissez **Bloquer** pour empêcher les utilisateurs de configurer le Bluetooth sur l’appareil. L’option **Non configuré** autorise l’utilisation du Bluetooth sur l’appareil.
-- **Partage de contacts via Bluetooth** : choisissez **Bloquer** pour empêcher l’accès aux contacts professionnels à partir d’un autre appareil, par exemple un système installé dans un véhicule avec un appareil Android apparié à l’aide de Bluetooth. L’option **Non configuré** autorise l’accès aux contacts professionnels sur un autre appareil Bluetooth apparié à l’appareil Android.
 - **Connexion et accès aux points d’accès** : choisissez **Bloquer** pour empêcher la connexion et l’accès aux points d’accès mobiles. L’option **Non configuré** permet d’accéder de se connecter et d’accéder aux points d’accès mobiles.
 - **Stockage USB** : choisissez **Autoriser** pour accéder au stockage USB sur l’appareil. L’option **Non configuré** empêche l’accès au stockage USB.
 - **Transfert de fichiers USB** : choisissez **Bloquer** pour empêcher le transfert de fichiers via USB. L’option **Non configuré** autorise le transfert de fichiers.

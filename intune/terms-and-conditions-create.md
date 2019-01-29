@@ -16,12 +16,12 @@ ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 7283b728e519eb2ca5a9a0b7516774c8cfc26f9b
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831511"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Conditions générales de l’accès utilisateur
 
@@ -29,7 +29,7 @@ ms.locfileid: "53032297"
 
 En tant qu’administrateur Intune, vous pouvez demander aux utilisateurs d’accepter les conditions générales de votre entreprise avant d’utiliser l’application Portail d’entreprise pour :
 - Inscrire des appareils
-- Accéder à des ressources telles que les applications et l’e-mail de l’entreprise
+- Accéder à des ressources telles que les applications et l’e-mail de l’entreprise    
 La configuration des conditions générales est facultative.
 
 Vous pouvez créer plusieurs ensembles de conditions générales et les affecter à différents groupes, par exemple pour prendre en charge différentes langues.

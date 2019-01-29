@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4082b845643aae47464e4df14ac6621fcf8f39cf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f3bea9b1678669aa568c44e63f57aebd832cf203
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751176"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Gérer les appareils avec profil professionnel Android avec Intune
 
@@ -67,7 +67,7 @@ Les stratégies de protection des applications sont entièrement prises en charg
 
 La prise en charge VPN est similaire à celle des profils VPN Android. Les mêmes fournisseurs de VPN et les mêmes options de configuration de base sont disponibles pour la gestion Android Entreprise, à deux différences près :
 
--  **VPN limité au profil professionnel** : les connexions VPN sont limitées aux applications déployées sur le profil professionnel. Seules les applications gérées par Android Entreprise peuvent utiliser la connexion VPN. Les applications personnelles sur l’appareil ne peuvent pas utiliser de connexion VPN gérée. Pour plus d’informations, consultez [Paramètres VPN pour Android Entreprise](vpn-settings-android.md#android-for-work-vpn-settings).
+-  **VPN limité au profil professionnel** : les connexions VPN sont limitées aux applications déployées sur le profil professionnel. Seules les applications gérées par Android Entreprise peuvent utiliser la connexion VPN. Les applications personnelles sur l’appareil ne peuvent pas utiliser de connexion VPN gérée. Pour plus d’informations, consultez [Paramètres VPN pour Android Entreprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
 -  **VPN spécifique à une application** : un VPN spécifique à une application peut être configuré dans Intune si le fournisseur de VPN prend en charge les éléments suivants :
     - configuration pour un VPN spécifique à l’application

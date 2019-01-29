@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: df91908f3d3be7be23e3cecfa83e2d92b656b91e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831596"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
@@ -108,7 +108,7 @@ Dans vos profils, vous pouvez utiliser OMA-URI pour personnaliser certains param
 
 Pour configurer les paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier), vous pouvez créer un profil personnalisé dans Intune. Utilisez les paramètres OMA-URI pour contrôler différentes fonctionnalités sur vos appareils Windows Holographic for Business, par exemple l’activation d’un VPN ou la recherche de mises à jour sur Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Configurer le mode kiosque](kiosk-settings.md#windows-holographic-for-business)
+#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Configurer le mode kiosque](kiosk-settings-holographic.md)
 
 Avec les fonctionnalités de PC partagé ou invité qui sont disponibles dans Intune, vous pouvez configurer les appareils Windows Holographic for Business pour qu’ils s’exécutent en mode kiosque. Ces appareils peuvent exécuter une seule application (mode kiosque mono-application) ou plusieurs applications (mode kiosque multi-application).
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831562"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
 
@@ -106,7 +106,7 @@ Une fois que vous avez créé les anneaux de mise à jour, affectez-les à des g
 
    - **Block user from pausing Windows updates** (Empêcher l’utilisateur de suspendre l’installation des mises à jour Windows) : Autorisé par défaut. Utilisez ce paramètre pour refuser ou permettre aux utilisateurs de suspendre l’installation des mises à jour dans les *Paramètres* de leurs ordinateurs. 
       
-   - **Mode de téléchargement de l’optimisation de la distribution** : L’optimisation de la distribution n’est plus configurée dans le cadre d’une boucle de mise à jour Windows 10 sous Mises à jour logicielles. L’optimisation de la distribution est maintenant définie via la configuration de l’appareil. Toutefois, les configurations précédentes restent disponibles dans la console. Vous pouvez supprimer ces configurations précédentes en les modifiant pour être *Non configurées*, mais elles ne peuvent pas être changées autrement. Pour éviter les conflits entre l’ancienne et la nouvelle stratégie, consultez [Passer des boucles de mise à jour à l’optimisation de la distribution](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization), puis déplacez vos paramètres vers un profil d’optimisation de la distribution. 
+   - **Mode de téléchargement de l’optimisation de la distribution** : L’optimisation de la distribution n’est plus configurée dans le cadre d’une boucle de mise à jour Windows 10 sous Mises à jour logicielles. L’optimisation de la distribution est maintenant définie via la configuration de l’appareil. Toutefois, les configurations précédentes restent disponibles dans la console. Vous pouvez supprimer ces configurations précédentes en les modifiant pour être *Non configurées*, mais elles ne peuvent pas être changées autrement. Pour éviter les conflits entre l’ancienne et la nouvelle stratégie, consultez [Passer des boucles de mise à jour à l’optimisation de la distribution](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization), puis déplacez vos paramètres vers un profil d’optimisation de la distribution. 
 
 5. Une fois que vous avez fini, sélectionnez **OK**. Dans **Créer un anneau de mise à jour**, sélectionnez **Créer**.
 

@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 145b4ba18325d82942eb4ebf5fbfe17ffc8e653b
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 833e58d8add6b316267e7cb1e177384a0ca4966d
+ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737897"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54899108"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Se connecter à l’entrepôt de données avec Power BI
 
@@ -54,7 +54,7 @@ Le fichier Power BI (pbix) contient les informations de connexion pour votre lo
 > [!Important]  
 > Les fichiers Power BI (pbix) peuvent varier selon l’emplacement du locataire. Si vous gérez plusieurs locataires Intune, veillez à utiliser le fichier téléchargé à partir du portail Azure tout en étant connecté au locataire.  
 
-1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher  **Intune** dans les ressources.  
+1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher **Intune** dans les ressources.  
 2.  Ouvrez le panneau **API d’entrepôt de données Microsoft Intune (préversion)**.
 3.  Sélectionnez **Télécharger le fichier Power BI**. Un fichier portant l’extension pbix est téléchargé à l’emplacement indiqué.
 4.  Ouvrez le fichier avec Power BI. Les *rapports de l’entrepôt de données Intune* se chargent, mais l’obtention des données de votre locataire peut prendre quelques secondes.
@@ -65,7 +65,7 @@ Le fichier Power BI (pbix) contient les informations de connexion pour votre lo
 
 Quand un client est authentifié auprès d’Azure AD, l’URL OData se connecte au point de terminaison RESTful dans l’API d’entrepôt de données qui expose le modèle de données à votre client de création de rapports. Pour utiliser Power BI Desktop pour vous connecter et créer vos propres rapports, suivez ces instructions. Vous n’êtes pas limité à Power BI Desktop. Vous pouvez utiliser votre outil d’analyse préféré avec l’URL OData, à condition toutefois que le client prenne en charge l’authentification OAUTH2.0 et la norme OData v4.0.
 
-1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher  **Intune** dans les ressources.  
+1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher **Intune** dans les ressources.  
 2.  Ouvrez le panneau **API d’entrepôt de données Microsoft Intune (préversion)**.
 3. Récupérez l’URL du flux personnalisé dans le panneau de création de rapports, par exemple, `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4. Ouvrez **Power BI Desktop**.
