@@ -1,12 +1,11 @@
 ---
-title: Paramètres Wi-Fi pour les appareils Android Enterprise et kiosque
-titleSuffix: Microsoft Intune
+title: Paramètres Wi-Fi pour les appareils Android Enterprise et les bornes – Microsoft Intune | Microsoft Docs
 description: Créez ou ajoutez un profil de configuration d’appareil Wi-Fi pour Android Enterprise et Android Kiosk. Consultez les différents paramètres, y compris l’ajout de certificats, le choix d’un type EAP et la sélection d’une méthode d’authentification dans Microsoft Intune. Pour les appareils de kiosques, entrez également entrer la clé prépartagée de votre réseau.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,22 +13,22 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1424cd43c6ccde17724a4165fe74def4da291e29
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: ea72cda4cb72af9028c52078e2215619bb2bef3c
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831477"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Configurer des paramètres Wi-Fi pour des appareils exécutant Android Entreprise et Android Kiosk dans Microsoft Intune
 
 Vous pouvez créer un profil avec des paramètres Wi-Fi spécifiques, puis le déployer sur vos appareils Android Entreprise et Android Kiosk. Microsoft Intune offre de nombreuses fonctionnalités, notamment l’authentification auprès de votre réseau à l’aide d’une clé prépartagée.
 
-Cet article décrit ces paramètres.
+Cet article décrit ces paramètres. Pour plus d’informations sur la fonctionnalité Wi-Fi dans Microsoft Intune, voir [Utiliser le Wi-Fi sur des appareils](wi-fi-settings-configure.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-[Créez un profil d’appareil](device-profile-create.md).
+[Créez un profil d’appareil](wi-fi-settings-configure.md#create-a-device-profile).
 
 ## <a name="device-owner-only---kiosk"></a>Propriétaire de l’appareil uniquement - kiosque
 
@@ -66,7 +65,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   - **EAP-TLS** : Entrez également :
 
-    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Ce certificat est présenté au serveur lorsque le client se connecte au réseau et est utilisé pour authentifier la connexion.
+    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Lorsque le client se connecte au réseau, ce certificat est présenté au serveur pour authentifier la connexion.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
@@ -76,7 +75,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   - **EAP-TTLS** : Entrez également :
 
-    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Ce certificat est présenté au serveur lorsque le client se connecte au réseau et est utilisé pour authentifier la connexion.
+    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Lorsque le client se connecte au réseau, ce certificat est présenté au serveur pour authentifier la connexion.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
@@ -95,7 +94,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   - **PEAP** : Entrez également :
 
-    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Ce certificat est présenté au serveur lorsque le client se connecte au réseau et est utilisé pour authentifier la connexion.
+    - **Approbation du serveur** - **Certificat racine pour la validation du serveur** : Choisissez un profil de certificat racine approuvé existant. Lorsque le client se connecte au réseau, ce certificat est présenté au serveur pour authentifier la connexion.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
@@ -116,9 +115,6 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le profil est créé, mais il ne fait rien. Ensuite, [affectez ce profil](device-profile-assign.md).
+Le profil est créé, mais il ne fait rien. Maintenant, [affectez-le](device-profile-assign.md) et [supervisez son état](device-profile-monitor.md).
 
-## <a name="more-resources"></a>Ressources complémentaires
-
-- Consultez les paramètres disponibles pour les appareils Android sous [Paramètres Wi-Fi pour les appareils exécutant Android](wi-fi-settings-android.md).
-- [Vue d’ensemble des paramètres Wi-Fi](wi-fi-settings-configure.md), y compris d’autres plateformes.
+Vous pouvez également créer des profils Wi-Fi pour des appareils [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md) et [Windows 8.1](wi-fi-settings-import-windows-8-1.md).

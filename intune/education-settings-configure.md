@@ -1,12 +1,11 @@
 ---
-title: Configurer les paramètres d’éducation Intune pour Windows 10
-titleSuffix: Microsoft Intune
-description: Découvrez comment utiliser Intune pour configurer des paramètres d’éducation sur les appareils Windows 10 que vous gérez.
+title: Ajouter ou configurer des paramètres Éducation dans Microsoft Intune – Azure | Microsoft Docs
+description: Utilisez l’application Examen dans un profil de configuration d’appareil sur des appareils Windows 10 (et versions ultérieures) dans Microsoft Intune. Créez un profil de configuration avec les paramètres Éducation et entrez une URL de test d’application, choisissez le mode de connexion des utilisateurs, surveillez l’écran pendant le test et autorisez ou empêchez les suggestions de texte pendant le test.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,44 +15,46 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 120aca8dae457748fea322ce164aa663ffa7e748
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1e49e1673e0bebdcdafb8ad7792051c76b80f696
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831454"
 ---
-# <a name="how-to-configure-windows-10-education-settings-in-microsoft-intune"></a>Guide pratique pour configurer des paramètres d’éducation Windows 10 dans Microsoft Intune
+# <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Utiliser l’application Examen sur des appareils Windows 10 dans Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Les profils d’éducation vous permettent de spécifier les détails qui configurent l’application Windows Take a Test, y compris les détails du compte et l’URL de test. Lorsque vous configurez cette option, l’application Take a Test s’ouvre avec le test que vous spécifiez, et aucune autre application ne peut être exécutée sur l’appareil jusqu'à ce que le test soit terminé.
+Les profils Éducation d’Intune sont conçus pour permettre aux étudiants de passer un test ou un examen sur des appareils. Cette fonctionnalité inclut l’application **Examen** et des paramètres servant à ajouter une URL de test, à choisir le mode de connexion des utilisateurs finaux et plus encore. Elle est compatible avec la plateforme suivante :
 
-Pour plus d’informations sur l’application Examen, consultez [Effectuer des tests dans Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- Windows 10 et versions ultérieures
 
-## <a name="create-a-device-profile-containing-education-profile-settings"></a>Créer un profil d’appareil contenant les paramètres du profil d’éducation
+Lorsque l’utilisateur se connecte, l’application Examen s’ouvre automatiquement sur le test que vous avez entré. Aucune autre application ne peut s’exécuter sur l’appareil tant que le test est en cours. Pour plus d’informations sur l’application Examen, voir [Passer des tests sur Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Configuration de l’appareil**.
-2. Dans le volet **Configuration de l’appareil**, sous la section **Gérer**, choisissez **Profils**.
-3. Dans le volet de profils, choisissez **Créer un profil**.
-4. Dans le volet **Créer un profil**, entrez un **Nom** et une **Description** pour le profil de restriction d’appareil.
-5. Dans la liste déroulante **Plateforme**, sélectionnez **Windows 10 et versions ultérieures**.
-6. Dans la liste déroulante **Type de profil**, choisissez **Profil d’éducation**. 
-7. Choisissez **Paramètres > Configurer** puis, dans le volet **Test**, configurez les éléments suivants :
-    - **Type de compte** - Sélectionnez un type de compte dans la liste déroulante.
-    - **Nom d’utilisateur du compte** - Entrez le nom d’utilisateur du compte utilisé avec Take a Test. Cela peut être un compte de domaine, un compte Azure Active Directory (AAD) ou un compte d’ordinateur local.
-    - **URL de l’évaluation** - Fournissez l’URL du test que les utilisateurs doivent effectuer. Pour plus d’informations, consultez la documentation Take a Test.
-    - **Capture d’écran** - Spécifiez si vous souhaitez pouvoir surveiller l’activité de l’écran pendant que les utilisateurs effectuent un test.
-    - **Suggestion de texte** - Autorisez ou bloquez les suggestions de texte pendant que les utilisateurs effectuent un test.
-8. Quand vous avez terminé, revenez au volet **Créer un profil** et tapez sur **Créer**.
+Cet article liste les étapes à suivre pour créer un profil de configuration d’appareil dans Microsoft Intune. Il comporte également des informations sur les paramètres Éducation disponibles pour les appareils Windows 10.
 
-Le profil est créé et s’affiche dans le volet de la liste des profils.
+## <a name="create-a-device-profile"></a>Créer un profil d’appareil
+
+1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+3. Entrez les propriétés suivantes :
+
+    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
+    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
+    - **Profil** : choisissez **Profil Éducation**.
+
+4. Entrez les paramètres à configurer :
+
+    - [Windows 10 et versions ultérieures](education-settings-windows.md)
+
+5. Sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
+
+Une fois que vous avez entré les paramètres et créé le profil, ce dernier apparaît dans la liste des profils. Ensuite, [affectez ce profil à certains groupes](device-profile-assign.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous souhaitez continuer et attribuer ce profil à des groupes, consultez [Guide pratique pour l’attribution de profils d’appareils](device-profile-assign.md).
+Voir la liste des [Paramètres Windows 10 Éducation](education-settings-windows.md) et leur description.
 
-
-
+[Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).

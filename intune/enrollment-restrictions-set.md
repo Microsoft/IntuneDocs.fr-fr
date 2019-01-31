@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: bd282a6b23f33b11cbd046cac4f791d6d675e365
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751210"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -100,7 +100,7 @@ Les méthodes suivantes sont qualifiées comme étant autorisées en tant qu’i
 - L’appareil est inscrit auprès de Windows Autopilot mais cela ne représente pas la seule option d’inscription MDM dans les paramètres Windows.
 - Le numéro IMEI de l’appareil est listé dans **Inscription de l’appareil** > **[Identificateurs d’appareil d’entreprise](corporate-identifiers-add.md)**. (Non pris en charge pour Windows Phone 8.1)
 - L’appareil s’inscrit via un [package de provisionnement en bloc](windows-bulk-enroll.md).
-- L’appareil s’inscrit via [l’inscription automatique à partir de SCCM pour la cogestion](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
+- L’appareil s’inscrit avec un objet de stratégie de groupe ou par [inscription automatique à partir de SCCM pour la cogestion](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Les inscriptions suivantes sont marquées comme étant d’entreprise par Intune mais, dans la mesure où elles n’offrent pas le contrôle par appareil d’administrateur Intune, elles seront bloquées :
  - [Inscription automatique à MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) avec [jonction Azure Active Directory durant la configuration de Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.

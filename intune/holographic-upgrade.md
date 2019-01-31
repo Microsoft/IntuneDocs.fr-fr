@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,50 +14,34 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4839206db5e34a039c9e99dd74f5ab1bad328418
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 80d4cf8db5789e6eeb22a777eeef74dce3009856
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831290"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Mettre à niveau les appareils exécutant Windows Holographique vers Windows Holographic for Business
 
+Microsoft Intune comporte de nombreux paramètres permettant de gérer et de protéger les appareils. Cet article liste et décrit les paramètres servant à mettre à niveau des appareils Windows Holographic vers Windows Holographic for Business. Ces paramètres sont créés dans un profil de configuration de mise à niveau dans Intune, qui est envoyé (push) ou déployé sur les appareils.
 
-Pour gérer les appareils qui exécutent Windows Holographique avec Microsoft Intune, vous devez mettre à niveau les appareils Windows Holographique vers Windows Holographic for Business. Vous pouvez créer un profil Mise à niveau d’édition pour effectuer la mise à niveau. Pour Microsoft HoloLens, vous pouvez acheter Commercial Suite afin d’obtenir la licence nécessaire pour la mise à niveau. Pour plus d’informations, consultez [Déverrouiller les fonctionnalités de Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
+Dans le cadre de votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour mettre à niveau vos appareils Windows Holographic. En ce qui concerne Microsoft HoloLens, vous pouvez acheter Commercial Suite pour obtenir la licence nécessaire à la mise à niveau. Pour plus d’informations, consultez [Déverrouiller les fonctionnalités de Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
 
-## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Pour installer un profil de configuration d’appareil de mise à niveau d’édition
+Pour plus d’informations sur cette fonctionnalité, voir [Mettre à niveau les éditions Windows 10 ou activer le mode S](edition-upgrade-configure-windows-10.md).
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) avec votre compte d’administrateur.
+## <a name="before-you-begin"></a>Avant de commencer
 
+[Créez un profil de configuration d’appareil](edition-upgrade-configure-windows-10.md#create-the-profile).
 
-2.  Cliquez sur **Configuration de l’appareil**, **Profils**, puis cliquez sur **+ Créer un profil**.
+## <a name="edition-upgrade"></a>Mise à niveau d’édition
 
-    ![Créer un profil](media/Holographic-create-profile.png)
+- **Édition choisie pour la mise à niveau** : sélectionnez **Windows 10 Holographic for Business**.
+- **Fichier de licence** : recherchez et sélectionnez le fichier de licence XML qui vous a été fourni.
 
-3.  Dans la page **Créer un profil**, tapez un nom pour le profil, sélectionnez **Windows 10 et versions ultérieures** comme plateforme, puis sélectionnez **Mise à niveau d’édition** comme type de profil. Cliquez sur **Configuration des paramètres**.
-
-5. Dans la page **Mise à niveau d’édition**, dans **Édition vers laquelle mettre à niveau**, sélectionnez **Windows 10 Holographic for Business**. Dans **Fichier de licence**, recherchez et sélectionnez le fichier de licence XML qui vous a été fourni.
-
-    ![Entrer le nom du fichier XML](media/Holographic-edition-upgrade.png)
+  ![Entrer le nom du fichier XML comportant les informations de licence Holographic for Business](media/Holographic-edition-upgrade.png)
  
-5.  Cliquez sur **OK**, puis sur **Créer** pour créer le profil.
-
-
-## <a name="deploy-the-edition-upgrade-policy"></a>Déployer la stratégie de mise à niveau d’édition
-
-Ensuite, vous affectez le profil de mise à niveau d’édition aux groupes ou appareils sélectionnés.
-
-1. Dans le profil que vous avez créé dans les étapes précédentes, cliquez sur **Affectations**.
-
-2. Dans la page **Affectations**, sélectionnez les groupes d’utilisateurs et les appareils à inclure et exclure avec la stratégie.
-
-![Inclure et exclure des groupes](media/Holographic-groups.PNG)
-
-Quand ces utilisateurs ou appareils sont inscrits dans Intune, le profil de mise à niveau d’édition est appliqué. 
-
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d'informations sur les groupes, consultez [Bien démarrer avec les groupes](get-started-groups.md).
+Le profil est créé, mais il peut ne rien faire pour le moment. [Affectez-le](device-profile-assign.md) et [supervisez son état](device-profile-monitor.md).
 
-
+Vous pouvez également créer des profils de mise à niveau d’édition pour les appareils [Windows 10 (et versions ultérieures)](edition-upgrade-windows-settings.md).
