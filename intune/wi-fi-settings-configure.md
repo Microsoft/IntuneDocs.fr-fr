@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a338cce6249cc7c5214a9d69a897cad3eaa09e93
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 54af9b1ef7872caddb972515d9c4765f8492bf00
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831358"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Ajoutez et utilisez des paramètres Wi-Fi sur vos appareils dans Microsoft Intune
 
-Utilisez les profils Wi-Fi de Microsoft Intune pour affecter les paramètres de réseau sans fil aux utilisateurs et appareils de votre organisation. Quand vous attribuez un profil Wi-Fi, vos utilisateurs peuvent accéder au réseau Wi-Fi de votre organisation sans le configurer eux-mêmes.
+Wi-Fi est un réseau sans fil qui est utilisé par de nombreux appareils mobiles pour obtenir un accès réseau. Microsoft Intune inclut des paramètres Wi-Fi intégrés qui peuvent être déployés pour les utilisateurs et appareils de votre organisation. Ce groupe de paramètres est appelé « profil » et peut être attribué à différents utilisateurs et groupes. Une fois le profil attribué, vos utilisateurs peuvent accéder au réseau Wi-Fi de votre organisation sans le configurer eux-mêmes.
 
 Par exemple, vous installez un nouveau réseau Wi-Fi nommé Contoso Wi-Fi. Ensuite, vous souhaitez configurer tous les appareils iOS pour vous connecter à ce réseau. Voici le processus :
 
 1. Créez un profil Wi-Fi incluant les paramètres pour se connecter au réseau sans fil Contoso Wi-Fi.
-2. Affectez le profil à un groupe contenant tous les utilisateurs d’appareils iOS.
+2. Attribuez le profil à un groupe contenant tous les utilisateurs d’appareils iOS.
 3. Les utilisateurs recherchent le nouveau réseau Wi-Fi Contoso dans la liste des réseaux sans fil sur leur appareil. Ils peuvent alors se connecter au réseau, à l’aide de la méthode d’authentification de votre choix.
 
-Utilisez les étapes décrites dans cet article pour créer un profil Wi-Fi. Ensuite, passez en revue les rubriques sur les paramètres spécifiques à la plateforme et les détails.
+Cet article répertorie les étapes pour créer un profil Wi-Fi. Il inclut également des liens qui décrivent les différents paramètres pour chaque plateforme.
 
 ## <a name="supported-device-platforms"></a>Plateformes d’appareil prises en charge
 
@@ -45,7 +45,7 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 > [!NOTE]
 > Pour les appareils exécutant Windows 8.1, vous pouvez importer une configuration Wi-Fi précédemment exportée à partir d’un autre appareil.
 
-## <a name="create-a-wi-fi-device-profile"></a>Créez un profil d’appareil Wi-Fi
+## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
 1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**. 
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
@@ -56,7 +56,6 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
     - **Android Entreprise**
     - **iOS**
     - **MacOS**
-    - **Windows Phone 8.1**
     - **Windows 8.1 et versions ultérieures**
     - **Windows 10 et versions ultérieures**
 
@@ -80,4 +79,4 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le profil est créé, mais il ne fait rien. Ensuite, [affectez ce profil](device-profile-assign.md).
+Le profil est créé, mais il ne fait rien. Vous devez à présent [attribuer ce profil](device-profile-assign.md) et [superviser son état](device-profile-monitor.md).

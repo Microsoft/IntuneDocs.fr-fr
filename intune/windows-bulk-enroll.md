@@ -3,7 +3,7 @@ title: Inscription en bloc pour Windows 10
 titlesuffix: Microsoft Intune
 description: Créer un package d’inscription en bloc pour Microsoft Intune
 keywords: ''
-author: Erikje
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fca6fd73da1277973ee313055eaf4b5ba073afbb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 97f51b4934a2dc2267e255da0ec1d896dd6b8961
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751193"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscription en bloc des appareils Windows
 
@@ -48,8 +48,7 @@ Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs
    - **Dossier du projet** : emplacement d’enregistrement du projet
    - **Description** : description facultative du projet ![Capture d’écran indiquant où spécifier le nom, le dossier du projet et la description dans l’application Windows Configuration Designer](media/bulk-enroll-name.png)
 
-4. Entrez un nom unique pour vos appareils. Les noms peuvent inclure un numéro de série (%%SERIAL%%) ou un jeu de caractères aléatoires. Si vous le souhaitez, vous pouvez également entrer une clé de produit si vous mettez à niveau l’édition de Windows, configurer l’appareil pour une utilisation partagée et supprimer le logiciel préinstallé.
-
+4. Entrez un nom unique pour vos appareils. Les noms peuvent inclure un numéro de série (%SERIAL%) ou un jeu de caractères aléatoires. Si vous le souhaitez, vous pouvez également entrer une clé de produit si vous mettez à niveau l’édition de Windows, configurer l’appareil pour une utilisation partagée et supprimer le logiciel préinstallé.
    ![Capture d’écran indiquant où spécifier le nom et la clé de produit dans l’application Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Si vous le souhaitez, vous pouvez configurer les appareils réseau Wi-Fi auxquels se connecter lors de leur premier démarrage.  Si les appareils réseau ne sont pas configurés, une connexion de réseau câblé est requise lors du premier démarrage de l’appareil.

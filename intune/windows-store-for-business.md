@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1584344907df168a98f947e187d6f0f0ef4a492a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d6ee36785c4134dd1c346bdc464096e832df3a9c
+ms.sourcegitcommit: f854ed8619ac66fe626198d8e4a8cac2e0c0710a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54460053"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises avec Microsoft Intune
 
@@ -52,12 +52,12 @@ En outre, les ensembles liés et les applications en mode hors connexion sous li
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Associer votre compte Microsoft Store pour Entreprises à Intune
 Avant d’activer la synchronisation dans la console Intune, vous devez configurer votre compte de Store pour utiliser Intune comme outil de gestion :
-1. Veillez à vous connecter à Business Store avec le compte de locataire que vous utilisez pour accéder à Intune.
-2. Dans Business Store, choisissez **Paramètres** > **Outils de gestion**.
-3. Sur la page Outils de gestion, choisissez **Ajouter un outil de gestion**, puis sélectionnez **Microsoft Intune**.
+1. Veillez à vous connecter à [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) avec le même compte de locataire que vous utilisez pour vous connecter à Intune.
+2. Dans le Microsoft Store pour Entreprises, choisissez l’onglet **Gérer**, sélectionnez **Paramètres**, puis choisissez l’onglet **Distribuer**.
+3. Si vous n’avez pas **Microsoft Intune** disponible comme outil de gestion des appareils mobiles, choisissez **Ajouter un outil de gestion** pour ajouter **Microsoft Intune**. Si vous n’avez pas activé **Microsoft Intune** en tant qu’outil de gestion des appareils mobiles, cliquez sur **Activer** en regard de **Microsoft Intune**. Notez que vous devez activer **Microsoft Intune** plutôt que **Inscription à Microsoft Intune**.
 
 > [!NOTE]
-> Auparavant, vous ne pouviez associer qu’un seul outil de gestion pour affecter des applications au Microsoft Store pour Entreprises. Désormais, vous pouvez associer plusieurs outils de gestion au Windows Store, par exemple, Intune et Configuration Manager.
+> Auparavant, vous ne pouviez associer qu’un seul outil de gestion pour affecter des applications au Microsoft Store pour Entreprises. Désormais, vous pouvez associer plusieurs outils de gestion au Windows Store, par exemple, Intune et Configuration Manager. 
 
 Vous pouvez maintenant continuer et configurer la synchronisation dans la console Intune.
 
@@ -92,12 +92,12 @@ Quand vous affectez une application Microsoft Store pour Entreprises, une licenc
 
 ## <a name="remove-apps"></a>Supprimer des applications
 
-Pour supprimer une application qui est synchronisée à partir du Microsoft Store pour Entreprises, vous devez vous connecter au Microsoft Store pour Entreprises et restituer l’application.
+Pour supprimer une application qui est synchronisée à partir du Microsoft Store pour Entreprises, vous devez vous connecter au Microsoft Store pour Entreprises et restituer l’application. Le processus est le même que l’application soit gratuite ou pas. Pour une application gratuite, le Store rembourse 0 $. L’exemple ci-dessous montre un remboursement pour une application gratuite. 
 
 ![Capture d’écran des détails de la suppression d’une application](./media/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> La suppression de la visibilité d’une application dans le magasin privé n’empêche pas Intune de les synchroniser. Vous devez restituer l’application.
+> La suppression de la visibilité d’une application dans le magasin privé n’empêche pas Intune de la synchroniser. Vous devez rembourser l’application pour supprimer complètement l’application.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
