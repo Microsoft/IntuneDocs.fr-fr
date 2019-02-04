@@ -16,23 +16,23 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9f9f95c42be252e0b2be515344e01a1d93e2cc6c
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 0eb12470c20efd8d455f8bb165455ae4266da956
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387216"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146891"
 ---
 # <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Inscrire vos appareils Android dédiés ou entièrement gérés (préversion)
 
 Après avoir configuré vos [appareils Android dédiés](android-kiosk-enroll.md) ou [entièrement gérés](android-fully-managed-enroll.md) dans Intune, vous pouvez les inscrire. La façon dont vous inscrivez vos appareils Android varie en fonction du système d’exploitation.
 
-| Méthode d’inscription | Version minimale du système d’exploitation Android pour les appareils dédiés | Version minimale du système d’exploitation Android pour les appareils entièrement gérés |
-| ----- | ----- | ----- |
-| Communication en champ proche (NFC) | 5.1 | 6.0 |
-| Entrée de jeton | 6.0 | 6.0 |
-| Code QR | 7.0 | 7.0 |
-| Zero Touch  | 8.0\* | 8.0\* |
+| Méthode d’inscription | Version minimale du système d’exploitation Android pour les appareils dédiés et complètement managés |
+| ----- | ----- |
+| Communication en champ proche (NFC) | 5.1 |
+| Entrée de jeton | 6.0 |
+| Code QR | 7.0 |
+| Zero Touch  | 8.0\* |
 
 \* Sur les fabricants participants.
 
@@ -42,7 +42,7 @@ Pour les appareils prenant en charge NFC, vous pouvez provisionner vos appareils
 
 ### <a name="enroll-by-using-a-token"></a>Inscrire à l’aide d’un jeton
 
-Pour les appareils Android 6 et ultérieur, vous pouvez utiliser le jeton pour inscrire l’appareil. Android 6.1 et versions ultérieures peuvent également tirer profit de l’analyse de code QR quand la méthode d’inscription **aft#setup** est utilisée.
+Pour les appareils Android 6 et ultérieur, vous pouvez utiliser le jeton pour inscrire l’appareil. Android version 6.1 et ultérieure peut également tirer profit de l’analyse de code QR quand la méthode d’inscription **afw#setup** est utilisée.
 
 1. Allumez votre appareil réinitialisé.
 2. Sur l’écran de **Bienvenue**, sélectionnez votre langue.

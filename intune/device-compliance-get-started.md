@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,32 +14,28 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
-ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
+ms.openlocfilehash: 806df8077045a4ad81cb7e221bd053059461a2fd
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531326"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199402"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Bien démarrer avec les stratégies de conformité des appareils dans Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Les critères de conformité sont essentiellement des règles, comme exiger un code PIN d’appareil ou un chiffrement. Les stratégies de conformité des appareils définissent ces règles et les paramètres que doit suivre un appareil pour être considéré conforme. Parmi ces règles, citons les suivantes :
+De nombreuses solutions de gestion des appareils mobiles vous permettent de protéger les données de l’organisation en obligeant les utilisateurs et les appareils à répondre à certaines exigences. Dans Intune, cette fonctionnalité est appelée « stratégies de conformité ». Les stratégies de conformité définissent les règles et les paramètres que les utilisateurs et les appareils doivent satisfaire pour être conformes. Quand elles sont associées à l’accès conditionnel, les administrateurs peuvent bloquer les utilisateurs et les appareils qui ne respectent pas les règles. Par exemple, un administrateur Intune peut exiger ceci :
 
-- Utiliser un mot de passe pour accéder aux appareils
+- Les utilisateurs finaux utilisent un mot de passe pour accéder aux données de l’organisation sur des appareils mobiles.
 
-- Chiffrement
+- L’appareil n’est pas jailbreaké ni rooté.
 
-- Si l’appareil est jailbroken ou rooté
+- Une version de système d’exploitation minimale ou maximale est installée sur l’appareil.
 
-- Version minimale du système d’exploitation requise
+- L’appareil se situe à un certain niveau de menace ou en dessous.
 
-- Version maximale autorisée du système d’exploitation
-
-- Exiger que l’appareil soit au niveau ou sous le niveau de défense contre les menaces mobiles
-
-Vous pouvez également utiliser des stratégies de conformité des appareils pour surveiller l’état de conformité dans vos appareils.
+Vous pouvez également utiliser des stratégies de conformité des appareils pour superviser l’état de conformité sur vos appareils.
 
 > [!IMPORTANT]
 > Intune suit la planification des enregistrements de l’appareil pour toutes les évaluations de conformité sur l’appareil. [Découvrez-en plus sur la planification des enregistrements d’appareils](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
@@ -68,7 +64,8 @@ compliance issues on the device. You can also use this time to create your actio
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ## <a name="prerequisites"></a>Prérequis
-Les conditions suivantes régissent l’utilisation des stratégies de conformité des appareils :
+
+Pour utiliser des stratégies de conformité des appareils, veillez à respecter ceci :
 
 - Utiliser les abonnements suivants :
 
@@ -84,30 +81,28 @@ Les conditions suivantes régissent l’utilisation des stratégies de conformit
   - Windows Phone 8.1
   - Windows 10
 
-- Les appareils doivent être inscrits dans Intune pour signaler leur état de conformité
+- Inscrivez les appareils dans Intune pour en connaître l’état de conformité.
 
-- Les appareils inscrits pour un seul utilisateur ou les appareils sans utilisateur principal sont pris en charge. Plusieurs contextes utilisateur ne sont pas pris en charge.
+- Inscrivez les appareils auprès d’un seul utilisateur ou sans utilisateur principal. Les appareils inscrits auprès de plusieurs utilisateurs ne sont pas pris en charge.
 
-## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Fonctionnement des stratégies de conformité des appareils Intune avec Azure AD
+## <a name="how-device-compliance-policies-work-with-azure-ad"></a>Fonctionnement des stratégies de conformité des appareils avec Azure AD
 
 Quand un appareil est inscrit dans Intune, le processus d’inscription Azure AD démarre, puis met à jour les attributs de l’appareil dans Azure AD. Une information clé est l’état de conformité de l’appareil. Cet état de conformité est utilisé par les stratégies d’accès conditionnel pour bloquer ou autoriser l’accès à l’e-mail et à d’autres ressources de l’entreprise.
 
 Le [processus d’inscription AD Azure](https://docs.microsoft.com/azure/active-directory/device-management-introduction) fournit plus d’informations.
 
-### <a name="assign-a-resulting-device-configuration-profile-status"></a>Affecter un état de profil de configuration d’appareil résultant
+## <a name="refresh-cycle-times"></a>Durées de cycle d’actualisation
 
-Si un appareil a plusieurs profils de configuration et qu’il a des états de conformité différents pour au moins deux profils de configuration affectés, un seul état de conformité résultant est affecté. Cette affectation est basée sur un niveau de gravité conceptuel affecté à chaque état de conformité. Chaque état de conformité a le niveau de gravité suivant :
+Lors de la vérification de la conformité, Intune utilise le même cycle d’actualisation que les profils de configuration. En règle générale, ces durées sont les suivantes :
 
-|État  |Gravité  |
-|---------|---------|
-|Pending     |1|
-|Réussi     |2|
-|Failed     |3|
-|Erreur     |4|
+- iOS : toutes les six heures
+- macOS : toutes les six heures
+- Android : toutes les huit heures
+- PC Windows 10 inscrits en tant qu’appareils : toutes les huit heures
+- Windows Phone : toutes les huit heures
+- Windows 8.1 : toutes les huit heures
 
-Quand un appareil a plusieurs profils de configuration, le niveau de gravité le plus élevé de tous les profils lui est attribué.
-
-Par exemple, un appareil comporte trois profils qui lui sont affectés : un état En attente (gravité = 1), un état Réussi (gravité = 2) et un état Erreur (gravité = 4). L’état Erreur ayant le niveau de gravité le plus élevé, les trois profils ont l’état de conformité Erreur.
+Les vérifications de conformité se produisent plus fréquemment juste après l’inscription d’un appareil.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Attribuer un état InGracePeriod
 
@@ -152,19 +147,19 @@ Par exemple, un appareil a trois stratégies de conformité qui lui sont affect�
 Si un appareil est conforme aux règles de stratégie, vous pouvez lui accorder l’accès à l’e-mail et aux autres ressources d’entreprise. Sinon, cet accès leur est refusé. Il s’agit d’un accès conditionnel.
 
 #### <a name="without-conditional-access"></a>Sans accès conditionnel
-Vous pouvez également utiliser des stratégies de conformité d’appareils sans accès conditionnel. Quand vous utilisez des stratégies de conformité indépendamment, les appareils ciblés sont évalués et signalés avec leur état de conformité. Par exemple, vous pouvez obtenir un rapport sur le nombre d’appareils qui ne sont pas chiffrés, ou les appareils qui sont jailbreakés ou rootés. Quand vous utilisez des stratégies de conformité sans accès conditionnel, il n’y a aucune restriction d’accès aux ressources de l’entreprise.
+Vous pouvez également utiliser des stratégies de conformité d’appareils sans accès conditionnel. Quand vous utilisez des stratégies de conformité indépendamment, les appareils ciblés sont évalués et signalés avec leur état de conformité. Par exemple, vous pouvez obtenir un rapport sur le nombre d’appareils qui ne sont pas chiffrés, ou sur les appareils jailbreakés ou rootés. Quand vous utilisez des stratégies de conformité sans accès conditionnel, il n’y a aucune restriction d’accès aux ressources de l’organisation.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Déploiement des stratégies de conformité des appareils
 Vous pouvez déployer une stratégie de conformité pour des utilisateurs dans des groupes d’utilisateurs ou sur des appareils dans des groupes d’appareils. Quand une stratégie de conformité est déployée sur un utilisateur, la conformité de tous ses appareils est vérifiée. Sur les appareils Windows 10 version 1803 et les appareils plus récents, il est recommandé de déployer sur des groupes d’appareils *si* l’utilisateur principal n’a pas inscrit l’appareil. L’utilisation de groupes d’appareils dans ce scénario permet la création de rapports de conformité.
 
-Un ensemble de **Paramètres de stratégie de conformité** intégrés (portail Azure > Conformité de l’appareil) est évalué sur tous les appareils inscrits auprès d’Intune. Par exemple :
+Un ensemble de paramètres de stratégie de conformité intégrés (**Intune** > **Conformité de l’appareil**) est évalué sur tous les appareils inscrits auprès d’Intune. Par exemple :
 
 - **Marquer les appareils sans stratégie de conformité comme étant** : Cette propriété a deux valeurs :
 
   - **Conforme** : fonctionnalité de sécurité désactivée
   - **Non conforme** (par défaut) : fonctionnalité de sécurité activée
 
-  Si un appareil n’a pas de stratégie de conformité attribuée, il est considéré comme non conforme. Par défaut, les appareils sont marqués comme étant **conformes**. Si vous utilisez l’accès conditionnel, nous vous recommandons de changer la valeur en **Non conforme**. Si un utilisateur final n’est pas conforme en raison du défaut d’attribution d’une stratégie, le portail d’entreprise indique `No compliance policies have been assigned`.
+  Si un appareil n’a pas de stratégie de conformité attribuée, il est considéré comme non conforme. Par défaut, les appareils sont marqués comme **non conformes**. Si vous utilisez l’accès conditionnel, nous vous recommandons de modifier le paramètre en **Non conforme**. Si un utilisateur final n’est pas conforme en raison du défaut d’attribution d’une stratégie, le portail d’entreprise indique `No compliance policies have been assigned`.
 
 - **Détection de jailbreak améliorée** : Quand ce paramètre est activé, les appareils iOS sont enregistrés dans Intune plus fréquemment. L’activation de cette propriété utilise les services de localisation de l’appareil et a un impact sur l’utilisation de la batterie. Les données d’emplacement utilisateur ne sont pas stockées par Intune.
 

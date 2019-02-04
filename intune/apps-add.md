@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 95f41985f11803e6e1a474b38a2af6a891ddafcb
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: c615dd2dda680cd106fd099d180f57ce2a5ebfef
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067480"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105219"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 
@@ -52,7 +52,7 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 | Applications de l’App Store iOS  | Application de store  | Sélectionnez **iOS** comme **type d’application**, recherchez l’application, puis sélectionnez l’application dans Intune. |
 | Application du Windows Phone 8.1 Store  | Application de store  | Sélectionnez **Windows Phone 8.1** comme **type d’application**, puis entrez l’URL du Microsoft Store de l’application. |
 | Applications Microsoft Store  | Application de store  | Sélectionnez **Windows** comme **type d’application**, puis entrez l’URL du Microsoft Store de l’application. |
-| Applications de profil professionnel Android | Application de store  | Recherchez et approuvez l’application avec profil professionnel Android à partir du Managed Google Play Store.  |
+| Applications Google Play gérées | Application de store  | Sélectionnez **Google Play géré** comme **type d’application**, recherchez l’application, puis sélectionnez l’application dans Intune. |
 | Applications Office 365 pour Windows 10  | Application de store (Office 365) | Sélectionnez **Windows 10** sous la **Suite Office 365** comme **type d’application**, puis sélectionnez l’application Office 365 à installer.  |
 | Applications Office 365 pour macOS | Application de store (Office 365) | Sélectionnez **macOS** sous la **Suite Office 365** comme **type d’application**, puis sélectionnez la suite d’applications Office 365. |
 | Applications métier Android | Application métier | Sélectionnez l’application **Métier** comme **type d’application**, sélectionnez le **fichier Package d’application**, puis entrez un fichier d’installation Android avec l’extension **.apk**.  |
@@ -119,7 +119,7 @@ Les applications gérées par Intune peuvent également activer la protection de
 ### <a name="understanding-licensed-apps"></a>Présentation des applications sous licence
 En plus des applications Web, des applications de store et des applications métier, vous devez avoir connaissance de la destination des applications du programme d’achat en volume et des applications sous licence, notamment : 
 - **Programme d’achat en volume Apple pour les entreprises (iOS)** : l’App Store iOS vous permet d’acheter plusieurs licences pour une application que vous souhaitez exécuter dans votre entreprise. Le fait d’acheter plusieurs copies aide à gérer efficacement les applications de l’entreprise. Pour plus d’informations, consultez [Gérer les applications iOS achetées en volume](vpp-apps-ios.md).
-- **Profil professionnel Android** : La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Toutes les applications que vous installez pour des profils professionnels Android proviennent du Managed Google Play Store. Vous vous connectez au store, recherchez les applications souhaitées et les approuvez. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
+- **Profil professionnel Android** : La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Toutes les applications que vous installez pour des profils professionnels Android proviennent du Managed Google Play Store. Intune vous permet de rechercher les applications que vous souhaitez et de les approuver. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
 - **Microsoft Store pour Entreprises (Windows 10)**: Le Microsoft Store pour Entreprises propose un emplacement dans lequel vous pouvez trouver et acheter des applications pour votre organisation, individuellement ou en volume. En connectant le store à Microsoft Intune, vous pouvez gérer les applications achetées en volume dans le portail Azure. Pour plus d’informations, consultez [Gérer des applications à partir du Microsoft Store pour Entreprises](windows-store-for-business.md).
 
     > [!NOTE]

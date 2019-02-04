@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: eb369d8e89ff41e75d5bd669819afbe98b6d1ba7
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: be348840df2e1d7864b0c1c57efbb7abcb698392
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031838"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199385"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils dans Intune avec un compte de gestionnaire d’inscription d’appareil
 
@@ -36,6 +36,7 @@ Les comptes d’utilisateur DEM et les appareils inscrits avec un compte d’uti
   - Les comptes d’utilisateur DEM ne peuvent pas utiliser les applications du programme d’achat en volume (VPP) Apple avec des licences utilisateur VPP Apple en raison des critères des identifiants Apple par utilisateur pour la gestion des applications.
   - Les appareils peuvent installer des applications VPP s’ils ont des licences d’appareil VPP Apple.
   - Les appareils sont bloqués pour l’accès conditionnel à l’exception de Windows 10 1803+
+  - Chaque appareil inscrit avec un compte DEM doit avoir sa propre licence d’appareil Intune.
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Ajouter un gestionnaire d’inscription d’appareil

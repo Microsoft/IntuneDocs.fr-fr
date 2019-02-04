@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/26/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 5981b3dbb74209fbd4d7f0ab03adb5a35a41954b
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: d9dfa25c2528ea2f929c3db6714bc68fee013a7b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203533"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072573"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Paramètres Windows 10 (et versions ultérieures) pour protéger les appareils à l’aide d’Intune
 
@@ -115,7 +115,7 @@ Pris en charge sur les éditions de Windows 10 sur lesquelles Microsoft Edge est
 **Paramètres** :
 
 - **SmartScreen pour les applications et les fichiers** : **Activer** Windows SmartScreen pour l’exécution de fichiers et d’applications. SmartScreen est un composant cloud anti-hameçonnage et anti-programme malveillant. **Non configuré** (valeur par défaut) désactive SmartScreen.
-- **Exécution de fichiers non vérifiés** : **Bloquer ** pour empêcher les utilisateurs finaux d’exécuter des fichiers qui n’ont pas été vérifiés par Windows SmartScreen. **Non configuré** (valeur par défaut) désactive cette fonctionnalité et permet aux utilisateurs finaux d’exécuter des fichiers qui n’ont pas été vérifiés.
+- **Exécution de fichiers non vérifiés** : **Bloquer**  pour empêcher les utilisateurs finaux d’exécuter des fichiers qui n’ont pas été vérifiés par Windows SmartScreen. **Non configuré** (valeur par défaut) désactive cette fonctionnalité et permet aux utilisateurs finaux d’exécuter des fichiers qui n’ont pas été vérifiés.
 
 ## <a name="windows-encryption"></a>Chiffrement Windows
 
@@ -152,6 +152,9 @@ Pris en charge sur les éditions de Windows 10 suivantes :
 Les paramètres de base correspondent aux paramètres BitLocker universels pour tous les types de lecteurs de données. Ces paramètres permettent de gérer les options de configuration ou les tâches de chiffrement de lecteur modifiables par l’utilisateur final pour tous les types de lecteurs de données.
 
 - **Avertissement pour tout autre chiffrement de disque** : sélectionnez **Bloquer** pour désactiver l’invite d’avertissement si un autre service de chiffrement de disque se trouve sur l’appareil. **Non configuré** (valeur par défaut) permet l’affichage de l’avertissement.
+    - **Autoriser les utilisateurs standard à activer le chiffrement pendant une jonction Azure AD** : Lorsque vous choisissez **Autoriser**, les utilisateurs standard/non-administrateurs peuvent activer le chiffrement BitLocker quand ils sont connectés. Ce paramètre s’applique uniquement aux appareils joints à Azure Active Directory. **Non configuré** permet uniquement aux administrateurs d’activer le chiffrement BitLocker sur l’appareil.
+      
+      Ce paramètre s’applique uniquement aux appareils joints à Azure Active Directory. Il exige également que le paramètre **Avertissement pour tout autre chiffrement de disque** ait la valeur **Bloquer**.
 - **Configurer les méthodes de chiffrement** : **Activer** ce paramètre pour configurer des algorithmes de chiffrement pour le système d’exploitation, les données et les lecteurs amovibles. Quand ce paramètre a la valeur **Non configuré** (valeur par défaut), BitLocker utilise XTS-AES 128 bits comme méthode de chiffrement par défaut, ou utilise la méthode de chiffrement spécifiée par tout script d’installation.
   - **Chiffrement pour les lecteurs du système d’exploitation** : choisissez la méthode de chiffrement pour les lecteurs de système d’exploitation. Nous vous recommandons d’utiliser l’algorithme AES-XTS.
   - **Chiffrement pour les lecteurs de données fixes** : choisissez la méthode de chiffrement pour les lecteurs de données fixes (intégrés). Nous vous recommandons d’utiliser l’algorithme AES-XTS.

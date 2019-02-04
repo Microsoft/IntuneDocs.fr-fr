@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 83baf13b42cd67e682227d6310b7057bdbd6bf1e
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: ae4691b21b9728a28f9cac0ae0af7fd42a8bdbde
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324856"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199436"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifier les appareils comme appartenant à l’entreprise
 
@@ -41,7 +41,7 @@ Après l’inscription, vous pouvez [changer le paramètre de propriété](#chan
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identifier des appareils d’entreprise à l’aide de leur numéro IMEI ou de leur numéro de série
 
-Les administrateurs Intune peuvent créer et importer un fichier de valeurs séparées par des virgules (.csv) qui répertorie les numéros de série ou les numéros IMEI. Intune utilise ces identificateurs pour spécifier l’entreprise comme propriétaire des appareils lors de l’inscription de l’appareil. Vous pouvez déclarer des numéros IMEI pour toutes les plateformes prises en charge. Vous pouvez déclarer un numéro de série seulement pour les appareils iOS, macOS et Android. Chaque numéro IMEI ou numéro de série peut contenir des détails spécifiés dans la liste pour des raisons administratives.
+Les administrateurs Intune peuvent créer et importer un fichier de valeurs séparées par des virgules (.csv) qui liste les numéros de série ou les numéros IMEI de 14 chiffres. Intune utilise ces identificateurs pour spécifier l’entreprise comme propriétaire des appareils lors de l’inscription de l’appareil. Vous pouvez déclarer des numéros IMEI pour toutes les plateformes prises en charge. Vous pouvez déclarer un numéro de série seulement pour les appareils iOS, macOS et Android. Chaque numéro IMEI ou numéro de série peut contenir des détails spécifiés dans la liste pour des raisons administratives.
 
 <!-- When you upload serial numbers for corporate-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -49,7 +49,7 @@ Les administrateurs Intune peuvent créer et importer un fichier de valeurs sép
 [Découvrez comment trouver votre numéro de série d’appareil Android](https://support.google.com/store/answer/3333000).
 
 ## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Ajouter des identificateurs d’entreprise à l’aide d’un fichier .csv
-Pour créer la liste, préparez une liste à deux colonnes de valeurs séparées par des virgules (.csv), sans en-tête. Ajoutez les numéros de série ou IMEI dans la colonne de gauche, et les détails dans la colonne de droite. Vous ne pouvez importer qu’un seul type d’ID, numéro IMEI ou numéro de série dans un fichier .csv. Les détails sont limités à 128 caractères et sont réservés à des fins d’administration. Les détails ne sont pas affichés sur l’appareil. La limite actuelle est de 5 000 lignes par fichier .csv.
+Pour créer la liste, préparez une liste à deux colonnes de valeurs séparées par des virgules (.csv), sans en-tête. Ajoutez les numéros de série ou IMEI de 14 chiffres dans la colonne de gauche, et les détails dans celle de droite. Vous ne pouvez importer qu’un seul type d’ID, numéro IMEI ou numéro de série dans un fichier .csv. Les détails sont limités à 128 caractères et sont réservés à des fins d’administration. Les détails ne sont pas affichés sur l’appareil. La limite actuelle est de 5 000 lignes par fichier .csv.
 
 **Chargez un fichier .csv qui contient les numéros de série** : créez une liste de valeurs séparées par des virgules (.csv) de deux colonnes sans en-tête, limitée à 5 000 appareils ou à 5 Mo par fichier .csv.
 
