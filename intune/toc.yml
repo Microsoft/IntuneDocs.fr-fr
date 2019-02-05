@@ -491,7 +491,7 @@ items:
     - name: Configurer des applications
       href: app-configuration-policies-overview.md
       items:
-      - name: iOS périphériques gérés
+      - name: Appareils gérés iOS
         href: app-configuration-policies-use-ios.md
       - name: Android périphériques gérés
         href: app-configuration-policies-use-android.md
@@ -699,6 +699,10 @@ items:
           href: wi-fi-settings-macos.md
         - name: Personnalisé
           href: custom-settings-macos.md
+    - name: Bases de référence de sécurité
+      items:
+      - name: Paramètres de base de référence de la sécurité Windows
+        href: security-baseline-settings-windows.md
     - name: Windows 10 et versions ultérieures
       items:
       - name: Paramètres de stratégie de conformité
@@ -951,9 +955,9 @@ items:
       href: data-outside-protect.md
     - name: Éviter les fuites de données sur les appareils non gérés
       href: data-leak-prevention.md
-ms.openlocfilehash: 456d3f4205ca9e24c4358c97a3a2f6a33d1a421f
-ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
+ms.openlocfilehash: cb54a7f48a96684c98ed73584adf4acc57a19f56
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55645187"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690782"
