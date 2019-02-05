@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58d0cbbd503697575cd63e66fff80bd91e742e5e
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831444"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229897"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -37,7 +37,7 @@ Utilisez des stratégies de protection des applications avec la fonctionnalité 
 
 -   **Appareils appartenant à l’entreprise non gérés par une solution MDM :** vous pouvez définir les paramètres de la stratégie de protection des applications pour **autoriser l’application à transférer des données uniquement vers des applications gérées par une stratégie**. Le comportement *Open-In* dans une application gérée par stratégie présente uniquement d’autres applications gérées par stratégie en tant qu’options de partage. Si un utilisateur tente d’envoyer un fichier protégé par stratégie en tant que pièce jointe depuis OneDrive vers l’application de messagerie native, ce fichier est illisible.
 
--   **Appareils gérés par Intune :** pour les appareils inscrits dans Intune, le transfert de données entre les applications avec les stratégies de protection des applications et les autres applications iOS gérées qui sont déployées par le biais d’Intune est automatiquement autorisé. Pour spécifier la façon dont vous souhaitez autoriser le transfert de données sur d’autres applications, activez **Autoriser l’application à transférer des données vers d’autres applications** et choisissez le niveau de partage de votre choix. Pour spécifier la façon dont vous souhaitez autoriser une application à recevoir des données d’autres applications, activez **Autoriser l’application à recevoir des données d’autres applications** et choisissez le niveau de réception de données votre choix. Vous pouvez utiliser la fonctionnalité **Ouvrir dans la gestion** pour contrôler le transfert de données entre les applications qui sont déployées via Intune. Pour plus d’informations sur la réception et le partage des données d’application, consultez [Paramètres de réadressage des données](app-protection-policy-settings-ios.md#data-protection-settings).   
+-   **Appareils gérés par Intune :** pour les appareils inscrits dans Intune, le transfert de données entre les applications avec les stratégies de protection des applications et les autres applications iOS gérées qui sont déployées par le biais d’Intune est automatiquement autorisé. Pour spécifier la façon dont vous souhaitez autoriser le transfert de données sur d’autres applications, activez **Autoriser l’application à transférer des données vers d’autres applications** et choisissez le niveau de partage de votre choix. Pour spécifier la façon dont vous souhaitez autoriser une application à recevoir des données d’autres applications, activez **Autoriser l’application à recevoir des données d’autres applications** et choisissez le niveau de réception de données votre choix. Vous pouvez utiliser la fonctionnalité **Ouvrir dans la gestion** pour contrôler le transfert de données entre les applications qui sont déployées via Intune. Pour plus d’informations sur la réception et le partage des données d’application, consultez [Paramètres de réadressage des données](app-protection-policy-settings-ios.md#data-protection).   
 
 -   **Appareils gérés par une gestion MDM tierce :** vous pouvez limiter le transfert de données uniquement à des applications gérées en utilisant la fonctionnalité iOS **Ouvrir dans la gestion**.
 Pour vous assurer que les applications que vous déployez à l’aide d’une solution MDM tierce sont également associées à vos stratégies de protection des applications Intune, configurez le paramètre UPN d’utilisateur comme décrit dans la section suivante [Configurer le paramètre UPN d’utilisateur](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Quand les applications sont déployées avec le paramètre UPN de l’utilisateur, les stratégies de protection des applications sont implémentées dans l’application quand l’utilisateur se connecte avec son compte professionnel.

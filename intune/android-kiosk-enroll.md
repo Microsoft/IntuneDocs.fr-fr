@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4a6818f67ab4e3b04364b412fb8ecf71227328d4
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: b3ced7e52de05e98c2f4a7ec9a828972ab60cf71
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54386917"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290721"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription Intune d’appareils Android Entreprise dédiés
 
@@ -101,7 +101,7 @@ Vous pouvez à présent [inscrire vos appareils dédiés](android-dedicated-devi
 
 ## <a name="managing-apps-on-android-dedicated-devices"></a>Gestion d’applications sur des appareils Android dédiés
 
-Seules les applications dont le type Affectation [a la valeur Obligatoire](apps-deploy.md#to-assign-an-app) peuvent être installées sur des appareils Android dédiés. Les applications sont installées à partir du store Google Play géré de la même manière que les appareils avec profil professionnel Android.
+Seules les applications dont le type Affectation [a la valeur Obligatoire](apps-deploy.md#assign-an-app) peuvent être installées sur des appareils Android dédiés. Les applications sont installées à partir du store Google Play géré de la même manière que les appareils avec profil professionnel Android.
 
 Les applications sont mises à jour automatiquement sur les appareils gérés quand le développeur d’application publie une mise à jour sur Google Play.
 
