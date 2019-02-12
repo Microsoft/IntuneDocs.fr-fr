@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4336be8d24ac4a81ec6fca09f22d594000bbd9a5
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5611fb75ebf8106e70c1735458ee8b33fec16f7d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831382"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838391"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Paramètres des appareils Android permettant de configurer la messagerie, l’authentification et la synchronisation dans Intune
 
@@ -50,7 +51,7 @@ Pour plus d’informations sur les profils de courrier dans Intune, voir [Config
       Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
       - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, par exemple `contoso.com` ou `contoso`
 
-- **Attribut d’adresse e-mail d’AAD** : ce nom est l’attribut de courrier obtenu par Intune auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
+- **Attribut d’adresse e-mail d’AAD** : Ce nom est l’attribut de messagerie obtenu par Intune auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
   - **Nom d’utilisateur principal** :  utilise le nom principal complet (par exemple, `user1@contoso.com` ou `user1`) comme adresse e-mail.
   - **Adresse SMTP principale** : utilise l’adresse SMTP principale (par exemple, `user1@contoso.com`) pour la connexion à Exchange.
 
