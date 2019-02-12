@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d87d8c8da5511f641b785f28bad7d7ef6739d888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 86c822ba197851fe7e05d91ff8aa703fb9fe3811
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184452"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842779"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows 10 dans Intune
 
@@ -43,14 +44,14 @@ Cet article :
 3. entrez les paramètres suivants :
 
     - **Nom** : entrez un nom pour le profil, par exemple `windows 10 custom profile`.
-    - **Description :** entrez une description pour le profil.
-    - **Plateforme** : choisissez **Windows 10 et ultérieur**.
+    - **Description** : Entrez la description du profil.
+    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
     - **Type de profil** : choisissez **Personnalisé**.
 
 4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
 
-    - **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
-    - **Description** : entrez une description qui donne une vue d’ensemble du paramètre et tout autre détail important.
+    - **Nom** : Affectez un nom unique au paramètre OMA-URI pour vous aider à l'identifier dans la liste des paramètres.
+    - **Description** : entrez une description qui présente le paramètre et tout autre détail important.
     - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
     - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
 

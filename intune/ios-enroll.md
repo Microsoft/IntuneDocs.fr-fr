@@ -16,12 +16,13 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 22951d6e129b50d37fb16d865f0b9ad9aada012f
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ec625b2ef7f968f8098a8288832c62d3510c4906
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032280"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837649"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Inscrire des appareils iOS dans Intune
 
@@ -77,7 +78,7 @@ Une affinité utilisateur est nécessaire pour prendre en charge les éléments 
 4. Les utilisateurs doivent lancer l’application Portail d’entreprise et se connecter à l’aide des informations d’identification (par exemple, l’UPN) qui sont associées à leur abonnement dans Intune. 
 5. Une fois que vous êtes connecté, l’inscription est terminée. Les utilisateurs peuvent désormais utiliser cet appareil avec l’ensemble complet des fonctionnalités.
 
-### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>À propos des périphériques gérés d’entreprise sans aucune affinité utilisateur
+### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>À propos des appareils gérés d’entreprise sans aucune affinité utilisateur
 
 Les appareils configurés sans aucune affinité utilisateur ne prennent pas en charge le Portail d’entreprise et ne doivent pas être dotés de l’application. Le Portail d’entreprise est conçu pour les utilisateurs détenteurs d’informations d’identification d’entreprise, qui ont besoin d’accéder à des ressources d’entreprise personnalisées (par exemple, aux e-mails). Les appareils inscrits sans aucune affinité utilisateur ne sont pas destinés à un utilisateur dédié. Une borne, un point de vente (PDV) ou un appareil à usage partagé sont des exemples typiques d’utilisation d’appareils inscrits sans aucune affinité utilisateur.
 

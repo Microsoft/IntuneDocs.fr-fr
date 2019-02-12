@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a59cab5f709897e064b315193b292cb46dc2f2e
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f335c8acf9e979366fe75d1a3da2318b7ec46400
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831545"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836691"
 ---
 # <a name="windows-10-and-newer-delivery-optimization-settings-in-microsoft-intune"></a>Paramètres d’optimisation de la distribution de Windows 10 (et versions ultérieures) dans Microsoft Intune
 
@@ -43,7 +44,7 @@ Pour plus d’informations sur l’optimisation de la distribution sur Windows 
 
     - **Nom** : Entrez un nom descriptif pour le nouveau profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
-    - **Plateforme** : Sélectionnez la plateforme :  
+    - **Plateforme** : sélectionnez la plateforme :  
 
         - **Windows 10 et versions ultérieures**
 

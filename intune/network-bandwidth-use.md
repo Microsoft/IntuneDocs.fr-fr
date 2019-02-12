@@ -16,12 +16,13 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: 243e9602a253fecf2eda1dd73dfb49a488db0974
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0ba4cf212f44742ca9feb077a945a1f500ca1a78
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190249"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840941"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Configuration requise pour le réseau Intune et bande passante
 
@@ -165,7 +166,7 @@ Les tableaux suivants répertorient les ports et services auxquels le client Int
 
 ### <a name="apple-device-network-information"></a>Informations réseau de l’appareil Apple
 
-|         Hostname         |                                        URL (adresse IP/sous-réseau)                                        |  Protocole  |     Port     |                          Appareil                           |
+|         Nom d'hôte         |                                        URL (adresse IP/sous-réseau)                                        |  Protocole  |     Port     |                          Appareil                           |
 |--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
 |      Console d'administration       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS et macOS                    |
 |      Console d'administration       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS et macOS                    |

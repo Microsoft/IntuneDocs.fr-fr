@@ -16,12 +16,13 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65f3598282bd46d422f8748d2653dbf8e18cf9b7
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324971"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086214"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Gérer l’accès à Internet à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
@@ -150,9 +151,9 @@ Microsoft Edge, Intune Managed Browser et le [Proxy d’application Azure AD]( h
 ### <a name="before-you-start"></a>Avant de commencer
 
 - Configurez vos applications internes à l’aide du proxy d’application Azure AD.
-    - Pour configurer le proxy d’application et publier des applications, consultez la [documentation d’installation](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started). 
+    - Pour configurer le proxy d’application et publier des applications, consultez la [documentation d’installation](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
 - Vous devez utiliser au minimum la version 1.2.0 de l’application Managed Browser.
-- Les utilisateurs de l’application Managed Browser ou Microsoft Edge ont une [stratégie Intune App Protection]( app-protection-policy.md) affectée à l’application.
+- Les utilisateurs de l’application Managed Browser ou Microsoft Edge ont une [stratégie Intune App Protection](app-protection-policy.md) affectée à l’application.
 
     > [!NOTE]
     > La mise à jour des données de redirection du proxy d’application dans Managed Browser et Microsoft Edge peut prendre jusqu’à 24 heures.

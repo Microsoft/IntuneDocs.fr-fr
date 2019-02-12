@@ -16,12 +16,13 @@ ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 4a0af73cdcd65486ac5ee3a51e4eb1d7e453bb93
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 77e86912870b22168a7e2dd3e146b9410c482744
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303461"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841077"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
@@ -155,7 +156,7 @@ Pour les appareils Windows gérés avec le client logiciel Intune, les erreurs d
 
 4. Déplacez le curseur de notification sur le paramètre par défaut.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>ERREUR : Impossible d’obtenir la valeur de l’ordinateur, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>ERROR : Impossible d’obtenir la valeur de l’ordinateur, 0x80041013
 
 Cela se produit si l’heure sur le système local présente un écart de synchronisation d’au moins cinq minutes. Si l’heure n’est pas synchronisée sur l’ordinateur local, les transactions sécurisées échouent, car les horodatages ne sont pas valides.
 

@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1a6019365b03a54e5897bc8788c171ef969e0d1e
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ec227fc3057f80e94ae58ce68c19f06b7dba8bc5
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032371"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848472"
 ---
 # <a name="reference-for-application-entities"></a>Informations de référence sur les entités d’application
 
@@ -67,7 +68,7 @@ L’entité **AppTypes** répertorie la source d’installation d’une applicat
 
 ### <a name="example"></a>Exemple
 
-| AppTypeID  | Name | Description |
+| AppTypeID  | Nom | Description |
 |---------|------------|--------|
 | 0 |Application de l’Android Store | Application de l’Android Store. |
 | 1 |Application métier Android | Application métier Android. |
@@ -96,7 +97,7 @@ L’entité **VppProgramTypes** répertorie les types de VPP possibles pour une 
 
 ### <a name="example"></a>Exemple
 
-| VppProgramID  | Name | Description |
+| VppProgramID  | Nom | Description |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Programme VPP Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Pas encore disponible | Valeur par défaut : aucun VPP. |

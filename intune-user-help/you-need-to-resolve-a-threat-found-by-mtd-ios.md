@@ -15,18 +15,19 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 40d4b2d316320f23b29f1a7a67c529a158a0f7d6
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7a3c100b283b5220f065facdf96e25fa32bab7e5
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48827834"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837320"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Résoudre une menace détectée par une application Mobile Threat Defense
 
 Les applications Mobile Threat Defense détectent et signalent les menaces potentielles sur vos appareils. Certaines organisations intègrent un service Mobile Threat Defense à un fournisseur de gestion des appareils mobiles comme Intune. En cas d’intégration, le service Mobile Threat Defense signale les menaces (telles que les applications ou les réseaux suspects, ainsi que les vulnérabilités du système d’exploitation) et affiche une notification dans l’application Portail d’entreprise. Vous pourrez alors accéder à des informations supplémentaires sur les menaces et les étapes correctives dans l’application Mobile Threat Defense.  
 
-Les menaces sont affichées dans le portail d’entreprise en tant que problèmes non résolus et non conformes. Si les menaces présentent un risque suffisamment élevé, l’entreprise révoquera votre accès à ses ressources. Tant que ces menaces sont présentes sur votre appareil, vous risquez de ne pas pouvoir :  
+Les menaces sons affichées dans le portail d’entreprise en tant que problèmes non résolus et non conformes. Si les menaces présentent un risque suffisamment élevé, l’entreprise révoquera votre accès à ses ressources. Tant que ces menaces sont présentes sur votre appareil, vous risquez de ne pas pouvoir :  
 
 * Vous connecter à la messagerie d’entreprise.
 * Vous connecter au réseau Wi-Fi d’entreprise.

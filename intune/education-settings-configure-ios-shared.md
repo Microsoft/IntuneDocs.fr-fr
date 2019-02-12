@@ -16,12 +16,13 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 24fb627d0fcf0fe3b24a8242d8ac22ccf6f3ff91
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 558f55d1d809fe634f7b48a91962644fe0d97232
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032369"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842879"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Configurer les paramètres d’Intune Education pour les appareils iPad partagés
 
@@ -102,7 +103,7 @@ Sous **Certificat PKCS#12 d’enseignant**, configurez les valeurs suivantes :
 - **Nom de l’autorité de certification** : entrez le nom de votre autorité de certification.
 - **Nom du modèle de certificat** : entrez le nom d’un modèle de certificat qui a été ajouté à une autorité de certification émettrice.
 - **Seuil de renouvellement (%)** : spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.
-- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
+- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
 
 Quand vous avez terminé la configuration des certificats d’enseignants, choisissez **OK**.
 
@@ -124,7 +125,7 @@ Sous **Certificat PKCS#12 d’étudiant**, configurez les valeurs suivantes :
 - **Nom de l’autorité de certification** : entrez le nom de votre autorité de certification.
 - **Nom du modèle de certificat** : entrez le nom d’un modèle de certificat qui a été ajouté à une autorité de certification émettrice.
 - **Seuil de renouvellement (%)** : spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.
-- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
+- **Période de validité du certificat** : spécifiez la quantité de temps restant avant l’expiration du certificat. Vous pouvez spécifier une valeur inférieure à la période de validité du modèle de certificat spécifié, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez spécifier une valeur de 1 an mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice.
 
 Quand vous avez terminé la configuration des certificats, choisissez **OK**.
 

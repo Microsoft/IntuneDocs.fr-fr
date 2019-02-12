@@ -16,12 +16,13 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: cd238a7b779dd5e52e3cf8fb06c8f89db1f76559
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bc2ee6c8281e035cbbb6cf41b7f41c208d3c04c8
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112917"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55835195"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Intune
 
@@ -92,7 +93,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
 5.  Si la connexion aboutit, l’appareil iOS vous invite à installer l’application Portail d’entreprise Intune et à procéder à l’inscription. Sur un appareil Android, vous devez d’abord installer manuellement l’application Portail d’entreprise Intune avant de retenter l’inscription.
 
-### <a name="mdm-authority-not-defined"></a>Autorité GPM non définie
+### <a name="mdm-authority-not-defined"></a>Autorité MDM non définie
 **Problème :** Un utilisateur reçoit l’erreur **Autorité MDM non définie**.
 
 **Résolution :**
@@ -120,7 +121,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
     4.  Dans la partie supérieure, choisissez **Nouvelle requête** et exécutez les requêtes suivantes :
 
-        -   Pour afficher tous les utilisateurs : `select * from [CM_ DBName].[dbo].[User_DISC]`
+        -   Pour afficher tous les utilisateurs : `select * from [CM_ DBName].[dbo].[User_DISC]`
 
         -   Pour afficher des utilisateurs spécifiques, utilisez la requête suivante, où %testuser1% est un espace réservé correspondant à username@domain.com pour l’utilisateur que vous recherchez : `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
@@ -150,7 +151,7 @@ Un [correctif cumulatif pour AD FS 2.0](http://support.microsoft.com/kb/260749
 
 Le tableau suivant répertorie les erreurs auxquelles les utilisateurs finaux peuvent être confrontés durant l’inscription d’appareils Android dans Intune.
 
-|Message d'erreur|Problème|Solution|
+|Message d'erreur|Problème|Résolution|
 |---|---|---|
 |**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies :<ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Pour plus d’informations, consultez [Attribuer des licences Intune à vos comptes d’utilisateur](/intune/licenses-assign).|
 |**L’administrateur informatique doit définir une autorité MDM**<br>Apparemment, votre administrateur informatique n’a pas défini d’autorité MDM. Demandez-lui de l’aide ou réessayez plus tard.|L’autorité de gestion des appareils mobiles n’a pas été définie.|L’autorité de gestion des appareils mobiles n’a pas été définie dans Intune. Découvrez comment [définir l’autorité de gestion des appareils mobiles](/intune/mdm-authority-set).|
@@ -263,7 +264,7 @@ Si le certificat de serveur est installé correctement, toutes les coches s’af
 ### <a name="ios-enrollment-errors"></a>Erreurs d'inscription iOS
 Le tableau suivant répertorie les erreurs que les utilisateurs finaux peuvent rencontrer lors de l’inscription d’appareils iOS dans Intune.
 
-|Message d'erreur|Problème|Solution|
+|Message d'erreur|Problème|Résolution|
 |-------------|-----|----------|
 |NoEnrollmentPolicy|Aucune stratégie d’inscription détectée|Vérifiez que tous les prérequis de l’inscription, comme le certificat Apple Push Notification Service (APNs), ont été configurés et que l’option « iOS comme plateforme » est activée. Pour obtenir des instructions, consultez [Configurer la gestion des appareils iOS et Mac](ios-enroll.md).|
 |DeviceCapReached|Vous avez trop d’appareils mobiles déjà inscrits.|L’utilisateur doit supprimer un de ses appareils mobiles actuellement inscrits du portail d’entreprise avant d’en inscrire un autre. Consultez les instructions correspondant au type d’appareil que vous utilisez : [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
@@ -443,7 +444,7 @@ La liste des erreurs d’inscription iOS est fournie dans notre documentation, d
 
 ## <a name="pc-issues"></a>Problèmes liés aux PC
 
-|Message d'erreur|Problème|Solution|
+|Message d'erreur|Problème|Résolution|
 |---|---|---|
 |**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies : <ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Découvrez comment [attribuer des licences Intune à vos comptes d’utilisateur](https://docs.microsoft.com/intune/licenses-assign).|
 
@@ -475,7 +476,7 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 
 ## <a name="general-enrollment-error-codes"></a>Codes généraux des erreurs d’inscription
 
-|Code d’erreur|Problème possible|Solution suggérée|
+|Code d'erreur|Problème possible|Solution suggérée|
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |L’horloge de l’ordinateur client n’est pas réglée sur la bonne heure.|Assurez-vous que l'horloge et le fuseau horaire de l'ordinateur client sont correctement réglés.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Connexion impossible au service Intune. Vérifiez les paramètres de proxy du client.|Vérifiez qu’Intune prend en charge la configuration du proxy sur l’ordinateur client. Vérifiez que l’ordinateur client dispose d’un accès à Internet.|

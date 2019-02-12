@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 2c4e6041f00ad55b18f8b20996da8002f5ce0247
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ce08d8c199b6fc680f314141b920ca798137139c
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032195"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843559"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows Holographic for Business dans Intune
 
@@ -40,8 +41,8 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 3. entrez les paramètres suivants :
 
     - **Nom** : entrez un nom pour le profil, par exemple `hololens custom profile`.
-    - **Description** : entrez la description du profil.
-    - **Plateforme** : choisissez **Windows 10 et ultérieur**.
+    - **Description** : Entrez la description du profil.
+    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
     - **Type de profil** : choisissez **Personnalisé**.
 
 4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
@@ -51,7 +52,7 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
     - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
     - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
 
-        - String
+        - Chaîne
         - Chaîne (fichier XML)
         - Date et heure
         - Entier
@@ -110,7 +111,7 @@ Les paramètres suivants sont utiles pour les appareils exécutant Windows Holog
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Type de données|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|String<br/>URL : L’appareil vérifie l’existence de mises à jour auprès du serveur WSUS à l’URL spécifiée.<br/>Non configuré : L’appareil vérifie l’existence de mises à jour auprès de Microsoft Update.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Chaîne<br/>URL : L’appareil vérifie l’existence de mises à jour auprès du serveur WSUS à l’URL spécifiée.<br/>Non configuré : L’appareil vérifie l’existence de mises à jour auprès de Microsoft Update.|
 
 ### <a name="approvedupdateshttpsdocsmicrosoftcomwindowsclient-managementmdmupdate-csp"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
@@ -124,7 +125,7 @@ Les paramètres suivants sont utiles pour les appareils exécutant Windows Holog
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Type de données|
 > |----|---|
-> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Important**<br/>L’article Fournisseur de services de configuration AppLocker utilise des exemples XML avec une séquence d’échappement. Pour configurer les paramètres avec des profils personnalisés Intune, vous devez utiliser du XML brut.|String<br/>Pour plus d’informations, consultez [CSP AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Important**<br/>L’article Fournisseur de services de configuration AppLocker utilise des exemples XML avec une séquence d’échappement. Pour configurer les paramètres avec des profils personnalisés Intune, vous devez utiliser du XML brut.|Chaîne<br/>Pour plus d’informations, consultez [CSP AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ### <a name="deletionpolicyhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 

@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: ce4689aaecd40d7d44f0064b1e951823fa0bb2c2
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b45f8d5b548bd88715381f25ba0b5c3e9155b344
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737999"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841791"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données Microsoft Intune
 
@@ -56,7 +57,7 @@ Les entités et les relations suivent un modèle de schéma en étoile. Un sché
 
 Optimisé pour la flexibilité et l’analyse des données, un modèle de schéma en étoile vous permet de créer les rapports nécessaires pour comprendre l’évolution de votre environnement mobile.
 
-## <a name="time-daily-snapshots"></a>Heure : instantanés quotidiens
+## <a name="time-daily-snapshots"></a>Heure : instantanés quotidiens
 
 L’entrepôt est en aval des données Intune. Intune prend un instantané quotidien à minuit UTC, et le stocke dans l’entrepôt. La durée de conservation des instantanés varie d’une table de faits à l’autre : sept jours pour certaines, 30 jours pour d’autres, voire encore plus longtemps.
 

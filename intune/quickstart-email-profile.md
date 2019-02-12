@@ -16,14 +16,15 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 83371d14215eb9ed2298796279d232ffbc7d129f
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7fbe3371d86d02247922c87680605c9ea3a1f4df
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817039"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55845837"
 ---
-# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS
+# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS
 
 Dans ce guide de démarrage rapide, vous verrez comment créer un profil d’appareil e-mail pour les appareils iOS. Ce profil spécifie les paramètres dont a besoin l’application e-mail intégrée sur l’appareil iOS pour se connecter à l’e-mail d’entreprise. Les profils d’appareil e-mail aident à standardiser les paramètres parmi les appareils et permettent aux utilisateurs finaux d’accéder à l’e-mail d’entreprise sur leurs appareils personnels sans aucune autre configuration de leur part. Pour protéger davantage votre e-mail, vous pouvez utiliser un profil e-mail pour déterminer si les appareils sont conformes, puis configurer l’accès conditionnel pour n’autoriser que les appareils conformes à accéder à l’e-mail. Pour plus d’informations sur les profils e-mail, consultez [Guide pratique pour configurer des paramètres de messagerie dans Microsoft Intune](email-settings-configure.md).
 

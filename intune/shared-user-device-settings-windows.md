@@ -15,12 +15,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: fb51ba835491da284ddd304bc038d16862c6dfc1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 707bb84df55fa202e3dc5241e3d7212039b17b3b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54205101"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841740"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Paramètres Windows 10 et ultérieur pour gérer les appareils partagés à l’aide d’Intune
 
@@ -43,10 +44,10 @@ Pour plus d’informations sur cette fonctionnalité dans Intune, consultez [Con
   - **Invité** : crée un compte invité localement sur l’appareil.
   - **Domaine** : crée un compte invité dans Azure Active Directory (AD).
   - **Invité et domaine** : crée un compte invité localement sur l’appareil et dans Azure Active Directory (AD).
-- **Gestion des comptes** : affectez la valeur **Activer** pour supprimer automatiquement les comptes locaux créés par des invités et les comptes dans Active Directory et Azure AD. Quand un utilisateur se déconnecte de l’appareil, ou lors de l’exécution de la maintenance du système, ces comptes sont supprimés. Quand cette option est activée, définissez également :
-  - **Suppression du compte** : choisissez quand les comptes sont supprimés : **Au niveau du seuil d’espace de stockage**, **Au niveau du seuil d’espace de stockage et du seuil d’inactivité** ou **Immédiatement après la déconnexion**. Entrez également :
-    - **Seuil de démarrage de suppression (%)**  : entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total est inférieur à la valeur entrée, les comptes mis en cache sont supprimés. Les comptes sont supprimés de manière continue afin de récupérer l’espace disque. Les comptes inactifs depuis le plus longtemps sont supprimés en premier.
-    - **Seuil d’arrêt de suppression (%)**  : entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total atteint la valeur entrée, la suppression cesse.
+- **Gestion des comptes** : Affectez la valeur **Activer** pour supprimer automatiquement les comptes locaux créés par des invités et les comptes dans Active Directory et Azure AD. Quand un utilisateur se déconnecte de l’appareil, ou lors de l’exécution de la maintenance du système, ces comptes sont supprimés. Quand cette option est activée, définissez également :
+  - **Suppression du compte** : Choisissez quand les comptes sont supprimés : **Au niveau du seuil d’espace de stockage**, **Au niveau du seuil d’espace de stockage et du seuil d’inactivité** ou **Immédiatement après la déconnexion**. Entrez également :
+    - **Seuil de démarrage de suppression (%)**  : Entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total est inférieur à la valeur entrée, les comptes mis en cache sont supprimés. Les comptes sont supprimés de manière continue afin de récupérer l’espace disque. Les comptes inactifs depuis le plus longtemps sont supprimés en premier.
+    - **Seuil d’arrêt de suppression (%)**  : Entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total atteint la valeur entrée, la suppression cesse.
 
   Affectez la valeur **Désactiver** pour conserver les comptes locaux, AD et Azure AD créés par des invités.
 

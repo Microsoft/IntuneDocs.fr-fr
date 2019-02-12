@@ -16,12 +16,13 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 6a49ee917540c9378f69dc6a025fbe5f8429767c
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c81162d5208ecdca2c26d7a981170d370b68115e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112814"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837489"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Configurer l’inscription des appareils iOS avec Apple Configurator
 
@@ -33,7 +34,7 @@ Intune prend en charge l’inscription d’appareils iOS à l’aide d’[Apple 
 
 Vous ne pouvez pas utiliser les méthodes d’inscription Apple Configurator avec le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 - Accès physique aux appareils iOS
 - [Définir l’autorité MDM](mdm-authority-set.md)
@@ -129,8 +130,8 @@ Une fois que vous avez créé le profil et affecté des numéros de série, vous
 9. Dans le panneau **Configure iOS Setup Assistant** (Configurer l’Assistant Configuration iOS), choisissez les étapes à présenter à l’utilisateur, puis sélectionnez **Prepare** (Préparer). Si vous y êtes invité, authentifiez-vous pour mettre à jour les paramètres d’approbation.  
 10. Une fois la préparation de l’appareil iOS terminée, déconnectez le câble USB.  
 
-### <a name="distribute-devices"></a>Distribuer les appareils
-Les appareils sont désormais prêts pour l’inscription d’entreprise. Éteignez les appareils et distribuez-les aux utilisateurs. Quand les utilisateurs allument leur appareil, l’Assistant Configuration démarre.
+### <a name="distribute-devices"></a>Distribuer des appareils
+Les appareils sont désormais prêts pour l'inscription d'entreprise. Éteignez les appareils et distribuez-les aux utilisateurs. Quand les utilisateurs allument leur appareil, l’Assistant Configuration démarre.
 
 Après avoir reçu leur appareil, les utilisateurs doivent exécuter l’Assistant Configuration. Des appareils configurés avec une affinité utilisateur peuvent installer et exécuter l’application Portail d’entreprise pour télécharger des applications et gérer des appareils.
 

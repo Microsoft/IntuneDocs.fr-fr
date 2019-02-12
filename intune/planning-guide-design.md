@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 192e0ac0e67fb519f1dcd2ff9faf0d7748942997
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112984"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834532"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -178,9 +179,9 @@ Informations supplémentaires :
 
 Examinez de plus près les aspects suivants de vos appareils pour comprendre comment les gérer correctement.
 
--   Plateformes d’appareils prises en charge
+-   Plateformes d’appareil prises en charge
 
--   Périphériques
+-   Appareils
 
 -   Propriété des appareils
 
@@ -194,7 +195,7 @@ Vous devez identifier les appareils qui seront utilisés dans l’environnement 
 
 [Liste complète des appareils pris en charge par Intune](supported-devices-browsers.md).
 
-### <a name="devices"></a>Périphériques
+### <a name="devices"></a>Appareils
 
 Intune gère les appareils mobiles pour sécuriser les données d’entreprise et permettre aux utilisateurs de travailler depuis plusieurs endroits. Comme Intune prend en charge de nombreuses plateformes d’appareils, nous vous recommandons de documenter les appareils ainsi que les plateformes et versions de système d’exploitation pris en charge dans la conception de votre organisation. Par exemple :
 

@@ -16,12 +16,13 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b952483fc0cb33b32769a4b83564618b082c4b87
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 35492b94e38d482f5ee59385453bac54f434223d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303444"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55845327"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot (préversion)
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
@@ -42,7 +43,7 @@ Les appareils à inscrire doivent également :
 
    ![Le portail Azure](./media/auto-enroll-azure-main.png)
 
-1. Sélectionnez **Mobilité (MDM et MAM)**.
+1. Sélectionnez **Mobilité (MDM et GAM)**.
 
    ![Le volet Azure Active Directory](./media/auto-enroll-mdm.png)
 

@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8912810d10468bd0b37e5cfcec04ee7a62427720
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 785509e3272190774f7023b572118588e7443f91
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31014399"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849299"
 ---
 # <a name="enroll-your-windows-device-in-intune"></a>Inscrire un appareil Windows dans Intune
 
@@ -34,6 +35,6 @@ Si votre société ou votre école utilise Microsoft Intune, vous pouvez inscrir
 
 Pour vous inscrire, cliquez sur le lien correspondant à l’appareil que vous utilisez :
 
--  [Windows 10 Mobile et Windows 10 Desktop](enroll-your-w10-phone-or-w10-pc-windows.md)
--  [Windows 8.1 ou Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
--  [Windows Phone 8.1](enroll-your-wp81-windows.md)
+-  [Windows 10 Mobile et Windows 10 Desktop](enroll-your-w10-phone-or-w10-pc-windows.md)
+-  [Windows 8.1 ou Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
+-  [Windows Phone 8.1](enroll-your-wp81-windows.md)

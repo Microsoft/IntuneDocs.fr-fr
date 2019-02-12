@@ -16,12 +16,13 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f86ebd91125ec60d2ad0a28b47f5ac01fb62e8e2
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7efa888344b91c74672563730bbdea6c7424214b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297296"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55835093"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Guide pratique de surveillance des stratégies de protection des applications
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -62,7 +63,7 @@ Vous pouvez accéder à la vue détaillée du résumé en choisissant les vignet
 Vous pouvez rechercher un utilisateur et vérifier son état de conformité. Le volet **Rapport d’application** montre les informations suivantes sur un utilisateur sélectionné :
 - Les appareils associés au compte d’utilisateur
 
-- Applications avec une stratégie MAM sur l’appareil
+- Applications avec une stratégie GAM sur l’appareil
 
 - État :
 
@@ -104,15 +105,15 @@ Le panneau **Rapports** fournit plusieurs rapports basés sur l’utilisateur et
 
 -   **Rapport de l’application** : il fournit deux états distincts de protection de l’application, que les administrateurs peuvent sélectionner avant de générer le rapport. Les états peuvent être protégés ou non protégés.
 
-    -   État de l’utilisateur pour l’activité MAM gérée (protégé) : ce rapport présente l’activité de chaque application MAM gérée, par utilisateur.
+    -   État de l’utilisateur pour l’activité GAM gérée (protégé) : ce rapport présente l’activité de chaque application GAM gérée, par utilisateur.
 
-        -   Il affiche toutes les applications ciblées par les stratégies MAM de chaque utilisateur et détaille l’état de chaque application enregistrée dans les stratégies MAM ou ciblée par une stratégie MAM mais jamais enregistrée.
+        -   Il affiche toutes les applications ciblées par les stratégies GAM de chaque utilisateur et détaille l’état de chaque application enregistrée dans les stratégies GAM ou ciblée par une stratégie GAM mais jamais enregistrée.
 <br><br>
-    -   État de l’utilisateur pour l’activité MAM non gérée (non protégé) : ce rapport présente l’activité des applications compatibles avec MAM qui ne sont actuellement pas gérées, par utilisateur. Cela peut se produire pour les raisons suivantes :
+    -   État de l’utilisateur pour l’activité GAM non gérée (non protégé) : ce rapport présente l’activité des applications compatibles avec GAM qui ne sont actuellement pas gérées, par utilisateur. Cela peut se produire pour les raisons suivantes :
 
-        -   Ces applications sont utilisées par un utilisateur ou une application qui n’est actuellement pas ciblée par une stratégie MAM.
+        -   Ces applications sont utilisées par un utilisateur ou une application qui n’est actuellement pas ciblée par une stratégie GAM.
 
-        -   Toutes les applications sont enregistrées, mais ne reçoivent aucune stratégie MAM.
+        -   Toutes les applications sont enregistrées, mais ne reçoivent aucune stratégie GAM.
 
 ![Capture d’écran du panneau Rapport d’application d’un utilisateur, affichant les détails de trois applications](./media/MAM-reporting-4.png)
 

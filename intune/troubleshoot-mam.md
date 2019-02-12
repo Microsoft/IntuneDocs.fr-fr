@@ -15,12 +15,13 @@ ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58ff1bd91a5c95d66d75ad6546137dd2de9feac3
-ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54899091"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086146"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Résoudre les problèmes de gestion des applications mobiles
 
@@ -34,9 +35,9 @@ Il s’agit de problèmes courants qu’un administrateur informatique peut renc
 
 | Problème | Description | Résolution |
 | -- | -- | -- |
-| La stratégie n’est pas appliquée à Skype Entreprise | La stratégie de protection des applications sans inscription d’appareil, effectuée dans le portail Azure, ne s’applique pas à l’application Skype Entreprise sur les appareils iOS et Android. | Skype Entreprise doit être configuré pour l’authentification moderne.  Pour configurer l’authentification moderne pour Skype, suivez les instructions fournies dans [Enable your tenant for modern authentication](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) (Activer votre locataire pour l’authentification moderne). |
+| La stratégie n’est pas appliquée à Skype Entreprise | La stratégie de protection des applications sans inscription d’appareil, effectuée dans le portail Azure, ne s’applique pas à l’application Skype Entreprise sur les appareils iOS et Android. | Skype Entreprise doit être configuré pour l’authentification moderne.  Pour configurer l’authentification moderne pour Skype, suivez les instructions fournies dans [Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) (Activer votre locataire pour l’authentification moderne). |
 | La stratégie d’application Office n’est pas appliquée | Les stratégies de protection des applications ne s’appliquent à aucune [application Office prise en charge](https://www.microsoft.com/cloud-platform/microsoft-intune-partners), quel que soit l’utilisateur. | Vérifiez que l’utilisateur a une licence pour Intune et que les applications Office sont ciblées par une stratégie de protection des applications déployée. L’application d’une stratégie de protection des applications récemment déployée peut prendre jusqu’à huit heures. |
-| L’administrateur ne peut pas configurer la stratégie de protection des applications dans le portail Azure | L’administrateur informatique ne peut pas configurer de stratégies de protection des applications dans le portail Azure. | Les rôles d’utilisateur suivants ont accès au portail Azure : <ul><li>Administrateur général (rôle à configurer dans le [portail Office](http://portal.office.com/))</li><li>Propriétaire (rôle à configurer dans le [portail Azure](https://portal.azure.com/))</li><li>Collaborateur (rôle à configurer dans le [portail Azure](https://portal.azure.com/))</li></ul> Pour obtenir de l’aide sur la configuration de ces rôles, consultez [Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune](role-based-access-control.md).|
+| L’administrateur ne peut pas configurer la stratégie de protection des applications dans le portail Azure | L’administrateur informatique ne peut pas configurer de stratégies de protection des applications dans le portail Azure. | Les rôles d’utilisateur suivants ont accès au portail Azure : <ul><li>Administrateur général (rôle à configurer dans le [portail Office](https://portal.office.com/))</li><li>Propriétaire (rôle à configurer dans le [portail Azure](https://portal.azure.com/))</li><li>Collaborateur (rôle à configurer dans le [portail Azure](https://portal.azure.com/))</li></ul> Pour obtenir de l’aide sur la configuration de ces rôles, consultez [Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune](role-based-access-control.md).|
 |Les comptes d’utilisateur manquent dans les rapports de stratégie de protection des applications | Les rapports de la console d’administration ne montrent pas les comptes d’utilisateur sur lesquels la stratégie de protection des applications a été récemment déployée. | Si vous venez de cibler un utilisateur avec une stratégie de protection des applications, il peut s’écouler jusqu’à 24 heures avant que cet utilisateur apparaisse dans les rapports en tant qu’utilisateur ciblé. |
 | Les modifications de stratégie ne sont pas mises en œuvre | Il peut s’écouler jusqu’à 8 heures pour que des modifications et des mises à jour d’une stratégie de protection des applications prennent effet. | Le cas échéant l’utilisateur final peut se déconnecter de l’application et s’y reconnecter pour forcer la synchronisation avec le service. |
 | La stratégie de protection des applications ne fonctionne ne pas avec DEP | La stratégie de protection des applications ne s’applique pas aux appareils Apple DEP. | Vérifiez que vous utilisez l’Affinité utilisateur avec Apple DEP (Device Enrollment Program). L’affinité utilisateur doit être utilisée pour chaque application qui nécessite une authentification utilisateur dans DEP. <br><br>Pour plus d’informations sur DEP pour iOS, consultez [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md).|

@@ -16,12 +16,13 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bab1656ec141b26cc3e9cb4195da7c1c24e401a1
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9951c1e2be1824936d757bfa74f4c82eeaf5e498
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230169"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834447"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -39,7 +40,7 @@ Deux facteurs déterminent la manière dont vous pouvez simplifier l’inscripti
 - **Utilisez-vous Azure Active Directory Premium ?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) est inclus avec Enterprise Mobility + Security et d’autres plans de licence.
 - **Quelles versions des clients Windows les utilisateurs vont-ils inscrire ?** <br>Les appareils Windows 10 peuvent s’inscrire automatiquement quand vous ajoutez un compte professionnel ou scolaire. L’inscription des versions antérieures doit s’effectuer à l’aide de l’application Portail d’entreprise.
 
-||**Azure AD Premium**|**Autre AD **|
+||**Azure AD Premium**|**Autre AD** |
 |----------|---------------|---------------|  
 |**Windows 10**|[Inscription automatique](#enable-windows-10-automatic-enrollment) |[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|
 |**Versions précédentes de Windows**|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|

@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 58a78cee51a411c940d4510cd8498994c14129f0
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: caf4401a2274a74050ec0eb404363cfc15b23e76
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642742"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851438"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Point de terminaison de l’API d’entrepôt de données Intune
 
@@ -76,11 +77,11 @@ Vous pouvez utiliser les filtres de plage `DateKey` pour limiter la quantité de
 
 |                             Filtre                             |           Optimisation des performances           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-|    `maxhistorydays=7`                                            |    Complet                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180221.                                     |
-|    `$filter=DateKey eq 20180214`                                 |    Complet                                      |    Retourner des données avec `DateKey` égal à 20180214.                                                    |
-|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Complet                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180220.                                     |
+|    `maxhistorydays=7`                                            |    Complète                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180221.                                     |
+|    `$filter=DateKey eq 20180214`                                 |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214.                                                    |
+|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Complète                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180220.                                     |
 |    `maxhistorydays=7&$filter=Id gt 1`                            |    Partiel, l’ID gt 1 ne sera pas optimisé    |    Retourner des données avec `DateKey` compris entre 20180214 20180221, et ID supérieur à 1.             |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Complet                                      |    Retourner des données avec `DateKey` égal à 20180214. `maxhistorydays` est ignoré.                            |
+|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214. `maxhistorydays` est ignoré.                            |
 |    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances.                              |
 |    `$filter=DateKey ne 20180214`                                 |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances.                              |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances. `maxhistorydays` ignoré.    |

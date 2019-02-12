@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 52201b68e946ec59b7c70ea5ff735c26728e27ce
-ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 61ec5fbe3504f972085af49e6860f4258cfc9484
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429727"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55835263"
 ---
 # <a name="reference-for-user-entity"></a>Informations de référence sur l’entité d’utilisateur
 
@@ -38,7 +39,7 @@ La collection d’entités **Utilisateur** contient les données des utilisateur
 | UserKey |Identificateur unique de l’utilisateur dans l’entrepôt de données (clé de substitution). |123 |
 | UserId |Identificateur unique de l’utilisateur (semblable à UserKey, mais il s’agit d’une clé naturelle). |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Adresse e-mail de l’utilisateur. |John@constoso.com |
-| UPN | Nom d'utilisateur principal de l'utilisateur. | John@constoso.com |
+| UPN | Nom d’utilisateur principal de l’utilisateur. | John@constoso.com |
 | DisplayName |Nom d’affichage de l’utilisateur. |Jean |
 | IntuneLicensed |Spécifie si cet utilisateur dispose d’une licence Intune ou non. |Vrai/Faux |
 | IsDeleted | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a de ce fait été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. |Vrai/Faux |

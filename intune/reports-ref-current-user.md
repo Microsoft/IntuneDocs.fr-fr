@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
-ms.openlocfilehash: a6329a44f1ccfa55025ad558fe2f277a41293538
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b9fdd1891f8a0e893d61ac3a0b40dac5a01f602c
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266900"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851336"
 ---
 # <a name="reference-for-current-user-entity"></a>Informations de référence sur l’entité d’utilisateur actuel
 
@@ -37,7 +38,7 @@ L’entité **Utilisateur actuel** répertorie tous les utilisateurs Azure Activ
 | UserKey |Identificateur unique de l’utilisateur dans l’entrepôt de données (clé de substitution). |123 |
 | UserId |Identificateur unique de l’utilisateur (semblable à UserKey, mais il s’agit d’une clé naturelle). |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Adresse e-mail de l’utilisateur. |John@constoso.com |
-| UPN | Nom d'utilisateur principal de l'utilisateur. | John@constoso.com |
+| UPN | Nom d’utilisateur principal de l’utilisateur. | John@constoso.com |
 | DisplayName |Nom d’affichage de l’utilisateur. |Jean |
 | IntuneLicensed |Spécifie si cet utilisateur dispose d’une licence Intune ou non. |Vrai/Faux |
 | StartDateInclusiveUTC |Date et heure UTC de création de cet utilisateur dans l’entrepôt de données. |11/23/2016 12:00:00 AM |

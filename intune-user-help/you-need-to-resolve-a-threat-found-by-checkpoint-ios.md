@@ -15,16 +15,17 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 5eba9f6f920b4bf868e26b47e4043babe62a8945
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bf812f57a506cf6c8129015fd3e5cb9f36eb6024
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828038"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55833852"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Résoudre une menace détectée par SandBlast Mobile Protect
 
-SandBlast Mobile Protect est un service Mobile Threat Defender qui identifie et évalue les menaces potentielles sur vos appareils iOS. Il signale ensuite les menaces afin que vous puissiez les visualiser à partir de l’application Portail d’entreprise. Les menaces sont affichées dans l’application en tant que problèmes non résolus et non conformes. Tant que ces menaces sont présentes, vous risquez de ne pas pouvoir :   
+SandBlast Mobile Protect est un service Mobile Threat Defender qui identifie et évalue les menaces potentielles sur vos appareils iOS. Il signale ensuite les menaces afin que vous puissiez les visualiser à partir de l’application Portail d’entreprise. Les menaces sons affichées dans l’application en tant que problèmes non résolus et non conformes. Tant que ces menaces sont présentes, vous risquez de ne pas pouvoir :   
 
 * Vous connecter à la messagerie d’entreprise.
 * Vous connecter au réseau Wi-Fi d’entreprise.

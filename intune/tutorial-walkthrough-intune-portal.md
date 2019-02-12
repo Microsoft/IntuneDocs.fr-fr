@@ -16,14 +16,15 @@ Customer intent: As an Intune admin, I want to learn where to find the different
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f9d72ec2f35f15e2515160869fc352360b17e812
-ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 18c7a63900f0d77bbf90ecd6f3e8627d77a4f6e5
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55645170"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839197"
 ---
-# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutoriel : Présentation détaillée de Microsoft Intune dans le portail Azure
+# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Didacticiel : Présentation détaillée de Microsoft Intune dans le portail Azure
 
 [Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) comprend plus de 100 services pour vous aider dans divers scénarios et possibilités de cloud computing. Microsoft Intune est l’un des différents services disponibles dans Azure. Intune vous permet de garantir que les appareils, applications et données de votre entreprise répondent aux exigences de sécurité de cette dernière. C’est vous qui définissez les exigences à vérifier et ce qui se passe quand ces exigences ne sont pas respectées. Le [portail Azure](https://portal.azure.com) est l’endroit où se trouve le service Microsoft Intune. Le fait de comprendre les fonctionnalités disponibles dans Intune vous aidera à accomplir différentes tâches de gestion des appareils mobiles (MDM) et de gestion des applications mobiles (MAM).
 

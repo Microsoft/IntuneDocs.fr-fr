@@ -15,12 +15,13 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b4f35dba38dd1b69f770a3a10689ce87eaf3a27
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817056"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840397"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Créer une stratégie d’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité
 
@@ -80,9 +81,9 @@ L'application native **Courrier** sur Windows 8.1 et les versions ultérieures (
 
 1. Une fois que vous êtes connecté, vous voyez le **tableau de bord Azure**.
 
-1. Choisissez  **Tous les services**  dans le menu de gauche, puis entrez  **Intune**  dans le filtre de la zone de texte.
+1. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
 
-1. Choisissez  **Intune**, vous voyez le **tableau de bord Intune**.
+1. Choisissez **Intune**, vous voyez le **tableau de bord Intune**.
 
 1. Choisissez **Accès local**. Le volet **Accès local** affiche l’état de la stratégie d’accès conditionnel et les appareils qui en sont affectés.
 

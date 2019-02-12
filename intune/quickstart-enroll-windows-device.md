@@ -15,14 +15,15 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 5876b0df6787640e465952cb1cca17f4f3105762
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c04dc3169fbf6a60d0c4d7db8358092909e90240
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977335"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841815"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>Démarrage rapide : Inscrire votre appareil Windows 10
+# <a name="quickstart-enroll-your-windows-10-device"></a>Démarrage rapide : Inscrire votre appareil Windows 10
 
 Dans ce guide de démarrage rapide, vous jouez d’abord le rôle d’un utilisateur Intune et inscrivez votre appareil Windows 10 dans Microsoft Intune. Vous revenez ensuite à Intune et confirmez l’appareil inscrit.
 
@@ -33,7 +34,7 @@ L’inscription de vos appareils à Microsoft Intune permet à vos appareils Win
 
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 - Abonnement Microsoft Intune ([inscrivez-vous pour créer un compte d’essai gratuit](free-trial-sign-up.md)).
 - Pour suivre ce guide de démarrage rapide, vous devez [configurer l’inscription automatique dans Intune](quickstart-setup-auto-enrollment.md).

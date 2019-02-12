@@ -2,8 +2,8 @@
 title: Vérifier la réussite ou l’échec des bases de référence de la sécurité dans Microsoft Intune - Azure | Microsoft Docs
 description: Vérifiez les états d’erreur, de conflit et de réussite quand vous déployez des bases de référence de la sécurité vers des utilisateurs et appareils dans Microsoft Intune MDM. Découvrez comment résoudre les problèmes à l’aide des journaux clients et des fonctionnalités de rapport dans Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/24/2019
 ms.topic: article
@@ -14,12 +14,13 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 28a98a20e5f0b5181628da46ccd662f1f8f503dd
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bfbdad6d98065a691528d4cdada0b6f9377e1109
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55070213"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848234"
 ---
 # <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et le profil dans Microsoft Intune
 

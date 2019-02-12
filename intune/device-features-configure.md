@@ -14,12 +14,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4542a65afa87668702620a1b50443c9844692a87
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: aad3ad2a4f2e45fd94de057500686a718e8ee024
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831273"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839454"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
 
@@ -55,7 +56,7 @@ Cet article vous montre comment créer un profil de configuration d’appareil. 
 
 4. Lorsque vous avez terminé, sélectionnez **OK**, puis choisissez **Créer** pour enregistrer vos modifications.
 
-Le profil est créé et apparaît dans la liste. Veillez à [attribuer le profil](device-profile-assign.md) et à [superviser son état](device-profile-monitor.md).
+Le profil est créé et apparaît dans la liste. [Affectez-le](device-profile-assign.md) et [supervisez son état](device-profile-monitor.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -15,12 +15,13 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 32281ae37b7b36dfbf49503275a8a1e6c35d8f6d
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 528e26ddca1b3327fb0afa2f5cff6f2dbdca1660
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210786"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846483"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Problèmes courants avec les profils d’appareil dans Microsoft Intune et résolutions
 
@@ -79,7 +80,7 @@ Quand plusieurs stratégies sont affectées au même utilisateur ou appareil, le
 - Si un paramètre de stratégie de configuration est en conflit avec un paramètre d’une autre stratégie de configuration, ce conflit apparaît dans le portail Azure. Dans ce scénario, vous pouvez corriger ces conflits manuellement.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Que se passe-t-il quand des stratégies de protection d’application entrent en conflit ? Laquelle est appliquée à l’application ?
-Les valeurs en conflit sont les paramètres les plus restrictifs disponibles dans une stratégie de protection d’application, à l’exception des champs d’entrée numérique (comme le nombre de tentatives autorisées avant la réinitialisation du code PIN). Les champs d’entrée numérique sont définis sur les mêmes valeurs que quand vous créez une stratégie MAM dans la console en choisissant les paramètres recommandés.
+Les valeurs en conflit sont les paramètres les plus restrictifs disponibles dans une stratégie de protection d’application, à l’exception des champs d’entrée numérique (comme le nombre de tentatives autorisées avant la réinitialisation du code PIN). Les champs d’entrée numérique sont définis sur les mêmes valeurs que quand vous créez une stratégie GAM dans la console en choisissant les paramètres recommandés.
 
 Des conflits se produisent quand deux paramètres de profil sont identiques. Par exemple, vous avez configuré deux stratégies MAM identiques, à l’exception du paramètre de copier/coller. Dans ce scénario, le paramètre de copier/coller est défini sur la valeur la plus restrictive, mais le reste des paramètres est appliqué selon leur configuration.
 

@@ -15,12 +15,13 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a7250471e698d32a305755147943311d2150f0b2
-ms.sourcegitcommit: a27a9c4cae47be50807aa3c890f0d5c0c023f04a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 40711576af9b7799211971418a0b2529d12468cd
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52618184"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836385"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Utiliser un profil d’appareil personnalisé pour créer un profil Wi-Fi avec une clé prépartagée - Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -122,7 +123,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ## <a name="eap-based-wi-fi-profile-example"></a>Exemple de profil Wi-Fi basé sur EAP
-L’exemple suivant inclut le code XML pour un profil Wi-Fi basé sur EAP : l’exemple est fourni pour afficher le format approprié et fournir des détails supplémentaires. Ce n’est qu’un exemple et non une configuration recommandée pour votre environnement.
+L’exemple suivant inclut le code XML pour un profil Wi-Fi basé sur EAP : L’exemple est fourni pour afficher le format approprié et fournir des détails supplémentaires. Ce n’est qu’un exemple et non une configuration recommandée pour votre environnement.
 
 
 ```
@@ -215,7 +216,7 @@ Vous pouvez également créer un fichier XML à partir d’une connexion Wi-Fi e
 2. Recherchez dans les fichiers XML pour trouver celui dont le nom est correct.
 3. Une fois que vous avez localisé le fichier XML approprié, copiez et collez le code XML dans le champ **Données** de la page des paramètres OMA-URI.
 
-## <a name="best-practices"></a>Méthodes conseillées
+## <a name="best-practices"></a>meilleures pratiques recommandées.
 - Avant de déployer un profil Wi-Fi avec une clé prépartagée, vérifiez que l’appareil peut se connecter directement au point de terminaison.
 
 - Lors de la rotation des clés (mots de passe ou phrases secrètes), prévoyez un temps d’arrêt et planifiez vos déploiements en conséquence. Il est préférable d’envoyer les nouveaux profils Wi-Fi en dehors des horaires de travail. Avertissez également les utilisateurs que la connectivité peut être impactée.
