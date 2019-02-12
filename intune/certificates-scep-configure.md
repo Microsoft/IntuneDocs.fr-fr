@@ -2,24 +2,24 @@
 title: Utiliser des certificats SCEP avec Microsoft Intune - Azure | Microsoft Docs
 description: Pour utiliser des certificats SCEP dans Microsoft Intune, configurez votre domaine AD local, créez une autorité de certification, configurez le serveur NDES et installez Intune Certificate Connector. Ensuite, créez un profil de certificat SCEP, puis affectez ce profil à des groupes. Consultez également les différents ID d’événement et leur description, ainsi que les codes de diagnostic pour le service du connecteur Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: kmyrup
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
-ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
+ms.openlocfilehash: f8b4d1aded0198dfc3dcccf6bdeda30bb54ee651
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597373"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230152"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -67,7 +67,7 @@ Nous vous recommandons vivement de publier le serveur NDES par le biais d’un p
 |**Modèle de certificat**|Configurez ce modèle sur votre autorité de certification émettrice.|
 |**Certificat d’authentification client**|Demandé auprès de votre autorité de certification émettrice ou de votre autorité de certification publique ; ce certificat doit être installé sur le serveur NDES.|
 |**Certificat d’authentification serveur**|Demandé auprès de votre autorité de certification émettrice ou autorité de certification publique ; ce certificat doit être installé et lié dans IIS sur le serveur NDES. Si les utilisations des clés d’authentification du client et du serveur sont définies pour le certificat (**utilisations améliorées de la clé**), vous pouvez utiliser le même certificat.|
-|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux utilisateurs, aux appareils ou aux deux à l’aide du profil de certificat d’autorité de certification approuvé.<br /><b>Remarque :<b />Quand un profil de certificat SCEP est affecté, veillez à affecter le profil de certificat racine approuvé référencé dans votre profil de certificat SCEP au même groupe d’utilisateurs ou d’appareils.<br /><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez.<br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
+|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux utilisateurs, aux appareils ou aux deux en utilisant le profil de certificat de l’autorité de certification approuvée.<br /><b>Remarque :<b />Quand un profil de certificat SCEP est affecté, veillez à affecter le profil de certificat racine approuvé référencé dans votre profil de certificat SCEP au même groupe d’utilisateurs ou d’appareils.<br /><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez.<br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
 
 ### <a name="accounts"></a>Comptes
 
@@ -519,7 +519,7 @@ Pour résoudre les problèmes et vérifier la configuration du connecteur Intune
 > [!NOTE]
 > Pour plus d’informations sur les codes de diagnostic associés pour chaque événement, utilisez le tableau **Codes de diagnostic** (dans cet article).
 
-| ID d’événement      | Nom de l’événement    | Description de l’événement | Codes de diagnostic associés |
+| ID de l'événement      | Nom de l’événement    | Description de l’événement | Codes de diagnostic associés |
 | ------------- | ------------- | -------------     | -------------            |
 | 10010 | StartedConnectorService  | Service du connecteur démarré | 0x00000000, 0x0FFFFFFF |
 | 10020 | StoppedConnectorService  | Service du connecteur arrêté | 0x00000000, 0x0FFFFFFF |
@@ -556,9 +556,10 @@ Pour résoudre les problèmes et vérifier la configuration du connecteur Intune
 | 0x00000409 | CRPSCEPSigningCert_NotFound  | Impossible de récupérer le certificat de signature. Vérifiez que le service du connecteur Intune est configuré correctement et qu’il est en cours d’exécution. Vérifiez également que les événements de téléchargement de certificat ont réussi. |
 | 0x00000410 | CRPSCEPDeserialize_Failed  | Échec de la désérialisation de la demande de challenge SCEP. Vérifiez que le connecteur NDES et Intune sont configurés correctement. |
 | 0x00000411 | CRPSCEPChallenge_Expired  | Demande refusée en raison de l’expiration de la demande d’accès au certificat. L’appareil client peut réessayer après avoir obtenu une nouvelle demande d’accès à partir du serveur d’administration. |
-| 0x0FFFFFFFF | Unknown_Error  | Nous ne pouvons pas traiter votre demande, car une erreur côté serveur s’est produite. Réessayez. |
+| 0x0FFFFFFFF | Unknown_Error  | Nous ne pouvons pas traiter votre demande, car une erreur côté serveur s’est produite. Recommencez. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Utiliser des certificats PKCS](certficates-pfx-configure.md) ou [Émettre des certificats PKCS à partir d’un service web du gestionnaire PKI](certificates-symantec-configure.md)
+- [Utiliser des certificats PKCS](certficates-pfx-configure.md) ou [Émettre des certificats PKCS à partir d’un service web du gestionnaire PKI Symantec](certificates-symantec-configure.md)
 - [Ajouter une autorité de certification tierce pour utiliser SCEP avec Intune](certificate-authority-add-scep-overview.md)
+- Pour obtenir une aide supplémentaire, utilisez le guide [Dépannage du déploiement de profil de certificat SCEP dans Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune).

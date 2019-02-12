@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: bab1656ec141b26cc3e9cb4195da7c1c24e401a1
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626035"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230169"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -39,7 +39,7 @@ Deux facteurs déterminent la manière dont vous pouvez simplifier l’inscripti
 - **Utilisez-vous Azure Active Directory Premium ?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) est inclus avec Enterprise Mobility + Security et d’autres plans de licence.
 - **Quelles versions des clients Windows les utilisateurs vont-ils inscrire ?** <br>Les appareils Windows 10 peuvent s’inscrire automatiquement quand vous ajoutez un compte professionnel ou scolaire. L’inscription des versions antérieures doit s’effectuer à l’aide de l’application Portail d’entreprise.
 
-||**Azure AD Premium**|**Autre AD** |
+||**Azure AD Premium**|**Autre AD **|
 |----------|---------------|---------------|  
 |**Windows 10**|[Inscription automatique](#enable-windows-10-automatic-enrollment) |[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|
 |**Versions précédentes de Windows**|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|
@@ -82,6 +82,12 @@ L’administrateur DNS Contoso doit créer les enregistrements CNAME suivants :
 `EnterpriseEnrollment-s.manage.microsoft.com` : prend en charge une redirection vers le service Intune avec reconnaissance du domaine à partir du nom de domaine de l’e-mail.
 
 La propagation des modifications DNS peut prendre jusqu’à 72 heures. Vous ne pouvez pas vérifier le changement au niveau du DNS dans Intune tant que l’enregistrement DNS ne s’est pas propagé.
+
+## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Les points de terminaison supplémentaires sont pris en charge, mais ne sont pas recommandés
+EnterpriseEnrollment-s.manage.microsoft.com est le nom de domaine complet par défaut pour l’inscription, mais il existe deux autres points de terminaison qui ont été utilisés par des clients dans le passé et qui sont pris en charge. EnterpriseEnrollment.manage.microsoft.com (sans le « -s ») et manage.microsoft.com fonctionnent tous deux comme cible pour le serveur de découverte automatique, mais l’utilisateur doit appuyer sur OK sur un message de confirmation. Si vous pointez sur EnterpriseEnrollment-s.manage.microsoft.com, l’utilisateur ne doit pas effectuer l’étape de confirmation supplémentaire : il s’agit donc de la configuration recommandée.
+
+## <a name="alternate-methods-of-redirection-are-not-supported"></a>Les autres méthodes de redirection ne sont pas prises en charge
+L’utilisation d’une méthode autre que la configuration CNAME n’est pas prise en charge. Par exemple, l’utilisation d’un serveur proxy pour rediriger enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc vers enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc ou manage.microsoft.com/EnrollmentServer/Discovery.svc n’est pas prise en charge.
 
 **Étape 2 : Vérifier les enregistrements CNAME** (facultatif)<br>
 1. Dans [Intune dans le Portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Validation CNAME**.

@@ -15,12 +15,12 @@ ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 8c4e5e18c0b995ad84340cdbc07a8a11b09e4f3a
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 811bf4ba6ed611dab0e42625a8aa3dc2b18e007c
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112780"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290704"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Aider les utilisateurs finaux à comprendre les messages de l’application Portail d’entreprise
 
@@ -34,7 +34,7 @@ Découvrez les différents messages liés aux applications, que les utilisateurs
 - __Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?__
 - __Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?__
 
-## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?
+## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?
 
 ### <a name="where-it-appears"></a>Emplacement
 Le message **Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?** s’affiche quand les utilisateurs appuient sur le bouton **Inscrire** de l’application Portail d’entreprise lorsqu’ils inscrivent leur appareil.
@@ -78,7 +78,7 @@ Si les utilisateurs décident par la suite d’autoriser l’accès, ils peuvent
 ### <a name="how-to-explain-this-to-your-users"></a>Explication de ce mode de fonctionnement à vos utilisateurs
 Pour plus d’informations, envoyez à vos utilisateurs la procédure [Inscrire un appareil Android dans Intune](/intune-user-help/enroll-your-device-in-intune-android).
 
-## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?
+## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?
 
 ### <a name="where-it-appears"></a>Emplacement
 Le message **Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?** s’affiche quand les utilisateurs appuient sur **Envoyer les données** pour envoyer les journaux à leur administrateur informatique.

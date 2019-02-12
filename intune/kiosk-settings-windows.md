@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 61cb1a3c9de10020381d62a2a7795d5ff728db22
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.openlocfilehash: 31cfa617e0ca5d8d0848d1ecb781fda701589ccd
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199419"
+ms.locfileid: "55229948"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -101,7 +101,7 @@ Lorsque vous choisissez le mode kiosque multi-application, entrez les paramètre
 
     - **Nom d’application** : Obligatoire. Entrez un nom pour l'application.
     - **Chemin local** : Obligatoire. Entrez le chemin d’accès au fichier exécutable, par exemple `C:\Program Files (x86)\Microsoft VS Code\Code.exe` ou `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-    - **Identifiant AUMID de l’application** : Entrez l’identifiant AUMID de l’application Win32. Ce paramètre détermine la mise en page de démarrage de la mosaïque sur le bureau. Pour obtenir cet ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+    - **Identifiant AUMID de l’application** : Entrez l’identifiant AUMID de l’application Win32. Ce paramètre détermine la mise en page de démarrage de la mosaïque sur le bureau. Pour obtenir cet ID, consultez [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
     - **Taille de la vignette** : Obligatoire. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
   
   - **Ajouter par AUMID** : utilisez cette option pour ajouter des applications fournies avec Windows, par exemple le Bloc-notes ou la Calculatrice. Entrez les propriétés suivantes : 

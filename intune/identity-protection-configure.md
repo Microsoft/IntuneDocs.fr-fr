@@ -2,10 +2,10 @@
 title: Utiliser un code confidentiel pour se connecter à des appareils Windows 10 avec Microsoft Intune – Azure | Microsoft Docs
 description: Utilisez Windows Hello Entreprise pour permettre aux utilisateurs de se connecter aux appareils à l’aide d’un code confidentiel, d’une empreinte digitale et plus encore. Créez un profil de configuration de la protection des identités dans Intune pour les appareils Windows 10 avec ces paramètres, et affectez-le à des groupes d’utilisateurs et d’appareils.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 843806681fcee4ddec175207c2c49d6db95e0f0d
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: c6ca040c91437a35d12626f54b8385311d6631eb
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290653"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Utiliser Windows Hello Entreprise sur des appareils Windows 10 avec Microsoft Intune
 
@@ -60,7 +60,7 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
 
 4. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
-Le profil est créé et apparaît dans la liste des profils. Maintenant, [affectez-le à des groupes](device-profile-assign.md).
+Le profil est créé et apparaît dans la liste des profils. Ensuite, [affectez](device-profile-assign.md) ce profil à des groupes d’utilisateurs et d’appareils pour répondre à vos besoins.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

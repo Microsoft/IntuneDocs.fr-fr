@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
-ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
+ms.openlocfilehash: d54c778923b0d217187f6e4c70e4bc8730788fbc
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260247"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690799"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
 
@@ -57,7 +57,7 @@ Utilisez les étapes suivantes pour inscrire des appareils macOS exécutant OS X
 
 4. La page __Appareils__ affiche une liste des appareils gérés ou une bannière, selon que vous gérez déjà ou non un appareil. 
     * Pour ajouter un appareil qui n’est pas listé, sélectionnez la bannière qui indique **Appuyez ici pour nous indiquer l’appareil que vous utilisez ou ajouter un nouvel appareil.**
-    * Si vous n’avez aucun appareil, la bannière indique : **vous n’avez aucun appareil géré. Ajoutez celui-ci en appuyant ici.** Cliquez sur la bannière pour ajouter votre appareil.  
+    * Si vous n’avez aucun appareil, la bannière indique : **Vous n’avez aucun appareil géré. Ajoutez celui-ci en appuyant ici.** Cliquez sur la bannière pour ajouter votre appareil.  
 
      ![Capture d’écran de la page Appareils, avec un carré rouge autour de l’option de bannière pour mettre en surbrillance l’endroit où vous devez cliquer.](./media/CP-enroll-MACOS-1808.png)  
 5.  Effectuez l’étape ci-dessous correspondant au message que vous voyez actuellement dans le portail d’entreprise.  
@@ -93,4 +93,11 @@ Le profil de gestion définit la connexion au canal MDM. Quand le profil de gest
 
 De plus, comme ces autres profils n’ont alors pas besoin d’être vérifiés individuellement, ils sont générés et remis aux appareils plus rapidement. 
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Vous trouverez ses coordonnées sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## <a name="updating-the-company-portal-app"></a>Mise à jour de l’application Portail d’entreprise
+
+La mise à jour de l’application Portail d’entreprise s’effectue de la même façon que pour n’importe quelle autre application Office, par le biais de Microsoft AutoUpdate pour Mac. Pour en savoir plus sur la mise à jour des applications Microsoft pour macOS, consultez [cet article](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+
+## <a name="next-steps"></a>Étapes suivantes  
+Vous avez besoin d’aide supplémentaire ? Contactez le support technique de votre entreprise. Vous trouverez ses coordonnées sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+

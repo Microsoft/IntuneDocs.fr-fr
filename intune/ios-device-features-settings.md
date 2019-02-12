@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 01/30/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
-ms.openlocfilehash: a5a756cd3fd8b78893cee6a3c4629e49d6ac7c87
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 8656e480c292fc9ed1212f9d2c180b791cb4f94c
+ms.sourcegitcommit: ce76541ceb783eb2e242032ef8579041d2f61532
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072539"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55431488"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil iOS dans Intune
 
@@ -40,7 +40,7 @@ Cette fonctionnalité permet aux utilisateurs d’appareils iOS de se servir des
     - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez obtenir l’adresse IP en effectuant un test ping sur l’imprimante dans le Terminal. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
     - **Chemin d’accès** : Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
     - **Port** : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut. Disponible sur iOS 11.0 et ultérieur.
-    - **TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint avec le protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
+    - **TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
 
 2. Sélectionnez **Ajouter**. Le serveur AirPrint est ajouté à la liste. Vous pouvez ajouter plusieurs serveurs AirPrint.
 
@@ -74,8 +74,8 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
 
     - **Ajouter une application** : choisissez cette option pour ajouter des applications à l’espace d’ancrage sur l’écran. entrez :
 
-      - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* indiqué sur l’appareil iOS.
-      - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour obtenir des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+      - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+      - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
@@ -86,7 +86,7 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
       1. Entrez un nom dans **Nom du dossier**. Ce nom est visible sur l’appareil des utilisateurs.
       2. Choisissez **Ajouter** et entrez les propriétés suivantes :
 
-          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* indiqué sur l’appareil iOS.
+          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
           - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
           - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
@@ -117,7 +117,7 @@ Ajoutez les pages que vous souhaitez afficher sur l’écran d’accueil et les 
 
 3. Dans **Type**, choisissez d’ajouter une **application** ou un **dossier**.
 
-    - **Ajouter une application** : Choisissez cette option pour ajouter des applications à une page sur l’écran. Entrez :
+    - **Ajouter une application** : Choisissez cette option pour ajouter des applications à une page sur l’écran. entrez :
 
       - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
       - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
@@ -177,16 +177,23 @@ Choisissez la manière dont les applications installées sur les appareils iOS e
 
 Utilisez ces paramètres pour afficher un texte ou un message personnalisé sur l’écran de verrouillage et dans la fenêtre de connexion, par exemple un message de type « En cas de perte, renvoyez à » et des informations d’étiquette d’inventaire. 
 
-Ces paramètres prennent en charge les appareils supervisés exécutant iOS 9.3 et ultérieur.
+Cette fonctionnalité prend en charge les appareils supervisés exécutant :
 
-1. Dans **Paramètres**, sélectionnez **Configuration des appareils partagés (mode supervisé uniquement)**.
+- iOS 9.3 et version ultérieure
+
+1. Dans **Paramètres**, sélectionnez **Message d’écran de verrouillage (supervisé uniquement)**.
 2. entrez les paramètres suivants :
 
-    - **Informations de l’étiquette d’inventaire** : entrez des informations sur l’étiquette d’inventaire de l’appareil. Par exemple, entrez `Owned by Contoso Corp`. 
+    - **Informations de l’étiquette d’inventaire** : entrez des informations sur l’étiquette d’inventaire de l’appareil. Par exemple, entrez `Owned by Contoso Corp` ou `Serial Number: {{serialnumber}}`. 
 
       Le texte que vous entrez est affiché sur l’écran de verrouillage et dans la fenêtre de connexion de l’appareil.
 
-    - **Note de l’écran de verrouillage** : entrez une note qui pourrait vous aider à récupérer l’appareil en cas de perte ou de vol. Par exemple, entrez quelque chose du genre `If found, call Contoso at ...`.
+    - **Note de l’écran de verrouillage** : entrez une note qui pourrait vous aider à récupérer l’appareil en cas de perte ou de vol. Vous pouvez entrer n’importe quel texte. Par exemple, entrez quelque chose du genre `If found, call Contoso at ...`.
+
+    Vous pouvez aussi utiliser des jetons d’appareil pour ajouter des informations propres à l’appareil dans ces champs. Par exemple, pour afficher le numéro de série, entrez `Serial Number: {{serialnumber}}`. L’écran de verrouillage affichera le texte `Serial Number 123456789ABC`. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceName` ou toute autre valeur propre à l’appareil.
+
+    > [!NOTE]
+    > Les variables ne sont pas validées dans l’interface utilisateur. Par conséquent, vous pouvez voir des profils enregistrés avec une entrée incorrecte. Par exemple, si vous entrez `{{Devicename}}` au lieu de `{{devicename}}`, la chaîne littérale s’affiche à la place du nom unique de l’appareil.
 
 3. Quand vous avez terminé, sélectionnez **OK** pour enregistrer les modifications.
 
@@ -279,6 +286,8 @@ Ces paramètres contrôlent l’accès aux URL par le navigateur sur les apparei
 ## <a name="wallpaper-settings"></a>Paramètres du papier peint
 
 Ajoutez une image .png, .jpg ou .jpeg personnalisée sur vos appareils iOS supervisés. Par exemple, ajoutez un logo d’entreprise sur l’écran de verrouillage.
+
+Vous pouvez constater un comportement inattendu quand un profil sans image est affecté à des appareils ayant une image existante. Par exemple, vous créez un profil sans image. Ce profil est affecté à des appareils qui disposent déjà d’une image. Dans ce scénario, l’image peut être remplacée par l’appareil par défaut, ou l’image d’origine peut rester sur l’appareil. Ce comportement est contrôlé et limité par la plateforme MDM d’Apple.
 
 - **Emplacement d’affichage du papier peint** : choisissez un emplacement où afficher l’image sur l’appareil. Les options disponibles sont les suivantes :
   - **Non configuré** : aucune image personnalisée n’est ajoutée sur l’appareil. L’appareil utilise l’image par défaut du système d’exploitation.

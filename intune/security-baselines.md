@@ -2,10 +2,10 @@
 title: Utiliser des bases de référence de sécurité dans Microsoft Intune - Azure | Microsoft Docs
 description: Ajoutez ou configurez des paramètres de sécurité de groupe recommandés pour protéger les données et l’utilisateur sur les appareils à l’aide de Microsoft Intune pour la gestion des appareils mobiles. Activez BitLocker, configurez Windows Defender - Protection avancée contre les menaces, contrôlez Internet Explorer, utilisez SmartScreen, définissez des stratégies de sécurité locales, exigez un mot de passe, bloquez les téléchargements Internet et bien plus encore.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 02/01/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,23 +14,23 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d78adf8e7d6d2ce05951171e6248dcc8c389945d
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 8102ab88e878f7976ab7946f67080c4d4f23d6b1
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55070205"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690714"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Créer une base de référence de sécurité Windows 10 dans Intune
 
-Les bases de référence de sécurité sont une fonctionnalité en préversion disponible pour les appareils exécutant Windows 10 et versions ultérieures. Cette fonctionnalité inclut de nombreux paramètres Intune pour aider à sécuriser et à protéger vos utilisateurs et les appareils. Elle définit également automatiquement ces paramètres sur les valeurs recommandées par les équipes de sécurité. Par exemple, la base de référence active automatiquement BitLocker, requiert automatiquement un mot de passe pour déverrouiller un appareil, désactive automatiquement l’authentification de base et bien plus encore.
+Les bases de référence de sécurité sont une fonctionnalité en préversion disponible pour les appareils exécutant Windows 10 et versions ultérieures. Cette fonctionnalité inclut de nombreux paramètres pris en charge par Intune que vous pouvez utiliser pour mieux sécuriser et protéger vos utilisateurs et vos appareils. Elle définit également automatiquement ces paramètres sur les valeurs recommandées par les équipes de sécurité. Par exemple, la base de référence active automatiquement BitLocker, requiert automatiquement un mot de passe pour déverrouiller un appareil, désactive automatiquement l’authentification de base et bien plus encore.
 
 Cette fonctionnalité s’applique à :
 
 - Windows 10 1809 et versions ultérieures
 
 > [!NOTE]
-> Tandis que les bases de référence de sécurité sont disponibles en préversion, Microsoft ne recommande pas l’utilisation de profils dans un environnement de production, car les bases de référence peuvent changer au cours de la préversion.
+> Tandis que les bases de référence de sécurité sont disponibles en préversion, Microsoft ne recommande pas l’utilisation de profils dans un environnement de production, car les bases de référence peuvent changer au cours de la préversion. Quand les bases de référence de la sécurité sont en disponibilité générale, les profils existants ne sont pas convertis en profils les plus récemment pris en charge.
 
 L’objectif de l’utilisation des bases de référence de sécurité consiste à fournir un flux de travail sécurisé de bout en bout lorsque vous travaillez avec Microsoft 365. Vous trouverez ci-dessous certains des avantages :
 
@@ -94,6 +94,12 @@ Une fois créé, le profil est prêt à être attribué à vos utilisateurs, app
 
 Dès que vous enregistrez, le profil est envoyé (push) aux appareils lorsque ceux-ci se connectent à Intune. Par conséquent, cela peut se produire immédiatement.
 
+## <a name="available-security-baselines"></a>Bases de référence de la sécurité disponibles  
+
+Les bases de référence de la sécurité suivantes sont disponibles pour une utilisation avec Intune.
+- **Préversion : Base de référence de la sécurité MDM**
+  - Version : [Octobre 2018](security-baseline-settings-windows.md)
+
 ## <a name="q--a"></a>Questions et réponses
 
 #### <a name="why-these-settings"></a>Pourquoi ces paramètres ?
@@ -117,5 +123,5 @@ La même équipe de sécurité Microsoft a choisi et organisé les paramètres p
 - La migration à partir de stratégies de groupe Active Directory locales vers une solution cloud pure à l’aide d’Azure Active Directory (AD) avec Microsoft Intune est un parcours. Pour vous aider, il existe des GPO publiés pour les appareils joints à Azure AD et AD hybrides. Ces appareils peuvent obtenir les paramètres de gestion des appareils mobiles à partir du cloud (Intune) et les paramètres de stratégie de groupe à partir de contrôleurs de domaine locaux.
 
 ## <a name="next-steps"></a>Étapes suivantes
-
-Vérifiez l’état et surveillez [la base de référence et le profil](security-baselines-monitor.md).
+- Consultez les [Paramètres de base de référence de la sécurité Windows](security-baseline-settings-windows.md) pris en charge par Intune.  
+- Vérifiez l’état et surveillez [la base de référence et le profil](security-baselines-monitor.md).

@@ -2,8 +2,8 @@
 title: Utiliser des certificats de clés publiques et privées dans Microsoft Intune - Azure | Microsoft Docs
 description: Découvrez comment ajouter ou créer des certificats PKCS (Public Key Cryptography Standards) avec Microsoft Intune, notamment comment exporter un certificat racine, configurer le modèle de certificat, télécharger et installer Microsoft Intune Certificate Connector (NDES), créer un profil de configuration d’appareil, créer un profil de certificat PKCS dans Azure et votre autorité de certification.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/10/2018
 ms.topic: article
@@ -11,16 +11,16 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 6a617f56e688d8dd6e9bca8e964e075865f05be1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: f825e66a4668a007dc364e4c42b18ca7c2736016
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203618"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303484"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -136,6 +136,7 @@ Pour l’authentification auprès d’un VPN, d’un réseau Wi-Fi ou d’autres
 6. Sous l’onglet **Avancé**, laissez l’option **Utiliser le compte SYSTÈME de cet ordinateur (par défaut)** sélectionnée.
 7. **Appliquer** > **Fermer**
 8. Revenez au portail Azure (**Intune** > **Configuration de l’appareil** > **Autorité de certification**). Après quelques instants, une coche verte apparaît et **État de la connexion** indique **Active**. Votre serveur de connecteur peut désormais communiquer avec Intune.
+9. Si vous avez un proxy web dans votre environnement réseau, vous devrez peut-être procéder à des configurations supplémentaires pour que le connecteur fonctionne. Pour plus d’informations, consultez [Utiliser des serveurs proxy locaux existants](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) dans la documentation d’Azure Active Directory.
 
 > [!NOTE]
 > La prise en charge de TLS 1.2 est incluse dans Microsoft Intune Certificate Connector. Ainsi, si le serveur sur lequel est installé Microsoft Intune Certificate Connector prend en charge TLS 1.2, TLS 1.2 est utilisé. Si le serveur ne prend pas en charge TLS 1.2, TLS 1.1 est utilisé. Actuellement, TLS 1.1 est utilisé pour l’authentification entre les appareils et le serveur.

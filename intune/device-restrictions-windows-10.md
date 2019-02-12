@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: f2b75eb5a87dbfd7a17aee83f173d3d472920428
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203635"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230118"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -47,12 +47,12 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Jeux DVR (Desktop uniquement)**  : Détermine si l’enregistrement et la diffusion des jeux sont autorisés ou non.
 - **Applications du Store uniquement** : Détermine si les utilisateurs peuvent installer des applications à partir d’emplacements autres que l’App Store.
 
-## <a name="cellular-and-connectivity"></a>Mobile et connectivité
+## <a name="cellular-and-connectivity"></a>Cellulaire et connectivité
 
 - **Canal de données mobiles** : Empêche les utilisateurs d’utiliser des données, par exemple de naviguer sur le web, quand ils sont connectés à un réseau mobile. 
 - **Itinérance des données** : Autorisez l'itinérance entre réseaux lors de l'accès aux données.
-- **VPN sur le réseau de téléphonie mobile** : Contrôle si l’appareil peut accéder aux connexions VPN lorsqu'il est connecté à un réseau mobile.
-- **Itinérance VPN sur le réseau de téléphonie mobile** : Contrôle si l’appareil peut accéder aux connexions VPN lorsqu'il est en itinérance sur un réseau mobile.
+- **VPN sur le réseau de téléphonie mobile** : Contrôle si l’appareil peut accéder aux connexions VPN lorsqu'il est connecté à un réseau cellulaire.
+- **Itinérance VPN sur le réseau de téléphonie mobile** : Contrôle si l’appareil peut accéder aux connexions VPN lorsqu'il est en itinérance sur un réseau cellulaire.
 - **Bluetooth** : Contrôle si l’utilisateur peut activer et configurer la fonction Bluetooth sur l’appareil.
 - **Découvertibilité de Bluetooth** : Permet à l’appareil d’être découvert par d’autres appareils Bluetooth.
 - **Précouplage Bluetooth** : Permet de configurer des appareils Bluetooth spécifiques pour qu’ils soient couplés automatiquement à un appareil hôte.
@@ -420,7 +420,7 @@ Vous pouvez configurer les informations auxquelles toutes les applications sur l
 
 - **Disposition du menu Démarrer** : Pour personnaliser le menu Démarrer sur les appareils de bureau, vous pouvez charger un fichier XML qui inclut vos personnalisations, notamment l’ordre dans lequel les applications sont listées. Les utilisateurs ne peuvent pas changer la disposition du menu Démarrer que vous entrez.
 - **Épingler des sites web à des vignettes dans le menu Démarrer** : Importez des images provenant de Microsoft Edge et affichez-les sous forme de liens dans le menu Démarrer de Windows pour les appareils de bureau.
-- **Désépingler les applications de la barre des tâches** : Choisissez **Bloquer** pour empêcher l’utilisateur de désépingler des applications du menu Démarrer.
+- **Désépingler les applications de la barre des tâches** : Choisissez **Bloquer** pour empêcher l’utilisateur de désépingler des applications de la barre des tâches.
 - **Changement rapide d’utilisateur** : Choisissez **Bloquer** pour empêcher le passage d’un utilisateur connecté à un autre sans déconnexion.
 - **Applications les plus utilisées** : Choisissez **Bloquer** pour ne pas afficher les applications les plus utilisées dans le menu Démarrer. Le bouton bascule correspondant dans l’application Paramètres est également désactivé.
 - **Applications ajoutées récemment** : Choisissez **Bloquer** pour ne pas afficher les applications ajoutées récemment dans le menu Démarrer. Le bouton bascule correspondant dans l’application Paramètres est également désactivé.

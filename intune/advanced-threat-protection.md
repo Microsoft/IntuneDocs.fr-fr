@@ -2,10 +2,10 @@
 title: Utiliser Windows Defender ATP dans Microsoft Intune - Azure | Microsoft Docs
 description: Découvrez comment activer Windows Defender Advanced Threat Protection (ATP) dans un scénario de bout en bout. Cet article décrit notamment comment activer ATP dans Intune et dans le Centre de sécurité Windows Defender (portail ATP), intégrer des appareils à l’aide d’un profil de configuration ATP, créer une stratégie de conformité des appareils Intune, créer une stratégie d’accès conditionnel Azure AD et monitorer la conformité des appareils.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
-ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
+ms.openlocfilehash: 25328bc119b91d7c9c3bb678962b90123a0d1faa
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53167992"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290687"
 ---
-# <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Activer Windows Defender ATP avec accès conditionnel dans Intune
+# <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Windows Defender ATP avec accès conditionnel dans Intune
 
 Windows Defender Advanced Threat Protection (ATP) et Microsoft Intune fonctionnent de concert pour empêcher les violations de la sécurité et limiter leur impact au sein d’une organisation.
 
@@ -41,7 +41,7 @@ Cet article vous montre comment :
 - Créer la stratégie de conformité dans Intune.
 - Activer l’accès conditionnel dans Azure Active Directory (AD) sur les appareils en fonction de leur niveau de menace.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser ATP avec Intune, les éléments suivants doivent être configurés et opérationnels :
 

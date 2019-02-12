@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 360715881e3d6b2f61e7bf251045fc3356c44f6b
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203144"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690680"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Utiliser des appareils gérés pour accéder aux ressources professionnelles ou scolaires
 Microsoft Intune est un système de gestion d’appareils qui permet aux organisations de gérer l’accès aux appareils, aux applications et aux e-mails. Avec la gestion d’appareils, vous (employés, étudiants ou autres) pouvez accéder à vos informations professionnelles quasiment où que vous soyez et sur presque tous les appareils. Même quand vous travaillez à distance, vos informations ou celles de votre organisation sont sécurisées.
@@ -39,16 +39,9 @@ Vous pouvez obtenir l’application Portail d’entreprise de plusieurs façons�
 - En accédant au [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) que le support de votre entreprise a configuré.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Quelle est la différence entre l’application et le site web ?
-Il existe quelques différences mineures entre l’application Portail d’entreprise et le site web Portail d’entreprise, mais les deux permettent d’effectuer presque toutes les mêmes tâches . Exemples de tâche que vous pouvez effectuer :
+Chaque application du portail d’entreprise pour Windows 10, iOS, macOS et Android s’intègre sans interruption à la plateforme correspondante de votre appareil. Le site web est accessible à partir de n’importe quel appareil et vous donne la même expérience universelle, quel que soit l’appareil que vous utilisez. 
 
-- Inscrire vos appareils à la gestion
-- Consulter le statut des appareils
-- Télécharger les applications recommandées et obligatoires pour votre organisation
-- Renommer votre appareil
-- Réinitialiser le code PIN ou mot de passe de votre appareil
-- Contacter votre service informatique pour obtenir de l’aide
-
-Pour voir ce que vous pouvez faire par le biais du site web Portail d’entreprise par rapport à ce que vous pouvez faire à l’aide de l’application Portail d’entreprise sur votre appareil, choisissez l’un des liens suivants :
+Des conseils sur le portail d’entreprise spécifiques à la plateforme de votre appareil, en commençant par les étapes d’inscription, sont disponibles sous les liens suivants :  
 
 - [Utilisation de votre appareil Android](using-your-android-device-with-intune.md)
 - [Utilisation de votre appareil iOS](using-your-ios-device-with-intune.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.openlocfilehash: 9258bf1847e83087404967c0ded50481da3a8dff
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734270"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290738"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -51,7 +51,7 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 >
 > Pour recevoir des mises à jour d’applications sur des appareils qui ne sont pas inscrits auprès d’Intune, les utilisateurs des appareils doivent accéder à leur Portail d’entreprise et installer manuellement les mises à jour des applications.
 
-## <a name="to-assign-an-app"></a>Pour attribuer une application
+## <a name="assign-an-app"></a>Attribuer une application
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
@@ -62,7 +62,7 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 7. Sélectionnez **Ajouter un groupe** pour ouvrir le volet **Ajouter un groupe** lié à l’application.
 8. Pour l’application spécifique, sélectionnez un **type d’affectation** :
    - **Disponible pour les appareils inscrits** : attribuez l’application à des groupes d’utilisateurs qui peuvent installer l’application à partir de l’application ou du site web Portail d’entreprise.
-   - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les applications de Google Play géré ne prennent pas en charge cette option. Les utilisateurs doivent disposer d’une licence Intune, consultez [Licences Intune](licenses.md).
+   - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les utilisateurs doivent disposer d’une licence Intune, consultez [Licences Intune](licenses.md).
    - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés. Certaines plateformes peuvent avoir des invites supplémentaires dont l’utilisateur final doit accuser réception avant le démarrage de l’installation.
    - **Désinstaller** : L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution « disponible pour les appareils inscrits » ou « Requis » en utilisant le même déploiement. Les liens Web ne peuvent pas être supprimés après le déploiement.
 
@@ -122,6 +122,9 @@ Parfois, la même application est attribuée à plusieurs groupes, mais avec des
 > [!NOTE]
 > En ce qui concerne les applications du magasin iOS managées uniquement, une fois ajoutées à Microsoft Intune et assignées comme **Obligatoire**, elles sont automatiquement créées avec les intentions **Obligatoire** et **Disponible**.<br><br>
 > Les applications iOS de l’App Store (et non les applications VPP iOS) qui sont ciblées intentionnellement sont appliquées sur l’appareil au moment où l’appareil s’enregistre et s’affichent également dans l’application Portail d’entreprise.
+
+## <a name="android-enterprise-app-we-app-deployment"></a>Déploiement d’applications APP-WE Android pour les entreprises
+Si vous disposez d’appareils Android dans un scénario de déploiement APP-WE (stratégie App Protection sans inscription) non inscrit, vous pouvez maintenant utiliser Google Play dans sa version gérée pour déployer des applications du Store et des applications métier pour les utilisateurs. Plus précisément, vous pouvez proposer aux utilisateurs finaux un catalogue d’applications et une expérience d’installation dans laquelle ils n’ont plus besoin d’assouplir la posture de sécurité de leurs appareils en autorisant les installations à partir de sources inconnues. Ce scénario de déploiement offrira par ailleurs une meilleure expérience utilisateur. Pour savoir comment attribuer une application, consultez [Attribuer une application](apps-deploy.md#assign-an-app).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

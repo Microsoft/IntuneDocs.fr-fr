@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7a54a72afb6052ed11566c2d2ada596ebde2159b
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 5ffd2dca10db3df6abdcd5fa9603f1f58a37a078
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112406"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290534"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configurer l’inscription des appareils macOS dans Intune
 
@@ -31,7 +31,7 @@ Intune permet de gérer les appareils macOS de façon à donner aux utilisateurs
 
 En tant qu’administrateur Intune, vous pouvez configurer l’inscription des appareils macOS détenus par l’entreprise et par les employés (« Apportez votre propre appareil » ou BYOD). 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Avant de configurer l’inscription des appareils macOS, effectuez les prérequis suivants :
 
@@ -69,7 +69,7 @@ Par défaut, Intune permet aux appareils macOS de s’inscrire. Pour empêcher l
 
 Vous pouvez inscrire des machines virtuelles macOS à des fins de test à l’aide de Parallels Desktop ou de VMware Fusion. 
 
-Pour Parallels Desktop, vous avez besoin de définir le type de matériel et le numéro de série des machines virtuelles pour qu’Intune puisse les reconnaître. Suivez les instructions de Parallels pour [définir le type de matériel](http://kb.parallels.com/123594) et le [numéro de série](http://kb.parallels.com/123455) afin de configurer les paramètres nécessaires au test. Nous vous recommandons de faire correspondre le type de matériel de l’appareil qui exécute les machines virtuelles à celui des machines virtuelles que vous créez. Vous pouvez trouver ce type de matériel dans le **menu Pomme** > **À propos de ce Mac** > **Rapport système** > **Identifiant du modèle**. 
+Pour Parallels Desktop, vous avez besoin de définir le type de matériel et le numéro de série des machines virtuelles pour qu’Intune puisse les reconnaître. Suivez les instructions de Parallels pour définir le type de matériel et le [numéro de série](http://kb.parallels.com/123455) afin de configurer les paramètres nécessaires au test. Nous vous recommandons de faire correspondre le type de matériel de l’appareil qui exécute les machines virtuelles à celui des machines virtuelles que vous créez. Vous pouvez trouver ce type de matériel dans le **menu Pomme** > **À propos de ce Mac** > **Rapport système** > **Identifiant du modèle**. 
 
 Pour VMware Fusion, vous devez [modifier le fichier .vmx](https://kb.vmware.com/s/article/1014782) pour définir le modèle matériel et le numéro de série de la machine virtuelle. Nous vous recommandons de faire correspondre le type de matériel de l’appareil qui exécute les machines virtuelles à celui des machines virtuelles que vous créez. Vous pouvez trouver ce type de matériel dans le **menu Pomme** > **À propos de ce Mac** > **Rapport système** > **Identifiant du modèle**. 
 

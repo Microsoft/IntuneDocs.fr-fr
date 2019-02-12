@@ -2,8 +2,8 @@
 title: Réinitialiser des appareils Windows 10 avec Microsoft Intune - Azure | Microsoft Docs
 description: Utilisez Redémarrage à zéro pour supprimer ou désinstaller des applications sur des PC Windows 10 à l’aide de Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 08/09/2018
 ms.topic: article
@@ -14,12 +14,12 @@ ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cd2320e4c3935c4865d785bbb2461bba20afffdb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1eb1e671cc16196974cb15cdc785ba7d99fa8f46
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188736"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303410"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Utiliser Fresh Start pour réinitialiser les appareils Windows 10 avec Intune
 
@@ -33,10 +33,11 @@ L’action d’appareil **Redémarrage à zéro** supprime toutes les applicatio
 3. Cliquez sur **Redémarrage à zéro**. 
 4. Sélectionnez **Conserver les données utilisateur sur cet appareil** pour que :
    * l’appareil reste joint à Azure AD ;
-    * l’appareil reste inscrit à la gestion des appareils mobiles ; 
+    * L’appareil est de nouveau inscrit dans la gestion des appareils mobiles quand un annuaire Azure Active Directory a activé la connexion d’un utilisateur à l’appareil.
     * le contenu du dossier de base de l’utilisateur de l’appareil soit conservé, et les applications et les paramètres supprimés.  
   > [!IMPORTANT]
- > Si vous ne conservez pas les données utilisateur, l’appareil sera restauré à son état d’origine. Il sera désinscrit d’Azure AD et de la gestion des appareils mobiles. 
+ > Si vous ne conservez pas les données utilisateur, l’appareil sera restauré à son état d’origine. Les appareils BYOD seront désinscrits d’Azure AD et de la gestion des appareils mobiles.
+ > Les appareils joints à Azure AD seront de nouveau inscrits dans la gestion des appareils mobiles quand un annuaire Azure Active Directory aura activé la connexion d’un utilisateur à l’appareil.
  
 5. Cliquez sur **OK**.   
 6. Pour afficher l’état de cette action, revenez à **Appareils** et cliquez sur **Actions d’appareil**.  
