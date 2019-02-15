@@ -65,6 +65,8 @@ items:
     href: common-scenarios.md
   - name: Décisions d’ordre informatique pour BYOD avec EMS
     href: byod-technology-decisions.md
+  - name: Ajouter des stratégies de protection et des profils professionnels (Android)
+    href: android-deployment-scenarios-app-protection-work-profiles.md
   - name: Gérer les versions de système d’exploitation
     href: manage-os-versions.md
   - name: Gérer Windows Holographic
@@ -227,6 +229,45 @@ items:
       href: enrollment-report-company-portal-abandon.md
     - name: Résoudre les problèmes d’inscription d’appareils
       href: troubleshoot-device-enrollment-in-intune.md
+  - name: Gérer des unités
+    href: device-management.md
+    items:
+    - name: Fonctionnalités de gestion des appareils
+      href: device-management-capabilities.md
+    - name: Contourner le verrou d’activation
+      href: device-activation-lock-bypass.md
+    - name: Gérer le Redémarrage à zéro Windows
+      href: device-fresh-start.md
+    - name: Localiser un appareil iOS perdu
+      href: device-locate.md
+    - name: Activer le mode Perdu d’iOS
+      href: device-lost-mode.md
+    - name: Activer le mode supervisé iOS
+      href: device-supervised-mode.md
+    - name: Verrouiller un appareil
+      href: device-remote-lock.md
+    - name: Réinitialiser le code d’accès
+      href: device-passcode-reset.md
+    - name: Redémarrer un appareil
+      href: device-restart.md
+    - name: Déconnecter l’utilisateur actuel
+      href: device-logout-user.md
+    - name: Supprimer un utilisateur
+      href: device-remove-user.md
+    - name: Effacer l’appareil
+      href: device-erase.md
+    - name: Contrôler à distance les appareils mobiles
+      href: device-profile-android-teamviewer.md
+    - name: Réinitialisation du code PIN Windows 10
+      href: device-windows-pin-reset.md
+    - name: Installer le connecteur de service Exchange
+      href: exchange-service-connector-configure.md
+    - name: Synchroniser l’appareil
+      href: device-sync.md
+    - name: Examiner l’inventaire des appareils
+      href: device-inventory.md
+    - name: Supprimer les appareils
+      href: devices-wipe.md
   - name: Définir la conformité des appareils
     items:
     - name: Vue d’ensemble de la conformité
@@ -957,9 +998,9 @@ items:
       href: data-outside-protect.md
     - name: Éviter les fuites de données sur les appareils non gérés
       href: data-leak-prevention.md
-ms.openlocfilehash: ace0bec62318d846cdcc37330abb63b2a89fef14
-ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
+ms.openlocfilehash: 365777adf57d1f36577e2e6f20cce6b193a829f8
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986907"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302198"
