@@ -372,7 +372,8 @@ items:
       - name: Installer le connecteur Exchange local
         href: exchange-connector-install.md
       - name: Créer et attribuer la stratégie d’accès conditionnel
-        href: conditional-access-exchange-create.md
+      - name: Stratégie d’accès conditionnel basée sur l’appareil
+        href: create-conditional-access-intune.md
       - name: Réattribuer les stratégies d’accès conditionnel à partir du portail classique Intune
         href: conditional-access-intune-reassign.md
       - name: Accès conditionnel basé sur l’application
@@ -998,9 +999,9 @@ items:
       href: data-outside-protect.md
     - name: Éviter les fuites de données sur les appareils non gérés
       href: data-leak-prevention.md
-ms.openlocfilehash: 365777adf57d1f36577e2e6f20cce6b193a829f8
-ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
+ms.openlocfilehash: 1183db94d839619e1130261345f6988a627938bb
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/15/2019
-ms.locfileid: "56302198"
+ms.locfileid: "56307853"
