@@ -15,12 +15,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 444fd63f8c582d35891dfa5aedb9eadd6626e541
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303393"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302181"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Gérer des scripts PowerShell dans Intune pour des appareils Windows 10
 
@@ -30,9 +31,9 @@ Utilisez l’extension de gestion Intune pour charger des scripts PowerShell dan
 
 Actuellement, l’informatique de l’utilisateur final connaît une transformation numérique. L’informatique classique et traditionnelle se caractérise par une plateforme d’appareils unique, des appareils d’entreprise, des utilisateurs travaillant depuis leur bureau et de nombreux processus informatiques manuels et réactifs. Le lieu de travail moderne compte plusieurs plateformes d’appareils, à la fois personnelles et professionnelles. Il permet aux utilisateurs de travailler où qu’ils se trouvent et offre des processus informatiques automatisés et proactifs.
 
-Les services de gestion des appareils mobiles, tels que Microsoft Intune, peuvent gérer les appareils mobiles et de bureau qui exécutent Windows 10. Le client de gestion Windows 10 intégré communique avec Intune pour effectuer des tâches de gestion d’entreprise. Vous pouvez avoir besoin d’effectuer certaines tâches, telles que la configuration avancée des appareils, le dépannage et la gestion des applications Win32 héritée, qui ne sont pas disponibles dans la gestion des appareils mobiles Windows 10. Pour cela, vous pouvez exécuter le logiciel client Intune sur vos appareils Windows 10. L’article [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md) est très utile.
+Les services de gestion des appareils mobiles, tels que Microsoft Intune, peuvent gérer les appareils mobiles et de bureau qui exécutent Windows 10. Le client de gestion Windows 10 intégré communique avec Intune pour effectuer des tâches de gestion d’entreprise. Vous pouvez avoir besoin de certaines tâches, telles que la configuration avancée d’appareils et la résolution de problèmes. Pour la gestion des applications Win32, vous pouvez utiliser la fonctionnalité [Gestion des applications Win32](apps-win32-app-management.md) sur vos appareils Windows 10.
 
-L’extension de gestion Intune vient en complément des fonctionnalités intégrées de gestion des appareils mobiles Windows 10. Vous pouvez créer des scripts PowerShell à exécuter sur les appareils Windows 10. Par exemple, vous pouvez créer un script PowerShell qui installe une application Win32 héritée, charger le script dans Intune, affecter le script à un groupe Azure Active Directory (AD) et exécuter le script. Vous pouvez ensuite superviser l’état d’exécution du script du début à la fin.
+L’extension de gestion Intune vient en complément des fonctionnalités intégrées de gestion des appareils mobiles Windows 10. Vous pouvez créer des scripts PowerShell à exécuter sur les appareils Windows 10. Par exemple, vous pouvez créer un script PowerShell qui effectue une configuration avancée de l’appareil, charge le script dans Intune, affecte le script à un groupe Azure Active Directory (AD) et exécute le script. Vous pouvez ensuite superviser l’état d’exécution du script du début à la fin.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -46,7 +47,7 @@ L’extension de gestion Intune est soumise aux prérequis suivants :
 
 1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
 2. Sélectionnez **Configuration de l’appareil** > **Scripts PowerShell** > **Ajouter**.
-3. Entrez un **Nom** et une **Description** pour le script PowerShell. Pour l’**Emplacement du script**, accédez au script PowerShell. La taille du script doit être inférieure à 200 Ko (ASCII) ou 100 Ko (Unicode).
+3. Entrez un **Nom** et une **Description** pour le script PowerShell. Pour l’**Emplacement du script**, accédez au script PowerShell. La taille du script ne doit pas dépasser 200 Ko.
 4. Choisissez **Configurer**. Indiquez ensuite si vous souhaitez exécuter le script avec les informations d’identification de l’utilisateur sur l’appareil (**Oui**) ou dans le contexte du système (**Non**). Par défaut, le script s’exécute dans le contexte du système. Sélectionnez **Oui**, sauf si le script doit s’exécuter dans le contexte du système. 
   ![Volet Ajouter un script PowerShell](./media/mgmt-extension-add-script.png)
 5. Indiquez si le script doit être signé par un éditeur approuvé (**Oui**). Par défaut, il n’est pas nécessaire que le script soit signé. 

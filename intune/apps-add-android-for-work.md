@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b68206fd2170dd2bc156d844ae83caafaa08180
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ba3e4ae88423183d5d0317dedb59715d2adb4e11
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836572"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240025"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Ajouter des applications Google Play géré à des appareils d’entreprise Android avec Intune
 
@@ -41,8 +41,8 @@ Vérifiez que vous avez configuré des profils Intune et des profils professionn
 >[!NOTE]
 >Avec Microsoft Intune, nous vous recommandons d’utiliser le navigateur Microsoft Edge ou Google Chrome.
 
-## <a name="managed-google-play-app-type"></a>Type d’application Google Play géré 
-Le type d’application **Google Play géré** vous permet d’ajouter spécifiquement des [applications Google Play géré](https://play.google.com/work/search?q=microsoft&c=apps) à Intune. En tant qu’administrateur Intune, vous pouvez désormais parcourir, rechercher, approuver, synchroniser et attribuer des applications Google Play géré approuvées dans Intune.  Vous n’avez plus besoin d’accéder séparément à la console Google Play géré, ni de vous authentifier de nouveau. 
+## <a name="managed-google-play-app-type"></a>Type d’application Google Play géré
+Le type d’application **Google Play géré** vous permet d’ajouter spécifiquement des [applications Google Play géré](https://play.google.com/work/search?q=microsoft&c=apps) à Intune. En tant qu’administrateur Intune, vous pouvez désormais parcourir, rechercher, approuver, synchroniser et attribuer des applications Google Play géré approuvées dans Intune.  Vous n’avez plus besoin d’accéder séparément à la console Google Play géré, ni de vous authentifier de nouveau.
 
 > [!NOTE]
 > Si vous préférez synchroniser une application Google Play géré avec Intune, consultez [Synchroniser une application Google Play géré avec Intune](apps-add-android-for-work.md#synchronize-a-managed-google-play-app-with-intune-alternative).
@@ -55,11 +55,12 @@ Le type d’application **Google Play géré** vous permet d’ajouter spécifiq
 3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
 5. Dans le volet **Applications**, sélectionnez **Ajouter**.
 6. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
-7. Sélectionnez **Google Play géré - Approuver des applications** pour rechercher les applications Google Play géré approuvées.
-8. Cliquez sur chaque application à inclure. Ensuite :
-9. Cliquez sur **Approuver** pour approuver l’application Google Play géré, puis cliquez sur **Approuver** pour accepter les autorisations de l’application. 
-10. Cliquez sur **OK** pour inclure la ou les applications.
-11. Cliquez sur **Ajouter** dans le volet **Application** pour vous synchroniser avec le service Google Play géré.
+7. Sélectionnez **Google Play managé - approuver** pour ouvrir le catalogue Google Play managé.
+8. Utilisez la zone de recherche pour rechercher des applications que vous souhaitez inclure.
+9. Cliquez sur **Approuver** pour approuver l’application Google Play managée, puis sur **Approuver** pour accepter les autorisations de l’application.
+10. Sélectionnez **Keep approved when app requests new permissions** (Laisser approuvé quand l’application demande de nouvelles autorisations) dans la fenêtre Paramètres d’autorisation, puis cliquez sur **Enregistrer**. Si vous ne choisissez pas cette option, vous devez approuver manuellement les nouvelles autorisations si le développeur d’applications publie une mise à jour.  Les installations et les mises à jour de l’application sont stoppées jusqu'à ce que les autorisations soient approuvées. Pour cette raison, il est recommandé de sélectionner l’option permettant d’approuver automatiquement de nouvelles autorisations. 
+11. Cliquez sur **OK** pour inclure la ou les applications approuvées.
+12. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré.
 
 ## <a name="synchronize-a-managed-google-play-app-with-intune-alternative"></a>Synchroniser une application Google Play géré avec Intune (alternative)
 Si vous préférez synchroniser une application Google Play géré avec Intune, au lieu de l’ajouter directement à l’aide d’Intune, effectuez les étapes ci-après.
@@ -75,8 +76,8 @@ Si vous préférez synchroniser une application Google Play géré avec Intune, 
     Dans l’exemple suivant, l’application Microsoft Excel a été choisie.
 
     ![Bouton Approuver dans le store Google Play géré](media/approve.png)
-    
-   Une fenêtre de l’application s’ouvre, vous demandant d’accorder des autorisations pour que l’application puisse effectuer diverses opérations. 
+
+   Une fenêtre de l’application s’ouvre, vous demandant d’accorder des autorisations pour que l’application puisse effectuer diverses opérations.
 
 4. Sélectionnez **Approuver** pour accepter les autorisations des applications et continuer.
 
@@ -86,7 +87,7 @@ Si vous préférez synchroniser une application Google Play géré avec Intune, 
 
     ![Options de gestion des nouvelles demandes d’autorisation d’application](media/approve-app-settings.png)
 
-    L’application est approuvée et s’affiche dans votre console d’administration informatique. Vous pouvez ensuite [synchroniser l’application de profil professionnel Android avec Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
+    L’application est approuvée et s’affiche dans votre console d’administration informatique. Vous pouvez ensuite [synchroniser l’application de profil professionnel Android avec Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).
 
 ### <a name="sync-a-managed-google-play-app-with-intune"></a>Synchroniser une application de Google Play géré avec Intune
 
@@ -121,7 +122,7 @@ Consultez régulièrement la console Google Play gérée pour y rechercher l’e
 3. Sélectionnez l’onglet **Mises à jour** et vérifiez si toutes les applications nécessitent une mise à jour.  
     Les applications répertoriées nécessitent de nouvelles autorisations et ne sont pas affectées avant l’application de ces autorisations.
 
-Vous pouvez également configurer Google Play pour réapprouver automatiquement les autorisations d’application en fonction de l’application. 
+Vous pouvez également configurer Google Play pour réapprouver automatiquement les autorisations d’application en fonction de l’application.
 
 ## <a name="working-with-a-line-of-business-app-from-the-managed-google-play-store"></a>Utilisation d’une application métier provenant du store Google Play géré
 
@@ -139,10 +140,9 @@ Vous pouvez également configurer Google Play pour réapprouver automatiquement 
 5. Dans le nœud **Applications** du store, vérifiez que l’application que vous avez publiée est affichée.  
     L’application a été automatiquement approuvée pour être synchronisée avec Intune.
 
-## <a name="delete-managed-google-play-apps"></a>Supprimer des applications Google Play géré 
+## <a name="delete-managed-google-play-apps"></a>Supprimer des applications Google Play géré
 Si besoin, vous pouvez supprimer des applications Google Play géré à partir de Microsoft Intune. Pour supprimer une application Google Play géré, ouvrez Microsoft Intune dans le portail Azure et sélectionnez **Applications clientes** > **Applications**. À partir de la liste des applications, sélectionnez les points de suspension (...) à droite de l’application Google Play géré, puis sélectionnez **Supprimer** dans la liste affichée. Lorsque vous supprimez une application Google Play gérée à partir de la liste des applications, l’application Google Play gérée devient automatiquement non approuvée.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Affecter des applications à des groupes](apps-deploy.md) 
-
+- [Affecter des applications à des groupes](apps-deploy.md)

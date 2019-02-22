@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08e6c7657eeba7a41b9927e736fe7f4fc07e25e6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a57dca7f6b817177cbd131e969c1b5aa52a248a8
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848574"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307768"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -29,7 +29,8 @@ Le RBAC permet de contrôler qui peut effectuer diverses tâches Intune au sein 
 
 - **Définition de rôle** : Le nom d’un rôle, les ressources qu’il gère et les autorisations accordées pour chaque ressource.
 - **Membres** : Les groupes d’utilisateurs à qui sont accordées les autorisations.
-- **Étendue** : Les groupes d’utilisateurs ou d’appareils que les membres peuvent gérer.
+- **Étendue (groupes)**  : Les groupes d’utilisateurs ou d’appareils que les membres peuvent gérer.
+- **[Étendue balises)](https://docs.microsoft.com/intune/scope-tags)**  : balises où l’attribution de rôle s’applique.
 - **Assignment** : Lorsque la définition, les membres et l'étendue ont été configurés, le rôle est affecté.
 
 ![Exemple de RBAC Intune](./media/intune-rbac-1.PNG)
@@ -82,20 +83,22 @@ Vous pouvez attribuer des rôles intégrés aux groupes sans configuration suppl
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le volet **Intune**, choisissez **Rôles** > **Tous les rôles**.
-4. Dans **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous souhaitez affecter.
+3. Dans le panneau **Intune**, choisissez **Rôles** > **Tous les rôles**.
+4. Dans le panneau **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous souhaitez affecter.
 
-5. Dans le volet <*nom_rôle*> - **Vue d’ensemble**, choisissez **Gérer**, puis **Affectations**.
+5. Dans le panneau <*Nom de rôle*> - **Vue d’ensemble**, choisissez **Gérer** > **Affectations**.
 
-6. Dans le volet de rôle personnalisé, choisissez **Affecter**.
+6. Sur le panneau de rôle personnalisé, choisissez **Affecter**.
 
-7. Dans le volet **Attributions de rôle**, entrez un **Nom** et éventuellement une **Description** pour l’attribution.
+7. Dans le panneau **Attributions de rôles**, entrez un **Nom d’affectation** et, éventuellement, une **Description d’affectation** pour l’affectation.
 
-8. Pour **Membres**, choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
+8. Pour **Membres (groupes)**, choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
 
-9. Pour **Étendue**, choisissez un groupe contenant les utilisateurs que le membre ci-dessus sera autorisé à gérer.
-<br></br>
-10. Quand vous avez terminé, choisissez **OK**. La nouvelle affectation s’affiche dans la liste des affectations.
+9. Pour **Étendue (groupes)**, choisissez un groupe contenant les utilisateurs que le membre ci-dessus sera autorisé à gérer.
+
+10. Pour **Étendue (balises)**, choisissez des balises où cette affectation de rôle s’appliquera.
+
+11. Quand vous avez terminé, choisissez **OK**. La nouvelle affectation s’affiche dans la liste des affectations.
 
 ### <a name="intune-rbac-table"></a>Tableau RBAC d’Intune
 
@@ -116,31 +119,21 @@ Vous pouvez créer un rôle personnalisé qui inclut toutes les autorisations re
 
 2. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
 
-3. Choisissez **Intune** > **Rôles** > **Tous les rôles** > **Ajouter un élément personnalisé**.
+3. Choisissez **Intune** > **Rôles** > **Tous les rôles** > **Ajouter**.
 
-4. Dans le volet **Ajouter un rôle personnalisé**, entrez le nom et la description du nouveau rôle, puis cliquez sur **Autorisations**.
+4. Sur le panneau **Ajouter un rôle personnalisé**, entrez le nom et la description du nouveau rôle, puis cliquez sur **Autorisations**.
 
-5. Dans le volet **Autorisations**, choisissez les autorisations que vous souhaitez utiliser avec ce rôle. Utilisez le [Tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) comme référence pour déterminer quelles autorisations vous souhaitez appliquer.
+5. Dans le panneau **Autorisations**, sélectionnez les autorisations que vous souhaitez utiliser avec ce rôle. Utilisez le [Tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) comme référence pour déterminer quelles autorisations vous souhaitez appliquer.
 
-6. Quand vous avez terminé, choisissez **OK**.
+6. Dans le panneau **Étendue (balises)**, choisissez les balises où ce rôle personnalisé sera appliqué.
 
-7. Dans le volet **Ajouter un rôle personnalisé**, cliquez sur **Créer**. Le nouveau rôle s’affiche dans la liste dans le volet **Rôles Intune - Tous les rôles**.
+7. Quand vous avez terminé, choisissez **OK**.
+
+7. Dans le panneau **Ajouter un rôle personnalisé**, cliquez sur **Créer**. Le nouveau rôle s’affiche dans la liste du panneau **Rôles Intune - Tous les rôles**.
 
 ### <a name="to-assign-a-custom-role"></a>Pour affecter un rôle personnalisé
 
-1. Dans **Rôles Intune - Tous les rôles**, choisissez le rôle personnalisé que vous souhaitez affecter.
-
-2. Dans le volet <*nom_rôle*> - **Vue d’ensemble**, choisissez **Gérer**, puis **Affectations**. Dans ce volet, vous pouvez aussi modifier ou supprimer des rôles existants.
-
-3. Dans le volet de rôle personnalisé, choisissez **Affecter**.
-
-4. Dans le volet **Attributions de rôle**, entrez un **Nom** et éventuellement une **Description** pour l’attribution.
-
-5. Pour **Membres**, choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
-
-6. Pour **Étendue**, choisissez un groupe contenant les utilisateurs que le membre ci-dessus sera autorisé à gérer.
-
-7. Quand vous avez terminé, choisissez **OK**. La nouvelle affectation s’affiche dans la liste des affectations.
+Suivez les mêmes étapes que [Pour attribuer un rôle intégré](https://docs.microsoft.com/intune/role-based-access-control#to-assign-a-built-in-role) et sélectionnez le rôle personnalisé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

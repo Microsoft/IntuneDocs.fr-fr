@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6b0c2bff4051a1adba1a68f38d8f0a9b80b914b4
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838765"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240059"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Une fois que vous avez [ajouté une application](apps-add.md) à Microsoft Intune, vous pouvez l’attribuer à des utilisateurs et des appareils. Il est important de noter que vous pouvez attribuer une application à un appareil, que celui-ci soit géré par Intune ou pas. 
+Une fois que vous avez [ajouté une application](apps-add.md) à Microsoft Intune, vous pouvez l’attribuer à des utilisateurs et des appareils. Il est important de noter que vous pouvez attribuer une application à un appareil, que celui-ci soit géré par Intune ou pas.
 
 > [!NOTE]
 > L’intention de déploiement disponible n’est pas prise en charge pour les groupes d’appareils, seuls les groupes d’utilisateurs sont pris en charge.
@@ -124,8 +124,19 @@ Parfois, la même application est attribuée à plusieurs groupes, mais avec des
 > En ce qui concerne les applications du magasin iOS managées uniquement, une fois ajoutées à Microsoft Intune et assignées comme **Obligatoire**, elles sont automatiquement créées avec les intentions **Obligatoire** et **Disponible**.<br><br>
 > Les applications iOS de l’App Store (et non les applications VPP iOS) qui sont ciblées intentionnellement sont appliquées sur l’appareil au moment où l’appareil s’enregistre et s’affichent également dans l’application Portail d’entreprise.
 
-## <a name="android-enterprise-app-we-app-deployment"></a>Déploiement d’applications APP-WE Android pour les entreprises
-Si vous disposez d’appareils Android dans un scénario de déploiement APP-WE (stratégie App Protection sans inscription) non inscrit, vous pouvez maintenant utiliser Google Play dans sa version gérée pour déployer des applications du Store et des applications métier pour les utilisateurs. Plus précisément, vous pouvez proposer aux utilisateurs finaux un catalogue d’applications et une expérience d’installation dans laquelle ils n’ont plus besoin d’assouplir la posture de sécurité de leurs appareils en autorisant les installations à partir de sources inconnues. Ce scénario de déploiement offrira par ailleurs une meilleure expérience utilisateur. Pour savoir comment attribuer une application, consultez [Attribuer une application](apps-deploy.md#assign-an-app).
+## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Déploiement de l’application Google Play managée sur des appareils non gérés
+Si vous disposez d’appareils Android dans un scénario de déploiement APP-WE (stratégie de protection des applications sans inscription) non inscrit, vous pouvez utiliser Google Play dans sa version managée pour déployer des applications du Store et des applications métier (LOB) pour les utilisateurs. Les applications Google Play managées ciblées comme **Disponibles avec ou sans inscription** s’affichent dans l’application Play Store sur l’appareil de l’utilisateur final, pas dans l’application Portail d'entreprise. L’utilisateur final parcourt et installe les applications déployées de cette manière à partir de l’application Play. Étant donné que les applications sont installées à partir de Google Play managé, l’utilisateur final n’a pas besoin de modifier les paramètres de son appareil pour autoriser l’installation des applications à partir de sources inconnues, ce qui signifie que les appareils sont mieux sécurisés. Si le développeur d’applications publie sur Play une nouvelle version d’une application installée sur l’appareil d’un utilisateur, l’application est automatiquement mise à jour par Play. 
+
+Étapes pour attribuer une application Google Play non managée sur des appareils non gérés :
+
+1. Connecter votre tenant Intune à Google Play managé. Si vous l’avez déjà fait pour gérer un profil professionnel Android Entreprise ou bien des appareils dédiés ou entièrement gérés, il est inutile de le faire à nouveau.
+2. Ajouter des applications de Google Play géré à votre console Intune.
+3. Cibler les applications Google Play gérées en tant que **Disponibles avec ou sans inscription** pour le groupe d’utilisateurs souhaité. Les ciblages **Requis** et **Désinstallation** de l’application ne sont pas pris en charge pour les appareils non inscrits.
+4. Affecter une stratégie de protection des applications au groupe d'utilisateurs.
+5. La prochaine fois que l’utilisateur final ouvrira l’application Portail d’entreprise, un message lui indiquera que des applications sont disponibles dans l’application Play Store.  L’utilisateur peut appuyer sur cette notification pour être transféré directement vers l’application Play et voir les applications d’entreprise, ou il peut accéder à l’application Play Store séparément.
+6. L’utilisateur final peut développer le menu contextuel dans l’application Play Store et basculer entre son compte Google personnel (où il voit ses applications personnelles) et son compte professionnel (où il voit ses applications du Store et métier). Les utilisateurs finaux installent les applications en appuyant sur Installer dans l’application Play Store.
+
+Lorsqu’une réinitialisation sélective de la stratégie de protection des applications est effectuée dans la console Intune, le compte professionnel est automatiquement supprimé de l’application Play Store et l’utilisateur final ne peut plus voir ses applications professionnelles dans le catalogue d’applications Play Store. Lorsque le compte professionnel est supprimé d’un appareil, les applications installées à partir du Play Store restent installées sur l’appareil et ne se désinstallent pas. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

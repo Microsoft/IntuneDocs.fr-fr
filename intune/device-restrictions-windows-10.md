@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 943b5dc8c0fe1c9b55b9c4971be2087353b60428
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230118"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307887"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -70,6 +71,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Compte Microsoft** : Permet à l'utilisateur d'associer un compte Microsoft à l’appareil.
 - **Compte non-Microsoft** : Permet à l’utilisateur d’ajouter des comptes de messagerie à l’appareil qui ne sont pas associés à un compte Microsoft.
 - **Synchronisation des paramètres du compte Microsoft** : Permet aux paramètres d’appareil et d’application associés à un compte Microsoft de se synchroniser entre les appareils.
+- **Assistant de connexion de compte Microsoft** : Choisissez **Désactiver** pour empêcher les utilisateurs finaux de contrôler le service Assistant de connexion de compte Microsoft (wlidsvc), par exemple l’arrêt ou le démarrage manuels du service. Lorsqu’il est défini sur **Pas configuré**, le service NT wlidsvc utilise le système d’exploitation (SE) par défaut, ce qui peut permettre aux utilisateurs finaux de démarrer et d’arrêter le service. Ce service est utilisé par le système d’exploitation pour permettre aux utilisateurs de se connecter à leur compte Microsoft.
 
 ## <a name="cloud-printer"></a>Imprimante cloud
 
@@ -136,6 +138,10 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Espace de travail Windows Ink** : Empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. **Non configuré** : l’espace de travail Windows Ink est activé et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : Permet aux utilisateurs avec des droits administratifs de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **CTRL + Win + R** dans l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
 - **Demander aux utilisateurs de se connecter au réseau pendant l’installation de l’appareil (Windows Insider uniquement)**  : Choisissez l’option **Exiger** pour que l’appareil se connecte à un réseau avant de continuer au-delà de la page Réseau lors de la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
+- **Accès direct à la mémoire** : **Bloquer** empêche l’accès direct à la mémoire (DMA) pour tous les ports en aval PCI enfichables à chaud tant qu’un utilisateur ne se connecte pas à Windows. **Activé** (valeur par défaut) autorise l’accès à DMA, même lorsqu’un utilisateur n’est pas connecté.
+
+  CSP : [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+
 - **Terminer les processus à partir du Gestionnaire des tâches** : Ce paramètre détermine si les non-administrateurs peuvent utiliser le Gestionnaire des tâches pour mettre fin aux tâches. L’option **Empêcher** empêche les utilisateurs standard (non-administrateurs) d’utiliser le Gestionnaire des tâches pour terminer un processus ou une tâche sur l’appareil. L’option **Non configuré** (par défaut) permet aux utilisateurs standard d’arrêter un processus ou une tâche à l’aide du Gestionnaire des tâches.
 
 ## <a name="kiosk-preview---obsolete"></a>Plein écran (préversion) - Obsolète
@@ -192,7 +198,7 @@ Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou s�
 ## <a name="locked-screen-experience"></a>Expérience d’écran de verrouillage
 
 - **Notifications du centre de notifications (mobile uniquement)**  : Active les notifications du Centre de notifications dans l’écran de verrouillage de l’appareil (Windows 10 Mobile uniquement).
-- **URL de l’image de l’écran verrouillé (Desktop uniquement)**  : Entrez l’URL d’une image au format JPEG qui est utilisée comme papier peint de l’écran de verrouillage Windows. Les utilisateurs ne peuvent pas modifier ce paramètre.
+- **URL de l’image de l’écran verrouillé (Desktop uniquement)**  : Entrez l’URL d’une image au format JPEG qui est utilisée comme papier peint de l’écran de verrouillage Windows. Ce paramètre verrouille l’image. L’image ne peut pas être modifiée par la suite.
 - **Délai d’expiration de l’écran configurable par l’utilisateur (mobile uniquement)**  : Permet aux utilisateurs de configurer un délai d’expiration 
 - **Cortana sur écran verrouillé (Desktop uniquement)**  : N’autorise pas l’utilisateur à interagir avec Cortana quand l’appareil est sur l’écran de verrouillage (Windows 10 Desktop uniquement).
 - **Notifications toast sur écran verrouillé** : Bloque l’affichage des messages d’alerte sur l’écran de verrouillage de l’appareil.
@@ -313,7 +319,6 @@ Utilisez le bouton **Ajouter** pour créer une configuration plein écran (ou s�
   - **Empêcher la réutilisation des mots de passe précédents** : Spécifie le nombre de mots de passe précédemment utilisés conservés par l’appareil.
   - **Exiger un mot de passe quand l’appareil sort d’un état d’inactivité (mobile uniquement)**  : Spécifie que l’utilisateur doit entrer un mot de passe pour déverrouiller l’appareil (Windows 10 Mobile uniquement).
   - **Mots de passe simples** : Permet d’utiliser des mots de passe simples, tels que 1111 ou 1234. Ce paramètre autorise ou bloque également l’utilisation des mots de passe d’image Windows.
-- **Chiffrement** : Active le chiffrement sur les appareils ciblés.
 
 ## <a name="per-app-privacy-exceptions"></a>Exceptions de confidentialité par application
 

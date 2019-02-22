@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74445c678455dc881f79fed20ed68be6f090fe78
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 10b2ef5844c2d8889fd1d5c377fcefb8330be9e2
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834770"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325433"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -87,7 +87,6 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 |Autoriser l'application à recevoir des données d'autres applications|X|X|
 |Restreindre les opérations Couper, Copier et Coller avec d’autres applications|X|X|
 |Demander un code confidentiel simple pour l'accès|X|X|
-|Remplacer le code confidentiel intégré de l’application par le code confidentiel Intune|X||
 |Spécifier le nombre de tentatives avant réinitialisation du code confidentiel|X|X|
 |Autoriser une empreinte digitale à la place du code confidentiel|X|X|
 |Autoriser la reconnaissance faciale à la place du code PIN (iOS uniquement)|X|X|
@@ -98,8 +97,8 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 |Spécifier la période de grâce hors connexion|X|X|
 |Bloquer la capture d’écran (Android uniquement)|X|X|
 |Prise en charge de GAM sans inscription de l’appareil|X|X|
-|Réinitialisation complète|X|X|
-|Réinitialisation sélective <br><br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
+|Réinitialisation complète de données d’applications|X|X|
+|Réinitialisation sélective des données professionnelles et scolaires dans des scénarios multi-identités <br><br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
 |Empêcher « Enregistrer sous »|X||
 |Configuration d'application ciblée|X||
 |Prise en charge des identités multiples|X||
