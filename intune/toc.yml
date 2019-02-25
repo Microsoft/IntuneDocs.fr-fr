@@ -197,17 +197,17 @@ items:
       items:
       - name: Configurer l’inscription Android
         href: android-enroll.md
-      - name: Connecter Intune à Android entreprise
+      - name: Connecter Intune à Android Entreprise
         href: connect-intune-android-enterprise.md
-      - name: Configurer l’inscription du profil professionnel Android
+      - name: Inscription de profils professionnels Android Entreprise
         href: android-work-profile-enroll.md
-      - name: Configurer l’inscription d’un appareil dédié Android
+      - name: Inscription d’appareils dédiés Android Entreprise
         href: android-kiosk-enroll.md
-      - name: Configurer l’inscription d’un appareil Android complètement managé
+      - name: Inscription complètement managée Android Entreprise
         href: android-fully-managed-enroll.md
-      - name: Inscrire des appareils Android dédiés ou complètement managés
+      - name: Inscrire des appareils dédiés Android Entreprise ou des appareils complètement managés
         href: android-dedicated-devices-fully-managed-enroll.md
-      - name: Gérer les appareils avec profil professionnel Android
+      - name: Gérer des appareils avec profil professionnel Android Entreprise
         href: android-enterprise-overview.md
       - name: Inscription Samsung Knox Mobile
         href: android-samsung-knox-mobile-enroll.md
@@ -250,6 +250,8 @@ items:
       href: device-remote-lock.md
     - name: Réinitialiser le code d’accès
       href: device-passcode-reset.md
+    - name: Renommer un appareil
+      href: device-rename.md
     - name: Redémarrer un appareil
       href: device-restart.md
     - name: Déconnecter l’utilisateur actuel
@@ -578,6 +580,8 @@ items:
             href: app-protection-policies-exception.md
         - name: Valider des stratégies de protection des applications
           href: app-protection-policies-validate.md
+        - name: Remise de stratégie de protection des applications
+          href: app-protection-policy-delivery.md
         - name: Surveiller l’état de protection des utilisateurs d’applications
           href: app-protection-policies-monitor.md
         - name: Préparation aux stratégies de protection des applications WIP
@@ -1001,9 +1005,9 @@ items:
       href: data-outside-protect.md
     - name: Éviter les fuites de données sur les appareils non gérés
       href: data-leak-prevention.md
-ms.openlocfilehash: d10d6c5a1c19430a0413e4f3149035a9e783dfc6
-ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
+ms.openlocfilehash: 680ae510d7f3387b53ad6ae50c8e4d8ba194f8b9
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56458907"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742820"
