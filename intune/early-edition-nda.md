@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19994745a232a362d6bba0f09ed3934e492a17ed
-ms.sourcegitcommit: 2f431f122ce3ee6b5d0cdb04a0b748d00f83e295
+ms.openlocfilehash: b1ff65e1b48815cd5964aa7498fa6ba54df50e09
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265670"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742293"
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2019"></a>Édition préliminaire de Microsoft Intune - Février 2019
 
@@ -43,92 +43,6 @@ Cette page est mise à jour périodiquement. Consultez-la régulièrement pour s
 ## <a name="intune-in-the-azure-portal"></a>Intune dans le portail Azure
 <!-- 1902 start-->
 
-### <a name="powershell-scripts-can-run-in-a-64-bit-host-on-64-bit-devices----1862675----"></a>Les scripts PowerShell peuvent s’exécuter dans un hôte 64 bits sur des appareils 64 bits <!-- 1862675  -->
-Quand vous ajoutez un script PowerShell à un profil de configuration d’appareil, le script s’exécute toujours en 32 bits, même sur les systèmes d’exploitation 64 bits. Avec cette mise à jour, un administrateur peut exécuter le script dans un hôte PowerShell 64 bits sur des appareils 64 bits (**Configuration de l’appareil** > **Scripts PowerShell** > **Ajouter** > **Configurer** > **Exécuter le script dans un hôte PowerShell 64 bits**).
-Pour plus d’informations sur l’utilisation de PowerShell, consultez [Scripts PowerShell dans Intune](intune-management-extension.md).
-S'applique à : Windows 10 et versions ultérieures
-
-### <a name="rename-an-enrolled-windows-device----1911112----"></a>Renommer un appareil Windows inscrit <!-- 1911112  -->
-Vous pouvez renommer un appareil Windows 10 inscrit (RS4 ou ultérieur). Pour cela, choisissez **Intune** > **Appareils** > **Tous les appareils** > Choisissez un appareil > **Renommer l’appareil**.
-
-### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521-----"></a>Affecter des certificats SCEP à un appareil macOS sans utilisateur    <!-- 2340521   -->
-Vous pouvez affecter des certificats SCEP (Simple Certificate Enrollment Protocol) à un appareil macOS sans utilisateur et associer le certificat à des profils Wi-Fi ou VPN. Ceci étend la prise en charge existante permettant d’[affecter des certificats à des appareils sans utilisateur qui exécutent Windows, iOS et Android](certificates-scep-configure.md#create-a-scep-certificate-profile).
-
-### <a name="intune-conditional-access-ui-update------2432313----"></a>Mise à jour de l’interface utilisateur de l’accès conditionnel Intune   <!-- 2432313  -->
-Nous apportons des améliorations à l’interface utilisateur pour l’accès conditionnel dans la console Intune. Par exemple :
-- Remplacer le panneau *Accès conditionnel* d’Intune par le panneau d’Azure Active Directory. Ceci garantit que vous avez accès à la gamme complète des paramètres et des configurations pour l’accès conditionnel, qui reste une technologie d’Azure AD.
-- Déplacer l’installation du *connecteur du service Exchange* dans ce qui est actuellement le panneau *Accès local*. Nous renommons aussi ce panneau en *Accès Exchange*. Cette modification va dans le sens d’une consolidation de l’endroit où vous configurez et où vous surveillez les détails relatifs à Exchange online et local.
-
-### <a name="intune-will-leverage-google-play-protect-apis-on-android-devices----2577355----"></a>Intune tirera parti des API Google Play Protect sur les appareils Android <!-- 2577355  -->
-Certains administrateurs informatiques sont confrontés à un « paysage » BYOD où les téléphones mobiles des utilisateurs finaux peuvent être rootés ou jailbreakés. Ce comportement, bien que n’étant parfois pas mal intentionné, entraîne un contournement de nombreuses stratégies Intune définies pour protéger les données de l’organisation sur les appareils des utilisateurs finaux. Par conséquent, Intune permet donc la détection du rootage et du jailbreaking pour les appareils inscrits et désinscrits. Avec cette version, Intune peut désormais tirer parti des API Google Play Protect, qui s’ajoutent à nos contrôles de détection du rootage pour les appareils non inscrits. Même si Google ne partage pas l’intégralité des contrôles de détection du rootage qui sont effectués, nous pensons que ces API vont détecter les utilisateurs qui ont rooté leurs appareils pour une raison quelconque, allant de la personnalisation de l’appareil à l’obtention de mises à jour plus récentes du système d’exploitation sur des appareils plus anciens. L’accès de ces utilisateurs aux données de l’entreprise peut alors être bloqué, ou leurs comptes professionnels peuvent être supprimés des applications pour lesquelles une stratégie est activée. L’administrateur informatique dispose désormais de plusieurs mises à jour d’amélioration des rapports dans le panneau Intune App Protection : le rapport « Utilisateurs avec indicateur » montre les utilisateurs qui sont détectés via l’analyse de l’API SafetyNet de Google Play Protect, et le rapport « Applications potentiellement dangereuses » montre les applications qui sont détectées via l’analyse de l’API Verify Apps de Google. Cette fonctionnalité est disponible sur Android. 
-
-### <a name="win32-app-information-available-in-troubleshooting-blade----2617342------"></a>Informations sur les applications Win32 disponibles dans le panneau Résolution des problèmes <!-- 2617342    -->
-Vous pouvez collecter des fichiers journaux d’incidents pour l’installation d’une application Win32 à partir du panneau **Résolution des problèmes** d’Intune. Pour plus d’informations sur la résolution des problèmes d’installation d’une application, consultez [Résoudre les problèmes d’installation d’applications](troubleshoot-app-install.md).
-
-### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode----2935135----"></a>Les applications Navigateur kiosque et Navigateur Microsoft Edge peuvent s’exécuter sur les appareils Windows 10 en mode kiosque <!-- 2935135  -->
-Vous pouvez utiliser des appareils Windows 10 en mode kiosque pour exécuter une application ou plusieurs applications. Cette mise à jour inclut plusieurs modifications de l’utilisation des applications de navigateur en mode kiosque, notamment :
-
-- Ajoutez le navigateur Microsoft Edge ou le navigateur kiosque pour qu’ils s’exécutent comme applications sur l’appareil kiosque (**Configuration de l’appareil** > **Profils** > **Nouveau profil**  >  **Windows 10 et ultérieur** pour la plateforme > **Kiosque** pour le type de profil).
-- Appliquez une restriction à Microsoft Edge afin qu’il puisse (ou ne puisse pas) s’exécuter en mode kiosque (**Configuration de l’appareil** > **Profils** > **Nouveau profil**  >  **Windows 10 et ultérieur** pour la plateforme > **Restrictions de l’appareil** pour le type de profil > **Navigateur Microsoft Edge**). Quand il n’est pas exécuté en mode kiosque, les paramètres de Microsoft Edge peuvent être modifiés par les utilisateurs finaux.
-
-Pour obtenir la liste des paramètres actuels, consultez :
-
-- [Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque ](kiosk-settings-windows.md)
-- [Restrictions d’appareil pour le navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser)
-
-S'applique à : Windows 10 et versions ultérieures
-
-### <a name="auto-assign-scope-tags-to-resources-created-by-an-admin-with-that-scope----3173823----"></a>Affecter automatiquement des étiquettes d’étendue à des ressources créées par un administrateur avec cette étendue <!-- 3173823  -->
-Quand un administrateur crée une ressource, les étiquettes d’étendue affectées à l’administrateur sont automatiquement affectées à cette nouvelle ressource.
-
-### <a name="new-device-restriction-settings-for-ios-and-macos-devices----3448774---"></a>Nouveaux paramètres de restriction d’appareil pour les appareils iOS et macOS <!-- 3448774 -->
-Vous pouvez restreindre certains paramètres et certaines fonctionnalités sur les appareils exécutant iOS et macOS (**Configuration de l’appareil** > **Profils** > **Nouveau profil**  >  **iOS** ou **macOS** pour la plateforme > **Restrictions de l’appareil** pour le type de profil). Cette mise à jour ajoute des fonctionnalités et des paramètres que vous pouvez contrôler, notamment définir l’heure de l’écran, modifier les paramètres eSIM et les plans mobiles, retarder la visibilité par l’utilisateur des mises à jour logicielles, bloquer la mise en cache du contenu, etc.
-Pour connaître les fonctionnalités et les paramètres actuels que vous pouvez restreindre, consultez :
-- [Paramètres de restriction d’appareil iOS](device-restrictions-ios.md)
-- [Paramètres de restriction d’appareil macOS](device-restrictions-macos.md)
-
-S'applique à :
-- iOS
-- macOS
-
-### <a name="failed-enrollment-report-moves-to-the-device-enrollment-blade----3560202---"></a>Le rapport des échecs d’inscription est déplacé dans le panneau Inscription des appareils <!-- 3560202 -->
-Le rapport **Échecs d’inscription** est déplacé dans la section **Surveiller** du panneau **Inscription des appareils**. Deux nouvelles colonnes (Méthode d’inscription et Version du système d’exploitation) sont également ajoutées.
-
-### <a name="change-kiosk-to-dedicated-devices----3598402----"></a>Changement de « Kiosque » en « Appareils dédiés » <!-- 3598402  -->
-Pour s’aligner sur la terminologie d’Android, **Kiosque** est changé en **Appareils dédiés** sous Profils de configuration d’appareil, **Android Entreprise** > **Propriétaire de l’appareil** > **Restrictions de l’appareil**.
-
-### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850--3803313----"></a>Les paramètres iOS de Safari et ceux du retardement de la visibilité des mises à jour logicielles par l’utilisateur sont déplacés dans l’interface utilisateur Intune <!-- 3640850, , 3803313  -->
-Pour les appareils iOS, vous pouvez définir des paramètres Safari et configurer les mises à jour logicielles. Dans cette mise à jour, ces paramètres sont déplacés dans différentes parties de l’interface utilisateur Intune :
-
-- Les paramètres Safari passent de **Safari** (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour la plateforme > **Restrictions de l’appareil** pour le type de profil) à **Applications intégrées**. 
-- Le paramètre **Retardement de la visibilité des mises à jour logicielles par l’utilisateur pour les appareils iOS supervisés** (**Mises à jour logicielles** > **Mettre à jour des stratégies pour iOS**) est déplacé dans  **Restrictions de l’appareil** > **Général**.
-
-Pour obtenir la liste des paramètres actuels, consultez [Paramètres de restriction des appareils iOS](device-restrictions-ios.md) et [Mises à jour logicielles iOS](software-updates-ios.md).
-
-S'applique à : 
-- iOS
-
-### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164----"></a>Activation des restrictions dans les paramètres de l’appareil est renommé en Heure de l’écran sur les appareils iOS <!-- 3699164  -->
-Vous pouvez configurer **Activation des restrictions dans les paramètres de l’appareil** sur les appareils iOS supervisés (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour plateforme > **Restrictions de l’appareil** pour le type de profil > **Général**). Dans cette mise à jour, ce paramètre est renommé en **Heure de l’écran (mode supervisé uniquement)**. Le comportement reste le même. Plus précisément : 
-
-- iOS 11.4.1 et antérieur : **Bloquer** empêche les utilisateurs finaux de définir leurs propres restrictions dans les paramètres de l’appareil. 
-- iOS 12.0 et ultérieur : **Bloquer** empêche les utilisateurs de définir leur propre **Heure de l’écran** dans les paramètres de l’appareil, notamment les restrictions de contenu et de confidentialité. Les appareils mis à niveau vers iOS 12.0 ne voient plus l’onglet Restrictions dans les paramètres de l’appareil. Ces paramètres se trouvent dans **Heure de l’écran**. 
-
-Pour obtenir la liste des paramètres actuels, consultez [Restrictions des appareils iOS](device-restrictions-ios.md).
-
-S'applique à : 
-- iOS
-
-### <a name="app-status-details-for-ios-apps----3761235----"></a>Détails de l’état des applications pour les applications iOS <!-- 3761235  -->
-Des nouveaux messages d’erreur d’installation d’une application ont été ajoutés et concernent les échecs suivants :
-- Échec pour les applications VPP lors de l’installation sur un iPad partagé
-- Échec quand l’App Store est désactivé
-- Échec de la recherche d’une licence VPP pour l’application
-- Échec de l’installation d’applications système avec le fournisseur MDM
-- Échec de l’installation d’applications quand l’appareil est en mode perdu ou en mode kiosque
-- Échec de l’installation d’applications quand l’utilisateur n’est pas connecté à l’App Store
-
-Dans Intune, sélectionnez **Applications clientes** > **Applications** > « Nom de l’application » > **État de l’installation de l’appareil**. Les nouveaux messages d’erreur sont disponibles dans la colonne **Détails du statut**.
 
 <!-- 1901 start -->
 

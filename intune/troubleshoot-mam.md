@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 02/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: ae8113a603ae4c091005f7c82045708f7e9e3e97
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086146"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655389"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Résoudre les problèmes de gestion des applications mobiles
 
@@ -78,7 +78,7 @@ Message d’erreur ou boîte de dialogue | Cause | Mise à jour |
 **Application non configurée** : cette application n’a pas été configurée pour votre usage. Contactez votre administrateur informatique pour obtenir de l’aide. | La détection d’une stratégie de protection des applications obligatoire pour l’application a échoué. |Vérifiez qu’une stratégie de protection des applications iOS est déployée pour le groupe de sécurité de l’utilisateur et qu’elle cible cette application.
 **Bienvenue dans Intune Managed Browser** : Cette application fonctionne mieux quand elle est gérée par Microsoft Intune. Vous pouvez toujours l’utiliser pour parcourir le web et, quand elle est gérée par Microsoft Intune, vous avez accès à des fonctionnalités de protection de données supplémentaires. | La détection d’une stratégie de protection des applications obligatoire pour l’application Intune Managed Browser a échoué. <br><br>L’utilisateur peut toujours utiliser l’application pour parcourir le web, mais l’application n’est pas gérée par Intune. | Vérifiez qu’une stratégie de protection des applications iOS est déployée pour le groupe de sécurité de l’utilisateur et qu’elle cible Intune Managed Browser.
 **Échec de connexion** : Nous ne sommes pas en mesure de vous connecter pour l’instant. Veuillez réessayer plus tard. | L’utilisateur n’a pas réussi à s’inscrire auprès du service GAM après avoir tenté de se connecter avec son compte professionnel ou scolaire. | Vérifiez qu’une stratégie de protection des applications iOS est déployée pour le groupe de sécurité de l’utilisateur et qu’elle cible cette application.
-**Compte non configuré** : Votre organisation n’a pas configuré votre compte pour accéder aux données professionnelles ou scolaires. Contactez votre administrateur informatique pour obtenir de l’aide. | Le compte d’utilisateur n’a pas de licence Intune A Direct. | Vérifiez qu’une licence Intune est affectée au compte d’utilisateur dans le [portail Office](http://portal.office.com).
+**Compte non configuré** : Votre organisation n’a pas configuré votre compte pour accéder aux données professionnelles ou scolaires. Contactez votre administrateur informatique pour obtenir de l’aide. | Le compte d’utilisateur n’a pas de licence Intune A Direct. | Vérifiez qu’une licence Intune est affectée au compte d’utilisateur dans le [portail Office](https://portal.office.com).
 **Appareil non conforme** : Impossible d’utiliser cette application car vous utilisez un appareil jailbreaké. Contactez votre administrateur informatique pour obtenir de l’aide. | Intune a détecté que l’utilisateur utilisait un appareil jailbreaké. | Rétablissez les paramètres d’usine de l’appareil. Suivez [ces instructions](https://support.apple.com/HT201274) sur le site de support technique d’Apple.
 **Connexion Internet obligatoire** : Vous devez être connecté à Internet pour vérifier que vous pouvez utiliser cette application. | Cet appareil n’est pas connecté à Internet. | Connectez l’appareil à un réseau Wi-Fi ou un réseau de données.
 **Échec inconnu** : Essayez de redémarrer cette application. Si le problème persiste, contactez votre administrateur informatique pour obtenir de l’aide. | Une erreur inconnue s’est produite. | Attendez un moment, puis réessayez. Si l’erreur persiste, créez un [ticket de support](get-support.md#create-an-online-support-ticket) avec Intune.
@@ -97,7 +97,7 @@ Boîte de dialogue/message d’erreur | Cause | Mise à jour |
 **Échec de connexion** : Essayez de vous reconnecter. Si le problème persiste, contactez votre administrateur informatique pour obtenir de l’aide. | Échec d’authentification du compte avec lequel l’utilisateur a tenté de se connecter. | Vérifiez que l’utilisateur se connecte avec le compte professionnel ou scolaire qui est déjà inscrit auprès du service GAM Intune (le premier compte professionnel ou scolaire qui s’est connecté à cette application). <br><br> Effacez les données de l’application. <br><br> Vérifiez que la version de l’application est à jour. <br><br> Vérifiez que la version du Portail d’entreprise est à jour.
 **Connexion Internet obligatoire** : Vous devez être connecté à Internet pour vérifier que vous pouvez utiliser cette application. | Cet appareil n’est pas connecté à Internet. | Connectez l’appareil à un réseau Wi-Fi ou un réseau de données.
 **Appareil non conforme** : Impossible d’utiliser cette application, car vous utilisez un appareil « rooté ». Contactez votre administrateur informatique pour obtenir de l’aide. | Intune a détecté que l’utilisateur utilisait un appareil « rooté ». | Rétablissez les paramètres d’usine de l’appareil.
-**Compte non configuré** : Cette application doit être gérée par Microsoft Intune, mais votre compte n’a pas été configuré. Contactez votre administrateur informatique pour obtenir de l’aide. | Le compte d’utilisateur n’a pas de licence Intune A Direct. | Vérifiez qu’une licence Intune est affectée au compte d’utilisateur dans le [portail Office](http://portal.office.com).
+**Compte non configuré** : Cette application doit être gérée par Microsoft Intune, mais votre compte n’a pas été configuré. Contactez votre administrateur informatique pour obtenir de l’aide. | Le compte d’utilisateur n’a pas de licence Intune A Direct. | Vérifiez qu’une licence Intune est affectée au compte d’utilisateur dans le [portail Office](https://portal.office.com).
 **Impossible d’inscrire l’application** : Cette application doit être gérée par Microsoft Intune, mais nous n’arrivons pas à l’y inscrire. Contactez votre administrateur informatique pour obtenir de l’aide. | Impossible d’inscrire automatiquement l’application auprès du service GAM quand la stratégie de protection des applications est obligatoire. | Effacez les données de l’application. <br><br> Envoyez des journaux à Intune par le biais de l’application Portail d’entreprise ou créez un ticket de support. Pour plus d’informations, consultez [Guide pratique pour obtenir un support technique pour Microsoft Intune](get-support.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
