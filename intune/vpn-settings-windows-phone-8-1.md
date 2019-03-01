@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b0fe54d576a80f4f228de038d51ec3ae89a94926
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dc00fc243fd0a0cb86f4beea4fd2b610b3d20645
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182685"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836453"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Configurer les paramètres VPN dans Microsoft Intune pour les appareils exécutant Windows Phone 8.1
 
@@ -40,7 +41,7 @@ Selon les paramètres que vous choisissez, toutes les valeurs de la liste suivan
 - **Serveurs** : Ajoutez un ou plusieurs serveurs VPN auxquels les appareils se connectent.
     - **Ajouter** : ouvre le panneau **Ajouter une ligne** dans lequel vous pouvez spécifier les informations suivantes :
         - **Description** : spécifiez un nom descriptif pour le serveur, comme **Serveur VPN Contoso**.
-        - **Adresse IP ou nom de domaine complet** : fournissez l'adresse IP ou le nom de domaine complet du serveur VPN auquel les appareils se connectent. Exemples : **192.168.1.1**, **vpn.contoso.com**.
+        - **Adresse IP ou nom de domaine complet** : fournissez l'adresse IP ou le nom de domaine complet du serveur VPN auquel les appareils se connectent. Exemples : **192.168.1.1**, **vpn.contoso.com**.
         - **Serveur par défaut** : Active ce serveur comme serveur par défaut que les appareils utilisent pour établir la connexion. Veillez à ne définir qu’un seul serveur par défaut.
     - **Importer** : accédez à un fichier qui contient une liste séparée par des virgules de serveurs au format description, adresse IP ou nom de domaine complet, serveur par défaut. Choisissez **OK** pour les importer dans la liste **Serveurs**.
     - **Exporter** : exporte la liste des serveurs dans un fichier de valeurs séparées par des virgules (csv).
