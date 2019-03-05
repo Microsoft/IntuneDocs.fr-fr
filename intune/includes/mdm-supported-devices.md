@@ -28,6 +28,6 @@
 > [!NOTE]
 > Vous ne pouvez pas utiliser Intune pour gérer les systèmes d’exploitation Windows Server. La référence SKU Home ne prend pas en charge toutes les fonctionnalités Intune
 
-Les clients ayant Enterprise Management + Security (EMS) peuvent également utiliser [Azure Active Directory (Azure AD) pour inscrire des appareils Windows 10](/intune/windows-enroll.md).
+Les clients ayant Enterprise Management + Security (EMS) peuvent également utiliser [Azure Active Directory (Azure AD) pour inscrire des appareils Windows 10](/intune/windows-enroll).
 
 

@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acbfafcc26aa924a5a9d0a7712bb56119099af43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f84eddaf9fac6dd678c7046664bf1feb9ea8cfc1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848217"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335239"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrire l’appareil macOS fourni par votre organisation dans la gestion
 
@@ -64,7 +64,7 @@ Effectuez les étapes suivantes pour inscrire votre appareil macOS dans la gesti
     * Configurer votre Mac  
 ## <a name="get-the-company-portal-app"></a>Obtenir l’application Portail d’entreprise      
 Téléchargez l’application Portail d’entreprise Intune pour macOS sur votre appareil. Cette application vous permet de surveiller, de synchroniser, d’ajouter et de supprimer votre appareil de la gestion, ainsi que d’installer des applications. Ces étapes décrivent également comment inscrire votre appareil dans Portail d’entreprise.  
-1. Sur votre appareil macOS, accédez à http://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
+1. Sur votre appareil macOS, accédez à https://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
 2. Connectez-vous au site web du portail d’entreprise avec votre compte professionnel ou scolaire. 
 3. Cliquez sur **Obtenir l’application** pour télécharger le programme d’installation du Portail d’entreprise pour macOS.
 4. Lorsque vous y êtes invité, ouvrez le fichier .pkg et effectuez les étapes d’installation.

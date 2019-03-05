@@ -6,19 +6,19 @@ ms.author: dougeby
 author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e7269eb6e396557a6bc19daa371a10be7154866
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f44d25f75ccc68912bea7b108ca56afe6aecb528
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844630"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57239048"
 ---
 # <a name="audit-logs-for-intune-activities"></a>Journaux d’audit pour les activités Intune
 Les journaux d’audit vous indiquent les activités qui génèrent un changement dans Microsoft Intune. Les actions Créer, Mettre à jour (modifier), Supprimer et Affecter, ou les tâches à distance, génèrent des événements d’audit que vous pouvez consulter. Vous pouvez consulter les journaux d’audit pour la plupart des charges de travail Intune. L’audit est activé par défaut pour tous les clients et il ne peut pas être désactivé. L’enregistrement des événements d’audit a commencé avec la version de fonctionnalités de décembre 2017 ; les événements antérieurs ne sont pas disponibles.

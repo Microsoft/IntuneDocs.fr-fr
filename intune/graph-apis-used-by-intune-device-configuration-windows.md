@@ -1,12 +1,12 @@
 ---
-title: Graph API utilisées lors de la configuration des appareils dans Microsoft Intune - Azure | Microsoft Docs
+title: Graphique des API pour configurer des appareils dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Afficher la liste de toutes les API de graphique avec le CSP Windows correspondant et décalage URI sur les appareils Windows 10 et versions ultérieures utilisé lors de la configuration des appareils dans Microsoft Intune. Consultez l’API correspondant et le fournisseur de services cryptographiques pour les PC partagés, protection de point de terminaison, Windows Defender advanced threat protection, protection d’identité, Windows 10 équipes, plein écran et Windows Update for Business.
+description: Afficher la liste de toutes les entités de l’API Graph avec le CSP Windows correspondant et décalage URI sur les appareils Windows 10 et versions ultérieures utilisé lors de la configuration des appareils dans Microsoft Intune. Consultez l’API correspondant et le fournisseur de services cryptographiques pour les PC partagés, protection de point de terminaison, Windows Defender advanced threat protection, protection d’identité, Windows 10 équipes, plein écran et Windows Update for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,30 +15,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ccc46914e53e72d941cc726b6a32fa421e23ca4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b2bed795125043eac07fce41a0f101a9b029bd06
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335307"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>API Graph et correspondant à Windows 10 CSP utilisé dans Intune
 
-Microsoft Intune utilise le [API Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) pour configurer des appareils (**Intune** > **configuration de l’appareil**) exécutant Windows 10 et versions ultérieures. L’API Graph utilise des fournisseurs de services de configuration (CSP) pour lire, définir, modifier, et/ou supprimer des paramètres de configuration sur les appareils.
+Microsoft Intune utilise le [entités de l’API Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (ouvre un autre site Docs) pour configurer des appareils (**Intune** > **configuration de l’appareil**) exécutant Windows 10 et versions ultérieures. L’API Graph utilise des fournisseurs de services de configuration (CSP) pour lire, définir, modifier, et/ou supprimer des paramètres de configuration sur les appareils.
 
 Cette liste s’applique à :
 
 - Windows 10 et versions ultérieures
 
-Cet article répertorie les propriétés de graphique et leurs fournisseurs de services cloud de Windows 10 et décalage correspondant URI.
+Cet article répertorie les entités de graphes et leurs fournisseurs de services cryptographiques correspondant Windows 10 et le décalage d’URI.
+
+Ces informations sont utiles pour un large éventail de scénarios. Par exemple, ce qui est utilisé par Intune, consultez les paramètres à inclure dans des configurations personnalisées OMA-URI et ainsi de suite. 
 
 ## <a name="windows-10-csps"></a>Fournisseurs de services cloud Windows 10
 
-Pour plus d’informations sur les fournisseurs de services de configuration de Windows 10, consultez le [référence de fournisseur de service de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Pour plus d’informations sur les fournisseurs de services de configuration de Windows 10, consultez le [référence de fournisseur de service de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (ouvre un autre site Docs).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>Propriétés de l’API Graph au mappage de CSP
 
-La liste suivante présente les propriétés de l’API Graph utilisées par Microsoft Intune pour la configuration de périphérique Windows 10. Il montre également le fournisseur de services cryptographiques correspondant Windows 10 et le décalage d’URI.
+La liste suivante présente la plupart des entités de l’API de graphique utilisé par Microsoft Intune pour la configuration de périphérique Windows 10. Il montre également le fournisseur de services cryptographiques correspondant Windows 10 et le décalage d’URI.
+
+Pour afficher les versions de Windows 10 que les API suivantes s’appliquent, utilisez Windows 10 [référence de fournisseur de service de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (ouvre un autre site Docs).
 
 #### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/WindowsLicensing  
@@ -237,8 +241,7 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Décalage d’URI**: /Config/CredentialsUI/EnumerateAdministrators
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -257,23 +260,21 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Décalage d’URI**: /Config/Defender/AttackSurfaceReductionRules (/ Configuration du fournisseur CSP nécessite des propriétés de graphique : windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/ **décalage URI**: /Config/ExploitGuard/ExploitProtectionSettings
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/Defender/EnableControlledFolderAccess
 
 #### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/Defender/EnableNetworkProtection
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/Defender/EnableNetworkProtection
 
 #### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -340,8 +341,7 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Décalage d’URI**: /Config/Defender/AttackSurfaceReductionRules (/ Configuration du fournisseur CSP nécessite des propriétés de graphique : windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -416,19 +416,18 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Décalage d’URI**: /Config/Defender/AttackSurfaceReductionRules (/ Configuration du fournisseur CSP nécessite des propriétés de graphique : windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/DeviceGuard/ConfigureSystemGuardLaunch
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/DeviceGuard/LsaCfgFlags
 
 #### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
@@ -868,12 +867,10 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Décalage d’URI**: /Config/MSSecurityGuide/WDigestAuthentication
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy/  
-**Décalage d’URI**: /Config/SmartScreen/EnableSmartScreenInShell
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/SmartScreen/EnableSmartScreenInShell
 
 #### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -1030,6 +1027,9 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 #### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
 **Fournisseur de services cryptographiques**: ./Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+
+#### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: Appel d’API de graphique de n/a uniquement **URI décalage**: Appel d’API de graphique de n/a uniquement
 
 #### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **Fournisseur de services cryptographiques**: ./Vendor/MSFT/Policy  
@@ -2924,9 +2924,17 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/Update/PauseFeatureUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: N/a - Graph API **décalage URI**: N/a - Graph API uniquement
+
 #### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
-**Décalage d’URI**: / restauration/FeatureUpdate
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: N/a - Graph API **décalage URI**: N/a - Graph API uniquement
+
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: N/a - Graph API **décalage URI**: N/a - Graph API uniquement
+
+#### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
+**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy **décalage URI**: /Config/Update/ActiveHoursStart, /Config/Update/ActiveHoursEnd, /Config/Update/ScheduledInstallDay, /Config/Update/ScheduledInstallTime
 
 #### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -2948,9 +2956,11 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
 **Décalage d’URI**: /Config/Update/PauseQualityUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: N/a - Graph API **décalage URI**: N/a - Graph API uniquement
+
 #### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
-**Décalage d’URI**: / restauration/QualityUpdate
+**FOURNISSEUR DE SERVICES CRYPTOGRAPHIQUES**: N/a - Graph API **décalage URI**: N/a - Graph API uniquement
 
 #### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **Fournisseur de services cryptographiques**: ./Device/Vendor/MSFT/Policy  
@@ -2976,4 +2986,4 @@ La liste suivante présente les propriétés de l’API Graph utilisées par Mic
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Vue d’ensemble de configuration de périphérique](device-profiles.md)
-- [Référence de fournisseur de service de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+- [Référence de fournisseur de service de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (ouvre un autre site Docs)

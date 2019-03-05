@@ -18,21 +18,18 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666779620aa0404c12107a374280c403d66bec3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840210"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335069"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synchroniser votre appareil Windows manuellement
 
 Quand la vitesse d’installation des applications est loin d’être idéale, lancez une synchronisation manuelle de l’appareil. Les synchronisations manuelles forcent votre appareil à se connecter à Intune pour obtenir les dernières mises à jour et communications. La vitesse d’installation peut augmenter une fois la synchronisation de l’appareil terminée.
 
-Intune prend en charge la synchronisation manuelle à partir de l’application Portail d’entreprise, de la barre des tâches du Bureau ou du menu Démarrer et de l’application Paramètres de l’appareil. 
-
-La fonctionnalité de l’application Portail d’entreprise est prise en charge sur les appareils Windows 10 exécutant Creators Update (1703) ou version ultérieure. 
-* [Synchroniser à partir de l’application Portail d’entreprise](#Sync-from-Company-Portal-app-for-Windows)  
+Intune prend en charge la synchronisation manuelle à partir de l’application Portail d’entreprise, de la barre des tâches du Bureau ou du menu Démarrer et de l’application Paramètres de l’appareil. La fonctionnalité de l’application Portail d’entreprise est prise en charge sur les appareils Windows 10 exécutant Creators Update (1703) ou version ultérieure. 
 
 Tous les appareils Windows peuvent être synchronisés à partir de l’application Paramètres de l’appareil, notamment :
 
@@ -75,11 +72,11 @@ Effectuez ces étapes pour synchroniser manuellement vos appareils Microsoft Hol
 
 3. Il existe plusieurs versions de Windows 10 pour les ordinateurs de bureau. Comparez votre écran aux captures d’écran ci-dessous pour déterminer l’ensemble des étapes à suivre. 
 
-    * Si votre écran indique **Accès professionnel ou scolaire**, passez aux étapes décrites dans [Accès professionnel ou scolaire](#access-work-or-school).
+    * Si votre écran indique **Accès professionnel ou scolaire**, passez aux étapes décrites dans [Accès professionnel ou scolaire](#access-work-or-school-steps).
 
     ![Option Accès professionnel ou scolaire dans l’application Paramètres](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    * Si votre écran indique **Accès professionnel**, passez aux étapes décrites dans [Accès professionnel](#work-access).  
+    * Si votre écran indique **Accès professionnel**, passez aux étapes décrites dans [Accès professionnel](#work-access-steps).  
 
     ![Choix d’accès professionnel comme type de compte](./media/win10pc-sync-3-work-access.png)
 

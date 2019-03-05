@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 12/12/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e38d5e68e79facfd270de64c79708b74aa460189
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 5c62e170c6645b3158ae6086ecff46860032a3cc
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838187"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57237178"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Paramètres des appareils Windows 10 et Windows Holographic permettant d’ajouter des connexions VPN en utilisant Intune
 
@@ -73,7 +73,7 @@ Selon les paramètres que vous choisissez, toutes les valeurs ne sont pas néces
       - À la réactivation de l’écran de l’appareil 
 
     - **Méthode d’authentification** : sélectionnez le mode d’authentification des utilisateurs auprès du serveur VPN. L’utilisation de **certificats** offre des fonctionnalités améliorées, comme l’expérience sans intervention, VPN à la demande et VPN par application.
-    - **Mémoriser les informations d’identification à chaque ouverture de session ** : choisissez de mettre en cache les informations d’identification d’authentification.
+    - **Mémoriser les informations d’identification à chaque ouverture de session**  : choisissez de mettre en cache les informations d’identification d’authentification.
     - **XML personnalisé** : entrez des commandes XML personnalisées qui configurent la connexion VPN.
     - **Code XML EAP** : entrez des commandes XML EAP qui configurent la connexion VPN.
 
@@ -164,7 +164,7 @@ Pour plus d’informations sur la création de code XML EAP personnalisé, consu
 ## <a name="split-tunneling"></a>Tunneling fractionné
 
 - **Fractionner le tunneling** : vous pouvez **Activer** ou **Désactiver** cette option pour laisser les appareils décider quelle connexion utiliser en fonction du trafic. Par exemple, un utilisateur dans un hôtel utilise la connexion VPN pour accéder à ses fichiers de travail, mais utilise le réseau standard de l’hôtel pour surfer sur Internet.
-- **Fractionner les routages de tunneling pour cette connexion VPN ** : ajoutez des routes facultatives pour les fournisseurs VPN tiers. Entrez un préfixe de destination et une taille de préfixe pour chaque connexion.
+- **Fractionner les routages de tunneling pour cette connexion VPN**  : ajoutez des routes facultatives pour les fournisseurs VPN tiers. Entrez un préfixe de destination et une taille de préfixe pour chaque connexion.
 
 ## <a name="trusted-network-detection"></a>Détection de réseaux approuvés
 
