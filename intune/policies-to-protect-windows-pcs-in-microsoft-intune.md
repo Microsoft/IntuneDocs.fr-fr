@@ -6,10 +6,11 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: d081f466-45dd-41d1-ab25-6d974c72a52a
 ms.reviewer: owenyen
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 784ad8366391c55a97ac58d9c1f7ab7707062aa8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 16992d8a80ca42db84cfa071422a779606a99891
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845667"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460077"
 ---
 # <a name="use-policies-to-help-protect-windows-pcs-that-run-the-intune-client-software"></a>Utilisation de stratégies pour vous aider à protéger les PC Windows qui exécutent le logiciel client Intune
 
@@ -43,7 +44,6 @@ Le pare-feu Windows permet de protéger les PC Windows des pirates, des logiciel
 
 En tant qu'administrateur informatique, l'une de vos principales priorités est de [maintenir les PC Windows que vous gérez libres de tous programmes malveillants et virus](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md). Intune s’intègre à Endpoint Protection pour fournir une protection en temps réel contre les menaces posées par les programmes malveillants, maintenir à jour les définitions de logiciels malveillants et analyser automatiquement les ordinateurs. Endpoint Protection fournit également des outils qui vous aident à gérer et à surveiller les attaques de logiciels malveillants.
 
+## <a name="see-also"></a>Voir aussi
 
-
-### <a name="see-also"></a>Voir aussi
-[Gérer des paramètres et des fonctionnalités sur vos appareils avec des stratégies Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
+[Questions, problèmes courants et résolutions avec les stratégies d’appareil et des profils](device-profile-troubleshoot.md)

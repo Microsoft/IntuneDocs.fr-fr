@@ -14,11 +14,11 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: 68090a038cec49009b6bd0ce0515a075f62483b8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
-ms.translationtype: HT
+ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "20283567"
 ---
 # <a name="metadata-and-markdown-template"></a>Métadonnées et modèle Markdown
@@ -37,7 +37,7 @@ Le bloc de métadonnées complet se situe au-dessus, divisé en champs obligatoi
 - Le signe deux-points dans une valeur (par exemple, un titre) arrête l’analyseur de métadonnées. À la place, utilisez l’encodage HTML &#58; (par exemple, « title: Azure Rights Management &#58; les principes de base | Azure RMS »).
 - **title** : Ce titre s’affiche dans les résultats des moteurs de recherche. Il doit se terminer par une barre verticale (|) suivie du nom du service (voir ci-dessus). Il ne doit pas être identique à votre titre H1. Il doit contenir environ 65 caractères (y compris | NOM DU SERVICE)
 - **author**, **manager**, **reviewer** : Le champ author doit contenir le **nom d’utilisateur Github** de l’auteur, pas son alias.  En revanche, les champs « manager » et « reviewer » doivent contenir des alias. ms.reviewer spécifie le nom du PM associé à l’article ou au service.
-- **ms.assetid** : Il s’agit du GUID de l’article en majuscules. Quand vous créez un fichier Markdown, obtenez un GUID à partir de [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.assetid** : Il s’agit du GUID de l’article en majuscules. Lorsque vous créez un fichier Markdown, récupérez un GUID sur [https://www.guidgenerator.com](https://www.guidgenerator.com). 
 - **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm** : Des valeurs possibles pour ces éléments se trouvent [ici](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Formats GFM et Markdown de base
@@ -70,7 +70,7 @@ Les titres de deuxième niveau génèrent la table des matières sur la page qui
 
 
 
-## <a name="links"></a>Links
+## <a name="links"></a>Liens
 
 Pour créer un lien vers un fichier Markdown dans le même référentiel, utilisez des [liens relatifs](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
 
@@ -90,7 +90,7 @@ Pour créer un lien vers un fichier externe, utilisez l’URL complète comme li
 
 Si une URL apparaît dans un fichier Markdown, elle est transformée en lien actif.
 
-- Exemple : http://www.github.com
+- Exemple : http://www.github.com
 
 ## <a name="lists"></a>Listes
 
@@ -128,7 +128,7 @@ Si une URL apparaît dans un fichier Markdown, elle est transformée en lien act
 
 - Cette 
 - liste 
-- à puces
+- triée
     - Madame Pervenche
     - Monsieur Olive
 - contient  
@@ -142,7 +142,7 @@ Si une URL apparaît dans un fichier Markdown, elle est transformée en lien act
 
 ---
 
-## <a name="tables"></a>Tables
+## <a name="tables"></a>Tableaux
 
 | Tables        | sont           | pratiques  |
 | ------------- |:-------------:| -----:|
@@ -167,7 +167,7 @@ Il s’agit d’un exemple de `in-line code`.
 
 ## <a name="blockquotes"></a>Blockquotes
 
-> La sécheresse durait désormais depuis dix millions d’années et le règne des horribles lézards s’était terminé depuis longtemps. Ici au niveau de l’Équateur, sur le continent qui serait un jour connu sous le nom d’Afrique, la lutte pour la vie avait atteint un nouveau paroxysme de férocité et la victoire n’était pas encore en vue. Sur cette terre désertique et desséchée, seul le petit, le rapide ou le féroce pouvait prospérer, ou même espérer survivre.
+> La sécheresse durait maintenant depuis dix millions d’années et le règne des terribles lézards avait depuis longtemps pris fin. Ici au niveau de l’Équateur, sur le continent qui serait un jour connu sous le nom d’Afrique, la lutte pour la vie avait atteint un nouveau paroxysme de férocité et la victoire n’était pas encore en vue. Sur cette terre désertique et desséchée, seul le petit, le rapide ou le féroce pouvait prospérer, ou même espérer survivre.
 
 ## <a name="images"></a>Images
 

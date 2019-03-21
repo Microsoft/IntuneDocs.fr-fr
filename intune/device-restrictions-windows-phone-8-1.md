@@ -7,20 +7,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 343b15e13a944cb519451a14c299d66444b17569
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: c75923440b8b8147f7ed75a06df2435ed6eb0981
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230361"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565279"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Paramètres de restriction d’appareil Windows Phone 8.1 dans Microsoft Intune
 
@@ -73,7 +74,7 @@ Dans la page [Windows Phone Store](https://www.microsoft.com/store/apps/windows-
 
 Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.
 
-Exemple : recherchez l'application Skype dans le Store. L’URL que vous utilisez est `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
+Exemple : recherchez l'application Skype dans le Store. L’URL que vous utilisez est `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
 
 
 

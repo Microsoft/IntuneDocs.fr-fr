@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b21a2efc67773f1762e422af5fe8e576b1a97db
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55843457"
 ---
 # <a name="using-your-android-device-with-intune-company-portal"></a>Utilisation de votre appareil Android avec le Portail d’entreprise Intune
@@ -45,12 +45,12 @@ Le Portail d’entreprise prend actuellement en charge Android 4.4 et ultérieu
 - [Chiffrer votre appareil](encrypt-your-device-android.md)
 - [Définir votre code confidentiel ou mot de passe](set-your-pin-or-password-android.md)
 - [Installer le réseau privé virtuel (VPN) de votre entreprise](install-your-companys-virtual-private-network-VPN-android.md)
-- [Définir le délai avant le verrouillage de votre appareil](set-the-amount-of-time-before-your-device-is-locked-android.md)
+- [Définir la période de temps qui doit s’écouler avant le verrouillage de l’appareil](set-the-amount-of-time-before-your-device-is-locked-android.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Réinitialiser (effacer) votre appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
 - [Désactiver la collecte de données d’utilisation Microsoft](turn-off-microsoft-usage-data-collection-android.md)
 - [Désinscrire votre appareil d’Intune](unenroll-your-device-from-intune-android.md)
 - [Annuler l’inscription de votre appareil si vous avez refusé les conditions d’utilisation](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Que se passe-t-il quand vous désinscrivez votre appareil d’Intune ?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
-- [Que se passe-t-il si vous réinitialisez votre appareil Android à l’aide de l’application Portail d’entreprise ?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+- [Que se passe-t-il si vous réinitialisez votre appareil Android à l’aide de l’application Portail d’entreprise ?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
   <!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->

@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/20/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
@@ -17,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e305d419a101410a9a934a200dfcfb1c3488ff7
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 2cbf6e1bde3f8853f2e5c6c1919089bf0dc10126
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238283"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565518"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données Microsoft Intune
 
 L’entrepôt de données Intune échantillonne quotidiennement les données pour vous offrir un historique de votre environnement d’appareils mobiles, qui évolue en permanence. L’affichage se compose d’entités associées dans le temps.
 
-## <a name="entities-entity-sets"></a>Entités : Ensemble d'entités
+## <a name="entities-entity-sets"></a>Entités : Jeux d’entités
 
 L’entrepôt expose les données dans les zones générales suivantes :
 
@@ -49,7 +50,7 @@ Ces zones contiennent les entités qui sont significatives pour l’environnemen
   -  [Utilisateur actuel](reports-ref-current-user.md)
   -  [Associations appareil-utilisateur](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>Relations : Modèle de schéma en étoile
+## <a name="relationships-star-schema-model"></a>Relations : modèle de schéma en étoile
 
 L’entrepôt organise les entités selon des relations utiles pour répondre aux questions que vous souhaitez poser. Vous pouvez, par exemple, consulter le nombre d’installations d’une application Android développée en interne. La structure de l’entrepôt de données vous permet d’obtenir des insights sur votre environnement mobile. Des outils analytiques comme Microsoft Power BI peuvent ensuite utiliser le modèle de données de l’entrepôt de données pour créer des visualisations et des tableaux de bord dynamiques.
 
@@ -57,7 +58,7 @@ Les entités et les relations suivent un modèle de schéma en étoile. Un sché
 
 Optimisé pour la flexibilité et l’analyse des données, un modèle de schéma en étoile vous permet de créer les rapports nécessaires pour comprendre l’évolution de votre environnement mobile.
 
-## <a name="time-daily-snapshots"></a>Heure : instantanés quotidiens
+## <a name="time-daily-snapshots"></a>Temps : instantanés quotidiens
 
 L’entrepôt est en aval des données Intune. Intune prend un instantané quotidien à minuit UTC, et le stocke dans l’entrepôt. La durée de conservation des instantanés varie d’une table de faits à l’autre : sept jours pour certaines, 30 jours pour d’autres, voire encore plus longtemps.
 

@@ -6,55 +6,56 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9601e8b83a22bb57398afefadd16f3a0e944413
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 3e2b3708b6b0c75a1384a7cdbdb524dff3f0627d
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238555"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565432"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10---intune"></a>Paramètres de profil de messagerie pour les appareils exécutant Windows 10 - Intune
 
 Utilisez les paramètres de profil de messagerie pour configurer l’application Courrier sur vos appareils Windows 10.
 
-- **Serveur de messagerie** : entrez le nom d’hôte de votre serveur Exchange.
-- **Nom du compte** : entrez le nom d’affichage du compte de messagerie. Ce nom est présenté aux utilisateurs sur leurs appareils.
-- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (AAD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
-  - **Nom principal de l’utilisateur** : Obtient le nom, par exemple `user1` ou `user1@contoso.com`
-  - **Adresse SMTP principale** : Obtient le nom au format d’une adresse e-mail, comme `user1@contoso.com`.
-  - **Nom de compte SAM** : nécessite le domaine, par exemple `domain\user1`.
+- **Serveur de messagerie** : entrez le nom d’hôte de votre serveur Exchange.
+- **Nom du compte** : entrez le nom d’affichage du compte de messagerie. Ce nom est présenté aux utilisateurs sur leurs appareils.
+- **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (AAD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
+  - **Nom d’utilisateur principal** : obtient le nom, comme `user1` ou `user1@contoso.com`
+  - **Adresse SMTP principale** : obtient le nom au format d’une adresse e-mail, comme `user1@contoso.com`.
+  - **Nom de compte SAM** : nécessite le domaine, comme `domain\user1`.
 
     Entrez également :  
-    - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
+    - **Source du nom de domaine d’utilisateur** : choisissez **AAD** (Azure Active Directory) ou **Personnalisé**.
 
       Quand vous choisissez d’obtenir les attributs auprès **d’AAD**, entrez :
-      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur
+      - **Attribut de nom de domaine d’utilisateur dans AAD** : choisissez d’obtenir l’attribut **Nom de domaine complet** ou **Nom NetBIOS** de l’utilisateur
 
       Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
-      - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, par exemple `contoso.com` ou `contoso`
+      - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`
 
-- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange.
+- **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail, ou **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale pour vous connecter à Exchange.
 
 ## <a name="security-settings"></a>Paramètres de sécurité
 
-- **SSL** : Utilisez la communication SSL (Secure Sockets Layer) pour envoyer et recevoir des e-mails, et communiquer avec le serveur Exchange.
+- **SSL** : utilisez une communication SSL (Secure Sockets Layer) pour envoyer et recevoir des e-mails, et communiquer avec le serveur Exchange.
 
 ## <a name="synchronization-settings"></a>Paramètres de synchronisation
 
-- **Nombre d’e-mails à synchroniser** : Choisissez la quantité d’e-mails (en jours) à synchroniser. Vous pouvez aussi sélectionner **Illimité** pour synchroniser tous les messages disponibles.
-- **Planification de la synchronisation** : Sélectionnez la planification de la synchronisation des données des appareils à partir du serveur Exchange. Vous pouvez également sélectionner **À mesure que les messages arrivent** pour synchroniser les données dès qu’elles arrivent, ou **Manuel** pour que ce soit l’utilisateur de l’appareil qui lance la synchronisation.
+- **Nombre d’e-mails à synchroniser** : sélectionnez le nombre de jours d’e-mails à synchroniser. Ou sélectionnez **Illimité** pour synchroniser tous les messages disponibles.
+- **Planification de la synchronisation** : sélectionnez la planification de la synchronisation des données des appareils à partir du serveur Exchange. Vous pouvez également sélectionner **À mesure que les messages arrivent** pour synchroniser les données dès qu’elles arrivent, ou **Manuel** pour que ce soit l’utilisateur de l’appareil qui lance la synchronisation.
 
 ## <a name="content-sync-settings"></a>Paramètres de synchronisation du contenu
 
-- **Type de contenu à synchroniser** : sélectionnez les types de contenu à synchroniser avec les appareils :
+- **Type de contenu à synchroniser** : sélectionnez les types de contenu à partir desquels vous voulez synchroniser les appareils :
   - **Contacts**
   - **Calendrier**
   - **Tâches**

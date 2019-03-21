@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5984ac8ebe825a187b33945699a5fadc27e0c0cc
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 46f2193a3a13183d41b10f03b6efe7100f0d9f9d
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828412"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "55840363"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Supprimer votre appareil Windows de la gestion
 
@@ -55,11 +56,11 @@ Pour supprimer un appareil Windows 10 de la gestion, effectuez les étapes suiva
 
     ![Exemple de capture d’écran de la page d’accueil de l’application Portail d’entreprise pour Windows, avec la section Mes appareils mise en surbrillance.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Appuyez de façon prolongée sur l’appareil, ou cliquez dessus avec le bouton droit, pour ouvrir le [menu contextuel](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) correspondant.  
+2. Appuyez de façon prolongée sur l’appareil, ou cliquez dessus avec le bouton droit, pour ouvrir le [menu contextuel](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) associé.  
 
 3. Sélectionnez **Supprimer**.  
 
-    ![Exemple de capture d’écran de la page d’accueil de l’application Portail d’entreprise pour Windows. Le menu contextuel de l’appareil est visible dans la section **Mes appareils** de la page, et contient les actions « Renommer », « Supprimer » et « Vérifier l’accès ».](./media/1809_DeviceContextMenu_Windows_CP.png)  
+    ![Exemple de capture d’écran de l’application Portail d’entreprise pour Windows, page d’accueil. Le menu contextuel de l’appareil est visible dans la section **Mes appareils** de la page, et contient les actions « Renommer », « Supprimer » et « Vérifier l’accès ».](./media/1809_DeviceContextMenu_Windows_CP.png)  
 
 5. Dans le message de confirmation, cliquez sur **En savoir plus** pour obtenir des informations sur le changement de vos conditions d’accès aux ressources professionnelles ou scolaires. Pour confirmer la suppression de l’appareil, sélectionnez **Supprimer**.   
 

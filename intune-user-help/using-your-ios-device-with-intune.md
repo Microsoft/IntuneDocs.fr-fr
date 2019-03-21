@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9c25166ed9b004cc4e43e777008e33e88983912
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55843491"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Utilisation de votre appareil iOS avec le Portail d’entreprise Intune
@@ -41,7 +41,7 @@ Le Portail d’entreprise pour iOS prend actuellement en charge iOS 10.0 et vers
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Ce que vous pouvez faire quand votre appareil est inscrit dans Intune
 
 - [Utiliser des applications gérées sur votre appareil](use-managed-apps-on-your-device-ios.md)
-- [Définir ou changer votre code secret](set-or-change-your-passcode-ios.md)
+- [Définir ou modifier votre code secret](set-or-change-your-passcode-ios.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Réinitialiser (effacer) votre appareil perdu ou volé](reset-erase-your-device-cpwebsite.md)
 - [Désactiver la collecte de données d’utilisation Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
