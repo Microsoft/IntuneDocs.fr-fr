@@ -9,18 +9,19 @@ ms.date: 12/06/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.localizationpriority: medium
+ms.topic: reference
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c6ec55db072cd02fae2b4eef659f601b63bb850
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: ee2084cd7b5ba2d51311b675c3f31c41cc83fc4f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231687"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566163"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows Holographic for Business dans Intune
 
@@ -41,14 +42,14 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 3. entrez les paramètres suivants :
 
     - **Nom** : entrez un nom pour le profil, par exemple `hololens custom profile`.
-    - **Description** : Entrez la description du profil.
-    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
+    - **Description :** entrez une description pour le profil.
+    - **Plateforme** : choisissez **Windows 10 et ultérieur**.
     - **Type de profil** : choisissez **Personnalisé**.
 
 4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
 
-    - **Nom** : Affectez un nom unique au paramètre OMA-URI pour vous aider à l'identifier dans la liste des paramètres.
-    - **Description** : entrez une description qui présente le paramètre et tout autre détail important.
+    - **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
+    - **Description** : entrez une description qui donne une vue d’ensemble du paramètre et tout autre détail important.
     - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
     - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
 

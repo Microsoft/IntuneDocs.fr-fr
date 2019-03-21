@@ -7,9 +7,10 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/01/2018
-ms.topic: conceptual
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94549f150b2c658ba422ea1d6f68c5b5df85e33
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 9c70dbee01c546f73052b8741ce339c7bfe92fc7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238487"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461139"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles
 
@@ -53,4 +54,5 @@ Les organisations peuvent utiliser Microsoft Intune pour gérer les PC Windows e
 La gestion des PC Windows avec la gestion des appareils mobiles moderne présente les avantages suivants :
 - **Scalabilité** : la gestion MDM évolue avec la gestion cloud Intune. Le logiciel client Intune est limité à 7 000 PC.
 - **Simplicité** : utilise les fonctionnalités de gestion modernes incluses dans le système d’exploitation sans se baser sur un client logiciel téléchargé
-- **Cohérence** : vos PC Windows sont gérés comme tous les autres appareils mobiles de votre organisation <!-- - **Cloud optimization** - -->
+- **Cohérence** : vos PC Windows sont gérés comme tous les autres appareils mobiles de votre organisation
+<!-- - **Cloud optimization** - -->

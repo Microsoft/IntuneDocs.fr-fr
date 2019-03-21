@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff0aad055aee08dfbf17622e3d9f9c3061165b8
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 666b61eec021fa6a2cdad5126f572234d97b6883
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233965"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566095"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Configurer des paramètres VPN pour les appareils exécutant Android dans Intune
 
@@ -37,14 +38,14 @@ Selon les paramètres que vous choisissez, toutes les valeurs suivantes ne sont 
 ## <a name="android-vpn-settings"></a>Paramètres VPN Android
 
 - **Nom de connexion** : entrez un nom pour cette connexion. Les utilisateurs finaux voient ce nom quand ils recherchent dans leur appareil les connexions VPN disponibles.
-- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
+- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
 
-  - **Méthode d’authentification** : choisissez la manière dont les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
+  - **Méthode d’authentification** : choisissez comment les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
 
     - **Certificats** : sélectionnez un profil de certificat SCEP ou PKCS existant pour authentifier la connexion. [Configurer des certificats](certificates-configure.md) répertorie les étapes permettant de créer un profil de certificat.
     - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer un nom d’utilisateur et un mot de passe.
 
-- **Type de connexion** : Sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
+- **Type de connexion** : sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
@@ -53,20 +54,20 @@ Selon les paramètres que vous choisissez, toutes les valeurs suivantes ne sont 
   - **Pulse Secure**
   - **Citrix**
 
-- **Empreinte numérique** (VPN Check Point Capsule uniquement) : entrez une chaîne, par exemple **Code d’empreinte numérique Contoso**, pour vérifier que le serveur VPN est digne de confiance. Une empreinte digitale peut être envoyée au client pour que celui-ci sache qu’il peut approuver n’importe quel serveur ayant cette même empreinte lors de la connexion. Si l’appareil n’a pas l’empreinte digitale, il invite l’utilisateur à approuver le serveur VPN tout en affichant l’empreinte digitale. L’utilisateur vérifie manuellement l’empreinte digitale et choisit confiance pour se connecter.
-- **Entrer les paires clé/valeur des attributs du VPN Citrix** (Citrix uniquement) : entrez les paires clé/valeur fournies par Citrix. Ces valeurs configurent les propriétés de la connexion VPN.
+- **Empreinte digitale** (VPN Check Point Capsule uniquement) : entrez une chaîne, par exemple **Code d’empreinte digitale Contoso**, pour vérifier que le serveur VPN est digne de confiance. Une empreinte digitale peut être envoyée au client pour que celui-ci sache qu’il peut approuver n’importe quel serveur ayant cette même empreinte lors de la connexion. Si l’appareil n’a pas l’empreinte digitale, il invite l’utilisateur à approuver le serveur VPN tout en affichant l’empreinte digitale. L’utilisateur vérifie manuellement l’empreinte digitale et choisit confiance pour se connecter.
+- **Entrer les paires clé / valeur pour les attributs de Citrix VPN** (Citrix uniquement) : entrez les paires clé / valeur fournies par Citrix. Ces valeurs configurent les propriétés de la connexion VPN.
 
 ## <a name="android-enterprise-vpn-settings"></a>Paramètres du VPN Android Enterprise
 
 - **Nom de connexion** : entrez un nom pour cette connexion. Les utilisateurs finaux voient ce nom quand ils recherchent dans leur appareil les connexions VPN disponibles.
-- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
+- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
 
-  - **Méthode d’authentification** : choisissez la manière dont les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
+  - **Méthode d’authentification** : choisissez comment les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
   
     - **Certificats** : sélectionnez un profil de certificat SCEP ou PKCS existant pour authentifier la connexion. [Configurer des certificats](certificates-configure.md) répertorie les étapes permettant de créer un profil de certificat.
     - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer un nom d’utilisateur et un mot de passe.
 
-- **Type de connexion** : Sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
+- **Type de connexion** : sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**

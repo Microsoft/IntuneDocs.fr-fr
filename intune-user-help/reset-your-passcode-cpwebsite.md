@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8ce71a14f9bb7e877fb31e78afdf64d5e492f4a8
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146687"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "55838034"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Guide pratique pour réinitialiser le code secret de votre appareil à partir du site web du portail d’entreprise
 
@@ -33,7 +34,7 @@ Si vous utilisez un appareil d’entreprise, vous ne verrez peut-être pas l’o
    > [!NOTE]
    > Vous ne pouvez pas réinitialiser le code secret pour les appareils Android 7.0 et versions ultérieures. Si vous oubliez un code secret, vous devez réinitialiser l’appareil aux paramètres d’usine. 
 
-## <a name="reset-your-passcode"></a>Réinitialiser votre code secret
+## <a name="reset-your-passcode"></a>Réinitialiser votre code d’accès
 
 1.  Accédez au [site web du portail d’entreprise](https://portal.manage.microsoft.com), puis sélectionnez le bouton __Menu__ > __Appareils__.  
 

@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c9ea11cd19fee8f491329020753501996b47f40
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55834719"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
@@ -58,7 +58,7 @@ Utilisez les étapes suivantes pour inscrire des appareils macOS exécutant OS X
 
 4. La page __Appareils__ affiche une liste des appareils gérés ou une bannière, selon que vous gérez déjà ou non un appareil. 
     * Pour ajouter un appareil qui n’est pas listé, sélectionnez la bannière qui indique **Appuyez ici pour nous indiquer l’appareil que vous utilisez ou ajouter un nouvel appareil.**
-    * Si vous n’avez aucun appareil, la bannière indique : **Vous n’avez aucun appareil géré. Ajoutez celui-ci en appuyant ici.** Cliquez sur la bannière pour ajouter votre appareil.  
+    * Si vous n’avez aucun appareil, la bannière indique : **vous n’avez aucun appareil géré. Ajoutez celui-ci en appuyant ici.** Cliquez sur la bannière pour ajouter votre appareil.  
 
      ![Capture d’écran de la page Appareils, avec un carré rouge autour de l’option de bannière pour mettre en surbrillance l’endroit où vous devez cliquer.](./media/CP-enroll-MACOS-1808.png)  
 5.  Effectuez l’étape ci-dessous correspondant au message que vous voyez actuellement dans le portail d’entreprise.  

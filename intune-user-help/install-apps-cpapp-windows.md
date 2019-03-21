@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f19d347cb799a47d07ade4f8458fade68b1b99
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834651"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56742531"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installer et partager des applications sur votre appareil
 Installez des applications sur votre appareil à partir de l’application Portail d’entreprise pour Windows.
@@ -35,10 +35,11 @@ Installez des applications sur votre appareil à partir de l’application Porta
     ![Page d’accueil de l’application Portail d’entreprise pour Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)    
 2. Recherchez et installez des applications à partir de l’une des sections suivantes de l’application Portail d’entreprise :  
 
-    * **Accueil** : sélectionnez une application dans la liste des Applications à la une de votre organisation.  
-    * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
-    * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (notamment celles qui sont installées et proposées).  
-    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application.  Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
+    * **Page d’accueil**  : sélectionnez une application parmi la liste des applications proposées par votre organisation.  
+    * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
+    * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (à savoir celles déjà installées et celles proposées).  
+    * **Catégories d’applications**: sélectionnez cette page dans le volet de navigation pour choisir les applications basées sur le type ou la fonction. Les applications sont triées comme sous catégories **en vedette**, **Éducation**, et **productivité**.  
+    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application.  Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
     * **Toutes les applications** : affichez, triez et filtrez toutes les applications disponibles. Les résultats de la recherche sont automatiquement triés selon la pertinence.  
 
 3. Sélectionnez une application.   

@@ -18,11 +18,11 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bdb3e5c79b348b323df129c2dec4c02af596215
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 85856e77fc8ebbd4054ef819a9110e0fa258ced3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55844545"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Utilisation de votre appareil Windows avec le Portail d’entreprise Intune
@@ -46,7 +46,7 @@ Portail d’entreprise prend actuellement en charge les appareils exécutant les
 D’autres versions de Windows, telles que [Windows 10 Holographique](https://www.microsoft.com/hololens) sont prises en charge dans le Portail d’entreprise. Ces versions ne sont pas mentionnées dans cet article, car elles sont conçues pour des usages particuliers.
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>Configurer votre appareil dans le Portail d’entreprise
-- [Passer mon appareil Windows en mode géré dans Portail d’entreprise](enroll-your-device-in-intune-windows.md)
+- [Passer mon appareil Windows en mode géré dans Portail d’entreprise](windows-enrollment-company-portal.md)  
 - [Que signifie passer mon appareil *en mode géré* ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [Quelles informations sur mon appareil mon entreprise peut-elle voir ?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [Chiffrer mon appareil](encrypt-your-device-windows.md)
