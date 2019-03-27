@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 03/11/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0ed363acca7fc0021569009b1f672a06101e29f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834175"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57756851"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Démarrage rapide : Essayer gratuitement Microsoft Intune 
 
@@ -53,7 +54,7 @@ L’essai d’Intune est gratuit pendant 30 jours. Si vous disposez déjà d’
 
     ![Capture d’écran du processus de nouvelles informations d’identification pour un compte d’essai Intune](./media/account-sign-up-site-user-id.png)
 
-    Si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le portail Office 365 Admin décrit plus loin dans cet article.
+    Si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le Centre d’administration Microsoft 365 décrit plus loin dans cet article.
 
 3. À la fin du processus d’inscription, vous pouvez voir les informations relatives à votre nouveau compte.
 
@@ -86,34 +87,34 @@ Pour définir Intune en tant qu’autorité MDM, effectuez les étapes suivantes
 3. Sélectionnez la bannière indiquant que vous n’avez pas activé la gestion des appareils, ou si vous ne voyez pas immédiatement la bannière, sélectionnez **Inscription de l’appareil**. Le panneau **Sélectionner une autorité MDM** s’affiche si vous n’avez pas encore activé la gestion des appareils.
 
     > [!NOTE]
-    > La bannière orange s’affiche seulement si vous n’avez pas encore défini l’autorité MDM.
+    > Si vous avez défini l’autorité MDM, vous verrez sa valeur dans le panneau **Inscription de l’appareil**. La bannière orange s’affiche seulement si vous n’avez pas encore défini l’autorité MDM. 
 
     ![Image du panneau Sélectionner une autorité MDM](./media/choose-mdm-authority.png) 
 
-4. Sous **Sélectionner une autorité MDM**, définissez l’autorité MDM en tant qu’**Autorité MDM Intune**.
+4. Si votre autorité MDM n’est pas définie, sous **Sélectionner une autorité MDM**, définissez l’autorité MDM en tant qu’**Autorité MDM Intune**.
 
 Pour plus d’informations sur l’autorité MDM, consultez [Définir l’autorité de gestion des appareils mobiles](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Configurer votre nom de domaine personnalisé (facultatif)
 
-Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le portail Office 365 Admin. Vous allez ajouter, vérifier et configurer votre nom de domaine personnalisé.  
+Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le Centre d’administration Microsoft 365. Vous pouvez ajouter, vérifier et configurer votre nom de domaine personnalisé en effectuer les étapes suivantes.  
 
 > [!IMPORTANT]
-> Vous ne pouvez pas renommer ou supprimer le nom de domaine initial **onmicrosoft.com**. Vous pouvez ajouter, vérifier ou supprimer les noms de domaine personnalisés utilisés avec Intune pour clarifier l’identité de votre entreprise.
+> Vous ne pouvez pas renommer ou supprimer la partie *initiale* **onmicrosoft.com** du nom de domaine. Toutefois, vous pouvez ajouter, vérifier ou supprimer les noms de domaine *personnalisés* utilisés avec Intune pour clarifier l’identité de votre entreprise. Pour plus d’informations, consultez [Configurer un nom de domaine personnalisé](custom-domain-name-configure.md).
 
-1. Accédez au [portail de gestion Office 365](https://portal.office.com/Admin/Default.aspx), et connectez-vous à l’aide de votre compte d’administrateur.
+1. Accédez au [Centre d’administration Microsoft 365](https://admin.microsoft.com), et connectez-vous à l’aide de votre compte d’administrateur.
 
 2. Dans le volet de navigation, choisissez **Configuration** > **Domaines** > **Ajouter un domaine**.
 
 3. Tapez votre nom de domaine personnalisé. Sélectionnez ensuite **Suivant**.
 
-   ![Capture d’écran du centre d’administration Office 365 -Ajouter un domaine](./media/domain-custom-add.png)
+   ![Capture d’écran du Centre d’administration Microsoft 365 -Ajouter un domaine](./media/domain-custom-add.png)
 
 4. Vérifiez que vous êtes le propriétaire du domaine que vous avez entré auparavant. 
     
-    Si vous sélectionnez **envoyer le code par courrier**, un e-mail est envoyé au contact inscrit pour votre domaine. Une fois l’e-mail reçu, copiez le code et entrez-le dans le champ **Tapez votre code de vérification ici**. Si le code de vérification correspond, le domaine est ajouté à votre locataire. L’e-mail affiché peut ne pas sembler familier. Certains bureaux d’enregistrement cachent la véritable adresse e-mail fournie durant l’enregistrement du domaine.
+    Si vous sélectionnez **envoyer le code par courrier**, un e-mail est envoyé au contact inscrit pour votre domaine. Une fois l’e-mail reçu, copiez le code et entrez-le dans le champ **Tapez votre code de vérification ici**. Si le code de vérification correspond, le domaine est ajouté à votre locataire. L’e-mail affiché peut ne pas sembler familier. Certains bureaux d’enregistrement masquent la véritable adresse e-mail. L’adresse e-mail peut aussi être différente de celle fournie lors de l’enregistrement du domaine.
 
-   ![Capture d’écran du centre d’administration Office 365 -Vérifier un domaine](./media/domain-custom-verify.png)
+   ![Capture d’écran du Centre d’administration Microsoft 365 -Vérifier le domaine](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > Pour plus d’informations sur la vérification des enregistrements TXT, consultez [Créer des enregistrements DNS auprès d’un fournisseur d’hébergement DNS pour Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
@@ -122,7 +123,7 @@ Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalis
 
 Vous pouvez utiliser deux portails :
 - Le tableau de bord Intune dans Azure ([portal.azure.com](https://portal.azure.com)) vous permet d’explorer les [fonctionnalités d’Intune](what-is-intune.md). Normalement, vous effectuez votre travail dans le tableau de bord Intune.
-- Le centre d’administration Office 365 ([portal.office.com](https://portal.office.com)) vous permet d’ajouter et de gérer des utilisateurs, si vous n’utilisez pas Azure Active Directory pour cela. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
+- Le Centre d’administration Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) vous permet d’ajouter et de gérer des utilisateurs, si vous n’utilisez pas Azure Active Directory à cette fin. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

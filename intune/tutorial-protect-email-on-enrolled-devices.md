@@ -3,27 +3,29 @@ title: Tutoriel - Protéger la messagerie Exchange Online sur les appareils gér
 titlesuffix: Microsoft Intune
 description: Apprenez à sécuriser Exchange Online avec les stratégies de conformité iOS Intune et l’accès conditionnel Azure AD pour exiger des appareils gérés et l’application Outlook.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/19/2018
-ms.topic: quickstart
+ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2c23ad2c63fad8c74666e3c1ae9acc543e48f8e8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c76a22fec1342481a67029147c757347a06447c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181868"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57528205"
 ---
-# <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : protéger la messagerie Exchange Online sur les appareils gérés
+# <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
 
 Dans ce tutoriel, vous apprendrez à : 
@@ -37,7 +39,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
   - Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
     - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
     - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
-  - Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : créer un profil d’appareil e-mail pour iOS](quickstart-email-profile.md).
+  - Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : créer un profil d’appareil de messagerie pour iOS](quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 

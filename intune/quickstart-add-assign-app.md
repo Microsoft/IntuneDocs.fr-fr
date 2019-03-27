@@ -10,18 +10,20 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6d0a7485aa25dee74bf54192fa931d081be81cd8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 40f321b02565f696554e2380d488c41a3b1f24eb
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184505"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57391881"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Démarrage rapide : ajouter et attribuer une application cliente
 
@@ -90,7 +92,7 @@ Vous devez installer et utiliser l’application Portail d’entreprise pour ins
 4. Cliquez sur l’application que vous avez ajoutée à l’aide d’Intune. Dans ce guide de démarrage rapide, vous avez ajouté l’application **Suite d’applications Microsoft Office 365**.
 
     > [!NOTE]
-    > Si vous n’avez pas réussi à attribuer d’application à l’utilisateur Intune, vous verrez le message suivant : *Votre administrateur informatique n’a mis aucune application à votre disposition.*
+    > Si vous n’avez pas réussi à attribuer d’application à l’utilisateur Intune, vous voyez le message suivant : *Votre administrateur informatique n’a mis aucune application à votre disposition.*
 
 5. Cliquez sur **Installer**.
 
@@ -100,7 +102,7 @@ Si votre entreprise l’exige, vous pouvez attribuer manuellement l’applicatio
 
 Dans ce guide de démarrage rapide, vous avez ajouté des applications dans Intune, attribué les applications à un groupe et installé les applications sur l’appareil Windows 10 Desktop inscrit. Pour plus d’informations sur la gestion des applications dans Intune, consultez [Qu’est-ce que la gestion d’applications Microsoft Intune ?](app-management.md)
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Créer et attribuer une stratégie de protection des applications](quickstart-create-assign-app-policy.md)
+> [Démarrage rapide : Créer et affecter une stratégie de protection des applications](quickstart-create-assign-app-policy.md)

@@ -10,6 +10,7 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up Windows Autopilot so that users can enroll in Intune.
@@ -17,14 +18,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 087f890f84c9bc0ff0c46f129ef84b8a268c738e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 36aa9ad733e2ae5e0f4a292b073fbebd5f5f5f8f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187733"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57395980"
 ---
-# <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
+# <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 Windows Autopilot simplifie l’inscription des appareils. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées. 
 
 Dans ce tutoriel, vous apprendrez à :
@@ -93,9 +95,9 @@ Après avoir créé un groupe d’appareils, vous devez créer un profil de dép
 4. Pour **Mode de déploiement**, choisissez **Piloté par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
 5. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
 6. Choisissez **OOBE (Out-Of-Box Experience)**, configurez les options suivantes et conservez la valeur par défaut des autres options, puis choisissez **Enregistrer** :
-    - **Contrat de Licence Utilisateur Final (CLUF)** : **Masquer**
-    - **Paramètres de confidentialité** : **Afficher**
-    - **Type de compte utilisateur** : **Standard**
+    - **Contrat de Licence Utilisateur Final (CLUF)**  : **Masquer**
+    - **Paramètres de confidentialité** : **Afficher**
+    - **Type de compte d’utilisateur** : **Standard**
 
 6. Choisissez **Créer** pour créer le profil. Le profil de déploiement Autopilot peut désormais être affecté aux appareils.
 

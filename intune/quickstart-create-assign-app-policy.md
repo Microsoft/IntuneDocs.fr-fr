@@ -10,20 +10,22 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ae378550a75f756390053e44eb4fbd04f665612
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179072"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57393365"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Démarrage rapide : Créer et attribuer une stratégie de protection des applications
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Démarrage rapide : Créer et affecter une stratégie de protection des applications
 
 Dans ce guide de démarrage rapide, vous allez utiliser Intune pour créer une stratégie de protection des applications et l’attribuer à une application cliente sur l’appareil d’un utilisateur final. Intune utilise des stratégies de protection des applications pour garantir que vos applications remplissent les exigences de protection des données dans votre organisation.
 
@@ -44,10 +46,10 @@ Effectuez les étapes suivantes pour créer une stratégie de protection des app
 1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications clientes** > **Stratégies de protection des applications** > **Créer une stratégie**. 
 2. Entrez les informations suivantes : 
 
-    - **Nom** : *Protection du contenu Windows 10*
-    - **Description** : *Les utilisateurs associés à cette stratégie ne pourront pas couper, copier ou coller du contenu entre l’application attribuée et d’autres applications non managées sur l’appareil.*
-    - **Plateforme** : *Windows 10*
-    - **État de l’inscription**  *Avec inscription*
+    - **Nom** : *Protection du contenu Windows 10*
+    - **Description** : *Les utilisateurs associés à cette stratégie ne pourront pas couper, copier ou coller du contenu entre l’application attribuée et d’autres applications non gérées sur l’appareil.*
+    - **Plateforme** : *Windows 10*
+    - **État d’inscription** : *Avec inscription*
 
 3. Sélectionnez **Applications protégées** pour choisir les applications auxquelles appliquer cette stratégie.
 4. Cliquez sur **Ajouter des applications**.
@@ -81,7 +83,7 @@ Vous avez maintenant attribué la stratégie de protection des applications.
 
 Dans ce guide de démarrage rapide, vous avez créé et attribué une stratégie de protection des applications. Les utilisateurs de l’application auxquels cette stratégie a été attribuée ne pourront pas couper, copier ou coller du contenu entre l’application attribuée et d’autres applications non managées sur l’appareil. Ce type de protection contribue à mieux protéger les données de votre organisation. Pour plus d’informations sur les stratégies de protection des applications dans Intune, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Créer et attribuer un rôle personnalisé](quickstart-create-custom-role.md)
+> [Démarrage rapide : Créer et attribuer un rôle personnalisé](quickstart-create-custom-role.md)

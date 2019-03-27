@@ -4,6 +4,7 @@ description: Démarrage rapide - Créer un utilisateur dans Intune.
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: b5653c67766a3312cf7ce2872e8b0cd4301b0e8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 98c71bd4c93e869b429b7677b4fb7c442aa58643
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189487"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57991076"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Démarrage rapide : Créer un utilisateur et lui affecter une licence
+# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Démarrage rapide : Créer un utilisateur et lui attribuer une licence
 
 Dans ce guide de démarrage rapide, vous allez créer un utilisateur, puis lui affecter une licence. Avec Intune, chaque personne pour laquelle vous souhaitez accéder aux données d’entreprise doit avoir un compte d’utilisateur. Les administrateurs Intune peuvent par la suite configurer ces utilisateurs pour gérer le contrôle d’accès.
 
@@ -45,9 +47,9 @@ Toute personne qui souhaite s’inscrire à la gestion des appareils Intune doit
 
 ## <a name="assign-a-license-to-the-user"></a>Affecter une licence à l’utilisateur
 
-Après avoir créé un utilisateur, vous devez utiliser le [portail Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pour lui affecter une licence Intune. Si vous ne lui affectez pas de licence, il ne peut pas inscrire son appareil dans Intune. 
+Après avoir créé un utilisateur, vous devez utiliser le [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pour lui attribuer une licence Intune. Si vous ne lui affectez pas de licence, il ne peut pas inscrire son appareil dans Intune. 
 
-1. Connectez-vous au [portail Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) avec les mêmes informations d’identification que celles utilisées pour vous connecter à Intune.
+1. Connectez-vous au [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) avec les mêmes informations d’identification que celles utilisées pour vous connecter à Intune.
 2. Choisissez **Utilisateurs** > **Utilisateurs actifs** > choisissez l’utilisateur que vous venez de créer.
 3. En regard de **Licences des produits**, sélectionnez **Modifier**.
 4. Sous **Emplacement**, choisissez un emplacement pour l’utilisateur.
@@ -61,13 +63,13 @@ Le nouvel utilisateur Intune actif apparaît à présent comme utilisant une lic
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
-Si vous n’avez plus besoin de cet utilisateur, vous pouvez le supprimer ; accédez au [portail Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), choisissez **Utilisateurs** > **Utilisateurs actifs** > *choisissez l’utilisateur dans la liste* > **Supprimer l’utilisateur** > **Supprimer l’utilisateur** > **Confirmer les modifications** > **Fermer**.
+Si vous n’avez plus besoin de cet utilisateur, vous pouvez le supprimer ; accédez au [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), choisissez **Utilisateurs** > **Utilisateurs actifs** > *choisissez l’utilisateur dans la liste* > **Supprimer l’utilisateur** > **Supprimer l’utilisateur** > **Confirmer les modifications** > **Fermer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Dans ce guide de démarrage rapide, vous avez créé un utilisateur auquel vous avez affecté une licence. Pour plus d’informations sur l’ajout d’utilisateurs dans Intune, consultez [Ajouter des utilisateurs et accorder une autorisation d’administration dans Intune](users-add.md).
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Créer un groupe pour gérer les utilisateurs](quickstart-create-group.md)
+> [Démarrage rapide : Créer un groupe pour gérer les utilisateurs](quickstart-create-group.md)

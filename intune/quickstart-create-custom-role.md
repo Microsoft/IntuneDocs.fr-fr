@@ -4,6 +4,7 @@ description: Démarrage rapide - Créer et attribuer un rôle personnalisé pour
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 5de108835254d6a65546b8f1c9e8d0e9c32dbd26
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be3ef61d3bdce2f1ad74a388a2ec50691313a1d1
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189926"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400281"
 ---
-# <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et attribuer un rôle personnalisé
+# <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et affecter un rôle personnalisé
 
 Dans ce guide de démarrage rapide d’Intune, vous allez créer un rôle personnalisé avec des autorisations spécifiques pour un service des opérations de sécurité. Vous allez ensuite attribuer le rôle au groupe d’opérateurs correspondant. Il existe plusieurs rôles par défaut que vous pouvez utiliser immédiatement. Toutefois, en créant des rôles personnalisés comme celui-ci, vous disposez d’un contrôle d’accès précis à toutes les parties de votre système de gestion des appareils mobiles.
 
@@ -70,7 +72,7 @@ Si vous ne souhaitez plus utiliser le nouveau rôle personnalisé, vous pouvez l
 
 Dans ce guide de démarrage rapide, vous avez créé un rôle d’opérations de sécurité personnalisé, et vous l’avez attribué à un groupe. Pour plus d’informations sur les rôles dans Intune, consultez [Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune](role-based-access-control.md).
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Créer un profil d’appareil e-mail pour iOS](quickstart-email-profile.md)
+> [Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS](quickstart-email-profile.md)

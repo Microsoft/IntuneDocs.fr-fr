@@ -10,18 +10,20 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a1b89f2d-7937-46bb-926b-b05f6fa9c749
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: af24e1c56e43fe2edfc6a9241c31600b7cfe61a7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 757191515ca88cedf1a5edcdb243b1ecb730ec3c
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186254"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57991119"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Démarrage rapide : Envoyer des notifications aux appareils non conformes
 
@@ -47,12 +49,12 @@ Pour envoyer un e-mail à vos utilisateurs, créez un modèle de message de noti
 1. Dans Intune, sélectionnez **Conformité des appareils** > **Notifications** > **Créer une notification**. 
 2. Entrez les informations suivantes :
 
-   - **Nom** : *Administrateur Contoso*
+   - **Nom** : *Administrateur Contoso*
    - **Objet** : *Conformité de l’appareil*
-   - **Message** : *Votre appareil n’est actuellement pas conforme aux exigences de conformité de notre organisation.*
-   - **En-tête de l’e-mail - Inclure le logo de l’entreprise** : définissez la valeur sur **Activé** pour afficher le logo de votre organisation.
-   - **Pied de page de l’e-mail - Inclure le nom de l’entreprise** : définissez la valeur sur **Activé** pour afficher le nom de votre organisation.
-   - **Pied de page de l’e-mail - Inclure les informations de contact** : définissez la valeur sur **Activé** pour afficher les informations de contact de votre organisation.
+   - **Message** : *Votre appareil n’est actuellement pas conforme aux exigences de conformité de notre organisation.*
+   - **En-tête de l’e-mail - Inclure le logo de l’entreprise** : Définissez la valeur **Activé** pour afficher le logo de votre organisation.
+   - **Pied de page de l’e-mail - Inclure le nom de l’entreprise** : Définissez la valeur **Activé** pour afficher le nom de votre organisation.
+   - **Pied de page de l’e-mail - Inclure les informations de contact** : Définissez la valeur **Activé** pour afficher les informations de contact de votre organisation.
 
    ![Exemple de message de notification de conformité dans Intune](./media/quickstart-send-notification-01.png)
 
@@ -73,9 +75,9 @@ Effectuez les étapes suivantes si vous souhaitez créer une stratégie de confo
 2. Sélectionnez **Stratégies** > **Créer une stratégie**.
 3. Entrez les informations suivantes :
 
-   - **Nom** : *Conformité Windows 10*
-   - **Description** : *Stratégie de conformité Windows 10*
-   - **Plateforme** : Windows 10 et versions ultérieures
+   - **Nom** : *Conformité Windows 10*
+   - **Description** : *Stratégie de conformité Windows 10*
+   - **Plateforme** : Windows 10 et versions ultérieures
 
 4. Sélectionnez **Paramètres** > **Sécurité système** pour afficher les paramètres de sécurité des appareils.
 5. Définissez **Exiger un mot de passe pour déverrouiller des appareils mobiles** sur **Exiger**. Ce paramètre indique si les utilisateurs doivent entrer un mot de passe avant d'accéder aux informations stockées sur leurs périphériques mobiles. 
@@ -84,7 +86,7 @@ Effectuez les étapes suivantes si vous souhaitez créer une stratégie de confo
     ![Paramètres de sécurité système pour une nouvelle stratégie de conformité](./media/quickstart-send-notification-02.png) 
 
 7. Cliquez sur **OK**, **OK** et **Créer** pour créer une stratégie de conformité.
-8. Sélectionnez le nom de votre nouvelle stratégie : **Conformité Windows 10**.
+8. Sélectionnez le nom de votre nouvelle stratégie : **Conformité Windows 10**.
 9. Sélectionnez **Propriétés** > **Action en cas de non-conformité** > **Ajouter**.
 10. Dans la zone déroulante **Action**, vérifiez que l’option **Envoyer un e-mail aux utilisateurs finaux** est sélectionnée.
 11. Sélectionnez **Modèle de message** > **Administrateur Contoso** > **Sélectionner** pour sélectionner le modèle de message que vous avez créé précédemment dans cette rubrique.
@@ -109,7 +111,7 @@ Une fois que vous avez correctement créé et enregistré la stratégie, celle-c
 
 Pour ce guide de démarrage rapide, vous avez utilisé Intune pour créer et attribuer une stratégie de conformité pour les appareils Windows 10 de votre personnel afin d’exiger un mot de passe d’au moins six caractères. Pour plus d’informations sur la création des stratégies de conformité des appareils Windows, consultez [Ajouter une stratégie de conformité des appareils pour les appareils Windows dans Intune](compliance-policy-create-windows.md).
 
-Pour continuer cette série de guides de démarrage rapide Intune, passez au guide de démarrage rapide suivant.
+Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Ajouter et attribuer une application cliente](quickstart-add-assign-app.md)
+> [Démarrage rapide : Ajouter et attribuer une application cliente](quickstart-add-assign-app.md)
