@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fa6a68d1b5a8d2ccf87587ecab36c7807770d48
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 0a59c40a5f1095e832f84c4b21d553e3c5f11ed7
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565347"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330417"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils macOS pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune
 
@@ -46,7 +46,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   Cette fonctionnalité s’applique à :  
   - macOS 10.13 et versions ultérieures
 
-- **Différer les mises à jour logicielles (mode supervisés uniquement)**: lorsque la valeur **ne pas configuré** (valeur par défaut), les mises à jour logicielles sont affichés sur l’appareil comme Apple les libère. Par exemple, si une mise à jour de macOS est libérée par Apple à une date spécifique, puis cette mise à jour naturellement apparaît sur l’appareil autour de la date de publication.
+- **Différer les mises à jour logicielles**: lorsque la valeur **ne pas configuré** (valeur par défaut), les mises à jour logicielles sont affichés sur l’appareil comme Apple les libère. Par exemple, si une mise à jour de macOS est libérée par Apple à une date spécifique, puis cette mise à jour naturellement apparaît sur l’appareil autour de la date de publication. Mises à jour de la génération initiale sont autorisées sans délai.
 
   **Activer** vous permet de délai lorsque les mises à jour logicielles sont affichées sur les appareils, à partir de 0 à 90 jours. Ce paramètre ne contrôle pas lorsque les mises à jour sont ou ne sont pas installés. 
 

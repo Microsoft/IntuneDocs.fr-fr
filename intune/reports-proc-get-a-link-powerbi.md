@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 03/28/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3342eec0ea9797f4ce21b53e589ff4f427d03bb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5b93bb9911fa93998e443a797d085a568280c278
+ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564803"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618499"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Se connecter à l’entrepôt de données avec Power BI
 
@@ -31,7 +31,7 @@ ms.locfileid: "57564803"
 
 Vous pouvez télécharger un fichier destiné à Microsoft Power BI qui vous permet de charger des rapports interactifs et dynamiques pour votre locataire Intune. Le fichier Power BI (pbix) d’entrepôt de données contient des paramètres de connexion à votre locataire ainsi que les exemples de rapports et de graphiques suivants :  
 
-  -  Appareils
+  -  Périphériques
   -  Inscription
   -  Stratégie de protection des applications
   -  Stratégie de conformité
@@ -57,7 +57,7 @@ Le fichier Power BI (pbix) contient les informations de connexion pour votre lo
 > Les fichiers Power BI (pbix) peuvent varier selon l’emplacement du locataire. Si vous gérez plusieurs locataires Intune, veillez à utiliser le fichier téléchargé à partir du portail Azure tout en étant connecté au locataire.  
 
 1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher **Intune** dans les ressources.  
-2.  Ouvrez le panneau **API d’entrepôt de données Microsoft Intune (préversion)**.
+2.  Ouvrez le **configurer l’entrepôt de données Intune** panneau.
 3.  Sélectionnez **Télécharger le fichier Power BI**. Un fichier portant l’extension pbix est téléchargé à l’emplacement indiqué.
 4.  Ouvrez le fichier avec Power BI. Les *rapports de l’entrepôt de données Intune* se chargent, mais l’obtention des données de votre locataire peut prendre quelques secondes.
 5.  Sélectionnez **Actualiser** pour charger les données de votre locataire et passer en revue les rapports.
@@ -68,7 +68,7 @@ Le fichier Power BI (pbix) contient les informations de connexion pour votre lo
 Quand un client est authentifié auprès d’Azure AD, l’URL OData se connecte au point de terminaison RESTful dans l’API d’entrepôt de données qui expose le modèle de données à votre client de création de rapports. Pour utiliser Power BI Desktop pour vous connecter et créer vos propres rapports, suivez ces instructions. Vous n’êtes pas limité à Power BI Desktop. Vous pouvez utiliser votre outil d’analyse préféré avec l’URL OData, à condition toutefois que le client prenne en charge l’authentification OAUTH2.0 et la norme OData v4.0.
 
 1.  Connectez-vous au portail Azure et choisissez **Surveillance + gestion** > **Intune**. Vous pouvez aussi rechercher **Intune** dans les ressources.  
-2.  Ouvrez le panneau **API d’entrepôt de données Microsoft Intune (préversion)**.
+2.  Ouvrez le **configurer l’entrepôt de données Intune** panneau.
 3. Récupérez l’URL du flux personnalisé dans le panneau de création de rapports, par exemple, `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4. Ouvrez **Power BI Desktop**.
 5. Choisissez **Accueil** > **Obtenir des données**. Sélectionnez **Flux OData**.

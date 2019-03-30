@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b47decc297c58feadb7cd507a3ff09070d46d4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565738"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429689"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -176,6 +176,7 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
+    - **Lancer automatiquement**: facultatif. Choisissez une application à lancer automatiquement lorsque l’utilisateur se connecte. Uniquement une seule application peut être AutoLaunched.
     - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
 
   > [!TIP]
@@ -184,6 +185,8 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 - **Utiliser une autre mise en page de démarrage** : choisissez **Oui** pour entrer un fichier XML qui décrit comment les applications s’affichent dans le menu Démarrer, notamment l’ordre des applications. Utilisez cette option si vous avez besoin de davantage de personnalisation dans votre menu Démarrer. [Personnaliser et exporter la disposition de l’écran de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) fournit quelques conseils et un exemple de code XML.
 
 - **Barre des tâches Windows** : choisissez d’**Afficher** ou de **Masquer** la barre des tâches. Par défaut, la barre des tâches ne s’affiche pas. Des icônes, telles que l’icône Wi-Fi, sont visibles, mais les paramètres ne sont pas modifiables par les utilisateurs finaux.
+
+- **Autoriser l’accès au dossier Téléchargements**: choisissez **Oui** pour permettre aux utilisateurs d’accéder au dossier téléchargements dans l’Explorateur Windows. Par défaut, l’accès au dossier téléchargements est désactivée. Cette fonctionnalité est couramment utilisée pour les utilisateurs finaux d’accéder aux éléments téléchargés à partir d’un navigateur.
 
 Cliquez sur **OK** pour enregistrer vos modifications.
 

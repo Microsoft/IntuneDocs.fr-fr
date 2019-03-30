@@ -2,8 +2,8 @@
 title: Paramètres de protection pour appareils Windows 10 dans Microsoft Intune - Azure | Microsoft Docs
 description: Sur les appareils Windows 10, utilisez ou configurez les paramètres Endpoint Protection pour activer les fonctionnalités de Windows Defender, notamment Application Guard, Pare-feu, SmartScreen, le chiffrement et BitLocker, Exploit Guard, Contrôle d’application, Centre de sécurité, ainsi que la sécurité sur les appareils locaux dans Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbdbbb92c033a99f1c439271c745c1abfbcd562
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 4c2df888e146a7f240530e5cbc6628dbce34cb61
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566690"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342995"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Paramètres Windows 10 (et versions ultérieures) pour protéger les appareils à l’aide d’Intune
 
@@ -59,7 +59,7 @@ Application Guard est uniquement disponible pour les appareils Windows 10 (64 bi
 ## <a name="windows-defender-firewall"></a>Pare-feu Windows Defender
 
 Pris en charge sur les éditions de Windows 10 suivantes :
-- Accueil
+- page d'accueil
 - Professionnel
 - Professionnel
 - Enterprise
@@ -83,12 +83,11 @@ Ces paramètres s’appliquent à tous les types de réseaux.
 - **Associer le jeu d’authentification de façon opportuniste par module de génération de clés** : **Activer** pour OBLIGER les modules de génération de clés à ignorer uniquement les suites d’authentification qu’ils ne prennent pas en charge. Quand ce paramètre a la valeur**Non configuré**, les modules de génération de clés DOIVENT ignorer la totalité du jeu d’authentification s’ils ne prennent pas en charge toutes les suites de l’authentification spécifiées dans le jeu.
 - **Mise en file d’attente des paquets** : indiquez comment la mise à l’échelle des logiciels côté réception est activée pour la réception chiffrée et efface le texte pour le scénario de passerelle du tunnel IPsec. Ce paramètre confirme la préservation de l’ordre des paquets.
 
-### <a name="network-settings"></a>Paramètres réseau
+### <a name="network-settings"></a>Paramètres du réseau
 
 Ces paramètres s’appliquent à des types de réseaux spécifiques, notamment **Réseau (espace de travail) avec domaine**, **Réseau privé (détectable)** et **Réseau public (non détectable)**.
 
-#### <a name="general-settings"></a>Paramètres généraux :
-
+#### <a name="general-settings"></a>Paramètres généraux :  
 - **Pare-feu Windows Defender** : choisissez **Activer** pour activer le pare-feu et les fonctions de sécurité avancées. **Non configuré** (valeur par défaut) autorise tout le trafic réseau, quels que soit les autres paramètres de stratégie.
 - **Mode furtif** : **Bloquer** le fonctionnement du pare-feu en mode furtif. Le blocage du mode furtif vous permet de bloquer également **Exemption de paquets sécurisés IPsec**. **Non configuré** (valeur par défaut) fait fonctionner le pare-feu en mode furtif, ce qui permet d’empêcher les réponses aux demandes de détection.
 - **Protégé** : **Bloquer** désactive cette fonctionnalité. **Non configuré** (valeur par défaut) active ce paramètre. Quand ce paramètre et le pare-feu Windows Defender sont activés, tout le trafic entrant est bloqué, quels que soit les autres paramètres de stratégie.
@@ -106,7 +105,7 @@ Ces paramètres s’appliquent à des types de réseaux spécifiques, notamment 
 ## <a name="windows-defender-smartscreen-settings"></a>Paramètres Windows Defender SmartScreen
 
 Pris en charge sur les éditions de Windows 10 sur lesquelles Microsoft Edge est installé :
-- Accueil
+- page d'accueil
 - Professionnel
 - Professionnel
 - Enterprise
@@ -241,7 +240,7 @@ Pris en charge sur les éditions de Windows 10 suivantes :
 
 Pris en charge sur les éditions de Windows 10 suivantes :
 
-- Accueil
+- page d'accueil
 - Professionnel
 - Professionnel
 - Enterprise
@@ -379,7 +378,7 @@ Lorsque vous activez Credential Guard, les fonctionnalités requises suivantes s
 
 Pris en charge sur les éditions de Windows 10 suivantes :
 
-- Accueil
+- page d'accueil
 - Professionnel
 - Professionnel
 - Enterprise
@@ -412,7 +411,7 @@ Indiquez les informations de contact du service informatique à afficher dans l�
 
 Pris en charge sur les éditions de Windows 10 suivantes :
  
-- Accueil
+- page d'accueil
 - Professionnel
 - Professionnel
 - Enterprise
@@ -435,7 +434,7 @@ Utilisez ces options pour configurer les paramètres de sécurité locale sur le
 - **Compte invité** : définissez la valeur **Activé** pour autoriser le compte Invité local. Définissez la valeur **Non configuré** (valeur par défaut) pour désactiver le compte Invité local.
 - **Renommer le compte Invité** : définit un autre nom de compte à associer à l’identificateur de sécurité (SID) pour le compte Invité.
 
-### <a name="devices"></a>Appareils
+### <a name="devices"></a>Périphériques
 
 - **Retirer l’appareil de la station d’accueil sans ouverture de session** : définissez la valeur **Bloquer** pour permettre aux utilisateurs d’appuyer sur le bouton d’éjection physique d’un appareil portable placé sur une station d’accueil afin de retirer l’appareil de manière sécurisée. **Non configuré** (valeur par défaut) oblige l’utilisateur à se connecter à l’appareil et à être autorisé à retirer l’appareil.
 - **Installer des pilotes d’imprimante pour les imprimantes partagées** : quand ce paramètre a la valeur **Activé**, n’importe quel utilisateur peut installer un pilote d’imprimante lors de la connexion à une imprimante partagée. Quand **Non configuré** (valeur par défaut) est défini, seuls les administrateurs peuvent installer un pilote lors de la connexion à une imprimante partagée.

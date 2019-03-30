@@ -1,11 +1,11 @@
 ---
 title: Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 description: Le SDK d’application Microsoft Intune pour Android vous permet d’incorporer la gestion des applications mobiles Intune à votre application Android.
-keywords: SDK
+keywords: Kit de développement logiciel
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a7ccc2da5fd99c3c72c8c9beb765f292e896eee
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
-ms.translationtype: HT
+ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069069"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514495"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -46,7 +46,7 @@ Le SDK d’application Intune se compose des fichiers suivants :
 * **CHANGELOG.txt** : contient un historique des modifications apportées dans chaque version du SDK.
 * **THIRDPARTYNOTICES.TXT** : avis d’attribution qui reconnaît que le code tiers et/ou OSS sera compilé dans votre application.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Conditions requises
 
 ### <a name="android-versions"></a>Versions d’Android
 Le Kit de développement logiciel (SDK) prend en charge l’API Android de la version 19 (Android 4.4+) à la version 28 (Android 9.0).
@@ -699,7 +699,7 @@ Métadonnées ADAL **ne doit pas** être présent dans le manifeste.
 
 #### <a name="2-app-integrates-adal"></a>2. L’application intègre la bibliothèque ADAL
 
-|Paramètre ADAL requis| Valeur |
+|Paramètre ADAL requis| Value |
 |--|--|
 | ClientID | ID client de l’application (généré par Azure AD quand l’application est inscrite) |
 
@@ -714,7 +714,7 @@ Consultez aussi les exigences pour [l’accès conditionnel](#conditional-access
 
 #### <a name="3-app-integrates-adal-but-does-not-support-brokered-authenticationdevice-wide-sso"></a>3. L’application intègre la bibliothèque ADAL, mais ne prend pas en charge l’authentification répartie ou l’authentification unique à l’échelle de l’appareil
 
-|Paramètre ADAL requis| Valeur |
+|Paramètre ADAL requis| Value |
 |--|--|
 | ClientID | ID client de l’application (généré par Azure AD quand l’application est inscrite) |
 | SkipBroker | **True** |
@@ -832,7 +832,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > [!NOTE]
     > Assurez-vous que votre application utilise le `resourceId` et `aadId` paramètres passés à `acquireToken()` afin que le jeton approprié est acquis.
 
-    ```
+    ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
         return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
@@ -1633,7 +1633,7 @@ Si une application à plusieurs identités a été inscrite à la notification `
 
 Une application s’inscrivant à la notification `WIPE_USER_DATA` ne bénéficie plus du comportement de réinitialisation sélective par défaut du SDK. Pour les applications prenant en charge plusieurs identités, cette perte peut être d’autant plus importante, car la réinitialisation sélective GAM par défaut réinitialise uniquement les fichiers dont l’identité est ciblée par une réinitialisation. Si une application prenant en charge plusieurs identités souhaite que la réinitialisation sélective GAM par défaut soit effectuée _**et**_ souhaite effectuer ses propres actions de réinitialisation, elle doit s’inscrire pour les notifications `WIPE_USER_AUXILIARY_DATA`. Cette notification sera envoyée par le SDK juste avant d’effectuer la réinitialisation sélective par défaut GAM. Une application ne doit jamais s’inscrire à la fois à `WIPE_USER_DATA` et à `WIPE_USER_AUXILIARY_DATA`.
 
-La réinitialisation sélective par défaut fermera l’application normalement, fin des activités et de suppression du processus d’application. Si votre application substitue à la réinitialisation de seletive par défaut, vous souhaiterez fermer votre application manuellement pour empêcher l’utilisateur de l’accès aux données en mémoire après qu’une réinitialisation se produit.
+La réinitialisation sélective par défaut fermera l’application normalement, fin des activités et de suppression du processus d’application. Si votre application substitue à la réinitialisation sélective par défaut, vous souhaiterez fermer votre application manuellement pour empêcher l’utilisateur de l’accès aux données en mémoire après qu’une réinitialisation se produit.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Activation de la configuration ciblée de gestion des applications mobiles pour vos applications Android (facultatif)
@@ -1785,7 +1785,7 @@ Le SDK Intune respecte le contrat fourni par l’API Android, bien que des condi
 
 ## <a name="telemetry"></a>Télémétrie
 
-Le SDK d’application Intune pour Android ne contrôle pas la collecte de données à partir de votre application. Par défaut, l’application Portail d’entreprise enregistre des données de télémétrie. Ces données sont envoyées à Microsoft Intune. Conformément à la stratégie Microsoft, nous ne collectons aucune information d’identification personnelle (PII).
+Le SDK d’application Intune pour Android ne contrôle pas la collecte de données à partir de votre application. L’application portail d’entreprise enregistre des données générées par le système par défaut. Ces données sont envoyées à Microsoft Intune. Conformément à Policy de Microsoft, nous ne collectons pas toutes les données personnelles.
 
 > [!NOTE]
 > Si les utilisateurs finaux choisissent de ne pas envoyer ces données, ils doivent désactiver la télémétrie sous Paramètres dans l’application Portail d’entreprise. Pour en savoir plus, consultez [Désactiver la collecte de données d’utilisation Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

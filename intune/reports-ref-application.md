@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 03/19/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39052860cefc562700608beda7f42c4146ccdf34
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d47d7a52a212733955d441b463ef66d89f8d9143
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566027"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358185"
 ---
 # <a name="reference-for-application-entities"></a>Informations de référence sur les entités d’application
 
@@ -44,7 +44,7 @@ L’entité **AppRevision** répertorie toutes les versions des applications.
 | AppKey |Identificateur unique de l’application. |123 |
 | ApplicationId |Identificateur unique de l’application (semblable à AppKey, mais il s’agit d’une clé naturelle) |b66bc706-ffff-7437-0340-032819502773 |
 | Révision |Version mentionnée par l’administrateur durant le chargement du binaire. |2 |
-| Titre |Titre de l’application. |Excel |
+| Title |Titre de l’application. |Excel |
 | Éditeur |Éditeur de l’application. |Microsoft |
 | UploadState |État de chargement de l’application. |1 |
 | AppTypeKey |Référence à AppType décrite dans la section suivante | |
@@ -128,17 +128,5 @@ L’entité **MobileAppInstallState** représente l’état d’installation d�
 | AppInstallState | Valeur d’énumération de l’état d’installation de l’application. |
 | AppInstallStateName | Nom de l’état d’installation de l’application. |
 
-## <a name="mobileappdeviceuserinstallstatus"></a>MobileAppDeviceUserInstallStatus
 
-L’entité **MobileAppDeviceUserInstallStatus** représente l’état d’installation d’une application mobile pour un appareil et un utilisateur.
-
-
-|      Propriété      |                                                         Description                                                         |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|
-|      DateKey       |                                  Clé de la date à laquelle l’état d’installation d’une application a été enregistré.                                  |
-|       AppKey       |                             Clé de l’application mobile utilisée pour identifier une instance AppRevision.                              |
-|     DeviceKey      |                              Clé d’un appareil cible utilisée pour identifier une instance de l’appareil.                               |
-|      UserKey       |                                Clé d’un utilisateur ciblé utilisée pour identifier une instance d’utilisateur.                                 |
-| AppInstallStateKey |                     Clé de l’état d’installation d’une application, utilisée pour identifier une instance de MobileAppInstallState.                     |
-|     Code d'erreur      | Le code d’erreur retourné par le programme d’installation de l’application, la plateforme mobile ou le service lié à l’installation de l’application. |
 

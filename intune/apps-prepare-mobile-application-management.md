@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 03/19/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1e3e510cf1ef7e13e653f7793433045b0610ef
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f3addd79b20c685c5643a2b99fb7120e958cdecb
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565468"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394879"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -80,13 +80,14 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 > [!NOTE]
 > Vous pouvez utiliser l’outil de création de package de restrictions d’application avec Intune autonome ou Intune avec Configuration Manager.
 
-|Composant|Kit SDK d’application|Outil de création de package de restrictions d’application|
+|Fonctionnalité|Kit SDK d’application|Outil de création de package de restrictions d’application|
 |-----------|---------------------|-----------|
 |Afficher le contenu web uniquement dans Managed Browser|X|X|
 |Empêcher les sauvegardes Android, iTunes ou iCloud|X|X|
 |Autoriser l'application à transférer des données vers d'autres applications|X|X|
 |Autoriser l'application à recevoir des données d'autres applications|X|X|
 |Restreindre les opérations Couper, Copier et Coller avec d’autres applications|X|X|
+|Spécifiez le nombre de caractères qui peuvent être coupées ou copiées à partir d’une application gérée|X|X|
 |Demander un code confidentiel simple pour l'accès|X|X|
 |Spécifier le nombre de tentatives avant réinitialisation du code confidentiel|X|X|
 |Autoriser une empreinte digitale à la place du code confidentiel|X|X|
