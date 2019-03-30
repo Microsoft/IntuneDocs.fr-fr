@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: babebc2cbdd13b84d763363c85ab38b9053a9aaa
-ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
-ms.translationtype: HT
+ms.openlocfilehash: 073115d33f9a4f22fe3706ef15860c2a8d8a68ee
+ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58632835"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675491"
 ---
 Ces mentions fournissent important des informations qui peuvent vous aider à préparer pour les fonctionnalités et les futures modifications Intune. 
 
@@ -20,7 +20,7 @@ Ces mentions fournissent important des informations qui peuvent vous aider à pr
 Il existe une modification à venir dans le flux de travail pour l’inscription des appareils iOS via une des méthodes de l’inscription d’Apple appareil d’entreprise - Apple Configurator, Apple Business Manager, Apple School Manager ou le dispositif de programme d’inscription (APPLE), lorsque vous utilisez le programme d’installation Assistant pour l’authentification. Cette modification s’applique uniquement aux appareils inscrits sans affinité utilisateur.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
-Lorsque cette modification est appliquée sur ~~mars~~ avril, les profils d’inscription dans Intune sur le Portail Azure sont mis à jour : il sera ainsi possible de spécifier la façon dont les appareils sont authentifiés et d’indiquer s’ils peuvent recevoir l’application Portail d’entreprise. Il y aura un flux de travail amélioré pour inscrire des appareils iOS via les méthodes répertoriées ci-dessus.
+Lorsque cette modification est appliquée sur ~~mars~~ avril, les profils d’inscription dans Intune sur le Portail Azure sont mis à jour : il sera ainsi possible de spécifier la façon dont les appareils sont authentifiés et d’indiquer s’ils peuvent recevoir l’application Portail d’entreprise. Il y aura un flux de travail amélioré pour inscrire des appareils iOS via les méthodes répertoriées ci-dessus. 
 
 - Lorsque l’inscription de nouveaux appareils et d’authentification avec l’Assistant Configuration, vous serez en mesure de choisir s’il faut déployer automatiquement de l’application portail d’entreprise. Les utilisateurs finaux ne voyez plus l’écran « Identify votre appareil » et l’écran « Confirmez votre appareil » dans la procédure d’inscription.  
 - Sur les appareils déjà inscrits via l’Assistant Configuration via une des méthodes d’inscription des appareils d’entreprise d’Apple, vous devez agir si vous souhaitez activer l’accès conditionnel. Vous devrez configurer une stratégie de configuration d’application avec un fichier xml spécifique pour transmettre le portail d’entreprise à ces appareils. Directions à suivre se trouvent dans le billet de blog sur le lien informations supplémentaires. Si vous choisissez d’envoyer le portail d’entreprise de cette manière, les utilisateurs finaux ne voyez plus l’écran « Identify votre appareil » et l’écran « Confirmez votre appareil » dans la procédure d’inscription. 
@@ -38,7 +38,6 @@ Consultez notre blog de prise en charge sur le lien informations supplémentaire
 
 #### <a name="additional-information"></a>Informations supplémentaires 
 [https://aka.ms/enrollment_setup_assistant](https://aka.ms/enrollment_setup_assistant)
-
 
 ### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Planifier des modifications : mise à jour de l’expérience utilisateur dans l’application Portail d’entreprise Intune pour iOS
 Nous sommes ravis d’annoncer qu’Intune va bientôt publier une mise à jour majeure de l’expérience utilisateur dans l’application iOS Portail d’entreprise. La mise à jour proposera une refonte visuelle de la page d’accueil avec des filtres avancés et un accès plus rapide aux applications et aux livres.
@@ -114,3 +113,4 @@ Vous devrez informer vos utilisateurs finaux et informer votre support technique
 
 #### <a name="additional-information"></a>Informations supplémentaires
 https://aka.ms/Win10EmailProfiles
+
