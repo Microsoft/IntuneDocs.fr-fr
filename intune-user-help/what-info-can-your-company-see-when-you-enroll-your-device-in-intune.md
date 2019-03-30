@@ -18,10 +18,10 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91ea3aab5cd04624bfa036615b8d7710573bcae1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55846976"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quelles informations mon organisation peut-elle voir quand j’inscris mon appareil ?
@@ -43,7 +43,7 @@ Votre organisation ne peut pas voir vos informations personnelles quand vous ins
 - Modèle d’appareil, par exemple Google Pixel
 - Fabricant de l’appareil, par exemple Microsoft
 - Système d’exploitation et sa version, par exemple iOS 12.0.1
-- Noms d’applications, tels que Microsoft Word : sur les appareils personnels, votre organisation peut uniquement voir la liste de vos applications gérées. Sur les appareils de l’entreprise, elle peut voir la liste de toutes vos applications.
+- Noms des applications, tels que Microsoft Word : sur les appareils personnels, votre organisation peut uniquement voir la liste de vos applications gérées. Sur les appareils de l’entreprise, elle peut voir la liste de toutes vos applications.
 - Propriétaire de l’appareil
 - Nom de l'appareil
 - Numéro de série de l’appareil
@@ -52,7 +52,7 @@ Votre organisation ne peut pas voir vos informations personnelles quand vous ins
 **Ce que votre organisation est susceptible de voir :**
 
 -  Numéro de téléphone : pour les appareils appartenant à l’**entreprise**, votre numéro de téléphone complet peut être vu. Pour les appareils **personnels**, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles par votre organisation. Vous pouvez voir le **Type de propriété** pour chaque appareil en ouvrant la page **Détails sur l’appareil** de l’appareil.
-- Espace de stockage sur l’appareil : si vous ne réussissez pas à installer une application obligatoire, votre organisation peut regarder si l’espace de stockage disponible sur votre appareil est insuffisant.  
--  Emplacement : Votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
-- Inventaire des applications : si votre organisation utilise Mobile Threat Defense, elle peut voir plus de détails sur les applications installées sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
-- Informations sur les réseaux Certaines informations sur les connexions réseau des appareils Android peuvent être visibles par l’équipe de support de votre organisation. Par exemple, si votre organisation exige que les appareils restent dans un bâtiment spécifique, votre appareil identifie le réseau auquel il est connecté. 
+- Espace de stockage sur l’appareil : si vous ne réussissez pas à installer une application obligatoire, votre organisation peut regarder si l’espace de stockage disponible sur votre appareil est insuffisant.  
+-  Localisation : votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
+- Inventaire des applications : si votre organisation utilise Mobile Threat Defense, elle peut les détails concernant les applications installées sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Informations sur le réseau : certaines informations sur les connexions réseau des appareils Android peuvent être visibles par l’équipe de support de votre organisation. Par exemple, si votre organisation exige que les appareils restent dans un bâtiment spécifique, votre appareil identifie le réseau auquel il est connecté. 

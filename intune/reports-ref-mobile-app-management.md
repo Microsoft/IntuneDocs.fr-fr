@@ -6,10 +6,11 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a21194b218cc7df230bf1ef1969b8d4483940d75
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 7ea3e2c87055e4f111c8f12c47c468dff2c4e587
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238759"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565687"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Informations de référence sur les entités de gestion des applications mobiles (GAM)
 
@@ -83,12 +84,12 @@ L’entité **MamCheckin** représente les données collectées au moment de l�
 | Propriété | Description | Exemple |
 |---------|------------|--------|
 | DateKey |Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil est enregistré dans l’entrepôt de données. | 20160703 |
-| ApplicationInstanceKey |Clé de l’instance d’application associée à l’enregistrement de cette application MAM. |5/2/1900 12:00:00 AM |
-| UserKey |Clé de l’utilisateur associée à l’enregistrement de cette application MAM. |1/12/1900 12:00:00 AM |
-| ApplicationKey |Clé de l’application MAM enregistrée. |1/10/1900 12:00:00 AM |
-| DeviceHealthKey |Clé de DeviceHealth associée à l’enregistrement de cette application MAM. |1/2/1900 12:00:00 AM |
-| PlatformKey |Représente la plateforme de l’appareil associé à l’enregistrement de cette application MAM. |1/1/1900 12:00:00 AM |
-| EffectiveAppliedPolicyKey |Représente la stratégie appliquée actuelle qui est associée à l’application GAM enregistrée. Une stratégie appliquée actuelle est le résultat de la fusion de toutes les stratégies relatives à une application et à un utilisateur particuliers. |5/2/1900 12:00:00 AM |
+| ApplicationInstanceKey |Clé de l’instance d’application associée à l’enregistrement de cette application MAM. | 123 |
+| UserKey |Clé de l’utilisateur associée à l’enregistrement de cette application MAM. | 4323 |
+| ApplicationKey |Clé de l’application MAM enregistrée. |234 |
+| DeviceHealthKey |Clé de DeviceHealth associée à l’enregistrement de cette application MAM. | 321 |
+| PlatformKey |Représente la plateforme de l’appareil associé à l’enregistrement de cette application MAM. |123 |
+| EffectiveAppliedPolicyKey |Représente la stratégie appliquée actuelle qui est associée à l’application GAM enregistrée. Une stratégie appliquée actuelle est le résultat de la fusion de toutes les stratégies relatives à une application et à un utilisateur particuliers. | 322 |
 | LastCheckInDate |Date et heure du dernier enregistrement de cette application GAM. La valeur peut être Null. |11/23/2016 12:00:00 AM |
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
@@ -97,8 +98,8 @@ L’entité **MamDeviceHealth** représente les appareils sur lesquels des strat
 
 | Propriété | Description | Exemple |
 |---------|------------|--------|
-| DeviceHealthKey |Identificateur unique de l’appareil et de son état d’intégrité associé dans l’entrepôt de données (clé de substitution). |1/1/1900 12:00:00 AM |
-| DeviceHealth |Identificateur unique de l’appareil et de son état d’intégrité associé (semblable à DeviceHealthKey, mais l’identificateur est une clé naturelle). |1/1/1900 12:00:00 AM |
+| DeviceHealthKey |Identificateur unique de l’appareil et de son état d’intégrité associé dans l’entrepôt de données (clé de substitution). |123 |
+| DeviceHealth |Identificateur unique de l’appareil et de son état d’intégrité associé (semblable à DeviceHealthKey, mais l’identificateur est une clé naturelle). |b66bc706-ffff-7777-0340-032819502773 |
 | DeviceHealthName |Représente l’état de l’appareil. <br>Non disponible : aucune information n’est disponible sur cet appareil. <br>Sain : appareil non jailbreaké. <br>Défectueux : appareil jailbreaké. |Non disponible Sain Défectueux |
 | RowLastModifiedDateTimeUtc |Date et heure UTC de la dernière modification de l’intégrité de cet appareil MAM spécifique dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
 

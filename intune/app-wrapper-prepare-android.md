@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2018
-ms.topic: conceptual
+ms.date: 03/11/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b554bd4eb6aa5e49354501e69326b6eeb11098ef
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236960"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566044"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -30,7 +31,6 @@ ms.locfileid: "57236960"
 Utilisez l’outil de création de package de restrictions d’application Microsoft Intune pour Android pour changer le comportement de vos applications Android internes en limitant les fonctionnalités de l’application sans modifier le code de l’application proprement dit.
 
 L’outil est une application en ligne de commande Windows qui s’exécute dans PowerShell et crée un wrapper autour de votre application Android. Une fois l’application encapsulée, vous pouvez modifier sa fonctionnalité en configurant des [stratégies de gestion des applications mobiles](app-protection-policies.md) dans Intune.
-
 
 Avant d’exécuter l’outil, passez en revue les [considérations en matière de sécurité pour l’exécution de l’outil de création de package de restrictions d’application](#security-considerations-for-running-the-app-wrapping-tool). Pour télécharger l’outil, accédez à la page [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) (Outil de création de package de restrictions d’application Microsoft Intune pour Android) sur GitHub.
 
@@ -53,10 +53,12 @@ Avant d’exécuter l’outil, passez en revue les [considérations en matière 
 
 - Android nécessite que tous les packages d’application (.apk) soient signés. Pour obtenir de l’aide sur la**réutilisation** de certificats existants et sur les certificats de signature en général, consultez [Réutilisation de certificats de signature et inclusion d’applications dans un wrapper](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). L’exécutable Java keytool.exe permet de générer de **nouvelles** informations d’identification nécessaires pour signer l’application de sortie incluse dans un wrapper. Tous les mots de passe définis doivent être sécurisés, mais notez-les car ils sont nécessaires pour exécuter l’outil de création de package de restrictions d’application.
 
-> [!NOTE]
-> Intune App Wrapping Tool ne prend pas en charge les schémas de signature d’applications de la v2 et de la v3 à venir. Une fois le fichier .apk inclus dans un wrapper à l’aide d’Intune App Wrapping Tool, il est recommandé d’utiliser [l’outil apksigner fourni par Google]( https://developer.android.com/studio/command-line/apksigner). Ainsi, lorsque l’application arrive sur les appareils des utilisateurs finaux, elle peut être lancée correctement selon les standards Android. 
+    > [!NOTE]
+    > Intune App Wrapping Tool ne prend pas en charge les schémas de signature d’applications de la v2 et de la v3 à venir. Une fois le fichier .apk inclus dans un wrapper à l’aide d’Intune App Wrapping Tool, il est recommandé d’utiliser [l’outil apksigner fourni par Google]( https://developer.android.com/studio/command-line/apksigner). Ainsi, lorsque l’application arrive sur les appareils des utilisateurs finaux, elle peut être lancée correctement selon les standards Android. 
 
-- (Facultatif) Activez Multidex dans l’application d’entrée. Parfois, une application peut atteindre la limite de taille du fichier exécutable Dalvik (DEX) à cause des classes du SDK Intune MAM ajoutées pendant le wrapping. Les fichiers DEX font partie de la compilation d’une application Android. Dans ce scénario, une bonne pratique consiste à activer Multidex au sein de l’application elle-même. Dans certaines organisations, il peut être nécessaire de contacter la personne compile l’application (c’est-à-dire l’équipe de génération des applications). 
+- Parfois, une application peut atteindre la limite de taille du fichier exécutable Dalvik (DEX) à cause des classes du Kit de développement logiciel (SDK) de gestion des applications mobiles Intune ajoutées pendant l’habillage. (en option) Les fichiers DEX font partie de la compilation d’une application Android. Intune App Wrapping Tool gère automatiquement le dépassement de capacité de fichier DEX pendant le wrapping d’applications avec une API min niveau 21 ou version ultérieure (comme de [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Pour les applications avec une niveau d’API de < 21 min, meilleure pratique serait pour augmenter le nombre minimal de niveau d’API à l’aide du wrapper `-UseMinAPILevelForNativeMultiDex` indicateur. Pour les clients est impossible d’augmenter le niveau d’API minimal de l’application, les solutions de contournement de dépassement de capacité DEX suivantes sont disponibles. Dans certaines organisations, il peut être nécessaire de contacter la personne en charge de compiler l’application (c’est-à-dire l’équipe de génération des applications) :
+* Utiliser ProGuard pour éliminer les références de classe inutilisé à partir du fichier DEX principal de l’application.
+* Pour les clients utilisant v3.1.0 ou ultérieure du plug-in Gradle Android, désactivez le [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>installer l'outil de création de package de restrictions d'application
 
@@ -64,7 +66,7 @@ Avant d’exécuter l’outil, passez en revue les [considérations en matière 
 
 2.  Acceptez le contrat de licence, puis terminez l’installation.
 
-Notez le dossier dans lequel vous avez installé l'outil. L'emplacement par défaut est : C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Notez le dossier dans lequel vous avez installé l'outil. L’emplacement par défaut est : C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>exécuter l'outil de création de package de restrictions d'application
 
@@ -92,7 +94,8 @@ Notez le dossier dans lequel vous avez installé l'outil. L'emplacement par déf
 |**-KeyStorePassword**&lt;SecureString&gt;|Mot de passe utilisé pour déchiffrer le magasin de clés. Android requiert la signature de tous les packages d’applications (.apk). Recourez à l’utilitaire Java keytool pour générer le mot de passe du magasin de clés (KeyStorePassword). Vous pouvez en savoir plus sur le [magasin de clés](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) Java ici.| |
 |**-KeyAlias**&lt;String&gt;|Nom de la clé à utiliser pour la signature.| |
 |**-KeyPassword**&lt;SecureString&gt;|Mot de passe utilisé pour déchiffrer la clé privée qui sera utilisée pour la signature.| |
-|**-SigAlg**&lt;SecureString&gt;| (Facultatif) Nom de l’algorithme de signature à utiliser pour la signature. L’algorithme doit être compatible avec la clé privée.|Exemples : SHA256withRSA, SHA1withRSA|
+|**-SigAlg**&lt;SecureString&gt;| (Facultatif) Nom de l’algorithme de signature à utiliser pour la signature. L’algorithme doit être compatible avec la clé privée.|Exemples : SHA256withRSA, SHA1withRSA|
+|**-UseMinAPILevelForNativeMultiDex**| (Facultatif) Utilisez cet indicateur pour augmenter le niveau d’API minimal de l’application Android source sur 21. Cet indicateur vous invite à confirmer l’opération car il limite qui peut installer cette application. Les utilisateurs peuvent ignorer la boîte de dialogue de confirmation en ajoutant le paramètre «-confirmer : $false » à leur commande PowerShell. L’indicateur doit être utilisé uniquement par les clients sur les applications avec < 21 min API qui ne parviennent pas à inclure dans un wrapper avec succès en raison d’erreurs de dépassement de capacité DEX. | |
 | **&lt;CommonParameters&gt;** | (Facultatif) La commande prend en charge les paramètres PowerShell communs tels que verbose et debug. |
 
 

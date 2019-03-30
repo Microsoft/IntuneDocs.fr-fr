@@ -6,22 +6,23 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28f5b7a37e1ed21c4680a57098bdd0a43a79346
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: af0c544540798a52dc018c749909da6cea50df6c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238402"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566673"
 ---
 # <a name="reference-for-policy-entities"></a>Informations de référence sur les entités de stratégie
 
@@ -59,7 +60,7 @@ L’entité **PolicyType** répertorie les types de profils de configuration d�
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
-L’entité **DeviceConfigurationProfileDeviceActivity** répertorie le nombre d’appareils, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un appareil sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si deux profils sont affectés à un appareil, l’un dans un état de réussite et l’autre dans un état d’erreur, l’entité incrémente le compteur de réussite et affecte à l’appareil un état d’erreur. L’entité répertorie le nombre d’appareils dans chaque état pour un jour donné au cours des 30 derniers jours.
+L’entité **DeviceConfigurationProfileDeviceActivity** répertorie le nombre **d’appareils** dans un état de réussite, d’attente, d’échec ou d’erreur, par jour. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un **appareil** sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si deux profils sont affectés à un appareil, l’un dans un état de réussite et l’autre dans un état d’erreur, l’entité incrémente le compteur de réussite et affecte à l’appareil un état d’erreur. L’entité répertorie le nombre d’appareils dans chaque état pour un jour donné au cours des 30 derniers jours.
 
 | Propriété  | Description | Exemple |
 |---------|------------|--------|
@@ -69,9 +70,7 @@ L’entité **DeviceConfigurationProfileDeviceActivity** répertorie le nombre d
 | Erreur |Nombre d’appareils uniques en état d’erreur. |10 |
 | Failed |Nombre d’appareils uniques en état d’échec. |2 |
 
-
-
-L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d’utilisateurs, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un utilisateur sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si un utilisateur a deux profils affectés, l’un dans un état de réussite et l’autre dans un état d’erreur, l’utilisateur dans l’état d’erreur est pris en compte.  L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d’utilisateurs dans chaque état pour un jour donné au cours des 30 derniers jours.
+L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre **d’utilisateurs** dans un état de réussite, d’attente, d’échec ou d’erreur, par jour. Le nombre reflète les profils de configuration d’appareil affectés à l’entité. Par exemple, si toutes les stratégies affectées à un **utilisateur** sont dans un état de réussite, le compteur de réussite augmente d’une unité pour ce jour-là. Si un utilisateur a deux profils affectés, l’un dans un état de réussite et l’autre dans un état d’erreur, l’utilisateur dans l’état d’erreur est pris en compte.  L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d’utilisateurs dans chaque état pour un jour donné au cours des 30 derniers jours.
 
 | Propriété  | Description | Exemple |
 |---------|------------|--------|

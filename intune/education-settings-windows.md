@@ -6,9 +6,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 ms.reviewer: heenamac
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32c15037bad21ca90f81ed239ac24a9bac8d7499
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 206bc3276f3c175fe61852f235c722b835ad60b4
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228321"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57564854"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Configurer l’application Take a Test sur les appareils Windows 10 à l’aide d’Intune
 
@@ -37,18 +38,18 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil, puis a
 
 ## <a name="take-a-test-settings"></a>Paramètres Take a Test
 
-- **Type de compte** : Choisissez la façon dont les utilisateurs se connectent au test. Les options disponibles sont les suivantes :
+- **Type de compte**: choisissez la façon dont les utilisateurs se connecter au test. Les options disponibles sont les suivantes :
   - Compte Azure AD
   - Compte de domaine
   - Compte local
-- **Nom d’utilisateur du compte** : Entrez le nom d’utilisateur du compte utilisé avec l’application Take a Test. Vous pouvez entrer des comptes au format suivant :
+- **Nom d’utilisateur du compte** : entrez le nom d’utilisateur du compte utilisé avec l’application Take a Test. Vous pouvez entrer des comptes au format suivant :
   - `user@contoso.com`
   - `domain\username`
   - `user@contoso.com`
   - `computerName\username`
-- **URL d’évaluation** : Entrez l’URL du test que les utilisateurs doivent effectuer. Pour plus d’informations sur l’obtention de l’URL, consultez la [documentation Take a Test](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
-- **Surveillance de l’écran** : Choisissez **Autoriser** pour surveiller l’activité de l’écran pendant que les utilisateurs effectuent un test. L’option **Non configuré** vous empêche de surveiller l’écran pendant le test.
-- **Suggestion de texte** : Choisissez **Autoriser** pour que les personnes répondant au test puissent afficher des suggestions de texte. L’option **Non configuré** bloque les suggestions de texte pendant que les utilisateurs effectuent un test.
+- **URL de l’évaluation** : entrez l’URL du test que les utilisateurs doivent effectuer. Pour plus d’informations sur l’obtention de l’URL, consultez la [documentation Take a Test](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Surveillance de l’écran** : choisissez **Autoriser** pour surveiller l’activité de l’écran pendant que les utilisateurs effectuent un test. L’option **Non configuré** vous empêche de surveiller l’écran pendant le test.
+- **Suggestion de texte** : choisissez **Autoriser** pour que les personnes répondant au test puissent afficher des suggestions de texte. L’option **Non configuré** bloque les suggestions de texte pendant que les utilisateurs effectuent un test.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

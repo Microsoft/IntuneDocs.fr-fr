@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38087afa95dc5933b55e6342ad46386cf0185f42
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: c2a8c234c305744c48785763c87913c2635276ad
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228967"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565602"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Paramètres d’appareil Windows 10 (et versions ultérieures) pour mettre à niveau les éditions ou activer le mode S dans Intune
 
@@ -37,15 +38,15 @@ Pour plus d’informations sur cette fonctionnalité, consultez [Mettre à nivea
 
 ## <a name="edition-upgrade"></a>Mise à niveau d’édition
 
-- **Édition vers laquelle mettre à niveau** : Sélectionnez l’édition de Windows 10 vers laquelle vous effectuez la mise à niveau. Les appareils ciblés par cette stratégie sont mis à niveau vers l’édition de votre choix.
-- **Clé de produit** : Entrez la clé de produit fournie par Microsoft. Une fois que vous avez créé la stratégie basée sur la clé de produit, la clé ne peut plus être mise à jour et est masquée pour des raisons de sécurité. Pour changer la clé de produit, retapez-la en entier.
-- **Fichier de licence** : Pour **Windows 10 Holographic for Business** ou **Windows 10 Mobile**, choisissez **Parcourir** afin de sélectionner le fichier de licence fourni par Microsoft. Ce fichier de licence contient des informations de licence pour les éditions vers lesquelles vous mettez à niveau les appareils.
+- **Édition vers laquelle la mise à niveau est effectuée** : sélectionnez l’édition de Windows 10 vers laquelle vous effectuez la mise à niveau. Les appareils ciblés par cette stratégie sont mis à niveau vers l’édition de votre choix.
+- **Clé de produit** : entrez la clé de produit fournie par Microsoft. Une fois que vous avez créé la stratégie basée sur la clé de produit, la clé ne peut plus être mise à jour et est masquée pour des raisons de sécurité. Pour changer la clé de produit, retapez-la en entier.
+- **Fichier de licence** : pour **Windows 10 Holographic for Business** ou **Windows 10 Mobile**, choisissez **Parcourir** afin de sélectionner le fichier de licence fourni par Microsoft. Ce fichier de licence contient des informations de licence pour les éditions vers lesquelles vous mettez à niveau les appareils.
 
 ## <a name="mode-switch"></a>Commutateur de mode
 
-- **Aucune configuration** : Un appareil en mode S reste en mode S. Un utilisateur final peut sortir l’appareil du mode S.
-- **Rester en mode S** : Empêche l’utilisateur final de sortir l’appareil du mode S.
-- **Changer** : Permet de sortir l’appareil du mode S.
+- **Aucune configuration** : un appareil en mode S reste en mode S. Un utilisateur final peut sortir l’appareil du mode S.
+- **Rester en mode S** : empêche l’utilisateur final de sortir l’appareil du mode S.
+- **Changer** : permet de sortir l’appareil du mode S.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

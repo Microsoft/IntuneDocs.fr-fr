@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/10/2019
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c43b27a07aa5eafc19ce1528bbfe34c1a6dbb1d
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 0e57d197cadf2ba6586aa39fdc5dbb9cddba554c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839465"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566571"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtenir des données à partir de l’API d’entrepôt de données Intune avec un client REST
 
@@ -99,7 +100,7 @@ Vous avez également besoin du point de terminaison. Pour obtenir votre point de
 3. Sélectionnez **Configurer l’entrepôt de données Intune** sous **Autres tâches**.
 4. Copiez l’URL de flux personnalisée sous **Utiliser des services de rapports tiers**. Elle doit ressembler à ceci : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 
-Le point de terminaison suit le format suivant : `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
+Le point de terminaison suit le format suivant : `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
 Par exemple, l’entité **dates** ressemble à : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 
@@ -164,7 +165,7 @@ L’exemple suivant contient un client REST simple. Le code utilise la classe **
 
     ![Progam.cs et l’Explorateur de solutions dans Visual Studio](./media/reports-get_rest_data_in.png)
 
-8. Remplacez le code dans Program.cs par le code suivant :  
+8. Remplacez le code dans *Program.cs* par le code suivant :  
    ```csharp
    namespace IntuneDataWarehouseSamples
    {

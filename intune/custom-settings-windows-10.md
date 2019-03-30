@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/24/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86c822ba197851fe7e05d91ff8aa703fb9fe3811
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 44be460ee910818d52179da55151d1bceeb8b306
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842779"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565908"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows 10 dans Intune
 
@@ -44,14 +45,14 @@ Cet article :
 3. entrez les paramètres suivants :
 
     - **Nom** : entrez un nom pour le profil, par exemple `windows 10 custom profile`.
-    - **Description** : Entrez la description du profil.
-    - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
+    - **Description :** entrez une description pour le profil.
+    - **Plateforme** : choisissez **Windows 10 et ultérieur**.
     - **Type de profil** : choisissez **Personnalisé**.
 
 4. Dans **Paramètres OMA-URI personnalisés**, sélectionnez **Ajouter**. entrez les paramètres suivants :
 
-    - **Nom** : Affectez un nom unique au paramètre OMA-URI pour vous aider à l'identifier dans la liste des paramètres.
-    - **Description** : entrez une description qui présente le paramètre et tout autre détail important.
+    - **Nom** : entrez un nom unique pour paramètre OMA-URI, qui vous permette de l’identifier dans la liste des paramètres.
+    - **Description** : entrez une description qui donne une vue d’ensemble du paramètre et tout autre détail important.
     - **OMA-URI (sensible à la casse)**  : entrez l’identificateur OMA-URI à utiliser comme paramètre.
     - **Type de données** : choisissez le type de données que vous allez utiliser pour ce paramètre OMA-URI. Les options disponibles sont les suivantes :
 
@@ -82,7 +83,7 @@ La liste complète de tous les fournisseurs de services de configuration pris en
 
 Les paramètres ne sont pas tous compatibles avec toutes les versions de Windows 10. [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) vous indique quelles versions sont prises en charge pour chaque fournisseur de services de configuration.
 
-De plus, Intune ne prend pas en charge tous les paramètres listés dans les [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pour savoir si Intune prend en charge le paramètre de votre choix, ouvrez l’article relatif à ce paramètre. Chaque page de paramètre indique ses opérations prises en charge. Pour fonctionner avec Intune, le paramètre doit prendre en charge les opérations **Ajouter** ou **Remplacer**.
+De plus, Intune ne prend pas en charge tous les paramètres listés dans les [Informations de référence sur les fournisseurs de services de configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pour savoir si Intune prend en charge le paramètre de votre choix, ouvrez l’article relatif à ce paramètre. Chaque page de paramètre indique ses opérations prises en charge. Pour fonctionner avec Intune, le paramètre doit prendre en charge les opérations **Ajouter**, **Remplacer** et **Get**. Si la valeur retournée par la **obtenir** opération ne correspond pas à la valeur fournie par le **ajouter** ou **remplacer** operations, puis Intune signale une erreur de conformité.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

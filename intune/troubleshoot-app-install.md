@@ -6,28 +6,29 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
-ms.topic: article
+ms.date: 02/19/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65391ca620892dcd3b95719454dabc30eb35cb6f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 5a5e000a973932db0bbaa215ea94976219ff905c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839378"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57577844"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
 Sur les appareils gérés par MDM Microsoft Intune, les installations d’applications peuvent parfois échouer. Quand ces installations d’applications échouent, il peut être difficile de comprendre la raison de l’échec ou de résoudre le problème. Microsoft Intune fournit des détails sur l’échec de l’installation d’applications qui permettent aux opérateurs du support technique et aux administrateurs Intune d’afficher des informations sur l’application pour répondre aux demandes d’assistance des utilisateurs. Le volet de résolution des problèmes dans Intune fournit des détails sur l’échec, notamment des détails sur les applications managées sur l’appareil d’un utilisateur. Des informations détaillées sur le cycle de vie de bout en bout d’une application sont fournies sous chaque appareil individuel dans le volet **Applications managées**. Vous pouvez afficher les problèmes d’installation, par exemple quand l’application a été créée, modifiée, ciblée et remise à un appareil. 
 
-## <a name="to-review-app-troubleshooting-details"></a>Pour examiner les informations de résolution des problèmes d’une application
+## <a name="app-troubleshooting-details"></a>Détails de résolution des problèmes d’application
 
 Intune fournit des informations de résolution des problèmes d’une application en fonction des applications installées sur l’appareil d’un utilisateur spécifique.
 
@@ -52,6 +53,47 @@ Les détails de l’erreur d’installation de l’application indiquent le prob
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
+## <a name="win32-app-installation-troubleshooting"></a>Dépannage de l’installation application Win32
+
+Sélectionnez l’application Win32 qui a été déployée à l’aide de l’extension de gestion Intune. Vous pouvez sélectionner le **collecter les journaux** option en cas d’échec de l’installation de votre application Win32. 
+
+> [!IMPORTANT]
+> Le **collecter les journaux** option ne sera pas activée lorsque l’application Win32 a été installée correctement sur l’appareil.<p>Avant de pouvoir collecter des informations du journal application Win32, l’extension de gestion Intune doit être installée sur le client Windows. L’extension de gestion Intune est installée lorsqu’un script PowerShell ou une application Win32 est déployé dans un groupe de sécurité d’utilisateurs ou d’appareils. Pour plus d’informations, consultez [extension de gestion Intune - conditions préalables](intune-management-extension.md#prerequisites).
+
+### <a name="collect-log-file"></a>Collecter le fichier journal
+
+Pour collecter vos journaux d’installation application Win32, tout d’abord suivre les étapes fournies dans la section [application dépannage détails](troubleshoot-app-install.md#app-troubleshooting-details). Ensuite, passez aux étapes suivantes :
+
+1. Cliquez sur le **collecter les journaux** option sur le **détails de l’Installation** panneau.
+
+    <image alt="Win32 app installation details - Collect log option" src="media/troubleshoot-app-install-04.png" width="500" />
+
+2. Fournir des chemins d’accès du fichier journal des noms de fichiers pour le processus de collecte du fichier journal et cliquez sur **OK**.
+    
+    > [!NOTE]
+    > Collecte de journaux prendra moins de deux heures. Types de fichier pris en charge : *.log, .txt, .dmp, .cab, .zip, .xml, .evtx et .evtl*. Un maximum de 25 chemins d’accès de fichier sont autorisées.
+
+3. Une fois les fichiers journaux ont été collectés, vous pouvez sélectionner le **journaux** lien pour télécharger les fichiers journaux.
+
+    <image alt="Win32 app log details - Download logs" src="media/troubleshoot-app-install-05.png" width="500" />
+
+    > [!NOTE]
+    > Une notification s’affichera indiquant la réussite de la collecte de journaux d’application.
+
+#### <a name="win32-log-collection-requirements"></a>Exigences de collection de journal de Win32
+
+Il existe des exigences spécifiques qui doivent être remplies pour collecter des fichiers journaux :
+
+- Vous devez spécifier le chemin d’accès du fichier journal complet. 
+- Vous pouvez spécifier des variables d’environnement pour la collecte de journaux, tels que les éléments suivants :<br>
+  *% PROGRAMFILES%, % PROGRAMDATA %VALUE% PUBLIQUE %, % WINDIR%, % TEMP%, %TMP%*
+- Uniquement les extensions de fichier exact sont autorisées, telles que :<br>
+  *.log, .txt, .dmp, .cab, .zip, .xml*
+- Le fichier journal maximale à charger est 60 Mo 25 fichiers ou, selon la première éventualité. 
+- La collecte de journaux d’installation application Win32 est activée pour les applications qui répondent aux requis, disponible et désinstallez l’intention de l’attribution d’application.
+- Journaux stockées sont chiffrées pour protéger les informations d’identification personnelle contenues dans les journaux.
+- Bien que la prise en charge de l’ouverture des tickets pour les échecs d’application Win32, attacher les journaux d’erreur liée à l’aide de la procédure décrite ci-dessus.
+
 ## <a name="app-installation-errors"></a>Erreurs d’installation des applications
 
 Les messages d’erreur et les descriptions ci-dessous fournissent des informations sur les erreurs d’installation iOS et Android. 
@@ -61,7 +103,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 |    Message/Code d’erreur    |    Description    |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    L’installation de l’application a échoué. (0xC7D14FB5)    |    Ce message d’erreur s’affiche quand Intune ne peut pas déterminer la cause de l’erreur d’installation de l’application Android. Android n’a pas fourni d’informations lors de l’échec.       Cette erreur est retournée lorsque le téléchargement du fichier APK a réussi, mais que l’installation de l’application a échoué. Cette erreur se produit le plus souvent lorsqu’un fichier APK endommagé ne peut pas être installé sur l’appareil. Cela peut être dû à Google Play Protect qui bloque l’installation de l’application pour des raisons de sécurité. Il est aussi possible que l’appareil ne prenne pas en charge l’application. Par exemple, si l’application nécessite la version d’API 21+ alors que la version 19 est installée sur l’appareil.         Intune retourne cette erreur pour les appareils DA et Knox. Même si une notification s’affiche et propose à l’utilisateur de cliquer pour réessayer, si le fichier APK est endommagé, l’installation continue d’échouer. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée.        |
-|    L’installation de l’application a été annulée car le fichier d’installation (APK) a été supprimé après le téléchargement, mais avant l’installation. (0xC7D14FBA)    |    Le téléchargement du fichier APK a réussi, mais le fichier a été supprimé de l’appareil avant que l’utilisateur n’ait pu installer l’application. Cela peut se produire lorsqu’une longue période s’est écoulée entre le moment du téléchargement et celui de l’installation. Par exemple, l’utilisateur a peut-être annulé l’installation d’origine, puis a attendu et a cliqué sur la notification pour réessayer.         Ce message d’erreur est retourné uniquement dans les scénarios DA. Dans les scénarios Knox, l’installation peut être effectuée sans assistance. Une notification s’affiche pour proposer à l’utilisateur de réessayer. Il peut ainsi l’accepter au lieu d’annuler. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée.    |
+|    L’installation de l’application a été annulée car le fichier d’installation (APK) a été supprimé après le téléchargement, mais avant l’installation. (0xC7D14FBA)    |    Le téléchargement du fichier APK a réussi, mais le fichier a été supprimé de l’appareil avant que l’utilisateur n’ait pu installer l’application. Cela peut se produire lorsqu’une longue période s’est écoulée entre le moment du téléchargement et celui de l’installation. Par exemple, l’utilisateur a peut-être annulé l’installation d’origine, puis a attendu et cliqué sur la notification pour réessayer.         Ce message d’erreur est retourné uniquement dans les scénarios DA. Dans les scénarios Knox, l’installation peut être effectuée sans assistance. Une notification s’affiche pour proposer à l’utilisateur de réessayer. Il peut ainsi l’accepter au lieu d’annuler. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée.    |
 |    L’installation de l’application a été annulée car le processus a été redémarré pendant l’installation. (0xC7D14FBB)    |    L’appareil a été redémarré pendant le processus d’installation du fichier APK, ce qui a annulé l’installation.        Ce message d’erreur est retourné pour les appareils DA et Knox. Intune affiche une notification proposant à l’utilisateur de cliquer pour réessayer. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée.    |
 |    Application non détectée une fois l’installation terminée. (0x87D1041C)    |    L’utilisateur a explicitement désinstallé l’application. Cette erreur n’est pas retournée par le client. Cette erreur se produit lorsque l’application a été installée, puis désinstallée entre temps par l’utilisateur. Cette erreur se produit uniquement pour les applications obligatoires. Les utilisateurs peuvent désinstaller les applications qui ne sont pas obligatoires. Cette erreur se produit uniquement avec les appareils DA. Les appareils Knox bloquent la désinstallation des applications managées.       La prochaine synchronisation réaffichera la notification sur l’appareil pour que l’utilisateur installe l’application.   L’utilisateur peut ignorer cette notification. Cette erreur continuera d’être signalée tant que l’utilisateur n’aura pas installé l’application.    |
 |    Le téléchargement a échoué en raison d’une erreur inconnue. (0xC7D14FB2)    |    Cette erreur se produit lorsque le téléchargement échoue. Cette erreur se produit souvent en cas de problème avec la connexion Wi-Fi ou de connexion lente.       Cette erreur est retournée uniquement dans les scénarios DA. Dans les scénarios Knox, l’utilisateur n’est pas invité à installer l’application, puisque celle-ci est installée sans assistance. Intune affiche une notification proposant à l’utilisateur de cliquer pour réessayer. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée.    |
@@ -72,18 +114,28 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 
 ### <a name="ios-errors"></a>Erreurs iOS
 
-|    Message/Code d’erreur    |    Description    |
-|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|    (0x87D12906)    |    L’agent MDM d’Apple signale que la commande d’installation a échoué.        |
-|    (0x87D1313C)    |    La connexion réseau a été perdue pendant l’envoi de l’URL mise à jour du service de téléchargement vers l’appareil. Pour être plus précis, le serveur avec le nom d’hôte spécifié n’a pas été trouvé.    |
-|    L’appareil iOS est actuellement occupé. (0x87D11388)    |    L’appareil iOS était occupé, ce qui a entraîné une erreur.    |
-|    L’installation de l’application a échoué. (0x87D13B64)    |    L’installation de l’application a échoué. Les journaux XCODE sont nécessaires pour résoudre cette erreur.    |
-|    L’application est managée, mais elle a expiré ou a été supprimée par l’utilisateur. (0x87D13B66)    |    L’utilisateur a explicitement désinstallé l’application. Il est possible aussi que l’application ait expiré, mais que son téléchargement ait échoué, ou que l’application détectée ne corresponde pas à la réponse de l’appareil.   En outre, cette erreur peut se produire en raison d’un bogue de la plateforme iOS 9.2.2.    |
-|    L’installation de l’application est planifiée, mais un code d’échange est nécessaire pour effectuer la transaction.   (0x87D13B60)    |    Cette erreur se produit généralement avec les applications payantes du Store iOS.     |
-|    Application non détectée une fois l’installation terminée. (0x87D1041C)    |    L’application détectée ne correspond pas à la réponse de l’appareil.    |
-|    L’utilisateur a refusé l’installation de l’application. (0x87D13B62)    |    Lors de la première installation de l’application, l’utilisateur a cliqué sur Annuler.    |
-|    L’utilisateur a refusé la mise à jour de l’application. (0x87D13B63)    |    L’utilisateur final a cliqué sur Annuler pendant le processus de mise à jour.     |
-|    Erreur inconnue   (0x87D103E8)    |    Une erreur inconnue liée à l’installation de l’application s’est produite. C’est l’erreur qui s’affiche lorsqu’une erreur autre que celles connues se produit.    |
+| Message/Code d’erreur | Conseils de description/résolution des problèmes |
+|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| (0x87D12906) | L’agent GPM d’Apple signale que la commande d’installation a échoué. |
+| (0x87D1313C) | La connexion réseau a été perdue pendant l’envoi de l’URL mise à jour du service de téléchargement vers l’appareil. Pour être plus précis, aucun serveur portant le nom d’hôte spécifié n’a été trouvé. |
+| L’appareil iOS est actuellement occupé. (0x87D11388) | L’appareil iOS était occupé, ce qui a entraîné une erreur. |
+| L’installation de l’application a échoué. (0x87D13B64) | Échec de l’installation de l’application. Les journaux XCODE sont nécessaires pour résoudre cette erreur. |
+| L’application est managée, mais elle a expiré ou a été supprimée par l’utilisateur. (0x87D13B66) | L’utilisateur a explicitement désinstallé l’application. Il est possible aussi que l’application ait expiré, mais que son téléchargement ait échoué, ou que l’application détectée ne corresponde pas à la réponse de l’appareil.   En outre, cette erreur peut se produire en raison d’un bogue de la plateforme iOS 9.2.2. |
+| L’installation de l’application est planifiée, mais un code d’échange est nécessaire pour effectuer la transaction. (0x87D13B60) | Cette erreur se produit généralement avec les applications payantes de l’App Store iOS. |
+| L’application n’a pas été détectée une fois l’installation terminée.   (0x87D1041C) | L’application détectée ne correspond pas à la réponse de l’appareil. |
+| L’utilisateur a refusé l’installation de l’application. (0x87D13B62) | Lors de la première installation de l’application, l’utilisateur a cliqué sur Annuler. |
+| L’utilisateur a refusé la mise à jour de l’application. (0x87D13B63) | L’utilisateur final a cliqué sur Annuler pendant le processus de mise à jour. |
+| Erreur inconnue (0x87D103E8) | Une erreur inconnue liée à l’installation de l’application s’est produite. Cette erreur s’affiche lorsqu’une erreur autre que celles connues se produit. |
+| Peut installer uniquement les applications VPP sur iPad partagé (-2016330861). | Les applications doivent être obtenues à l’aide du programme d’achat en Volume Apple pour installer sur un iPad partagé. |
+| Ne peut pas installer des applications lors de l’App Store est désactivé (-2016330860).  | L’application Store doit être activé pour l’utilisateur à installer l’application. |
+| Impossible de trouver les licences VPP pour l’application (-2016330859).  | Essayez de révoquer et en réaffectant la licence d’application. |
+| Impossible d’installer des applications système auprès de votre fournisseur de gestion des appareils mobiles (-2016330858). | Installation d’applications qui sont préinstallées par le système d’exploitation iOS n’est pas un scénario pris en charge. |
+| Ne peut pas installer des applications lors de l’appareil est en Mode perdu (-2016330857). | Toutes les utilisations de l’appareil sont bloquée en Mode perdu.   Désactiver le Mode perdu pour installer des applications. |
+| Ne peut pas installer des applications lors de l’appareil est en mode plein écran (-2016330856). | Essayez d’ajouter cet appareil à un groupe d’exclusion de stratégie de configuration du mode plein écran pour installer des applications. |
+| Impossible d’installer des applications 32 bits sur cet appareil (-2016330852). | L’appareil ne prend pas en charge l’installation des applications 32 bits. Essayez de déployer la version 64 bits de l’application. |
+| Utilisateur doit se connecter pour le Store de l’application (-2016330855). | L’utilisateur doit se connecter à l’App Store avant de l’application peut être installée. |
+| Problème inconnu. Veuillez recommencez (-2016330854). | Installation de l’application a échoué en raison d’une raison inconnue.   Réessayez plus tard. |
+| Échec de l’installation de l’application. Intune va tenter de la prochaine fois que le périphérique se synchronise (-2016330853). | Installation de l’application a rencontré une erreur de périphérique. Synchroniser l’appareil pour essayer à nouveau d’installer l’application. |
 
 ### <a name="other-installation-errors"></a>Autres erreurs d’installation
 

@@ -6,10 +6,11 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2010
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
@@ -17,18 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e10549e05f814975337831e3eb9821d87a3f43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565636"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Journal des modifications pour l’API de l’entrepôt de données Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Suivez les mises à jour de l’entrepôt de données Intune.
+
+## <a name="1902"></a>1902 
+_Date de publication : février 2019_
+
+### <a name="power-bi-compliance-app"></a>Application de la conformité de Power BI 
+
+Accéder à votre entrepôt de données Intune à l’aide de Power BI en ligne le [conformité Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) application. Avec cette application Power BI, vous pouvez maintenant accéder à et partager des rapports créés au préalable, sans configuration et sans quitter votre navigateur web. 
+
+> [!NOTE]
+> Il existe deux filtres supplémentaires, que vous pouvez appliquer à l’application de conformité Intune.
+
+#### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Ajouter des filtres supplémentaires pour l’application de conformité Intune
+1. Ouvrez le [conformité Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) application dans vos navigateurs web.
+2. Cliquez sur **les appareils Non conformes** et sélectionnez **Non conforme** dans le **complianceStatus** filtre. 
+3. Cliquez sur **périphériques inconnus** et sélectionnez **pas encore disponible** dans le **complianceStatus** filtre. 
 
 ## <a name="1812"></a>1812 
 _Publication : décembre 2018_
@@ -60,11 +76,11 @@ Un correctif a été apporté à la collection **Appareils** qui est susceptible
 ## <a name="1801"></a>1801
 _Publiée en janvier 2018_
 
-### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Authentification des applications uniquement auprès de l’entrepôt de données Intune <!-- 1867540 -->
+### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Authentification Intune Data Warehouse des applications uniquement <!-- 1867540 -->
 
 Vous pouvez configurer une application avec Azure Active Directory (Azure AD) et l’authentifier auprès d’Intune Data Warehouse. Pour plus d’informations, consultez [Authentification des applications uniquement auprès de l’entrepôt de données Intune](data-warehouse-app-only-auth.md).
 
-### <a name="azure-ad-and-intune-credential-requirements----2077525---"></a>Exigences liées aux informations d’identification Azure AD et Intune<!-- 2077525 -->
+### <a name="azure-ad-and-intune-credential-requirements----2077525---"></a>Exigences liées aux informations d’identification Azure AD et Intune <!-- 2077525 -->
 
 - Il n’est plus nécessaire d’affecter une licence Intune à l’utilisateur pour accéder à l’entrepôt de données Intune (notamment à l’API).
 - Le nom du rôle Intune a été changé de **Rapports** en **Entrepôt de données Intune**. 
@@ -83,7 +99,7 @@ Vous pouvez utiliser <code>$select</code> comme paramètre de requête OData. La
 ## <a name="1710"></a>1710
 _Publication : novembre 2017_
 
-### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>Nouvelle collection d’entités, nommée Utilisateur actuel, limitée aux données des utilisateurs actuellement actifs<!-- 1544273 -->
+### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>Une nouvelle collection d’entités nommée Utilisateur actuel se limite aux données des utilisateurs actuellement actifs <!-- 1544273 -->
 
 La collecte d’entités **User** répertorie tous les utilisateurs Azure Active Directory (Azure AD) auxquels des licences ont été attribuées dans votre entreprise. Parmi ces enregistrements figurent les états utilisateurs de la période de collecte de données, même si l’utilisateur a été supprimé. Il est possible, par exemple, qu’un utilisateur soit ajouté à Intune, puis supprimé au cours du mois précédent. Cet utilisateur n’est pas présent au moment du rapport, mais lui et l’état apparaissent quand même dans les données. Vous pourriez créer un rapport qui afficherait la durée de la présence passée de l’utilisateur dans vos données.
 
@@ -92,7 +108,7 @@ En revanche, la nouvelle collection d’entités **Utilisateur actuel** contient
 ## <a name="1709"></a>1709
 _Publication : octobre 2017_
 
-### <a name="user-device-association-entity-collection-added-to-intune-data-warehouse-data-model----1187917---"></a>Collection d’entités Association appareil-utilisateur ajoutée au modèle de données de l’entrepôt de données Intune<!-- 1187917 -->
+### <a name="user-device-association-entity-collection-added-to-intune-data-warehouse-data-model----1187917---"></a>Collection d’entités d’association appareil-utilisateur ajoutée au modèle de données de l’entrepôt de données Intune <!-- 1187917 -->
 
 Vous pouvez désormais générer des rapports et des visualisations des données en utilisant les informations d’association appareil-utilisateur qui associent les collections d’entité utilisateur et appareil. Le modèle de données est accessible par le biais du fichier Power BI (PBIX) extrait de la page Intune Data Warehouse, via le point de terminaison OData, ou en développant un client personnalisé. Pour plus d’informations, consultez la page [Association appareil-utilisateur](reports-ref-user-device.md).
 

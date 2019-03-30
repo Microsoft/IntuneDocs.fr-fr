@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ROBOTS: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90c92eb7ea08fbe89464911c9f1eb5c6aea452db
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 6d1f790aeedff1e13ecc220ed7a6d8f311e12585
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237501"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460510"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
@@ -49,25 +50,25 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 
 5. Sous **Appareils**, recherchez l’appareil qui rencontre un problème. Examinez les différentes colonnes :
 
-    - **Géré** : pour permettre à un appareil de recevoir des stratégies de conformité ou de configuration, cette propriété doit indiquer **MDM** ou **EAS/MDM**.
+    - **Managé** : pour permettre à un appareil de recevoir des stratégies de conformité ou de configuration, cette propriété doit indiquer **GPM** ou **EAS/GPM**.
 
       - Si **Géré** n’est pas défini sur **MDM** ou **EAS/MDM**, l’appareil n’est pas inscrit. Il ne reçoit pas les stratégies de conformité ou de configuration tant qu’il n’est pas inscrit.
 
       - Les stratégies de protection des applications (gestion des applications mobiles) n’exigent pas l’inscription des appareils. Pour plus d’informations, consultez [Créer et affecter des stratégies de protection des applications](app-protection-policies.md).
 
-    - **Type de jonction à Azure AD** : doit être défini sur **Espace de travail** ou **AzureAD**.
+    - **Type de jointure de Azure AD**: doit être définie sur **Workplace** ou **AzureAD**.
  
       - Si cette colonne indique **Non inscrit**, il y a peut-être un problème d’inscription. En règle générale, le fait de désinscrire et de réinscrire l’appareil suffit à résoudre cet état.
 
-    - **Conforme Intune** : doit avoir la valeur **Oui**. Si la valeur **Non** est indiquée, il se peut qu’il existe un problème au niveau des stratégies de conformité, ou l’appareil ne se connecte pas au service Intune. Par exemple, l’appareil est peut-être éteint ou ne dispose pas de connexion réseau. L’appareil finit par devenir non conforme après 30 jours, vraisemblablement.
+    - **Intune conforme**: doit être **Oui**. Si la valeur **Non** est indiquée, il se peut qu’il existe un problème au niveau des stratégies de conformité, ou l’appareil ne se connecte pas au service Intune. Par exemple, l’appareil est peut-être éteint ou ne dispose pas de connexion réseau. L’appareil finit par devenir non conforme après 30 jours, vraisemblablement.
 
       Pour plus d’informations, consultez [Bien démarrer avec les stratégies de conformité des appareils](device-compliance-get-started.md).
 
-    - **Conforme Azure AD** : doit avoir la valeur **Oui**. Si la valeur **Non** est indiquée, il se peut qu’il existe un problème au niveau des stratégies de conformité, ou l’appareil ne se connecte pas au service Intune. Par exemple, l’appareil est peut-être éteint ou ne dispose pas de connexion réseau. L’appareil finit par devenir non conforme après 30 jours, vraisemblablement.
+    - **Conforme Azure AD**: doit être **Oui**. Si la valeur **Non** est indiquée, il se peut qu’il existe un problème au niveau des stratégies de conformité, ou l’appareil ne se connecte pas au service Intune. Par exemple, l’appareil est peut-être éteint ou ne dispose pas de connexion réseau. L’appareil finit par devenir non conforme après 30 jours, vraisemblablement.
 
       Pour plus d’informations, consultez [Bien démarrer avec les stratégies de conformité des appareils](device-compliance-get-started.md).
 
-    - **Dernier archivage** : doit indiquer une date et une heure récentes. Par défaut, les appareils Intune sont archivés toutes les 8 heures.
+    - **Dernière vérification**: doit être une date et heure récente. Par défaut, les appareils Intune sont archivés toutes les 8 heures.
 
       - Si le **Dernier archivage** remonte à plus de 24 heures, l’appareil a peut-être un problème. Un appareil qui ne peut pas s’archiver ne peut pas recevoir vos stratégies d’Intune.
 
@@ -86,10 +87,10 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 
       **États de stratégie** :
 
-      - **Non applicable** : cette stratégie n’est pas prise en charge sur cette plateforme. Par exemple, les stratégies iOS ne fonctionnent pas sur Android. Les stratégies Samsung Knox ne fonctionnent pas sur les appareils Windows.
-      - **Conflit** : il existe un paramètre sur l’appareil qui ne peut pas être remplacé par Intune. Ou bien, vous avez déployé deux stratégies qui ont un même paramètre mais avec des valeurs différentes.
-      - **En attente** : l’appareil n’a pas encore été archivé dans Intune pour obtenir la stratégie. Ou bien, l’appareil a reçu la stratégie mais n’a pas communiqué l’état à Intune.
-      - **Erreurs** : recherchez les erreurs et les résolutions possibles dans [Résoudre les problèmes d’accès aux ressources d’entreprise](troubleshoot-company-resource-access-problems.md).
+      - **Non Applicable**: cette stratégie n’est pas pris en charge sur cette plateforme. Par exemple, les stratégies iOS ne fonctionnent pas sur Android. Les stratégies Samsung Knox ne fonctionnent pas sur les appareils Windows.
+      - **Conflit** : un paramètre existant sur l’appareil ne peut pas être remplacé par Intune. Ou bien, vous avez déployé deux stratégies qui ont un même paramètre mais avec des valeurs différentes.
+      - **En attente** : l’appareil n’a pas encore été enregistré dans Intune afin d’obtenir la stratégie. Ou bien, l’appareil a reçu la stratégie mais n’a pas communiqué l’état à Intune.
+      - **Erreurs** : recherchez les erreurs et les résolutions possibles dans [Résoudre les problèmes d’accès aux ressources d’entreprise](troubleshoot-company-resource-access-problems.md).
 
       **Liens utiles** : 
 
@@ -103,20 +104,20 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 
     Chaque appareil liste ses profils. Chaque profil a un **État**. L’état s’applique quand tous les profils affectés, notamment les exigences et les restrictions en matière de système d’exploitation et de matériel, sont considérés ensemble. Les états possibles sont :
 
-    - **Conforme** : l’appareil a reçu le profil et indique à Intune qu’il est conforme au paramètre.
+    - **Conforme** : l’appareil a reçu le profil et indique à Intune qu’il est conforme au paramètre.
 
-    - **Non applicable** : le paramètre de profil n’est pas applicable. Par exemple, les paramètres de messagerie pour les appareils iOS ne s’appliquent pas à un appareil Android.
+    - **Non applicable** : le paramètre du profil n’est pas applicable. Par exemple, les paramètres de messagerie pour les appareils iOS ne s’appliquent pas à un appareil Android.
 
-    - **En attente** : le profil est envoyé à l’appareil, mais l’état n’a pas été communiqué à Intune. Tel est le cas notamment du chiffrement sur Android, qui impose à l’utilisateur de l’activer et peut être en attente.
+    - **En attente** : le profil est envoyé à l’appareil, mais l’état n’a pas été communiqué à Intune. Tel est le cas notamment du chiffrement sur Android, qui impose à l’utilisateur de l’activer et peut être en attente.
 
-**Liens utiles** : [Suivre les profils de configuration d’appareil](device-profile-monitor.md)
+**Lien utile**: [surveiller des profils de configuration d’appareil](device-profile-monitor.md)
 
 > [!NOTE]
 > Quand deux stratégies avec différents niveaux de restriction s’appliquent au même appareil ou utilisateur, la stratégie la plus restrictive prévaut.
 
-## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerte : L'enregistrement des règles d'accès à Exchange a échoué
+## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerte : L’enregistrement de règles d’accès dans Exchange a échoué
 
-**Problème** : vous recevez l’alerte **L’enregistrement de règles d’accès dans Exchange a échoué** dans la console d’administration.
+**Problème**: vous recevez l’alerte **L’enregistrement de règles d’accès dans Exchange a échoué** dans la console d’administration.
 
 Si vous créez des stratégies dans l’espace de travail Stratégie Exchange sur site (console d’administration), mais que vous utilisez Office 365, les paramètres de stratégie configurés ne sont pas appliqués par Intune. Notez la source de la stratégie indiquée dans l’alerte. Sous l’espace de travail Stratégie Exchange sur site, supprimez les règles existantes. Les règles existantes sont les règles Exchange globales dans Intune pour Exchange sur site et ne concernent pas Office 365. Par conséquent, créez une stratégie pour Office 365.
 
@@ -156,7 +157,7 @@ Pour les appareils Windows gérés avec le client logiciel Intune, les erreurs d
 
 4. Déplacez le curseur de notification sur le paramètre par défaut.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>ERROR : Impossible d’obtenir la valeur de l’ordinateur, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>Erreur : Impossible d’obtenir la valeur de l’ordinateur, 0x80041013
 
 Cela se produit si l’heure sur le système local présente un écart de synchronisation d’au moins cinq minutes. Si l’heure n’est pas synchronisée sur l’ordinateur local, les transactions sécurisées échouent, car les horodatages ne sont pas valides.
 

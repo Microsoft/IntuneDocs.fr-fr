@@ -6,10 +6,11 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 02/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caf4401a2274a74050ec0eb404363cfc15b23e76
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55851438"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396476"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Point de terminaison de l’API d’entrepôt de données Intune
 
@@ -57,11 +58,13 @@ L’URL contient les éléments suivants :
 
 ## <a name="api-version-information"></a>Informations sur la version de l’API
 
-Version actuelle de l’API : `beta`. 
+Vous pouvez maintenant utiliser la version v1.0 d’Intune Data Warehouse en définissant le paramètre de requête  `api-version=v1.0`. Les mises à jour de collections dans l’entrepôt de données sont additives par nature et n’interrompent pas les scénarios existants.
+
+Utilisez la version bêta pour essayer les fonctionnalités les plus récentes de l’entrepôt de données. Pour accéder à la version bêta, votre URL doit contenir le paramètre de requête  `api-version=beta`. La version bêta vous permet d’utiliser des fonctionnalités avant qu’elles ne soient disponibles dans le cadre d’un service pris en charge. À mesure que de nouvelles fonctionnalités sont ajoutées à Intune, le comportement et le contrat de données de la version bêta peuvent être amenés à changer. Il est possible que le code personnalisé ou les outils de génération de rapports qui dépendent de la version bêta ne fonctionnent plus après l’application de mises à jour.
 
 ## <a name="odata-query-options"></a>Options de requête OData
 
-La version actuelle prend en charge les paramètres de requête OData suivants : `$filter, $orderby, $select, $skip,` et `$top`.
+La version actuelle prend en charge les paramètres de requête OData suivants : `$filter`, `$select`, `$skip,` et `$top`. Dans `$filter`, seuls `DateKey` ou `RowLastModifiedDateTimeUTC` peut être pris en charge lorsque les colonnes sont applicables, et autres propriétés déclenche une demande incorrecte.
 
 ## <a name="datekey-range-filters"></a>Filtres de plage DateKey
 
@@ -73,15 +76,12 @@ Vous pouvez utiliser les filtres de plage `DateKey` pour limiter la quantité de
 ## <a name="filter-examples"></a>Exemples de filtres
 
 > [!NOTE]
-> Les exemples de filtres partent du principe que nous sommes le 21 février 2018.
+> Les exemples de filtres partent du principe que nous sommes le 21 février 2019.
 
 |                             Filtre                             |           Optimisation des performances           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Complète                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Complète                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180220.                                     |
-|    `maxhistorydays=7&$filter=Id gt 1`                            |    Partiel, l’ID gt 1 ne sera pas optimisé    |    Retourner des données avec `DateKey` compris entre 20180214 20180221, et ID supérieur à 1.             |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214. `maxhistorydays` est ignoré.                            |
-|    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances.                              |
-|    `$filter=DateKey ne 20180214`                                 |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances.                              |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Aucune                                      |    Non traité en tant que filtre de plage `DateKey`, donc aucune amélioration des performances. `maxhistorydays` ignoré.    |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Complète                                       |    Retourne des données avec `RowLastModifiedDateTimeUTC` est supérieur ou égal à `2018-02-21T23:18:51.3277273Z`                             |

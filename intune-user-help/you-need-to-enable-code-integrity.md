@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 02/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,26 +14,27 @@ ms.assetid: 84892bbc-f888-417b-bbeb-978cc7e10028
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisbal
+ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34bad76c3b6ff00b42eac70bcd870ef4d59ab017
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: d258fcb7f338e4177c31a5c77b92b5941b7db212
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839946"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56426924"
 ---
-# <a name="you-need-to-enable-code-integrity"></a>Vous devez activer l’intégrité du Code
+# <a name="enable-code-integrity"></a>Activer l’intégrité du code
 
-La protection des informations de votre organisation requiert différents types de sécurité pour empêcher différents types de problèmes. Une méthode pour garantir cette sécurité consiste à utiliser l’intégrité du code Windows, qui permet de s’assurer que les programmes de base (pilotes) et les fichiers système n’ont pas été modifiés.
+Votre organisation peut avoir besoin de votre PC doit être activé avec une fonctionnalité de protection contre les menaces appelée *l’intégrité du code*. L’intégrité du code vérifie les pilotes et les fichiers système sur votre appareil pour rechercher des signes d’altération ou de logiciels malveillants. Pour l’intégrité du code travailler sur votre appareil, une autre fonctionnalité de sécurité appelé [ *le démarrage sécurisé* ](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) doit également être activée. 
 
-L’intégrité du code est automatiquement activée lorsque votre système utilise activement le démarrage sécurisé.
+Si votre PC n’est pas conforme parce que l’intégrité du code est désactivée, vous devez contacter votre organisation informatique équipe de support technique. Ils vous aideront à activer le démarrage sécurisé, ce qui déclenchera l’intégrité du code de la prochaine fois que vous démarrez votre appareil. 
 
-> [!Tip]
-> L’activation du démarrage sécurisé est une tâche avancée. Nous vous recommandons de contacter le support technique de votre entreprise pour obtenir de l’aide sur cette tâche.
+Si vous vous identifiez en tant qu’un utilisateur avancée des appareils et que vous souhaitez essayer les étapes sur votre propre, consultez [réactiver le démarrage sécurisé](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
-Si vous vous sentez prêt à continuer, consultez la section « Pour réactiver le démarrage sécurisé » dans la page [Désactivation du démarrage sécurisé](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) afin d’essayer d’activer vous-même le démarrage sécurisé.
+## <a name="additional-resources-for-it-administrators"></a>Ressources supplémentaires pour les administrateurs informatiques  
+Si vous êtes administrateur d’Intune et que vous souhaitez en savoir plus sur les paramètres de compatibilité de contrôle d’intégrité appareil d’Intune, consultez [ajouter une stratégie de conformité pour les appareils Windows 10 dans Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows#windows-10-and-later-policy-settings). Pour une présentation détaillée les actions de conformité que vous pouvez tirer dans Intune, consultez le [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
+## <a name="next-steps"></a>Étapes suivantes  
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

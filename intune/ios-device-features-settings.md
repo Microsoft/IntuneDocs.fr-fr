@@ -5,28 +5,31 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2019
-ms.topic: conceptual
+ms.date: 03/13/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7176da8bf35265ecf16b72faf987a4dcf5e66e0e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 34f0869b46323606d69891c3761bfbc154f3b6a3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235722"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566622"
 ---
-# <a name="ios-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil iOS dans Intune
+# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>paramètres des appareils iOS pour utiliser les fonctionnalités communes d’iOS dans Intune
 
 Intune inclut certains paramètres prédéfinis pour permettre aux utilisateurs d’utiliser différentes fonctionnalités Apple sur leurs appareils iOS. Par exemple, les administrateurs peuvent contrôler la façon dont les utilisateurs d’appareils iOS se servent des imprimantes AirPrint, ajoutent des applications et dossiers à l’écran d’accueil et aux pages de l’écran d’accueil, affichent les notifications d’applications, affichent les détails de l’étiquette d’inventaire sur l’écran de verrouillage, utilisent l’authentification unique et s’authentifient avec des certificats.
 
-Cet article liste ces paramètres et décrit la fonction de chaque paramètre.
+Utilisez ces fonctionnalités pour contrôler les appareils iOS dans le cadre de votre solution de gestion des appareils mobiles.
+
+Cet article liste ces paramètres et décrit le rôle de chaque paramètre.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -38,10 +41,10 @@ Cette fonctionnalité permet aux utilisateurs d’appareils iOS de se servir des
 
 1. Dans **Paramètres**, sélectionnez **AirPrint**. Entrez les propriétés suivantes pour le serveur AirPrint :
 
-    - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez obtenir l’adresse IP en effectuant un test ping sur l’imprimante dans le Terminal. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-    - **Chemin d’accès** : Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-    - **Port** : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut. Disponible sur iOS 11.0 et ultérieur.
-    - **TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
+    - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez obtenir l’adresse IP en effectuant un test ping sur l’imprimante dans le Terminal. Pour plus de détails, consultez Obtenir l’adresse IP et le chemin dans cet article.
+    - **Chemin d’accès** : de manière générale, le chemin est `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez Obtenir l’adresse IP et le chemin dans cet article.
+    - **Port** : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut. Disponible sur iOS 11.0 et ultérieur.
+    - **Protocole TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
 
 2. Sélectionnez **Ajouter**. Le serveur AirPrint est ajouté à la liste. Vous pouvez ajouter plusieurs serveurs AirPrint.
 
@@ -73,23 +76,23 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
 1. Dans **Paramètres**, sélectionnez **Disposition de l’écran d’accueil (supervisé uniquement)** > **Ancrer** > **Ajouter**. Vous pouvez ajouter jusqu’à **six** éléments (applications et dossiers combinés) à l’espace d’ancrage sur l’écran de l’appareil.
 2. Dans **Type**, choisissez d’ajouter une **application** ou un **dossier**.
 
-    - **Ajouter une application** : choisissez cette option pour ajouter des applications à l’espace d’ancrage sur l’écran. entrez :
+    - **Ajouter une application** : choisissez cette option pour ajouter des applications à l’espace d’ancrage sur l’écran. entrez :
 
-      - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-      - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+      - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+      - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
-    - **Ajouter un dossier** : choisissez cette option pour ajouter un dossier à l’espace d’ancrage sur l’écran. 
+    - **Ajouter un dossier** : choisissez cette option pour ajouter un dossier à l’espace d’ancrage sur l’écran. 
 
       Les applications que vous ajoutez à une page dans un dossier sont organisées de gauche à droite, dans le même ordre que dans la liste. Si vous ajoutez plus d’applications que la page ne peut en contenir, les applications sont déplacées vers une autre page.
 
       1. Entrez un nom dans **Nom du dossier**. Ce nom est visible sur l’appareil des utilisateurs.
       2. Choisissez **Ajouter** et entrez les propriétés suivantes :
 
-          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+          - **Nom de la page**: entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       3. Choisissez **Ajouter**. Vous pouvez ajouter jusqu’à **20** pages à l’espace d’ancrage sur l’écran de l’appareil.
       4. Cliquez sur **OK** pour enregistrer vos modifications.
@@ -118,23 +121,23 @@ Ajoutez les pages que vous souhaitez afficher sur l’écran d’accueil et les 
 
 3. Dans **Type**, choisissez d’ajouter une **application** ou un **dossier**.
 
-    - **Ajouter une application** : Choisissez cette option pour ajouter des applications à une page sur l’écran. entrez :
+    - **Ajouter une application** : choisissez cette option pour ajouter des applications à une page sur l’écran. entrez :
 
-      - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-      - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+      - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+      - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
-    - **Ajouter un dossier** : choisissez cette option pour ajouter un dossier à l’espace d’ancrage sur l’écran. 
+    - **Ajouter un dossier** : choisissez cette option pour ajouter un dossier à l’espace d’ancrage sur l’écran. 
 
       Les applications que vous ajoutez à une page dans un dossier sont organisées de gauche à droite, dans le même ordre que dans la liste. Si vous ajoutez plus d’applications que la page ne peut en contenir, les applications sont déplacées vers une autre page.
 
       1. Entrez un nom dans **Nom du dossier**. Ce nom est visible sur l’appareil des utilisateurs.
       2. Choisissez **Ajouter** et entrez les propriétés suivantes :
 
-          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **Nom de l’application** : Entrez un nom pour l'application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **ID de l'ensemble d'applications** : entrez l’ID de bundle de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+          - **Nom de la page**: entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       3. Choisissez **Ajouter**.
       4. Cliquez sur **OK** pour enregistrer vos modifications.
@@ -159,18 +162,18 @@ Choisissez la manière dont les applications installées sur les appareils iOS e
 
 2. Entrez les propriétés suivantes :
 
-    - **ID de l’ensemble d’applications** : entrez l’**ID d’ensemble d’applications** pour l’application que vous souhaitez ajouter. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
+    - **Ajouter une ID d’ensemble d’applications** : entrez l’**ID d’ensemble d’applications** de l’application que vous voulez ajouter. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
     - **Nom de l’application** : entrez le nom de l’application que vous voulez ajouter. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil.
     - **Éditeur** : entrez le nom de l’éditeur de l’application ajoutée. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil.
-    - **Notifications** : choisissez **Activer** ou **Désactiver** pour autoriser ou empêcher l’envoi de notifications entre l’application et l’appareil.
-       - **Afficher dans le centre de notifications** : choisissez **Activer** pour autoriser l’application à afficher des notifications dans le centre de notifications de l’appareil. Choisissez **Désactiver** pour l’en empêcher.
-       - **Afficher dans l’écran de verrouillage** : choisissez **Activer** pour autoriser l’application à afficher des notifications dans l’écran de verrouillage de l’appareil. Choisissez **Désactiver** pour l’en empêcher.
-       - **Type d’alerte** : choisissez le mode d’affichage de la notification quand l’appareil est déverrouillé. Les options disponibles sont les suivantes :
-         - **Aucune** : aucune notification ne s’affiche.
-         - **Bannière** : Une bannière s’affiche brièvement avec la notification.
-         - **Modal** : la notification s’affiche et l’utilisateur doit la fermer manuellement pour pouvoir continuer à utiliser l’appareil.
-       - **Badge sur l’icône de l’application** : sélectionnez **Activer** pour ajouter un badge à l’icône de l’application. Le badge indique que l’application a envoyé une notification.
-       - **Sons** : choisissez **Activer** pour qu’un son soit émis à la réception d’une notification.
+    - **Notifications** : permet d’**Activer** ou de **Désactiver** l’envoi de notifications entre l’application et l’appareil.
+       - **Afficher dans le centre de notifications** : **Activer** cette option permet à l’application d’afficher des notifications dans le centre de notifications de l’appareil. Choisissez **Désactiver** pour l’en empêcher.
+       - **Afficher sur l’écran de verrouillage** : sélectionnez **Activer** pour afficher les notifications de l’application sur l’écran de verrouillage de l’appareil. Choisissez **Désactiver** pour l’en empêcher.
+       - **Type d’alerte** : choisissez le mode d’affichage de la notification quand l’appareil est déverrouillé. Les options disponibles sont les suivantes :
+         - **Aucune** : aucune notification ne s’affiche.
+         - **Bannière** : une bannière contenant la notification s’affiche brièvement.
+         - **Modal** : la notification s’affiche et l’utilisateur doit la fermer manuellement pour pouvoir continuer à utiliser l’appareil.
+       - **Badge sur l’icône de l’application**: sélectionnez **activer** pour ajouter un badge à l’icône d’application. Le badge indique que l’application a envoyé une notification.
+       - **Sons** : choisissez **Activer** pour qu’un son soit émis à la réception d’une notification.
 
 3. Cliquez sur **OK** pour enregistrer vos modifications. Ajoutez toutes les autres applications souhaitées. Quand vous avez terminé, sélectionnez **OK**.
 
@@ -185,11 +188,11 @@ Cette fonctionnalité prend en charge les appareils supervisés exécutant :
 1. Dans **Paramètres**, sélectionnez **Message d’écran de verrouillage (supervisé uniquement)**.
 2. entrez les paramètres suivants :
 
-    - **Informations de l’étiquette d’inventaire** : entrez des informations sur l’étiquette d’inventaire de l’appareil. Par exemple, entrez `Owned by Contoso Corp` ou `Serial Number: {{serialnumber}}`. 
+    - **Informations de l’étiquette d’inventaire** : entrez des informations sur l’étiquette d’inventaire de l’appareil. Par exemple, entrez `Owned by Contoso Corp` ou `Serial Number: {{serialnumber}}`. 
 
       Le texte que vous entrez est affiché sur l’écran de verrouillage et dans la fenêtre de connexion de l’appareil.
 
-    - **Note de l’écran de verrouillage** : entrez une note qui pourrait vous aider à récupérer l’appareil en cas de perte ou de vol. Vous pouvez entrer n’importe quel texte. Par exemple, entrez quelque chose du genre `If found, call Contoso at ...`.
+    - **Note de l’écran de verrouillage** : entrez une note qui pourrait vous aider à récupérer l’appareil en cas de perte ou de vol. Vous pouvez entrer n’importe quel texte. Par exemple, entrez quelque chose du genre `If found, call Contoso at ...`.
 
     Vous pouvez aussi utiliser des jetons d’appareil pour ajouter des informations propres à l’appareil dans ces champs. Par exemple, pour afficher le numéro de série, entrez `Serial Number: {{serialnumber}}`. L’écran de verrouillage affichera le texte `Serial Number 123456789ABC`. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceName` ou toute autre valeur propre à l’appareil.
 
@@ -215,7 +218,7 @@ L’authentification unique est possible si les conditions suivantes sont réuni
 
     - **Attribut de nom d’utilisateur d’AAD** : Intune recherche cet attribut pour chaque utilisateur dans Azure AD. Ensuite, Intune remplit le champ correspondant (par exemple, UPN) avant de générer le XML installé sur l’appareil. Les options disponibles sont les suivantes :
 
-      - **Nom d’utilisateur principal** : l’UPN est analysé de la façon suivante :
+      - **Nom d’utilisateur principal** : l’UPN est analysé de la façon suivante :
 
         ![Attribut de nom d’utilisateur](media/User-name-attribute.png)
 
@@ -223,7 +226,7 @@ L’authentification unique est possible si les conditions suivantes sont réuni
 
         Par exemple, Contoso a plusieurs régions, dont Europe, Asie et Amérique du Nord. Contoso souhaite que les utilisateurs en Asie utilisent l’authentification unique et que l’application exige que le nom d’utilisateur principal soit au format `username@asia.contoso.com`. Quand vous sélectionnez **Nom d’utilisateur principal**, le domaine pour chaque utilisateur est extrait d’Azure AD (ici, c’est `contoso.com`). Par conséquent, pour les utilisateurs en Asie, sélectionnez **Nom d’utilisateur principal**, puis entrez `asia.contoso.com`. Le nom d’utilisateur principal de l’utilisateur final est maintenant `username@asia.contoso.com`, au lieu de `username@contoso.com`.
 
-      - **ID d’appareil Intune** : Intune sélectionne automatiquement l’ID d’appareil Intune.
+      - **ID d’appareil Intune** : Intune sélectionne automatiquement l’ID d’appareil Intune.
 
         Par défaut, les applications ont besoin d’utiliser uniquement l’ID d’appareil. Mais si votre application utilise le domaine et l’ID d’appareil, vous pouvez taper le domaine dans la zone de texte Domaine.
 
@@ -232,8 +235,8 @@ L’authentification unique est possible si les conditions suivantes sont réuni
 
       - **ID d’appareil Azure AD**
 
-    - **Domaine** : entrez la partie domaine de l’URL. Par exemple, entrez `contoso.com`.
-    - **Préfixes d’URL qui utiliseront l’authentification unique** : choisissez **Ajouter** pour ajouter les URL de votre organisation qui exigeront une authentification unique de l’utilisateur.
+    - **Domaine** : entrez la partie domaine de l’URL. Par exemple, entrez `contoso.com`.
+    - **Préfixes d’URL qui utiliseront l’authentification unique** : **ajoutez** toutes les URL de votre organisation qui nécessitent une authentification unique de l’utilisateur.
 
         Par exemple, quand un utilisateur se connecte à l’un de ces sites, l’appareil iOS utilise les informations d’identification d’authentification unique. L’utilisateur n’a pas besoin d’entrer d’informations d’identification supplémentaires. Si l’authentification multifacteur est activée, les utilisateurs doivent entrer la deuxième authentification.
 
@@ -244,13 +247,13 @@ L’authentification unique est possible si les conditions suivantes sont réuni
 
         Les modèles `http://.com` et `https://.com` correspondent respectivement à toutes les URL HTTP et HTTPS.
 
-    - **Applications qui utiliseront l’authentification unique** : choisissez **Ajouter** pour ajouter les applications sur les appareils des utilisateurs finaux qui seront autorisées à utiliser l’authentification unique.
+    - **Applications qui utiliseront l’authentification unique** : **ajoutez** les applications sur les appareils de l’utilisateur final qui peuvent utiliser l’authentification unique.
 
         Le tableau `AppIdentifierMatches` doit inclure des chaînes qui correspondent aux ID de bundles d’applications. Ces chaînes peuvent être des correspondances exactes (comme `com.contoso.myapp`). Sinon, entrez une correspondance de préfixe sur l’ID de bundle à l’aide du caractère générique \*. Le caractère générique doit être placé après un point (.) et doit être utilisé une seule fois, à la fin de la chaîne, comme dans `com.contoso.*`. Quand un caractère générique est inclus, toute application dont l’ID de bundle commence par le préfixe bénéficie de l’accès au compte.
 
         Utilisez **Nom de l’application** pour entrer un nom convivial afin de faciliter l’identification de l’ID de bundle.
 
-    - **Certificat de renouvellement des informations d’identification** : si vous utilisez des certificats pour l’authentification (au lieu de mots de passe), sélectionnez le certificat SCEP ou PFX existant comme certificat d’authentification. En général, ce certificat est le même que celui déployé pour l’utilisateur dans d’autres profils, tels que VPN, WiFi ou e-mail.
+    - **Certificat de renouvellement des informations d’identification** : si vous utilisez des certificats pour l’authentification (plutôt que des mots de passe), sélectionnez le certificat SCEP ou PFX existant en tant que certificat d’authentification. En général, ce certificat est le même que celui déployé pour l’utilisateur dans d’autres profils, tels que VPN, WiFi ou e-mail.
 
 3. Quand vous avez terminé, sélectionnez **OK** pour enregistrer les modifications.
 
@@ -261,24 +264,24 @@ Ces paramètres contrôlent l’accès aux URL par le navigateur sur les apparei
 1. Dans **Paramètres**, sélectionnez **Filtre de contenu web (mode supervisé uniquement)**.
 2. Choisissez le **type de filtre**. Les options disponibles sont les suivantes :
 
-    - **Configurer les URL** : utilisez le filtre web intégré d’Apple qui recherche la présence de contenu pour adultes, notamment les propos blasphématoires et sexuellement explicites. Cette fonctionnalité analyse chaque page web qui est chargée afin de détecter et bloquer les contenus inappropriés. Vous pouvez également ajouter les URL que vous souhaitez exclure du filtrage, ou bien bloquer certaines URL, indépendamment des paramètres de filtre d’Apple.
+    - **Configurer les URL** : utilisez le filtre web intégré d’Apple qui recherche le contenu réservé aux adultes, par exemple des propos blasphématoires ou sexuellement explicites. Cette fonctionnalité analyse chaque page web qui est chargée afin de détecter et bloquer les contenus inappropriés. Vous pouvez également ajouter les URL que vous souhaitez exclure du filtrage, ou bien bloquer certaines URL, indépendamment des paramètres de filtre d’Apple.
 
-      - **URL autorisées** : choisissez **Ajouter** pour ajouter les URL que vous souhaitez autoriser. Ces URL ignorent le filtre web d’Apple.
+      - **Autorisé les URL**: **ajouter** les URL que vous souhaitez autoriser. Ces URL ignorent le filtre web d’Apple.
 
         > [!NOTE]
         > Les URL que vous entrez ici sont les URL qui ne seront pas analysées par le filtre web d’Apple. Elles ne correspondent pas à des sites web autorisés. Pour créer une liste des sites web autorisés, définissez **Type de filtre** sur **Sites web spécifiques uniquement**.
 
         Cliquez sur **OK** pour enregistrer vos modifications.
 
-      - **URL bloquées** : choisissez **Ajouter** pour ajouter les URL dont vous souhaitez empêcher l’ouverture, indépendamment des paramètres de filtre web d’Apple.
+      - **URL bloquées** : choisissez **Ajouter** pour ajouter les URL dont vous souhaitez empêcher l’ouverture, indépendamment des paramètres de filtre web d’Apple.
 
         Cliquez sur **OK** pour enregistrer vos modifications.
 
-    - **Sites web spécifiques uniquement** (pour le navigateur web Safari uniquement) : ces URL sont ajoutées aux signets du navigateur Safari. L’utilisateur est **uniquement** autorisé à accéder à ces sites ; il ne peut ouvrir aucun autre site. Utilisez cette option uniquement si vous connaissez la liste exacte des URL auxquelles les utilisateurs peuvent accéder.
+    - **Sites web spécifiques uniquement** (pour le navigateur web Safari uniquement) : ces URL sont ajoutées aux signets du navigateur Safari. L’utilisateur est **uniquement** autorisé à accéder à ces sites ; il ne peut ouvrir aucun autre site. Utilisez cette option uniquement si vous connaissez la liste exacte des URL auxquelles les utilisateurs peuvent accéder.
 
-      - **URL** : entrez l’URL du site web que vous souhaitez autoriser. Par exemple, entrez `https://www.contoso.com`.
-      - **Chemin de signet** : entrez le chemin où stocker le signet. Par exemple, entrez `/Contoso/Business Apps`. Si vous n’ajoutez pas de chemin, le signet est ajouté au dossier de signets par défaut sur l’appareil.
-      - **Titre** : entrez un titre descriptif pour le signet.
+      - **URL** : entrez l’URL du site web que vous souhaitez autoriser. Par exemple, entrez `https://www.contoso.com`.
+      - **Chemin de signet**: entrez le chemin d’accès pour stocker le signet. Par exemple, entrez `/Contoso/Business Apps`. Si vous n’ajoutez pas de chemin, le signet est ajouté au dossier de signets par défaut sur l’appareil.
+      - **Titre** : entrez un titre descriptif pour le signet.
 
       Si vous n’entrez pas d’URL, les utilisateurs finaux ne pourront accéder à aucun site web à l’exception de `microsoft.com`, `microsoft.net` et `apple.com`. Ces URL sont automatiquement autorisées par Intune.
 
@@ -290,12 +293,12 @@ Ajoutez une image .png, .jpg ou .jpeg personnalisée sur vos appareils iOS super
 
 Vous pouvez constater un comportement inattendu quand un profil sans image est affecté à des appareils ayant une image existante. Par exemple, vous créez un profil sans image. Ce profil est affecté à des appareils qui disposent déjà d’une image. Dans ce scénario, l’image peut être remplacée par l’appareil par défaut, ou l’image d’origine peut rester sur l’appareil. Ce comportement est contrôlé et limité par la plateforme MDM d’Apple.
 
-- **Emplacement d’affichage du papier peint** : choisissez un emplacement où afficher l’image sur l’appareil. Les options disponibles sont les suivantes :
-  - **Non configuré** : aucune image personnalisée n’est ajoutée sur l’appareil. L’appareil utilise l’image par défaut du système d’exploitation.
-  - **Écran de verrouillage** : ajoute l’image à l’écran de verrouillage.
-  - **Écran d’accueil** : ajoute l’image à l’écran d’accueil.
-  - **Écran de verrouillage et écran d’accueil** : la même image est utilisée sur l’écran de verrouillage et l’écran d’accueil.
-- **Image de papier peint** : chargez une image .png, .jpg ou .jpeg existante à utiliser. La taille du fichier doit être inférieure à 750 Ko. Vous pouvez **supprimer** une image que vous aviez ajoutée.
+- **Du papier peint de l’emplacement d’affichage**: choisissez un emplacement sur l’appareil pour afficher l’image. Les options disponibles sont les suivantes :
+  - **Ne pas configuré**: une image personnalisée n’est pas ajoutée à l’appareil. L’appareil utilise l’image par défaut du système d’exploitation.
+  - **Écran de verrouillage**: ajoute l’image à l’écran de verrouillage.
+  - **Écran d’accueil**: ajoute l’image à l’écran d’accueil.
+  - **Écran de verrouillage et écran d’accueil**: utilise la même image sur l’écran de verrouillage et l’écran d’accueil.
+- **Image de papier peint** : chargez une image .png, .jpg ou .jpeg existante à utiliser. La taille du fichier doit être inférieure à 750 Ko. Vous pouvez **supprimer** une image que vous aviez ajoutée.
 
 > [!TIP]
 > Pour afficher des images différentes sur l’écran de verrouillage et l’écran d’accueil, créez un profil avec l’image de l’écran de verrouillage, et un autre profil avec l’image de l’écran d’accueil. Affectez les deux profils à l’utilisateur ou aux groupes d’appareils iOS souhaités.
@@ -304,47 +307,52 @@ Vous pouvez constater un comportement inattendu quand un profil sans image est a
 
 La liste suivante indique l’ID d’ensemble de quelques applications iOS intégrées parmi les plus courantes. Pour rechercher l’ID d’ensemble d’autres applications, contactez votre éditeur de logiciels.
 
-|||
-|-|-|
-|Nom de l’application|ID d’ensemble|
-|App Store|com.apple.AppStore|
-|Calculatrice|com.apple.calculator|
-|Calendrier|com.apple.mobilecal|
-|Appareil photo|com.apple.camera|
-|Horloge|com.apple.mobiletimer|
-|Boussole|com.apple.compass|
-|Contacts|com.apple.MobileAddressBook|
-|FaceTime|com.apple.facetime|
-|Trouver des amis|com.apple.mobileme.fmf1|
-|Trouver un iPhone|com.apple.mobileme.fmip1|
-|Centre de jeux|com.apple.gamecenter|
-|GarageBand|com.apple.mobilegarageband|
-|Intégrité|com.apple.Health|
-|iBooks|com.apple.iBooks|
-|iTunes Store|com.apple.MobileStore|
-|iTunes U|com.apple.itunesu|
-|Keynote|com.apple.Keynote|
-|Mail|com.apple.mobilemail|
-|Mappages|com.apple.Maps|
-|Messages|com.apple.MobileSMS|
-|Musique|com.apple.Music|
-|Actualités|com.apple.news|
-|Remarques|com.apple.mobilenotes|
-|Nombres|com.apple.Numbers|
-|Pages|com.apple.Pages|
-|Photo Booth|com.apple.Photo-Booth|
-|Photo|com.apple.mobileslideshow|
-|Podcasts|com.apple.podcasts|
-|Rappels|com.apple.reminders|
-|Safari|com.apple.mobilesafari|
-|Paramètres|com.apple.Preferences|
-|Bourse|com.apple.stocks|
-|Conseils|com.apple.tips|
-|Vidéos|com.apple.videos|
-|VoiceMemos|com.apple.VoiceMemos|
-|Portefeuille|com.apple.Passbook|
-|Regardez|com.apple.Bridge|
-|Météo|com.apple.weather|
+| ID d’offre groupée                   | Nom de l’application     | Éditeur |
+|-----------------------------|--------------|-----------|
+| com.apple.AppStore          | App Store    | Apple     |
+| com.apple.calculator        | Calculatrice   | Apple     |
+| com.apple.mobilecal         | Calendrier     | Apple     |
+| com.apple.camera            | Appareil photo       | Apple     |
+| com.apple.mobiletimer       | Horloge        | Apple     |
+| com.apple.compass           | Boussole      | Apple     |
+| com.apple.MobileAddressBook | Contacts     | Apple     |
+| com.apple.facetime          | FaceTime     | Apple     |
+| com.apple.DocumentsApp      | Fichiers        | Apple     |
+| com.apple.mobileme.fmf1     | Trouver des amis | Apple     |
+| com.apple.mobileme.fmip1    | Trouver un iPhone  | Apple     |
+| com.apple.gamecenter        | Centre de jeux  | Apple     |
+| com.apple.mobilegarageband  | GarageBand   | Apple     |
+| com.apple.Health            | Intégrité       | Apple     |
+| com.apple.Home              | Accueil         | Apple     |
+| com.apple.iBooks            | iBooks       | Apple     |
+| com.apple.iMovie            | iMovie       | Apple     |
+| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
+| com.apple.MobileStore       | iTunes Store | Apple     |
+| com.apple.itunesu           | iTunes U     | Apple     |
+| com.apple.Keynote           | Keynote      | Apple     |
+| com.apple.mobilemail        | Mail         | Apple     |
+| com.apple.Maps              | Mappages         | Apple     |
+| com.apple.MobileSMS         | Messages     | Apple     |
+| com.apple.Music             | Musique        | Apple     |
+| com.apple.news              | Actualités         | Apple     |
+| com.apple.mobilenotes       | Remarques        | Apple     |
+| com.apple.Numbers           | Nombres      | Apple     |
+| com.apple.Pages             | Pages        | Apple     |
+| com.apple.Photo-Booth       | Photo Booth  | Apple     |
+| com.apple.mobileslideshow   | Photo       | Apple     |
+| com.apple.podcasts          | Podcasts     | Apple     |
+| com.apple.reminders         | Rappels    | Apple     |
+| com.apple.mobilesafari      | Safari       | Apple     |
+| com.apple.Preferences       | Paramètres     | Apple     |
+| com.apple.SiriViewService   | Siri         | Apple     |
+| com.apple.stocks            | Bourse       | Apple     |
+| com.apple.tips              | Conseils         | Apple     |
+| com.apple.TV                | TV           | Apple     |
+| com.apple.videos            | Vidéos       | Apple     |
+| com.apple.VoiceMemos        | VoiceMemos   | Apple     |
+| com.apple.Passbook          | Portefeuille       | Apple     |
+| com.apple.Bridge            | Regardez        | Apple     |
+| com.apple.weather           | Météo      | Apple     |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

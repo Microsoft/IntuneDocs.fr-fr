@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: article
+ms.date: 02/21/2018
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
@@ -17,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71f4ce34abdb0c1b3d7dbc2bbd3f41f618715fb3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55837394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566486"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Microsoft Intune
-Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet d'appliquer des stratégies de protection des applications Intune sur votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience utilisateur et administrateur, vous pouvez utiliser les API pour personnaliser le comportement de votre application pour les fonctionnalités nécessitant sa participation.
+Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet à votre application de prendre en charge des [stratégies de protection d’applications](app-protection-policy.md) Intune. Si votre application dispose de stratégies de protection appliqués à celui-ci, il peut être géré par Intune et est reconnu par Intune comme une application gérée. Le Kit de développement logiciel (SDK) s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience de l’utilisateur final et de l’administrateur informatique, vous pouvez utiliser les API du Kit de développement logiciel (SDK) pour personnaliser le comportement de votre application et permettre la prise en charge des fonctionnalités nécessitant sa participation.
 
-Une fois que vous avez configuré votre application pour les stratégies de protection des applications, les administrateurs informatiques peuvent déployer ces stratégies afin de protéger leurs données d’entreprise au sein de l’application.
+Une fois que vous avez configuré votre application pour qu’elle puisse prendre en charge les stratégies de protection d’applications Intune, les administrateurs informatiques peuvent déployer ces stratégies afin de protéger leurs données d’entreprise au sein de l’application.
 
 ## <a name="app-protection-features"></a>Fonctionnalités de protection des applications
 
@@ -51,13 +52,13 @@ Les administrateurs informatiques peuvent forcer l'ouverture des liens web dans 
 ### <a name="enforce-a-pin-policy"></a>Appliquer une stratégie de code confidentiel
 Les administrateurs informatiques peuvent obliger l’utilisateur final à entrer un code confidentiel pour accéder aux données d’entreprise dans l’application. Ceci garantit que la personne qui utilise l’application est celle qui s’est initialement connectée avec un compte professionnel ou scolaire. Quand un utilisateur final configure son code confidentiel, le SDK d’application Intune utilise Azure Active Directory pour comparer les informations d’identification de l’utilisateur final à celles du compte Intune inscrit.
 
-### <a name="require-users-to-sign-in-with-work-or-school-account-for-app-access"></a>Obliger les utilisateurs à se connecter avec un compte professionnel ou scolaire pour accéder à l’application
+### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Obliger les utilisateurs à se connecter avec un compte professionnel ou scolaire pour accéder à l’application
 Les administrateurs informatiques peuvent obliger les utilisateurs à se connecter avec leur compte professionnel ou scolaire pour accéder à l’application. Le SDK d’application Intune utilise Azure Active Directory pour fournir une expérience d’authentification unique, dans laquelle les informations d’identification, une fois entrées, sont réutilisées pour les connexions suivantes. Nous prenons également en charge l’authentification des solutions de gestion d’identité fédérées à l’aide d’Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Vérifier l’intégrité et la conformité des appareils
 Les administrateurs informatiques peuvent vérifier l’intégrité de l’appareil et sa conformité aux stratégies Intune avant que les utilisateurs finaux accèdent à l'application. Sur iOS, cette stratégie vérifie si l’appareil est jailbreakée. Sur Android, cette stratégie vérifie si l’appareil est rooté.
 
-### <a name="multi-identity-support"></a>Prise en charge de la multi-identité
+### <a name="support-multi-identity"></a>Prendre en charge plusieurs identités
 La prise en charge de plusieurs identités est une fonctionnalité du Kit de développement logiciel (SDK) qui permet la coexistence de comptes gérés par stratégie (d’entreprise) et non gérés (personnels) dans une même application.
 
 Par exemple, beaucoup d’utilisateurs configurent à la fois des comptes de messagerie d’entreprise et personnels dans les applications mobiles Office pour iOS et Android. Quand un utilisateur accède aux données avec son compte d’entreprise, l’administrateur informatique doit être certain que la stratégie de protection des applications sera appliquée. Toutefois, quand un utilisateur accède à un compte de messagerie personnel, ces données doivent être hors du contrôle de l’administrateur. Le Kit de développement logiciel (SDK) de l’application Intune réalise cette opération en ciblant la stratégie de protection des applications **uniquement** pour l’identité de l’entreprise dans l’application.
@@ -80,4 +81,4 @@ Pour en savoir plus sur Citrix MDX, consultez [À propos du MDX Toolkit](https:/
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- En savoir plus sur les [stratégies de protection des applications](app-protection-policy.md).
+- [Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune](app-sdk-get-started.md).
