@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 03/26/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,83 +14,110 @@ ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7db319586b9375b8c88f177197e2fdf15378ab4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ee0f438d929abd6b5b90acbaeeddc41e3ce11f98
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847299"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490640"
 ---
-# <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurer l’accès d’un appareil iOS aux ressources de l’entreprise
+# <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurer l’accès d’un appareil iOS aux ressources de l’entreprise  
 
 Inscrivez votre appareil iOS avec l’application Portail d’entreprise Intune pour obtenir un accès sécurisé aux e-mails, aux fichiers et aux applications de votre organisation.
 
-Pour être autorisé à accéder aux données propriétaires à partir d’un appareil d’entreprise ou personnel, vous devez au préalable passer l’appareil en mode géré. Une fois que votre appareil est en mode géré, votre organisation lui assigne des stratégies et des applications par le biais du fournisseur MDM. 
+Pour pouvoir accéder aux données propriétaires à partir d’un appareil d’entreprise ou personnel, vous devez au préalable passer l’appareil en mode géré. Une fois que votre appareil est en mode géré, votre organisation lui assigne des stratégies et des applications par le biais d’un fournisseur MDM comme Intune. 
 
-Pour conserver l’accès aux informations professionnelles ou scolaires à partir de votre appareil, vous devez configurer l’appareil avec les paramètres par défaut de votre organisation. Cet article décrit comment l’application Portail d’entreprise vous aide à inscrire, à configurer et à tenir à jour votre appareil pour satisfaire à ces exigences.
+Pour conserver l’accès aux informations professionnelles ou scolaires à partir de votre appareil, vous devez configurer l’appareil avec les paramètres par défaut de votre organisation. Cet article décrit l’utilisation de portail d’entreprise pour vous inscrire appareil et de mettre à jour les exigences de configuration de votre organisation. 
 
 > [!NOTE]
-> Si vous avez essayé d’accéder à vos e-mails professionnels dans la messagerie d’entreprise et avez reçu un message vous invitant à passer votre appareil en mode géré, vous êtes au bon endroit. Suivez les instructions ci-dessous pour accéder à vos e-mails et à d’autres ressources de l’entreprise sur votre appareil iOS.
+> Si vous avez essayé d’accéder à vos e-mails professionnels dans la messagerie d’entreprise et avez reçu un message vous invitant à passer votre appareil en mode géré, vous êtes au bon endroit. Suivez les instructions ci-dessous pour accéder à vos e-mails et à d’autres ressources de l’entreprise sur votre appareil iOS.  
 
-## <a name="what-to-expect-from-the-company-portal-app"></a>À quoi s’attendre avec l’application Portail d’entreprise ?
+## <a name="what-to-expect-from-the-company-portal-app"></a>À quoi s’attendre avec l’application Portail d’entreprise ?  
 
-### <a name="security"></a>Sécurité
-Pendant l’installation initiale, l’application vous demande de vous authentifier auprès de votre organisation. Ensuite, elle vous indique les paramètres que vous devez mettre à jour sur votre appareil. Par exemple, les organisations définissent souvent des critères de longueur de mots de passe auxquels vous devez vous plier.    
+### <a name="security"></a>Sécurité  
+Pendant l’installation initiale, l’application vous demande de vous authentifier auprès de votre organisation. Ensuite, elle vous indique les paramètres que vous devez mettre à jour sur votre appareil. Par exemple, les organisations définissent souvent des critères de longueur de mots de passe auxquels vous devez vous plier.     
 
-### <a name="protection"></a>Protection
-Une fois votre appareil inscrit, l’application Portail d’entreprise continue de s’assurer que votre appareil est protégé. Par exemple, si vous installez une application à partir d’une source non fiable, l’application vous alerte et révoque parfois l’accès aux données de l’entreprise. Les stratégies de protection d’applications comme celles-ci sont courantes dans les organisations. Elles vous obligent souvent à désinstaller l’application non approuvée avant de vous redonner l’accès.
+### <a name="protection"></a>Protection  
+Une fois votre appareil inscrit, l’application Portail d’entreprise continue de s’assurer que votre appareil est protégé. Par exemple, si vous installez une application à partir d’une source non fiable, l’application vous alerte et révoque parfois l’accès aux données de l’entreprise. Une telle stratégie est courante dans les organisations et souvent vous oblige à désinstaller l’application non approuvée avant de vous retrouver l’accès.  
 
-### <a name="setting-notifications"></a>Définition des notifications
+### <a name="setting-notifications"></a>Définition des notifications  
 Si après l’inscription votre organisation impose une nouvelle exigence de sécurité, telle que l’authentification multifacteur, l’application Portail d’entreprise vous avertit. Vous aurez la possibilité d’ajuster vos paramètres afin de pouvoir continuer à travailler sur votre appareil.  
 
-Pour plus d’informations sur l’inscription, consultez [Que se passe-t-il quand j’installe l’application Portail d’entreprise et que j’inscris mon appareil ?](https://docs.microsoft.com//intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios). 
+Pour plus d’informations sur l’inscription, consultez [Que se passe-t-il quand j’installe l’application Portail d’entreprise et que j’inscris mon appareil ?](https://docs.microsoft.com//intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="before-you-start"></a>Avant de commencer
+## <a name="enroll-your-ios-device"></a>Inscrire votre appareil iOS   
 
-- Une fois que vous avez commencé l’inscription, vous devez impérativement terminer l’ensemble du processus. Si vous faites une pause pendant plus de quelques minutes, le programme d’installation risque de se terminer et vous obliger à recommencer à zéro.  
-- En cas d’échec, revenez à l’application Portail d’entreprise et réessayez.  
-- Vérifiez que votre réseau Wi-Fi fonctionne et que Safari est opérationnel sur votre appareil.
-- Téléchargez et installez [l’application Portail d’entreprise Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).  
+> [!IMPORTANT]
+> Les captures d’écran dans cette section montrent l’expérience pour les appareils exécutant iOS version 12.1 et versions antérieures. Le cas échéant, nous avons inclus des instructions spécifiques à la version iOS 12.2 et versions ultérieures. Si vous constatez que votre expérience diffère les captures d’écran présentées, reportez-vous aux 12,2 instructions.      
+
+Accédez à l’App store pour télécharger et installer le [application portail d’entreprise Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) sur votre appareil. Lors de l’inscription, vous devez également une connexion Wi-Fi et un accès à Safari. 
+
+Si vous faites une pause pendant plusieurs minutes lors de l’inscription, l’application peut fermer ou se terminer le programme d’installation. Si cela se produit, ouvrez l’application portail d’entreprise et réessayez.  
+
+1. Ouvrez Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire. 
+
+    ![Capture d’écran de l’application portail d’entreprise, de connexion.](./media/ios-01-cp-enroll-1903.PNG)  
+
+2. Quand vous y êtes invité pour recevoir des notifications du portail d’entreprise, appuyez sur **autoriser.** Portail d’entreprise utilise des notifications pour vous avertir si, par exemple, vos paramètres de périphérique doivent être mis à jour. 
+
+    ![Capture d’écran de la page d’accueil de portail d’entreprise, invite de « Notifications ».](./media/ios-04-cp-enroll-1903.PNG)  
+
+3. Sur le **configurer l’accès** s’affiche, sélectionnez **commencer.**  
+
+     ![Capture d’écran du portail d’entreprise, écran « Configurer l’accès ».](./media/ios-05-cp-enroll-1903.PNG)  
+
+4. Lisez la liste des informations sur l’appareil votre organisation peut voir ou non. [Des détails supplémentaires sur cette rubrique](what-info-can-your-company-see-when-you-enroll-your-device-in-Intune.md) est accessible via la **en savoir plus** lien. Lorsque vous avez terminé, appuyez sur **continuer**.  
+
+    ![Capture d’écran de l’exemple d’application de portail d’entreprise, « Que mon entreprise voit », avec le bouton Continuer.](./media/ios-06-cp-enroll-1903.PNG)  
+ 
+5. Le **quelle est la suite ?** écran résume les étapes restantes. Ces étapes peuvent être différentes selon votre version d’iOS. 
+    * **iOS 12,2 et versions ultérieures**: votre expérience à la place vous devrez :  
+
+        a. **Autoriser le téléchargement du profil de gestion**: votre navigateur s’ouvre le site Web portail d’entreprise et vous invite à autoriser le téléchargement. Le téléchargement sera enregistré dans votre application de paramètres.  
+
+        b. **Ouvrez l’application de paramètres et installer le profil**: vous aurez besoin accéder à l’application paramètres et installer le profil de gestion.  
+
+        c. **Retour à l’application portail d’entreprise**: vous devez revenir à l’application portail d’entreprise pour terminer l’installation.  
+
+    Quand vous êtes prêt à télécharger le profil de gestion, appuyez sur **continuer**.  
+
+6. Safari ouvre le site Web portail d’entreprise. Lorsque vous êtes invité à télécharger le profil de configuration, appuyez sur **autoriser**.  
+    * **iOS 12,2 et versions ultérieures**: attendez que le profil à terminer le téléchargement dans Safari, puis appuyez sur **fait**. Ouvrez ensuite l’application **Paramètres** sur votre appareil.  
+
+    > [!IMPORTANT]
+    > Vous devez accéder à la **paramètres** application et installer ce profil dans les 8 minutes de téléchargement. Si vous n’est pas le cas, le profil sera supprimé et vous devrez redémarrer l’inscription. 
+
+7. Dans le **paramètres** application, appuyez sur **installer un profil téléchargé** > **installer**. Si **installer un profil téléchargé** n’apparaissent sous la forme d’une option, accédez à **général** > **profils**. Si vous ne voyez pas le profil, vous devrez peut-être télécharger à nouveau.  
+
+    ![Capture d’écran de l’application de paramètres, paramètre d’installer le profil téléchargé, avec un badge rouge qui indique un profil récemment téléchargé.](./media/ios-10-cp-enroll-1903.PNG)  
+    
+8. Si vous y êtes invité, entrez le mot de passe de votre appareil. Puis appuyez sur **installer**.      
+
+9. L’écran suivant est un avertissement de système standard pour la gestion des appareils. Pour en savoir plus sur ce que votre organisation peut voir ou non sur votre appareil, consultez les informations pertinentes [article de docs Intune](what-info-can-your-company-see-when-you-enroll-your-device-in-Intune.md). Pour continuer l’installation, appuyez sur **installer**. Si vous êtes invité à approuver la gestion à distance, appuyez sur **approbation**.  
+
+    ![Capture d’écran de l’application paramètres, l’écran d’avertissement système standard pour le certificat racine et de gestion des appareils mobiles.](./media/ios-15-cp-enroll-1903.PNG)  
+
+10. Une fois l’installation terminée, appuyez sur **fait**. Pour vérifier que le profil a été installé, accédez à la **profils et gestion des appareils** paramètres. Vous devez voir le profil figurant sous **gestion des appareils mobiles**.   
+
+    ![Capture d’écran de l’exemple d’application de paramètres, les profils et gestion des appareils paramètres, montrant le profil de gestion.](./media/ios-00-cp-enroll-1903.PNG)  
 
 
-## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Utiliser l’application Portail d’entreprise pour configurer l’accès aux ressources de l’entreprise
+11. Retournez dans l’application **Portail d’entreprise**. Portail d’entreprise commence à synchroniser et configurer votre appareil. Portail d’entreprise peut vous inviter à mettre à jour les paramètres de périphérique supplémentaires. Si elle est le cas, appuyez sur **continuer**.
 
-|Ce que vous voyez|Explication|
-|---|---|
-|![Écran de connexion du Portail d’entreprise, avec un bouton « Se connecter » en bas.](./media/ios-01-cp-enroll-1802.PNG)|Ouvrez l’application Portail d’entreprise et appuyez sur **Se connecter**.|
-|![Invitation à se connecter à Azure AD.](./media/ios-02-cp-enroll-1802.PNG)|Entrez l’adresse électronique de votre entreprise, puis appuyez sur **Suivant**.|
-|![Invitation à saisir le mot de passe Azure AD.](./media/ios-03-cp-enroll-1802.PNG)|Entrez votre mot de passe, puis appuyez sur **Connexion**.|
-|![Écran de démarrage du chargement des ressources de l’entreprise.](./media/ios-04-cp-enroll-1802.PNG)|Attendez que cet écran soit chargé.|
-|![Page des conditions générales.](./media/ios-05-cp-enroll-1802.PNG)|Lisez et acceptez toutes les conditions générales (**Tout accepter**).|
-|![Écran de configuration de l’accès à l’entreprise. La gestion et les paramètres ont actuellement besoin d’une résolution.](./media/ios-06-cp-enroll-1802.PNG)|Appuyez sur **Commencer** pour démarrer le processus à l’issue duquel votre appareil pourra accéder aux ressources de l’entreprise. Si vous ne pouvez pas le faire pour le moment, vous avez la possibilité de **Différer** le processus, mais cela signifie que vous ne pourrez pas accéder à la messagerie, aux documents, etc.|
-|![Écran Ce que peut mon entreprise peut voir.](./media/ios-07-cp-enroll-1802.PNG)|En appuyant sur le lien **En savoir plus** en bas, vous aurez accès à ce que votre entreprise peut voir. Sinon, appuyez sur **Continuer**.|
-|![Écran Et ensuite ?.](./media/ios-08-cp-enroll-1802.PNG)|Cet écran vous explique tout ce qui se passe au cours de la configuration. Vous allez passer du temps dans Safari, dans l’application Paramètres et dans l’application Portail d’entreprise. Appuyez sur **Continuer**.|
-|![Écran de chargement après avoir appuyé sur Suivant dans Et ensuite ?.](./media/ios-09-cp-enroll-1802.PNG)|Attendez que cet écran soit chargé.|
-|![Basculement vers Safari pour l’inscription.](./media/ios-cp-sent-to-safari-1808.png)|Vous accédez automatiquement à Safari pour récupérer des informations de gestion sur votre appareil.|
-|![Invite du système qui demande l’ouverture de l’application Paramètres.](./media/ios-8-cp-enroll-1711.PNG)|Appuyez sur **Autoriser** pour ouvrir l’application Paramètres afin de télécharger le profil de configuration. Cette installation permettra à votre entreprise de gérer ses informations sur votre appareil.|
-|![Capture de l’écran Installer un profil dans les paramètres de l’appareil.](./media/ios-9-cp-enroll-1711.PNG)|Appuyez sur **Installer**.|
-|![Installation de la boîte de dialogue modale du profil en bas de l’écran.](./media/ios-10-cp-enroll-1711.PNG)|Appuyez sur **Installer**.|
-|![Écran de chargement de l’installation du profil.](./media/ios-11-cp-enroll-1711.PNG)|Attendez que cet écran soit chargé.|
-|![Écran d’avertissement de gestion de profil.](./media/ios-12-cp-enroll-1711.PNG)|Cet avertissement, écrit par Apple, vous informe sur les types d’actions réalisables sur un appareil géré. Cliquez [ici](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) pour en savoir plus sur les informations auxquelles votre entreprise a accès.|
-|![Invite du système qui demande s’il faut faire confiance à la gestion à distance.](./media/ios-13-cp-enroll-1711.PNG)|Appuyez sur **Faire confiance** pour permettre à votre société de gérer ses informations et paramètres sur votre appareil.|
-|![Écran de chargement de la fin de l’installation du profil.](./media/ios-14-cp-enroll-1711.PNG)|Attendez que cet écran soit chargé.|
-|![Écran Profil installé.](./media/ios-15-cp-enroll-1711.PNG)|Votre profil est installé, et les paramètres et informations de l’entreprise présents sur votre appareil sont maintenant tout près d’être gérés.|
-|![Basculement vers Safari pour l’inscription.](./media/ios-16-cp-enroll-1711.PNG)|Vous accédez automatiquement à Safari pour finir de récupérer des informations de gestion sur votre appareil. |
-|![Invite du système qui demande l’ouverture du Portail d’entreprise.](./media/ios-17-cp-enroll-1711.PNG)|Appuyez sur **Ouvrir**.|
-|![Écran de chargement des ressources de l’entreprise.](./media/ios-21-cp-enroll-1802.PNG)|Attendez que cet écran soit chargé.|
-|![Sélectionnez la catégorie d’appareils sur l’application Portail d’entreprise.](./media/ios-22-cp-enroll-1802.PNG)|Sélectionnez la meilleure catégorie pour votre appareil. Elle est généralement en rapport avec le propriétaire de l’appareil ou son emplacement habituel.|
-|![Catégorie sélectionnée.](./media/ios-23-cp-enroll-1802.PNG)||
-|![Gestion de l’appareil réussie ; vous devez maintenant mettre à jour les paramètres.](./media/ios-24-cp-enroll-1802.PNG)|Vous avez réussi à passer votre appareil en mode géré. Il reste probablement des paramètres, comme la longueur de votre mot de passe, que votre entreprise vous demandera éventuellement de mettre à jour. Appuyez sur **Continuer** pour continuer.|
-|![Confirmation des paramètres de l’appareil.](./media/ios-25-cp-enroll-1802.PNG)|Le Portail d’entreprise regardera si certains de vos paramètres doivent être mis à jour.|
-|![Fin de la vérification des paramètres, avec une version du système d’exploitation incorrecte.](./media/ios-26-cp-enroll-1802.PNG)|Le Portail d’entreprise donne des instructions pour résoudre les problèmes relatifs aux paramètres. Dès que c’est fait, appuyez sur **Vérifier les paramètres**.|
-|![Écran de chargement de la confirmation des paramètres de l’appareil.](./media/ios-27-cp-enroll-1802.PNG)|Votre appareil vérifie si les paramètres sont suffisamment sécurisés pour lui permettre d’accéder aux ressources de l’entreprise.|
-|![Inscription et mise à jour des paramètres réussies.](./media/ios-28-cp-enroll-1802.PNG)|Félicitations ! Votre appareil est maintenant inscrit dans Intune.|
+    ![Capture d’écran du portail d’entreprise, « Configurer l’accès » de l’écran, avec un triangle jaune en regard de la spécification de paramètre.](./media/ios-12-cp-enroll-1903.PNG)  
+
+12. Vous saurez que l’installation est terminée lorsque tous les éléments dans la liste affichent un cercle vert. Appuyez sur **Terminé**.  
+    
+    ![Capture d’écran du portail d’entreprise, « vous voilà prêt ! » écran, affichant tous les cercles verts.](./media/ios-13-cp-enroll-1903.PNG)  
 
 > [!Note]
-> Il peut rester quelques étapes à suivre pour que l’appareil soit totalement géré. Obtenez des informations supplémentaires sur l’[inscription de votre appareil en utilisant la gestion des dépenses de télécommunications](enroll-your-device-with-telecom-expense-management-ios.md). Si votre organisation utilise le Programme d’inscription des appareils (DEP) d’Apple, vous trouverez un complément d’informations [ici](enroll-your-device-dep-ios.md).
+> Si votre organisation surveille les limites de voix et de données, ou vous offre un appareil appartenant à l’entreprise, vous pouvez avoir quelques étapes supplémentaires pour terminer. Si vous êtes invité à installer le **Datalert** application, consultez [en inscrivant votre appareil dans la gestion des dépenses de télécommunications](enroll-your-device-with-telecom-expense-management-ios.md). Si votre organisation fait partie du programme DEP d’Apple, Découvrez [comment inscrire votre appareil d’entreprise](enroll-your-device-dep-ios.md).  
+
+## <a name="next-steps"></a>Étapes suivantes  
+Rechercher des applications qui vous aideront à professionnel ou scolaire. En savoir plus [comment les applications sont mises à disposition](use-managed-apps-on-your-device-ios.md) via le portail d’entreprise.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Vous trouverez ses coordonnées sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

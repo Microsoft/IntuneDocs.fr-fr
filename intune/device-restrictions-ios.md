@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92d18615f6be7c1e0ce931d443d2ac986db991e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566707"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490724"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -43,7 +43,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
     Cette fonctionnalité s’applique à :  
     - iOS 9.3.2 et versions ultérieures
 
-- **Capture d’écran** : choisissez **Bloquer** pour empêcher les captures d’écran sur l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisateur à capturer le contenu de l’écran en tant qu’image.
+- **Capture d’écran** : choisissez **Bloquer** pour empêcher les captures d’écran sur l’appareil. Dans iOS 9.0 et versions ultérieures, cela inclut également des enregistrements d’écran de blocage. L’option (par défaut) **Non configuré** autorise l’utilisateur à capturer le contenu de l’écran en tant qu’image ou vidéo.
   - **Observation de l’écran à distance avec l’application Classroom (mode supervisé uniquement)** : choisissez l’option **Bloquer** pour empêcher l’application Classroom d’observer à distance l’écran de l’appareil. L’option (par défaut) **Non configuré** autorise l’application Apple Classroom à afficher l’écran.
 
     Cette fonctionnalité s’applique à :  
@@ -255,7 +255,7 @@ Pour ajouter des applications à ces listes, vous pouvez :
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
-- **Point d’accès personnel** : choisissez **Bloquer** pour empêcher l’appareil d’être utilisé comme point d’accès personnel. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. **Ne pas configuré** (valeur par défaut) permet cette fonctionnalité.
+- **Point d’accès personnel**: **bloc** désactive le point d’accès personnel sur les appareils utilisateur avec chaque synchronisation de l’appareil. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. **Ne pas configuré** (valeur par défaut) conserve la configuration de point d’accès personnel en tant que la valeur par défaut définie par l’utilisateur.
 - **Rejoindre uniquement les réseaux Wi-Fi utilisant des profils de configuration (mode supervisé uniquement)** : **activez** cette option pour forcer l’appareil à rejoindre uniquement les réseaux Wi-Fi configurés à l’aide d’un profil de configuration Intune. L’option (par défaut) **Non configuré** autorise l’appareil à utiliser d’autres réseaux Wi-Fi.
 - **Règles d’utilisation des données mobiles (applications gérées uniquement)** : définissez les types de données que les applications gérées peuvent utiliser sur les réseaux mobiles. Les options disponibles sont les suivantes :
   - **Bloquer l’utilisation de données cellulaires** : bloquez l’utilisation de données cellulaires pour **toutes les applications managées** ou **Choisir des applications spécifiques**.
@@ -367,7 +367,7 @@ La liste suivante indique l’ID d’ensemble de quelques applications iOS inté
 | com.apple.gamecenter        | Centre de jeux  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Intégrité       | Apple     |
-| com.apple.Home              | Accueil         | Apple     |
+| com.apple.Home              | page d'accueil         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
 | com.apple.itunesconnect.mobile | iTunes Connect | Apple |
@@ -424,7 +424,7 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 - Interface utilisateur - Restrictions 
 - Installation de profils de configuration par l’interface utilisateur 
 - Actualités 
-- raccourcis clavier 
+- Raccourcis clavier 
 - Modifications du code secret 
 - Changements du nom de l’appareil 
 - Téléchargements automatiques d’applications 

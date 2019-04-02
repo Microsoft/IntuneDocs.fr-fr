@@ -1,11 +1,11 @@
 ---
-title: Désinscrire votre appareil macOS d’Intune | Microsoft Docs
-description: Cette rubrique explique comment désinscrire un appareil macOS d’Intune
+title: Désinscrire un appareil macOS de l’application Portail d’entreprise d’Intune | Microsoft Docs
+description: Cette rubrique explique comment désinscrire un appareil macOS du portail d'entreprise
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,24 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3518707aa90c3866fbf8b24936db6d781712bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19cb76df318abe84670c1a7d703e85e3b7e7539a
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55839965"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330396"
 ---
-# <a name="unenroll-your-macos-device-from-intune"></a>Désinscrire votre appareil macOS d’Intune
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Désinscrire votre appareil macOS à partir du portail d’entreprise
 
 Quand vous désinscrivez votre appareil macOS d’Intune, il ne peut plus accéder aux ressources d’entreprise.
 
 Suivez ces étapes pour désinscrire votre appareil macOS de la gestion :
 
-1.  Dans l’application Portail d’entreprise, sous **Mes appareils**, sélectionnez l’appareil que vous voulez désinscrire.
+1.  Connectez-vous à l’application Portail d’entreprise pour macOS.
+2.  Accédez à **Mes appareils**, puis sélectionnez l'appareil que vous voulez désinscrire.
 
-2.  Cliquez sur **Supprimer** > **Supprimer**.
+3.  Sélectionnez l’icône de menu de points de suspension > **supprimer**.
+4.  Un message de confirmation s’affiche. Sélectionnez **supprimer** désinscrire votre appareil. 
 
 La désinscription de votre appareil d’Intune a les conséquences suivantes :
 

@@ -4,7 +4,7 @@ description: Microsoft 365 Entreprise inclut Microsoft Intune. Découvrez comme
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 03/29/2018
 ms.topic: conceptual
 audience: ITPro
 ms.prod: microsoft-365-enterprise
@@ -16,16 +16,16 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e34c3de77dde59b87829617b8cbbd2614f7081
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: ea24101600c7a0e485440f50fc043c14bd840968
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57231245"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646486"
 ---
 # <a name="what-is-device-management"></a>Qu’est-ce que la gestion des appareils ? 
 
-L’une des tâches clés d’un administrateur est de protéger et sécuriser les ressources et les données d’une organisation. Cette tâche correspond à la gestion des appareils. Les utilisateurs ont de nombreux appareils à partir desquels ils ouvrent et partagent des fichiers personnels, visitent des sites web et installent des applications et des jeux. Ces mêmes utilisateurs sont également des employés et des étudiants, qui souhaitent utiliser leurs appareils pour accéder à des ressources professionnelles et scolaires, par exemple des e-mails et OneNote. La *gestion des appareils* permet aux organisations de protéger et sécuriser leurs ressources et leurs données. 
+L’une des tâches clés d’un administrateur est de protéger et sécuriser les ressources et les données d’une organisation. Cette tâche correspond à la *gestion des appareils*. Les utilisateurs ont de nombreux appareils à partir desquels ils ouvrent et partagent des fichiers personnels, visitent des sites web et installent des applications et des jeux. Ces mêmes utilisateurs sont également des employés et des étudiants, qui souhaitent utiliser leurs appareils pour accéder à des ressources professionnelles et scolaires, par exemple des e-mails et OneNote. La gestion des appareils permet aux organisations de protéger et sécuriser leurs ressources et leurs données. 
 
 À l’aide d’un fournisseur de gestion des appareils, les organisations peuvent vérifier que seuls les utilisateurs et les appareils autorisés ont accès aux informations propriétaires. De même, les utilisateurs d’appareils peuvent facilement accéder aux données professionnelles à partir de leur téléphone, car ils savent que leur appareil répond aux exigences de sécurité de leur organisation. En tant qu’organisation, vous pouvez vous poser la question suivante : **que devons-nous utiliser pour protéger nos ressources ?**
 
@@ -91,7 +91,7 @@ Dans le tableau de bord de gestion des appareils, vous pouvez :
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Gérer les utilisateurs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Gérer les groupes et les membres](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Dépannage](https://docs.microsoft.com/intune/help-desk-operators)
+- [Résoudre les problèmes](https://docs.microsoft.com/intune/help-desk-operators)
 
 ## <a name="next-step"></a>Étape suivante
 Une fois que vous êtes prêt à utiliser une solution MDM ou GAM, à suivre les différentes étapes de configuration d’Intune, à inscrire des appareils et à créer des stratégies, consultez [Gestion des appareils mobiles pour Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure). 

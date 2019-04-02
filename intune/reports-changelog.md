@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/21/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d7d69c602471e8508744f2a00008294cbd335204
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565636"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358256"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Journal des modifications pour l’API de l’entrepôt de données Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Suivez les mises à jour de l’entrepôt de données Intune.
+
+## <a name="1903"></a>1903
+_Date de publication : mars 2019_
+
+### <a name="v10-changes-reflecting-back-to-beta"></a>Modifications v1.0 reflétant vers la version bêta
+Lors de la version 1.0 a été introduite dans 1808, il est différent dans certaines différences significatives à partir de la version bêta d’API. Ces modifications apparaîtront dans la version bêta d’API dans 1903. Si vous avez des rapports importants qui utilisent la version bêta d’API, nous vous recommandons vivement de passer ces rapports à V1.0 pour éviter les modifications avec rupture. Reportez-vous à [les informations de version API](reports-api-url.md) pour plus d’informations sur les versions d’API d’entrepôt de données et vers l’arrière compatibilité. 
 
 ## <a name="1902"></a>1902 
 _Date de publication : février 2019_
@@ -42,7 +48,7 @@ Accéder à votre entrepôt de données Intune à l’aide de Power BI en ligne 
 > Il existe deux filtres supplémentaires, que vous pouvez appliquer à l’application de conformité Intune.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Ajouter des filtres supplémentaires pour l’application de conformité Intune
-1. Ouvrez le [conformité Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) application dans vos navigateurs web.
+1. Ouvrez le [conformité Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) application dans votre navigateur web.
 2. Cliquez sur **les appareils Non conformes** et sélectionnez **Non conforme** dans le **complianceStatus** filtre. 
 3. Cliquez sur **périphériques inconnus** et sélectionnez **pas encore disponible** dans le **complianceStatus** filtre. 
 
@@ -93,7 +99,7 @@ Vous pouvez utiliser <code>$select</code> comme paramètre de requête OData. La
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nouvelles entités dans le modèle de données de l’entrepôt de données <!-- 2077804 -->
 
- - L’entité [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus) a été ajoutée. L’entité **MobileAppDeviceUserInstallStatus** représente l’état d’installation d’une application mobile pour un appareil et un utilisateur.
+ - L’entité [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md) a été ajoutée. L’entité **MobileAppDeviceUserInstallStatus** représente l’état d’installation d’une application mobile pour un appareil et un utilisateur.
  - L’entité [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate) a été ajoutée. L’entité **MobileAppInstallState** représente l’état d’installation d’une application mobile après qu’elle a été affectée à un groupe contenant des appareils, des utilisateurs ou les deux. 
 
 ## <a name="1710"></a>1710

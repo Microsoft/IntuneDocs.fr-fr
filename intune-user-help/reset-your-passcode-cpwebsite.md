@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
+ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838034"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58163426"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Guide pratique pour réinitialiser le code secret de votre appareil à partir du site web du portail d’entreprise
 
@@ -32,7 +32,7 @@ Si vous perdez le code PIN ou le mot de passe de votre appareil, vous pouvez uti
 Si vous utilisez un appareil d’entreprise, vous ne verrez peut-être pas l’option permettant de réinitialiser votre code secret. Contactez le support de votre entreprise pour réinitialiser le code secret.
 
    > [!NOTE]
-   > Vous ne pouvez pas réinitialiser le code secret pour les appareils Android 7.0 et versions ultérieures. Si vous oubliez un code secret, vous devez réinitialiser l’appareil aux paramètres d’usine. 
+   > Vous ne pouvez pas réinitialiser le code secret pour les appareils exécutant Android 7.0 et versions ultérieures. Si vous oubliez votre code secret, vous devez réinitialiser l’appareil avec les paramètres d’usine. 
 
 ## <a name="reset-your-passcode"></a>Réinitialiser votre code d’accès
 

@@ -152,8 +152,12 @@ items:
       href: mdm-authority-set.md
     - name: Gérer les rôles
       items:
-      - name: Contrôle d'accès en fonction du rôle
+      - name: Contrôle d'accès basé sur les rôles
         href: role-based-access-control.md
+      - name: Attribuer un rôle à un utilisateur
+        href: assign-role.md
+      - name: Créer un rôle personnalisé
+        href: create-custom-role.md
       - name: Utiliser des balises d’étendue
         href: scope-tags.md
   - name: Inscrire des appareils
@@ -229,7 +233,7 @@ items:
       href: enrollment-report-company-portal-abandon.md
     - name: Résoudre les problèmes d’inscription d’appareils
       href: troubleshoot-device-enrollment-in-intune.md
-  - name: Gérer des unités
+  - name: Gérer des périphériques
     href: device-management.md
     items:
     - name: Fonctionnalités de gestion des appareils
@@ -537,7 +541,7 @@ items:
         href: apps-windows-10-app-deploy.md
       - name: Déployer des applications dans des environnements de secteur public
         href: apps-deploy-gcc-dod.md
-    - name: Surveiller les applications
+    - name: Superviser les applications
       href: apps-monitor.md
     - name: Configurer des applications
       href: app-configuration-policies-overview.md
@@ -665,9 +669,9 @@ items:
         items:
         - name: Restrictions d’appareil
           href: device-restrictions-android.md
-        - name: E-mail
+        - name: Courrier électronique
           href: email-settings-android.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-android.md#android-vpn-settings
         - name: Wi-Fi
           href: wi-fi-settings-android.md
@@ -684,9 +688,9 @@ items:
         items:
         - name: Restrictions d’appareil
           href: device-restrictions-android-for-work.md
-        - name: E-mail
+        - name: Courrier électronique
           href: email-settings-android-enterprise.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-android.md#android-enterprise-vpn-settings
         - name: Wi-Fi
           href: wi-fi-settings-android-enterprise.md
@@ -702,9 +706,9 @@ items:
           href: ios-device-features-settings.md
         - name: Restrictions d’appareil
           href: device-restrictions-ios.md
-        - name: E-mail
+        - name: Courrier électronique
           href: email-settings-ios.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-ios.md
         - name: Wi-Fi
           href: wi-fi-settings-ios.md
@@ -722,7 +726,7 @@ items:
           href: device-restrictions-macos.md
         - name: Endpoint Protection
           href: endpoint-protection-macos.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-macos.md
         - name: Wi-Fi
           href: wi-fi-settings-macos.md
@@ -742,7 +746,7 @@ items:
           href: device-restrictions-windows-10-teams.md
         - name: Mise à niveau de l’édition et changement de mode
           href: edition-upgrade-windows-settings.md
-        - name: E-mail
+        - name: Courrier électronique
           href: email-settings-windows-10.md
         - name: Endpoint Protection
           href: endpoint-protection-windows-10.md
@@ -750,7 +754,7 @@ items:
           href: identity-protection-windows-settings.md
         - name: Kiosk
           href: kiosk-settings-windows.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-windows-10.md
         - name: Wi-Fi
           href: wi-fi-settings-windows.md
@@ -776,7 +780,7 @@ items:
         href: kiosk-settings-holographic.md
       - name: Personnalisé
         href: custom-settings-windows-holographic.md
-    - name: Windows 8.1
+    - name: Windows 8.1
       items:
       - name: Paramètres de stratégie de conformité
         href: compliance-policy-create-windows.md#windows-81-devices-policy-settings
@@ -784,7 +788,7 @@ items:
         items:
         - name: Restrictions d’appareil
           href: device-restrictions-windows-8-1.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-windows-8-1.md
         - name: Importation Wi-Fi
           href: wi-fi-settings-import-windows-8-1.md
@@ -796,9 +800,9 @@ items:
         items:
         - name: Restrictions d’appareil
           href: device-restrictions-windows-phone-8-1.md
-        - name: E-mail
+        - name: Courrier électronique
           href: email-settings-windows-phone-8-1.md
-        - name: VPN
+        - name: Réseau privé virtuel
           href: vpn-settings-windows-phone-8-1.md
         - name: Personnalisé
           href: custom-settings-windows-phone-8-1.md
@@ -945,9 +949,9 @@ items:
       href: data-outside-protect.md
     - name: Éviter les fuites de données sur les appareils non gérés
       href: data-leak-prevention.md
-ms.openlocfilehash: d273d9c300f49a2d78f8b9ed62031497b06a0060
-ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.openlocfilehash: c58e250d7aeb4913554874c8a1e931b2dc356dfd
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58514420"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658572"

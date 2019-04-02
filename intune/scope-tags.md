@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bca2d52bb47a149c6a36bc1b8cbc4d65e50c0f4c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756800"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658547"
 ---
-# <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Utiliser des balises RBAC et l’étendue pour distribuée informatique
+# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour distribuée informatique
 
-Vous pouvez utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour vous assurer que les administrateurs de droite ont l’accès approprié et la visibilité aux objets Intune appropriées. Les rôles déterminent quel accès administrateurs ont à quels objets. Balises d’étendue déterminent les objets que les administrateurs peuvent voir.
+Vous pouvez utiliser des balises de contrôle et la portée des accès en fonction du rôle pour vous assurer que les administrateurs de droite ont l’accès approprié et la visibilité aux objets Intune appropriées. Les rôles déterminent quel accès administrateurs ont à quels objets. Balises d’étendue déterminent les objets que les administrateurs peuvent voir.
 
 Par exemple, supposons qu’un administrateur de bureau régional de Seattle est attribué au rôle de gestionnaire de stratégie et profil. Vous souhaitez que cet administrateur pour afficher et gérer les profils et les stratégies qui s’appliquent uniquement aux appareils de Seattle. Pour ce faire, vous devez :
 
@@ -83,6 +83,21 @@ Par exemple, supposons qu’un administrateur de bureau régional de Seattle est
 3. Sous **balises Select**, choisissez les balises que vous souhaitez ajouter au profil.
 4. Choisissez **sélectionnez** > **OK** > **enregistrer**.
 
+## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Pour affecter une balise d’étendue à une stratégie de configuration d’application
+Pour les appareils avec **type d’inscription d’appareil** définie sur **appareils gérés**:
+1. Choisissez **les applications clientes** > **stratégies de configuration** > choisir une stratégie de configuration d’application.
+2. Choisissez **propriétés** > **étendue (balises)** > Choisissez les balises que vous souhaitez affecter à la stratégie.
+
+Pour les appareils avec **type d’inscription d’appareil** définie sur **applications gérées**:
+1. Choisissez **les applications clientes** > **stratégies de configuration** > choisir une stratégie de configuration d’application.
+2. Choisissez **étendue (balises)** > Choisissez les balises que vous souhaitez affecter à la stratégie.
+
+
+## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Pour affecter une balise d’étendue à une profil de provisionnement d’application iOS
+1. Dans Intune, choisissez **les applications clientes** > **profils de provisionnement d’application iOS** > Choisissez un profil.
+2. Choisissez **propriétés** > **étendue (balises)** > Choisissez les balises que vous souhaitez affecter au profil.
+3. Choisissez **sélectionnez** > **OK** > **enregistrer**.
+
 ## <a name="scope-tag-details"></a>Détails de l’étiquette étendue
 Lorsque vous travaillez avec des balises d’étendue, n’oubliez pas ces détails :
 
@@ -96,20 +111,13 @@ Lorsque vous travaillez avec des balises d’étendue, n’oubliez pas ces déta
     - Stratégies de configuration : les appareils gérés
     - Scripts PowerShell
     - Jetons DEP
+    - Profil de provisionnement d’applications iOS
 - Lorsqu’un administrateur crée un objet dans Intune, toutes les balises d’étendue qu’administrateur seront automatiquement attribués au nouvel objet.
 - RBAC d’Intune ne s’applique pas aux rôles Azure Active Directory. Par conséquent, les rôles des administrateurs de Service Intune et les administrateurs généraux ont accès d’administrateur complets à Intune, quel que soit les balises d’étendue sont-ils.
 - Les administrateurs dans une attribution de rôle avec les balises d’étendue peuvent également voir les objets Intune sans balises d’étendue.
 - Vous pouvez uniquement affecter une balise d’étendue que vous avez dans vos attributions de rôles.
 - Vous pouvez uniquement les groupes de cibles qui sont répertoriées dans l’étendue (groupes) de votre attribution de rôle.
 - Si vous avez une balise d’étendue à votre rôle, vous ne pouvez pas supprimer toutes les balises d’étendue sur un objet Intune. Balise d’au moins une étendue est requise.
-- Si un utilisateur a plusieurs attributions de rôles, les autorisations dans les affectations de rôle s’étendent à des objets différents comme suit :
-    - Affecter des autorisations s’appliquent uniquement aux objets (tels que les stratégies ou applications) dans l’attribution d’un rôle étendue (groupes). Affecter des autorisations ne s’appliquent aux objets dans d’autres affectations de rôle, sauf si l’autre attribution leur ait spécifiquement accordé.
-    - Autres autorisations (par exemple, créer et de lecture), s’appliquent à tous les objets du même type (par exemple, toutes les stratégies ou toutes les applications) dans des affectations de l’utilisateur.
-    - Autorisations pour les objets de types différents (par exemple, les stratégies ou applications), ne s’appliquent pas à eux. Par exemple, une autorisation de lecture pour une stratégie, ne fournit pas une autorisation de lecture pour les applications dans les attributions de l’utilisateur.
-
-
-
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400481"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358315"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -37,7 +37,7 @@ Les listes d’entités **appRevision** répertorient toutes les versions des ap
 | AppKey                     | Identificateur unique de l’application.                                                         | 123                                  |
 | ApplicationId              | Identificateur unique de l’application (semblable à AppKey, sauf qu’il s’agit d’une clé naturelle).        | b66bc706-ffff-7437-0340-032819502773 |
 | Révision                   | Version mentionnée par l’administrateur durant le chargement du binaire.                   | 2                                    |
-| Titre                      | Titre de l’application.                                                                     | Excel                                |
+| Title                      | Titre de l’application.                                                                     | Excel                                |
 | Éditeur                  | Éditeur de l’application.                                                                 | Microsoft                            |
 | UploadState                | État de chargement de l’application.                                                              | 1                                    |
 | AppTypeKey                 | Référence à AppType décrite dans la section suivante.                            | 1                                    |
@@ -231,7 +231,7 @@ L’entité **device** répertorie tous les appareils inscrits à la gestion et 
 | DeviceEnrollmentType       | Clé du type d’inscription associé à cet appareil. Indique la méthode d’inscription.                                                                                             |
 | ComplianceStateKey         | Clé de l’état de conformité associée à cet appareil.                                                                                                                             |
 | OSVersion                  | Version du système d’exploitation de l’appareil.                                                                                                                                                |
-| EasDeviceId                | Identificateur Exchange ActiveSync de l’appareil.                                                                                                                                                  |
+| EasDeviceId                | ID Exchange ActiveSync de l’appareil.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
 | UserId                     | Identificateur unique de l’utilisateur associé à l’appareil.                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Date et heure UTC de la dernière modification de cet appareil dans l’entrepôt de données.                                                                                                       |
@@ -266,7 +266,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 | deviceTypeID |        Nom       |                      Description                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Non disponible   | Le type d’appareil n’est pas disponible.                     |
-| 0            | Bureau           | Appareil Windows Desktop                              |
+| 0            | Desktop (Expérience utilisateur)           | Appareil Windows Desktop                              |
 | 1            | Windows           | Appareil Windows                                      |
 | 2            | WinMO6            | Appareil Windows Mobile 6.0                           |
 | 3            | Nokia             | Appareil Nokia                                        |
@@ -281,7 +281,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 | 12           | ISocConsumer      | Appareil iSoc grand public                                |
 | 13           | Unix              | Appareil Unix                                         |
 | 14           | MacMDM            | Appareil Mac OS X géré avec l’agent GPM intégré |
-| 15           | HoloLens          | Appareil HoloLens                                    |
+| 15           | HoloLens          | Appareils HoloLens                                       |
 | 16           | SurfaceHub        | Appareil Surface Hub                                  |
 | 17           | AndroidForWork    | Appareil Android géré à l’aide du propriétaire de profil Android  |
 | 18           | AndroidEnterprise | Appareil Android Entreprise.                          |
@@ -360,7 +360,7 @@ L’entité **EnrollmentFailureCategory** indique pourquoi une inscription d’a
 | Non disponible                   | La catégorie d’échec d’inscription n’est pas disponible.                                                             |
 | Unknown                         | Erreur inconnue.                                                                                                |
 | Authentification                  | Échec de l’authentification.                                                                                        |
-| Autorisation                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
+| Authorization                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
 | AccountValidation               | Impossible de valider le compte pour l’inscription. (Compte bloqué, inscription non activée)                      |
 | UserValidation                  | Impossible de valider l’utilisateur. (L’utilisateur n’existe pas, absence de licence)                                           |
 | DeviceNotSupported              | L’appareil n’est pas pris en charge pour la gestion des appareils mobiles.                                                         |
@@ -448,7 +448,7 @@ L’entité **ManagementAgentTypes** représente les agents utilisés pour gére
 | 5                     | EasIntuneClient                   | L’appareil est géré à la fois par Exchange Active Sync et par l’agent Intune PC. |
 | 8                     | ConfigManagerClient               | L’appareil est géré par l’agent System Center Configuration Manager.     |
 | 10                    | ConfigurationManagerClientMdm     | L’appareil est géré par Configuration Manager et par GPM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | L’appareil est géré par Configuration Manager, GPM et Eas.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | L’appareil est géré par Configuration Manager, de gestion des appareils mobiles et d’Exchange Active Sync.               |
 | 16                    | Unknown                           | Type d’agent de gestion inconnu                                              |
 | 32                    | Jamf                              | Les attributs des appareils sont extraits de Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  L’appareil est géré par les CloudDPC de Google.                                 |
@@ -617,7 +617,7 @@ La collection d’entités **user** contient les données des utilisateurs. Parm
 | UserKey                    | Identificateur unique de l’utilisateur dans l’entrepôt de données (clé de substitution).                                                                                                                                                         | 123                                  |
 | UserId                     | Identificateur unique de l’utilisateur (semblable à UserKey, sauf qu’il s’agit d’une clé naturelle).                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Adresse e-mail de l’utilisateur.                                                                                                                                                                                                     | John@constoso.com                    |
-| UPN                        | Nom d’utilisateur principal de l’utilisateur.                                                                                                                                                                                               | John@constoso.com                    |
+| userPrincipalName                        | Nom d’utilisateur principal de l’utilisateur.                                                                                                                                                                                               | John@constoso.com                    |
 | DisplayName                | Nom d’affichage de l’utilisateur.                                                                                                                                                                                                      | Jean                                 |
 | IntuneLicensed             | Spécifie si cet utilisateur dispose d’une licence Intune ou non.                                                                                                                                                                              | Vrai/Faux                           |
 | IsDeleted                  | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a, de ce fait, été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. | Vrai/Faux                           |
