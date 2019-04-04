@@ -1,12 +1,12 @@
 ---
 title: 'Démarrage rapide : Créer et attribuer une stratégie de protection des applications'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour créer et attribuer une stratégie de protection des applications.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5d7e63542563425606cf1f9a8509a7bf0c09b9a9
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393365"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871359"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Démarrage rapide : Créer et affecter une stratégie de protection des applications
 
@@ -72,7 +72,7 @@ Effectuez les étapes suivantes pour attribuer la stratégie de protection des a
 3.  Sélectionnez **Affectations**.
 4.  Cliquez sur **Sélectionner les groupes à inclure** dans l’onglet **Inclure**.
 5.  Sélectionnez **Testeurs Contoso** comme groupe à inclure.
-6.  Cliquez sur **Sélectionner**. 
+6.  Cliquez sur **Sélectionner** > **Enregistrer**. 
 
 Vous avez maintenant attribué la stratégie de protection des applications.
 

@@ -1,12 +1,12 @@
 ---
 title: 'Démarrage rapide : ajouter et attribuer une application cliente'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour ajouter et attribuer une application cliente.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/25/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40f321b02565f696554e2380d488c41a3b1f24eb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a1c81b1b2f54b15397e9e1d7451ee7ed911848
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391881"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798741"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Démarrage rapide : ajouter et attribuer une application cliente
 
@@ -37,7 +37,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’[administrateur général ou administrateur de services Intune](users-add.md#types-of-administrators). Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
+Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’[administrateur général ou en tant qu’administrateur de services fédérés Intune](users-add.md#types-of-administrators). Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="add-the-client-app-to-intune"></a>Ajouter l’application cliente à Intune
 

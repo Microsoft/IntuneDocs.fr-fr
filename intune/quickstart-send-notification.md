@@ -1,12 +1,12 @@
 ---
 title: 'Démarrage rapide : Envoyer des notifications aux appareils non conformes'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour envoyer des notifications par e-mail aux appareils non conformes.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 757191515ca88cedf1a5edcdb243b1ecb730ec3c
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57991119"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871431"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Démarrage rapide : Envoyer des notifications aux appareils non conformes
 
@@ -40,7 +40,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous au portail [Intune](https://aka.ms/intuneportal) comme [administrateur général](users-add.md#types-of-administrators) ou [administrateur de service](users-add.md#types-of-administrators) Intune. 
+Connectez-vous au portail [Intune](https://aka.ms/intuneportal) comme [administrateur général](users-add.md#types-of-administrators) ou [administrateur de service](users-add.md#types-of-administrators) Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="create-a-notification-message-template"></a>Créer un modèle de message de notification
 
@@ -83,14 +83,13 @@ Effectuez les étapes suivantes si vous souhaitez créer une stratégie de confo
 5. Définissez **Exiger un mot de passe pour déverrouiller des appareils mobiles** sur **Exiger**. Ce paramètre indique si les utilisateurs doivent entrer un mot de passe avant d'accéder aux informations stockées sur leurs périphériques mobiles. 
 6. Définissez **Longueur minimale du mot de passe** sur **6**. Ce paramètre indique le nombre minimal de chiffres ou de caractères figurant dans le mot de passe.
 
-    ![Paramètres de sécurité système pour une nouvelle stratégie de conformité](./media/quickstart-send-notification-02.png) 
+    <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
 7. Cliquez sur **OK**, **OK** et **Créer** pour créer une stratégie de conformité.
-8. Sélectionnez le nom de votre nouvelle stratégie : **Conformité Windows 10**.
-9. Sélectionnez **Propriétés** > **Action en cas de non-conformité** > **Ajouter**.
-10. Dans la zone déroulante **Action**, vérifiez que l’option **Envoyer un e-mail aux utilisateurs finaux** est sélectionnée.
-11. Sélectionnez **Modèle de message** > **Administrateur Contoso** > **Sélectionner** pour sélectionner le modèle de message que vous avez créé précédemment dans cette rubrique.
-12. Sélectionnez **OK** > **OK** > **Enregistrer** pour enregistrer vos modifications.
+8. Sélectionnez **Propriétés** > **Action en cas de non-conformité** > **Ajouter**.
+9. Dans la zone déroulante **Action**, vérifiez que l’option **Envoyer un e-mail aux utilisateurs finaux** est sélectionnée.
+10. Sélectionnez **Modèle de message** > **Administrateur Contoso** > **Sélectionner** pour sélectionner le modèle de message que vous avez créé précédemment dans cette rubrique.
+11. Sélectionnez **AJOUTER** > **OK** > **Enregistrer** pour enregistrer vos modifications.
 
 ## <a name="assign-the-policy"></a>Affecter la stratégie
 

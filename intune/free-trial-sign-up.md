@@ -1,6 +1,6 @@
 ---
 title: Démarrage rapide - Essayer gratuitement Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Dans ce guide de démarrage rapide, vous allez créer un abonnement d’essai gratuit, comprendre les configurations prises en charge, ainsi que les exigences relatives à la mise en réseau, et éventuellement configurer votre nom de domaine.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 63f9ef266c9a5754d5de57232a8f7bc41a6c5777
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756851"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871393"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Démarrage rapide : Essayer gratuitement Microsoft Intune 
 
@@ -67,7 +67,7 @@ L’essai d’Intune est gratuit pendant 30 jours. Si vous disposez déjà d’
 
     ![Image de la page de connexion au Portail Azure](./media/azure-portal-signin.png)
 
-3. Pour afficher Microsoft Intune sur le port Azure, sélectionnez **Tous les services** dans la barre latérale à gauche de la page.
+3. Pour afficher Microsoft Intune dans le portail Azure, sélectionnez **Tous les services** dans la barre latérale à gauche de la page.
 4. Recherchez **Microsoft Intune** dans la zone de filtre, puis sélectionnez cette valeur.
 5. Sélectionnez l’**étoile** pour ajouter Intune au bas de la liste de vos services favoris, puis ouvrez le tableau de bord Intune.
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur l’autorité MDM, consultez [Définir l’autori
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Configurer votre nom de domaine personnalisé (facultatif)
 
-Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le Centre d’administration Microsoft 365. Vous pouvez ajouter, vérifier et configurer votre nom de domaine personnalisé en effectuer les étapes suivantes.  
+Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalisé et si vous souhaitez l’utiliser sans **.onmicrosoft.com**, vous pouvez le changer dans le Centre d’administration Microsoft 365. Vous pouvez ajouter, vérifier et configurer votre nom de domaine personnalisé en effectuant les étapes suivantes.  
 
 > [!IMPORTANT]
 > Vous ne pouvez pas renommer ou supprimer la partie *initiale* **onmicrosoft.com** du nom de domaine. Toutefois, vous pouvez ajouter, vérifier ou supprimer les noms de domaine *personnalisés* utilisés avec Intune pour clarifier l’identité de votre entreprise. Pour plus d’informations, consultez [Configurer un nom de domaine personnalisé](custom-domain-name-configure.md).
@@ -110,7 +110,7 @@ Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalis
 
    ![Capture d’écran du Centre d’administration Microsoft 365 -Ajouter un domaine](./media/domain-custom-add.png)
 
-4. Vérifiez que vous êtes le propriétaire du domaine que vous avez entré auparavant. 
+4. Vérifiez que vous êtes le propriétaire du domaine dans lequel vous êtes entré à l’étape précédente. 
     
     Si vous sélectionnez **envoyer le code par courrier**, un e-mail est envoyé au contact inscrit pour votre domaine. Une fois l’e-mail reçu, copiez le code et entrez-le dans le champ **Tapez votre code de vérification ici**. Si le code de vérification correspond, le domaine est ajouté à votre locataire. L’e-mail affiché peut ne pas sembler familier. Certains bureaux d’enregistrement masquent la véritable adresse e-mail. L’adresse e-mail peut aussi être différente de celle fournie lors de l’enregistrement du domaine.
 
@@ -123,7 +123,7 @@ Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalis
 
 Vous pouvez utiliser deux portails :
 - Le tableau de bord Intune dans Azure ([portal.azure.com](https://portal.azure.com)) vous permet d’explorer les [fonctionnalités d’Intune](what-is-intune.md). Normalement, vous effectuez votre travail dans le tableau de bord Intune.
-- Le Centre d’administration Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) vous permet d’ajouter et de gérer des utilisateurs, si vous n’utilisez pas Azure Active Directory à cette fin. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
+- Dans le Centre d’administration Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)), vous pouvez ajouter et gérer des utilisateurs si vous n’utilisez pas Azure Active Directory à cette fin. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

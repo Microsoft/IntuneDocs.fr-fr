@@ -1,12 +1,12 @@
 ---
 title: 'Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour définir une longueur de mot de passe minimale pour les appareils Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ae0c7b9a00c3e07bb49261ca1a20bd5ef5db15
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397236"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799656"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android
 
@@ -49,7 +49,8 @@ Dans ce guide de démarrage rapide, vous allez utiliser Intune pour demander aux
 3. Pour l’option **Plateforme**, sélectionnez **Android**. 
 4. Sélectionnez **Paramètres** > **Sécurité système** pour afficher le panneau Android **Sécurité système**.
 5. Cliquez sur **Exiger** à côté de **Exiger un mot de passe pour déverrouiller des appareils mobiles**.
-6. Entrez **6** à côté de **Longueur minimale du mot de passe**. 
+6. Sélectionnez **Au moins numérique** en regard de **Type de mot de passe requis**.
+7. Entrez **6** à côté de **Longueur minimale du mot de passe**. 
 
     ![Capture d’écran de création d’un groupe dans Microsoft Intune](media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 

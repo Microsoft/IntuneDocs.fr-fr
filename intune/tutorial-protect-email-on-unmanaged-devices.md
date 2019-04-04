@@ -1,12 +1,12 @@
 ---
 title: Didacticiel - Protéger la messagerie Exchange Online sur les appareils non gérés
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Apprenez à sécuriser Office 365 Exchange Online avec les stratégies de protection des applications Intune et l’accès conditionnel Azure AD.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4692e19d657e19efe18a91273ce585eb59c6cb65
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e6224a0dae7c0aa3d80d4e64331a668953220f65
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528273"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798782"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils non gérés
 
@@ -91,8 +91,8 @@ Nous allons maintenant créer deux stratégies d’accès conditionnel pour couv
 5.  Sous **Affectations**, sélectionnez **Conditions** > **Plateformes d’appareils**.
      
     1. Sous **Configurer**, sélectionnez **Oui**.
-    2. Dans l’onglet **Inclure**, sélectionnez **Toutes les plateformes (y compris celles non prises en charge)**. 
-    3. Sélectionnez **Terminé**.
+    2. Dans l’onglet **Inclure**, sélectionnez **N'importe quel appareil**.
+    1. Sélectionnez **Terminé**.
    
 6.  Dans le volet **Intune**, sélectionnez **Applications clientes**.
      
@@ -136,7 +136,7 @@ La stratégie d’accès conditionnel pour les clients d’authentification mode
 5.  Sous **Affectations**, sélectionnez **Conditions** > **Plateformes d’appareils**.
      
     1. Sous **Configurer**, sélectionnez **Oui**.
-    2. Dans l’onglet **Inclure**, sélectionnez **Toutes les plateformes (y compris celles non prises en charge)**, puis sélectionnez **Terminé**. 
+    2. Dans l’onglet **Inclure**, sélectionnez **N’importe quel appareil**, puis **Terminé**. 
     3. Sélectionnez **Terminé** à nouveau.
 
 6.  Dans le volet **Intune**, sélectionnez **Applications clientes**.

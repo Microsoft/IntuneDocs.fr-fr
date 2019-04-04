@@ -1,12 +1,12 @@
 ---
 title: Tutoriel - Protéger la messagerie Exchange Online sur les appareils gérés par Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Apprenez à sécuriser Exchange Online avec les stratégies de conformité iOS Intune et l’accès conditionnel Azure AD pour exiger des appareils gérés et l’application Outlook.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c76a22fec1342481a67029147c757347a06447c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528205"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799766"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -43,7 +43,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Pour accéder à Intune dans le Portail Azure, choisissez **Tous les services** > **Intune**.
+Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="create-the-ios-device-compliance-policy"></a>Créer la stratégie de conformité des appareils iOS
 Configurez une stratégie de conformité d’appareil Intune pour définir les conditions qu’un appareil doit respecter pour être considéré comme conforme. Pour ce tutoriel, nous allons créer une stratégie de conformité pour des appareils iOS. Les stratégies de conformité sont spécifiques à la plateforme, donc vous avez besoin d’une stratégie de conformité distincte pour chaque plateforme d’appareil que vous souhaitez évaluer.
@@ -93,7 +93,7 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
 5.  Sous **Affectations**, sélectionnez **Conditions** > **Plateformes d’appareils**.
      
     1. Sous **Configurer**, sélectionnez **Oui**.
-    2. Dans l’onglet **Inclure**, sélectionnez **Toutes les plateformes (y compris celles non prises en charge)**, puis sélectionnez **Terminé**. 
+    2. Dans l’onglet **Inclure**, sélectionnez **N’importe quel appareil**, puis **Terminé**. 
     3. Sélectionnez **Terminé** à nouveau.
    
     ![Sélectionnez l’application Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)

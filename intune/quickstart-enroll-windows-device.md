@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6dfdf61159d899a81e1ef53a1aaa649c98833b0e
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389977"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871414"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Démarrage rapide : Inscrire votre appareil Windows 10
 
-Dans ce guide de démarrage rapide, vous jouez d’abord le rôle d’un utilisateur Intune et inscrivez votre appareil Windows 10 dans Microsoft Intune. Vous revenez ensuite à Intune et confirmez l’appareil inscrit.
+Dans ce guide de démarrage rapide, vous jouez d’abord le rôle d’un utilisateur Intune et inscrivez votre appareil Windows 10 dans Microsoft Intune. Ensuite, vous revenez à Intune et confirmez l’inscription de l’appareil.
 
 L’inscription de vos appareils à Microsoft Intune permet à vos appareils Windows 10 d’avoir accès aux données sécurisées de votre organisation, comme les e-mails, les fichiers et d’autres ressources. Sont à la fois concernés les appareils Windows 10 Desktop et Windows 10 Mobile. L’inscription de vos appareils permet de sécuriser cet accès pour vous et votre organisation. Elle vous permet de séparer vos données professionnelles de vos données personnelles.
 
@@ -72,7 +72,7 @@ Avant d’inscrire votre appareil Windows 10 Desktop, vous devez confirmer la ve
 
     ![Sélectionner le compte Accès Professionnel ou Scolaire](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Connectez-vous à Intune avec votre compte professionnel ou scolaire, puis sélectionnez **Suivant**. Si vous avez suivi le guide de démarrage rapide Créer un utilisateur et affecter une licence, connectez-vous avec le compte d’utilisateur que vous avez créé.
+3. Connectez-vous à Intune avec votre compte professionnel ou scolaire, puis sélectionnez **Suivant**. Si vous avez suivi le guide de démarrage rapide [Créer un utilisateur et attribuer une licence](quickstart-create-user.md), connectez-vous avec le compte d’utilisateur que vous avez créé.
 
     > [!NOTE]
     > Si vous configurez un compte « .onmicrosoft.com », l’adresse du compte d’utilisateur contient **.onmicrosoft.com**. 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/30/2019
+ms.date: 03/29/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Device Enrollment Program so that users can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88fe825b75e7717740e5a5ca4af4c52e9bb21768
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f9cd0eec492f5131e4015aa64eccb4c081c663ee
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400396"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646469"
 ---
 # <a name="tutorial-use-the-device-enrollment-program-to-enroll-ios-devices-in-intune"></a>Tutoriel : Utiliser le Programme d’inscription des appareils pour inscrire des appareils iOS dans Intune
 Le Programme d’inscription des appareils d’Apple simplifie l’inscription des appareils. Avec Microsoft Intune et DEP, les appareils sont inscrits automatiquement la première fois que l’utilisateur allume l’appareil. Vous pouvez par conséquent livrer des appareils à de nombreux utilisateurs sans avoir à configurer chaque appareil individuellement. 
@@ -61,7 +61,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
 5. Pour **Nom du serveur MDM**, entrez *TestMDMServer*, puis choisissez **Suivant**. Le nom du serveur vous permet d’identifier le serveur de gestion des appareils mobiles (MDM) uniquement. Il ne s’agit pas du nom ou de l’URL du serveur Microsoft Intune.
 
-6. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
+6. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Sélectionnez **Choisir un fichier...** pour charger le fichier .pem, puis choisissez **Suivant**.
 
 6. Accédez à **Programmes de déploiement** > **Programme d’inscription des appareils** > **Gérer les appareils**.
 7. Sous **Choisir des appareils par**, choisissez **numéro de série**. <!--ask Tiffany about this-->
