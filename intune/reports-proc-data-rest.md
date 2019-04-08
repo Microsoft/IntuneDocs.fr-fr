@@ -1,12 +1,12 @@
 ---
 title: Obtenir des données à partir de l’API d’entrepôt de données avec un client REST
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cette rubrique décrit comment récupérer des données à partir de l’entrepôt de données Microsoft Intune à l’aide d’une API RESTful.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e57d197cadf2ba6586aa39fdc5dbb9cddba554c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5aa85ee044eae5fba9dcb7c380a29dda727c6492
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566571"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871448"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtenir des données à partir de l’API d’entrepôt de données Intune avec un client REST
 
@@ -98,11 +98,11 @@ Vous avez également besoin du point de terminaison. Pour obtenir votre point de
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
 3. Sélectionnez **Configurer l’entrepôt de données Intune** sous **Autres tâches**.
-4. Copiez l’URL de flux personnalisée sous **Utiliser des services de rapports tiers**. Elle doit ressembler à ceci : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+4. Copiez l’URL de flux personnalisée sous **Utiliser des services de rapports tiers**. Elle doit ressembler à ceci : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Le point de terminaison suit le format suivant : `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
-Par exemple, l’entité **dates** ressemble à : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+Par exemple, l’entité **dates** ressemble à : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
 Pour plus d’informations, consultez [Point de terminaison de l’API d’entrepôt de données Intune](reports-api-url.md).
 
@@ -116,7 +116,7 @@ Pour obtenir un nouveau jeton d’accès pour Postman, vous devez ajouter l’UR
 2.  Ouvrez Postman. Choisissez l’opération HTTP **GET**.
 3.  Collez l’URL de point de terminaison dans l’adresse. Vous devez obtenir quelque chose de ce type :  
 
-    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4.  Choisissez l’onglet **Autorisation** et sélectionnez **OAuth 2.0** dans la liste **Type**.
 5.  Sélectionnez **Obtenir un nouveau jeton d’accès**.
 6.  Vérifiez que vous avez déjà ajouté l’URL de rappel à votre application dans Azure. L’URL de rappel est `https://www.getpostman.com/oauth2/callback`.
@@ -197,7 +197,7 @@ L’exemple suivant contient un client REST simple. Le code utilise la classe **
    var emailAddress = "intuneadmin@yourcompany.com";
    var password = "password_of(intuneadmin@yourcompany.com)";
    var applicationId = "<Application ID>";
-   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta";
+   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0";
    var collectionName = "dates";
 
    var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");

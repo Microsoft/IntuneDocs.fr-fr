@@ -1,6 +1,6 @@
 ---
 title: Entité IntuneManagementExtension
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Rubrique de référence sur la catégorie d’entités IntuneManagementExtension dans l’API d’entrepôt de données Intune.
 keywords: Entrepôt de données Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1cd36cba007b465d2100000c484ab6ef5eed2dd
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: ea55c92fb3254b6e610bec1074e35d9d9c32cd18
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58068953"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797996"
 ---
 # <a name="reference-for-intune-management-extension"></a>Informations de référence sur l’extension de la gestion Intune
 

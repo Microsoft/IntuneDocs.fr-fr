@@ -1,6 +1,6 @@
 ---
 title: 'Association appareil-utilisateur : Entrepôt de données Intune'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: L’entité UserDeviceAssociation contient les associations appareil-utilisateur dans votre organisation.
 keywords: Entrepôt de données Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d3473b04a1d015f88d27359864a84227215b62a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 466066faf03cbdf560697a04310eac844d4f1b87
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565296"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798258"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Informations de référence sur l’entité Association appareil-utilisateur
 

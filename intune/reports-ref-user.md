@@ -1,6 +1,6 @@
 ---
 title: 'Utilisateur : Entrepôt de données Intune'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Rubrique de référence sur la catégorie Utilisateur de collections d’entités dans l’API d’entrepôt de données Intune.
 keywords: Entrepôt de données Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ab0674304f1e74c8bf2ad1aeecd419575484e5f
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: 16084e2cd33f6aac9313bb1f8e9fba0467a3ce73
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797855"
 ---
 # <a name="reference-for-user-entity"></a>Informations de référence sur l’entité d’utilisateur
 

@@ -1,6 +1,6 @@
 ---
 title: Informations de référence sur les entités d’application
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Rubrique de référence sur la catégorie Application de collections d’entités dans l’API d’entrepôt de données Intune.
 keywords: Entrepôt de données Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47d7a52a212733955d441b463ef66d89f8d9143
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: 68eeb174b7cc2be09ea4b6da9f151695157ac819
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358185"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799246"
 ---
 # <a name="reference-for-application-entities"></a>Informations de référence sur les entités d’application
 
@@ -44,7 +44,7 @@ L’entité **AppRevision** répertorie toutes les versions des applications.
 | AppKey |Identificateur unique de l’application. |123 |
 | ApplicationId |Identificateur unique de l’application (semblable à AppKey, mais il s’agit d’une clé naturelle) |b66bc706-ffff-7437-0340-032819502773 |
 | Révision |Version mentionnée par l’administrateur durant le chargement du binaire. |2 |
-| Title |Titre de l’application. |Excel |
+| Titre |Titre de l’application. |Excel |
 | Éditeur |Éditeur de l’application. |Microsoft |
 | UploadState |État de chargement de l’application. |1 |
 | AppTypeKey |Référence à AppType décrite dans la section suivante | |

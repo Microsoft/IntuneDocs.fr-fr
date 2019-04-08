@@ -1,6 +1,6 @@
 ---
 title: Ajouter des applications pour les PC Windows exécutant le logiciel client Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cette rubrique montre comment ajouter des applications pour ordinateurs Windows à Intune avant de les déployer.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aaeabeebc636e58eac2058b0f482efef34878f0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e4f6a8c3e460e9806aabadd710ec102aa77d44ab
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460929"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798891"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Ajouter des applications pour les PC Windows exécutant le logiciel client Intune
 

@@ -1,6 +1,6 @@
 ---
 title: Protection de point de terminaison pour PC Windows
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Sécurisez vos ordinateurs gérés avec Endpoint Protection, qui fournit une protection en temps réel contre les menaces de logiciels malveillants.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 188242f870e5b7218a5b58a201782bf4bed4c25e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7192d7c71d1737a624f2c76e3253cb232dc1f2af
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460969"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798970"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Contribuer à la sécurisation des PC Windows avec Endpoint Protection pour Microsoft Intune
 
