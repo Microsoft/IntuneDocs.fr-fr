@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.openlocfilehash: 4b5e6ac4683284dc71c9171f4367e72d5ec45c59
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871431"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899009"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Démarrage rapide : Envoyer des notifications aux appareils non conformes
 
@@ -85,7 +85,7 @@ Effectuez les étapes suivantes si vous souhaitez créer une stratégie de confo
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Cliquez sur **OK**, **OK** et **Créer** pour créer une stratégie de conformité.
+7. Sélectionnez **OK** > **OK** > **Créer** pour créer une stratégie de conformité.
 8. Sélectionnez **Propriétés** > **Action en cas de non-conformité** > **Ajouter**.
 9. Dans la zone déroulante **Action**, vérifiez que l’option **Envoyer un e-mail aux utilisateurs finaux** est sélectionnée.
 10. Sélectionnez **Modèle de message** > **Administrateur Contoso** > **Sélectionner** pour sélectionner le modèle de message que vous avez créé précédemment dans cette rubrique.
