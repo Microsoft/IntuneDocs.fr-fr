@@ -1,6 +1,6 @@
 ---
 title: Ajouter des applications à Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Découvrez comment ajouter des applications à Microsoft Intune et affecter les applications à des utilisateurs et à des appareils. Intune prend en charge un large éventail de types d’applications.
 keywords: ''
 author: Erikre
@@ -10,6 +10,7 @@ ms.date: 01/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c0f7723e242a77b85db1f9007f26697769edd
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 3dfd2442d737b91d5722f26313ac1d0200a341a7
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229885"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568373"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 

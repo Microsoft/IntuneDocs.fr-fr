@@ -1,6 +1,6 @@
 ---
 title: Configurer l’inscription d’appareils Windows à l’aide de Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Configurer l’inscription d’appareils Windows.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2192b6d653bfb51503b006a5045d454c202618f
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: d7dd4ab5f7cecfa8a765b6dfa038b73015a0c768
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234101"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567294"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -40,10 +41,10 @@ Deux facteurs déterminent la manière dont vous pouvez simplifier l’inscripti
 - **Utilisez-vous Azure Active Directory Premium ?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) est inclus avec Enterprise Mobility + Security et d’autres plans de licence.
 - **Quelles versions des clients Windows les utilisateurs vont-ils inscrire ?** <br>Les appareils Windows 10 peuvent s’inscrire automatiquement quand vous ajoutez un compte professionnel ou scolaire. L’inscription des versions antérieures doit s’effectuer à l’aide de l’application Portail d’entreprise.
 
-||**Azure AD Premium**|**Autre AD** |
+||**Azure AD Premium**|**Autre AD **|
 |----------|---------------|---------------|  
-|**Windows 10**|[Inscription automatique](#enable-windows-10-automatic-enrollment) |[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|
-|**Versions précédentes de Windows**|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|[Inscription d’utilisateur](#enable-windows-enrollment-without-azure-ad-premium)|
+|**Windows 10**|[Inscription automatique](#enable-windows-10-automatic-enrollment) |Inscription des utilisateurs|
+|**Versions précédentes de Windows**|Inscription des utilisateurs|Inscription des utilisateurs|
 
 Les organisations qui peuvent utiliser l’inscription automatique peuvent également configurer [l’inscription en bloc des appareils](windows-bulk-enroll.md) à l’aide de l’application Concepteur de configuration Windows.
 

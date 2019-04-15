@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 04afc9c44bc1c4898950e6f3aff5dac7cb93370f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56323369"
+---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Activer l’inscription automatique Windows 10
 
 L’inscription automatique permet aux utilisateurs d’inscrire leurs appareils Windows 10 dans Intune. Pour s’inscrire, les utilisateurs ajoutent leur compte professionnel à leurs appareils personnels ou joignent des appareils d’entreprise à Azure Active Directory. En arrière-plan, l’appareil est inscrit et joint à Azure Active Directory. Une fois inscrit, l’appareil est géré par Intune.

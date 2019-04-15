@@ -1,15 +1,16 @@
 ---
 title: Gérer les applications iOS achetées en volume dans Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Découvrez comment synchroniser les applications que vous avez achetées en volume sur l’App Store iOS dans Microsoft Intune, puis comment gérer et suivre leur utilisation.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 606fe0dfe7160d6fe61366db98b7f22a45216bd0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: dca219f1593265e0bf6447c054969548d5d79351
+ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229825"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59570635"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS achetées par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -124,11 +125,11 @@ L’utilisateur final reçoit des invites concernant l’installation d’applic
 
 | # | Scénario                                | Invite au programme Apple VPP                              | Invite d’installation d’application | Invite de saisie de l’identifiant Apple |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD – Licence associée à un utilisateur                             | Y                                                                                               | Y                                           | Y                                 |
-| 2 | Corp – Licence associée à un utilisateur (appareil non supervisé)     | Y                                                                                               | Y                                           | Y                                 |
-| 3 | Corp – Licence associée à un utilisateur (appareil supervisé)         | Y                                                                                               | N                                           | Y                                 |
-| 4 | BYOD – Licence associée à un appareil                           | N                                                                                               | Y                                           | N                                 |
-| 5 | Corp – Licence associée à un appareil (appareil non supervisé)                           | N                                                                                               | Y                                           | N                                 |
+| 1 | BYOD – Licence associée à un utilisateur                             | O                                                                                               | O                                           | O                                 |
+| 2 | Corp – Licence associée à un utilisateur (appareil non supervisé)     | O                                                                                               | O                                           | O                                 |
+| 3 | Corp – Licence associée à un utilisateur (appareil supervisé)         | O                                                                                               | N                                           | O                                 |
+| 4 | BYOD – Licence associée à un appareil                           | N                                                                                               | O                                           | N                                 |
+| 5 | Corp – Licence associée à un appareil (appareil non supervisé)                           | N                                                                                               | O                                           | N                                 |
 | 6 | Corp – Licence associée à un appareil (appareil supervisé)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Mode plein écran (appareil supervisé) – Licence associée à un appareil | N                                                                                               | N                                           | N                                 |
 | 8 | Mode plein écran (appareil supervisé) – Licence associée à un utilisateur   | --- | ---                                          | ---                                |

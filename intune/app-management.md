@@ -1,15 +1,16 @@
 ---
 title: Qu’est-ce que la gestion des applications dans Microsoft Intune ?
-titlesuffix: ''
+titleSuffix: ''
 description: En savoir plus sur les fonctionnalités de gestion des applications client par plateforme pour Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f2c5da7772ff137e44fead66f00fe34004bb1f4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 34807edabf99a107c259fdfae5e43db18084fb67
+ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850900"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59569062"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -44,7 +45,7 @@ Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Ajouter et affecter des applications à des appareils et à des utilisateurs | Oui | Oui | Oui | Oui | Oui |
 | Affecter des applications à des appareils non inscrits auprès d’Intune | Oui | Oui | Non | Non | Non |
-| Utiliser des stratégies de configuration d’application pour contrôler le comportement des applications au démarrage | Non | Oui | Non | Non | Non |
+| Utiliser des stratégies de configuration d’application pour contrôler le comportement des applications au démarrage | Oui | Oui | Non | Non | Non |
 | Utiliser des stratégies d’approvisionnement d’application mobile pour renouveler les applications arrivées à expiration | Non | Oui | Non | Non | Non |
 | Protéger les données de l’entreprise dans les applications avec des stratégies de protection d’applications | Oui | Oui | Non | Non1 | Non |
 | Supprimer exclusivement les données d’entreprise d’une application installée (effacement d’application sélectif) | Oui | Oui | Non | Oui | Oui |

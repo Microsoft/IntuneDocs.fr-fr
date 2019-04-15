@@ -1,5 +1,6 @@
 ---
-title: Créer une stratégie de conformité des appareils MTD avec Microsoft Intune | Microsoft Intune
+title: Créer une stratégie de conformité des appareils MTD avec Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Créez une stratégie de conformité des appareils Intune qui utilise les niveaux de menace MTD partenaires afin de déterminer si un appareil mobile peut accéder aux ressources de l’entreprise.
 keywords: ''
 author: brenduns
@@ -9,6 +10,7 @@ ms.date: 01/02/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
@@ -16,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 876d9afb21d4f1fc00eebc21226eed189597fd17
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: fe3561bd664842e79f50f738307ce6a026464565
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237535"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569608"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Créer une stratégie de conformité des appareils Mobile Threat Defense (MTD) avec Intune
 

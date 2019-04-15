@@ -1,5 +1,6 @@
 ---
-title: Créer et déployer une stratégie de protection des applications WIP | Microsoft Intune
+title: Créer et déployer une stratégie de protection des applications Protection des informations Windows (WIP)
+titleSuffix: Microsoft Intune
 description: Créer et déployer une stratégie de protection des applications Protection des informations Windows (WIP) avec Microsoft Intune
 keywords: ''
 author: Erikre
@@ -9,6 +10,7 @@ ms.date: 01/02/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
@@ -16,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6494bbff9ca1c9d46c4af03ff90340fcca36ec97
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 1b8257b315bc18b10e7c2c86e931af005e44730c
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569764"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune
 
@@ -125,7 +127,8 @@ Après avoir ajouté les applications que vous souhaitez protéger avec WIP, vou
 
 WIP Learning est un rapport qui vous permet de surveiller vos applications WIP et les applications inconnues de WIP. Les applications inconnues sont celles non déployées par le département informatique de votre organisation. Vous pouvez exporter ces applications à partir du rapport et les ajouter à vos stratégies WIP pour éviter une perturbation de la productivité avant l’application de WIP en mode « Bloquer ».
 
-<!-- 1631908 --> En plus de l’affichage des informations sur les applications WIP, vous pouvez consulter un récapitulatif des appareils qui partagent des données de travail avec des sites web. Ces informations vous permettront d’identifier les sites web à ajouter aux stratégies WIP des utilisateurs et des groupes. Le résumé montre les URL du site Web accessibles par des applications compatibles WIP.
+<!-- 1631908 -->
+En plus de l’affichage des informations sur les applications WIP, vous pouvez consulter un récapitulatif des appareils qui partagent des données de travail avec des sites web. Ces informations vous permettront d’identifier les sites web à ajouter aux stratégies WIP des utilisateurs et des groupes. Le résumé montre les URL du site Web accessibles par des applications compatibles WIP.
 
 Quand vous utilisez des applications WIP et des applications inconnues de WIP, nous vous recommandons de commencer par **Silencieux** ou **Autoriser les substitutions** quand vous vérifiez sur un petit groupe que vous avez les bonnes applications dans votre liste d’applications protégées. Une fois cela fait, vous pouvez passer sur votre stratégie d’application finale, **Bloquer**.
 

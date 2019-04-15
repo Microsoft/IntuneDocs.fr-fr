@@ -1,15 +1,16 @@
 ---
 title: Ajouter une application métier Windows Phone à Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Découvrez comment ajouter une application métier (LOB) Windows Phone à l’aide de Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6a1b9114488fd61e0204485ffb7f90d744c3607
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: e3458570f617fb24fa2798c843ca4d7c69342472
+ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232668"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59570648"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows Phone à Microsoft Intune
 
@@ -63,7 +64,7 @@ Utilisez les informations contenues dans cet article pour ajouter une applicatio
     - **Logo** : chargez une icône associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 3. Une fois que vous avez fini, sélectionnez **OK**.
 
-## <a name="step-4-finish-up"></a>Étape 4 : Terminer
+## <a name="step-4-finish-up"></a>Étape 4 : Terminer
 
 1. Dans le volet **Ajouter une application**, vérifiez que les informations sont correctement configurées.
 2. Sélectionnez **Ajouter** pour charger l’application sur Intune.
