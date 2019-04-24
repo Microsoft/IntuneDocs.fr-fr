@@ -8,10 +8,12 @@
 
 ## [Se connecter au portail d’entreprise](sign-in-to-the-company-portal.md)
 
-## [Utilisation de votre appareil Android](using-your-android-device-with-intune.md)
-### [Que se passe-t-il quand vous inscrivez un appareil Android ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-### [Inscrire votre appareil](enroll-your-device-in-Intune-android.md)
-#### [Inscrire votre appareil avec Android for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+## Utilisation de votre appareil Android
+### [Pourquoi inscrire votre appareil Android](why-enroll-android-device.md)
+### Inscrire votre appareil
+#### [Inscrire votre appareil Android](enroll-device-android-company-portal.md)  
+#### [Inscrire avec un profil professionnel Android](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Inscrire auprès de l’application Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
 ### [Utiliser des applications gérées sur votre appareil](use-managed-apps-on-your-device-android.md)
 ### [Chiffrer votre appareil](encrypt-your-device-android.md)
 ### [Définir votre code confidentiel ou mot de passe](set-your-pin-or-password-android.md)
@@ -23,16 +25,15 @@
 #### [Annuler l'inscription de votre appareil](unenroll-your-device-from-intune-android.md)
 #### [Annuler l’inscription de votre appareil si vous avez refusé les conditions d’utilisation](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
-### [Résolution des problèmes courants avec Android](troubleshoot-your-device-android.md)
+### Résoudre les problèmes courants avec Android
 #### [Vérification de la conformité des appareils](check-compliance-on-your-device-android.md)
 #### [Résolution des problèmes courants avec Samsung Knox](samsung-knox-errors-android.md)
 #### [Mettre à jour votre appareil pour installer Outlook](update-device-outlook-android.md)
 
-#### Utilisation des journaux pour résoudre les problèmes
+#### Journalisation
 ##### [Activer la journalisation détaillée](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Envoyer des journaux à l’aide de la messagerie](send-logs-to-your-it-admin-by-email-android.md)
+##### [Charger et envoyer par e-mail des journaux](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Envoyer des journaux à l’aide d’un câble USB](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Soumettre des erreurs d'inscription](send-enrollment-errors-to-your-it-admin-android.md)
 ##### [Envoyer les erreurs à Microsoft](send-logs-to-microsoft-android.md)
 
 ### Questions concernant le système d'exploitation
