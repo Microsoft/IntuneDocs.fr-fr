@@ -1,28 +1,30 @@
 ---
 title: Préparation de Microsoft Intune à la gestion des appareils mobiles
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Évaluez vos exigences stratégiques et techniques avant de migrer vers Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 1e21fef5102b22dfe698a9adb73736508452acfe
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e527ed11e451ec0ef2f6d2fde42e0c8fd53408f3
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508359"
 ---
-# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Phase 1 : Préparer Microsoft Intune à la gestion des appareils mobiles (MDM)
+# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Phase 1 : Préparer Microsoft Intune à la gestion des appareils mobiles (MDM)
 
 Avant d’étudier plus en détail la configuration d’Intune, passons en revue les exigences de la gestion des appareils mobiles de votre organisation. Il peut être judicieux d’exécuter des rapports d’utilisateurs actifs dans votre fournisseur MDM actuel de façon à identifier les groupes d’utilisateurs critiques. Dès lors, vous pourrez commencer à vous pencher sur les questions de la section [Évaluation des exigences MDM](migration-guide-prepare.md#assess-mdm-requirements).
 

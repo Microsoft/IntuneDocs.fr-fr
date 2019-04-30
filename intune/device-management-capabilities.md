@@ -5,10 +5,11 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: NOINDEX,NOFOLLOW
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b5308eb1f9d83bcc9b9cbc29cac9bcf09356e77
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 293fa40b59d0005f60aad45a3fc42d3dd790857d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61510144"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Fonctionnalités de gestion des appareils inscrits de Microsoft Intune
 
@@ -30,7 +31,7 @@ Microsoft Intune vous permet de gérer une gamme d’appareils en les *inscrivan
 
 Cet article fournit une liste complète des fonctionnalités dont vous bénéficiez après avoir inscrit vos appareils.
 
-La gestion, le stock, le déploiement d'applications, le provisionnement et la mise hors service sont gérés dans le portail Intune.
+La gestion, le stock, le déploiement d’applications, le provisionnement et la mise hors service sont gérés par le biais d’Intune dans le portail Azure.
 
 Les utilisateurs ont accès au portail d’entreprise, ce qui leur permet d’installer des applications, d’inscrire et de supprimer des appareils, et de contacter le service informatique ou le support technique.
 
@@ -42,7 +43,7 @@ Les utilisateurs ont accès au portail d’entreprise, ce qui leur permet d’in
 |--------------|-----------|--------------------|
 |Stratégies de configuration<br><br>Stratégies personnalisées| Vous permettent de gérer de nombreux paramètres et fonctionnalités sur les appareils mobiles de votre organisation. Par exemple, vous pouvez exiger un mot de passe, restreindre le nombre de tentatives de connexion ayant échoué, limiter la durée avant le verrouillage de l’écran, définir une date d’expiration du mot de passe et empêcher la réutilisation de mots de passe déjà utilisés. Vous pouvez également contrôler l’utilisation de fonctionnalités matérielles et logicielles telles que l’appareil photo ou le navigateur web.<br><br>Utilisez des stratégies personnalisées quand les stratégies de configuration ne contiennent pas les paramètres dont vous avez besoin. Pour les appareils iOS, vous pouvez importer les paramètres que vous avez exportés à l’aide de l’outil Apple Configurator. Pour d’autres appareils, vous pouvez utiliser des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer les paramètres et fonctionnalités sur l’appareil.|[Gérer des paramètres et des fonctionnalités sur vos appareils avec des stratégies Microsoft Intune](device-compliance-get-started.md)|
 |Réinitialisation à distance, verrouillage à distance et réinitialisation du code d'accès|Supprime les données sensibles en cas de perte ou de vol d’un appareil. Par exemple, vous pouvez verrouiller l'appareil à distance, restaurer ses paramètres d'usine ou effacer uniquement les données d'entreprise.<br><br>Vous pouvez réinitialiser les codes secrets si les utilisateurs ne peuvent plus accéder à leur appareil, verrouiller des appareils perdus ou volés ou supprimer les données d'appareils perdus ou volés.|Protéger vos appareils à l’aide du [verrouillage à distance](device-remote-lock.md) et de la [réinitialisation du code d’accès](device-passcode-reset.md)|
-|Mode plein écran|Permet de verrouiller certaines fonctionnalités des appareils mobiles, comme la capture d’écran et les boutons d’alimentation. Vous permet également de limiter les appareils à l'exécution d'une seule application que vous spécifiez.|[Paramètres de la stratégie de configuration iOS dans Microsoft Intune](device-restrictions-ios.md)|
+|Mode plein écran|Permet de verrouiller certaines fonctionnalités des appareils mobiles, comme la capture d’écran et les boutons d’alimentation. Vous permet également de limiter les appareils à l'exécution d'une seule application que vous spécifiez. |[Paramètres de la stratégie de configuration iOS dans Microsoft Intune](device-restrictions-ios.md)|
 
 ## <a name="app-management"></a>Gestion d'applications
 

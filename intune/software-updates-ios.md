@@ -5,56 +5,87 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: de73aa069765ce75068781674ff24d097346cdba
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505928"
 ---
-# <a name="configure-ios-update-policies-in-intune"></a>Configurer des stratégies de mise à jour iOS dans Intune
+# <a name="add-ios-software-update-policies-in-intune"></a>Ajouter des stratégies de mise à jour de logiciel iOS dans Intune
 
-Les stratégies de mise à jour logicielle vous permettent de forcer les appareils iOS supervisés à installer automatiquement la dernière mise à jour de système d’exploitation disponible. Cette fonctionnalité est disponible uniquement pour les appareils supervisés. Lors de la configuration d’une stratégie, vous pouvez ajouter les jours et heures auxquelles vous ne souhaitez pas que les appareils installent une mise à jour. 
+Les stratégies de mise à jour logicielle vous permettent de forcer les appareils iOS supervisés à installer automatiquement la dernière mise à jour de système d’exploitation disponible. Lors de la configuration d’une stratégie, vous pouvez ajouter les jours et heures auxquelles vous ne souhaitez pas que les appareils installent une mise à jour. 
+
+Cette fonctionnalité s’applique à :
+
+- iOS versions 10.3 et ultérieures (supervisé)
 
 L’appareil effectue une vérification auprès d’Intune toutes les huit heures. Si une mise à jour est disponible, et qu’il ne s’agit pas d’une période limitée, l’appareil télécharge et installe la dernière mise à jour du système d’exploitation. Aucune interaction utilisateur n’est nécessaire pour mettre à jour l’appareil. La stratégie n’empêche pas un utilisateur de mettre à jour le système d’exploitation manuellement.
 
-Cette fonctionnalité prend en charge les appareils exécutant iOS 10.3 et versions ultérieures. Le paramètre de délai est disponible dans iOS 11.3 et les versions ultérieures.
-
 ## <a name="configure-the-policy"></a>Configurer la stratégie
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Mises à jour logicielles** > **Mettre à jour les stratégies pour iOS** > **Créer**.
-4. Entrez un nom et une description pour la stratégie.
-5. Cliquez sur **Paramètres**. 
 
-    Indiquez quand les appareils iOS ne sont pas forcés à installer les dernières mises à jour. Ces paramètres créent une plage de temps limitée. Vous pouvez configurer les **Jours** de la semaine, le **Fuseau horaire**, **l’heure de début**, **l’heure de fin** et s’il faut **Retarder la visibilité des mises à jour logicielles (en jours)** pour entrer des utilisateurs. Vous pouvez sélectionner une plage de délai des mises à jour logicielles comprise entre 1 et 90 jours. Quand le délai expire, les utilisateurs obtiennent une notification de mise à jour vers la version la plus récente du système d’exploitation qui était disponible au moment du déclenchement du délai. Pour ne pas définir de délai pour les mises à jour logicielles, entrez 0. Ces paramètres de mise à jour s’appliquent seulement aux appareils iOS supervisés.
-  
-    Par exemple, si iOS 12.a est disponible le **1er janvier** et que l’option **Retarder les mises à jour du système d’exploitation** est définie sur **5 jours**, cette version particulière ne s’affiche pas comme mise à jour disponible sur les appareils d’utilisateur final attribués à ce profil. Le **sixième jour** suivant le lancement, cette mise à jour s’affiche comme disponible et tous les utilisateurs finaux sont libres de lancer une mise à jour.
+1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+2. Sélectionnez **Mises à jour logicielles** > **Mettre à jour les stratégies pour iOS** > **Créer**.
+3. entrez les paramètres suivants :
 
+    - **Nom** : entrez un nom pour votre stratégie de mises à jour de logiciel. Par exemple, entrez `iOS restricted update times`.
+    - **Description** : entrez une description pour votre stratégie. Ce paramètre est facultatif, mais recommandé.
 
-6. Cliquez sur **OK** pour enregistrer vos modifications. Sélectionnez **Créer** pour créer la stratégie.
+4. Sélectionnez **Paramètres > Configurer**. entrez les paramètres suivants :
 
-Le profil est créé et affiché dans la liste des stratégies. La Gestion des appareils mobiles Apple ne vous permet de forcer un appareil à installer des mises à jour en fonction d’une certaine date ou heure. 
+    - **Sélectionnez les heures durant lesquelles empêcher l’installation de mises à jour** : spécifiez une plage de temps limitée durant laquelle les mises à jour ne peuvent pas être installées de force. 
+      - Les blocs nocturnes ne sont pas pris en charge et risquent de ne pas fonctionner. Par exemple, ne configurez pas une stratégie avec une *heure de début* de 20h00 et une *heure de fin* de 6h00.
+      - Une stratégie qui démarre à minuit et se termine à minuit couvre 0 heure, et non pas 24 heures ; elle aboutit donc à l’absence de restriction.
+
+      Quand vous définissez la plage de temps limitée, entrez les informations suivantes :
+
+      - **Jours** : choisissez le ou les jours de la semaine au cours desquels les mises à jour ne sont pas installées. Par exemple, cochez Lundi, Mercredi et Vendredi pour empêcher l’installation de mises à jour durant ces jours.
+      - **Fuseau horaire** : choisissez un fuseau horaire.
+      - **Heure de début** : choisissez l’heure de début de la plage de temps limitée. Par exemple, entrez 5h00 pour que les mises à jour ne soient pas installées à partir de 5h00.
+      - **Heure de fin** : choisissez l’heure de fin de la plage de temps limitée. Par exemple, entrez 1h00 pour que les mises à jour puissent être installées à partir de 1h00.
+
+    - **Différer la visibilité des mises à jour logicielles pour les utilisateurs finaux sans changer les mises à jour planifiées (jours)**  : 
+
+      **Ce paramètre a été déplacé vers [Restrictions de l’appareil](device-restrictions-ios.md#general). Il sera supprimé de cet emplacement dans le portail**. Pendant une courte période, les stratégies existantes peuvent être changées ici. Après environ un mois, ce paramètre sera supprimé des stratégies existantes.
+
+      Pour limiter l’impact, nous vous recommandons de :
+        - Supprimer la stratégie existante de cet emplacement dans le portail
+        - Créer une [stratégie de restriction d’appareil](device-restrictions-ios.md#general)
+        - Cibler les mêmes utilisateurs que la stratégie d’origine
+
+      En cas de conflit, ce paramètre n’a aucun effet, *sauf si* les deux valeurs sont identiques. Pour éviter un conflit, veillez à changer la stratégie existante ou à la supprimer de cet emplacement dans le portail.
+      > [! Important]  
+      > Une stratégie dont l’*heure de début* et l’*heure de fin* sont définies sur minuit couvre 0 heure, et non pas 24 heures. Cette stratégie aboutit à l’absence de restriction.  
+
+5. Sélectionnez **OK** > **Créer** pour enregistrer vos changements et créer la stratégie.
+
+Le profil est créé et affiché dans la liste des stratégies.
+
+Pour obtenir des conseils de la part de l’équipe du support technique Intune, consultez [Différer la visibilité des mises à jour logicielles dans Intune pour les appareils supervisés](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
+
+> [!NOTE]
+> La Gestion des appareils mobiles Apple ne vous permet de forcer un appareil à installer des mises à jour en fonction d’une certaine date ou heure.
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Changer les heures restreintes de la stratégie
 
 1. Dans **Mises à jour logicielles**, sélectionnez **Mettre à jour les stratégies pour iOS**.
 2. Choisissez une stratégie existante > **Propriétés**.
 3. Mettez à jour la période limitée :
-    
+
     1. Choisir les jours de la semaine
     2. Choisissez le fuseau horaire dans lequel cette stratégie est appliquée.
     3. Entrez l’heure de début et de fin pour les heures sur liste rouge.
 
     > [!NOTE]
-    > Si l’**Heure de début** et l’**Heure de fin** sont toutes deux définies sur minuit, la vérification de temps de maintenance est désactivée.
+    > Si l’**heure de début** et l’**heure de fin** sont toutes deux définies sur minuit, Intune ne vérifie pas les restrictions relatives aux plages d’installation des mises à jour. Ainsi, toute configuration pour **Sélectionnez les heures durant lesquelles empêcher l’installation de mises à jour** est ignorée et les mises à jour peuvent s’installer à tout moment.  
 
 ## <a name="assign-the-policy-to-users"></a>Affecter la stratégie à des utilisateurs
 
@@ -71,3 +102,6 @@ La conformité de la mise à jour des appareils utilisés par les utilisateurs c
 <!-- 1352223 -->
 **Mises à jour logicielles** > **Échecs d’installation pour les appareils iOS** affiche une liste des appareils iOS supervisés ciblés par une stratégie de mise à jour, ayant tenté d’effectuer une mise à jour et dont la mise à jour a échoué. Pour chaque appareil, vous pouvez afficher un état indiquant la raison pour laquelle l’appareil n’a pas été automatiquement mis à jour. Les appareils intègres et à jour ne sont pas affichés dans la liste. Les appareils marqués comme « À jour » disposent de la dernière mise à jour prise en charge par l’appareil lui-même.
 
+## <a name="next-steps"></a>Étapes suivantes
+
+[Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).

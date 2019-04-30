@@ -5,21 +5,23 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
-ms.topic: article
+ms.date: 03/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 60cfa440-0723-4ea0-bacf-3c5d26f9a1d3
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 4cec5c593fd4191a9d73e77b13fd38df81a7fe8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a9f16c563ff0416092abe3812b3505c2f6d92587
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512897"
 ---
 # <a name="basic-setup"></a>Configuration de base
 
@@ -31,11 +33,11 @@ Une fois que vous avez évalué votre environnement, vous devez configurer Micro
 
 Intune requiert l’utilisation d’Azure Active Directory (Azure AD) en tant que fournisseur de groupes d’utilisateurs et d’identités. Informations supplémentaires :
 
--  [Configuration requise pour les identités](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+-  [Configuration requise pour les identités](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   [Configuration requise pour la synchronisation d’annuaires](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+-   [Configuration requise pour la synchronisation d’annuaires](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   [Configuration requise pour l’authentification multifacteur (MFA)](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
+-   [Authentification multifacteur (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
 -   [Planification de vos groupes d’utilisateurs et d’appareils](users-add.md)
 
@@ -54,17 +56,17 @@ Si vous comptez utiliser l’authentification basée sur un certificat pour vali
 
 ## <a name="task-list-for-an-intune-setup"></a>Liste des tâches de configuration de Microsoft Intune
 
-### <a name="task-1-intune-subscription"></a>Tâche 1 : Abonnement Intune
+### <a name="task-1-intune-subscription"></a>Tâche 1 : Abonnement Intune
 
 Avant de pouvoir migrer vers Intune, vous devez créer un abonnement Intune.
 
--   Vous pouvez consulter [cette page](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), qui fournit des instructions sur les opérations suivantes :
+-   Vous pouvez consulter [cette page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), qui fournit des instructions sur les opérations suivantes :
 
     -   Création d’un abonnement Intune lié à un nouveau locataire AAD
 
     -   Liaison de l’abonnement Intune via la connexion à un locataire AAD existant
 
-### <a name="task-2-assign-intune-user-licenses"></a>Tâche 2 : Affecter des licences utilisateur Intune
+### <a name="task-2-assign-intune-user-licenses"></a>Tâche 2 : Attribuer des licences utilisateur Intune
 
 -   Découvrez comment [affecter des licences utilisateur Intune](licenses-assign.md).
 

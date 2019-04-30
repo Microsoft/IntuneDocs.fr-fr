@@ -5,67 +5,81 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 04/19/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b853d42efc247f6080cc4ed6ad8b4943b85b3215
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506986"
 ---
-# <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et le profil dans Microsoft Intune
+# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et les profils dans Microsoft Intune  
 
-Il existe différentes options de supervision avec les bases de référence de la sécurité. Vous pouvez superviser le profil des bases de référence de la sécurité qui s’applique à vos utilisateurs et appareils. Vous pouvez également superviser la base de référence réelle et tous les appareils qui correspondent (ou non) aux valeurs recommandées.
+Intune propose plusieurs options pour superviser vos bases de référence de la sécurité. Vous pouvez superviser le profil des bases de référence de la sécurité qui s’applique à vos utilisateurs et appareils. Vous pouvez également superviser la base de référence réelle et tous les appareils qui correspondent (ou non) aux valeurs recommandées.
 
 Cet article décrit progressivement ces deux options de supervision.
 
 [Bases de référence de la sécurité dans Intune](security-baselines.md) fournit plus d’informations sur la fonctionnalité des bases de référence de la sécurité dans Microsoft Intune.
 
-## <a name="monitor-the-baseline-and-your-devices"></a>Superviser la base de référence et vos appareils
+## <a name="monitor-the-baseline-and-your-devices"></a>Superviser la base de référence et vos appareils  
 
-Quand vous supervisez la base de référence, vous obtenez un aperçu de l’état de sécurité de vos appareils selon les recommandations de Microsoft.
+Quand vous supervisez une base de référence, vous obtenez un aperçu de l’état de sécurité de vos appareils selon les recommandations de Microsoft. Vous pouvez afficher ces informations à partir du volet Vue d’ensemble de la base de référence de la sécurité dans la console Intune.  L’affichage des données peut prendre jusqu’à 24 heures après l’affectation initiale d’une base de référence. L’affichage des modifications ultérieures prend jusqu’à six heures.  
 
-> [!NOTE]
-> Une fois que vous avez assigné une base de référence, les rapports peuvent prendre jusqu’à 24 heures pour se mettre à jour. Passé ce délai, ils peuvent prendre jusqu’à 6 heures pour se mettre à jour.
+Pour afficher les données de supervision de la base de référence et des appareils, connectez-vous au [portail Intune](https://aka.ms/intuneportal). Ensuite, sélectionnez **Bases de référence de la sécurité (préversion)** et sélectionnez une base de référence pour afficher le volet **Vue d’ensemble**.
 
-1. Dans le [portail Azure](https://portal.azure.com/), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
-2. Sélectionnez **Bases de référence de la sécurité (préversion)** > sélectionnez une base de référence.
-3. Dans **Vue d’ensemble**, le graphe montre le nombre d’appareils impactés par la base de référence que vous avez choisie, ainsi que les différents états :
+Le volet **Vue d’ensemble** propose deux méthodes pour superviser l’état :
+- **Vue de l’appareil** : synthèse du nombre d’appareils figurant dans chaque catégorie d’état pour la base de référence.  
+- **Par catégorie** : vue qui montre chaque catégorie dans la base de référence et inclut le pourcentage d’appareils pour chaque groupe d’état pour chaque catégorie de base de référence. 
 
-    ![Vérifier l’état des appareils](./media/security-baselines-monitor/overview.png)
+Chaque appareil est représenté par l’un des états suivants, qui sont utilisés à la fois dans la vue *appareil* et dans les vues *par catégorie* :  
+- **Correspond à la base de référence** : tous les paramètres de la base de référence correspondent aux paramètres recommandés.
+- **Ne correspond pas à la base de référence** : au moins un paramètre de la base de référence ne correspond pas aux paramètres recommandés.
+- **Mal configuré** : au moins un paramètre n’est pas correctement configuré. Cet état signifie que le paramètre se trouve dans un état de conflit, d’erreur ou d’attente.
+- **Non applicable** : au moins un paramètre n’est pas applicable et n’est pas appliqué.
 
-    Les états suivants sont disponibles :
 
-    - **Correspond à la base de référence** : Tous les paramètres de la base de référence correspondent aux paramètres recommandés.
-    - **Ne correspond pas à la base de référence** : Au moins un paramètre de la base de référence ne correspond pas aux paramètres recommandés.
-    - **Mal configuré** : Au moins un paramètre n’est pas correctement configuré. Cet état signifie que le paramètre se trouve dans un état de conflit, d’erreur ou d’attente.
-    - **Non applicable** : Au moins un paramètre n’est pas applicable et n’est pas appliqué.
+### <a name="device-view"></a>Vue de l’appareil
+Le volet Vue d’ensemble affiche une synthèse sous forme de graphique du nombre d’appareils ayant un état spécifique pour la base de référence ; **Position vis à vis de la base de référence pour les appareils Windows 10 attribués**.  
 
-4. Sélectionnez l’un des états qui dispose d’appareils. Par exemple, sélectionnez l’état **Mal configuré**.
+![Vérifier l’état des appareils](./media/security-baselines-monitor/overview.png)
 
-5. La liste de tous les appareils dans cet état s’affiche. Sélectionnez un appareil pour obtenir plus d’informations. 
+Quand un appareil a un état différent dans différentes catégories dans la base de référence, il est représenté par un seul état. L’état qui représente l’appareil est déterminé d’après l’ordre de priorité suivant : **Mal configuré**, **Ne correspond pas à la base de référence**, **Non applicable**, **Correspond à la base de référence**.  
 
-    Dans l’exemple suivant, sélectionnez **Configuration de l’appareil** > sélectionnez le profil avec un état d’erreur :
+Par exemple, si un appareil a un paramètre classé comme *Mal configuré* et un ou plusieurs paramètres classés comme *Ne correspond pas à la base de référence*, il est classé comme *Mal configuré*.  
 
-    ![Vérifier l’état des appareils](./media/security-baselines-monitor/device-configuration-profile-list.png)
+Vous pouvez cliquer sur le graphique pour voir les détails et afficher la liste des appareils avec différents états. Vous pouvez ensuite sélectionner un appareil dans cette liste pour en afficher les détails. Par exemple :
+- Sélectionnez **Configuration de l’appareil** > sélectionnez le profil avec un état d’erreur :
 
-    Sélectionnez le profil d’erreur. La liste de tous les paramètres du profil et leur état s’affiche. Maintenant, vous pouvez faire défiler la liste pour trouver le paramètre à l’origine de l’erreur :
+  ![Vérifier l’état des appareils](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-    ![Voir le paramètre à l’origine de l’erreur](./media/security-baselines-monitor/profile-with-error-status.png)
+- Sélectionnez le profil d’erreur. La liste de tous les paramètres du profil et leur état s’affiche. Maintenant, vous pouvez faire défiler la liste pour trouver le paramètre à l’origine de l’erreur :
+
+  ![Voir le paramètre à l’origine de l’erreur](./media/security-baselines-monitor/profile-with-error-status.png)
 
 Utilisez ce compte-rendu pour voir tous les paramètres du profil qui sont à l’origine d’un problème. Obtenez aussi plus d’informations sur les stratégies et profils déployés sur les appareils.
 
 > [!NOTE]
 > Quand une propriété a la valeur **Non configuré** dans la base de référence, le paramètre est ignoré et aucune restriction n’est appliquée. La propriété ne figure dans aucun compte-rendu.
+
+### <a name="per-category-view"></a>Vue par catégorie
+Le volet Vue d’ensemble affiche un graphique par catégorie pour la base de référence ; **Position vis à vis de la base de référence par catégorie**.  Cette vue affiche chaque catégorie de la base de référence et identifie le pourcentage d’appareils appartenant à une classification d’état pour chacune de ces catégories. 
+ 
+![Vue de l’état par catégorie](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+
+L’état de **Correspond à la base de référence** s’affiche seulement une fois que 100 % des appareils signalent cet état pour la catégorie.   
+
+Vous pouvez trier l’affichage par catégorie en fonction de chaque colonne, en sélectionnant l’icône de flèche verticale en haut de la colonne.  
+
 
 ## <a name="monitor-the-profile"></a>Superviser le profil
 

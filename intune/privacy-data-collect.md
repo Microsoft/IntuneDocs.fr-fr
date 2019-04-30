@@ -6,21 +6,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73cd8b4f0cf5bdfa02a301d476df31a01fc9691f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: eede87fdca31e8e263d1dea78d766fec59f05f58
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61511300"
 ---
 # <a name="data-collection-in-intune"></a>Collecte des données dans Intune
 
@@ -39,7 +41,7 @@ La plupart des données personnelles collectées par Intune sont des données id
 
 Les données identifiées collectées par Intune peuvent inclure notamment, mais pas exclusivement, les informations suivantes : 
 
-- Informations utilisateur
+- Informations sur l'utilisateur
     - Nom de propriétaire/Nom d’affichage de l’utilisateur (nom de l’utilisateur inscrit par Azure, tel qu’identifié par la valeur AzureUserID)
     - Nom principal ou adresse e-mail de l’utilisateur
     - Identificateur d’utilisateur tiers (comme l’ID Apple)
@@ -77,7 +79,7 @@ Les données identifiées collectées par Intune peuvent inclure notamment, mais
     - Clé de l’abonnement
 - Inventaire des applications, comme
     - nom de l’application
-    - Version de
+    - Version
     - ID de l’application
     - est
     - emplacement d’installation
@@ -127,10 +129,10 @@ Les données agrégées collectées par Intune peuvent inclure notamment, mais p
     - Nombre d’appareils ou d’utilisateurs inscrits
     - Nombre de plateformes d’appareils identifiées  
     - Nombre d’appareils installés
-    - installedDeviceCount : Nombre d’appareils sur lesquels l’application est installée.
-    - notApplicableDeviceCount : Nombre d’appareils pour lesquels l’application n’est pas applicable.
-    - notInstalledDeviceCount : Nombre d’appareils pour lesquels l’application est applicable mais pas installée.
-    - pendingInstallDeviceCount : Nombre d’appareils pour lesquels l’application est applicable et l’installation en attente.
+    - installedDeviceCount : nombre d’appareils sur lesquels l’application est installée.
+    - notApplicableDeviceCount : nombre d’appareils pour lesquels l’application n’est pas applicable.
+    - notInstalledDeviceCount : nombre d’appareils pour lesquels l’application est applicable mais pas installée.
+    - pendingInstallDeviceCount : nombre d’appareils pour lesquels l’application est applicable et l’installation en attente.
     
 ## <a name="next-steps"></a>Étapes suivantes
 

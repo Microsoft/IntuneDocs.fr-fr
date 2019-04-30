@@ -1,27 +1,28 @@
 ---
 title: Test et validation Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment tester et valider dans votre solution Intune cloud uniquement dans votre environnement.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4974dc3e86b26434cb633bd58e524d290573ecd0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: ba257ad6ebd7c8dbb2ca6ef805c896a4584ed41f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512866"
 ---
 # <a name="intune-testing-and-validation"></a>Test et validation Intune
 
@@ -43,7 +44,7 @@ Si un composant de conception ne figure pas dans au moins un des critères de te
 
 -   **Appareils** : appareils de test qui peuvent être réinitialisés ou dont les paramètres d’usine peuvent être rétablis.
 
--   **Composants d’intégration** : tous les composants d’intégration (Certificate Connector, connecteur service à service Intune pour Exchange hébergé et connecteur Intune pour Exchange local) doivent être installés et configurés, si nécessaire.
+-   **Composants d’intégration** : Tous les composants d’intégration (connecteurs de certificat et connecteur local Exchange d’Intune) doivent être installés et configurés, si nécessaire.
 
 Des modifications de conception peuvent s’avérer nécessaires pour prendre en compte les problèmes imprévus. En outre, toutes les modifications de conception doivent être entièrement documentées en justifiant chaque changement. Voici un exemple de modification :
 

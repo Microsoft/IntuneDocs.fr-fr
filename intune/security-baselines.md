@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2019
+ms.date: 03/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 180a4cad27082105aa41c2bd79e6f9c05a65d162
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 5b2a5e2bbd6d06cc4ec0cf71ee815229b01040a8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490685"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Créer une base de référence de sécurité Windows 10 dans Intune
 
@@ -46,6 +47,10 @@ Une fois que le profil est attribué, vous pouvez le surveiller, ainsi que la ba
 Cet article vous montre comment utiliser des bases de référence de sécurité pour créer un profil, attribuer le profil et le surveiller.
 
 Les [bases de référence de sécurité Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) sont une ressource précieuse pour en savoir plus sur cette fonctionnalité. La [Gestion des appareils mobiles](https://docs.microsoft.com/windows/client-management/mdm/) est une ressource précieuse sur la gestion des appareils mobiles, et ce que vous pouvez faire sur les appareils Windows.
+
+## <a name="prerequisites"></a>Prérequis
+Pour gérer les bases de référence dans Intune, votre compte doit avoir le rôle intégré [Gestionnaire de stratégie et de profils](role-based-access-control.md#built-in-roles).
+
 
 ## <a name="co-managed-devices"></a>Appareils cogérés
 
@@ -107,7 +112,7 @@ Les bases de référence de la sécurité suivantes sont disponibles pour une ut
 
 L’équipe de sécurité Microsoft travaille directement avec les développeurs Windows et de la communauté de sécurité depuis des années pour créer ces recommandations. Les paramètres de cette base de référence sont considérées comme les options de configuration liées à la sécurité les plus pertinentes. Dans chaque nouvelle build de Windows, l’équipe ajuste ses recommandations en fonction des nouvelles fonctionnalités.
 
-#### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Existe-t-il une différence dans les recommandations pour les bases de référence de sécurité Windows pour la stratégie de groupe et Intune ?
+#### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Existe-t-il une différence dans les recommandations pour les bases de référence de sécurité Windows pour la stratégie de groupe et Intune ?
 
 La même équipe de sécurité Microsoft a choisi et organisé les paramètres pour chaque base de référence. Intune inclut tous les paramètres pertinents dans la base de référence de sécurité Intune. Il existe certains paramètres dans la base de référence de la stratégie de groupe qui sont spécifiques à un contrôleur de domaine local. Ces paramètres sont exclus des recommandations d’Intune. Tous les autres paramètres sont les mêmes.
 

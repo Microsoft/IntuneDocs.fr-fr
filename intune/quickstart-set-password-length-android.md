@@ -1,12 +1,12 @@
 ---
-title: 'Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android'
+title: 'Démarrage rapide : stratégie de conformité des mots de passe pour les appareils Android'
 titleSuffix: Microsoft Intune
 description: Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour définir une longueur de mot de passe minimale pour les appareils Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/15/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: e71a9a69cfc474f311bc6acd9e8f24c776a44476
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512775"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android
 
@@ -32,7 +32,7 @@ Dans ce démarrage rapide, vous allez utiliser Microsoft Intune pour exiger de v
 Une stratégie de conformité des appareils Intune spécifie les règles et les paramètres que ces appareils doivent respecter pour être considérés conformes. Vous pouvez utiliser ces stratégies de conformité avec un accès conditionnel pour autoriser ou bloquer l’accès aux ressources de l’entreprise. Vous pouvez également obtenir des rapports sur les appareils et prendre des mesures en cas de non-conformité.
 
 > [!IMPORTANT]
-> En plus des paramètres de mot de passe, vous devez également prendre en compte d'autres paramètres de sécurité système pour protéger votre personnel. Pour plus d'informations, consultez [Paramètres de sécurité système](compliance-policy-create-android-for-work.md#system-security-settings).
+> En plus des paramètres de mot de passe, vous devez également prendre en compte d'autres paramètres de sécurité système pour protéger votre personnel. Pour plus d'informations, consultez [Paramètres de sécurité système](compliance-policy-create-android-for-work.md).
 
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2019
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,29 +18,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844342d0d21110f46ac9a344edbd7409f7d779cb
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: cc29e7bb56c5a5e21264e275cfecf0ea4b0e9273
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59567216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61501365"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
-Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration pour une application iOS ou Android. Ces paramètres de configuration permettent à une application d’être personnalisée. Vous n’attribuez pas ces stratégies de configuration directement aux appareils et aux utilisateurs. Au lieu de cela, vous associez une stratégie de configuration à une application que vous attribuez ensuite. Les paramètres de stratégie de configuration sont utilisés quand l’application les vérifie, en général à sa première exécution.
+Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration pour une application iOS ou Android. Ces paramètres de configuration permettent à une application d’être personnalisée. Vous n’attribuez pas ces stratégies de configuration directement aux appareils ou aux utilisateurs. Au lieu de cela, vous associez une stratégie de configuration à une application, puis vous affectez l’application. Les paramètres de stratégie de configuration sont utilisés quand l’application les vérifie, en général à sa première exécution.
 
 Vous pouvez attribuer une stratégie de configuration des applications à un groupe d’utilisateurs et d’appareils à l’aide d’une combinaison d’affectations d’inclusion et d’exclusion. Dès que vous ajoutez une stratégie de configuration d’application, vous pouvez définir les affectations de la stratégie de configuration d’application. Quand vous définissez les affectations de la stratégie, vous pouvez choisir d’inclure et d’exclure les groupes d’utilisateurs auxquels la stratégie s’applique. Quand vous choisissez d’inclure un ou plusieurs groupes, vous pouvez choisir de sélectionner des groupes spécifiques à inclure ou sélectionner des groupes intégrés. Les groupes intégrés sont notamment **Tous les utilisateurs**, **Tous les appareils** et **Tous les utilisateurs + Tous les appareils**.
 
-Par exemple, une application peut vous obliger à spécifier les détails suivants :
+Un paramètre de configuration d’application, par exemple, peut vous obliger à spécifier les détails suivants :
 
 - Un numéro de port personnalisé
 - Paramètres de langue
 - Paramètres de sécurité
 - Paramètres de personnalisation comme le logo de l’entreprise
 
-Si les utilisateurs n’entrent pas correctement ces paramètres, cela peut occasionner plus de travail à votre assistance technique et ralentir l’adoption des nouvelles applications.
+Si les utilisateurs devaient plutôt entrer ces paramètres, ils pourraient le faire incorrectement, ce qui occasionnerait plus de travail à votre assistance technique et ralentirait l’adoption des nouvelles applications.
 
-Les stratégies de configuration des applications peuvent vous aider à éliminer ces problèmes en vous permettant d’affecter ces paramètres dans une stratégie avant que les utilisateurs exécutent l’application. Les paramètres sont alors fournis automatiquement, les utilisateurs n’ont aucune action à effectuer.
+Les stratégies de configuration des applications peuvent vous aider à éliminer les problèmes d’installation des applications en vous permettant d’affecter des paramètres de configuration à une stratégie à son tour affectée aux utilisateurs avant qu’ils n’exécutent l’application. Les paramètres sont alors fournis automatiquement, les utilisateurs n’ont aucune action à effectuer.
 
 Les paramètres de configuration sont utilisés chaque fois que l’application les vérifie. En général, une application vérifie les paramètres de configuration la première fois qu’elle est exécutée par l’utilisateur.
 

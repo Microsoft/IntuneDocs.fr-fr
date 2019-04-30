@@ -9,17 +9,18 @@ ms.date: 02/13/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6fd12432d07d1486e0943f88c0cf8b4536e651bc
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: cbd3b13215a58a831a15884bfe451f00a35ba379
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490193"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Stratégies de protection des applications et profils professionnels sur des appareils Android Entreprise dans Intune
 
@@ -50,7 +51,7 @@ Les différentes applications Android sont activées de plusieurs façons pour l
 
     Pour vous aider, Intune inclut l’**outil de création de packages d’applications** pour les applications Android (APK) existantes et crée une application qui reconnaît les stratégies d’application.
 
-    Pour plus d’informations sur cet outil, consultez [préparer les applications métier aux stratégies de protection des applications](apps-prepare-mobile-application-management.md).
+    Pour plus d’informations sur cet outil, consultez [Préparer les applications métier aux stratégies de protection des applications](apps-prepare-mobile-application-management.md).
 
 Pour voir une liste des applications activées avec la stratégie de protection des applications, consultez les [applications gérées avec un ensemble complet de stratégies de protection des applications mobiles](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 

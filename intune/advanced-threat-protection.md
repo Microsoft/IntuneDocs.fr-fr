@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afa2ef4cf1199597f61af99d631243e2d3b51e64
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 036f2ca8302f9b3c2d700a04918c4c49a4c6211a
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490544"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Windows Defender ATP avec accès conditionnel dans Intune
 
@@ -109,12 +110,12 @@ La stratégie de conformité détermine un niveau acceptable de risque sur un ap
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies** > **Créer une stratégie**.
 3. Entrez un **Nom** et une **Description**.
 4. Dans **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Dans les paramètres **Windows Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix :
+5. Dans les paramètres **Windows Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix. Les classifications des niveaux de menace sont [déterminées par Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
 
-  - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme.
-  - **Faible** : l’appareil est conforme uniquement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
-  - **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
-  - **Élevé** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
+   - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme. (Windows Defender ATP utilise la valeur *Sécurisé*.)
+   - **Faible** : l’appareil est conforme uniquement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
+   - **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
+   - **Élevé** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
 
 6. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer la stratégie.
 
@@ -126,10 +127,13 @@ La stratégie de conformité détermine un niveau acceptable de risque sur un ap
 4. Incluez ou excluez vos groupes Azure AD pour leur affecter la stratégie.
 5. Pour déployer la stratégie sur les groupes, sélectionnez **Enregistrer**. La conformité des appareils ciblés par la stratégie est évaluée.
 
-## <a name="create-an-azure-ad-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel Azure AD
-La stratégie d’accès conditionnel bloque l’accès aux ressources *si* l’appareil n’est pas conforme. Si un appareil dépasse le niveau de menace, vous pouvez donc bloquer l’accès aux ressources d’entreprise (comme SharePoint ou Exchange Online).
+## <a name="create-a-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel
+La stratégie d’accès conditionnel bloque l’accès aux ressources *si* l’appareil n’est pas conforme. Si un appareil dépasse le niveau de menace, vous pouvez donc bloquer l’accès aux ressources d’entreprise (comme SharePoint ou Exchange Online).  
 
-1. Dans le [Portail Azure](https://portal.azure.com), ouvrez **Azure Active Directory** > **Accès conditionnel** > **Nouvelle stratégie**.
+> [!TIP]  
+> L’accès conditionnel est une technologie Azure Active Directory (Azure AD). Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.  
+
+1. Dans le [portail Azure](https://portal.azure.com), ouvrez **Intune** > **Accès conditionnel** > **Nouvelle stratégie**.
 2. Entrez un **Nom** de stratégie, puis sélectionnez **Utilisateurs et groupes**. Utilisez les options Inclure et Exclure pour ajouter vos groupes à la stratégie, puis sélectionnez **Terminé**.
 3. Sélectionnez **Applications cloud**, puis choisissez les applications à protéger. Par exemple, choisissez **Sélectionner les applications**, puis sélectionnez **Office 365 SharePoint Online** et **Office 365 Exchange Online**.
 

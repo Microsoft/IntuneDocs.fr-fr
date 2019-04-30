@@ -1,27 +1,29 @@
 ---
 title: Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment inscrire des appareils Android à l’aide de Samsung KME
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 47627bc9f223c301fd04b88c0080b3a6fea26fe8
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3f753b959d7b2c64358abd92f4276a8e7f55c0f6
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504003"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
 
@@ -40,7 +42,7 @@ Pour activer l’inscription Intune à l’aide de Samsung KME, vous devez utili
 Une liste d’identificateurs d’appareils (numéros de série et IMEI) est ajoutée automatiquement au portail Knox quand vous achetez des appareils auprès de revendeurs participant au programme Knox Deployment.
 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Pour vous inscrire à Intune en utilisant KME, vous devez d’abord inscrire votre société sur le portail Samsung Knox en effectuant les étapes suivantes :
 1.  [Assurez-vous que KME est disponible dans votre région](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries) : KME est disponible dans plus de 55 pays. Vérifiez que votre pays de déploiement est pris en charge.
@@ -59,7 +61,7 @@ Une fois votre entreprise correctement inscrite, vous pouvez créer votre profil
 
 ### <a name="for-android-enterprise"></a>Pour Android Entreprise
 
-| Champs de profil de gestion des appareils mobiles| Obligatoire ? | Valeurs | 
+| Champs de profil de gestion des appareils mobiles| Nécessaire ? | Valeurs | 
 |-------------------|-----------|-------| 
 |MDM Server URI     | Non        |Laissez ce champ vide. 
 |Nom du profil       | Oui       |Entrez le nom de profil de votre choix. 
@@ -75,7 +77,7 @@ Une fois votre entreprise correctement inscrite, vous pouvez créer votre profil
 
 Pour obtenir des instructions pas à pas, consultez l’[Assistant Configuration de profil Samsung Knox](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm).
 
-| Champs de profil de gestion des appareils mobiles| Obligatoire ? | Valeurs |
+| Champs de profil de gestion des appareils mobiles| Nécessaire ? | Valeurs |
 |-------------------|-----------|-------|
 |MDM Server URI     | Non        |Laissez ce champ vide.
 |Nom du profil       | Oui       |Entrez le nom de profil de votre choix.
@@ -111,7 +113,7 @@ Pour les appareils inscrits à Intune via KME pour Android, vous pouvez configur
 >L’association utilisateur s’applique uniquement à l’inscription Android. Quand l’association utilisateur est définie, seul l’utilisateur associé peut inscrire l’appareil à l’aide de KME. Cela est vrai même après une réinitialisation aux paramètres d’usine de l’appareil. Quand aucune association utilisateur n’est définie dans le portail Knox, tout utilisateur disposant d’une licence Intune valide peut inscrire l’appareil à l’aide de KME.
 >
 
-## <a name="distribute-devices"></a>Distribuer les appareils
+## <a name="distribute-devices"></a>Distribuer des appareils
 
 Après avoir créé et affecté un profil de gestion des appareils mobiles, associé un nom d’utilisateur et identifié les appareils comme appartenant à l’entreprise dans Intune, vous pouvez distribuer les appareils aux utilisateurs.
 

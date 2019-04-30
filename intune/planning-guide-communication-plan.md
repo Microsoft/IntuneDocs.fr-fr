@@ -1,27 +1,29 @@
 ---
 title: Développer un plan de communication de déploiement
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cet article vous aide à développer un plan de communication de déploiement pour votre déploiement Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 10/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 393ebe75-d001-485a-b81c-6361c8b5e6ee
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 013e2c6c10d5a545343c864b1b564acbede7c675
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6e3584d97bf9f1a223b15c986f398681a20520c1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513288"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Développer un plan de communication de déploiement
 
@@ -55,7 +57,7 @@ Ce [guide d’inscription de l’utilisateur final](https://gallery.technet.micr
 
 Il existe plusieurs méthodes de remise que vous pouvez utiliser pour communiquer des informations de déploiement Intune aux utilisateurs et groupes ciblés de votre organisation. La liste suivante présente quelques exemples et la vague avec laquelle vous pouvez utiliser la méthode :
 
--   Réunions individuelles ou par Skype à l’échelle de l’organisation pour la vague de lancement
+-   Réunions individuelles ou par Microsoft Teams à l’échelle de l’organisation pour la vague de lancement
 
 -   E-mail utilisé pour les vagues de pré-inscription, d’inscription et de post-inscription
 

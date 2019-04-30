@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61510047"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -36,9 +37,9 @@ Cet article vous montre comment configurer votre infrastructure, puis comment cr
 - **Serveur NDES** : sur un serveur Windows Server 2012 R2 ou ultérieur, configurez le service d’inscription de périphérique réseau (NDES). Intune ne prend pas en charge le service NDES sur un serveur qui exécute également l’autorité de certification d’entreprise. Consultez le [Guide du service d’inscription de périphérique réseau](http://technet.microsoft.com/library/hh831498.aspx) pour obtenir des instructions sur la configuration de Windows Server 2012 R2 en vue d’héberger NDES.
 Le serveur NDES doit être joint à un domaine au sein de la même forêt que l’autorité de certification d’entreprise. Vous trouverez plus d’informations sur le déploiement du serveur NDES dans une forêt distincte, un réseau isolé ou un domaine interne dans [Utilisation d’un module de stratégie avec le service d’inscription de périphérique réseau](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector** : téléchargez le programme d’installation de **Certificate Connector** (**NDESConnectorSetup.exe**) à partir du portail d’administration Intune. Vous allez exécuter ce programme d’installation sur le serveur avec le rôle NDES.  
+- **Microsoft Intune Certificate Connector** : Dans le portail Intune, accédez à **Configuration de l’appareil** > **Connecteurs de certificat** > **Ajouter** et suivez les *Étapes d’installation du connecteur pour SCEP*. Utilisez le lien de téléchargement dans le portail pour démarrer le téléchargement du programme d’installation du connecteur de certificat **NDESConnectorSetup.exe**.  Vous allez exécuter ce programme d’installation sur le serveur avec le rôle NDES.  
 
-  - Le connecteur NDES Certificate prend également en charge FIPS le mode FIPS (Federal Information Processing Standard). FIPS n’est pas obligatoire, mais il vous permet d’émettre et de révoquer des certificats.
+Ce connecteur NDES Certificate prend également en charge le mode FIPS (Federal Information Processing Standard). FIPS n’est pas obligatoire, mais il vous permet d’émettre et de révoquer des certificats.
 
 - **Serveur proxy d'application web** (facultatif) : utilisez un serveur exécutant Windows Server 2012 R2 ou une version ultérieure en tant que serveur proxy d'application Web. Cette configuration :
   - Permet aux appareils de recevoir des certificats à l'aide d'une connexion Internet.
@@ -298,12 +299,13 @@ Au cours de cette étape, vous allez :
 > Microsoft Intune Certificate Connector **doit** être installé sur un serveur Windows distinct. Il ne peut pas être installé sur l’autorité de certification émettrice (CA). Il **doit** également être installé sur le même serveur que le rôle NDES (Network Device Enrollment Service).
 
 1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-2. Sélectionnez **Configuration de l’appareil** > **Autorité de certification** > **Ajouter**
-3. Téléchargez et enregistrez le fichier du connecteur. Enregistrez-le dans un emplacement accessible à partir du serveur où vous allez installer le connecteur.
+2. Sélectionnez **Configuration de l’appareil** > **Connecteurs de certification** > **Ajouter**.
+3. Téléchargez et enregistrez le fichier du connecteur pour SCEP. Enregistrez-le dans un emplacement accessible à partir du serveur où vous allez installer le connecteur.
 
-    ![Téléchargement de Connector](./media/certificates-download-connector.png)
+   ![Téléchargement de Connector](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. Une fois le téléchargement terminé, accédez au serveur qui héberge le rôle Service d’inscription de périphériques réseau (NDES). Ensuite :
+
+4. Une fois le téléchargement terminé, accédez au serveur qui héberge votre service d’inscription de périphériques réseau (NDES). Ensuite :
 
     1. Vérifiez que le .NET Framework 4.5 est installé, car il est nécessaire pour le connecteur NDES Certificate. Le .NET Framework 4.5 est automatiquement inclus avec Windows Server 2012 R2 et ses versions plus récentes.
     2. Exécutez le programme d’installation (**NDESConnectorSetup.exe**). Le programme d’installation installe également le module de stratégie pour NDES et le service web CRP. Le service web CRP, CertificateRegistrationSvc, s’exécute en tant qu’application dans IIS.
@@ -323,7 +325,7 @@ Au cours de cette étape, vous allez :
     > [!TIP]
     > Si vous fermez l'Assistant avant de lancer l'interface utilisateur de Certificate Connector, vous pouvez le rouvrir en exécutant la commande suivante :
     >
-    > <chemin_d'installation>\NDESConnectorUI\NDESConnectorUI.exe
+    > <chemin_d’installation>\NDESConnectorUI\NDESConnectorUI.exe
 
 7. Dans l'interface utilisateur de **Certificate Connector** :
 
@@ -363,8 +365,8 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
 5. Dans la liste déroulante **Type de profil**, sélectionnez **Certificat SCEP**.
 6. entrez les paramètres suivants :
 
-   - **Type de certificat** : choisissez **Utilisateur** pour les certificats utilisateur. Choisissez **Appareil** pour les appareils sans utilisateur, tels que les kiosques. Les certificat d’**Appareil** sont disponibles pour les plateformes suivantes :  
-     - Android Entreprise
+   - **Type de certificat** : choisissez **Utilisateur** pour les certificats utilisateur. L’objet et le SAN d’un certificat de type **Utilisateur** peuvent contenir des attributs d’utilisateur et d’appareil.  Choisissez **Appareil** pour les scénarios tels que les appareils sans utilisateur, à l’image des kiosques, ou pour les appareils Windows, en plaçant le certificat dans le magasin de certificats de l’ordinateur local. L’objet et le SAN d’un certificat de type **Appareil** peuvent contenir uniquement des attributs d’appareil.  Les certificat d’**Appareil** sont disponibles pour les plateformes suivantes :  
+     - Android Entreprise - Profil professionnel
      - iOS
      - macOS
      - Windows 8.1 et versions ultérieures
@@ -438,7 +440,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         Les attributs suivants sont disponibles :
 
         - Adresse de messagerie
-        - Nom d'utilisateur principal (UPN)
+        - Nom d’utilisateur principal (UPN)
 
             Par exemple, si vous sélectionnez un type de certificat utilisateur, vous pouvez inclure le nom d’utilisateur principal (UPN) dans l’autre nom de l’objet. Si un certificat client est utilisé pour l’authentification auprès d’un serveur de stratégie réseau, l’autre nom de l’objet doit être défini sur le nom d’utilisateur principal. 
 

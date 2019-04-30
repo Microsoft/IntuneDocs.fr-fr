@@ -5,37 +5,40 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2018
-ms.topic: article
+ms.date: 4/19/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5bd8bfe0230e4d49ce5ae4372e0f373a014c00ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504200"
 ---
-# <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes - Intune
+# <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes dans Intune
 
-Il existe une fonctionnalité **Actions en cas de non-conformité** qui configure une séquence ordonnée d’actions. Ces actions s’appliquent aux appareils qui ne satisfont pas à votre stratégie de conformité. 
+Pour les appareils qui ne respectent pas vos règles ou stratégies de conformité, vous pouvez ajouter des **actions en cas de non-conformité**. Cette fonctionnalité configure une séquence chronologique d’actions, comme l’envoi d’un e-mail à l’utilisateur final, etc.
 
 ## <a name="overview"></a>Vue d’ensemble
-Par défaut, quand Intune détecte un appareil qui n’est pas conforme, il le marque immédiatement comme étant non conforme. L’[accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) bloque alors l’appareil. Quand un appareil n’est pas conforme, les **actions en cas de non-conformité** offrent davantage de flexibilité pour décider de ce qu’il faut faire. Par exemple, ne pas bloquer immédiatement l’appareil et donner à l’utilisateur une période de grâce pendant laquelle il peut configurer la conformité de l’appareil.
+
+Par défaut, quand Intune détecte un appareil qui n’est pas conforme, il le marque immédiatement comme étant non conforme. L’[accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) bloque alors l’appareil. Quand un appareil n’est pas conforme, une **action en cas de non-conformité** offre davantage de flexibilité pour décider de ce que vous devez faire. Par exemple, ne pas bloquer immédiatement l’appareil et donner à l’utilisateur une période de grâce pendant laquelle il peut configurer la conformité de l’appareil.
 
 Il existe plusieurs types d’actions :
 
-- **Envoyer un e-mail à l’utilisateur final** : personnalisez un e-mail de notification avant de l’envoyer à l’utilisateur final. Vous pouvez personnaliser les destinataires, l’objet et le corps du message, notamment le logo de l’entreprise et les informations de contact.
+- **Envoyer un e-mail à l’utilisateur final** : Personnalisez une notification par e-mail avant de l’envoyer à l’utilisateur final. Vous pouvez personnaliser les destinataires, l’objet et le corps du message, notamment le logo de l’entreprise et les informations de contact.
 
     Par ailleurs, Intune ajoute des informations sur l’appareil non conforme dans l’e-mail de notification.
 
-- **Verrouiller à distance l’appareil non conforme** : pour les appareils qui ne sont pas conformes, vous pouvez émettre un verrouillage à distance. L’utilisateur est ensuite invité à entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. Découvrez plus en détail la fonctionnalité [Verrouillage à distance](device-remote-lock.md). 
+- **Verrouiller à distance l’appareil non conforme** : Pour les appareils qui ne sont pas conformes, vous pouvez émettre un verrouillage à distance. L’utilisateur est ensuite invité à entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. Découvrez plus en détail la fonctionnalité [Verrouillage à distance](device-remote-lock.md). 
 
-- **Marquer l’appareil comme non conforme** : créez une planification, c’est-à-dire un nombre de jours au terme desquels l’appareil est marqué comme non conforme. Vous pouvez décider d’exécuter l’action immédiatement ou octroyer à l’utilisateur une période de grâce pour se mettre en conformité.
+- **Marquer l’appareil comme non conforme** : Créez une planification, c’est-à-dire un nombre de jours au terme desquels l’appareil est marqué comme non conforme. Vous pouvez décider d’exécuter l’action immédiatement ou octroyer à l’utilisateur une période de grâce pour se mettre en conformité.
 
 Cet article vous montre comment :
 
@@ -72,14 +75,14 @@ Pour envoyer un e-mail à vos utilisateurs, créez un modèle de message de noti
 
    ![Exemple de message de notification de conformité dans Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. Une fois que vous avez terminé l’ajout des informations, choisissez **Créer**. Le modèle de message de notification est prêt à être utilisé. Notez que le logo que vous chargez dans le cadre de la personnalisation du Portail d’entreprise sera utilisé pour les modèles e-mail. Pour plus d’informations sur la personnalisation du Portail d’entreprise, consultez [Personnalisation de l’identité de la société](company-portal-app.md#company-identity-branding-customization).  
+4. Une fois que vous avez terminé l’ajout des informations, choisissez **Créer**. Le modèle de message de notification est prêt à être utilisé. Le logo que vous chargez dans le cadre de la personnalisation du Portail d’entreprise est utilisé pour les modèles d’e-mail. Pour plus d’informations sur la personnalisation du Portail d’entreprise, consultez [Personnalisation de l’identité de la société](company-portal-app.md#company-identity-branding-customization).
 
 > [!NOTE]
-> Vous pouvez également modifier un modèle de notification créé précédemment.
+> Vous pouvez également changer ou mettre à jour un modèle de notification existant, que vous avez créé précédemment.
 
 ## <a name="add-actions-for-noncompliance"></a>Ajouter des actions en cas de non-conformité
 
-Quand vous créez une stratégie de conformité des appareils, Intune crée automatiquement une action en cas de non-conformité. Quand un appareil ne satisfait pas à votre stratégie de conformité, cette action marque l’appareil comme non conforme. Vous pouvez personnaliser la durée pendant laquelle l’appareil est marqué comme non conforme. Cette action ne peut pas être supprimée.
+Quand vous créez une stratégie de conformité des appareils, Intune crée automatiquement une action en cas de non-conformité. Si un appareil ne répond pas à votre stratégie de conformité, cette action marque l’appareil comme non conforme. Vous pouvez personnaliser la durée pendant laquelle l’appareil est marqué comme non conforme. Cette action ne peut pas être supprimée.
 
 Vous pouvez également ajouter une autre action quand vous créez une stratégie de conformité ou mettez à jour une stratégie existante. 
 
@@ -94,16 +97,20 @@ Vous pouvez également ajouter une autre action quand vous créez une stratégie
 3. Sélectionnez **Actions en cas de non-conformité** > **Ajouter**.
 4. Sélectionnez votre **Action** : 
 
-    - **Envoyer un e-mail à l’utilisateur final** : quand l’appareil n’est pas conforme, envoyer un e-mail à l’utilisateur. En outre : 
+    - **Envoyer un e-mail à l’utilisateur final** : Quand l’appareil n’est pas conforme, choisissez d’envoyer un e-mail à l’utilisateur. En outre : 
     
          - Choisissez le **Modèle de message** que vous avez créé
          - Entrez d’**Autres destinataires** en sélectionnant des groupes
     
-    - **Verrouiller à distance l’appareil non conforme** : quand l’appareil n’est pas conforme, verrouiller l’appareil. L’utilisateur est ainsi obligé d’entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. 
-    
-    - **Planification** : entrez le nombre de jours de non-conformité (0 à 365) au terme desquels l’action doit être déclenchée sur les appareils des utilisateurs. Après cette période de grâce, vous pouvez appliquer une stratégie d’accès conditionnel. Si vous entrez **0** comme nombre de jours, l’accès conditionnel prend effet **immédiatement**. Par exemple, vous pouvez bloquer l’accès aux ressources d’entreprise immédiatement si un appareil n’est pas conforme.
+    - **Verrouiller à distance l’appareil non conforme** : Quand l’appareil n’est pas conforme, verrouillez-le. L’utilisateur est ainsi obligé d’entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. 
 
-5. Quand vous avez terminé, sélectionnez **Ajouter** > **OK** pour enregistrer les modifications.
+    - **Mettre hors service l’appareil non conforme** : Quand l’appareil n’est pas conforme, supprimez toutes les données d’entreprise de l’appareil et retirez l’appareil de la gestion Intune. Pour empêcher une réinitialisation accidentelle d’un appareil, cette action prend en charge une planification minimale de **30** jours.  
+
+    
+5. Configurer une **planification** : Entrez le nombre de jours de non-conformité (0 à 365) au terme desquels l’action doit être déclenchée sur les appareils des utilisateurs. Après cette période de grâce, vous pouvez appliquer une stratégie d’accès conditionnel. Si vous entrez **0** (zéro) comme nombre de jours, l’accès conditionnel prend effet **immédiatement**. Par exemple, vous pouvez bloquer l’accès aux ressources d’entreprise immédiatement si un appareil n’est pas conforme.
+
+6. Quand vous avez terminé, sélectionnez **Ajouter** > **OK** pour enregistrer les modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
-[Superviser l’activité de conformité de l’appareil](device-compliance-monitor.md).
+
+[Supervisez vos stratégies](compliance-policy-monitor.md).

@@ -1,32 +1,34 @@
 ---
 title: Résoudre les problèmes d’inscription d’appareils
-description: Suggestions pour résoudre les problèmes liés à l’inscription d’appareils.
+titleSuffix: Microsoft Intune
+description: Suggestions pour résoudre les problèmes liés à l’inscription d’appareils dans Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/09/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
+ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d345ba84eb963600a921c0f77f7a93ed6aa1b0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 06a8bd8d0a46b7d7eed8efb4cb8b4c2d4e21f77d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509231"
 ---
-# <a name="troubleshoot-device-enrollment-in-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Intune
+# <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
-Cet article fournit des suggestions pour résoudre les problèmes liés à l’inscription d’appareils. Si ces informations ne vous permettent pas de remédier au problème, consultez [Guide pratique pour obtenir un support technique pour Microsoft Intune](get-support.md) afin d’accéder à d’autres types d’assistance.
+Cet article fournit des suggestions pour résoudre les problèmes liés à l’[inscription d’appareils](device-enrollment.md). Si ces informations ne vous permettent pas de remédier au problème, consultez [Guide pratique pour obtenir un support technique pour Microsoft Intune](get-support.md) afin d’accéder à d’autres types d’assistance.
 
 
 ## <a name="initial-troubleshooting-steps"></a>Étapes initiales de dépannage
@@ -100,7 +102,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
 1.  Vérifier que l’autorité MDM est [correctement définie](mdm-authority-set.md).
     
-2.  Vérifiez que les informations d’identification de l’utilisateur ont été correctement synchronisées avec Azure Active Directory. Vous pouvez vérifier que l’UPN de l’utilisateur correspond aux informations Active Directory du portail Office 365.
+2.  Vérifiez que les informations d’identification de l’utilisateur ont été correctement synchronisées avec Azure Active Directory. Vous pouvez vérifier que l’UPN de l’utilisateur correspond aux informations Active Directory dans le centre d’administration Microsoft 365.
     Si l’UPN ne correspond pas aux informations Active Directory :
 
     1.  Désactivez DirSync sur le serveur local.
@@ -131,7 +133,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Impossible de créer une stratégie ou d’inscrire des appareils si le nom de l’entreprise contient des caractères spéciaux
 **Problème :** Vous ne pouvez pas créer de stratégies, ni inscrire d’appareils.
 
-**Résolution :** Dans le [Centre d’administration Office 365](https://portal.office.com/), supprimez les caractères spéciaux dans le nom de l’entreprise et enregistrez les informations de l’entreprise.
+**Résolution :** Dans le [Centre d’administration Microsoft 365](https://admin.microsoft.com/), supprimez les caractères spéciaux dans le nom de l’entreprise et enregistrez les informations de l’entreprise.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Impossible de se connecter ou d’inscrire des appareils quand vous avez plusieurs domaines vérifiés
 **Problème :** Ce problème peut se produire quand vous ajoutez un deuxième domaine vérifié à votre ADFS. Les utilisateurs dotés du suffixe UPN (nom d’utilisateur principal) du deuxième domaine risquent de ne pas pouvoir se connecter aux portails ou d’inscrire des appareils.
@@ -225,7 +227,7 @@ Si la résolution #2 ne fonctionne pas, indiquez à vos utilisateurs de suivre 
 
 **Résolution 1**:
 
-L’utilisateur peut récupérer le certificat manquant en suivant les instructions de la rubrique [Un certificat obligatoire est manquant sur votre appareil](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Si l’erreur persiste, essayez la résolution 2.
+L’utilisateur peut récupérer le certificat manquant en suivant les instructions de la rubrique [Un certificat obligatoire est manquant sur votre appareil](/intune-user-help/your-device-is-missing-a-required-certificate-android). Si l’erreur persiste, essayez la résolution 2.
 
 **Résolution 2** :
 

@@ -5,35 +5,33 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 02/27/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36076aab02f16937066cb3d47d573f7c74dd6277
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 704abe5e03410b52d54c7729e1832e527ae4dfb6
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504310"
 ---
-# <a name="windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
+# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
 Vous gérez les appareils dans votre organisation et souhaitez créer un groupe des paramètres qui sont appliqués à différents groupes d’appareils. Supposons que vous avez plusieurs groupes d’appareils. Vous souhaitez assigner des ensembles de paramètres distincts au groupe A et au groupe B. Vous voulez également voir rapidement tous les paramètres que vous pouvez configurer.
 
-Vous pouvez effectuer tout cela à l’aide des **modèles d’administration** fournis dans Microsoft Intune. Les modèles d’administration contiennent des centaines de paramètres qui vous permettent de contrôler les fonctionnalités dans Internet Explorer, les programmes Microsoft Office, le Bureau à distance, l’accès à OneDrive, la connexion par mot de passe image ou code PIN, et bien plus encore. Ces modèles sont similaires aux paramètres de stratégie de groupe (GPO) dans Active Directory (AD). Ce sont des [paramètres ADMX sauvegardés](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) qui utilisent XML. Toutefois, les modèles dans Intune sont entièrement basés dans le cloud. Ils offrent un moyen plus simple et rapide de configurer les paramètres et de trouver les paramètres souhaités.
+Vous pouvez effectuer tout cela à l’aide des **modèles d’administration** fournis dans Microsoft Intune. Les modèles d’administration contiennent des centaines de paramètres qui vous permettent de contrôler les fonctionnalités dans Internet Explorer, les programmes Microsoft Office, le Bureau à distance, l’accès à OneDrive, la connexion par mot de passe image ou code PIN, et bien plus encore. Ces modèles sont similaires aux paramètres de stratégie de groupe (GPO) dans Active Directory (AD). Ce sont des [paramètres ADMX sauvegardés](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (ouverture d’un autre site Docs) qui utilisent XML. Toutefois, les modèles dans Intune sont entièrement basés dans le cloud. Ils offrent un moyen plus simple et rapide de configurer les paramètres et de trouver les paramètres souhaités.
 
 Les **modèles d’administration** sont intégrés à Intune et ne nécessitent aucune personnalisation, y compris l’utilisation d’OMA-URI. Dans votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres de modèle comme un moyen centralisé de gérer vos appareils Windows 10.
 
 Cet article présente les étapes de la création d’un modèle pour les appareils Windows 10 et montre comment filtrer tous les paramètres disponibles dans Microsoft Intune. Quand vous créez un modèle, vous créez en même temps un profil de configuration d’appareil. Vous pouvez ensuite assigner ou déployer ce profil sur les appareils Windows 10 dans votre organisation.
-
-> [!NOTE]
-> Les modèles d’administration sont pris en charge sur les appareils autonomes. Actuellement, ils ne sont pas pris en charge sur les appareils comanagés par System Center Configuration Manager (SCCM).
 
 ## <a name="create-a-template"></a>Créer un modèle
 
@@ -75,6 +73,8 @@ Les modèles contiennent des centaines de paramètres. Pour trouver plus facilem
   ![Cliquer sur Chemin pour trier par ordre alphabétique](./media/administrative-templates-windows/search-copy-settings.png)
 
   En guide d’autre exemple, recherchez `microsoft word`. Vous voyez alors tous les paramètres que vous pouvez définir pour le programme Microsoft Word. Recherchez `explorer` pour voir tous les paramètres Internet Explorer que vous pouvez ajouter à votre modèle.
+
+Cette fonctionnalité utilise des [fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (ouverture d’un autre site Docs). Les fournisseurs de services de configuration fonctionnent sur les différentes éditions de Windows, telles que les éditions Famille, Professionnel et Entreprise. Pour voir si un fournisseur de services de configuration fonctionne sur une édition spécifique, accédez à [Fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (ouverture d’un autre site Docs).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

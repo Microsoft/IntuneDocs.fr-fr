@@ -1,27 +1,29 @@
 ---
 title: Déterminer les objectifs et les défis liés au déploiement
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cet article permet de déterminer les objectifs et les défis liés au déploiement dans le cadre d'une implémentation de cloud Microsoft Intune uniquement.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 24cf9d97-db39-4b95-a664-4aa2e33edb87
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 10598f4868a42b9736b6b33a6d9b5c4b4b308967
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cd1fd6198e71dd585d0216c0850c0140f5e71344
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512676"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Déterminer les objectifs et les défis liés au déploiement
 
@@ -33,25 +35,25 @@ Les objectifs de déploiement sont les buts à long terme que vous avez l’inte
 
 -   **Intégration à Office 365 et prise en charge des applications mobiles Office**
 
-    -   **Description :** fournir une intégration étroite à Office 365, et l’utilisation d’applications mobiles Office avec la protection des applications.
+    -   **Description :** fournir une intégration étroite à Office 365, et l’utilisation d’applications mobiles Office avec la protection des applications.
 
-    -   **Valeur métier :** expérience utilisateur sécurisée et améliorée en permettant aux utilisateurs d'exploiter les applications qu’ils maîtrisent et préfèrent.
+    -   **Valeur métier :** expérience utilisateur sécurisée et améliorée en permettant aux utilisateurs d’utiliser les applications qu’ils maîtrisent et préfèrent.
 
 -   **Offrir l’accès aux services d’entreprise internes sur les appareils mobiles**
 
-    -   **Description :** permettez aux employés d’être productifs quel que soit leur lieu de travail ou l'appareil qui leur convient le mieux. Ce projet a pour but d'améliorer la productivité de l’entreprise et l'accès sécurisé à ses données.
+    -   **Description :** permettre aux employés d’être productifs quel que soit leur lieu de travail ou l’appareil qui leur convient le mieux. Ce projet a pour but d'améliorer la productivité de l’entreprise et l'accès sécurisé à ses données.
 
-    -   **Valeur métier :** offrir aux employés la possibilité d’être flexibles et opérationnels en tout lieu permet à l’entreprise de gagner en compétitivité et de proposer un environnement de travail plus enrichissant.
+    -   **Valeur métier :** le fait d’offrir aux employés la possibilité d’être flexibles et opérationnels en tout lieu permet à l’entreprise de gagner en compétitivité et de proposer un environnement de travail plus enrichissant.
 
 -   **Garantir la protection des données sur les appareils mobiles**
 
-    -   **Description :** les données stockées sur un appareil mobile doivent être protégées contre toute perte ou tout partage, que ce soit de manière malveillante ou accidentelle.
+    -   **Description :** les données stockées sur un appareil mobile doivent être protégées contre toute perte ou tout partage, que ce soit de manière malveillante ou accidentelle.
 
-    -   **Valeur métier :** la protection des données est essentielle pour rester compétitif et s'assurer que les clients et leurs données sont traités avec la plus grande considération.
+    -   **Valeur métier :** la protection des données est essentielle pour rester compétitif et s’assurer que les clients et leurs données sont traités avec la plus grande considération.
 
 -   **Réduire les coûts**
 
-    -   **Description :** lorsque cela est possible, le projet permet de réduire les coûts d’exploitation et de déploiement.
+    -   **Description :** quand cela est possible, le projet permet de réduire les coûts d’exploitation et de déploiement.
 
     -    **Valeur métier :** en utilisant efficacement ses ressources, l’entreprise peut investir dans d’autres domaines, augmenter sa compétitivité et fournir un meilleur service à ses clients.
 
@@ -61,7 +63,7 @@ Les objectifs du déploiement sont les actions que votre organisation peut mener
 
 -   **Réduire le nombre de solutions de gestion d’appareils**
 
-    -   **Implémentation :** consolider une solution unique de gestion d'appareils mobiles, intégrant la protection des données d’entreprise Microsoft Intune ainsi que les applications et les appareils.
+    -   **Implémentation :** consolider une solution unique de gestion d’appareils mobiles, intégrant la protection des données d’entreprise Microsoft Intune ainsi que les applications et les appareils.
 
 -   **Offrir un accès conditionnel à Exchange et SharePoint Online**
 
@@ -85,12 +87,12 @@ Les défis liés au déploiement représentent des problèmes cruciaux pour une 
 
 -   Le manque de critères de réussite et d’objectifs clairement définis entraîne des résultats intangibles. Cela peut également mettre votre organisation en position réactive lorsque des problèmes surviennent.
 
-    -   **Solution :** définissez vos objectifs et des critères de réussite très tôt dans la définition de la portée de votre projet et utilisez ces points de données pour donner vie à vos autres phases de déploiement. Assurez-vous que vos objectifs sont SMART (spécifiques, mesurables, atteignables, réalistes et en temps voulu). Prévoyez des mesures par rapport à vos objectifs à chaque phase et assurez-vous que votre projet de déploiement reste sur les bons rails.
+    -   **Atténuation :** définissez vos objectifs et des critères de réussite très tôt dans la définition de la portée de votre projet et utilisez ces points de données pour donner vie à vos autres phases de déploiement. Assurez-vous que vos objectifs sont SMART (spécifiques, mesurables, atteignables, réalistes et en temps voulu). Prévoyez des mesures par rapport à vos objectifs à chaque phase et assurez-vous que votre projet de déploiement reste sur les bons rails.
 
 -   Vous oubliez de créer, valider et partager largement une proposition de valeur claire qui correspond aux attentes de votre organisation. Cela aboutit généralement à une adoption limitée et à une limitation du retour sur investissement.
 
-    -   **Solution :** même si vous êtes très heureux de développer votre projet, assurez-vous de définir précisément vos objectifs. Incluez ces éléments dans toutes les activités de formation afin de garantir que les utilisateurs comprennent pourquoi votre organisation a sélectionné Intune.
+    -   **Atténuation :** même si vous êtes très heureux de développer votre projet, veillez à définir précisément vos objectifs. Incluez ces éléments dans toutes les activités de formation afin de garantir que les utilisateurs comprennent pourquoi votre organisation a sélectionné Intune.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez identifié vos objectifs de déploiement et les défis potentiels, passons à la section suivante : [Identifier les scénarios de cas d'utilisation](planning-guide-scenarios.md).
+Maintenant que vous avez identifié vos objectifs de déploiement et les défis potentiels, passons à la section suivante : [Identifier les scénarios de cas d’utilisation](planning-guide-scenarios.md).

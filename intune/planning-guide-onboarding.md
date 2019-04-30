@@ -1,27 +1,29 @@
 ---
 title: Processus d’intégration Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cet article fournit tous les détails à prendre en compte quand vous intégrez une solution cloud uniquement Microsoft Intune dans votre environnement.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d5c1fb2b6b20c9687418e14f8e35543c04833a25
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cd9f14d48c86119acf862e2d335fe88fb2a9a1c
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513968"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implémenter votre plan Microsoft Intune
 
@@ -58,7 +60,7 @@ Comme nous l’avons vu dans la section précédente sur les éléments requis I
 
 -   En savoir plus sur [comment acheter Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>Tâche 2 : Ajouter un abonnement Office 365
+### <a name="task-2-add-office-365-subscription"></a>Tâche 2 : Ajouter un abonnement Office 365
 
 Cette étape est facultative. Si vous envisagez d’utiliser Exchange Online et de gérer les applications mobiles Office avec des stratégies de protection des applications, vous avez besoin d’un abonnement Office 365. Si votre organisation ne dispose pas d’un abonnement Office 365, contactez Microsoft ou votre équipe des comptes Microsoft pour lui signifier votre souhait d’acheter Office 365.
 
@@ -74,9 +76,9 @@ Vous serez peut-être amené à ajouter des utilisateurs ou des groupes de sécu
 
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Tâche 4 : Attribuer des licences utilisateur Intune et Office 365
+### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Tâche 4 : Attribuer des licences utilisateur Intune et Office 365
 
-Vous devez attribuer une licence à tous les utilisateurs que vous ciblez pour le déploiement EMS/Intune et Office 365. Vous pouvez attribuer les licences EMS/Intune et Office 365 dans le portail Centre d’administration Office 365.
+Vous devez attribuer une licence à tous les utilisateurs que vous ciblez pour le déploiement EMS/Intune et Office 365. Vous pouvez attribuer les licences EMS/Intune et Office 365 dans le centre d’administration Microsoft 365.
 
 -   En savoir plus sur [comment attribuer des licences Intune](licenses-assign.md).
 
@@ -86,13 +88,13 @@ Avant de commencer l’installation, la configuration, la gestion et l’inscrip
 
 -   En savoir plus sur la [définition de l’autorité de gestion des appareils](mdm-authority-set.md).
 
-### <a name="task-6-enable-device-platforms"></a>Tâche 6 : Activer les plateformes d'appareils mobiles
+### <a name="task-6-enable-device-platforms"></a>Tâche 6 : Activer les plateformes d’appareils mobiles
 
 Par défaut, la plupart des plateformes d’appareils sont activées, à l’exception des appareils Apple (iOS et Mac). Avant de pouvoir inscrire et gérer les appareils iOS dans Intune, la plateforme d'appareils doit être activée. Pour ce faire, vous devez créer un certificat Push MDM et l’ajouter à Intune.
 
 -   En savoir plus sur l’[activation des appareils Apple pour l’inscription](apple-mdm-push-certificate-get.md).
 
-### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Tâche 7 : Ajouter et déployer des stratégies de conditions générales
+### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Tâche 7 : Ajouter et déployer des stratégies de conditions générales
 
 Intune prend en charge les stratégies de conditions générales. Ajoutez les stratégies de conditions générales adéquates et déployez-les sur des groupes ciblés en fonction des cas d’utilisation et exigences de votre déploiement Intune.
 
@@ -110,7 +112,7 @@ Intune prend en charge les profils de messagerie, Wi-Fi et VPN. Ajoutez ces prof
 
 -   En savoir plus sur l’[activation de l’accès aux ressources d’entreprise avec Intune](device-profiles.md).
 
-### <a name="task-10-add-and-deploy-apps"></a>Tâche 10 : Ajouter et déployer des applications
+### <a name="task-10-add-and-deploy-apps"></a>Tâche 10 : Ajouter et déployer des applications
 
 Intune prend en charge le déploiement d’applications web, métier et de Store public. Vous pouvez aussi gérer les applications qui intègrent le kit SDK Intune en les associant à des stratégies de protection des applications. Ajoutez les applications adéquates et déployez-les sur des groupes ciblés en fonction des cas d’utilisation et exigences de votre déploiement Intune.
 
@@ -128,7 +130,7 @@ Intune prend en charge l’accès conditionnel pour Exchange Online, Exchange su
 
 -   En savoir plus sur l'[accès conditionnel](conditional-access.md).
 
-### <a name="task-13-enroll-devices"></a>Tâche 13 : Inscrire des appareils
+### <a name="task-13-enroll-devices"></a>Tâche 13 : Inscrire des appareils
 
 Intune prend en charge les plateformes d’appareils iOS, Mac OS, Android, Windows Desktop et Windows Mobile. Inscrivez les plateformes d’appareils mobiles adéquates en fonction des cas d’utilisation et exigences de votre déploiement Intune.
 

@@ -1,26 +1,29 @@
 ---
-title: Gérer le transfert de données entre des applications iOS | Microsoft Intune
+title: Gérer le transfert de données entre applications iOS
+titleSuffix: Microsoft Intune
 description: Découvrez comment utiliser des stratégies de gestion des applications mobiles dans Microsoft Intune pour gérer les transferts de données entre les applications.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/28/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bb109f8c837fe8848ad8cb19c930de765ed381d1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509508"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -49,16 +52,20 @@ Le paramètre UPN d’utilisateur **doit être configuré** pour les appareils g
 
 2.  Déployez les applications et le profil de messagerie que vous souhaitez gérer par le biais d’Intune ou de votre solution MDM tierce en suivant les étapes généralisées suivantes. Cette expérience est également abordée dans l’*Exemple 1*.
 
-3.  Déployez l’application avec les paramètres de configuration d’application suivants :
+3.  Déployez l’application avec les paramètres de configuration d’application suivants sur l’appareil géré :
 
       **clé** = IntuneMAMUPN, **valeur** = <username@company.com>
 
       Exemple : [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      
+       > [!NOTE]
+       > Dans Intune, la stratégie Configuration de l’application doit être destinée au type d’inscription « Appareils gérés ».
+       > En outre, l’application doit être soit installée à partir du portail d’entreprise Intune si elle est définie comme étant disponible, soit envoyée (push) en fonction des besoins à l’appareil. 
 
 4.  Déployez la stratégie **Open in management** en utilisant Intune ou votre fournisseur MDM tiers sur les appareils inscrits.
 
 
-### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Exemple 1 : Expérience de l’administrateur dans Intune ou dans la console MDM tierce
+### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Exemple 1 : Expérience de l’administrateur dans Intune ou dans la console MDM tierce
 
 1. Accédez à la console d’administration Intune ou à votre fournisseur MDM tiers. Accédez à la section de la console dans laquelle vous déployez les paramètres de configuration d’application sur les appareils iOS inscrits.
 
@@ -76,7 +83,7 @@ Le paramètre UPN d’utilisateur **doit être configuré** pour les appareils g
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Chaîne | %upn% |
 
 
-### <a name="example-2-end-user-experience"></a>Exemple 2 : Expérience de l’utilisateur final
+### <a name="example-2-end-user-experience"></a>Exemple 2 : Expérience de l’utilisateur final
 
 1.  L’utilisateur installe l’application Microsoft Word sur un appareil.
 

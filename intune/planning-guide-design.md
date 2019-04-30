@@ -1,15 +1,16 @@
 ---
 title: Créer votre conception Microsoft Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cet article vous permet de créer une conception dans le cadre de la conception et de l'implémentation d'un cloud Microsoft Intune uniquement.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22af3d4de296d90a89bb3d812cab0e55983e786b
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 307895935e1cd6fe2489a4ee8ae03333ce97d55b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512700"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -110,6 +111,10 @@ Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.tech
 
 Intune propose deux options de déploiement : autonome et hybride. Autonome fait référence au service Intune en cours d’exécution dans le cloud, hybride fait référence à l’intégration d’Intune avec System Center Configuration Manager. Ce guide couvre principalement l’option autonome. [Choisissez l’option qui répond aux besoins de votre entreprise](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
+> [!Important]
+>L’intégration des nouveaux clients MDM hybrides est dépréciée. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+
+
 ## <a name="intune-tenant-location"></a>Emplacement du client Intune
 
 Si votre organisation est présente dans plusieurs pays, tenez compte de l’emplacement de votre locataire quand vous vous abonnez au service. Le pays est défini lorsque vous souscrivez un abonnement Intune pour la première fois. Voici les régions du monde concernées :
@@ -133,7 +138,7 @@ Les dépendances externes sont des services et des produits distincts d'Intune, 
 
 -   Infrastructure à clé publique (PKI)
 
-Examinons plus en détail les dépendances externes courantes ci-dessous
+Nous allons examiner les dépendances externes courantes plus en détail.
 
 ### <a name="identity"></a>Fournisseur
 
@@ -399,11 +404,9 @@ Voici un exemple de conception d’une stratégie de conformité :
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie de conformité.
 #### <a name="conditional-access-policies"></a>Stratégies d'accès conditionnel
 
-L’accès conditionnel est utilisé pour autoriser uniquement les appareils compatibles à accéder aux e-mails et aux autres ressources de l’entreprise. Intune fonctionne avec Enterprise Mobility + Security (EMS) pour contrôler l’accès aux ressources de l’entreprise. Vous devez déterminer si l’accès conditionnel est requis, et ce qui doit être sécurisé. En savoir plus sur l'[accès conditionnel](conditional-access.md).
+L’accès conditionnel est utilisé pour autoriser uniquement les appareils compatibles à accéder aux e-mails et aux autres ressources de l’entreprise. Intune fonctionne avec Enterprise Mobility + Security (EMS) pour contrôler l’accès aux ressources de l’entreprise. Déterminez si vous avez besoin de l’accès conditionnel et ce qui doit être sécurisé. En savoir plus sur l'[accès conditionnel](conditional-access.md).
 
-Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs ciblés par les stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer/configurer le connecteur service à service Intune pour Exchange Online ou Exchange sur site. Découvrez comment installer et configurer les connecteurs service à service Intune : <!---these links are correct--->
-
--   [Exchange Online](exchange-service-connector-configure.md)
+Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs que vous allez cibler par les stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer ou configurer le connecteur Intune pour Exchange sur site : 
 
 -   [Exchange local](exchange-connector-install.md)
 

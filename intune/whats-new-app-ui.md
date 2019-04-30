@@ -1,49 +1,97 @@
 ---
 title: Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez ce qui a changé dans l’interface utilisateur des applications qui fonctionnent sur les appareils des utilisateurs finaux avec Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/13/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0d6a798f9f16f4eaa0e882fb7d90203be912051f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 753c261ea08ce304176f19e1c64389053b055d5f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61517280"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
-Découvrez les mises à jour apportées à l’interface utilisateur des applications présentées aux utilisateurs finaux dans cette version de Microsoft Intune. Comprendre ces mises à jour peut vous aider dans vos communications avec les utilisateurs et dans la mise à jour de la documentation personnalisée que vous avez créée pour accompagner votre déploiement. Cela peut aussi vous être utile pour mieux résoudre les problèmes auxquels font face vos utilisateurs s’ils font appel au support technique à l’aide du Portail d’entreprise.
+Découvrez les dernières mises à jour pour les applications Microsoft Intune. Nous apportons régulièrement des améliorations au site web et à l’application Portail d’entreprise Intune. Si vous êtes un administrateur Intune ou un technicien de support, vous trouverez dans cet article les informations dont vous aurez besoin pour :
+
+* Informer les étudiants et les employés des modifications apportées aux applications et à l’inscription.
+* Mettre à jour les procédures de support technique et la documentation de votre organisation.  
+
+Si vous êtes un employé ou un étudiant, veillez à consulter les captures d’écran et les liens vers la documentation d’aide de Portail d’entreprise. Pour plus d’informations sur l’utilisation de l’application Portail d’entreprise, consultez la [documentation d’aide pour les utilisateurs de Portail d’entreprise](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-april-15-2019"></a>Semaine du 15 avril 2019  
+
+### <a name="new-end-user-app-microsoft-intune-app---3903244---"></a>Nouvelle application utilisateur final (application Microsoft Intune) <!--3903244 -->  
+Il existe une nouvelle application utilisateur final pour les appareils Android complètement managés appelée **Microsoft Intune**. Cette nouvelle application est légère et moderne, et offre des fonctionnalités similaires à celles de l’application Portail d’entreprise, mais pour les appareils d’entreprise complètement managés. Pour plus d’informations, consultez l’[application Microsoft Intune sur Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
+
+Exemple de capture d’écran de la page de détails de l’appareil : 
+
+![Capture d’écran de l’application Microsoft Intune montrant les détails de l’appareil Android de Jane.](./media/1904-intune-app-device-details.png)   
+
+Exemple de capture d’écran de la page **Configurer l’accès** :  
+
+![Capture d’écran de l’application Microsoft Intune montrant l’écran d’inscription Configurer l’accès.](./media/1904-intune-app-setup-access.png)   
+
+Exemple de capture d’écran du menu d’application :  
+
+![Capture d’écran de l’application Microsoft Intune montrant le menu latéral.](./media/1904-intune-app-navigation-menu.png)   
+
+Exemple de capture d’écran de la page **Aide** :  
+
+![Capture d’écran de l’application Microsoft Intune montrant la page d’aide.](./media/1904-intune-app-help.png)   
+
+
+## <a name="week-of-april-1-2019"></a>Semaine du 1 avril 2019  
+
+### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Modifications apportées à l’inscription auprès du Portail d’entreprise pour les utilisateurs d’appareils iOS 12 <!--3448635 -->  
+Les étapes et les écrans d’inscription iOS auprès du Portail d’entreprise ont été mis à jour afin de s’aligner avec les modifications de l’inscription MDM publiées dans Apple iOS 12.2. Le flux de travail mis à jour invite les utilisateurs à :  
+
+* Autoriser Safari à ouvrir le site web Portail d’entreprise et à télécharger le profil de gestion avant de retourner à l’application Portail d’entreprise.  
+* Ouvrir l’application Paramètres pour installer le profil de gestion sur leur appareil.  
+* Retourner à l’application Portail d’entreprise pour terminer l’inscription.  
+
+Pour en savoir plus sur les étapes et les écrans d’inscription mis à jour, consultez [Inscrire un appareil iOS dans Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).  
+
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Mise à jour de l’expérience utilisateur de l’application Portail d’entreprise pour iOS <!-- 2536024 -->
+La page d’accueil de l’application Portail d’entreprise pour les appareils iOS a été repensée. Désormais, elle adhère davantage aux modèles d’interface utilisateur iOS, et fournit également une meilleure détectabilité des applications et des livres électroniques.  
+
+## <a name="week-of-february-19-2019"></a>Semaine du 19 février 2019  
+### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nouvel écran Catégories d’application dans l’application Portail d’entreprise pour Windows 10<!-- 3834780 WNready4Review -->  
+Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans Portail d’entreprise pour Windows 10. Les applications des utilisateurs sont désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
+
+![Capture d’écran de Portail d’entreprise pour Windows 10, écran Catégories d’application.](./media/1902_CP_app_categories.png)   
+
 
 ## <a name="week-of-november-12-2018"></a>Semaine du 12 novembre 2018
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Raccourcis clavier du Portail d’entreprise Windows <!-- 2771518 -->
-Les utilisateurs finaux peuvent désormais déclencher des actions d’application et d’appareil dans le Portail d’entreprise Windows à l’aide de raccourcis clavier (accélérateurs).
+Les utilisateurs finaux peuvent désormais déclencher des actions d’application et d’appareil dans le Portail d’entreprise Windows à l’aide de [raccourcis clavier (accélérateurs)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Semaine du 22 octobre 2018
 
 ### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Ajouter une image de marque personnalisée pour l’application Portail d’entreprise <!-- 1916266 -->
-En tant qu’administrateur Microsoft Intune, vous pouvez charger une image de marque personnalisée, qui est affichée en tant qu’image d’arrière-plan dans la page de profil de l’utilisateur au sein de l’application Portail d’entreprise iOS. Pour plus d’informations sur la configuration de l’application Portail d’entreprise, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](company-portal-app.md).
-
-
+En tant qu’administrateur Microsoft Intune, vous pouvez charger une image de marque personnalisée, qui est affichée en tant qu’image d’arrière-plan dans la page de profil de l’utilisateur au sein de l’application Portail d’entreprise iOS. Pour plus d’informations sur la configuration de l’application Portail d’entreprise, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](company-portal-app.md).  
 
 ## <a name="week-of-august-27-2018"></a>Semaine du 27 août 2018  
 
-### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nouvelle mise à jour de l’expérience utilisateur du site web Portail d’entreprise<!--2000968 -->  
-En nous basant sur les commentaires que nous ont envoyés des clients, nous avons ajouté de nouvelles fonctionnalités au site web Portail d’entreprise. Vous allez constater une nette amélioration des fonctionnalités existantes et de la facilité d’utilisation sur vos appareils. Les différentes zones du site, comme les détails de l’appareil, le feedback et le support, ainsi que la vue d’ensemble de l’appareil, bénéficient d’une nouvelle présentation interactive et moderne. La [documentation du site web Portail d’entreprise Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) a été mise à jour pour refléter ces modifications.   
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nouvelle mise à jour de l’expérience utilisateur du site web Portail d’entreprise <!--2000968 -->  
+En nous basant sur les commentaires que nous ont envoyés des clients, nous avons ajouté de nouvelles fonctionnalités au site web Portail d’entreprise. Vous allez constater une nette amélioration des fonctionnalités existantes et de la facilité d’utilisation sur vos appareils. Des zones spécifiques du site, telles que les détails de l’appareil, les commentaires et le support, ainsi que la vue d’ensemble de l’appareil, bénéficient désormais d’une nouvelle présentation interactive et moderne. La [documentation du site web Portail d’entreprise Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) a été mise à jour pour refléter ces modifications.   
 
 Vous pouvez voir les mises à jour suivantes :  
 
@@ -63,15 +111,15 @@ Vous pouvez voir les mises à jour suivantes :
 ## <a name="week-of-july-16-2018"></a>Semaine du 16 juillet 2018  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Nouvelles opportunités de synchronisation dans l’application Portail d’entreprise pour Windows   
-L’application Portail d’entreprise pour Windows vous permet désormais de lancer une synchronisation directement à partir de la barre des tâches Windows et du menu Démarrer. Cette fonctionnalité est particulièrement utile si votre seule tâche consiste à synchroniser des appareils et à accéder aux ressources d’entreprise. Pour accéder à la nouvelle fonctionnalité, cliquez avec le bouton droit sur l’icône Portail d’entreprise épinglée à votre barre des tâches ou au menu Démarrer. Dans les options de menu (également appelées liste de raccourcis), sélectionnez **Synchroniser cet appareil**. Le portail d’entreprise s’ouvre à la page **Paramètres** et lance la synchronisation.  
+L’application Portail d’entreprise pour Windows vous permet désormais de lancer une synchronisation directement à partir de la barre des tâches Windows et du menu Démarrer. Cette fonctionnalité est particulièrement utile si votre seule tâche consiste à synchroniser des appareils et à accéder aux ressources d’entreprise. Pour accéder à la nouvelle fonctionnalité, cliquez avec le bouton droit sur l’icône Portail d’entreprise épinglée à votre barre des tâches ou au menu **Démarrer**. Dans les options de menu (également appelées liste de raccourcis), sélectionnez **Synchroniser cet appareil**. Le portail d’entreprise s’ouvre à la page **Paramètres** et lance la synchronisation.  
 
 ![Capture d’écran de la barre des tâches Windows sur le Bureau d’un appareil. L’utilisateur a cliqué sur l’icône du programme de l’application Portail entreprise pour afficher un menu avec les options « Épingler à la barre des tâches » et « Fermer la fenêtre », et l’action « Synchroniser cet appareil ».](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nouvelles expériences d’exploration dans l’application Portail d’entreprise pour Windows  
 
-Désormais, quand vous parcourez ou recherchez des applications dans l’application Portail d’entreprise pour Windows, vous pouvez basculer entre la vue **Vignettes** existante et la nouvelle vue **Détails**. La nouvelle vue répertorie les détails des applications, tels que le nom, l’éditeur, la date de publication et l’état d’installation.  
+Désormais, quand vous parcourez ou recherchez des applications dans l’application Portail d’entreprise pour Windows, vous pouvez basculer entre la vue **Vignettes** existante et la nouvelle vue **Détails**. Cette nouvelle vue contient les détails des applications, tels que le nom, l’éditeur, la date de publication et l’état d’installation.  
 
-La vue **Installée** de la page **Applications** vous permet de voir les détails concernant les installations d’application terminées et en cours.  
+La vue **Installée** de la page **Applications** vous permet de voir les détails concernant les installations d’applications terminées et en cours.  
 
 Capture d’écran montrant la vue Vignettes :  
  
@@ -82,7 +130,7 @@ Capture d’écran montrant la vue Détails :
 ![Capture d’écran de l’application Portail d’entreprise Intune pour Windows montrant les applications installées dans la vue Détails.](/intune/media/details-installed-view-cpapp-1807.png) 
 
 ## <a name="week-of-april-23-2018"></a>Semaine du 23 avril 2018
-### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Affichage de navigation mis à jour dans l’application Portail d’entreprise pour Windows 10 <!-- 1195010 -->
+### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Affichage de navigation mis à jour dans l’application Portail d’entreprise pour Windows 10 <!-- 1195010 -->
 L’application Portail d’entreprise Intune pour Windows 10 a été mise à jour avec l’[affichage de navigation de Fluent Design System](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Le long de l’application, vous remarquerez une liste verticale statique de toutes les pages de niveau supérieur. Cliquez sur n’importe quel lien pour afficher des pages et passer de l’une à l’autre rapidement. Il s’agit de la première d’une série de mises à jour que vous verrez dans le cadre de nos efforts constants pour créer une expérience plus adaptive, empathique et familière dans Intune. 
 
 ![Capture d’écran du tableau de bord de l’application Portail d’entreprise indiquant la vue de navigation Fluent](./media/1804_WindowsCP_Fluent_01.png)
@@ -90,7 +138,7 @@ L’application Portail d’entreprise Intune pour Windows 10 a été mise à jo
 
 ## <a name="week-of-april-2-2018"></a>Semaine du 2 avril 2018
 
-### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Mise à jour de l’expérience utilisateur dans l’application Portail d’entreprise pour iOS <!-- 1412866 -->
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Mise à jour de l’expérience utilisateur de l’application Portail d’entreprise pour iOS <!-- 1412866 -->
 Nous avons publié une mise à jour majeure de l’expérience utilisateur de l’application Portail d’entreprise pour iOS. La mise à jour comporte une refonte visuelle complète incluant une apparence plus moderne. Nous avons conservé les fonctionnalités de l’application, mais nous avons étendu sa facilité d’utilisation et son accessibilité.  
 
 Vous découvrirez également les points suivants :
@@ -105,7 +153,7 @@ Vous découvrirez également les points suivants :
 |*Combiné à l’étape précédente*|![02](/intune/media/cp_iosRedesign_after_1803_02.png)|
 |![03](/intune/media/cp_iosRedesign_before_1803_02.png)|![03](/intune/media/cp_iosRedesign_after_1803_03.png)|
 
-### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Améliorations du langage utilisé dans l’application Portail d’entreprise pour Windows <!-- 1683758 -->
+### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Améliorations apportées au langage utilisé dans l’application Portail d’entreprise pour Windows <!-- 1683758 -->
 Nous avons amélioré le langage utilisé dans le Portail d’entreprise pour Windows 10 pour qu’il soit plus convivial et plus spécifique à votre entreprise.
 
 |Avant|Après|
@@ -132,7 +180,7 @@ Nous avons mis à jour l’application Portail d’entreprise pour Android afin 
 
 ## <a name="week-of-november-27-2017"></a>Semaine du 27 novembre 2017
 
-### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nouvelle étape « Catégories d’appareils » dans l’installation guidée pour l’application Portail d’entreprise pour Windows 10<!-- 1335292 -->
+### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nouvelle étape « Catégories d’appareils » dans l’installation guidée pour l’application Portail d’entreprise pour Windows 10 <!-- 1335292 -->
 
 Si vous avez activé le [mappage de groupe d’appareils](device-group-mapping.md), l’application Portail d’entreprise pour Windows 10 invite maintenant vos utilisateurs à sélectionner une catégorie d’appareils après l’inscription de leur appareil.
 
@@ -140,7 +188,7 @@ Si vous avez activé le [mappage de groupe d’appareils](device-group-mapping.m
 
 ## <a name="week-of-november-13-2017"></a>Semaine du 13 novembre 2017
 
-### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Améliorations apportées au workflow de configuration des appareils dans le portail d’entreprise pour iOS dans la version 2.9.0 <!-- 1417174 -->
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Améliorations apportées au workflow de configuration des appareils sur le Portail d’entreprise pour iOS dans la version 2.9.0 <!-- 1417174 -->
 
 Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour iOS. La langue est plus conviviale, et nous avons regroupé des écrans dans la mesure du possible. La langue est également plus adaptée à l’entreprise, car nous utilisons à chaque fois son nom dans le texte de configuration.
 
@@ -160,7 +208,7 @@ Nous avons amélioré le workflow de configuration des appareils dans l’applic
 
 ## <a name="week-of-november-6-2017"></a>Semaine du 6 novembre 2017
 
-### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Mise à jour de l’application Portail d’entreprise pour Windows 10<!--1299474-->
+### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Mise à jour de l’application Portail d’entreprise pour Windows 10 <!--1299474-->
 La page Paramètres de l’application Portail d’entreprise pour Windows 10 a été mise à jour pour rendre les paramètres et les actions prévues de l’utilisateur plus cohérents à travers l’ensemble des paramètres, ainsi que pour correspondre à la disposition d’autres applications Windows.
 
 |Avant|Après|
@@ -189,7 +237,7 @@ Cette version corrige un problème connu sur la façon dont le portail d’entre
 
 ## <a name="week-of-october-2-2017"></a>Semaine du 2 octobre 2017
 
-### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Améliorations apportées au workflow de configuration des appareils dans le portail d’entreprise <!-- 1490692 -->
+### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Améliorations apportées au workflow de configuration des appareils dans le Portail d’entreprise <!-- 1490692 -->
 Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour Android. Le texte de l’interface est plus convivial et spécifique à votre entreprise, et nous avons regroupé des écrans quand cela était possible. 
 
 |Avant|Après|
@@ -253,7 +301,7 @@ L’accès conditionnel avec Intune prend en charge une authentification plus s�
 
 
 
-### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Les boîtes de dialogue Gestion des applications mobiles (GAM) Intune auront une interface modernisée <!-- 1199015 -->
+### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Les boîtes de dialogue Gestion des applications mobiles (MAM) Intune auront une interface modernisée <!-- 1199015 -->
 
 Les boîtes de dialogue Gestion des applications mobiles (GAM) Intune seront mises à jour pour afficher une apparence plus actuelle. Ces boîtes de dialogue fonctionneront de la même façon qu’avec le précédent style.
 
@@ -266,7 +314,7 @@ Les boîtes de dialogue Gestion des applications mobiles (GAM) Intune seront mis
 ![interface moderne](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
-### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Mises à jour de la page « Détails de l’appareil » dans l’application Portail d’entreprise pour Windows 10 <!-- 1287448 -->
+### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Mises à jour de la page « Détails de l’appareil » dans l’application Portail d’entreprise pour Windows 10 <!-- 1287448 -->
 
 L’application Portail d’entreprise pour Windows 10 déplace la balise __Catégorie__ en dessous du titre vers une propriété dans la page __Détails de l’appareil__.
 
@@ -280,7 +328,7 @@ La page de détails des applications de l’application Portail d’entreprise p
 
 ![Nouvelle page de détails de l’application](./media/cp_android_appdetails_after_1708.png)
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Amélioration de l’expérience de connexion sur l’ensemble des applications du portail d’entreprise pour toutes les plates-formes<!--User Story 1132123-->
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Amélioration de l’expérience de connexion sur l’ensemble des applications du Portail d’entreprise pour toutes les plateformes <!--User Story 1132123-->
 
 Dans les mois à venir, nous introduirons des changements visant à améliorer l’expérience de connexion aux applications Portail d’entreprise Intune pour Android, iOS et Windows. La nouvelle expérience utilisateur s’affiche automatiquement sur toutes les plates-formes utilisées pour l’application du portail d’entreprise lorsqu’Azure AD apporte cette modification. En outre, les utilisateurs peuvent désormais se connecter au portail d’entreprise à partir d’un autre appareil grâce à un code à usage unique automatiquement généré. Cette fonction se révèle particulièrement utile lorsque les utilisateurs doivent se connecter sans informations d’identification.  
 
@@ -343,7 +391,7 @@ L’appareil peut toujours être inscrit pour la gestion complète en appuyant s
 
 ![Image de l’application Portail d’entreprise pour Android montrant le menu du coin supérieur droit de l’écran avec une option pour inscrire l’appareil.](./media/and_sign_in_menu_after_app_protection_policy_enrolled_after_1706.png)
 
-### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>Améliorations apportées à la synchronisation des applications avec Windows 10 Creators Update<!--676505-->
+### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>Améliorations apportées à la synchronisation des applications avec Windows 10 Creators Update <!--676505-->
 
 L’application Portail d’entreprise pour Windows 10 démarre maintenant automatiquement une synchronisation pour les demandes d’installation d’application sur les appareils exécutant Windows 10 Creators Update (version 1703). Cela permet de réduire le problème de blocage des installations d’applications à l’état « Synchronisation en attente ». En outre, les utilisateurs peuvent lancer manuellement une synchronisation à partir de l’application.
 
@@ -351,7 +399,7 @@ L’application Portail d’entreprise pour Windows 10 démarre maintenant auto
 
 ![Image de l’application Portail d’entreprise Windows 10, avec le nouvel état de synchronisation automatique affichant un message d’état signalant que l’appareil est en cours de synchronisation et tente de télécharger l’application.](./media/w10_download_pending_syncing_after_1706.png)
 
-### <a name="new-guided-experience-for-windows-10-company-portal----1058938---"></a>Nouvelle expérience interactive pour le portail d’entreprise Windows 10 <!---1058938--->
+### <a name="new-guided-experience-for-windows-10-company-portal----1058938---"></a>Nouvelle expérience interactive pour le Portail d’entreprise Windows 10 <!---1058938--->
 L’application Portail d’entreprise pour Windows 10 inclura une expérience de procédure pas à pas Intune interactive pour les appareils qui n’ont pas été identifiés ou inscrits. La nouvelle expérience fournit des instructions détaillées qui guident les utilisateurs lors de l’inscription à Azure Active Directory (requis pour les fonctionnalités d’accès conditionnel) et de l’inscription MDM (obligatoire pour les fonctionnalités de gestion des appareils). L’expérience guidée sera accessible à partir de la page d’accueil de portail d’entreprise. Les utilisateurs peuvent continuer à utiliser l’application s’ils ne terminent pas l’inscription, mais seront confrontés à des fonctionnalités limitées.
 
 Cette mise à jour est visible uniquement sur les appareils exécutant la Mise à jour anniversaire Windows 10 (build 1607) ou version ultérieure.
@@ -366,14 +414,14 @@ Cette mise à jour est visible uniquement sur les appareils exécutant la Mise �
 
 ![Image de l’écran d’achèvement de l’application Portail d’entreprise Windows 10, informant l’utilisateur qu’il a terminé, que l’appareil est inscrit et qu’un compte d’entreprise a été correctement ajouté.](./media/win10_guided_enroll_youre_all_set_after_1706.png)
 
-### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Nouvelle action de menu pour supprimer facilement le portail d’entreprise <!--1164569-->
+### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Nouvelle action de menu pour supprimer facilement le Portail d’entreprise <!--1164569-->
 Suite aux commentaires des utilisateurs, l’application Portail d’entreprise pour Android offre désormais une nouvelle action de menu pour lancer la suppression du portail d’entreprise à partir de votre appareil. Cette action supprime l’appareil de la gestion Intune afin que l’application puisse être supprimée à partir de l’appareil par l’utilisateur.
 
 ![Une image de l’application Portail d’entreprise Android, avec le menu Action ouvert en haut à droite. La nouvelle option « Supprimer le portail d’entreprise » est disponible en tant que troisième option, sous « Mon profil » et « Paramètres », et au-dessus de « Conditions générales », « Aide et commentaires » et « À propos ».](./media/android_remove_cp_menu_action_after_1705.png)
 
-![Une image de la boîte de dialogue de confirmation, qui est disponible après avoir sélectionné la nouvelle option « Supprimer le portail d’entreprise » dans le menu Action. La boîte de dialogue informe l’utilisateur comme suit : « en supprimant le portail d’entreprise, votre appareil ne sera plus géré par votre administrateur informatique et pourrait perdre l’accès à la messagerie, aux applications et aux données de l’entreprise. » L’utilisateur doit ensuite confirmer qu’il souhaite supprimer l’application Portail d’entreprise en sélectionnant « Oui ».](./media/android_remove_cp_menu_confirmation_after_1705.png)
+![Une image de la boîte de dialogue de confirmation, qui est disponible après avoir sélectionné la nouvelle option « Supprimer le portail d’entreprise » dans le menu Action. La boîte de dialogue informe l’utilisateur comme suit : « en supprimant le portail d’entreprise, votre appareil ne sera plus géré par votre administrateur informatique et pourrait perdre l’accès à la messagerie, aux applications et aux données de l’entreprise. » Elle demande ensuite à l’utilisateur de confirmer qu’il souhaite supprimer l’application de portail d’entreprise en sélectionnant « Oui ».](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Améliorations des vignettes de l’application dans l’application Portail d’entreprise pour iOS <!--1230777-->
+### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Améliorations aux mosaïques de l’application dans l’application de portail d’entreprise pour iOS <!--1230777-->
 Nous avons mis à jour l’apparence des vignettes d’application sur la page d’accueil afin de refléter la couleur de marque que vous définissez pour le portail d’entreprise.
 
 **Avant**
@@ -391,7 +439,7 @@ Si des utilisateurs ont utilisé leur compte professionnel ou scolaire pour se c
 
 ## <a name="april-2017"></a>Avril 2017
 
-### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nouvelles icônes pour Managed Browser et le portail d’entreprise <!--918433, 918431-->
+### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nouvelles icônes pour Managed Browser et le Portail d’entreprise <!--918433, 918431-->
 
 Managed Browser reçoit des icônes mises à jour pour les versions iOS et Android de l’application. La nouvelle icône contient le badge Intune mis à jour, pour une meilleure cohérence avec d’autres applications Enterprise Mobility + Security (EM+S).
 
@@ -412,7 +460,7 @@ Managed Browser reçoit des icônes mises à jour pour les versions iOS et Andro
 
 Le portail d’entreprise reçoit également des icônes mises à jour pour les versions Android, iOS et Windows de l’application, afin d’améliorer la cohérence avec d’autres applications dans EM + S. Ces icônes seront publiées progressivement sur toutes les plateformes du mois d’avril jusqu’à fin mai.
 
-### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Indicateur de progression de connexion dans Portail d’entreprise Android <!--953374-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Indicateur de progression de connexion dans le Portail d’entreprise Android <!--953374-->
 
 Une mise à jour de l’application Portail d’entreprise Android affiche un indicateur de progression de connexion quand l’utilisateur lance l’application ou effectue une reprise. L’indicateur affiche successivement les nouveaux états, en commençant par « Connexion... », puis « Connexion en cours », puis « Vérification des exigences de sécurité... », avant d’autoriser l’utilisateur à accéder à l’application.
 
@@ -434,7 +482,7 @@ Une mise à jour de l’application Portail d’entreprise Android affiche un in
 </body>
 </html>
 
-### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Amélioration de l’état d’installation de l’application pour l’application Portail d’entreprise Windows 10 <!--676495-->
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Amélioration de l’état d’installation de l’application pour l’application Portail d’entreprise de Windows 10 <!--676495-->
 L’application Portail d’entreprise Windows 10 fournit désormais une barre de progression de l’installation dans la page des détails de l’application. Elle est prise en charge pour les applications modernes sur les appareils exécutant au minimum Mise à jour anniversaire Windows 10.
 
 __Avant__ ![Image de la version précédente de l’écran de chargement, où l’état indique simplement « installation ».](./media/cp_win10_install_status_before_1704.png)
@@ -454,7 +502,7 @@ __Après__ ![Image de la version mise à jour de l’écran de chargement, qui a
 
 ![À gauche, une image de l’application Portail d’entreprise pour Android avant la mise à jour. À droite, une image de l’application Portail d’entreprise pour Android après la mise à jour. Les deux images montrent l’onglet Applications sélectionné parmi les trois onglets disponibles Applications, Appareils et Contacter le service informatique.](./media/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigation__ : Le bouton Toutes les applications propose une vue comprenant les onglets __Applications proposées__, __Toutes les applications__ et __Catégories__ pour faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
+* __Navigation__ : La vue Toutes les applications montre une vue à onglets avec __Proposée(s)__, __Toutes__ et __Catégories__ afin de faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
 
 <html>
 <body>
@@ -470,7 +518,7 @@ __Après__ ![Image de la version mise à jour de l’écran de chargement, qui a
 
 ## <a name="january-2017"></a>Janvier 2017
 
-### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernisation du site web du portail d’entreprise <!--753980, announced 1701-->
+### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernisation du site web Portail d’entreprise <!--753980, announced 1701-->
 À compter de février, le site web du portail d’entreprise prend en charge les applications destinées aux utilisateurs qui n’ont pas d’appareils gérés. Le site web s’aligne sur les autres produits et services Microsoft et utilise un nouveau modèle de couleurs contrastées, des illustrations dynamiques et un « menu hamburger », ![Petite image du menu hamburger désormais ajouté en haut à gauche du site web du portail d’entreprise](./media/CP_hamburger_menu.png) qui contient les coordonnées du support technique et des informations sur les appareils gérés existants. Nous avons réorganisé la page d’accueil pour mettre en évidence les applications disponibles en les affichant dans des carrousels sous Applications proposées et Applications récemment mises à jour.
 
 ![L’image de gauche représente la version actuelle du site web du portail d’entreprise, avec les versions précédentes des vues Applications, Mes appareils, Applications proposées et Catégories. L’image de droite représente la version mise à jour du site web du portail d’entreprise, avec un carrousel d’applications repensé, la liste des applications récemment publiées et la vue Catégories mise à jour.](./media/CP_Website_BeforeAfter_Feb2016.png)
@@ -479,26 +527,7 @@ __Après__ ![Image de la version mise à jour de l’écran de chargement, qui a
 Voici les moyens envisagés pour améliorer l’expérience utilisateur en mettant à jour l’interface utilisateur.
 
 > [!Note]
-> Notez que les images ci-dessous peuvent être en préversion. Le produit annoncé peut différer des versions présentées.
-
-### <a name="ui-iwp"></a>Nouvelle mise à jour de l’expérience utilisateur pour le site web Portail d’entreprise <!--2000968-->
-
-Nous allons introduire une nouvelle expérience du site web Portail d’entreprise en août, avec des mises à jour de l’interface utilisateur, des workflows simplifiés et des améliorations apportées à l’accessibilité. Cette nouvelle expérience inclut des améliorations demandées par les clients comme le partage d’applications et l’amélioration des performances globales pour plus de convivialité.
-
-Nous avons ajouté de nouvelles fonctionnalités en nous basant sur les commentaires que nous ont envoyés des clients comme vous, afin d’améliorer considérablement les fonctionnalités existantes et leur mode d’utilisation :
-
--   Améliorations de l’interface utilisateur dans l’ensemble du site web
--   Possibilité de partager des liens directs vers les applications
-- Performances améliorées des grands catalogues d’applications
-
-Vous n’avez rien à faire pour vous préparer à ce changement. Nous vous informons au moment où le site web Portail d’entreprise est mis à jour et à votre disposition. Toutefois, vous devrez éventuellement mettre à jour les documents destinés à l’utilisateur final avec des captures d’écran actualisées. Notez que vous devez également mettre à jour la documentation de l’application Portail d’entreprise sur iOS, étant donné que le site web alimente la section **Applications** de l’application iOS.  
-
-### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Mises à jour apportées à l’interface utilisateur sur le site web Portail d’entreprise <!--1313244 part 2-->
-
-__Mises à jour des applications proposées__  Nous avons ajouté une page dédiée sur le site où les utilisateurs peuvent rechercher les applications que vous avez choisi de proposer, et nous avons apporté quelques ajustements à l’interface utilisateur de la section correspondante sur la page d’accueil.
-
-![Les vignettes de couleur qui signalent les applications. Il s’agit de grands carrés de couleur en dessous de chaque application, où la couleur est extraite de la teinte principale du logo de l’application. La section « Applications proposées » s’affiche dans la partie supérieure de l’application Portail d’entreprise.](./media/cp_win10_colorful_tiles_after_1708.png)
-
+> Les images ci-dessous peuvent être en préversion. Le produit annoncé peut différer des versions présentées.  
 
 
 ### <a name="see-also"></a>Voir aussi

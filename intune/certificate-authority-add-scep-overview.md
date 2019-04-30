@@ -6,20 +6,22 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 07/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de0df4878d2461d2f7c0a022a7e3d305e58aef7f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d042a160d016343c6e8374dff8f74560b9806014
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508479"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -69,7 +71,7 @@ Pour autoriser un serveur SCEP tiers à exécuter une validation de stimulation 
 
 Vérifiez que vous disposez des autorisations requises pour inscrire une application Azure AD. [Autorisations requises](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) répertorie les étapes.
 
-**Étape 1 : Créer une application Azure AD**
+**Étape 1 : Créer une application Azure AD**
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 2. Sélectionnez **Azure Active Directory** > **Inscriptions des applications** > **Inscription d’une nouvelle application**.
@@ -78,7 +80,7 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
 
 [Intégrer des applications à Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) inclut des instructions sur la création d’une application, notamment des conseils sur l’URL et le nom.
 
-**Étape 2 : Accorder des autorisations**
+**Étape 2 : Accorder des autorisations**
 
 Après avoir créé votre application, accordez les autorisations requises à l’API Microsoft Intune :
 
@@ -87,11 +89,11 @@ Après avoir créé votre application, accordez les autorisations requises à l�
 3. Dans **Sélectionner des autorisations**, choisissez **SCEP challenge validation** (Validation de stimulation SCEP) > **Sélectionner**.
 4. Sélectionnez **Terminé** pour enregistrer vos changements.
 
-**Étape 3 : Obtenir l’ID d’application et la clé d’authentification**
+**Étape 3 : Obtenir l’ID d’application et la clé d’authentification**
 
 Obtenez ensuite les valeurs d’ID et de clé de votre application Azure AD. Les valeurs suivantes sont nécessaires :
 
-- ID de l'application
+- ID de l’application
 - Clé d’authentification
 - ID de locataire
 

@@ -6,21 +6,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: edb07842-6a16-482e-8c1d-541a29e169a8
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f1adab40170227926dce1eb7c14117accf1d7d0a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3b499f3171910f28a2d190d28e8ab6e945fa463a
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61511266"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Stockage et traitement des données dans Intune
 
@@ -32,7 +34,7 @@ Toutes les données collectées autres que les données de télémétrie sont tr
 
 - SQLAzure 
 - Collections fiables (Service Fabric)  
-- Azure Storage 
+- Stockage Azure 
 
 Les données de télémétrie (journaux des services, journaux de performances, erreurs, etc.) qui sont essentiels pour la surveillance et la fourniture d’un service stable sont envoyées aux banques de données de télémétrie de Microsoft.
 

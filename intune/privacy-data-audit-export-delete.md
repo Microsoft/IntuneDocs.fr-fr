@@ -9,6 +9,7 @@ ms.date: 05/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76e0c411afe1fb4e32b26c6ad669cb91b6cd3336
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 5a253894e400e4b63de40d2d8ef56cefef5b2ca0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512809"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditer, exporter ou supprimer des données personnelles dans Intune
 
@@ -79,6 +80,9 @@ Quand vous avez un environnement MDM hybride (Intune intégré à Configuration 
 1. Supprimez l’utilisateur de votre annuaire Active Directory local (AD). Cela empêche la synchronisation de l’utilisateur avec Azure AD, ainsi que sa détection par la découverte de Configuration Manager. 
 2. Supprimez l’utilisateur de la console Configuration Manager pour supprimer les données utilisateur et les données associées de Configuration Manager. Dans la console, accédez à **Biens et conformité** > **Utilisateurs**, cliquez avec le bouton droit sur l’utilisateur à supprimer, puis cliquez sur **Supprimer**.
 3. [Supprimez l’utilisateur d’AAD](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad), ce qui supprime l’utilisateur et les données associées simultanément d’Azure Active Directory et d’Intune. Quand l’utilisateur est supprimé d’AAD (supprimé de manière définitive), Intune reçoit le signal de suppression d’AAD, puis commence automatiquement à purger toutes les données personnelles de cet utilisateur du service Intune. Les informations de l’utilisateur sont supprimées du service Intune dans les 30 jours suivant l’action de suppression.
+
+> [!Important]
+>L’intégration des nouveaux clients MDM hybrides est dépréciée. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

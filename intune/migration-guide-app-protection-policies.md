@@ -1,5 +1,5 @@
 ---
-title: Configurer des stratégies de protection des applications pendant une migration Intune
+title: Configurer des stratégies de protection des applications pendant une migration
 titleSuffix: Microsoft Intune
 description: Cet article décrit les étapes nécessaires pour configurer des stratégies de protection des applications pendant une migration Microsoft Intune.
 keywords: ''
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 076750334c8faba6e9a99368d7af682b10de8962
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: c516c53c38eb033aa2a9688c40b301bedcc7a034
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59567359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508342"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Configurer des stratégies de protection des applications (facultatif)
 

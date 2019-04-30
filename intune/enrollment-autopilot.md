@@ -10,6 +10,7 @@ ms.date: 10/5/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 ms.reviewer: angerobe
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9b0cb07e6dcf192aa25c13e8637934c46d6799
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513104"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -102,6 +103,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
 2. Dans le panneau du profil, choisissez **Affectations**. 
 3. Choisissez **Sélectionner des groupes** puis, dans le panneau **Sélectionner des groupes**, sélectionnez les groupes auxquels vous souhaitez affecter le profil, puis choisissez **Sélectionner**.
 
+
 > [!NOTE]
 > Intune recherche régulièrement de nouveaux appareils dans les groupes affectés, puis commence le processus d’affectation de profils à ces appareils. Ce processus peut prendre plusieurs minutes. Avant de déployer un appareil, vérifiez que ce processus est terminé.  Pour ce faire, accédez à **Inscription de l’appareil** > **Inscription Windows ** > **Appareils** où vous devez voir l’état du profil passer de « Non affecté » à « Affectation » et enfin à « Affecté ».
 
@@ -117,7 +119,7 @@ Une fois que vous avez créé un profil de déploiement Autopilot, vous pouvez e
 > [!NOTE]
 > Les modifications apportées au profil sont appliquées aux appareils qui ont été affectés à ce profil. Cependant, il n’est pas appliqué aux appareils qui sont déjà inscrits à Intune tant que ceux-ci ne sont pas réinitialisés et réinscrits.
 
-## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alertes relatives aux appareils Windows Autopilot non affectés <!-- 163236 -->  
+## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alertes relatives aux appareils Windows Autopilot non affectés  <!-- 163236 -->  
 
 Les alertes indiquent le nombre d’appareils du programme Autopilot qui n’ont pas de profils de déploiement Autopilot. Utilisez les informations de l’alerte pour créer des profils et les affecter aux appareils non affectés. Quand vous cliquez sur l’alerte, vous voyez s’afficher une liste complète d’appareils Windows Autopilot, ainsi que des informations détaillées les concernant.
 

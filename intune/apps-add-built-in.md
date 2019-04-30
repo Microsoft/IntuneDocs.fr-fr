@@ -1,27 +1,29 @@
 ---
 title: Ajouter des applications intégrées sur des appareils mobiles à l’aide de Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Découvrez comment utiliser Intune pour faciliter l’installation d’applications intégrées sur des appareils mobiles.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e3bb60d3d6bd7321ea3e378c747e87481b659888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5f46cd1295c9ecf593765cf26f4c8685eccbffa0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506829"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Ajouter des applications intégrées à Microsoft Intune
 
@@ -55,15 +57,15 @@ Vous pouvez modifier les informations de l’application intégrée. Ces informa
 3. Pour modifier les informations de l’application intégrée, sélectionnez l’option **Configurer**.
 4. Dans le volet **Informations sur l’application**, vous pouvez modifier les informations suivantes :
     - **Nom** : entrez le nom de l’application intégrée, tel qu’il est affiché dans le portail d’entreprise. Tous les noms que vous utilisez doivent être uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
-    - **Description :** entrez la description de l’application. 
-    - **Éditeur :** entrez le nom de l’éditeur de l’application.
-    - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs catégories d’application intégrée. La définition de cette option facilite la recherche de l’application pour les utilisateurs qui naviguent dans le portail d’entreprise.
-    - **Proposer cette application dans le portail d’entreprise** : met en évidence l’application sur la page principale du portail d’entreprise quand les utilisateurs recherchent des applications.
-    - **URL d’information** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de déclaration de confidentialité** : si vous le souhaitez, entrez l’URL d’un site web qui contient des informations de confidentialité relatives à cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
-    - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple *Service des ressources humaines*).
-    - **Remarques** : entrez les remarques à associer à cette application.
+    - **Description** : Entrez une description de l'application. 
+    - **Éditeur** : Entrez le nom de l'éditeur de l'application.
+    - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs catégories d’application intégrée. La définition de cette option facilite la recherche de l’application pour les utilisateurs qui naviguent dans le portail d’entreprise.
+    - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
+    - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
+    - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple, *Ressources humaines*).
+    - **Remarques** : entrez les remarques à associer à cette application.
     - **Charger l’icône** : chargez une icône qui s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 4. Sélectionnez **OK**.
 5. Dans le volet **Propriétés**, sélectionnez **Enregistrer**.

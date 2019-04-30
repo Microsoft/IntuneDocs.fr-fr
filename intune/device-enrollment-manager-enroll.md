@@ -1,6 +1,6 @@
 ---
 title: Inscrire des appareils avec un compte de gestionnaire d’inscription d’appareil
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Utilisez le compte de gestionnaire d’inscription d’appareil pour inscrire des appareils dans Intune.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a12d162b9877bbbc73ecbcc7bb2ed2f1e0095b9e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 6bb3289bf2136506903d1fefe6c5170580a6fc11
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509795"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils dans Intune avec un compte de gestionnaire d’inscription d’appareil
 
@@ -32,12 +33,14 @@ Vous pouvez inscrire jusqu’à 1 000 appareils mobiles avec un seul compte Az
 
 Les comptes d’utilisateur DEM et les appareils inscrits avec un compte d’utilisateur DEM ont les limitations suivantes :
 
+  - Une licence Intune doit être attribuée à un utilisateur de compte DEM.
   - La réinitialisation ne peut pas être effectuée à partir du Portail d’entreprise. La réinitialisation d’un appareil inscrit par un compte d’utilisateur DEM peut être effectuée à partir d’Intune dans le portail Azure.
   - Seul l’appareil local s’affiche dans l’application Portail d’entreprise ou le site web.
   - Les comptes d’utilisateur DEM ne peuvent pas utiliser les applications du programme d’achat en volume (VPP) Apple avec des licences utilisateur VPP Apple en raison des critères des identifiants Apple par utilisateur pour la gestion des applications.
   - Les appareils peuvent installer des applications VPP s’ils ont des licences d’appareil VPP Apple.
   - Les appareils sont bloqués pour l’accès conditionnel à l’exception de Windows 10 1803+
-  - Chaque appareil inscrit avec un compte DEM doit avoir sa propre licence d’appareil Intune.
+  - Tout appareil inscrit auprès de comptes DEM doit bénéficier de la licence appropriée pour être géré par Intune. La licence peut être une licence d’utilisateur Intune ou une licence d’appareil Intune.
+
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Ajouter un gestionnaire d’inscription d’appareil

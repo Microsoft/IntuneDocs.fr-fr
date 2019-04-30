@@ -5,22 +5,25 @@ keywords: ''
 ms.author: dougeby
 author: dougeby
 manager: dougeby
-ms.date: 03/15/2018
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3b992f64-fe34-4270-9730-bc6c65c308ed
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46f11d8f44b0e8b2f8d26d5b0c3c1534ebeb962e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 55f9d8a98235873dfcfa440a49226d7bc2e71081
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61514543"
 ---
 # <a name="high-level-architecture-for-microsoft-intune"></a>Architecture de haut niveau pour Microsoft Intune
 Cette architecture de référence présente les options d’intégration de Microsoft Intune dans votre environnement Windows Azure avec Azure Active Directory.  
- 
-![Diagramme architectural de haut niveau pour Microsoft Intune](/intune/media/intunearchitecture.svg)
+
+![Diagramme architectural de haut niveau pour Microsoft Intune](./media/intunearchitecture_wh.svg)
+
+[Image avec contraste foncé](./media/intunearchitecture.svg)

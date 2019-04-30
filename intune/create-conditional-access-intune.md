@@ -1,33 +1,34 @@
 ---
 title: Configurer un accès conditionnel basé sur un périphérique avec Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment créer une stratégie d’accès conditionnel basée sur l’appareil en fonction de la conformité des appareils Microsoft Intune et de la gestion des applications mobiles.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ca9a65d5a62c75c45541b42c9b2aa5c4871a18
-ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
+ms.openlocfilehash: aaf9b82bc810dd3a616eb25f39f4b5830b1c3e6f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508653"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel basée sur l’appareil
 
-Avec Intune, vous pouvez améliorer l’accès conditionnel dans Azure Active Directory en ajoutant une conformité des appareils mobiles avec les contrôles d’accès. Après avoir créé une stratégie de conformité Intune définissant les exigences pour que les appareils soient déclarés comme étant conformes, vous pouvez utiliser l’état de conformité d’un appareil pour autoriser ou bloquer l’accès à vos applications et services. Vous pouvez le faire en créant une stratégie d’accès conditionnel utilisant le paramètre **Exiger que l’appareil soit marqué comme conforme**. 
+Avec Intune, vous pouvez améliorer l’accès conditionnel dans Azure Active Directory en ajoutant une conformité des appareils mobiles avec les contrôles d’accès. Après avoir créé une stratégie de conformité Intune définissant les exigences pour que les appareils soient déclarés comme étant conformes, vous pouvez utiliser l’état de conformité d’un appareil pour autoriser ou bloquer l’accès à vos applications et services. Vous pouvez le faire en créant une stratégie d’accès conditionnel utilisant le paramètre **Exiger que l’appareil soit marqué comme conforme**.  
 
-Une stratégie d’accès conditionnel spécifie l’application ou les services que vous souhaitez protéger, les conditions sous lesquelles les applications ou les services sont accessibles et les utilisateurs auxquels la stratégie s’applique. L’accès conditionnel est une fonctionnalité premium d’Azure AD configurable dans Azure Active Directory, mais vous pouvez également configurer ces stratégies à partir du portail Intune. 
+Une stratégie d’accès conditionnel spécifie l’application ou les services que vous souhaitez protéger, les conditions sous lesquelles les applications ou les services sont accessibles et les utilisateurs auxquels la stratégie s’applique. L’accès conditionnel est une fonctionnalité premium d’Azure AD configurable dans Azure Active Directory, mais vous pouvez également configurer ces stratégies à partir du portail Intune. Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.  
 
 > [!IMPORTANT]
 > Avant de configurer l’accès conditionnel, vous devez configurer les stratégies de conformité des appareils Intune pour évaluer si les appareils répondent à des exigences spécifiques. Consultez l’article [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md).
