@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e9f01ad981350f250e35961f9a41a62698061a1
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: MTE75
+ms.openlocfilehash: 456abbf849120675b6a7c108ca65c6f9967ae64a
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429197"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Informations de référence sur les entités de gestion des applications mobiles (GAM)
 
@@ -43,10 +43,14 @@ L’entité **MamApplication** répertorie les applications métier qui sont gé
 
 | Propriété | Description | Exemple |
 |---------|------------|--------|
+| mamApplicationKey |Identificateur unique de l’application de gestion des applications mobiles. | 432 |
+| mamApplicationName |Nom de l’application de gestion des applications mobiles. |Nom de l’exemple Application GAM |
+| mamApplicationId |ID de l’application MAM. | 123 |
 | IsDeleted |Indique si cet enregistrement d’application GAM a été mis à jour. <br>True : l’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette application GAM. |Vrai/Faux |
 | StartDateInclusiveUTC |Date et heure UTC de création de cette application MAM dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
 | DeletedDateUTC |Date et heure UTC de l’affectation de la valeur True à IsDeleted. |11/23/2016 12:00:00 AM |
 | RowLastModifiedDateTimeUTC |Date et heure UTC de la dernière modification de cette application MAM dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
+
 
 ## <a name="mamapplicationinstance"></a>MamApplicationInstance
 
@@ -58,15 +62,20 @@ L’entité **MamApplicationInstance** répertorie les applications GAM gérées
 |   ApplicationInstanceKey   |                                                               Identificateur unique de l’instance de l’application MAM dans l’entrepôt de données (clé de substitution).                                                                |                 123                  |
 |           UserId           |                                                                              ID de l’utilisateur ayant installé cette application MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Identificateur unique de l’instance de l’application MAM (semblable à ApplicationInstanceKey, mais l’identificateur est une clé naturelle).                                              | b66bc706-ffff-7437-0340-032819502773 |
+| mamApplicationId | Id d’application de l’Application de gestion des applications mobiles pour lequel cette Instance d’Application GAM a été créée.   | 11/23/2016 12:00:00 AM   |
 |     ApplicationVersion     |                                                                                     Version de cette application MAM.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Date de création de cet enregistrement de l’instance d’application GAM. La valeur peut être Null.                                                                 |        11/23/2016 12:00:00 AM        |
 |          Plate-forme          |                                                                          Plateforme de l’appareil sur lequel cette application MAM est installée.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Version de la plateforme de l’appareil sur lequel cette application MAM est installée.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Version du SDK MAM avec laquelle cette application MAM a été enveloppée (wrapped).                                                                            |                 3.2                  |
+| mamDeviceId | Id de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceType | Type d’appareil de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceName | Nom de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
 |         IsDeleted          | Indique si l’enregistrement de cette application GAM a été mis à jour. <br>True : cette instance d’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette instance d’application GAM. |              Vrai/Faux              |
 |   StartDateInclusiveUtc    |                                                              Date et heure UTC de création de cette instance d’application MAM dans l’entrepôt de données.                                                               |        11/23/2016 12:00:00 AM        |
 |       DeletedDateUtc       |                                                                             Date et heure UTC de l’affectation de la valeur True à IsDeleted.                                                                              |        11/23/2016 12:00:00 AM        |
 | RowLastModifiedDateTimeUtc |                                                           Date et heure UTC de la dernière modification de cette instance d’application MAM dans l’entrepôt de données.                                                            |        11/23/2016 12:00:00 AM        |
+
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -80,10 +89,12 @@ L’entité **MamCheckin** représente les données collectées au moment de l�
 | DateKey |Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil est enregistré dans l’entrepôt de données. | 20160703 |
 | ApplicationInstanceKey |Clé de l’instance d’application associée à l’enregistrement de cette application MAM. | 123 |
 | UserKey |Clé de l’utilisateur associée à l’enregistrement de cette application MAM. | 4323 |
+| mamApplicationKey |Clé d’une Application associée avec vérification de l’Application de gestion des applications mobiles dans. | 432 |
 | DeviceHealthKey |Clé de DeviceHealth associée à l’enregistrement de cette application MAM. | 321 |
 | PlatformKey |Représente la plateforme de l’appareil associé à l’enregistrement de cette application MAM. |123 |
 | EffectiveAppliedPolicyKey |Représente la stratégie appliquée actuelle qui est associée à l’application GAM enregistrée. Une stratégie appliquée actuelle est le résultat de la fusion de toutes les stratégies relatives à une application et à un utilisateur particuliers. | 322 |
 | LastCheckInDate |Date et heure du dernier enregistrement de cette application GAM. La valeur peut être Null. |11/23/2016 12:00:00 AM |
+
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
 

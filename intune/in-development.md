@@ -1,12 +1,12 @@
 ---
 title: Dans le développement - Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Fonctionnalités de Microsoft Intune dans le développement
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e068e2c9834290b705e8e7bc2f895636415f9ba
-ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.openlocfilehash: aa38a684a32756d4f2c3be3b750f8e79b66e98f6
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675440"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587380"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Dans le développement pour Microsoft Intune - avril 2019
 
 Pour faciliter votre préparation et planification, cette page listes Intune UI met à jour et de fonctionnalités qui en cours de développement, mais pas encore été publié. De plus :
 
-- Si nous pensons que vous devez effectuer une action avant une modification, nous allons publier un billet de centre de messages Office gratuit.
+- Si nous pensons que vous devez effectuer une action avant une modification, nous allons publier un billet de centre de messages Office complémentaire.
 - Quand une fonctionnalité est lancée en production, soit en version préliminaire ou à la disposition générale, la description de la fonctionnalité déplace hors de cette page et sur le [page Nouveautés](whats-new.md).
 - Cette page et le [page Nouveautés](whats-new.md) sont régulièrement mis à jour. Consultez-la régulièrement pour savoir si des mises à jour supplémentaires sont disponibles.
 - Reportez-vous à la [feuille de route M365](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) pour stratégiques livrables et chronologies.
@@ -61,18 +61,6 @@ Vous serez bientôt en mesure d’utiliser Intune pour gérer les règles de par
 ### <a name="require-app-protection-conditional-access----1634317---"></a>Nécessitent un accès conditionnel de Protection application  <!--1634317 -->
 Vous serez en mesure d’utiliser *stratégie de Protection des applications nécessitent*, ce qui confirme la stratégie est appliquée à l’application un utilisateur avant la fin de connexion pour empêcher les utilisateurs d’accéder aux données que vous protégez l’accès conditionnel. Tandis que l’assurance de la stratégie peut ralentir la première utilisation, il vous protège contre les problèmes de réseau, les erreurs de configuration d’administration ou les efforts intentionnels pour déjouer les stratégies de protection d’application. 
 
-### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660---"></a>Déploiement en ligne d’un Microsoft Store sous licence pour les applications métier <!-- 16726660 -->
-Vous serez en mesure d’assigner un Microsoft Store sous licence en ligne obligatoire pour les applications métier dans le contexte d’appareil. Un Microsoft Store pour une application métier déployé de cette façon permet à l’application d’être installée pour tous les utilisateurs sur l’appareil. Seuls les appareils de bureau Windows 10 version RS4 et ultérieures sont concernés. L’option d’installation dans le contexte d’appareil est disponible dans la page d’affectation des applications clientes pour les applications sous licence en ligne MSFB.
-
-### <a name="include-and-exclude-mixture-of-user-groups-and-device-groups-when-assigning-policies-and-profiles----1807547---"></a>Inclure et exclure le mélange de groupes d’utilisateurs et groupes d’appareils lors de l’affectation des stratégies et des profils <!-- 1807547 -->
-Lorsque vous affectez des stratégies de conformité ou les profils de configuration, vous pouvez les affecter aux groupes de sécurité avec des utilisateurs ou appareils. Actuellement, vous pouvez inclure et exclure des groupes d’utilisateurs uniquement, *ou* inclure et exclure des groupes d’appareils. Vous ne pouvez pas inclure et exclure un mélange de groupes, tels que groupes d’utilisateurs *et* exclure un groupe de périphériques.
-
-Vous serez en mesure d’inclure et exclure un mélange de groupes d’utilisateurs et groupes d’appareils. Vous pouvez inclure un groupe d’utilisateurs et exclure un groupe d’appareils. Par exemple, vous pouvez affecter ou déployer un profil de configuration de périphérique à un groupe d’utilisateurs, mais exclure les appareils personnels.
-
-[Affecter des profils de configuration d’appareil](device-profile-assign.md) inclut plus d’informations sur l’attribution de profils pour les groupes d’utilisateurs et groupes d’appareils.
-
-S’applique à : toutes les plateformes
-
 ### <a name="retire-noncompliant-devices----1827291---"></a>Mettre hors service des appareils non conformes <!-- 1827291 -->
 Nous allons ajouter une nouvelle action de conformité pour mettre hors service un appareil non conforme. Mise hors service un appareil non conforme supprime toutes les données d’entreprise, ainsi que l’appareil d’être gérés par Intune. Cette action s’exécute lorsque la valeur en jours configurée est atteinte. La valeur minimale est 30 jours. 
 
@@ -98,7 +86,7 @@ Vous serez en mesure d’ajouter des balises d’étendue pour les jetons VPP d�
 ### <a name="use-applicability-rules-when-creating-windows-10-device-configuration-profiles----2549910---"></a>Utilisez « règles d’applicabilité » lorsque la création de profils de configuration d’appareil Windows 10 <!-- 2549910 -->
 Vous créez des profils de configuration d’appareil Windows 10 (**configuration de l’appareil** > **profils** > **créer un profil**  >  **Windows 10** pour la plateforme). Vous serez en mesure de créer un **règle de mise en application** pour le profil s’applique uniquement à une édition spécifique ou une version spécifique. Par exemple, vous créez un profil qui permet à certains paramètres de BitLocker. Une fois que vous ajoutez le profil, utilisez une règle de mise en application pour le profil s’applique uniquement aux appareils exécutant Windows 10 entreprise.
 
-S'applique à : 
+S’applique à : 
 - Windows 10 et versions ultérieures
 
 ### <a name="enable-win32-app-dependencies----2617348---"></a>Activer les dépendances d’application Win32 <!-- 2617348 -->
@@ -127,7 +115,7 @@ Intune prendra en charge de configuration des appareils Android Enterprise avec 
 
 Prise en charge pour les fabricants OEM est actuellement sur une base par l’OEM. Si une application OEMConfig souhaité n’est pas disponible dans la liste des applications de OEMConfig, contactez `IntuneOEMConfig@microsoft.com`.
 
-S'applique à : 
+S’applique à : 
 - Android Entreprise
 
 ### <a name="new-device-restriction-settings-for-android-enterprise-device-owner----3574254---"></a>Nouveaux paramètres de restriction d’appareil d’entreprise Android, propriétaire de l’appareil <!-- 3574254 -->
@@ -142,9 +130,9 @@ S’applique à : Android Enterprise entièrement les appareils gérés
 ### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Recherchez une puce de module de plateforme sécurisée dans une stratégie de conformité Windows 10 <!-- 3617671 -->
 Nombreux appareils Windows 10 et versions ultérieures ont chipsets de Module de plateforme sécurisée (TPM). Un nouveau paramètre de conformité vérifie si un module de plateforme sécurisée sur l’appareil.
 
-[Windows 10 et les paramètres de stratégie de conformité ultérieure](compliance-policy-create-windows.md#windows-10-and-later-policy-settings) répertorie les paramètres actuels.
+[Windows 10 et les paramètres de stratégie de conformité ultérieure](compliance-policy-create-windows.md) répertorie les paramètres actuels.
 
-S'applique à : 
+S’applique à : 
 - Windows 10 et versions ultérieures
 
 ### <a name="configure-your-win32-apps-to-be-installed-on-intune-enrolled-azure-ad-joined-devices----3695227---"></a>Configurer vos applications Win32 sur Intune inscrit des appareils joints à Azure AD <!-- 3695227 -->
@@ -177,15 +165,6 @@ Nous ajoutons un nouveau paramètre d’anneau de mise à jour de Windows que vo
 
 ### <a name="windows-update-notifications----3316782---"></a>Notifications de mise à jour de Windows <!-- 3316782 -->
 Nous avons ajouté la prise en charge pour les configurations d’anneau de mise à jour de Windows afin d’être en mesure de configurer les notifications de mise à jour de Windows que vos utilisateurs voient. Ce paramètre n’est pas disponible à partir du portail, mais peut être configuré à l’aide de l’API Graph Intune.
-
-### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Modifications apportées à leur inscription au portail d’entreprise pour les utilisateurs d’appareils iOS 12 <!--3448635 --> 
-Portail d’entreprise pour iOS a mis à jour les écrans d’inscription de l’application et les étapes pour s’aligner avec les modifications de l’inscription MDM publiées dans Apple iOS 12.2. Le flux de travail mis à jour demande désormais aux utilisateurs de :
-
-- Autoriser Safari ouvrir le site Web portail d’entreprise (par le biais de Safari) et de télécharger le profil de gestion avant de retourner à l’application portail d’entreprise.
-- Ouvrez l’application paramètres afin d’installer le profil de gestion sur son appareil.
-- Retourner à l’application de portail d’entreprise pour effectuer d’inscription.
-
-Pour plus d’informations sur la façon dont vous pouvez préparer ces modifications, consultez le [post de la Communauté technologique Microsoft](https://aka.ms/CP_changes_iOS12). En attendant, pour prendre en charge les nouvelles inscriptions iOS dans le portail d’entreprise, nous avons mis à jour les étapes de [inscription iOS appareil dans Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Ces modifications de document seront actives après la publication de Apple iOS version 12.2. 
 
 ### <a name="easier-access-to-diagnostic-settings----3804627---"></a>Faciliter l’accès aux paramètres de Diagnostic <!-- 3804627 -->
 Nous ajoutons une nouvelle option pour le **journaux d’Audit** panneau chaque charge de travail du journal d’Audit dans la console Intune que vous pouvez utiliser pour ouvrir directement le *les paramètres de Diagnostic* page.

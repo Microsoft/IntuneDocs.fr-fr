@@ -1,15 +1,15 @@
 ---
 title: Ajouter une application métier Android à Microsoft Intune
-titlesuffix: ''
 description: Découvrez comment ajouter une application métier (LOB) Android à Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a080d655aa4dfda46e0fc6019183e8425942f2c4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 5be123dc918785c1c60ec08e5815d642a3f13f72
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238436"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587465"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Android à Microsoft Intune
 
@@ -70,7 +70,7 @@ Une application métier est une application que vous ajoutez à Intune à partir
     - **Logo** : chargez une icône associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 3. Une fois que vous avez fini, sélectionnez **OK**.
 
-## <a name="step-4-finish-up"></a>Étape 4 : Terminer
+## <a name="step-4-finish-up"></a>Étape 4 : Terminer
 
 1. Dans le volet **Ajouter une application**, vérifiez que les détails de votre application sont corrects.
 2. Sélectionnez **Ajouter** pour charger l’application sur Intune.

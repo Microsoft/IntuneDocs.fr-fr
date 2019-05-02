@@ -1,6 +1,6 @@
 ---
 title: Point de terminaison de l’API d’entrepôt de données Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Cette rubrique de référence décrit la structure de l’URL de l’API d’entrepôt de données Microsoft Intune. Des exemples de filtre sont fournis.
 keywords: Entrepôt de données Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 50be11f9ada92670c201fc2540499effa5a7edef
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396476"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798496"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Point de terminaison de l’API d’entrepôt de données Intune
 
@@ -53,7 +53,7 @@ L’URL contient les éléments suivants :
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | emplacement | msua06 | Pour trouver l’URL de base, examinez le panneau de l’API d’entrepôt de données dans le portail Azure. |
 | collection_entités | dates | Nom de la collection d’entités OData. Pour plus d’informations sur les collections et entités du modèle de données, consultez [Modèle de données](reports-ref-data-model.md). |
-| api-version | beta | Version de l’API à laquelle accéder. Pour plus d’informations, consultez [Version](#API-version-information). |
+| api-version | beta | Version de l’API à laquelle accéder. Pour plus d’informations, consultez [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Facultatif) Nombre maximal de jours d’historique à récupérer. Ce paramètre peut être fourni à n’importe quelle collection, mais n’entre en vigueur que pour les collections qui incluent `dateKey` dans le cadre de leur propriété de clé. Pour plus d’informations, consultez [Filtres de plage DateKey](reports-api-url.md#datekey-range-filters). |
 
 ## <a name="api-version-information"></a>Informations sur la version de l’API

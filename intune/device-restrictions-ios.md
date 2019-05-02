@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d0623e9d12132ac470813d65510bc2c76379109
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490724"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871469"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -195,7 +195,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 #### <a name="safari"></a>Safari
 
-- **Safari** : choisissez l’option **Bloquer** pour empêcher l’utilisation du navigateur Safari sur l’appareil. L’option **Non configuré** autorise l’utilisation du navigateur Safari.
+- **Safari (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher l’utilisation du navigateur Safari sur l’appareil. L’option **Non configuré** autorise l’utilisation du navigateur Safari.
 - **Remplissage automatique** : l’option **Bloquer** désactive la fonctionnalité de remplissage automatique dans Safari sur l’appareil. L’option **Non configuré** autorise les utilisateurs à modifier les paramètres de saisie semi-automatique dans le navigateur web.
 - **Cookies** : choisissez la façon dont les cookies sont gérés sur l’appareil. Les options disponibles sont les suivantes :
   - Autoriser
@@ -290,7 +290,7 @@ Pour ajouter des applications à ces listes, vous pouvez :
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
 - **Sauvegarder sur iCloud** : l’option **Non configuré** autorise l’utilisateur à sauvegarder les données de l’appareil dans iCloud. Choisissez **Bloquer** pour empêcher l’utilisateur de sauvegarder les données de l’appareil dans iCloud.
-- **Bloquer la synchronisation de document iCloud** : l’option **Non configuré** autorise la synchronisation des documents et des clés-valeurs sur votre espace de stockage iCloud. Choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et des données.
+- **Synchronisation de documents sur iCloud (mode supervisé uniquement)** : l’option **Non configuré** autorise la synchronisation des documents et des clés-valeurs sur votre espace de stockage iCloud. Choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et des données.
 - **Synchronisation du flux de photos sur iCloud** : l’option **Non configuré** permet aux utilisateurs d’activer **Mon flux de photos** sur leur appareil afin de synchroniser les photos avec iCloud et de les mettre à la disposition de tous les appareils des utilisateurs. Choisissez **Bloquer** pour empêcher la synchronisation du flux de photos sur iCloud.
 - **Sauvegarde chiffrée** : **activez** cette option pour exiger le chiffrement des sauvegardes d’appareil.
 - **Photothèque iCloud** : choisissez **Bloquer** pour empêcher la photothèque iCloud de stocker des photos et vidéos dans le cloud. Toutes les photos qui ne sont pas entièrement téléchargées de la Photothèque iCloud sur l’appareil sont supprimées de l’appareil. L’option **Non configuré** autorise l’utilisation de la photothèque iCloud.
@@ -367,7 +367,7 @@ La liste suivante indique l’ID d’ensemble de quelques applications iOS inté
 | com.apple.gamecenter        | Centre de jeux  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Intégrité       | Apple     |
-| com.apple.Home              | page d'accueil         | Apple     |
+| com.apple.Home              | Accueil         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
 | com.apple.itunesconnect.mobile | iTunes Connect | Apple |

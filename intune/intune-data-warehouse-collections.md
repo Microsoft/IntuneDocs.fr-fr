@@ -1,12 +1,12 @@
 ---
 title: Collections Intune Data Warehouse
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Les collections Intune Data Warehouse fournissent des détails sur l’API Data Warehouse.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: 00a0bd4936d1ad8ba8dd52f1839e7d42505db60e
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429222"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -37,7 +37,7 @@ Les listes d’entités **appRevision** répertorient toutes les versions des ap
 | AppKey                     | Identificateur unique de l’application.                                                         | 123                                  |
 | ApplicationId              | Identificateur unique de l’application (semblable à AppKey, sauf qu’il s’agit d’une clé naturelle).        | b66bc706-ffff-7437-0340-032819502773 |
 | Révision                   | Version mentionnée par l’administrateur durant le chargement du binaire.                   | 2                                    |
-| Title                      | Titre de l’application.                                                                     | Excel                                |
+| Titre                      | Titre de l’application.                                                                     | Excel                                |
 | Éditeur                  | Éditeur de l’application.                                                                 | Microsoft                            |
 | UploadState                | État de chargement de l’application.                                                              | 1                                    |
 | AppTypeKey                 | Référence à AppType décrite dans la section suivante.                            | 1                                    |
@@ -116,7 +116,7 @@ Le tableau suivant récapitule l’état d’affectation des stratégies de conf
 
 |  complianceStatus  |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
-|    Unknown         |    Inconnue.                                                                        |
+|    Unknown         |    Inconnu.                                                                        |
 |    Conforme       |    Conforme.                                                                      |
 |    Non conforme    |       L’appareil n’est pas conforme et est bloqué par les ressources d’entreprise.             |
 |    Conflit        |    Conflit avec d'autres règles.                                                      |
@@ -266,7 +266,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 | deviceTypeID |        Nom       |                      Description                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Non disponible   | Le type d’appareil n’est pas disponible.                     |
-| 0            | Desktop (Expérience utilisateur)           | Appareil Windows Desktop                              |
+| 0            | Bureau           | Appareil Windows Desktop                              |
 | 1            | Windows           | Appareil Windows                                      |
 | 2            | WinMO6            | Appareil Windows Mobile 6.0                           |
 | 3            | Nokia             | Appareil Nokia                                        |
@@ -360,7 +360,7 @@ L’entité **EnrollmentFailureCategory** indique pourquoi une inscription d’a
 | Non disponible                   | La catégorie d’échec d’inscription n’est pas disponible.                                                             |
 | Unknown                         | Erreur inconnue.                                                                                                |
 | Authentification                  | Échec de l’authentification.                                                                                        |
-| Authorization                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
+| Autorisation                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
 | AccountValidation               | Impossible de valider le compte pour l’inscription. (Compte bloqué, inscription non activée)                      |
 | UserValidation                  | Impossible de valider l’utilisateur. (L’utilisateur n’existe pas, absence de licence)                                           |
 | DeviceNotSupported              | L’appareil n’est pas pris en charge pour la gestion des appareils mobiles.                                                         |
@@ -427,6 +427,85 @@ L’entité **IntuneManagementExtensionVersion** répertorie toutes les versions
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | ExtensionVersionKey | Identificateur unique de la version IntuneManagementExtension. | 1       |
 | ExtensionVersion    | Numéro de version à quatre chiffres.                                   | 1.0.2.0 |
+
+## <a name="mamapplications"></a>MamApplications
+
+L’entité **MamApplication** répertorie les applications métier qui sont gérées par le biais de la gestion des applications mobiles (GAM) sans inscription dans votre entreprise.
+
+| Propriété | Description | Exemple |
+|---------|------------|--------|
+| mamApplicationKey |Identificateur unique de l’application de gestion des applications mobiles. | 432 |
+| mamApplicationName |Nom de l’application de gestion des applications mobiles. |Nom de l’exemple Application GAM |
+| mamApplicationId |ID de l’application MAM. | 123 |
+| IsDeleted |Indique si cet enregistrement d’application GAM a été mis à jour. <br>True : l’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette application GAM. |Vrai/Faux |
+| StartDateInclusiveUTC |Date et heure UTC de création de cette application MAM dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
+| DeletedDateUTC |Date et heure UTC de l’affectation de la valeur True à IsDeleted. |11/23/2016 12:00:00 AM |
+| RowLastModifiedDateTimeUTC |Date et heure UTC de la dernière modification de cette application MAM dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
+
+
+## <a name="mamapplicationinstances"></a>MamApplicationInstances
+
+L’entité **MamApplicationInstance** répertorie les applications GAM gérées comme instances singulières, par utilisateur et par appareil. Tous les utilisateurs et appareils répertoriés dans l’entité sont protégés si au moins une stratégie GAM leur est affectée.
+
+
+|          Propriété          |                                                                                                  Description                                                                                                  |               Exemple                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Identificateur unique de l’instance de l’application MAM dans l’entrepôt de données (clé de substitution).                                                                |                 123                  |
+|           UserId           |                                                                              ID de l’utilisateur ayant installé cette application MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Identificateur unique de l’instance de l’application MAM (semblable à ApplicationInstanceKey, mais l’identificateur est une clé naturelle).                                              | b66bc706-ffff-7437-0340-032819502773 |
+| mamApplicationId | Id d’application de l’Application de gestion des applications mobiles pour lequel cette Instance d’Application GAM a été créée.   | 11/23/2016 12:00:00 AM   |
+|     ApplicationVersion     |                                                                                     Version de cette application MAM.                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Date de création de cet enregistrement de l’instance d’application GAM. La valeur peut être Null.                                                                 |        11/23/2016 12:00:00 AM        |
+|          Plate-forme          |                                                                          Plateforme de l’appareil sur lequel cette application MAM est installée.                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Version de la plateforme de l’appareil sur lequel cette application MAM est installée.                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            Version du SDK MAM avec laquelle cette application MAM a été enveloppée (wrapped).                                                                            |                 3.2                  |
+| mamDeviceId | Id de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceType | Type d’appareil de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceName | Nom de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+|         IsDeleted          | Indique si l’enregistrement de cette application GAM a été mis à jour. <br>True : cette instance d’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette instance d’application GAM. |              Vrai/Faux              |
+|   StartDateInclusiveUtc    |                                                              Date et heure UTC de création de cette instance d’application MAM dans l’entrepôt de données.                                                               |        11/23/2016 12:00:00 AM        |
+|       DeletedDateUtc       |                                                                             Date et heure UTC de l’affectation de la valeur True à IsDeleted.                                                                              |        11/23/2016 12:00:00 AM        |
+| RowLastModifiedDateTimeUtc |                                                           Date et heure UTC de la dernière modification de cette instance d’application MAM dans l’entrepôt de données.                                                            |        11/23/2016 12:00:00 AM        |
+
+## <a name="mamcheckins"></a>MamCheckins
+
+L’entité **MamCheckin** représente les données collectées au moment de l’enregistrement d’une instance d’application gérée par la gestion des applications mobiles (GAM) auprès du service Intune. 
+
+> [!Note]  
+> Quand une instance d’application s’enregistre plusieurs fois par jour, l’entrepôt de données la stocke sous la forme d’un enregistrement unique.
+
+| Propriété | Description | Exemple |
+|---------|------------|--------|
+| DateKey |Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil est enregistré dans l’entrepôt de données. | 20160703 |
+| ApplicationInstanceKey |Clé de l’instance d’application associée à l’enregistrement de cette application MAM. | 123 |
+| UserKey |Clé de l’utilisateur associée à l’enregistrement de cette application MAM. | 4323 |
+| mamApplicationKey |Clé d’une Application associée avec vérification de l’Application de gestion des applications mobiles dans. | 432 |
+| DeviceHealthKey |Clé de DeviceHealth associée à l’enregistrement de cette application MAM. | 321 |
+| PlatformKey |Représente la plateforme de l’appareil associé à l’enregistrement de cette application MAM. |123 |
+| LastCheckInDate |Date et heure du dernier enregistrement de cette application GAM. La valeur peut être Null. |11/23/2016 12:00:00 AM |
+
+## <a name="mamdevicehealths"></a>MamDeviceHealths
+
+L’entité **MamDeviceHealth** représente les appareils sur lesquels des stratégies de gestion des applications mobiles (GAM) sont déployées, même s’ils sont jailbreakés.
+
+| Propriété | Description | Exemple |
+|---------|------------|--------|
+| DeviceHealthKey |Identificateur unique de l’appareil et de son état d’intégrité associé dans l’entrepôt de données (clé de substitution). |123 |
+| DeviceHealth |Identificateur unique de l’appareil et de son état d’intégrité associé (semblable à DeviceHealthKey, mais l’identificateur est une clé naturelle). |b66bc706-ffff-7777-0340-032819502773 |
+| DeviceHealthName |Représente l’état de l’appareil. <br>Non disponible : aucune information n’est disponible sur cet appareil. <br>Sain : appareil non jailbreaké. <br>Défectueux : appareil jailbreaké. |Non disponible Sain Défectueux |
+| RowLastModifiedDateTimeUtc |Date et heure UTC de la dernière modification de l’intégrité de cet appareil MAM spécifique dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
+
+## <a name="mamplatforms"></a>MamPlatforms
+
+L’entité **MamPlatform** répertorie les noms et types des plateformes sur lesquelles une application gérée par la gestion des applications mobiles (GAM) a été installée.
+
+
+|          Propriété          |                                    Description                                    |                         Exemple                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Identificateur unique de la plateforme dans l’entrepôt de données (clé de substitution).      |                           123                           |
+|          Plate-forme          | Identificateur unique de la plateforme (semblable à PlatformKey, mais il s’agit d’une clé naturelle). |                           123                           |
+|        PlatformName        |                                   Nom de la plateforme                                   | Non disponible <br>Aucune <br>Windows <br>IOS <br>Android. |
+| RowLastModifiedDateTimeUtc | Date et heure UTC de la dernière modification de cette plateforme dans l’entrepôt de données.  |                 11/23/2016 12:00:00 AM                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 L’entité **ManagementAgentTypes** représente les agents utilisés pour gérer un appareil.
@@ -497,8 +576,8 @@ Représente l’état d’installation d’une application mobile pour un type d
 | AppKey             | Clé de l’application mobile utilisée pour identifier une instance AppRevision.                                                          |
 | DeviceTypeKey      | Clé du Type d’appareil associé à l’application mobile.                                                              |
 | AppInstallStateKey | Clé de l’état d’installation de l’application utilisée pour identifier une instance de MobileAppInstallState.                                         |
-| Code d'erreur          | Le code d’erreur retourné par le programme d’installation de l’application, la plateforme mobile ou le service lié à l’installation de l’application. |
-| Count              | Nombre total.                                                                                                                  |
+| ErrorCode          | Le code d’erreur retourné par le programme d’installation de l’application, la plateforme mobile ou le service lié à l’installation de l’application. |
+| Compteur              | Nombre total.                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 L’entité **ownerType** indique si un appareil est un appareil d’entreprise, personnel ou inconnu.

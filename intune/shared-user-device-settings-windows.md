@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/01/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28f8a589f20cb63ad4f9873942e9ad511d729b37
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 535f66c68b066454ce9706b1dd1d7a4fce5c265c
+ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566452"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788485"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Paramètres Windows 10 et ultérieur pour gérer les appareils partagés à l’aide d’Intune
 
@@ -60,6 +60,9 @@ Pour plus d’informations sur cette fonctionnalité dans Intune, consultez [Con
 - **Stratégie d’éducation** : choisissez **Activé** afin d’utiliser les paramètres recommandés pour les appareils des établissements scolaires, qui sont plus restrictifs. Choisissez **Désactivé** pour ne pas utiliser les stratégies d’éducation par défaut et recommandées. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
 
   Pour plus d’informations sur ce que font les stratégies d’éducation, consultez [Recommandations de configuration de Windows 10 pour les clients de l’enseignement](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+
+> [!TIP]
+> [Configurer un PC partagé ou à l’invité](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (ouvre un autre site web de docs) est une ressource précieuse sur cette fonctionnalité de Windows 10, y compris les concepts et les stratégies de groupe qui peuvent être définies en mode partagé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd162f6af256c104c04374290a695141cdcc26f6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: d42fab929d6fa3e7fbaed8e9557573ebbaa1f3ad
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292348"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Liaisons Xamarin du kit SDK d’application Microsoft Intune
 
@@ -110,6 +110,8 @@ Votre application doit définir un `Android.App.Application` classe qui hérite 
     public TaskrApp(IntPtr handle, JniHandleOwnership transfer)
         : base(handle, transfer) { }
 ```
+> [!NOTE]
+> Un problème avec les liaisons de la gestion des applications mobiles Xamarin peut entraîner l’application à se bloquer lors du déploiement en mode débogage. Pour résoudre ce problème, le `Debuggable=false` attribut doit être ajouté à la `Application` classe et le `android:debuggable="true"` indicateur doit être supprimé à partir du manifeste si elle a été définie manuellement.
 
 #### <a name="enable-features-that-require-app-participationapp-sdk-androidmdenable-features-that-require-app-participation"></a>[Activer les fonctionnalités qui nécessitent la participation de l’application](app-sdk-android.md#enable-features-that-require-app-participation)
 Exemple : Déterminer si le code PIN est nécessaire pour l’application

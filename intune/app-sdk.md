@@ -1,12 +1,12 @@
 ---
 title: Avantages du SDK d’application Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Le Kit SDK d’application Intune est disponible pour les plateformes iOS et Android. Il permet d’utiliser les fonctionnalités de gestion des applications mobiles avec Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 046c82a1b149f33e20a21adf931a30cc812e3f10
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292447"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Microsoft Intune
 Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet à votre application de prendre en charge des [stratégies de protection d’applications](app-protection-policy.md) Intune. Si votre application dispose de stratégies de protection appliqués à celui-ci, il peut être géré par Intune et est reconnu par Intune comme une application gérée. Le Kit de développement logiciel (SDK) s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience de l’utilisateur final et de l’administrateur informatique, vous pouvez utiliser les API du Kit de développement logiciel (SDK) pour personnaliser le comportement de votre application et permettre la prise en charge des fonctionnalités nécessitant sa participation.

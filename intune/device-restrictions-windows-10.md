@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
-ms.translationtype: MTE75
+ms.openlocfilehash: 8957c8d8aad2eaa1741b1a625afd4b5a41a8bb51
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423694"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -138,7 +138,10 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)** : empêche un message d’erreur de s’afficher sur l’appareil si aucune carte SIM n’est détectée.
 - **Espace de travail Windows Ink** : empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. **Non configuré** : l’espace de travail Windows Ink est activé et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : permet aux utilisateurs avec des droits d’administration de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **Ctrl+Win+R** sur l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
-- **Demander aux utilisateurs de se connecter au réseau pendant la configuration de l’appareil (Windows Insider uniquement)** : choisissez **Exiger** pour que l’appareil se connecte à un réseau avant de passer à la page Réseau durant la configuration de Windows 10. Tant que cette fonctionnalité est en préversion, vous avez besoin de Windows Insider build 1809 ou ultérieure pour utiliser ce paramètre.
+- **Demander aux utilisateurs de se connecter au réseau pendant la configuration de l’appareil (Windows Insider uniquement)** : choisissez **Exiger** pour que l’appareil se connecte à un réseau avant de passer à la page Réseau durant la configuration de Windows 10.
+
+  Le paramètre entre en vigueur la prochaine fois que l’appareil est réinitialisé ou réinitialisé. Comme toute autre configuration Intune, l’appareil doit être inscrits et géré par Intune pour recevoir des paramètres de configuration. Mais une fois qu’il est inscrit, et recevoir des stratégies, puis elle réinitialise l’appareil applique le paramètre lors de l’installation de Windows suivant.
+
 - **Accès direct à la mémoire** : **Bloquer** empêche l’accès direct à la mémoire (DMA) pour tous les ports en aval PCI enfichables à chaud tant qu’un utilisateur ne se connecte pas à Windows. **Activé** (valeur par défaut) autorise l’accès à DMA, même lorsqu’un utilisateur n’est pas connecté.
 
   CSP : [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
@@ -305,6 +308,29 @@ Ce profil de restrictions d’appareil est directement lié au profil plein écr
   - **Empêcher la réutilisation des mots de passe précédents** : spécifie le nombre de mots de passe précédemment utilisés conservés par l’appareil.
   - **Exiger un mot de passe quand l’appareil sort d’un état d’inactivité (Mobile uniquement)** : spécifie que l’utilisateur doit entrer un mot de passe pour déverrouiller l’appareil (Windows 10 Mobile uniquement).
   - **Mots de passe simples** : permet d’utiliser des mots de passe simples, tels que 1111 ou 1234. Ce paramètre autorise ou bloque également l’utilisation des mots de passe d’image Windows.
+- **Chiffrement automatique durant AADJ**: **bloc** empêche le chiffrement automatique de l’appareil BitLocker lorsque l’appareil est préparée pour la première utilisation, quand l’appareil est joint à Azure AD. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, ce qui peut activer le chiffrement. Informations complémentaires sur [chiffrement BitLocker de l’appareil](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+
+  [Sécurité/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+
+- **Stratégie de Federal FIPS Information Processing Standard ()**: **autoriser** utilise la stratégie Federal FIPS Information Processing Standard (), qui est un gouvernement des États-Unis standard pour le chiffrement, le hachage et la signature. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, qui n’utilise pas FIPS.
+
+  [Chiffrement/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+
+- **Authentification des appareils Windows Hello**: **autoriser** aux utilisateurs d’utiliser un appareil Windows Hello associé, tel qu’un téléphone, bande de Fitness (pertinence) ou l’appareil IoT, se pour connecter à un ordinateur Windows 10. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, ce qui peut empêcher des appareils Windows Hello Compagnon de s’authentifier avec Windows.
+
+  [Authentification/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+
+- **Connexion Web**: prise en charge pour les fournisseurs fédérée non-ADFS (Active Directory Federation Services), telles que Security Assertion Markup Language (SAML) de Windows permet d’ouverture de session. SAML utilise des jetons sécurisés qui fournissent l’expérience de navigateurs web une authentification-unique (SSO). Les options disponibles sont les suivantes :
+
+  - **Ne pas configuré** (valeur par défaut) : utilise la valeur par défaut du système d’exploitation sur l’appareil.
+  - **Activé**: le fournisseur d’informations d’identification Web est activé pour la connexion.
+  - **Désactivé**: le fournisseur d’informations d’identification Web est désactivé pour la connexion.
+
+  [Authentification/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
+
+- **Par défaut le domaine du locataire Azure AD**: entrez un nom de domaine existant dans votre organisation Azure AD. Lorsque les utilisateurs dans ce domaine se connectent, ils n’ont pas à taper le nom de domaine. Par exemple, entrez `contoso.com`. Les utilisateurs dans le `contoso.com` domaine peut se connecter à l’aide de son nom d’utilisateur, tels que « abby », au lieu de «abby@contoso.com».
+
+  [Authentification/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Exceptions de confidentialité par application
 
@@ -386,7 +412,7 @@ Vous pouvez configurer les informations auxquelles toutes les applications sur l
   - Sécurité
   - de base
   - Étendu
-  - Complet
+  - Complète
 - **Envoyer les données de navigation Microsoft Edge à Microsoft 365 Analytics** : pour utiliser cette fonctionnalité, définissez les paramètres **Partager des données d’utilisation** sur **Étendu** ou **Complet**. Cette fonctionnalité contrôle les données que Microsoft Edge envoie à Microsoft 365 Analytics pour les appareils d’entreprise avec un ID commercial configuré. Les options disponibles sont les suivantes :
   - **Non configuré** : utilise la valeur par défaut du système d’exploitation, ce qui peut n’envoyer aucune donnée de l’historique de navigation
   - **Envoyer uniquement les données intranet** : permet à l’administrateur d’envoyer l’historique des données intranet

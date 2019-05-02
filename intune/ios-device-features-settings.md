@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 04/01/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f0869b46323606d69891c3761bfbc154f3b6a3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: c2a94be7ebc369005f92809d57c8e55076972df3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566622"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799263"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>paramètres des appareils iOS pour utiliser les fonctionnalités communes d’iOS dans Intune
 
@@ -96,6 +96,9 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
 
       3. Choisissez **Ajouter**. Vous pouvez ajouter jusqu’à **20** pages à l’espace d’ancrage sur l’écran de l’appareil.
       4. Cliquez sur **OK** pour enregistrer vos modifications.
+
+> [!NOTE]
+> Lorsque vous ajoutez des icônes en utilisant les paramètres d’ancrage, les icônes sur l’écran d’accueil et les pages sont verrouillés et ne peut pas être déplacés. Cela peut être par conception avec des stratégies de gestion des appareils mobiles d’Apple et iOS.
 
 #### <a name="example"></a>Exemple
 
