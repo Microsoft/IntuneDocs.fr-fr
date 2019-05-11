@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bbad42e478fadcb40f35d621e805367e60944a00
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: MTE75
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490470"
+---
   > [!NOTE]
   > La mise à jour de votre appareil vous permet d’accéder aux fonctionnalités les plus récentes, et elle garantit également que votre appareil dispose de la version la plus sûre de son système d’exploitation. Microsoft et la plupart des principaux fournisseurs recommandent généralement de mettre à jour les appareils personnels et professionnels avec les dernières versions des logiciels disponibles.
 
