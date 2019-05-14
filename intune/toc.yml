@@ -397,36 +397,6 @@
             - name: Protection contre les menaces mobiles
               href: mobile-threat-defense.md
               items:
-                - name: Configurer Lookout
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Lookout et Intune
-                      href: lookout-mtd-connector-integration.md
-                - name: Configurer Symantec
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Symantec et d’Intune
-                      href: skycure-mtd-connector-integration.md
-                - name: Configurer Check Point
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Check Point et Intune
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Configurer Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Zimperium et Intune
-                      href: zimperium-mtd-connector-integration.md
-                - name: Configurer Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Pradeo et Intune
-                      href: pradeo-mtd-connector-integration.md
-                - name: Configurer Better Mobile
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Intégration de Better Mobile et Intune
-                      href: better-mobile-mtd-connector-integration.md
                 - name: Configurer Intune pour MTD
                   items:
                     - name: Ajouter des applications MTD
@@ -435,6 +405,43 @@
                       href: mtd-device-compliance-policy-create.md
                     - name: Activer MTD dans Intune
                       href: mtd-connector-enable.md
+                - name: Applications MTD
+                  items:
+                    - name: Configurer Lookout
+                      href: lookout-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Lookout et Intune
+                          href: lookout-mtd-connector-integration.md
+                    - name: Configurer Symantec
+                      href: skycure-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Symantec et d’Intune
+                          href: skycure-mtd-connector-integration.md
+                    - name: Configurer Check Point
+                      href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Check Point et Intune
+                          href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+                    - name: Configurer Zimperium
+                      href: zimperium-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Zimperium et Intune
+                          href: zimperium-mtd-connector-integration.md
+                    - name: Configurer Pradeo
+                      href: pradeo-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Pradeo et Intune
+                          href: pradeo-mtd-connector-integration.md
+                    - name: Configurer Better Mobile
+                      href: better-mobile-threat-defense-connector.md
+                      items:
+                        - name: Intégration de Better Mobile et Intune
+                          href: better-mobile-mtd-connector-integration.md
+                    - name: Configurer Sophos Mobile
+                      href: sophos-mtd-connector.md
+                      items:
+                        - name: Intégration de Sophos Mobile et d’Intune
+                          href: sophos-mtd-connector-integration.md
             - name: Windows Defender ATP
               href: advanced-threat-protection.md
             - name: Bases de référence de sécurité
@@ -709,6 +716,8 @@
                   href: wi-fi-settings-ios.md
                 - name: Personnalisé
                   href: custom-settings-ios.md
+                - name: ID d’offre groupée pour les applications intégrées
+                  href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
             - name: Paramètres de stratégie de conformité
