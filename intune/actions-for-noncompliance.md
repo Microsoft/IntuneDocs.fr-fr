@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/19/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 751d89ef023bea07d3c8bdb69904605d88c9e0b6
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504200"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135220"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes dans Intune
 
@@ -103,9 +103,6 @@ Vous pouvez également ajouter une autre action quand vous créez une stratégie
          - Entrez d’**Autres destinataires** en sélectionnant des groupes
     
     - **Verrouiller à distance l’appareil non conforme** : Quand l’appareil n’est pas conforme, verrouillez-le. L’utilisateur est ainsi obligé d’entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. 
-
-    - **Mettre hors service l’appareil non conforme** : Quand l’appareil n’est pas conforme, supprimez toutes les données d’entreprise de l’appareil et retirez l’appareil de la gestion Intune. Pour empêcher une réinitialisation accidentelle d’un appareil, cette action prend en charge une planification minimale de **30** jours.  
-
     
 5. Configurer une **planification** : Entrez le nombre de jours de non-conformité (0 à 365) au terme desquels l’action doit être déclenchée sur les appareils des utilisateurs. Après cette période de grâce, vous pouvez appliquer une stratégie d’accès conditionnel. Si vous entrez **0** (zéro) comme nombre de jours, l’accès conditionnel prend effet **immédiatement**. Par exemple, vous pouvez bloquer l’accès aux ressources d’entreprise immédiatement si un appareil n’est pas conforme.
 

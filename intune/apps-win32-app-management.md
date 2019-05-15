@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426151"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135118"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -142,8 +142,8 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     Par exemple, si le nom de fichier de votre application est **MyApp123**, ajoutez ce qui suit :<br>
     `msiexec /p “MyApp123.msp”`<p>
     Et, si l’application est `ApplicationName.exe`, la commande correspond au nom de l’application suivi des arguments de commande (commutateurs) pris en charge par le package. <br>Par exemple :<br>
-    `ApplicationName.exe /quite`<br>
-    Dans la commande ci-dessus, le package `ApplicaitonName.exe` prend en charge l’argument de commande `/quite`.<p> Pour connaître les arguments spécifiques pris en charge par le package d’application, contactez le fournisseur de l’application.
+    `ApplicationName.exe /quiet`<br>
+    Dans la commande ci-dessus, le package `ApplicationName.exe` prend en charge l’argument de commande `/quiet`.<p> Pour connaître les arguments spécifiques pris en charge par le package d’application, contactez le fournisseur de l’application.
 
 3.  Ajoutez la ligne de commande de désinstallation complète pour désinstaller l’application à partir de son GUID. 
 
@@ -282,9 +282,6 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 ## <a name="app-dependencies"></a>Dépendances d’application
 
 Les dépendances d’application sont des applications que vous devez installer avant votre application Win32. Vous pouvez exiger que d’autres applications soient installées en tant que dépendances. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Le nombre maximal de dépendances s’élève à 100. Il inclut les dépendances de toutes les dépendances incluses, ainsi que l’application elle-même. Vous pouvez ajouter des dépendances d’application Win32 uniquement une fois que votre application Win32 a été ajoutée et chargée dans Intune. Une fois que votre application Win32 a été ajoutée, l’option **Dépendances** apparaît dans le panneau de votre application Win32. 
-
-> [!NOTE]
-> La fonctionnalité de dépendance d’application n’est disponible qu’une fois l’agent de gestion Intune mis à niveau vers la version 1904 (ultérieure à la version 1.18.120.0), ce qui peut prendre une ou deux semaines supplémentaires une fois le service mis à niveau vers la version 1904.
 
 Quand vous ajoutez une dépendance d’application, vous pouvez la rechercher avec le nom de l’application et son éditeur. De plus, vous pouvez trier vos dépendances ajoutées selon le nom de l’application et l’éditeur. Les dépendances d’application précédemment ajoutées ne sont pas sélectionnables dans la liste des dépendances d’application ajoutées. 
 
