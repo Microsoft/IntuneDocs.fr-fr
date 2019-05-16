@@ -1,11 +1,11 @@
 ---
 title: Paramètres des fonctionnalités d’appareil macOS dans Microsoft Intune - Azure | Microsoft Docs
-description: Passez en revue tous les paramètres permettant de configurer des appareils macOS pour AirPrint dans Microsoft Intune. Découvrez également les étapes à suivre pour obtenir les paramètres relatifs à l’adresse IP, au chemin et au port d’un serveur AirPrint dans votre réseau. Utilisez ces paramètres dans un profil de configuration d’appareil pour permettre aux appareils macOS d’utiliser des serveurs AirPrint dans votre réseau.
+description: Consultez les paramètres pour configurer des appareils macOS pour AirPrint et personnalisez la fenêtre de connexion pour qu’elle affiche ou masque les boutons d’alimentation dans Microsoft Intune. Consultez les étapes à suivre pour obtenir les paramètres relatifs à l’adresse IP, au chemin et au port d’un serveur AirPrint dans votre réseau. Utilisez ces paramètres dans un profil de configuration d’appareil pour configurer les fonctionnalités d’un appareil macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,37 +16,43 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4973dc5038ecfe9a8e909df1a1db3feceb30979b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8858848d12ca3f5839741fc15d87e1cd66e9fad0
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764853"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
-Intune intègre certains paramètres que vous pouvez configurer pour permettre aux utilisateurs macOS d’imprimer sur des imprimantes AirPrint de votre réseau. Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il liste également les étapes à suivre pour obtenir l’adresse IP, le chemin et le port des imprimantes AirPrint à l’aide de l’application Terminal (émulateur).
+Intune inclut certains paramètres intégrés afin de personnaliser les fonctionnalités de vos appareils macOS. Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il liste également les étapes à suivre pour obtenir l’adresse IP, le chemin et le port des imprimantes AirPrint à l’aide de l’application Terminal (émulateur).
+
+Cette fonctionnalité s’applique à :
+
+- macOS
+
+Dans le cadre de votre solution de gestion des périphériques mobiles (GPM), utilisez ces paramètres pour créer une bannière, choisir la méthode de connexion des utilisateurs, ajouter un serveur AirPrint, et plus encore.
+
+Ces paramètres sont ajoutés à un profil de configuration d’appareil dans Intune, puis affectés ou déployés sur vos appareils macOS.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
 [Créez un profil de configuration d’appareil macOS](device-features-configure.md).
 
-## <a name="airprint-settings"></a>Paramètres AirPrint
+## <a name="airprint"></a>AirPrint
 
-1. Dans **Paramètres**, sélectionnez **AirPrint**. Entrez les propriétés suivantes pour le serveur AirPrint :
+- **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez effectuer un test ping dans l’application Terminal pour obtenir l’adresse IP de l’imprimante. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
+- **Chemin d’accès** : entrez le chemin de l’imprimante. Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
+- **Port** (iOS 11.0 et supérieure) : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut.
+- **Protocole TLS** (iOS 11.0 et supérieure) : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security).
 
-    - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez effectuer un test ping dans l’application Terminal pour obtenir l’adresse IP de l’imprimante. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-    - **Chemin d’accès** : entrez le chemin de l’imprimante. Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-    - **Port** : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut. Disponible sur iOS 11.0 et ultérieur.
-    - **Protocole TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
+**Ajoutez** le serveur AirPrint. Vous pouvez ajouter plusieurs serveurs AirPrint.
 
-2. Sélectionnez **Ajouter**. Le serveur AirPrint est ajouté à la liste. Vous pouvez ajouter plusieurs serveurs AirPrint.
+- **Importer** (facultatif) : vous pouvez également **importer** une liste d’imprimantes AirPrint séparées par des virgules dans un fichier .csv. Après avoir ajouté des imprimantes AirPrint dans Intune, vous pouvez **exporter** cette liste.
 
-    Vous pouvez également **importer** une liste d’imprimantes AirPrint séparées par des virgules dans un fichier .csv. Après avoir ajouté des imprimantes AirPrint dans Intune, vous pouvez **exporter** cette liste.
+Sélectionnez **OK** pour enregistrer vos paramètres.
 
-3. Quand vous avez terminé, sélectionnez **OK** pour enregistrer votre liste.
-
-## <a name="get-the-ip-address-and-path"></a>Obtenir l’adresse IP et le chemin
+### <a name="get-the-ip-address-and-path"></a>Obtenir l’adresse IP et le chemin
 
 Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l’imprimante, du chemin de la ressource et du port. Les étapes suivantes vous montrent comment obtenir ces informations.
 
@@ -61,7 +67,45 @@ Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l�
 
 4. Utilisez les valeurs de l’adresse IP et du chemin de la ressource. Dans cet exemple, l’adresse IP est `10.50.25.21` et le chemin de ressource est `/ipp/port1`.
 
+## <a name="login-window"></a>Fenêtre de connexion
+
+### <a name="window-layout"></a>Disposition de la fenêtre
+
+- **Afficher des informations supplémentaires dans la barre de menus** : lorsque la zone d’heure de la barre de menus est sélectionnée, **Autoriser** affiche le nom de l’hôte et la version macOS. **Non configuré** (par défaut) n’affiche pas ces informations dans la barre de menus.
+- **Bannière** : entrez un message à afficher à l’écran de connexion de l’appareil. Par exemple, entrez les informations de votre organisation, un message d’accueil, les informations sur les objets perdus et retrouvés, etc.
+- **Choisir le format de connexion** : choisissez la façon dont les utilisateurs se connectent à l’appareil. Les options disponibles sont les suivantes :
+  - **Demander le nom d’utilisateur et le mot de passe** (par défaut) : demande aux utilisateurs de saisir un nom d'utilisateur et un mot de passe.
+  - **Répertorier tous les utilisateurs, demander mot de passe** : demande aux utilisateurs de sélectionner leur nom d'utilisateur depuis une liste d’utilisateurs avant de saisir leur mot de passe. Configurez également :
+
+    - **Utilisateurs locaux** : **Masquer** pour masquer les comptes utilisateurs locaux dans la liste des utilisateurs, ce qui peut inclure les comptes administrateurs et standards. Seuls les comptes d'utilisateur système et réseau sont affichés. **Non configuré** (par défaut) affiche les comptes d'utilisateur locaux dans la liste des utilisateurs.
+    - **Comptes mobiles** : **Masquer** pour masquer les comptes mobiles dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes mobiles dans la liste des utilisateurs. Certains comptes mobiles peuvent apparaître comme utilisateurs réseau.
+    - **Utilisateurs réseau** : sélectionnez **Afficher** pour afficher les utilisateurs réseau dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’utilisateurs réseau dans la liste des utilisateurs.
+    - **Utilisateurs administrateurs** : **Masquer** pour masquer les comptes d’utilisateurs administrateurs dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes d’utilisateurs réseau dans la liste des utilisateurs.
+    - **Autres utilisateurs** : sélectionnez **Afficher** pour afficher les **Autres...** utilisateurs dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’autres utilisateurs dans la liste des utilisateurs.
+
+### <a name="login-screen-power-settings"></a>Paramètres d’alimentation de l’écran de connexion
+
+- **Bouton Arrêt** : **Masquer** pour masquer le bouton d’arrêt sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton d’arrêt.
+- **Bouton Redémarrer** : **Masquer** pour masquer le bouton de redémarrage sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de redémarrage.
+- **Bouton Veille** : **Masquer** pour masquer le bouton de mise en veille sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de mise en veille.
+
+### <a name="other"></a>Autre
+
+- **Désactiver la connexion utilisateur à partir de la console** : **Désactiver** masque la ligne de commande macOS utilisée pour se connecter. Pour des utilisateurs normaux, **désactivez** ce paramètre. **Non configuré** (par défaut) permet à des utilisateurs avancés de se connecter à l’aide de la ligne de commande macOS. Pour passer en mode console, les utilisateurs doivent saisir `>console` dans le champ Nom d'utilisateur puis s’authentifier dans la fenêtre de la console.
+
+### <a name="apple-menu"></a>Menu Apple
+
+Une fois que les utilisateurs se sont connectés à leurs appareils, les paramètres suivants affectent ce qu’ils peuvent faire.
+
+- **Désactiver l’arrêt** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Arrêt** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Arrêt** sur l’appareil.
+- **Désactiver le redémarrage** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Redémarrage** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Redémarrage** sur l’appareil.
+- **Désactiver la mise hors tension** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Mise hors tension** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Mise hors tension** sur l’appareil.
+- **Désactiver la déconnexion** (macOS 10.13 et versions ultérieures) : **Désactiver** empêche les utilisateurs de sélectionner l’option **Déconnexion** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Déconnexion** sur l’appareil.
+- **Désactiver le verrouillage d’écran** (macOS 10.13 et versions ultérieures) : **Désactiver** empêche les utilisateurs de sélectionner l’option **Verrouillage de l’écran** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Verrouillage de l’écran** sur l’appareil.
+
+Sélectionnez **OK** pour enregistrer vos paramètres.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Passez en revue tous les paramètres pour les appareils [iOS](ios-device-features-settings.md).
-- Affectez ce profil à des groupes (découvrez comment [affecter des profils d’appareil](device-profile-assign.md)).
+- [Affectez ce profil](device-profile-assign.md) à vos groupes et [supervisez son état](device-profile-monitor.md).

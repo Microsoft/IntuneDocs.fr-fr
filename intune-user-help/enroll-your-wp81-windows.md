@@ -19,20 +19,20 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16a610050a7c4ce094005617304249acdb961878
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57335103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61497516"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Inscrire un appareil Windows Phone 8.1 dans Intune  
 
-Inscrire vos appareils pour accéder à un travail ou adresse e-mail scolaire, fichiers et d’autres ressources. Quand vous inscrivez vos appareils, votre organisation peut sécuriser les données d’entreprise. Pour en savoir plus sur l’inscription, consultez [Que se passe-t-il si j’installe l’application Portail d’entreprise et que j’inscris mon appareil dans Intune ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) et [Liste de ce que le support technique de votre entreprise peut voir ou non sur votre appareil](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Inscrivez vos appareils pour obtenir l’accès à vos fichiers, e-mails et ressources professionnels ou scolaires. Quand vous inscrivez vos appareils, votre organisation peut sécuriser les données d’entreprise. Pour en savoir plus sur l’inscription, consultez [Que se passe-t-il si j’installe l’application Portail d’entreprise et que j’inscris mon appareil dans Intune ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) et [Liste de ce que le support technique de votre entreprise peut voir ou non sur votre appareil](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
-Pour inscrire votre appareil dans Intune, suivez les instructions qui correspondent à vos autorisations ou l’état actuel du compte.
+Pour inscrire votre appareil dans Intune, suivez l’ensemble d’instructions correspondant à vos autorisations ou à votre statut de compte actuel.
 
 ## <a name="enroll-through-company-portal"></a>Inscrire via le portail d’entreprise  
-Si vous pouvez installer l’application portail d’entreprise à partir du Microsoft Store, procédez comme suit. 
+Suivez ces étapes si vous pouvez installer l’application du portail d'entreprise depuis le Microsoft Store. 
 
 1.  Appuyez sur **Démarrer** > **Boutique**.  
 
@@ -77,8 +77,8 @@ Inscrivez votre appareil :
 
     ![Écran de compte ajouté](./media/WP81-enroll-4-account-added.png)  
 
-## <a name="enroll-through-settings-app"></a>Inscrire via l’application paramètres  
-Si vous ne pouvez pas accéder au Microsoft Store à partir de votre appareil Windows Phone, ou si vous n’avez pas un Account Microsoft, procédez comme suit.
+## <a name="enroll-through-settings-app"></a>Inscrire via les paramètres d’application  
+Suivez ces étapes si vous ne parvenez pas à accéder au Microsoft Store à partir de votre appareil Windows Phone ou si vous n’avez pas de compte Microsoft.
 
 1.  Appuyez sur **Paramètres** &gt; **Espace de travail**.  
 

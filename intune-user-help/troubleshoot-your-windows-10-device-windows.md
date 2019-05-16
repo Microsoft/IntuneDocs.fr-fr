@@ -19,14 +19,14 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61501236"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Résolution de problèmes liés à l’inscription de votre appareil Windows 10
-Si vous avez inscrit votre appareil, mais toujours pas accéder à votre adresse e-mail scolaire ou fichiers professionnels ou, essayez les étapes de dépannage.  
+Si vous avez inscrit votre appareil et que vous ne pouvez toujours pas accéder à vos fichiers ou e-mail scolaires ou professionnels, essayez de suivre ces étapes de résolution des problèmes.  
 
 1.  Examinez les deux écrans suivants et déterminez celui qui ressemble à ce que vous voyez sur votre appareil. Suivez les étapes associées à l’écran que vous voyez sur votre appareil.
 
@@ -48,13 +48,13 @@ Si vous avez inscrit votre appareil, mais toujours pas accéder à votre adresse
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - Si vous ne voyez pas les informations de connexion illustrées ci-dessus, ou il apparaît, mais il manque certaines des options, appuyez sur **Connect**. Connectez-vous avec vos informations d’identification professionnelles ou scolaires pour vous connecter.  
+   - Si vous ne voyez pas les informations de connexion indiquées ci-dessus, ou si certaines de ces options manquent, appuyez sur **Connexion**. Connectez-vous avec vos informations d’identification professionnelles ou scolaires pour vous connecter.  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Étapes de dépannage à suivre si vous voyez « Votre compte »
 
 Si vous avez suivi les étapes ci-dessus mais que vous ne pouvez toujours pas accéder à vos e-mails, vos fichiers ou d’autres données professionnelles ou scolaires, retournez dans **Comptes** et appuyez sur **Accès professionnel**.
 
-- Si vous consultez votre travail ou scolaire compte répertorié, vous êtes connecté.  
+- Si votre compte professionnel ou scolaire apparaît dans la liste, c’est que vous êtes connecté.  
 
 - Si vous ne voyez pas votre compte professionnel ou scolaire, appuyez sur **Connexion**, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires.
 

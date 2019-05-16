@@ -1,11 +1,11 @@
 ---
 title: Paramètres d’appareil Android Enterprise dans Microsoft Intune - Azure | Microsoft Docs
-description: Sur les appareils Android Entreprise et Android for Work, vous pouvez restreindre certains paramètres, notamment les opérations de copier-coller, l’affichage des notifications, les autorisations d’application, le partage de données, la longueur de mot de passe, les échecs de connexion, l’utilisation d’empreintes digitales pour le déverrouillage, la réutilisation des mots de passe et l’activation du partage Bluetooth des contacts professionnels. Configurer les appareils comme un kiosque de périphérique dédié pour exécuter une application ou plusieurs applications.
+description: Sur les appareils Android Entreprise et Android for Work, vous pouvez restreindre certains paramètres, notamment les opérations de copier-coller, l’affichage des notifications, les autorisations d’application, le partage de données, la longueur de mot de passe, les échecs de connexion, l’utilisation d’empreintes digitales pour le déverrouillage, la réutilisation des mots de passe et l’activation du partage Bluetooth des contacts professionnels. Configurez les appareils comme appareils dédiés plein écran pour exécuter une ou plusieurs applications.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505775"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -65,32 +65,24 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
   L’option **Non configuré** empêche les utilisateurs d’activer la fonctionnalité de trappe de secours du réseau sur l’appareil.
 
-- **Autoriser l’installation à partir de sources inconnues** : choisissez **Autoriser** pour permettre aux utilisateurs d’activer l’option **Sources inconnues**. Ce paramètre permet d’installer des applications à partir de sources inconnues. L’option **Non configuré** empêche les utilisateurs d’activer le paramètre **Sources inconnues**.
 - **Mise à jour système** : choisissez une option pour définir la façon dont l’appareil traite les mises à jour à distance :
   - **Paramètre par défaut de l’appareil** : utiliser le paramètre par défaut de l’appareil.
   - **Automatique** : les mises à jour sont installées automatiquement, sans interaction de l’utilisateur. La définition de cette stratégie entraîne l’installation immédiate des mises à jour en attente.
   - **Différé** : les mises à jour sont reportées de 30 jours. À la fin des 30 jours, Android invite l’utilisateur à installer la mise à jour. Il est possible pour les fabricants ou les opérateurs d’appareils d’empêcher (exempter) le report des mises à jour de sécurité importantes. Une mise à jour exemptée affiche une notification système sur l’appareil de l’utilisateur. 
   - **Fenêtre de maintenance** : permet d’installer les mises à jour automatiquement durant une fenêtre de maintenance quotidienne définie dans Intune. L’installation est tentée quotidiennement pendant 30 jours, et cette opération peut échouer en raison d’un espace ou d’un niveau de batterie insuffisant. Après 30 jours, Android invite l’utilisateur à procéder à l’installation. Cette fenêtre est également utilisée pour installer les mises à jour des applications Play. Utilisez cette option pour les appareils dédiés, par exemple les bornes, car les applications de premier plan d’appareils mono-application dédiés peuvent être mises à jour.
-- **Mises à jour automatiques d'application** : choisissez à quel moment installer les mises à jour automatiques. Les options disponibles sont les suivantes :
-  - **Non configuré**
-  - **Choix de l’utilisateur**
-  - **Jamais**
-  - **Wi-Fi uniquement**
-  - **Toujours**
 
 - **Fenêtre de notification** : quand cette option a la valeur **Désactiver**, les notifications, notamment les toasts, les appels entrants, les appels sortants, les alertes système et les erreurs système, ne sont pas affichées sur l’appareil. quand elle a la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage des notifications).
 - **Ignorer les premiers conseils d’utilisation** : choisissez **Activer** pour masquer ou ignorer les suggestions des applications concernant l’exécution de tutoriels ou la lecture de conseils d’introduction lors du démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
 
-
 ### <a name="system-security-settings"></a>Paramètres de sécurité système
 
-- **Analyse des menaces sur les applications** : l’option **Exiger** applique la règle indiquant que le paramètre **Vérifier les applications** est activé pour les profils professionnels et personnels.
+- **Analyse des menaces sur les applications** : **Exiger** (par défaut) permet à Google Play Protect d’analyser les applications avant et après leur installation. S’il détecte une menace, il peut avertir l’utilisateur et lui recommander de supprimer l’application de l’appareil. **Non configuré** ne permet pas à Google Play Protect d’analyser des applications.
 
-### <a name="dedicated-device-settings"></a>Paramètres de périphérique dédié
+### <a name="dedicated-device-settings"></a>Paramètres de l’appareil dédié
 
-Utilisez ces paramètres pour configurer une expérience plein écran-style sur vos appareils dédiés. Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications. Quand un appareil est en mode plein écran, seules les applications que vous ajoutez sont disponibles. Ces paramètres s’appliquent aux appareils d’entreprise Android dédié. Ils ne s’appliquent pas aux appareils d’entreprise Android entièrement géré.
+Utilisez ces paramètres pour configurer une expérience plein écran sur vos appareils dédiés. Vous pouvez configurer un appareil pour exécuter une ou plusieurs applications. Quand un appareil est en mode plein écran, seules les applications que vous ajoutez sont disponibles. Ces paramètres s’appliquent aux appareils Android Enterprise dédiés. Ils ne sont pas appliqués à des appareils Android Enterprise entièrement gérés.
 
-**Mode plein écran**: choisissez si l’appareil exécute une seule application ou plusieurs applications.
+**Mode plein écran** : choisissez si l’appareil exécute une ou plusieurs applications.
 
 - **Application unique** : les utilisateurs ne peuvent accéder qu’à une seule application sur l’appareil. Lors du démarrage de l’appareil, seule l’application spécifique démarre. Les utilisateurs ne peuvent pas ouvrir de nouvelles applications, ni changer l’application en cours d’exécution.
 
@@ -122,25 +114,58 @@ Utilisez ces paramètres pour configurer une expérience plein écran-style sur 
     1. Sélectionne plusieurs fois le bouton Précédent jusqu’à ce que le bouton « Quitter le kiosque » s’affiche. 
     2. Sélectionne le bouton, puis entre le **code confidentiel permettant de quitter le mode kiosque**.
     3. Après avoir apporté vos modifications, sélectionnez l’application **Managed Home Screen**. Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application. 
-    
+
     L’option **Désactiver** empêche la suspension du mode kiosque. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton « Quitter le kiosque », un message indique qu’un code secret est requis.
-    
+
     - **Code permettant de quitter le mode kiosque** : entrez un code PIN composé de 4 à 6 chiffres. L’administrateur utilise ce code PIN pour interrompre temporairement le mode kiosque.
- 
+
   - **Définir l’arrière-plan de l’URL personnalisée** : entrez une URL pour personnaliser l’arrière-plan de l’appareil dédié.
+    
+    > [!NOTE]
+    > Dans la plupart des cas, nous recommandons de commencer avec des images des tailles minimales suivantes :
+    >
+    > - Téléphone : 1080 x 1920 px
+    > - Tablette : 1920 x 1080 px
+    >    
+    > Pour une expérience optimale et claire, il est conseillé de créer des composants d’images par appareil selon les caractéristiques de l’écran.
+    >
+    > Les écrans modernes affichent une densité supérieure de pixels et peuvent obtenir une définition d’image 2K/4K.
+  - **Configuration Wi-Fi** : choisissez **Activer** pour autoriser les utilisateurs à connecter l’appareil à différents réseaux Wi-Fi. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) empêche les utilisateurs de se connecter aux réseaux Wi-Fi lorsqu’ils sont dans l’application Managed Home Screen (mode de verrouillage de tâche).
+
+    Plus d’informations sur le [mode de verrouillage de tâche](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (dirige sur le site web d’Android).
+
+  - **Configuration Bluetooth** : choisissez **Activer** pour activer le Bluetooth sur l’appareil et permettre aux utilisateurs finaux de jumeler leurs appareils via Bluetooth. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) empêche les utilisateurs de configurer le Bluetooth et de jumeler leurs appareils lorsqu’ils sont dans l’application Managed Home Screen (mode de verrouillage de tâche). 
+
+    Plus d’informations sur le [mode de verrouillage de tâche](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (dirige sur le site web d’Android).
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
 
-- **Keyguard** : choisissez **Désactiver** pour empêcher l’utilisation de la fonctionnalité de verrouillage d’écran Keyguard sur l’appareil. L’option **Non configuré** permet l’utilisation des fonctionnalités Keyguard.
-- **Désactivé les fonctionnalités keyguard**: lorsque keyguard est activé sur l’appareil, choisissez les fonctionnalités à désactiver. Par exemple, quand l’option **Sécuriser l’appareil photo** est cochée, la fonctionnalité appareil photo est désactivée sur l’appareil. Toutes les fonctionnalités non cochées sont activées sur l’appareil.
+- **Désactiver le verrouillage d’écran** : choisissez **Désactiver** pour empêcher l’utilisation de la fonctionnalité de verrouillage d’écran Keyguard sur l’appareil. L’option **Non configuré** permet l’utilisation des fonctionnalités Keyguard.
+- **Désactiver les fonctionnalités de verrouillage d’écran** : quand keyguard est activé sur l’appareil, choisissez les fonctionnalités à désactiver. Par exemple, quand l’option **Sécuriser l’appareil photo** est cochée, la fonctionnalité appareil photo est désactivée sur l’appareil. Toutes les fonctionnalités non cochées sont activées sur l’appareil.
+
+  Ces fonctionnalités sont disponibles pour les utilisateurs lorsque l’appareil est verrouillé. Les utilisateurs ne verront pas les fonctionnalités vérifiées ni ne pourront y accéder.
+
 - **Type de mot de passe obligatoire** : définissez le type de mot de passe demandé pour l’appareil. Les options disponibles sont les suivantes :
-  - **Au moins numérique**
-  - **Chiffres complexes** : les chiffres répétés ou consécutifs (comme « 1111 » ou « 1234 ») ne sont pas autorisés.
-  - **Au moins alphabétique**
-  - **Au moins alphanumérique**
-  - **Au moins alphanumérique avec des symboles**
-- **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe qu’un utilisateur doit entrer (entre 4 et 16 caractères).
-- **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs de connexion à autoriser avant réinitialisation de l’appareil (entre 1 et 11).
+  - **Paramètre par défaut de l’appareil**
+  - **Mot de passe requis, sans restriction**
+  - **Biométrie faible** : [Biométrie forte et faible](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (dirige sur le site web d’Android)
+  - **Numérique** : le mot de passe ne doit comporter que des nombres, par exemple `123456789`. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Chiffres complexes** : les chiffres répétés ou consécutifs (comme « 1111 » ou « 1234 ») ne sont pas autorisés. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Alphabétique** : des lettres de l’alphabet sont nécessaires. Les nombres et symboles ne sont pas nécessaires. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Alphanumériques** : inclut des lettres majuscules, minuscules et des caractères numériques. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Alphanumérique avec symboles** : inclut des lettres majuscules, minuscules, des caractères numériques, des signes de ponctuation et des symboles. Entrez également :
+
+    - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères).
+    - **Nombre de caractères requis** : entrez le nombre de caractères du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères minuscules** : entrez le nombre de caractères minuscules du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères majuscules** : entrez le nombre de caractères majuscules du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères non lettres requis** : entrez le nombre de caractères non lettres (tout caractère hors lettres de l’alphabet) du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères numériques requis** : entrez le nombre de caractères numériques (`1`, `2`, `3`, etc.) du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de symboles requis** : entrez le nombre de symboles (`&`, `#`, `%`, etc.) du mot de passe (entre 0 et 16 caractères).
+
+- **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil (entre 1 et 365). Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
+- **Nombre de mots de passe requis avant que l’utilisateur puisse réutiliser un mot de passe** : entrez le nombre de mots de passe récents ne pouvant être réutilisés (entre 1 et 24). Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.
+- **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs de connexion à autoriser avant réinitialisation de l’appareil (entre 4 et 11).
 
 ### <a name="power-settings"></a>Paramètres d’alimentation
 
@@ -152,6 +177,17 @@ Utilisez ces paramètres pour configurer une expérience plein écran-style sur 
 - **Ajouter de nouveaux utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter de nouveaux utilisateurs. Chaque utilisateur dispose d’un espace personnel sur l’appareil, regroupant les écrans d’accueil personnalisés ainsi que les comptes, applications et paramètres. L’option **Non configuré** autorise les utilisateurs à ajouter d’autres utilisateurs à l’appareil.
 - **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
 - **Modifications apportées aux comptes** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
+
+### <a name="applications"></a>Applications
+
+- **Autoriser l’installation à partir de sources inconnues** : choisissez **Autoriser** pour permettre aux utilisateurs d’activer **Sources inconnues**. Ce paramètre permet aux applications d’être installées à partir de sources inconnues, y compris celles ne provenant pas de Google Play Store. L’option **Non configuré** empêche les utilisateurs d’activer le paramètre **Sources inconnues**.
+- **Autoriser l’accès à toutes les applications dans Google Play Store** : lorsque cette option est définie sur **Autoriser**, les utilisateurs peuvent accéder à toutes les applications dans Google Play Store. Ils ne peuvent pas accéder aux applications bloquées par l’administrateur dans [Applications clientes](apps-add-android-for-work.md). **Non configuré** oblige les utilisateurs à n’accéder qu’aux applications rendues disponibles par l’administrateur dans Google Play Store ou aux applications requises dans [Applications clientes](apps-add-android-for-work.md).
+- **Mises à jour automatiques d'application** : choisissez à quel moment installer les mises à jour automatiques. Les options disponibles sont les suivantes :
+  - **Non configuré**
+  - **Choix de l’utilisateur**
+  - **Jamais**
+  - **Wi-Fi uniquement**
+  - **Toujours**
 
 ### <a name="connectivity"></a>Connectivité
 

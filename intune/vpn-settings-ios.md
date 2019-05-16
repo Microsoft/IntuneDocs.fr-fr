@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 04/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d914ea9bffe9485d2e37f8ede4d168f597f9e200
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c40146f37ff6477663dc63468d1081a73ac2544a
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565928"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135157"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Configurer les paramètres VPN sur les appareils iOS dans Microsoft Intune
 
@@ -42,7 +42,7 @@ Sélectionnez le type de connexion VPN dans la liste de fournisseurs suivante :
 - **Cisco (IPSec)**
 - **Citrix VPN** (VPN Citrix)
 - **Citrix SSO**
-- **Zscaler** : vous devez intégrer ZPA (Zscaler Private Access) à votre compte Azure AD. Pour des instructions détaillées, consultez la [documentation Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Zscaler** : pour utiliser l’accès conditionnel ou autoriser les utilisateurs à contourner l’écran de connexion de Zscaler, vous devez intégrer Zscaler Private Access (ZPA) à votre compte Azure AD. Pour des instructions détaillées, consultez la [documentation Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
 - **VPN personnalisé**
 
 > [!NOTE]
@@ -70,19 +70,28 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
 - **Identificateur VPN** (VPN personnalisé, Zscaler et Citrix) : identificateur pour l’application VPN que vous utilisez, qui est fourni par votre fournisseur VPN.
   - **Entrer les paires clé-valeur pour les attributs du VPN personnalisé de votre organisation** : ajoutez ou importez des **Clés** et des **Valeurs** pour personnaliser votre connexion VPN. N’oubliez pas que ces valeurs sont généralement indiquées par votre fournisseur VPN.
 
-- **Activer le contrôle d’accès réseau (NAC)** (Citrix SSO uniquement) : lorsque vous choisissez **J’accepte**, l’ID d’appareil est inclus dans le profil VPN. Cet ID peut être utilisé pour l’authentification sur le VPN pour autoriser ou empêcher l’accès au réseau.
+- **Activer le contrôle d’accès réseau (NAC)** (Citrix SSO, Accès F5) : lorsque vous choisissez **J’accepte**, l’ID d’appareil est inclus dans le profil VPN. Cet ID peut être utilisé pour l’authentification sur le VPN pour autoriser ou empêcher l’accès au réseau.
+
+  **Lorsque vous utilisez l’accès F5**, veillez à :
+
+  - confirmer que vous utilisez F5 BIG-IP 13.1.1.5. BIG-IP 14 n’est pas pris en charge.
+  - Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Consultez le guide F5 [Présentation : configuration APM pour vérifications de posture d’appareils avec systèmes de gestion de point de terminaison](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+  - Activer le contrôle d’accès réseau dans le profil VPN.
 
   **Lorsque vous utilisez Citrix SSO avec Gateway**, veillez à :
 
   - Confirmer que vous utilisez Citrix Gateway 12.0.59 ou une version ultérieure.
   - Confirmer que vos utilisateurs ont Citrix SSO 1.1.6 ou une version ultérieure installée sur leurs appareils.
-  - Intégrer Citrix Gateway avec Intune pour le contrôle d’accès réseau, comme décrit dans le guide de déploiement Citrix [Intégration de Microsoft Intune/Enterprise Mobility Suite avec NetScaler (scénario LDAP + OTP)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf).
+  - Intégrez la passerelle Citrix avec Intune pour le contrôle d’accès réseau. Consultez le guide de déploiement Citrix [Intégration de Microsoft Intune/Enterprise Mobility Suite avec NetScaler (scénario LDAP + OTP)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf).
   - Activer le contrôle d’accès réseau dans le profil VPN.
 
-  Détails importants :  
+  **Détails importants** :  
 
-  - Quand le contrôle d’accès réseau est activé, le VPN est déconnecté toutes les 24 heures.
-  - L’ID d’appareil fait partie du profil, mais il n’est pas visible dans Intune. Cet ID n’est stocké nulle part et n’est pas partagé par Microsoft. Une fois que les partenaires VPN prendront en charge cet ID, un client VPN, tel que Citrix SSO, pourra obtenir l’ID et interroger Intune pour vérifier si l’appareil est bien inscrit et si le profil VPN est conforme ou non.
+  - Quand le contrôle d’accès réseau est activé, le VPN est déconnecté toutes les 24 heures. Le VPN peut être immédiatement reconnecté.
+  - L’ID d’appareil fait partie du profil, mais il n’est pas visible dans Intune. Cet ID n’est stocké nulle part et n’est pas partagé par Microsoft.
+
+  Lorsque l’ID d’appareil est pris en charge par des partenaires VPN, le client VPN, tel que Citrix SSO, peut obtenir l’ID. Il peut ensuite interroger Intune afin de confirmer l’inscription de l’appareil et la conformité du profil VPN.
+
   - Pour supprimer ce paramètre, recréez le profil et ne sélectionnez pas **J’accepte**. Réaffectez ensuite le profil.
 
 ## <a name="automatic-vpn-settings"></a>Paramètres VPN automatiques
@@ -92,7 +101,7 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
   - Quand vous utilisez des profils **VPN par application** iOS avec Pulse Secure ou un VPN personnalisé, choisissez entre le tunneling de couche application (app-proxy) ou le tunneling de couche paquet (packet-tunnel). Affectez à **ProviderType** la valeur **app-proxy** pour le tunneling de couche application, ou la valeur **packet-tunnel** pour le tunneling de couche paquet. Si vous ne savez pas quelle valeur utiliser, consultez la documentation de votre fournisseur VPN.
   - **URL Safari qui déclenchent ce VPN** : ajoutez une ou plusieurs URL de site web. Quand ces URL sont consultées sur l’appareil à l’aide du navigateur Safari, la connexion VPN est établie automatiquement.
 
-- **VPN à la demande** : configurez des règles conditionnelles qui contrôlent le démarrage de la connexion VPN. Par exemple, créez une condition dans laquelle la connexion VPN est utilisée uniquement quand un appareil n’est pas connecté au réseau Wi-Fi d’une entreprise. Sinon, créez une condition dans laquelle la connexion VPN n’est pas lancée si un appareil ne peut pas accéder au domaine de recherche DNS que vous entrez.
+- **VPN à la demande** : configurez des règles conditionnelles qui contrôlent le démarrage de la connexion VPN. Par exemple, créez une condition dans laquelle la connexion VPN est utilisée uniquement quand un appareil n’est pas connecté au réseau Wi-Fi d’une entreprise. Sinon, créez une condition. Par exemple, la connexion VPN n’est pas lancée si un appareil ne peut pas accéder au domaine de recherche DNS que vous entrez.
 
   - **Domaines de recherche DNS ou SSID** : indiquez si cette condition utilise les **SSID** de réseau sans fil ou les **domaines de recherche DNS**. Cliquez sur **Ajouter** pour configurer un ou plusieurs SSID ou domaines de recherche.
   - **Sonde de chaîne d’URL** : facultatif. Entrez une URL que la règle utilise comme test. Si l’appareil ayant ce profil accède à cette URL sans redirection, la connexion VPN est lancée. Et l’appareil se connecte à l’URL cible. L’utilisateur ne voit pas le site de la sonde de chaîne d’URL. Par exemple, une sonde de chaîne d’URL peut être l’adresse d’un serveur web d’audit qui vérifie la compatibilité de l’appareil avant la connexion du VPN. Autre exemple, l’URL teste la capacité du VPN à se connecter à un site avant de connecter l’appareil à l’URL cible via le VPN.
@@ -103,7 +112,7 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
     - Se connecter
     - Évaluer la connexion
     - Ignorer
-    - Se déconnecter
+    - Déconnecter
 
 ## <a name="proxy-settings"></a>Paramètres du proxy
 
