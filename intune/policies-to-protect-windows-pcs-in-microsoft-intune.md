@@ -46,4 +46,4 @@ En tant qu'administrateur informatique, l'une de vos principales priorités est 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Questions, problèmes courants et résolutions avec les stratégies d’appareil et des profils](device-profile-troubleshoot.md)
+[Questions, problèmes et solutions concernant les stratégies et les profils d’appareil](device-profile-troubleshoot.md)

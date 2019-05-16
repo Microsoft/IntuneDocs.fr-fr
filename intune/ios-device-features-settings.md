@@ -23,11 +23,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/01/2019
 ms.locfileid: "58799263"
 ---
-# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>paramètres des appareils iOS pour utiliser les fonctionnalités communes d’iOS dans Intune
+# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
 
 Intune inclut certains paramètres prédéfinis pour permettre aux utilisateurs d’utiliser différentes fonctionnalités Apple sur leurs appareils iOS. Par exemple, les administrateurs peuvent contrôler la façon dont les utilisateurs d’appareils iOS se servent des imprimantes AirPrint, ajoutent des applications et dossiers à l’écran d’accueil et aux pages de l’écran d’accueil, affichent les notifications d’applications, affichent les détails de l’étiquette d’inventaire sur l’écran de verrouillage, utilisent l’authentification unique et s’authentifient avec des certificats.
 
-Utilisez ces fonctionnalités pour contrôler les appareils iOS dans le cadre de votre solution de gestion des appareils mobiles.
+Utilisez ces fonctionnalités pour contrôler vos appareils iOS dans le cadre de votre solution de gestion des appareils mobiles.
 
 Cet article liste ces paramètres et décrit le rôle de chaque paramètre.
 
@@ -78,7 +78,7 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
 
     - **Ajouter une application** : choisissez cette option pour ajouter des applications à l’espace d’ancrage sur l’écran. entrez :
 
-      - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+      - **Nom de l’application** : entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
       - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
@@ -90,15 +90,15 @@ Utilisez les paramètres **Ancrer** pour ajouter jusqu’à six éléments ou d
       1. Entrez un nom dans **Nom du dossier**. Ce nom est visible sur l’appareil des utilisateurs.
       2. Choisissez **Ajouter** et entrez les propriétés suivantes :
 
-          - **Nom de la page**: entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de l’application** : entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
           - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       3. Choisissez **Ajouter**. Vous pouvez ajouter jusqu’à **20** pages à l’espace d’ancrage sur l’écran de l’appareil.
       4. Cliquez sur **OK** pour enregistrer vos modifications.
 
 > [!NOTE]
-> Lorsque vous ajoutez des icônes en utilisant les paramètres d’ancrage, les icônes sur l’écran d’accueil et les pages sont verrouillés et ne peut pas être déplacés. Cela peut être par conception avec des stratégies de gestion des appareils mobiles d’Apple et iOS.
+> Lorsque vous ajoutez des icônes à l’aide des paramètres d’ancrage, les icônes présentes sur l’écran d’accueil et sur les pages sont verrouillées et ne peuvent pas être déplacées. Cet ancrage peut faire partie des stratégies de gestion des appareils mobiles iOS et Apple.
 
 #### <a name="example"></a>Exemple
 
@@ -126,7 +126,7 @@ Ajoutez les pages que vous souhaitez afficher sur l’écran d’accueil et les 
 
     - **Ajouter une application** : choisissez cette option pour ajouter des applications à une page sur l’écran. entrez :
 
-      - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+      - **Nom de l’application** : entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
       - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
@@ -138,8 +138,8 @@ Ajoutez les pages que vous souhaitez afficher sur l’écran d’accueil et les 
       1. Entrez un nom dans **Nom du dossier**. Ce nom est visible sur l’appareil des utilisateurs.
       2. Choisissez **Ajouter** et entrez les propriétés suivantes :
 
-          - **Nom de la page**: entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
-          - **Nom de l’application**: entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de la page** : entrez un nom pour la page. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
+          - **Nom de l’application** : entrez un nom pour l’application. Ce nom est utilisé à titre de référence dans le portail Azure. Il *n’est pas* visible sur l’appareil iOS.
           - **ID d’ensemble d’applications** : entrez l’ID d’ensemble de l’application. Pour des exemples, consultez la section [ID de bundle pour les applications iOS intégrées](#bundle-ids-for-built-in-ios-apps), plus loin dans cet article.
 
       3. Choisissez **Ajouter**.
@@ -175,7 +175,7 @@ Choisissez la manière dont les applications installées sur les appareils iOS e
          - **Aucune** : aucune notification ne s’affiche.
          - **Bannière** : une bannière contenant la notification s’affiche brièvement.
          - **Modal** : la notification s’affiche et l’utilisateur doit la fermer manuellement pour pouvoir continuer à utiliser l’appareil.
-       - **Badge sur l’icône de l’application**: sélectionnez **activer** pour ajouter un badge à l’icône d’application. Le badge indique que l’application a envoyé une notification.
+       - **Badge sur l’icône de l’application** : sélectionnez **Activer** pour ajouter un badge à l’icône de l’application. Le badge indique que l’application a envoyé une notification.
        - **Sons** : choisissez **Activer** pour qu’un son soit émis à la réception d’une notification.
 
 3. Cliquez sur **OK** pour enregistrer vos modifications. Ajoutez toutes les autres applications souhaitées. Quand vous avez terminé, sélectionnez **OK**.
@@ -269,7 +269,7 @@ Ces paramètres contrôlent l’accès aux URL par le navigateur sur les apparei
 
     - **Configurer les URL** : utilisez le filtre web intégré d’Apple qui recherche le contenu réservé aux adultes, par exemple des propos blasphématoires ou sexuellement explicites. Cette fonctionnalité analyse chaque page web qui est chargée afin de détecter et bloquer les contenus inappropriés. Vous pouvez également ajouter les URL que vous souhaitez exclure du filtrage, ou bien bloquer certaines URL, indépendamment des paramètres de filtre d’Apple.
 
-      - **Autorisé les URL**: **ajouter** les URL que vous souhaitez autoriser. Ces URL ignorent le filtre web d’Apple.
+      - **URL autorisées** : choisissez **Ajouter** pour ajouter les URL que vous souhaitez autoriser. Ces URL ignorent le filtre web d’Apple.
 
         > [!NOTE]
         > Les URL que vous entrez ici sont les URL qui ne seront pas analysées par le filtre web d’Apple. Elles ne correspondent pas à des sites web autorisés. Pour créer une liste des sites web autorisés, définissez **Type de filtre** sur **Sites web spécifiques uniquement**.
@@ -283,7 +283,7 @@ Ces paramètres contrôlent l’accès aux URL par le navigateur sur les apparei
     - **Sites web spécifiques uniquement** (pour le navigateur web Safari uniquement) : ces URL sont ajoutées aux signets du navigateur Safari. L’utilisateur est **uniquement** autorisé à accéder à ces sites ; il ne peut ouvrir aucun autre site. Utilisez cette option uniquement si vous connaissez la liste exacte des URL auxquelles les utilisateurs peuvent accéder.
 
       - **URL** : entrez l’URL du site web que vous souhaitez autoriser. Par exemple, entrez `https://www.contoso.com`.
-      - **Chemin de signet**: entrez le chemin d’accès pour stocker le signet. Par exemple, entrez `/Contoso/Business Apps`. Si vous n’ajoutez pas de chemin, le signet est ajouté au dossier de signets par défaut sur l’appareil.
+      - **Chemin de signet** : entrez le chemin où stocker le signet. Par exemple, entrez `/Contoso/Business Apps`. Si vous n’ajoutez pas de chemin, le signet est ajouté au dossier de signets par défaut sur l’appareil.
       - **Titre** : entrez un titre descriptif pour le signet.
 
       Si vous n’entrez pas d’URL, les utilisateurs finaux ne pourront accéder à aucun site web à l’exception de `microsoft.com`, `microsoft.net` et `apple.com`. Ces URL sont automatiquement autorisées par Intune.
@@ -296,11 +296,11 @@ Ajoutez une image .png, .jpg ou .jpeg personnalisée sur vos appareils iOS super
 
 Vous pouvez constater un comportement inattendu quand un profil sans image est affecté à des appareils ayant une image existante. Par exemple, vous créez un profil sans image. Ce profil est affecté à des appareils qui disposent déjà d’une image. Dans ce scénario, l’image peut être remplacée par l’appareil par défaut, ou l’image d’origine peut rester sur l’appareil. Ce comportement est contrôlé et limité par la plateforme MDM d’Apple.
 
-- **Du papier peint de l’emplacement d’affichage**: choisissez un emplacement sur l’appareil pour afficher l’image. Les options disponibles sont les suivantes :
-  - **Ne pas configuré**: une image personnalisée n’est pas ajoutée à l’appareil. L’appareil utilise l’image par défaut du système d’exploitation.
-  - **Écran de verrouillage**: ajoute l’image à l’écran de verrouillage.
-  - **Écran d’accueil**: ajoute l’image à l’écran d’accueil.
-  - **Écran de verrouillage et écran d’accueil**: utilise la même image sur l’écran de verrouillage et l’écran d’accueil.
+- **Emplacement d’affichage du papier peint** : choisissez un emplacement où afficher l’image sur l’appareil. Les options disponibles sont les suivantes :
+  - **Non configuré** : aucune image personnalisée n’est ajoutée sur l’appareil. L’appareil utilise l’image par défaut du système d’exploitation.
+  - **Écran de verrouillage** : ajoute l’image à l’écran de verrouillage.
+  - **Écran d’accueil** : ajoute l’image à l’écran d’accueil.
+  - **Écran de verrouillage et écran d’accueil** : la même image est utilisée sur l’écran de verrouillage et sur l’écran d’accueil.
 - **Image de papier peint** : chargez une image .png, .jpg ou .jpeg existante à utiliser. La taille du fichier doit être inférieure à 750 Ko. Vous pouvez **supprimer** une image que vous aviez ajoutée.
 
 > [!TIP]

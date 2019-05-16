@@ -1,6 +1,6 @@
 ---
-title: Paramètres Windows 8.1 Éducation dans Microsoft Intune - Azure | Microsoft Docs
-description: Afficher la liste de tous les paramètres que vous pouvez utiliser lors de la définition de conformité pour vos appareils Windows 8.1 et Windows Phone 8.1 dans Microsoft Intune. Vérifier la conformité sur le système de d’exploitation minimale et maximale, définir des restrictions de mot de passe et de longueur, activer le chiffrement sur le stockage de données et bien plus encore.
+title: Paramètres de conformité de Windows 8.1 dans Microsoft Intune - Azure | Microsoft Docs
+description: Découvrez la liste de tous les paramètres que vous pouvez utiliser quand vous configurez la conformité de vos appareils Windows 8.1 et Windows Phone 8.1 dans Microsoft Intune. Vérifiez la conformité sur le système d’exploitation minimal et maximal, définissez des restrictions et une longueur de mot de passe, activez le chiffrement sur le stockage de données, etc.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -22,29 +22,29 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59424940"
 ---
-# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres de Windows 8.1 pour marquer les appareils conformes ou non conformes à l’aide d’Intune
+# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres de Windows 8.1 pour marquer les appareils comme étant conformes ou non conformes avec Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Cet article répertorie et décrit les paramètres de conformité différents que vous pouvez configurer sur les appareils Windows 8.1 dans Intune. Dans le cadre de votre solution de gestion des appareils mobiles, utilisez ces paramètres pour bloquer les mots de passe simples, définir un minimum et maximum version du système d’exploitation et bien plus encore.
+Cet article liste et décrit les différents paramètres de conformité que vous pouvez configurer sur les appareils Windows 8.1 dans Intune. Dans le cadre de votre solution MDM, utilisez ces paramètres pour bloquer les mots de passe simples, définir une version minimale ou maximale du système d’exploitation, etc.
 
 Cette fonctionnalité s’applique à :
 
 - Windows Phone 8.1
 - Windows 8.1 et versions ultérieures
 
-En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour vous aider à protéger vos ressources de l’organisation. Pour en savoir plus sur les stratégies de conformité et sur les prérequis, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
+En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour protéger les ressources de votre organisation. Pour plus d’informations sur les stratégies de conformité et ce qu’elles permettent de faire, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-[Créer une stratégie de conformité](create-compliance-policy.md#create-the-policy). Pour **plateforme**, sélectionnez **Windows Phone 8.1** ou **Windows 8.1 et versions ultérieures**.
+[Créer une stratégie de conformité](create-compliance-policy.md#create-the-policy). Pour **Plateforme**, sélectionnez **Windows Phone 8.1** ou **Windows 8.1 et ultérieur**.
 
 ## <a name="device-properties"></a>Propriétés des appareils
 
-- **Système d’exploitation minimal requis**: entrez la version minimale autorisée. quand un appareil ne répond pas à la condition de version minimale du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut choisir de mettre à niveau son appareil pour pouvoir accéder aux ressources de l’entreprise.
-- **Version du système d’exploitation maximale autorisée**: entrez la version maximale autorisée. Quand un appareil utilise une version du système d’exploitation postérieure à la version entrée dans la règle, l’accès aux ressources de l’entreprise est bloqué. L’utilisateur est invité à contacter son administrateur informatique. L’appareil ne peut pas accéder aux ressources de l’organisation jusqu’à ce que vous changiez la règle pour qu’elle autorise cette version du système d’exploitation.
+- **Système d’exploitation minimal exigé** : entrez la version minimale autorisée. Quand un appareil ne répond pas à la condition de version minimale du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut choisir de mettre à niveau son appareil pour pouvoir accéder aux ressources de l’entreprise.
+- **Système d’exploitation maximal autorisé** : entrez la version maximale autorisée. Quand un appareil utilise une version du système d’exploitation postérieure à la version entrée dans la règle, l’accès aux ressources de l’entreprise est bloqué. L’utilisateur est invité à contacter son administrateur informatique. L’appareil ne peut pas accéder aux ressources de l’organisation jusqu’à ce que vous changiez la règle pour qu’elle autorise cette version du système d’exploitation.
 
-Les PC Windows 8.1 retournent la version **3**. Si la règle de la version du système d’exploitation est définie sur Windows 8.1 pour Windows, l’appareil est signalé comme non conforme même si Windows 8.1 est installé dessus.
+Les PC Windows 8.1 retournent la version **3**. Si la règle de version du système d’exploitation est définie sur Windows 8.1 pour Windows, l’appareil est signalé comme non conforme, même si Windows 8.1 y est installé.
 
 ## <a name="system-security"></a>Sécurité système
 
@@ -83,6 +83,6 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [utiliser des balises d’étendue pour filtrer les stratégies](scope-tags.md).
-- [Surveiller vos stratégies de conformité](compliance-policy-monitor.md).
-- Consultez le [les paramètres de stratégie de conformité pour Windows 10 et versions ultérieures](compliance-policy-create-windows.md) appareils.
+- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [Utiliser des étiquettes d’étendue pour filtrer les stratégies](scope-tags.md).
+- [Superviser vos stratégies de conformité](compliance-policy-monitor.md).
+- Consultez les [paramètres de stratégie de conformité pour les appareils Windows 10 et ultérieur](compliance-policy-create-windows.md).

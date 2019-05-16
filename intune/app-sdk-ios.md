@@ -604,7 +604,7 @@ L’application doit définir l’identité de façon appropriée, que l’utili
 
 À tout moment, chaque thread a une identité effective pour les tâches de l’interface utilisateur et celles relatives aux fichiers. Il s’agit de l’identité utilisée pour vérifier les stratégies qui doivent être appliquées, le cas échéant. Si l’identité est « aucune identité » ou si l’utilisateur n’est pas géré, aucune stratégie n’est appliquée. Les schémas ci-dessous montrent comment les identités effectives sont déterminées.
 
-  ![SDK d’application Intune pour iOS : processus de détermination d’identité](./media/ios-thread-identities.png)
+  ![SDK de l’application Intune pour iOS : Processus de détermination de l’identité](./media/ios-thread-identities.png)
 
 ### <a name="thread-queues"></a>Files d’attente de threads
 

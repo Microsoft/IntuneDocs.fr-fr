@@ -66,7 +66,7 @@ L’entité **DeviceTypes** représente le type d’appareil référencé par d�
 | 11 |Android |Appareil Android géré à l’aide de l’Administrateur d’appareil |
 | 12 |ISocConsumer |Appareil grand public iSoc |
 | 14 |MacMDM |Appareil Mac OS X géré avec l’agent MDM intégré |
-| 15 |HoloLens |Appareils HoloLens |
+| 15 |HoloLens |Appareil HoloLens |
 | 16 |SurfaceHub |Appareil Surface Hub |
 | 17 |AndroidForWork |Appareil Android géré à l’aide du Propriétaire de profil Android |
 | 100 |Blackberry |Appareil Blackberry |
@@ -167,10 +167,10 @@ L’entité **EnrollmentTypes** indique si un appareil est un appareil d’entre
 |---------|------------|--------|
 | ownerTypeID |Identificateur unique du type de propriétaire. | |
 | ownerTypeKey |Identificateur unique du type de propriétaire dans l’entrepôt de données (clé de substitution). | |
-| ownerTypeName |Représente le type de propriétaire des appareils :  <br>Entreprise - appareil est appartient à l’entreprise. <br>Personnel : il s’agit d’un appareil personnel (BYOD).  <br>Inconnu : aucune information n’est disponible sur cet appareil. |Entreprise personnel inconnu |
+| ownerTypeName |Représente le type de propriétaire des appareils :  <br>Entreprise : l’appareil appartient à l’entreprise. <br>Personnel : il s’agit d’un appareil personnel (BYOD).  <br>Inconnu : aucune information n’est disponible sur cet appareil. |Personnel d’entreprise inconnu |
 
 > [!Note]  
-> Pour le `ownerTypeName` dans Azure AD lors de la création de groupes dynamiques pour les appareils, vous devez définir la valeur de filtre `deviceOwnership` comme `Company`. Pour plus d’informations, consultez [règles pour les appareils](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Pour `ownerTypeName` dans Azure AD lors de la création de groupes dynamiques pour les appareils, vous devez définir la valeur de filtre `deviceOwnership` sur `Company`. Pour plus d’informations, consultez [Règles pour les appareils](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>ManagementStates
 

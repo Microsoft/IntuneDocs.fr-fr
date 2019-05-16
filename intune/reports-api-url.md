@@ -64,7 +64,7 @@ Utilisez la version bêta pour essayer les fonctionnalités les plus récentes d
 
 ## <a name="odata-query-options"></a>Options de requête OData
 
-La version actuelle prend en charge les paramètres de requête OData suivants : `$filter`, `$select`, `$skip,` et `$top`. Dans `$filter`, seuls `DateKey` ou `RowLastModifiedDateTimeUTC` peut être pris en charge lorsque les colonnes sont applicables, et autres propriétés déclenche une demande incorrecte.
+La version actuelle prend en charge les paramètres de requête OData suivants : `$filter`, `$select`, `$skip,` et `$top`. Dans `$filter`, seuls `DateKey` et `RowLastModifiedDateTimeUTC` sont pris en charge lorsque les colonnes sont applicables. En effet, les autres propriétés auraient pour effet de déclencher une requête incorrecte.
 
 ## <a name="datekey-range-filters"></a>Filtres de plage DateKey
 
@@ -84,4 +84,4 @@ Vous pouvez utiliser les filtres de plage `DateKey` pour limiter la quantité de
 |    `$filter=DateKey eq 20180214`                                 |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Complète                                      |    Retourner des données avec `DateKey` compris entre 20180214 et 20180220.                                     |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Complète                                      |    Retourner des données avec `DateKey` égal à 20180214. `maxhistorydays` est ignoré.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Complète                                       |    Retourne des données avec `RowLastModifiedDateTimeUTC` est supérieur ou égal à `2018-02-21T23:18:51.3277273Z`                             |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Complète                                       |    Retourne des données où `RowLastModifiedDateTimeUTC` a une valeur supérieure ou égale à `2018-02-21T23:18:51.3277273Z`                             |

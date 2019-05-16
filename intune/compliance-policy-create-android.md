@@ -1,6 +1,6 @@
 ---
-title: Créer une stratégie de conformité des appareils Android dans Microsoft Intune - Azure | Microsoft Docs
-description: Afficher la liste de tous les paramètres que vous pouvez utiliser lors de la définition de la conformité de vos appareils Android dans Microsoft Intune. Définir des règles de mot de passe, choisissez une version du système d’exploitation minimale ou maximale, restreindre des applications spécifiques, empêcher la réutilisation des mots de passe et bien plus encore.
+title: Paramètres de conformité des appareils Android dans Microsoft Intune - Azure | Microsoft Docs
+description: Découvrez la liste de tous les paramètres que vous pouvez utiliser lors de la configuration de la conformité pour vos appareils Android dans Microsoft Intune. Définissez des règles de mot de passe, choisissez une version minimale ou maximale pour le système d’exploitation, appliquez des restrictions pour certaines applications, empêchez la réutilisation d’un même mot de passe, etc.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -24,17 +24,17 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59423575"
 ---
-# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Android pour marquer les appareils conformes ou non conformes à l’aide d’Intune
+# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Android pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Cet article répertorie et décrit les paramètres de conformité différents que vous pouvez configurer sur les appareils Android dans Intune. Dans le cadre de votre solution de gestion des appareils mobiles, utilisez ces paramètres pour marquer les appareils rootés (jailbroken) comme non conforme, définissez un niveau de menace autorisée, activer Google Play Protect et bien plus encore.
+Cet article liste et décrit les différents paramètres de conformité que vous pouvez configurer sur les appareils Android dans Intune. Dans le cadre de votre solution MDM, vous pouvez utiliser ces paramètres pour marquer les appareils rootés (jailbreakés) comme étant non conformes, définir le niveau de menace autorisé, activer Google Play Protect, etc.
 
 Cette fonctionnalité s’applique à :
 
 - Android
 
-En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour vous aider à protéger vos ressources de l’organisation. Pour en savoir plus sur les stratégies de conformité et sur les prérequis, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
+En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour protéger les ressources de votre organisation. Pour plus d’informations sur les stratégies de conformité et ce qu’elles permettent de faire, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -49,7 +49,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
   - **Moyen** : l’appareil est jugé conforme si les menaces présentes sur celui-ci sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées sur l’appareil, celui-ci est considéré comme non conforme.
   - **Élevé** : cette option est la moins sécurisée, elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
 
-### <a name="google-play-protect"></a>Protéger de Google Play
+### <a name="google-play-protect"></a>Google Play Protect
 
 - **Google Play Services est configuré** : l’application Google Play Services **doit être impérativement** installée et activée. Google Play Services autorise les mises à jour de sécurité et constitue une dépendance de niveau de base pour de nombreuses fonctionnalités de sécurité sur les appareils Google certifiés. Quand vous choisissez **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 - **Fournisseur de sécurité à jour** : un fournisseur de sécurité à jour **doit** protéger l’appareil contre les vulnérabilités connues. Quand vous choisissez **Non configuré** (option par défaut), ce paramètre n’est pas évalué pour déterminer la conformité ou la non-conformité.
@@ -64,7 +64,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
   - **Vérifier l’intégrité de base et les appareils certifiés**
 
 > [!NOTE]
-> Pour configurer les paramètres Google Play Protect à l’aide de stratégies de protection des applications, consultez [paramètres de stratégie Intune app protection](app-protection-policy-settings-android.md#conditional-launch) sur Android.
+> Pour configurer les paramètres de Google Play Protect en utilisant des stratégies de protection des applications, consultez [Paramètres de stratégie de protection des applications Intune](app-protection-policy-settings-android.md#conditional-launch) sur Android.
 
 ## <a name="device-property-settings"></a>Paramètres de propriétés d’appareils
 
@@ -120,14 +120,14 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 ## <a name="locations"></a>Emplacements
 
-Dans votre stratégie, vous pouvez forcer la conformité par l’emplacement de l’appareil. Choisissez parmi des emplacements actuels. Vous n’avez pas encore d’emplacement ? L’article [Utiliser des emplacements (délimitation du réseau) dans Intune](use-network-locations.md) fournit quelques conseils.
+Dans votre stratégie, vous pouvez forcer la conformité selon l’emplacement de l’appareil. Choisissez parmi les emplacements existants. Vous n’avez pas encore d’emplacement ? L’article [Utiliser des emplacements (délimitation du réseau)](use-network-locations.md) dans Intune fournit des conseils.
 
-1. Choisissez **emplacements** > **sélectionnez emplacements**.
-2. Dans la liste, vérifiez votre emplacement > **sélectionnez**.
+1. Choisissez **Emplacements** > **Sélectionner les emplacements**.
+2. Dans la liste, vérifiez votre emplacement > **Sélectionner**.
 3. **Enregistrez** la stratégie.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [utiliser des balises d’étendue pour filtrer les stratégies](scope-tags.md).
-- [Surveiller vos stratégies de conformité](compliance-policy-monitor.md).
-- [Paramètres de stratégie de conformité pour Android Entreprise](compliance-policy-create-android-for-work.md)
+- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [Utiliser des étiquettes d’étendue pour filtrer les stratégies](scope-tags.md).
+- [Superviser vos stratégies de conformité](compliance-policy-monitor.md).
+- Consultez [Paramètres de stratégie de conformité pour les appareils Android Entreprise](compliance-policy-create-android-for-work.md).

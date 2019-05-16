@@ -28,7 +28,7 @@ ms.locfileid: "58799499"
 
 Sur les appareils gérés par MDM Microsoft Intune, les installations d’applications peuvent parfois échouer. Quand ces installations d’applications échouent, il peut être difficile de comprendre la raison de l’échec ou de résoudre le problème. Microsoft Intune fournit des détails sur l’échec de l’installation d’applications qui permettent aux opérateurs du support technique et aux administrateurs Intune d’afficher des informations sur l’application pour répondre aux demandes d’assistance des utilisateurs. Le volet de résolution des problèmes dans Intune fournit des détails sur l’échec, notamment des détails sur les applications managées sur l’appareil d’un utilisateur. Des informations détaillées sur le cycle de vie de bout en bout d’une application sont fournies sous chaque appareil individuel dans le volet **Applications managées**. Vous pouvez afficher les problèmes d’installation, par exemple quand l’application a été créée, modifiée, ciblée et remise à un appareil. 
 
-## <a name="app-troubleshooting-details"></a>Détails de résolution des problèmes d’application
+## <a name="app-troubleshooting-details"></a>Résolution des problèmes liés aux applications
 
 Intune fournit des informations de résolution des problèmes d’une application en fonction des applications installées sur l’appareil d’un utilisateur spécifique.
 
@@ -53,46 +53,46 @@ Les détails de l’erreur d’installation de l’application indiquent le prob
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="win32-app-installation-troubleshooting"></a>Dépannage de l’installation application Win32
+## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 
-Sélectionnez l’application Win32 qui a été déployée à l’aide de l’extension de gestion Intune. Vous pouvez sélectionner le **collecter les journaux** option en cas d’échec de l’installation de votre application Win32. 
+Sélectionnez l’application Win32 qui a été déployée à l’aide de l’extension de gestion Intune. Si l’installation de votre application Win32 échoue, vous pouvez sélectionner l’option **Collecter les journaux**. 
 
 > [!IMPORTANT]
-> Le **collecter les journaux** option ne sera pas activée lorsque l’application Win32 a été installée correctement sur l’appareil.<p>Avant de pouvoir collecter des informations du journal application Win32, l’extension de gestion Intune doit être installée sur le client Windows. L’extension de gestion Intune est installée lorsqu’un script PowerShell ou une application Win32 est déployé dans un groupe de sécurité d’utilisateurs ou d’appareils. Pour plus d’informations, consultez [extension de gestion Intune - conditions préalables](intune-management-extension.md#prerequisites).
+> L’option **Collecter les journaux** n’est pas activée si l’application Win32 a été installée correctement sur l’appareil.<p>Pour collecter les informations des journaux d’application Win32, vous devez avoir installé l’extension de gestion Intune sur le client Windows. L’extension de gestion Intune est installée lorsqu’un script PowerShell ou une application Win32 est déployé dans un groupe de sécurité d’utilisateurs ou d’appareils. Pour plus d’informations, consultez [Extension de gestion Intune - Prérequis](intune-management-extension.md#prerequisites).
 
 ### <a name="collect-log-file"></a>Collecter le fichier journal
 
-Pour collecter vos journaux d’installation application Win32, tout d’abord suivre les étapes fournies dans la section [application dépannage détails](troubleshoot-app-install.md#app-troubleshooting-details). Ensuite, passez aux étapes suivantes :
+Pour collecter vos journaux d’installation d’application Win32, vous devez d’abord suivre les étapes fournies dans la section [Résolution des problèmes liés aux applications](troubleshoot-app-install.md#app-troubleshooting-details). Ensuite, poursuivez avec les étapes suivantes :
 
-1. Cliquez sur le **collecter les journaux** option sur le **détails de l’Installation** panneau.
+1. Cliquez sur l’option **Collecter les journaux** située dans le panneau **Détails de l’installation**.
 
     <image alt="Win32 app installation details - Collect log option" src="media/troubleshoot-app-install-04.png" width="500" />
 
-2. Fournir des chemins d’accès du fichier journal des noms de fichiers pour le processus de collecte du fichier journal et cliquez sur **OK**.
+2. Pour démarrer le processus de collecte des fichiers journaux, indiquez leurs noms dans les chemins, puis cliquez sur **OK**.
     
     > [!NOTE]
-    > Collecte de journaux prendra moins de deux heures. Types de fichier pris en charge : *.log, .txt, .dmp, .cab, .zip, .xml, .evtx et .evtl*. Un maximum de 25 chemins d’accès de fichier sont autorisées.
+    > La durée de collecte des journaux est inférieure à deux heures. Types de fichiers pris en charge : *.log, .txt, .dmp, .cab, .zip, .xml, .evtx et .evtl*. Le nombre de chemins de fichiers est limité à 25.
 
-3. Une fois les fichiers journaux ont été collectés, vous pouvez sélectionner le **journaux** lien pour télécharger les fichiers journaux.
+3. Une fois que les fichiers journaux ont été collectés, vous pouvez sélectionner le lien **Journaux** pour télécharger les fichiers journaux.
 
     <image alt="Win32 app log details - Download logs" src="media/troubleshoot-app-install-05.png" width="500" />
 
     > [!NOTE]
-    > Une notification s’affichera indiquant la réussite de la collecte de journaux d’application.
+    > Une notification s’affiche pour indiquer que la collecte des journaux d’application a bien été effectuée.
 
-#### <a name="win32-log-collection-requirements"></a>Exigences de collection de journal de Win32
+#### <a name="win32-log-collection-requirements"></a>Conditions de collecte des journaux Win32
 
-Il existe des exigences spécifiques qui doivent être remplies pour collecter des fichiers journaux :
+Vous devez respecter certaines conditions pour collecter les fichiers journaux :
 
-- Vous devez spécifier le chemin d’accès du fichier journal complet. 
-- Vous pouvez spécifier des variables d’environnement pour la collecte de journaux, tels que les éléments suivants :<br>
-  *% PROGRAMFILES%, % PROGRAMDATA %VALUE% PUBLIQUE %, % WINDIR%, % TEMP%, %TMP%*
-- Uniquement les extensions de fichier exact sont autorisées, telles que :<br>
+- Vous devez spécifier le chemin complet du fichier journal. 
+- Vous pouvez spécifier des variables d’environnement pour la collecte de journaux, par exemple :<br>
+  *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
+- Seules les extensions de fichier exactes sont autorisées, par exemple :<br>
   *.log, .txt, .dmp, .cab, .zip, .xml*
-- Le fichier journal maximale à charger est 60 Mo 25 fichiers ou, selon la première éventualité. 
-- La collecte de journaux d’installation application Win32 est activée pour les applications qui répondent aux requis, disponible et désinstallez l’intention de l’attribution d’application.
-- Journaux stockées sont chiffrées pour protéger les informations d’identification personnelle contenues dans les journaux.
-- Bien que la prise en charge de l’ouverture des tickets pour les échecs d’application Win32, attacher les journaux d’erreur liée à l’aide de la procédure décrite ci-dessus.
+- Le nombre de fichiers journaux pouvant être chargés est limité à 25, et leur taille totale est limitée à 60 Mo. 
+- La collecte des journaux d’installation des applications Win32 est activée pour les applications qui répondent aux affectations d’applications de type « obligatoire », « disponible » et « désinstaller ».
+- Les journaux stockés sont chiffrés pour protéger les informations d’identification personnelle qu’ils peuvent contenir.
+- Lorsque vous créez un ticket de support pour un échec concernant une application Win32, envoyez les journaux d’erreurs associés à l’aide de la procédure décrite ci-dessus.
 
 ## <a name="app-installation-errors"></a>Erreurs d’installation des applications
 
@@ -114,7 +114,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 
 ### <a name="ios-errors"></a>Erreurs iOS
 
-| Message/Code d’erreur | Conseils de description/résolution des problèmes |
+| Message/Code d’erreur | Description/Conseils de dépannage |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (0x87D12906) | L’agent GPM d’Apple signale que la commande d’installation a échoué. |
 | (0x87D1313C) | La connexion réseau a été perdue pendant l’envoi de l’URL mise à jour du service de téléchargement vers l’appareil. Pour être plus précis, aucun serveur portant le nom d’hôte spécifié n’a été trouvé. |
@@ -126,16 +126,16 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 | L’utilisateur a refusé l’installation de l’application. (0x87D13B62) | Lors de la première installation de l’application, l’utilisateur a cliqué sur Annuler. |
 | L’utilisateur a refusé la mise à jour de l’application. (0x87D13B63) | L’utilisateur final a cliqué sur Annuler pendant le processus de mise à jour. |
 | Erreur inconnue (0x87D103E8) | Une erreur inconnue liée à l’installation de l’application s’est produite. Cette erreur s’affiche lorsqu’une erreur autre que celles connues se produit. |
-| Peut installer uniquement les applications VPP sur iPad partagé (-2016330861). | Les applications doivent être obtenues à l’aide du programme d’achat en Volume Apple pour installer sur un iPad partagé. |
-| Ne peut pas installer des applications lors de l’App Store est désactivé (-2016330860).  | L’application Store doit être activé pour l’utilisateur à installer l’application. |
-| Impossible de trouver les licences VPP pour l’application (-2016330859).  | Essayez de révoquer et en réaffectant la licence d’application. |
-| Impossible d’installer des applications système auprès de votre fournisseur de gestion des appareils mobiles (-2016330858). | Installation d’applications qui sont préinstallées par le système d’exploitation iOS n’est pas un scénario pris en charge. |
-| Ne peut pas installer des applications lors de l’appareil est en Mode perdu (-2016330857). | Toutes les utilisations de l’appareil sont bloquée en Mode perdu.   Désactiver le Mode perdu pour installer des applications. |
-| Ne peut pas installer des applications lors de l’appareil est en mode plein écran (-2016330856). | Essayez d’ajouter cet appareil à un groupe d’exclusion de stratégie de configuration du mode plein écran pour installer des applications. |
-| Impossible d’installer des applications 32 bits sur cet appareil (-2016330852). | L’appareil ne prend pas en charge l’installation des applications 32 bits. Essayez de déployer la version 64 bits de l’application. |
-| Utilisateur doit se connecter pour le Store de l’application (-2016330855). | L’utilisateur doit se connecter à l’App Store avant de l’application peut être installée. |
-| Problème inconnu. Veuillez recommencez (-2016330854). | Installation de l’application a échoué en raison d’une raison inconnue.   Réessayez plus tard. |
-| Échec de l’installation de l’application. Intune va tenter de la prochaine fois que le périphérique se synchronise (-2016330853). | Installation de l’application a rencontré une erreur de périphérique. Synchroniser l’appareil pour essayer à nouveau d’installer l’application. |
+| Peut installer uniquement les applications VPP sur un iPad partagé (-2016330861). | Vous devez passer par le programme d’achat en volume (VPP) Apple pour obtenir les applications si vous voulez les installer sur un iPad partagé. |
+| Impossible d’installer des applications si l’App Store est désactivé (-2016330860).  | L’App Store doit être activé pour que l’utilisateur puisse installer l’application. |
+| La licence VPP de l’application est introuvable (-2016330859).  | Essayez de révoquer puis de réaffecter la licence de l’application. |
+| Échec de l’installation d’applications système avec le fournisseur MDM (-2016330858). | L’installation d’applications préinstallées par le système d’exploitation iOS n’est pas prise en charge. |
+| Échec de l’installation d’applications quand l’appareil est en mode Perdu (-2016330857). | En mode Perdu, vous bloquez toute utilisation de l’appareil.   Désactivez le mode Perdu pour pouvoir installer des applications. |
+| Échec de l’installation d’applications quand l’appareil est en mode Kiosque (-2016330856). | Pour installer des applications, essayez d’ajouter cet appareil à un groupe d’exclusion de la stratégie de configuration du mode Kiosque. |
+| Impossible d’installer des applications 32 bits sur cet appareil (-2016330852). | L’appareil ne prend pas en charge l’installation des applications 32 bits. Essayez de déployer la version 64 bits de l’application. |
+| L’utilisateur doit se connecter à l’App Store (-2016330855). | L’utilisateur doit se connecter à l’App Store avant de pouvoir installer l’application. |
+| Problème inconnu. Veuillez recommencez (-2016330854). | L’installation de l’application a échoué en raison d’un problème inconnu.   Réessayez plus tard. |
+| Échec de l’installation de l’application. Intune retentera l’installation lors de la prochaine synchronisation de l’appareil (-2016330853). | Une erreur s’est produite lors de l’installation de l’application sur l’appareil. Synchronisez l’appareil pour retenter l’installation de l’application. |
 
 ### <a name="other-installation-errors"></a>Autres erreurs d’installation
 

@@ -281,7 +281,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 | 12           | ISocConsumer      | Appareil iSoc grand public                                |
 | 13           | Unix              | Appareil Unix                                         |
 | 14           | MacMDM            | Appareil Mac OS X géré avec l’agent GPM intégré |
-| 15           | HoloLens          | Appareils HoloLens                                       |
+| 15           | HoloLens          | Appareil HoloLens                                       |
 | 16           | SurfaceHub        | Appareil Surface Hub                                  |
 | 17           | AndroidForWork    | Appareil Android géré à l’aide du propriétaire de profil Android  |
 | 18           | AndroidEnterprise | Appareil Android Entreprise.                          |
@@ -434,9 +434,9 @@ L’entité **MamApplication** répertorie les applications métier qui sont gé
 
 | Propriété | Description | Exemple |
 |---------|------------|--------|
-| mamApplicationKey |Identificateur unique de l’application de gestion des applications mobiles. | 432 |
-| mamApplicationName |Nom de l’application de gestion des applications mobiles. |Nom de l’exemple Application GAM |
-| mamApplicationId |ID de l’application MAM. | 123 |
+| mamApplicationKey |Identificateur unique de l’application MAM. | 432 |
+| mamApplicationName |Nom de l’application MAM. |Exemple de nom d’application MAM |
+| mamApplicationId |ID d’application de l’application MAM. | 123 |
 | IsDeleted |Indique si cet enregistrement d’application GAM a été mis à jour. <br>True : l’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette application GAM. |Vrai/Faux |
 | StartDateInclusiveUTC |Date et heure UTC de création de cette application MAM dans l’entrepôt de données. |11/23/2016 12:00:00 AM |
 | DeletedDateUTC |Date et heure UTC de l’affectation de la valeur True à IsDeleted. |11/23/2016 12:00:00 AM |
@@ -453,15 +453,15 @@ L’entité **MamApplicationInstance** répertorie les applications GAM gérées
 |   ApplicationInstanceKey   |                                                               Identificateur unique de l’instance de l’application MAM dans l’entrepôt de données (clé de substitution).                                                                |                 123                  |
 |           UserId           |                                                                              ID de l’utilisateur ayant installé cette application MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Identificateur unique de l’instance de l’application MAM (semblable à ApplicationInstanceKey, mais l’identificateur est une clé naturelle).                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Id d’application de l’Application de gestion des applications mobiles pour lequel cette Instance d’Application GAM a été créée.   | 11/23/2016 12:00:00 AM   |
+| mamApplicationId | ID d’application de l’application MAM pour laquelle cette instance de l’application MAM a été créée.   | 11/23/2016 12:00:00 AM   |
 |     ApplicationVersion     |                                                                                     Version de cette application MAM.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Date de création de cet enregistrement de l’instance d’application GAM. La valeur peut être Null.                                                                 |        11/23/2016 12:00:00 AM        |
 |          Plate-forme          |                                                                          Plateforme de l’appareil sur lequel cette application MAM est installée.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Version de la plateforme de l’appareil sur lequel cette application MAM est installée.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Version du SDK MAM avec laquelle cette application MAM a été enveloppée (wrapped).                                                                            |                 3.2                  |
-| mamDeviceId | Id de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
-| mamDeviceType | Type d’appareil de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
-| mamDeviceName | Nom de l’appareil avec lequel l’Instance d’Application GAM est associé.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceId | ID d’appareil de l’appareil auquel l’instance de l’application MAM est associée.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceType | Type d’appareil de l’appareil auquel l’instance de l’application MAM est associée.   | 11/23/2016 12:00:00 AM   |
+| mamDeviceName | Nom d’appareil de l’appareil auquel l’instance de l’application MAM est associée.   | 11/23/2016 12:00:00 AM   |
 |         IsDeleted          | Indique si l’enregistrement de cette application GAM a été mis à jour. <br>True : cette instance d’application GAM a un nouvel enregistrement avec des champs mis à jour dans cette table. <br>False : dernier enregistrement pour cette instance d’application GAM. |              Vrai/Faux              |
 |   StartDateInclusiveUtc    |                                                              Date et heure UTC de création de cette instance d’application MAM dans l’entrepôt de données.                                                               |        11/23/2016 12:00:00 AM        |
 |       DeletedDateUtc       |                                                                             Date et heure UTC de l’affectation de la valeur True à IsDeleted.                                                                              |        11/23/2016 12:00:00 AM        |
@@ -479,7 +479,7 @@ L’entité **MamCheckin** représente les données collectées au moment de l�
 | DateKey |Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil est enregistré dans l’entrepôt de données. | 20160703 |
 | ApplicationInstanceKey |Clé de l’instance d’application associée à l’enregistrement de cette application MAM. | 123 |
 | UserKey |Clé de l’utilisateur associée à l’enregistrement de cette application MAM. | 4323 |
-| mamApplicationKey |Clé d’une Application associée avec vérification de l’Application de gestion des applications mobiles dans. | 432 |
+| mamApplicationKey |Clé d’application de l’application associée à l’enregistrement de l’application MAM. | 432 |
 | DeviceHealthKey |Clé de DeviceHealth associée à l’enregistrement de cette application MAM. | 321 |
 | PlatformKey |Représente la plateforme de l’appareil associé à l’enregistrement de cette application MAM. |123 |
 | LastCheckInDate |Date et heure du dernier enregistrement de cette application GAM. La valeur peut être Null. |11/23/2016 12:00:00 AM |
@@ -527,7 +527,7 @@ L’entité **ManagementAgentTypes** représente les agents utilisés pour gére
 | 5                     | EasIntuneClient                   | L’appareil est géré à la fois par Exchange Active Sync et par l’agent Intune PC. |
 | 8                     | ConfigManagerClient               | L’appareil est géré par l’agent System Center Configuration Manager.     |
 | 10                    | ConfigurationManagerClientMdm     | L’appareil est géré par Configuration Manager et par GPM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | L’appareil est géré par Configuration Manager, de gestion des appareils mobiles et d’Exchange Active Sync.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | L’appareil est géré par Configuration Manager, MDM et Exchange Active Sync.               |
 | 16                    | Unknown                           | Type d’agent de gestion inconnu                                              |
 | 32                    | Jamf                              | Les attributs des appareils sont extraits de Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  L’appareil est géré par les CloudDPC de Google.                                 |
@@ -586,10 +586,10 @@ L’entité **ownerType** indique si un appareil est un appareil d’entreprise,
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Identificateur unique du type de propriétaire.                                                                                                                                               |                            |
 | ownerTypeKey  | Identificateur unique du type de propriétaire dans l’entrepôt de données (clé de substitution).                                                                                                       |                            |
-| ownerTypeName | Représente le type de propriétaire des appareils : Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Entreprise personnel inconnu |
+| ownerTypeName | Représente le type de propriétaire des appareils : Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Personnel d’entreprise inconnu |
 
 > [!Note]  
-> Pour le `ownerTypeName` filtre dans Azure AD lors de la création de groupes dynamiques pour les appareils, vous devez définir la valeur `deviceOwnership` comme `Company`. Pour plus d’informations, consultez [règles pour les appareils](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Pour le filtre `ownerTypeName` dans Azure AD lors de la création de groupes dynamiques pour les appareils, vous devez définir la valeur de `deviceOwnership` sur `Company`. Pour plus d’informations, consultez [Règles pour les appareils](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>stratégies
 L’entité **Policy** répertorie les profils de configuration d’appareil, les profils de configuration d’application et les profils de conformité. Vous pouvez affecter les stratégies à un groupe de votre entreprise à l’aide de la gestion des appareils mobiles (MDM).

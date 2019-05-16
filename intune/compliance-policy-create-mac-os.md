@@ -1,11 +1,11 @@
 ---
-title: Créer une stratégie de conformité des appareils macOS dans Microsoft Intune - Azure | Microsoft Docs
-description: Créez ou configurez une stratégie de conformité des appareils Microsoft Intune pour permettre aux appareils macOS d’utiliser la protection de l’intégrité du système, définissez la version minimale et maximale du système d’exploitation, choisissez les exigences relatives aux mots de passe et chiffrez le stockage de données.
+title: Paramètres de conformité des appareils macOS dans Microsoft Intune - Azure | Microsoft Docs
+description: Découvrez la liste de tous les paramètres que vous pouvez utiliser lorsque vous configurez la conformité de vos appareils macOS dans Microsoft Intune. Exigez la protection de l’intégrité des systèmes Apple, définissez des restrictions de mot de passe, exigez un pare-feu, autorisez Gatekeeper, etc.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,47 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21eca671d40f1ee2f2f9176a272cab5754140a26
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: b3224e7400ad56f971488aba53bb073a0d33bb9d
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423643"
 ---
-# <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Ajouter une stratégie de conformité des appareils pour les appareils macOS avec Intune
+# <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres macOS pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
-Une stratégie de conformité des appareils macOS avec Intune détermine les règles et les paramètres que les appareils macOS doivent respecter pour être conformes. Quand vous utilisez des stratégies de conformité de l’appareil avec l’accès conditionnel, vous pouvez autoriser ou bloquer l’accès aux ressources d’entreprise. Vous pouvez également obtenir des rapports sur les appareils et prendre des mesures en cas de non-conformité. Des stratégies de conformité de l’appareil pour chaque plateforme peuvent être créées dans le portail Intune Azure. Pour en savoir plus sur les stratégies de conformité et sur les prérequis, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Le tableau suivant décrit la gestion des paramètres non conformes quand une stratégie de conformité est utilisée avec une stratégie d’accès conditionnel :
+Cet article liste et décrit les différents paramètres de conformité que vous pouvez configurer sur les appareils macOS dans Intune. Dans le cadre de votre solution de gestion des appareils mobiles, vous pouvez utiliser ces paramètres pour définir une version minimale ou maximale de système d’exploitation, définir l’expiration des mots de passe, etc.
 
----------------------------
+Cette fonctionnalité s’applique à :
 
-| Paramètre de stratégie | macOS 10.11 et ultérieur |
-| --- | --- |
-| **Configuration d’un code confidentiel ou mot de passe** | Corrigé |   
-| **Chiffrement de l’appareil** | Corrigé (en définissant le code confidentiel) |
-| **Profil de messagerie** | En quarantaine |
-|**Version minimale du système d’exploitation** | En quarantaine |
-| **Version maximale du système d’exploitation** | En quarantaine |
+- macOS
 
----------------------------
+En tant qu’administrateur de service Intune, utilisez ces paramètres de conformité pour protéger les ressources de votre organisation. Pour plus d’informations sur les stratégies de conformité et ce qu’elles permettent de faire, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
 
-**Corrigé** : le système d’exploitation de l’appareil applique la conformité. Par exemple, l’utilisateur est obligé de définir un code PIN.
+## <a name="before-you-begin"></a>Avant de commencer
 
-**En quarantaine** : le système d’exploitation de l’appareil n’applique pas la conformité. (Par exemple, les appareils Android n’obligent pas l’utilisateur à chiffrer l’appareil.) Quand l’appareil n’est pas conforme, les actions suivantes se produisent :
-
-- L’appareil est bloqué si une stratégie d’accès conditionnel s’applique à l’utilisateur.
-- Le portail d’entreprise informe l’utilisateur des problèmes de conformité.
-
-## <a name="create-a-device-compliance-policy"></a>Créer une stratégie de conformité des appareils
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. Pour l’option **Plateforme**, sélectionnez **macOS**. 
-5. Choisissez **Paramètres Configurer**, puis entrez les paramètres nécessaires pour les options **Intégrité de l’appareil**, **Propriétés de l’appareil** et **Sécurité du système** décrites dans cet article. Une fois que vous avez fini, sélectionnez **OK**, puis **Créer**.
+[Créer une stratégie de conformité](create-compliance-policy.md#create-the-policy). Pour l’option **Plateforme**, sélectionnez **macOS**.
 
 ## <a name="device-health"></a>Intégrité de l’appareil
 
-- **Exiger la protection de l’intégrité du système** : vous pouvez **exiger** que la [Protection de l’intégrité du système](https://support.apple.com/HT204899) soit activée sur les appareils macOS.
+- **Exiger la protection de l’intégrité du système** : vous pouvez **exiger** que la [Protection de l’intégrité du système](https://support.apple.com/HT204899) soit activée sur les appareils macOS (ouvre le site web d’Apple). Quand vous définissez la valeur **Non configuré** (par défaut), ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
 
 ## <a name="device-properties"></a>Propriétés des appareils
 
@@ -73,13 +58,13 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 - **Mots de passe simples** : choisissez **Bloquer** pour que les utilisateurs ne puissent pas créer de mots de passe simples, par exemple **1234** ou **1111**. Choisissez **Non configuré** pour permettre aux utilisateurs de créer des mots de passe tels que **1234** ou **1111**.
 - **Longueur minimale du mot de passe** : entrez le nombre minimal de chiffres ou de caractères du mot de passe.
 - **Type de mot de passe** : choisissez si un mot de passe doit comporter uniquement des caractères **numériques**, ou s’il doit comporter un mélange de chiffres et d’autres caractères (**alphanumériques**).
-- **Nombre de caractères non alphanumériques dans le mot de passe** : entrez le nombre minimal de caractères spéciaux (&, #, %, !, etc.) à inclure dans le mot de passe.
+- **Nombre de caractères non alphanumériques dans le mot de passe** : entrez le nombre minimal de caractères spéciaux (`&`, `#`, `%`, `!`, etc.) à inclure dans le mot de passe.
 
     Si vous définissez un nombre plus élevé, l’utilisateur doit créer un mot de passe plus complexe.
 
 - **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe.
 - **Expiration du mot de passe (jours)**  : sélectionnez le nombre de jours avant l’expiration du mot de passe de l’utilisateur et l’obligation d’en créer un autre.
-- **Nombre de mots de passe précédents avant d’autoriser leur réutilisation** : entrez le nombre d’anciens mots de passe qui ne peuvent pas être réutilisés.
+- **Nombre de mots de passe précédents avant d’autoriser leur réutilisation** : entrez le nombre d’anciens mots de passe qui ne peuvent pas être réutilisés.
 
     > [!IMPORTANT]
     > Quand les exigences de mot de passe sont changées sur un appareil macOS, elles n’entrent pas en vigueur tant que l’utilisateur ne change pas son mot de passe. Par exemple, si vous fixez la longueur minimale du mot de passe à huit chiffres et si l’appareil macOS a un mot de passe de six chiffres, il reste conforme jusqu’à ce que l’utilisateur mette à jour son mot de passe.
@@ -89,13 +74,16 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 - **Chiffrement du stockage de données sur l’appareil** : choisissez **Exiger** pour chiffrer le stockage des données sur vos appareils.
 
 ### <a name="device-security"></a>Sécurité du périphérique
+
 Le Pare-feu protège les appareils contre tout accès réseau non autorisé. Vous pouvez utiliser le Pare-feu afin de contrôler les connexions pour chaque application. 
 
-- **Pare-feu** : sélectionnez **Activer** pour protéger les appareils contre tout accès non autorisé. L’activation de cette fonctionnalité vous permet de gérer les connexions Internet entrantes et d’utiliser le mode furtif. L’option **Non configuré** (par défaut) laisse le Pare-feu désactivé, et le trafic réseau est autorisé (non bloqué).
-- **Connexions entrantes** : choisissez de **Bloquer** toutes les connexions réseau entrantes, à l’exception de celles nécessaires aux services Internet de base, par exemple DHCP, Bonjour et IPsec. Ce paramètre bloque également tous les services de partage, y compris le partage d’écran, l’accès à distance, le partage de musique iTunes, etc. L’option **Non configuré** (par défaut) autorise les connexions entrantes et les services de partage. 
-- **Mode furtif** : sélectionnez l’option **Activer** pour empêcher l’appareil de répondre aux demandes de sondage, qui peuvent provenir d’utilisateurs malveillants. Quand cette option est activée, l’appareil continue de répondre aux requêtes entrantes des applications autorisées. L’option **Non configuré** (par défaut) laisse le mode furtif désactivé.
+- **Pare-feu** : sélectionnez **Activer** pour protéger les appareils contre tout accès non autorisé. L’activation de cette fonctionnalité vous permet de gérer les connexions Internet entrantes et d’utiliser le mode furtif. L’option **Non configuré** (par défaut) laisse le Pare-feu désactivé, et le trafic réseau est autorisé (non bloqué).
+- **Connexions entrantes** : **bloque** toutes les connexions réseau entrantes, à l’exception des connexions nécessaires aux services Internet de base, par exemple DHCP, Bonjour et IPsec. Ce paramètre bloque également tous les services de partage, y compris le partage d’écran, l’accès à distance, le partage de musique iTunes, etc. L’option **Non configuré** (par défaut) autorise les connexions entrantes et les services de partage.
+- **Mode furtif** : sélectionnez l’option **Activer** pour empêcher l’appareil de répondre aux requêtes de sondage, qui peuvent provenir d’utilisateurs malveillants. Quand cette option est activée, l’appareil continue de répondre aux requêtes entrantes des applications autorisées. L’option **Non configuré** (par défaut) laisse le mode furtif désactivé.
 
 ### <a name="gatekeeper"></a>Gatekeeper
+
+Pour plus d’informations, consultez [Gatekeeper sur macOS](https://support.apple.com/HT202491) (ouvre le site web d’Apple).
 
 **Autoriser les applications téléchargées à partir de ces emplacements** : autorise l’installation des applications prises en charge sur vos appareils à partir de différents emplacements. Options d’emplacement :
 
@@ -104,19 +92,10 @@ Le Pare-feu protège les appareils contre tout accès réseau non autorisé. Vou
 - **Mac App Store et développeurs identifiés** : installer des applications pour le Mac App Store et par le biais de développeurs identifiés. macOS vérifie l’identité des développeurs et fait quelques autres vérifications portant sur l’intégrité de l’application. Si un utilisateur sélectionne Gatekeeper pour installer des applications en dehors de ces options, l’appareil est considéré comme non conforme.
 - **Partout** : les applications peuvent être installées depuis n’importe où et par n’importe quel développeur. Cette option est la moins sécurisée.
 
-Pour plus d’informations dans la documentation Apple, consultez [Gatekeeper sur macOS](https://support.apple.com/HT202491).
-
-## <a name="assign-user-groups"></a>Affectation de groupes d’utilisateurs
-
-1. Choisissez une stratégie que vous avez configurée. Les stratégies existantes se trouvent dans **Conformité de l’appareil** > **Stratégies**.
-2. Choisissez la stratégie, puis **Affectations**. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
-3. Choisissez **Groupes sélectionnés** pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Enregistrer** pour déployer la stratégie auprès des utilisateurs.
-
-> [!TIP]
-> Par défaut, les appareils vérifient la conformité toutes les huit heures. Toutefois, les utilisateurs peuvent forcer ce processus via l’application Portail d’entreprise Intune.
-
-Vous avez appliqué la stratégie à des utilisateurs. La conformité des appareils utilisés par les utilisateurs ciblés par la stratégie est évaluée.
+Sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
-[Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md)  
-[Surveiller les stratégies de conformité d’appareils Intune](compliance-policy-monitor.md)
+
+- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [Utiliser des balises d’étendue pour filtrer les stratégies](scope-tags.md).
+- [Superviser vos stratégies de conformité](compliance-policy-monitor.md).
+- Consultez [Paramètres de stratégie de conformité pour les appareils iOS](compliance-policy-create-ios.md).

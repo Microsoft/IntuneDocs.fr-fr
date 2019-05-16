@@ -29,7 +29,7 @@ Cet article liste et décrit tous les paramètres que vous pouvez contrôler sur
 Ces paramètres sont ajoutés à un profil de configuration d’appareil dans Intune, puis affectés ou déployés sur les appareils Windows 10.
 
 > [!Note]
-> Toutes les options ne sont pas disponibles dans toutes les éditions de Windows. Pour afficher les éditions prises en charge, reportez-vous à la [stratégie CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (ouvre un autre site web de Microsoft).
+> Toutes les options ne sont pas disponibles dans toutes les éditions de Windows. Pour voir les éditions prises en charge, reportez-vous à [Fournisseurs de services de configuration de stratégie](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (ouvre un autre site web Microsoft).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -138,15 +138,15 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)** : empêche un message d’erreur de s’afficher sur l’appareil si aucune carte SIM n’est détectée.
 - **Espace de travail Windows Ink** : empêche les utilisateurs d’accéder à l’espace de travail Windows Ink. **Non configuré** : l’espace de travail Windows Ink est activé et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
 - **Redéploiement automatique** : permet aux utilisateurs avec des droits d’administration de supprimer l’ensemble des données et des paramètres utilisateur à l’aide des touches **Ctrl+Win+R** sur l’écran de verrouillage de l’appareil. L’appareil est automatiquement reconfiguré et réinscrit dans la gestion.
-- **Demander aux utilisateurs de se connecter au réseau pendant la configuration de l’appareil (Windows Insider uniquement)** : choisissez **Exiger** pour que l’appareil se connecte à un réseau avant de passer à la page Réseau durant la configuration de Windows 10.
+- **Demander aux utilisateurs de se connecter au réseau pendant la configuration de l’appareil** : choisissez **Exiger** pour que l’appareil se connecte à un réseau avant d’aller au-delà de la page Réseau lors la configuration de Windows 10.
 
-  Le paramètre entre en vigueur la prochaine fois que l’appareil est réinitialisé ou réinitialisé. Comme toute autre configuration Intune, l’appareil doit être inscrits et géré par Intune pour recevoir des paramètres de configuration. Mais une fois qu’il est inscrit, et recevoir des stratégies, puis elle réinitialise l’appareil applique le paramètre lors de l’installation de Windows suivant.
+  Le paramètre entre en vigueur la prochaine fois que l’appareil est effacé ou réinitialisé. Comme pour les autres configurations Intune, l’appareil doit être inscrit et géré par Intune pour recevoir des paramètres de configuration. Mais une fois qu’il est inscrit et qu’il reçoit des stratégies, le fait de réinitialiser l’appareil applique le paramètre lors de l’installation suivante de Windows.
 
 - **Accès direct à la mémoire** : **Bloquer** empêche l’accès direct à la mémoire (DMA) pour tous les ports en aval PCI enfichables à chaud tant qu’un utilisateur ne se connecte pas à Windows. **Activé** (valeur par défaut) autorise l’accès à DMA, même lorsqu’un utilisateur n’est pas connecté.
 
   CSP : [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
-- **Mettre fin aux processus de Gestionnaire des tâches**: ce paramètre détermine si les utilisateurs non-administrateurs peuvent utiliser des Gestionnaire des tâches pour mettre fin aux tâches. L’option **Empêcher** empêche les utilisateurs standard (non-administrateurs) d’utiliser le Gestionnaire des tâches pour terminer un processus ou une tâche sur l’appareil. L’option **Non configuré** (par défaut) permet aux utilisateurs standard d’arrêter un processus ou une tâche à l’aide du Gestionnaire des tâches.
+- **Terminer les processus à partir du Gestionnaire des tâches** : ce paramètre détermine si les non-administrateurs peuvent utiliser le Gestionnaire des tâches pour mettre fin aux tâches. L’option **Empêcher** empêche les utilisateurs standard (non-administrateurs) d’utiliser le Gestionnaire des tâches pour terminer un processus ou une tâche sur l’appareil. L’option **Non configuré** (par défaut) permet aux utilisateurs standard d’arrêter un processus ou une tâche à l’aide du Gestionnaire des tâches.
 
 ## <a name="locked-screen-experience"></a>Expérience d’écran de verrouillage
 
@@ -165,30 +165,30 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="microsoft-edge-browser"></a>Navigateur Microsoft Edge
 
-### <a name="use-microsoft-edge-kiosk-mode"></a>Utiliser le mode plein écran Microsoft Edge
+### <a name="use-microsoft-edge-kiosk-mode"></a>Utiliser le mode kiosque Microsoft Edge
 
-Les paramètres disponibles varient selon que vous choisissez. Les options disponibles sont les suivantes :
+Les paramètres disponibles varient selon ce que vous choisissez. Les options disponibles sont les suivantes :
 
-- **Ne** (valeur par défaut) : Microsoft Edge n’est pas en cours d’exécution en mode plein écran. Tous les paramètres Microsoft Edge sont disponibles pour vous permettre de modifier et de configurer.
-- **Signalisation numérique/Interactive (application unique plein écran)**: paramètres de filtres Microsoft Edge qui sont applicables pour le mode de plein écran de Microsoft Edge de signalisation numérique/Interactive pour une utilisation uniquement sur les bornes d’application unique de Windows 10. Choisissez ce paramètre pour ouvrir une URL en plein écran et afficher uniquement le contenu sur ce site Web. [Configurer des signes numériques](https://docs.microsoft.com/windows/configuration/setup-digital-signage) fournit des informations sur cette fonctionnalité.
-- **Publique la navigation inPrivate (application unique plein écran)**: paramètres de filtres Microsoft Edge qui sont applicables pour le mode InPrivate navigation Microsoft Edge borne publique pour une utilisation sur les bornes d’application unique de Windows 10. Exécute une version de l’onglet multi de Microsoft Edge.
-- **Mode normal (kiosque multi-application)**: paramètres de filtres Microsoft Edge qui sont applicables pour le mode plein écran de Normal Microsoft Edge. Exécute une version complète de Microsoft Edge avec toutes les fonctionnalités de navigation.
-- **Navigation au public (kiosque multi-application)**: paramètres de filtres Microsoft Edge qui s’appliquent à la consultation publique sur un kiosque multi-application de Windows 10.  Exécute une version de l’onglet multi de InPrivate de Microsoft Edge.
+- **Non** (par défaut) : Microsoft Edge ne s’exécute pas en mode kiosque. Tous les paramètres de Microsoft Edge peuvent être changés et configurés.
+- **Signalisation numérique/interactive (application kiosque unique)**  : filtre les paramètres de Microsoft Edge qui sont applicables pour le mode kiosque Microsoft Edge de signalisation numérique/Interactive pour une utilisation seulement sur les kiosques mono-applications de Windows 10. Choisissez ce paramètre pour ouvrir une URL en plein écran et pour afficher le contenu seulement sur ce site web. [Configurer les signes numériques](https://docs.microsoft.com/windows/configuration/setup-digital-signage) fournit plus d’informations sur cette fonctionnalité.
+- **Navigation publique InPrivate (application kiosque unique)**  : filtre les paramètres de Microsoft Edge qui sont applicables pour le mode kiosque Microsoft Edge de navigation publique InPrivate pour une utilisation sur les kiosques mono-applications de Windows 10. Exécute une version multi-onglet de Microsoft Edge.
+- **Mode normal (kiosque multi-application)**  : filtre les paramètres de Microsoft Edge qui sont applicables pour le mode kiosque de Microsoft Edge normal. Exécute une version complète de Microsoft Edge avec toutes les fonctionnalités de navigation.
+- **Navigation publique (kiosque multi-application)**  : filtre les paramètres de Microsoft Edge qui s’appliquent à la navigation publique sur un kiosque multi-application de Windows 10.  Exécute une version multi-onglet de Microsoft Edge InPrivate.
 
 > [!TIP]
-> Pour plus d’informations sur les opérations de ces options, consultez [types de configuration de mode plein écran Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+> Pour plus d’informations sur ce que font ces options, consultez [Types de configuration du mode kiosque de Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-Ce profil de restrictions d’appareil est directement lié au profil plein écran vous créez à l’aide de la [paramètres de plein écran Windows](kiosk-settings-windows.md). Pour récapituler :
+Ce profil de restrictions d’appareil est directement lié au profil de kiosque que vous créez avec les [paramètres de kiosque de Windows](kiosk-settings-windows.md). Pour récapituler :
 
-1. Créer le [paramètres de plein écran Windows](kiosk-settings-windows.md) profil à exécuter l’appareil en mode plein écran. Sélectionnez Microsoft Edge en tant que l’application et définir le Mode plein écran de bord Microsoft dans le profil de plein écran.
-2. Créez le profil de restrictions d’appareil décrit dans cet article et configurer les paramètres autorisés dans Microsoft Edge et les fonctionnalités spécifiques. Veillez à choisir le même type de mode plein écran Microsoft Edge comme sélectionné dans votre profil de plein écran ([paramètres de plein écran Windows](kiosk-settings-windows.md)). 
+1. Créez le profil de [paramètres de kiosque de Windows](kiosk-settings-windows.md) pour exécuter l’appareil en mode kiosque. Sélectionnez Microsoft Edge comme application et définissez le mode kiosque de Microsoft Edge dans le profil de kiosque.
+2. Créez le profil de restrictions d’appareil décrit dans cet article et configurez les fonctionnalités et paramètres spécifiques autorisés dans Microsoft Edge. Veillez à choisir le même type de mode kiosque de Microsoft Edge que celui sélectionné dans votre profil de kiosque ([Paramètres de kiosque de Windows](kiosk-settings-windows.md)). 
 
-    [Prise en charge des paramètres du mode plein écran](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) est une ressource précieuse.
+    [Paramètres du mode kiosque pris en charge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) est une ressource précieuse.
 
 > [!IMPORTANT] 
-> Veillez à affecter ce profil Microsoft Edge pour les mêmes unités que celles de votre profil de plein écran ([paramètres de plein écran Windows](kiosk-settings-windows.md)).
+> Veillez à affecter ce profil Microsoft Edge aux mêmes appareils que ceux de votre profil de kiosque ([Paramètres de kiosque de Windows](kiosk-settings-windows.md)).
 
-[ConfigureKioskMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
+[Fournisseur de services de configuration ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Expérience de démarrage
 
@@ -208,11 +208,11 @@ Ce profil de restrictions d’appareil est directement lié au profil plein écr
 - **L’utilisateur peut modifier le bouton Accueil** : l’option **Autoriser** permet aux utilisateurs de modifier le bouton Accueil. Les modifications de l’utilisateur remplacent les paramètres de l’administrateur pour le bouton Accueil. **Non configuré** utilise le comportement par défaut du système d’exploitation sur l’appareil, ce qui empêcher les utilisateurs de changer la façon dont l’administrateur a configuré le bouton Accueil.
 - **Afficher la page Expérience de la première exécution** : **empêcher** l’affichage de la page d’introduction lors de la première exécution de Microsoft Edge. Cette fonctionnalité permet aux entreprises, notamment celles inscrites dans les configurations zéro émissions, de bloquer cette page. **Non configuré** affiche la page d’introduction.
   - **URL Expérience de la première exécution** : entrer l’URL de la page à afficher la première fois qu’un utilisateur exécute Microsoft Edge (Windows 10 Mobile uniquement).
-- **Actualisez le navigateur après la durée d’inactivité**: entrez le nombre de minutes inactifs jusqu'à ce que l’actualisation du navigateur, à partir de 0-1 440 minutes. Valeur par défaut est `5` minutes. Lorsque la valeur `0` (zéro), le navigateur n’actualise pas après une inactivité.
+- **Actualiser le navigateur après la durée d’inactivité** : entrez le nombre de minutes d’inactivité avant actualisation du navigateur, de 0 à 1 440 minutes. La valeur par défaut est de `5` minutes. Quand la valeur est `0` (zéro), le navigateur ne s’actualise pas après une période d’inactivité.
 
-  Ce paramètre est uniquement disponible lors de l’exécution [de navigation InPrivate Public (application unique plein écran)](#use-microsoft-edge-kiosk-mode).
+  Ce paramètre est disponible seulement lors de l’exécution en [navigation publique InPrivate (kiosque mono-application)](#use-microsoft-edge-kiosk-mode).
 
-  CSP : [ConfigureKioskResetAfterIdleTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskresetafteridletimeout)
+  Fournisseur de services de configuration : [ConfigureKioskResetAfterIdleTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskresetafteridletimeout)
 
 - **Fenêtres contextuelles** : choisir **Bloquer** pour arrêter les fenêtres contextuelles dans le navigateur. S’applique à Windows 10 Desktop uniquement. **Non configuré** autorise les fenêtres contextuelles dans le navigateur web.
 - **Envoyer le trafic intranet vers Internet Explorer** : **autorise** les utilisateurs à ouvrir des sites web intranet dans Internet Explorer au lieu de Microsoft Edge (Windows 10 Desktop uniquement). **Non configuré** autorise les utilisateurs à afficher Microsoft Edge.
@@ -245,11 +245,11 @@ Ce profil de restrictions d’appareil est directement lié au profil plein écr
   - Yahoo
   - Valeur personnalisée
 - **Suggestions de recherche** : **Non configuré** permet à votre moteur de recherche de suggérer des sites à mesure que vous saisissez des expressions de recherche dans la barre d’adresses. L’option **Bloquer** empêche cette fonctionnalité.
-- **Autoriser les modifications sur le moteur de recherche**: **Oui** (valeur par défaut) permet aux utilisateurs d’ajouter de nouveaux moteurs de recherche, ou modifier le moteur de recherche par défaut dans Microsoft Edge. Choisissez **non** pour empêcher les utilisateurs de personnaliser le moteur de recherche.
+- **Autoriser les changements du moteur de recherche** : **Oui** (par défaut) permet aux utilisateurs d’ajouter de nouveaux moteurs de recherche, ou de changer le moteur de recherche par défaut dans Microsoft Edge. Choisissez **Non** pour empêcher les utilisateurs de personnaliser le moteur de recherche.
 
-  Ce paramètre est uniquement disponible lors de l’exécution [mode Normal (kiosque multi-application)](#use-microsoft-edge-kiosk-mode).
+  Ce paramètre est disponible seulement lors de l’exécution en [mode normal (kiosque multi-application)](#use-microsoft-edge-kiosk-mode).
 
-  CSP : [AllowSearchEngineCustomization](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
+  Fournisseur de services de configuration : [AllowSearchEngineCustomization](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
 
 ### <a name="privacy-and-security"></a>Confidentialité et sécurité
 
@@ -308,29 +308,29 @@ Ce profil de restrictions d’appareil est directement lié au profil plein écr
   - **Empêcher la réutilisation des mots de passe précédents** : spécifie le nombre de mots de passe précédemment utilisés conservés par l’appareil.
   - **Exiger un mot de passe quand l’appareil sort d’un état d’inactivité (Mobile uniquement)** : spécifie que l’utilisateur doit entrer un mot de passe pour déverrouiller l’appareil (Windows 10 Mobile uniquement).
   - **Mots de passe simples** : permet d’utiliser des mots de passe simples, tels que 1111 ou 1234. Ce paramètre autorise ou bloque également l’utilisation des mots de passe d’image Windows.
-- **Chiffrement automatique durant AADJ**: **bloc** empêche le chiffrement automatique de l’appareil BitLocker lorsque l’appareil est préparée pour la première utilisation, quand l’appareil est joint à Azure AD. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, ce qui peut activer le chiffrement. Informations complémentaires sur [chiffrement BitLocker de l’appareil](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Chiffrement automatique durant AADJ** : **Bloquer** empêche le chiffrement automatique de l’appareil BitLocker quand l’appareil est préparé pour une première utilisation, quand l’appareil est joint à Azure AD. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, ce qui peut activer le chiffrement. Vous trouverez plus d’informations sur [Chiffrement d’appareil BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
-  [Sécurité/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+  [Fournisseur de services de configuration Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Stratégie de Federal FIPS Information Processing Standard ()**: **autoriser** utilise la stratégie Federal FIPS Information Processing Standard (), qui est un gouvernement des États-Unis standard pour le chiffrement, le hachage et la signature. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, qui n’utilise pas FIPS.
+- **Stratégie FIPS (Federal Information Processing Standard)**  : **Autoriser** utilise la stratégie FIPS, qui est une norme de l’administration américaine pour le chiffrement, le hachage et la signature. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, qui est de ne pas utiliser FIPS.
 
-  [Chiffrement/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+  [Fournisseur de services de configuration Cryptography/AllowFipsAlgorithmPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Authentification des appareils Windows Hello**: **autoriser** aux utilisateurs d’utiliser un appareil Windows Hello associé, tel qu’un téléphone, bande de Fitness (pertinence) ou l’appareil IoT, se pour connecter à un ordinateur Windows 10. **Ne pas configuré** (valeur par défaut) utilise le système d’exploitation par défaut, ce qui peut empêcher des appareils Windows Hello Compagnon de s’authentifier avec Windows.
+- **Authentification des appareils Windows Hello** : **Autoriser** les utilisateurs à utiliser un appareil mobile Windows Hello, comme un téléphone, un appareil de suivi d’activité physique ou un appareil IoT, pour se connecter à un ordinateur Windows 10. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, ce qui peut empêcher les appareils mobiles Windows Hello de s’authentifier auprès de Windows.
 
-  [Authentification/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+  [Fournisseur de services de configuration Authentication/AllowSecondaryAuthenticationDevice](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
-- **Connexion Web**: prise en charge pour les fournisseurs fédérée non-ADFS (Active Directory Federation Services), telles que Security Assertion Markup Language (SAML) de Windows permet d’ouverture de session. SAML utilise des jetons sécurisés qui fournissent l’expérience de navigateurs web une authentification-unique (SSO). Les options disponibles sont les suivantes :
+- **Connexion web** : active la prise en charge de l’ouverture de session Windows pour les fournisseurs fédérés non-ADFS (Active Directory Federation Services), comme SAML (Security Assertion Markup Language). SAML utilise des jetons sécurisés qui fournissent une expérience d’authentification unique aux navigateurs web. Les options disponibles sont les suivantes :
 
-  - **Ne pas configuré** (valeur par défaut) : utilise la valeur par défaut du système d’exploitation sur l’appareil.
-  - **Activé**: le fournisseur d’informations d’identification Web est activé pour la connexion.
-  - **Désactivé**: le fournisseur d’informations d’identification Web est désactivé pour la connexion.
+  - **Non configuré** (par défaut) : utilise la valeur par défaut du système d’exploitation sur l’appareil.
+  - **Activé** : le fournisseur d’informations d’identification web est activé pour la connexion.
+  - **Désactivé** : le fournisseur d’informations d’identification web est désactivé pour la connexion.
 
-  [Authentification/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
+  [Fournisseur de services de configuration Authentication/EnableWebSignIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
 
-- **Par défaut le domaine du locataire Azure AD**: entrez un nom de domaine existant dans votre organisation Azure AD. Lorsque les utilisateurs dans ce domaine se connectent, ils n’ont pas à taper le nom de domaine. Par exemple, entrez `contoso.com`. Les utilisateurs dans le `contoso.com` domaine peut se connecter à l’aide de son nom d’utilisateur, tels que « abby », au lieu de «abby@contoso.com».
+- **Domaine de locataire Azure AD par défaut** : entrez un nom de domaine existant dans votre organisation Azure AD. Quand des utilisateurs de ce domaine se connectent, ils n’ont pas besoin de taper le nom de domaine. Par exemple, entrez `contoso.com`. Les utilisateurs du domaine `contoso.com` peuvent se connecter en utilisant leur nom d’utilisateur, comme « abby », au lieu de « abby@contoso.com ».
 
-  [Authentification/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
+  [Fournisseur de services de configuration Authentication/PreferredAadTenantDomainName](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Exceptions de confidentialité par application
 
@@ -356,7 +356,7 @@ Vous pouvez ajouter des applications qui doivent avoir un comportement de confid
 - **Téléphone** : définir si cette application peut accéder au téléphone.
 - **Radios** : certaines applications utilisent des signaux radio, comme Bluetooth, dans votre appareil pour envoyer et recevoir des données, et doivent activer et désactiver ces signaux radio. Définissez si cette application peut contrôler ces signaux radio.
 - **Tâches** : définir si cette application peut accéder à vos tâches.
-- **Appareils de confiance**: choisissez si cette application peut utiliser des appareils de confiance. Les appareils de confiance sont des appareils déjà connectés ou ayant été fournis avec l’appareil. Par exemple, utilisez des téléviseurs, des projecteurs, etc. comme appareils de confiance.
+- **Appareils de confiance** : choisissez si cette application peut utiliser des appareils de confiance. Les appareils de confiance sont des appareils déjà connectés ou ayant été fournis avec l’appareil. Par exemple, utilisez des téléviseurs, des projecteurs, etc. comme appareils de confiance.
 - **Commentaires et diagnostics** : définir si cette application peut accéder aux informations de diagnostic.
 - **Synchroniser avec les appareils** : choisir si cette application peut automatiquement partager et synchroniser des informations avec des appareils sans fil qui ne sont pas explicitement jumelés avec l’appareil.
 
@@ -396,7 +396,7 @@ Vous pouvez configurer les informations auxquelles toutes les applications sur l
 - **Téléphone** : définir si cette application peut accéder au téléphone.
 - **Radios** : certaines applications utilisent des signaux radio, comme Bluetooth, dans votre appareil pour envoyer et recevoir des données, et doivent activer et désactiver ces signaux radio. Définissez si cette application peut contrôler ces signaux radio.
 - **Tâches** : définir si cette application peut accéder à vos tâches.
-- **Appareils de confiance**: choisissez si cette application peut utiliser des appareils de confiance. Les appareils de confiance sont des appareils déjà connectés ou ayant été fournis avec l’appareil. Par exemple, utilisez des téléviseurs, des projecteurs, etc. comme appareils de confiance.
+- **Appareils de confiance** : choisissez si cette application peut utiliser des appareils de confiance. Les appareils de confiance sont des appareils déjà connectés ou ayant été fournis avec l’appareil. Par exemple, utilisez des téléviseurs, des projecteurs, etc. comme appareils de confiance.
 - **Commentaires et diagnostics** : choisir si cette application peut accéder aux informations de diagnostic.
 - **Synchroniser avec les appareils** - Définir si cette application peut automatiquement partager et synchroniser des informations avec des appareils sans fil qui ne sont pas explicitement jumelés avec ce PC, cette tablette ou ce téléphone.
 
@@ -494,7 +494,7 @@ Vous pouvez configurer les informations auxquelles toutes les applications sur l
 - **Accès de l'utilisateur final à Defender** : détermine si l'interface utilisateur de Windows Defender est masquée aux utilisateurs finaux. Quand ce paramètre est modifié, le changement est appliqué au prochain redémarrage de l’ordinateur de l’utilisateur final.
 - **Intervalle de mise à jour des signatures (en heures)** : entrez l’intervalle auquel Defender vérifie les nouveaux fichiers de signatures.
 - **Surveiller l’activité des fichiers et des programmes** : autorise Defender à surveiller l’activité des fichiers et des programmes sur des appareils.
-- **Jours avant la suppression des logiciels malveillants en quarantaine**: poursuivre le suivi des programmes malveillants résolus pendant le nombre de jours que vous entrez afin que vous puissiez vérifier manuellement les appareils précédemment affectés. Si vous définissez le nombre de jours du suivi sur **0**, les logiciels malveillants restent dans le dossier de quarantaine et ne sont pas automatiquement supprimés.
+- **Nombre de jours avant la suppression des programmes malveillants en quarantaine** : continuer le suivi des logiciels malveillants résolus pendant le nombre de jours que vous entrez, pour vous permettre de vérifier manuellement les appareils précédemment affectés. Si vous définissez le nombre de jours du suivi sur **0**, les logiciels malveillants restent dans le dossier de quarantaine et ne sont pas automatiquement supprimés.
 - **Limite de l'utilisation du processeur pendant une analyse** : limitez la quantité de ressources du processeur que les analyses sont autorisées à utiliser, de **1** à **100**.
 - **Analyser les fichiers d’archive** : permet à Defender d’analyser les fichiers archivés tels que les archives .zip ou .cab.
 - **Analyser les e-mails entrants** : permet à Defender d’analyser les e-mails quand ils arrivent sur l’appareil.
@@ -502,31 +502,31 @@ Vous pouvez configurer les informations auxquelles toutes les applications sur l
 - **Analyser les lecteurs réseau mappés lors d'une analyse complète** : permet à Defender d’analyser les fichiers sur un lecteur réseau mappé.
   Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
 - **Analyser les fichiers ouverts à partir de dossiers réseau** : permet à Defender d’analyser les fichiers sur des lecteurs réseau partagés (par exemple les fichiers accessibles à partir d’un chemin UNC). Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
-- **Protection du cloud** : autorise ou empêche Microsoft Active Protection Service de recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. Ces informations améliorent le service à l’avenir.
+- **Protection du cloud** : autorise ou empêche Microsoft Active Protection Service de recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. Ces informations permettront d’améliorer le service dans le futur.
 - **Demander confirmation aux utilisateurs avant l’envoi d’un échantillon** : contrôle si les fichiers potentiellement malveillants susceptibles de nécessiter une analyse plus approfondie sont envoyés automatiquement à Microsoft.
-- **Le temps d’effectuer une analyse rapide quotidienne**: choisissez l’heure pour exécuter une analyse rapide quotidienne. **Ne pas configuré** ne s’exécute pas une analyse quotidienne. Si vous souhaitez davantage de personnalisation, configurez le **Type d’analyse système à effectuer** paramètre.
+- **Heure de l’analyse rapide quotidienne** : choisissez l’heure à laquelle exécuter une analyse rapide quotidienne. **Non configuré** : n’exécute pas d’analyse quotidienne. Si vous voulez davantage de personnalisation, configurez le paramètre **Type d’analyse système à effectuer**.
 
-  [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
-- **Type d’analyse système à effectuer**: planifier une analyse du système, y compris le niveau de l’analyse et le jour et l’heure pour exécuter l’analyse. Les options disponibles sont les suivantes :
-  - **Ne pas configuré**: ne planifier une analyse système sur l’appareil. Les utilisateurs finaux peuvent exécuter manuellement des analyses comme nécessaire ou souhaité sur leurs appareils.
-  - **Désactiver**: désactive n’importe quel système d’analyse sur l’appareil. Choisissez cette option si vous utilisez une solution de protection contre les virus de partenaire qui analyse les appareils.
-  - **Analyse rapide**: examine les emplacements courants où il peut y avoir des programmes malveillants enregistrés, tels que les clés de Registre et connu les dossiers de démarrage de Windows.
-    - **Jour planifié**: choisissez la journée pour exécuter l’analyse.
-    - **Heure planifiée**: choisissez l’heure à exécuter l’analyse.
-  - **Analyse complète**: examine les emplacements courants où il pourrait y avoir contre les programmes malveillants inscrit et qu’il analyse également tous les fichiers et dossiers sur l’appareil.
-    - **Jour planifié**: choisissez la journée pour exécuter l’analyse.
-    - **Heure planifiée**: choisissez l’heure à exécuter l’analyse.
+  [Fournisseur de services de configuration Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+- **Type d’analyse système à effectuer** : planifier une analyse du système, notamment le niveau de l’analyse, et le jour et l’heure auxquels exécuter l’analyse. Les options disponibles sont les suivantes :
+  - **Non configuré** : ne planifie d’analyse système sur l’appareil. Les utilisateurs finaux peuvent exécuter manuellement des analyses selon ce qui est nécessaire ou souhaité sur leurs appareils.
+  - **Désactiver** : désactive les systèmes d’analyse sur l’appareil. Choisissez cette option si vous utilisez une solution anti-virus d’un partenaire qui analyse les appareils.
+  - **Analyse rapide** : examine les emplacements habituels où des programmes malveillants pourraient être inscrits, comme les clés du Registre et les dossiers de démarrage de Windows connus.
+    - **Jour planifié** : choisissez le jour où exécuter l’analyse.
+    - **Heure planifiée** : choisissez l’heure où exécuter l’analyse.
+  - **Analyse complète** : examine les emplacements habituels où des programmes malveillants pourraient être inscrits, et analyse également tous les fichiers et dossiers sur l’appareil.
+    - **Jour planifié** : choisissez le jour où exécuter l’analyse.
+    - **Heure planifiée** : choisissez l’heure où exécuter l’analyse.
 
-  Ce paramètre peut entrer en conflit avec le **le temps d’effectuer une analyse rapide quotidienne** paramètre. Quelques recommandations :
+  Ce paramètre peut entrer en conflit avec le paramètre **Heure de l’analyse rapide quotidienne**. Quelques recommandations :
 
-  - Pour exécuter une analyse rapide quotidienne, configurer le **le temps d’effectuer une analyse rapide quotidienne** paramètre.
-  - Pour exécuter une analyse rapide quotidienne et une analyse complète chaque semaine, puis configurez le **le temps d’effectuer une analyse rapide quotidienne**et définissez **Type d’analyse système à effectuer** pour une analyse complète avec le jour et l’heure.
-  - Ne configurez pas le **le temps d’effectuer une analyse rapide quotidienne** définir simultanément avec le **Type d’analyse système à effectuer** définie sur **analyse rapide**. Ces paramètres peuvent être en conflit, et une analyse peut ne pas fonctionner.
-  - Pour exécuter une analyse rapide tous les mardis à 6 h 00, configurer le **Type d’analyse système à effectuer** paramètre.
+  - Pour exécuter une analyse rapide quotidienne, configurez le paramètre **Heure de l’analyse rapide quotidienne**.
+  - Pour exécuter une analyse rapide quotidienne et une analyse complète chaque semaine, configurez **Heure de l’analyse rapide quotidienne** et définissez **Type d’analyse système à effectuer** sur une analyse complète avec le jour et l’heure.
+  - Ne configurez pas le paramètre **Heure de l’analyse rapide quotidienne** en combinaison avec **Type d’analyse système à effectuer** défini sur **Analyse rapide**. Ces paramètres peuvent être en conflit, l’analyse pouvant alors ne pas s’exécuter.
+  - Pour exécuter une analyse rapide tous les mardis à 6h00, configurez le paramètre **Type d’analyse système à effectuer**.
 
-  [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
-  [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
-  [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
+  [Fournisseur de services de configuration Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
+  [Fournisseur de services de configuration Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Fournisseur de services de configuration Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Détecter les applications potentiellement indésirables** : choisissez le niveau de protection quand Windows détecte des applications potentiellement indésirables, parmi les niveaux suivants :
   - **Bloquer**

@@ -33,34 +33,34 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-[Créer un profil de configuration des restrictions de périphérique](device-restrictions-configure.md#create-the-profile).
+[Créez un profil de configuration pour les restrictions appliquées aux appareils](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Général
 
 - **Partager des données d’utilisation** : choisissez **Bloquer** pour empêcher l’appareil d’envoyer des données de diagnostic et d’utilisation à Apple. L’option (par défaut) **Non configuré** autorise l’envoi de ces données.
-  - **Modification de paramètres d’envoi de Diagnostics (mode supervisée uniquement)**: **bloc** empêche l’utilisateur de modifier les présentation et application analytique les paramètres de diagnostic dans **d’utilisationetdediagnostic**(réglages de l’appareil). L’option (par défaut) **Non configuré**permet à l’utilisateur de modifier ces paramètres d’appareil.
+  - **Modification des paramètres d’envoi des diagnostics (mode supervisé uniquement)**  : l’option **Bloquer** empêche l’utilisateur de modifier les paramètres d’envoi des diagnostics et d’analyse des applications du volet **Diagnostics et utilisation** (paramètres de l’appareil). L’option (par défaut) **Non configuré**permet à l’utilisateur de modifier ces paramètres d’appareil.
 
     Cette fonctionnalité s’applique à :  
     - iOS 9.3.2 et versions ultérieures
 
-- **Capture d’écran** : choisissez **Bloquer** pour empêcher les captures d’écran sur l’appareil. Dans iOS 9.0 et versions ultérieures, cela inclut également des enregistrements d’écran de blocage. L’option (par défaut) **Non configuré** autorise l’utilisateur à capturer le contenu de l’écran en tant qu’image ou vidéo.
+- **Capture d’écran** : choisissez **Bloquer** pour empêcher les captures d’écran sur l’appareil. Dans iOS 9.0 et ultérieur, cela bloque également les enregistrements d’écran. L’option (par défaut) **Non configuré** autorise l’utilisateur à capturer le contenu de l’écran en tant qu’image ou vidéo.
   - **Observation de l’écran à distance avec l’application Classroom (mode supervisé uniquement)** : choisissez l’option **Bloquer** pour empêcher l’application Classroom d’observer à distance l’écran de l’appareil. L’option (par défaut) **Non configuré** autorise l’application Apple Classroom à afficher l’écran.
 
     Cette fonctionnalité s’applique à :  
     - iOS 9.3 et version ultérieure
 
-  - **Observation des écrans sans invite par l’application En classe (mode supervisé uniquement)** : si cette option est définie sur **Autoriser**, les enseignants peuvent observer en mode silencieux l’écran des appareils iOS des étudiants qui n’en sont pas avertis à l’aide de l’application En classe. Les appareils des étudiants inscrits dans une classe et qui utilisent l’application Classroom accordent automatiquement une autorisation à l’enseignant de cette classe. **Ne pas configuré** (valeur par défaut) empêche cette fonctionnalité.
-- **Certificats TLS non approuvés** : choisissez l’option **Bloquer** pour empêcher les certificats Transport Layer Security (TLS) non autorisés sur l’appareil. **Ne pas configuré** (valeur par défaut) autorise les certificats TLS.
+  - **Observation des écrans sans invite par l’application En classe (mode supervisé uniquement)** : si cette option est définie sur **Autoriser**, les enseignants peuvent observer en mode silencieux l’écran des appareils iOS des étudiants qui n’en sont pas avertis à l’aide de l’application En classe. Les appareils des étudiants inscrits dans une classe et qui utilisent l’application Classroom accordent automatiquement une autorisation à l’enseignant de cette classe. **Non configuré** (par défaut) désactive cette fonctionnalité.
+- **Certificats TLS non approuvés** : choisissez l’option **Bloquer** pour empêcher les certificats Transport Layer Security (TLS) non autorisés sur l’appareil. L’option **Non configuré** (par défaut) autorise les certificats TLS.
 - **Approbation des applications d’entreprise** : choisissez **Bloquer** pour supprimer le bouton **Approuver Enterprise Developer** du menu Paramètres > Général > Profils et gestion des appareils sur l’appareil. L’option (par défaut) **Non configuré** permet à l’utilisateur de choisir de faire confiance aux applications qui n’ont pas été téléchargées sur l’App Store.
 - **Modification de compte (mode supervisé uniquement)**  : si cette option est définie sur **Bloquer**, l’utilisateur ne peut pas mettre à jour les paramètres spécifiques à l’appareil dans l’application Réglages d’iOS. Par exemple, l’utilisateur ne peut ni créer de nouveaux comptes d’appareils ni modifier le nom d’utilisateur ou le mot de passe. L’option (par défaut) **Non configuré** permet aux utilisateurs de modifier ces paramètres.
 
   Cette fonctionnalité s’applique également aux options accessibles à partir des applications iOS comme Mail, Contacts, Calendrier, Twitter, etc. Elle ne s’applique pas aux applications avec des paramètres de compte qui ne sont pas configurables à partir des applications iOS comme Microsoft Outlook.
-- **Écran de temps (mode supervisé uniquement)**: choisissez **bloc** pour empêcher les utilisateurs de définir leurs propres restrictions dans le temps de l’écran (paramètres du périphérique). **Ne pas configuré** permet à l’utilisateur configurer les restrictions d’appareil (par exemple, le contrôle parental ou contenu et restrictions de confidentialité) sur l’appareil.
+- **Heure de l’écran (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher les utilisateurs de définir leurs propres restrictions concernant l’heure de l’écran (paramètres de l’appareil). L’option **Non configuré** permet à l’utilisateur de configurer des restrictions sur l’appareil (par exemple, le contrôle parental ou les restrictions liées au contenu et à la confidentialité).
 
-  Ce paramètre a été renommé **activation des restrictions dans les paramètres de périphérique**. Impact de cette modification :  
+  Ce paramètre s’appelait autrefois **Activation des restrictions dans les paramètres de l’appareil**. Impact de cette modification :  
   
-  - iOS 11.4.1 et versions antérieures : **Bloquer** empêche les utilisateurs finaux de définir leurs propres restrictions dans les paramètres de l’appareil. Ceci est le même ; et n’a pas changé pour les utilisateurs finaux.
-  - iOS 12.0 et versions ultérieures : **bloc** interdit aux utilisateurs de définir leurs propres **écran temps** dans les paramètres de périphérique (Paramètres > Général > heure de l’écran), notamment les restrictions de contenu et de confidentialité. Appareils mis à niveau vers iOS 12.0 ne verrez pas plus de l’onglet restrictions dans les paramètres de périphérique (Paramètres > Général > Gestion des appareils > profil de gestion > Restrictions). Ces paramètres se trouvent dans **Heure de l’écran**.
+  - iOS 11.4.1 et versions antérieures : **Bloquer** empêche les utilisateurs finaux de définir leurs propres restrictions dans les paramètres de l’appareil. Il s’agit du même paramètre, et rien ne change pour les utilisateurs finaux.
+  - iOS 12.0 et versions ultérieures : l’option **Bloquer** empêche les utilisateurs de définir leur propre **Heure de l’écran** dans les paramètres de l’appareil (Paramètres > Général > Heure de l’écran), notamment les restrictions de contenu et de confidentialité. Les appareils mis à niveau vers iOS 12.0 n’affichent plus l’onglet Restrictions dans les paramètres de l’appareil (Paramètres > Général > Gestion des appareils > Profil de gestion > Restrictions). Ces paramètres se trouvent dans **Heure de l’écran**.
   
 - **Utiliser la réinitialisation de tous les paramètres et du contenu sur l’appareil (mode supervisé uniquement)** : choisissez **Bloquer** pour empêcher les utilisateurs d’utiliser l’option de réinitialisation de tout le contenu et de tous les paramètres sur l’appareil (mode supervisé uniquement). L’option (par défaut) **Non configuré** permet aux utilisateurs d’accéder à ces paramètres.
 - **Modification du nom de l’appareil (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher toute modification du nom de l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisateur à modifier le nom de l’appareil.
@@ -70,38 +70,38 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Modifications au profil de configuration (mode supervisé uniquement)** : choisissez **Bloquer** pour empêcher l’utilisateur de modifier le profil de configuration sur l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisateur à installer des profils de configuration.
 - **Verrou d’activation (mode supervisé uniquement)** : choisissez **Autoriser** pour activer le verrou d’activation sur les appareils iOS supervisés. Le verrouillage d'activation rend plus difficile la réactivation d'un appareil perdu ou volé.
 - **Bloquer la suppression d’applications (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des applications. L’option (par défaut) **Non configuré** autorise les utilisateurs à supprimer des applications de l’appareil.
-- **Bloque le mode USB restreint (mode supervisé uniquement)**  : choisissez **Bloquer** pour désactiver le mode USB restreint sur les appareils supervisés. Le mode USB restreint empêche les accessoires USB d'échanger des données avec un appareil verrouillé depuis plus d'une heure. **Ne pas configuré** (valeur par défaut) permet de mode USB restreint.
+- **Bloque le mode USB restreint (mode supervisé uniquement)**  : choisissez **Bloquer** pour désactiver le mode USB restreint sur les appareils supervisés. Le mode USB restreint empêche les accessoires USB d'échanger des données avec un appareil verrouillé depuis plus d'une heure. L’option **Non configuré** (par défaut) autorise le mode USB restreint.
 - **Application de la date et de l’heure automatique (mode supervisé uniquement)**  : **activez** cette option pour forcer les appareils supervisés à définir automatiquement la date et l’heure. Le fuseau horaire de l’appareil est mis à jour quand l’appareil se connecte à des réseaux cellulaires ou si les services de localisation ont été activés en mode Wi-Fi.
 - **Require students to request permission to leave Classroom course (supervised only)** (Obliger les élèves à demander l’autorisation de quitter le cours Classroom - mode supervisé uniquement) : **activez** cette option pour obliger les élèves inscrits à un cours non managé et qui utilisent l’app Classroom à demander à l’enseignant l’autorisation de quitter le cours. L’option (par défaut) **Non configuré** dispense les étudiants de demander une autorisation.
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.3 et versions ultérieures
 
-- **Autoriser la classe verrouiller à une application et de verrouiller l’appareil sans demander confirmation (mode supervisé uniquement)**: **activer** permet des enseignants verrouiller des applications ou de verrouillage de l’appareil à l’aide de l’application Classroom sans solliciter l’étudiant. Applications moyens de verrouillage l’appareil ne peut professeur d’accès des applications spécifiées. **Ne pas configuré** (valeur par défaut) empêche les enseignants de verrouiller des applications ou des appareils à l’aide de l’application Classroom sans solliciter l’étudiant. 
+- **Autoriser Classroom à verrouiller une application et verrouiller l’appareil sans envoyer d’invite (mode supervisé uniquement)**  : **Activer** permet aux enseignants de verrouiller les applications ou de verrouiller l’appareil à l’aide de l’application Classroom, sans en informer l’étudiant. Le verrouillage des applications signifie que l’appareil peut uniquement accéder aux applications qui ont été spécifiées par l’enseignant. **Non configuré** (par défaut) empêche les enseignants de verrouiller les applications ou les appareils à l’aide de l’application Classroom sans en informer l’étudiant. 
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
-- **Joindre automatiquement des classes de la classe sans invite (mode supervisé uniquement)**: **activer** automatiquement permet aux étudiants de joindre une classe qui se trouve dans l’application Classroom sans solliciter l’enseignant. **Ne pas configuré** (valeur par défaut) vous invite à entrer l’enseignant étudiants souhaitent pas rejoindre une classe qui se trouve dans l’application Classroom.
+- **Participer automatiquement aux cours Classroom sans envoyer d’invite (mode supervisé uniquement)**  : **Activer** permet automatiquement aux étudiants de rejoindre un cours de l’application Classroom sans que l’enseignant ait à fournir son approbation. **Non configuré** (par défaut) demande à l’enseignant s’il souhaite autoriser les étudiants à rejoindre un cours dans l’application Classroom.
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
 - **Autoriser les mises à jour PKI à distance** : l’option **Autoriser** permet à vos utilisateurs de recevoir des mises à jour logicielles sans connecter leurs appareils à un ordinateur.
-- **Limiter le suivi des publicités** : choisissez **Limiter** pour désactiver l’identificateur de publicités de l’appareil. **Ne pas configuré** conserve (valeur par défaut) est activée.
+- **Limiter le suivi des publicités** : choisissez **Limiter** pour désactiver l’identificateur de publicités de l’appareil. **Non configuré** (par défaut) maintient l’activation de l’identificateur.
 - **Bloquer la création de VPN (mode supervisé uniquement)**  : l’option **Bloquer** empêche les utilisateurs de créer des paramètres de configuration VPN. L’option (par défaut) **Non configuré** permet aux utilisateurs de créer des VPN sur l’appareil.
-- **Modification des paramètres des eSIM (mode supervisés uniquement)**: **bloc** empêche les utilisateurs de la suppression ou ajout d’un plan de téléphonie mobile pour l’eSIM sur l’appareil. L’option (par défaut) **Non configuré** permet aux utilisateurs de modifier ces paramètres.
+- **Modification des paramètres eSIM (mode supervisé uniquement)**  : l’option **Bloquer** empêche les utilisateurs de supprimer ou d’ajouter un forfait mobile pour l’eSIM de l’appareil. L’option (par défaut) **Non configuré** permet aux utilisateurs de modifier ces paramètres.
 
   Cette fonctionnalité s’applique à :  
   - iOS 12.1 et versions ultérieures
 
-- **Différer les mises à jour logicielles (mode supervisés uniquement)**: lorsque la valeur **ne pas configuré** (valeur par défaut), les mises à jour logicielles sont affichés sur l’appareil comme Apple les libère. Par exemple, si une mise à jour iOS est libérée par Apple à une date spécifique, puis cette mise à jour naturellement apparaît sur l’appareil autour de la date de publication.
+- **Différer les mises à jour logicielles (mode supervisé uniquement)**  : lorsque cette option est définie sur **Non configuré** (par défaut), les mises à jour logicielles sont affichées sur l’appareil dès leur publication par Apple. Par exemple, si une mise à jour iOS est publiée par Apple à une date spécifique, cette mise à jour s’affiche automatiquement sur l’appareil autour de la date de publication.
 
-  **Activer** vous permet de délai lorsque les mises à jour logicielles sont affichées sur les appareils, à partir de 0 à 90 jours. Ce paramètre ne contrôle pas lorsque les mises à jour sont ou ne sont pas installés. 
+  **Activer** vous permet de différer l’affichage des mises à jour logicielles sur les appareils (de 0 à 90 jours). Ce paramètre ne permet pas de contrôler à quel moment les mises à jour sont installées. 
 
-  - **Délai de visibilité des mises à jour logicielles**: entrez une valeur comprise entre 0 et 90 jours. Quand le délai expire, les utilisateurs reçoivent une notification de mise à jour vers la version la plus récente du système d’exploitation disponible au moment du déclenchement du délai.
+  - **Retarde la visibilité des mises à jour logicielles** : entrez une valeur comprise entre 0 et 90 jours. Quand le délai expire, les utilisateurs reçoivent une notification de mise à jour vers la version la plus récente du système d’exploitation disponible au moment du déclenchement du délai.
 
-    Par exemple, si iOS 12.a est disponible sur **le 1er janvier**, et **retarder visibilité** a la valeur **5 jours**, puis iOS 12.a n’est pas indiqué comme une mise à jour disponible sur les appareils des utilisateurs finaux. Sur le **sixième jour** suivant la publication, la mise à jour est disponible et les utilisateurs finaux peuvent l’installer.
+    Par exemple, si la version iOS 12.a est disponible le **1er janvier**, et si le **délai de visibilité** est défini sur **5 jours**, iOS 12.a ne s’affichera pas comme étant disponible sur les appareils des utilisateurs finaux. En revanche, le **sixième jour** suivant la publication, la mise à jour est disponible et les utilisateurs finaux peuvent l’installer.
 
     Ce paramètre s’applique à :  
     - iOS 11.3 et versions ultérieures
@@ -135,7 +135,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 - **Bloquer les demandes de mots de passe de proximité (mode supervisé uniquement)** : choisissez **Bloquer** pour que l’appareil de l’utilisateur ne demande pas de mots de passe aux appareils situés à proximité. L’option **Non configuré** (par défaut) autorise ces demandes de mots de passe.
 - **Bloquer le partage de mots de passe (mode supervisé uniquement)** : choisissez **Bloquer** pour empêcher le partage de mots de passe entre les appareils avec AirDrop. L’option **Non configuré** (par défaut) autorise le partage de mots de passe.
-- **Exiger une authentification de Touch ID ou Face ID pour les informations de mot de passe ou carte de crédit le remplissage automatique (supervisé uniquement)**: lorsque la valeur **nécessitent**, les utilisateurs doivent s’authentifier à l’aide de TouchID ou FaceID avant les mots de passe ou carte de crédit informations peuvent être automatiquement renseigné dans Safari et d’autres applications. **Ne pas configuré** (valeur par défaut) permet aux utilisateurs de contrôler cette fonctionnalité dans les paramètres de l’appareil.
+- **Exiger une authentification Touch ID ou Face ID pour le remplissage automatique du mot de passe ou des informations de carte de crédit (mode supervisé uniquement)**  : lorsque cette option est définie sur **Exiger**, les utilisateurs doivent s’authentifier à l’aide de TouchID ou de FaceID avant qu’un mot de passe ou des informations de carte de crédit ne puissent être automatiquement renseignés dans Safari et autres applications. **Non configuré** (par défaut) permet aux utilisateurs de contrôler cette fonctionnalité dans les paramètres de l’appareil.
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
@@ -159,12 +159,12 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Contenu iTunes explicite (musique, podcast ou actualités) (mode supervisé uniquement)** : choisissez **Bloquer** pour empêcher l’affichage de contenu explicite dans la musique, les podcasts ou les actualités iTunes. L’option **Non configuré** autorise l’appareil à accéder au contenu réservé aux adultes depuis le magasin.
 - **Télécharger du contenu de l'iBook Store indiqué comme étant de la « Littérature érotique »**  : choisissez **Bloquer** pour empêcher les utilisateurs de télécharger du contenu de l’iBook Store indiqué comme étant de la littérature érotique. L’option **Non configuré** autorise l’utilisateur à télécharger des livres de la catégorie « Littérature érotique ».
 - **Affichage de documents d’entreprise dans les applications non gérées** : choisissez **Bloquer** pour empêcher l’affichage de documents d’entreprise dans les applications non gérées. L’option **Non configuré** autorise l’affichage de documents d’entreprise depuis toute application. Par exemple, vous voulez empêcher les utilisateurs d’enregistrer des fichiers de OneDrive dans Dropbox. Attribuez la valeur **Bloquer** à ce paramètre. Une fois que l’appareil a reçu la stratégie (par exemple, après un redémarrage), il cesse d’autoriser l’enregistrement.
-  - **Autoriser les applications gérées écrire des contacts dans les comptes non gérés contacts**: lorsque la valeur **autoriser**, les utilisateurs peuvent ajouter ou synchroniser Outlook coordonnées toute personne, y compris l’entreprise et les contacts d’entreprise, à la application Contacts intégrée sur l’appareil. Avec l’option **Non configuré**, les utilisateurs ne sont pas autorisés à ajouter des contacts Outlook dans l’application Contacts intégrée sur l’appareil.
+  - **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés (mode supervisé uniquement)**  : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter ou de synchroniser les informations de tous les contacts Outlook, y compris des contacts professionnels et d’entreprise, dans l’application Contacts intégrée à l’appareil. Avec l’option **Non configuré**, les utilisateurs ne sont pas autorisés à ajouter des contacts Outlook dans l’application Contacts intégrée sur l’appareil.
   
     Pour utiliser ce paramètre, définissez le paramètre **Affichage des documents d’entreprise dans les applications non gérées**  sur **Bloquer**.
   
 - **Affichage des documents autres que ceux d’entreprise dans les applications d’entreprise** : choisissez **Bloquer** pour empêcher l’affichage de documents autres que ceux de l’entreprise dans les applications d’entreprise. L’option **Non configuré** autorise tout document à être affiché dans les applications d’entreprise gérées.
-  - **Autoriser les applications non gérées qui lit les comptes gérés contacts**: lorsque la valeur **autoriser**, les utilisateurs peuvent ajouter iContacts application informations de contact de toute personne dans Outlook. L’option **Non configuré** empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.
+  - **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés (mode supervisé uniquement)**  : choisissez l’option **Autoriser** pour permettre aux utilisateurs d’ajouter des informations de contact de l’application iContacts dans Outlook. L’option **Non configuré** empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.
   
     Pour utiliser ce paramètre, définissez le paramètre **Affichage de documents externes à l’entreprise dans les applications d’entreprise**  sur **Bloquer**.
   
@@ -250,12 +250,12 @@ Pour ajouter des applications à ces listes, vous pouvez :
 - **Numérotation vocale** : choisissez **Bloquer** pour empêcher l’utilisation de la fonctionnalité de numérotation vocale sur l’appareil. L’option (par défaut) **Non configuré** autorise la numérotation vocale sur l’appareil.
 - **Itinérance vocale** : choisissez **Bloquer** pour empêcher l’itinérance vocale sur le réseau cellulaire. L’option (par défaut) **Non configuré** autorise l’itinérance vocale quand l’appareil se trouve sur un réseau cellulaire.
 - **Modifications des paramètres d'utilisation des données cellulaires des applications (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher toute modification des paramètres d’utilisation des données cellulaires des applications. L’option (par défaut) **Non configuré** permet à l’utilisateur de contrôler quelles applications sont autorisées à utiliser les données cellulaires.
-- **Modifications apportées aux paramètres de plan cellulaire (mode supervisés uniquement)**: **bloc** empêche les utilisateurs de modifier des paramètres dans le plan de téléphonie mobile. **Ne pas configuré** (valeur par défaut) permet aux utilisateurs d’apporter des modifications.
+- **Changements des paramètres de forfait mobile (mode supervisé uniquement)**  : l’option **Bloquer** empêche les utilisateurs de modifier les paramètres du forfait mobile. L’option**Non configuré** (par défaut) permet aux utilisateurs de modifier ces paramètres.
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
-- **Point d’accès personnel**: **bloc** désactive le point d’accès personnel sur les appareils utilisateur avec chaque synchronisation de l’appareil. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. **Ne pas configuré** (valeur par défaut) conserve la configuration de point d’accès personnel en tant que la valeur par défaut définie par l’utilisateur.
+- **Point d’accès personnel** : l’option **Bloquer** désactive le point d’accès personnel sur l’appareil de l’utilisateur à chaque synchronisation de l’appareil. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. **Non configuré** (par défaut) conserve la configuration de point d’accès personnel comme la valeur par défaut définie par l’utilisateur.
 - **Rejoindre uniquement les réseaux Wi-Fi utilisant des profils de configuration (mode supervisé uniquement)** : **activez** cette option pour forcer l’appareil à rejoindre uniquement les réseaux Wi-Fi configurés à l’aide d’un profil de configuration Intune. L’option (par défaut) **Non configuré** autorise l’appareil à utiliser d’autres réseaux Wi-Fi.
 - **Règles d’utilisation des données mobiles (applications gérées uniquement)** : définissez les types de données que les applications gérées peuvent utiliser sur les réseaux mobiles. Les options disponibles sont les suivantes :
   - **Bloquer l’utilisation de données cellulaires** : bloquez l’utilisation de données cellulaires pour **toutes les applications managées** ou **Choisir des applications spécifiques**.
@@ -273,7 +273,7 @@ Pour ajouter des applications à ces listes, vous pouvez :
   - **Bloquer le stockage des informations d'identification AirPrint dans le trousseau (mode supervisé uniquement)**  : choisissez **Bloquer** afin d’empêcher l’utilisation du stockage Trousseau pour le nom d’utilisateur et le mot de passe sur l’appareil. L’option (par défaut) **Non configuré** permet de stocker le nom d’utilisateur et le mot de passe AirPrint dans l’application Trousseau.
   - **Exiger un certificat TLS approuvé pour AirPrint (mode supervisé uniquement)**  : **activez** cette option pour forcer l’appareil à utiliser des certificats approuvés pour la communication de l'impression TLS.
   - **Bloquer la découverte par iBeacon des imprimantes AirPrint (mode supervisé uniquement)**  : choisissez **Bloquer** pour empêcher les balises AirPrint Bluetooth malveillants de lancer des attaques d’hameçonnage sur le réseau. L’option (par défaut) **Non configuré** permet de publier des imprimantes AirPrint sur l’appareil.
-- **Bloquez le paramètre des nouveaux périphériques (mode supervisés uniquement) à proximité**: **bloc** désactive l’invite pour le programme d’installation de nouveaux appareils sont situés à proximité. **Ne pas configuré** (valeur par défaut) permet à l’écran pour les utilisateurs pour se connecter à d’autres appareils Apple à proximité.
+- **Bloquer la configuration de nouveaux appareils à proximité (mode supervisé uniquement)**  : l’option **Bloquer** désactive le message qui invite l’utilisateur à configurer de nouveaux appareils situés à proximité. **Non configuré** (par défaut) affiche des messages invitant l’utilisateur à connecter d’autres appareils Apple situés à proximité.
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
@@ -290,7 +290,7 @@ Pour ajouter des applications à ces listes, vous pouvez :
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
 - **Sauvegarder sur iCloud** : l’option **Non configuré** autorise l’utilisateur à sauvegarder les données de l’appareil dans iCloud. Choisissez **Bloquer** pour empêcher l’utilisateur de sauvegarder les données de l’appareil dans iCloud.
-- **Synchronisation de documents sur iCloud (mode supervisé uniquement)** : l’option **Non configuré** autorise la synchronisation des documents et des clés-valeurs sur votre espace de stockage iCloud. Choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et des données.
+- **Bloquer la synchronisation des documents sur iCloud (mode supervisé uniquement)**  : l’option **Non configuré** autorise la synchronisation des documents et des clés-valeurs dans votre espace de stockage iCloud. Choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et des données.
 - **Synchronisation du flux de photos sur iCloud** : l’option **Non configuré** permet aux utilisateurs d’activer **Mon flux de photos** sur leur appareil afin de synchroniser les photos avec iCloud et de les mettre à la disposition de tous les appareils des utilisateurs. Choisissez **Bloquer** pour empêcher la synchronisation du flux de photos sur iCloud.
 - **Sauvegarde chiffrée** : **activez** cette option pour exiger le chiffrement des sauvegardes d’appareil.
 - **Photothèque iCloud** : choisissez **Bloquer** pour empêcher la photothèque iCloud de stocker des photos et vidéos dans le cloud. Toutes les photos qui ne sont pas entièrement téléchargées de la Photothèque iCloud sur l’appareil sont supprimées de l’appareil. L’option **Non configuré** autorise l’utilisation de la photothèque iCloud.
@@ -313,10 +313,10 @@ Pour ajouter des applications, vous pouvez :
 ## <a name="kiosk-supervised-only"></a>Plein écran (supervisé uniquement)
 
 - **Application à exécuter en mode plein écran** : choisissez le type d’applications que vous souhaitez exécuter en mode plein écran. Les options disponibles sont les suivantes :
-  - **Ne pas configuré**: paramètres de plein écran ne sont pas appliquées. L’appareil ne s’exécute en mode plein écran.
+  - **Non configuré** : les paramètres Kiosque ne sont pas appliqués. L’appareil ne s’exécute pas en mode Kiosque.
   - **App Store** : entrez l’URL d’une application de l’App Store d’iTunes.
   - **Application gérée** : choisissez une application que vous avez ajoutée à Intune.
-  - **Application intégrée**: entrez le [ID de lot](#bundle-ids-for-built-in-ios-apps) (dans cet article) de l’application intégrée.
+  - **Application intégrée** : entrez l’[ID de bundle](#bundle-ids-for-built-in-ios-apps) (dans cet article) de l’application intégrée.
 
 - **Assistance tactile** : cette option **nécessite** le paramètre d’accessibilité Assistance tactile sur l’appareil. Cette fonctionnalité aide les utilisateurs à effectuer des gestes à l’écran qui peuvent être difficiles à réaliser pour eux. L’option **Non configuré** n’exécute ou n’active pas cette fonctionnalité en mode plein écran.
 - **Inverser les couleurs** : **activez** le paramètre d’accessibilité Inverser les couleurs pour permettre aux utilisateurs ayant des troubles visuels d’ajuster l’affichage. L’option **Non configuré** n’exécute ou n’active pas cette fonctionnalité en mode plein écran.
@@ -341,11 +341,11 @@ Pour ajouter des applications, vous pouvez :
 
 ## <a name="domains"></a>Domains
 
-- **Domaines d’e-mail non marqués** > **URL de domaine de messagerie**: ajouter une ou plusieurs URL à la liste. Quand les utilisateurs finaux reçoivent un e-mail provenant d’un domaine autre que ceux que vous avez saisis, l’e-mail est marqué comme non approuvé dans l’application iOS Mail.
+- **Domaines d’e-mail non marqués** > **URL de domaine d’e-mail** : ajoutez une ou plusieurs URL à la liste. Quand les utilisateurs finaux reçoivent un e-mail provenant d’un domaine autre que ceux que vous avez saisis, l’e-mail est marqué comme non approuvé dans l’application iOS Mail.
 
-- **Domaines web gérés** > **URL de domaine Web**; Ajouter une ou plusieurs URL à la liste. Les documents téléchargés à partir des domaines que vous saisissez sont considérés comme gérés. Ce paramètre s’applique uniquement aux documents téléchargés à l’aide du navigateur Safari.
+- **Domaines web gérés** > **URL de domaine web** : ajoutez une ou plusieurs URL à la liste. Les documents téléchargés à partir des domaines que vous saisissez sont considérés comme gérés. Ce paramètre s’applique uniquement aux documents téléchargés à l’aide du navigateur Safari.
 
-- **Domaines de remplissage automatique de mot de passe Safari** > **URL de domaine**: ajouter une ou plusieurs URL à la liste. Les utilisateurs peuvent uniquement enregistrer les mots de passe web à partir des URL de cette liste. Ce paramètre s’applique uniquement au navigateur Safari et aux appareils iOS 9.3 et versions ultérieures en mode supervisé. Si vous ne spécifiez aucune URL, les mots de passe peuvent être enregistrés à partir de tous les sites web.
+- **Domaines de remplissage automatique des mots de passe Safari (en mode supervisé uniquement)** > **URL de domaine** : ajoutez une ou plusieurs URL à la liste. Les utilisateurs peuvent uniquement enregistrer les mots de passe web à partir des URL de cette liste. Ce paramètre s’applique uniquement au navigateur Safari et aux appareils iOS 9.3 et versions ultérieures en mode supervisé. Si vous ne spécifiez aucune URL, les mots de passe peuvent être enregistrés à partir de tous les sites web.
 
 ## <a name="bundle-ids-for-built-in-ios-apps"></a>ID de bundle pour les applications iOS intégrées
 
@@ -450,4 +450,4 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
-Vous pouvez également limiter les fonctionnalités de l’appareil et les paramètres sur [macOS](device-restrictions-macos.md) appareils.
+Vous pouvez également appliquer des restrictions sur les fonctionnalités ou les paramètres des appareils [macOS](device-restrictions-macos.md).
