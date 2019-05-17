@@ -1,27 +1,29 @@
 ---
 title: Profil VPN par application personnalisé pour Android
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment créer un profil VPN par application pour les appareils Android gérés par Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 04/05/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 48f1227da6260217105120d31301f60b6e06110c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 38763d5c16d5cba36220c03e9d74b30a465d752b
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568464"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Utiliser un profil personnalisé Microsoft Intune pour créer un profil VPN par application pour les appareils Android
 
@@ -81,6 +83,6 @@ Vous pouvez également utiliser la valeur **WHITELIST** pour spécifier une list
 
 
 
-## <a name="step-3-assign-both-policies"></a>Étape 3 : Affecter les deux stratégies
+## <a name="step-3-assign-both-policies"></a>Étape 3 : Affecter les deux stratégies
 
 Suivez les instructions du [Guide pratique pour attribuer des profils d’appareils](device-profile-assign.md) pour affecter les deux profils aux utilisateurs ou appareils nécessaires.

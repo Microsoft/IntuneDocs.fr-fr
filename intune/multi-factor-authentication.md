@@ -1,27 +1,28 @@
 ---
 title: Exiger l’authentification multifacteur pour l’inscription d’appareils dans Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment exiger l’authentification multifacteur dans Azure AD pour l’inscription d’appareils dans Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2018
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71d551ca64f85c3ba6a807fac70e3b0662e1b89a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cf5611b3b9292222582d66cae39b4f751279dcec
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834090"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568789"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Exiger l’authentification multifacteur pour l’inscription d’appareils dans Intune
 
@@ -50,11 +51,10 @@ Pour exiger l’authentification multifacteur à l’inscription d’un appareil
 >Ne configurez pas les **règles d’accès basées sur les appareils** pour l’inscription à Microsoft Intune.
 
 1. Connectez-vous à votre [portail Microsoft Azure](https://portal.azure.com) avec vos informations d’identification.
-2. Dans le portail, accédez à **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
-3. Dans **Azure Active Directory** sous Sécurité, choisissez **[Accès conditionnel](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+2. Dans le portail, accédez à **Intune** et choisissez **Accès conditionnel**. Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.
 4. Choisissez **Nouvelle stratégie**.
 5. Dans **Nouvelle** stratégie, tapez un nom descriptif pour la stratégie.
-6. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**.
+6. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**. 
 7. Dans **Utilisateurs et groupes**, choisissez **Sélectionner les utilisateurs ou les groupes** et cochez **Utilisateurs et groupes**. Sélectionnez ensuite les utilisateurs et/ou les groupes auxquels attribuer cette stratégie, puis choisissez **Terminé**.
 8. Dans la section **Affectations**, choisissez **Applications cloud**.
 9. Sous l’onglet **Inclure** des **Applications cloud**, choisissez **Sélectionner les applications**, puis **Sélectionner** > **Inscription à Microsoft Intune**, puis choisissez **OK**.

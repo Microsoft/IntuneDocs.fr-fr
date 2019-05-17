@@ -1,27 +1,29 @@
 ---
 title: Surveiller les informations sur les applications et les affectations
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Une fois que vous avez affecté une application à des utilisateurs ou à des appareils, utilisez ces informations pour surveiller son état.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
-ms.topic: article
+ms.date: 03/26/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b3cba546be350f47c1a57f47b8eddf85323dc74
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325175"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567229"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Surveiller les informations sur les applications et les affectations avec Microsoft Intune
 
@@ -42,14 +44,14 @@ Intune propose plusieurs façons de surveiller les propriétés des applications
 
 Dans le volet de l’application, vous pouvez passer en revue des détails de l’état d’une application dans votre environnement.
 
-### <a name="essentials"></a>Base
+### <a name="essentials"></a>Essentials
 La section **Bases** contient les informations suivantes sur l’application :
 
  | **Détails de l’application**            | **Description**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Éditeur**          | Éditeur de l’application.                                            |
 | **Système d'exploitation**   | Système d’exploitation de l’application (Windows, iOS, Android, etc.). |
-| **Créé le**             | Date et heure de création de cette révision.                         |
+| **Créé le**             | Date et heure de création de cette révision. <b>**Remarque** : Cette valeur de date est mise à jour lorsqu’un administrateur informatique modifie les métadonnées de l’application, en modifiant la catégorie d’application ou la description de l’application par exemple.                        |
 | **Affecté**           | Si l’application a été affectée (**Oui** ou **Non**).                  |
 
 ### <a name="device-and-user-status-graphs"></a>Graphiques des états de l’appareil et de l’utilisateur
@@ -78,9 +80,9 @@ Une listes des états de l’appareil s’affiche quand vous sélectionnez **Ét
 | **Colonne de l’appareil**      | **Description**                                                                                                                                                                                                                                            |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nom de l’appareil**      | Nom de l’appareil sur les plateformes qui autorisent à nommer un appareil. Sur d’autres plateformes, Intune crée un nom à partir d’autres propriétés. Cet attribut n’est disponible pour aucun autre appareil.                                                                       |
-| **Nom d’utilisateur**        | Nom de l’utilisateur.                                                                                                                                                                                                                                      |
+| **Nom d’utilisateur**        | Nom de l'utilisateur.                                                                                                                                                                                                                                      |
 | **Plateforme**         | Système d’exploitation de l’appareil (Windows, iOS, Android, etc.).                                                                                                                                                                                           |
-| **Version**          | Numéro de version de l’application. Pour les applications métier, le numéro de version complet de l’application s’affiche. Le numéro de version complet identifie une version spécifique de l’application. Le numéro apparaît sous la forme _Version_(_Build_). Par exemple, 2.2(2.2.17560800). |
+| **Version**          | Numéro de version de l’application. Pour les applications métier (LOB), le numéro de version complet de l’application s’affiche. Le numéro de version complet identifie une version spécifique de l’application. Le numéro apparaît sous la forme _Version_(_Build_). Par exemple, 2.2(2.2.17560800). Pour les applications de Store, aucune version n’est affichée. |
 | **Statut**           | État de l’application.                                                                                                                                                                                                                                     |
 | **Détails de l’état**   | Détails de l’état.                                                                                                                                                                                                                                     |
 | **Dernier archivage**    | Date de la dernière synchronisation de l’appareil avec Intune.                                                                                                                                                                                                                  |

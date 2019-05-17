@@ -1,35 +1,36 @@
 ---
-title: Gérer des applications à partir du Microsoft Store pour Entreprises
-titlesuffix: Microsoft Intune
-description: Découvrez comment synchroniser des applications dans Intune à partir de Microsoft Store pour Entreprises, puis assignez et suivez ces applications.
+title: Gérer les applications achetées en volume ou gratuites du Windows Store pour Entreprises
+titleSuffix: Microsoft Intune
+description: Découvrez comment synchroniser des applications achetées (ou gratuites) dans Intune à partir du Microsoft Store pour Entreprises.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75e6cdd97bbc591a76e541874152455c4fe258c0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 67d99977776657219638980eb6de8a4079384185
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234925"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587499"
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications que vous avez achetées dans le Microsoft Store pour Entreprises avec Microsoft Intune
+# <a name="how-to-manage-volume-purchased-or-free-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications achetées en volume (ou gratuites) dans le Microsoft Store pour Entreprises avec Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Le [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) propose un emplacement dans lequel vous pouvez trouver et acheter des applications pour votre organisation, individuellement ou en volume. En connectant le Windows Store à Microsoft Intune, vous pouvez gérer les applications achetées en volume depuis le portail Azure. Par exemple :
-* Vous pouvez synchroniser la liste des applications que vous avez achetées dans le Store avec Intune.
+* Vous pouvez synchroniser la liste des applications que vous avez achetées (ou qui sont gratuites) dans le Store avec Intune.
 * Les applications qui sont synchronisées apparaissent dans la console d’administration Intune. Vous pouvez les affecter comme toute autre application.
 * Vous pouvez effectuer un suivi du nombre de licences disponibles et de la quantité de licences utilisée dans la console d’administration Intune.
 * Intune bloque l’attribution et l’installation des applications s’il n’y a pas suffisamment de licences disponibles.
@@ -80,7 +81,7 @@ Vous pouvez maintenant continuer et configurer la synchronisation dans la consol
 
 ## <a name="assign-apps"></a>Attribuer des applications
 
-Vous affectez des applications à partir du Windows Store de la même façon que vous affectez toute autre application Intune. Pour plus d’informations, consultez [Guide pratique pour attribuer des applications à des groupes avec Microsoft Intune](apps-deploy.md). Toutefois, au lieu d’affecter les applications à partir de la page **Toutes les applications**, affectez-les à partir de la page **Applications sous licence**.
+Vous affectez des applications à partir du Windows Store de la même façon que vous affectez toute autre application Intune. Pour plus d’informations, consultez [Guide pratique pour attribuer des applications à des groupes avec Microsoft Intune](apps-deploy.md). 
 
 Les applications hors connexion peuvent cibler des groupes d’utilisateurs, des groupes d’appareils ou des groupes contenant des utilisateurs et des appareils.
 Les applications hors connexion peuvent être installées pour un utilisateur spécifique sur un appareil ou pour tous les utilisateurs sur un appareil. 

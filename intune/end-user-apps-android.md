@@ -6,21 +6,23 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/21/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5f8263f06fe33537a74a6d1889b02b89ee6a825f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f4169f5625965ebc7d2bbbf9153cb4183fcd22b3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183398"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57388079"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Comment vos utilisateurs Android obtiennent leurs applications
 
@@ -37,8 +39,8 @@ Utilisez ces informations pour comprendre comment et où vos utilisateurs finaux
 
 Vos utilisateurs finaux doivent autoriser l’installation à partir de sources inconnues afin d’installer des [applications métier](lob-apps-android.md). Celles-ci se trouvent généralement dans deux emplacements différents :
 
-* **Android 7.1.2 et versions inférieures** : **Paramètres** > **Sécurité** > **Sources inconnues**
-* **Android 8.0 et versions supérieures** : **Paramètres** > **Applications et notifications** > **Accès spécial à l’application** > **Installer des applications inconnues** > **Portail d’entreprise** > **Autoriser à partir de cette source**
+* **Android 7.1.2 et versions antérieures** : **Paramètres** > **Sécurité** > **Sources inconnues**
+* **Android 8.0 et versions ultérieures** : **Paramètres** > **Applications et notifications** > **Accès spécial à l’application** > **Installer des applications inconnues** > **Portail d’entreprise Intune** > **Autoriser à partir de cette source**
 
 Si cela se produit, l’application Portail d’entreprise avertit l’utilisateur final et le guide directement vers le paramètre approprié. 
 

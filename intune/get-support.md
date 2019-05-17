@@ -1,14 +1,16 @@
 ---
-title: Guide pratique pour obtenir un support technique pour Microsoft Intune | Microsoft Intune
+title: Comment obtenir un support technique pour Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Obtenez du support en ligne et par téléphone pour les abonnements d’essai gratuit et payants de Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
@@ -16,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01cffe9143034b9f4221cd760f9cb91f1cceebce
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
+ms.openlocfilehash: cf1e87d40459d194f2c4aa0ff702a137e45504ab
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334967"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569751"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Comment obtenir un support technique pour Microsoft Intune
 
@@ -29,16 +31,28 @@ ms.locfileid: "57334967"
 
 Microsoft fournit un support technique global, en avant-vente, pour la facturation et l’abonnement pour Microsoft Intune. Un support technique est disponible en ligne et par téléphone pour les abonnements payants et d’évaluation. Le support technique en ligne est disponible en anglais et japonais. Le support par téléphone et le support à la facturation en ligne sont disponibles dans d’autres langues.
 
+En tant qu’administrateur informatique, vous pouvez utiliser l’option **Aide et support** afin de créer un ticket de support en ligne pour Intune, à partir du portail Microsoft Azure. Pour que vous puissiez créer et gérer un incident de support, votre compte doit posséder un rôle Azure Active Directory (Azure AD) qui inclut l’*action* **microsoft.office365.supportTickets/allEntities/allTasks**. Pour plus d’informations sur les rôles Azure AD et les autorisations nécessaires pour créer un ticket de support, consultez la section relative aux [rôles d’administration dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal). 
+
+**Problèmes connus pour la création d’incidents de support**
+
+Si votre compte dispose des autorisations requises, mais ne parvient pas à accéder à la fonction Aide et support, ou à créer ou gérer un incident de support, passez en revue les problèmes connus suivants et leur résolution :  
+- Jeton utilisateur périmé pour votre compte. Pour résoudre ce problème, déconnectez-vous de toutes les sessions de console actives, reconnectez-vous, puis tentez de créer ou gérer un incident de support. 
+- Plusieurs sessions actives. Si vous êtes connecté avec plusieurs utilisateurs ou sessions, déconnectez-vous de toutes les consoles, sauf une. Ensuite, avec une seule session active, essayez de créer ou gérer un incident de support.
+
+Actions supplémentaires qui peuvent être nécessaires pour résoudre les problèmes d’accès :
+- Nettoyez tous les cookies de votre session de navigateur active, et recommencez la création ou la gestion d’un incident de support.
+- Utilisez une session de navigation InPrivate pour vous connecter à Intune, puis essayez de créer ou de gérer un incident de support.  
+
+Si ces solutions de contournement ne vous aident pas, accédez au [Centre d’administration Microsoft 365](https://admin.microsoft.com) et créez un ticket de support à partir de là. Nous travaillons actuellement à la création d’un correctif qui sera disponible à la fin de l’été. 
+
+
+
 >[!IMPORTANT]  
 > Pour obtenir un support technique sur les produits tiers qui fonctionnent avec Intune (comme Saaswedo, Cisco ou Lookout), contactez d’abord le fournisseur du produit. Avant d’ouvrir un incident auprès du support Intune, vérifiez que vous avez correctement configuré l’autre produit.
 >
 > Pour plus d’informations sur la résolution des problèmes liés à Microsoft Intune, consultez la [section de résolution des problèmes](help-desk-operators.md) dans la documentation d’Intune.
 
-En tant qu’administrateur informatique, vous pouvez utiliser l’option **Aide et support** afin de créer un ticket de support en ligne pour Intune à partir du portail Azure. Pour créer un ticket de support, vous devez attribuer à votre compte l’un des [rôles d’administrateur suivants dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) :
 
-- Administrateur Intune
-- Administrateur général
-- Administrateur de services fédérés  
 
 
 ## <a name="help-and-support-experience"></a>Expérience Aide et support
@@ -50,9 +64,9 @@ L’expérience Aide et support pour Intune est disponible sur le [portail de ge
 ![Panneaux Intune](./media/get-support/intune-blades.png)
 
 
-Cette nouvelle expérience est similaire à celle du [Centre d’administration Microsoft 365](https://portal.office.com/AdminPortal/Home) et remplace l’[expérience Aide et support précédente](#azure-help-+-support-experience). 
+Cette nouvelle expérience est similaire à celle du [Centre d’administration Microsoft 365](https://admin.microsoft.com/) et remplace l’expérience Aide et support précédente. 
 
-Pour accéder à Aide et support, utilisez les éléments suivants :  
+Pour accéder à Aide et support, utilisez les options suivantes :  
 - **Tableau de bord Gestion des appareils** :
    - Sélectionner une option disponible pour **Aide et support**
    - Sélectionner l’icône **?** en haut à droite du portail
@@ -73,7 +87,7 @@ Dans cet affichage, vous pouvez effectuer les actions suivantes :
 4. [Afficher les incidents](#view-support-cases) nécessitant un support, que vous avez ouverts à l’aide de ce nouveau flux de travail  
 
 ### <a name="specify-details-about-an-issue"></a>Spécifier les détails d’un problème
-Quand vous ouvrez Aide et support depuis un emplacement pris en charge par la nouvelle expérience, la page **Besoin d’aide ?**  s’ouvre. Dans cette page, vous pouvez spécifier les détails relatifs à un problème. Quand vous entrez les détails, la console propose des requêtes courantes basées sur vos mots clés. Vous pouvez sélectionner un choix proposé, ou indiquer votre propre description du problème. Si vous entrez votre propre description, sélectionnez **Obtenir de l’aide** pour l’envoyer. Une fois que vous avez envoyé une requête, la console retourne des informations contextuelles pouvant vous aider à résoudre le problème.
+Quand vous ouvrez Aide et support depuis un emplacement pris en charge par la nouvelle expérience, la page **Besoin d’aide ?** s’ouvre. Dans cette page, vous pouvez spécifier les détails relatifs à un problème. Quand vous entrez les détails, la console propose des requêtes courantes basées sur vos mots clés. Sélectionnez l’un des choix proposés, ou indiquez votre propre description du problème. Si vous entrez votre propre description, sélectionnez **Obtenir de l’aide** pour l’envoyer. Une fois que vous avez envoyé une requête, la console retourne des informations contextuelles pouvant vous aider à résoudre le problème.
 
 Voici des exemples de requêtes que vous pouvez envoyer :
   
@@ -113,11 +127,11 @@ Sélectionnez le bouton d’historique pour voir les incidents que vous avez cr�
 
 
 ## <a name="azure-help--support-experience"></a>Expérience Aide et support Azure
-Les informations suivantes décrivent l’expérience Aide et support Azure à laquelle vous pouvez toujours accéder depuis le portail Azure quand vous utilisez le volet de navigation de gauche **Aide + support** ou l’option **?** en haut à droite du portail Azure. À compter de janvier 2019, vous ne pouvez plus accéder à l’expérience *Aide + support* Azure à partir de *Aide et support* dans les panneaux Intune.  
+Les informations suivantes décrivent l’expérience Aide et support Azure à laquelle vous pouvez toujours accéder depuis le portail Azure quand vous utilisez le volet de navigation de gauche **Aide + support** ou l’option **?** en haut à droite du portail Azure. Depuis janvier 2019, vous ne pouvez plus accéder à l’expérience *Aide + support* Azure à partir de la zone *Aide et support* des panneaux Intune.  
 
 ### <a name="create-an-online-support-ticket"></a>Créer un ticket de support en ligne
 
-1. Connectez-vous au Portail Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez **?** en haut à droite du portail, puis sélectionnez **Aide + support** pour accéder à la page [Aide + support Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Connectez-vous au Portail Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez **?** en haut à droite du portail, puis sélectionnez **Aide + support** pour accéder à la page [Aide + support Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
    ![Image du lien point d’interrogation avec lien Aide + support entouré](./media/azure-get-support.png)
 
@@ -131,7 +145,7 @@ Les informations suivantes décrivent l’expérience Aide et support Azure à l
    - **Service** : **Microsoft Intune**
    - **Type de problème** : Choisissez votre type de problème dans le menu déroulant.
    - **Sous-type de problème** : Choisissez le sous-type de problème dans le menu déroulant.
-   - **Objet** : Décrivez brièvement le problème que vous rencontrez.
+   - **Objet** : Décrivez brièvement le problème pour lequel vous avez besoin d’aide.
 
    ![Image de l’onglet Fonctions de base sur la page Aide + support - Nouvelle demande de support](./media/get-support/help-new-support-case-basics.png)
 
@@ -175,17 +189,16 @@ Les informations suivantes décrivent l’expérience Aide et support Azure à l
 6. Choose **Create** to submit your support request.
 -->
 >[!IMPORTANT]
->Si vous avez une question relative à la facturation ou à l’abonnement, vous pouvez ouvrir un incident pour obtenir une assistance par l’intermédiaire du [Centre d’administration Office](https://portal.office.com/Support/SupportEntry.aspx).
+>Si vous avez une question relative à la facturation ou à l’abonnement, vous pouvez ouvrir un incident pour obtenir de l’assistance par l’intermédiaire du [Centre d’administration Microsoft 365](https://admin.microsoft.com/Support/SupportEntry.aspx).
 
 ### <a name="view-support-requests"></a>Afficher les demandes de support
 Vous pouvez afficher une demande de support à partir du Portail Azure. Pour cela :
 
-1. Connectez-vous à Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez **?** en haut à droite du portail, puis sélectionnez **Aide + support** pour accéder à la page [Aide + support Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Connectez-vous à Azure (<https://portal.azure.com>) à l’aide de vos informations d’identification d’administrateur Intune, sélectionnez **?** en haut à droite du portail, puis sélectionnez **Aide + support** pour accéder à la page [Aide + support Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 2. Dans la page **Aide + support**, vous pouvez afficher la liste des **Demandes de support récentes** et les sélectionner pour afficher des informations supplémentaires.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
-- [Contacter le support par téléphone pour Microsoft Intune](phone-support-contact.md)
 - [Support relatif à la gestion de la facturation et des abonnements](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Licences en volume](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Résoudre les problèmes d’Intune](help-desk-operators.md)

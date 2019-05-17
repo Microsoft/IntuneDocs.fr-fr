@@ -7,21 +7,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/19/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: cf27fdb8-f408-425c-9a7c-146de1534425
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 12f9b6aa5fb9a7b1f31b43dc7faf3e36cdd49157
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4362983bbcdb78f82ce7b16f675c6f61fbefd1e1
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186543"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396321"
 ---
 # <a name="data-apple-sends-to-intune"></a>Données envoyées par Apple à Intune
 
@@ -38,7 +40,7 @@ Pour que Microsoft Intune puisse établir une connexion, vous devez créer un co
 
 Le tableau suivant répertorie les données qu’un appareil Apple envoie à Intune. [Intune envoie également des données à Apple](data-intune-sends-to-apple.md). 
 
-| Service | Message | Données envoyées à Intune | Rôle |
+| Service | Message | Données envoyées à Intune | Utilisé pour |
 |:---:|:---:|:---:| ---|
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Authentifier | MessageType | Type de message : authenticate. |
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Authentifier | Rubrique | Rubrique écoutée par l’appareil. |
@@ -74,7 +76,7 @@ Le tableau suivant répertorie les données qu’un appareil Apple envoie à Int
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton du programme d’inscription | Date d’affectation de l’appareil | Horodatage au format ISO 8601 indiquant quand l’appareil a été inscrit dans le Programme d’inscription des appareils. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton du programme d’inscription | Appareil affecté par | Adresse e-mail de la personne qui a affecté l’appareil. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton du programme d’inscription | Système d’exploitation | Système d’exploitation de l’appareil. |
-| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton du programme d’inscription | Famille d’appareils | Famille de produits Apple de l’appareil. |
+| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton du programme d’inscription | Famille de périphériques | Famille de produits Apple de l’appareil. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | Identifiant utilisateur Apple | Identifiant utilisateur généré par Apple. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | description de l’application | Description d’une application VPP. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | icône d’application | URL d’une icône hébergée par Apple pour une application VPP. |
@@ -83,7 +85,7 @@ Le tableau suivant répertorie les données qu’un appareil Apple envoie à Int
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | assignedCount | Nombre de licences affectées pour une application. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | availableCount | Nombre de licences non affectées pour une application. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | bundleId | Identifiant de bundle d’une application. |
-| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | droits d’auteur | Informations de copyright d’une application. |
+| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | copyright | Informations de copyright d’une application. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | CountryCode | Code pays d’un programme VPP. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | deviceAssignable | Apple retourne true si l’administrateur peut affecter une licence d’appareil pour une application. Sinon, la valeur false est retournée. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | facilitatorMemberId | Identifiant de membre d’un organisateur de compte VPP.  |
@@ -99,7 +101,7 @@ Le tableau suivant répertorie les données qu’un appareil Apple envoie à Int
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | retiredCount | Nombre de licences hors service pour une application. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | totalCount | Nombre total de licences achetées pour une application. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | url | URL de l’iTunes Store d’une application.|
-| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | Statut de l'utilisateur | Statut de l’utilisateur dans les programmes VPP Apple. |
+| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Jeton VPP Apple | État des utilisateurs | Statut de l’utilisateur dans les programmes VPP Apple. |
 
 
 Pour arrêter d’utiliser les services Apple avec Microsoft Intune et supprimer les données, vous devez à la fois désactiver le jeton Apple de Microsoft Intune et supprimer votre compte Apple. Reportez-vous au compte Apple pour savoir comment effectuer la gestion du compte.

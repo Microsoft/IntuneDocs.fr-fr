@@ -6,23 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
+ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb6a8f159aebe837fabf671a84dd96223298227
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 45e9f50881ff7da0554a4731712441b5fedb01d8
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569413"
 ---
 # <a name="what-are-app-protection-policies"></a>Que sont les stratégies de protection des applications ?
 
@@ -50,7 +51,7 @@ Vous pouvez configurer des stratégies de protection des applications pour les a
 > [!IMPORTANT]
 > Vous pouvez créer des stratégies de gestion des applications mobiles pour les applications mobiles Office qui se connectent aux services Office 365. Vous pouvez également protéger l’accès aux boîtes aux lettres Exchange sur site en créant des stratégies Intune App Protection pour Outlook sous iOS et Android avec authentification moderne hybride. Avant d’utiliser cette fonctionnalité, vérifiez que vous répondez aux [exigences relatives à Outlook pour iOS et Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Les stratégies de protection d’applications ne sont pas prises en charge pour les autres applications qui se connectent à des services Exchange ou SharePoint sur site.
 
-**Les principaux avantages de l’utilisation de stratégies de protection des applications sont les suivants :**
+**Les principaux avantages de l’utilisation de stratégies de protection des applications sont les suivants** :
 
 -   Protection des données de votre entreprise au niveau de l’application. Étant donné que la gestion des applications mobiles ne nécessite pas de gestion des appareils, vous pouvez protéger les données d’entreprise à la fois sur les appareils gérés et non gérés. La gestion est centrée autour de l’identité de l’utilisateur, ce qui supprime la nécessité de gérer les appareils.
 
@@ -60,7 +61,7 @@ Il existe d’autres avantages à utiliser la gestion des appareils mobiles (MDM
 
 - **La gestion des appareils mobiles permet de s’assurer que l’appareil est protégé**. Par exemple, vous pouvez demander un code confidentiel pour accéder à l’appareil ou déployer des applications gérées sur l’appareil. Vous pouvez également déployer des applications sur des appareils via votre solution MDM, pour mieux contrôler la gestion des applications.
 
-- **Les stratégies de protection des applications permettent de veiller à ce que des protections de la couche application soient en place**. Par exemple, vous pouvez :
+- **Les stratégies de protection des applications permettent de veiller à ce que des protections de la couche application soient en place**. Par exemple, vous pouvez :
   - Exiger un code PIN pour ouvrir une application dans un contexte professionnel 
   - Contrôler le partage de données entre applications 
   - Empêcher l’enregistrement des données des applications de l’entreprise dans un emplacement de stockage personnel
@@ -69,8 +70,8 @@ Il existe d’autres avantages à utiliser la gestion des appareils mobiles (MDM
 ### <a name="supported-platforms-for-app-protection-policies"></a>Plateformes prises en charge pour les stratégies de protection des applications
 La prise en charge de la plateforme des stratégies de protection des applications Intune s’aligne sur la prise en charge de la plateforme des applications mobiles Office pour les appareils Android et iOS. Pour plus d’informations, consultez la section **Applications mobiles** de la [Configuration requise pour Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Les appareils Windows ne sont pas pris en charge actuellement. Toutefois, vous pouvez utiliser Windows Information Protection, qui offre des fonctionnalités similaires. Pour plus d’informations, consultez [Protéger vos données d’entreprise à l’aide de la Protection des informations Windows (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-
+> [!IMPORTANT]
+> Le Portail d’entreprise Intune est requis sur l’appareil pour recevoir des stratégies de protection des applications sur Android. Pour plus d’informations, consultez les [exigences d’applications d’accès au Portail d’entreprise Intune](end-user-mam-apps-android.md#access-apps).
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>Comment les stratégies de protection d’application protègent les données d’application
 

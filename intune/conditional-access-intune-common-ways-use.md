@@ -1,26 +1,28 @@
 ---
-title: Scénarios d’accès conditionnel | Microsoft Intune
+title: Scénarios d’accès conditionnel
+titleSuffix: Microsoft Intune
 description: Découvrez comment l’accès conditionnel Intune est couramment utilisé pour l’accès conditionnel basé sur l’application et sur l’appareil.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd29f52b4d108173b8f08b68cf8b85ce291a0077
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 666a62e9aa42212bacba0e0222a828d89d780eef
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569374"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -31,7 +33,7 @@ Il existe deux types d’accès conditionnel avec Intune : l’accès condition
 Les informations ci-dessous vous aident à comprendre comment utiliser les fonctionnalités de conformité des *appareils* mobiles et les fonctionnalités de gestion des *applications* mobiles d’Intune. 
 
 > [!NOTE]
-> L’accès conditionnel est une fonctionnalité d’Azure Active Directory fournie avec la licence Azure Active Directory Premium. Intune améliore cette fonctionnalité en ajoutant la conformité des appareils mobiles et la gestion des applications mobiles à la solution.
+> L’accès conditionnel est une fonctionnalité d’Azure Active Directory fournie avec la licence Azure Active Directory Premium. Intune améliore cette fonctionnalité en ajoutant la conformité des appareils mobiles et la gestion des applications mobiles à la solution. Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Accès conditionnel basé sur l’appareil
 
@@ -71,7 +73,7 @@ Quand un appareil ne remplit pas les conditions définies, l'utilisateur final e
 
 Le connecteur Intune Exchange extrait tous les enregistrements Exchange Active Sync (EAS) qui existent sur le serveur Exchange. Intune peut ainsi prendre ces enregistrements EAS et les mapper à des enregistrements d’appareils Intune. Ces enregistrements sont les appareils inscrits et reconnus par Intune. Ce processus autorise ou bloque l’accès à la messagerie.
 
-Si l’enregistrement EAS est nouveau et qu’Intune ne le sait pas, Intune émet une applet de commande qui bloque l’accès à la messagerie. Voici plus de détails sur le fonctionnement de ce processus :
+Si l’enregistrement EAS est nouveau et qu’Intune ne le sait pas, Intune émet une cmdlet (prononcer « command-let ») qui bloque l’accès à la messagerie. Voici plus de détails sur le fonctionnement de ce processus :
 
 ![Exchange local avec organigramme de l’autorité de certification](./media/ca-intune-common-ways-1.png)
 
@@ -91,7 +93,7 @@ Si l’enregistrement EAS est nouveau et qu’Intune ne le sait pas, Intune éme
 
 8.  L’inscription d’appareil Azure AD enregistre les informations d’état de l’appareil.
 
-9.  Si l’utilisateur respecte les stratégies d’accès conditionnel, Intune émet une applet de commande via le connecteur Intune Exchange qui permet la synchronisation de la messagerie.
+9.  Si l’utilisateur respecte les stratégies d’accès conditionnel, Intune émet une cmdlet via le connecteur Intune Exchange qui permet la synchronisation de la messagerie.
 
 10. Exchange Server envoie la notification au client EAS afin que l’utilisateur puisse accéder à la messagerie.
 
@@ -104,7 +106,7 @@ Intune évalue et gère l’état de l’appareil.
 Le serveur Exchange fournit l’API et l’infrastructure pour déplacer des appareils en quarantaine.
 
 > [!IMPORTANT]
-> N’oubliez pas que l’utilisateur de l’appareil doit déployer un profil de conformité sur l’appareil afin que sa conformité soit évaluée. Si aucune stratégie de conformité n’est déployée sur l’utilisateur, l’appareil est considéré comme conforme et aucune restriction d’accès ne s’applique.
+> N’oubliez pas que l’utilisateur de l’appareil doit déployer un profil de conformité sur l’appareil afin que sa conformité puisse être évaluée. Si aucune stratégie de conformité n’est déployée sur l’utilisateur, l’appareil est considéré comme conforme et aucune restriction d’accès ne s’applique.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Accès conditionnel basé sur le contrôle d’accès réseau
 
@@ -136,7 +138,7 @@ L’accès conditionnel pour PC offre des fonctionnalités similaires à celles 
 
 -   **Jonction à un domaine Azure AD et gestion Intune** : cette option s’utilise généralement dans les scénarios CYOD (Choisissez votre propre appareil) et dans les scénarios d’itinérance sur ordinateur portable où ces appareils sont rarement connectés au réseau d’entreprise. L’appareil est joint à Azure AD et est inscrit sur Intune, ce qui supprime les dépendances sur l’instance AD locale et les contrôleurs de domaine. Cela peut servir de critère d’accès conditionnel lors de l’accès aux ressources d’entreprise.
 
--   **Joint au domaine AD et System Center Configuration Manager** : à partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
+-   **Joint au domaine AD et System Center Configuration Manager** : À partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
 
     -   Le PC est-il chiffré ?
 

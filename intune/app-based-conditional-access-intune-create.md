@@ -1,15 +1,15 @@
 ---
 title: Configurer une stratégie d’accès conditionnel basée sur l’application avec Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment créer une stratégie d’accès conditionnel basée sur l’application avec Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/26/2018
-ms.topic: article
+ms.date: 02/22/2019
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2026a446ffef3bd845affe45a7732ef3ab8ec24
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 1514fe9dfcd09e2b77967b0fed8c36fb7a06634f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842914"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567489"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurer des stratégies d’accès conditionnel basées sur des applications avec Intune
 
@@ -33,19 +33,18 @@ Configurez des stratégies d’accès conditionnel basées sur des applications 
 > [!IMPORTANT]
 > Cet article décrit les étapes permettant d’ajouter une stratégie d’accès conditionnel basé sur l’application. Vous pouvez utiliser les mêmes étapes quand vous ajoutez des applications comme SharePoint Online, Microsoft Teams et Microsoft Exchange Online à partir de la liste des applications approuvées.
 
-## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Création de stratégies d’accès conditionnel basé sur l’application dans la charge de travail Azure AD
-
-Les administrateurs informatiques peuvent créer des stratégies d’accès conditionnel basé sur l’application à partir de la charge de travail Azure AD. Cet accès signifie qu’il n’est plus nécessaire de basculer entre les charges de travail Azure et Intune.
+## <a name="create-app-based-conditional-access-policies"></a>Créer des stratégies d’accès conditionnel basées sur l’application
+L’accès conditionnel est une technologie Azure Active Directory (Azure AD). Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*. Cela signifie que vous n’avez pas besoin de basculer entre Intune et Azure AD pour configurer des stratégies.
 
 > [!IMPORTANT]
-> Vous devez disposer d’une licence Azure AD Premium pour créer des stratégies d’accès conditionnel Azure AD à partir du portail Intune Azure.
+> Vous devez disposer d’une licence Azure AD Premium pour créer des stratégies d’accès conditionnel à partir du portail Intune.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Pour créer une stratégie d’accès conditionnelle basée sur l’application
 
 > [!IMPORTANT]
 > Les [stratégies de protection des applications Intune](app-protection-policies.md) doivent être appliquées à vos applications avant d’utiliser des stratégies d’accès conditionnel basé sur l’application.
 
-1. Dans le **tableau de bord Intune**, choisissez **Accès conditionnel**.
+1. Dans le **tableau de bord Intune**, sélectionnez **Accès conditionnel**.
 
 2. Dans le volet **Stratégies**, choisissez **Nouvelle stratégie** pour créer votre stratégie d’accès conditionnel basé sur l’application.
 

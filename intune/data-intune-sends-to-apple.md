@@ -7,21 +7,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b204a956-18ec-11e8-accf-0ed5f89f718b
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ba9d4d779a0f609bf07e4d0d7d9aad83e5d415c5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f1fbf8f37b989112025bd6d54328dd61246913f7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181528"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400209"
 ---
 # <a name="data-intune-sends-to-apple"></a>Données envoyées par Intune à Apple
 
@@ -38,7 +40,7 @@ Pour que Microsoft Intune puisse établir une connexion, vous devez créer un co
 
 Le tableau suivant répertorie les données que Microsoft Intune envoie depuis un appareil vers les services Apple activés. 
 
-| Service | Données envoyées à Apple | Rôle |
+| Service | Données envoyées à Apple | Utilisé pour |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton, PushMagic | Si le serveur accepte l’appareil, l’appareil fournit son jeton d’appareil de notification Push au serveur. Le serveur doit utiliser ce jeton pour envoyer des messages Push à l’appareil. Ce message d’archivage contient également une chaîne PushMagic. Le serveur doit stocker cette chaîne en mémoire et l’inclure dans les messages Push qu’il envoie à l’appareil. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Jeton de serveur | Jeton d’appareil de notification Push utilisé pour l’authentification auprès du service Apple. |

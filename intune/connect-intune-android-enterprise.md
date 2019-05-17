@@ -1,15 +1,16 @@
 ---
-title: Connecter votre compte Intune à votre compte professionnel Android
-titlesuffix: Microsoft Intune
-description: Découvrez comment connecter votre compte Intune à votre compte professionnel Android.
+title: Liez votre compte Intune à votre compte Google Play géré.
+titleSuffix: Microsoft Intune
+description: Découvrez comment lier votre compte Intune à votre compte Google Play géré.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 6/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
@@ -17,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 421d9c56f959fe30d35c0c55ce34017a7a0ba5a6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 19efd0821deeac0e76c60ee67e6230da554391a0
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838256"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567385"
 ---
-# <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Connecter votre compte Intune à votre compte professionnel Android
+# <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Lier votre compte Intune à votre compte Google Play géré
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pour prendre en charge les [appareils Android avec profil professionnel](android-work-profile-enroll.md), les [appareils Android entièrement gérés](android-fully-managed-enroll.md) et les [appareils Android dédiés](android-kiosk-enroll.md), vous devez connecter votre compte de locataire Intune à votre compte professionnel Android.  
+Pour prendre en charge les [appareils Android Entreprise avec profil professionnel](android-work-profile-enroll.md), les [appareils Android Entreprise complètement gérés](android-fully-managed-enroll.md) et les [appareils Android Entreprise dédiés](android-kiosk-enroll.md), vous devez lier votre compte de locataire Intune à votre compte Google Play géré.  
 
 > [!NOTE]
 > En raison de l’interaction entre les domaines Google et Microsoft, cette étape peut nécessiter un réglage des paramètres de votre navigateur.  Vérifiez que « portal.azure.com » et « play.google.com » sont dans la même zone de sécurité de votre navigateur.
@@ -42,7 +43,7 @@ Pour prendre en charge les [appareils Android avec profil professionnel](android
    
 4. Choisissez **Lancez Google pour vous connecter maintenant** pour ouvrir le site web Google Play géré. Le site web s’ouvre dans un nouvel onglet dans votre navigateur.
   
-5. Dans la page de connexion de Google, entrez le compte Google à associer à toutes les tâches de gestion d’entreprise Android pour ce locataire. Il s’agit du compte Google partagé par les administrateurs informatiques de votre organisation pour gérer et publier des applications dans la console Google Play. Vous pouvez utiliser un compte Google existant ou en créer un. Le compte que vous choisissez ne doit pas être associé à un domaine G Suite.
+5. Dans la page de connexion de Google, entrez le compte Google à associer à toutes les tâches de gestion d’Android Entreprise pour ce locataire. Il s’agit du compte Google partagé par les administrateurs informatiques de votre organisation pour gérer et publier des applications dans la console Google Play. Vous pouvez utiliser un compte Google existant ou en créer un. Le compte que vous choisissez ne doit pas être associé à un domaine G Suite.
     
     > [!Note]
     > Si vous utilisez le navigateur Microsoft Edge, cliquez sur **Se connecter** en haut à droite pour vous connecter à votre compte Google.
@@ -51,9 +52,9 @@ Pour prendre en charge les [appareils Android avec profil professionnel](android
 
 7. Acceptez le contrat Android, puis choisissez **Confirmer**. Votre demande va être traitée.
 
-## <a name="disconnect-your-android-enterprise-administrative-account"></a>Déconnecter votre compte d’administration professionnel Android
+## <a name="disconnect-your-android-enterprise-administrative-account"></a>Déconnecter votre compte d’administration Android Entreprise
 
-Vous pouvez désactiver l’inscription et la gestion d’entreprise Android. Pour ce faire, vous devez d’abord mettre hors service les appareils avec profil professionnel Android inscrits. Ensuite, choisissez **Se déconnecter** dans la console d’administration Intune pour annuler l’inscription de tous les appareils avec profil professionnel Android et tous les appareils kiosque inscrits. Cela supprime également la relation entre le compte professionnel Android et Intune.
+Vous pouvez désactiver l’inscription et la gestion d’Android Entreprise. Pour ce faire, vous devez d’abord mettre hors service les appareils avec profil professionnel Android Entreprise inscrits. Ensuite, choisissez **Se déconnecter** dans la console d’administration Intune pour annuler l’inscription de tous les appareils avec profil professionnel Android Entreprise et tous les appareils dédiés inscrits. Cela supprime également la relation entre le compte Google Play géré et Intune.
 
 1. En tant qu’administrateur Intune, dans le [portail Azure](https://portal.azure.com), choisissez **Tous les services** > **Surveillance + Gestion** > **Intune**.
 2. Choisissez **Inscription de l’appareil** > **Inscription Android** > **Google Play géré** > **Se déconnecter**.
@@ -61,4 +62,4 @@ Vous pouvez désactiver l’inscription et la gestion d’entreprise Android. Po
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois connecté au compte professionnel Android, vous pouvez [configurer des appareils avec profil professionnel Android](android-work-profile-enroll.md) et [configurer des appareils kiosque Android](android-kiosk-enroll.md).
+Une fois connecté au compte Google Play géré, vous pouvez [configurer des appareils avec profil professionnel Android Entreprise](android-work-profile-enroll.md) et [configurer des appareils dédiés Android Entreprise](android-kiosk-enroll.md).

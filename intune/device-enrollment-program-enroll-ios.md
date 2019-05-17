@@ -7,9 +7,10 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/04/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60364d01f4ba4ca83ff91226f7738ec095e9152e
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849248"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566503"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -102,8 +103,13 @@ Dans le portail Azure d’Intune, fournissez l’ID Apple pour référence ulté
 
 ![Capture d’écran : spécification de l’ID Apple utilisé pour créer le jeton du programme d’inscription et accès à ce jeton.](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Étape 4. Chargez votre jeton.
-Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisissez **Ouvrir**, puis **Créer**. Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Étape 4. Chargez votre jeton et choisissez des balises d’étendue.
+
+1. Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem) et choisissez **Ouvrir**.
+2. Pour appliquer des [balises d’étendue](scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)**, puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
+3. Choisissez **Créer**.
+
+Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 
@@ -145,6 +151,8 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 7. Si vous avez choisi un jeton pour **Installer le portail d’entreprise avec VPP**, vous avez la possibilité de verrouiller l’appareil en mode Application unique (plus précisément l’application Portail d’entreprise) immédiatement après la fin de l’Assistant Configuration. Choisissez **Oui** pour **Exécuter le portail d’entreprise en mode Application unique jusqu’à l’authentification** pour définir cette option. Pour utiliser l’appareil, l’utilisateur doit d’abord s’authentifier en se connectant avec le portail d’entreprise.
     Cette fonctionnalité est uniquement pris en charge pour iOS 11.3.1 et versions ultérieures.
+
+   ![Capture d’écran du mode Application unique.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
 8. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils possédant ce profil soient supervisés ou non.
 

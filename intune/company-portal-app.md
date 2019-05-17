@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c61eb47f29b201997d04fa6b1405ad2f186e4fcc
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 33f24a3d7b30973855bb303bb97bf703cd4dc5fa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237186"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567268"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -33,7 +34,7 @@ Le portail d’entreprise Microsoft Intune permet aux utilisateurs d’accéder 
 > [!Tip]        
 > Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise. Notez que les utilisateurs doivent disposer d’une licence Intune pour accéder au site web Portail d’entreprise.
 
-La personnalisation du Portail d’entreprise permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour cela, à partir de la charge de travail **Applications clientes**, choisissez **Configuration** > **Personnalisation de Portail d’entreprise**, puis configurez les paramètres nécessaires.  
+La personnalisation du Portail d’entreprise Intune permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour ce faire, dans le portail Intune, sélectionnez **Applications clientes** > **Branding et personnalisation**, puis configurez les paramètres requis. 
 
 > [!Note]       
 > Si vous utilisez Azure Government, l’utilisateur final dispose de journaux des applications pour décider du mode de partage des informations, quand il lance le processus d’obtention d’aide sur un problème. Toutefois, si vous n’utilisez pas Azure Government, le Portail d’entreprise pour Windows 10 envoie les journaux des applications directement à Microsoft, quand l’utilisateur lance le processus d’obtention d’aide sur un problème. L’envoi des journaux des applications à Microsoft facilite l’analyse et la résolution des problèmes. 
@@ -90,7 +91,7 @@ Affichez une image de marque qui reflète la marque de votre société. Après a
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image d’arrière-plan sur la page de profil de l’utilisateur dans l’application Portail d’entreprise.<p>*Remarque* : l’image peut s’afficher différemment pour différentes plateformes.<p><ul><li>Largeur recommandée pour l’image : Inférieure à 1 125 px (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image de marque. Sur la page de profil de l’utilisateur du portail d’entreprise Intune iOS, elle s’affiche comme une image d’arrière-plan.<p><ul><li>Largeur recommandée pour l’image : Inférieure à 1 125 px (minimum de 640 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-vis du Portail d’entreprise en présentant votre société de manière affirmée. Voici quelques conseils que vous pouvez suivre pour acquérir, choisir et optimiser l’image dans le Portail d’entreprise. 
 

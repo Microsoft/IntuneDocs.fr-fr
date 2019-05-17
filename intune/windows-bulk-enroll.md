@@ -1,6 +1,6 @@
 ---
 title: Inscription en bloc pour Windows 10
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Créer un package d’inscription en bloc pour Microsoft Intune
 keywords: ''
 author: ErikjeMS
@@ -10,18 +10,19 @@ ms.date: 5/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7df624f0a3db11b058498c650a9f9c3dd95e8d12
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236804"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568165"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscription en bloc des appareils Windows
 
@@ -29,7 +30,7 @@ ms.locfileid: "57236804"
 
 En tant qu’administrateur, vous pouvez joindre un grand nombre de nouveaux appareils Windows à Azure Active Directory et à Intune. Pour inscrire des appareils en bloc pour votre client Azure AD, vous devez créer un package d’approvisionnement avec l’application Windows Configuration Designer (WCD). En appliquant le package d’approvisionnement aux appareils d’entreprise, vous pouvez joindre les appareils à votre client Azure AD et les inscrire pour une gestion dans Intune. Une fois le package appliqué, vos utilisateurs Azure AD peuvent immédiatement se connecter.
 
-Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs standard ; ils reçoivent les stratégies Intune qui leur sont affectées ainsi que les applications dont ils ont besoin. Les scénarios de libre-service et de portail d’entreprise ne sont pas pris en charge pour le moment.
+Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs standard ; ils reçoivent les stratégies Intune qui leur sont affectées ainsi que les applications dont ils ont besoin. Les appareils Windows inscrits auprès d’Intune à l’aide de l’inscription en bloc de Windows peuvent utiliser l’application Portail d’entreprise pour installer des applications disponibles. 
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Prérequis pour l’inscription en bloc des appareils Windows
 

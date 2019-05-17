@@ -1,14 +1,15 @@
 ---
 title: Fonctionnalités et paramètres d’appareil dans Microsoft Intune - Azure | Microsoft Docs
-description: Vue d’ensemble des différents profils d’appareil Microsoft Intune, notamment les profils de fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, Éducation, certificats, mise à niveau Windows 10, BitLocker et Windows Defender, Protection des informations Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le Portail Azure. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
+description: Vue d’ensemble des différents profils d’appareil Microsoft Intune. Obtenez des informations sur les profils de fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, Éducation, certificats, mise à niveau Windows 10, BitLocker et Windows Defender, Protection des informations Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le Portail Azure. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
@@ -16,18 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b9bd8aaca9aaf6e39c7a120518eeca1cef31511
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4dc68071886b8f2a0852feb69bf78c2c265f046d
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570349"
 ---
-# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des paramètres de fonctionnalités sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
+# <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
-Microsoft Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils, différentes plateformes, notamment iOS, Android et Windows, puis utiliser Intune pour appliquer le profil de votre choix aux appareils de votre organisation.
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Exemples de profil :
+Microsoft Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS, Android et Windows. Ensuite, utilisez Intune pour appliquer ou « attribuer » le profil aux appareils.
+
+Dans le cadre de votre solution de gestion des périphériques mobiles (GPM), utilisez ces profils de configuration pour effectuer différentes tâches. Exemples de profil :
 
 - Sur les appareils Windows 10, utilisez un modèle de profil qui bloque les contrôles ActiveX dans Internet Explorer.
 - Sur les appareils iOS et macOS, autorisez les utilisateurs à utiliser les imprimantes AirPrint de votre organisation.
@@ -36,70 +39,13 @@ Exemples de profil :
 - Gérez les mises à jour logicielles, notamment le moment de leur installation.
 - Exécutez un appareil Android, un appareil kiosque dédié pouvant exécuter une ou plusieurs applications.
 
-Cet article liste les étapes permettant de créer un profil et donne une vue d’ensemble des différents types de profil que vous pouvez créer. Utilisez ces profils pour autoriser ou empêcher l’accès à certaines fonctionnalités sur les appareils.
-
-## <a name="create-the-profile"></a>Créer le profil
-
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Intune**.
-
-2. Sélectionnez **Configuration de l’appareil**. Les options suivantes sont disponibles :
-
-    - **Vue d’ensemble** : liste l’état de vos profils et fournit des détails supplémentaires sur les profils que vous avez affectés aux utilisateurs et aux appareils.
-    - **Gérer** : créez des profils d’appareil, chargez des [scripts PowerShell](intune-management-extension.md) personnalisés à exécuter dans le profil, et ajoutez des forfaits de données aux appareils via [eSIM](esim-device-configuration.md).
-    - **Surveiller** : vérifiez l’état d’un profil (réussite ou échec), et consultez les journaux de vos profils.
-    - **Configurer** : ajoutez une autorité de certification (SCEP ou PFX), ou activez la [Gestion des dépenses de télécommunications](telecom-expenses-monitor.md) dans le profil.
-
-3. Sélectionnez **Profils** > **Créer un profil**. Entrez les propriétés suivantes :
-
-   - **Nom** : Entrez un nom descriptif pour le profil.
-   - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
-   - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :  
-
-       - **Android**
-       - **Android Entreprise**
-       - **iOS**
-       - **MacOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 et versions ultérieures**
-       - **Windows 10 et versions ultérieures**
-
-   - **Type de profil** : Sélectionnez le type des paramètres à créer. La liste affichée dépend de la **plateforme** choisie :
-
-       - [Modèles d’administration](administrative-templates-windows.md)
-       - [Personnalisé](custom-settings-configure.md)
-       - [Optimisation de la distribution](delivery-optimization-windows.md)
-       - [Fonctionnalités de l’appareil](device-features-configure.md)
-       - [Restrictions relatives aux appareils](device-restrictions-configure.md)
-       - [Mise à niveau de l’édition et changement de mode](edition-upgrade-configure-windows-10.md)
-       - [Éducation](education-settings-configure.md)
-       - [Courrier électronique](email-settings-configure.md)
-       - [Endpoint Protection](endpoint-protection-configure.md)
-       - [Identity protection](identity-protection-configure.md)  
-       - [Kiosque](kiosk-settings.md)
-       - [Certificat PKCS](certficates-pfx-configure.md)
-       - [Certificat SCEP](certificates-scep-configure.md)
-       - [Certificat approuvé](certificates-configure.md)
-       - [Stratégies de mise à jour](software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Defender ATP](advanced-threat-protection.md)
-       - [Protection des informations Windows](windows-information-protection-configure.md)
-
-     Par exemple, si vous sélectionnez **iOS** pour la plateforme, les options de type de votre profil ressemblent à ce qui suit :
-
-     ![Créer un profil iOS dans Intune](./media/create-device-profile.png)
-
-4. Cliquez sur **Paramètres**. Les paramètres sont organisés par catégorie. Sélectionnez une catégorie pour voir la liste de tous les paramètres que vous pouvez configurer.
-
-5. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements.
-
-Pour plus d’informations sur les différents types de profil, lisez les sections suivantes de cet article.
+Cet article fournit une vue d’ensemble des différents types de profils que vous pouvez créer. Utilisez ces profils pour autoriser ou empêcher l’accès à certaines fonctionnalités sur les appareils.
 
 ## <a name="administrative-templates-preview"></a>Modèles d’administration (préversion)
 
-Les [modèles d’administration](administrative-templates-windows.md) incluent des centaines de paramètres que vous pouvez configurer pour Internet Explorer, OneDrive, le Bureau à distance, Word, Excel ainsi que d’autres programmes Office, et bien plus encore.
+Les [modèles d’administration](administrative-templates-windows.md) incluent des centaines de paramètres que vous pouvez configurer pour Internet Explorer, OneDrive, le Bureau à distance, Word, Excel ainsi que d’autres programmes Office.
 
-Ces modèles offrent aux administrateurs une vue claire et simplifiée des paramètres, à l’image de la stratégie de groupe. Toutefois, ils sont basés sur le cloud à 100 %. 
+Ces modèles offrent aux administrateurs une vue simplifiée des paramètres, à l’image de la stratégie de groupe. Toutefois, ils sont basés sur le cloud à 100 %.
 
 Cette fonctionnalité prend en charge :
 
@@ -164,7 +110,7 @@ Cette fonctionnalité prend en charge :
 
 - Windows 10 et versions ultérieures
 
-Les paramètres Kiosk sont également disponible en tant que restrictions d’appareil pour [Android](device-restrictions-android.md#kiosk), [Android Entreprise](device-restrictions-android-for-work.md#kiosk-settings) et [ios](device-restrictions-ios.md#kiosk-supervised-only).
+Les paramètres Kiosk sont également disponible en tant que restrictions d’appareil pour [Android](device-restrictions-android.md#kiosk), [Android Entreprise](device-restrictions-android-for-work.md#dedicated-device-settings) et [ios](device-restrictions-ios.md#kiosk-supervised-only).
 
 ## <a name="email"></a>E-mail
 
@@ -173,6 +119,7 @@ La fonctionnalité [Paramètres de messagerie](email-settings-configure.md) cré
 Cette fonctionnalité prend en charge : 
 
 - Android
+- Android Entreprise
 - iOS
 - Windows Phone 8.1
 - Windows 10 et versions ultérieures
@@ -186,6 +133,7 @@ Les réseaux privés virtuels (ou VPN) donnent à vos utilisateurs un accès à 
 Cette fonctionnalité prend en charge : 
 
 - Android
+- Android Entreprise
 - iOS
 - macOS
 - Windows Phone 8.1
@@ -199,6 +147,7 @@ Le profil [Paramètres Wi-Fi](wi-fi-settings-configure.md) affecte les paramètr
 Cette fonctionnalité prend en charge : 
 
 - Android
+- Android Entreprise
 - iOS
 - macOS
 - Windows 8.1 (importation uniquement)
@@ -235,12 +184,14 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="certificates"></a>Certificats
 
-Le profil [Certificats](certificates-configure.md) configure des certificats approuvés, SCEP et PKCS qui sont affectés aux appareils et utilisés pour authentifier le Wi-Fi, le VPN et les profils de messagerie.
+[Certificats](certificates-configure.md) permet de configurer les certificats approuvés, SCEP et PKCS qui sont attribués aux appareils. Ces certificats authentifient les profils Wi-Fi, VPN et de messagerie.
 
 Cette fonctionnalité prend en charge : 
 
 - Android
+- Android Entreprise
 - iOS
+- macOS
 - Windows Phone 8.1
 - Windows 8.1
 - Windows 10 et versions ultérieures
@@ -255,7 +206,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="shared-multi-user-device"></a>Appareil multiutilisateur partagé
 
-[Windows 10](shared-user-device-settings-windows.md) et [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) comprennent des paramètres permettant de gérer les appareils employés par plusieurs utilisateurs. Ces appareils sont également appelés appareils partagés ou PC partagés. Quand un utilisateur se connecte à l’appareil, vous choisissez s’il peut changer les options de veille ou enregistrer des fichiers sur cet appareil. Dans un autre cas de figure, vous pouvez créer une stratégie qui supprime les informations d’identification inactives des appareils Windows HoloLens pour économiser de l’espace.
+[Windows 10](shared-user-device-settings-windows.md) et [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) comprennent des paramètres permettant de gérer les appareils employés par plusieurs utilisateurs. Ces appareils sont également appelés appareils partagés ou PC partagés. Quand un utilisateur se connecte à l’appareil, vous choisissez s’il peut changer les options de veille ou enregistrer des fichiers sur cet appareil. Dans un autre cas de figure, pour économiser de l’espace, vous pouvez créer un profil qui supprime les informations d’identification inactives des appareils Windows HoloLens.
 
 Ces paramètres d’appareils multiutilisateur partagés permettent à un administrateur de contrôler certaines fonctionnalités et de gérer les appareils partagés à l’aide d’Intune.
 
@@ -264,21 +215,30 @@ Cette fonctionnalité prend en charge :
 - Windows 10 et versions ultérieures
 - Windows Holographic for Business
 
-## <a name="custom-profile"></a>Profil personnalisé
+## <a name="zebra-mobility-extensions-mx"></a>Extensions Zebra Mobility (MX)
 
-Les [paramètres personnalisés](custom-settings-configure.md) permettent aux administrateurs d’affecter des paramètres d'appareil qui ne sont pas intégrés à Intune. Par exemple, sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator. 
+Les [extensions Zebra Mobility (MX)](android-zebra-mx-overview.md) permettent aux administrateurs d’utiliser et de gérer des appareils Zebra dans Intune. Vous créez des profils StageNow avec vos paramètres, puis utilisez Intune pour attribuer et déployer ces profils pour vos appareils Zebra. La section [Journaux StageNow et problèmes courants](android-zebra-mx-logs-troubleshoot.md) est une ressource précieuse pour résoudre les problèmes de profils et connaître les problèmes potentiels lors de l’utilisation de StageNow.
 
 Cette fonctionnalité prend en charge :
 
 - Android
+
+## <a name="custom-profile"></a>Profil personnalisé
+
+Les [paramètres personnalisés](custom-settings-configure.md) permettent aux administrateurs d’attribuer des paramètres d’appareil qui ne sont pas intégrés à Intune. Sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator.
+
+Cette fonctionnalité prend en charge :
+
+- Android
+- Android Entreprise
 - iOS
 - macOS
 - Windows Phone 8.1
 
 ## <a name="manage-and-troubleshoot"></a>Gérer et dépanner
 
-[Gérez vos profils](device-profile-monitor.md) pour vérifier l’état des appareils et les profils affectés. Ceci vous aide aussi à résoudre les conflits en visualisant les paramètres qui provoquent un conflit et les profils qui contiennent ces paramètres. [Problèmes courants et résolutions](device-profile-troubleshoot.md) fournit des questions et réponses qui vous aident à utiliser les profils, notamment ce qui se passe quand un profil est supprimé, la cause de l’envoi de notifications à des appareils, etc.
+[Gérez vos profils](device-profile-monitor.md) pour vérifier l’état des appareils et les profils affectés. Ceci vous aide aussi à résoudre les conflits en visualisant les paramètres qui provoquent un conflit et les profils qui incluent ces paramètres. [Solutions aux problèmes courants](device-profile-troubleshoot.md) permet aux administrateurs d’utiliser des profils. Il décrit ce qui se passe lorsque vous supprimez un profil, ce qui entraîne l’envoi de notifications à des appareils, et bien plus encore.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Choisissez votre plateforme et lancez-vous :
 
+Choisissez votre plateforme et lancez-vous.

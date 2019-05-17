@@ -7,21 +7,23 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/24/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 51d1c477f490cb23c35ef54a0a5099ee4b4b035b
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 83cc1f43faba1ee98bde680b1ff2b74c78ff65e4
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55068252"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57389500"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Guide pratique pour effacer uniquement les données d’entreprise des applications gérées par Intune
 
@@ -30,7 +32,7 @@ ms.locfileid: "55068252"
 Lorsqu'un appareil est perdu ou volé, ou si l'employé quitte votre entreprise, vous devez vous assurer que les données de l'application d’entreprise sont supprimées de l'appareil. Mais vous ne souhaitez peut-être pas supprimer les données personnelles contenues dans l’appareil, en particulier si celui-ci appartient à un employé.
 
 >[!NOTE]
-> Les plateformes iOS et Android sont les deux plateformes prises en charge actuellement pour le nettoyage des données d’entreprise à partir d’applications gérées par Intune. Les applications gérées par Intune incluent le SDK d’application Intune et disposent d’un compte d’utilisateur sous licence pour votre organisation. Il n’est pas obligatoire d’activer la réinitialisation sélective des applications dans les stratégies de déploiement de la protection des applications.
+> Les plateformes iOS, Android et Windows 10 sont les seules plateformes prises en charge actuellement pour le nettoyage des données d’entreprise à partir d’applications gérées par Intune. Les applications gérées par Intune incluent le SDK d’application Intune et disposent d’un compte d’utilisateur sous licence pour votre organisation. Il n’est pas obligatoire d’activer la réinitialisation sélective des applications dans les stratégies de déploiement de la protection des applications.
 
 Pour supprimer des données d’application d’entreprise de manière sélective, créez une demande de réinitialisation en suivant les étapes indiquées dans cette rubrique. Une fois la demande terminée, les données d’entreprise sont supprimées de l’application dès sa prochaine exécution sur l’appareil. En plus de créer une demande de réinitialisation, vous pouvez configurer une réinitialisation sélective des données de votre organisation comme nouvelle action quand les conditions des paramètres d’accès des stratégies de protection des applications ne sont pas remplies. Cette fonctionnalité vous permet de protéger et de supprimer automatiquement des données d’entreprise sensibles dans des applications en fonction de critères préconfigurés.
 

@@ -1,15 +1,16 @@
 ---
 title: Ajouter une application métier Windows à Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Découvrez comment ajouter une application métier (LOB) Windows à l’aide de Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7776c1bddb459347679cb4aea3bc4e14e05e1418
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: ca41e12136911cc0aecb6968a949fb738e2e2d77
+ms.sourcegitcommit: d1116c70bd0f2382d590091e0e66095de3925324
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238776"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59570765"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -69,7 +70,7 @@ Une application métier est une application que vous ajoutez à partir d’un fi
     - **Logo** : chargez une icône associée à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
 3. Une fois que vous avez fini, sélectionnez **OK**.
 
-## <a name="step-4-finish-up"></a>Étape 4 : Terminer
+## <a name="step-4-finish-up"></a>Étape 4 : Terminer
 
 1. Dans le volet **Ajouter une application**, vérifiez que vous avez correctement configuré les informations de l’application.
 2. Sélectionnez **Ajouter** pour charger l’application sur Intune.
@@ -92,4 +93,4 @@ Cette fonctionnalité est utile pour éviter d’introduire une condition de con
 
 - Découvrez plus d’informations sur les façons dont vous pouvez surveiller les propriétés et l’affectation de votre application. Consultez [Guide pratique pour surveiller les affectations et les informations d’applications](apps-monitor.md).
 
-- Découvrez plus d’informations sur le contexte de votre application dans Intune. Consultez [Vue d’ensemble des cycles de vie des appareils et des applications](introduction-device-app-lifecycles.md).
+- Découvrez plus d’informations sur le contexte de votre application dans Intune. Consultez [Vue d’ensemble du cycle de vie des applications dans Microsoft Intune](app-lifecycle.md).

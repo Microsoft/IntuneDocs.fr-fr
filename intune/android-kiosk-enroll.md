@@ -1,15 +1,16 @@
 ---
-title: Configurer l’inscription Intune pour les appareils Android Entreprise dédiés
-titlesuffix: Microsoft Intune
+title: Configurer l’inscription à Intune pour les appareils Android Entreprise dédiés
+titleSuffix: Microsoft Intune
 description: Découvrez comment inscrire des appareils Android Entreprise dédiés dans Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/15/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
@@ -17,36 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e71ae4add82482bf0bfbde25adac69c51570966
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 5e980049797ffc3c727d89c197037c019b94326a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834039"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567346"
 ---
-# <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription Intune d’appareils Android Entreprise dédiés
+# <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription à Intune pour les appareils Android Entreprise dédiés
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android prend en charge les appareils appartenant à l’entreprise, à usage unique et kiosque avec son ensemble de solutions pour appareils dédiés. Ces appareils sont destinés à un usage unique, tel que la signalisation numérique, l’impression de ticket ou la gestion des stocks, pour n’en nommer que quelques-uns. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
+Android Enterprise prend en charge les appareils appartenant à l’entreprise, à usage unique et de style kiosque avec son ensemble de solutions pour appareils dédié. Ces appareils sont destinés à un usage unique, tel que la signalisation numérique, l’impression de ticket ou la gestion des stocks, pour n’en nommer que quelques-uns. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
 
-Intune vous aide à déployer des applications et des paramètres sur des appareils Android dédiés. Pour plus d’informations sur Android Entreprise, consultez [Android enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune vous aide à déployer des applications et des paramètres sur des appareils Android Enterprise dédiés. Pour plus d’informations sur Android Entreprise, voir [Exigences Android Entreprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 Les appareils que vous gérez de cette façon sont inscrits dans Intune sans compte d’utilisateur et ne sont associés à aucun utilisateur final. Ils ne sont pas conçus pour les applications à usage personnel, ni pour celles qui exigent un grand nombre de données de compte propres à l’utilisateur, comme Outlook ou Gmail.
 
-## <a name="device-requirements"></a>Exigences relatives aux périphériques
+## <a name="device-requirements"></a>Exigences relatives aux appareils
 
-Les appareils doivent respecter les exigences suivantes pour pouvoir être gérés en tant qu’appareils Android Entreprise dédiés :
+Les appareils doivent respecter les exigences suivantes pour pouvoir être gérés en tant qu’appareils Android Entreprise dédiés :
 
 - Système d’exploitation Android version 5.1 et ultérieures.
 - Les appareils doivent exécuter une distribution d’Android qui dispose d’une connectivité GMS (Google Mobile Services). Les appareils doivent avoir accès à GMS et doivent pouvoir s’y connecter.
 
-## <a name="set-up-android-dedicated-device-management"></a>Configurer la gestion d’appareils Android dédiés
+## <a name="set-up-android-enterprise-dedicated-device-management"></a>Configurer la gestion d’appareils Android Enterprise dédiés
 
-Pour configurer la gestion d’appareils Android dédiés, effectuez les étapes suivantes :
+Pour configurer la gestion d’appareils Android Enterprise dédiés, effectuez les étapes suivantes :
 
 1. Pour préparer la gestion des appareils mobiles, vous devez [définir l’autorité de gestion des appareils mobiles (MDM) sur **Microsoft Intune**](mdm-authority-set.md) afin d’obtenir des instructions. Cet élément ne se définit qu’une seule fois, quand vous configurez pour la première fois Intune pour la gestion des appareils mobiles.
-2. [Connectez votre compte de locataire Intune à votre compte d’entreprise Android](connect-intune-android-enterprise.md).
+2. [Liez votre compte Google Play géré à votre compte d’abonné Intune](connect-intune-android-enterprise.md).
 3. [Créez un profil d’inscription.](#create-an-enrollment-profile)
 4. [Créez un groupe d’appareils.](#create-a-device-group)
 5. [Inscrire les appareils dédiés](#enroll-the-dedicated-devices).
@@ -55,7 +56,7 @@ Pour configurer la gestion d’appareils Android dédiés, effectuez les étapes
 
 Vous devez créer un profil d’inscription pour pouvoir inscrire vos appareils dédiés. Quand le profil est créé, vous obtenez un jeton d’inscription (chaîne aléatoire) et un code QR. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour [inscrire l’appareil dédié](#enroll-the-dedicated-devices).
 
-1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Inscriptions d’appareils en mode kiosque et tâche**.
+1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Appareils dédiés appartenant à l’entreprise**.
 2. Choisissez **Créer** et remplissez les champs requis.
     - **Nom** : tapez un nom que vous utiliserez lors de l’affectation du profil au groupe d’appareils dynamique.
     - **Date d’expiration du jeton** : Date à laquelle le jeton expirera. Google applique un maximum de 90 jours.
@@ -90,7 +91,7 @@ Vous pouvez remplacer ou supprimer des jetons et des codes QR.
 
 Le remplacement ou la révocation d’un jeton/code QR n’a aucun effet sur les appareils qui sont déjà inscrits.
 
-1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Inscriptions d’appareils en mode kiosque et tâche**.
+1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Appareils dédiés appartenant à l’entreprise**.
 2. Choisissez le profil à utiliser.
 3. Choisissez **Jeton**.
 4. Pour remplacer le jeton, choisissez **Remplacer le jeton**.
@@ -100,13 +101,13 @@ Le remplacement ou la révocation d’un jeton/code QR n’a aucun effet sur les
 
 Vous pouvez à présent [inscrire vos appareils dédiés](android-dedicated-devices-fully-managed-enroll.md).
 
-## <a name="managing-apps-on-android-dedicated-devices"></a>Gestion d’applications sur des appareils Android dédiés
+## <a name="managing-apps-on-android-enterprise-dedicated-devices"></a>Gestion d’applications sur des appareils Android Entreprise dédiés
 
-Seules les applications dont le type Affectation [a la valeur Obligatoire](apps-deploy.md#assign-an-app) peuvent être installées sur des appareils Android dédiés. Les applications sont installées à partir du store Google Play géré de la même manière que les appareils avec profil professionnel Android.
+Seules les applications dont le type Affectation [a la valeur Obligatoire](apps-deploy.md#assign-an-app) peuvent être installées sur des appareils Android Entreprise dédiés. Les applications sont installées à partir du Google Play Store géré de la même manière que les appareils avec un profil professionnel Android Entreprise.
 
 Les applications sont mises à jour automatiquement sur les appareils gérés quand le développeur d’application publie une mise à jour sur Google Play.
 
-Pour supprimer une application des appareils Android dédiés, vous pouvez effectuer l’une des opérations suivantes :
+Pour supprimer une application sur des appareils Android Entreprise dédiés, vous pouvez effectuer l’une des opérations suivantes :
 -   Supprimez le déploiement d’application Obligatoire.
 -   Créez un déploiement de désinstallation pour l’application.
 

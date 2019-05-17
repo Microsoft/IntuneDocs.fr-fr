@@ -1,27 +1,29 @@
 ---
 title: Accès conditionnel basé sur l’application avec Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez le fonctionnement de l’accès conditionnel basé sur l’application avec Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/11/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 30f5b902619c84e6d1d193c252e76475d2e54e82
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b4c39a1d95a10c96b8f34703f99c4d8414efbbf0
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816733"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567372"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Accès conditionnel basé sur l’application avec Intune
 
@@ -67,13 +69,13 @@ Dans cet exemple, l’administrateur a appliqué des stratégies de protection d
 
 3. L’application broker est installée sur l’appareil.
 
-4. L’application broker démarre le processus d’inscription d’Azure AD, qui crée un enregistrement d’appareil dans Azure AD. Cela diffère du processus d’inscription de gestion des appareils mobiles, mais cet enregistrement est nécessaire pour que les stratégies d’accès conditionnel puissent être appliquées sur l’appareil.
+4. L’application broker démarre le processus d’inscription dans Azure AD, qui crée un enregistrement d’appareil dans Azure AD. Cela diffère du processus d’inscription pour la gestion GPM, mais cet enregistrement est nécessaire pour que les stratégies d’accès conditionnel puissent être appliquées sur l’appareil.
 
-5. L’application broker vérifie l’identité de l’application. Il existe une couche de sécurité pour que l’application broker puisse valider que l’application est autorisée à être utilisée par l’utilisateur.
+5. L’application broker vérifie l’identité de l’application. Il existe une couche de sécurité, afin que l’application broker puisse vérifier que l’utilisateur est autorisé à exécuter l’application.
 
 6. L’application broker envoie l’ID de client d’application à Azure AD dans le cadre du processus d’authentification utilisateur pour vérifier sa présence dans liste approuvée par stratégie.
 
-7. Azure AD permet à l’utilisateur de s’authentifier et d’utiliser l’application en fonction de la liste approuvée par stratégie. Si l’application n’est pas dans la liste, AD Azure refuse l’accès à l’application.
+7. Azure AD permet à l’utilisateur de s’authentifier et d’utiliser l’application en fonction de la liste approuvée par stratégie. Si l’application n’est pas sur la liste, Microsoft Azure Active Directory refuse l’accès à l’application.
 
 8. L’application Outlook communique avec le service cloud d’Outlook pour établir la communication avec Exchange Online.
 

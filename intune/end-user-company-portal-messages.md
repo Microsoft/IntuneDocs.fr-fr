@@ -1,6 +1,6 @@
 ---
 title: Messages du Portail d’entreprise que les utilisateurs peuvent voir sur les appareils
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez les différents messages que les utilisateurs finaux peuvent voir dans le Portail d’entreprise.
 keywords: ''
 author: lenewsad
@@ -10,18 +10,19 @@ ms.date: 03/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2fd42ece4a0df60ebe6f15b67c91bba46f210ff
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233154"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59569127"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Aider les utilisateurs finaux à comprendre les messages de l’application Portail d’entreprise
 
@@ -110,6 +111,34 @@ Si vous n’avez pas ajouté l’application Portail d’entreprise à la liste 
 ### <a name="what-it-means"></a>Signification
 
 Ajoutez l’application Portail d’entreprise à la liste **Applications autorisées** ou **Applications exemptes** dans la stratégie de protection des applications Windows Information Protection. Pour plus d’informations, consultez [Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune](windows-information-protection-policy-create.md).
+
+## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Approuver une application d’entreprise iOS (application métier) sur votre appareil iOS 
+
+### <a name="where-it-appears"></a>Emplacement
+Les applications iOS développées par votre organisation qui ne sont pas disponibles dans l’App Store ne sont pas approuvées par votre appareil par défaut. Lorsque vous installez ces applications à l’aide du Portail d’entreprise et que vous lancez l’application, le message suivant s’affiche :
+
+![Message d’application iOS - Développeur Entreprise non approuvé](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+
+### <a name="what-it-means"></a>Signification
+Ce message signifie que vous devez modifier les paramètres de votre appareil iOS afin d’approuver et d’installer une application développée par votre société sur votre appareil iOS.
+
+Lorsque vous installez ces applications à l’aide du Portail d’entreprise et que vous lancez l’application, procédez comme suit pour approuver l’application après l’avoir téléchargée :
+
+1. Au lancement d’une application d’entreprise installée (application métier), vous voyer le message « Développeur Entreprise non approuvé ». <br>
+   Appuyez sur **Annuler**.
+2. Accédez à **Paramètres** > **Général** > **Gestion des appareils**.
+
+   ![IU d’appareil iOS - Gestion des appareils](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Sélectionnez **Profil de gestion** > **Application d’entreprise**.
+4. Sélectionnez le nom du développeur.
+5. Appuyez sur **Faire confiance à _nom du développeur_**.
+6. Confirmez l’application en sélectionnant **Faire confiance** dans le message contextuel d’installation d’application.
+
+   ![IU d’appareil iOS - Message d’application de confiance](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
+
+    Vous pourrez lancer et utiliser l’application d’entreprise.
+
 
 ### <a name="see-also"></a>Voir aussi
 [Comment former vos utilisateurs finaux à Microsoft Intune](end-user-educate.md)

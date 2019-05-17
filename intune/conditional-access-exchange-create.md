@@ -1,27 +1,28 @@
 ---
-title: Créer une stratégie d’accès conditionnel Exchange | Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Créer une stratégie d’accès conditionnel Exchange
+titleSuffix: Microsoft Intune
 description: Configurer l’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité dans Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 04/15/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b4f35dba38dd1b69f770a3a10689ce87eaf3a27
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 003e6e5aa78440861e6aff5be138c4a302171c1b
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840397"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571737"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Créer une stratégie d’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité
 
@@ -79,52 +80,54 @@ L'application native **Courrier** sur Windows 8.1 et les versions ultérieures (
 
 1. Accédez au [portail Azure](https://portal.azure.com/) et connectez-vous avec vos informations d’identification Intune.
 
-1. Une fois que vous êtes connecté, vous voyez le **tableau de bord Azure**.
+2. Accédez à **Intune** > **Accès à Exchange**, puis sélectionnez **Accès à Exchange sur site**. 
 
-1. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
+3. Dans le volet **Accès à Exchange sur site**, choisissez **Oui** pour *Activer le contrôle d’accès à Exchange sur site*.
 
-1. Choisissez **Intune**, vous voyez le **tableau de bord Intune**.
+4. Choisissez **Tous les services** dans le menu de gauche, puis entrez **Intune** dans le filtre de la zone de texte.
 
-1. Choisissez **Accès local**. Le volet **Accès local** affiche l’état de la stratégie d’accès conditionnel et les appareils qui en sont affectés.
+5. Choisissez **Intune**, vous voyez le **tableau de bord Intune**.
 
-1. Sous **Gérer**, choisissez **Accès à Exchange sur site**.
+6. Choisissez **Accès local**. Le volet **Accès local** affiche l’état de la stratégie d’accès conditionnel et les appareils qui en sont affectés.
 
-1. Dans le volet **Accès à Exchange sur site**, choisissez **Oui** pour activer le contrôle d’accès Exchange sur site.
+7. Sous **Gérer**, choisissez **Accès à Exchange sur site**.
+
+8. Dans le volet **Accès à Exchange sur site**, choisissez **Oui** pour activer le contrôle d’accès Exchange sur site.
 
     > [!NOTE]
     > Si vous n’avez pas configuré de connecteur Exchange Active Sync local, cette option est désactivée.  Vous devez tout d’abord installer et configurer au moins un connecteur avant d’activer l’accès conditionnel pour Exchange local. Pour plus de détails, consultez la rubrique [Installer le connecteur Exchange local de Microsoft Intune](exchange-connector-install.md)
 
-1. Sous **Affectation**, choisissez **Groupes inclus**.  Utilisez le groupe d’utilisateurs de sécurité auquel appliquer l'accès conditionnel. Dans ce cas, les utilisateurs doivent inscrire leurs appareils auprès d’Intune et se conformer aux profils de conformité.
+9. Sous **Affectation**, choisissez **Groupes inclus**.  Utilisez le groupe d’utilisateurs de sécurité auquel appliquer l'accès conditionnel. Dans ce cas, les utilisateurs doivent inscrire leurs appareils auprès d’Intune et se conformer aux profils de conformité.
 
-1. Si vous voulez exclure des groupes d’utilisateurs spécifiques, vous pouvez le faire en choisissant **Groupes exclus**, puis en sélectionnant un groupe d’utilisateurs exempté de l’inscription et de la conformité des appareils.
+10. Si vous voulez exclure des groupes d’utilisateurs spécifiques, vous pouvez le faire en choisissant **Groupes exclus**, puis en sélectionnant un groupe d’utilisateurs exempté de l’inscription et de la conformité des appareils.
 
-1. Sous **Paramètres**, choisissez **Notifications utilisateur** pour modifier l'e-mail par défaut. Ce message est envoyé aux utilisateurs si leur appareil n’est pas conforme alors qu'ils souhaitent accéder à Exchange sur site. Le modèle de message utilise le langage de balisage.  Vous voyez également un aperçu du message en cours de frappe.
+11. Sous **Paramètres**, choisissez **Notifications utilisateur** pour modifier l'e-mail par défaut. Ce message est envoyé aux utilisateurs si leur appareil n’est pas conforme alors qu'ils souhaitent accéder à Exchange sur site. Le modèle de message utilise le langage de balisage.  Vous voyez également un aperçu du message en cours de frappe.
     > [!TIP]
     > Pour en savoir plus sur le langage de balisage, consultez cet [article](https://en.wikipedia.org/wiki/Markup_language) Wikipedia.
 
-1. Dans le volet des **paramètres d’accès Exchange Active Sync avancés**, définissez la règle globale par défaut pour l’accès à partir d’appareils qui ne sont pas gérés par Intune et pour les règles de niveau plateforme comme décrit dans les deux prochaines étapes.
+12. Dans le volet des **paramètres d’accès Exchange Active Sync avancés**, définissez la règle globale par défaut pour l’accès à partir d’appareils qui ne sont pas gérés par Intune et pour les règles de niveau plateforme comme décrit dans les deux prochaines étapes. Pour accéder au volet des paramètres avancés, dans la vue *Accès à Exchange - Accès à Exchange sur site*, sélectionnez *Connecteur local Exchange ActiveSync*.
 
-1. Si vous avez un appareil qui n'est pas affecté par l'accès conditionnel ou d'autres règles, vous pouvez choisir de l'autoriser l'accès à Exchange ou le bloquer.
+13. Si vous avez un appareil qui n'est pas affecté par l'accès conditionnel ou d'autres règles, vous pouvez choisir de l'autoriser l'accès à Exchange ou le bloquer.
 
    - Quand vous définissez cette option pour autoriser l’accès, tous les appareils peuvent accéder immédiatement à Exchange sur site.  Les appareils qui appartiennent aux utilisateurs dans les **Groupes inclus** sont bloqués s’ils sont évalués par la suite comme non conforme aux stratégies de conformité ou ne sont pas inscrits auprès d'Intune.
    - Quand vous définissez cette option pour bloquer l’accès, l’accès initial des appareils à Exchange sur site est immédiatement bloqué.  Les appareils qui appartiennent à des utilisateurs des **Groupes inclus** reçoivent un accès une fois que ces appareils sont inscrits auprès d’Intune et déterminés comme conformes. Les appareils Android qui n’exécutent pas Samsung Knox standard sont toujours bloqués, car ils ne prennent pas en charge ce paramètre.
 
-1. Sous **Exceptions de la plateforme d'appareils**, choisissez **Ajouter** pour spécifier les plateformes. Si le paramètre **Accès aux appareils non gérés** est défini sur **Bloqué**, les appareils qui sont inscrits et conformes sont autorisés, même s’il existe une exception de plateforme qui bloque. Choisissez **OK** pour enregistrer les paramètres.
+14. Sous **Exceptions de la plateforme d'appareils**, choisissez **Ajouter** pour spécifier les plateformes. Si le paramètre **Accès aux appareils non gérés** est défini sur **Bloqué**, les appareils qui sont inscrits et conformes sont autorisés, même s’il existe une exception de plateforme qui bloque. Choisissez **OK** pour enregistrer les paramètres.
 
-1. Dans le volet **Local**, cliquez sur **Enregistrer** pour enregistrer la stratégie d’accès conditionnel.
+15. Dans le volet **Local**, cliquez sur **Enregistrer** pour enregistrer la stratégie d’accès conditionnel.
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Création de stratégies d’accès conditionnel Azure AD dans Intune
 
-À compter d’Intune version 1704, les administrateurs peuvent créer des stratégies d’accès conditionnel Azure AD à partir du portail Intune Azure, et il n’est donc plus nécessaire de basculer entre les charges de travail Azure et Intune.
+L’accès conditionnel est une technologie Azure Active Directory (Azure AD). Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.  
 
 > [!IMPORTANT]
 > Vous devez disposer d’une licence Azure AD Premium pour créer des stratégies d’accès conditionnel Azure AD à partir du portail Intune Azure.
 
-### <a name="to-create-azure-ad-conditional-access-policy"></a>Pour créer une stratégie d’accès conditionnel Azure AD
+### <a name="to-create-a-conditional-access-policy"></a>Pour créer une stratégie d’accès conditionnel
 
-1. Dans le **tableau de bord Intune**, choisissez **Accès conditionnel**.
+1. Dans le **tableau de bord Intune**, sélectionnez **Accès conditionnel**.
 
-2. Dans le volet **Stratégies**, choisissez **Nouvelle stratégie** pour créer votre stratégie d’accès conditionnel Azure AD.
+2. Dans le volet **Stratégies**, sélectionnez **Nouvelle stratégie** pour créer votre stratégie d’accès conditionnel Azure AD.
 
 ## <a name="see-also"></a>Voir aussi
 

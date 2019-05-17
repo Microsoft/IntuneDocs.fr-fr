@@ -1,15 +1,16 @@
 ---
 title: Profils de provisionnement d’applications iOS dans Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Intune vous fournit les outils nécessaires pour affecter de manière proactive un nouveau profil de provisionnement aux appareils dont les applications arrivent à expiration.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f02e4416f68fef7531f6d6ffa617273904b752c
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 888c136934deca80877d75879e270807af194a1e
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569556"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Utiliser les profils de provisionnement d’application iOS pour empêcher l’expiration de vos applications
 
@@ -51,7 +52,7 @@ En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécu
 3. Dans le volet **Créer un profil**, configurez les valeurs suivantes :
     - **Nom** : nommez ce profil de configuration mobile.
     - **Description** : vous pouvez également fournir une description de la stratégie (facultatif).
-    - **Charger le fichier de profil** : choisissez **Importer**, puis un fichier de profil de configuration mobile Apple (avec l’extension `.mobileprovision`) que vous avez téléchargé depuis le site web Apple Developer.
+    - **Charger le fichier de profil** : choisissez **Ouvrir**, puis sélectionnez le fichier de profil de configuration mobile Apple (avec l’extension `.mobileprovision`) que vous avez téléchargé depuis le [site web Apple Developer](https://developer.apple.com/).
 4. Quand vous avez terminé, choisissez **Créer**.
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -1,6 +1,6 @@
 ---
 title: configurer un nom de domaine personnalisé
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ajouter un nom de domaine personnalisé à votre abonnement Microsoft Intune
 keywords: ''
 author: dougeby
@@ -10,18 +10,20 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: a4227399eb5cf1d2cc2e265215eccb2c05d73ac5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d0c3d11eb3a031f34704dcd9ecf16f3312ac818
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181494"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567242"
 ---
 # <a name="configure-a-custom-domain-name"></a>configurer un nom de domaine personnalisé
 
@@ -42,15 +44,15 @@ Vous ne pouvez pas renommer ou supprimer le nom de domaine onmicrosoft.com initi
 
 ## <a name="to-add-and-verify-your-custom-domain"></a>Pour ajouter et vérifier votre domaine personnalisé
 
-1. Accédez au [portail de gestion Office 365](https://portal.office.com/Admin/Default.aspx) et connectez-vous à votre compte d’administrateur.
+1. Accédez au [Centre d’administration Microsoft 365](https://admin.microsoft.com/) et connectez-vous à votre compte d’administrateur.
 
 2. Dans le volet de navigation, choisissez **Configuration** &gt; **Domaines**.
 
 3. Choisissez **Ajouter un domaine**, puis tapez votre nom de domaine personnalisé. Sélectionnez **Suivant**.
-   ![Capture d’écran du Centre d’administration Office 365 avec Paramètres > Domaines sélectionné et l’ajout d’un nouveau nom de domaine](./media/domain-custom-add.png)
+   ![Capture d’écran du Centre d’administration Microsoft 365 avec Paramètres > Domaines sélectionné, et l’ajout d’un nouveau nom de domaine](./media/domain-custom-add.png)
 4. La boîte de dialogue **Vérifier le domaine** s’ouvre. Elle contient les valeurs permettant de créer l’enregistrement TXT dans votre fournisseur d’hébergement DNS.
-    - **Utilisateurs GoDaddy** : le portail de gestion Office 365 vous redirige vers la page de connexion de GoDaddy. L’enregistrement TXT est créé automatiquement une fois que vous entrez vos informations d’identification et que vous acceptez le contrat d’autorisation de modification de domaine. Vous pouvez également [créer un enregistrement TXT](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
-    - **Utilisateurs Register.com** : suivez les [instructions détaillées](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) pour créer l’enregistrement TXT.
+    - **Utilisateurs GoDaddy** : Le Centre d’administration Microsoft 365 vous redirige vers la page de connexion de GoDaddy. L’enregistrement TXT est créé automatiquement une fois que vous entrez vos informations d’identification et que vous acceptez le contrat d’autorisation de modification de domaine. Vous pouvez également [créer un enregistrement TXT](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
+    - **Utilisateurs Register.com** : Suivez les [instructions détaillées](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) pour créer l’enregistrement TXT.
 
 Les étapes permettant d’ajouter et de vérifier un domaine personnalisé peuvent également être [effectuées dans Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
 

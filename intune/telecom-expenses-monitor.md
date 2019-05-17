@@ -7,21 +7,23 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b3ca1b95a6dcf7bdc30b61469fa747894d20fe73
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 031db83302dfef8b99fc83ab7975e233c3eeb799
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188090"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396860"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configurer un service de gestion des dépenses en télécommunications dans Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -152,7 +154,7 @@ Effectuez les étapes suivantes pour créer l’application Datalert dans Intune
 
    ![Capture d’écran du volet Ajouter une stratégie](./media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Étape 4 : Ajouter des lignes téléphoniques payées par l’entreprise à la console Datalert
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Étape 4 : Ajouter des lignes téléphoniques payées par l’entreprise à la console Datalert
 
 Vous avez configuré les services Intune et Datalert pour qu’ils communiquent entre eux. Vous devez maintenant ajouter des lignes téléphoniques payées par votre entreprise à la console Datalert, et définir des seuils et actions concernant toutes les violations de l’utilisation de ces lignes par des téléphones portables ou en itinérance. Vous pouvez soit ajouter manuellement des lignes téléphoniques d’entreprise payantes à la console Datalert, soit les ajouter automatiquement une fois l’appareil inscrit dans Intune.
 

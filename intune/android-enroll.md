@@ -1,15 +1,16 @@
 ---
 title: Inscrire des appareils Android dans Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment inscrire des appareils Android dans Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 866db22b79f2ca9255f9eccdfdba28dc353836ed
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 363a7d0ef32aee0c21c6e5cecbd55cc3087f4613
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568672"
 ---
 # <a name="enroll-android-devices"></a>Inscrire des appareils Android
 
@@ -30,10 +31,10 @@ ms.locfileid: "55846755"
 
 En tant qu’administrateur Intune, vous pouvez gérer les appareils Android suivants :
 - Appareils Android, notamment les appareils Samsung Knox Standard.
-- Appareils Android Entreprise, notamment :
-    - **Appareils avec profil professionnel Android** : appareils personnels autorisés à accéder aux données d’entreprise. Les administrateurs peuvent gérer les applications, données et comptes professionnels. Les données personnelles sur l’appareil sont séparées des données professionnelles. Les administrateurs n’ont aucun contrôle sur les paramètres et données à caractère personnel. 
-    - **Appareils Android dédiés** : appareils à usage unique appartenant à l’entreprise, utilisés notamment pour la signalisation numérique, l’impression de billets ou la gestion des stocks. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
-    - **Appareils Android entièrement gérés** : appareils mono-utilisateur appartenant à l’entreprise utilisés exclusivement à des fins professionnelles. Les administrateurs peuvent gérer entièrement l’appareil et appliquer des contrôles de stratégie non disponibles dans les profils professionnels. 
+- Appareils Android Entreprise, notamment :
+    - **Appareils avec profil professionnel Android Entreprise** : appareils personnels autorisés à accéder aux données d’entreprise. Les administrateurs peuvent gérer les applications, données et comptes professionnels. Les données personnelles sur l’appareil sont séparées des données professionnelles. Les administrateurs n’ont aucun contrôle sur les paramètres et données à caractère personnel. 
+    - **Appareils dédiés Android Entreprise** : appareils à usage unique appartenant à l’entreprise, utilisés notamment pour la signalisation numérique, l’impression de billets ou la gestion des stocks. Les administrateurs verrouillent l’utilisation d’un appareil pour un ensemble limité d’applications et de liens web. Les utilisateurs ne peuvent pas non plus ajouter d’autres applications ou effectuer d’autres actions sur l’appareil.
+    - **Appareils Android Entreprise complètement gérés** : appareils mono-utilisateur appartenant à l’entreprise utilisés exclusivement à des fins professionnelles. Les administrateurs peuvent gérer entièrement l’appareil et appliquer des contrôles de stratégie non disponibles dans les profils professionnels. 
 
 ## <a name="prerequisite"></a>Prérequis
 
@@ -54,11 +55,11 @@ Pour empêcher l’inscription des appareils Android, ou uniquement des appareil
 
 ## <a name="set-up-android-enterprise-enrollment"></a>Configurer l’inscription d’Android Entreprise
 
-Android Entreprise est un ensemble de fonctionnalités et de services pour les appareils Android, qui séparent les applications et les données personnelles d’un profil professionnel contenant des applications et des données professionnelles. Les appareils Android Entreprise incluent les appareils avec profil professionnel, les appareils entièrement gérés et les appareils dédiés. 
+Android Entreprise offre un ensemble d’options d’inscription qui fournissent aux utilisateurs les fonctionnalités les plus à jour et sécurisées. Les options d’inscription d’Android Entreprise incluent les appareils avec profil professionnel, complètement gérés et dédiés.
 
-- [Configurer les inscriptions d’appareils avec profil professionnel Android](android-work-profile-enroll.md)
-- [Configurer les inscriptions d’appareils dédiés Android](android-kiosk-enroll.md)
-- [Configurer les inscriptions d’appareils Android entièrement gérés](android-fully-managed-enroll.md)
+- [Configurer les inscriptions de profil professionnel Android Entreprise](android-work-profile-enroll.md)
+- [Configurer les inscriptions d’appareil dédié Android Entreprise](android-kiosk-enroll.md)
+- [Configurer les inscriptions d’appareil complètement géré Android Entreprise](android-fully-managed-enroll.md)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Expérience utilisateur final au moment de l’inscription d’un appareil Samsung Knox
 
@@ -76,6 +77,6 @@ Les points suivants doivent être pris en compte au moment de l’inscription d�
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Configurer les inscriptions d’appareils avec profil professionnel Android](android-work-profile-enroll.md)
-- [Configurer les inscriptions d’appareils dédiés Android](android-kiosk-enroll.md)
-- [Configurer les inscriptions d’appareils Android entièrement gérés](android-fully-managed-enroll.md)
+- [Configurer les inscriptions de profil professionnel Android Entreprise](android-work-profile-enroll.md)
+- [Configurer les inscriptions d’appareil dédié Android Entreprise](android-kiosk-enroll.md)
+- [Configurer les inscriptions d’appareil complètement géré Android Entreprise](android-fully-managed-enroll.md)

@@ -1,27 +1,29 @@
 ---
 title: Créer et déployer des stratégies de protection d’applications
 titleSuffix: Microsoft Intune
-description: Découvrez comment créer et affecter des stratégies de protection des applications Microsoft Intune.
+description: Cette partie explique comment créer et attribuer des stratégies de protection des applications Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/28/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e81a80dae9777cae96d9ddc6dfe9d64b2abf1204
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a7d7834719b42a1aaa6240510a951733a96f6add
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569790"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -52,7 +54,7 @@ Pour plus d’informations sur l’ajout d’applications métier professionnell
 6. Dans le panneau **Ajouter une stratégie**, sélectionnez **Configurer les paramètres requis** pour ouvrir **Paramètres**.
 
    Il existe trois catégories pour les paramètres de stratégie :
-   - **Réadressage des données** - Ce groupe comprend les contrôles DLP (protection contre la perte de données), par exemple les restrictions d’opérations consistant à couper, copier, coller et enregistrer sous. Ces paramètres déterminent la manière dont les utilisateurs interagissent avec les données dans les applications.
+   - **Protection des données** - Ce groupe comprend les contrôles de protection contre la perte de données (DLP), par exemple les restrictions d’opérations Couper, Copier, Coller et Enregistrer sous. Ces paramètres déterminent la manière dont les utilisateurs interagissent avec les données dans les applications.
    - **Conditions d’accès** - Ce groupe contient les options de code PIN par application, qui déterminent le mode d’accès de l’utilisateur final aux applications dans un contexte professionnel.  
    - **Lancement conditionnel** - Ce groupe contient des paramètres tels que les paramètres minimum du système d’exploitation, la détection d’appareils jailbreakés/rootés, ainsi que les périodes de grâce hors connexion.
 

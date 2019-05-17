@@ -1,15 +1,16 @@
 ---
 title: Ajouter des stratégies de configuration d’applications pour les appareils Android gérés
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Utilisez des stratégies de configuration des applications dans Microsoft Intune pour fournir des paramètres quand les utilisateurs exécutent une application avec profil professionnel Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2018
-ms.topic: article
+ms.date: 02/21/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 512fc924f71ba9a9fdd46ba8f5f5c087de83c2dd
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: dccbfe597fa4bd461bb71cb86d38ffdfd52d719a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840414"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567424"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android gérés
 
@@ -44,13 +45,13 @@ Utilisez des stratégies de configuration des applications dans Microsoft Intune
 6. Sélectionnez **Android** comme **Plateforme**.
 7. Sélectionnez **Application associée** pour choisir l’application pour laquelle vous souhaitez définir une stratégie de configuration d’applications. Sélectionnez-la dans la liste d’applications avec profil professionnel Android que vous avez approuvées et synchronisées avec Intune.
 8. Sélectionnez **Autorisations**. Vous pouvez définir des configurations à l’aide de :
-    - [Concepteur de configuration](#Use-the-configuration-designer)
-    - [Éditeur JSON](#Enter-the-JSON-editor)
+    - [Concepteur de configuration](#use-the-configuration-designer)
+    - [Éditeur JSON](#enter-the-json-editor)
 9. Choisissez **OK**, puis **Ajouter**.
 
 ## <a name="use-the-configuration-designer"></a>Utiliser le concepteur de configuration
 
-Vous pouvez utiliser le concepteur de configuration pour les applications Android qui prennent en charge la configuration. La configuration s’appliquera aux appareils qui sont inscrits dans Intune. Le concepteur vous permet de configurer des valeurs de configuration spécifiques pour les paramètres qu’une application expose.
+Vous pouvez utiliser le concepteur de configuration pour les applications Android lorsque l’application a été conçue pour prendre en charge les paramètres de configuration. La configuration s’appliquera aux appareils qui sont inscrits dans Intune. Le concepteur vous permet de configurer des valeurs de configuration spécifiques pour les paramètres qu’une application expose.
 
 Sélectionnez **Ajouter** pour sélectionner la liste de paramètres de configuration que vous souhaitez spécifier pour l’application.  
 Pour chaque clé et valeur de la configuration, définissez les éléments suivants :
