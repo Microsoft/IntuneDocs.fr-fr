@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dff7e28daff503570350950b60ae974cd048c5c
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 401bc833b2b864983ec301972950ffbd04fe2229
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426228"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135182"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -46,6 +46,25 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-6-2019"></a>Semaine du 6 mai 2019 
+
+### <a name="device-configuration"></a>Configuration des appareils
+
+#### <a name="network-access-control-nac-support-for-f5-access-for-ios-devices----4500808---"></a>Prise en charge du contrôle d’accès réseau (NAC) pour l’accès F5 sur les appareils iOS <!-- 4500808 -->
+
+F5 a publié une mise à jour vers BIG-IP 13 qui autorise la fonctionnalité NAC pour l’accès F5 sur iOS dans Intune. Pour utiliser cette fonctionnalité :
+
+- Effectuez une mise à jour de BIG-IP avec la version 13.1.1.5 actualisée. BIG-IP 14 n’est pas pris en charge.
+- Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Étapes dans [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+- Cochez le paramètre **Activer le contrôle d'accès réseau (NAC)** dans le profil VPN dans Intune.
+
+Pour voir le paramètre disponible, accédez à [Configurer les paramètres VPN sur les appareils iOS](vpn-settings-ios.md).
+
+S’applique à : iOS
+
+#### <a name="updated-pfx-certificate-connector-for-microsoft-intune----doc-vso-1521237----"></a>Mise à jour du connecteur de certificat PFX pour Microsoft Intune <!-- doc-vso 1521237  -->  
+Nous avons publié une mise à jour pour le [connecteur de certificat PFX pour Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors) qui baisse l’intervalle d’interrogation de 5 minutes à 30 secondes.
 
 ## <a name="week-of-april-22-2019"></a>Semaine du 22 avril 2019
 
@@ -75,7 +94,7 @@ Dans l’exemple suivant, vous voyez la répartition des contrôles RGPD. Micros
 Les stratégies de protection des applications Intune sur les appareils Android utilise désormais une bibliothèque de chiffrement OpenSSL qui est conforme à la norme FIPS 140-2. Pour plus d’informations, consultez la section [Chiffrement](app-protection-policy-settings-android.md#encryption) de [Paramètres de la stratégie de protection des applications Android dans Microsoft Intune](app-protection-policy-settings-android.md).
 
 #### <a name="enable-win32-app-dependencies----2617348----"></a>Activer les dépendances d’application Win32 <!-- 2617348  -->
-En qualité d’administrateur, vous pouvez exiger que les autres applications soient installées en tant que dépendances avant d’installer votre application Win32. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Dans Intune, sélectionnez **Applications clientes** > **Applications** > **Ajouter** pour afficher le panneau **Ajouter une application**. Sélectionnez **Application Windows (Win32)** comme **Type d’application**. Après avoir ajouté l’application, vous pouvez sélectionner **Dépendances** pour ajouter l’application dépendante qui doit être installée avant que l’application Win32 puisse être installée. Pour plus d’informations, consultez [Intune autonome - Gestion des applications Win32](apps-win32-app-management.md). Cette fonctionnalité n’est disponible qu’une fois l’agent de gestion Intune mis à niveau vers la version 1904 (ultérieure à la version 1.18.120.0), ce qui peut prendre une ou deux semaines supplémentaires une fois le service mis à niveau vers la version 1904.
+En qualité d’administrateur, vous pouvez exiger que les autres applications soient installées en tant que dépendances avant d’installer votre application Win32. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Dans Intune, sélectionnez **Applications clientes** > **Applications** > **Ajouter** pour afficher le panneau **Ajouter une application**. Sélectionnez **Application Windows (Win32)** comme **Type d’application**. Après avoir ajouté l’application, vous pouvez sélectionner **Dépendances** pour ajouter l’application dépendante qui doit être installée avant que l’application Win32 puisse être installée. Pour plus d’informations, consultez [Intune autonome - Gestion des applications Win32](apps-win32-app-management.md). 
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informations sur l’installation de versions d’application pour les applications Microsoft Store pour Entreprises <!-- 3537391   -->
 Les rapports d’installation des applications incluent des informations sur les versions d’application concernant Microsoft Store pour les applications métier. Dans Intune, sélectionnez **Applications clientes** > **Applications**. Sélectionnez une **Application du Microsoft Store pour Entreprises** , puis **État de l’installation de l’appareil** sous la section **Superviser**.
@@ -91,6 +110,9 @@ La page de vue d’ensemble de l’appareil indique l’utilisateur principal, �
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Création de rapports d’applications Google Play gérées supplémentaires pour les appareils avec profil professionnel Android Entreprise <!-- 4105925  -->
 Pour les applications Google Play gérées qui sont déployées sur des appareils avec profil professionnel Android Entreprise, vous pouvez afficher le numéro de version spécifique de l’application installée sur un appareil. Cela concerne uniquement les applications obligatoires. Les mêmes fonctionnalités seront activées pour les applications disponibles dans une version ultérieure. 
+
+#### <a name="ios-third-party-keyboards----4111843-idready-eeready---"></a>Claviers tiers iOS <!-- 4111843 idready eeready -->
+La prise en charge de la stratégie de protection des applications Intune pour le paramètre **Claviers tiers** pour iOS n’existe plus en raison d’un changement de plateforme iOS. Vous ne pouvez plus configurer ce paramètre dans la console d’administration Intune, ni l’appliquer sur le client dans le kit SDK de l’application Intune.
 
 ### <a name="device-configuration"></a>Configuration des appareils
 
@@ -108,7 +130,7 @@ S’applique à : Appareils dédiés Android Entreprise s’exécutant en mode 
 
 
 #### <a name="configure-bluetooth-and-pairing-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode----3041941----"></a>Configurer le Bluetooth et l’appairage sur les appareils dédiés des propriétaires d’appareils Android Entreprise s’exécutant en mode kiosque multi-application <!-- 3041941  -->
-Vous pouvez activer des paramètres sur un propriétaire d’appareil Android Entreprise en cas d’exécution en tant qu’appareil dédié en mode kiosque multi-application. Dans cette mise à jour, vous pouvez autoriser les utilisateurs finaux à activer le Bluetooth (**Intune** > **Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Entreprise** pour la plateforme > **Propriétaire de l’appareil uniquement, Restrictions sur l’appareil** pour le type de profil >  **Appareils dédiés** > **Mode kiosque** : **Multi-application** > **Configuration Bluetooth**). 
+Vous pouvez activer des paramètres sur un propriétaire d’appareil Android Entreprise en cas d’exécution en tant qu’appareil dédié en mode kiosque multi-application. Dans cette mise à jour, vous pouvez autoriser les utilisateurs finaux à activer le Bluetooth et à appairer les appareils en Bluetooth (**Intune** > **Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Entreprise** pour la plateforme > **Propriétaire de l’appareil uniquement, Restrictions sur l’appareil** pour le type de profil >  **Appareils dédiés** > **Mode kiosque** : **Multi-application** > **Configuration Bluetooth**). 
 
 Pour voir tous les paramètres que vous pouvez configurer, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités](device-restrictions-android-for-work.md).
 
@@ -207,7 +229,7 @@ Vous pouvez maintenant ajouter des balises d’étendue à des jetons VPP Apple.
 ### <a name="device-configuration"></a>Configuration des appareils
 
 #### <a name="updated-certificate-connectors-----icm-113304612---"></a>Mise à jour des connecteurs de certificat  <!-- ICM 113304612 -->
-Nous avons publié des mises à jour à la fois pour [Intune Certificate Connector et pour PFX Certificate Connector](certficates-pfx-configure.md#whats-new-for-connectors). Les nouvelles versions résolvent plusieurs problèmes connus.  
+Nous avons publié des mises à jour à la fois pour le [connecteur de certificat Intune et le connecteur de certificat PFX](certficates-pfx-configure.md#whats-new-for-connectors). Les nouvelles versions résolvent plusieurs problèmes connus.  
 
 ### <a name="app-management"></a>Gestion d'applications
 
@@ -376,7 +398,7 @@ Dans Intune, sélectionnez **Applications clientes** > **Applications** > « No
 Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Ce changement apparaît dans la version 10.3.3451.0 et les versions ultérieures du portail d’entreprise. Pour afficher le nouvel écran, consultez [Nouveautés de l’interface utilisateur des applications](https://docs.microsoft.com/intune/whats-new-app-ui). Pour plus d’informations sur les applications dans le portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Application Conformité de Power BI <!-- 1455231 doc-work-item -->
-Accédez à votre entrepôt de données Intune dans Power BI à l’aide de l’application [Conformité Intune (Entrepôt de données)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance). Avec cette application Power BI, vous pouvez désormais accéder à des rapports précréés et les partager sans aucune configuration supplémentaire et sans quitter votre navigateur web. Pour plus d’informations, consultez [Journal des changements - Application Conformité de Power BI](reports-changelog.md#power-bi-compliance-app).
+Accédez à votre entrepôt de données Intune dans Power BI à l’aide de l’application [Conformité Intune (Entrepôt de données)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Avec cette application Power BI, vous pouvez désormais accéder à des rapports précréés et les partager sans aucune configuration supplémentaire et sans quitter votre navigateur web. Pour plus d’informations, consultez [Journal des changements - Application Conformité de Power BI](reports-changelog.md#power-bi-compliance-app).
 
 
 ### <a name="device-configuration"></a>Configuration des appareils

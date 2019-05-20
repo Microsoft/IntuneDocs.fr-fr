@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48228d0baea204fd94175750075c04771116a74d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cbef2059f42a209a63e4ba3f1e83aec410237d02
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513795"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135137"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
@@ -63,27 +63,39 @@ La liste suivante présente le fonctionnement du contrôle d’accès réseau qu
 9. La connexion est établie, ce qui permet à l’appareil d’accéder aux ressources d’entreprise.
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Utiliser le contrôle d’accès réseau pour un VPN sur vos appareils iOS  
-Le contrôle d’accès réseau pour Cisco Legacy AnyConnect, F5 Access Legacy et Citrix VPN est pris en charge sans avoir à activer le contrôle d’accès réseau dans le profil VPN.
 
-Le contrôle d’accès réseau pour Citrix SSO est également pris en charge. Pour activer le contrôle d’accès réseau pour Citrix SSO pour iOS :
-- Utilisez Citrix Gateway 12.0.59 ou une version ultérieure.  
-- Les utilisateurs doivent avoir Citrix SSO 1.1.6 ou version ultérieure.
-- [Intégrez NetScaler avec Intune pour le contrôle d’accès réseau](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) comme décrit dans la documentation de produit Citrix.
-- Dans la configuration des paramètres VPN de base, pour **Activer le contrôle d’accès réseau (NAC)**, cochez la case **J’accepte**.
+- Le contrôle d’accès réseau est disponible sur les réseaux privés virtuels suivants sans activer le contrôle d’accès réseau dans le profil VPN :
 
-Lorsque vous utilisez Citrix SSO pour iOS, la connexion VPN est déconnectée toutes les 24 heures pour des raisons de sécurité. Le VPN peut être immédiatement reconnecté.
+  - NAC for Cisco Legacy AnyConnect
+  - F5 Access Legacy
+  - Citrix VPN
 
+- Le contrôle d’accès réseau est également disponible pour Citrix SSO et F5 Access. Pour activer le contrôle d’accès réseau pour Citrix SSO :
 
-**Le contrôle d’accès réseau n’est pas pris en charge pour les clients VPN suivants sur iOS** :
--   Cisco AnyConnect
--   Accès F5
+  - Utilisez Citrix Gateway 12.0.59 ou une version ultérieure.  
+  - Les utilisateurs doivent avoir Citrix SSO 1.1.6 ou version ultérieure.
+  - [Intégrez NetScaler avec Intune pour le contrôle d’accès réseau](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) comme décrit dans la documentation de produit Citrix.
+  - Dans le profil VPN, sélectionnez **Paramètres de Base** > **Activer le contrôle d’accès réseau (NAC)** > **J’accepte**.
 
-Nous travaillons avec nos partenaires à la publication d’une solution de contrôle d’accès réseau pour ces clients plus récents. Quand des solutions seront prêtes, nous mettrons à jour cet article avec des détails supplémentaires. 
+  La connexion VPN est déconnectée toutes les 24 heures pour des raisons de sécurité. Le VPN peut être immédiatement reconnecté.
 
+- Pour activer le contrôle d’accès réseau pour F5 Access :
+
+  - Utilisez F5 BIG-IP 13.1.1.5. BIG-IP 14 n’est pas pris en charge.
+  - Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Le guide F5 [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) dresse la liste des étapes.
+  - Dans le profil VPN, sélectionnez **Paramètres de Base** > **Activer le contrôle d’accès réseau (NAC)** > **J’accepte**.
+
+  La connexion VPN est déconnectée toutes les 24 heures pour des raisons de sécurité. Le VPN peut être immédiatement reconnecté.
+
+- Le contrôle d’accès réseau n’est pas pris en charge pour les clients VPN suivants sur iOS :
+  - Cisco AnyConnect
+
+Nous travaillons avec nos partenaires à la publication d’une solution de contrôle d’accès réseau pour ces clients plus récents. Quand des solutions seront prêtes, cet article sera mis à jour avec des informations supplémentaires.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Intégrer Cisco ISE avec Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Intégrer Citrix NetScaler avec Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Intégrer F5 BIG-IP Access Policy Manager avec Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Intégrer HP Aruba ClearPass à Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Intégrer Squadra secRMM (security Removable Media Manager) à Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

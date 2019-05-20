@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 4/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d089d0e9724a1ce150fa7e8697c80734fb0d7e9c
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 68f5fad9d05787b6e79792d594480547ce10cf81
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764919"
 ---
 # <a name="what-is-device-enrollment"></a>Qu’est-ce que l’inscription d’appareils ?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -67,11 +67,19 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 
 ## <a name="android-enrollment-methods"></a>Méthodes d’inscription d’Android
 
-| **Méthode** |  **Réinitialisation requise** |    **Affinité utilisateur**   |   **Verrouillé** | **Détails**|
+| **Personnel** | **Méthodes d’inscription** | **Réinitialisation requise** | **Affinité utilisateur** | **Verrouillé** | **Détails**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Non|   Oui |   Non | [Plus d’informations](./android-enroll.md)|
-|**[GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager)**| Non |Non |Non  |[Plus d’informations](./device-enrollment-manager-enroll.md)|
-|**Profils professionnels Android**| Non | Oui | Non| [Plus d’informations](./android-work-profile-enroll.md) |
+|**Administration des appareils Android**|**Lancée par l’utilisateur par le biais du portail d’entreprise** | Non | Oui | Non | [Plus d’informations](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
+|**Profil professionnel Android Entreprise**|**Lancée par l’utilisateur par le biais du portail d’entreprise**| Non | Oui | Non | [Plus d’informations](./android-work-profile-enroll.md)|
+
+
+| **Entreprise** | **Méthodes d’inscription** | **Réinitialisation requise** | **Affinité utilisateur** | **Verrouillé** | **Détails**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Administration des appareils Android**|**Lancée par le [GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager) par le biais du portail d’entreprise**| Non | Non | Non |[Plus d’informations](./device-enrollment-manager-enroll.md)|
+|**Administration des appareils Android**|**(IMEI ou SN prédéclaré) Lancée par l’utilisateur par le biais du portail d’entreprise**| Non | Oui | Non | [Plus d’informations](./corporate-identifiers-add.md)|
+|**Administration des appareils Android avec Extensions de mobilité Zebra**|**Lancée par l’utilisateur ou par le [GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager) par le biais du portail d’entreprise**| Non | Oui si lancée par l’utilisateur, non si lancée par le [GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager) | Non | [Plus d’informations](./android-zebra-mx-overview.md)|
+|**Android Entreprise dédié**|**NFC, jeton, code QR, Zero Touch**| Oui | Non | Configurable par le biais de la stratégie | [Plus d’informations](./android-kiosk-enroll.md)|
+|**Android Entreprise complètement géré (préversion)**|**NFC, jeton, code QR, Zero Touch**| Oui | Oui | Configurable par le biais de la stratégie | [Plus d’informations](./android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>(Apportez votre propre appareil)

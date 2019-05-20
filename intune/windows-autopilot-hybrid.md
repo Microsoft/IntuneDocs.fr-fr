@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
+ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619434"
 ---
-# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot (préversion)
+# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
 
 ## <a name="prerequisites"></a>Prérequis
@@ -35,7 +35,7 @@ Configurez correctement vos [appareils joints à Azure AD Hybride](https://docs.
 Les appareils à inscrire doivent également :
 - Exécuter Windows 10 avec la [mise à jour d’octobre 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)
 - Avoir accès à Internet
-- Avoir accès à votre domaine Active Directory (connexion VPN non prise en charge)
+- Avoir accès à votre domaine Active Directory (connexion VPN non prise en charge à l’heure actuelle)
 - Fournir l’expérience utilisateur OOBE (Out-of-Box Experience).
 - Pouvoir effectuer un test ping sur le contrôleur de domaine du domaine que vous tentez de joindre.
 
@@ -211,7 +211,14 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
 1. Sélectionnez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et (facultatif) une **Unité d’organisation** au [Format DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Sélectionnez **OK** > **Créer**.  
     Le profil est créé et apparaît dans la liste.
-1. Pour affecter le profil, suivez les étapes décrites dans [Attribuer un profil d’appareil](device-profile-assign.md#assign-a-device-profile). 
+1. Pour attribuer le profil, suivez les étapes fournies dans [Attribuer un profil d’appareil](device-profile-assign.md#assign-a-device-profile), et affectez le profil au même groupe que celui utilisé à l’étape [Créer un groupe d’appareils](windows-autopilot-hybrid.md#create-a-device-group).
+   - Déploiement de plusieurs profils joints à un domaine
+   
+     a. Créez un groupe dynamique incluant tous vos appareils Autopilot avec un profil de déploiement Autopilot spécifique, et entrez (device.enrollmentProfileName -eq "nom_profil_Autopilot"). 
+     
+     b. Remplacez « nom_profil_Autopilot » par le nom complet du profil créé sous [Créer et attribuer un profil de déploiement Autopilot](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
+     
+     c. Créez plusieurs profils de déploiement Autopilot et affectez cet appareil au profil spécifié dans ce groupe dynamique.
 
 > [!NOTE]
 > Les capacités de nommage pour Windows Autopilot pour la jonction Azure AD Hybride ne prennent pas en charge les variables telles que %SERIAL% et prennent uniquement en charge les préfixes pour le nom d’ordinateur.

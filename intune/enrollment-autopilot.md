@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6545724294eefc83789f56f851549c0b5fee7f22
+ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513104"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626431"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## <a name="prerequisites"></a>Prérequis
+- [Abonnement Intune](licenses.md)
 - [Inscription automatique Windows activée](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Abonnement à Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -150,15 +151,17 @@ Prérequis : portail d’entreprise Azure Active Directory configuré et Window
 
 ## <a name="delete-autopilot-devices"></a>Supprimer des appareils Autopilot
 
-Vous pouvez supprimer les appareils Windows Autopilot qui ne sont pas inscrits.
+Vous pouvez supprimer les appareils Windows Autopilot qui ne sont pas inscrits dans Intune :
 
-1. Si les appareils sont inscrits dans Intune, vous devez d’abord [les supprimer dans le portail Azure Active Directory](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+- Supprimez les appareils Windows Autopilot dans **Inscription d’appareils** > **Inscription Windows** > **Appareils**. Sélectionnez les appareils que vous souhaitez supprimer, puis choisissez **Supprimer**. La suppression des appareils Windows Autopilot peut prendre quelques minutes.
 
-2. Dans [Intune dans le portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils**.
+La suppression totale d’un appareil de votre locataire vous oblige à supprimer l’appareil Intune, l’appareil Azure Active Directory et les enregistrements d’appareil Windows Autopilot. Vous pouvez effectuer toutes ces opérations à partir d’Intune :
 
-3. Sous **Appareils Windows Autopilot**, choisissez les appareils à supprimer, puis choisissez **Supprimer**.
+1. Si les appareils sont inscrits dans Intune, vous devez d’abord [les supprimer à partir du panneau Tous les appareils](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-4. Confirmez la suppression en choisissant **Oui**. La suppression peut prendre quelques minutes.
+2. Supprimez les appareils d’Azure Active Directory dans **Appareils** > **Appareils Azure AD**.
+
+3. Supprimez les appareils Windows Autopilot dans **Inscription d’appareils** > **Inscription Windows** > **Appareils**. Sélectionnez les appareils que vous souhaitez supprimer, puis choisissez **Supprimer**. La suppression des appareils Windows Autopilot peut prendre quelques minutes.
 
 ## <a name="using-autopilot-in-other-portals"></a>Utilisation d’Autopilot dans d’autres portails
 Si la gestion des appareils mobiles ne vous intéresse pas, vous pouvez utiliser Autopilot dans d’autres portails. Bien que l’utilisation d’autres portails soit une option, nous vous recommandons d’utiliser seulement Intune pour gérer vos déploiements Autopilot. Quand vous utilisez Intune et un autre portail, Intune ne peut pas :  

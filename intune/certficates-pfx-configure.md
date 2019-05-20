@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b05b7f2a0b56321023bc8444528578aeface0b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 491610fcefa1b20159ebfe487c9e2d95a6f5e7c6
+ms.sourcegitcommit: 586114e1beee31aa8553f69c0ba4d731afcb45e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508577"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65402064"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -189,7 +189,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 3. Accédez à **Paramètres** et entrez le fichier .cer du certificat d’AC racine exporté précédemment.
 
    > [!NOTE]
-   > En fonction de la plateforme que vous avez choisie à l’**Étape 3**, vous n’aurez pas forcément la possibilité de choisir le **Magasin de destination** du certificat.
+   > En fonction de la plateforme que vous avez choisie à l’**Étape 2**, vous n’aurez pas forcément la possibilité de choisir le **Magasin de destination** du certificat.
 
    ![Créer un profil et charger un certificat approuvé](media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
 
@@ -248,16 +248,21 @@ Après avoir importé les certificats dans Intune, créez un profil **Certificat
 ## <a name="whats-new-for-connectors"></a>Nouveautés des connecteurs
 Des mises à jour pour les deux connecteurs de certificats sont régulièrement publiées. Quand nous mettons à jour un connecteur, vous pouvez découvrir ici les modifications apportées. 
 
-*PFX Certificates Connector* [prend en charge les mises à jour automatiques](#requirements), tandis qu’Intune Certificate Connector est mis à jour manuellement.
+Le *connecteur de certificats PFX pour Microsoft Intune* [prend en charge les mises à jour automatiques](#requirements), tandis que le *conteneur de certificat Intune* est mis à jour manuellement.
+
+### <a name="may-6-2019"></a>6 mai 2019
+- **Connecteur de certificats PFX pour Microsoft Intune - version 6.1905.0.402**  
+  Modifications de cette version :  
+  - L’intervalle d’interrogation pour le connecteur est réduit de cinq minutes à 30 secondes.
  
 ### <a name="april-2-2019"></a>2 avril 2019
-- **Connecteur NDES Certificate - version 6.1904.1.0**  
+- **Connecteur de certificat Intune - version 6.1904.1.0**  
   Modifications de cette version :  
   - Correction d’un problème pouvant entraîner l’échec de l’inscription du connecteur auprès d’Intune après la connexion au connecteur avec un compte d’administrateur général.  
   - Inclusion de correctifs de fiabilité pour la révocation de certificats.  
   - Inclusion de correctifs de performances pour augmenter la vitesse de traitement des demandes de certificat PKCS.  
 
-- **PFX Certificate Connector - version 6.1904.0.401**
+- **Connecteur de certificats PFX pour Microsoft Intune - version 6.1904.0.401**
   > [!NOTE]  
   > La mise à jour automatique pour cette version du connecteur PFX n’est pas disponible avant le 11 avril 2019.  
 

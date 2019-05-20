@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 04/30/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
-ms.reviewer: heenamac
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab9fef5a577783ebbdd512de6d00ab98483e754c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 92216550ee53c220beb3dc325be02c28b5eeb0c5
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513353"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135206"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Activer le connecteur Mobile Threat Defense dans Intune
 
@@ -67,7 +67,7 @@ Vous pouvez décider des options MTD que vous devez activer en fonction des beso
 - **Nombre de jours avant de considérer que le partenaire n’est pas réactif** : nombre de jours d’inactivité au bout desquels Intune considère que le partenaire n’est pas réactif en raison de la perte de connexion. Intune ignore l’état de conformité pour les partenaires MTD non réactifs.
 
 > [!IMPORTANT] 
-> Vous devez ajouter et affecter les applications MTD avant de créer les règles de conformité des appareils et de stratégie d’accès conditionnel. Cela garantit que l’application MTD est prête et mise à la disposition des utilisateurs finaux qui souhaitent l’installer pour pouvoir accéder à leur e-mail ou à d’autres ressources de l’entreprise.
+> Dans la mesure du possible, nous vous recommandons d’ajouter et d’affecter les applications MTD avant de créer les règles de conformité des appareils et de stratégie d’accès conditionnel. Cela aide à garantir que l’application MTD est prête et mise à la disposition des utilisateurs finaux qui souhaitent l’installer pour pouvoir accéder à leur e-mail ou à d’autres ressources de l’entreprise.
 
 > [!TIP]
 > Vous pouvez voir l’**état de la connexion** et l’heure de la **dernière synchronisation** entre Intune et le partenaire MTD dans le volet Mobile Threat Defense.
