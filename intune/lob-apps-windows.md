@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca41e12136911cc0aecb6968a949fb738e2e2d77
-ms.sourcegitcommit: d1116c70bd0f2382d590091e0e66095de3925324
+ms.openlocfilehash: 0eadff455a25a22d53d58d87790a356072f9db66
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59570765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764728"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -63,7 +63,7 @@ Une application métier est une application que vous ajoutez à partir d’un fi
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : entrez éventuellement l’URL d’un site web qui contient des informations sur l’application. L’URL s’affiche dans le portail d’entreprise.
     - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
-    - **Arguments de ligne de commande** : si vous le souhaitez, entrez les arguments de ligne de commande à appliquer au fichier .msi durant son exécution. Exemple : **/q**.
+    - **Arguments de ligne de commande** : si vous le souhaitez, entrez les arguments de ligne de commande à appliquer au fichier .msi durant son exécution.  Exemple : **/q**. N’incluez pas la commande msiexec ou des arguments, tel que **/i** ou **/x**, car ils sont automatiquement utilisés. Pour plus d’informations, consultez [Options de ligne de commande](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). 
     - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application. Exemple : **Service des ressources humaines**.
     - **Remarques** : entrez les remarques à associer à cette application.
