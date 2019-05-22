@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98e2229194287ff644e9503fa21c9536cbff4734
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 895b358760775b1021e545b271acb7ced7fa7b1d
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507305"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942089"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -42,7 +42,7 @@ Pour afficher un rôle, choisissez **Intune** > **Rôles** > **Tous les rôles**
 -   **Affectations** : liste d’[attributions de rôles]( assign-role.md) identifiant quels utilisateurs ont accès à quels utilisateurs/appareils. Un rôle peut avoir plusieurs attributions, et un utilisateur peut figurer dans plusieurs attributions.
 
 ### <a name="built-in-roles"></a>Rôles intégrés
-Vous pouvez attribuer des rôles intégrés aux groupes sans configuration supplémentaire. Vous ne pouvez pas supprimer ou modifier le nom, la description, le type ou les autorisations d’un rôle intégré. Pour obtenir une liste complète des autorisations pour chaque rôle intégré, consultez le [tableau RBAC d’Intune] ((https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Vous pouvez attribuer des rôles intégrés aux groupes sans configuration supplémentaire. Vous ne pouvez pas supprimer ou modifier le nom, la description, le type ou les autorisations d’un rôle intégré. Pour obtenir une liste complète des autorisations pour chaque rôle intégré, consultez le [tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 - **Opérateur du support technique** : Effectue des tâches à distance sur les utilisateurs et les appareils, et peut attribuer des applications ou des stratégies aux utilisateurs ou aux appareils.
 - **Gestionnaire de stratégie et de profils** : Gère la stratégie de conformité, les profils de configuration, l’inscription auprès d’Apple, les identificateurs d’appareils d’entreprise et les bases de référence de la sécurité.
