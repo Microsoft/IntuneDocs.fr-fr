@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 151ceaa40f2993d3160b9de34eee92e53c35925d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 84a4db5639a03720b03da665c9df09fbc39d9df5
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565857"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66045012"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Paramètres Windows Holographic for Business pour gérer les appareils partagés à l’aide d’Intune
 
@@ -44,9 +43,9 @@ Pour plus d’informations sur cette fonctionnalité dans Intune, consultez [Con
 > Les appareils qui exécutent Windows Holographic for Business, y compris Microsoft HoloLens, prennent uniquement en charge les paramètres de **gestion des comptes**. Si vous configurez d’autres paramètres Intune, y compris le **mode PC partagé**, cela n’aura aucun impact sur ces appareils.
 
 - **Gestion du compte** : affectez la valeur **Activer** pour supprimer automatiquement les comptes locaux créés par des invités et les comptes dans AD et Azure Active Directory. Quand un utilisateur se déconnecte de l’appareil, ou lors de l’exécution de la maintenance du système, ces comptes sont supprimés. Quand cette option est activée, définissez également :
-  - **Suppression du compte**: choisissez lors de la suppression des comptes : **au seuil d’espace de stockage**, **au seuil d’espace de stockage et de seuil inactive**, ou **immédiatement après la déconnexion** . Entrez également :
-    - **Commencez par supprimer les threshold(%)**: entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total est inférieur à la valeur entrée, les comptes mis en cache sont supprimés. Les comptes sont supprimés de manière continue afin de récupérer l’espace disque. Les comptes inactifs depuis le plus longtemps sont supprimés en premier.
-    - **Arrêter la suppression threshold(%)**: entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total atteint la valeur entrée, la suppression cesse.
+  - **Suppression du compte** : choisissez quand les comptes doivent être supprimés : **Au niveau du seuil d’espace de stockage**, **Au niveau du seuil d’espace de stockage et du seuil d’inactivité** ou **Immédiatement après la déconnexion**. Entrez également :
+    - **Seuil de démarrage de suppression (%)**  : entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total est inférieur à la valeur entrée, les comptes mis en cache sont supprimés. Les comptes sont supprimés de manière continue afin de récupérer l’espace disque. Les comptes inactifs depuis le plus longtemps sont supprimés en premier.
+    - **Seuil d’arrêt de suppression (%)**  : entrez un pourcentage (0-100) d’espace disque. Quand l’espace de stockage/disque total atteint la valeur entrée, la suppression cesse.
 
   Affectez la valeur **Désactiver** pour conserver les comptes locaux, AD et Azure AD créés par des invités.
 

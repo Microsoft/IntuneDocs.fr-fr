@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 08/29/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4f6a8c3e460e9806aabadd710ec102aa77d44ab
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 86cbea29233d792006bce68fcd2a36fb1a7ec0a6
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050194"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Ajouter des applications pour les PC Windows exécutant le logiciel client Intune
 
@@ -78,7 +77,7 @@ Vous utilisez l’Éditeur de logiciel Microsoft Intune pour configurer les prop
 5. Dans la page **Règles de détection**, vous pouvez configurer des règles pour détecter si l’application que vous configurez actuellement est déjà installée sur un PC. Vous pouvez aussi utiliser les règles de détection par défaut pour remplacer automatiquement toutes les versions de l’application précédemment installées. Cette option est pour Windows Installer (fichiers .exe uniquement).
 
    Les règles que vous pouvez configurer sont les suivantes :
-   - **Le fichier existe**. Spécifiez le chemin du fichier que vous voulez détecter. Vous pouvez effectuer une recherche sous **%ProgramFiles%** (c’est-à-dire dans **Program Files**\&lt;chemin&gt; et **Program Files (x86)**\&lt;chemin&gt;) sur le PC ou **%SystemDrive%** (la recherche s’effectue à partir du lecteur racine du PC, généralement le lecteur C).
+   - **Le fichier existe**. Spécifiez le chemin du fichier que vous voulez détecter. Vous pouvez effectuer une recherche sous **%ProgramFiles%** (c’est-à-dire dans **Program Files**\&lt;chemin&gt; et **Program Files (x86)** \&lt;chemin&gt;) sur le PC ou **%SystemDrive%** (la recherche s’effectue à partir du lecteur racine du PC, généralement le lecteur C).
    - **Le code de produit MSI existe déjà**. Sélectionnez **Parcourir** pour choisir le fichier Windows Installer (msi) que vous voulez détecter.
    - <strong>Cette clé du Registre existe</strong>. Spécifiez une clé de Registre qui commence par <strong>HKEY_LOCAL_MACHINE\</strong>. La recherche peut porter sur les chemins du Registre 32 bits et 64 bits. Si la clé spécifiée existe dans les deux emplacements, la règle de détection est satisfaite.
 

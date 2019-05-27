@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 6/14/2018
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7ec762e7e7299e400fefedbf7a8810e1da929f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 000f48f062e9e7300337ade04c8cf872d96eab2a
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461343"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040234"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Résoudre les problèmes de mise à jour logicielle dans Microsoft Intune
 
@@ -173,7 +172,7 @@ Le tableau suivant répertorie les codes d’erreur de l’**agent de mise à jo
 |**0x80cf4028**|OM_E_PT_NO_AUTH_COOKIES_CREATED|L'agent n'a pas pu créer tous les cookies d'authentification valides.|
 |**0x80cf4029**|OM_E_PT_INVALID_CONFIG_PROP|Une valeur de propriété de configuration était erronée.|
 |**0x80cf402A**|OM_E_PT_CONFIG_PROP_MISSING|Une valeur de propriété de configuration était manquante.|
-|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|La demande HTTP n’a pas pu être effectuée et la raison ne correspondait à aucun des codes d’erreur **OM_E_PT_HTTP_&#42;**.|
+|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|La demande HTTP n’a pas pu être effectuée et la raison ne correspondait à aucun des codes d’erreur **OM_E_PT_HTTP_&#42;** .|
 |**0x80cf402C**|OM_E_PT_WINHTTP_NAME_NOT_RESOLVED|Identique à **ERROR_WINHTTP_NAME_NOT_RESOLVED**. Le nom du serveur proxy ou du serveur de destination ne peut pas être résolu.|
 |**0x80cf402F**|OM_E_PT_ECP_SUCCEEDED_WITH_ERRORS|Le traitement des fichiers .cab externes s'est terminé avec des erreurs.|
 |**0x80cf4030**|OM_E_PT_ECP_INIT_FAILED|L'initialisation du processeur .cab externe ne s'est pas terminée.|
@@ -182,7 +181,7 @@ Le tableau suivant répertorie les codes d’erreur de l’**agent de mise à jo
 |**0x80cf4033**|OM_E_PT_ECP_FAILURE_TO_EXTRACT_DIGEST|Le fichier condensé n'a pas pu être extrait à partir d'un fichier .cab externe.|
 |**0x80cf4034**|OM_E_PT_ECP_FAILURE_TO_DECOMPRESS_CAB_FILE|Impossible de décompresser un fichier .cab externe.|
 |**0x80cf4035**|OM_E_PT_ECP_FILE_LOCATION_ERROR|Le processeur cab externe n'a pas pu obtenir les emplacements de fichiers.|
-|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Une erreur de communication s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_PT_&#42;**.|
+|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Une erreur de communication s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_PT_&#42;** .|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Une opération du gestionnaire de téléchargement n'a pas pu aboutir car le fichier demandé n'a pas d'URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Une opération du gestionnaire de téléchargement n'a pas pu aboutir car le fichier condensé n'était pas reconnu.|
 |**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Une opération du gestionnaire de téléchargement n'a pas pu aboutir car les métadonnées du fichier demandaient un algorithme de hachage non reconnu.|
@@ -192,7 +191,7 @@ Le tableau suivant répertorie les codes d’erreur de l’**agent de mise à jo
 |**0x80cf6009**|OM_E_DM_BITSTRANSFERERROR|Une opération du gestionnaire de téléchargement a échoué car une erreur de transfert du Service de transfert intelligent en arrière-plan (BITS) non spécifiée s'est produite.|
 |**0x80cf600a**|OM_E_DM_DOWNLOADLOCATIONCHANGED|Un téléchargement doit être redémarré car l'emplacement source de téléchargement a été modifié.|
 |**0x80cf600B**|OM_E_DM_CONTENTCHANGED|Un téléchargement doit être redémarré car le contenu de la mise à jour a changé dans une nouvelle révision.|
-|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Une erreur du gestionnaire de téléchargement s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_DM_&#42;**.|
+|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Une erreur du gestionnaire de téléchargement s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_DM_&#42;** .|
 |**0x80cf7003**|OM_E_INVALID_EVENT_PAYLOAD|Une charge utile de l'événement a été spécifiée et n'est pas valide.|
 |**0x80cf7004**|OM_E_INVALID_EVENT_PAYLOADSIZE|La taille de la charge utile de l'événement soumise n'est pas valide.|
 |**0x80cf7005**|OM_E_SERVICE_NOT_REGISTERED|Le service n'est pas enregistré.|
@@ -224,13 +223,13 @@ Le tableau suivant répertorie les codes d’erreur de l’**agent de mise à jo
 |**0x80cf801B**|OM_E_DS_SCHEMAMISMATCH|Le schéma du magasin de données actuel et le schéma d'un tableau dans un document XML de sauvegarde ne correspondent pas.|
 |**0x80cf801C**|OM_E_DS_RESETREQUIRED|Le magasin de données requiert une réinitialisation de session. Libérez la session et réessayez avec une nouvelle session.|
 |**0x80cf801D**|OM_E_DS_IMPERSONATED|Une opération du magasin de données n'a pas pu aboutir car elle a été demandée avec une identité usurpée.|
-|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Une erreur du magasin de données s’est produite et n’est pas couverte par un autre code **OM_E_DS_&#42;**.|
+|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Une erreur du magasin de données s’est produite et n’est pas couverte par un autre code **OM_E_DS_&#42;** .|
 |**0x80cfA000**|OM_E_AU_NOSERVICE|Le service Mises à jour automatiques n'a pas pu entretenir les demandes entrantes.|
 |**0x80cfA004**|OM_E_AU_PAUSED|Le service Mises à jour automatiques n'a pas pu traiter les demandes entrantes car il était suspendu.|
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|Aucun service non géré n'est inscrit avec le service Mises à jour automatiques.|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|Le service par défaut enregistré avec le service Mises à jour automatiques a été modifié lors de la recherche.|
 |**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|Le service Mises à jour automatiques invite déjà l'utilisateur à un redémarrage.|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Une erreur du service Mises à jour automatiques s’est produite et n’est pas couverte par un autre code **OM_E_AU &#42;**.|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Une erreur du service Mises à jour automatiques s’est produite et n’est pas couverte par un autre code **OM_E_AU &#42;** .|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|Une opération de l'évaluateur d'expression n'a pas pu aboutir car une expression n'a pas été reconnue.|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|Une opération de l'évaluateur d'expression n'a pas pu aboutir car une expression n'était pas valide.|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|Une opération de l'évaluateur d'expression n'a pas pu aboutir car une expression contient un nombre incorrect de nœuds de métadonnées.|
@@ -238,7 +237,7 @@ Le tableau suivant répertorie les codes d’erreur de l’**agent de mise à jo
 |**0x80cfE005**|OM_E_EE_NOT_INITIALIZED|L'évaluateur d'expression n'a pas pu être initialisé.|
 |**0x80cfE006**|OM_E_EE_INVALID_ATTRIBUTEDATA|Une opération de l'évaluateur d'expression n'a pas pu aboutir car un attribut n'est pas valide.|
 |**0x80cfE007**|OM_E_EE_CLUSTER_ERROR|Une opération de l'évaluateur d'expression n'a pas pu aboutir car l'état de cluster de l'ordinateur n'a pas pu être déterminé.|
-|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Une erreur de l’évaluateur d’expression s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_EE_&#42;**.|
+|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Une erreur de l’évaluateur d’expression s’est produite et n’est pas couverte par un autre code d’erreur **OM_E_EE_&#42;** .|
 |**0x80cfF001**|OM_E_REPORTER_EVENTCACHECORRUPT|Le fichier de cache des événements était défectueux.|
 |**0x80cfF002**|OM_E_REPORTER_EVENTNAMESPACEPARSEFAILED|Le XML dans le descripteur d'espace de noms d'événement n'a pas pu être analysé.|
 |**0x80cfF003**|OM_E_INVALID_EVENT|Le XML dans le descripteur d'espace de noms d'événement n'est pas valide.|

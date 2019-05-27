@@ -1,7 +1,7 @@
 ---
-title: Paramètres de base de référence de la sécurité Windows pour Intune
+title: Paramètres de base de référence de la sécurité Intune pour Windows 10
 titleSuffix: Microsoft Intune
-description: Paramètres de base de référence de la sécurité Windows pris en charge par Intune
+description: Paramètres de base de référence de la sécurité pour Intune pour la gestion de Windows 10
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67938f8697002f94f275f953510d1b0f4864a3fa
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 1d9d095db4d10630555e5696610535bb828f0b5f
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566724"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733062"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité Windows pour Intune  
 
@@ -39,7 +39,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Bloquer l’affichage des notifications toast**  
   Ce paramètre de stratégie vous permet d’empêcher les notifications des applications d’apparaître sur l’écran de verrouillage. Si vous activez ce paramètre de stratégie, aucune notification d’application ne s’affiche sur l’écran de verrouillage. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les utilisateurs peuvent choisir les applications qui affichent des notifications sur l’écran de verrouillage.
   
-  **Par défaut**: Oui  
+  **Par défaut** : Oui  
 
 ## <a name="app-runtime"></a>Runtime d’application    
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
@@ -56,7 +56,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Bloquer Jeux DVR (Desktop uniquement)**  
   Détermine si l’enregistrement et la diffusion des jeux sont autorisés ou non.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 ## <a name="auto-play"></a>Lecture automatique   
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) dans la documentation Windows.  
@@ -64,7 +64,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Comportement d’exécution automatique par défaut de la lecture automatique**  
   Ce paramètre affecte le comportement par défaut des commandes Autorun. Les commandes Autorun sont stockées dans des fichiers autorun.inf et peuvent lancer des programmes d’installation ou d’autres routines. Si ce paramètre est *activé*, les administrateurs peuvent changer le comportement d’Autorun par défaut sur un appareil qui exécute Windows Vista ou ultérieur. Le comportement peut : a) désactiver complètement les commandes Autorun, ou b) rétablir le comportement antérieur à Windows Vista qui consiste à exécuter automatiquement la commande Autorun. Si ce paramètre est *Désactivé* ou *Non configuré*, les appareils exécutant Windows Vista ou ultérieur demandent à l’utilisateur d’exécuter ou non la commande Autorun.
   
-  **Par défaut**: n’exécutez pas  
+  **Par défaut** : ne pas exécuter  
   
 - **Mode lecture automatique**  
   Ce paramètre de stratégie vous permet de désactiver la fonctionnalité de lecture automatique. La lecture automatique commence à lire le média d’un lecteur dès son insertion. Les fichiers d’installation des programmes et la musique des médias audio démarrent donc immédiatement. Avant Windows XP SP2, la lecture automatique était désactivée par défaut sur les lecteurs amovibles, tels que les lecteurs de disquettes (mais pas sur le lecteur de CD-ROM), ainsi que sur les lecteurs réseau. Depuis Windows XP SP2, la lecture automatique est également activée pour les lecteurs amovibles, notamment les lecteurs ZIP et certains périphériques de stockage de masse USB. Si vous activez ce paramètre de stratégie, vous désactivez la lecture automatique sur les lecteurs de CD-ROM et les lecteurs de médias amovibles, ou sur tous les lecteurs. Ce paramètre de stratégie désactive la lecture automatique sur les autres types de lecteurs. Vous ne pouvez pas utiliser ce paramètre pour activer la lecture automatique sur des lecteurs où elle est désactivée par défaut. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, la lecture automatique est activée. Remarque : Ce paramètre de stratégie apparaît dans les dossiers Configuration ordinateur et Configuration utilisateur. Si les paramètres de stratégie sont en conflit, le paramètre de stratégie du dossier Configuration ordinateur a priorité sur le paramètre du dossier Configuration utilisateur.
@@ -83,27 +83,27 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Stratégie de lecteur amovible BitLocker**  
   Ce paramètre de stratégie permet de contrôler la méthode et le niveau de chiffrement. Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.
 
-  Pour la stratégie de lecteur amovible du stockage sécurisé des bits, configurez les paramètres suivants :
+  Pour la stratégie de lecteur amovible BitLocker, configurez les paramètres suivants :
 
     - **Exiger le chiffrement pour l’accès en écriture**  
-      **Par défaut**: Oui  
+      **Par défaut** : oui  
   
     - **Méthode de chiffrement**  
-      **Par défaut**: AES 256 bits CBC  
+      **Par défaut** : AES-CBC 256 bits  
 
 - **Stratégie de lecteur fixe BitLocker**  
   Ce paramètre de stratégie permet de contrôler la méthode et le niveau de chiffrement. Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.  
  
-   Pour le stockage sécurisé des bits stratégie de lecteur fixé, configurez les paramètres suivants : 
+   Pour la stratégie de lecteur fixe BitLocker, configurez les paramètres suivants : 
    - **Méthode de chiffrement**
-     **par défaut**: AES 256 bits XTS  
+     **par défaut**: AES-XTS 256 bits  
 
 - **Stratégie de lecteur système BitLocker**  
   Ce paramètre de stratégie permet de contrôler la méthode et le niveau de chiffrement. Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.  
 
-   Pour la stratégie de lecteur de système de stockage sécurisé de bits, configurez les paramètres suivants :
+   Pour la stratégie de lecteur système BitLocker, configurez les paramètres suivants :
   - **Méthode de chiffrement**  
-    **Par défaut**: AES 256 bits XTS  
+    **Par défaut** : AES-CBC 256 bits  
 
 ## <a name="browser"></a>Navigateur  
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) dans la documentation Windows.  
@@ -111,26 +111,26 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Exiger SmartScreen pour Microsoft Edge**  
   Microsoft Edge utilise Windows Defender SmartScreen (activé) pour protéger les utilisateurs contre d’éventuels courriers indésirables d’hameçonnage et logiciels malveillants par défaut. Par ailleurs, les utilisateurs ne peuvent pas désactiver Windows Defender SmartScreen par défaut. L’activation de cette stratégie désactive Windows Defender SmartScreen et empêche les utilisateurs de l’activer. Ne configurez pas cette stratégie pour permettre aux utilisateurs de choisir d’activer ou non Windows Defender SmartScreen.  
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 - **Bloquer l’accès aux sites malveillants**  
   Par défaut, Microsoft Edge permet aux utilisateurs de contourner (ignorer) les avertissements de Windows Defender SmartScreen relatifs aux fichiers potentiellement malveillants, leur permettant ainsi d’accéder au site. Toutefois, avec cette stratégie, vous pouvez configurer Microsoft Edge de manière à empêcher les utilisateurs de contourner les avertissements, les empêchant ainsi d’accéder au site.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 - **Télécharger des fichiers de bloc non vérifiés** Par défaut, Microsoft Edge permet aux utilisateurs de contourner (ignorer) les avertissements de Windows Defender SmartScreen relatifs aux fichiers potentiellement malveillants, leur permettant ainsi de continuer à télécharger le ou les fichiers non vérifiés. L’activation de cette stratégie empêche les utilisateurs de contourner les avertissements, ce qui leur interdit de télécharger le ou les fichiers non vérifiés.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 - **Bloquer le gestionnaire de mots de passe**  
   Par défaut, Microsoft Edge utilise automatiquement le gestionnaire de mots de passe, ce qui permet aux utilisateurs de gérer leurs mots de passe localement. Si vous désactivez cette stratégie, Microsoft Edge ne peut pas utiliser le gestionnaire de mots de passe. Si vous ne configurez pas cette stratégie, les utilisateurs peuvent choisir d’enregistrer et de gérer leurs mots de passe localement à l’aide du gestionnaire de mots de passe.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 - **Empêcher les utilisateurs de passer outre les erreurs de certificat**  
   Ce paramètre de stratégie empêche l’utilisateur d’ignorer les erreurs de certificat SSL/TLS (Secure Sockets Layer/Transport Layer Security) qui interrompent la navigation, telles que les erreurs relatives à l’expiration, à la révocation ou à une incohérence au niveau des noms dans Internet Explorer. Si vous activez ce paramètre de stratégie, l’utilisateur ne peut pas poursuivre la navigation. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’utilisateur peut choisir d’ignorer les erreurs de certificat et poursuivre la navigation.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 ## <a name="connectivity"></a>Connectivité  
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) dans la documentation Windows.  
@@ -150,7 +150,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 ) dans la documentation Windows.  
 
 - **Délégation par l’hôte distant d’informations d’identification non exportables**  
-  L’hôte distant autorise la délégation d’informations d’identification non exportables. Lorsque vous utilisez la délégation des informations d’identification, appareils fournissent une version exportable d’informations d’identification à l’hôte distant, qui expose les utilisateurs à risque de vol d’informations d’identification des attaquants sur l’hôte distant. Si vous activez ce paramètre de stratégie, l’hôte prend en charge le mode d’administration restreinte ou Credential Guard à distance. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les modes Administration restreinte et Credential Guard à distance ne sont pas pris en charge. L’utilisateur devra toujours passer ses informations d’identification à l’hôte.  
+  L’hôte distant autorise la délégation d’informations d’identification non exportables. Lorsque vous utilisez la délégation des informations d’identification, les appareils fournissent une version exportable d’informations d’identification à l’hôte distant, ce qui expose les utilisateurs à un risque de vol des informations d’identification par des attaquants sur l’hôte distant. Si vous activez ce paramètre de stratégie, l’hôte prend en charge le mode d’administration restreinte ou Credential Guard à distance. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les modes Administration restreinte et Credential Guard à distance ne sont pas pris en charge. L’utilisateur devra toujours passer ses informations d’identification à l’hôte.  
 
   
   **Par défaut** : Activé  
@@ -171,7 +171,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Ce paramètre de stratégie vous permet de bloquer l’accès direct à la mémoire (DMA) pour tous les ports en aval PCI enfichables à chaud tant que l’utilisateur ne se connecte pas à Windows. Une fois l’utilisateur connecté, Windows énumère les périphériques PCI connectés aux ports PCI enfichables à chaud. À chaque verrouillage de l’ordinateur par l’utilisateur, l’Assistant Migration de données Microsoft est bloqué sur les ports PCI enfichables à chaud sans périphériques enfants, tant que l’utilisateur ne se reconnecte pas. Les périphériques déjà énumérés quand l’ordinateur a été déverrouillé continuent de fonctionner tant qu’ils sont branchés. Ce paramètre de stratégie est appliqué uniquement quand BitLocker ou le chiffrement de l’appareil est activé.
   
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 ## <a name="device-guard"></a>Device Guard  
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
@@ -180,12 +180,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Credential Guard**  
   Ce paramètre permet aux utilisateurs d’activer Credential Guard avec la sécurité basée sur la virtualisation pour protéger les informations d’identification au prochain redémarrage.
    
-  **Par défaut**: activer avec le verrouillage UEFI 
+  **Par défaut** : activer avec le verrouillage UEFI 
 
 - **Activer la sécurité basée sur la virtualisation**  </br>
   Active la sécurité basée sur la virtualisation au prochain redémarrage. La sécurité basée sur la virtualisation utilise l’hyperviseur Windows pour prendre en charge les services de sécurité.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 <!-- not yet available 
 - **Enable secure boot with DMA**  
@@ -205,24 +205,24 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque *bloquent l’installation de périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
   
     - **Supprimer les périphériques matériels correspondants**   
     Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
       
-      **Par défaut**: Oui
+      **Par défaut** : oui
   
     - **Identificateurs de périphériques matériels bloqués**  
        Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
       
-      **Par défaut**: Oui  
+      **Par défaut** : oui  
   
 - **Installation de périphériques matériels par classes d’installation**  
   Ce paramètre de stratégie permet de spécifier une liste de GUID de classe d’installation de périphériques décrivant les pilotes de périphériques que Windows ne peut pas installer. Ce paramètre de stratégie prévaut sur tout autre paramètre de stratégie autorisant l’installation de périphériques par Windows. Si vous activez ce paramètre, Windows ne peut pas installer ou mettre à jour les pilotes de périphériques dont les GUID de classe d’installation de périphériques figurent dans la liste que vous créez. Si vous activez ce paramètre de stratégie sur un serveur Bureau à distance, il a une incidence sur la redirection des périphériques spécifiés à partir d’un client Bureau à distance vers le serveur Bureau à distance. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows peut installer ou mettre à jour des périphériques conformément aux autorisations ou interdictions prévues par d’autres paramètres de stratégie.
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque *bloquent l’installation de périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
     - **Supprimer les périphériques matériels correspondants**    
     Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.  
 
@@ -244,12 +244,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Exiger un mot de passe**  
   Spécifie si le verrouillage de l’appareil est activé.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
-    Lorsque *nécessitent le mot de passe* a la valeur *Oui*, les paramètres suivants sont disponibles.
+    Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
     - **Nombre minimal de jeux de caractères du mot de passe**  
-      Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Code confidentiel applique le comportement suivant pour les appareils mobiles et de bureau : 1 - chiffres uniquement 2 - lettres minuscules et chiffres obligatoire 3 : chiffres, lettres minuscules, et les lettres majuscules sont nécessaires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1. 
+      Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1. 
       
       **Par défaut** : 3  
   
@@ -266,7 +266,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
     - **Type de mot de passe requis**  
       Détermine le type de code PIN ou de mot de passe exigé.
       
-      **Par défaut**: alphanumérique  
+      **Par défaut** : alphanumérique  
   
     - **Longueur minimale du mot de passe**  
       Le paramètre de stratégie Longueur minimale du mot de passe détermine le plus petit nombre de caractères qui peuvent constituer un mot de passe pour un compte d’utilisateur. Vous pouvez définir une valeur comprise entre 1 et 14 caractères, ou vous pouvez établir qu’aucun mot de passe n’est exigé en définissant le nombre de caractères sur 0.
@@ -276,16 +276,16 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
     - **Bloquer les mots de passe simples**  
       Spécifie si les codes PIN ou les mots de passe comme « 1111 » ou « 1234 » sont autorisés. Pour le poste de travail, il contrôle également l’utilisation de mots de passe image.
       
-      **Par défaut**: Oui  
+      **Par défaut** : oui  
         *La valeur Oui empêche l’utilisation de mots de passe simples.* 
 
   - **Empêcher la réutilisation des mots de passe précédents**  
-    Spécifie le nombre de mots de passe à stocker dans l’historique des mots de passe qui ne peuvent pas être utilisés. Ceci comprend le mot de passe actuel de l’utilisateur. Par exemple, avec un paramètre de *1* l’utilisateur ne peut pas réutiliser leur mot de passe actuel lors du choix d’un nouveau mot de passe. Un paramètre de *5* signifie qu’un utilisateur ne peut pas définir son nouveau mot de passe sur leur mot de passe actuel ou l’un de leurs mots de passe précédents quatre.
+    Spécifie le nombre de mots de passe à stocker dans l’historique des mots de passe qui ne peuvent pas être utilisés. Ceci comprend le mot de passe actuel de l’utilisateur. Par exemple, avec un paramètre de *1* l’utilisateur ne peut pas réutiliser son mot de passe actuel lors du choix d’un nouveau mot de passe. Un paramètre de *5* signifie qu’un utilisateur ne peut pas définir son nouveau mot de passe sur leur mot de passe actuel ni l’un de ses quatre mots de passe précédents.
     
     **Par défaut** : 24  
 
 - **Empêcher le diaporama**  
-  Désactive les paramètres de diaporama de l’écran de verrouillage dans Paramètres du PC et empêche l’affichage d’un diaporama sur l’écran de verrouillage. Par défaut, les utilisateurs peuvent activer un diaporama qui s’exécute après avoir verrouillé l’ordinateur. Si vous activez ce paramètre, les utilisateurs ne peuvent pas modifier les paramètres de diaporama dans les paramètres du PC, et aucun diaporama ne peut démarrer.
+  Désactive les paramètres de diaporama de l’écran de verrouillage dans Paramètres du PC et empêche l’affichage d’un diaporama sur l’écran de verrouillage. Par défaut, les utilisateurs peuvent activer un diaporama qui s’exécute après avoir verrouillé l’ordinateur. Si vous activez ce paramètre, les utilisateurs ne peuvent plus modifier les paramètres du diaporama dans Paramètres du PC et aucun diaporama ne peut démarrer.
   
     **Par défaut** : Activé  
     *La valeur Activé empêche l’exécution des diaporamas.* 
@@ -319,18 +319,18 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Bloquer Windows à la une**  
   Permet aux administrateurs informatiques de désactiver toutes les fonctionnalités de Windows à la une : Windows à la une sur l’écran de verrouillage, Conseils Windows, les fonctionnalités Microsoft grand public et d’autres fonctionnalités associées.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
-  Lorsque *bloquer Windows Spotlight* a la valeur *Oui*, les paramètres suivants sont disponibles.
+  Lorsque *Bloquer les informations à la une Windows* est défini sur *Oui*, les paramètres suivants sont disponibles.
   
   - **Bloquer les suggestions de tiers dans Windows à la une**  
     Spécifie s’il faut autoriser les suggestions d’applications et de contenu provenant d’éditeurs de logiciels tiers dans les fonctionnalités de Windows à la une, comme la une sur l’écran de verrouillage, les applications suggérées dans le menu Démarrer et les conseils Windows. Les utilisateurs peuvent quand même voir les suggestions de fonctionnalités, d’applications et de services Microsoft.
       
-    **Par défaut**: Oui  
+    **Par défaut** : oui  
    - **Bloquer les fonctionnalités spécifiques au grand public**  
       Permet aux administrateurs informatiques d’activer les fonctionnalités destinées au grand public uniquement, comme les suggestions du démarrage, les notifications d’appartenance, l’installation d’application post-OOBE et les vignettes de redirection.
       
-     **Par défaut**: Oui  
+     **Par défaut** : oui  
 
 
 ## <a name="exploit-guard"></a>Exploit Guard  
@@ -339,7 +339,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Protection contre le code malveillant XML**  
   Permet à l’administrateur informatique de diffuser une configuration qui représente les options souhaitées d’atténuation des risques pour le système et les applications auprès de tous les appareils de l’organisation. La configuration est représentée par du code XML. Exploit Protection aide à protéger les appareils contre les programmes malveillants qui utilisent du code malveillant exploitant une faille de sécurité pour se propager et les infecter. Utilisez l’application Sécurité Windows ou PowerShell pour créer un ensemble d’atténuations des risques (qui est appelé « configuration »). Vous pouvez ensuite exporter cette configuration dans un fichier XML et le partager sur plusieurs machines de votre réseau pour donner à toutes le même ensemble de paramètres d’atténuation des risques. Vous pouvez aussi convertir et importer un fichier XML de configuration EMET existant en un fichier XML de configuration de protection contre le code malveillant.
   
-  **Par défaut**: *exemple de code xml est fourni.* 
+  **Par défaut** : *un exemple de code XML est fourni* 
  
 ## <a name="file-explorer"></a>Explorateur de fichiers  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) dans la documentation Windows.  
@@ -409,7 +409,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut**: désactiver 
   
 - **Internet Explorer > Zone Internet : Autoriser uniquement les domaines approuvés à utiliser le contrôle ActiveX TDC**  
-  Ce paramètre de stratégie détermine si l’utilisateur peut exécuter le contrôle ActiveX de CDC sur les sites Web. Si vous activez ce paramètre de stratégie, le contrôle ActiveX TDC n’est pas exécuté sur les sites web de cette zone. Si vous désactivez ce paramètre de stratégie, le contrôle ActiveX TDC s’exécute sur tous les sites de cette zone.
+  Ce paramètre de stratégie contrôle si l’utilisateur est ou non autorisé à exécuter le contrôle ActiveX TDC sur des sites web. Si vous activez ce paramètre de stratégie, le contrôle ActiveX TDC n’est pas exécuté sur les sites web de cette zone. Si vous désactivez ce paramètre de stratégie, le contrôle ActiveX TDC s’exécute sur tous les sites de cette zone.
   
   **Par défaut** : Activé 
   
@@ -456,7 +456,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Recours à SSL3**  
   Ce paramètre de stratégie vous permet de bloquer tout recours non sécurisé à SSL 3.0. Lorsque cette stratégie est activée, Internet Explorer tente de se connecter aux sites à l’aide de SSL 3.0 ou version antérieure lorsque TLS 1.0 ou version supérieure échoue. Nous vous recommandons de ne pas autoriser le recours non sécurisé afin d’empêcher les attaques de l’intercepteur. Cette stratégie n’a pas d’impact sur l’activation des protocoles de sécurité. Si vous désactivez cette stratégie, les paramètres système par défaut seront utilisés.
   
-  **Par défaut**: aucun site 
+  **Par défaut** : aucun site 
   
 - **Internet Explorer > Zone Internet verrouillée : SmartScreen**  
   Ce paramètre de stratégie détermine si le filtre SmartScreen analyse les pages de cette zone à la recherche d’un contenu malveillant. Si vous activez ce paramètre de stratégie, le filtre SmartScreen analyse les pages de cette zone à la recherche d’un contenu malveillant. Si vous désactivez ce paramètre de stratégie, le filtre SmartScreen n’analyse pas les pages de cette zone à la recherche d’un contenu malveillant. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut choisir si le filtre SmartScreen analyse les pages de cette zone à la recherche d’un contenu malveillant. Remarque : Dans Internet Explorer 7, ce paramètre de stratégie détermine si le filtre antihameçonnage analyse les pages de cette zone à la recherche d’un contenu malveillant.
@@ -468,7 +468,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut**: désactiver 
   
-- **Internet Explorer ignorer les avertissements SmartScreen sur les fichiers rares**  
+- **Internet Explorer : ignorer les avertissements SmartScreen relatifs aux fichiers rares**  
   Ce paramètre de stratégie détermine si l’utilisateur peut ignorer les avertissements du filtre SmartScreen. Le filtre SmartScreen avertit l’utilisateur au sujet des fichiers exécutables que les utilisateurs d’Internet Explorer ne téléchargent généralement pas à partir d’Internet. Si vous activez ce paramètre de stratégie, les avertissements du filtre SmartScreen bloquent l’utilisateur. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’utilisateur peut ignorer les avertissements du filtre SmartScreen.
   
   **Par défaut** : Désactivé  
@@ -476,17 +476,17 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Internet : Bloqueur de fenêtres publicitaires**  
   Ce paramètre de stratégie permet d’indiquer si les fenêtres publicitaires s’affichent. Les fenêtres indépendantes qui sont ouvertes lorsque l’utilisateur final clique sur un lien ne sont pas bloquées. Si vous activez ce paramètre de stratégie, la plupart des fenêtres publicitaires sont bloquées. Si vous désactivez ce paramètre de stratégie, les fenêtres indépendantes ne sont pas bloquées. Si vous ne configurez pas ce paramètre de stratégie, la plupart des fenêtres indépendantes non désirées ne s’afficheront pas.
   
-  **Par défaut**: activer  
+  **Par défaut** : activer  
   
 - **Processus Internet Explorer > Gestion MIME cohérente**  
   Internet Explorer contient des comportements binaires dynamiques : les composants qui intègrent une fonctionnalité spécifique pour les éléments HTML auxquels ils sont attachés. Ce paramètre de stratégie indique si le paramètre Restriction de sécurité de comportement binaire est bloqué ou autorisé. Ce paramètre de stratégie permet aux administrateurs d’indiquer les applications pour lesquelles ils souhaitent bloquer ou activer cette fonctionnalité de sécurité. Si vous désactivez ce paramètre de stratégie, les comportements binaires sont autorisés dans les processus de l’Explorateur de fichiers et d’Internet Explorer. Si vous ne configurez pas ce paramètre de stratégie, les comportements binaires sont bloqués dans les processus de l’Explorateur de fichiers et d’Internet Explorer.
   
   **Par défaut** : Activé  
   
-- **Internet Explorer restreint les autorisations de zone java**  
+- **Internet Explorer : autorisations Java des zones restreintes**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, les applets Java sont désactivées.
   
-  **Par défaut**: désactiver java  
+  **Par défaut**: désactiver Java  
     
   
 - **Internet Explorer > Contrôles ActiveX en mode protégé**  
@@ -518,12 +518,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Ce paramètre de stratégie permet de gérer les paramètres des options de connexion. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options de connexion suivantes. 
   - *Anonyme* : utilisez la connexion anonyme pour désactiver l’authentification HTTP et n’utilisez le compte invité que pour le protocole CIFS (Common Internet File System). 
   - *Invite* : utilisez l’invite pour interroger les utilisateurs sur leurs identifiants utilisateur et leurs mots de passe. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées de manière silencieuse pour le reste de la session. 
-  - *La connexion automatique uniquement dans la zone Intranet* -Utilisez cette option pour les utilisateurs de la requête ID d’utilisateur et mots de passe dans d’autres zones. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées de manière silencieuse pour le reste de la session. 
-  - *Connexion automatique avec le nom d’utilisateur et mot de passe*-Utilisez cette option pour tenter de se connecter à l’aide de Windows NT, stimulation-réponse (également appelée authentification NTLM). Si le serveur prend en charge Windows NTLM, la connexion utilise le nom d’utilisateur réseau et le mot de passe pour se connecter. Si le protocole Stimulation/réponse de Windows NT n’est pas pris en charge par le serveur, l’utilisateur doit entrer son nom et son mot de passe. 
+  - *Connexion automatique uniquement dans la zone Intranet* : utilisez cette option pour demander aux utilisateurs leur identifiant utilisateur et leur mot de passe pour accéder à d’autres zones. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées de manière silencieuse pour le reste de la session. 
+  - *Connexion automatique avec le nom d’utilisateur et le mot de passe actuels*  : utilisez cette option pour tenter une connexion à l’aide de l’authentification Stimulation/réponse de Windows NT (également connue sous le nom Authentification NTLM). Si le protocole Stimulation/réponse de Windows NT est pris en charge par le serveur, la connexion utilise le nom d’utilisateur réseau de l’utilisateur et son mot de passe pour l’ouverture de session. Si le protocole Stimulation/réponse de Windows NT n’est pas pris en charge par le serveur, l’utilisateur doit entrer son nom et son mot de passe. 
 
   Si vous désactivez ce paramètre de stratégie, la connexion est définie comme *Automatique uniquement dans la zone intranet*. Si vous ne configurez pas ce paramètre de stratégie, la connexion est définie sur *Invite* pour le nom d’utilisateur et le mot de passe.
   
-  **Par défaut**: anonyme  
+  **Par défaut** : anonyme  
   
 - **Internet Explorer > Zone de confiance : Contrôles d’initialisation et de script ActiveX non marqués comme sécurisés**  
   Ce paramètre de stratégie vous permet de gérer les contrôles ActiveX non marqués comme sécurisés. Si vous activez ce paramètre de stratégie, les contrôles ActiveX sont exécutés, chargés avec des paramètres, puis scriptés sans définir la sécurité des objets pour les scripts ou les données non fiables. Ce paramètre n’est pas recommandé, sauf pour les zones sécurisées et administrées. Ce paramètre entraîne l’initialisation et l’écriture de scripts pour les contrôles sécurisés et non sécurisés, en ignorant l’option Contrôles ActiveX reconnus sûrs pour l’écriture de scripts. Si vous activez ce paramètre de stratégie et sélectionnez Invite dans la zone de liste déroulante, les utilisateurs doivent indiquer s’ils souhaitent autoriser le chargement du contrôle avec des paramètres ou scripté. Si vous désactivez ce paramètre de stratégie, les contrôles ActiveX qui ne peuvent pas être sécurisés ne sont pas chargés avec des paramètres ou scriptés. Si vous ne configurez pas ce paramètre de stratégie, les utilisateurs doivent indiquer s’ils souhaitent autoriser le chargement du contrôle avec des paramètres ou scripté.
@@ -558,7 +558,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Empêcher la gestion du filtre SmartScreen**  
   Ce paramètre de stratégie empêche l’utilisateur de gérer le filtre SmartScreen, qui avertit l’utilisateur lorsque le site web visité est connu pour des tentatives frauduleuses de collecte d’informations personnelles par « hameçonnage », ou qu’il est connu pour héberger des programmes malveillants. Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Toutes les URL qui ne figurent pas dans la liste des URL autorisées par les filtres sont automatiquement envoyées à Microsoft, sans que l’utilisateur en soit informé. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’utilisateur est invité à choisir s’il veut activer le filtre SmartScreen lors de l’expérience de première exécution.
   
-  **Par défaut**: activer  
+  **Par défaut** : activer  
   
 - **Processus Internet Explorer > Fonctionnalité de sécurité de détection MIME**  
   Ce paramètre de stratégie indique si la détection MIME dans Internet Explorer doit empêcher la promotion d’un fichier ou d’un type de fichier vers un type plus dangereux. Si vous activez ce paramètre de stratégie, la fonctionnalité de sécurité de détection MIME n’autorisera jamais la promotion d’un fichier vers un type de fichier plus dangereux. Si vous désactivez ce paramètre de stratégie, les processus Internet Explorer autoriseront la détection MIME à promouvoir un fichier vers un type de fichier plus dangereux. Si vous ne configurez pas ce paramètre de stratégie, la détection MIME n’autorise jamais la promotion d’un type de fichier vers un type de fichier plus dangereux.
@@ -584,7 +584,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut**: désactiver  
   
 - **Internet Explorer > Zone restreinte : Autoriser uniquement les domaines approuvés à utiliser le contrôle Active X TDC**  
-  Ce paramètre de stratégie détermine si l’utilisateur peut exécuter le contrôle ActiveX de CDC sur les sites Web. Si vous activez ce paramètre de stratégie, le contrôle ActiveX TDC n’est pas exécuté sur les sites web de cette zone. Si vous désactivez ce paramètre de stratégie, le contrôle ActiveX TDC s’exécute sur tous les sites de cette zone.
+  Ce paramètre de stratégie contrôle si l’utilisateur est ou non autorisé à exécuter le contrôle ActiveX TDC sur des sites web. Si vous activez ce paramètre de stratégie, le contrôle ActiveX TDC n’est pas exécuté sur les sites web de cette zone. Si vous désactivez ce paramètre de stratégie, le contrôle ActiveX TDC s’exécute sur tous les sites de cette zone.
   
   **Par défaut** : Activé  
   
@@ -596,9 +596,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Ordinateur local : Autorisations Java**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, l’autorisation est définie sur « Sécurité moyenne ».
   
-  **Par défaut**: désactiver java 
+  **Par défaut**: désactiver Java 
   
-- **Logiciel anti-programme malveillant contre les contrôles ActiveX dans Internet Explorer intranet zone ne s’exécutent ne pas** ce paramètre de stratégie détermine si Internet Explorer s’exécute de logiciels anti-programme malveillant contre les contrôles ActiveX, pour vérifier s’ils sont sûrs charger des pages. Si vous activez ce paramètre de stratégie, Internet Explorer ne consulte pas votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous désactivez ce paramètre de stratégie, Internet Explorer consulte toujours votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous ne configurez pas ce paramètre de stratégie, Internet Explorer ne consulte pas votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Les utilisateurs peuvent activer ou désactiver ce comportement au moyen des paramètres Sécurité d’Internet Explorer.
+- **La zone intranet Internet Explorer n’exécute pas de logiciel anti-programme malveillant sur les contrôles Active X** Ce paramètre de stratégie détermine si Internet Explorer exécute des logiciels anti-programme malveillant sur les contrôles ActiveX pour déterminer s’ils peuvent être chargés sur des pages de façon sécurisée. Si vous activez ce paramètre de stratégie, Internet Explorer ne consulte pas votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous désactivez ce paramètre de stratégie, Internet Explorer consulte toujours votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous ne configurez pas ce paramètre de stratégie, Internet Explorer ne consulte pas votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Les utilisateurs peuvent activer ou désactiver ce comportement au moyen des paramètres Sécurité d’Internet Explorer.
   
   **Par défaut** : Désactivé  
 
@@ -645,7 +645,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone de confiance verrouillée : Autorisations Java**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, les applets Java sont désactivées.
   
-  **Par défaut**: désactiver java 
+  **Par défaut**: désactiver Java 
   
 - **Internet Explorer > Vérifier les signatures des programmes téléchargés**  
   Ce paramètre de stratégie vous permet de décider si Internet Explorer recherche des signatures numériques (pour identifier l’éditeur du logiciel signé et vérifier qu’il n’a pas été modifié ni falsifié) sur les ordinateurs des utilisateurs avant de télécharger des programmes exécutables. Si vous activez ce paramètre de stratégie, Internet Explorer vérifie les signatures numériques des programmes exécutables et affiche leur identité avant de les télécharger sur les ordinateurs des utilisateurs. Si vous désactivez ce paramètre de stratégie, Internet Explorer ne vérifie pas les signatures numériques des programmes exécutables ou n’affiche pas leurs identités avant de les télécharger sur les ordinateurs des utilisateurs. Si vous ne configurez pas cette stratégie, Internet Explorer ne vérifie pas les signatures numériques des programmes exécutables ou n’affiche pas leurs identités avant de les télécharger sur les ordinateurs des utilisateurs.
@@ -675,12 +675,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Internet : Avertissement de sécurité pour les fichiers potentiellement dangereux**  
   Ce paramètre de stratégie détermine si le message « Fichier ouvert : Avertissement de sécurité » s’affiche lorsque l’utilisateur essaie d’ouvrir des fichiers exécutables ou d’autres fichiers potentiellement non sécurisés (à partir d’un partage de fichiers intranet via l’Explorateur de fichiers, par exemple). Si vous activez ce paramètre de stratégie et affectez la valeur Activer à la zone de liste déroulante, les fichiers concernés s’ouvrent sans avertissement de sécurité préalable. Si vous affectez la valeur Demander à la zone de liste déroulante, un avertissement de sécurité s’affiche avant l’ouverture des fichiers. Si vous désactivez ce paramètre de stratégie, les fichiers concernés ne s’ouvrent pas. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut configurer la façon dont l’ordinateur gère ces fichiers. Par défaut, ces fichiers sont bloqués dans la zone restreinte, activés dans les zones Intranet et Ordinateur local, et définis sur Demander dans les zones Internet et de confiance.
   
-  **Par défaut**: Prompt  
+  **Par défaut** : invite  
   
 - **Internet Explorer > Zone Intranet : Autorisations Java**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, l’autorisation est définie sur « Sécurité moyenne ».
   
-  **Par défaut**: haute sécurité 
+  **Par défaut** : haute sécurité 
   
 - **Internet Explorer > Bloquer les contrôles ActiveX obsolètes**  </br>
   Ce paramètre de stratégie détermine si Internet Explorer bloque des contrôles ActiveX obsolètes spécifiques. Les contrôles ActiveX obsolètes ne sont jamais bloqués dans la zone Intranet. Si vous activez ce paramètre de stratégie, Internet Explorer cesse de bloquer les contrôles ActiveX obsolètes. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Internet Explorer continue de bloquer des contrôles ActiveX obsolètes spécifiques. Pour plus d’informations, consultez « Contrôles ActiveX obsolètes » dans la bibliothèque TechNet Internet Explorer.
@@ -690,7 +690,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone restreinte : Bloqueur de fenêtres publicitaires**  
   Ce paramètre de stratégie permet d’indiquer si les fenêtres publicitaires s’affichent. Les fenêtres indépendantes qui sont ouvertes lorsque l’utilisateur final clique sur un lien ne sont pas bloquées. Si vous activez ce paramètre de stratégie, la plupart des fenêtres publicitaires sont bloquées. Si vous désactivez ce paramètre de stratégie, les fenêtres indépendantes ne sont pas bloquées. Si vous ne configurez pas ce paramètre de stratégie, la plupart des fenêtres indépendantes non désirées ne s’afficheront pas.
   
-  **Par défaut**: activer  
+  **Par défaut** : activer  
   
 - **Processus Internet Explorer > Restriction de sécurité du protocole MK**  
   Le paramètre de stratégie Restriction de sécurité du protocole MK réduit l’exposition aux attaques en empêchant l’utilisation du protocole MK. Cela se traduit par l’échec des ressources hébergées sur le protocole MK. Si vous activez ce paramètre de stratégie, l’utilisation du protocole MK est interdite dans l’Explorateur de fichiers et Internet Explorer, ce qui se traduit par l’échec des ressources hébergées sur le protocole MK. Si vous désactivez ce paramètre de stratégie, les applications peuvent utiliser l’API du protocole MK. Les ressources hébergées sur le protocole MK fonctionnent pour les processus de l’Explorateur de fichiers et d’Internet Explorer. Si vous ne configurez pas ce paramètre de stratégie, l’utilisation du protocole MK est interdite dans l’Explorateur de fichiers et Internet Explorer, ce qui se traduit par l’échec des ressources hébergées sur le protocole MK.
@@ -700,7 +700,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone de confiance : Autorisations Java**  </br>
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, l’autorisation est définie sur « Basse sécurité ».
   
-  **Par défaut**: haute sécurité  
+  **Par défaut** : haute sécurité  
   
 - **Internet Explorer > Zone restreinte : Écriture de scripts pour les applets Java**  
   Ce paramètre de stratégie vous permet de décider si les applets sont exposées aux scripts dans la zone. Si vous activez ce paramètre de stratégie, les scripts peuvent accéder aux applets automatiquement, sans intervention de l’utilisateur. Si vous sélectionnez Demander dans la zone de liste déroulante, les utilisateurs doivent indiquer s’ils souhaitent autoriser les scripts à accéder aux applets. Si vous désactivez ce paramètre de stratégie, les scripts ne peuvent pas accéder aux applets. Si vous ne configurez pas ce paramètre de stratégie, les scripts ne peuvent pas accéder aux applets.
@@ -710,7 +710,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone restreinte verrouillée : Autorisations Java**  </br>
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, les applets Java sont désactivées.
   
-  **Par défaut**: désactiver java 
+  **Par défaut**: désactiver Java 
   
 - **Internet Explorer > Zone Internet : Autoriser uniquement les domaines approuvés à utiliser les contrôles ActiveX**  </br>
   Ce paramètre de stratégie détermine si l’utilisateur est invité ou non à autoriser l’exécution des contrôles ActiveX sur des sites web autres que le site web qui a installé le contrôle ActiveX. Si vous activez ce paramètre de stratégie, l’utilisateur est invité à confirmer l’exécution des contrôles ActiveX à partir des sites web de cette zone. L’utilisateur peut choisir d’autoriser l’exécution du contrôle à partir du site actuel ou à partir de tous les sites. Si vous désactivez ce paramètre de stratégie, l’utilisateur ne voit pas l’invite ActiveX propre au site, et les contrôles ActiveX peuvent s’exécuter à partir de tous les sites de cette zone.
@@ -725,7 +725,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Internet : Mode protégé**  
   Ce paramètre de stratégie vous permet d’activer le mode protégé. Le mode protégé favorise la protection d’Internet Explorer face à des vulnérabilités exploitées en réduisant les emplacements où Internet Explorer peut écrire dans le Registre et le système de fichiers. Si vous activez ce paramètre de stratégie, le mode protégé est activé. L’utilisateur ne peut pas désactiver le mode protégé. Si vous désactivez ce paramètre de stratégie, le mode protégé est désactivé. L’utilisateur ne peut pas activer le mode protégé. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut activer ou désactiver le mode protégé.
   
-  **Par défaut**: activer 
+  **Par défaut** : activer 
   
 - **Internet Explorer > Zone Internet : Contrôles d’initialisation et de script ActiveX non marqués comme sécurisés**  
   Ce paramètre de stratégie vous permet de gérer les contrôles ActiveX non marqués comme sécurisés. Si vous activez ce paramètre de stratégie, les contrôles ActiveX sont exécutés, chargés avec des paramètres, puis scriptés sans définir la sécurité des objets pour les scripts ou les données non fiables. Ce paramètre n’est pas recommandé, sauf pour les zones sécurisées et administrées. Ce paramètre entraîne l’initialisation et l’écriture de scripts pour les contrôles sécurisés et non sécurisés, en ignorant l’option Contrôles ActiveX reconnus sûrs pour l’écriture de scripts. Si vous activez ce paramètre de stratégie et sélectionnez Invite dans la zone de liste déroulante, les utilisateurs doivent indiquer s’ils souhaitent autoriser le chargement du contrôle avec des paramètres ou scripté. Si vous désactivez ce paramètre de stratégie, les contrôles ActiveX qui ne peuvent pas être sécurisés ne sont pas chargés avec des paramètres ou scriptés. Si vous ne configurez pas ce paramètre de stratégie, les contrôles ActiveX qui ne peuvent pas être sécurisés ne sont pas chargés avec des paramètres ou scriptés.
@@ -745,7 +745,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Internet : Autorisations Java**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, l’autorisation est définie sur « Haute sécurité ».
   
-  **Par défaut**: désactiver java  
+  **Par défaut**: désactiver Java  
   
 - **Internet Explorer > Zone restreinte : Active Scripting**  
   Ce paramètre de stratégie vous permet de gérer si le code de script dans les pages de la zone est exécuté. Si vous activez ce paramètre de stratégie, le code de script dans les pages de la zone peut s’exécuter automatiquement. Si vous sélectionnez Demander dans la zone de liste déroulante, les utilisateurs doivent indiquer s’ils souhaitent autoriser l’exécution du code de script dans les pages de la zone. Si vous désactivez ce paramètre de stratégie, le code de script dans les pages de la zone ne peut pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, le code de script dans les pages de la zone ne peut pas s’exécuter.
@@ -753,9 +753,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut**: désactiver  
   
 - **Internet Explorer > Zone Internet : Options d’ouverture de session**  
-  Ce paramètre de stratégie permet de gérer les paramètres des options de connexion. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options de connexion suivantes. Ouverture de session anonyme, pour désactiver l’authentification HTTP et n’utiliser le compte Invité que pour le protocole CIFS (Common Internet File System). Demander aux utilisateurs leur nom d’utilisateur et leur mot de passe. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées pour le reste de la session. Ouverture de session automatique uniquement dans la zone Intranet, pour demander aux utilisateurs leur nom et leur mot de passe pour accéder aux autres zones. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées de manière silencieuse pour le reste de la session. Connexion automatique avec le nom d’utilisateur et le mot de passe actuels, pour tenter l’ouverture de session avec le protocole Stimulation/réponse de Windows NT (également connu sous le nom d’Authentification NTLM). Si le serveur prend en charge Windows NTLM, la connexion utilise le nom d’utilisateur réseau et le mot de passe pour ouvrir une session. Si le protocole Stimulation/réponse de Windows NT n’est pas pris en charge par le serveur, l’utilisateur doit entrer son nom et son mot de passe. Si vous désactivez ce paramètre de stratégie, l’ouverture de session est définie comme automatique uniquement dans la zone intranet. Si vous ne configurez pas ce paramètre de stratégie, connectez-vous est définie pour la connexion automatique dans la zone de Intranet uniquement dans.
+  Ce paramètre de stratégie permet de gérer les paramètres des options de connexion. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options de connexion suivantes. Ouverture de session anonyme, pour désactiver l’authentification HTTP et n’utiliser le compte Invité que pour le protocole CIFS (Common Internet File System). Demander aux utilisateurs leur nom d’utilisateur et leur mot de passe. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées pour le reste de la session. Ouverture de session automatique uniquement dans la zone Intranet, pour demander aux utilisateurs leur nom et leur mot de passe pour accéder aux autres zones. Après qu’un utilisateur a été interrogé, ces valeurs peuvent être utilisées de manière silencieuse pour le reste de la session. Connexion automatique avec le nom d’utilisateur et le mot de passe actuels, pour tenter l’ouverture de session avec le protocole Stimulation/réponse de Windows NT (également connu sous le nom d’Authentification NTLM). Si l’authentification Stimulation/réponse de Windows NT est pris en charge par le serveur, la connexion utilise le nom d’utilisateur réseau de l’utilisateur et son mot de passe pour l’ouverture de session. Si le protocole Stimulation/réponse de Windows NT n’est pas pris en charge par le serveur, l’utilisateur doit entrer son nom et son mot de passe. Si vous désactivez ce paramètre de stratégie, l’ouverture de session est définie comme automatique uniquement dans la zone intranet. Si vous ne configurez pas ce paramètre de stratégie, la connexion est définie sur Connexion automatique uniquement dans la zone intranet.
   
-  **Par défaut**: Prompt  
+  **Par défaut** : invite  
   
 - **Internet Explorer > Zone restreinte : Autoriser l’exécution de VBScript**  </br>  
   Ce paramètre de stratégie permet d’indiquer si VBScript peut s’exécuter dans les pages d’une zone spécifiée dans Internet Explorer. Si vous sélectionnez Activer dans la zone de liste déroulante, VBScript peut s’exécuter sans intervention de l’utilisateur. Si vous sélectionnez Demander dans la zone de liste déroulante, les utilisateurs doivent indiquer s’ils souhaitent autoriser l’exécution de VBScript. Si vous sélectionnez Désactiver dans la zone de liste déroulante, VBScript ne peut pas s’exécuter. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, VBScript ne peut pas s’exécuter.
@@ -815,7 +815,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer : utilisateurs ajoutant des sites**  
-  Empêche les utilisateurs d’ajouter ou de supprimer des sites dans des zones de sécurité. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez cette stratégie, les paramètres de gestion de sites pour les zones de sécurité seront désactivés. (Pour voir les paramètres de gestion de sites pour les zones de sécurité, dans la boîte de dialogue Options Internet, cliquez sur l’onglet Sécurité, puis sur le bouton Sites.) Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs peuvent non seulement ajouter ou supprimer des sites web dans les zones de Sites de confiance et de Sites sensibles, mais aussi modifier les paramètres de la zone intranet locale. Cette stratégie empêche les utilisateurs de changer les paramètres de gestion de sites pour les zones de sécurité définies par l’administrateur. Remarque : La stratégie « Désactiver la page Sécurité » (située dans \Configuration utilisateur\Modèles d’administration\Composants Windows\Internet Explorer\Panneau de configuration Internet), qui élimine l’onglet Sécurité de l’interface, est prioritaire sur cette stratégie. Si elle est activée, cette stratégie est ignorée. En outre, consultez le « zones de sécurité : utiliser uniquement les paramètres de machine « stratégie.
+  Empêche les utilisateurs d’ajouter ou de supprimer des sites dans des zones de sécurité. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez cette stratégie, les paramètres de gestion de sites pour les zones de sécurité seront désactivés. (Pour voir les paramètres de gestion de sites pour les zones de sécurité, dans la boîte de dialogue Options Internet, cliquez sur l’onglet Sécurité, puis sur le bouton Sites.) Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs peuvent non seulement ajouter ou supprimer des sites web dans les zones de Sites de confiance et de Sites sensibles, mais aussi modifier les paramètres de la zone intranet locale. Cette stratégie empêche les utilisateurs de changer les paramètres de gestion de sites pour les zones de sécurité définies par l’administrateur. Remarque : La stratégie « Désactiver la page Sécurité » (située dans \Configuration utilisateur\Modèles d’administration\Composants Windows\Internet Explorer\Panneau de configuration Internet), qui élimine l’onglet Sécurité de l’interface, est prioritaire sur cette stratégie. Si elle est activée, cette stratégie est ignorée. Consultez également la stratégie « Zones de sécurité : utiliser uniquement des paramètres machine ».
   
   **Par défaut** : Désactivé  
   
@@ -825,14 +825,14 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zones de sécurité : utiliser uniquement des paramètres machine**  
-  Applique l’information sur les zones de sécurité à tous les utilisateurs du même ordinateur. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez ce paramètre de stratégie, les changements apportés par l’utilisateur à une zone de sécurité s’appliquent à tous les utilisateurs de cet ordinateur. Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs du même ordinateur peuvent définir leurs propres paramètres de zone de sécurité. Utilisez cette stratégie pour garantir que les paramètres de zone de sécurité s’appliquent uniformément au même ordinateur et ne varient pas d’un utilisateur à l’autre. En outre, consultez le « zones de sécurité : ne pas autoriser les utilisateurs à modifier les stratégies « stratégie.
+  Applique l’information sur les zones de sécurité à tous les utilisateurs du même ordinateur. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez ce paramètre de stratégie, les changements apportés par l’utilisateur à une zone de sécurité s’appliquent à tous les utilisateurs de cet ordinateur. Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs du même ordinateur peuvent définir leurs propres paramètres de zone de sécurité. Utilisez cette stratégie pour garantir que les paramètres de zone de sécurité s’appliquent uniformément au même ordinateur et ne varient pas d’un utilisateur à l’autre. En outre, consultez la stratégie « Zones de sécurité : ne pas autoriser les utilisateurs à modifier les stratégies ».
   
   **Par défaut** : Activé  
   
 - **Internet Explorer > Zone Ordinateur local verrouillé : autorisations Java**  
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, les applets Java sont désactivées.
   
-  **Par défaut**: désactiver java 
+  **Par défaut**: désactiver Java 
   
 - **Internet Explorer > Zone restreinte : ne pas exécuter de logiciels anti-programme malveillant sur les contrôles ActiveX**  </br>
   Ce paramètre de stratégie détermine si Internet Explorer exécute des logiciels anti-programme malveillant sur les contrôles ActiveX pour déterminer s’ils peuvent être chargés sur des pages en toute sécurité. Si vous activez ce paramètre de stratégie, Internet Explorer ne consulte pas votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous désactivez ce paramètre de stratégie, Internet Explorer consulte toujours votre logiciel anti-programme malveillant pour déterminer si une instance du contrôle ActiveX peut être créée de façon sécurisée. Si vous ne configurez pas ce paramètre de stratégie, Internet Explorer utilise toujours votre logiciel anti-programme malveillant pour vérifier si une instance du contrôle ActiveX peut être créée de façon sécurisée. Les utilisateurs peuvent activer ou désactiver ce comportement au moyen des paramètres Sécurité d’Internet Explorer.
@@ -902,14 +902,14 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut**: désactiver  
   
 - **Internet Explorer : modification des stratégies par les utilisateurs**  
-    Empêche les utilisateurs de modifier les paramètres des zones de sécurité. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez cette stratégie, le bouton Personnaliser le niveau et le curseur de niveau de sécurité sont désactivés sous l’onglet Sécurité de la boîte de dialogue Options Internet. Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs peuvent changer les paramètres des zones de sécurité. Cette stratégie empêche les utilisateurs de changer les paramètres des zones de sécurité configurés par l’administrateur. Remarque : La stratégie « Désactiver la page Sécurité » (située dans \Configuration utilisateur\Modèles d’administration\Composants Windows\Internet Explorer\Panneau de configuration Internet), qui supprime l’onglet Sécurité dans le Panneau de configuration Internet Explorer, est prioritaire sur cette stratégie. Si elle est activée, cette stratégie est ignorée. En outre, consultez le « zones de sécurité : utiliser uniquement les paramètres de machine « stratégie.
+    Empêche les utilisateurs de modifier les paramètres des zones de sécurité. Une zone de sécurité est un groupe de sites web partageant le même niveau de sécurité. Si vous activez cette stratégie, le bouton Personnaliser le niveau et le curseur de niveau de sécurité sont désactivés sous l’onglet Sécurité de la boîte de dialogue Options Internet. Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs peuvent changer les paramètres des zones de sécurité. Cette stratégie empêche les utilisateurs de changer les paramètres des zones de sécurité configurés par l’administrateur. Remarque : La stratégie « Désactiver la page Sécurité » (située dans \Configuration utilisateur\Modèles d’administration\Composants Windows\Internet Explorer\Panneau de configuration Internet), qui supprime l’onglet Sécurité dans le Panneau de configuration Internet Explorer, est prioritaire sur cette stratégie. Si elle est activée, cette stratégie est ignorée. Consultez également la stratégie « Zones de sécurité : utiliser uniquement des paramètres machine ».
     
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zone restreinte : Mode protégé**  
   Ce paramètre de stratégie vous permet d’activer le mode protégé. Le mode protégé favorise la protection d’Internet Explorer face à des vulnérabilités exploitées en réduisant les emplacements où Internet Explorer peut écrire dans le Registre et le système de fichiers. Si vous activez ce paramètre de stratégie, le mode protégé est activé. L’utilisateur ne peut pas désactiver le mode protégé. Si vous désactivez ce paramètre de stratégie, le mode protégé est désactivé. L’utilisateur ne peut pas activer le mode protégé. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut activer ou désactiver le mode protégé.
   
-  **Par défaut**: activer  
+  **Par défaut** : activer  
   
 - **Internet Explorer > Zone Internet : Persistance des données utilisateur**  
   Ce paramètre de stratégie vous permet de gérer la conservation des informations dans l’historique du navigateur, dans les favoris, dans un magasin XML ou directement dans une page web enregistrée sur le disque. Quand un utilisateur revient à une page persistante, l’état de la page peut être restauré si ce paramètre de stratégie est configuré de façon appropriée. Si vous activez ce paramètre de stratégie, les utilisateurs peuvent conserver des informations dans l’historique du navigateur, dans les favoris, dans un magasin XML ou directement dans une page web enregistrée sur le disque. Si vous désactivez ce paramètre de stratégie, les utilisateurs ne peuvent pas conserver d’informations dans l’historique du navigateur, dans les favoris, dans un magasin XML ou directement dans une page web enregistrée sur le disque. Si vous ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent conserver des informations dans l’historique du navigateur, dans les favoris, dans un magasin XML ou directement dans une page web enregistrée sur le disque.
@@ -930,7 +930,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Internet Explorer > Zone Intranet verrouillée : autorisations Java**  
   Ce paramètre de stratégie vous permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, les applets Java sont désactivées.
   
-  **Par défaut**: désactiver java  
+  **Par défaut**: désactiver Java  
   
 - **Internet Explorer : mode protégé amélioré**  
   Le mode protégé amélioré renforce la protection contre les sites Web malveillants en utilisant des processus 64 bits sur des versions 64 bits de Windows. Pour les ordinateurs qui exécutent Windows 8 ou version ultérieure, le mode protégé amélioré limite également les emplacements à partir desquels Internet Explorer peut lire dans le Registre et le système de fichiers. Si vous activez ce paramètre de stratégie, le mode protégé amélioré est activé. Toute zone pour laquelle le mode protégé est activé utilise le mode protégé amélioré. Les utilisateurs ne sont pas en mesure de désactiver le mode protégé amélioré. Si vous désactivez ce paramètre de stratégie, le mode protégé amélioré est activé. Toute zone pour laquelle le mode protégé est activé utilise la version du mode protégé introduite dans Internet Explorer 7 pour Windows Vista. Si vous ne configurez pas cette stratégie, les utilisateurs peuvent activer ou désactiver le mode protégé amélioré sur l’onglet Avancé de la boîte de dialogue Options Internet.
@@ -951,9 +951,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) dans la documentation Windows. 
 
 - **Restreindre l’accès anonyme aux canaux nommés et aux partages**  
-  Lorsque l’option est activée, ce paramètre de sécurité restreint l’accès anonyme aux partages et aux canaux pour les paramètres : les canaux nommés (1) qui peuvent être accessibles de manière anonyme (2) les partages qui sont accessibles de manière anonyme
+  Lorsque l’option est activée, ce paramètre de sécurité restreint l’accès anonyme aux partages et aux canaux pour les paramètres : (1) canaux nommés qui peuvent être accessibles de manière anonyme (2) partages qui sont accessibles de manière anonyme
   
-  **Par défaut**: Oui  
+  **Par défaut** : Oui  
   
 - **Sécurité de session minimale pour les serveurs basés sur NTLM SSP**  
   Ce paramètre de sécurité permet à un serveur d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options sont : nécessite une sécurité de session NTLMv2 : la connexion échoue si l’intégrité des messages n’est pas négociée. Exiger un chiffrement 128 bits : La connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
@@ -965,9 +965,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : 15
   
-- **Exiger du client qu’il signe toujours numériquement les communications** Ce paramètre de sécurité détermine si tout le trafic d’un canal sécurisé initié par le membre du domaine doit être signé ou chiffré. Lorsqu’un ordinateur rejoint un domaine, un compte d’ordinateur est créé. Après cela, lorsque le système démarre, il utilise le mot de passe du compte d’ordinateur pour créer un canal sécurisé avec un contrôleur de domaine pour son domaine. Ce canal sécurisé est utilisé pour effectuer des opérations telles que l’authentification directe NTLM, la recherche de nom SID de l’autorité de sécurité locale (LSA), etc. Ce paramètre détermine si tout le trafic du canal sécurisé initialisé par le membre du domaine répond ou non aux exigences de sécurité minimales. Plus précisément, il détermine si tout le trafic du canal sécurisé initialisé par le membre du domaine doit être signé ou chiffré. Si cette stratégie est activée, le canal sécurisé ne sera établi que si la signature ou le chiffrement de tout le trafic du canal sécurisé est négocié. Si cette stratégie est désactivée, chiffrement et signature de tout le trafic de canal sécurisé est négociée avec le contrôleur de domaine auquel cas le niveau de signature et chiffrement dépend de la version du contrôleur de domaine et les paramètres des deux suivantes stratégies : membre du domaine : chiffrer numériquement les données des canaux sécurisés (lorsque cela est possible) membre du domaine : signer numériquement les données de canal (si possible) sécurisés
+- **Exiger du client qu’il signe toujours numériquement les communications** Ce paramètre de sécurité détermine si tout le trafic d’un canal sécurisé initié par le membre du domaine doit être signé ou chiffré. Lorsqu’un ordinateur rejoint un domaine, un compte d’ordinateur est créé. Après cela, lorsque le système démarre, il utilise le mot de passe du compte d’ordinateur pour créer un canal sécurisé avec un contrôleur de domaine pour son domaine. Ce canal sécurisé est utilisé pour effectuer des opérations telles que l’authentification directe NTLM, la recherche de nom SID de l’autorité de sécurité locale (LSA), etc. Ce paramètre détermine si tout le trafic du canal sécurisé initialisé par le membre du domaine répond ou non aux exigences de sécurité minimales. Plus précisément, il détermine si tout le trafic du canal sécurisé initialisé par le membre du domaine doit être signé ou chiffré. Si cette stratégie est activée, le canal sécurisé ne sera établi que si la signature ou le chiffrement de tout le trafic du canal sécurisé est négocié. Si cette stratégie est désactivée, le chiffrement et la signature de tout le trafic du canal sécurisé sont négociés avec le contrôleur de domaine, auquel cas le niveau de signature et de chiffrement dépend de la version du contrôleur de domaine et des paramètres des deux stratégie suivantes : Membre de domaine : données de canal sécurisé par le chiffrement numérique (si possible) Membre de domaine : données de canal sécurisé par connexion numérique (si possible)
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Niveau d'authentification**  
   Ce paramètre de sécurité détermine le protocole d'authentification de stimulation/réponse utilisé pour les ouvertures de session réseau. Ce choix a une incidence sur le niveau du protocole d'authentification qu'utilisent les clients, le niveau de sécurité de session négocié et le niveau d'authentification qu'acceptent les serveurs, de la façon suivante :  
@@ -983,12 +983,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Empêcher les clients d’envoyer des mots de passe non chiffrés à des serveurs SMB tiers**  
   Si ce paramètre de sécurité est activé, le redirecteur SMB (Server Message Block) est autorisé à envoyer des mots de passe en clair à des serveurs qui ne sont pas des serveurs Microsoft SMB et qui ne prennent pas en charge le chiffrement des mots de passe lors de l’authentification. L'envoi de mots de passe non chiffrés constitue un risque pour la sécurité.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Désactiver la signature numérique systématique des communications par le serveur**  
   Ce paramètre de sécurité détermine si le client SMB tente de négocier la signature des paquets SMB. Le protocole SMB (Server Message Block) représente la base sur laquelle s'appuient le partage des fichiers et des imprimantes Microsoft ainsi que beaucoup d'autres opérations de gestion de réseau, telles que l'administration à distance de Windows. Pour empêcher des attaques de l’intercepteur, susceptibles de modifier les paquets SMB en transit, le protocole SMB prend en charge la signature numérique des paquets SMB. Ce paramètre de stratégie détermine si le composant client SMB tente de négocier la signature des paquets SMB lorsqu'il se connecte à un serveur SMB. Si ce paramètre est activé, le client réseau Microsoft demandera au serveur de signer les paquets SMB lors de la configuration de la session. Si la signature de paquet a été activée sur le serveur, la signature de paquet est négociée. Si cette stratégie est désactivée, le client SMB ne négocie jamais la signature des paquets SMB.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Comportement de l’invite d’élévation d’administrateur**  
   Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
@@ -1004,7 +1004,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Sécurité de session minimale pour les clients basés sur NTLM SSP**  
   Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options disponibles sont :
   - Nécessite une sécurité de session NTLMv2 : la connexion échoue si le protocole NTLMv2 n’est pas négocié. 
-  - *Exiger le chiffrement 128 bits*: la connexion échoue si le cryptage fort (128 bits) n’est pas négocié.
+  - *Nécessite un chiffrement 128 bits* : la connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
   - *Exiger l’authentification NTLMv2 et un chiffrement de 128 bits*. 
 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
@@ -1012,25 +1012,25 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Comportement lorsque la carte à puce est retirée**  
     Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
      - *Aucune action*. 
-     - *Verrouiller la station de travail* -la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de conserver la zone, prendre leur carte à puce avec eux et tout en conservant une session protégée.
+     - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
      - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
      - *Déconnecter la session de Bureau à distance* : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Ceci permet à l'utilisateur d'insérer la carte à puce et de reprendre la session ultérieurement ou sur un autre ordinateur équipé d'un lecteur de cartes à puce, sans avoir à ouvrir de nouveau une session. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.  <br><br>
     
-  **Par défaut**: station de travail de verrou
+  **Par défaut** : verrouiller la station de travail
   
 - **Bloquer l’énumération anonyme des comptes et partages SAM**  
   Ce paramètre de sécurité détermine si l’énumération anonyme des comptes et partages de gestion des actifs logiciels est autorisée. Windows autorise les utilisateurs anonymes à effectuer certaines activités, comme l'énumération des noms des comptes de domaine et des partages réseau. Cette possibilité est pratique, par exemple lorsqu’un administrateur veut accorder aux utilisateurs l’accès dans un domaine approuvé ne conservant pas une approbation réciproque. Si vous ne voulez pas autoriser l’énumération anonyme des comptes et partages de gestion des actifs logiciels, puis configurez cette stratégie sur *Oui*.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Bloquer l’ouverture de session à distance avec un mot de passe vide**  
-  Ce paramètre de sécurité détermine si les comptes locaux qui ne sont pas protégés par un mot de passe peuvent être utilisés pour ouvrir une session à partir d’emplacements autres que la console de l’ordinateur physique. Si activé, les comptes locaux qui ne sont pas protégé par mot de passe doivent utiliser le clavier pour vous connecter. 
+  Ce paramètre de sécurité détermine si les comptes locaux qui ne sont pas protégés par un mot de passe peuvent être utilisés pour ouvrir une session à partir d’emplacements autres que la console de l’ordinateur physique. S'il est activé, les comptes locaux qui ne sont pas protégés par mot de passe ne permettent une ouverture de session que sur le clavier de l'ordinateur. 
 
   *Avertissement* : les ordinateurs qui ne se trouvent pas à des emplacements physiquement sécurisés doivent toujours appliquer des stratégies de mot de passe fort pour tous les comptes d’utilisateur locaux. Dans le cas contraire, toute personne ayant un accès physique à l’ordinateur peut ouvrir une session en utilisant un compte d’utilisateur sans mot de passe. Ce paramètre est particulièrement important pour les ordinateurs portables. 
 
   Si vous appliquez cette stratégie de sécurité au groupe Tout le monde, personne ne peut ouvrir une session via les services Bureau à distance. Ce paramètre n’affecte pas les ouvertures de sessions qui utilisent des comptes de domaine. Les applications qui utilisent des ouvertures de session interactives à distance peuvent contourner ce paramètre.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Comportement de l’invite d’élévation d’utilisateur standard**  
   Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les utilisateurs standard. 
@@ -1045,14 +1045,14 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   - *Non configuré* : le mode d’approbation Administrateur et tous les paramètres de stratégie UAC associés sont désactivés. Remarque : Si ce paramètre de stratégie est désactivé, le Centre de sécurité vous avertit que la sécurité globale du système d’exploitation a été réduite. 
   - *Oui* : Le mode d’approbation Administrateur est activé. Cette stratégie doit être activée et les paramètres de stratégie UAC associés doivent également être définis en conséquence pour permettre au compte Administrateur intégré et à tous les autres utilisateurs membres du groupe Administrateurs de s’exécuter en mode d’approbation Administrateur.  
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Empêcher l’énumération anonyme des comptes SAM**  
   Ce paramètre de sécurité détermine quelles autorisations supplémentaires sont octroyées aux connexions anonymes à l’ordinateur. Windows autorise les utilisateurs anonymes à effectuer certaines activités, comme l'énumération des noms des comptes de domaine et des partages réseau. Cette possibilité est pratique, par exemple lorsqu’un administrateur veut accorder aux utilisateurs l’accès dans un domaine approuvé ne conservant pas une approbation réciproque. Cette option de sécurité permet d'imposer aux connexions anonymes les restrictions supplémentaires suivantes : 
   - *Oui* : Ne pas autoriser l’énumération des comptes de gestion des actifs logiciels. Cette option remplace Tout le monde par Utilisateurs authentifiés dans les autorisations de sécurité pour les ressources.
-  - *Ne pas configuré*: aucune restriction supplémentaire. Correspond aux autorisations par défaut.  
+  - *Non configuré* : aucune autre restriction. Correspond aux autorisations par défaut.  
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Autoriser les appels distants au Gestionnaire des comptes de sécurité**  
   Ce paramètre de stratégie vous permet de limiter les connexions rpc à distance au gestionnaire SAM. S’il n’est pas sélectionné, le descripteur de sécurité par défaut est utilisé.
@@ -1064,31 +1064,31 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   - *Oui* : le compte Administrateur intégré utilise le mode d’approbation Administrateur. Par défaut, une invite d’approbation est présentée à l’utilisateur pour chaque opération nécessitant une élévation de privilège. 
   - *Non configuré* : le compte Administrateur intégré exécute toutes les applications avec des privilèges administratifs complets.  
 
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Autoriser les applications d’accès de l’interface utilisateur pour des emplacements sécurisés**  
   Ce paramètre de sécurité indique si les programmes d’accessibilité de l’interface utilisateur (UIAccess ou UIA) peuvent désactiver automatiquement le bureau sécurisé pour les invites d’élévation utilisées par un utilisateur standard. 
   - *Oui* : les programmes UIA, notamment l’Assistance à distance Windows, désactivent automatiquement le bureau sécurisé pour les invites d’élévation. Si vous ne désactivez pas le paramètre de stratégie « Contrôle de compte d’utilisateur : passer au bureau sécurisé lors d’une demande d’élévation », les invites s’affichent sur le bureau de l’utilisateur interactif et non sur le bureau sécurisé. 
   - *Non configuré* : le bureau sécurisé ne peut être désactivé que par l’utilisateur du bureau interactif ou en désactivant le paramètre de stratégie « Contrôle de compte d’utilisateur  : passer au bureau sécurisé lors d’une demande d’élévation ».  
 
-  **Par défaut**: Oui
+  **Par défaut** : Oui
 
 - **Détecter les installations d’applications et demander l’élévation**  
   Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options disponibles sont : 
   - *Activé* : lorsqu’un package d’installation d’application nécessitant une élévation de privilège est détecté, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
   - *Désactivé* : les packages d’installation d’application ne sont pas détectés ni invités pour une élévation. Les entreprises qui utilisent des ordinateurs de bureau pour utilisateur standard et ont recours à des technologies d’installation déléguée telles que GPSI (Group Policy Software Install) ou SMS (Systems Management Server) doivent désactiver ce paramètre de stratégie. Dans ce cas, la détection d’un programme d’installation n’est pas nécessaire.  
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
   
 - **Empêcher le stockage d’une valeur de hachage LAN Manager lors du prochain changement de mot de passe**  
   Ce paramètre de sécurité détermine si, au prochain changement de mot de passe, la valeur de hachage LAN Manager (LM) est stockée pour le nouveau mot de passe. Le hachage LM est relativement faible et vulnérable aux attaques par rapport au hachage Windows NT, plus fort en matière de chiffrement. Étant donné que le hachage LM est stocké sur l’ordinateur local dans la base de données de sécurité, les mots de passe peuvent être compromis si la base de données de sécurité est attaquée.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
 
 - **Virtualiser les échecs d’écriture de fichier et de Registre dans des emplacements par utilisateur**  
   Ce paramètre de stratégie détermine si les échecs d’écriture d’application sont redirigés vers des emplacements définis du système de fichiers et du Registre. Ce paramètre de stratégie atténue les applications qui s’exécutent en tant qu’administrateur et écrivent des données d’application au moment de l’exécution dans *%ProgramFiles%*, *%Windir%*, *%Windir%\system32*, or *HKLM\Software*.
   
-  **Par défaut**: Oui
+  **Par défaut** : Oui
 
 ## <a name="ms-security-guide"></a>Guide de sécurité Microsoft  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) dans la documentation Windows.  
@@ -1097,7 +1097,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Activé
   
 - **Configuration de démarrage du pilote du client SMB v1**  
-  **Par défaut**: désactivé pilote
+  **Par défaut** : pilote désactivé
   
 - **Serveur SMB v1**  
   **Par défaut** : Désactivé
@@ -1112,18 +1112,18 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) dans la documentation Windows.  
 
 - **Niveau de protection du routage de source IP réseau**  
-  **Par défaut**: protection la plus élevée  
+  **Par défaut** : protection la plus élevée  
   
 - **Ignorer sur le réseau les demandes de libération de noms NetBIOS sauf à partir de serveurs WINS**  
   **Par défaut** : Activé
   
 - **Niveau de protection du routage de source IPv6 réseau**  
-  **Par défaut**: protection la plus élevée
+  **Par défaut** : protection la plus élevée
 
 - **Les redirections ICMP réseau remplacent les routes OSPF générées**  
   **Par défaut** : Désactivé
   
-## <a name="power"></a>Alimentation électrique  
+## <a name="power"></a>Puissance  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) dans la documentation Windows.  
 
 - **Exiger un mot de passe à la sortie de veille quand l’appareil est branché**  
@@ -1132,12 +1132,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Activé
   
 - **États de mise en attente lorsque l'appareil est en veille sur batterie**  
-  Ce paramètre de stratégie gère si Windows peut utiliser les États de veille lors du placement de l’ordinateur dans un état de veille. Si vous activez ou ne configurez pas ce paramètre de stratégie, Windows utilise les états de mise en attente pour mettre l’ordinateur en veille. Si vous désactivez ce paramètre de stratégie, les états de mise en attente (S1-S3) ne sont pas autorisés.
+  Ce paramètre de stratégie indique si Windows est autorisé à utiliser les états de mise en attente lors de la mise en veille de l'ordinateur. Si vous activez ou ne configurez pas ce paramètre de stratégie, Windows utilise les états de mise en attente pour mettre l’ordinateur en veille. Si vous désactivez ce paramètre de stratégie, les états de mise en attente (S1-S3) ne sont pas autorisés.
   
   **Par défaut** : Désactivé
   
 - **États de mise en attente lorsque l'appareil est en veille et branché**  
-  Ce paramètre de stratégie gère si Windows peut utiliser les États de veille lors du placement de l’ordinateur dans un état de veille. Si vous activez ou ne configurez pas ce paramètre de stratégie, Windows utilise les états de mise en attente pour mettre l’ordinateur en veille. Si vous désactivez ce paramètre de stratégie, les états de mise en attente (S1-S3) ne sont pas autorisés.
+  Ce paramètre de stratégie indique si Windows est autorisé à utiliser les états de mise en attente lors de la mise en veille de l'ordinateur. Si vous activez ou ne configurez pas ce paramètre de stratégie, Windows utilise les états de mise en attente pour mettre l’ordinateur en veille. Si vous désactivez ce paramètre de stratégie, les états de mise en attente (S1-S3) ne sont pas autorisés.
   
   **Par défaut** : Désactivé
   
@@ -1177,7 +1177,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   Si vous désactivez ce paramètre ou ne le configurez pas, le niveau de chiffrement à utiliser pour les connexions à distance aux serveurs Hôte de session Bureau à distance n’est pas appliqué via la stratégie de groupe. Une conformité FIPS importante peut être configurée via le chiffrement système. Utilisez des algorithmes compatibles FIPS pour les paramètres de chiffrement, de hachage et de signature dans la stratégie de groupe (sous Configuration ordinateur\Paramètres Windows\Paramètres de sécurité\Stratégies locales\Options de sécurité). Le paramètre compatible FIPS chiffre et déchiffre les données envoyées du client au serveur et du serveur au client, avec les algorithmes de chiffrement FIPS (Federal Information Processing Standard) 140, à l’aide des modules de chiffrement Microsoft. Utilisez ce niveau de chiffrement lorsque les communications entre les clients et les serveurs hôtes de session Bureau à distance nécessitent le niveau de chiffrement le plus élevé.
   
-  **Par défaut**: élevé
+  **Par défaut** : élevé
   
 ## <a name="remote-management"></a>Gestion à distance  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) dans la documentation Windows.  
@@ -1213,7 +1213,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé
   
 
-## <a name="remote-procedure-call"></a>RPC (Remote Procedure Call)  
+## <a name="remote-procedure-call"></a>Appel de procédure distante  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) dans la documentation Windows.  
 
 - **Options du client RPC non authentifié**  
@@ -1222,7 +1222,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   - *Authentifié* autorise seulement les clients RPC authentifiés (selon la définition ci-dessus) à se connecter aux serveurs RPC s’exécutant sur la machine sur laquelle le paramètre de stratégie est appliqué. Des exemptions sont accordées aux interfaces qui les ont demandées. 
   - *Authentifié sans exceptions* autorise seulement les clients RPC authentifiés (selon la définition ci-dessus) à se connecter aux serveurs RPC s’exécutant sur la machine sur laquelle le paramètre de stratégie est appliqué. Aucune exception n’est autorisée. Remarque : Ce paramètre de stratégie n’est pas appliqué tant que le système n’est pas redémarré.  
 
-  **Par défaut**: authentifié
+  **Par défaut** : authentifié
 
 ## <a name="search"></a>Recherche 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Recherche](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) dans la documentation Windows.  
@@ -1230,7 +1230,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Désactiver l’indexation des éléments chiffrés**  
   Autorise ou interdit l’indexation des éléments. Ce commutateur concerne l’indexeur Windows Search, qui contrôle s’il indexe les éléments chiffrés, comme les fichiers protégés par la Protection des informations Windows. Quand la stratégie est activée, les éléments protégés par la Protection des informations Windows sont indexés et leurs métadonnées sont stockées à un emplacement non chiffré. Les métadonnées incluent des éléments comme le chemin et la date de modification des fichiers. Lorsque la stratégie est désactivée, les éléments TEC protégés ne sont pas indexés et n’apparaissent pas dans les résultats de Cortana ou de l’Explorateur de fichiers. Il peut également y avoir un impact sur les performances pour les photos et les applications Groove si de nombreux fichiers multimédias sont protégés par la Protection des informations Windows sur l’appareil.
   
-**Par défaut**: Oui
+**Par défaut** : oui
   
 ## <a name="smart-screen"></a>SmartScreen  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) dans la documentation Windows.  
@@ -1240,7 +1240,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   - *Non configuré* : les employés peuvent ignorer les avertissements SmartScreen et exécuter des fichiers malveillants. 
   - *Oui* : les employés ne peuvent pas ignorer les avertissements SmartScreen et exécuter des fichiers malveillants.
 
-  **Par défaut**: Oui
+  **Par défaut** : oui
 
 <!-- Not currently available? - **Block unverified file download**  
   By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading the unverified file(s). Enabling this policy prevents users from bypassing the warnings, blocking them from downloading of the unverified file(s).
@@ -1250,7 +1250,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Exiger SmartScreen pour les applications et les fichiers**  
   Permet aux administrateurs informatiques de configurer SmartScreen pour Windows.
 
-  **Par défaut**: Oui
+  **Par défaut** : oui
   
 ## <a name="system"></a>Système  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Système](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) dans la documentation Windows.  
@@ -1258,7 +1258,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Système : Initialisation des pilotes de démarrage**  
   Ce paramètre de stratégie vous permet de spécifier quels pilotes de démarrage sont initialisés selon une classification déterminée par un pilote de démarrage du logiciel anti-programme malveillant à lancement anticipé. Le pilote de démarrage du logiciel anti-programme malveillant à lancement anticipé peut retourner les classifications suivantes pour chaque pilote de démarrage : 
   - *Bon* : le pilote a été signé et n’a pas été falsifié.  
-  - *Mauvais* : Le pilote a été identifié comme étant un programme malveillant. Nous recommandons que vous n’autorisez pas les pilotes défectueux connus à initialiser. 
+  - *Mauvais* : Le pilote a été identifié comme étant un programme malveillant. Il est recommandé de ne pas autoriser l’initialisation des mauvais pilotes connus. 
   - *Mauvais, mais requis lors du démarrage* : le pilote a été identifié comme étant un programme malveillant, mais l’ordinateur ne peut pas démarrer correctement sans charger ce pilote. 
   - *Inconnu* : ce pilote n’a pas été confirmé par votre application de détection des programmes malveillants et n’a pas été classé par le pilote de démarrage du logiciel anti-programme malveillant à lancement anticipé.  
 
@@ -1273,12 +1273,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Bloquer le partage Internet**  
   Spécifie si le partage Internet est possible sur l’appareil.  
 
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 - **Bloquer la connexion automatique aux points d’accès Wi-Fi**  
   Autorise ou interdit la connexion automatique de l’appareil aux points d’accès Wi-Fi.  
 
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 ## <a name="windows-connection-manager"></a>Gestionnaire de connexions Windows  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) dans la documentation Windows.  
@@ -1298,12 +1298,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Analyser les e-mails entrants**  
   Autorise ou interdit l’analyse des e-mails.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
 
 - **Les applications Office lancent un type de processus enfant**  
   Les applications Office ne sont pas autorisées à créer des processus enfants. Elles incluent Word, Excel, PowerPoint, OneNote et Access. Il s’agit d’un comportement malveillant typique, en particulier pour les attaques basées sur des macros qui tentent d’utiliser des applications Office pour lancer ou télécharger des fichiers exécutables malveillants.
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Type de consentement pour l’envoi d’exemples par Defender**  
   Vérifie le niveau de consentement de l’utilisateur dans Windows Defender pour envoyer des données. Si le consentement nécessaire a déjà été accordé, Windows Defender les envoie. Si ce n’est pas le cas (et si l’utilisateur a spécifié de ne jamais lui demander), l’interface utilisateur est lancée pour demander le consentement de l’utilisateur (quand Defender/AllowCloudProtection est autorisé) avant d’envoyer des données.
@@ -1318,92 +1318,92 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 - **Script : type d’exécution de charge utile téléchargée**  
   Script Defender : type d’exécution de charge utile téléchargée
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Empêcher le vol d’informations d’identification**  
   Windows Defender Credential Guard utilise une sécurité basée sur la virtualisation pour isoler les secrets, afin que seuls les logiciels système privilégiés puissent y accéder. L’accès non autorisé à ces informations secrètes peut entraîner des vols, par exemple de type Pass-the-Hash ou Pass-the-Ticket. Windows Defender Credential Guard empêche ces attaques en protégeant les hachages de mot de passe NTLM, les TGT (Ticket Granting Ticket) Kerberos et les informations d’identification stockées par les applications comme informations d’identification de domaine.
   
-  **Par défaut**: activer
+  **Par défaut** : activer
 
 - **Type d’exécution du contenu des e-mails**  
-  Cette règle bloque des types de fichiers suivants ne soient pas exécuter ou lancée à partir d’un message électronique dans Microsoft Outlook ou de messagerie Web (par exemple, Gmail.com ou Outlook.com) : fichiers exécutables (par exemple, .exe, .dll ou .scr) des fichiers de Script (par exemple, un .ps PowerShell, VisualBasic, .vbs, ou JavaScript .js) fichiers d’archive de Script.
+  Cette règle bloque les types de fichiers suivants pour qu’ils ne soient pas exécuter ou lancée à partir d’un email dans Microsoft Outlook ou d’une message sur le Web (par exemple, Gmail.com ou Outlook.com) : fichiers exécutables (par exemple, .exe, .dll ou .scr) fichiers de Script (par exemple, un fichier .ps PowerShell, .vbs VisualBasic, .js ou JavaScript) fichiers d’archive de Script.
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Type de protection réseau**  
-  Cette stratégie vous permet d’activer la protection réseau (bloquer/auditer) ou de la désactiver dans Windows Defender Exploit Guard. La protection réseau est une fonctionnalité de Windows Defender Exploit Guard qui protège les employés utilisant une application d’accéder à des tentatives d’hameçonnage, à des sites hébergeant du code malveillant exploitant une faille de sécurité et à du contenu malveillant sur Internet. Cela inclut le fait d’empêcher des navigateurs tiers de se connecter à des sites dangereux. Le type de la valeur est un entier. Si vous activez ce paramètre, la protection réseau est activée et les employés ne peuvent pas la désactiver. Son comportement peut être contrôlé par les options suivantes : Bloquer et Auditer. Si vous activez cette stratégie avec l’option « Bloquer », la connexion des utilisateurs et des applications à des domaines dangereux est bloquée. Vous pouvez voir cette activité dans le centre de sécurité Windows Defender. Si vous activez cette stratégie avec l’option « Auditer », la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous pouvez néanmoins toujours voir cette activité dans le Centre de sécurité Windows Defender. Si vous désactivez cette stratégie, la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous ne voyez pas cette activité réseau dans le Centre de sécurité Windows Defender. Si vous ne configurez pas cette stratégie, le blocage du réseau est désactivée par défaut.
+  Cette stratégie vous permet d’activer la protection réseau (bloquer/auditer) ou de la désactiver dans Windows Defender Exploit Guard. La protection réseau est une fonctionnalité de Windows Defender Exploit Guard qui protège les employés utilisant une application d’accéder à des tentatives d’hameçonnage, à des sites hébergeant du code malveillant exploitant une faille de sécurité et à du contenu malveillant sur Internet. Cela inclut le fait d’empêcher des navigateurs tiers de se connecter à des sites dangereux. Le type de la valeur est un entier. Si vous activez ce paramètre, la protection réseau est activée et les employés ne peuvent pas la désactiver. Son comportement peut être contrôlé par les options suivantes : Bloquer et Auditer. Si vous activez cette stratégie avec l’option « Bloquer », la connexion des utilisateurs et des applications à des domaines dangereux est bloquée. Vous pouvez consulter cette activité dans Windows Defender Security Center. Si vous activez cette stratégie avec l’option « Auditer », la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous pouvez néanmoins toujours voir cette activité dans le Centre de sécurité Windows Defender. Si vous désactivez cette stratégie, la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous ne voyez pas cette activité réseau dans le Centre de sécurité Windows Defender. Si vous ne configurez pas cette stratégie, le blocage réseau est désactivé par défaut.
   
-  **Par défaut**: activer
+  **Par défaut** : activer
   
 - **Defender : Planifier le jour de l’analyse**  
   Jour de l’analyse planifié dans Defender.
   
-  **Par défaut**: tous les jours
+  **Par défaut** : tous les jours
   
 - **Protection assurée par le cloud**  
   Pour protéger au mieux votre PC, Windows Defender envoie des informations à Microsoft sur les problèmes détectés. Microsoft analyse ces informations, en apprend plus sur les problèmes qui vous affectent ainsi que d’autres clients, et offre des solutions améliorées.
   
-  **Par défaut**: Oui  
+  **Par défaut** :  oui  
 
 - **Defender : action contre les applications potentiellement indésirables**  
-  La fonctionnalité de protection contre les applications potentiellement indésirables dans l’antivirus Windows Defender peut identifier et bloquer le téléchargement et l’installation des applications potentiellement indésirables sur les points de terminaison de votre réseau. Ces applications ne sont pas considérées comme des virus, des logiciels malveillants ou d’autres types de menaces, mais elles peuvent effectuer des actions sur les points de terminaison qui dégradent leurs performances ou leur utilisation. Les applications potentiellement indésirables peuvent également faire référence à des applications considérées comme ayant une mauvaise réputation. Comportement PUA typique inclut : différents types de logiciels regroupement injection Ad dans les navigateurs pilote web et les optimiseurs de Registre qui détectent des problèmes, le paiement de demande pour résoudre les erreurs, mais restent sur le point de terminaison et n’apporter aucune modification ou les optimisations (également appelé » programmes non autorisés antivirus »). Ces applications peuvent accroître le risque de votre réseau d’être infecté par des programmes malveillants, entraîner à être plus difficile à identifier les infections de logiciels malveillants et peut gaspiller des ressources informatiques dans les applications de nettoyage.  
+  La fonctionnalité de protection contre les applications potentiellement indésirables dans l’antivirus Windows Defender peut identifier et bloquer le téléchargement et l’installation des applications potentiellement indésirables sur les points de terminaison de votre réseau. Ces applications ne sont pas considérées comme des virus, des logiciels malveillants ou d’autres types de menaces, mais elles peuvent effectuer des actions sur les points de terminaison qui dégradent leurs performances ou leur utilisation. Les applications potentiellement indésirables peuvent également faire référence à des applications considérées comme ayant une mauvaise réputation. Le comportement typique des PUA est notamment : différents types de bundle de logiciels Injection de publicité dans les navigateurs web, Optimiseurs de pilotes et du Registre qui détectent des problèmes et proposent de corriger les erreurs moyennant finance, mais restent sur le point de terminaison et n'effectuent ni changements ni optimisations (connus aussi sous le nom de programmes « antivirus non fiables »). Ces applications peuvent augmenter le risque d'infection de votre réseau par des programmes malveillants, rendent les infections de programmes malveillants difficiles à identifier et peuvent utiliser à perte les ressources informatiques pour nettoyer les applications.  
   
-  **Par défaut**: bloc  
+  **Par défaut** : bloc  
 
 - **Type de code de macro obfusqué dans les scripts**  
   Les logiciels malveillants et d’autres menaces peuvent tenter d’obfusquer ou de masquer leur code malveillant dans certains fichiers de script. Cette règle empêche l’exécution des scripts qui paraissent obfusqués.
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Analyser les disques amovibles lors d’une analyse complète**  
   Permet à Windows Defender rechercher les logiciels malveillants et indésirables dans les lecteurs amovibles (par exemple les lecteurs flash) lors d’une analyse complète. L’antivirus Windows Defender analyse tous les fichiers sur les périphériques USB avant exécution.
   
-  **Par défaut**: Oui  
+  **Par défaut** : oui  
   
 - **Analyser les fichiers d’archive**  
   Defender : Analyser les fichiers d’archive.
   
-  **Par défaut**: Oui
+  **Par défaut** : oui
   
 - **Surveillance du comportement**  
-  Autorise ou interdit la fonctionnalité Surveillance du comportement de Windows Defender. Incorporés dans Windows 10, ces capteurs collectent et traitent les signaux comportementaux du système d’exploitation, et envoient ces données à votre instance cloud, isolée et privée de Windows Defender ATP.
+  Autorise ou interdit la fonctionnalité de Surveillance du comportement de Windows Defender incorporée dans Windows 10, ces capteurs collectent et traitent les signaux comportementaux du système d’exploitation et envoient ces données de capteur à votre instance cloud, isolée et privée de Windows Defender ATP.
   
-  **Par défaut**: Oui
+  **Par défaut** : oui
 
 - **Analyser les fichiers ouverts à partir de dossiers réseau**  
   Si des fichiers sont en lecture seule, l’utilisateur ne peut pas supprimer les programmes malveillants détectés.
   
-  **Par défaut**: Oui
+  **Par défaut** : oui
 
 - **Type de processus USB non approuvés**  
   Avec cette règle, les administrateurs peuvent empêcher l’exécution des fichiers exécutables non signés ou non fiables partir de lecteurs USB amovibles, notamment les cartes SD.
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Applications Office : Type d’injection dans d’autres processus**  
   Les applications Office, notamment Word, Excel, PowerPoint et OneNote, ne peuvent pas injecter du code dans d’autres processus. Ceci est généralement utilisé par des programmes malveillants pour exécuter du code malveillant de façon à masquer l’activité aux moteurs d’analyse antivirus.
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
   
 - **Code de macro Office autorisant un type d’importation Win32**  
   Les programmes malveillants peuvent utiliser du code de macro dans des fichiers Office pour importer et charger des DLL Win32, qui peuvent alors être utilisées pour effectuer des appels d’API, permettant ensuite une infection de tout le système. Cette règle tente de bloquer les fichiers Office qui contiennent du code de macro capable d’importer des DLL Win32. Ceci inclut Word, Excel, PowerPoint et OneNote.
   
-  **Par défaut**: bloc  
+  **Par défaut** : bloc  
   
 - **Defender : Niveau de blocage cloud**  
   Niveau de blocage cloud de Defender.
   
-  **Par défaut**: non configuré
+  **Par défaut** : non configuré
 
 - **Surveillance en temps réel**  
   Defender requiert une surveillance en temps réel.
   
-  **Par défaut**: Oui
+  **Par défaut** : oui
   
 - **Applications Office : type de création ou de lancement de contenu exécutable**  
   Cette règle cible des comportements typiques utilisés par des modules complémentaires et des scripts suspects et malveillants (extensions) qui créent ou lancent des fichiers exécutables. Il s’agit d’une technique classique des programmes malveillants. L’utilisation des extensions par les applications Office est bloquée. En général, ces extensions utilisent l’hôte de script Windows (fichiers .wsh) pour exécuter des scripts qui automatisent certaines tâches ou fournissent des fonctionnalités de modules complémentaires créés par l’utilisateur
   
-  **Par défaut**: bloc
+  **Par défaut** : bloc
 
 ## <a name="windows-ink-workspace"></a>Espace de travail Windows Ink  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) dans la documentation Windows.  
@@ -1412,7 +1412,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Spécifie s’il faut autoriser l’utilisateur à accéder à l’espace de travail Ink. 
   - *Désactivé* : l’accès à l’espace de travail Ink est désactivé. La fonctionnalité est désactivée.
   - *Activé* : la fonctionnalité Espace de travail Ink est activée, mais l’utilisateur ne peut pas y accéder sur l’écran de verrouillage.
-  - *Ne pas configuré* : fonctionnalité de l’espace de travail de l’encre est activée et que l’utilisateur peut l’utiliser au-dessus de l’écran de verrouillage.  
+  - *Non configuré* : la fonctionnalité Espace de travail Ink est activée, mais l’utilisateur ne peut pas y accéder sur l’écran de verrouillage.  
 
   **Par défaut** : Activé
  

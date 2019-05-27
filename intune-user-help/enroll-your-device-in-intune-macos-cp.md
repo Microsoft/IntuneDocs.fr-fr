@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c9ea11cd19fee8f491329020753501996b47f40
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55834719"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196780"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
 
@@ -31,7 +31,9 @@ Inscrire votre appareil macOS avec l’application Portail d’entreprise Intune
 
 Les organisations vous obligent souvent à activer la gestion de votre appareil avant que vous puissiez accéder à des données propriétaires à partir de cet appareil. Une fois qu’un appareil est géré, les organisations peuvent lui transmettre des stratégies et des applications par le biais de leur fournisseur de gestion des appareils mobiles. Pour obtenir un accès continu aux informations professionnelles ou scolaires à partir de votre appareil, vous devez le configurer conformément aux paramètres de stratégie.  
 
-Cet article décrit comment l’application Portail d’entreprise Intune pour macOS vous aide à inscrire, à configurer et à tenir à jour votre appareil pour satisfaire aux exigences de votre organisation.
+Cet article décrit comment l’application Portail d’entreprise Intune pour macOS vous aide à inscrire, à configurer et à tenir à jour votre appareil pour satisfaire aux exigences de votre organisation.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/Pa2pfhwq_yk?rel=0]
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>À quoi s’attendre avec l’application Portail d’entreprise ?
 

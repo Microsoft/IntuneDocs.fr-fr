@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 07/18/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,18 +14,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3452eb832f31377ddc9c55c5008405cb2235569b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ce2813702d9b2b3cb91f5531308cbb58b1f9f80
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050609"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importer des paramètres Wi-Fi pour des appareils Windows dans Intune
 
 Pour les appareils qui exécutent Windows, vous pouvez importer un profil de configuration Wi-Fi précédemment exporté vers un fichier. **Pour Windows 10 et versions ultérieures, vous pouvez aussi [créer un profil Wi-Fi](wi-fi-settings-windows.md) directement dans Intune**.
 
-S'applique à :  
+S’applique à :  
 - Windows 8.1 et versions ultérieures
 - Windows 10 et versions ultérieures
 - Windows 10 Desktop ou Mobile

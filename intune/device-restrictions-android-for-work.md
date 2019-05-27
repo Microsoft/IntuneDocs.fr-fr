@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
-ms.translationtype: MTE75
+ms.openlocfilehash: d2eac8c396e63fa2f3a4e8ef2c2b88b883c87433
+ms.sourcegitcommit: b7f3a6d67f7ae2356bbca1934056d28cdfc6e45e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505775"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836453"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -327,3 +327,7 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
 Vous pouvez également créer des profils plein écran pour des appareils [Android](device-restrictions-android.md#kiosk) et [Windows 10](kiosk-settings.md) dédiés.
+
+## <a name="see-also"></a>Voir aussi
+
+[Configuration et dépannage des appareils d’entreprise Android dans Microsoft Intune](https://support.microsoft.com/help/4476974)

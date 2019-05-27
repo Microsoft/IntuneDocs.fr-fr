@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30d7b2acb6acf48699df92075349b06e5ad9e742
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476508"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042671"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Authentification Intune Data Warehouse des applications uniquement
 
@@ -79,7 +78,7 @@ Dans cette section, vous allez accorder des autorisations aux applications.
 1.  Sélectionnez **Autorisations nécessaires** dans le panneau **Paramètres**.
 2.  Cliquez sur **Ajouter**.
 3.  Sélectionnez **Ajouter une API** pour afficher le panneau **Sélectionner une API**.
-4.  Sélectionnez **API Microsoft Intune (MicrosoftIntuneAPI)**, puis cliquez sur **Sélectionner** dans le panneau **Sélectionner une API**. L’étape **Sélectionner les autorisations** est sélectionnée, et le panneau **Activer l’accès** s’affiche.
+4.  Sélectionnez **API Microsoft Intune (MicrosoftIntuneAPI)** , puis cliquez sur **Sélectionner** dans le panneau **Sélectionner une API**. L’étape **Sélectionner les autorisations** est sélectionnée, et le panneau **Activer l’accès** s’affiche.
 5.  Choisissez l’option **Obtenir des informations de l’entrepôt de données auprès de Microsoft Intune** dans la section **Autorisations des applications**.
 6.  Cliquez sur **Sélectionner** dans le panneau **Activer l’accès**.
 7.  Cliquez sur **Terminé** dans le panneau **Ajouter l’accès aux API**.
@@ -91,10 +90,10 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
 
 1.  Sélectionnez **Fichier** > **Nouveau** > **Projet** pour afficher la boîte de dialogue **Nouveau projet**.
 2.  Sur la gauche, sélectionnez **Visual C#** pour afficher tous les projets .NET Framework.
-3.  Sélectionnez **Application console (.NET Framework)**, ajoutez un nom d’application, puis cliquez sur **OK** pour créer l’application.
+3.  Sélectionnez **Application console (.NET Framework)** , ajoutez un nom d’application, puis cliquez sur **OK** pour créer l’application.
 4.  Dans **l’Explorateur de solutions**, sélectionnez **Program.cs** pour afficher le code.
 5.  Dans le menu contextuel, sélectionnez **Ajouter** > **Nouvel élément**. La boîte de dialogue **Ajouter un élément** s’affiche.
-6.  Sur la gauche, sous **Visual C#**, sélectionnez **Code**.
+6.  Sur la gauche, sous **Visual C#** , sélectionnez **Code**.
 7.  Sélectionnez **Classe**, modifiez le nom de la classe en choisissant *IntuneDataWarehouseClass.cs*, puis cliquez sur **Ajouter**.
 8.  Ajoutez le code suivant dans la méthode <code>Main</code> :
 
