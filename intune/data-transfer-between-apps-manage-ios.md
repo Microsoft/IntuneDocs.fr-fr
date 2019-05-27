@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb109f8c837fe8848ad8cb19c930de765ed381d1
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: dffdf67597ccb7a1719b2b769a79a6a5f365198c
+ms.sourcegitcommit: 5fec35341d83b16023a92fc4b2b3e9237fc6c9ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509508"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65853904"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -80,6 +80,7 @@ Le paramètre UPN d’utilisateur **doit être configuré** pour les appareils g
    |Microsoft Intune| IntuneMAMUPN | Chaîne | {{UserPrincipalName}}|
    |VMware AirWatch| IntuneMAMUPN | Chaîne | {UserPrincipalName}|
    |MobileIron | IntuneMAMUPN | Chaîne | ${userUPN} **ou** ${userEmailAddress} |
+   |Gestion de point de terminaison Citrix | IntuneMAMUPN | Chaîne | ${user.userprincipalname} |
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Chaîne | %upn% |
 
 

@@ -1,11 +1,11 @@
 ---
 title: Utiliser des bases de référence de sécurité dans Microsoft Intune - Azure | Microsoft Docs
-description: Ajoutez ou configurez des paramètres de sécurité de groupe recommandés pour protéger les données et l’utilisateur sur les appareils à l’aide de Microsoft Intune pour la gestion des appareils mobiles. Activez BitLocker, configurez Windows Defender - Protection avancée contre les menaces, contrôlez Internet Explorer, utilisez SmartScreen, définissez des stratégies de sécurité locales, exigez un mot de passe, bloquez les téléchargements Internet et bien plus encore.
+description: Ajoutez ou configurez des paramètres de sécurité de groupe recommandés pour protéger les données et l’utilisateur sur les appareils à l’aide de Microsoft Intune pour la gestion des appareils mobiles. Activez BitLocker, configurez Microsoft Defender Advanced Threat Protection, contrôlez Internet Explorer, utilisez SmartScreen, définissez des stratégies de sécurité locales, exigez un mot de passe, bloquez les téléchargements Internet et bien plus encore.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70638228875f1fb063a2ea22dc424c00f3940a30
-ms.sourcegitcommit: ef4bc7318449129af3dc8c0154e54a264b7bf4e5
+ms.openlocfilehash: 9dd289535ba4276b1bca21044d362172517b07e0
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197625"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732510"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Créer une base de référence de sécurité Windows 10 dans Intune
 
@@ -44,9 +44,19 @@ Les bases de référence de sécurité créent un « profil de configuration �
 
 Une fois que le profil est attribué, vous pouvez le surveiller, ainsi que la base de référence. Par exemple, vous pouvez voir quels appareils correspondent à la base de référence ou pas.
 
-Cet article vous montre comment utiliser des bases de référence de sécurité pour créer un profil, attribuer le profil et le surveiller.
+Cet article peut vous aider à utiliser des bases de référence de sécurité pour créer un profil, attribuer le profil et le surveiller.
 
 Les [bases de référence de sécurité Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) sont une ressource précieuse pour en savoir plus sur cette fonctionnalité. La [Gestion des appareils mobiles](https://docs.microsoft.com/windows/client-management/mdm/) est une ressource précieuse sur la gestion des appareils mobiles, et ce que vous pouvez faire sur les appareils Windows.
+
+## <a name="available-security-baselines"></a>Bases de référence de la sécurité disponibles  
+
+Les bases de référence de la sécurité suivantes sont disponibles pour une utilisation avec Intune.
+- **Préversion : Base de référence de la sécurité MDM pour octobre 2018**  
+  [Afficher les paramètres](security-baseline-settings-windows.md)
+
+- **PRÉVERSION : base de référence Windows Defender ATP**  
+  [Afficher les paramètres](security-baseline-settings-defender-atp.md)
+
 
 ## <a name="prerequisites"></a>Prérequis
 Pour gérer les bases de référence dans Intune, votre compte doit avoir le rôle intégré [Gestionnaire de stratégie et de profils](role-based-access-control.md#built-in-roles).
@@ -60,51 +70,36 @@ Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Dans le [portail Azure](https://portal.azure.com/), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
-2. Sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)**. Vous obtenez la liste des bases de référence disponibles. Au fur et à mesure que davantage de bases de référence sont ajoutées, vous les verrez ici :
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=20909), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)**. Vous obtenez la liste des bases de référence disponibles. 
 
-    ![Afficher la liste des bases de référence de sécurité actuellement disponibles dans Intune](./media/security-baselines/available-baselines.png)
+    ![Sélectionnez une base de référence de sécurité pour configurer](./media/security-baselines/available-baselines.png)
 
-3. Sélectionnez la base de référence que vous souhaitez utiliser > **Créer un profil**.
-4. Dans **Informations de base**, entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom pour votre profil de base de référence de sécurité. Par exemple, entrez `pilot Windows 10 MDM baseline - Oct 2018`.
+2. Sélectionnez la base de référence que vous souhaitez utiliser, puis sélectionnez **Créer un profil**.  
+
+3. Dans l'onglet **Notions de base**, spécifiez les propriétés suivantes :
+
+    - **Nom** : Entrez un nom pour votre profil de base de référence de sécurité. Par exemple, entrez *Profil standard pour Defender ATP*
     - **Description** : Entrez du texte qui décrit ce que fait cette base de référence. La description vous permet d’entrer n’importe quel texte. Cela est facultatif, mais sans aucun doute recommandé.
 
-5. Développez **Paramètres**. Dans la liste, vous voyez tous les paramètres de cette base de référence de sécurité, ainsi que la valeur sur laquelle le paramètre est automatiquement défini. Les paramètres et leurs valeurs sont recommandés et peuvent être modifiés.
+4. Sélectionnez l’onglet **Configuration** pour afficher les groupes disponibles de **Paramètres** dans cette base de référence. Sélectionnez un groupe pour le développer et afficher les paramètres individuels qu’il contient. Les paramètres ont des configurations par défaut pour la base de référence de la sécurité. Reconfigurez les paramètres de valeurs par défaut pour répondre aux besoins de votre entreprise.  
 
-    ![Développer pour afficher tous les paramètres de cette base de référence de sécurité dans Intune](./media/security-baselines/sample-list-of-settings.png)
+    ![Développez un groupe pour afficher ses paramètres](./media/security-baselines/sample-list-of-settings.png)
 
-    Développez certains des paramètres pour vérifier leurs valeurs. Par exemple, développez **Windows Defender**. Notez certains des paramètres, ainsi que la valeur sur laquelle ils sont définis :
+5. Sélectionnez l’onglet **Affectations** pour affecter base de référence à des groupes. Attribuez la base de référence à un groupe existant ou créez un nouveau groupe à l’aide du processus standard dans la console Intune pour effectuer votre configuration.  
 
-    ![Consulter la valeur de certains paramètres Windows Defender dans Intune](./media/security-baselines/expand-windows-defender.png)
+   ![Attribuer un profil](./media/security-baselines/assignments.png)
+  
+6. Lorsque vous êtes prêt à déployer la base de référence, sélectionnez l’onglet **Réviser + créer** pour consulter les détails de la base de référence. Ensuite, sélectionnez **Enregistrer le profil** pour enregistrer, puis déployez le profil. 
 
-6. **Créez** le profil. 
-7. Sélectionnez **Profils**. Votre profil est créé et apparaît dans la liste. Toutefois, il ne fait rien pour le moment. Ensuite, attribuez le profil.
+   ![Réviser la base de référence](./media/security-baselines/review.png) 
 
-## <a name="assign-the-profile"></a>Attribuer le profil
+   Dès que vous enregistrez, le profil est envoyé (push) aux appareils lorsque ceux-ci se connectent à Intune. Par conséquent, cela peut se produire immédiatement.
 
-Une fois créé, le profil est prêt à être attribué à vos utilisateurs, appareils et groupes. Une fois attribué, le profil et ses paramètres sont appliqués aux utilisateurs, appareils et groupes de votre choix.
+   > [!TIP]  
+   > Vous pouvez enregistrer un profil sans l’avoir affecté à des groupes. Vous pouvez modifier le profil ultérieurement pour ajouter des groupes. 
 
-1. Dans Intune, sélectionnez **Bases de référence de sécurité** > choisir une base de référence > **Profils**.
-2. Sélectionnez votre profil > **Attributions**.
-
-    ![Choisissez votre profil de base de référence de sécurité dans Intune, puis cliquez sur Attributions pour déployer le profil](./media/security-baselines/assignments.png)
-
-3. Dans l’onglet **Inclure**, ajoutez les groupes, utilisateurs ou appareils auxquels vous souhaitez appliquer cette stratégie.
-
-    > [!TIP]
-    > Notez que vous pouvez également **exclure** des groupes. Si vous appliquez une stratégie à **Tous les utilisateurs**, envisagez d’exclure les groupes d’administration. En cas de problème, vous ne voulez sans doute pas que vous ou vos administrateurs soyez verrouillés.
-
-4. **Enregistrez** les changements apportés.
-
-Dès que vous enregistrez, le profil est envoyé (push) aux appareils lorsque ceux-ci se connectent à Intune. Par conséquent, cela peut se produire immédiatement.
-
-## <a name="available-security-baselines"></a>Bases de référence de la sécurité disponibles  
-
-Les bases de référence de la sécurité suivantes sont disponibles pour une utilisation avec Intune.
-- **Préversion : Base de référence de la sécurité MDM**
-  - Version : [Octobre 2018](security-baseline-settings-windows.md)
+7. Après avoir créé le profil, vous pouvez le modifier en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez la base de référence que vous avez configurée, puis sélectionnez **Profils**.  Sélectionnez le profil, puis **Propriétés** pour modifier les paramètres, puis sélectionnez **Affectations** pour modifier les groupes qui reçoivent cette base de référence. 
 
 ## <a name="q--a"></a>Questions et réponses
 

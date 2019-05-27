@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 96a0da69cdb77ae36ce2456186593f5c334c870c
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61510047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765416"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -567,4 +567,6 @@ Pour résoudre les problèmes et vérifier la configuration du connecteur Intune
 
 - [Utiliser des certificats PKCS](certficates-pfx-configure.md) ou [Émettre des certificats PKCS à partir d’un service web du gestionnaire PKI Symantec](certificates-symantec-configure.md)
 - [Ajouter une autorité de certification tierce pour utiliser SCEP avec Intune](certificate-authority-add-scep-overview.md)
-- Pour obtenir une aide supplémentaire, utilisez le guide [Dépannage du déploiement de profil de certificat SCEP dans Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune).
+- Pour obtenir une assistance supplémentaire, utilisez les guides suivants :
+  - [Dépannage du déploiement de profil de certificat SCEP dans Microsoft Intune](https://support.microsoft.com/help/4457481)
+  - [Résolution des problèmes de configuration NDES pour une utilisation avec des profils de certificat Microsoft Intune](https://support.microsoft.com/help/4459540)

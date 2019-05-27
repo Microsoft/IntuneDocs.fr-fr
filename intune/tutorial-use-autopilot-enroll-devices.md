@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36aa9ad733e2ae5e0f4a292b073fbebd5f5f5f8f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511518"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732992"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 Windows Autopilot simplifie l’inscription des appareils. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées. 
@@ -90,23 +90,20 @@ Ensuite, vous allez créer un groupe d’appareils et placer dedans les appareil
 Après avoir créé un groupe d’appareils, vous devez créer un profil de déploiement afin de pouvoir configurer les appareils Autopilot.
 
 1. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
-2. Pour **Nom**, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
+2. Sur la page **Notions de base** page, **Nom** tor, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
 3. Définissez **Convertir tous les appareils ciblés vers Autopilot** sur **Oui**. Ce paramètre permet de s’assurer que tous les appareils dans la liste sont inscrits auprès du service de déploiement Autopilot. Le traitement de l’enregistrement prend 48 heures.
-4. Pour **Mode de déploiement**, choisissez **Piloté par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
-5. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
-6. Choisissez **OOBE (Out-Of-Box Experience)**, configurez les options suivantes et conservez la valeur par défaut des autres options, puis choisissez **Enregistrer** :
+4. Sélectionnez **Suivant**.
+5. Sur la page **Mode out-of-box experience (OOBE)**, pour **Mode de déploiement**, choisissez **Géré par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
+6. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
+7. Configurez les options suivantes et laissez les autres sur la valeur par défaut :
     - **Contrat de Licence Utilisateur Final (CLUF)**  : **Masquer**
     - **Paramètres de confidentialité** : **Afficher**
     - **Type de compte d’utilisateur** : **Standard**
-
-6. Choisissez **Créer** pour créer le profil. Le profil de déploiement Autopilot peut désormais être affecté aux appareils.
-
-## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Affecter un profil de déploiement Autopilot à un groupe d’appareils
-
-Maintenant que le profil de déploiement est créé, vous allez l’affecter au groupe d’appareils.
-1. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > Choisir un profil.
-2. Dans le panneau du profil, choisissez **Affectations**. 
-3. Choisissez **Sélectionner des groupes**, puis dans le panneau **Sélectionner des groupes**, choisissez **Groupe Autopilot**, puis **Sélectionner**.
+8. Sélectionnez **Suivant**.
+9. Sur la page **Affectations**, choisissez **Groupes sélectionnés** pour **Affecter à**.
+10. Choisissez **Sélectionner les groupes à inclure**, puis **Groupe Autopilot**.
+11. Sélectionnez **Suivant**.
+12. Sur la page **Réviser + créer**, choisissez **Créer** pour créer le profil.
 
 ## <a name="distribute-devices-to-users"></a>Distribuer des appareils aux utilisateurs
 
@@ -114,7 +111,7 @@ Vous pouvez désormais distribuer les appareils Windows à vos utilisateurs. Lor
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
-Si vous ne souhaitez plus utiliser les appareils Autopilot, vous pouvez les supprimer.
+Si vous ne voulez plus utiliser les appareils Autopilot, vous pouvez les supprimer.
 
 1. Si les appareils sont inscrits dans Intune, vous devez d’abord [les supprimer dans le portail Azure Active Directory](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 

@@ -1,11 +1,11 @@
 ---
-title: Utiliser une autorité de certification tierce avec SCEP dans Microsoft Intune - Azure | Microsoft Docs
+title: Utiliser des autorités de certification tierces avec SCEP dans Microsoft Intune – Azure | Microsoft Docs
 description: Dans Microsoft Intune, vous pouvez ajouter un fournisseur ou une autorité de certification tierce pour émettre des certificats à destination d’appareils mobiles à l’aide du protocole SCEP. Dans cette vue d’ensemble, une application Azure Active Directory (Azure AD) accorde à Microsoft Intune les autorisations de valider des certificats. Utilisez ensuite l’ID d’application, la clé d’authentification et l’ID de locataire de l’application AAD dans le programme d’installation de votre serveur SCEP pour émettre des certificats.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d042a160d016343c6e8374dff8f74560b9806014
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5e87b7397d994b089a30fedd9ccedc0107bf0cef
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508479"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732492"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -69,47 +69,40 @@ Avant d’intégrer des autorités de certification tierces à Intune, vérifiez
 
 Pour autoriser un serveur SCEP tiers à exécuter une validation de stimulation personnalisée par rapport à Intune, créez une application dans Azure AD. Cette application accorde des droits délégués à Intune pour valider les demandes SCEP.
 
-Vérifiez que vous disposez des autorisations requises pour inscrire une application Azure AD. [Autorisations requises](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) répertorie les étapes.
+Vérifiez que vous disposez des autorisations requises pour inscrire une application Azure AD. Consultez [Autorisations requises](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) dans la documentation Azure AD.
 
-**Étape 1 : Créer une application Azure AD**
+#### <a name="create-an-application-in-azure-active-directory"></a>Créer une application dans Azure Active Directory  
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Azure Active Directory** > **Inscriptions des applications** > **Inscription d’une nouvelle application**.
-3. Entrez un nom et une URL de connexion. Sélectionnez **Application/API web** pour le type d’application.
-4. Sélectionnez **Créer**.
+1. Dans le [portail Azure](https://portal.azure.com), accédez à **Azure Active Directory** > **Inscriptions d’applications**, puis sélectionnez **Nouvelle inscription**.  
 
-[Intégrer des applications à Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) inclut des instructions sur la création d’une application, notamment des conseils sur l’URL et le nom.
+2. Sur la page **Inscrire une application**, spécifiez les détails suivants :  
+   - Dans la section **Nom**, entrez un nom d’application explicite.  
+   - Pour la section **Types de comptes pris en charge**, sélectionnez **Comptes dans n’importe quel répertoire d’organisation**.  
+   - Pour **URI de redirection**, laissez la valeur par défaut du site web, puis spécifiez l’URL de connexion pour le serveur SCEP tiers.  
 
-**Étape 2 : Accorder des autorisations**
+3. Sélectionnez **Inscrire** pour créer l’application et ouvrir la page Vue d’ensemble de cette nouvelle application.  
 
-Après avoir créé votre application, accordez les autorisations requises à l’API Microsoft Intune :
+4. Sur la page **Vue d’ensemble** de l’application, copiez la valeur **ID d’application (client)** et enregistrez-la pour une utilisation ultérieure. Vous aurez besoin de cette valeur ultérieurement.  
 
-1. Dans votre application Azure AD, ouvrez **Paramètres** > **Autorisations requises**.  
-2. Sélectionnez **Ajouter** > **Sélectionner une API** > sélectionnez **API Microsoft Intune** > **Sélectionner**.
-3. Dans **Sélectionner des autorisations**, choisissez **SCEP challenge validation** (Validation de stimulation SCEP) > **Sélectionner**.
-4. Sélectionnez **Terminé** pour enregistrer vos changements.
+5. Dans le volet de navigation de l’application, accédez à **Certificats et clés secrètes** sous **Gérer**. Sélectionnez le bouton **Nouvelle clé secrète client**. Entrez une valeur dans la Description, sélectionnez une option pour **Expire**, puis choisissez **Ajouter** afin de générer une *valeur* pour la clé secrète client. 
+   > [!IMPORTANT]  
+   > Avant de quitter cette page, copiez la valeur de la clé secrète client et enregistrez-la pour une utilisation ultérieure avec votre implémentation d’autorité de certification tierce. Cette valeur ne s’affiche plus. Veillez à consulter les instructions de configuration souhaitées par votre autorité de certification tierce pour l’ID d’application, la clé d’authentification et l’ID de locataire.  
 
-**Étape 3 : Obtenir l’ID d’application et la clé d’authentification**
+6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com*, votre ID de locataire est **name.onmicrosoft.com**.  
 
-Obtenez ensuite les valeurs d’ID et de clé de votre application Azure AD. Les valeurs suivantes sont nécessaires :
+7. Dans le volet de navigation de l’application, accédez à **Autorisations d’API** sous **Gérer**, puis sélectionnez **Ajouter une autorisation**.  
 
-- ID de l’application
-- Clé d’authentification
-- ID de locataire
+8. Sur la page **Demander des autorisations d’API**, sélectionnez **Intune**, puis sélectionnez **Autorisations d’application**. Activez la case à cocher pour **scep_challenge_provider** (validation de demande d’accès SCEP).  
 
-**Pour obtenir l’ID d’application et la clé d’authentification** :
+   Sélectionnez **Ajouter des autorisations** pour enregistrer cette configuration.  
 
-1. Dans Azure AD, sélectionnez votre nouvelle application (**Inscriptions des applications**).
-2. Copiez **l’ID d’application** et stockez-le dans votre code d’application.
-3. Ensuite, générez une clé d’authentification. Dans votre application Azure AD, ouvrez **Paramètres** > **Clés**.
-4. Dans **Mots de passe**, entrez une description et choisissez la durée de la clé. **Enregistrez** les changements apportés. Copiez et enregistrez la valeur affichée.
+9. Restez à la page **Autorisations d’API**, sélectionnez **Accorder le consentement administrateur pour Microsoft**, puis sélectionnez **Oui**.  
+   
+   Le processus d’inscription d’application dans Azure AD est terminé.
 
-    > [!IMPORTANT]
-    > Copiez et enregistrez cette clé immédiatement, car elle ne va plus s’afficher. Cette valeur de clé est nécessaire avec votre implémentation de l’autorité de certification tierce. Veillez à consulter les instructions de configuration souhaitée pour l’ID d’application, la clé d’authentification et l’ID de locataire.
 
-**L’ID de locataire** est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est `admin@name.onmicrosoft.com`, votre ID de locataire est **name.onmicrosoft.com**.
 
-[Obtenir l’ID d’application et la clé d’authentification](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key) répertorie les étapes pour obtenir ces valeurs et fournit des informations détaillées sur les applications Azure AD.
+
 
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Configurer et déployer un profil de certificat SCEP
 En tant qu’administrateur, créez un profil de certificat SCEP pour cibler des utilisateurs ou appareils. Ensuite, affectez le profil.
@@ -128,6 +121,9 @@ Les autorités de certification tierces suivantes prennent en charge Intune :
 - [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
 - [Version open source GitHub d’EJBCA](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
+- [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [IDnomic](https://www.idnomic.com/)
+- [Sectigo](https://sectigo.com/products)
 
 Si vous êtes une autorité de certification tierce intéressée par l’intégration de votre produit à Intune, passez en revue les instructions de l’API :
 

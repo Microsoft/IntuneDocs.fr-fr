@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
-ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.openlocfilehash: 07922ff771f8dea2e19a94cd965fb7779f20f131
+ms.sourcegitcommit: 5fec35341d83b16023a92fc4b2b3e9237fc6c9ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135118"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65853952"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -153,6 +153,8 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     > Vous pouvez configurer une application Win32 afin qu’elle soit installée dans le contexte **Utilisateur** ou **Système**. Le contexte **Utilisateur** fait référence uniquement à un utilisateur donné. Le contexte **Système** fait référence à tous les utilisateurs d’un appareil Windows 10.
     >
     > Les utilisateurs finaux ne sont pas obligés d’être connectés à l’appareil pour installer des applications Win32.
+    > 
+    > L’installation et la désinstallation de Win32 sont exécutées exécutée sous le privilège Administrateur (par défaut) lorsque l’application est définie pour être installée dans le contexte de l’utilisateur et que l’utilisateur final de l’appareil a des privilèges Administrateur.
 
 4.  Une fois que vous avez fini, sélectionnez **OK**.
 
@@ -243,7 +245,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
             L’agent Intune vérifie les résultats du script. Il lit les valeurs écrites par le script dans le flux de sortie standard (STDOUT), le flux d’erreurs standard (STDERR) et le code de sortie. Si le script se termine par une valeur non nulle, il échoue et l’état de la détection de l’application est Non installé. Si le code de sortie est égal à zéro et STDOUT contient des données, l’état de la détection d’application est installé. 
 
             > [!NOTE]
-            > Quand le script se termine par la valeur 0, l’exécution du script est réussie. Le deuxième canal de sortie indique que l’application a été détectée : les données STDOUT indiquent que l’application a été trouvée sur le client. Nous ne recherchons pas de chaîne en particulier dans STDOUT.
+            > Microsoft recommande d’encoder votre script en tant qu’UTF-8. Quand le script se termine par la valeur 0, l’exécution du script est réussie. Le deuxième canal de sortie indique que l’application a été détectée : les données STDOUT indiquent que l’application a été trouvée sur le client. Nous ne recherchons pas de chaîne en particulier dans STDOUT.
 
         4.  Une fois que vous avez ajouté votre ou vos règles, sélectionnez **Ajouter** > **OK**.
 

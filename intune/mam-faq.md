@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
+ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506812"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65992897"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -51,6 +51,13 @@ Les stratégies de protection des applications sont des règles qui garantissent
 
 **Des exemples de stratégies de protection des applications sont-ils disponibles ?**<br></br>
 Consultez les [paramètres de stratégie de protection des applications Android](app-protection-policy-settings-android.md) et les [paramètres de stratégie de protection des applications iOS](app-protection-policy-settings-ios.md) pour plus d’informations sur chaque paramètre de stratégie de protection des applications.
+
+**Est-il possible d’appliquer en même temps des stratégies de gestion des appareils mobiles et de gestion des applications mobiles au même utilisateur, pour différents appareils ? Supposons par exemple qu’un utilisateur puisse accéder à ses ressources de travail sur son propre ordinateur MAM, mais aussi utiliser un appareil géré par Intune MDM au travail. Y a-t-il des limitations à cette idée ?**<br></br>
+Si vous appliquez une stratégie de gestion MAM à l’utilisateur sans définir l’état de l’appareil, l’utilisateur reçoit la stratégie à la fois sur l’appareil BYOD et sur l’appareil géré par Intune. Il est également possible d’appliquer une stratégie de gestion MAM en fonction de l’état géré. Si vous créez une stratégie de protection d’applications, sélectionnez Non à côté de Cibler tous les types d’application. Ensuite, choisissez entre les deux solutions suivantes :
+- Appliquer une stratégie de gestion MAM moins stricte aux appareils gérés par Intune et une autre plus stricte aux appareils non inscrits à la gestion MDM.
+- Appliquer une stratégie de gestion MAM aux appareils non inscrits exclusivement.
+
+Pour plus d’informations, voir [Guide pratique pour surveiller les stratégies de protection d’applications](app-protection-policies-monitor.md).
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Applications que vous pouvez gérer avec des stratégies de protection des applications
 

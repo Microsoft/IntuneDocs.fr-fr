@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,23 +17,23 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 52b92483ddafadf460911caaa472825a0bc0a20f
-ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
+ms.openlocfilehash: 72121aa48e7b5d46e25aac28ad386832b6b4ea72
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65527218"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733100"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Superviser le chiffrement des appareils et BitLocker  
 Intune offre un emplacement centralisé pour identifier l’état de chiffrement de vos appareils Windows 10 et vous permet d’accéder à des informations importantes pour BitLocker à partir de vos appareils, comme dans Azure Active Directory (Azure AD).  
 
-- Le [rapport de chiffrement (en préversion publique)](#encryption-report) fournit des détails sur l’état de chiffrement et de préparation d’un appareil. Les détails du rapport peuvent vous aider à identifier les problèmes qui empêchent le chiffrement correct des appareils que vous voulez protéger.  
-- [Affichez des détails BitLocker (en préversion publique)](#bitlocker-recovery-keys) comme l’ID de clé et les clés de récupération de vos appareils à partir du portail Intune.  
+- Le [rapport de chiffrement](#encryption-report) fournit des détails sur l’état de chiffrement et de préparation d’un appareil. Les détails du rapport peuvent vous aider à identifier les problèmes qui empêchent le chiffrement correct des appareils que vous voulez protéger.  
+- [Affichez des détails BitLocker](#bitlocker-recovery-keys) comme l’ID de clé et les clés de récupération de vos appareils à partir du portail Intune.  
 
 ## <a name="encryption-report"></a>Rapport de chiffrement
-Vous pouvez utiliser le rapport de chiffrement (en préversion publique) pour voir des détails sur l’état de chiffrement de vos appareils Windows 10.  
+Vous pouvez utiliser le rapport de chiffrement pour voir des détails sur l’état de chiffrement de vos appareils Windows 10.  
 
-Pour trouver le rapport, connectez-vous à [Intune](https://aka.ms/intuneportal) et accédez à **Configuration de l’appareil**, puis sous *Surveiller*, sélectionnez **Rapport de chiffrement (préversion)**.  
+Pour trouver le rapport, connectez-vous à [Intune](https://aka.ms/intuneportal) et accédez à **Configuration de l’appareil**, puis sous *Surveiller*, sélectionnez **Rapport de chiffrement**.  
 
 ### <a name="prerequisites"></a>Prérequis :
 Pour apparaître dans le rapport de chiffrement, un appareil doit exécuter Windows version 1607 ou ultérieure.  
@@ -95,9 +95,9 @@ Ce volet fournit les détails suivants :
    - Le réseau n’est pas disponible, ce qui est nécessaire pour la sauvegarde des clés de récupération.  
 
 ## <a name="bitlocker-recovery-keys"></a>Clés de récupération BitLocker
-En préversion publique, Intune fournit l’accès au panneau Azure AD pour BitLocker pour que vous puissiez voir les ID de clé BitLocker et les clés de récupération de vos appareils Windows 10, à partir du portail Intune.  Pour être accessible, l’appareil doit avoir ses clés déposées dans Azure AD. 
+Intune fournit l’accès au panneau Azure AD pour BitLocker pour que vous puissiez voir les ID de clé BitLocker et les clés de récupération de vos appareils Windows 10, à partir du portail Intune.  Pour être accessible, l’appareil doit avoir ses clés déposées dans Azure AD. 
 1. Connectez-vous à [Intune](https://aka.ms/intuneportal), accédez à **Appareils**, puis sous *Gérer*, sélectionnez **Tous les appareils**.
-2. Sélectionnez un appareil dans la liste, puis sous *Surveiller*, sélectionnez **Clés de récupération – préversion**.  
+2. Sélectionnez un appareil dans la liste, puis sous *Surveiller*, sélectionnez **Clés de récupération**.  
   
 Quand des clés sont disponibles dans Azure AD, les informations suivantes sont disponibles :
 - ID de clé BitLocker

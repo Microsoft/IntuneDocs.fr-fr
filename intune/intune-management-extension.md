@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66a23b75913f6465064a988bd8f2ba9c2b4c36d6
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6b7ea047daca5dad327b431986840a59074614d1
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61514118"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732632"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utiliser des scripts PowerShell sur des appareils Windows 10 dans Intune
 
@@ -70,6 +70,9 @@ L’extension de gestion Intune est soumise aux prérequis suivants :
 
     ![Ajouter et utiliser des scripts PowerShell dans Microsoft Intune](./media/mgmt-extension-add-script.png)
 5. Sélectionnez **OK** > **Créer** pour enregistrer le script.
+
+> [!NOTE]
+> Le script PowerShell s’exécute sous le privilège Administrateur (par défaut) lorsque le script est défini pour le contexte de l’utilisateur et que l’utilisateur final de l’appareil a des privilèges d’administrateur.
 
 ## <a name="assign-the-policy"></a>Affecter la stratégie
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
-ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
+ms.openlocfilehash: 7ac370ffe297cb62af6ed55cfd5c4c41cf8452d3
+ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65619434"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65816285"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
@@ -119,6 +119,9 @@ Le connecteur Intune pour Active Directory doit être installé sur un ordinateu
 > [!NOTE]
 > Une fois que vous êtes connecté au connecteur, il peut être nécessaire d’attendre quelques minutes avant qu’il apparaisse dans [Intune](https://aka.ms/intuneportal). Il apparaît seulement s’il peut communiquer avec le service Intune.
 
+### <a name="turn-off-ie-enhanced-security-configuration"></a>Désactivez la configuration de sécurité renforcée d’Internet Explorer
+Par défaut, sous Windows Server la configuration de sécurité renforcée d’Internet Explorer est activée. Si vous ne parvenez pas à vous connecter au connecteur Intune pour Active Directory, désactivez la configuration de sécurité renforcée d’Internet Explorer pour l’administrateur. [Comment désactiver la configuration de sécurité renforcée d’Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
+
 ### <a name="configure-web-proxy-settings"></a>Configuration des paramètres de proxy web
 
 Si vous avez un proxy web dans votre environnement réseau, vérifiez que le connecteur Intune pour Active Directory fonctionne correctement en vous référant à [Utiliser des serveurs proxy locaux existants](autopilot-hybrid-connector-proxy.md).
@@ -194,7 +197,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Facultatif) Activer la page d’état d’inscription
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription (préversion)**.
+1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription**.
 1. Dans le volet **Page d’état d’inscription**, sélectionnez **Par défaut** > **Paramètres**.
 1. Pour **Afficher la progression de l’installation des applications et des profils**, sélectionnez **Oui**.
 1. Configurez les autres options selon les besoins.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 654d5b86a8a2df8eaddc8ea626b55390d2d32920
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b5da0e5f14d3b87827d42d48341fa7080d73c567
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508993"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942048"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -75,7 +75,9 @@ Descriptions des différents états des stratégies de conformité des appareils
 
   - Il peut aussi s’agir d’appareils auxquels aucune stratégie de conformité n’a été affectée et qui n’ont pas de déclencheur pour vérifier leur conformité
   - Les appareils non enregistrés depuis la dernière mise à jour de la stratégie de conformité
-  - Les appareils non associés à un utilisateur spécifique
+  - Les appareils non associés à un utilisateur spécifique, tels que :
+    - les appareils iOS achetés dans le cadre du Programme d’inscription des appareils (DEP) d’Apple
+    - les appareils dédiés Android en mode kiosque ou Android Entreprise
   - Les appareils inscrits avec un compte de gestionnaire d’inscription des appareils
 
 - **Non conforme** : l’appareil n’a pas pu appliquer un ou plusieurs paramètres de stratégie de conformité d’appareil. L’autre possibilité est que l’utilisateur ne s’est pas conformé aux stratégies.
