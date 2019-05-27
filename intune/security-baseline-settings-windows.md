@@ -7,7 +7,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/05/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d9d095db4d10630555e5696610535bb828f0b5f
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
-ms.translationtype: HT
+ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65733062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66045049"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité Windows pour Intune  
 
@@ -1086,7 +1085,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Oui
 
 - **Virtualiser les échecs d’écriture de fichier et de Registre dans des emplacements par utilisateur**  
-  Ce paramètre de stratégie détermine si les échecs d’écriture d’application sont redirigés vers des emplacements définis du système de fichiers et du Registre. Ce paramètre de stratégie atténue les applications qui s’exécutent en tant qu’administrateur et écrivent des données d’application au moment de l’exécution dans *%ProgramFiles%*, *%Windir%*, *%Windir%\system32*, or *HKLM\Software*.
+  Ce paramètre de stratégie détermine si les échecs d’écriture d’application sont redirigés vers des emplacements définis du système de fichiers et du Registre. Ce paramètre de stratégie atténue les applications qui s’exécutent en tant qu’administrateur et écrivent des données d’application au moment de l’exécution dans *%ProgramFiles%* , *%Windir%* , *%Windir%\system32*, or *HKLM\Software*.
   
   **Par défaut** : Oui
 
@@ -1160,7 +1159,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Activé
   
 - **Bloquer la redirection des lecteurs**  
-  Ce paramètre de stratégie spécifie s’il faut empêcher ou non le mappage des lecteurs client dans une session des services Bureau à distance (redirection de lecteur). Par défaut, un serveur hôte de session Bureau à distance mappe automatiquement les lecteurs client à la connexion. Les lecteurs mappés apparaissent dans l'arborescence des dossiers de sessions dans l'Explorateur de fichiers ou Poste de travail sous le format *\<lettre_lecteur>* dans *\<nom_ordinateur>*. Vous pouvez utiliser ce paramètre de stratégie pour remplacer ce comportement. Si vous activez ce paramètre de stratégie, la redirection des lecteurs client n’est pas autorisée dans les sessions des Services Bureau à distance, et la redirection de copie de fichiers du Presse-papiers n’est pas autorisée sur les ordinateurs exécutant Windows Server 2003, Windows 8 et Windows XP. Si vous désactivez ce paramètre de stratégie, la redirection des lecteurs client est toujours autorisée. En outre, la redirection de copie de fichiers du Presse-papiers est toujours autorisée si la redirection du Presse-papiers est autorisée. Si vous ne configurez pas ce paramètre de stratégie, la redirection de lecteurs client et la redirection de copie de fichiers du Presse-papiers ne sont pas spécifiées au niveau de la stratégie de groupe.
+  Ce paramètre de stratégie spécifie s’il faut empêcher ou non le mappage des lecteurs client dans une session des services Bureau à distance (redirection de lecteur). Par défaut, un serveur hôte de session Bureau à distance mappe automatiquement les lecteurs client à la connexion. Les lecteurs mappés apparaissent dans l'arborescence des dossiers de sessions dans l'Explorateur de fichiers ou Poste de travail sous le format *\<lettre_lecteur>* dans *\<nom_ordinateur>* . Vous pouvez utiliser ce paramètre de stratégie pour remplacer ce comportement. Si vous activez ce paramètre de stratégie, la redirection des lecteurs client n’est pas autorisée dans les sessions des Services Bureau à distance, et la redirection de copie de fichiers du Presse-papiers n’est pas autorisée sur les ordinateurs exécutant Windows Server 2003, Windows 8 et Windows XP. Si vous désactivez ce paramètre de stratégie, la redirection des lecteurs client est toujours autorisée. En outre, la redirection de copie de fichiers du Presse-papiers est toujours autorisée si la redirection du Presse-papiers est autorisée. Si vous ne configurez pas ce paramètre de stratégie, la redirection de lecteurs client et la redirection de copie de fichiers du Presse-papiers ne sont pas spécifiées au niveau de la stratégie de groupe.
   
   **Par défaut** : Activé
   
