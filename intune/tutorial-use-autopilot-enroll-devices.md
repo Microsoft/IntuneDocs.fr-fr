@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/19/2018
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -19,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.openlocfilehash: 2ee353e5e6c39c3b402c0b4f039bb02efcfa4532
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65732992"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044524"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 Windows Autopilot simplifie l’inscription des appareils. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées. 
@@ -53,9 +52,9 @@ La première étape de la configuration de Windows Autopilot consiste à ajouter
 
 1. Dans n’importe quel éditeur de texte, créez une liste séparée par des virgules (CSV) des valeurs qui identifient les appareils Windows. Utilisez le format suivant :
     
-    *serial-number*, *windows-product-id*, *hardware-hash*, *optional-order-id*
+    *numéro-série*, *id-produit-windows*, *hachage-matériel*, *étiquette-groupe-facultative*
     
-    Les trois premiers éléments sont obligatoires, mais l’ID de commande est facultatif.
+    Les trois premiers éléments sont obligatoires, mais l’étiquette de groupe (auparavant « ID de commande ») est facultative.
 
 2. Enregistrez le fichier CSV.
 
@@ -93,7 +92,7 @@ Après avoir créé un groupe d’appareils, vous devez créer un profil de dép
 2. Sur la page **Notions de base** page, **Nom** tor, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
 3. Définissez **Convertir tous les appareils ciblés vers Autopilot** sur **Oui**. Ce paramètre permet de s’assurer que tous les appareils dans la liste sont inscrits auprès du service de déploiement Autopilot. Le traitement de l’enregistrement prend 48 heures.
 4. Sélectionnez **Suivant**.
-5. Sur la page **Mode out-of-box experience (OOBE)**, pour **Mode de déploiement**, choisissez **Géré par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
+5. Sur la page **Mode out-of-box experience (OOBE)** , pour **Mode de déploiement**, choisissez **Géré par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
 6. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
 7. Configurez les options suivantes et laissez les autres sur la valeur par défaut :
     - **Contrat de Licence Utilisateur Final (CLUF)**  : **Masquer**

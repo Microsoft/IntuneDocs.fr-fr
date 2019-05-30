@@ -7,7 +7,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 05/08/2019
 ms.topic: article
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 491610fcefa1b20159ebfe487c9e2d95a6f5e7c6
-ms.sourcegitcommit: 586114e1beee31aa8553f69c0ba4d731afcb45e8
+ms.openlocfilehash: 02a5a7bd3625b5e95ddb304df7cf64461cca9c10
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65402064"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66049138"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -215,7 +214,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
     - **Nom de l’autorité de certification** : indique le nom de l’autorité de certification d’entreprise, par exemple « Autorité de certification Contoso ».
     - **Nom du modèle de certificat** : nom du modèle créé précédemment. Rappel : Par défaut, **Nom du modèle** est identique à **Nom complet du modèle**, *sans les espaces*.
     - **Format du nom de l'objet** : définissez cette option sur **Nom commun**, sauf indication contraire.
-    - **Autre nom de l'objet** : définissez cette option sur **Nom d’utilisateur principal (UPN)**, sauf indication contraire.
+    - **Autre nom de l'objet** : définissez cette option sur **Nom d’utilisateur principal (UPN)** , sauf indication contraire.
 
 4. Sélectionnez **OK** > **Créer** pour enregistrer votre profil.
 5. Pour affecter le nouveau profil à un ou plusieurs appareils, consultez [Affecter des profils d’appareils Microsoft Intune](device-profile-assign.md).

@@ -7,7 +7,6 @@ ms.author: tanvira
 manager: smantri
 ms.date: 4/16/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebefba3f912669166e5e077fe15b0b04f4a7b75f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5c47a7413d98467fffc26dee098a64cfeac770e4
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61489995"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66043562"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Utiliser des serveurs proxy locaux existants
 
 Cet article explique comment configurer le connecteur Intune pour Active Directory afin qu’il soit utilisable avec des serveurs proxy sortants. Il s’adresse aux clients dont les environnements réseau comportent des proxys.
 
-Pour plus d’informations sur le fonctionnement des connecteurs, consultez [Présentation des connecteurs de proxy d’application Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors).
+Pour plus d’informations sur le fonctionnement des connecteurs, consultez [Présentation des connecteurs de proxy d’application Azure AD](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## <a name="bypass-outbound-proxies"></a>Contourner les proxys sortants
 

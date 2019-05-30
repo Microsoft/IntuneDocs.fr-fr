@@ -7,7 +7,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
-ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
+ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65992897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041654"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -220,6 +219,6 @@ Lors du traitement de différents types de paramètres, une exigence de version 
 - [Paramètres de stratégie de gestion des applications mobiles Android dans Microsoft Intune](app-protection-policy-settings-android.md)
 - [Paramètres de stratégie de gestion des applications mobiles iOS](app-protection-policy-settings-ios.md)
 - [Stratégies de protection des applications - Actualisation des stratégies](app-protection-policy-delivery.md)
-- [Valider les stratégies de protection des applications](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
+- [Valider les stratégies de protection des applications](app-protection-policy-delivery.md)
 - [Ajouter des stratégies de configuration pour les applications gérées sans inscription des appareils](app-configuration-policies-managed-app.md)
 - [Comment obtenir un support technique pour Microsoft Intune](get-support.md)

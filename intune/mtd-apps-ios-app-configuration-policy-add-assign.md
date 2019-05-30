@@ -8,7 +8,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 05/09/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 108b9fb0eb227e9f046919efc6ef4d04b0903c40
-ms.sourcegitcommit: d259c0986d356135e626a30468971e32f8103f4e
+ms.openlocfilehash: 8fccf991f93a1b2804d31418bdb0f84edf681c92
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65442955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041592"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Ajouter et affecter des applications Mobile Threat Defense (MTD) avec Intune
 
@@ -97,7 +96,7 @@ Choisissez la section correspondant à votre fournisseur MTD :
 
  - **Android**
 
-    - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](store-apps-android.md). À l’**étape 7**, utilisez cette [URL du magasin de l’application SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Pour **système d’exploitation Minimum**, sélectionnez **Android 4.0 (Ice Cream Sandwich)**.
+    - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](store-apps-android.md). À l’**étape 7**, utilisez cette [URL du magasin de l’application SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Pour **système d’exploitation Minimum**, sélectionnez **Android 4.0 (Ice Cream Sandwich)** .
 
  - **iOS**
 
@@ -173,7 +172,7 @@ Choisissez la section correspondant à votre fournisseur MTD :
 
     -   Consultez les instructions [d’utilisation de stratégies de configuration d’application Microsoft Intune pour iOS](app-configuration-policies-use-ios.md) pour ajouter la stratégie de configuration d’application SEP Mobile iOS.
 
-    - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu à partir du fichier ***.plist** et collez son contenu dans le corps de la stratégie de configuration.
+    - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu à partir du fichier * **.plist** et collez son contenu dans le corps de la stratégie de configuration.
 
 > [!NOTE]  
 > Si vous ne parvenez pas à récupérer les fichiers, contactez [Support d’entreprise Symantec Endpoint Protection Mobile](https://support.symantec.com/en_US/contact-support.html).

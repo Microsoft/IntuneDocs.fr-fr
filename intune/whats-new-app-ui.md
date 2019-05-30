@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 04/04/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 753c261ea08ce304176f19e1c64389053b055d5f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 9955330d9f20c13b9239f900b77828d582d12bff
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61517280"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046423"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les dernières mises à jour pour les applications Microsoft Intune. Nous apportons régulièrement des améliorations au site web et à l’application Portail d’entreprise Intune. Si vous êtes un administrateur Intune ou un technicien de support, vous trouverez dans cet article les informations dont vous aurez besoin pour :
@@ -60,7 +59,7 @@ Exemple de capture d’écran de la page **Aide** :
 ## <a name="week-of-april-1-2019"></a>Semaine du 1 avril 2019  
 
 ### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Modifications apportées à l’inscription auprès du Portail d’entreprise pour les utilisateurs d’appareils iOS 12 <!--3448635 -->  
-Les étapes et les écrans d’inscription iOS auprès du Portail d’entreprise ont été mis à jour afin de s’aligner avec les modifications de l’inscription MDM publiées dans Apple iOS 12.2. Le flux de travail mis à jour invite les utilisateurs à :  
+Les étapes et les écrans d’inscription iOS sur le portail d’entreprise ont été mis à jour afin de s’aligner avec les changements de l’inscription MDM publiés dans Apple iOS 12.2. Le workflow mis à jour invite les utilisateurs à effectuer les opérations suivantes :  
 
 * Autoriser Safari à ouvrir le site web Portail d’entreprise et à télécharger le profil de gestion avant de retourner à l’application Portail d’entreprise.  
 * Ouvrir l’application Paramètres pour installer le profil de gestion sur leur appareil.  
@@ -73,7 +72,7 @@ La page d’accueil de l’application Portail d’entreprise pour les appareils
 
 ## <a name="week-of-february-19-2019"></a>Semaine du 19 février 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nouvel écran Catégories d’application dans l’application Portail d’entreprise pour Windows 10<!-- 3834780 WNready4Review -->  
-Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans Portail d’entreprise pour Windows 10. Les applications des utilisateurs sont désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
+Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
 
 ![Capture d’écran de Portail d’entreprise pour Windows 10, écran Catégories d’application.](./media/1902_CP_app_categories.png)   
 

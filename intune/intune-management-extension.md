@@ -5,9 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 05/28/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b7ea047daca5dad327b431986840a59074614d1
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.openlocfilehash: 2c590f81b846fe3671d5ccddede28a4a4bd799ba
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65732632"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264155"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utiliser des scripts PowerShell sur des appareils Windows 10 dans Intune
 
@@ -42,11 +41,27 @@ L’extension de gestion Intune vient en complément des fonctionnalités intég
 
 ## <a name="prerequisites"></a>Prérequis
 
-L’extension de gestion Intune est soumise aux prérequis suivants :
+L’extension de gestion Intune est soumise aux prérequis suivants : Une fois ces prérequis satisfaits, l’extension de gestion Intune est installée automatiquement quand un script PowerShell ou une application Win32 est affectée à l’utilisateur ou à l’appareil.
 
-- Les appareils doivent être joints ou inscrits auprès d’Azure AD. De plus, Azure AD et Intune sont configurés pour l’[inscription automatique](quickstart-setup-auto-enrollment.md). L’extension de gestion Intune prend en charge les appareils joints à Azure AD, les appareils hybrides joints à un domaine Azure AD et les appareils Windows inscrits cogérés.
-- Les appareils doivent exécuter Windows 10, version 1607 ou ultérieure.
-- L’agent Extension de gestion Intune est installé lorsqu’un script PowerShell ou une application Win32 est déployée dans un groupe de sécurité d’utilisateurs ou d’appareils.
+- Appareils exécutant Windows 10 version 1607 ou ultérieure Si l’appareil est inscrit via [l’inscription automatique en bloc](windows-bulk-enroll.md), les appareils doivent exécuter Windows 10 version 1703 ou ultérieure. L’extension de gestion Intune n’est pas prise en charge sur Windows 10 en mode S, car le mode S n’autorise pas l’exécution d’applications non-Store. 
+  
+- Appareils joints à Azure Active Directory, notamment :
+  
+  - Joint à Azure AD Hybride : Appareils joints à Azure Active Directory et également joints à Active Directory local. Pour obtenir de l’aide, consultez [Planifier l’implémentation de la jonction à Azure Active Directory Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+
+- Appareils inscrits dans Intune, notamment :
+
+  - Appareils inscrits dans une stratégie de groupe. Pour obtenir de l’aide, consultez [Inscrire un appareil Windows 10 automatiquement en utilisant la stratégie de groupe](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+  
+  - Appareils inscrits manuellement dans Intune, ce qui se fait quand :
+  
+    - L’utilisateur se connecte à l’appareil en utilisant un compte d’utilisateur local, puis qu’il joint manuellement l’appareil à Azure AD (et que l’inscription automatique à Intune est activée dans Azure AD).
+    
+    Ou
+    
+    - L’utilisateur se connecte à l’appareil en utilisant son compte Azure AD, puis qu’il s’inscrit dans Intune.
+
+  - Appareils cogérés qui utilisent Configuration Manager et Intune. Pour obtenir de l’aide, consultez [Présentation de la cogestion](https://docs.microsoft.com/sccm/comanage/overview).
 
 ## <a name="create-a-script-policy"></a>Créer une stratégie de script 
 
@@ -72,7 +87,7 @@ L’extension de gestion Intune est soumise aux prérequis suivants :
 5. Sélectionnez **OK** > **Créer** pour enregistrer le script.
 
 > [!NOTE]
-> Le script PowerShell s’exécute sous le privilège Administrateur (par défaut) lorsque le script est défini pour le contexte de l’utilisateur et que l’utilisateur final de l’appareil a des privilèges d’administrateur.
+> Le script PowerShell s’exécute sous le privilège d’administrateur (par défaut) quand le script est défini pour le contexte de l’utilisateur et que l’utilisateur final de l’appareil a des privilèges d’administrateur.
 
 ## <a name="assign-the-policy"></a>Affecter la stratégie
 
@@ -85,8 +100,7 @@ L’extension de gestion Intune est soumise aux prérequis suivants :
 
 > [!NOTE]
 > - Les utilisateurs finaux ne sont pas obligés d’être connectés à l’appareil pour exécuter des scripts PowerShell.
-> - Dans Intune, les scripts PowerShell peuvent cibler des groupes de sécurité des appareils Azure AD.
-> - Dans Intune, les scripts PowerShell peuvent cibler des groupes de sécurité des utilisateurs Azure AD.
+> - Dans Intune, les scripts PowerShell peuvent cibler des groupes de sécurité d’appareils Azure AD ou des groupes de sécurité d’utilisateurs Azure AD.
 
 Toutes les heures et après chaque redémarrage, le client d’extension de gestion Intune vérifie auprès d’Intune s’il existe de nouveaux scripts ou si des modifications ont été apportées. Une fois la stratégie affectée aux groupes Azure AD, le script PowerShell s’exécute, puis les résultats de l’exécution sont consignés dans un rapport. Une fois que le script s’exécute, il ne se réexécute pas sauf si une modification est apportée au script ou à la stratégie.
 
@@ -111,41 +125,57 @@ Dans **Scripts PowerShell**, cliquez avec le bouton droit sur le script, puis s�
 
 ## <a name="common-issues-and-resolutions"></a>Solutions aux problèmes courants
 
-Les scripts PowerShell ne s’exécutent pas à chaque connexion. Ils s’exécutent uniquement après le redémarrage, ou si le service **Extension de gestion Microsoft Intune** est redémarré. Toutes les heures, le client d’extension de gestion Intune vérifie la présence de modifications de script ou de stratégie dans Intune.
-
 #### <a name="issue-intune-management-extension-doesnt-download"></a>Problème : Impossible de télécharger l’extension de gestion Intune
 
 **Solutions possibles :**
 
-- Vérifiez que les appareils ont bien été inscrits automatiquement dans Azure AD. Pour le vérifier : 
+- L’appareil n’est pas joint à Azure AD. Vérifiez que les appareils répondent aux [prérequis](#prerequisites) (de cet article). 
+- Aucun script PowerShell ou aucune application Win32 ne sont affectés aux groupes auxquels appartient l’utilisateur ou l’appareil.
+- L’appareil ne peut pas se connecter au service Intune, car il n’a pas d’accès à Internet, pas d’accès aux services de notifications Push Windows, etc.
+- L’appareil est en mode S. L’extension de gestion Intune n’est pas prise en charge sur les appareils s’exécutant en mode S. 
+
+Pour voir si l’appareil est inscrit automatiquement, vous pouvez :
 
   1. Accédez à **Paramètres** > **Comptes** > **Accès scolaire ou professionnel**.
   2. Sélectionnez le compte joint > **Infos**.
   3. Sous le **rapport Diagnostics avancés**, sélectionnez **Créer un rapport**.
-  4. Ouvrez `MDMDiagReport` dans un navigateur web et accédez à la section **Enrolled configuration sources** (Sources de configuration inscrites).
-  5. Recherchez la propriété **MDMDeviceWithAAD**. Si cette propriété n’existe pas, votre appareil n’a pas été inscrit automatiquement.
+  4. Ouvrez le `MDMDiagReport` dans un navigateur web.
+  5. Recherchez la propriété **MDMDeviceWithAAD**. Si la propriété existe, c’est que l’appareil est inscrit automatiquement. Si cette propriété n’existe pas, c’est que votre appareil n’est pas inscrit automatiquement.
 
-    La section [Activer l’inscription automatique Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) fournit les étapes nécessaires.
+[Activer l’inscription automatique Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) inclut les étapes pour configurer l’inscription automatique dans Intune.
 
 #### <a name="issue-powershell-scripts-do-not-run"></a>Problème : Les scripts PowerShell ne s’exécutent pas
 
 **Solutions possibles :**
 
+- Les scripts PowerShell ne s’exécutent pas à chaque connexion. Ils s’exécutent :
+
+  - Quand le script est affecté à un appareil
+  - Si vous modifiez le script, chargez-le et affectez-le à un utilisateur ou à un appareil
+  
+    > [!TIP]
+    > L’**extension de gestion Microsoft Intune** est un service qui s’exécute sur l’appareil, tout comme n’importe quel autre service listé dans l’application Services (services.msc). Après le redémarrage d’un appareil, ce service peut également redémarrer et rechercher des scripts PowerShell affectés avec le service Intune. Si le service **Extension de gestion Microsoft Intune** est défini sur Manuel, le service ne peut pas redémarrer après un redémarrage de l’appareil.
+
+- Toutes les heures, le client d’extension de gestion Intune vérifie s’il y a des modifications du script ou de la stratégie dans Intune.
 - Vérifiez que l’extension de gestion Intune a été téléchargée à l’emplacement suivant : `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
-- Les scripts ne s’exécutent pas sur les appareils Surface Hub.
-- Vérifiez la présence d’erreurs dans les journaux situés sous `\ProgramData\Microsoft\IntuneManagementExtension\Logs`.
+- Les scripts ne s’exécutent pas sur les appareils Surface Hub ou Windows 10 en mode S.
+- Examinez les éventuelles erreurs dans les journaux. Consultez [Résoudre les problèmes liés aux scripts](#troubleshoot-scripts) (dans cet article).
 - En cas de problème lié aux autorisations, vérifiez que les propriétés du script PowerShell sont bien définies sur `Run this script using the logged on credentials`. Vérifiez également que l’utilisateur connecté dispose des autorisations nécessaires pour exécuter le script.
-- Pour isoler les problèmes de script, exécutez un exemple de script. Par exemple, créez le répertoire `C:\Scripts` et accordez à tout le monde un contrôle complet. Exécutez le script suivant :
 
-  ```powershell
-  write-output "Script worked" | out-file c:\Scripts\output.txt
-  ```
+- Pour isoler les problèmes des scripts, procédez comme suit :
 
-  Si cela réussit, le fichier output.txt doit être créé et doit inclure le texte « Script worked » (Le script a fonctionné).
+  - Examinez la configuration de l’exécution de PowerShell sur vos appareils. Pour obtenir de l’aide, consultez [Stratégie d’exécution de PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6).
+  - Exécutez un exemple de script en utilisant l’extension de gestion Intune. Par exemple, créez le répertoire `C:\Scripts` et accordez à tout le monde un contrôle complet. Exécutez le script suivant :
 
-- Pour tester l’exécution des scripts sans Intune, exécutez les scripts localement sous le contexte système à l’aide de l’[outil psexec](https://docs.microsoft.com/sysinternals/downloads/psexec) :
+    ```powershell
+    write-output "Script worked" | out-file c:\Scripts\output.txt
+    ```
 
-  `psexec -i -s`
+    Si cela réussit, le fichier output.txt doit être créé et doit inclure le texte « Script worked » (Le script a fonctionné).
+
+  - Pour tester l’exécution des scripts sans Intune, exécutez les scripts localement dans le compte système avec l’[outil psexec](https://docs.microsoft.com/sysinternals/downloads/psexec) :
+
+    `psexec -i -s`
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ac370ffe297cb62af6ed55cfd5c4c41cf8452d3
-ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
+ms.openlocfilehash: 030467009e0fed8716a1aa622474188352c0e0b0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050355"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
@@ -45,7 +44,7 @@ Les appareils à inscrire doivent également :
 
    ![Le portail Azure](./media/auto-enroll-azure-main.png)
 
-1. Sélectionnez **Mobilité (MDM et GAM)**.
+1. Sélectionnez **Mobilité (MDM et GAM)** .
 
    ![Le volet Azure Active Directory](./media/auto-enroll-mdm.png)
 
@@ -69,7 +68,7 @@ L’unité d’organisation qui a les droits de créer des ordinateurs doit corr
 - À l’unité d’organisation entrée dans le profil de jonction de domaine.
 - Si aucun profil n’est sélectionné, au nom de domaine de l’ordinateur pour votre domaine.
 
-1. Ouvrez **Utilisateurs et ordinateurs Active Directory (DSA.msc)**.
+1. Ouvrez **Utilisateurs et ordinateurs Active Directory (DSA.msc)** .
 
 1. Cliquez avec le bouton droit sur l’unité d’organisation à utiliser pour créer des ordinateurs joints à un domaine Azure AD Hybride, puis sélectionnez **Déléguer le contrôle**.
 
@@ -107,14 +106,14 @@ L’unité d’organisation qui a les droits de créer des ordinateurs doit corr
 Le connecteur Intune pour Active Directory doit être installé sur un ordinateur qui exécute Windows Server 2016 ou ultérieur. L’ordinateur doit également avoir accès à Internet et à votre annuaire Active Directory. Pour augmenter la scalabilité et la disponibilité, ou pour permettre la prise en charge de plusieurs domaines Active Directory, vous pouvez installer plusieurs connecteurs dans votre environnement. Nous vous recommandons d’installer le connecteur sur un serveur qui n’exécute aucun autre connecteur Intune.
 
 1. Assurez-vous que vous disposez d’un module linguistique installé et configuré comme décrit dans [Spécifications de langue pour Intune Connector (préversion)](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
-2. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory (préversion)** > **Ajouter un connecteur**. 
+2. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory (préversion)**  > **Ajouter un connecteur**. 
 3. Suivez les instructions pour télécharger le connecteur.
 4. Ouvrez le fichier d’installation du connecteur téléchargé *ODJConnectorBootstrapper.exe* pour installer le connecteur.
 5. À la fin de l’installation, sélectionnez **Configurer**.
 6. Sélectionnez **Se connecter**.
 7. Entrez les informations d’identification du rôle utilisateur Administrateur général ou Administrateur Intune.  
    Le compte d’utilisateur doit avoir une licence Intune.
-8. Accédez à **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory (préversion)**, puis vérifiez que l’état de la connexion indique **Actif**.
+8. Accédez à **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory (préversion)** , puis vérifiez que l’état de la connexion indique **Actif**.
 
 > [!NOTE]
 > Une fois que vous êtes connecté au connecteur, il peut être nécessaire d’attendre quelques minutes avant qu’il apparaisse dans [Intune](https://aka.ms/intuneportal). Il apparaît seulement s’il peut communiquer avec le service Intune.
@@ -140,7 +139,7 @@ Si vous avez un proxy web dans votre environnement réseau, vérifiez que le con
 
 1. Si vous avez sélectionné **Appareils dynamiques** pour le type d’adhésion, dans le volet **Groupe**, sélectionnez **Membres de dispositif dynamique** puis, dans la zone **Règle avancée**, effectuez une des actions suivantes :
     - Pour créer un groupe qui inclut tous vos appareils Autopilot, entrez `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Pour créer un groupe qui inclut tous vos appareils Autopilot avec un ID de commande spécifique, entrez `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
+    - Le champ Balise de groupe d’Intune est mappé à l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe (OrderID) spécifique, vous devez taper  `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Pour créer un groupe qui inclut tous vos appareils Autopilot avec un ID de bon de commande spécifique, entrez `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Sélectionnez **Enregistrer**.
@@ -177,7 +176,7 @@ Une fois vos appareils Autopilot *inscrits*, ceux-ci apparaissent à quatre endr
 - Le volet **Tous les appareils Azure AD** dans Azure Active Directory, dans le portail Azure. Sélectionnez **Appareils** > **Tous les appareils**.
 - Le volet **Tous les appareils** dans Intune, dans le portail Azure. Sélectionnez **Appareils** > **Tous les appareils**.
 
-Une fois vos appareils Autopilot inscrits, leur nom devient le nom d’hôte de l’appareil. Par défaut, le nom d’hôte commence par *DESKTOP-*.
+Une fois vos appareils Autopilot inscrits, leur nom devient le nom d’hôte de l’appareil. Par défaut, le nom d’hôte commence par *DESKTOP-* .
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Créer et affecter un profil de déploiement Autopilot
@@ -186,8 +185,8 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
 1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
 1. Tapez un **Nom** et (éventuellement) une **Description**.
 1. Pour **Mode de déploiement**, sélectionnez **Piloté par l’utilisateur**.
-1. Dans la zone **Joindre à Azure AD comme**, sélectionnez **Joint à Azure AD Hybride (préversion)**.
-1. Sélectionnez **OOBE (Out-Of-Box Experience)**, configurez les options selon les besoins, puis sélectionnez **Enregistrer**.
+1. Dans la zone **Joindre à Azure AD comme**, sélectionnez **Joint à Azure AD Hybride (préversion)** .
+1. Sélectionnez **OOBE (Out-Of-Box Experience)** , configurez les options selon les besoins, puis sélectionnez **Enregistrer**.
 1. Sélectionnez **Créer** pour créer le profil. 
 1. Dans le volet du profil, sélectionnez **Affectations**.
 1. Sélectionnez **Sélectionner des groupes**.
@@ -210,7 +209,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
    - **Description** : Entrez la description du profil.
    - **Plateforme** : Sélectionnez **Windows 10 et ultérieur**.
-   - **Type de profil** : Sélectionnez **Jonction de domaine (préversion)**.
+   - **Type de profil** : Sélectionnez **Jonction de domaine (préversion)** .
 1. Sélectionnez **Paramètres**, puis indiquez un **Préfixe du nom d’ordinateur**, un **Nom de domaine** et (facultatif) une **Unité d’organisation** au [Format DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Sélectionnez **OK** > **Créer**.  
     Le profil est créé et apparaît dans la liste.

@@ -7,7 +7,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/05/2019
 ms.topic: article
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96a0da69cdb77ae36ce2456186593f5c334c870c
-ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
+ms.openlocfilehash: 04c4cb95d9eacd8967ecacedfe1a5d335b729005
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65765416"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66043724"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -273,8 +272,8 @@ Au cours de cette étape, vous allez :
 
 2. Sélectionnez **Modifier les paramètres de la fonctionnalité**, puis définissez les valeurs :
 
-    - **Chaîne de requête (octets)** = **65534**
-    - **Longueur maximale des URL (octets)** = **65534**
+    - **Chaîne de requête (octets)**  = **65534**
+    - **Longueur maximale des URL (octets)**  = **65534**
 
 3. Vérifiez la clé de Registre suivante :
 
@@ -385,10 +384,10 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         - **Nom commun comme adresse e-mail**
         - **IMEI (International Mobile Equipment Identity)**
         - **Numéro de série**
-        - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Un format personnalisé prend en charge deux variables : **Nom commun (CN)** et **E-mail (E)**. **Nom courant (cn)** peut être défini sur une des variables suivantes :
+        - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Un format personnalisé prend en charge deux variables : **Nom commun (CN)** et **E-mail (E)** . **Nom courant (cn)** peut être défini sur une des variables suivantes :
 
-            - **CN={{UserName}}**: Le nom d'utilisateur principal de l’utilisateur, tel que janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
+            - **CN={{UserName}}** : Le nom d'utilisateur principal de l’utilisateur, tel que janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}** : ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
             - **CN={{SERIALNUMBER}}** : numéro de série unique (SN) généralement utilisé par le fabricant pour identifier un appareil
             - **CN={{IMEINumber}}** : numéro IMEI (International Mobile Equipment Identity) unique utilisé pour identifier un téléphone mobile
             - **CN={{OnPrem_Distinguished_Name}}** : séquence de noms uniques relatifs séparés par des virgules, par exemple `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
@@ -427,7 +426,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
 
         > [!IMPORTANT]
         >  - Dans le texte statique de l’objet, des accolades  **{ }** qui n’englobent pas une variable sont résolues en erreur. 
-        >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }**.
+        >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }** .
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
         >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans le nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue. 
@@ -469,8 +468,8 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         Ces variables peuvent être ajoutées avec du texte statique dans la zone de texte de valeur personnalisée. Par exemple, l’attribut DNS peut être ajouté en tant que `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
-        >  - Dans le texte statique du SAN, les accolades **{}**, les barres verticales **|** et les points-virgules **;** ne fonctionnent pas. 
-        >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }**.
+        >  - Dans le texte statique du SAN, les accolades **{}** , les barres verticales **|** et les points-virgules **;** ne fonctionnent pas. 
+        >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }** .
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
         >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans l’autre nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  

@@ -8,7 +8,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 80f9d3d2799732f2d019189913c5c47cc6973809
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61512223"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044591"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -67,7 +66,7 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
     - Pour **Longueur minimale du mot de passe**, entrez **4**.
     - Pour **Type de mot de passe requis**, choisissez **Alphanumérique**.
     - Pour **Nombre maximal de minutes après le verrouillage d’écran avant que le mot de passe ne soit obligatoire**, choisissez **Immédiatement**.
-    - Pour **Expiration du mot de passe (jours)**, entrez **41**.
+    - Pour **Expiration du mot de passe (jours)** , entrez **41**.
     - Pour **Nombre de mots de passe précédents pour empêcher la réutilisation**, entrez **5**.
  
     ![Définir les paramètres de mot de passe pour la stratégie de conformité e-mail](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-system-security.png)
@@ -134,9 +133,9 @@ Avec les stratégies que vous avez créées, n’importe quel appareil iOS qui t
 Lorsque les stratégies de test ne sont plus nécessaires, vous pouvez les supprimer.
 1. Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune.
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies**.
-3. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel (**...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer.
+3. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel ( **...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer.
 4. Sélectionnez **Accès conditionnel** > **Stratégies**.
-5. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel (**...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Cliquez sur **Oui** pour confirmer la suppression.
+5. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel ( **...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Cliquez sur **Oui** pour confirmer la suppression.
 
  ## <a name="next-steps"></a>Étapes suivantes 
 Dans ce tutoriel, vous avez créé des stratégies qui exigent que les appareils iOS s’inscrivent dans Intune et utilisent l’application Outlook pour accéder à la messagerie Exchange Online. Pour en savoir plus sur l’utilisation d’Intune avec accès conditionnel pour protéger d’autres applications et services, notamment les clients Exchange ActiveSync pour Office 365 Exchange Online, consultez [Configurer l’accès conditionnel](conditional-access.md).

@@ -8,7 +8,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6224a0dae7c0aa3d80d4e64331a668953220f65
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b91e3863a23d62921f4145db4460fa07f325df98
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515784"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040292"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils non gérés
 
@@ -54,7 +53,7 @@ Pour ce didacticiel, nous allons configurer une stratégie de protection des app
 
     - Pour **Autoriser l'application à transférer des données vers d'autres applications**, sélectionnez **Aucune**.
     - Pour **Autoriser l'application à recevoir des données d'autres applications**, sélectionnez **Aucune**.
-    - Pour **Empêcher « Enregistrer sous »**, sélectionnez **Oui**.
+    - Pour **Empêcher « Enregistrer sous »** , sélectionnez **Oui**.
     - Pour **Restreindre les opérations couper, copier et coller avec d’autres**, sélectionnez **Bloqué**.
    
      ![Sélectionner les paramètres de réadressage des données de la stratégie de protection de l’application Outlook](media/tutorial-protect-email-on-unmanaged-devices/outlook-app-data-relocation.png)
@@ -179,9 +178,9 @@ Avec les stratégies que vous avez créées,les appareils doivent s’inscrire d
 Lorsque les stratégies de test ne sont plus nécessaires, vous pouvez les supprimer.
 1. Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune.
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies**.
-3. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel (**...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer.
+3. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel ( **...** ) pour votre stratégie de test, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer.
 4. Sélectionnez **Accès conditionnel** > **Stratégies**.
-5. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel (**...** ) pour chacune de vos stratégies de test, puis sélectionnez **Supprimer**. Cliquez sur **Oui** pour confirmer la suppression.
+5. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel ( **...** ) pour chacune de vos stratégies de test, puis sélectionnez **Supprimer**. Cliquez sur **Oui** pour confirmer la suppression.
 
  ## <a name="next-steps"></a>Étapes suivantes 
 Dans ce didacticiel, vous avez créé des stratégies de protection afin de limiter les actions d’un utilisateur avec l’application Outlook et vous avez créé des stratégies d’accès conditionnel pour exiger l’utilisation de l’application Outlook et de l’authentification multifacteur pour les clients d’authentification moderne. Pour en savoir plus sur l’utilisation d’Intune avec accès conditionnel pour protéger d’autres applications et services,consultez [Configurer l’accès conditionnel](conditional-access.md).
