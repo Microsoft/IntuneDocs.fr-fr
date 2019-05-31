@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 12/11/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cf1daf42d1dfcd8dd25304040e868581a056943
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0faf9220b4859c41ef8c4393fe15f385eaac8cc3
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566406"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042115"
 ---
 # <a name="email-profile-settings-for-ios-devices-in-intune"></a>Paramètres de profil e-mail pour les appareils iOS dans Intune
 
@@ -76,20 +75,20 @@ Cet article liste et décrit tous les paramètres d’e-mail qui sont disponible
   Lorsque vous utilisez l’option S/MIME pour un e-mail, vous pouvez vérifier l’authenticité de l’expéditeur, ainsi que l’intégrité et la confidentialité du message.
 
   - **Signature S/MIME activée** : choisissez **Activer** pour permettre aux utilisateurs de signer numériquement les e-mails sortants pour le compte que vous avez entré. La signature permet aux utilisateurs qui reçoivent un message d’être sûrs que celui-ci provient réellement d’un expéditeur donné, et non d’une personne se faisant passer pour lui. L’option **Désactiver** ne permet pas aux utilisateurs de signer numériquement leurs messages.
-    - **Autoriser l’utilisateur à modifier le paramètre**: choisissez **activer** pour permettre aux utilisateurs de modifier le comportement de signature S/MIME. L’option **Désactiver** empêche les utilisateurs de modifier le paramètre de signature S/MIME que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
+    - **Autoriser l’utilisateur à changer le paramètre** : choisissez **Activer** pour permettre aux utilisateurs de modifier le comportement de signature S/MIME. L’option **Désactiver** empêche les utilisateurs de modifier le paramètre de signature S/MIME que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
 
   - **Certificat de signature S/MIME** : sélectionnez un profil de certificat PKCS ou SCEP existant qui est utilisé pour la signature des e-mails.
-    - **Autoriser l’utilisateur à modifier le paramètre**: choisissez **activer** pour permettre aux utilisateurs de modifier le certificat de signature. L’option **Désactiver** empêche les utilisateurs de modifier le certificat de signature, et les force à utiliser celui que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
+    - **Autoriser l’utilisateur à changer le paramètre** : choisissez **Activer** pour permettre aux utilisateurs de modifier le certificat de signature. L’option **Désactiver** empêche les utilisateurs de modifier le certificat de signature, et les force à utiliser celui que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
 
-  - **Chiffrer par défaut**: **activer** chiffre tous les messages en tant que le comportement par défaut. L’option **Désactiver** ne chiffre pas par défaut tous les messages.
-    - **Autoriser l’utilisateur à modifier le paramètre**: choisissez **activer** pour permettre aux utilisateurs de modifier le comportement de chiffrement par défaut. L’option **Désactiver** empêche les utilisateurs de modifier le comportement de chiffrement par défaut, et les force à utiliser le paramètre que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
+  - **Chiffrer par défaut** : l’option **Activer** chiffre par défaut tous les messages. L’option **Désactiver** ne chiffre pas par défaut tous les messages.
+    - **Autoriser l’utilisateur à changer le paramètre** : choisissez **Activer** pour permettre aux utilisateurs de modifier le comportement de chiffrement par défaut. L’option **Désactiver** empêche les utilisateurs de modifier le comportement de chiffrement par défaut, et les force à utiliser le paramètre que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
 
   - **Forcer le chiffrement par message** : le chiffrement par message permet aux utilisateurs de choisir quels e-mails chiffrer avant de les envoyer. Choisissez **Activer** pour afficher l’option de chiffrement par message lors de la création d’un e-mail. Les utilisateurs peuvent ensuite accepter ou refuser le chiffrement par message. L’option **Désactiver** empêche l’affichage de l’option de chiffrement par message.
 
     Si le paramètre **Chiffrer par défaut** est activé, l’activation du chiffrement par message permet aux utilisateurs de refuser le chiffrement par message. Si le paramètre **Chiffrer par défaut** est désactivé, l’activation du chiffrement par message permet aux utilisateurs d’accepter le chiffrement par message.
 
   - **Certificat de chiffrement S/MIME** : sélectionnez un profil de certificat PKCS ou SCEP existant qui est utilisé pour le chiffrement des e-mails.
-    - **Autoriser l’utilisateur à modifier le paramètre**: choisissez **activer** pour permettre aux utilisateurs de modifier le certificat de chiffrement. L’option **Désactiver** empêche les utilisateurs de modifier le certificat de chiffrement, et les force à utiliser celui que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
+    - **Autoriser l’utilisateur à changer le paramètre** : choisissez **Activer** pour permettre aux utilisateurs de modifier le certificat de chiffrement. L’option **Désactiver** empêche les utilisateurs de modifier le certificat de chiffrement, et les force à utiliser celui que vous avez configuré. Disponible dans iOS 12 et versions ultérieures.
 - **Nombre d’e-mails à synchroniser** : sélectionnez le nombre de jours d’e-mails à synchroniser. Vous pouvez aussi sélectionner **Illimité** pour synchroniser tous les messages disponibles.
 - **Autoriser le déplacement des messages vers d’autres comptes de messagerie** : sélectionnez **Activer** pour permettre aux utilisateurs de déplacer des e-mails entre les différents comptes qu’ils ont configurés sur leur appareil.
 - **Autoriser l’envoi d’e-mails à partir d’applications tierces** : sélectionnez **Activer** pour permettre aux utilisateurs de sélectionner ce profil comme compte par défaut pour l’envoi d’e-mails. Les applications tierces peuvent ainsi ouvrir les e-mails dans l’application de messagerie native, par exemple pour joindre des fichiers à un e-mail.

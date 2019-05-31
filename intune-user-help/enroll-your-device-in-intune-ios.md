@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0c7ac239a67a51ba7165771206883f3c46f5f55
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
-ms.translationtype: HT
+ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292422"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196859"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurer l’accès d’un appareil iOS aux ressources de l’entreprise  
 
@@ -31,7 +31,9 @@ Inscrivez votre appareil iOS avec l’application Portail d’entreprise Intune 
 
 Une fois que votre appareil est inscrit, il devient *géré*. Votre organisation peut affecter des stratégies et des applications à l’appareil via un fournisseur MDM, comme Intune.  
 
-Pour conserver l’accès aux informations professionnelles ou scolaires à partir de votre appareil, vous devez configurer votre appareil avec les paramètres par défaut de votre organisation. Cet article décrit comment utiliser le portail d’entreprise pour inscrire votre appareil et pour gérer les exigences de configuration de votre organisation. 
+Pour conserver l’accès aux informations professionnelles ou scolaires à partir de votre appareil, vous devez configurer votre appareil avec les paramètres par défaut de votre organisation. Cet article décrit comment utiliser le portail d’entreprise pour inscrire votre appareil et pour gérer les exigences de configuration de votre organisation.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
 > Si vous avez essayé d’accéder à vos e-mails professionnels dans la messagerie d’entreprise et avez reçu un message vous invitant à passer votre appareil en mode géré, vous êtes au bon endroit. Suivez les instructions ci-dessous pour accéder à vos e-mails et à d’autres ressources de l’entreprise sur votre appareil iOS.  
@@ -39,7 +41,7 @@ Pour conserver l’accès aux informations professionnelles ou scolaires à part
 ## <a name="what-to-expect-from-the-company-portal-app"></a>À quoi s’attendre avec l’application Portail d’entreprise ?  
 
 ### <a name="security"></a>Sécurité  
-Pendant l’installation initiale, l’application vous demande de vous authentifier auprès de votre organisation. Ensuite, elle vous indique les paramètres que vous devez mettre à jour sur votre appareil. Par exemple, les organisations définissent souvent des critères de longueur de mots de passe auxquels vous devez vous plier.     
+Pendant l’installation initiale, l’application vous demande de vous authentifier auprès de votre organisation. Ensuite, elle vous indique les paramètres que vous devez mettre à jour sur votre appareil. Par exemple, les organisations définissent souvent des critères de longueur de mots de passe auxquels vous devez vous plier.
 
 ### <a name="protection"></a>Protection  
 Une fois votre appareil inscrit, l’application Portail d’entreprise continue de s’assurer que votre appareil est protégé. Par exemple, si vous installez une application à partir d’une source non fiable, l’application vous alerte et révoque parfois l’accès aux données de l’entreprise. Ce type de stratégie est courant dans les organisations et vous oblige souvent à désinstaller l’application non approuvée avant de pouvoir récupérer l’accès.  
@@ -69,7 +71,7 @@ Une interruption de plus de quelques minutes lors de l’inscription peut entra�
 
 4. Lisez la liste des informations présentes sur l’appareil que votre organisation peut voir ou ne pas voir. Appuyez ensuite sur **Continuer**.  
 
-5. Lisez les instructions dans l’écran **Quelle est la prochaine étape ?**. Quand vous êtes prêt à télécharger et à installer le profil de gestion, appuyez sur **Continuer**.  
+5. Lisez les instructions dans l’écran **Quelle est la prochaine étape ?** . Quand vous êtes prêt à télécharger et à installer le profil de gestion, appuyez sur **Continuer**.  
 
  > [!IMPORTANT]
 > Ces étapes et ces écrans suivants diffèrent selon votre version d’iOS. Suivez les étapes correspondant à votre version d’iOS. 
@@ -118,6 +120,9 @@ Une interruption de plus de quelques minutes lors de l’inscription peut entra�
 
 > [!Note]
 > Si votre organisation surveille les limites pour la voix et les données, ou si elle vous fournit un appareil d’entreprise, quelques étapes supplémentaires peuvent être nécessaires pour terminer la configuration. Si vous êtes invité à installer l’application **Datalert**, consultez [Inscription de votre appareil dans la gestion des dépenses de télécommunication](enroll-your-device-with-telecom-expense-management-ios.md). Si votre organisation fait partie du programme DEP d’Apple, découvrez [comment inscrire votre appareil d’entreprise](enroll-your-device-dep-ios.md).  
+
+## <a name="it-administrator-support"></a>Support technique pour les administrateurs informatiques  
+Si vous êtes administrateur informatique et que vous rencontrez des problèmes lors de l’inscription d’appareils, consultez [Résolution des problèmes d’inscription d’appareils iOS dans Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Cet article liste les erreurs courantes, leurs causes et les étapes pour les résoudre.  
 
 ## <a name="next-steps"></a>Étapes suivantes  
 Recherchez des applications qui vous aident dans le domaine professionnel ou scolaire. Découvrez [comment les applications sont rendues disponibles](use-managed-apps-on-your-device-ios.md) via le portail d’entreprise.  

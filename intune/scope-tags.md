@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: article
-ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
@@ -15,109 +14,115 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
-ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.openlocfilehash: 57a14e1e3c4caea570667096fec71cecf2d88ddf
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658547"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66045188"
 ---
-# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour distribuée informatique
+# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée
 
-Vous pouvez utiliser des balises de contrôle et la portée des accès en fonction du rôle pour vous assurer que les administrateurs de droite ont l’accès approprié et la visibilité aux objets Intune appropriées. Les rôles déterminent quel accès administrateurs ont à quels objets. Balises d’étendue déterminent les objets que les administrateurs peuvent voir.
+Vous pouvez utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour garantir que les administrateurs ont la visibilité et l’accès appropriés pour les bons objets Intune. Les rôles déterminent quel accès ont les administrateurs sur quels objets. Les balises d’étendue déterminent quels objets les administrateurs peuvent voir.
 
-Par exemple, supposons qu’un administrateur de bureau régional de Seattle est attribué au rôle de gestionnaire de stratégie et profil. Vous souhaitez que cet administrateur pour afficher et gérer les profils et les stratégies qui s’appliquent uniquement aux appareils de Seattle. Pour ce faire, vous devez :
+Par exemple, supposons que le rôle de gestionnaire de stratégie et de profil est attribué à l’administrateur d’un bureau régional de Seattle. Vous voulez que cet administrateur voie et gère seulement les profils et les stratégies qui s’appliquent uniquement aux appareils de Seattle. Pour cela, vous devez :
 
 1. Créer une balise d’étendue nommée Seattle.
-2. Créer une attribution de rôle pour le rôle de gestionnaire de stratégie et profil avec : 
-    - Membres (groupes) = un groupe de sécurité nommé administrateurs informatiques de Seattle. Tous les administrateurs de ce groupe disposent des autorisations pour gérer les stratégies et les profils des utilisateurs/appareils dans l’étendue (groupes).
-    - Étendue (groupes) = une sécurité groupe utilisateurs de Seattle nommés. Tous les utilisateurs/appareils de ce groupe peut avoir leurs profils et des stratégies gérés par les administrateurs dans les membres (groupes). 
-    - Étendue (balises) = Seattle. Administrateurs dans le membre (groupes) peuvent voir les appareils qui ont également la balise d’étendue de Seattle.
-3. Ajoutez la balise d’étendue de Seattle pour les stratégies et les profils que vous souhaitez que les administrateurs de membres (groupes) pour être en mesure d’accéder.
-4. Ajoutez la balise d’étendue de Seattle pour les périphériques que vous voulez visible pour les administrateurs dans les membres (groupes). 
+2. Créer une attribution de rôle pour le rôle de gestionnaire de stratégie et de profil avec : 
+    - Membres (Groupes) = un groupe de sécurité nommé Administrateurs informatiques Seattle. Tous les administrateurs de ce groupe disposent des autorisations pour gérer les stratégies et les profils des utilisateurs/appareils dans Étendue (Groupes).
+    - Étendue (Groupes) = un groupe de sécurité nommé Utilisateurs Seattle. Les profils et les stratégies de tous les utilisateurs/appareils de ce groupe peuvent être gérés par les administrateurs de Membres (Groupes). 
+    - Étendue (balises) = Seattle. Les administrateurs dans Membre (Groupes) peuvent voir les appareils qui ont également la balise d’étendue Seattle.
+3. Ajoutez la balise d’étendue Seattle aux stratégies et aux profils auxquels vous voulez que les administrateurs de Membres (Groupes) puissent accéder.
+4. Ajoutez la balise d’étendue Seattle aux appareils que vous voulez rendre visibles par les administrateurs de Membres (Groupes). 
 
 
 ## <a name="to-create-a-scope-tag"></a>Pour créer une étiquette de délimitation
 
-1. Dans Intune, choisissez **rôles** > **étendue (balises)** > **créer**.
+1. Dans Intune, Choisissez **Rôles** > **Étendue (balises)**  > **Créer**.
 
-    ![Capture d’écran de créer une balise d’étendue.](./media/scope-tags/create-scope-tag.png)
+    ![Capture d’écran de la création d’une balise d’étendue](./media/scope-tags/create-scope-tag.png)
 
 2. Indiquez un **Nom** et une **Description**.
 3. Choisissez **Créer**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Pour affecter une étiquette de délimitation à un rôle
 
-1. Dans Intune, choisissez **rôles** > **tous les rôles** > Choisissez un rôle > **affectations** > **affecter**.
+1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > choisissez un rôle > **Affectations** > **Affecter**.
 
-    ![Capture d’écran d’affecter l’étendue à un rôle.](./media/scope-tags/assign-scope-to-role.png)
+    ![Capture d’écran de l’affectation d’une étendue à un rôle.](./media/scope-tags/assign-scope-to-role.png)
 
-2. Fournir un **nom de l’affectation** et **Description**.
-3. Choisissez **membres (groupes)** > **ajouter** > Choisissez les groupes que vous souhaitez dans le cadre de cette attribution > **sélectionnez**  >   **OK**. mUsers dans ce groupe ont des autorisations pour gérer des stratégies et des profils pour les utilisateurs/appareils dans l’étendue (groupes).
+2. Spécifiez un **Nom de l’affectation** et une **Description**.
+3. Choisissez **Membres (Groupes)**  > **Ajouter** > choisissez les groupes dont vous souhaitez qu’ils fassent partie de cette affectation > **Sélectionner** >  **OK**. Les utilisateurs de ce groupe disposent des autorisations pour gérer les stratégies et les profils des utilisateurs/appareils dans Étendue (Groupes).
 
-    ![Capture d’écran de groupes de sélectionner un membre.](./media/scope-tags/select-member-groups.png)
+    ![Capture d’écran de la sélection de groupes de membres](./media/scope-tags/select-member-groups.png)
 
-4. Si vous souhaitez gérer les utilisateurs/appareils dans un ensemble spécifique de groupes, choisissez **étendue (groupes)** > **groupes sélectionnés** > **sélectionner les groupes à inclure**> Choisissez les groupes > **sélectionnez** > **OK**. Tous les utilisateurs/appareils de ce groupe peut avoir leurs profils et des stratégies gérés par les administrateurs dans les membres (groupe).
+4. Si vous voulez gérer les utilisateurs/appareils dans un ensemble spécifique de groupes, choisissez **Étendue (Groupes)**  > **Groupes sélectionnés** > **Sélectionner les groupes à inclure** > choisissez les groupes > **Sélectionner** > **OK**. Les profils et les stratégies de tous les utilisateurs/appareils de ce groupe peuvent être gérés par les administrateurs de Membres (Groupe).
 
-    ![Capture d’écran de groupes d’étendue select.](./media/scope-tags/select-scope-groups.png)
+    ![Capture d’écran de la sélection de groupes de l’étendue](./media/scope-tags/select-scope-groups.png)
 
-    Alternativement, vous pouvez choisir **tous les appareils**, **tous les utilisateurs**, ou **tous les utilisateurs et tous les appareils**.
+    Vous pouvez aussi choisir **Tous les appareils**, **Tous les utilisateurs** ou **Tous les utilisateurs et tous les appareils**.
 
-    ![Capture d’écran d’autres options pour les groupes d’étendue select.](./media/scope-tags/scope-group-other-options.png)
+    ![Capture d’écran d’autres options pour la sélection de groupes de l’étendue.](./media/scope-tags/scope-group-other-options.png)
     
-5. Choisissez **étendue (balises)** > **ajouter** > Choisissez les balises que vous souhaitez ajouter à ce rôle > **sélectionnez** > **OK**. Utilisateurs de membres (groupes) auront accès aux stratégies et profils qui possèdent également la même balise d’étendue.
+5. Choisissez **Étendue (balises)**  > **Ajouter** > choisissez les balises que vous voulez ajouter à ce rôle > **Sélectionner** > **OK**. Les utilisateurs de Membres (Groupes) auront accès aux stratégies et aux profils qui ont aussi la même balise d’étendue.
 
-    ![Capture d’écran de balises d’étendue select.](./media/scope-tags/select-scope-tags.png)
+    ![Capture d’écran de la sélection de balises d’étendue](./media/scope-tags/select-scope-tags.png)
 
 6. Choisissez **OK**. 
 
 ## <a name="to-add-a-scope-tag-to-a-configuration-profile"></a>Pour ajouter une étiquette de délimitation à un profil de configuration
-1. Dans Intune, choisissez **configuration de l’appareil** > **profils** > Choisissez un profil.
+1. Dans Intune, choisissez **Configuration de l’appareil** > **Profils** > choisissez un profil.
 
-    ![Capture d’écran de sélectionner un profil.](./media/scope-tags/choose-profile.png)
+    ![Capture d’écran de la sélection d’un profil.](./media/scope-tags/choose-profile.png)
 
-2. Choisissez **propriétés** > **étendue (balises)** > **ajouter**.
+2. Choisissez **Propriétés** > **Étendue (balises)**  > **Ajouter**.
 
-    ![Capture d’écran de balises d’étendue ajouter.](./media/scope-tags/add-scope-tags.png)
+    ![Capture d’écran de l’ajout de balises d’étendue](./media/scope-tags/add-scope-tags.png)
 
-3. Sous **balises Select**, choisissez les balises que vous souhaitez ajouter au profil.
-4. Choisissez **sélectionnez** > **OK** > **enregistrer**.
+3. Sous **Sélectionner des balises**, choisissez les balises que vous voulez ajouter au profil.
+4. Choisissez **Sélectionner** > **OK** > **Enregistrer**.
 
 ## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Pour affecter une balise d’étendue à une stratégie de configuration d’application
-Pour les appareils avec **type d’inscription d’appareil** définie sur **appareils gérés**:
-1. Choisissez **les applications clientes** > **stratégies de configuration** > choisir une stratégie de configuration d’application.
-2. Choisissez **propriétés** > **étendue (balises)** > Choisissez les balises que vous souhaitez affecter à la stratégie.
+Pour les appareils avec **Type d’inscription de l’appareil** défini sur **Appareils gérés** :
+1. Choisissez **Applications clientes** > **Stratégies de configuration des applications** > choisissez une stratégie de configuration des applications.
+2. Choisissez **Propriétés** > **Étendue (balises)** > choisissez les balises que vous voulez affecter à la stratégie.
 
-Pour les appareils avec **type d’inscription d’appareil** définie sur **applications gérées**:
-1. Choisissez **les applications clientes** > **stratégies de configuration** > choisir une stratégie de configuration d’application.
-2. Choisissez **étendue (balises)** > Choisissez les balises que vous souhaitez affecter à la stratégie.
+Pour les appareils avec **Type d’inscription de l’appareil** défini sur **Applications gérées** :
+1. Choisissez **Applications clientes** > **Stratégies de configuration des applications** > choisissez une stratégie de configuration des applications.
+2. Choisissez **Étendue (balises)** > choisissez les balises que vous voulez affecter à la stratégie.
 
 
-## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Pour affecter une balise d’étendue à une profil de provisionnement d’application iOS
-1. Dans Intune, choisissez **les applications clientes** > **profils de provisionnement d’application iOS** > Choisissez un profil.
-2. Choisissez **propriétés** > **étendue (balises)** > Choisissez les balises que vous souhaitez affecter au profil.
-3. Choisissez **sélectionnez** > **OK** > **enregistrer**.
+## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Pour affecter une balise d’étendue à un profil de provisionnement d’application iOS
+1. Dans Intune, choisissez **Applications clientes** > **Profils de provisionnement d’application iOS** > choisissez un profil.
+2. Choisissez **Propriétés** > **Étendue (balises)** > choisissez les balises que vous voulez affecter au profil.
+3. Choisissez **Sélectionner** > **OK** > **Enregistrer**.
 
-## <a name="scope-tag-details"></a>Détails de l’étiquette étendue
-Lorsque vous travaillez avec des balises d’étendue, n’oubliez pas ces détails :
+## <a name="to-assign-a-scope-tag-to-an-apple-volume-purchase-program-vpp-token"></a>Pour affecter une balise d’étendue à un jeton Programme d’achat en volume (VPP) Apple
+1. Dans Intune, choisissez **Applications clientes** > **Jetons VPP Apple** > choisissez un jeton VPP.
+2. Sélectionnez **Étendue (balises)** > choisissez les balises que vous voulez affecter au profil. Les applications VPP et les livres électroniques associés au jeton VPP héritent des balises affectées.
+3. Choisissez **Sélectionner** > **OK** > **Enregistrer**.
 
-- Vous pouvez actuellement affecter des balises d’étendue à :
+## <a name="scope-tag-details"></a>Informations détaillées sur les balises d’étendue
+Quand vous utilisez des balises d’étendue, rappelez-vous de ceci :
+
+- Vous pouvez actuellement affecter des balises d’étendue aux éléments suivants :
     - Attributions de rôles
     - Stratégies de conformité des appareils
     - Profils de configuration d’appareil
     - Anneaux des mises à jour Windows 10
     - Appareils gérés
     - Applications
-    - Stratégies de configuration : les appareils gérés
+    - Stratégies de configuration d’applications - appareils gérés
     - Scripts PowerShell
     - Jetons DEP
     - Profil de provisionnement d’applications iOS
-- Lorsqu’un administrateur crée un objet dans Intune, toutes les balises d’étendue qu’administrateur seront automatiquement attribués au nouvel objet.
-- RBAC d’Intune ne s’applique pas aux rôles Azure Active Directory. Par conséquent, les rôles des administrateurs de Service Intune et les administrateurs généraux ont accès d’administrateur complets à Intune, quel que soit les balises d’étendue sont-ils.
-- Les administrateurs dans une attribution de rôle avec les balises d’étendue peuvent également voir les objets Intune sans balises d’étendue.
-- Vous pouvez uniquement affecter une balise d’étendue que vous avez dans vos attributions de rôles.
-- Vous pouvez uniquement les groupes de cibles qui sont répertoriées dans l’étendue (groupes) de votre attribution de rôle.
-- Si vous avez une balise d’étendue à votre rôle, vous ne pouvez pas supprimer toutes les balises d’étendue sur un objet Intune. Balise d’au moins une étendue est requise.
+    - Jetons Programme d’achat en volume (VPP) Apple
+- Quand un administrateur crée un objet dans Intune, toutes les balises d’étendue affectées à cet administrateur sont automatiquement affectées au nouvel objet.
+- Le contrôle d’accès en fonction du rôle (RBAC) d’Intune ne s’applique pas aux rôles Azure Active Directory. Ainsi, les rôles Administrateur de service et Administrateur général d’Intune ont un accès d’administrateur complet à Intune, quelles que soient leurs balises d’étendue.
+- Les administrateurs dans une attribution de rôle avec des balises d’étendue peuvent également voir les objets Intune sans balises d’étendue.
+- Vous pouvez affecter seulement une balise d’étendue que vous avez dans vos attributions de rôles.
+- Vous pouvez cibler seulement des groupes qui sont listés dans l’étendue (groupes) de votre attribution de rôle.
+- Si une balise d’étendue est affectée à votre rôle, vous ne pouvez pas supprimer toutes les balises d’étendue sur un objet Intune. Au moins une balise d’étendue est obligatoire.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

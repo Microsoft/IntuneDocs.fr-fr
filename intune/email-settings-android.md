@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/15/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94f907ee8805c5f0559e8751a7cd69bacf1612ee
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 647e1cd6925df27d42186599ad6786e866742b44
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042279"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Paramètres des appareils Android permettant de configurer la messagerie, l’authentification et la synchronisation dans Intune
 
@@ -52,9 +51,9 @@ Pour plus d’informations sur les profils de courrier dans Intune, voir [Config
       Quand vous choisissez d’utiliser des attributs **Personnalisés**, entrez :
       - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`
 
-- **Attribut d’adresse de messagerie d’AAD**: ce nom est l’attribut de messagerie Intune obtient auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
+- **Attribut d’adresse e-mail d’AAD** : ce nom est l’attribut d’e-mail obtenu par Intune auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
   - **Nom d’utilisateur principal** : utilise le nom principal complet (par exemple, `user1@contoso.com` ou `user1`) comme adresse e-mail.
-  - **Adresse SMTP principale**: utilise l’adresse SMTP principale, tel que `user1@contoso.com`, pour vous connecter à Exchange.
+  - **Adresse SMTP principale** : utilise l’adresse SMTP principale (par exemple, `user1@contoso.com`) pour la connexion à Exchange.
 
 - **Méthode d’authentification** : sélectionnez **Nom d’utilisateur et mot de passe** ou **Certificats** comme méthode d’authentification utilisée par le profil de messagerie.
   - Si vous avez sélectionné **Certificats**, sélectionnez un profil de certificat SCEP ou PKCS client que vous avez préalablement créé pour authentifier la connexion Exchange.

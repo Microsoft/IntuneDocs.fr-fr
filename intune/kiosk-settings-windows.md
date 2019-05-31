@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 03/11/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: a80e4cf4e68235ef9e88943a8b62121e0cfb6623
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046973"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -36,40 +35,40 @@ Pour en savoir plus sur la fonctionnalité de kiosque Windows dans Intune, consu
 
 - [Créez le profil](kiosk-settings.md#create-the-profile).
 
-- Ce profil de plein écran est directement lié au profil de restrictions d’appareil vous créez à l’aide du [paramètres de plein écran de Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser). Pour récapituler :
+- Ce profil de kiosque est directement lié au profil de restrictions d’appareil que vous créez avec les [paramètres de kiosque de Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser). Pour récapituler :
 
-  1. Créez ce profil de plein écran pour exécuter l’appareil en mode plein écran.
-  2. Créer le [profil restrictions d’appareil](device-restrictions-windows-10.md#microsoft-edge-browser)et configurer des fonctionnalités spécifiques et les paramètres autorisés dans Microsoft Edge.
+  1. Créez ce profil de kiosque pour exécuter l’appareil en mode kiosque.
+  2. Créez le [profil de restrictions d’appareil](device-restrictions-windows-10.md#microsoft-edge-browser) et configurez les fonctionnalités et paramètres spécifiques autorisés dans Microsoft Edge.
 
 > [!IMPORTANT] 
-> Veillez à affecter ce profil de plein écran aux mêmes périphériques comme votre [profil Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+> Veillez à attribuer ce profil de kiosque aux mêmes appareils que ceux de votre [profil Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
 
 ## <a name="single-full-screen-app-kiosks"></a>Kiosques avec une seule application en plein écran
 
-S’exécute qu’une seule application sur l’appareil.
+Exécute une seule application sur l’appareil.
 
-- **Sélectionnez un mode plein écran**: choisissez **application unique, plein écran**.
+- **Sélectionner un mode kiosque** : choisissez **Kiosque plein écran mono-application**.
 
 - **Type d’ouverture de session utilisateur** : les applications que vous ajoutez s’exécutent comme le compte d’utilisateur que vous entrez. Les options disponibles sont les suivantes :
 
   - **Ouverture de session automatique (Windows 10 version 1803 et versions ultérieures)** : utilisez les bornes des environnements publics qui ne nécessitent pas de connexion de l’utilisateur, similaire à un compte invité. Ce paramètre utilise le [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
-  - **Compte d’utilisateur local** : entrez le compte d’utilisateur local (sur l’appareil). Le compte que vous entrez ne se connecte à l’appareil plein écran.
+  - **Compte d’utilisateur local** : entrez le compte d’utilisateur local (sur l’appareil). Le compte que vous entrez se connecte au kiosque.
 
-- **Type d’application**: sélectionnez le type d’application. Les options disponibles sont les suivantes :
+- **Type d’application** : sélectionnez le type d’application. Les options disponibles sont les suivantes :
 
-  - **Ajouter le navigateur Microsoft Edge**: sélectionnez **navigateur Microsoft Edge**, puis choisissez le **type de mode plein écran de session**:
+  - **Ajouter un navigateur Microsoft Edge** : sélectionnez **Navigateur Microsoft Edge**, puis choisissez le **Type de mode kiosque Microsoft Edge** :
 
-    - **La signalisation numérique/Interactive**: ouvre l’URL du mode plein écran et affiche uniquement le contenu sur ce site Web. [Configurer des signes numériques](https://docs.microsoft.com/windows/configuration/setup-digital-signage) fournit des informations sur cette fonctionnalité.
-    - **Navigation au public (InPrivate)**: exécute une version de multi-onglet limitée de Microsoft Edge. Les utilisateurs peuvent parcourir publiquement ou se terminer leur session de navigation.
+    - **Signalisation numérique/interactive**:  ouvre une URL en mode plein écran et affiche uniquement le contenu sur ce site web. [Configurer les signes numériques](https://docs.microsoft.com/windows/configuration/setup-digital-signage) fournit plus d’informations sur cette fonctionnalité.
+    - **Navigation publique (InPrivate)**  : exécute une version multi-onglets limitée de Microsoft Edge. Les utilisateurs peuvent parcourir publiquement ou terminer leur session de navigation.
 
-    Pour plus d’informations sur ces options, consultez [mode plein écran de déployer Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+    Pour plus d’informations sur ces options, consultez [Déployer le mode kiosque dans Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer les paramètres spécifiques à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **profils** > **créer un profil**  >  **Windows 10** pour plateforme > **Restrictions d’appareil** >  **navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) répertorie et décrit les paramètres disponibles.
+    > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer des paramètres propres à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** pour la plateforme > **Restrictions de l’appareil** >  **Navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) liste et décrit les paramètres disponibles.
 
     Cliquez sur **OK** pour enregistrer vos modifications.
 
-  - **Ajouter navigateur kiosque**: sélectionnez **paramètres du navigateur plein écran**. Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à obtenir l’[application de navigateur kiosque](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) dans le Store, ajoutez-la à Intune en tant qu’[application cliente](apps-add.md), puis affectez l’application aux appareils kiosques.
+  - **Ajouter un navigateur kiosque** : sélectionnez **Paramètres du navigateur kiosque**. Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à obtenir l’[application de navigateur kiosque](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) dans le Store, ajoutez-la à Intune en tant qu’[application cliente](apps-add.md), puis affectez l’application aux appareils kiosques.
 
     entrez les paramètres suivants :
 
@@ -96,7 +95,7 @@ S’exécute qu’une seule application sur l’appareil.
 
     Cliquez sur **OK** pour enregistrer vos modifications.
 
-  - **Application de Store d’ajouter**: sélectionnez **ajouter une application du store**et choisissez une application dans la liste.
+  - **Ajouter une application de Store** : sélectionnez **Ajouter une application de Store**, puis choisissez une application dans la liste.
 
     Aucune application n’est répertoriée ? En ajouter à l’aide de la procédure sous [Applications clientes](apps-add.md).
 
@@ -104,18 +103,18 @@ S’exécute qu’une seule application sur l’appareil.
 
 ## <a name="multi-app-kiosks"></a>Applications multiples plein écran
 
-Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir. Si une application a une dépendance sur une autre application, les deux doivent être inclus dans la liste des applications autorisées. Par exemple, Internet Explorer 64 bits a une dépendance sur Internet Explorer 32 bits, donc vous devez autoriser « C:\Program Files\internet explorer\iexplore.exe » et « C:\Program Files (x86) \Internet ». 
+Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont les seules applications que l’utilisateur peut ouvrir. Si une application a une dépendance sur une autre application, les deux doivent être incluses dans la liste des applications autorisées. Par exemple, Internet Explorer 64 bits ayant une dépendance sur Internet Explorer 32 bits, vous devez autoriser « C:\Program Files\internet explorer\iexplore.exe » et « C:\Program Files (x86)\Internet Explorer\iexplore.exe ». 
 
-- **Sélectionnez un mode plein écran**: choisissez **kiosque multi-application**.
+- **Sélectionner un mode kiosque** : choisissez **Kiosque multi-application**.
 
 - **Cibler Windows 10 dans les appareils en mode S** :
   - **Oui** : Autorise les applications Store et les applications AUMID (à l’exception des applications Win32) dans le profil kiosque.
-  - **Non** : autorise les applications Store, les applications Win32 et les applications AUMID dans le profil kiosque. Ce profil de plein écran n’est pas déployé sur des appareils en mode S.
+  - **Non** : autorise les applications Store, les applications Win32 et les applications AUMID dans le profil kiosque. Ce profil de kiosque n’est pas déployé sur des appareils en mode S.
 
 - **Type d’ouverture de session utilisateur** : les applications que vous ajoutez s’exécutent comme le compte d’utilisateur que vous entrez. Les options disponibles sont les suivantes :
 
   - **Ouverture de session automatique (Windows 10 version 1803 et versions ultérieures)** : utilisez les bornes des environnements publics qui ne nécessitent pas de connexion de l’utilisateur, similaire à un compte invité. Ce paramètre utilise le [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
-  - **Compte d'utilisateur local** : **Ajouter** le compte d'utilisateur local (à l’appareil). Le compte que vous entrez ne se connecte à l’appareil plein écran.
+  - **Compte d'utilisateur local** : **Ajouter** le compte d'utilisateur local (à l’appareil). Le compte que vous entrez se connecte au kiosque.
   - **Utilisateur ou groupe Azure Active Directory (Windows 10 version 1803 et versions ultérieures)** : sélectionnez **Ajouter**, puis choisissez des utilisateurs ou des groupes Azure Active Directory dans la liste. Vous pouvez sélectionner plusieurs utilisateurs et groupes. Choisissez **Sélectionner** pour enregistrer vos changements.
   - **Visiteur HoloLens** : Le compte visiteur est un compte invité ne nécessitant pas d’informations d’identification de l’utilisateur ou d’authentification, comme décrit dans [Concepts du mode PC partagé](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
@@ -123,15 +122,15 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
   - **Navigateurs**
 
-    - **Ajouter Microsoft Edge**: Microsoft Edge est ajouté à la grille de l’application, et toutes les applications peuvent s’exécuter sur ce mode plein écran. Choisissez le **type de mode plein écran de Microsoft Edge**:
+    - **Ajouter Microsoft Edge** : Microsoft Edge est ajouté à la grille d’applications, et toutes les applications peuvent s’exécuter sur ce kiosque. Choisissez le **Type de mode kiosque Microsoft Edge** :
 
-      - **Mode normal (version complète de Microsoft Edge)**: exécute une version complète de Microsoft Edge avec toutes les fonctionnalités de navigation. État et les données utilisateur sont enregistrés entre les sessions.
-      - **Navigation au public (InPrivate)**: exécute une version de multi-onglet de Microsoft Edge InPrivate avec une expérience adaptée pour les appareils qui s’exécutent en mode plein écran.
+      - **Mode normal (version complète de Microsoft Edge)**  : exécute une version complète de Microsoft Edge avec toutes les fonctionnalités de navigation. L’état et les données utilisateur sont enregistrés entre les sessions.
+      - **Navigation publique (InPrivate)**  : exécute une version multi-onglets de Microsoft Edge InPrivate avec une expérience adaptée aux appareils qui s’exécutent en mode plein écran.
 
-      Pour plus d’informations sur ces options, consultez [mode plein écran de déployer Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Pour plus d’informations sur ces options, consultez [Déployer le mode kiosque dans Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer les paramètres spécifiques à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **profils** > **créer un profil**  >  **Windows 10** pour plateforme > **Restrictions d’appareil** >  **navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) répertorie et décrit les paramètres disponibles.
+      > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer des paramètres propres à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** pour la plateforme > **Restrictions de l’appareil** >  **Navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) liste et décrit les paramètres disponibles.
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
@@ -176,7 +175,7 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
       Cliquez sur **OK** pour enregistrer vos modifications.
 
-    - **Lancer automatiquement**: facultatif. Choisissez une application à lancer automatiquement lorsque l’utilisateur se connecte. Uniquement une seule application peut être AutoLaunched.
+    - **Démarrage automatique** : facultatif. Choisissez une application à lancer automatiquement quand l’utilisateur se connecte. Une seule application peut être lancée automatiquement.
     - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
 
   > [!TIP]
@@ -186,7 +185,7 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
 - **Barre des tâches Windows** : choisissez d’**Afficher** ou de **Masquer** la barre des tâches. Par défaut, la barre des tâches ne s’affiche pas. Des icônes, telles que l’icône Wi-Fi, sont visibles, mais les paramètres ne sont pas modifiables par les utilisateurs finaux.
 
-- **Autoriser l’accès au dossier Téléchargements**: choisissez **Oui** pour permettre aux utilisateurs d’accéder au dossier téléchargements dans l’Explorateur Windows. Par défaut, l’accès au dossier téléchargements est désactivée. Cette fonctionnalité est couramment utilisée pour les utilisateurs finaux d’accéder aux éléments téléchargés à partir d’un navigateur.
+- **Autoriser l’accès au dossier Téléchargements** : choisissez **Oui** pour autoriser les utilisateurs à accéder au dossier Téléchargements dans l’Explorateur Windows. Par défaut, l’accès au dossier Téléchargements est désactivé. Cette fonctionnalité est couramment utilisée pour permettre aux utilisateurs finaux d’accéder aux éléments téléchargés à partir d’un navigateur.
 
 Cliquez sur **OK** pour enregistrer vos modifications.
 

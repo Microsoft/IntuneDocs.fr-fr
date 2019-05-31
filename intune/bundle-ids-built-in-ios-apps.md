@@ -6,9 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/24/2019
+ms.date: 05/20/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: ''
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 052a5f533ef577358b8c28262116c065b3c4748d
-ms.sourcegitcommit: d1b4f0d5487e35902e8bcd478ad02f93125cc31d
-ms.translationtype: MTE75
+ms.openlocfilehash: 26f43523589da0d59afb3b667eb4ead8357f7a60
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64336703"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66049021"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID d’offres groupées pour des applications iOS intégrées que vous pouvez utiliser dans Intune
 
@@ -69,7 +68,7 @@ Lorsque vous configurez des fonctionnalités sur des appareils iOS, vous pouvez 
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Bourse       | Apple     |
 | com.apple.tips              | Conseils         | Apple     |
-| com.apple.TV                | TV           | Apple     |
+| com.apple.tv                | TV           | Apple     |
 | com.apple.videos            | Vidéos       | Apple     |
 | com.apple.VoiceMemos        | VoiceMemos   | Apple     |
 | com.apple.Passbook          | Portefeuille       | Apple     |

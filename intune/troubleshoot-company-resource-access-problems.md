@@ -1,13 +1,12 @@
 ---
 title: Codes d’erreur et d’état dans Microsoft Intune - Azure | Microsoft Docs
-description: Afficher la liste des erreurs, code d’état, les descriptions et les résolutions lors de l’utilisation de gestion des appareils mobiles gérés les appareils, obtenir l’accès aux ressources de l’entreprise, les erreurs sur les appareils iOS et les erreurs de réponse OMA dans Microsoft Intune.
+description: Affichez la liste des erreurs et des codes d’état (ainsi que leur description et leur résolution) que vous rencontrez sur les appareils gérés MDM, notamment lorsque vous tentez d’accéder aux ressources de l’entreprise, mais également des erreurs qui se produisent sur les appareils iOS et des erreurs de réponse OMA dans Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/20/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4d2b940a0079794c5b17e8d1c1900f630d14cd
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 36d21c0b80a2737be39bbee2399f6005c43edc43
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040427"
 ---
-# <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Codes d’erreur courants et les descriptions dans Microsoft Intune
+# <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Description des codes d’erreur courants dans Microsoft Intune
 
-Cet article répertorie les erreurs courantes, les codes d’état, les descriptions et les solutions possibles lors de l’accès aux ressources de l’organisation. Utilisez ces informations pour aider à résoudre les problèmes d’accès lors de l’utilisation de Microsoft Intune.
+Cet article fournit la liste des erreurs et des codes d’état les plus couramment rencontrés lorsque vous tentez d’accéder aux ressources de l’entreprise, et fournit pour chacun d’eux une description et des solutions possibles. Utilisez ces informations pour résoudre les problèmes d’accès lorsque vous utilisez Microsoft Intune.
 
-Si vous devez prendre en charge d’aide, consultez [obtenir un support technique pour Microsoft Intune](get-support.md).
+Si vous avez besoin d’aide, consultez [Comment obtenir un support technique pour Microsoft Intune](get-support.md).
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>Codes d'état des appareils Windows gérés par MDM
 
-|Code d'état|Message d’erreur|Procédure à suivre|
+|Code d'état|Message d'erreur|Procédure à suivre|
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Installation en cours||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|En attente de contenu||
@@ -51,7 +50,7 @@ Si vous devez prendre en charge d’aide, consultez [obtenir un support techniqu
 
 ## <a name="company-resource-access-common-errors"></a>Accès aux ressources d'entreprise (erreurs fréquentes)
 
-|Code d'état|Code d’erreur hexadécimal|Message d’erreur|
+|Code d'état|Code d’erreur hexadécimal|Message d'erreur|
 |---------------|--------------------------|-----------------|
 |-2016281101|0x87D1FDF3|Requête MDM CRP introuvable|
 |-2016281102|0x87D1FDF2|URL NDES introuvable|
@@ -92,7 +91,7 @@ Si vous devez prendre en charge d’aide, consultez [obtenir un support techniqu
 
 ### <a name="service-errors"></a>Erreurs de service
 
-|Code d'état|Code d’erreur hexadécimal|Message d’erreur|
+|Code d'état|Code d’erreur hexadécimal|Message d'erreur|
 |---------------|--------------------------|-----------------|
 |-2016299111|0x87D1B799|Erreur interne|
 |-2016299112|0x87D1B798|Erreur interne|
@@ -387,4 +386,4 @@ Si vous devez prendre en charge d’aide, consultez [obtenir un support techniqu
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Contactez le Support Microsoft pour [obtenir un support technique pour Microsoft Intune](get-support.md).
+Contactez le support Microsoft pour [obtenir de l’aide avec Microsoft Intune](get-support.md).
