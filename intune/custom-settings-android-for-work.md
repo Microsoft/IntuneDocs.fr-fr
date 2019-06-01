@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 852d4b169e2e6a43934babf3e1c26d91341050ab
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043205"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373638"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils Android Entreprise dans Microsoft Intune
 
@@ -35,7 +35,7 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. entrez les paramètres suivants :
 
@@ -70,7 +70,7 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 
 Dans cet exemple, vous créez un profil personnalisé qui restreint les actions de copier et coller entre applications professionnelles et personnelles sur les appareils Android Entreprise.
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. entrez les paramètres suivants :
 

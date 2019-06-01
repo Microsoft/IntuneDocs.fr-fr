@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47115fcb2662439bff867043c2fb58bc3550dbbb
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fe7ffa6ff024c719fc24209947b87b07ea2b6791
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044878"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412679"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -31,8 +31,7 @@ Sur les appareils gérés par MDM Microsoft Intune, les installations d’applic
 
 Intune fournit des informations de résolution des problèmes d’une application en fonction des applications installées sur l’appareil d’un utilisateur spécifique.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Dépanner**.
 4. Cliquez sur **Sélectionner un utilisateur** pour sélectionner un utilisateur à aider. Le volet **Sélectionner les utilisateurs** s’affiche.
 5. Sélectionnez un utilisateur en tapant son nom ou son adresse e-mail. Cliquez sur **Sélectionner** en bas du volet. Les informations sur la résolution des problèmes pour l’utilisateur s’affichent dans le volet **Résoudre les problèmes**. 
