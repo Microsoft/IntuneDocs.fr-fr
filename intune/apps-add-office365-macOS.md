@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618557c129b693ad035dd82c823db43dcca2ee4d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2ae63fa19bb24381580a206481a9ac2e3684314a
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049457"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412380"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Affecter Office 365 à des appareils macOS avec Microsoft Intune
 
@@ -40,8 +40,7 @@ Avant d’ajouter Office 365 à des appareils macOS, vous devez comprendre les 
 ## <a name="create-and-configure-the-app-suite"></a>Créer et configurer la suite d’applications
 
 Ajoutez Office 365 à partir du volet **Applications**.
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services** > **Surveillance + Gestion** > **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
 4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**. 
 5. Sélectionnez **Ajouter**.

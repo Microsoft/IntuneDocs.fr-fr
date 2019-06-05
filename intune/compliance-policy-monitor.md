@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b530d509e87871d30f015cf6bc77410660563da
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fc97e9884fbcd23c599c917c181e29cdbc3708ee
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043356"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374036"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -34,7 +34,7 @@ Les rapports de conformité vous permettent d’examiner la conformité des appa
 
 Ouvrez le **Tableau de bord de conformité des appareils Intune** :
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. Sélectionnez **Conformité de l’appareil** > **Vue d’ensemble**. Le **tableau de bord de conformité des appareils** s’ouvre.
 

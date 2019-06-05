@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: d927c886bbb3f82c18d5873a86fc427d00d96337
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4190d84fda46e4be3cdc4c4f7bfe4ac8a1852ebc
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042632"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373945"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Paramètres d’optimisation de la distribution dans Microsoft Intune
 
@@ -36,7 +36,7 @@ Pour en savoir plus sur l’optimisation de la distribution sur Windows 10, con
 > Le paramètre **Mises à jour de logiciels – Boucles de mise à jour Windows 10** est remplacé par les paramètres **Optimisation de la distribution**. Il est possible de changer des boucles de mise à jour en paramètres **Optimisation de la distribution**. [Déplacer les boucles de mise à jour existantes pour l’optimisation de la distribution](#move-existing-update-rings-to-delivery-optimization) (dans cet article) 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 

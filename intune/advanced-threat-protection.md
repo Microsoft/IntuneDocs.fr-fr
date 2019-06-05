@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a53ae7f43f135f7316b665672dc410812ef14d08
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050132"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374086"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Windows Defender ATP avec accès conditionnel dans Intune
 
@@ -83,11 +83,11 @@ Si vous avez intégré un appareil à l’aide du package de configuration, vous
 
 ### <a name="create-the-configuration-profile"></a>Créer le profil de configuration
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. Entrez un **Nom** et une **Description**.
 4. Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Pour **Type de profil**, sélectionnez **Windows Defender ATP (Windows 10 Desktop)**.
+5. Pour **Type de profil**, sélectionnez **Windows Defender ATP (Windows 10 Desktop)** .
 6. Configurez les paramètres :
 
   - **Type de package de configuration des clients Windows Defender ATP** : Sélectionnez **Intégrer** pour ajouter le package de configuration au profil. Sélectionnez **Désintégrer** pour supprimer le package de configuration du profil.
@@ -105,11 +105,11 @@ Si vous avez intégré un appareil à l’aide du package de configuration, vous
 ## <a name="create-the-compliance-policy"></a>Créer la stratégie de conformité
 La stratégie de conformité détermine un niveau acceptable de risque sur un appareil.
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies** > **Créer une stratégie**.
 3. Entrez un **Nom** et une **Description**.
 4. Dans **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Dans les paramètres **Windows Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix. Les classifications des niveaux de menace sont [déterminées par Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
+5. Dans les paramètres **Windows Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix. Les classifications des niveaux de menace sont [déterminées par Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection).
 
    - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme. (Windows Defender ATP utilise la valeur *Sécurisé*.)
    - **Faible** : l’appareil est conforme uniquement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
@@ -120,7 +120,7 @@ La stratégie de conformité détermine un niveau acceptable de risque sur un ap
 
 ## <a name="assign-the-policy"></a>Affecter la stratégie
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies**> sélectionnez votre stratégie de conformité Windows Defender ATP.
 3. Sélectionnez **Affectations**.
 4. Incluez ou excluez vos groupes Azure AD pour leur affecter la stratégie.
@@ -153,7 +153,7 @@ La stratégie d’accès conditionnel bloque l’accès aux ressources *si* l’
 ## <a name="monitor-device-compliance"></a>Surveiller la conformité des appareils
 Ensuite, monitorez l’état des appareils qui ont la stratégie de conformité Windows Defender ATP.
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Conformité de l’appareil** > **Conformité à la stratégie**.
 3. Recherchez votre stratégie Windows Defender ATP dans la liste, et identifiez les appareils qui sont conformes ou non.
 

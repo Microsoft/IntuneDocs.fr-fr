@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803d556150d60d0a3d60ec03c029d65f0f935f67
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045288"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412701"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envoyer les données de journal à des comptes de stockage, des hubs d’événements ou Log Analytics dans Intune (préversion)
 
@@ -53,7 +53,7 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
 
 ## <a name="send-logs-to-azure-monitor"></a>Envoyer des journaux à Azure Monitor
 
-1. Dans le [portail Azure](https://portal.azure.com/), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sous **Supervision**, sélectionnez **Paramètres de diagnostic**. Vous devez les activer la première fois que vous les utilisez :
 
     ![Activer Paramètres de diagnostic dans Intune pour envoyer les journaux à Azure Monitor](media/diagnostics-settings-turn-on.png)
@@ -101,7 +101,7 @@ Vous pouvez également exporter les journaux d’audit dans d’autres parties d
 
 Par exemple, pour exporter les journaux d’audit lors de l’utilisation de la conformité des appareils :
 
-1. Dans le [portail Azure](https://portal.azure.com/), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Conformité de l’appareil** > **Surveiller** > **Journaux d’Audit** :
 
     ![Choisir les journaux d’audit pour acheminer les données d’Intune vers l’analytique, les hubs d’événements ou le stockage Azure Monitor](media/audit-logs-under-monitor-in-compliance.png)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02a5a7bd3625b5e95ddb304df7cf64461cca9c10
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049138"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454059"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -136,7 +136,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 > [!IMPORTANT]  
 > Microsoft Intune Certificate Connector ne pouvant pas être installé sur l’autorité de certification émettrice, vous devez l’installer sur un serveur Windows distinct.  
 
-1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Connecteurs de certification** > **Ajouter**.
 3. Téléchargez le fichier du connecteur et enregistrez-le à un emplacement accessible à partir du serveur où vous installerez le connecteur.
 
@@ -160,7 +160,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 
 ### <a name="pfx-certificate-connector-for-microsoft-intune"></a>PFX Certificate Connector pour Microsoft Intune
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Connecteurs de certification** > **Ajouter**.
 3. Téléchargez et installez PFX Certificate Connector pour Microsoft Intune. Enregistrez-le dans un emplacement accessible à partir du serveur où vous allez installer le connecteur.
 4. Une fois le téléchargement terminé, connectez-vous au serveur. Ensuite :

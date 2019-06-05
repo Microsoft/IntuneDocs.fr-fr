@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb55951390c3fe19651087e16c3185018cfd9dab
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c8353cf2f0c24c3a894fa219df9fc9a8272e17af
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049304"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454067"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inclure et exclure des affectations d’applications dans Microsoft Intune
 
@@ -44,9 +44,8 @@ Intune ne prend pas en compte l’association entre utilisateurs et appareils qu
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Inclure et exclure des groupes lors de l’affectation d’applications 
 Pour affecter une application à des groupes à l’aide de l’affectation d’inclusion et d’exclusion :
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Dans le menu **Intune**, sélectionnez **Applications clientes**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
 4. Dans le volet **Applications clientes**, sélectionnez **Applications**. La liste des applications ajoutées s’affiche.
 5. Sélectionnez l’application que vous voulez attribuer. Un tableau de bord contient des informatinos sur l’application. 
 6. Dans la section **Gérer** du menu, sélectionnez **Affectations**. 
@@ -76,7 +75,7 @@ Pour affecter une application à des groupes à l’aide de l’affectation d’
 
 Lorsque vous affectez des groupes, les groupes déjà affectés ne peuvent pas être modifiés. Si vous voulez sélectionner un groupe actuellement indisponible, commencez par supprimer l’application de la liste d’affectations de l’application. 
 
-Pour modifier des affectations, dans la liste **Affectations** de l’application, sélectionnez la ligne qui contient l’affectation spécifique que vous souhaitez modifier. Vous pouvez également supprimer une affectation en sélectionnant les points de suspension (**...**) à la fin d’une ligne, puis en sélectionnant **Supprimer**. Vous pouvez afficher la vue de la liste **Affectations** par **Type d’affectation** ou par **Inclus/exclus**.
+Pour modifier des affectations, dans la liste **Affectations** de l’application, sélectionnez la ligne qui contient l’affectation spécifique que vous souhaitez modifier. Vous pouvez également supprimer une affectation en sélectionnant les points de suspension ( **...** ) à la fin d’une ligne, puis en sélectionnant **Supprimer**. Vous pouvez afficher la vue de la liste **Affectations** par **Type d’affectation** ou par **Inclus/exclus**.
 
 ![Affectations d’applications Intune - Terminer](./media/apps-inc-exl-05.png)
 
