@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 05/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042671"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454041"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Authentification Intune Data Warehouse des applications uniquement
 
@@ -78,7 +78,7 @@ Dans cette section, vous allez accorder des autorisations aux applications.
 1.  Sélectionnez **Autorisations nécessaires** dans le panneau **Paramètres**.
 2.  Cliquez sur **Ajouter**.
 3.  Sélectionnez **Ajouter une API** pour afficher le panneau **Sélectionner une API**.
-4.  Sélectionnez **API Microsoft Intune (MicrosoftIntuneAPI)** , puis cliquez sur **Sélectionner** dans le panneau **Sélectionner une API**. L’étape **Sélectionner les autorisations** est sélectionnée, et le panneau **Activer l’accès** s’affiche.
+4.  Sélectionnez **API Microsoft Intune (MicrosoftIntuneAPI)**, puis cliquez sur **Sélectionner** dans le panneau **Sélectionner une API**. L’étape **Sélectionner les autorisations** est sélectionnée, et le panneau **Activer l’accès** s’affiche.
 5.  Choisissez l’option **Obtenir des informations de l’entrepôt de données auprès de Microsoft Intune** dans la section **Autorisations des applications**.
 6.  Cliquez sur **Sélectionner** dans le panneau **Activer l’accès**.
 7.  Cliquez sur **Terminé** dans le panneau **Ajouter l’accès aux API**.
@@ -90,12 +90,13 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
 
 1.  Sélectionnez **Fichier** > **Nouveau** > **Projet** pour afficher la boîte de dialogue **Nouveau projet**.
 2.  Sur la gauche, sélectionnez **Visual C#** pour afficher tous les projets .NET Framework.
-3.  Sélectionnez **Application console (.NET Framework)** , ajoutez un nom d’application, puis cliquez sur **OK** pour créer l’application.
+3.  Sélectionnez **Application console (.NET Framework)**, ajoutez un nom d’application, puis cliquez sur **OK** pour créer l’application.
 4.  Dans **l’Explorateur de solutions**, sélectionnez **Program.cs** pour afficher le code.
-5.  Dans le menu contextuel, sélectionnez **Ajouter** > **Nouvel élément**. La boîte de dialogue **Ajouter un élément** s’affiche.
-6.  Sur la gauche, sous **Visual C#** , sélectionnez **Code**.
-7.  Sélectionnez **Classe**, modifiez le nom de la classe en choisissant *IntuneDataWarehouseClass.cs*, puis cliquez sur **Ajouter**.
-8.  Ajoutez le code suivant dans la méthode <code>Main</code> :
+5.  Dans l’Explorateur de solutions, ajoutez une référence à l’assembly `System.Configuration`.
+6.  Dans le menu contextuel, sélectionnez **Ajouter** > **Nouvel élément**. La boîte de dialogue **Ajouter un élément** s’affiche.
+7.  Sur la gauche, sous **Visual C#**, sélectionnez **Code**.
+8.  Sélectionnez **Classe**, modifiez le nom de la classe en choisissant *IntuneDataWarehouseClass.cs*, puis cliquez sur **Ajouter**.
+9.  Ajoutez le code suivant dans la méthode <code>Main</code> :
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
@@ -110,7 +111,7 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
                  new SecureClientSecret(applicationSecret))).Result;
     ``` 
 
-9. Ajoutez des espaces de noms supplémentaires en intégrant le code suivant en haut du fichier de code :
+10. Ajoutez des espaces de noms supplémentaires en intégrant le code suivant en haut du fichier de code :
 
     ``` csharp
      using System.Security;
@@ -118,7 +119,7 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
      using System.Configuration;
     ``` 
 
-10. Après la méthode <code>Main</code>, ajoutez la méthode privée suivante pour traiter et convertir la clé d’application :
+11. Après la méthode <code>Main</code>, ajoutez la méthode privée suivante pour traiter et convertir la clé d’application :
 
     ``` csharp
     private static SecureString ConvertToSecureStr(string appkey)
@@ -136,10 +137,10 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
     }
     ```
 
-11. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Références**, puis sélectionnez **Gérer les packages NuGet**.
-12. Recherchez *Microsoft.IdentityModel.Clients.ActiveDirectory* et installez le package NuGet Microsoft associé.
-13. Dans **Explorateur de solutions**, sélectionnez et ouvrez le fichier *App.config*.
-14. Ajouter la section <code>appSettings</code> afin que le code XML se présente ainsi :
+12. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Références**, puis sélectionnez **Gérer les packages NuGet**.
+13. Recherchez *Microsoft.IdentityModel.Clients.ActiveDirectory* et installez le package NuGet Microsoft associé.
+14. Dans **Explorateur de solutions**, sélectionnez et ouvrez le fichier *App.config*.
+15. Ajouter la section <code>appSettings</code> afin que le code XML se présente ainsi :
 
     ``` xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -155,8 +156,8 @@ Avec Visual Studio, créez un projet d’application console (.NET Framework) qu
     </configuration>
     ``` 
 
-15. Remplacez les valeurs <code>appId</code>, <code>appKey</code> et <code>tenantDomain</code> par les valeurs uniques propres à votre application.
-16. Créez votre application.
+16. Remplacez les valeurs <code>appId</code>, <code>appKey</code> et <code>tenantDomain</code> par les valeurs uniques propres à votre application.
+17. Créez votre application.
 
     >[!NOTE] 
     > Vous trouverez d’autres extraits de code d’implémentation dans la section [Exemple de code Intune Data Warehouse](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).

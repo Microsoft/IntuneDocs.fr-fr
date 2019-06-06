@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044611"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402659"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
@@ -32,13 +32,12 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 
 ## <a name="use-built-in-troubleshooting"></a>Utiliser la fonctionnalité de résolution des problèmes intégrée
 
-1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
-2. Sélectionnez **Résoudre les problèmes** :
+1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Résoudre les problèmes** :
 
     ![Dans Intune, accéder à Aide et support, puis sélectionner Résoudre les problèmes](./media/help-and-support-troubleshoot.png)
 
-3. Choisissez **Sélectionner un utilisateur** > sélectionnez l’utilisateur qui rencontre un problème > **Sélectionner**.
-4. Vérifiez que **Licence Intune** et **État du compte** présentent tous deux une coche verte :
+2. Choisissez **Sélectionner un utilisateur** > sélectionnez l’utilisateur qui rencontre un problème > **Sélectionner**.
+3. Vérifiez que **Licence Intune** et **État du compte** présentent tous deux une coche verte :
 
     ![Dans Intune, sélectionner l’utilisateur et vérifier que Licence Intune et État du compte présentent une coche verte](./media/account-status-intune-license-show-green.png)
 
@@ -47,7 +46,7 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
     - [Affecter des licences aux utilisateurs pour qu’ils puissent inscrire des appareils](licenses-assign.md)
     - [Ajouter des utilisateurs à Intune](users-add.md)
 
-5. Sous **Appareils**, recherchez l’appareil qui rencontre un problème. Examinez les différentes colonnes :
+4. Sous **Appareils**, recherchez l’appareil qui rencontre un problème. Examinez les différentes colonnes :
 
     - **Managé** : pour permettre à un appareil de recevoir des stratégies de conformité ou de configuration, cette propriété doit indiquer **GPM** ou **EAS/GPM**.
 
@@ -74,7 +73,7 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
       - Pour forcer l’archivage :
         - Sur l’appareil Android, ouvrez l’application Portail d’entreprise Intune > **Appareils** > Choisissez l’appareil à partir dans la liste > **Vérifier les paramètres de l’appareil**.
         - Sur l’appareil iOS, ouvrez l’application Portail d’entreprise Intune > **Appareils** > Choisissez l’appareil dans la liste > **Vérifier les paramètres**. 
-        - Sur un appareil Windows, ouvrez **Paramètres** > **Comptes** > **Accès Professionnel ou Scolaire** > Sélectionnez le compte ou l’inscription MDM >  **Informations** > **Synchronisation**.
+        - Sur un appareil Windows, ouvrez **Paramètres** > **Comptes** > **Accès Professionnel ou Scolaire** > Sélectionnez le compte ou l’inscription MDM > **Informations** > **Synchronisation**.
 
     - Sélectionnez l’appareil pour afficher les informations propres à la stratégie.
 
@@ -98,7 +97,7 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Vous ne savez pas avec certitude si une stratégie est correctement appliquée
 
-1. Dans le [portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune** et sélectionnez **Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Appareils** > **Tous les appareils** > sélectionnez l’appareil > **Configuration de l’appareil**. 
 
     Chaque appareil liste ses profils. Chaque profil a un **État**. L’état s’applique quand tous les profils affectés, notamment les exigences et les restrictions en matière de système d’exploitation et de matériel, sont considérés ensemble. Les états possibles sont :
@@ -164,4 +163,6 @@ Pour résoudre ce problème, définissez sur le système local une heure la plus
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous avez encore besoin d’aide, vous pouvez [obtenir du support pour Microsoft Intune](get-support.md).
+[Problèmes courants avec les profils de messagerie et résolutions](troubleshoot-email-profiles-in-microsoft-intune.md)
+
+Obtenir [l’aide de Microsoft](get-support.md) ou utiliser les [forums des communautés](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

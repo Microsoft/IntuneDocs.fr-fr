@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45df3e3b217e25c9e61fd51d7f458f33c7c0481d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0d2e52ed64bfee2da8eafbc228abe61f109b3c27
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045521"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412445"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Créer un rapport à partir du flux OData avec Power BI
 
@@ -53,14 +53,13 @@ Installez la dernière version de Power BI Desktop. Power BI Desktop est dispo
 > [!Note]  
 > Vous devez être autorisé à accéder à **Rapports** dans Intune. Pour plus d’informations, consultez [Autorisation](reports-api-url.md).
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Ouvrez le volet **Entrepôt de données Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Ouvrez le volet **Intune Data Warehouse** en sélectionnant le lien Data Warehouse sous **Autres tâches** sur le côté droit du panneau **Microsoft Intune - Vue d’ensemble**.
 4. Copier l’URL du flux personnalisé. Par exemple : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-5. Ouvrez Power BI Desktop.
-6. Choisissez **Obtenir des données** > **Flux Odata**.
-7. Collez l’URL du flux personnalisé dans la zone URL de la fenêtre **Flux OData**.
-8. Sélectionnez **De base**.
+1. Ouvrez Power BI Desktop.
+2. Choisissez **Obtenir des données** > **Flux Odata**.
+3. Collez l’URL du flux personnalisé dans la zone URL de la fenêtre **Flux OData**.
+4. Sélectionnez **De base**.
 
     ![Flux OData pour l’entrepôt de données Intune de votre abonné](media/reports-create-01-odatafeed.png)
 

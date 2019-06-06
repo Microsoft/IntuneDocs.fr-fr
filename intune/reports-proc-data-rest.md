@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ce1fcf270af0169661359c2ab088bb30fab62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 733ac8eee551a3ddba7a5219827c09357659a06e
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041157"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412719"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtenir des données à partir de l’API d’entrepôt de données Intune avec un client REST
 
@@ -94,9 +94,8 @@ Vous avez besoin des informations suivantes pour effectuer un appel REST à l’
 
 Vous avez également besoin du point de terminaison. Pour obtenir votre point de terminaison d’entrepôt de données, vous avez besoin de l’URL de flux personnalisée. Vous pouvez obtenir le point de terminaison OData à partir du volet Entrepôt de données.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
-3. Sélectionnez **Configurer l’entrepôt de données Intune** sous **Autres tâches**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Ouvrez le volet **Intune Data Warehouse** en sélectionnant le lien Data Warehouse sous **Autres tâches** sur le côté droit du panneau **Microsoft Intune - Vue d’ensemble**.
 4. Copiez l’URL de flux personnalisée sous **Utiliser des services de rapports tiers**. Elle doit ressembler à ceci : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Le point de terminaison suit le format suivant : `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
@@ -155,7 +154,7 @@ L’exemple suivant contient un client REST simple. Le code utilise la classe **
 > Vous pouvez accéder au code suivant [Exemple sur GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Reportez-vous au dépôt GitHub pour connaître les dernières modifications et mises à jour de l’exemple.
 
 1. Ouvrez **Microsoft Visual Studio**.
-2. Choisissez **Fichier** > **Nouveau projet**. Développez **Visual C#** , puis choisissez **Application console (.Net Framework)** .
+2. Choisissez **Fichier** > **Nouveau projet**. Développez **Visual C#**, puis choisissez **Application console (.Net Framework)**.
 3. Nommez le projet ` IntuneDataWarehouseSamples`, accédez à l’emplacement où vous voulez enregistrer le projet, puis sélectionnez **OK**.
 4. Cliquez avec le bouton droit sur le nom de la solution dans l’Explorateur de solutions, puis sélectionnez **Gérer les packages NuGet pour la solution**. Sélectionnez **Parcourir**, puis tapez `Microsoft.IdentityModel.Clients.ActiveDirectory` dans la zone de recherche.
 5. Choisissez le package, sélectionnez le projet **IntuneDataWarehouseSamples** sous Gérer les packages pour votre solution, puis sélectionnez **Installer**.
