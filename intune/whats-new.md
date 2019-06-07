@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
-ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
+ms.openlocfilehash: 72b96714e8740fe4077583cfa5d9f148c2ee0908
+ms.sourcegitcommit: f41b22f65286a64a8002e2cbe80debfdd6692278
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264167"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469592"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -45,6 +45,13 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-27-2019"></a>Semaine du 27 mai 2019 
+
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="reporting-for-potentially-harmful-apps-on-android-devices----4223162---"></a>Création de rapports pour les applications potentiellement dangereuses sur les appareils Android <!-- 4223162 -->
+Intune fournit désormais des informations supplémentaires sur la création de rapports pour les applications potentiellement dangereuses sur les appareils Android. 
 
 ## <a name="week-of-may-20-2019"></a>Semaine du 20 mai 2019 
 
@@ -134,7 +141,7 @@ Pour afficher les paramètres disponibles, accédez aux [paramètres iOS App Sto
 S’applique à : iOS
 
 ####  <a name="microsoft-defender-advanced-threat-protection--baseline--preview------3754134---"></a>Base de référence de Microsoft Defender Advanced Threat Protection (préversion)  <!--  3754134 -->
-Nous avons ajouté une préversion de base de référence de la sécurité pour les paramètres [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md).  
+Nous avons ajouté une préversion de base de référence de la sécurité pour les paramètres [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md). Cette ligne de base est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 ### <a name="device-enrollment"></a>Inscription des appareils
 
@@ -153,6 +160,14 @@ Vous n’aurez pas à inclure d’espaces dans les chiffres IMEI pour effectuer 
 
 #### <a name="deleting-a-device-in-the-apple-portal-will-be-reflected-in-the-intune-portal---2489996---"></a>Application sur le portail Intune de la suppression d’un appareil sur le portail Apple <!--2489996 -->
 Si un appareil est supprimé sur le portail du Programme d’inscription des appareils ou sur le portail Apple Business Manager, cette suppression est automatiquement appliquée à Intune lors de la synchronisation suivante.
+
+### <a name="the-enrollment-status-page-now-tracks-win32-apps----2714451---"></a>La Page d’état d’inscription effectue maintenant le suivi des applications Win32 <!-- 2714451 -->
+Cela s’applique uniquement aux appareils exécutant Windows 10 version 1903 et versions ultérieures. Pour plus d’informations, voir [Configurer une page d’état de l’inscription](windows-enrollment-status.md).
+
+### <a name="device-management"></a>Gestion des appareils
+
+#### <a name="reset-and-wipe-devices-in-bulk-by-using-the-graph-api----3295288---"></a>Réinitialiser et effacer en bloc le contenu des appareils à l’aide de l’API Graph <!-- 3295288 -->
+L’API Graph permet désormais de réinitialiser et d’effacer le contenu d’un maximum de 100 appareils à la fois.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
@@ -227,7 +242,7 @@ Vous pouvez attribuer vos applications Win32 à installer sur des appareils join
 La page de vue d’ensemble de l’appareil indique l’utilisateur principal, également appelé utilisateur d’UDA (affinité entre appareil et utilisateur). Pour voir l’utilisateur principal d’un appareil, choisissez **Intune** > **Appareils** > **Tous les appareils** > choisissez un appareil. L’utilisateur principal apparaît en haut de la page **Vue d’ensemble**.
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Création de rapports d’applications Google Play gérées supplémentaires pour les appareils avec profil professionnel Android Entreprise <!-- 4105925  -->
-Pour les applications Google Play gérées qui sont déployées sur des appareils avec profil professionnel Android Entreprise, vous pouvez afficher le numéro de version spécifique de l’application installée sur un appareil. Cela concerne uniquement les applications obligatoires. Les mêmes fonctionnalités seront activées pour les applications disponibles dans une version ultérieure. 
+Pour les applications Google Play gérées qui sont déployées sur des appareils avec profil professionnel Android Entreprise, vous pouvez afficher le numéro de version spécifique de l’application installée sur un appareil. Cela concerne uniquement les applications obligatoires.  
 
 #### <a name="ios-third-party-keyboards----4111843-----"></a>Claviers tiers iOS <!-- 4111843   -->
 La prise en charge de la stratégie de protection des applications Intune pour le paramètre **Claviers tiers** pour iOS n’existe plus en raison d’un changement de plateforme iOS. Vous ne pouvez plus configurer ce paramètre dans la console d’administration Intune, ni l’appliquer sur le client dans le kit SDK de l’application Intune.
@@ -277,7 +292,7 @@ S’applique à : Appareils Android Entreprise complètement gérés
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Rechercher une puce TMP dans une stratégie de conformité des appareils Windows 10 <!-- 3617671 -->
 
-Cette fonctionnalité est différée et devrait être incluse dans une version ultérieure.
+Cette fonctionnalité a été différée et devrait être publiée ultérieurement.
 
 #### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Mise à jour des changements apportés à l’interface utilisateur pour le navigateur Microsoft Edge sur les appareils Windows 10 et versions ultérieures <!-- 3775833   -->
 Quand vous créez un profil de configuration d’appareil, vous pouvez autoriser ou limiter les fonctionnalités Microsoft Edge sur les appareils Windows 10 et les versions ultérieures (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10 et ultérieur** sur la plateforme > **restrictions d’appareil** pour le type de profil > **Navigateur Microsoft Edge**). Dans cette mise à jour, les paramètres Microsoft Edge sont plus descriptifs et plus faciles à comprendre. 
@@ -320,7 +335,7 @@ Nous avons mis à jour le message d’expiration par défaut que les utilisateur
 ### <a name="device-management"></a>Gestion des appareils
 
 #### <a name="retire-noncompliant-devices-----1827291-----"></a>Mettre hors service les appareils non conformes  <!-- 1827291   -->
-Cette fonctionnalité a été différée et sera fournie dans une version ultérieure.
+Cette fonctionnalité a été différée et devrait être publiée ultérieurement.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
@@ -878,7 +893,7 @@ Cette nouvelle expérience utilisateur vous permet de décrire le problème avec
 ### <a name="role-based-access-control"></a>Contrôle d'accès en fonction du rôle
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Balises d’étendue pour les applications <!-- 1081941 -->
-Vous pouvez créer des étiquettes de délimitation afin de limiter l’accès pour les rôles et applications. Vous pouvez ajouter une étiquette de délimitation à une application afin que seules les personnes avec des rôles ayant également reçu cette étiquette de délimitation aient accès à l’application. Il n’est actuellement pas possible d’attribuer des balises d’étendue aux applications ajoutées à Intune par Google Play géré ou achetées avec le programme d’achat en volume (VPP) Apple (mais une prise en charge est à l’avenir). Pour plus d’informations, consultez [Utiliser des étiquettes de délimitation pour filtrer les stratégies](scope-tags.md).
+Vous pouvez créer des étiquettes de délimitation afin de limiter l’accès pour les rôles et applications. Vous pouvez ajouter une étiquette de délimitation à une application afin que seules les personnes avec des rôles ayant également reçu cette étiquette de délimitation aient accès à l’application. Il n’est actuellement pas possible d’attribuer des balises d’étendue aux applications ajoutées à Intune par Google Play géré ou achetées avec le programme d’achat en volume (VPP) Apple (une prise en charge future est planifiée). Pour plus d’informations, consultez [Utiliser des étiquettes de délimitation pour filtrer les stratégies](scope-tags.md).
 
 <!-- ########################## -->
 ## <a name="week-of-december-10-2018"></a>Semaine du 10 décembre 2018
@@ -908,7 +923,7 @@ Intune nécessite désormais macOS 10.12 ou une version ultérieure. Les appare
 Vous pouvez supprimer les applications de votre choix sur les appareils iOS supervisés appartenant à l’entreprise. Vous pouvez supprimer une application en ciblant des groupes d’utilisateurs ou des groupes d’appareils ayant le type d’affectation **Désinstaller**. Pour les appareils iOS personnels ou non supervisés, vous êtes toujours limité à la suppression des applications installées à l’aide d’Intune.
 
 #### <a name="downloading-intune-win32-app-content----2617320---"></a>Télécharger du contenu d’applications Win32 Intune <!-- 2617320 -->
-Les clients Windows 10 RS3 (et versions ultérieures) téléchargent du contenu d’applications Win32 Intune à l’aide d’un composant d’optimisation de la distribution sur le client Windows 10. L’optimisation de la distribution offre la fonctionnalité pair à pair, activée par défaut. Elle peut être configurée par la stratégie de groupe et, à l’avenir, par la gestion des appareils mobiles (MDM) Intune. Pour plus d’informations, voir [Optimisation de la distribution pour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Les clients Windows 10 RS3 (et versions ultérieures) téléchargent du contenu d’applications Win32 Intune à l’aide d’un composant d’optimisation de la distribution sur le client Windows 10. L’optimisation de la distribution offre la fonctionnalité pair à pair, activée par défaut. Actuellement, l’optimisation de la distribution peut être configurée par la stratégie de groupe. Pour plus d’informations, voir [Optimisation de la distribution pour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 #### <a name="end-user-device-and-app-content-menu----2771453---"></a>Menu contenu de l’application et appareil de l’utilisateur final <!-- 2771453 -->
 Les utilisateurs finaux peuvent désormais utiliser le menu contextuel sur l’appareil et dans les applications pour déclencher des actions courantes telles que la modification du nom d’un appareil ou la vérification de la conformité.

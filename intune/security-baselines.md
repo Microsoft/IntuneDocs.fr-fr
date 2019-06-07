@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb2bda30547779680a001b3c598b54d236f70ed
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045097"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374131"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Créer une base de référence de sécurité Windows 10 dans Intune
 
@@ -54,7 +54,8 @@ Les bases de référence de la sécurité suivantes sont disponibles pour une ut
   [Afficher les paramètres](security-baseline-settings-windows.md)
 
 - **PRÉVERSION : base de référence Windows Defender ATP**  
-  [Afficher les paramètres](security-baseline-settings-defender-atp.md)
+  [Afficher les paramètres](security-baseline-settings-defender-atp.md)  
+  *(Cette ligne de base est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
 
 
 ## <a name="prerequisites"></a>Prérequis
@@ -69,11 +70,12 @@ Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=20909), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)**. Vous obtenez la liste des bases de référence disponibles. 
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=20909), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)** . Vous obtenez la liste des bases de référence disponibles. 
 
     ![Sélectionnez une base de référence de sécurité pour configurer](./media/security-baselines/available-baselines.png)
 
-
+   >[!TIP]  
+   > La ligne de base Windows Defender ATP est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 2. Sélectionnez la base de référence que vous souhaitez utiliser, puis sélectionnez **Créer un profil**.  
 
 3. Dans l'onglet **Notions de base**, spécifiez les propriétés suivantes :

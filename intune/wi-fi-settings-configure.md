@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d6aab271e6c065dbdaac2359974457d8fae607
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7dc28a614514bf9b1a4987976cb057529b75a5fc
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050555"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412007"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Ajoutez et utilisez des paramètres Wi-Fi sur vos appareils dans Microsoft Intune
 
@@ -48,7 +48,7 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
-1. Dans le [Portail Azure](https://portal.azure.com), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**. 
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. Entrez un **Nom** et une **Description** pour le profil Wi-Fi.
 4. Dans la liste déroulante de la **Plateforme**, sélectionnez la plateforme de l’appareil auquel appliquer les paramètres Wi-Fi. Les options disponibles sont les suivantes :

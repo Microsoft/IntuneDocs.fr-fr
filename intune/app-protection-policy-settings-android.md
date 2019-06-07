@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9f421a54319878c4f985ecc08252d4e03a00919
-ms.sourcegitcommit: 95572ed540e90471963833c0bbf71478477b1813
+ms.openlocfilehash: 79edbf77f4f6b188d9fa4bf75ce8cacbad9dcf9c
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270008"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402788"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Paramètres de la stratégie de protection des applications Android dans Microsoft Intune
 Cet article décrit les paramètres de stratégie de protection d’application pour les appareils Android. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure.
@@ -35,8 +35,8 @@ Il existe trois catégories de paramètres de stratégie : les paramètres de p
 ### <a name="data-transfer"></a>Transfert de données
 | Paramètre | Procédure d'utilisation | Valeur par défaut |
 |------|------|------|
-| **Sauvegarder les données d’organisation sur les services de sauvegarde Android**  | Sélectionnez **Bloquer** pour empêcher cette application de sauvegarder les données professionnelles ou scolaires sur le [service de sauvegarde Android](https://developer.android.com/google/backup/index.html).<br><br> Sélectionnez **Autoriser** pour permettre à cette application de sauvegarder les données professionnelles ou scolaires.| **Autoriser** |
-| **Envoyer les données d’organisation à d’autres applications** | Spécifiez les applications qui peuvent recevoir des données à partir de cette application : <ul><li> **Applications gérées par la stratégie** : autoriser le transfert uniquement vers d’autres applications gérées par la stratégie.</li> <li>**Toutes les applications** : autoriser le transfert vers n'importe quelle application. </li> <li>**Aucune** : interdire le transfert de données vers n’importe quelle application, y compris d’autres applications gérées par la stratégie.</li></ul> <p>Intune peut toutefois autoriser par défaut le transfert de données vers certains services et applications exemptés. Par ailleurs, vous pouvez créer vos propres exemptions si vous devez autoriser le transfert de données vers une application qui ne prend pas en charge Intune APP. Pour plus d’informations, consultez [Exemptions au transfert de données](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Cette stratégie peut également s’appliquer aux liens d’application Android.  Les liens web généraux sont gérés par le paramètre de stratégie **Ouvrir les liens d’application dans Intune Managed Browser**.<p>**Remarque :** *Actuellement, Intune ne prend pas en charge la fonctionnalité Android Instant Apps. Intune bloque les connexions de données vers ou à partir de l’application. Pour plus d’informations, consultez [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) dans la documentation Android Developer.*</p>| **Toutes les applications** | 
+| **Sauvegarder les données d’organisation sur les services de sauvegarde Android** | Sélectionnez **Bloquer** pour empêcher cette application de sauvegarder les données professionnelles ou scolaires sur le [service de sauvegarde Android](https://developer.android.com/google/backup/index.html).<br><br> Sélectionnez **Autoriser** pour permettre à cette application de sauvegarder les données professionnelles ou scolaires.| **Autoriser** |
+| **Envoyer les données d’organisation à d’autres applications** | Spécifiez les applications qui peuvent recevoir des données à partir de cette application : <ul><li> **Applications gérées par la stratégie** : autoriser le transfert uniquement vers d’autres applications gérées par la stratégie.</li> <li>**Toutes les applications** : autoriser le transfert vers n'importe quelle application. </li> <li>**Aucune** : interdire le transfert de données vers n’importe quelle application, y compris d’autres applications gérées par la stratégie.</li></ul> <p>Intune peut toutefois autoriser par défaut le transfert de données vers certains services et applications exemptés. Par ailleurs, vous pouvez créer vos propres exemptions si vous devez autoriser le transfert de données vers une application qui ne prend pas en charge Intune APP. Pour plus d’informations, consultez [Exemptions au transfert de données](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Cette stratégie peut également s’appliquer aux liens d’application Android.  Les liens web généraux sont gérés par le paramètre de stratégie **Ouvrir les liens d’application dans Intune Managed Browser**.<p><div class="NOTE"><p>Remarque</p><p>Intune ne prend pas en charge la fonctionnalité Android Instant Apps. Intune bloque les connexions de données vers ou à partir de l’application. Pour plus d’informations, consultez [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) dans la documentation Android Developer.</p><p>Si l’option **Envoyer les données d’organisation à d’autres applications** est configurée pour **Toutes les applications**, les données de texte peuvent être transférées par le biais du partage du système d’exploitation dans le Presse-papiers.</p></div> | **Toutes les applications** | 
 |<ul><ui> **Sélectionner les applications à exclure** | Cette option est disponible quand vous sélectionnez *Applications gérées par la stratégie* pour l’option précédente. | |
 | **Recevoir des données d’autres applications** | Spécifiez quelles applications peuvent transférer des données vers cette application : <ul><li>**Applications gérées par la stratégie** : autoriser le transfert uniquement à partir d’autres applications gérées par la stratégie.</li><li>**Toutes les applications** : autoriser le transfert de données à partir de n’importe quelle application.</li><li>**Aucune** : interdire le transfert de données depuis n’importe quelle application, y compris d’autres applications gérées par la stratégie. </li></ul> <p>Intune peut toutefois autoriser le transfert de données à partir d’applications et de services exemptés. Pour obtenir la liste complète de ces applications et services, consultez [Exemptions au transfert de données](app-protection-policy-settings-android.md#data-transfer-exemptions). | **Toutes les applications** |
 | **Enregistrer des copies des données d’organisation** | Choisissez **Bloquer** pour interdire l’utilisation de l’option Enregistrer sous dans cette application. Choisissez **Autoriser** pour autoriser l’utilisation de l’option Enregistrer sous. **Remarque :** *Ce paramètre est pris en charge par Microsoft Excel, OneNote, PowerPoint et Word. Il se peut aussi qu’il soit pris en charge par des applications tierces et métier.*| **Autoriser** |  

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 06/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,19 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9884f1c5d794b527aeaf8fb522d9118d59468b3b
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041654"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506877"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
 Cet article fournit des réponses à certaines questions fréquemment posées sur la gestion des applications mobiles (MAM) Intune et la protection des applications Intune.
 
 ## <a name="mam-basics"></a>Notions de base de la MAM
-
 
 **Qu’est-ce-que la MAM ?**<br></br>
 La [gestion des applications mobiles Intune](/intune/app-lifecycle) se rapporte à la suite de fonctionnalités de gestion Intune qui vous permettent de publier, d’envoyer des notifications Push, de configurer, de sécuriser, de surveiller et de mettre à jour des applications mobiles pour vos utilisateurs.
@@ -45,7 +44,7 @@ La MAM Intune prend en charge deux configurations :
 
 ## <a name="app-protection-policies"></a>Stratégies de protection des applications
 
-**Que sont les stratégies de protection des applications** ?<br></br>
+**Que sont les stratégies de protection des applications ?**<br></br>
 Les stratégies de protection des applications sont des règles qui garantissent que les données d’une organisation sont sécurisées ou restent dans une application managée. Une stratégie peut être une règle qui est appliquée lorsque l’utilisateur tente d’accéder à des données « d’entreprise » ou de les déplacer, ou s’il tente un ensemble d’actions interdites ou surveillées lorsqu’il se trouve dans l’application.
 
 **Des exemples de stratégies de protection des applications sont-ils disponibles ?**<br></br>
@@ -72,6 +71,13 @@ Toute application intégrée avec le [Kit de développement logiciel (SDK) d’a
 - L’utilisateur final doit appartenir à un groupe de sécurité ciblé par une stratégie de protection des applications. La même stratégie de protection des applications doit cibler l’application spécifique utilisée. Des stratégies de protection des applications peuvent être créées et déployées dans la console Intune dans le [portail Azure](https://portal.azure.com). Des groupes de sécurité peuvent actuellement être créés dans le [centre d’administration Microsoft 365](https://admin.microsoft.com).
 
 - L’utilisateur final doit se connecter à l’application à l’aide de son compte AAD.
+
+**Que se passe-t-il si je souhaite activer une application avec Intune App Protection, mais qu’elle n’utilise pas une plateforme de développement d’applications prise en charge ?** 
+
+L’équipe de développement SDK Intune teste et maintient activement la prise en charge des applications générées avec les plateformes Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms et Cordova natives. Bien que certains clients aient réussi l’intégration du SDK Intune avec d’autres plateformes comme React Native et NativeScript, nous ne fournissons pas de conseils explicites ou de plug-ins pour les développeurs d’applications utilisant d’autres plateformes que celles que nous prenons en charge.
+
+**Le SDK d’application Intune prend-t-il en charge la bibliothèque d’authentification Microsoft (MSAL) ou des comptes de réseaux sociaux ?**<br></br>
+Le SDK d’application Intune utilise certaines fonctionnalités avancées de la bibliothèque ADAL pour les versions internes et de tiers du SDK. En l’état, MSAL ne fonctionne pas correctement dans la plupart de nos scénarios de base, comme l’authentification dans le service Intune App Protection et le lancement conditionnel. Étant donné que les instructions de l’équipe Microsoft Identity sont de passer à MSAL pour toutes les applications Microsoft Office, le SDK Intune devra la prendre en charge, mais cela n’est pas prévu pour le moment.
 
 **Quelles sont les exigences supplémentaires pour utiliser [l’application mobile Outlook ](https://products.office.com/outlook)?**
 
@@ -164,8 +170,7 @@ La protection d’applications Intune dépend de la cohérence de l’identité 
 **Existe-t-il un moyen sécurisé d’ouvrir des liens web depuis des applications gérées ?**<br></br>
 Oui ! L’administrateur informatique peut déployer et définir la stratégie de protection des applications pour [l’application Intune Managed Browser](app-configuration-managed-browser.md), un navigateur web développé par Microsoft Intune qui peut être géré facilement avec Intune. L’administrateur informatique peut exiger que tous les liens web dans les applications gérées par Intune soient ouverts à l’aide de l’application Managed Browser.
 
-**Le SDK d’application Intune prend-t-il en charge la bibliothèque d’authentification Microsoft (MSAL) ou des comptes de réseaux sociaux ?**
-Le SDK d’application Intune utilise certaines fonctionnalités avancées de la bibliothèque ADAL pour les versions internes et de tiers du SDK. En l’état, MSAL ne fonctionne pas correctement dans la plupart de nos scénarios de base, comme l’authentification dans le service Intune App Protection et le lancement conditionnel. Il n’est pas prévu à ce jour de la prendre en charge.
+
 
 ## <a name="app-experience-on-android"></a>Expérience d'application sur Android
 
@@ -199,13 +204,13 @@ Les contrôles de l’API SafetyNet Google Play Protect exigent que l’utilisat
 Les paramètres « Attestation d’appareil SafetyNet » et « Analyse des menaces sur les applications » exigent une version déterminée de Google Play Services pour fonctionner correctement. Dans la mesure où il s’agit de paramètres touchant la sécurité, l’utilisateur final sera bloqué s’il a été ciblé avec ces paramètres et qu’il ne dispose pas de la version appropriée des Services Google Play ou n’a pas accès à Google Play Services. 
 
 ## <a name="app-experience-on-ios"></a>Expérience d'application sur iOS
-**Que se passe-t-il si j’ajoute ou supprime une empreinte digitale ou un visage sur mon appareil ?**
+**Que se passe-t-il si j’ajoute ou supprime une empreinte digitale ou un visage sur mon appareil ?**<br></br>
 Les stratégies Intune de protection des applications permettent de restreindre l’accès aux utilisateurs qui disposent d’une licence Intune. L’un des moyens de contrôler l’accès à une application est d’exiger un Touch ID ou un Face ID Apple sur les appareils pris en charge. Le comportement suivant est implémenté: si un changement est apporté à la base de données biométrique de l’appareil, Intune invite l’utilisateur à entrer un code PIN la prochaine fois que le délai d’attente d’inactivité est atteint. Les changements apportés aux données biométriques incluent l’ajout et la suppression d’une empreinte digitale ou d’un visage. Si l’utilisateur Intune n’a pas défini de code PIN, il est dirigé vers la page de configuration d’un code PIN Intune.
  
 L’objectif est de sécuriser les données de votre organisation au sein de l’application. Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS 9.0.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être ajouté aux applications ciblées. Cette intégration se produit en continu et repose sur les équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer. 
   
 **Je suis en mesure d’utiliser l’extension de partage iOS pour ouvrir des données professionnelles ou scolaires dans des applications non gérées, même si la stratégie de transfert de données est définie sur les « applications gérées uniquement » ou sur « Aucune application ». Cela ne provoque-t-il pas de fuite de données ?**<br></br>
-La stratégie de protection des applications Intune ne peut pas contrôler l’extension de partage iOS sans gérer l’appareil. Par conséquent, Intune _**chiffre les données « d’entreprise » avant de les partager à l’extérieur de l’application**_. Vous pouvez valider cette action en essayant d’ouvrir le fichier « d’entreprise » en dehors de l’application gérée. Le fichier doit être chiffré et ne peut pas être ouvert en dehors de l’application gérée.
+La stratégie de protection des applications Intune ne peut pas contrôler l’extension de partage iOS sans gérer l’appareil. Par conséquent, Intune _**chiffre les données « d’entreprise » avant de les partager à l’extérieur de l’application**_ . Vous pouvez valider cette action en essayant d’ouvrir le fichier « d’entreprise » en dehors de l’application gérée. Le fichier doit être chiffré et ne peut pas être ouvert en dehors de l’application gérée.
 
 **Comment plusieurs paramètres d’accès de protection des applications Intune qui sont configurés pour le même ensemble d’applications et d’utilisateurs fonctionnent-ils sur iOS ?**<br></br>
 Les stratégies de protection des applications Intune pour l’accès sont appliquées dans un ordre spécifique sur les appareils des utilisateurs finaux quand ceux-ci tentent d’accéder à une application cible à partir de leur compte d’entreprise. En règle générale, une réinitialisation est prioritaire, suivie d’un blocage, puis d’un message d’avertissement. Par exemple, si cela s’applique à l’utilisateur/application en question, un paramètre de système d’exploitation iOS minimal qui signale à un utilisateur qu’il doit mettre à niveau sa version d’iOS est appliqué après le paramètre de système d’exploitation iOS minimal qui bloque l’accès à l’utilisateur. Ainsi, dans le scénario où l’administrateur informatique configure le système d’exploitation iOS minimal sur 11.0.0.0 et le système d’exploitation iOS minimal (Avertissement uniquement) sur 11.1.0.0, alors que l’appareil qui tente d’accéder à l’application utilise iOS 10, l’utilisateur final est bloqué sur la base du paramètre le plus restrictif pour la version de système d’exploitation iOS minimal qui provoque un blocage de l’accès.
