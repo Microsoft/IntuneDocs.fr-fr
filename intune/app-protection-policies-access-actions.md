@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 490c7312f510651cafc6ade516e5f7dca8131b3a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804686"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Intune
 
@@ -32,9 +32,7 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 
 ## <a name="create-an-app-protection-policy-using-access-actions"></a>Créer une stratégie de protection des applications à l’aide d’actions d’accès
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services** > **Intune**.  
-    Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Stratégie de protection d’application**.
 4. Cliquez sur **Ajouter une stratégie** (vous pouvez également modifier une stratégie existante). 
 5. Cliquez sur **Configurer les paramètres requis** pour afficher la liste des paramètres configurables pour la stratégie. 

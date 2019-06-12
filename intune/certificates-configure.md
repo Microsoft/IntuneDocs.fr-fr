@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37938287cc5ddde6285ec09aa0fffea56f98b3c3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e0e0eda1c60e420adcdab9364ecb0da1f52fe4e6
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048938"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713897"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Configurer un profil de certificat pour vos appareils dans Microsoft Intune
 
@@ -90,8 +90,7 @@ Vous importez ce certificat quand vous configurez un profil de certificat approu
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Étape 3 : Créer des profils de certificat approuvés
 Vous devez créer un profil de certificat approuvé pour pouvoir créer un profil de certificat SCEP ou PKCS. Un profil de certificat approuvé et un profil SCEP ou PKCS sont nécessaires pour chaque plateforme d’appareil. Les étapes de création de certificats approuvés sont similaires pour chaque plateforme d’appareil.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Sélectionnez **Configuration de l’appareil** > **Gérer** > **Profils** > **Créer un profil**.
 4. Entrez un **Nom** et une **Description** pour le profil de certificat approuvé.
 5. Dans la liste déroulante **Plateforme**, sélectionnez la plateforme d’appareil pour ce certificat approuvé. Les options disponibles sont les suivantes :
