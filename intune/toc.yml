@@ -270,7 +270,7 @@
         - name: Effacer un appareil macOS
           href: device-erase.md
         - name: Contrôler à distance les appareils mobiles
-          href: device-profile-android-teamviewer.md
+          href: teamviewer-support.md
         - name: Réinitialisation du code PIN Windows 10
           href: device-windows-pin-reset.md
         - name: Synchroniser l’appareil

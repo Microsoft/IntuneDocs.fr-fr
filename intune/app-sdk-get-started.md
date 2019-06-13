@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/29/2019
+ms.date: 06/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35f4007d03ca66ada5721de1ffe20dd87bfe4527
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: MTE75
+ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043791"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506875"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune
 
@@ -174,15 +174,12 @@ Si votre application utilise ses propres paramètres Azure Active Directory (AAD
 Une fois que vous avez inscrit votre application auprès d’un locataire Azure, et qu’elle s’affiche sous **Toutes les applications**, vous devez autoriser votre application à accéder au service de protection d’application Intune (précédemment appelé service MAM). Dans le portail Azure :
 
 1.  Accédez au panneau **Azure Active Directory**.
-2.  Sélectionnez la configuration d’**Inscription d’application** pour l’application.
-3.  Dans **Paramètres**, sous l’en-tête **Accès d’API**, sélectionnez **Autorisation requise**. 
-4.  Cliquez sur **+ Ajouter**.
-5.  Cliquez sur **Sélectionner une API**. 
-6.  Dans la zone de recherche, entrez **Gestion des applications mobiles Microsoft**.
-7.  Sélectionnez **Gestion des applications mobiles Microsoft** dans la liste des API et cliquez sur Sélectionner.
-8.  Sélectionnez **Lire et écrire les données de gestion d’application de l’utilisateur**.
-9.  Cliquez sur **Terminé**.
-10. Cliquez sur **Accorder des autorisations**, puis sur **Oui**. 
+2.  Sous **Inscriptions d’applications**, accédez à la liste configurée pour l’application.
+3.  Cliquez sur **+ Ajouter une autorisation**.
+4.  Cliquez sur **API utilisées par mon organisation**. 
+5.  Dans la zone de recherche, entrez **Gestion des applications mobiles Microsoft**.
+6.  Sous **Autorisations déléguées**, cochez la case **DeviceManagementManagedApps.ReadWrite : Lire et écrire les données de gestion d’application de l’utilisateur***.
+7. Cliquez sur **Ajouter des autorisations**.
 
 ### <a name="badge-your-app-optional"></a>Badger votre application (facultatif)
 

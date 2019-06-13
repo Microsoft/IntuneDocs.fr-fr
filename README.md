@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: fc2e17c605af2c9cec021724852bcf1b48012ba8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "58068947"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804423"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Code de conduite Microsoft Open Source
 
 Ce projet a adopté le [Code de conduite Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
 Pour plus d’informations, consultez le [Forum aux Questions sur le Code de conduite](https://opensource.microsoft.com/codeofconduct/faq/) ou contactez [opencode@microsoft.com](mailto:opencode@microsoft.com) si vous avez des questions ou des commentaires supplémentaires.
 
-# <a name="docsmicrosoftcom-github-repository"></a>Référentiel Github docs.microsoft.com 
+# <a name="docsmicrosoftcom-github-repository"></a>Référentiel Github docs.microsoft.com
 
 Vous avez trouvé l’un des dépôts GitHub qui héberge la source du contenu publié sur [https://docs.microsoft.com](https://docs.microsoft.com/.). C’est là où se trouve tout le contenu technique de la division Cloud & Enterprise de Microsoft.
 
@@ -20,24 +20,24 @@ Nous **sollicitons et encourageons les contributions** de la communauté (utilis
 
 * **Créez un compte GitHub** : l’inscription est gratuite sur [GitHub.com](https://www.github.com).
 
-* **Utiliser votre navigateur**: il existe deux options : 
+* **Utilisez votre navigateur** : deux options s’offrent à vous : 
 
-    **Option 1 : Modifier directement à partir de docs.microsoft.com**  
-    1. Consultez la rubrique, telles que [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/ntune/troubleshoot-policies-in-microsoft-intune). 
-    2. Sélectionnez **modifier** (en haut à droite). Voici le fichier markdown dans le référentiel GitHub.
-    3. Sélectionnez l’icône de crayon. Lorsque vous pointez sur l’icône de crayon, vous verrez la **modifier ce fichier** info-bulle. 
-    4. Apportez vos modifications, puis **validation** vos modifications. 
-    5. Créer la requête de tirage.
+    **Option 1 : Modifier directement à partir de docs.microsoft.com**  
+    1. Consultez la rubrique, par exemple [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
+    2. Sélectionnez **Modifier** (en haut à droite). Le fichier Markdown dans le dépôt GitHub s’affiche.
+    3. Sélectionnez l’icône de crayon. Quand vous pointez sur l’icône de crayon, l’info-bulle **Modifier ce fichier** s’affiche. 
+    4. Apportez les changements souhaités, puis **validez**-le. 
+    5. Créez une demande de tirage (pull request).
     
-    **Option 2 : Recherchez l’article dans ce référentiel et mettre à jour**  
-    1.  La plupart des sujets sont dans `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Dans ce dossier, recherchez le nom de la rubrique, telles que `troubleshoot-policies-in-microsoft-intune`. 
-    2. Sélectionnez le lien, puis cliquez sur l’icône de crayon. Lorsque vous pointez sur l’icône de crayon, vous verrez la **modifier ce fichier** info-bulle. 
-    3. Apportez vos modifications, puis **validation** vos modifications. 
-    4. Créer la requête de tirage. 
+    **Option 2 : Rechercher l’article dans ce dépôt et effectuer une mise à jour**  
+    1.  La plupart des rubriques se trouvent dans `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Dans ce dossier, recherchez le nom de la rubrique, par exemple `troubleshoot-policies-in-microsoft-intune`. 
+    2. Sélectionnez le lien, puis cliquez sur l’icône de crayon. Quand vous pointez sur l’icône de crayon, l’info-bulle **Modifier ce fichier** s’affiche. 
+    3. Apportez les changements souhaités, puis **validez**-le. 
+    4. Créez une demande de tirage (pull request). 
 
   Quand vous effectuez un changement, vous pouvez être invité à signer un contrat de licence. Cette tâche ne doit être effectuée qu’une seule fois. Si vous effectuez à l’avenir d’autres changements sous votre nom d’utilisateur GitHub, aucune signature ne sera demandée. 
   
-  La valeur dans la `author` métadonnées (en haut de chaque rubrique) répertorie l’auteur de GitHub. Dans le `troubleshoot-policies-in-microsoft-intune` exemple, vous verrez `MandiOhlinger`. Dans votre demande de tirage, vous pouvez également mentionner (@*authorValue*) l’auteur si vous le souhaitez.
+  La valeur affichée dans les métadonnées `author` (en haut de chaque rubrique) indique l’auteur GitHub. Pour l’exemple `troubleshoot-policies-in-microsoft-intune`, vous verrez `MandiOhlinger`. Dans votre demande de tirage, vous pouvez également mentionner(@*authorValue*) l’auteur si vous le souhaitez.
   
 * **Employés MSFT** : après avoir créé un compte GitHub, liez-le à votre adresse e-mail Microsoft. En liant votre compte, vous n’êtes pas tenu de signer un contrat de licence pour effectuer un changement. Étapes :
 

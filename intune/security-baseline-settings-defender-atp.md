@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: a58095612d6e76d4a1cb633e69260267dcfd9999
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373509"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749908"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Paramètres de bases de référence de Windows Defender Advanced Threat Protection pour Intune
 
-Afficher les paramètres de bases de référence de Microsoft Defender Advanced Threat Protection (anciennement Windows Defender Advanced Threat Protection) qui sont pris en charge par Microsoft Intune. Les valeurs par défaut dans cet article représentent la configuration de la base de référence par défaut pour Intune. Ces valeurs par défaut représentent la configuration recommandée pour Intune et peuvent ne pas correspondent aux valeurs par défaut de Windows.
+Afficher les paramètres de bases de référence de Microsoft Defender Advanced Threat Protection (anciennement Windows Defender Advanced Threat Protection) qui sont pris en charge par Microsoft Intune. Les valeurs par défaut de la base de référence Advanced Threat Protection (ATP) représentent la configuration recommandée pour ATP. Elles peuvent ne pas correspondent aux valeurs par défaut pour d’autres bases de référence de sécurité.  
 
   Ligne de base Microsoft Defender Advanced Threat Protection est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
 
@@ -33,7 +33,7 @@ Afficher les paramètres de bases de référence de Microsoft Defender Advanced 
 
 
 > [!NOTE]  
-> Les paramètres de base de référence de Windows Defender Advanced Threat Protection (WDATP) sont en **Préversion**. En préversion, la liste des paramètres disponibles et l’ordre dans lequel ce contenu les présente varient en fonction de ce qui est disponible dans le portail. 
+> Les paramètres de base de référence ATP sont en **préversion**. En préversion, la liste des paramètres disponibles et l’ordre dans lequel ce contenu les présente varient en fonction de ce qui est disponible dans le portail.  
 >
 > Lorsque les paramètres de base de référence sont hors Préversion, ce contenu est mis à jour pour correspondre à une liste actuelle des paramètres de base de référence de la sécurité pris en charge par Intune.
 

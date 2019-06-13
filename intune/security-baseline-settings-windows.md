@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 82fa4fc7f9e60dff3c08adf3281351cbfa8eb743
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045049"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749935"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité Windows pour Intune  
 
-Consultez les [paramètres de base de référence de la sécurité Windows](security-baselines.md) pris en charge par Intune.  
+Consultez les [paramètres de base de référence de la sécurité Windows](security-baselines.md) pris en charge par Intune. Les valeurs par défaut de la base de référence Windows représentent la configuration recommandée pour Windows. Elles peuvent ne pas correspondent aux valeurs par défaut d’autres bases de référence de sécurité.  
 
 > [!NOTE]  
-> Les paramètres de base de référence de la sécurité Windows sont en préversion. En préversion, la liste des paramètres disponibles et l’ordre dans lequel ce contenu les présente varient en fonction de ce qui est disponible dans le portail.  
+> Les paramètres de base de référence de sécurité Windows sont en **préversion**. En préversion, la liste des paramètres disponibles et l’ordre dans lequel ce contenu les présente varient en fonction de ce qui est disponible dans le portail.  
 >  
 > Lorsque les paramètres de base de référence sont hors préversion, ce contenu est mis à jour avec la liste hors préversion des paramètres de base de référence de sécurité pris en charge par Intune.  
 
@@ -882,7 +882,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Désactivé  
   
-- **Internet Explorer > Zone restreinte : Inclure le chemin local lors du chargement des fichiers sur un serveur**   </br> Ce paramètre de stratégie spécifie si les informations du chemin d’accès local sont envoyées ou non lorsque l’utilisateur charge un fichier via un formulaire HTML. Si les informations de chemin local sont envoyées, certaines informations peuvent être involontairement révélées au serveur. Par exemple, des fichiers envoyés à partir du Bureau de l’utilisateur peuvent avoir un chemin contenant le nom de l’utilisateur. Si vous activez ce paramètre de stratégie, les informations de chemin sont envoyées lorsque l’utilisateur charge un fichier via un formulaire HTML. Si vous désactivez ce paramètre de stratégie, les informations de chemin sont supprimées lorsque l’utilisateur charge un fichier via un formulaire HTML. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut choisir si les informations du chemin d’accès sont envoyées lorsqu’il charge un fichier via un formulaire HTML. Par défaut, les informations de chemin sont envoyées.
+- **Internet Explorer > Zone restreinte : Inclure le chemin local lors du chargement des fichiers sur un serveur**  </br> Ce paramètre de stratégie spécifie si les informations du chemin d’accès local sont envoyées ou non lorsque l’utilisateur charge un fichier via un formulaire HTML. Si les informations de chemin local sont envoyées, certaines informations peuvent être involontairement révélées au serveur. Par exemple, des fichiers envoyés à partir du Bureau de l’utilisateur peuvent avoir un chemin contenant le nom de l’utilisateur. Si vous activez ce paramètre de stratégie, les informations de chemin sont envoyées lorsque l’utilisateur charge un fichier via un formulaire HTML. Si vous désactivez ce paramètre de stratégie, les informations de chemin sont supprimées lorsque l’utilisateur charge un fichier via un formulaire HTML. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut choisir si les informations du chemin d’accès sont envoyées lorsqu’il charge un fichier via un formulaire HTML. Par défaut, les informations de chemin sont envoyées.
   
   **Par défaut** : Désactivé  
   
