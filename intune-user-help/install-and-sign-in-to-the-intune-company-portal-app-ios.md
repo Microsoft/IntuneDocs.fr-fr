@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e861348e3ba8e3caef92eac04899d48cc790262a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bc2173e2972e422ac629331110d3b86b787765da
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55842792"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040953"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installer l’application Portail d’entreprise et s’y connecter
 
@@ -37,6 +37,6 @@ Installez l’application Portail d’entreprise sur votre appareil iOS pour acc
 
 3.  Ouvrez l’application Portail d’entreprise, entrez votre adresse e-mail professionnelle ou scolaire ainsi que votre mot de passe, puis appuyez sur **Se connecter**.
 
-    Si vous vous connectez à l’application Portail d’entreprise pour la première fois et que votre entreprise ou établissement scolaire utilise Intune, vous êtes invité à inscrire votre appareil dans Intune. Pour cela, suivez les étapes décrites dans la rubrique [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md). Vous pouvez également [vous connecter à l’aide d’un autre appareil](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
+    Si vous vous connectez à l’application Portail d’entreprise pour la première fois et que votre entreprise ou établissement scolaire utilise Intune, vous êtes invité à inscrire votre appareil dans Intune. Pour cela, suivez les étapes décrites dans la rubrique [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md). Vous pouvez également [vous connecter à l’aide d’un autre appareil](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

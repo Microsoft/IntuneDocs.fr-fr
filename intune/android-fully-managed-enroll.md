@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9edfa2ec7a408f512d4cb0b99a468db0b29f5868
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f1b1197671b54cb5374bd79b6acbeb8137c0135c
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044207"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819897"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Configurer l’inscription Intune des appareils Android Entreprise entièrement gérés (préversion)
 
@@ -55,8 +55,11 @@ Pour configurer la gestion d’appareils Android Entreprise entièrement gérés
 
 ### <a name="enable-corporate-owned-user-devices"></a>Activer les appareils utilisateur appartenant à l’entreprise
 
-1. Accédez au [portail Intune](https://portal.azure.com) et choisissez **Inscription d’appareil** > **Inscription Android** > **Appareils utilisateur entièrement gérés appartenant à l’entreprise (préversion)**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Inscription d’appareil** > **Inscription Android** > **Appareils utilisateur entièrement gérés appartenant à l’entreprise (préversion)** .
 2. Sous **Autoriser les utilisateurs à inscrire des appareils d’utilisateur appartenant à l’entreprise**, choisissez **Oui**.
+
+[!NOTE]
+Si vous avez une stratégie d’accès conditionnel Azure AD définie qui utilise le contrôle *	Exiger que l’appareil soit marqué comme conforme* et qui s’applique à **toutes les applications cloud**, à **Android** et aux **navigateurs**, vous devez exclure l’application cloud **Microsoft Intune** de cette stratégie. En effet, les processus de configuration Android utilisent un onglet Chrome pour authentifier vos utilisateurs pendant l’inscription. Pour plus d’informations, consultez la [documentation sur l’accès conditionnel Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 Si vous choisissez **Oui**, vous recevez un jeton d’inscription (chaîne aléatoire) et un code QR pour votre locataire Intune. Ce jeton d’inscription unique est valide pour tous vos utilisateurs et n’expire pas. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour inscrire l’appareil kiosque.
 

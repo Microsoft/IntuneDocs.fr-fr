@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6276f38eed4d20e7e81437c2ba3e2c9bc58ae1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047746"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819740"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Guide pratique pour utiliser Azure AD afin d’accéder aux API Intune dans Microsoft Graph
 
@@ -61,7 +61,7 @@ Pour en savoir plus, consultez :
 
 Pour inscrire une application pour qu’elle utilise l’API Microsoft Graph :
 
-1.  Connectez-vous au [portail Azure](https://portal.azure.com) à l’aide des informations d’identification administratives.
+1.  Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) à l’aide des informations d’identification administratives.
 
     Selon le cas, vous pouvez utiliser :
     - Le compte d’administrateur du client.

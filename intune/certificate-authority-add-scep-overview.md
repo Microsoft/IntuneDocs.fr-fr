@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ed95507d8a7486bc1c1cca2c2a067658239eed8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5124796166f27823b7a13b0f3dd239446f778850
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043540"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713868"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -87,7 +87,7 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
    > [!IMPORTANT]  
    > Avant de quitter cette page, copiez la valeur de la clé secrète client et enregistrez-la pour une utilisation ultérieure avec votre implémentation d’autorité de certification tierce. Cette valeur ne s’affiche plus. Veillez à consulter les instructions de configuration souhaitées par votre autorité de certification tierce pour l’ID d’application, la clé d’authentification et l’ID de locataire.  
 
-6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com*, votre ID de locataire est **name.onmicrosoft.com**.  
+6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com* , votre ID de locataire est **name.onmicrosoft.com**.  
 
 7. Dans le volet de navigation de l’application, accédez à **Autorisations d’API** sous **Gérer**, puis sélectionnez **Ajouter une autorisation**.  
 
@@ -123,6 +123,7 @@ Les autorités de certification tierces suivantes prennent en charge Intune :
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 
 Si vous êtes une autorité de certification tierce intéressée par l’intégration de votre produit à Intune, passez en revue les instructions de l’API :
 

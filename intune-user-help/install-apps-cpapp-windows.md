@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 05/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
+ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56742531"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66828953"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installer et partager des applications sur votre appareil
 Installez des applications sur votre appareil à partir de l’application Portail d’entreprise pour Windows.
@@ -70,6 +70,10 @@ Une fois que vous avez partagé l’application, le destinataire reçoit un lien
 Votre organisation sélectionne les applications appropriées qui vous sont utiles dans votre environnement professionnel ou scolaire. Ces applications sont les seules que vous trouverez dans le Portail d’entreprise.  
 
 Des applications sont également mises à votre disposition en fonction de votre type d’appareil. Par exemple, si vous utilisez l’application Portail d’entreprise pour Windows, vous avez accès aux applications Windows, mais pas aux applications iOS.  
+
+## <a name="required-apps"></a>Applications requises  
+
+Votre organisation peut déployer des applications directement sur votre appareil et les marquer en tant que **requis**. Ces applications sont automatiquement installées pour vous sans intervention.
 
 ## <a name="request-an-app-for-work-or-school"></a>Demander une application dans le cadre professionnel ou scolaire  
 Si vous avez besoin d’une application qui ne figure pas dans le Portail d’entreprise, demandez-la. Recherchez les coordonnées de votre **Support technique** dans l’application Portail d’entreprise, au sein de la page Aide et support. Vous trouverez les mêmes informations de contact sur le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).    

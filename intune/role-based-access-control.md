@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7419a316018ed5c883f89a51090a852680cd9e38
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4c4b9f1d1dd0072555d8438940969b7abd0a9fff
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804484"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -30,6 +30,8 @@ Le contrôle d’accès en fonction du rôle (RBAC) vous permet de gérer qui a 
 Pour créer, modifier ou affecter des rôles, votre compte doit posséder l'une des autorisations suivantes dans Azure AD :
 - **Administrateur général**
 - **Administrateur du service Intune** (également appelé **Administrateur Intune**)
+
+Pour obtenir des conseils et des suggestions sur Intune RBAC, vous pouvez consulter cette série de cinq vidéos qui présentent des exemples et procédures pas à pas : [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
 
 ## <a name="roles"></a>Rôles
 Un rôle définit le jeu d’autorisations accordées aux utilisateurs affectés à ce rôle.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374086"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819876"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Windows Defender ATP avec accès conditionnel dans Intune
 
@@ -52,8 +52,7 @@ Pour utiliser ATP avec Intune, les éléments suivants doivent être configurés
 
 ## <a name="enable-windows-defender-atp-in-intune"></a>Activer Windows Defender ATP dans Intune
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Sélectionnez **Conformité de l’appareil** > **Windows Defender ATP** > **Ouvrir le Centre de sécurité Windows Defender**.
 
     ![Sélectionner l’option pour ouvrir le Centre de sécurité Windows Defender](./media/atp-device-compliance-open-windows-defender.png)
@@ -132,7 +131,7 @@ La stratégie d’accès conditionnel bloque l’accès aux ressources *si* l’
 > [!TIP]  
 > L’accès conditionnel est une technologie Azure Active Directory (Azure AD). Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.  
 
-1. Dans le [portail Azure](https://portal.azure.com), ouvrez **Intune** > **Accès conditionnel** > **Nouvelle stratégie**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et sélectionnez **Accès conditionnel** > **Nouvelle stratégie**.
 2. Entrez un **Nom** de stratégie, puis sélectionnez **Utilisateurs et groupes**. Utilisez les options Inclure et Exclure pour ajouter vos groupes à la stratégie, puis sélectionnez **Terminé**.
 3. Sélectionnez **Applications cloud**, puis choisissez les applications à protéger. Par exemple, choisissez **Sélectionner les applications**, puis sélectionnez **Office 365 SharePoint Online** et **Office 365 Exchange Online**.
 

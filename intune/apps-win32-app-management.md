@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b3a566fd5c040e1c0007c10b1b57a64788a2323
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043821"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804703"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -97,8 +97,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 
-1.  Connectez-vous au [portail Azure](https://portal.azure.com/).
-2.  Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3.  Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications** > **Ajouter**.
 4.  Dans le volet d’application **Ajouter**, sélectionnez **Application Windows (Win32)** dans la liste déroulante fournie.
 
@@ -342,12 +341,50 @@ Les journaux de l’agent sur l’ordinateur client sont souvent dans `C:\Progra
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 
-Pour plus d’informations sur la résolution des problèmes liés aux applications Win32, consultez [Résolution des problèmes d’installation des applications Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Détection de la version du fichier d’application Win32 à l’aide de PowerShell
 
-### <a name="troubleshooting-areas-to-consider"></a>Zones de résolution de problèmes à prendre en compte
+Si vous rencontrez des difficultés pour détecter la version du fichier d’application Win32, envisagez d’utiliser ou de modifier la commande PowerShell suivante :
+
+``` PowerShell
+
+$FileVersion = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+#The below line trims the spaces before and after the version name
+$FileVersion = $FileVersion.Trim();
+if ("<file version of successfully detected file>" -eq $FileVersion)
+{
+#Write the version to STDOUT by default
+$FileVersion
+exit 0
+}
+else
+{
+#Exit with non-zero failure code
+exit 1
+}
+
+```
+Dans la commande PowerShell ci-dessus, remplacez la chaîne `<path to binary file>` par le chemin de votre fichier d’application Win32. Voici un exemple de chemin :<br>
+`C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+
+De plus, remplacez la chaîne `<file version of successfully detected file>` par la version du fichier que vous avez besoin de détecter. Voici un exemple de chaîne de version du fichier :<br>
+`2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
+
+Si vous avez besoin d’obtenir les informations de version de votre application Win32, vous pouvez utiliser la commande PowerShell suivante :
+
+``` PowerShell
+
+[System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+
+```
+
+Dans la commande PowerShell ci-dessus, remplacez `<path to binary file>` par le chemin de votre fichier.
+
+### <a name="additional-troubleshooting-areas-to-consider"></a>Autres domaines de résolution des problèmes à prendre en compte
 - Vérifiez le ciblage pour être sûr que l’agent est installé sur l’appareil : une application Win32 ciblée sur un groupe ou un script PowerShell ciblé sur un groupe crée une stratégie d’installation d’agent pour le groupe de sécurité.
 - Vérifiez la version du système d’exploitation : Windows 10 1607 et versions ultérieures.  
 - Vérifiez la référence de Windows 10 : Windows 10 S, ou les versions de Windows s’exécutant avec le mode S activé, ne prend pas en charge l’installation de MSI.
+
+Pour plus d’informations sur la résolution des problèmes liés aux applications Win32, consultez [Résolution des problèmes d’installation des applications Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

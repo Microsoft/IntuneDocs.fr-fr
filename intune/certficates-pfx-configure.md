@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/08/2019
+ms.date: 06/05/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: c1119a5681033574ec0a114442b122990da872bf
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454059"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749815"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -249,12 +249,17 @@ Des mises à jour pour les deux connecteurs de certificats sont régulièrement 
 
 Le *connecteur de certificats PFX pour Microsoft Intune* [prend en charge les mises à jour automatiques](#requirements), tandis que le *conteneur de certificat Intune* est mis à jour manuellement.
 
-### <a name="may-6-2019"></a>6 mai 2019
+### <a name="may-17-2019"></a>17 mai 2019  
+- **PFX Certificates Connector pour Microsoft Intune - version 6.1905.0.404**  
+  Modifications de cette version :  
+  - Correction d’un problème pouvant entraîner l’arrêt du traitement des nouvelles demandes par le connecteur en raison du retraitement continuel des certificats PFX existants. 
+
+### <a name="may-6-2019"></a>6 mai 2019  
 - **Connecteur de certificats PFX pour Microsoft Intune - version 6.1905.0.402**  
   Modifications de cette version :  
   - L’intervalle d’interrogation pour le connecteur est réduit de cinq minutes à 30 secondes.
  
-### <a name="april-2-2019"></a>2 avril 2019
+### <a name="april-2-2019"></a>2 avril 2019  
 - **Connecteur de certificat Intune - version 6.1904.1.0**  
   Modifications de cette version :  
   - Correction d’un problème pouvant entraîner l’échec de l’inscription du connecteur auprès d’Intune après la connexion au connecteur avec un compte d’administrateur général.  
