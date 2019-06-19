@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d58a10e62e4ff65c0c1589fcf948a6704224bc51
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: c0a83526a2e9333c0e6a131e59cee29a4a76fffa
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402744"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041196"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -186,7 +186,7 @@ Si la gestion des appareils mobiles ne vous intéresse pas, vous pouvez utiliser
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot pour les appareils existants
 
-Vous pouvez regrouper des appareils Windows par ID de corrélation lors de l’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) par le biais de Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. L’[attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) est automatiquement défini pour être égal à « OfflineAutopilotprofile-\<ID de corrélation\> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation à l’aide de l’attribut enrollmentprofileName.
+Vous pouvez regrouper des appareils Windows par ID de corrélation lors de l’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) par le biais de Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. L’[attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) est automatiquement défini pour être égal à « OfflineAutopilotprofile-\<ID de corrélation\> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation à l’aide de l’attribut enrollmentprofileName.
 
 >[!WARNING] 
 > Étant donné que l’ID de corrélation n’est pas prélisté dans Intune, l’appareil peut signaler l’ID de corrélation de son choix. Si l’utilisateur crée un ID de corrélation correspondant à un nom de profil DEP Apple ou Autopilot, l’appareil est ajouté à n’importe quel groupe d’appareils Azure AD dynamiques basé sur l’attribut enrollmentProfileName. Pour éviter ce conflit :

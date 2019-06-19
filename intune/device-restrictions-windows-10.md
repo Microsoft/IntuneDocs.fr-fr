@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
-ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
-ms.translationtype: MTE75
+ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354217"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041129"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -430,9 +430,9 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Dev
     > [!IMPORTANT]
     > Lorsque la configuration requise du mot de passe est modifiée sur un ordinateur de bureau Windows, les utilisateurs sont affectés lors de leur prochaine connexion, car c’est à ce moment-là que l’appareil passe d’inactif à actif. Les utilisateurs dont les mots de passe sont conformes à la configuration requise sont toujours invités à modifier leur mot de passe.
     
-  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs d’authentification autorisés avant réinitialisation de l’appareil (de 1 à 11) `0` (zéro) peut désactiver la fonctionnalité de réinitialisation de l’appareil.
+  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs d’authentification autorisés avant réinitialisation de l’appareil (jusqu’à 11). Le numéro valid que vous entrez dépend de l’édition. [Fournisseur de services cryptographiques DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) répertorie les valeurs prises en charge. `0` (zéro) peut désactiver la fonctionnalité de réinitialisation de l’appareil.
 
-    Ce paramètre a un impact différent selon l’édition. Pour obtenir des informations spécifiques, consultez la section sur le [fournisseur de service de configuration DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
+    Ce paramètre a également un impact différent selon l’édition. Pour obtenir des informations spécifiques sur ce paramètre, consultez la section sur le [fournisseur de service de configuration DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Nombre maximal de minutes d’inactivité avant le verrouillage de l’appareil** : entrez la durée pendant laquelle l’appareil doit être inactif avant le verrouillage de l’écran.
   - **Expiration du mot de passe (jours)**  : entrez la durée (en jours) après laquelle le mot de passe de l’appareil doit être modifié (de 1 à 365). Par exemple, entrez `90` pour que le mot de passe expire après 90 jours.
@@ -470,7 +470,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 Vous pouvez ajouter des applications qui doivent avoir un comportement de confidentialité différent de celui défini dans « Confidentialité par défaut ».
 
 - **Nom du package** : nom de famille du package d'application.
-- **Nom de l’application ** : nom de l’application.
+- **Nom de l’application**  : nom de l’application.
 
 ### <a name="exceptions"></a>Exceptions
 
@@ -615,7 +615,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sta
 - **Mode de l’écran de démarrage** : choisir comment afficher l’écran de démarrage. Les options disponibles sont les suivantes :
   - **Défini par l’utilisateur** : ne force pas la taille de Démarrer. Les utilisateurs peuvent définir la taille.
   - **Plein écran** : force une taille en plein écran de Démarrer.
-  - **Ne pas utiliser le plein écran ** : force une taille non-plein écran de Démarrer.
+  - **Ne pas utiliser le plein écran**  : force une taille non-plein écran de Démarrer.
 - **Éléments ouverts récemment dans les listes de raccourcis** : **Bloquer** masque les listes de raccourcis dans le menu Démarrer et la barre des tâches. Le bouton bascule correspondant dans l’application Paramètres est également désactivé. **Non configuré** (valeur par défaut) affiche les éléments récemment ouverts dans les listes de raccourcis.
 - **Liste d’applications**: choisissez comment les listes d’applications sont affichées. Les options disponibles sont les suivantes :
   - **Défini par l’utilisateur** : aucun paramètre n’est forcé. Les utilisateurs choisissent la façon dont la liste d’applications est présentée sur l’appareil.

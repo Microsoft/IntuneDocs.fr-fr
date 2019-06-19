@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ddd08baa99ebf7d6e7701d8345e42a72f0dbd57
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: db7f008e67c0523a373da24dd0a04f3556d9dd4c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046570"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031379"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Intégrer Zimperium à Intune
 
@@ -31,7 +31,7 @@ Suivez les étapes ci-dessous pour intégrer la solution Zimperium Mobile Threat
 ## <a name="before-you-begin"></a>Avant de commencer
 
 > [!NOTE]
-> Les étapes suivantes doivent être effectuées dans la  [console Zimperium MTD](https://sso.zimperium.com/signon/aad/).
+> Les étapes suivantes doivent être effectuées dans la  [console Zimperium MTD](https://www.zimperium.com/platform).
 
 Avant d’entamer le processus d’intégration de Zimperium à Intune, vérifiez que vous disposez de l’abonnement et des informations d’identification suivantes :
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur le consentement et les applications Azure Active 
 
 ## <a name="to-set-up-zimperium-integration"></a>Pour configurer l’intégration de Zimperium
 
-1.  Accédez à la [console Zimperium MTD](https://sso.zimperium.com/signon/aad/) et connectez-vous avec vos informations d’identification. Pour effectuer le processus de configuration de l’intégration de Zimperium, vous devez vous connecter avec un utilisateur Azure Active Directory qui a le rôle Administrateur général. Cette opération de configuration unique utilise les droits Administrateur général pour accorder l’autorisation dans votre organisation aux applications Zimperium de communiquer avec Intune. 
+1.  Accédez à la [console Zimperium MTD](https://www.zimperium.com/platform) et connectez-vous avec vos informations d’identification. Pour effectuer le processus de configuration de l’intégration de Zimperium, vous devez vous connecter avec un utilisateur Azure Active Directory qui a le rôle Administrateur général. Cette opération de configuration unique utilise les droits Administrateur général pour accorder l’autorisation dans votre organisation aux applications Zimperium de communiquer avec Intune. 
 
 2.  Choisissez **Management** (Administration) dans le menu de gauche.
 

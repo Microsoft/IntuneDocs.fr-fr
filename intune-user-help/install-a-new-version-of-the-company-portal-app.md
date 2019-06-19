@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2018
+ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fcee9a5d721eb3c898c65e18c6fd56189739ffa
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
+ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840526"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840958"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Guide pratique pour mettre à jour l’application Portail d’entreprise
 
@@ -29,7 +29,7 @@ Cet article décrit comment mettre à jour votre version de l’application Port
 * Une version plus récente de Portail d’entreprise est disponible.
 * Votre version de Portail d’entreprise n’est plus prise en charge.
 
-Ces étapes décrivent comment mettre à jour votre version avec la dernière version de l’application sur les appareils Android, iOS et Windows, ou comment obtenir cette version.    
+Ces étapes décrivent comment mettre à jour votre version avec la dernière version de l’application sur les appareils Android, iOS, macOS et Windows, ou comment obtenir cette version.    
 
 ## <a name="update-the-company-portal-app-on-your-android-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil Android  
 
@@ -41,6 +41,16 @@ Quand une nouvelle version est disponible, une option **Mettre à jour** appara�
 
 1. Ouvrez l’App Store et recherchez **Intune**.  
 2. Quand vous avez trouvé l’application, appuyez sur **Mettre à jour**.  
+
+## <a name="update-the-company-portal-app-on-your-macos-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil macOS
+
+Configurer le portail d’entreprise pour installer automatiquement les mises à jour dès qu’elles sont disponibles. 
+
+1. Ouvrez le portail d’entreprise et accédez à **aide**. 
+2. Sélectionnez **Rechercher les mises à jour**. 
+3. Dans l’écran de Microsoft AutoUpdate, sélectionnez **télécharger et installer automatiquement**. 
+
+Pour afficher les mises à jour disponibles, sélectionnez **vérifier les mises à jour**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil Windows
 Pour obtenir automatiquement les mises à jour dès leur mise à disposition, ouvrez Microsoft Store et accédez à **Paramètres**. Activez ensuite l’option **Mises à jour des applications**. Pour afficher les mises à jour récentes et les applications figurant dans la file d’attente de téléchargement, accédez à **Téléchargements et mises à jour**.  

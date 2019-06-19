@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5808a4b81fcc66d37e78c50cb5bcd2ae7bbe44e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049604"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045530"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -726,7 +726,7 @@ L’accès conditionnel est une [fonctionnalité](https://docs.microsoft.com/azu
 
 1. Suivez les [instructions d’intégration de la bibliothèque d’authentification Active Directory(ADAL)](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Consultez en particulier l’étape 11 pour l’utilisation du service Broker.
-2. [Inscrire votre application auprès d’Azure Active Directory] (https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)) 
+2. [Inscrire votre application auprès d’Azure Active Directory] (https://docs.microsoft.com/azure/active-directory/active-directory-app-registration) ) 
    L’URI de redirection se trouve dans les instructions d’intégration d’ADAL ci-dessus.
 3. Définissez les paramètres des métadonnées du manifeste selon les indications de [Configurations ADAL courantes](#common-adal-configurations), élément 2, ci-dessus.
 4. Testez si tout est configuré correctement en activant [l’accès conditionnel basé sur les appareils](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) dans le [portail Azure](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) et en vérifiant
