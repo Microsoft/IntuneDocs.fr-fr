@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 06/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef2db158e0572c1eec056a1d6e33b4b97aea77a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d6366034af09acdbecdc0cb0e670f6d57766b35
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047015"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197532"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareils Windows Holographic for Business à exécuter en tant que kiosques dans Intune
 
@@ -64,7 +64,7 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
 - **Applications** : ajoutez les applications à exécuter sur l’appareil kiosque. N’oubliez pas que vous pouvez ajouter plusieurs applications.
 
-  - **Ajouter des applications Store** : sélectionnez une application existante que vous avez ajoutée avec [Applications clientes](apps-add.md). Si vous n’avez aucune application répertoriée, vous pouvez obtenir des applications et [les ajouter à Intune](store-apps-windows.md).
+  - **Ajouter des applications de Store**: sélectionner une application existante, vous avez ajouté ou déployé à Intune en tant que [les applications clientes](apps-add.md), y compris les applications métier. Si vous n’avez pas toutes les applications répertoriées, Intune prend en charge plusieurs [types d’application](apps-add.md) que vous avez [ajouter à Intune](store-apps-windows.md).
   - **Ajouter une application Win32** : pas pris en charge sur Windows Holographic for Business.
   - **Ajouter par AUMID** : utilisez cette option pour ajouter des applications Windows de boîte de réception. Entrez les propriétés suivantes : 
 
