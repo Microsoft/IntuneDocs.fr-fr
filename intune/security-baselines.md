@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: bb1ddcadcac1ec9b4730a5dcd66abca111d80196
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374131"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251207"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Créer une base de référence de sécurité Windows 10 dans Intune
 
@@ -70,7 +70,7 @@ Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=20909), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)** . Vous obtenez la liste des bases de référence disponibles. 
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité (préversion)** . Vous obtenez la liste des bases de référence disponibles. 
 
     ![Sélectionnez une base de référence de sécurité pour configurer](./media/security-baselines/available-baselines.png)
 

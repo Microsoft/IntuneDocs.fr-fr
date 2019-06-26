@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 184781a315dcaeaac9540294746a9c2cd85da917
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2bebdf712ccf325c6742e6bb326a8fb2768023b7
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041901"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251175"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Ajouter des paramètres Endpoint Protection dans Intune
 
@@ -38,7 +38,7 @@ Avant de créer un profil, consultez les articles suivants. Ils détaillent les 
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Créer un profil d’appareil contenant des paramètres Endpoint Protection
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=20909).
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 4. Entrez un **Nom** et une **Description** pour le profil Endpoint Protection.
 5. À partir de la liste déroulante **Plateforme**, sélectionnez la plateforme de l’appareil auquel vous souhaitez appliquer les paramètres personnalisés. Actuellement, vous pouvez choisir l’une des plateformes suivantes pour les paramètres de restriction de l’appareil :
