@@ -157,6 +157,7 @@
 ### [Réinitialiser un appareil](reset-device-cp-app.md)
 
 ## [Utilisation du site web Portail d’entreprise Intune](using-the-intune-company-portal-website.md)
+### [Gérer les applications](manage-apps-cpweb.md)  
 ### [Verrouiller à distance un appareil](remote-lock-your-device-cpwebsite.md)  
 ### [Renommer un appareil](rename-your-device-cpwebsite.md)  
 ### [Supprimer un appareil](remove-your-device-cpwebsite.md)  
