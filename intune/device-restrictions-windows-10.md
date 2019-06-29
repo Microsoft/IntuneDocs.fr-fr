@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
-ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67234978"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403088"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -57,7 +57,16 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 - **Installer des données d’application sur le volume système** : **Bloquer** empêche les applications de stocker des données sur le volume système de l’appareil. **Non configuré** (valeur par défaut) autorise les applications à stocker des données sur le volume de disque du système.
 - **Installer les applications sur le lecteur système** : **Bloquer** empêche l’installation des applications sur le lecteur système de l’appareil. **Non configuré** (valeur par défaut) autorise l’installation des applications sur le lecteur système.
 - **Jeux DVR** (poste de travail uniquement) : **Bloquer** désactive l’enregistrement et la diffusion des jeux Windows. **Non configuré** (valeur par défaut) autorise l’enregistrement et la diffusion des jeux.
-- **Applications du Store uniquement** : **Exiger** force les utilisateurs finaux à installer uniquement les applications à partir du Windows App Store. **Non configuré** autorise les utilisateurs finaux à installer des applications à partir d’emplacements autres que le Windows App Store.
+- **Applications du Windows store uniquement**: ce paramètre détermine l’expérience utilisateur quand les utilisateurs installent des applications à partir d’emplacements autres que le Microsoft Store. Les options disponibles sont les suivantes :
+
+  - **Ne pas configuré** (valeur par défaut) : permet aux utilisateurs finaux installer des applications à partir d’emplacements autres que le Microsoft Store, y compris les applications définies dans les autres paramètres de stratégie.  
+  - **N’importe quel endroit**: désactive les recommandations de l’application, et permet aux utilisateurs d’installer des applications à partir de n’importe quel emplacement.  
+  - **Store uniquement**: force les utilisateurs finaux d’installer uniquement les applications à partir du Microsoft Store.
+  - **Recommandations**: lorsque vous installez une application à partir du web qui est disponible dans le Microsoft Store, les utilisateurs voient un message recommandant ils le téléchargent à partir du magasin.  
+  - **Préférez Store**: avertit les utilisateurs lorsqu’ils installent des applications à partir d’emplacements autres que le Microsoft Store.
+
+  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+
 - **Forcer le redémarrage des applications en cas d’échec de la mise à jour** : lorsqu’une application est utilisée, elle peut ne pas se mettre à jour. Utilisez ce paramètre pour forcer une application à redémarrer. **Non configuré** (valeur par défaut) ne force pas les applications à redémarrer. **Exiger** permet aux administrateurs de forcer un redémarrage à une date et une heure spécifiques, ou selon une planification périodique. Lorsque la valeur **Exiger** est sélectionnez, entrez également :
 
   - **Date/heure de début** : choisissez une date et une heure spécifiques pour redémarrer les applications.

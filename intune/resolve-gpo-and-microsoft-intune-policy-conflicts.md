@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6c7de15c3839548e8edf5056579eab1c0c0751a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 59432baf0e8120cc7280b3486c4c25388a4248b4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045256"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403774"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Résoudre des conflits de stratégie entre les objets de stratégie de groupe (GPO) et Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune.
 
 Intune utilise des stratégies qui vous aident à gérer des paramètres sur les PC Windows. Par exemple, vous pouvez utiliser une stratégie de contrôle des paramètres du Pare-feu Windows sur les PC. De nombreux paramètres Intune sont identiques à ceux que vous pouvez configurer avec la stratégie de groupe Windows. Toutefois, il est possible que, dans certains cas, les deux méthodes entrent en conflit l’une avec l’autre.
 

@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: 4c8dfdea552d035c036828bfd2e6695cc5e4cb7b
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196859"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402707"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurer l’accès d’un appareil iOS aux ressources de l’entreprise  
 
@@ -59,15 +59,15 @@ Une interruption de plus de quelques minutes lors de l’inscription peut entra�
 
 1. Ouvrez Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire. 
 
-    ![Exemple de capture d’écran de l’application Portail d’entreprise, Se connecter.](./media/ios-01-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran de l’application Portail d’entreprise, Se connecter.](./media/ios-01-cp-enroll-1904.PNG)  
 
 2. Quand vous êtes invité à recevoir des notifications du portail d’entreprise, appuyez sur **Autoriser**. Le portail d’entreprise utilise des notifications pour vous avertir, par exemple si les paramètres de votre appareil doivent être mis à jour. 
 
-    ![Exemple de capture d’écran de la page d’accueil du portail d’entreprise, Invite « Notifications ».](./media/ios-04-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran de la page d’accueil du portail d’entreprise, Invite « Notifications ».](./media/ios-02-cp-enroll-1904.PNG)  
 
 3. Dans l’écran **Configurer l’accès**, sélectionnez **Commencer**.  
 
-     ![Exemple de capture d’écran de l’application Portail d’entreprise, écran « Configurer l’accès ».](./media/ios-05-cp-enroll-1903.PNG)  
+     ![Exemple de capture d’écran de l’application Portail d’entreprise, écran « Configurer l’accès ».](./media/ios-03-cp-enroll-1904.PNG)  
 
 4. Lisez la liste des informations présentes sur l’appareil que votre organisation peut voir ou ne pas voir. Appuyez ensuite sur **Continuer**.  
 
@@ -87,7 +87,7 @@ Une interruption de plus de quelques minutes lors de l’inscription peut entra�
 
 7. iOS 12.2 et ultérieure uniquement : quand vous êtes invité à ouvrir le portail d’entreprise, appuyez sur **Ouvrir**. L’écran **Installation du profil de gestion** liste les étapes pour installer le profil.
 
-    ![Exemple de capture d’écran du portail d’entreprise, écran Installation du profil de gestion.](./media/ios-1904-settings-icon.PNG)  
+    ![Exemple de capture d’écran du portail d’entreprise, écran Installation du profil de gestion.](./media/ios-07-cp-enroll-1904.PNG)  
 
 8. Accédez à l’application Paramètres, puis appuyez sur **Profil téléchargé**.  
 
@@ -99,24 +99,24 @@ Une interruption de plus de quelques minutes lors de l’inscription peut entra�
     
 10. Entrez le mot de passe de votre appareil. Appuyez ensuite sur **Installer**.    
 
-    ![Exemple de capture d’écran de l’application Paramètres, écran Installation du profil, avec un curseur sur le bouton **Installer**.](./media/ios-1904-password-install.PNG)  
+    ![Exemple de capture d’écran de l’application Paramètres, écran Installation du profil, avec un curseur sur le bouton **Installer**.](./media/ios-10-cp-enroll-1904.PNG)  
 
 
 11. L’écran suivant est un avertissement système standard pour la gestion des appareils. Pour continuer l’installation, appuyez sur **Installer**. Si vous êtes invité à approuver la gestion à distance, appuyez sur **Approuver**.  
 
-    ![Exemple de capture d’écran de l’application Paramètres, écran d’avertissement système standard pour le certificat racine et la gestion des appareils mobiles.](./media/ios-15-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran de l’application Paramètres, écran d’avertissement système standard pour le certificat racine et la gestion des appareils mobiles.](./media/ios-11-cp-enroll-1904.PNG)  
 
 12. Une fois l’installation terminée, appuyez sur **Suivant**. Pour vérifier que le profil a été installé, accédez aux paramètres **Profils et gestion des appareils**. Vous devez normalement voir le profil sous **Gestion des appareils mobiles**.   
 
-    ![Exemple de capture d’écran de l’application Paramètres, paramètres de Profils & gestion des appareils, montrant le profil de gestion.](./media/ios-00-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran de l’application Paramètres, paramètres de Profils & gestion des appareils, montrant le profil de gestion.](./media/ios-12-cp-enroll-1904.PNG)  
 
 13. Revenez à l’application Portail d’entreprise. Le portail d’entreprise commence à synchroniser et à configurer votre appareil. Le portail d’entreprise peut vous inviter à mettre à jour des paramètres d’appareil supplémentaires. Si c’est le cas, appuyez sur **Continuer**.  
 
-    ![Exemple de capture d’écran du portail d’entreprise, écran « Configurer l’accès », avec un triangle jaune en regard de la spécification des paramètres.](./media/ios-12-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran du portail d’entreprise, écran « Configurer l’accès », avec un triangle jaune en regard de la spécification des paramètres.](./media/ios-13-cp-enroll-1904.PNG)  
 
 14. La configuration est terminée quand tous les éléments de la liste montrent un cercle vert. Appuyez sur **Terminé**.   
     
-    ![Exemple de capture d’écran du portail d’entreprise, écran « Vous êtes prêt à commencer ! », montrant tous les cercles verts.](./media/ios-13-cp-enroll-1903.PNG)  
+    ![Exemple de capture d’écran du portail d’entreprise, écran « Vous êtes prêt à commencer ! », montrant tous les cercles verts.](./media/ios-14-cp-enroll-1904.PNG)  
 
 > [!Note]
 > Si votre organisation surveille les limites pour la voix et les données, ou si elle vous fournit un appareil d’entreprise, quelques étapes supplémentaires peuvent être nécessaires pour terminer la configuration. Si vous êtes invité à installer l’application **Datalert**, consultez [Inscription de votre appareil dans la gestion des dépenses de télécommunication](enroll-your-device-with-telecom-expense-management-ios.md). Si votre organisation fait partie du programme DEP d’Apple, découvrez [comment inscrire votre appareil d’entreprise](enroll-your-device-dep-ios.md).  

@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b289f9edc1522333f70308a6979b2ea2e71b17c6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047534"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403014"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Protéger les PC Windows à l'aide de stratégies de Pare-feu Windows dans Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les paramètres de pare-feu pour les PC Windows inscrits comme appareils mobiles, consultez [ajouter des paramètres de protection de point de terminaison dans Intune](endpoint-protection-configure.md).
 
 Microsoft Intune peut vous aider à sécuriser les PC Windows que vous gérez avec le client Intune et ce, de plusieurs façons. Par exemple, il peut fournir des stratégies vous permettant de configurer les paramètres du Pare-feu Windows sur des PC.
 

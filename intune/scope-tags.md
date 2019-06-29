@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57a14e1e3c4caea570667096fec71cecf2d88ddf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045188"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403786"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée
 
@@ -42,8 +42,10 @@ Par exemple, supposons que le rôle de gestionnaire de stratégie et de profil e
 
     ![Capture d’écran de la création d’une balise d’étendue](./media/scope-tags/create-scope-tag.png)
 
-2. Indiquez un **Nom** et une **Description**.
-3. Choisissez **Créer**.
+3. Si vous souhaitez que tous les appareils dans des groupes spécifiques, choisissez **affecter la balise d’étendue à tous les appareils dans des groupes sélectionnés**.
+    1. Dans le **sélectionner les groupes à inclure** page, sélectionnez les groupes contenant les appareils que vous souhaitez affecter à cette balise d’étendue.
+    2. Choisissez **Sélectionner**.
+4. Choisissez **Créer**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Pour affecter une étiquette de délimitation à un rôle
 
