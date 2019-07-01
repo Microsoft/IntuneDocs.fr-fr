@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,18 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402659"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298396"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
 Microsoft Intune propose des fonctionnalités de résolution des problèmes intégrée. Celles-ci permettent de résoudre les problèmes liés aux stratégies de conformité et aux profils de configuration dans votre environnement.
 
 Cet article présente certaines techniques de dépannage courantes et décrit certains problèmes que vous êtes susceptible de rencontrer.
+
+## <a name="check-tenant-status"></a>Vérification du statut de client
+Vérifier le [état du locataire](tenant-status.md) et confirmez l’abonnement est actif. Vous pouvez également afficher les détails pour les incidents actifs et conseils qui peuvent affecter votre déploiement de stratégie ou de profil.
 
 ## <a name="use-built-in-troubleshooting"></a>Utiliser la fonctionnalité de résolution des problèmes intégrée
 
@@ -113,6 +116,13 @@ Cet article présente certaines techniques de dépannage courantes et décrit ce
 > [!NOTE]
 > Quand deux stratégies avec différents niveaux de restriction s’appliquent au même appareil ou utilisateur, la stratégie la plus restrictive prévaut.
 
+## <a name="policy-troubleshooting-resources"></a>Ressources de dépannage des stratégies
+
+- [Résolution des problèmes iOS ou Android stratégies ne s’appliquent aux appareils](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (ouvre un autre site de Microsoft)
+- [Résolution des problèmes de stratégie de Windows 10 Intune](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (ouvre un blog)
+- [Résoudre les problèmes de paramètres personnalisés de fournisseur de services cryptographiques pour Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (ouvre un autre site de Microsoft)
+- [Stratégie de groupe Windows 10 vs MDM Intune stratégie](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (ouvre un autre site de Microsoft)
+
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerte : L’enregistrement de règles d’accès dans Exchange a échoué
 
 **Problème**: vous recevez l’alerte **L’enregistrement de règles d’accès dans Exchange a échoué** dans la console d’administration.
@@ -125,11 +135,13 @@ La ressource [Résoudre les problèmes liés au connecteur Exchange local Intune
 
 Les appareils Windows Phone n’autorisent pas l’assouplissement des stratégies de sécurité définies par MDM ou EAS a posteriori. Par exemple, si vous définissez **Nombre minimal de caractères des mots de passe** sur 8, vous ne pouvez plus le réduire à 4. La stratégie la plus restrictive est appliquée à l’appareil.
 
+Appareils Windows 10 ne peuvent pas supprimer les stratégies de sécurité lorsque vous dissociez la stratégie (arrêter le déploiement). Vous devrez peut-être laisser la stratégie affectée et modifiez les paramètres de sécurité les valeurs par défaut.
+
 Selon la plateforme de l’appareil, si vous voulez attribuer à la stratégie une valeur moins sûre, vous devrez peut-être réinitialiser les stratégies de sécurité.
 
-Par exemple, dans Windows, sur le Bureau, balayez à partir de la droite pour ouvrir la barre **Icônes**. Choisissez **Paramètres** > **Panneau de configuration** > **Comptes d’utilisateurs**. Sur la gauche, cliquez sur le lien **Réinitialiser les stratégies de sécurité**, puis choisissez **Réinitialiser les stratégies**.
+Par exemple, dans Windows 8.1, sur le Bureau, balayez à partir de la droite pour ouvrir la barre **Icônes**. Choisissez **Paramètres** > **Panneau de configuration** > **Comptes d’utilisateurs**. Sur la gauche, cliquez sur le lien **Réinitialiser les stratégies de sécurité**, puis choisissez **Réinitialiser les stratégies**.
 
-Pour pouvoir appliquer une stratégie moins restrictive sur d’autres appareils MDM, comme Android, iOS et Windows Phone 8.1, vous devez peut-être les mettre hors service, puis les réinscrire.
+Pour pouvoir appliquer une stratégie moins restrictive sur d’autres plateformes, comme Android, iOS et Windows Phone 8.1, vous devez peut-être les mettre hors service, puis les réinscrire.
 
 La ressource [Résoudre les problèmes d’inscription d’appareils](troubleshoot-device-enrollment-in-intune.md) peut vous être utile.
 
@@ -160,6 +172,7 @@ Pour les appareils Windows gérés avec le client logiciel Intune, les erreurs d
 Cela se produit si l’heure sur le système local présente un écart de synchronisation d’au moins cinq minutes. Si l’heure n’est pas synchronisée sur l’ordinateur local, les transactions sécurisées échouent, car les horodatages ne sont pas valides.
 
 Pour résoudre ce problème, définissez sur le système local une heure la plus proche possible de l’heure Internet. Ou bien, affectez-lui l’heure des contrôleurs de domaine du réseau.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/17/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,20 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0fe37deb63457fef869df0f7263970a4e53cb29
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 2246e3f6faa853f620327558a7faf4dc9d6a6e85
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402720"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197506"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Problèmes courants avec les profils de messagerie dans Microsoft Intune et résolutions
 
 Découvrez quelques problèmes de profils de messagerie courants et des instructions pour les résoudre.
 
+## <a name="what-you-need-to-know"></a>Ce que vous devez savoir
+
+- Profils de messagerie sont déployés pour l’utilisateur qui a inscrit l’appareil. Pour configurer le profil de messagerie, Intune utilise les propriétés d’Azure Active Directory (AD) dans le profil de messagerie de l’utilisateur lors de l’inscription. [Ajouter des paramètres de messagerie pour les appareils](email-settings-configure.md) peut être une bonne ressource.
+- Après la migration de Configuration Manager hybride vers Intune autonome, le profil de messagerie à partir de Configuration Manager hybride reste sur l’appareil pendant 7 jours. Ce comportement est normal. Si vous devez le profil de messagerie supprimé plus tôt, contactez [support technique Intune](get-support.md).
+- Pour Android d’entreprise, déployez Gmail ou Nine pour le travail à l’aide de la Store Play Google géré. [Ajouter des applications de Google Play géré](apps-add-android-for-work.md) répertorie les étapes.
+- Microsoft Outlook pour iOS et Android ne prend pas en charge les profils de messagerie. Au lieu de cela, déployez une stratégie de configuration d’application. Pour plus d’informations, consultez [paramètre de Configuration d’Outlook](app-configuration-policies-outlook.md).
+- Profils de messagerie destinés aux groupes d’appareils (pas les groupes d’utilisateurs) ne peuvent pas être remis à l’appareil. Quand l’appareil a un utilisateur principal, ciblage de l’appareil doit fonctionner. Si le profil de messagerie inclut des certificats utilisateur, veillez aux groupes d’utilisateurs cibles.
+- Les utilisateurs peuvent être invités à plusieurs reprises à entrer son mot de passe pour le profil de messagerie. Dans ce scénario, vérifiez tous les certificats référencés dans le profil de messagerie. Si un des certificats n’est pas destiné à un utilisateur, Intune effectue une nouvelle tentative pour déployer le profil de messagerie.
+
 ## <a name="device-already-has-an-email-profile-installed"></a>Un profil de messagerie est déjà installé sur l’appareil
 
-Si les utilisateurs créent un profil de messagerie avant de s’inscrire dans Intune, le profil de messagerie Intune peut ne pas fonctionner comme prévu :
+Si les utilisateurs créent un profil de messagerie avant de s’inscrire dans Intune ou Office 365 MDM, le profil de messagerie déployé par Intune peut ne pas fonctionne comme prévu :
 
 - **iOS**: Intune détecte un profil de messagerie existant en double, en fonction de l’adresse e-mail et du nom d’hôte. Le profil de messagerie créé par l’utilisateur bloque le déploiement du profil créé par Intune. Il s’agit d’un problème courant, car les utilisateurs iOS créent généralement un profil de messagerie, puis s’inscrivent. L’application Portail d’entreprise indique que l’utilisateur n’est pas conforme et peut inviter l’utilisateur à supprimer le profil de messagerie.
 
@@ -50,19 +59,16 @@ Examinez la configuration de votre profil EAS pour Samsung KNOX et la stratégie
 
 ## <a name="unable-to-send-images-from--email-account"></a>Impossible d’envoyer des images à partir du compte de messagerie
 
-S’applique à Intune dans le portail Azure Classic.
-
 Les utilisateurs qui disposent de comptes de messagerie configurés automatiquement ne peuvent pas envoyer des photos ou des images à partir de leur appareil. Ce scénario peut se produire si l’option **Autoriser l’envoi d’e-mails à partir d’applications tierces** n’est pas activée.
 
 ### <a name="intune-solution"></a>Solution Intune
 
-1. Ouvrez la console d’administration Microsoft Intune, sélectionnez **Stratégie** Charge de travail > **Stratégie de configuration**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Sélectionnez **Configuration de l’appareil** > **Profils**.
+3. Sélectionnez votre profil de messagerie > **propriétés** > **paramètres**.
+4. Définir le **autoriser de courrier électronique à envoyer à partir des applications tierces** à **activer**.
 
-2. Sélectionnez le profil de messagerie et choisissez **Modifier**.
-
-3. Sélectionnez **Autoriser l’envoi de courrier électronique à partir d’applications tierces**.
-
-### <a name="configuration-manager-integrated-with-intune-solution"></a>Configuration Manager intégré à la solution Intune
+### <a name="configuration-manager-hybrid"></a>Configuration Manager hybride
 
 1. Dans la console Configuration Manager, ouvrez > **Ressources et Conformité**.
 
