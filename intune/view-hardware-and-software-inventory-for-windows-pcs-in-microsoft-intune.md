@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 06/26/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,30 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e24e72951d473c2e7e49d5ae62b39df18635c16
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2c1717be830d88ed0a7d1b660b7910c8192c93c5
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040270"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403547"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Afficher l’inventaire logiciel et matériel pour les PC Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Intune collecte des informations détaillées sur le matériel et les logiciels des ordinateurs de bureau que vous gérez en tant que PC à l’aide du client logiciel Intune. Utilisez les informations contenues dans les procédures suivantes pour apprendre à créer :
+> [!NOTE]
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez afficher l’inventaire pour les PC Windows inscrits en tant qu’appareils mobiles, consultez [afficher les détails de l’appareil dans Intune](device-inventory.md).
+
+Intune collecte des informations détaillées sur le matériel et les logiciels pour les ordinateurs de bureau que vous gérez en tant que PC à l’aide du client logiciel Intune. Utilisez les informations contenues dans les procédures suivantes pour apprendre à créer :
 
 -   Un rapport qui répertorie les informations sur les capacités matérielles des PC que vous gérez.
 
 -   Un rapport qui répertorie les logiciels installés sur chaque PC.
 
--   Guide pratique de l'actualisation d'un inventaire des PC pour vous assurer que les données du rapport sont récentes.
+-   Guide pratique d'actualisation d'un inventaire de PC pour vous assurer que les données du rapport sont récentes.
 
 ## <a name="to-display-information-about-pcs-you-manage"></a>Pour afficher des informations sur les PC que vous gérez
 
 1.  Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Rapports** &gt; **Rapports d’inventaire des ordinateurs**.
 
-2.  Dans la page **Créer un rapport** , acceptez les valeurs par défaut ou personnalisez-les pour filtrer les résultats qui seront renvoyés par le rapport. Par exemple, vous pouvez déterminer que seuls les PC qui exécutent Windows 8.1 s'afficheront dans le rapport.
+2.  Dans la page **Créer un rapport** , acceptez les valeurs par défaut ou personnalisez-les pour filtrer les résultats qui seront renvoyés par le rapport. Par exemple, vous pouvez déterminer que seuls les PC qui exécutent Windows 8.1 s'affichent dans le rapport.
 
 3.  Choisissez **Afficher le rapport** pour ouvrir le **Rapport d’inventaire informatique** dans une nouvelle fenêtre.
 

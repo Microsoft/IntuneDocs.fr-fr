@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 06/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5918dc0574033020689b267418fb6283cd686db
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 97d656db3e828ef3377b927395a283fe995bb8a4
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373898"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389293"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Utiliser des paramètres personnalisés pour les appareils Windows Phone 8.1 dans Intune
 
 À l’aide de Microsoft Intune, vous pouvez ajouter ou créer des paramètres personnalisés pour vos appareils Windows Phone 8.1 au moyen de « profils personnalisés ». Les profils personnalisés sont une fonctionnalité dans Intune. Ils sont conçus pour ajouter des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune.
 
-Les profils personnalisés Windows Phone 8.1 utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer différentes fonctionnalités. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler les fonctionnalités sur l’appareil.
+Les profils personnalisés Windows Phone 8.1 utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer différentes fonctionnalités. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler les fonctionnalités sur l’appareil. [Documentation du protocole Windows Phone 8.1 MDM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-phone/dn499787(v=technet.10)) répertorie les paramètres.
 
 Cet article vous montre comment créer un profil personnalisé pour les appareils Windows Phone 8.1. 
 
@@ -62,6 +62,16 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 
 5. Cliquez sur **OK** pour enregistrer vos modifications. Continuez à ajouter d’autres paramètres si besoin.
 6. Quand vous avez terminé, choisissez **OK** > **Créer** pour créer le profil Intune. Quand vous avez terminé, votre profil apparaît dans la liste **Configuration de l’appareil - Profils**.
+
+## <a name="example"></a>Exemple
+
+Dans l’exemple suivant, les téléphones Windows 8.1 ne peuvent pas modifier des réseaux cellulaires lorsqu’ils voyageaient hors de la zone de couverture du transporteur.
+
+- **Nom**: autoriser l’itinérance des données cellulaires
+- **Description**: autorisez ou non l’itinérance des données cellulaires
+- **OMA-URI** (respecte la casse) : ./Vendor/MSFT/PolicyManager/My/Connectivity/AllowCellularDataRoaming
+- **Type de données** : entier
+- **Valeur**: 0
 
 ## <a name="next-steps"></a>Étapes suivantes
 
