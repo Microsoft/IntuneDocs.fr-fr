@@ -1,5 +1,5 @@
 ---
-title: Configurer un accès conditionnel basé sur un périphérique avec Intune
+title: Configurer un accès conditionnel basé sur un appareil avec Intune
 titleSuffix: Microsoft Intune
 description: Découvrez comment créer une stratégie d’accès conditionnel basée sur l’appareil en fonction de la conformité des appareils Microsoft Intune et de la gestion des applications mobiles.
 keywords: ''
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb081dd52999f203420e8a1f0b4f9c52a313f75
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043285"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045103"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel basée sur l’appareil
 

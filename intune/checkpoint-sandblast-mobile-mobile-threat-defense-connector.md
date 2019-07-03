@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5d114067402147237c0afbb4d8a3656d8bd2e77
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba12b8c8561d02a9bcf7bc7286bcbaa096d2b2ee
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049234"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045309"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Connecteur de protection contre les menaces mobiles Check Point SandBlast Mobile avec Intune
 
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise à l’aide d’un accès conditionnel basé sur une évaluation des risques effectuée par Check Point SandBlast Mobile, solution de protection contre les menaces mobiles qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies par les appareils exécutant l’application Check Point SandBlast Mobile.
 
-Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Check Point SandBlast Mobile par le biais des stratégies de conformité d’appareil Intune, et les utiliser pour autoriser ou empêcher les appareils non conformes d’accéder aux ressources de l’entreprise en fonction des menaces détectées.
+Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Check Point SandBlast Mobile par le biais des stratégies de conformité d’appareil Intune et les utiliser pour autoriser ou empêcher les appareils non conformes d’accéder aux ressources de l’entreprise en fonction des menaces détectées.
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Comment Intune et Check Point SandBlast Mobile vous aident-ils à protéger les ressources de votre entreprise ?
 

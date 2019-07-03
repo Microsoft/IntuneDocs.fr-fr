@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72835ce45860eb6b10ac7967693cc50b9ceaa96f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3fccf3425222814f9493fe525033f67c734012c5
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043571"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045872"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Connecteur Better Mobile Threat Defense avec Intune
 
@@ -57,7 +57,7 @@ Quand des applications malveillantes telles que des programmes malveillants sont
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)**, et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
+Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)** , et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 

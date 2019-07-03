@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c84cd0ec61ea08956bbebd040167991c6285d073
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044981"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044331"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutoriel : Présentation détaillée de Microsoft Intune dans le portail Azure
 
@@ -102,7 +102,7 @@ Suivez les étapes ci-dessous pour mieux comprendre Intune dans le portail Azure
 
 7. À partir d’[Intune](https://aka.ms/intuneportal), sélectionnez **Accès conditionnel** pour afficher plus d’informations sur les stratégies d’accès.
 
-    ![Capture d’écran du volet d’accès conditionnel](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
+    ![Capture d’écran du volet Accès conditionnel](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
     L’accès conditionnel fait référence aux moyens grâce auxquels vous pouvez contrôler les appareils et les applications qui sont autorisés à se connecter à vos ressources d’entreprise et de messagerie. Pour en savoir plus sur l’accès conditionnel basé sur l’application et basé sur l’appareil, et découvrir des scénarios courants d’utilisation de l’accès conditionnel avec Intune, consultez [Qu’est-ce que l’accès conditionnel ?](conditional-access.md)
 

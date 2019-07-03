@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05e9e5b3933e9fbd8ca3f1f03ffd93d2522893e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c0dc8d7cca42898db92412e2cec41252a9a9a4d4
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046832"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046101"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Connecteur Zimperium Mobile Threat Defense avec Intune
 
-Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise à l’aide d’un accès conditionnel basé sur une évaluation des risques effectuée par Zimperium,une solution MTD qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies par les appareils exécutant l’application Zimperium.
+Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise à l’aide d’un accès conditionnel basé sur une évaluation des risques effectuée par Zimperium, une solution MTD qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies par les appareils exécutant l’application Zimperium.
 
 Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Zimperium, activée par le biais des stratégies de conformité Intune. Une stratégie d’évaluation des risques autorise ou bloque l’accès des appareils non conformes aux ressources d’entreprise en fonction des menaces détectées.
 

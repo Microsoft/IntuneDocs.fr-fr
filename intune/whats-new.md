@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c14568a0581220cf5941984645bd0b9044e00c1
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 756fafc02a6d64b1495a838ab8eee4130ee77361
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749954"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389335"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
-Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez également trouver les [changements à venir](in-development.md), les [annonces importantes](#notices) et des informations sur les [versions précédentes](whats-new-archive.md). 
+Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez également trouver des [annonces importantes](#notices), des [publications précédentes](whats-new-archive.md) et des informations sur [le mode de publication des mises à jour par le service Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
+> Chaque [mise à jour mensuelle](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) peut mettre jusqu'à trois jours pour être déployée et le sera dans l’ordre suivant :
+> - Jour 1 : Asie-Pacifique (APAC)
+> - Jour 2 : Europe, Moyen-Orient et Afrique (EMEA)
+> - Jour 3 : Amérique du Nord
+> 
 > Le lancement de certaines fonctionnalités peut s’étaler sur plusieurs semaines. Ces fonctionnalités risquent de ne pas être accessibles à tous les clients la première semaine.
+>
+> Consultez la [page En développement](in-development.md) pour obtenir une liste des fonctionnalités à venir dans une version.
 
 **Flux RSS** : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
@@ -45,6 +52,29 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-june-17-2019"></a>Semaine du 17 juin 2019   
+
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="new-features-in-microsoft-intune-app"></a>Nouvelles fonctionnalités dans l’application Microsoft Intune
+Nous avons ajouté de nouvelles fonctionnalités à l’application Microsoft Intune (préversion) pour Android. Les utilisateurs sur des appareils Android complètement managés peuvent maintenant :  
+
+* afficher et gérer des appareils qu’ils ont inscrits via le Portail d’entreprise Intune ou l’application Microsoft Intune ;    
+* contacter leur organisation pour bénéficier d’un support ;    
+* envoyer leurs commentaires à Microsoft ;    
+* afficher les conditions générales, si elles ont été définies par leur organisation.  
+
+## <a name="week-of-june-10-2019"></a>Semaine du 10 juin 2019 
+
+### <a name="app-management"></a>Gestion d'applications  
+
+#### <a name="new-sample-apps-showing-intune-sdk-integration-available-on-github----2653471---"></a>Nouveaux exemples d’applications illustrant l’intégration du kit de développement logiciel (SDK) Intune disponible sur GitHub <!-- 2653471 -->
+Le compte GitHub msintuneappsdk a ajouté de nouveaux exemples d'application pour iOS (Swift), Android, Xamarin.iOS, Xamarin Forms et Xamarin.Android. Ces applications sont censées remplacer notre documentation existante et fournir des exemples d’intégration du kit de développement logiciel (SDK) de l’application Intune dans vos propres applications mobiles. Si vous êtes développeur d’applications et que vous avez besoin de conseils supplémentaires concernant le kit de développement logiciel (SDK) Intune, consultez les exemples liés :
+- [Chatr](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App) : une application de messagerie instantanée iOS native (Swift) qui utilise la bibliothèque d'authentification Azure Active Directory (ADAL) pour l’authentification répartie.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App) : une application Android native de listes de tâches à effectuer qui utilise la bibliothèque d'authentification Active Directory pour l’authentification répartie.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) : application Xamarin.Android de listes de tâches à effectuer qui utilise la bibliothèque d'authentification Active Directory pour l’authentification répartie. Ce référentiel contient également l’application Xamarin.Forms.
+- [Exemple d’application Xamarin.iOS](https://github.com/msintuneappsdk/sample-intune-xamarin-ios) : un exemple d’application « barebones ».
 
 ## <a name="week-of-may-27-2019"></a>Semaine du 27 mai 2019 
 
@@ -192,7 +222,7 @@ Vous pouvez maintenant spécifier si la signature par défaut est activée dans 
 F5 a publié une mise à jour vers BIG-IP 13 qui autorise la fonctionnalité NAC pour l’accès F5 sur iOS dans Intune. Pour utiliser cette fonctionnalité :
 
 - Effectuez une mise à jour de BIG-IP avec la version 13.1.1.5 actualisée. BIG-IP 14 n’est pas pris en charge.
-- Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Étapes dans [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+- Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Étapes dans [Overview: Configuring APM for device posture checks with endpoint management systems](https://techdocs.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html).
 - Cochez le paramètre **Activer le contrôle d'accès réseau (NAC)** dans le profil VPN dans Intune.
 
 Pour voir le paramètre disponible, accédez à [Configurer les paramètres VPN sur les appareils iOS](vpn-settings-ios.md).
@@ -311,7 +341,7 @@ Toujours dans la préversion publique, nous avons développé notre prise en cha
 
   Sur les appareils dédiés, l’appareil peut s’afficher comme étant **Non conforme**. L’accès conditionnel n’est pas disponible sur les appareils dédiés. Veillez à effectuer toutes les tâches ou actions pour obtenir des appareils dédiés conformes à vos stratégies attribuées.
 
-- [Accès conditionnel](conditional-access.md): les stratégies d’accès conditionnel qui s’appliquent à Android s’appliquent également aux appareils Android Entreprise complètement gérés. Les utilisateurs peuvent désormais inscrire leur appareil complètement géré dans Azure Active Directory à l’aide de l’**application Microsoft Intune**. Ensuite, recherchez et résolvez tous les problèmes de conformité pour accéder aux ressources de l’organisation.
+- [Accès conditionnel](conditional-access.md) : les stratégies d’accès conditionnel qui s’appliquent à Android s’appliquent également aux appareils Android Entreprise complètement gérés. Les utilisateurs peuvent désormais inscrire leur appareil complètement géré dans Azure Active Directory à l’aide de l’**application Microsoft Intune**. Ensuite, recherchez et résolvez tous les problèmes de conformité pour accéder aux ressources de l’organisation.
 
 - Nouvelle application utilisateur final (application Microsoft Intune) : il existe une nouvelle application utilisateur final pour les appareils Android complètement gérés appelée **Microsoft Intune**. Cette nouvelle application est légère et moderne, et offre des fonctionnalités similaires à celles de l’application Portail d’entreprise, mais pour les appareils complètement gérés. Pour plus d’informations, consultez [Application Microsoft Intune sur Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 
@@ -1109,7 +1139,7 @@ Pour l’inscription Samsung Knox Mobile, Intune prend désormais en charge l’
 - Vous pouvez désormais configurer un message d’avertissement pour les redémarrages qui seront effectués en dehors des heures de travail, ce qui convient aux scénarios BYOD.
 
 #### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Regrouper les appareils inscrits auprès de Windows Autopilot par ID de corrélation <!-- 2075110 -->
-Intune prend désormais en charge le regroupement d’appareils Windows par ID de corrélation en cas d’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. Intune définit automatiquement l’[attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) pour qu’il ait la valeur « OfflineAutopilotprofile-<correlator ID> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation par le biais de l’attribut enrollmentprofilename pour les inscriptions Autopilot hors connexion. Pour plus d’informations, consultez [Windows Autopilot pour les appareils existants](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune prend désormais en charge le regroupement d’appareils Windows par ID de corrélation en cas d’inscription à l’aide d’[Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. L’ID de corrélation est un paramètre du fichier de configuration Autopilot. Intune définit automatiquement l’[attribut d’appareil Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) pour qu’il ait la valeur « OfflineAutopilotprofile-<correlator ID> ». Cela permet de créer des groupes dynamiques Azure AD arbitraires en fonction de l’ID de corrélation par le biais de l’attribut enrollmentprofilename pour les inscriptions Autopilot hors connexion. Pour plus d’informations, consultez [Windows Autopilot pour les appareils existants](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
 #### <a name="intune-app-protection-policies----2984657---"></a>Stratégies de protection des applications Intune <!-- 2984657 -->
 Les stratégies de protection des applications Intune vous permettent de configurer divers paramètres de protection des données pour des applications protégées Intune, par exemple Microsoft Outlook et Microsoft Word. Nous avons changé l’aspect de ces paramètres pour [iOS](app-protection-policy-settings-ios.md) et [Android](app-protection-policy-settings-android.md) afin de faciliter la recherche de paramètres individuels. Il existe trois catégories pour les paramètres de stratégie :

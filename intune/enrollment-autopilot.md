@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0a83526a2e9333c0e6a131e59cee29a4a76fffa
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 28c3da6d2e3390d20aecc3673cac38e8424ef57a
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041196"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389307"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -99,8 +99,8 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
     
     - **Masquer les options de changement de compte (nécessite Windows 10, version 1809 ou ultérieure)**  : choisissez **Masquer** pour empêcher l’affichage des options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Ces options nécessitent la [configuration de la marque de société dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Type de compte d’utilisateur** : choisissez le type de compte de l’utilisateur (**Administrateur** ou **Standard**).
-    - **Autoriser l’expérience OOBE assistée** : choisissez **Oui** pour autoriser l’assistance.
-    - **Appliquer un modèle de nom d’appareil** : choisissez **Oui** pour créer un modèle à utiliser au moment du nommage de l’appareil durant l’inscription. Les noms ne doivent pas dépasser 15 caractères. Ils peuvent comporter des lettres, des chiffres et des traits d’union. Les noms ne peuvent pas être constitués uniquement de chiffres. Utilisez la [macro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter un numéro de série spécifique au matériel. Sinon, utilisez la [macro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter une chaîne aléatoire de chiffres, où x représente le nombre de chiffres à ajouter. 
+    - **Autoriser White Glove OOBE** (requiert Windows 10, version 1903 ou ultérieure ; [exigences physiques supplémentaires](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)) : choisissez **Oui** pour autoriser l’assistance.
+    - **Appliquer le modèle de nom d’appareil (nécessite Windows 10, version 1809 ou ultérieure)**  : choisissez **Oui** pour créer un modèle à utiliser au moment du nommage de l’appareil durant l’inscription. Les noms ne doivent pas dépasser 15 caractères. Ils peuvent comporter des lettres, des chiffres et des traits d’union. Les noms ne peuvent pas être constitués uniquement de chiffres. Utilisez la [macro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter un numéro de série spécifique au matériel. Sinon, utilisez la [macro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) pour ajouter une chaîne aléatoire de chiffres, où x représente le nombre de chiffres à ajouter. 
     - **Langue (région)** \* : choisissez la langue à utiliser pour l’appareil. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
     - **Configurer automatiquement le clavier**\* : si une **Langue (région)** est sélectionnée, choisissez **Oui** pour ignorer la page de sélection du clavier. Cette option est disponible uniquement si vous avez choisi **Auto-déploiement**  comme **Mode de déploiement**.
 8. Sélectionnez **Suivant**.

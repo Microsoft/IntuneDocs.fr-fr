@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 415005ee58367a189986e9d7bd0ef693f14bc5c9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2c2c50909b701ee5418ea69d73e67518de1c5bce
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048365"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045740"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Fonctionnalités de gestion des appareils inscrits de Microsoft Intune
 
@@ -65,7 +65,7 @@ Les utilisateurs ont accès au portail d’entreprise, ce qui leur permet d’in
 |Profils Wi-Fi|Déploie des paramètres de réseau sans fil sur vos utilisateurs. En déployant ces paramètres, vous réduisez l’effort que doit fournir l’utilisateur pour se connecter au réseau d’entreprise.|[Connexions Wi-Fi dans Microsoft Intune](wi-fi-settings-configure.md)|
 |Profils de messagerie|Crée et déploie les paramètres de messagerie sur les appareils pour que les utilisateurs puissent accéder à leur e-mail professionnel sur leur appareil personnel sans aucune autre configuration de leur part.|[Configurer l’accès à la messagerie d’entreprise à l’aide de profils de messagerie avec Microsoft Intune](email-settings-configure.md)|
 |Profils VPN|Déploie des paramètres VPN sur les utilisateurs et les appareils de votre organisation. En déployant ces paramètres, vous réduisez l’effort que doit fournir l’utilisateur pour se connecter aux ressources du réseau d’entreprise.|[Connexions VPN dans Microsoft Intune](device-profiles.md#vpn)|
-|Stratégies d'accès conditionnel|Gère l’accès à la messagerie Microsoft Exchange et à SharePoint Online à partir des appareils qui ne sont pas gérés par Intune.|[Restreindre l’accès à la messagerie et à SharePoint avec Microsoft Intune](app-based-conditional-access-intune.md)|
+|Stratégies d’accès conditionnel|Gère l’accès à la messagerie Microsoft Exchange et à SharePoint Online à partir des appareils qui ne sont pas gérés par Intune.|[Restreindre l’accès à la messagerie et à SharePoint avec Microsoft Intune](app-based-conditional-access-intune.md)|
 
 ## <a name="next-steps"></a>Étapes suivantes
 

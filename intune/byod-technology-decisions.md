@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba3f6fc48a68122f0a192adc8e2140bb7a603b31
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c2e8c475cd52e199519db7a3d7ea83e6dbfef1a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043475"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530649"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Décisions d’ordre informatique pour activer BYOD avec Microsoft Enterprise Mobility + Security (EMS)
 
@@ -32,7 +32,7 @@ Dans cette rubrique, nous allons examiner le cas d’utilisation simple qui cons
 * Vos comptes e-mail sont hébergés dans Exchange Online
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Raisons courantes pour gérer les appareils (MDM)
-Vous pouvez facilement inciter les utilisateurs à inscrire leurs appareils à la gestion des appareils en déployant une stratégie [d’accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) sur Exchange Online. Voici les raisons pour lesquelles vous pourriez souhaiter gérer des appareils personnels :
+Vous pouvez facilement inciter les utilisateurs à inscrire leurs appareils à la gestion des appareils en déployant une stratégie d’[accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) sur Exchange Online. Voici les raisons pour lesquelles vous pourriez souhaiter gérer des appareils personnels :
 
 **Wi-Fi/VPN** : si vos utilisateurs ont besoin d’un profil de connectivité d’entreprise pour être productifs, cela peut être configuré très facilement.
 
@@ -56,7 +56,7 @@ Comme mentionné plus haut, l’accès conditionnel peut inciter un utilisateur 
 
 * Quel utilisateur tente d’obtenir l’accès
 * Si l’emplacement est approuvé ou non approuvé
-*   Niveau de risque de connexion
+* Niveau de risque de connexion
 * Plateforme d’appareils
 
 De nombreuses organisations sont souvent soucieuses de certains risques spécifiques.  Le tableau ci-dessous liste les risques les plus courants et les réponses MDM et MAM correspondantes.

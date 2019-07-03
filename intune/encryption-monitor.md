@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d90bc17d01a76c9c566210edc3bdc265511fa16d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
+ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047822"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316928"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Superviser le chiffrement des appareils et BitLocker  
 Intune offre un emplacement centralisé pour identifier l’état de chiffrement de vos appareils Windows 10 et vous permet d’accéder à des informations importantes pour BitLocker à partir de vos appareils, comme dans Azure Active Directory (Azure AD).  
@@ -51,7 +51,7 @@ Le rapport présente le **nom** de vos appareils Windows 10 et des informations
   - **Non prêt** : L’appareil n’a pas toutes les fonctionnalités de chiffrement, mais il prend quand même en charge le chiffrement. Par exemple, l’appareil peut être chiffré manuellement par un utilisateur ou par le biais d’une stratégie de groupe définie pour permettre le chiffrement sans TMP.
   - **Non applicable** : Les informations ne sont pas suffisantes pour classer cet appareil.  
 
-- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré.  
+- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré. 
 
 
 ### <a name="device-encryption-status"></a>État du chiffrement de l’appareil
@@ -60,7 +60,7 @@ Quand vous sélectionnez un appareil, Intune affiche le volet **État du chiffre
 Ce volet fournit les détails suivants :  
 - **Nom de l’appareil** : nom de l’appareil que vous visualisez.  
 - **Préparation du chiffrement** : évaluation de la préparation des appareils à la prise en charge du chiffrement BitLocker. L’état du chiffrement d’un appareil peut être *Chiffré* même si la préparation du chiffrement a la valeur *Non prêt*, car il lui manque un module de plateforme sécurisée (TPM). (Consultez Préparation du chiffrement dans la section précédente pour plus d’informations.)
-- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré.  
+- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré. Intune peut mettre jusqu'à 24 heures pour Intune commencer à créer des rapports sur l’état de chiffrement d’appareils ou une modification apportée à cet état.  
 - **Profils** : liste des profils de *configuration de l’appareil* qui s’appliquent à cet appareil et incluent les paramètres et le type de profil suivants :  
   - Type de profil = *Endpoint Protection*  
   - Paramètres > Chiffrement Windows > Chiffrer les appareils = *Obligatoire*  
@@ -95,7 +95,7 @@ Ce volet fournit les détails suivants :
 
 ## <a name="bitlocker-recovery-keys"></a>Clés de récupération BitLocker
 Intune fournit l’accès au panneau Azure AD pour BitLocker pour que vous puissiez voir les ID de clé BitLocker et les clés de récupération de vos appareils Windows 10, à partir du portail Intune.  Pour être accessible, l’appareil doit avoir ses clés déposées dans Azure AD. 
-1. Connectez-vous à [Intune](https://aka.ms/intuneportal), accédez à **Appareils**, puis sous *Gérer*, sélectionnez **Tous les appareils**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), accédez à **Appareils**, puis sous *Gérer*, sélectionnez **Tous les appareils**.
 2. Sélectionnez un appareil dans la liste, puis sous *Surveiller*, sélectionnez **Clés de récupération**.  
   
 Quand des clés sont disponibles dans Azure AD, les informations suivantes sont disponibles :

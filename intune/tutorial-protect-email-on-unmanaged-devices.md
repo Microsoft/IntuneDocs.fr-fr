@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc1f877f9b457c6abafef7f1e66e8b04bba2c8e0
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828985"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046270"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils non gérés
 
@@ -189,4 +189,4 @@ Lorsque les stratégies de test ne sont plus nécessaires, vous pouvez les suppr
 5. Dans la liste **Nom de la stratégie**, sélectionnez le menu contextuel ( **...** ) pour chacune de vos stratégies de test, puis sélectionnez **Supprimer**. Cliquez sur **Oui** pour confirmer la suppression.  
 
  ## <a name="next-steps"></a>Étapes suivantes  
-Dans ce didacticiel, vous avez créé des stratégies de protection afin de limiter les actions d’un utilisateur avec l’application Outlook et vous avez créé des stratégies d’accès conditionnel pour exiger l’utilisation de l’application Outlook et de l’authentification multifacteur pour les clients d’authentification moderne. Pour en savoir plus sur l’utilisation d’Intune avec accès conditionnel pour protéger d’autres applications et services,consultez [Configurer l’accès conditionnel](conditional-access.md).
+Dans ce didacticiel, vous avez créé des stratégies de protection afin de limiter les actions d’un utilisateur avec l’application Outlook et vous avez créé des stratégies d’accès conditionnel pour exiger l’utilisation de l’application Outlook et de l’authentification multifacteur pour les clients d’authentification moderne. Pour en savoir plus sur l’utilisation d’Intune avec accès conditionnel pour protéger d’autres applications et services, consultez [Configurer l’accès conditionnel](conditional-access.md).

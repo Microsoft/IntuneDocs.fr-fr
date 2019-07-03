@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a197b057278ff2f32539169feccc91edbd752386
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f4fa42a52e104ef1c9cf13c8490159f3dbb2efed
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048975"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045330"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
-Avec le nouveau portail Azure, l’accès conditionnel prend en charge plusieurs stratégies par application ainsi que davantage de possibilités de personnalisation. Si vous aviez créé des stratégies d’accès conditionnel dans le portail classique, vous pouvez les migrer vers le portail Azure. 
+Avec le nouveau portail Azure, l’accès conditionnel prend en charge plusieurs stratégies par application ainsi que davantage de possibilités de personnalisation. Si vous aviez créé des stratégies d’accès conditionnel dans le portail Intune classique, vous pouvez les migrer vers le portail Azure. 
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -74,7 +74,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 ## <a name="reassign-intune-device-based-conditional-access-policies"></a>Réaffecter des stratégies d’accès conditionnel basé sur l’appareil Intune
 
-1. Accédez à [Conditional access in the Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) (Accès conditionnel dans le portail Azure) et connectez-vous avec vos informations d’identification.
+1. Accédez à [Accès conditionnel au portail Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) et connectez-vous avec vos informations d’identification.
 
 2. Choisissez **Nouvelle stratégie**.
 
@@ -136,13 +136,13 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 
 21. Dans le panneau de la stratégie d’accès conditionnel **Nouveau**, activez la bascule **Activer la stratégie**, puis cliquez sur **Créer**.
 
-    ![Image comparant l’interface utilisateur des stratégies d’accès conditionnel dans Intune et Azure](./media/reassign-ca-11.png)
+    ![Comparer l’interface utilisateur des stratégies d’accès conditionnel dans Intune et Azure](./media/reassign-ca-11.png)
 
 ## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Réaffecter des stratégies d’accès conditionnel basé sur l’appareil Intune pour les clients EAS
 
 Si vous avez configuré les paramètres EAS (Exchange Active Sync) dans le cadre d’une stratégie Exchange Online dans le portail classique Intune, vous devez créer une deuxième stratégie d’accès conditionnel dans le portail Azure.
 
-1. Accédez à [Conditional access in the Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) (Accès conditionnel dans le portail Azure) et connectez-vous avec vos informations d’identification.
+1. Accédez à [Accès conditionnel au portail Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) et connectez-vous avec vos informations d’identification.
 
 2. Choisissez **Nouvelle stratégie**.
 
@@ -207,5 +207,5 @@ Une fois que vous avez réaffecté vos stratégies d’accès conditionnel dans 
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisations courantes de l’accès conditionnel avec Intune](conditional-access-intune-common-ways-use.md)
-- [accès conditionnel en fonction des applications avec Intune](app-based-conditional-access-intune.md)
+- [accès conditionnel basé sur l’application avec Intune](app-based-conditional-access-intune.md)
 - [Accès conditionnel dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

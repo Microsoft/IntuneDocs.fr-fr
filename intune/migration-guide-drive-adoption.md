@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a37d6dac24049a10b5abaed41a44c0c391b095e6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2bedaf279d65ee1ed7f8dda4e8d866fb848bade7
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050478"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044592"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Encourager l’adoption par les utilisateurs finaux avec l’accès conditionnel dans Microsoft Intune
 
@@ -33,7 +33,7 @@ Voici une méthode d’amélioration classique des campagnes de migration avec a
 
 1.  Définissez les règles d’accès conditionnel à appliquer pour tous les utilisateurs, mais excluez spécifiquement ceux qui doivent effectuer la migration depuis l’ancien fournisseur MDM. Vous pouvez créer un groupe d’utilisateurs Azure AD, qui rassemble tous les utilisateurs exclus avec accès conditionnel.
 
-2.  Au fur et à mesure que ces utilisateurs effectuent cette migration, retirez-les du groupe d’exclusion avec accès conditionnel.
+2.  À mesure que les utilisateurs migrent, supprimez-les du groupe des utilisateurs exclus de l’accès conditionnel.
 
 3.  Une fois la migration terminée, configurez toutes les stratégies d’accès conditionnel de manière à appliquer un blocage par défaut, sauf si Intune autorise l’accès.
 
@@ -56,15 +56,15 @@ Il s’agit d’une approche parmi d’autres. Vous pouvez choisir un processus 
 
 ## <a name="task-list-for-conditional-access"></a>Liste de tâches relatives à l’accès conditionnel
 
-### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Tâche 1 : Définir la façon dont vous allez implémenter l’accès conditionnel
+### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Tâche 1 : Définir la façon dont vous allez implémenter l’accès conditionnel
 
 [Utilisations courantes de l’accès conditionnel](conditional-access-intune-common-ways-use.md).
 
-### <a name="task-2-set-up-intune-conditional-access"></a>Tâche 2 : Configurer l’accès conditionnel Intune
+### <a name="task-2-set-up-intune-conditional-access"></a>Tâche 2 : Configurer l’accès conditionnel Intune
 
 Choisissez l'une des options suivantes :
 
--   [Configuration de l’accès conditionnel dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+-   [Configurer l’accès conditionnel Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 -   [Installer le connecteur Exchange local avec Intune](exchange-connector-install.md)
 

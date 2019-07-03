@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df1a3fcfe0f6fd0fc2a5fbfe73935c8f47c106ff
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b945218fd1c2692bdc5ca92db5f309488a1a10bd
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041608"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044295"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Connecteur Pradeo Mobile Threat Defense avec Intune
 
@@ -57,7 +57,7 @@ Quand des applications malveillantes telles que des programmes malveillants sont
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)**, et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
+Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)** , et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 

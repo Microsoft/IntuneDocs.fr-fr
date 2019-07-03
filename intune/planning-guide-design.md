@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 812a2e91b28908dcd3893ec77e9923362c8a9173
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046145"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044407"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -401,11 +401,11 @@ Voici un exemple de conception d’une stratégie de conformité :
 
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie de conformité.
-#### <a name="conditional-access-policies"></a>Stratégies d'accès conditionnel
+#### <a name="conditional-access-policies"></a>Stratégies d’accès conditionnel
 
 L’accès conditionnel est utilisé pour autoriser uniquement les appareils compatibles à accéder aux e-mails et aux autres ressources de l’entreprise. Intune fonctionne avec Enterprise Mobility + Security (EMS) pour contrôler l’accès aux ressources de l’entreprise. Déterminez si vous avez besoin de l’accès conditionnel et ce qui doit être sécurisé. En savoir plus sur l'[accès conditionnel](conditional-access.md).
 
-Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs que vous allez cibler par les stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer ou configurer le connecteur Intune pour Exchange sur site : 
+Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs que vous allez cibler par stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer ou configurer le connecteur Intune pour Exchange sur site : 
 
 -   [Exchange local](exchange-connector-install.md)
 
@@ -416,7 +416,7 @@ Voici un exemple montrant comment documenter des stratégies d’accès conditio
 | Exchange Online | iOS, Android | Bloquer les appareils non conformes sur les plateformes prises en charge par Intune | Entreprise, BYOD |
 | SharePoint Online | iOS, Android |  | Entreprise, BYOD |
 
-Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie d’accès conditionnel.
+Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie d’accès conditionnel.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

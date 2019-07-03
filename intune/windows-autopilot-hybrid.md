@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 030467009e0fed8716a1aa622474188352c0e0b0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050355"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494532"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
@@ -32,7 +32,7 @@ Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils j
 Configurez correctement vos [appareils joints à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Veillez à [vérifier l’inscription de votre appareil]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) avec l’applet de commande Get-MsolDevice.
 
 Les appareils à inscrire doivent également :
-- Exécuter Windows 10 avec la [mise à jour d’octobre 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)
+- Être en cours d’exécution de Windows 10 v1809 ou version ultérieure.
 - Avoir accès à Internet
 - Avoir accès à votre domaine Active Directory (connexion VPN non prise en charge à l’heure actuelle)
 - Fournir l’expérience utilisateur OOBE (Out-of-Box Experience).
@@ -163,7 +163,7 @@ Si vos appareils ne sont pas encore inscrits, vous pouvez les inscrire vous-mêm
 
 ### <a name="register-devices-from-an-oem"></a>Inscrire les appareils d’un OEM
 
-Si vous achetez de nouveaux appareils, certains OEM peuvent les inscrire à votre place. Pour plus d’informations, consultez la [page Windows Autopilot](http://aka.ms/WindowsAutopilot).
+Si vous achetez de nouveaux appareils, certains OEM peuvent les inscrire à votre place. Pour plus d’informations, consultez la [page Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Quand vos appareils Autopilot sont *inscrits*, avant qu’ils ne le soient dans Intune, vous les voyez à trois endroits (avec des noms définis sur leur numéro de série) :
 - Le volet **Appareils Autopilot** dans Intune, dans le portail Azure. Sélectionnez **Inscription d’appareils** > **Inscription Windows** > **Appareils**.

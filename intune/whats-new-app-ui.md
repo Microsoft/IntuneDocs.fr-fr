@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9955330d9f20c13b9239f900b77828d582d12bff
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0ee16e40eea4d217cd78c3a026731656bfa4ca53
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046423"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045624"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les dernières mises à jour pour les applications Microsoft Intune. Nous apportons régulièrement des améliorations au site web et à l’application Portail d’entreprise Intune. Si vous êtes un administrateur Intune ou un technicien de support, vous trouverez dans cet article les informations dont vous aurez besoin pour :
@@ -72,7 +72,7 @@ La page d’accueil de l’application Portail d’entreprise pour les appareils
 
 ## <a name="week-of-february-19-2019"></a>Semaine du 19 février 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nouvel écran Catégories d’application dans l’application Portail d’entreprise pour Windows 10<!-- 3834780 WNready4Review -->  
-Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
+Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)** , **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
 
 ![Capture d’écran de Portail d’entreprise pour Windows 10, écran Catégories d’application.](./media/1902_CP_app_categories.png)   
 
@@ -501,7 +501,7 @@ __Après__ ![Image de la version mise à jour de l’écran de chargement, qui a
 
 ![À gauche, une image de l’application Portail d’entreprise pour Android avant la mise à jour. À droite, une image de l’application Portail d’entreprise pour Android après la mise à jour. Les deux images montrent l’onglet Applications sélectionné parmi les trois onglets disponibles Applications, Appareils et Contacter le service informatique.](./media/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigation__ : La vue Toutes les applications montre une vue à onglets avec __Proposée(s)__, __Toutes__ et __Catégories__ afin de faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
+* __Navigation__ : La vue Toutes les applications montre une vue à onglets avec __Proposée(s)__ , __Toutes__ et __Catégories__ afin de faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
 
 <html>
 <body>

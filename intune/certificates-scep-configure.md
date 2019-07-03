@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
+ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744343"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344088"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -68,7 +68,7 @@ Nous vous recommandons vivement de publier le serveur NDES par le biais d’un p
 |**Modèle de certificat**|Configurez ce modèle sur votre autorité de certification émettrice.|
 |**Certificat d’authentification client**|Demandé auprès de votre autorité de certification émettrice ou de votre autorité de certification publique ; ce certificat doit être installé sur le serveur NDES.|
 |**Certificat d’authentification serveur**|Demandé auprès de votre autorité de certification émettrice ou autorité de certification publique ; ce certificat doit être installé et lié dans IIS sur le serveur NDES. Si les utilisations des clés d’authentification du client et du serveur sont définies pour le certificat (**utilisations améliorées de la clé**), vous pouvez utiliser le même certificat.|
-|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux utilisateurs, aux appareils ou aux deux en utilisant le profil de certificat de l’autorité de certification approuvée.<br /><b>Remarque :<b />Quand un profil de certificat SCEP est affecté, veillez à affecter le profil de certificat racine approuvé référencé dans votre profil de certificat SCEP au même groupe d’utilisateurs ou d’appareils.<br /><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez.<br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
+|**Certificat d’autorité de certification racine approuvée**|Vous exportez le certificat en tant que fichier **.cer** à partir de l’autorité de certification racine ou d’un appareil qui approuve votre autorité de certification racine. Ensuite, affectez-le aux utilisateurs, aux appareils ou aux deux en utilisant le profil de certificat de l’autorité de certification approuvée.<br /> **REMARQUE :<br />Quand un profil de certificat SCEP est attribué, veillez à attribuer le *profil de certificat racine approuvé* référencé dans votre profil de certificat SCEP au même groupe d’utilisateurs ou d’appareils.  Pour créer ce profil, consultez [Créer un profil de certificat approuvé](certficates-pfx-configure.md#create-a-trusted-certificate-profile), qui se trouve dans l’article sur les profils de certificats PKCS.** <br/><br />Vous utilisez un seul certificat d'autorité de certification racine approuvée par plateforme de système d'exploitation et l'associez à chaque profil de certificat racine approuvé que vous créez. <br /><br />Vous pouvez utiliser des certificats d'autorité de certification racine approuvée supplémentaires chaque fois que nécessaire. Par exemple, vous pouvez agir ainsi pour fournir une relation d'approbation à une autorité de certification qui signe les certificats d'authentification du serveur pour vos points d'accès Wi-Fi.|
 
 ### <a name="accounts"></a>Comptes
 
@@ -487,7 +487,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
      - **Signature numérique** : autoriser l'échange de clés uniquement lorsqu'une signature numérique contribue à la protection de la clé
    - **Taille de la clé (bits)** : sélectionnez le nombre de bits contenus dans la clé
    - **Algorithme de hachage** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) : Vous avez le choix entre les types d'algorithmes de hachage disponibles avec ce certificat. Permet de sélectionner le niveau le plus élevé de sécurité pris en charge par les appareils se connectant.
-   - **Certificat racine** : choisissez un profil de certificat d’autorité de certification racine que vous avez configuré et attribué à l’utilisateur et/ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat. Veillez à affecter ce profil de certificat racine approuvé au même groupe affecté dans le profil de certificat SCEP.
+   - **Certificat racine** : Choisissez un [profil de certificat racine approuvé](certficates-pfx-configure.md#create-a-trusted-certificate-profile) que vous avez préalablement créé et attribué à l’utilisateur et/ou à l’appareil. Ce certificat d’autorité de certification doit être le certificat racine de l’autorité de certification qui émet le certificat que vous configurez dans ce profil de certificat. Veillez à affecter ce profil de certificat racine approuvé au même groupe affecté dans le profil de certificat SCEP.
    - **Utilisation avancée de la clé** : **Ajoutez** des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une **authentification client** pour que l’utilisateur ou l’appareil puisse être authentifié auprès d’un serveur. Toutefois, vous pouvez ajouter d'autres utilisations de la clé en fonction de vos besoins.
    - **Paramètres d’inscription**
      - **Seuil de renouvellement (%)** : entrez le pourcentage de durée de vie restante du certificat avant que l'appareil ne demande le renouvellement du certificat.
@@ -508,6 +508,7 @@ Considérez les éléments suivants avant d’attribuer des profils de certifica
 
     > [!NOTE]
     > Pour iOS, vous devriez voir plusieurs copies du certificat dans le profil de gestion si vous déployez plusieurs profils de ressources qui utilisent le même profil de certificat.
+- Si vous utilisez la cogestion pour Intune et Configuration Manager, dans Configuration Manager [mettez le curseur de la charge de travail](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pour la *stratégie d’accès aux ressources* sur **Intune** ou sur  **Piloter Intune**. Ces paramètres permettent aux clients Windows 10 de démarrer le processus de demande de certificat.  
 
 Pour plus d’informations sur la façon d’affecter des profils, consultez [Affecter des profils d’appareils](device-profile-assign.md).
 
@@ -552,7 +553,7 @@ Pour résoudre les problèmes et vérifier la configuration du connecteur Intune
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Opération réussie  | Opération réussie |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | L’autorité de certification n’est pas valide ou est inaccessible. Vérifiez que l’autorité de certification est disponible et que votre serveur peut communiquer avec elle. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Le certificat d’authentification client Symantec est introuvable dans le magasin de certificats local. Pour plus d’informations, consultez [Installer le certificat d’autorisation d’inscription Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Le certificat d’authentification client Symantec est introuvable dans le magasin de certificats local. Consultez l’article [Configurer Intune Certificate Connector pour la plateforme DigiCert PKI](https://docs.microsoft.com/intune/certificates-digicert-configure#troubleshooting) pour plus d’informations.  |
 | 0x00000402 | RevokeCert_AccessDenied  | Le compte spécifié ne dispose pas d’autorisations pour révoquer un certificat d’une autorité de certification. Pour déterminer l’autorité de certification émettrice, consultez le champ Nom de l’autorité de certification dans les détails du message d’événement.  |
 | 0x00000403 | CertThumbprint_NotFound  | Impossible de trouver un certificat correspondant à votre entrée. Inscrivez le connecteur de certificat, puis réessayez. |
 | 0x00000404 | Certificate_NotFound  | Impossible de trouver un certificat correspondant à l’entrée fournie. Réinscrivez le connecteur de certificat, puis réessayez. |

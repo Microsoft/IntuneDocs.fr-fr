@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d1153254f5e803bc0e1f933b8bdc022f241abcc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bb175d2133cf2a7bc5b064c13afb7e252147c729
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045844"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044254"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Démarrage rapide : Envoyer des notifications aux appareils non conformes
 
 Dans ce guide de démarrage rapide, vous allez utiliser Microsoft Intune pour envoyer un e-mail de notification aux membres de votre personnel qui utilisent des appareils non conformes.
 
-Par défaut, quand Intune détecte un appareil qui n’est pas conforme, il le marque immédiatement comme étant non conforme. [L’accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) bloque alors l’appareil. Quand un appareil n’est pas conforme, Intune vous permet d’ajouter des actions en cas de non-conformité qui offrent plus de flexibilité pour décider de ce qu’il faut faire. Par exemple, vous pouvez accorder aux utilisateurs une période de grâce pour leur laisser le temps de mettre en conformité leurs appareils non conformes avant de bloquer ces derniers.
+Par défaut, quand Intune détecte un appareil qui n’est pas conforme, il le marque immédiatement comme étant non conforme. [L’accès conditionnel](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AAD) bloque alors l’appareil. Quand un appareil n’est pas conforme, Intune vous permet d’ajouter des actions en cas de non-conformité qui offrent plus de flexibilité pour décider de ce qu’il faut faire. Par exemple, vous pouvez accorder aux utilisateurs une période de grâce pour leur laisser le temps de mettre en conformité leurs appareils non conformes avant de bloquer ces derniers.
 
 Une des actions possibles en présence d’appareils non conformes est d’envoyer un e-mail aux utilisateurs finaux de ces appareils. Vous pouvez aussi personnaliser un e-mail de notification avant de l’envoyer aux utilisateurs. Plus précisément, vous pouvez personnaliser les destinataires, l’objet et le corps du message, y compris le logo de l’entreprise et les informations de contact. Intune fournit également des informations sur l’appareil non conforme dans l’e-mail de notification.
 

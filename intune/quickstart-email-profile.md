@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbf04d771a9c1fd43cfe695dd2d27b9cfe1a0528
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bbd8d81dfab46a1e752084aab75fbcf0d8104187
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050300"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044284"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS
 
@@ -67,7 +67,7 @@ Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrat
 Si vous n’envisagez pas d’utiliser le profil que vous avez créé pour d’autres tutoriels ou tests, vous pouvez le supprimer maintenant.
 1. Dans Intune, sélectionnez **Configuration de l’appareil**, puis **Profils**.
 2. Sélectionnez le profil de test que vous avez créé, **iOS require work email** (iOS : adresse e-mail professionnelle requise).
-3. Sélectionnez les points de suspension (**...**) en regard du profil, puis sélectionnez **Supprimer**.
+3. Sélectionnez les points de suspension ( **...** ) en regard du profil, puis sélectionnez **Supprimer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

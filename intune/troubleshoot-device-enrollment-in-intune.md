@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6175fca13f1883338b7f5858538728132183b8db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040597"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046303"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -143,7 +143,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 - S’ils ont plusieurs domaines de premier niveau pour les suffixes UPN des utilisateurs dans l’organisation (par exemple @contoso.com ou @fabrikam.com)
 
 
-Un [correctif cumulatif pour AD FS 2.0](http://support.microsoft.com/kb/2607496) fonctionne conjointement avec le commutateur <strong>SupportMultipleDomain</strong> pour permettre au serveur AD FS de prendre en charge ce scénario sans nécessiter d’autres serveurs AD FS 2.0. Pour plus d’informations, consultez [ce blog](https://blogs.technet.microsoft.uucom/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+Un [correctif cumulatif pour AD FS 2.0](http://support.microsoft.com/kb/2607496) fonctionne conjointement avec le commutateur <strong>SupportMultipleDomain</strong> pour permettre au serveur AD FS de prendre en charge ce scénario sans nécessiter d’autres serveurs AD FS 2.0. Pour plus d’informations, consultez [ce blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problèmes Android
@@ -464,7 +464,7 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 1. Dans le menu **Démarrer**, tapez **Exécuter** -> **MMC**.
 1. Choisissez **Fichier** > **Ajouter/supprimer des composants logiciels enfichables**.
 1. Double-cliquez sur **Certificats**, choisissez **Compte ordinateur** > **Suivant**, puis sélectionnez **Ordinateur local**.
-1. Double-cliquez sur **Certificats (ordinateur local)**, puis choisissez **Personnel / certificats**.
+1. Double-cliquez sur **Certificats (ordinateur local)** , puis choisissez **Personnel / certificats**.
 1. Recherchez le certificat Intune émis par Sc_Online_Issuing et supprimez-le, le cas échéant.
 1. Si la clé de Registre suivante existe, supprimez-la : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** et toutes les sous-clés.
 1. Tentez la réinscription.

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a10fa6983b8e8c34a1844c647d952ca8cbf0730c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050167"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045994"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
@@ -56,7 +56,7 @@ Dans l’application Portail d’entreprise, vous pouvez également effectuer l�
 
 Les stratégies de conformité sont des règles et des paramètres que les appareils doivent respecter pour être conformes. Utilisez ces stratégies avec un accès conditionnel pour empêcher les appareils non conformes d’accéder aux ressources de l’entreprise. Dans Intune, créez des stratégies de conformité pour autoriser ou bloquer l’accès des appareils exécutant Windows Holographic for Business. Par exemple, vous pouvez créer une stratégie qui impose l’activation de BitLocker.
 
-Voir aussi **[Bien démarrer avec les stratégies de conformité](device-compliance-get-started.md)**.
+Voir aussi **[Bien démarrer avec les stratégies de conformité](device-compliance-get-started.md)** .
 
 ## <a name="deploy-and-manage-apps"></a>Déployer et gérer des applications
 **[Ajouter des applications à Intune](apps-add.md)**

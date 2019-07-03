@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e21eb6169acf8ae69ace94fd54007eaa4f7f90f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5ed13994576f67c7b740a2ea895db9d1a0f42289
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046749"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044354"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implémenter votre plan Microsoft Intune
 
@@ -42,7 +42,7 @@ Les principaux éléments requis autonomes pour Intune sont les suivants :
 
 -   Azure AD Connect (pour la synchronisation d'annuaires)
 
--   Connecteur local Microsoft Intune pour Exchange (pour l’accès conditionnel pour Exchange sur site, si nécessaire)
+-   Connecteur local Microsoft Intune pour Exchange (pour l’accès conditionnel sur site à Exchange, si nécessaire)
 
 -   Intune Certificate Connector (pour le déploiement du certificat SCEP, si nécessaire)
 
@@ -123,7 +123,7 @@ Intune prend en charge les stratégies de conformité. Ajoutez les stratégies d
 
 -   En savoir plus sur les [stratégies de conformité](device-compliance.md).
 
-### <a name="task-12-enable-conditional-access-policies"></a>Tâche 12 : Activer les stratégies d’accès conditionnel
+### <a name="task-12-enable-conditional-access-policies"></a>Tâche 12 : Activer des stratégies d’accès conditionnel
 
 Intune prend en charge l’accès conditionnel pour Exchange Online, Exchange sur site, SharePoint Online, Skype Entreprise Online et Dynamics CRM Online. Activez et configurez l’accès conditionnel comme il se doit en fonction des cas d’utilisation et exigences de votre déploiement Intune.
 
