@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17db2227303fe3937156ad6afa610dce48bd1992
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041348"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528311"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Démarrage rapide : ajouter et attribuer une application cliente
 
@@ -69,7 +69,7 @@ Une fois que vous avez ajouté une application dans Microsoft Intune, vous pouve
 
 Effectuez les étapes suivantes pour attribuer une application à un groupe :
 1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications clientes** > **Applications**. 
-2. Sélectionnez l’application que vous voulez attribuer à un groupe.   
+2. Sélectionnez l’application que vous voulez attribuer à un groupe.
 3. Cliquez sur **Affectations** > **Ajouter un groupe** pour afficher le panneau **Ajouter un groupe**.
 4. Sélectionnez **Disponible pour les appareils inscrits** dans la zone de liste déroulante **Type d’attribution**. 
 5. Cliquez sur **Groupes inclus** > **Sélectionner les groupes à inclure** > **Testeurs Contoso**.

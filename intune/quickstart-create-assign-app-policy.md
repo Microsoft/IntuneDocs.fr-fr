@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bad416e738f1a0481c67480d9a83157a4781c71b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050332"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530776"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Démarrage rapide : Créer et affecter une stratégie de protection des applications
 
@@ -66,12 +66,12 @@ Une fois que vous avez créé une stratégie de protection des applications dans
 
 Effectuez les étapes suivantes pour attribuer la stratégie de protection des applications :
 
-1.  Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Intune** > **Applications clientes** > **Stratégies de protection des applications**. 
-2.  Sélectionnez la stratégie de protection des applications que vous avez créée précédemment. Dans ce guide de démarrage rapide, la stratégie s’appelle **Protection du contenu Windows 10**.
-3.  Sélectionnez **Affectations**.
-4.  Cliquez sur **Sélectionner les groupes à inclure** dans l’onglet **Inclure**.
-5.  Sélectionnez **Testeurs Contoso** comme groupe à inclure.
-6.  Cliquez sur **Sélectionner** > **Enregistrer**. 
+1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Intune** > **Applications clientes** > **Stratégies de protection des applications**. 
+2. Sélectionnez la stratégie de protection des applications que vous avez créée précédemment. Dans ce guide de démarrage rapide, la stratégie s’appelle **Protection du contenu Windows 10**.
+3. Sélectionnez **Affectations**.
+4. Cliquez sur **Sélectionner les groupes à inclure** dans l’onglet **Inclure**.
+5. Sélectionnez **Testeurs Contoso** comme groupe à inclure.
+6. Cliquez sur **Sélectionner** > **Enregistrer**. 
 
 Vous avez maintenant attribué la stratégie de protection des applications.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d3e36dbeb1fb7c90dfc5cc4c18fb30140c761db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046497"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512266"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Configurer des stratégies de gestion des applications et de conformité lors de la migration vers Microsoft Intune
 
@@ -59,7 +59,7 @@ Les profils d’accès aux ressources fournissent des certificats et des configu
 
 Vous devez créer un profil de configuration d’appareil pour appliquer des paramètres au niveau de ce dernier, par exemple la désactivation de l’appareil photo et de l’App Store, la configuration du mode d’application unique et de l’écran d’accueil, etc. Découvrez-en davantage sur [profils d’appareil](device-profiles.md).
 
-####  <a name="directly-import-ios-configuration-profiles-optional"></a>Importer directement des profils de configuration iOS (facultatif)
+#### <a name="directly-import-ios-configuration-profiles-optional"></a>Importer directement des profils de configuration iOS (facultatif)
 
 -   **Profils iOS Apple Configurator (iOS 7.1 et versions ultérieures) :** si votre solution MDM utilise des profils Apple Configurator (fichiers .mobileconfig), Intune peut les importer directement comme stratégies de configuration personnalisées.
 

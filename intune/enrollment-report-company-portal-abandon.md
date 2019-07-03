@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546694409e6f87d85c5ef934b5d084b0955e0bf7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c15bd301b60481f4d8b15617512851e2cc29034a
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041863"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529760"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Rapport Inscriptions d’utilisateur incomplètes
 
@@ -35,9 +35,9 @@ Pour voir le rapport, choisissez **Intune** > **Inscription de l’appareil** > 
 
 Une inscription incomplète est caractérisée par l’une des opérations suivantes de la part d’un utilisateur :
 
--   Il choisit explicitement une action pour arrêter l’inscription
--   Il ferme le Portail d’entreprise pendant l’inscription
--   Il consacre plus de 30 minutes à une des sections de l’inscription avant de passer à la suivante
+- Il choisit explicitement une action pour arrêter l’inscription
+- Il ferme le Portail d’entreprise pendant l’inscription
+- Il consacre plus de 30 minutes à une des sections de l’inscription avant de passer à la suivante
 
 Si un utilisateur arrête l’inscription et la redémarre plusieurs fois, cela compte pour autant de tentatives et d’inscriptions incomplètes. Si un utilisateur attend 30 minutes entre différents écrans d’inscription, cela est considéré comme plusieurs inscriptions incomplètes.
 
@@ -53,18 +53,18 @@ Vous pouvez filtrer la plage de dates, le système d’exploitation et la sectio
 
 En haut du rapport, vous pouvez voir le nombre et le pourcentage d’inscriptions incomplètes par rapport à toutes les inscriptions.
 
--   Inscriptions lancées : nombre d’inscriptions tentées.
--   Inscriptions incomplètes : nombre d’inscriptions tentées qui n’ont pas abouti à un appareil entièrement inscrit et conforme.
--   Taux d’inscriptions incomplètes : pourcentage de tentatives d’inscription qui ont été abandonnées (Inscriptions abandonnées/Inscriptions lancées).
+- Inscriptions lancées : nombre d’inscriptions tentées.
+- Inscriptions incomplètes : nombre d’inscriptions tentées qui n’ont pas abouti à un appareil entièrement inscrit et conforme.
+- Taux d’inscriptions incomplètes : pourcentage de tentatives d’inscription qui ont été abandonnées (Inscriptions abandonnées/Inscriptions lancées).
 
 ### <a name="line-graph"></a>Graphique linéaire
 
 Le graphique linéaire affiche les inscriptions incomplètes quotidiennes pour chacune des quatre sections d’inscription principales :
 
--   Liste de contrôle de configuration
--   Écrans de plateforme
--   Conditions d'utilisation
--   Conformité/activation
+- Liste de contrôle de configuration
+- Écrans de plateforme
+- Conditions d'utilisation
+- Conformité/activation
 
 ### <a name="user-abandonment-actions"></a>Actions d’abandon par l’utilisateur
 
