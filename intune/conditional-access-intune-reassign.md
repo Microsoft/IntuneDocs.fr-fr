@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4fa42a52e104ef1c9cf13c8490159f3dbb2efed
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045330"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530667"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
@@ -81,7 +81,7 @@ Le panneau **Intune App Protection** dans le portail Azure permet aux administra
 3. Spécifiez un nom pour la stratégie.
 
 4. Sous la section **Affectations**, choisissez **Utilisateurs et groupes** pour cibler la nouvelle stratégie d’accès conditionnel.
-    
+
     ![Image comparant l’interface utilisateur des groupes d’utilisateurs dans les portails Intune et Azure](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 

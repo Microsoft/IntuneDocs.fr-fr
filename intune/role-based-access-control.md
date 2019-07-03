@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0e6ad7e46abe8da4c1b03e836eb9ba2f5991d0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044166"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528242"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -38,9 +38,9 @@ Un rôle définit le jeu d’autorisations accordées aux utilisateurs affectés
 Vous pouvez utiliser les rôles intégrés et personnalisés. Les rôles intégrés couvrent des scénarios courants dans Intune. Vous pouvez [créer vos propres rôles personnalisés](create-custom-role.md) avec le jeu d’autorisations exact dont vous avez besoin. Plusieurs rôles Azure Active Directory disposent d’autorisations pour Intune.
 Pour afficher un rôle, choisissez **Intune** > **Rôles** > **Tous les rôles** > choisissez un rôle. Vous verrez les pages suivantes :
 
--   **Propriétés** : nom, description, type, affectations et balises d’étendue pour le rôle. 
--   **Autorisations** : liste un long ensemble de boutons bascules définissant les autorisations dont dispose le rôle.
--   **Affectations** : liste d’[attributions de rôles]( assign-role.md) identifiant quels utilisateurs ont accès à quels utilisateurs/appareils. Un rôle peut avoir plusieurs attributions, et un utilisateur peut figurer dans plusieurs attributions.
+- **Propriétés** : nom, description, type, affectations et balises d’étendue pour le rôle. 
+- **Autorisations** : liste un long ensemble de boutons bascules définissant les autorisations dont dispose le rôle.
+- **Affectations** : liste d’[attributions de rôles]( assign-role.md) identifiant quels utilisateurs ont accès à quels utilisateurs/appareils. Un rôle peut avoir plusieurs attributions, et un utilisateur peut figurer dans plusieurs attributions.
 
 ### <a name="built-in-roles"></a>Rôles intégrés
 Vous pouvez attribuer des rôles intégrés aux groupes sans configuration supplémentaire. Vous ne pouvez pas supprimer ou modifier le nom, la description, le type ou les autorisations d’un rôle intégré. Pour obtenir une liste complète des autorisations pour chaque rôle intégré, consultez le [tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
@@ -84,10 +84,10 @@ Une attribution de rôle définit :
 Vous pouvez affecter des rôles personnalisés et intégrés à vos utilisateurs. Pour être affecté à un rôle Intune, l’utilisateur doit disposer d’une licence Intune.
 Pour afficher une attribution de rôle, choisissez **Intune** > **Rôles** > **Tous les rôles** > choisissez un rôle > choisissez une attribution. Vous verrez les pages suivantes :
 
--   **Propriétés** : nom, description, rôle, membres, étendues et balises de l’attribution.
--   **Membres** : tous les utilisateurs des groupes listés sont autorisés à gérer les utilisateurs/appareils figurant dans Étendue (groupes).
--   **Étendue (groupes)**  : tous les utilisateurs/appareils dans ces groupes peuvent être gérés par les utilisateurs figurant dans Membres.
--   **[Étendue balises)](scope-tags.md)**  : les utilisateurs figurant dans Membres peuvent voir les ressources qui ont les mêmes balises d’étendue.
+- **Propriétés** : nom, description, rôle, membres, étendues et balises de l’attribution.
+- **Membres** : tous les utilisateurs des groupes listés sont autorisés à gérer les utilisateurs/appareils figurant dans Étendue (groupes).
+- **Étendue (groupes)**  : tous les utilisateurs/appareils dans ces groupes peuvent être gérés par les utilisateurs figurant dans Membres.
+- **[Étendue balises)](scope-tags.md)**  : les utilisateurs figurant dans Membres peuvent voir les ressources qui ont les mêmes balises d’étendue.
 
 ### <a name="multiple-role-assignments"></a>Attributions de rôles multiples
 Si un utilisateur a plusieurs attributions de rôles, les autorisations dans ces attributions de rôles s’étendent à différents objets comme suit :

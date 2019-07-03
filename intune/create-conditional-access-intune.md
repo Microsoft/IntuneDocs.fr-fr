@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ed6259c996772817ceaa8ec827c8ac506adfd399
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045103"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530470"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel basée sur l’appareil
 
@@ -34,12 +34,12 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
 
 ## <a name="create-conditional-access-policy"></a>Créer la stratégie d’accès conditionnel
 
-1.  Depuis le portail Intune, sélectionnez **Accès conditionnel** > **Stratégies** > **Nouvelle stratégie**.
+1. Depuis le portail Intune, sélectionnez **Accès conditionnel** > **Stratégies** > **Nouvelle stratégie**.
    
     ![Créer une stratégie d’accès conditionnel](media/create-conditional-access-intune/create-ca.png)
  
-2.  Sous **Affectations**, sélectionnez **Utilisateurs et groupes**. 
-3.  Sous l’onglet **Inclure**, identifiez les utilisateurs ou les groupes auxquels vous souhaitez appliquer cette stratégie d’accès conditionnel. Une fois que vous avez choisi lesquelles inclure, vous pouvez utiliser l’onglet **Exclure** s’il existe des utilisateurs, des rôles ou des groupes que vous souhaitez exclure de cette stratégie.  
+2. Sous **Affectations**, sélectionnez **Utilisateurs et groupes**. 
+3. Sous l’onglet **Inclure**, identifiez les utilisateurs ou les groupes auxquels vous souhaitez appliquer cette stratégie d’accès conditionnel. Une fois que vous avez choisi lesquelles inclure, vous pouvez utiliser l’onglet **Exclure** s’il existe des utilisateurs, des rôles ou des groupes que vous souhaitez exclure de cette stratégie.  
     - **Tous les utilisateurs** : sélectionnez cette option pour appliquer la stratégie à tous les utilisateurs et tous groupes, y compris les utilisateurs internes et les invités.
   
     - **Sélectionner les utilisateurs et les groupes** : sélectionnez cette option et spécifiez une ou plusieurs des options suivantes :
@@ -52,9 +52,9 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
      
        > [!TIP]  
        > Testez la stratégie sur un plus petit groupe d’utilisateurs pour vérifier qu’elle fonctionne comme prévu.
-4.  Sélectionnez **Terminé**.
-5.  Sous **Affectations**, sélectionnez **Applications cloud**. 
-6.  Sur l’onglet **Inclure**, identifiez les applications et les services que vous souhaitez protéger avec cette stratégie d’accès conditionnel. Vous pouvez ensuite utiliser l’onglet **Exclure** si vous souhaitez exclure des applications ou des services de cette stratégie.
+4. Sélectionnez **Terminé**.
+5. Sous **Affectations**, sélectionnez **Applications cloud**. 
+6. Sur l’onglet **Inclure**, identifiez les applications et les services que vous souhaitez protéger avec cette stratégie d’accès conditionnel. Vous pouvez ensuite utiliser l’onglet **Exclure** si vous souhaitez exclure des applications ou des services de cette stratégie.
     - **Toutes les applications cloud** : sélectionnez cette option pour appliquer la stratégie à toutes les applications.
       > [!IMPORTANT]  
       > L’application de gestion Microsoft Azure pour l’accès au portail Azure est incluse dans cette liste. Veillez à utiliser l’onglet **Exclure** soit à cet emplacement ou dans les options **Utilisateurs et groupes** pour vous assurer que vous (ou les utilisateurs ou groupes que vous désignez) serez en mesure de vous connecter au portail Azure. 
@@ -63,8 +63,8 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
     
       ![Créer une stratégie d’accès conditionnel](media/create-conditional-access-intune/create-ca-select-apps.png)
 
-7.  Sélectionnez **Terminé**.
-8.  Sous **Affectations**, sélectionnez **Conditions**.
+7. Sélectionnez **Terminé**.
+8. Sous **Affectations**, sélectionnez **Conditions**.
     - **Risque de connexion** : choisissez Oui pour utiliser la détection de risque de connexion Azure AD Identity Protection avec cette stratégie, puis choisissez les niveaux de risque de connexion auxquels la stratégie doit s’appliquer.
     - **Plateformes d'appareils** : Sous l’onglet **Inclure**, identifiez les plateformes d’appareil auxquels vous souhaitez appliquer cette stratégie d’accès conditionnel. Utilisez l’onglet **Exclure** pour exclure des plateformes de cette stratégie.
     - **Emplacements** : sous l’onglet **Inclure**, spécifiez si la stratégie s’applique à n’importe quel emplacement, des emplacements réseau approuvés sous le contrôle de votre service informatique ou des emplacements réseau spécifiques. Utilisez l’onglet **Exclure** pour exclure des emplacements réseau de cette stratégie. 
@@ -76,7 +76,7 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
       > [!TIP]  
       > Si vous souhaitez protéger à la fois les clients **d’authentification moderne** et les **clients Exchange ActiveSync**, créez deux stratégies d’accès conditionnel distinctes, une pour chaque type de client. Bien qu’Exchange ActiveSync prenne en charge l’authentification moderne, la seule condition prise en charge par Exchange ActiveSync est la plateforme. Les autres conditions, y compris l’authentification multifacteur, ne sont pas prises en charge. Pour protéger efficacement l’accès à Exchange Online à partir d’Exchange ActiveSync, créez une stratégie d’accès conditionnel qui spécifie l’application cloud Office 365 Exchange Online et l’application client Exchange ActiveSync, en sélectionnant le paramètre Appliquer la stratégie uniquement aux plateformes prises en charge.
 
-9.  Sélectionnez **Terminé**.
+9. Sélectionnez **Terminé**.
 10. Sous **Contrôles d’accès**, sélectionnez **Accorder**. Configurez ce qui se passe en fonction des conditions configurées.  Vous pouvez sélectionner l’une des options suivantes :
     - **Bloquer l’accès** : les utilisateurs spécifiés dans cette stratégie n’auront pas accès aux applications dans les conditions que vous avez spécifiées.
     - **Accorder l’accès** : les utilisateurs spécifiés dans cette stratégie auront un accès, mais vous pouvez exiger les actions supplémentaires suivantes :

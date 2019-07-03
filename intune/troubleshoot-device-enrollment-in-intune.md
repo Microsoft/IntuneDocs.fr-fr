@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046303"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528747"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -34,10 +34,10 @@ Cet article fournit des suggestions pour résoudre les problèmes liés à l’[
 
 Avant de commencer le dépannage, vérifiez que vous avez configuré Intune correctement pour activer l’inscription. Vous pouvez consulter ces exigences de configuration dans les rubriques suivantes :
 
--   [Se préparer à inscrire des appareils dans Microsoft Intune](setup-steps.md)
--   [Configurer la gestion des appareils iOS et Mac](ios-enroll.md)
--   [Configurer la gestion des appareils Windows](windows-enroll.md)
--   [Configurer la gestion des appareils Android](android-enroll.md) -aucune étape supplémentaire requise
+- [Se préparer à inscrire des appareils dans Microsoft Intune](setup-steps.md)
+- [Configurer la gestion des appareils iOS et Mac](ios-enroll.md)
+- [Configurer la gestion des appareils Windows](windows-enroll.md)
+- [Configurer la gestion des appareils Android](android-enroll.md) -aucune étape supplémentaire requise
 
 Vous pouvez également vérifier que l’heure et la date sur l’appareil de l’utilisateur sont correctement définies :
 
@@ -236,15 +236,15 @@ L’erreur de certificat se produit car les appareils Android nécessitent l’i
 
 Pour résoudre ce problème, importez les certificats dans les certificats personnels de l’ordinateur sur les proxys ou le serveur AD FS en procédant comme suit :
 
-1.  Sur les serveurs ADFS et proxy, cliquez avec le bouton droit sur **Démarrer** > **Exécuter** > **certlm.msc** pour lancer la console de gestion des certificats de l’ordinateur local.
-2.  Développez **Personnel** et choisissez **Certificats**.
-3.  Recherchez le certificat pour votre communication avec le service AD FS (un certificat signé publiquement) et double-cliquez dessus pour afficher ses propriétés.
-4.  Choisissez l’onglet **Chemin d’accès de certification** pour afficher les certificats parents du certificat.
-5.  Sur chaque certificat parent, choisissez **Afficher le certificat**.
-6.  Choisissez **Détails** > **Copier dans un fichier**.
-7.  Suivez les invites de l’Assistant pour exporter ou enregistrer la clé publique du certificat parent dans l’emplacement de fichier de votre choix.
-8.  Cliquez avec le bouton droit sur **Certificats** > **Toutes les tâches** > **Importer**.
-9.  Suivez les invites de l’assistant pour importer le(s) certificat(s) parent(s) dans **Local Computer\Personal\Certificates**.
+1. Sur les serveurs ADFS et proxy, cliquez avec le bouton droit sur **Démarrer** > **Exécuter** > **certlm.msc** pour lancer la console de gestion des certificats de l’ordinateur local.
+2. Développez **Personnel** et choisissez **Certificats**.
+3. Recherchez le certificat pour votre communication avec le service AD FS (un certificat signé publiquement) et double-cliquez dessus pour afficher ses propriétés.
+4. Choisissez l’onglet **Chemin d’accès de certification** pour afficher les certificats parents du certificat.
+5. Sur chaque certificat parent, choisissez **Afficher le certificat**.
+6. Choisissez **Détails** > **Copier dans un fichier**.
+7. Suivez les invites de l’Assistant pour exporter ou enregistrer la clé publique du certificat parent dans l’emplacement de fichier de votre choix.
+8. Cliquez avec le bouton droit sur **Certificats** > **Toutes les tâches** > **Importer**.
+9. Suivez les invites de l’assistant pour importer le(s) certificat(s) parent(s) dans **Local Computer\Personal\Certificates**.
 10. Redémarrez les serveurs AD FS.
 11. Répétez les étapes ci-dessus sur tous les serveurs proxy et AD FS.
 
