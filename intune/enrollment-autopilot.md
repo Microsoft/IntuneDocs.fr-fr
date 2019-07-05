@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28c3da6d2e3390d20aecc3673cac38e8424ef57a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: cbd73d22c2e42f0a379ec2a97179f9e3c4dec224
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389307"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512113"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -35,7 +35,7 @@ Windows Autopilot simplifie l’inscription des appareils dans Intune. La créat
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Comment obtenir le fichier CSV pour l’importation dans Intune
 
-Consultez la présentation de l’applet de commande PowerShell suivante pour plus d’informations sur son utilisation.
+Pour plus d’informations, consultez la présentation de l’applet de commande PowerShell.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 
@@ -47,8 +47,9 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
 
     ![Capture d’écran d’appareils Windows Autopilot](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. Sous **Ajouter des appareils Windows AutoPilot**, accédez au fichier CSV répertoriant les appareils que vous souhaitez ajouter. Le fichier CSV doit lister les numéros de série, les ID de produit Windows facultatifs, les hachages matériels et les étiquettes de groupe facultatives des appareils. Vous pouvez avoir jusqu’à 500 lignes dans la liste. Utilisez le format d’en-tête et de ligne ci-dessous : `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag`
-    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
+2. Sous **Ajouter des appareils Windows AutoPilot**, accédez au fichier CSV répertoriant les appareils que vous souhaitez ajouter. Le fichier CSV doit lister les numéros de série, les ID de produit Windows, les hachages matériels, les étiquettes de groupe facultatives, les utilisateurs attribués et les ID de commande des appareils. Vous pouvez avoir jusqu’à 500 lignes dans la liste. Utilisez le format d’en-tête et de ligne ci-dessous :
+
+    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User, Order ID` `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>,<optionalOrderID>`
 
     ![Capture d’écran de l’ajout d’appareils Windows Autopilot](media/enrollment-autopilot/autopilot-import-device2.png)
 
@@ -69,7 +70,7 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
     Les appareils Autopilot qui ne sont pas encore inscrits sont ceux dont le nom correspond au numéro de série de l’appareil.
 4. Si vous avez choisi **Appareils dynamiques** pour **Type d’appartenance** ci-dessus, dans le panneau **Groupe**, choisissez **Membres de dispositif dynamique**, puis tapez le code suivant dans la zone **Règle avancée**.
     - Si vous souhaitez créer un groupe comprenant tous vos appareils Autopilot, tapez `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Le champ de balises de groupe d’Intune est mis en correspondance avec l’attribut OrderID sur les appareils Azure AD. Si vous souhaitez créer un groupe comprenant tous vos appareils Autopilot qui présentent une balise de groupe (référence de commande) spécifique, tapez `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881") `.
+    - Le champ de balises de groupe d’Intune est mis en correspondance avec l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe spécifique (OrderID), vous devez taper ceci : `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Si vous souhaitez créer un groupe qui inclut tous vos appareils Autopilot associés à un ID de bon de commande spécifique, tapez `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     Après avoir ajouté le code dans la zone **Règle avancée**, choisissez **Enregistrer**.
@@ -95,7 +96,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
     - **Contrat de Licence Utilisateur Final (CLUF)**  : (Windows 10, version 1709 ou ultérieure) choisissez de montrer ou non le CLUF aux utilisateurs.
     - **Paramètres de confidentialité** : choisissez de montrer ou non les paramètres de confidentialité aux utilisateurs.
     >[!IMPORTANT]
-    >Pour les déploiements Autopilot sur les appareils Windows 10 version 1903 et ultérieure, la valeur par défaut de Données de diagnostic est automatiquement définie sur Complètes. Pour plus d’informations, consultez [Données de diagnostic Windows](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data) <br>
+    >Pour les déploiements Autopilot sur les appareils Windows 10 version 1903 et ultérieure, la valeur par défaut de Données de diagnostic est automatiquement définie sur Complètes. Pour plus d’informations, consultez [Données de diagnostic Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
     
     - **Masquer les options de changement de compte (nécessite Windows 10, version 1809 ou ultérieure)**  : choisissez **Masquer** pour empêcher l’affichage des options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Ces options nécessitent la [configuration de la marque de société dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Type de compte d’utilisateur** : choisissez le type de compte de l’utilisateur (**Administrateur** ou **Standard**).
@@ -118,7 +119,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
     ![Capture d’écran de la page Vérifier](media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune recherche régulièrement de nouveaux appareils dans les groupes affectés, puis commence le processus d’affectation de profils à ces appareils. Ce processus peut prendre plusieurs minutes. Avant de déployer un appareil, vérifiez que ce processus est terminé.  Pour ce faire, accédez à **Inscription de l’appareil** > **Inscription Windows ** > **Appareils** où vous devez voir l’état du profil passer de « Non affecté » à « Affectation » et enfin à « Affecté ».
+> Intune recherche régulièrement de nouveaux appareils dans les groupes affectés, puis commence le processus d’affectation de profils à ces appareils. Ce processus peut prendre plusieurs minutes. Avant de déployer un appareil, vérifiez que ce processus est terminé.  Pour ce faire, accédez à **Inscription de l’appareil** > **Inscription Windows** > **Appareils** où vous devez voir l’état du profil passer de « Non affecté » à « Affectation » et enfin à « Affecté ».
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Modifier un profil de déploiement Autopilot
 Une fois que vous avez créé un profil de déploiement Autopilot, vous pouvez en modifier certaines parties.   

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a20ccec2ef0cbaba87637b3c44c2cc2be094ab
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67325545"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500642"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Rechercher l’utilisateur principal d’un appareil Intune
 
@@ -60,8 +60,8 @@ Intune ajoute automatiquement un utilisateur principal aux appareils pendant ou 
 | Windows | Jonction Azure AD (prête à l’emploi) | Inscription de l’utilisateur | Pendant l’inscription | 
 | Windows | Jonction Azure AD (Autopilot prêt à l’emploi) | Inscription de l’utilisateur | Pendant l’inscription | 
 | Windows | Inscrire dans la gestion des appareils mobiles uniquement | Inscription de l’utilisateur | Pendant l’inscription | 
-| Windows | AADJ hybride + GPO à inscription automatique | Premier utilisateur à se connecter | Lorsque le premier utilisateur se connecte | 
-| Windows | Cogestion | Premier utilisateur à se connecter | Lorsque le premier utilisateur se connecte | 
+| Windows | AADJ hybride + GPO à inscription automatique | Premier utilisateur à se connecter à Windows | Quand le premier utilisateur se connecte à Windows| 
+| Windows | Cogestion | Premier utilisateur à se connecter à Windows | Quand le premier utilisateur se connecte à Windows | 
 | Windows | Jonction Azure AD (jeton d’inscription en bloc) | Aucune | Non applicable | 
 | Windows | Jonction Azure AD (mode de déploiement automatique Autopilot) | Aucune | Non applicable | 
 | Multiplateforme | Inscription par utilisateur avec l’application portail d’entreprise | Inscription de l’utilisateur | Pendant l’inscription |

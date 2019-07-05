@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: eda0d77fc5cdb11fa4bc5b21f48ceb7616ecfb15
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: b8b1c47e4a2eb46bb8f7190ede351ed77a1bfef4
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389262"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494494"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Méthodes d’inscription dans Intune pour les appareils Windows
 
@@ -41,7 +41,7 @@ Les utilisateurs peuvent inscrire eux-mêmes leur appareil Windows en appliquant
 Si un administrateur a configuré l’inscription automatique (disponible avec les abonnements Azure AD premium), l’utilisateur n’est obligé d’entrer ses informations d’identification qu’une seule fois. Sinon, il devra s’inscrire séparément par le biais de l’inscription à MDM uniquement, et entrer à nouveau ses informations d’identification.  
 - L’**inscription à MDM uniquement** permet aux utilisateurs d’inscrire un PC existant joint à un annuaire Active Directory, à Azure Active Directory ou à un groupe de travail dans Intune. Les utilisateurs s’inscrivent à partir de Paramètres sur le PC Windows existant. Cette méthode n’est pas recommandée, car elle n’inscrit pas l’appareil auprès d’Azure Active Directory. Elle empêche également l’utilisation de fonctionnalités telles que l’accès conditionnel.
 - [Jonction à Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) : joint l’appareil à Azure Active Directory et permet aux utilisateurs de se connecter à Windows avec leurs informations d’identification Azure AD. Si l’inscription automatique est activée, l’appareil est inscrit automatiquement dans Intune. L’avantage de l’inscription automatique est qu’il s’agit d’un processus à étape unique pour l’utilisateur. Autrement, il devra s’inscrire séparément par le biais de l’inscription à MDM uniquement, et entrer à nouveau ses informations d’identification. Les utilisateurs s’inscrivent de cette façon pendant la phase OOBE Windows initiale ou à partir de Paramètres. L’appareil est marqué comme appareil d’entreprise dans Intune.
-- [AutoPilot](enrollment-autopilot.md) : automatise la jonction à Azure AD et inscrit de nouveaux appareils d’entreprise dans Intune. Cette méthode simplifie l’expérience OOBE et élimine la nécessité d’appliquer des images de système d’exploitation personnalisées sur les appareils. Quand les administrateurs utilisent Intune pour gérer des appareils Autopilot, ils peuvent gérer des stratégies, des profils, des applications, et ainsi de suite, une fois les appareils inscrits.  Il existe deux types de déploiement Autopilot : le [mode de déploiement automatique](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (pour les kiosques, la signalisation numérique ou un appareil partagé) et le [mode géré par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (pour les utilisateurs classiques). 
+- [AutoPilot](enrollment-autopilot.md) : automatise la jonction à Azure AD et inscrit de nouveaux appareils d’entreprise dans Intune. Cette méthode simplifie l’expérience OOBE et élimine la nécessité d’appliquer des images de système d’exploitation personnalisées sur les appareils. Quand les administrateurs utilisent Intune pour gérer des appareils Autopilot, ils peuvent gérer des stratégies, des profils, des applications, et ainsi de suite, une fois les appareils inscrits.  Il existe quatre types de déploiement Autopilot : [Mode de déploiement automatique](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (pour les bornes, la signalisation numérique ou les appareils partagés), [Mode géré par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (pour les utilisateurs traditionnels), [White Glove] (https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permet aux partenaires ou au personnel informatique de préprovisionner un PC Windows 10 pour qu’il soit entièrement configuré et prêt à l’emploi, et [Autopilot pour les appareils existants] (https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vous permet de déployer facilement la dernière version de Windows 10 sur vos appareils existants).
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Inscription gérée par l’administrateur dans Intune
 
@@ -51,7 +51,7 @@ Les administrateurs peuvent configurer les méthodes d’inscription suivantes q
 - La [cogestion Configuration Manager](https://docs.microsoft.com/sccm/comanage/overview) permet aux administrateurs d’inscrire leurs appareils existants gérés par Configuration Manager dans Intune afin de bénéficier à la fois des avantages offerts par Intune et par Configuration Manager. 
 - Le [Gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md) (DEM) est un compte de service spécial. Les comptes DEM disposent d’autorisations qui permettent aux utilisateurs autorisés d’inscrire et de gérer plusieurs appareils d’entreprise. Ces types d’appareils sont adaptés par exemple aux applications utilitaires ou de point de vente, mais ne conviennent pas pour les utilisateurs qui doivent accéder à la messagerie ou à des ressources de l’entreprise. Cette méthode n’autorise pas l’utilisation de fonctionnalités telles que l’accès conditionnel. 
 - L’[inscription en bloc](windows-bulk-enroll.md) permet à un utilisateur autorisé de joindre un grand nombre de nouveaux appareils d’entreprise à Azure Active Directory et Intune. Vous créez un package de provisionnement avec l’application WCD (Windows Configuration Designer). Ensuite, à l’aide d’un support USB pendant l’expérience OOBE Windows initiale ou à partir d’un PC Windows existant, vous installez le package de provisionnement pour inscrire automatiquement les appareils dans Intune. Cette méthode n’autorise pas l’utilisation de l’accès conditionnel. 
-- [L’inscription des appareils Windows IoT Core](https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/intunedeviceenrollment) s’effectue en utilisant le tableau de bord Windows IoT Core pour préparer l’appareil, puis en utilisant Windows Configuration Designer pour créer un package d’approvisionnement. Ensuite, à l’aide de la carte SD comme support lors du démarrage initial, il installe le package d’approvisionnement pour inscrire automatiquement les appareils dans Intune.
+- [L’inscription des appareils Windows IoT Core](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) s’effectue en utilisant le tableau de bord Windows IoT Core pour préparer l’appareil, puis en utilisant Windows Configuration Designer pour créer un package d’approvisionnement. Ensuite, à l’aide de la carte SD comme support lors du démarrage initial, il installe le package d’approvisionnement pour inscrire automatiquement les appareils dans Intune.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
