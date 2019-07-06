@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f47d7e238bc810db9057a4a7c86dbfa523b0e7b
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: 1afdaa1bb21e3a13932202524eed9322d95479bb
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174212"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545650"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quelles informations mon organisation peut-elle voir quand j’inscris mon appareil ?
 
@@ -34,7 +34,7 @@ Votre organisation ne peut pas voir vos informations personnelles quand vous ins
 - E-mails et SMS
 - Contacts
 - Calendrier
--   Mots de passe
+- Mots de passe
 - Photos, notamment celles qui se trouvent dans l’application de photos ou sur la pellicule
 - Fichiers
 
@@ -51,8 +51,8 @@ Votre organisation ne peut pas voir vos informations personnelles quand vous ins
 
 **Ce que votre organisation est susceptible de voir :**
 
--  Numéro de téléphone : pour les appareils appartenant à l’**entreprise**, votre numéro de téléphone complet peut être vu. Pour les appareils **personnels**, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles par votre organisation. Vous pouvez voir le **Type de propriété** pour chaque appareil en ouvrant la page **Détails sur l’appareil** de l’appareil.
+- Numéro de téléphone : pour les appareils appartenant à l’**entreprise**, votre numéro de téléphone complet peut être vu. Pour les appareils **personnels**, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles par votre organisation. Vous pouvez voir le **Type de propriété** pour chaque appareil en ouvrant la page **Détails sur l’appareil** de l’appareil.
 - Espace de stockage sur l’appareil : si vous ne réussissez pas à installer une application obligatoire, votre organisation peut regarder si l’espace de stockage disponible sur votre appareil est insuffisant.  
--  Localisation : votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
+- Localisation : votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
 - Détails de l’inventaire des applications : si votre organisation utilise Mobile Threat Defense, elle peut voir les détails concernant les applications installées sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
 - Informations sur le réseau : certaines informations sur les connexions réseau des appareils Android peuvent être visibles par l’équipe de support de votre organisation. Par exemple, si votre organisation exige que les appareils restent dans un bâtiment spécifique, votre appareil identifie le réseau auquel il est connecté. 

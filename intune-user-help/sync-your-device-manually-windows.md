@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57335069"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546250"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synchroniser votre appareil Windows manuellement
 
@@ -41,9 +41,9 @@ Tous les appareils Windows peuvent être synchronisés à partir de l’applicat
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Synchroniser directement à partir de l’application Portail d’entreprise pour Windows
 Effectuez les étapes suivantes pour synchroniser manuellement n’importe quel appareil Windows 10 exécutant Creators Update (1703) ou version ultérieure.
 
-1.  Ouvrez l'application Portail d'entreprise sur votre appareil.
+1. Ouvrez l'application Portail d'entreprise sur votre appareil.
 
-2.  Sélectionnez **Paramètres** > **Synchroniser**.
+2. Sélectionnez **Paramètres** > **Synchroniser**.
 
     ![Capture d’écran de la page d’accueil de l’application Portail d’entreprise avec Paramètres mis en surbrillance](./media/RS1_homePage_settings_04.png)  
     
@@ -96,7 +96,7 @@ Effectuez ces étapes pour synchroniser manuellement vos appareils Microsoft Hol
 
 #### <a name="work-access-steps"></a>Étapes pour l’accès professionnel
 
-1.  Cliquez sur **Accès professionnel**.
+1. Cliquez sur **Accès professionnel**.
 
     ![Choix d’accès professionnel comme type de compte](./media/win10pc-sync-3-work-access.png)
 
@@ -128,12 +128,12 @@ Effectuez ces étapes pour synchroniser manuellement vos appareils Microsoft Hol
        ![Choix de l’icône Synchroniser](./media/win10m-sync-4-tap-sync.png)  
 ### <a name="microsoft-hololens"></a>Microsoft HoloLens  
 Ces instructions s’appliquent aux appareils HoloLens exécutant la Mise à jour anniversaire Windows 10 (également appelée RS1). 
-1.  Ouvrez l’application Paramètres sur votre appareil.  
+1. Ouvrez l’application Paramètres sur votre appareil.  
 
-2.  Sélectionnez **Comptes** > **Accès professionnel**.  
+2. Sélectionnez **Comptes** > **Accès professionnel**.  
     ![Capture d’écran de l’application Paramètres HoloLens avec lien Comptes mis en surbrillance](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3.  Sélectionnez votre compte connecté > **Synchroniser**. ![Capture d’écran de l’application Paramètres HoloLens avec bouton Synchroniser mis en surbrillance](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Sélectionnez votre compte connecté > **Synchroniser**.  ![Capture d’écran de l’application Paramètres HoloLens avec bouton Synchroniser mis en surbrillance](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 

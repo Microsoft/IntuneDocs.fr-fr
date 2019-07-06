@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23476383abfddabffc411afa286c97b30ef04439
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: dc7b7cdc4388051761eafac322171e4c30075923
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040978"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549183"
 ---
 # <a name="reference-for-policy-entities"></a>Informations de référence sur les entités de stratégie
 
 La catégorie **Stratégie** contient des entités pour appareils mobiles qui font le suivi d’informations, notamment les suivantes :
 
-  -  Inventaire des profils de configuration d’appareil, des profils de configuration d’application et des stratégies de conformité  
-  -  Nombre d’appareils, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur  
-  -  Nombre d’appareils, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur  
-  -  Nombre cumulé d’appareils dans un état de réussite, d’attente, d’échec ou d’erreur  
+  - Inventaire des profils de configuration d’appareil, des profils de configuration d’application et des stratégies de conformité  
+  - Nombre d’appareils, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur  
+  - Nombre d’appareils, par jour, dans un état de réussite, d’attente, d’échec ou d’erreur  
+  - Nombre cumulé d’appareils dans un état de réussite, d’attente, d’échec ou d’erreur  
 
 ## <a name="policy"></a>Stratégie
 

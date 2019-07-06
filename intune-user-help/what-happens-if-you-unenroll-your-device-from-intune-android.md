@@ -18,26 +18,26 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32dfb275e96ecf1d8c60f115881d7ceb0593a3b2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 73e9c42f69517d145c797b13ae9fa5aa779ebc5d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837427"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546511"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Que se passe-t-il si vous désinscrivez votre appareil Android d’Intune ?
 
 Quand vous désinscrivez votre appareil Android d’Intune :
 
--   Le support technique de votre entreprise ne gère plus l’appareil.
+- Le support technique de votre entreprise ne gère plus l’appareil.
 
--   Vous perdez l’accès aux ressources et aux données de l’entreprise.
+- Vous perdez l’accès aux ressources et aux données de l’entreprise.
 
--   Votre appareil n’apparaît plus dans le portail d’entreprise.
+- Votre appareil n’apparaît plus dans le portail d’entreprise.
 
--   Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
+- Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
 
--   Tous les paramètres qui ont été modifiés sur votre appareil quand vous l’avez ajouté (par exemple la désactivation de l’appareil photo ou l’exigence d’une certaine longueur de mot de passe) ne s’appliquent plus.
+- Tous les paramètres qui ont été modifiés sur votre appareil quand vous l’avez ajouté (par exemple la désactivation de l’appareil photo ou l’exigence d’une certaine longueur de mot de passe) ne s’appliquent plus.
 
 Si votre appareil est configuré uniquement pour recevoir les e-mails d’entreprise et que vous désinscrivez votre appareil, ce dernier n’apparaît plus dans le portail d’entreprise.
 

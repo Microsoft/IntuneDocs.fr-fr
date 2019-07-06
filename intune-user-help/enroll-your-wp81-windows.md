@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16a610050a7c4ce094005617304249acdb961878
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: dd15e960b3c2802930981271cb6cd9ffea841cee
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497516"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545485"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Inscrire un appareil Windows Phone 8.1 dans Intune  
 
@@ -34,45 +34,45 @@ Pour inscrire votre appareil dans Intune, suivez l’ensemble d’instructions c
 ## <a name="enroll-through-company-portal"></a>Inscrire via le portail d’entreprise  
 Suivez ces étapes si vous pouvez installer l’application du portail d'entreprise depuis le Microsoft Store. 
 
-1.  Appuyez sur **Démarrer** > **Boutique**.  
+1. Appuyez sur **Démarrer** > **Boutique**.  
 
-2.  Appuyez sur **Rechercher**, puis tapez **portail d’entreprise**.  
+2. Appuyez sur **Rechercher**, puis tapez **portail d’entreprise**.  
 
-3.  Dans la liste des résultats, appuyez sur **Portail d’entreprise**.  
+3. Dans la liste des résultats, appuyez sur **Portail d’entreprise**.  
 
 
     ![Résultats de recherche du portail d’entreprise](./media/WP81-1-CP-search-store-v2.png)  
 
-4.  Appuyez sur **Portail d’entreprise** &gt; **Installer**.  
+4. Appuyez sur **Portail d’entreprise** &gt; **Installer**.  
 
 
     ![Installation du portail d’entreprise](./media/WP81-2-CP-install-v2.png)  
 
 Inscrivez votre appareil :  
 
-1.  Sur l’appareil, ouvrez l’application **Portail d’entreprise Microsoft Intune**.  
+1. Sur l’appareil, ouvrez l’application **Portail d’entreprise Microsoft Intune**.  
 
 
-2.  Entrez vos informations d'identification. Le cas échéant, vous pouvez être invité à accepter les termes et conditions de votre entreprise.  
+2. Entrez vos informations d'identification. Le cas échéant, vous pouvez être invité à accepter les termes et conditions de votre entreprise.  
 
-3.  Passez à **Mes appareils**.  
+3. Passez à **Mes appareils**.  
 
-4.  Sélectionnez **Appuyez pour inscrire ou identifier cet appareil**.  
+4. Sélectionnez **Appuyez pour inscrire ou identifier cet appareil**.  
 
 
     ![Écran Appuyez pour inscrire ou identifier cet appareil](./media/WP81-enroll-1-swipe-my-devices.png)  
 
-5.  Appuyez sur **Inscrire cet appareil**.  
+5. Appuyez sur **Inscrire cet appareil**.  
 
 
     ![Écran Inscrire cet appareil](./media/WP81-enroll-2-enroll-this-device.png)  
 
-6.  Appuyez sur **Ajouter un compte**.  
+6. Appuyez sur **Ajouter un compte**.  
 
 
     ![Écran de paramètres du poste de travail](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-7.  Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription. Votre compte d’espace de travail doit à présent être répertorié dans la page **Paramètres** &gt; **Espace de travail**.  
+7. Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription. Votre compte d’espace de travail doit à présent être répertorié dans la page **Paramètres** &gt; **Espace de travail**.  
 
 
     ![Écran de compte ajouté](./media/WP81-enroll-4-account-added.png)  
@@ -80,13 +80,13 @@ Inscrivez votre appareil :
 ## <a name="enroll-through-settings-app"></a>Inscrire via les paramètres d’application  
 Suivez ces étapes si vous ne parvenez pas à accéder au Microsoft Store à partir de votre appareil Windows Phone ou si vous n’avez pas de compte Microsoft.
 
-1.  Appuyez sur **Paramètres** &gt; **Espace de travail**.  
+1. Appuyez sur **Paramètres** &gt; **Espace de travail**.  
 
-2.  Appuyez sur **ajouter un compte**, puis connectez-vous en utilisant votre compte professionnel.  
+2. Appuyez sur **ajouter un compte**, puis connectez-vous en utilisant votre compte professionnel.  
 
-3.  Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription.  
+3. Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription.  
 
-4.  Si vous êtes invité à installer l’application ou le hub d’entreprise, vérifiez que la case correspondante est cochée, puis appuyez sur **terminé**.  
+4. Si vous êtes invité à installer l’application ou le hub d’entreprise, vérifiez que la case correspondante est cochée, puis appuyez sur **terminé**.  
 
 Si le support technique de votre entreprise a configuré le portail d’entreprise pour qu’il soit installé au moment de l’inscription, il figure dans votre liste d’applications.  
 

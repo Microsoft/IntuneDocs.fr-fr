@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d52ef6f2cf995031c25bc9065212e39235041b2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55841146"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546592"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Supprimer votre appareil iOS d’Intune
 
@@ -35,9 +35,9 @@ Quand vous supprimez votre appareil iOS d’Intune, ce dernier ne peut plus acc�
 Pour supprimer votre appareil d’Intune, suivez ces étapes ou regardez cette vidéo :
 
 
-1.  Dans l’application Portail d’entreprise, appuyez sur **Appareils** et sélectionnez l’appareil que vous voulez désinscrire. Si vous avez un seul appareil, quand vous appuyez sur **Appareils**, accédez directement à l’écran des détails de l’appareil.
+1. Dans l’application Portail d’entreprise, appuyez sur **Appareils** et sélectionnez l’appareil que vous voulez désinscrire. Si vous avez un seul appareil, quand vous appuyez sur **Appareils**, accédez directement à l’écran des détails de l’appareil.
 
-2.  À côté de **RENOMMER**, appuyez sur le bouton de sélection > **Supprimer l’appareil** > **Supprimer**.  
+2. À côté de **RENOMMER**, appuyez sur le bouton de sélection > **Supprimer l’appareil** > **Supprimer**.  
 
     |![Capture d’écran de l’écran Appareils de l’application Portail d’entreprise, montrant les options une fois que l’utilisateur a cliqué sur Supprimer. Montre les boutons « Supprimer l’appareil », « Réinitialisation aux paramètres d’usine » et « Annuler ».](/intune-user-help/media/cp_ios_unenroll_after_1804_001.png)|
 
@@ -46,33 +46,33 @@ Pour supprimer votre appareil d’Intune, suivez ces étapes ou regardez cette v
 
   La désinscription de votre appareil d’Intune a les conséquences suivantes :
 
-  -   Votre appareil n’apparaît plus dans le portail d’entreprise.
+  - Votre appareil n’apparaît plus dans le portail d’entreprise.
 
-  -   Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
+  - Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
 
-  -   Les paramètres que vous avez modifiés au moment d’ajouter l’appareil (par exemple, le fait de désactiver l’appareil photo ou d’imposer une certaine longueur de mot de passe) ne s’appliquent plus.
+  - Les paramètres que vous avez modifiés au moment d’ajouter l’appareil (par exemple, le fait de désactiver l’appareil photo ou d’imposer une certaine longueur de mot de passe) ne s’appliquent plus.
 
-  -   Il se peut que vous n'ayez plus accès à certaines ressources de l'entreprise, telles que les partages de fichiers ou les sites Web internes.
+  - Il se peut que vous n'ayez plus accès à certaines ressources de l'entreprise, telles que les partages de fichiers ou les sites Web internes.
 
-  -   Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
+  - Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
 
-  -   Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
+  - Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
 
-  -   Les profils de messagerie d'entreprise sont supprimés de l'appareil.
+  - Les profils de messagerie d'entreprise sont supprimés de l'appareil.
 
-  -   Les appareils configurés pour la messagerie uniquement n’apparaissent plus dans l’application ou le site web Portail d’entreprise.
+  - Les appareils configurés pour la messagerie uniquement n’apparaissent plus dans l’application ou le site web Portail d’entreprise.
   
-  -   Les applications sont désinstallées. Les données des applications de l'entreprise sont supprimées.
+  - Les applications sont désinstallées. Les données des applications de l'entreprise sont supprimées.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Suppression des données collectées par l’application Portail d’entreprise
 
 Il existe trois emplacements où le portail d’entreprise stocke des données locales sur votre appareil.
 
--   **Journaux d’information** : les données standard de l’activité de l’application que Microsoft collecte, comme la durée pendant laquelle l’application reste ouverte ou si elle a planté, sont automatiquement effacées quand vous supprimez l’appareil du portail d’entreprise.
+- **Journaux d’information** : les données standard de l’activité de l’application que Microsoft collecte, comme la durée pendant laquelle l’application reste ouverte ou si elle a planté, sont automatiquement effacées quand vous supprimez l’appareil du portail d’entreprise.
 
--   **Apple analytics** : données standard de plantage de l’application que collecte Apple. Ces informations peuvent être supprimées seulement en réinitialisant votre appareil aux paramètres d’usine. Cette opération efface toutes vos informations personnelles de votre appareil. Pour ce faire, ouvrez **Réglages** > **Général** > **Réinitialiser** > **Effacer contenu et réglages**.
+- **Apple analytics** : données standard de plantage de l’application que collecte Apple. Ces informations peuvent être supprimées seulement en réinitialisant votre appareil aux paramètres d’usine. Cette opération efface toutes vos informations personnelles de votre appareil. Pour ce faire, ouvrez **Réglages** > **Général** > **Réinitialiser** > **Effacer contenu et réglages**.
 
--   **Keychain** : votre appareil stocke vos mots de passe et autres informations utilisées pour les connexions dans votre Keychain. Les applications Microsoft partagent vos informations de connexion avec toutes les applications développées par Microsoft présentes sur votre appareil, notamment Microsoft Outlook et Microsoft Authenticator. Comme avec Apple analytics, ces informations peuvent être supprimées seulement en réinitialisant votre appareil aux paramètres d’usine. Cette opération efface toutes vos informations personnelles de votre appareil. Pour ce faire, ouvrez **Réglages** > **Général** > **Réinitialiser** > **Effacer contenu et réglages**.
+- **Keychain** : votre appareil stocke vos mots de passe et autres informations utilisées pour les connexions dans votre Keychain. Les applications Microsoft partagent vos informations de connexion avec toutes les applications développées par Microsoft présentes sur votre appareil, notamment Microsoft Outlook et Microsoft Authenticator. Comme avec Apple analytics, ces informations peuvent être supprimées seulement en réinitialisant votre appareil aux paramètres d’usine. Cette opération efface toutes vos informations personnelles de votre appareil. Pour ce faire, ouvrez **Réglages** > **Général** > **Réinitialiser** > **Effacer contenu et réglages**.
 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

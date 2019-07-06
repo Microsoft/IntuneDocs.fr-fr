@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
-ms.translationtype: HT
+ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468729"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494242"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>En développement pour Microsoft Intune - Juillet 2019
 
@@ -58,8 +58,6 @@ Pour faciliter votre préparation et votre planification, cette page liste les m
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Gestion d'applications
 
-### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Les utilisateurs d’un appareil peuvent voir toutes les applications gérées qu’ils ont installées ou tenté d’installer <!-- 2352913 -->
-Le portail d’entreprise pour Windows liste toutes les applications gérées (qu’elles soient obligatoires ou disponibles), qui sont installées sur l’appareil d’un utilisateur. Les utilisateurs pourront voir les installations d’applications tentées et en attente ainsi que leur état actuel. Si votre organisation ne rend pas les applications obligatoires ou disponibles, les utilisateurs verront un message expliquant qu’aucune application d’entreprise n’a été installée. Les utilisateurs pourront également trier ou filtrer leurs applications par état de l’installation.
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Notifications personnalisées pour les utilisateurs et groupes    <!-- 16766574   -->
 Vous serez bientôt en mesure d’envoyer des notifications push personnalisées ad hoc à partir de l’application portail d’entreprise aux utilisateurs sur des appareils iOS et Android que vous gérez avec Intune. Ces notifications personnalisées ne sont pas liées aux fonctionnalités d’Intune particuliers et peut servir à quelque fin que vous avez besoin, y compris les notifications générales que vous souhaitez envoyer à certains ou tous vos employés.  

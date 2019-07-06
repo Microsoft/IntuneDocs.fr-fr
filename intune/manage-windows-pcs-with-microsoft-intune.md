@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 733cb20c43b34393003f2e9f4f4466922f3f581e
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044952"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572562"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Gérer des PC Windows en tant qu’ordinateurs via le logiciel client Intune
 
@@ -49,7 +49,7 @@ Voici la configuration matérielle minimale requise pour l’installation du log
 |---------------|--------------------|
 |Réseau|Le PC sur lequel est installé le client doit disposer d’une connexion à Internet.|
 |Processeur et mémoire|Reportez-vous à la configuration requise du processeur et de la RAM pour le système d’exploitation du PC.|
-|Espace disque|200 Mo d'espace disponible sur le disque avant l'installation du logiciel client.|
+|Espace disque|200 Mo d'espace disponible sur le disque avant l'installation du logiciel client.|
 
 **Logiciels**:  
 Voici la configuration logicielle requise pour l’installation du logiciel client :
@@ -70,16 +70,16 @@ En tant qu’administrateur Intune, vous pouvez mettre le logiciel client Intune
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Fonctionnalités de gestion des ordinateurs avec le logiciel client Intune
 Dans la plupart des scénarios, vous inscrirez vos appareils avec Microsoft Intune, car cette approche offre davantage de fonctionnalités. Toutefois, vous pouvez également gérer des PC en utilisant le client logiciel Intune, qui fournit les fonctionnalités suivantes :
 
--   **[Gestion des mises à jour logicielles](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** : Vous pouvez maintenir les PC à jour et choisir à quel moment appliquer les mises à jour.
+- **[Gestion des mises à jour logicielles](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** : Vous pouvez maintenir les PC à jour et choisir à quel moment appliquer les mises à jour.
 
--   **[Stratégie de Pare-feu Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)**  : elle permet de garantir que tous les PC utilisés dans votre entreprise ont un Pare-feu Windows actif et correctement configuré.
+- **[Stratégie de Pare-feu Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)**  : elle permet de garantir que tous les PC utilisés dans votre entreprise ont un Pare-feu Windows actif et correctement configuré.
 
--   **[Protection contre les programmes malveillants](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)**  : Intune inclut la fonctionnalité Endpoint Protection, qui vous aide à protéger les PC contre les programmes malveillants.
+- **[Protection contre les programmes malveillants](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)**  : Intune inclut la fonctionnalité Endpoint Protection, qui vous aide à protéger les PC contre les programmes malveillants.
 
--   **[Assistance à distance](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)**  : Intune permet aux utilisateurs de contacter l’équipe du support informatique, qui peut ensuite les aider via une fonctionnalité de Bureau à distance intégrée à Intune (nécessite le logiciel TeamViewer).
+- **[Assistance à distance](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)**  : Intune permet aux utilisateurs de contacter l’équipe du support informatique, qui peut ensuite les aider via une fonctionnalité de Bureau à distance intégrée à Intune (nécessite le logiciel TeamViewer).
 
--   **[Gestion des licences logicielles](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)**  : suivez le nombre de licences logicielles disponibles et le nombre de ces licences utilisé.
--   **[Déploiement d’applications](add-apps-for-windows-pcs-in-microsoft-intune.md)**  : déployez des logiciels sur les PC que vous gérez. Certaines fonctionnalités de gestion d'applications ne sont pas disponibles lorsque vous gérez des PC avec le client logiciel.
+- **[Gestion des licences logicielles](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)**  : suivez le nombre de licences logicielles disponibles et le nombre de ces licences utilisé.
+- **[Déploiement d’applications](add-apps-for-windows-pcs-in-microsoft-intune.md)**  : déployez des logiciels sur les PC que vous gérez. Certaines fonctionnalités de gestion d'applications ne sont pas disponibles lorsque vous gérez des PC avec le client logiciel.
 
 <!-- - **Compliance settings reporting** -->
 
@@ -113,8 +113,8 @@ Pour plus d’informations sur les tâches ci-dessus, consultez les [tâches cou
 
 Certaines options de gestion, qui peuvent être utilisées pour gérer des PC comme des appareils mobiles, ne peuvent pas être utilisées pour les PC qui sont gérés par le logiciel client Intune :
 
--   Réinitialisation complète (la réinitialisation sélective est disponible)
--   Accès conditionnel
+- Réinitialisation complète (la réinitialisation sélective est disponible)
+- Accès conditionnel
 
 Notez également que, dans la console d’administration Intune, certaines sections, telles que **Mises à jour**, **Protection** et **Licences** apparaissent uniquement si vous avez inscrit des appareils à l’aide du logiciel client Intune.
 

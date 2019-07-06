@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 122a7eef56f2850fced164a37b518f650ed2ecdf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 38e24bff110cea7d7a565ca00fc0e3e13e37744f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045869"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530765"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Point de terminaison de l’API d’entrepôt de données Intune
 
@@ -69,8 +69,8 @@ La version actuelle prend en charge les paramètres de requête OData suivants :
 
 Vous pouvez utiliser les filtres de plage `DateKey` pour limiter la quantité de données à télécharger pour certaines des collections ayant `dateKey` comme propriété de clé. Vous pouvez utiliser le filtre `DateKey` pour optimiser les performances du service en fournissant le paramètre de requête `$filter` suivant :
 
-1.  `DateKey` seul dans le `$filter`, prenant en charge les opérateurs `lt/le/eq/ge/gt` et assurant la jointure avec l’opérateur logique `and`, où ils peuvent être mappés à une date de début et/ou une date de fin.
-2.  `maxhistorydays` est fourni en tant qu’option de requête personnalisée.<br>
+1. `DateKey` seul dans le `$filter`, prenant en charge les opérateurs `lt/le/eq/ge/gt` et assurant la jointure avec l’opérateur logique `and`, où ils peuvent être mappés à une date de début et/ou une date de fin.
+2. `maxhistorydays` est fourni en tant qu’option de requête personnalisée.<br>
 
 ## <a name="filter-examples"></a>Exemples de filtres
 

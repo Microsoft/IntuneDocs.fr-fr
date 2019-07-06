@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403014"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572513"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Protéger les PC Windows à l'aide de stratégies de Pare-feu Windows dans Microsoft Intune
 
@@ -48,14 +48,14 @@ La stratégie du Pare-feu Windows vous permet de créer et de déployer les par
 > [!IMPORTANT]
 > Pour gérer le Pare-feu Windows à l’aide d’Intune, assurez-vous que les deux services suivants sont activés sur les ordinateurs que vous allez gérer :
 >
-> -   Pare-feu Windows
-> -   Agent de stratégie IPsec
+> - Pare-feu Windows
+> - Agent de stratégie IPsec
 
 ## <a name="configure-a-windows-firewall-policy"></a>Configurer une stratégie du Pare-feu Windows
 
-1.  Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Stratégie** &gt; **Ajouter une stratégie**.
+1. Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Stratégie** &gt; **Ajouter une stratégie**.
 
-2.  Configurez et déployez une stratégie **Paramètres du Pare-feu Windows** . Vous pouvez utiliser les paramètres recommandés ou personnaliser les paramètres. Pour plus d’informations sur la création et le déploiement des stratégies, consultez [Tâches courantes de gestion des PC Windows avec le client Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Configurez et déployez une stratégie **Paramètres du Pare-feu Windows** . Vous pouvez utiliser les paramètres recommandés ou personnaliser les paramètres. Pour plus d’informations sur la création et le déploiement des stratégies, consultez [Tâches courantes de gestion des PC Windows avec le client Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     La section suivante répertorie les valeurs que vous pouvez configurer dans la stratégie, ainsi que les valeurs par défaut qui seront utilisées si vous ne personnalisez pas la stratégie.
 

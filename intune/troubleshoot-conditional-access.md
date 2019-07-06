@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e8ebc708f76ed1f55f512edda75206d3ed5890a0
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043901"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530718"
 ---
 # <a name="troubleshoot-conditional-access"></a>Résoudre les problèmes d’accès conditionnel
 
@@ -35,8 +35,8 @@ Les conditions suivantes doivent être remplies pour que l’accès conditionnel
 - L’appareil doit être inscrit et géré par Intune
 - L’utilisateur et l’appareil doivent être conformes aux stratégies de conformité Intune attribuées
 - Par défaut, une stratégie de conformité doit être affectée à l’utilisateur. Cela peut dépendre de la façon dont le paramètre **Marquer les appareils sans stratégie de conformité comme étant** est configuré sous **Conformité de l’appareil** > **Paramètres de stratégie de conformité** dans le portail d’administration Intune
--   Exchange ActiveSync doit être activé sur l’appareil si l’utilisateur utilise le client d’e-mail natif de l’appareil plutôt qu’Outlook. Cela se fait automatiquement pour les appareils iOS, Windows Phone et Android
--   Votre connecteur Exchange Intune doit être configuré correctement. Pour plus d’informations, consultez [Dépannage du connecteur Exchange dans Microsoft Intune](troubleshoot-exchange-connector.md).
+- Exchange ActiveSync doit être activé sur l’appareil si l’utilisateur utilise le client d’e-mail natif de l’appareil plutôt qu’Outlook. Cela se fait automatiquement pour les appareils iOS, Windows Phone et Android
+- Votre connecteur Exchange Intune doit être configuré correctement. Pour plus d’informations, consultez [Dépannage du connecteur Exchange dans Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure et dans le rapport d’inventaire des appareils.
 

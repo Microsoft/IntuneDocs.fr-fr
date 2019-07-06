@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02a7b69245b9b6e7b8f62fdb9be8acb83d42981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55834753"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545431"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Compte de messagerie d’entreprise existant détecté
 
@@ -34,7 +34,7 @@ Vous avez peut-être eu accès à votre compte de messagerie scolaire ou profess
 
 Ces étapes garantissent que votre appareil est conforme aux exigences de sécurité de votre entreprise et que vos e-mails restent sécurisés.
 
-1.  Sur votre appareil, accédez aux **Paramètres** et recherchez vos comptes connectés. Par exemple, sur un appareil iOS 11 (ou une version ultérieure), sélectionnez **Mot de passe et comptes**.
+1. Sur votre appareil, accédez aux **Paramètres** et recherchez vos comptes connectés. Par exemple, sur un appareil iOS 11 (ou une version ultérieure), sélectionnez **Mot de passe et comptes**.
  
 2. Sélectionnez et supprimez votre compte de messagerie professionnel.
 

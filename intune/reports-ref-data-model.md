@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8756ad134853bdd19155c3d8f50d1f07960e80f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045369"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547889"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données Microsoft Intune
 
@@ -32,22 +32,22 @@ L’entrepôt de données Intune échantillonne quotidiennement les données pou
 
 L’entrepôt expose les données dans les zones générales suivantes :
 
-  -  Applications protégées par App Protection et utilisation
-  -  Appareils inscrits, propriétés et inventaire
-  -  Inventaire des applications et des logiciels
-  -  Configuration des appareils et stratégies de conformité
+  - Applications protégées par App Protection et utilisation
+  - Appareils inscrits, propriétés et inventaire
+  - Inventaire des applications et des logiciels
+  - Configuration des appareils et stratégies de conformité
 
 Ces zones contiennent les entités qui sont significatives pour l’environnement Intune. Pour plus d’informations sur les jeux d’entités, consultez les rubriques suivantes :
 
-  -  [Application](reports-ref-application.md)
-  -  [Date](reports-ref-date.md)
-  -  [Appareils](reports-ref-devices.md)
-  -  [Extension de la gestion Intune](reports-ref-intunemanagementextension.md)
-  -  [Stratégie](reports-ref-policy.md)
-  -  [Gestion des applications mobiles (GAM)](reports-ref-mobile-app-management.md)
-  -  [Utilisateur](reports-ref-user.md)
-  -  [Utilisateur actuel](reports-ref-current-user.md)
-  -  [Associations appareil-utilisateur](reports-ref-user-device.md)
+  - [Application](reports-ref-application.md)
+  - [Date](reports-ref-date.md)
+  - [Appareils](reports-ref-devices.md)
+  - [Extension de la gestion Intune](reports-ref-intunemanagementextension.md)
+  - [Stratégie](reports-ref-policy.md)
+  - [Gestion des applications mobiles (GAM)](reports-ref-mobile-app-management.md)
+  - [Utilisateur](reports-ref-user.md)
+  - [Utilisateur actuel](reports-ref-current-user.md)
+  - [Associations appareil-utilisateur](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relations : modèle de schéma en étoile
 

@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7265eb7b4679d72fa6ab348c17f9f4f7508482e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f6e73b784f0e938058dcb9d6001082f86ac800ff
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836422"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545662"
 ---
 # <a name="your-computer-is-already-enrolled"></a>Votre ordinateur est déjà inscrit
 
@@ -31,11 +31,11 @@ Si vous recevez une erreur indiquant que votre ordinateur est déjà inscrit, ce
 
 Pour lier votre ordinateur :
 
-1.  Sur l’ordinateur que vous souhaitez lier à votre compte, choisissez **Démarrer**, puis **Microsoft Intune Center**.
+1. Sur l’ordinateur que vous souhaitez lier à votre compte, choisissez **Démarrer**, puis **Microsoft Intune Center**.
 
-2.  Ouvrez le Portail d’entreprise.
+2. Ouvrez le Portail d’entreprise.
 
-3.  Suivez les invites pour lier l'ordinateur à votre compte d'utilisateur.
+3. Suivez les invites pour lier l'ordinateur à votre compte d'utilisateur.
 
 Si vous voulez désinscrire votre appareil, suivez les instructions correspondant au type d’appareil que vous avez : [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) ou [Windows](unenroll-your-device-from-intune-windows.md).
 

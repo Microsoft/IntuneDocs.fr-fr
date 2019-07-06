@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa48aae8f35ad55e3e836016262056268fd9cd89
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7a6b2e04e40aa12e791e34f3899686d5f5661df2
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836283"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546693"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Envoyer des erreurs au support technique de votre entreprise en cas de problèmes avec un appareil iOS
 Vous pouvez parfois rencontrer une erreur pendant l’utilisation de l’application Portail d’entreprise sur votre appareil iOS. Lorsque cela se produit, vous pouvez envoyer les détails de l’erreur au support technique de votre entreprise. Ces détails fournissent le contexte nécessaire pour résoudre le problème pour vous.
@@ -32,10 +32,10 @@ Quand vous chargez les journaux dans l’application Portail d’entreprise, ceu
 
 Si vous recevez des erreurs sur votre appareil iOS pendant que vous utilisez l’application Portail d’entreprise, vous pouvez envoyer des informations pour aider le support technique de votre entreprise à résoudre le problème. Vous pouvez envoyer les informations d’erreur de différentes manières :
 
--   Dans les messages d’alerte d’erreur, appuyez sur **Rapport**.
+- Dans les messages d’alerte d’erreur, appuyez sur **Rapport**.
 
--   Sous l’onglet **Plus** de l’application Portail d’entreprise, cliquez sur **Obtenir de l’aide**.
+- Sous l’onglet **Plus** de l’application Portail d’entreprise, cliquez sur **Obtenir de l’aide**.
 
--   Sur l’application du portail d’entreprise, secouez votre appareil, puis appuyez sur **Envoyer un rapport de diagnostic** dès que l’alerte de diagnostic apparaît. Si l’alerte n’apparaît pas quand vous secouez l’appareil, ouvrez **Paramètres** > **Portail d’entreprise**, puis vérifiez que l’option **Secouer** est activée.
+- Sur l’application du portail d’entreprise, secouez votre appareil, puis appuyez sur **Envoyer un rapport de diagnostic** dès que l’alerte de diagnostic apparaît. Si l’alerte n’apparaît pas quand vous secouez l’appareil, ouvrez **Paramètres** > **Portail d’entreprise**, puis vérifiez que l’option **Secouer** est activée.
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

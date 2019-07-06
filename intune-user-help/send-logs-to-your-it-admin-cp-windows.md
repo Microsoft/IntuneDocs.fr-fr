@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9ecf976ea973fdb1a9b8025fec0bf49d7f87d0c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836470"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528772"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Envoyer par e-mail au support de votre entreprise des informations relatives aux problèmes à partir du Portail d’entreprise pour Windows
 
@@ -32,7 +32,7 @@ Résolvez vos problèmes d’application dans l’application Portail d’entrep
 Quand vous demandez de l’aide, un e-mail prérempli s’ouvre et vous permet de décrire le problème en détail. Il comprend également un ID de journal de diagnostic. Si votre équipe de support ne peut pas résoudre le problème en fonction de votre description, elle contacte Microsoft pour obtenir de l’aide. Microsoft a besoin de l’ID de diagnostic pour référencer les journaux de l’application.   
 
 
-> [!Note]       
+> [!Note]
 > Après avoir cliqué sur **Obtenir de l’aide**, le portail d’entreprise envoie automatiquement vos journaux à l’équipe du support technique de Microsoft. Il s’agit d’une étape proactive qui facilite le dépannage et la résolution des problèmes remontés au Support Microsoft. Comme indiqué ci-dessus, l’équipe de support de Microsoft peut extraire les journaux à l’aide de l’ID de diagnostic de votre e-mail.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Qu’est-ce qu’un journal de diagnostic ?

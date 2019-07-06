@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95862c006baef40bfb219e5cff50d5622c8c00b4
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 767788d702db45686d686e21018cbf0c5b038412
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58068963"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546669"
 ---
 # <a name="set-your-pin-or-password"></a>Définir votre code confidentiel ou mot de passe
 
@@ -31,9 +31,9 @@ Le support technique de votre entreprise peut vous obliger à définir un code P
 
 Vous pouvez utiliser la procédure suivante pour définir un code confidentiel ou un mot de passe.
 
-1.  Appuyez sur **Paramètres** > **Sécurité** > **Écran de verrouillage** > **Mot de passe**.
+1. Appuyez sur **Paramètres** > **Sécurité** > **Écran de verrouillage** > **Mot de passe**.
 
-2.  Choisissez votre nouveau mot de passe et confirmez-le.
+2. Choisissez votre nouveau mot de passe et confirmez-le.
 
 Pour certains appareils, vous devrez peut-être définir un code confidentiel de démarrage en plus de votre mot de passe d’écran. Vous pouvez essayer de résoudre ce problème en recherchant un emplacement dans votre application de paramètres pour activer cette option. Par exemple, sur le Galaxy S7 de Samsung, vous activez le démarrage sécurisé en accédant à **Paramètres** > **Écran de verrouillage et sécurité** > **Démarrage sécurisé**. Pour en savoir plus, cliquez [ici](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 

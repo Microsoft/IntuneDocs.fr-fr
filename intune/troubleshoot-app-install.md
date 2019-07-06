@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe7ffa6ff024c719fc24209947b87b07ea2b6791
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412679"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558514"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -50,6 +50,18 @@ Les détails de l’erreur d’installation de l’application indiquent le prob
 
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Installation de l’application groupe d’utilisateurs ciblé n’atteint pas l’appareil
+Les actions suivantes doivent être considérées lorsque vous rencontrez des problèmes d’installation d’applications :
+- Si l’application ne s’affiche pas dans le portail d’entreprise, assurez-vous de l’application est déployée avec **disponible** intention et que l’utilisateur accède au portail d’entreprise avec le type d’appareil pris en charge par l’application.
+- Pour les appareils Windows BYOD, l’utilisateur doit ajouter un compte professionnel à l’appareil.
+- Vérifiez si l’utilisateur dépasse la limite d’appareils AAD :
+  1. Accédez à [paramètres d’appareil Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  2. Prenez note de la valeur définie pour **nombre maximal de périphériques par utilisateur**.
+  3. Accédez à [utilisateurs Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  4. Sélectionnez l’utilisateur concerné, cliquez sur **appareils**.
+  5. Si l’utilisateur dépasse la limite définie, puis supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
+- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est répertorié en tant que **inscrits par utilisateur** dans le panneau de vue d’ensemble des appareils Intune. S’il affiche NA, vous devez ensuite déployer une stratégie de configuration pour le portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 

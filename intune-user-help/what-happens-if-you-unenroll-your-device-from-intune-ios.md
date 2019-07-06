@@ -18,30 +18,30 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f6ae657361bea0ab89b8afa73976273fa000f4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4ba5705fa04d9eb28e74128228ca8a862f1cb772
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55844239"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545677"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Que se passe-t-il si vous désinscrivez votre appareil iOS ou Mac OS d’Intune ?
 
 Quand vous désinscrivez votre appareil iOS ou Mac OS d’Intune :
 
--   Votre appareil n’apparaît plus dans le portail d’entreprise.
+- Votre appareil n’apparaît plus dans le portail d’entreprise.
 
--   Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
+- Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
 
--   Tous les paramètres qui ont été modifiés sur votre appareil quand vous l’avez ajouté (par exemple la désactivation de l’appareil photo ou l’exigence d’une certaine longueur de mot de passe) ne s’appliquent plus.
+- Tous les paramètres qui ont été modifiés sur votre appareil quand vous l’avez ajouté (par exemple la désactivation de l’appareil photo ou l’exigence d’une certaine longueur de mot de passe) ne s’appliquent plus.
 
--   Il se peut que vous n’ayez plus accès à certaines ressources de l’entreprise, telles que les partages de fichiers ou les sites web internes.
+- Il se peut que vous n’ayez plus accès à certaines ressources de l’entreprise, telles que les partages de fichiers ou les sites web internes.
 
--   Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
+- Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
 
--   Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
+- Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
 
--   Les profils de messagerie d'entreprise sont supprimés de l'appareil.
+- Les profils de messagerie d'entreprise sont supprimés de l'appareil.
 
 Pour obtenir des instructions sur la désinscription, consultez [Désinscrire votre appareil dans Intune](unenroll-your-device-from-intune-ios.md).
 

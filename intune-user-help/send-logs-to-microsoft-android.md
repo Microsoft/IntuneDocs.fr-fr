@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f6caf8e48cd9781648acf1de0152ec107d5246
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 20bdfcce6574d31c37442a7bad58582aa7ea2fb6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55850899"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546129"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Envoyer les journaux aux développeurs du portail d’entreprise pour les appareils Android
 
@@ -34,16 +34,16 @@ L’application Portail d’entreprise peut parfois se fermer brutalement. Les d
 
 Pour envoyer des journaux à Microsoft :
 
-1.  Ouvrez l'application Portail d'entreprise.
+1. Ouvrez l'application Portail d'entreprise.
 
-2.  Appuyez sur **Menu** > **Aide** > **Envoyer un e-mail au support**.
+2. Appuyez sur **Menu** > **Aide** > **Envoyer un e-mail au support**.
 
     > [!NOTE]
     > Le **menu** peut être un bouton à l’écran ou un bouton physique, selon l’appareil Android que vous utilisez.
 
-3.  Appuyez sur **Charger uniquement les journaux**.
+3. Appuyez sur **Charger uniquement les journaux**.
 
-4.  Une fois le chargement terminé, vous recevez un ID d’incident. Enregistrez l’ID pour votre usage personnel.
+4. Une fois le chargement terminé, vous recevez un ID d’incident. Enregistrez l’ID pour votre usage personnel.
 
 Pour contacter directement l’équipe Portail d’entreprise pour Android, envoyez un e-mail à <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
 

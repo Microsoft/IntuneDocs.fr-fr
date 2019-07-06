@@ -18,30 +18,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bcae8e48fd9c6558d77aced73d12b15e54b2f7
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040944"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546345"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Installation de l’application Portail d’entreprise pour Android
 
 Le portail d’entreprise est une application vous donnant accès à des applications professionnelles ou scolaires, à des e-mails et à des connexions Internet. Cette application vous permet de protéger les informations de votre organisation en sécurisant votre appareil (par exemple, en actualisant les applications d’entreprise ou en configurant votre appareil pour qu’il se verrouille lui-même après un certain temps). Pour en savoir plus sur les fonctionnalités de portail d’entreprise et de sa part dans la gestion des appareils, consultez [pourquoi inscrire votre appareil Android](why-enroll-android-device.md).  
 
-1.  Appuyez sur **Accueil** > **Play Store**.
+1. Appuyez sur **Accueil** > **Play Store**.
 
-2.  Dans la zone de **recherche**, tapez **Portail d’entreprise Intune**.  
+2. Dans la zone de **recherche**, tapez **Portail d’entreprise Intune**.  
 
-3.  Appuyez sur **Portail d’entreprise Intune**.
+3. Appuyez sur **Portail d’entreprise Intune**.
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4.  Appuyez sur **INSTALLER**.
+4. Appuyez sur **INSTALLER**.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 
-5.  Appuyez sur **ACCEPTER**.
+5. Appuyez sur **ACCEPTER**.
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

@@ -17,22 +17,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: deea42bf9ef35d173761fddb16aa43eaa8876269
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a1ee376bdf2dff6dc59b6c51b20ff87c1ed81d82
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041075"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549233"
 ---
 # <a name="reference-for-application-entities"></a>Informations de référence sur les entités d’application
 
 La catégorie **Application** contient des entités pour appareils mobiles qui font le suivi d’informations, notamment les suivantes :
 
-  -  Versions d’une application
-  -  Source d’installation d’une application
-  -  Type de développeur à l’origine d’une application
-  -  Types de logiciels gérés pour une application, par exemple **sidecar** ou **desktop**
-  -  État du programme d’achat en volume (VPP) d’une application
+  - Versions d’une application
+  - Source d’installation d’une application
+  - Type de développeur à l’origine d’une application
+  - Types de logiciels gérés pour une application, par exemple **sidecar** ou **desktop**
+  - État du programme d’achat en volume (VPP) d’une application
 
 ## <a name="apprevision"></a>AppRevision
 

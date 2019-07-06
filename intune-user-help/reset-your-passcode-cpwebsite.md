@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58163426"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546799"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Guide pratique pour réinitialiser le code secret de votre appareil à partir du site web du portail d’entreprise
 
@@ -36,13 +36,13 @@ Si vous utilisez un appareil d’entreprise, vous ne verrez peut-être pas l’o
 
 ## <a name="reset-your-passcode"></a>Réinitialiser votre code d’accès
 
-1.  Accédez au [site web du portail d’entreprise](https://portal.manage.microsoft.com), puis sélectionnez le bouton __Menu__ > __Appareils__.  
+1. Accédez au [site web du portail d’entreprise](https://portal.manage.microsoft.com), puis sélectionnez le bouton __Menu__ > __Appareils__.  
 
 2. Sélectionnez l’appareil dont le code secret doit être réinitialisé.  
 
     ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
-3. Sélectionnez **Réinitialiser le code secret**. Si cette option n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Réinitialiser le code secret**.   
+3. Sélectionnez **Réinitialiser le code secret**. Si cette option n’est pas visible en haut de la page, sélectionnez **Plus (...)**  > **Réinitialiser le code secret**.   
 
    ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)   
 
@@ -79,7 +79,7 @@ Cette section décrit le comportement relatif à la réinitialisation du code se
 **iOS** : supprime le code secret existant et ne crée pas de code secret temporaire. Si vous utilisez le scanneur d’empreinte digitale Touch ID pour ouvrir votre appareil ou effectuer des achats, vous devez le reconfigurer.  
 
 **Windows 10 Mobile** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres. Si la reconnaissance faciale Windows Hello est configurée, elle continuera à fonctionner avec l’appareil.
-    
+
 **Windows Phone 8.1** : supprime le code secret existant et crée un code secret temporaire composé de chiffres.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

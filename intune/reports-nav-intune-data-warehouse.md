@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61cbe326bbbd0e52c045491fe59ba837779ddb6e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041152"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549222"
 ---
-#  <a name="microsoft-intune-data-warehouse-api"></a>API d’entrepôt de données Microsoft Intune
+# <a name="microsoft-intune-data-warehouse-api"></a>API d’entrepôt de données Microsoft Intune
 
 L’API d’entrepôt de données Intune vous permet d’accéder à vos données Intune dans un format lisible par ordinateur et de les utiliser dans votre outil analytique préféré. Vous pouvez utiliser l’API pour générer des rapports qui fournissent des insights sur l’environnement mobile de votre entreprise. L’API utilise le protocole OData qui respecte des modèles standard dans les domaines suivants :
 
-  -   En-têtes de demande et de réponse
-  -   Codes d’état
-  -   Méthodes HTTP
-  -   Conventions d’URL
-  -   Types de médias
-  -   Formats de charge utile
-  -   Options de requête
+  - En-têtes de demande et de réponse
+  - Codes d’état
+  - Méthodes HTTP
+  - Conventions d’URL
+  - Types de médias
+  - Formats de charge utile
+  - Options de requête
 
 OData (Open Data Protocol) est une norme OASIS (Organization for the Advancement of Structured Information Standards) qui définit les bonnes pratiques à suivre pour la création et l’utilisation d’API RESTful. L’entrepôt de données Intune utilise OData version 4.0.
 
@@ -56,8 +56,8 @@ Pour plus d’informations, consultez [Obtenir des données à partir de l’API
 
 L’API nécessite une autorisation auprès d’Azure AD. Azure AD utilise OAuth 2.0. Une fois l’autorisation obtenue, utilisez un verbe HTTP GET et contactez les collections d’entités exposées pour obtenir des données de l’API. Pour plus d'informations, consultez le site Internet suivant :
 
- -  [Autorisation](reports-api-url.md)
- -  [Structure de l’URL de l’API](reports-api-url.md)
+ - [Autorisation](reports-api-url.md)
+ - [Structure de l’URL de l’API](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données Intune
 

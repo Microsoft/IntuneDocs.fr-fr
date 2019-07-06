@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f328577ba2da97595c116efc51626176a14931a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1ad21f9197f32f8ff06cc0537719261f3daec7cb
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840754"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545743"
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Que se passe-t-il si vous réinitialisez votre appareil iOS à l’aide du Portail d’entreprise ?
 
@@ -31,14 +31,14 @@ Quand vous réinitialisez votre iPhone ou votre iPad à partir du portail d’en
 
 **Le support technique de votre entreprise gère votre appareil mobile**
 
--   Votre appareil n’apparaît plus dans le portail d’entreprise.
+- Votre appareil n’apparaît plus dans le portail d’entreprise.
 
--   Votre appareil est réinitialisé aux paramètres d’usine par défaut, et vos données, applications et paramètres personnels sont supprimés.
+- Votre appareil est réinitialisé aux paramètres d’usine par défaut, et vos données, applications et paramètres personnels sont supprimés.
 
 **Votre appareil peut accéder uniquement à la messagerie de l’entreprise**
 
--   Votre appareil n’apparaît plus dans le portail d’entreprise.
+- Votre appareil n’apparaît plus dans le portail d’entreprise.
 
--   Votre compte de messagerie professionnel et les messages non enregistrés sont supprimés.
+- Votre compte de messagerie professionnel et les messages non enregistrés sont supprimés.
 
 Si vous avez des questions, contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

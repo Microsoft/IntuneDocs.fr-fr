@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3b9f69e745baffd21b55274e173bb75e8581525
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
-ms.translationtype: HT
+ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418944"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549061"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
@@ -32,7 +32,7 @@ La dernière version de ligne de base est **MDM sécurité de base pour la mise 
 Pour savoir quelles sont les nouveautés dans la dernière version de cette ligne de base à partir de la version précédente, consultez [quelles sont les nouveautés dans le nouveau modèle](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> En juin de 2019, la ligne de base de la sécurité de la gestion des appareils mobiles en version préliminaire a été remplacée par la version de la *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19H 1)* modèle, qui est generaly disponibles (pas dans la version préliminaire). Profils qui ont été créés avant la disponibilité de la *MDM sécurité de base pour la mise à jour de Spring 2019 (19 H 1)* ligne de base ne sont pas mettre à jour pour refléter le les paramètres et les valeurs qui se trouvent dans la ligne de base de sécurité de gestion des appareils mobiles pour Spring 2019 Update () 19 H 1) version.  Bien que vous ne pouvez pas créer de nouveaux profils basés sur le modèle de version préliminaire, vous pouvez modifier et continuer à utiliser les profils que vous avez créé précédemment et qui sont basés sur le modèle de version préliminaire.   
+> En juin de 2019, la ligne de base de la sécurité de la gestion des appareils mobiles en version préliminaire a été remplacée par la version de la *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19H 1)* modèle, qui est generaly disponibles (pas dans la version préliminaire). Les profils qui ont été créés avant la disponibilité de la *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19 H 1)* ligne de base ne sont pas mettre à jour pour refléter les paramètres et les valeurs qui se trouvent dans la ligne de base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19 H 1 ) version.  Bien que vous ne pouvez pas créer de nouveaux profils basés sur le modèle de version préliminaire, vous pouvez modifier et continuer à utiliser les profils que vous avez créé précédemment et qui sont basés sur le modèle de version préliminaire.   
   
 Pour en savoir plus sur l’utilisation des bases de sécurité avec Intune, consultez [se servent des configurations de sécurité](security-baselines.md).  
 
@@ -57,7 +57,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
 - **Comptes Microsoft facultatifs pour les applications du Windows Store**  
   Ce paramètre de stratégie vous permet de déterminer si les comptes Microsoft sont facultatifs pour les applications du Windows Store qui nécessitent un compte pour la connexion. Cette stratégie affecte uniquement les applications du Windows Store qui le prennent en charge. Si vous activez ce paramètre de stratégie, les applications du Windows Store qui nécessitent normalement un compte Microsoft pour la connexion autorisent les utilisateurs à se connecter avec un compte d’entreprise. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les utilisateurs doivent se connecter avec un compte Microsoft.  
-    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067104)  
+  [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Par défaut** : Activé  
 
@@ -68,7 +68,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Ce paramètre de stratégie permet aux utilisateurs de modifier les options d’installation qui sont généralement disponibles uniquement pour les administrateurs système. Si vous activez ce paramètre de stratégie, certaines fonctionnalités de sécurité de Windows Installer sont ignorés. Il autorise les installations qui devraient s’interrompre en raison d’une violation de sécurité. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les fonctionnalités de sécurité de Windows Installer empêchent les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, telles que la spécification du répertoire dans lequel les fichiers sont installés. Si le programme d’installation de Windows détecte qu’un package d’installation a autorisé l’utilisateur à modifier une option protégée, il arrête l’installation et affiche un message. Ces fonctionnalités de sécurité fonctionnent uniquement lorsque le programme d’installation est en cours d’exécution dans un contexte de sécurité privilégié dans lequel il a accès aux répertoires refusé à l’utilisateur. Ce paramètre de stratégie est conçu pour les environnements moins restrictifs. Il peut servir à contourner les erreurs dans le programme d’installation qui empêche l’installation de logiciel.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
-    **Par défaut** : oui
+  **Par défaut** : oui
 
 - **Installations d’applications MSI de bloc avec des privilèges élevés**  
   Ce paramètre de stratégie dirige Windows Installer pour utiliser des autorisations élevées quand il installe un programme sur le système.  
@@ -828,7 +828,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
 - **Autorisations Java de la zone approuvée Internet Explorer**   
   Ce paramètre de stratégie permet de gérer les autorisations des applets Java. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options dans la zone de liste déroulante. « Personnalisé » permet de contrôler les paramètres d’autorisations de façon individuelle. « Basse sécurité » permet aux applets d’effectuer toutes les opérations. Sécurité moyenne permet aux applets de s’exécuter dans leur bac à sable (une zone mémoire en dehors de laquelle le programme ne peut pas effectuer d’appels), avec en plus des fonctionnalités telles que l’espace de travail (une zone de stockage sécurisée sur l’ordinateur client) et les E/S de fichiers contrôlées par l’utilisateur. « Haute sécurité » permet aux applets de s’exécuter dans leur bac à sable. « Désactiver Java » empêche l’exécution de toutes les applets. Si vous désactivez ce paramètre de stratégie, les applets Java ne peuvent pas s’exécuter. Si vous ne configurez pas ce paramètre de stratégie, l’autorisation est définie sur « Basse sécurité ».  
-    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067200)  
+  [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
   **Par défaut** : haute sécurité  
   
@@ -1829,7 +1829,7 @@ Les paramètres suivants sont soit :
 - *Révisé* d’une certaine façon à partir de la façon dont les paramètres est apparue dans la version précédente. 
 
 *[Nouveau]*  [ **Par-dessus le verrouillage**](#above-lock):
--  **Voice activer des applications à partir de l’écran verrouillé**    
+- **Voice activer des applications à partir de l’écran verrouillé**    
 
 *[Nouveau]* [**Gestion des applications**](#application-management) : 
 - **Contrôle utilisateur de bloc sur les installations**  
@@ -2602,7 +2602,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disable  
   
 - **Internet Explorer internet zone logon options**  
-  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
+  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
   
   **Default**: Prompt  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804423"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545237"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Code de conduite Microsoft Open Source
 
@@ -30,7 +30,7 @@ Nous **sollicitons et encourageons les contributions** de la communauté (utilis
     5. Créez une demande de tirage (pull request).
     
     **Option 2 : Rechercher l’article dans ce dépôt et effectuer une mise à jour**  
-    1.  La plupart des rubriques se trouvent dans `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Dans ce dossier, recherchez le nom de la rubrique, par exemple `troubleshoot-policies-in-microsoft-intune`. 
+    1. La plupart des rubriques se trouvent dans `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Dans ce dossier, recherchez le nom de la rubrique, par exemple `troubleshoot-policies-in-microsoft-intune`. 
     2. Sélectionnez le lien, puis cliquez sur l’icône de crayon. Quand vous pointez sur l’icône de crayon, l’info-bulle **Modifier ce fichier** s’affiche. 
     3. Apportez les changements souhaités, puis **validez**-le. 
     4. Créez une demande de tirage (pull request). 

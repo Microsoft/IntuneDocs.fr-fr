@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 582b4615941dae8c2fc696ce5dfc87e2bbe4b98b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0c72fb6e7ace6c603410ff0ffc9a96e4a0ff528d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55846245"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527635"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Installer Mobile Threat Defense sur votre appareil iOS
 
@@ -38,12 +38,12 @@ Avant de vous permettre d’accéder à vos ressources de travail, votre entrepr
 
 Mobile Threat Defense est un moyen pour les entreprises de garantir la protection de vos appareils contre des applications qui tenteraient de dérober des informations d’entreprise. L’ajout de cette protection nécessite l’envoi d’informations supplémentaires sur les applications présentes sur vos appareils au service Mobile Threat Defense utilisé par votre entreprise. Votre entreprise ne peut pas voir les données de vos applications personnelles. Toutes les applications présentes sur votre appareil sont ajoutées à [ce que votre entreprise peut voir](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) quand elle utilise un service Mobile Threat Defense. Voici les parties de l’application que votre entreprise peut voir :
 
-*   Nom de l’application
+* Nom de l’application
 * ID d’application : nom unique qui identifie l’application dans l’App Store
-*   Version de l’application et numéro de version abrégé : numéros de version spécifiques d’une application
+* Version de l’application et numéro de version abrégé : numéros de version spécifiques d’une application
 * Bundle et taille dynamique de l’application : quantité d’espace utilisé par une application sur votre appareil
 * Validité de l’application : si l’utilisation d’une application est approuvée
-*   État de gestion de l’application : si une application est gérée par votre entreprise ou s’il s’agit d’une application personnelle
+* État de gestion de l’application : si une application est gérée par votre entreprise ou s’il s’agit d’une application personnelle
 
 ## <a name="if-the-installation-doesnt-work"></a>Si l’installation ne fonctionne pas
 

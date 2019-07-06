@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b39cc879c9e1232335c38e8d95c0861a12662c6a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4784bcb706dd8eef395763729e04503682197f78
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564463"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545267"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Comment protéger votre appareil Windows à l’aide du chiffrement
 
@@ -37,8 +37,8 @@ Si vous avez un téléphone Windows et que vous l’avez inscrit, votre appareil
 
 Si vous disposez d’un poste de travail, les instructions ci-dessous indiquent comment le chiffrer.
 
-1.  Recherchez, puis démarrez l’application **Gérer BitLocker**.
+1. Recherchez, puis démarrez l’application **Gérer BitLocker**.
 
-2.  Choisissez **Activer BitLocker**, puis suivez les instructions pour chiffrer chacun de vos lecteurs.
+2. Choisissez **Activer BitLocker**, puis suivez les instructions pour chiffrer chacun de vos lecteurs.
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir les informations de contact, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

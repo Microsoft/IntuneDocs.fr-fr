@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9da053d0358d9b85426d75de51aeaea8beb866c1
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 29b435c3e41ba633ce4312808793bee4a495cd32
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55843168"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528798"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Envoyer les journaux aux développeurs du portail d’entreprise pour les appareils iOS
 
@@ -31,9 +31,9 @@ L’application Portail d’entreprise peut parfois se fermer brutalement. Il s�
 
 Si vous rencontrez ce problème, l’équipe du portail d’entreprise a besoin d’informations pour essayer d’en diagnostiquer la cause racine. Voici ce que vous devez faire :
 
-1.  Essayez de reproduire le problème. Ce n’est pas grave si vous n’y parvenez pas, mais cela peut faciliter l’étape suivante.
-2.  Accédez à __Settings__ > __Privacy__ > __Analytics__ > __Analytics Data__. Il s’agit d’une liste des activités d’application qui ont eu lieu (pannes, modèles d’utilisation générale, etc.). Celle-ci ne contient pas d’informations personnelles. Cette liste est organisée du plus récent au plus ancien. Si vous avez pu reproduire le problème, il doit s’agir du premier élément qui apparaît dans la liste des activités d’application sur cette page. Si vous n’avez pas pu reproduire le problème, faites défiler jusqu’à ce que vous trouviez le premier élément qui commence par « Portail d’entreprise », puis appuyez dessus pour l’ouvrir.
-3.  Appuyez de façon prolongée, puis faites glisser les petit points bleus de haut en bas jusqu’à ce que tout le texte du rapport soit sélectionné. Appuyez sur __Copier__ dans le menu contextuel.
-4.  Ouvrez votre application de messagerie, puis collez ce contenu dans le corps de l’e-mail. Envoyez cet e-mail à <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
+1. Essayez de reproduire le problème. Ce n’est pas grave si vous n’y parvenez pas, mais cela peut faciliter l’étape suivante.
+2. Accédez à __Settings__ > __Privacy__ > __Analytics__ > __Analytics Data__. Il s’agit d’une liste des activités d’application qui ont eu lieu (pannes, modèles d’utilisation générale, etc.). Celle-ci ne contient pas d’informations personnelles. Cette liste est organisée du plus récent au plus ancien. Si vous avez pu reproduire le problème, il doit s’agir du premier élément qui apparaît dans la liste des activités d’application sur cette page. Si vous n’avez pas pu reproduire le problème, faites défiler jusqu’à ce que vous trouviez le premier élément qui commence par « Portail d’entreprise », puis appuyez dessus pour l’ouvrir.
+3. Appuyez de façon prolongée, puis faites glisser les petit points bleus de haut en bas jusqu’à ce que tout le texte du rapport soit sélectionné. Appuyez sur __Copier__ dans le menu contextuel.
+4. Ouvrez votre application de messagerie, puis collez ce contenu dans le corps de l’e-mail. Envoyez cet e-mail à <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

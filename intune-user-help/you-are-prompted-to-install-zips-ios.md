@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d999cf43d568ad19f2ba83618f6ecfbaf7d7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 949a310b1588876cfe0c547dfa73f1510a710710
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55844281"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527591"
 ---
 # <a name="install-zimperium-zips-on-your-ios-device"></a>Installer Zimperium zIPS sur votre appareil iOS
 
@@ -29,7 +29,7 @@ Avant de vous permettre d’accéder à vos ressources de travail, le support te
 
 ## <a name="what-you-need-to-do"></a>Opérations à effectuer 
 
-1.  Si vous voyez apparaître l’invite suivante, appuyez sur **Installer** pour autoriser l’installation de Zimperium zIPS sur votre appareil.
+1. Si vous voyez apparaître l’invite suivante, appuyez sur **Installer** pour autoriser l’installation de Zimperium zIPS sur votre appareil.
 
 2. Quand vous voyez le message suivant, appuyez sur **Paramètres**, activez **Services de localisation**, puis cliquez sur **Continuer**.
 

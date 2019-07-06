@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46f2193a3a13183d41b10f03b6efe7100f0d9f9d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840363"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546643"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Supprimer votre appareil Windows de la gestion
 
@@ -76,24 +76,24 @@ Pour supprimer un appareil Windows 10 de la gestion, effectuez les étapes suiva
 ## <a name="remove-your-windows-81-computer"></a>Supprimer votre ordinateur Windows 8.1
 Pour supprimer un ordinateur Windows 8.1 d’Intune, effectuez les étapes suivantes.
 
-1.  Accédez à **Paramètres du PC** > **Réseau** > **Espace de travail**.
-2.  Sous **Jonction d’espace de travail**, sélectionnez **Quitter**.
-3.  Sous **Activer la gestion des appareils**, sélectionnez **Désactiver**.
-4.  Dans la fenêtre contextuelle qui s’ouvre, sélectionnez **Désactiver**.
+1. Accédez à **Paramètres du PC** > **Réseau** > **Espace de travail**.
+2. Sous **Jonction d’espace de travail**, sélectionnez **Quitter**.
+3. Sous **Activer la gestion des appareils**, sélectionnez **Désactiver**.
+4. Dans la fenêtre contextuelle qui s’ouvre, sélectionnez **Désactiver**.
 
 ## <a name="remove-your-windows-81-phone"></a>Supprimer votre téléphone Windows 8.1
 Pour supprimer un téléphone Windows 8.1 d’Intune, effectuez les étapes suivantes.
 
-1.  Accédez à **Paramètres** > **Espace de travail**.
-2.  Appuyez sur le compte Espace de travail que vous voulez désinscrire.
-3.  Appuyez sur **Supprimer** dans le bas de l’écran.
-4.  Dans la boîte de dialogue **Supprimer le compte**, appuyez sur **Supprimer**.  
+1. Accédez à **Paramètres** > **Espace de travail**.
+2. Appuyez sur le compte Espace de travail que vous voulez désinscrire.
+3. Appuyez sur **Supprimer** dans le bas de l’écran.
+4. Dans la boîte de dialogue **Supprimer le compte**, appuyez sur **Supprimer**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Suppression de vos informations personnelles après la suppression du portail d’entreprise  
 
 Il existe deux types de données que stocke les le portail d’entreprise sur votre appareil Windows :
 
--   **Journaux de diagnostic** : données d’activité d’application standard collectées par Microsoft. Elles sont automatiquement effacées quand vous désinstallez l’application Portail d’entreprise. Les données d’activité de l’application portent par exemple sur la durée pendant laquelle l’application a été ouverte, ou sur d’éventuels plantages.
--   **Cache d’application** : fichiers de prise en charge nécessaires au fonctionnement de l’application, comme les icônes et les paramètres.
+- **Journaux de diagnostic** : données d’activité d’application standard collectées par Microsoft. Elles sont automatiquement effacées quand vous désinstallez l’application Portail d’entreprise. Les données d’activité de l’application portent par exemple sur la durée pendant laquelle l’application a été ouverte, ou sur d’éventuels plantages.
+- **Cache d’application** : fichiers de prise en charge nécessaires au fonctionnement de l’application, comme les icônes et les paramètres.
 
 Pour supprimer les journaux et le cache stockés, effectuez une des actions suivantes :
 

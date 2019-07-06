@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196780"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545725"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
 
@@ -63,7 +63,7 @@ Utilisez les étapes suivantes pour inscrire des appareils macOS exécutant OS X
     * Si vous n’avez aucun appareil, la bannière indique : **vous n’avez aucun appareil géré. Ajoutez celui-ci en appuyant ici.** Cliquez sur la bannière pour ajouter votre appareil.  
 
      ![Capture d’écran de la page Appareils, avec un carré rouge autour de l’option de bannière pour mettre en surbrillance l’endroit où vous devez cliquer.](./media/CP-enroll-MACOS-1808.png)  
-5.  Effectuez l’étape ci-dessous correspondant au message que vous voyez actuellement dans le portail d’entreprise.  
+5. Effectuez l’étape ci-dessous correspondant au message que vous voyez actuellement dans le portail d’entreprise.  
     * Si vous ajoutez un appareil pour la première fois, vous êtes invité à télécharger l’application Portail d’entreprise sur votre appareil. Cliquez sur **Télécharger** pour continuer.  
 
          ![Capture de l’écran vous invitant à télécharger l’application Portail d’entreprise macOS. L’utilisateur peut cliquer sur le bouton bleu Télécharger dans la partie inférieure gauche de l’invite, ou sur le bouton gris Annuler dans la partie inférieure droite.](./media/CP-enroll-download-macOS-1808.png)  

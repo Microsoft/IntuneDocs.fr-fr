@@ -18,12 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d77c9aa739096f36f4dbf4b75a4186e55a3381
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835061"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546612"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Utiliser des applications gérées sur votre appareil iOS
 
@@ -38,9 +38,9 @@ Quand vous accédez à des données d’entreprise dans une application gérée,
 ## <a name="how-do-i-get-managed-apps"></a>Comment obtenir des applications gérées ?  
 Vous obtenez des applications gérées de deux façons différentes :
 
--   Quand votre appareil est inscrit dans Microsoft Intune, vous installez l’application à partir de votre application Portail d’entreprise ou du site web du portail d’entreprise, ou bien le support technique de votre entreprise peut l’installer sur votre appareil. Pour en savoir plus sur l’inscription, consultez [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md) ou [Inscrire votre appareil macOS dans Intune](enroll-your-device-in-intune-macos.md).
+- Quand votre appareil est inscrit dans Microsoft Intune, vous installez l’application à partir de votre application Portail d’entreprise ou du site web du portail d’entreprise, ou bien le support technique de votre entreprise peut l’installer sur votre appareil. Pour en savoir plus sur l’inscription, consultez [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md) ou [Inscrire votre appareil macOS dans Intune](enroll-your-device-in-intune-macos.md).
 
--   Vous installez une application à partir de l’App Store, puis vous vous connectez avec votre compte d’utilisateur d’entreprise qui est géré par Intune.
+- Vous installez une application à partir de l’App Store, puis vous vous connectez avec votre compte d’utilisateur d’entreprise qui est géré par Intune.
 
 Le support technique de votre entreprise peut parfois acheter plusieurs licences pour une application que vous installez. Si vous voyez un message vous demandant d’accepter le contrat Programme d’achat en volume (VPP) Apple, ceci est tout à fait normal, et vous pouvez accepter le contrat. Si vous ne l’acceptez pas, vous ne pouvez pas installer l’application.
 
@@ -56,22 +56,22 @@ Le support technique de votre entreprise peut parfois acheter plusieurs licences
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?  
 Voici quelques exemples d’options que le support technique de votre entreprise peut gérer dans une application et qui peuvent affecter vos interactions avec les données d’entreprise sur votre appareil :
 
--   Accès à des sites Web spécifiques
+- Accès à des sites Web spécifiques
 
--   Transferts de données entre les applications
+- Transferts de données entre les applications
 
--   Enregistrement de fichiers
+- Enregistrement de fichiers
 
--   Opérations de copier et coller
+- Opérations de copier et coller
 
--   Conditions d'accès de code confidentiel
+- Conditions d'accès de code confidentiel
 
--   Votre connexion à l’aide d’informations d’identification d’entreprise
+- Votre connexion à l’aide d’informations d’identification d’entreprise
 
--   Possibilité de sauvegarder dans le cloud
+- Possibilité de sauvegarder dans le cloud
 
--   Possibilité de prendre des captures d’écran
+- Possibilité de prendre des captures d’écran
 
--   Cryptage des données
+- Cryptage des données
 
 Pour plus d’informations sur les applications gérées sur votre appareil, contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

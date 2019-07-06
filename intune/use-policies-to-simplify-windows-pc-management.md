@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e9042b6c7c1890cd1829f803c05fbab7ae9b44
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040211"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548822"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Utiliser des stratégies pour simplifier la gestion des PC Windows
 
@@ -35,13 +35,13 @@ Pour gérer les ordinateurs de bureau Windows en tant que PC en y exécutant le 
 ### <a name="manage-the-microsoft-intune-center"></a>Gérer Microsoft Intune Center
 Pour les utilisateurs, le client logiciel Intune apparaît comme **Microsoft Intune Center**. Microsoft Intune Center permet aux utilisateurs d’effectuer les opérations suivantes :
 
--   Obtenir des applications à partir du portail d'entreprise.
+- Obtenir des applications à partir du portail d'entreprise.
 
--   Rechercher des mises à jour.
+- Rechercher des mises à jour.
 
--   Gérer Microsoft Intune Endpoint Protection.
+- Gérer Microsoft Intune Endpoint Protection.
 
--  Demander l'assistance à distance.
+- Demander l'assistance à distance.
 
 Microsoft Intune Center est installé sur tous les ordinateurs gérés. Vous pouvez configurer les paramètres suivants dans une stratégie Intune. Ceux-ci s’affichent pour les utilisateurs dans Microsoft Intune Center :
 

@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85ccfb526ada4d6851fb32b077d07d3538f90361
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: efed9522f64cd7b34d702cd959f6b1aa4524f855
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61490999"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545875"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Que se passe-t-il si vous installez l’application Portail d’entreprise et inscrivez votre appareil Windows dans Intune ?
 
@@ -32,48 +32,48 @@ Quand vous installez l’application Portail d’entreprise et que vous l’util
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Que se passe-t-il pour tous les appareils Windows après l’inscription ?
 Quand votre appareil Windows ou Windows Phone est inscrit dans Intune, vous pouvez :
 
--   accéder au réseau de l’entreprise, à votre messagerie et à vos fichiers de travail ;
+- accéder au réseau de l’entreprise, à votre messagerie et à vos fichiers de travail ;
 
--   obtenir des applications d’entreprise à partir du site web du portail d’entreprise ; (__Remarque__ : Pour Windows 7 et Windows Vista, vous ne pouvez obtenir des applications d’entreprise qu’à partir du site web du portail d’entreprise.)
+- obtenir des applications d’entreprise à partir du site web du portail d’entreprise ; (__Remarque__ : Pour Windows 7 et Windows Vista, vous ne pouvez obtenir des applications d’entreprise qu’à partir du site web du portail d’entreprise.)
 
--   configurer automatiquement votre compte e-mail d’entreprise ou scolaire ;
+- configurer automatiquement votre compte e-mail d’entreprise ou scolaire ;
 
--   réinitialiser les paramètres de votre téléphone en cas de perte ou de vol.
+- réinitialiser les paramètres de votre téléphone en cas de perte ou de vol.
 
 Quand vous inscrivez votre appareil, vous autorisez le support technique de votre entreprise à effectuer les opérations suivantes :
 
--   Réinitialiser votre appareil aux réglages par défaut d’origine. Ceci est utile si l'appareil est perdu ou volé.
+- Réinitialiser votre appareil aux réglages par défaut d’origine. Ceci est utile si l'appareil est perdu ou volé.
 
--   Supprimer uniquement les fichiers relatifs à l’entreprise et les applications professionnelles. *Vos données et paramètres personnels ne sont pas supprimés.*
+- Supprimer uniquement les fichiers relatifs à l’entreprise et les applications professionnelles. *Vos données et paramètres personnels ne sont pas supprimés.*
 
--   Le support technique de votre entreprise peut voir les logiciels installés sur l’appareil, dont les logiciels que vous avez installés personnellement.
+- Le support technique de votre entreprise peut voir les logiciels installés sur l’appareil, dont les logiciels que vous avez installés personnellement.
 
--   Définir les exigences pour votre appareil, comme vous obliger à avoir un mot de passe ou un code confidentiel sur l’appareil pour protéger les données d’entreprise. Le support technique de votre entreprise peut également limiter le nombre de tentatives de saisie d’un mot de passe et bloquer l’appareil si vous dépassez le nombre maximal autorisé.
+- Définir les exigences pour votre appareil, comme vous obliger à avoir un mot de passe ou un code confidentiel sur l’appareil pour protéger les données d’entreprise. Le support technique de votre entreprise peut également limiter le nombre de tentatives de saisie d’un mot de passe et bloquer l’appareil si vous dépassez le nombre maximal autorisé.
 
--   Vous obliger à chiffrer les données sur votre appareil pour mieux protéger les données d’entreprise si l’appareil est perdu ou volé.
+- Vous obliger à chiffrer les données sur votre appareil pour mieux protéger les données d’entreprise si l’appareil est perdu ou volé.
 
--   Vous êtes obligé d'accepter les conditions générales.
+- Vous êtes obligé d'accepter les conditions générales.
 
--   Vous empêcher de prendre des photos de données d’entreprise.
+- Vous empêcher de prendre des photos de données d’entreprise.
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Que se passe-t-il pour tous les ordinateurs Windows après l’inscription ?
 
--  Des logiciels sont installés sur votre ordinateur pour permettre au support technique de votre entreprise de gérer l’ordinateur, et pour vous permettre d’accéder aux ressources d’entreprise, comme des applications et des informations de support. Le support technique de votre entreprise peut mettre à jour ces logiciels automatiquement.
+- Des logiciels sont installés sur votre ordinateur pour permettre au support technique de votre entreprise de gérer l’ordinateur, et pour vous permettre d’accéder aux ressources d’entreprise, comme des applications et des informations de support. Le support technique de votre entreprise peut mettre à jour ces logiciels automatiquement.
 
--  Intune Endpoint Protection peut être installé sur votre ordinateur. Ce logiciel recherche les virus et programmes malveillants.
+- Intune Endpoint Protection peut être installé sur votre ordinateur. Ce logiciel recherche les virus et programmes malveillants.
 
--  Le support technique de votre entreprise peut collecter ou supprimer des données du disque dur de votre ordinateur.
+- Le support technique de votre entreprise peut collecter ou supprimer des données du disque dur de votre ordinateur.
 
--  Le support technique de votre entreprise peut installer des applications et des mises à jour sur votre ordinateur.
+- Le support technique de votre entreprise peut installer des applications et des mises à jour sur votre ordinateur.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Que se passe-t-il toutes les huit heures après l’inscription d’appareils ?
 
 Environ toutes les huit heures, les appareils inscrits vont :
 
--   Télécharger toutes les mises à jour d’une application ou d’une stratégie rendues disponibles par le support technique de votre entreprise.
+- Télécharger toutes les mises à jour d’une application ou d’une stratégie rendues disponibles par le support technique de votre entreprise.
 
--   envoyer toute mise à jour de l'inventaire matériel ;
+- envoyer toute mise à jour de l'inventaire matériel ;
 
--   envoyer toute mise à jour de l'inventaire d'applications de la société.
+- envoyer toute mise à jour de l'inventaire d'applications de la société.
 
 Si vous avez des questions, contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
