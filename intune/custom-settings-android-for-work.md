@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 07/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,20 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: aea4a3d6f8d28e4277435b1d9fc092e68adb9e55
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373638"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530321"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils Android Entreprise dans Microsoft Intune
 
-À l’aide de Microsoft Intune, vous pouvez ajouter ou créer des paramètres personnalisés pour vos appareils Android Entreprise au moyen d’un « profil personnalisé ». Les profils personnalisés sont une fonctionnalité dans Intune. Ils sont conçus pour ajouter des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune.
+À l’aide de Microsoft Intune, vous pouvez ajouter ou créer des paramètres personnalisés pour vos appareils Android Enterprise Work Profile au moyen d’un « profil personnalisé ». Les profils personnalisés sont une fonctionnalité dans Intune. Ils sont conçus pour ajouter des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune.
 
 Les profils personnalisés Android Entreprise utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour contrôler les fonctionnalités sur les appareils Android Entreprise. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler ces fonctionnalités.
 
-Intune prend en charge un nombre limité de profils personnalisés Android.
+Intune prend en charge un nombre limité de profils personnalisés d’entreprise Android, y compris :
+
+- Paramètres/./Vendor/MSFT/WiFi/Profile/SSID : [créer un profil Wi-Fi avec une clé prépartagée](wi-fi-profile-shared-key.md) a quelques exemples.
+- ./Vendor/MSFT/VPN/Profile/Name/PackageList : [créer un profil VPN par application](android-pulse-secure-per-app-vpn.md) a quelques exemples.
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste : consultez le [exemple](#example) (dans cet article).
+
+Si vous avez besoin des paramètres supplémentaires, consultez [OEMConfig pour Android Enterprise](android-oem-configuration-overview.md).
 
 Cet article vous montre comment créer un profil personnalisé pour les appareils Android Entreprise. Il fournit également un exemple d’un profil personnalisé qui bloque la fonction copier/coller.
 

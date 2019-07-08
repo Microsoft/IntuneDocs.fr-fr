@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4877920821b2471f752f9fdb8941e87576d937ba
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413862"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558402"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guide du Kit SDK d’application Microsoft Intune pour les développeurs iOS
 
@@ -70,6 +70,7 @@ Les fichiers d’en-tête suivants incluent les API, les types de données et le
     * IntuneMAMDataProtectionInfo.h
     * IntuneMAMDataProtectionManager.h
     * IntuneMAMDefs.h
+    * IntuneMAMDiagnosticConsole.h
     * IntuneMAMEnrollmentDelegate.h
     * IntuneMAMEnrollmentManager.h
     * IntuneMAMEnrollmentStatus.h
@@ -735,6 +736,10 @@ Oui, l’administrateur informatique peut envoyer une commande de réinitialisat
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Existe-t-il un exemple d’application qui montre comment intégrer le SDK ?
 
 Oui ! Nous avons récemment amélioré notre exemple d’application open source [Wagr pour iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Wagr est maintenant compatible avec la stratégie de protection des applications à l’aide du SDK d’application Intune.
+
+### <a name="how-can-i-troubleshoot-my-app"></a>Comment puis-je résoudre mon application ?
+
+Le SDK Intune pour iOS 9.0.3+ prend en charge la possibilité d’ajouter une console de diagnostic dans l’application mobile pour tester les stratégies et la journalisation des erreurs. `IntuneMAMDiagnosticConsole.h` définit le `IntuneMAMDiagnosticConsole` interface de classe, les développeurs peuvent utiliser pour afficher la console de diagnostic Intune. Cela permet aux utilisateurs finaux ou aux développeurs pendant le test pour recueillir et partager les journaux Intune pour aider à diagnostiquer tout problème que susceptible de lui. Cette API est facultative pour les intégrateurs de systèmes.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Soumettre votre application à l’App Store
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,24 +16,31 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: 99f51662894cac04e6ebcd821806b433dbf3117e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041238"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413771"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Supprimer des certificats SCEP et PKCS dans Microsoft Intune
 
-Dans Microsoft Intune, vous pouvez ajouter des certificats SCEP (Simple Certificate Enrollment Protocol) et PKCS (Public Key Cryptography Standards) à des appareils. En outre, vous pouvez supprimer ces certificats quand vous [réinitialisez](devices-wipe.md#wipe) ou [mettez hors service](devices-wipe.md#retire) l’appareil. 
+Dans Microsoft Intune, vous pouvez utiliser des certificats SCEP (Simple Certificate Enrollment Protocol) et des profils de certificat PKCS (Public Key Cryptography Standards) pour ajouter des certificats à des appareils. 
 
-Il existe d’autres scénarios où les certificats sont automatiquement supprimés et d’autres encore où les certificats restent sur l’appareil. Cet article liste quelques scénarios courants et leur impact sur les certificats PKCS et SCEP.
+Vous pouvez supprimer ces certificats quand vous [réinitialisez](devices-wipe.md#wipe) ou [mettez hors service](devices-wipe.md#retire) l’appareil. Il existe également des scénarios où les certificats sont automatiquement supprimés et d’autres encore où les certificats restent sur l’appareil. Cet article liste quelques scénarios courants et leur impact sur les certificats PKCS et SCEP.
 
 > [!NOTE]
 > Pour supprimer et révoquer des certificats pour un utilisateur qui est supprimé du service Azure AD (Azure Active Directory) ou Active Directory local, effectuez les étapes suivantes dans l’ordre :
 >
 > 1. Réinitialiser ou mettre hors service l’appareil de l’utilisateur.
 > 2. Supprimer l’utilisateur du service Azure AD ou Active Directory local.
+
+## <a name="manually-deleted-certificates"></a>Supprimer manuellement des certificats  
+
+La suppression manuelle d'un certificat est un scénario qui s'applique à toutes les plateformes et à tous les certificats fournis par les modèles de certificats SCEP ou PKCS. Par exemple, un utilisateur peut supprimer un certificat d'un appareil lorsque cet appareil reste ciblé par une stratégie de certificat.  
+
+Dans ce scénario, après la suppression du certificat, la prochaine fois que l’appareil se connecte avec Intune, il est considéré comme non conforme car il lui manque le certificat attendu. Intune émet alors un nouveau certificat pour rétablir la conformité de l'appareil. Aucune autre action n'est nécessaire pour restaurer le certificat.  
+
 
 ## <a name="windows-devices"></a>Appareils Windows
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19c02c8d4c9ece66d03b3510071bb90e7f35ad3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047518"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548776"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Contribuer à la sécurisation des PC Windows avec Endpoint Protection pour Microsoft Intune
 
@@ -46,15 +46,15 @@ En tant qu’administrateur informatique, l’une de vos principales priorités 
 
 Pour passer de votre application de protection de point de terminaison actuelle à Microsoft Intune Endpoint Protection, procédez comme suit :
 
-1.  Continuez d’exécuter votre application de protection de point de terminaison actuelle lors du déploiement du logiciel client Intune vers ces ordinateurs.
+1. Continuez d’exécuter votre application de protection de point de terminaison actuelle lors du déploiement du logiciel client Intune vers ces ordinateurs.
 
-2.  Vérifiez que Microsoft Intune Endpoint Protection est installé et contribue à sécuriser les ordinateurs clients.
+2. Vérifiez que Microsoft Intune Endpoint Protection est installé et contribue à sécuriser les ordinateurs clients.
 
-3.  Supprimez le logiciel tiers de protection de point de terminaison en procédant comme suit :
+3. Supprimez le logiciel tiers de protection de point de terminaison en procédant comme suit :
 
-    -   Utilisez la fonction de distribution de logiciels Intune pour déployer un outil de suppression de logiciels fourni par le fabricant de l’application tierce de protection de point de terminaison. Pour plus d’informations, consultez [Déployer des applications avec Microsoft Intune](apps-deploy.md).
+    - Utilisez la fonction de distribution de logiciels Intune pour déployer un outil de suppression de logiciels fourni par le fabricant de l’application tierce de protection de point de terminaison. Pour plus d’informations, consultez [Déployer des applications avec Microsoft Intune](apps-deploy.md).
 
-    -   Supprimez manuellement l'application tierce de protection de point de terminaison.
+    - Supprimez manuellement l'application tierce de protection de point de terminaison.
 
 > [!NOTE]
 > Intune ne désinstalle pas automatiquement les applications tierces de protection de point de terminaison.
@@ -62,9 +62,9 @@ Pour passer de votre application de protection de point de terminaison actuelle 
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Configurer Microsoft Intune Endpoint Protection
 Procédez comme suit pour configurer Endpoint Protection pour Microsoft Intune.
 
-1.  Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Stratégie** > **Ajouter une stratégie**.
+1. Dans la [console d’administration Microsoft Intune](https://manage.microsoft.com/), choisissez **Stratégie** > **Ajouter une stratégie**.
 
-2.  Développez **Gestion des ordinateurs** et sélectionnez **Paramètres de l’Agent Microsoft Intune**. Sélectionnez **Créer et déployer une stratégie personnalisée** pour spécifier la stratégie des paramètres Endpoint Protection. Choisissez ensuite le bouton **Créer une stratégie**.
+2. Développez **Gestion des ordinateurs** et sélectionnez **Paramètres de l’Agent Microsoft Intune**. Sélectionnez **Créer et déployer une stratégie personnalisée** pour spécifier la stratégie des paramètres Endpoint Protection. Choisissez ensuite le bouton **Créer une stratégie**.
 
 Vous pouvez utiliser les paramètres recommandés ou personnaliser les paramètres. Pour plus d’informations sur la création et le déploiement des stratégies, consultez la rubrique [Tâches courantes de gestion des PC Windows avec le client Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 

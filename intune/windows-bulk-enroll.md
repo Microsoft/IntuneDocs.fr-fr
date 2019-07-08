@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,16 +16,14 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568165"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403434"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscription en bloc des appareils Windows
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 En tant qu’administrateur, vous pouvez joindre un grand nombre de nouveaux appareils Windows à Azure Active Directory et à Intune. Pour inscrire des appareils en bloc pour votre client Azure AD, vous devez créer un package d’approvisionnement avec l’application Windows Configuration Designer (WCD). En appliquant le package d’approvisionnement aux appareils d’entreprise, vous pouvez joindre les appareils à votre client Azure AD et les inscrire pour une gestion dans Intune. Une fois le package appliqué, vos utilisateurs Azure AD peuvent immédiatement se connecter.
 
@@ -51,6 +48,7 @@ Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs
    - **Description** : description facultative du projet ![Capture d’écran indiquant où spécifier le nom, le dossier du projet et la description dans l’application Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4. Entrez un nom unique pour vos appareils. Les noms peuvent inclure un numéro de série (%SERIAL%) ou un jeu de caractères aléatoires. Si vous le souhaitez, vous pouvez également entrer une clé de produit si vous mettez à niveau l’édition de Windows, configurer l’appareil pour une utilisation partagée et supprimer le logiciel préinstallé.
+   
    ![Capture d’écran indiquant où spécifier le nom et la clé de produit dans l’application Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Si vous le souhaitez, vous pouvez configurer les appareils réseau Wi-Fi auxquels se connecter lors de leur premier démarrage.  Si les appareils réseau ne sont pas configurés, une connexion de réseau câblé est requise lors du premier démarrage de l’appareil.
@@ -66,7 +64,7 @@ Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs
 
 9. Si vous le souhaitez, vous pouvez **ajouter des applications** et **ajouter des certificats**. Ces applications et certificats sont approvisionnés sur l’appareil.
 
-10. Si vous le souhaitez, vous pouvez protéger votre package d’approvisionnement par un mot de passe.  Cliquez sur **Create (Créer)**.
+10. Si vous le souhaitez, vous pouvez protéger votre package d’approvisionnement par un mot de passe.  Cliquez sur **Create (Créer)** .
     ![Capture d’écran de la protection de package dans l’application Windows Configuration Designer](media/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Approvisionner des appareils
@@ -91,9 +89,6 @@ L’approvisionnement est destiné aux nouveaux appareils Windows. Les échecs d
 
 - Un package d’approvisionnement qui tente de rejoindre un domaine Active Directory ou un client Azure Active Directory qui ne crée pas de compte local peut rendre l’appareil inaccessible si le processus de jonction de domaine échoue en raison d’un manque de connectivité réseau.
 - Les scripts exécutés par le package de mise en service sont exécutés dans le contexte système. Les scripts peuvent apporter des modifications arbitraires au système de fichiers et aux configurations de l’appareil. Un script malveillant ou incorrect peut faire basculer l’appareil dans un état dont il ne peut récupérer que par réimageage ou par réinitialisation de l’appareil.
-
-### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problèmes liés à l’inscription en bloc et au portail d’entreprise
-Si un utilisateur tente d’inscrire un appareil qui a précédemment été inscrit en bloc à l’aide du portail d’entreprise, il recevra un message d’avertissement indiquant que son appareil a besoin d’actions supplémentaires, soit une installation, soit une inscription. L’appareil est inscrit, mais l’inscription n’est pas reconnue par l’application Portail d’entreprise ou le site web.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Inscription en bloc avec le Wi-Fi 
 

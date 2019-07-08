@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,35 +14,91 @@ ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: robstack
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7b67f1484ed74bd538cad53f02babd542b77fff
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2c0d3484311d044842daf6718b306d45fc93edf2
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838833"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545925"
 ---
-# <a name="use-managed-devices-to-access-work-or-school-resources"></a>Utiliser des appareils gérés pour accéder aux ressources professionnelles ou scolaires
-Microsoft Intune est un système de gestion d’appareils qui permet aux organisations de gérer l’accès aux appareils, aux applications et aux e-mails. Avec la gestion d’appareils, vous (employés, étudiants ou autres) pouvez accéder à vos informations professionnelles quasiment où que vous soyez et sur presque tous les appareils. Même quand vous travaillez à distance, vos informations ou celles de votre organisation sont sécurisées.
+# <a name="enroll-device-for-access-to-work-or-school-resources"></a>Inscrire un appareil pour l’accès aux professionnels ou scolaires de ressources
+Pour inscrire votre appareil et accéder à la messagerie et des applications, vous devez installer l’application portail d’entreprise Intune ou une application Microsoft Intune. Quand vous inscrivez, les stratégies de gestion de base que votre organisation a configuré, telles que le mot de passe, code confidentiel et le chiffrement, sont appliquées à votre appareil. Une fois que les paramètres de votre appareil répond à toutes les exigences de votre organisation, vous pouvez accéder en toute sécurité vos informations professionnelles à partir de pratiquement n’importe où.  
 
-Microsoft Intune est le logiciel que votre entreprise utilise pour répondre aux exigences de sécurité de ses appareils. Une fois que vous êtes prêt à gérer votre appareil, utilisez l’application Portail d’entreprise Intune. Avec cette application, vous pouvez utiliser votre appareil favori pour accéder à des ressources professionnelles ou scolaires. 
+Les applications de portail d’entreprise et Microsoft Intune sécuriser votre appareil inscrit en veillant à ce que les paramètres de votre appareil correspondent à des stratégies de votre organisation. 
 
-## <a name="what-information-can-my-company-see-when-i-get-my-device-managed"></a>Quelles sont les informations que mon entreprise peut voir quand je fais gérer mon appareil ?
-Une fois la configuration effectuée dans l’application Portail d’entreprise, l’équipe de support de votre entreprise voit uniquement les informations pertinentes. Vos informations personnelles ne sont pas visibles. Il est particulièrement important de le savoir si vous inscrivez un appareil personnel en vue de l’utiliser au travail. Découvrez exactement ce qui est [visible ou non dans le prochain article](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+L'application Portail d’entreprise effectue également les tâches suivantes :  
+* Permet de séparer vos informations personnelles et professionnelles.  
+* Rend plus facile rechercher et installer pertinentes les applications professionnelles et scolaires.   
 
-## <a name="how-do-i-get-company-portal"></a>Comment obtenir l’application Portail d’entreprise ?
-Vous pouvez obtenir l’application Portail d’entreprise de plusieurs façons :
+## <a name="get-the-apps"></a>Obtenir les applications
+Pour obtenir Portail d’entreprise :
 
-- En installant l’application Portail d’entreprise sur votre appareil. Vous obtenez généralement l’application Portail d’entreprise en accédant à l’App Store sur votre appareil, mais le support technique de votre entreprise peut également l’installer pour vous.
-- En accédant au [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) que le support de votre entreprise a configuré.
+- Installer l’application portail d’entreprise à partir du magasin de l’application spécifique à la plateforme. Dans certains cas, votre organisation installera l’application portail d’entreprise pour vous.  
+- Accédez à la [site Web portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) accéder à l’application à partir d’un navigateur.  
 
-## <a name="whats-the-difference-between-the-app-and-the-website"></a>Quelle est la différence entre l’application et le site web ?
-Chaque application du portail d’entreprise pour Windows 10, iOS, macOS et Android s’intègre sans interruption à la plateforme correspondante de votre appareil. Le site web est accessible à partir de n’importe quel appareil et vous donne la même expérience universelle, quel que soit l’appareil que vous utilisez. 
+Si vous êtes tenu d’utiliser l’application Microsoft Intune, votre organisation l’installera pour vous.  
 
-Des conseils sur le portail d’entreprise spécifiques à la plateforme de votre appareil, en commençant par les étapes d’inscription, sont disponibles sous les liens suivants :  
+
+## <a name="what-information-can-my-company-see-when-i-enroll"></a>Quelles informations mon entreprise peut-elle voir quand je m’inscris?
+Une fois votre appareil est inscrit, le personnel de support de votre organisation peut voir uniquement les informations professionnelles. Vos informations personnelles ne sont pas visibles. Si vous inscrivez un appareil personnel à utiliser au travail, [savoir exactement ce qui peut et ne peut pas être consulté](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+
+
+## <a name="whats-the-difference-between-the-apps-and-the-website"></a>Quelle est la différence entre les applications et le site web ?
+L’application portail d’entreprise est disponible pour Windows 10, iOS, macOS et les appareils Android. Il s’intègre en toute transparence avec la plateforme correspondante de votre appareil. La version sur le site web est accessible à partir de n’importe quel appareil et vous donne la même expérience universelle, quel que soit l’appareil que vous utilisez. 
+
+L’application Microsoft Intune est pour les appareils d’entreprise Android.  
+
+## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Quels types d’appareils peuvent inscrire avec le portail d’entreprise ?
+- Appareils Apple utilisant iOS (par ex., iPhone et iPad) et Mac OS (par ex., MacBook et iMac)
+- Appareils Android
+- Appareils Windows
+    - Windows 10 Mobile
+    - Windows 10 Desktop
+    - Windows Phone 8.1
+    - Windows 8.1
+
+## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Quels types d’appareils peuvent inscrire avec l’application Microsoft Intune ?  
+Vous pouvez inscrire des appareils d’entreprise Android que votre organisation a configuré à utiliser avec l’application. L’application prend en charge Android 6.0 et versions ultérieur. 
+
+## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Pouvez-vous supprimer un ordinateur ou un appareil du Portail d’entreprise ?
+Vous pouvez supprimer ou réinitialiser un ordinateur ou un appareil à partir du Portail d’entreprise. Il existe une différence entre **supprimer** et **réinitialiser**.
+
+Quand vous supprimez un ordinateur ou un appareil du portail d’entreprise, vous désinscrivez votre appareil dans Intune. Une fois l’appareil désinscrit, vous ne pouvez plus accéder au portail d’entreprise à partir de cet appareil et certaines données d’entreprise peuvent également être supprimées de l’appareil. Pour savoir comment supprimer votre appareil à partir du portail d’entreprise, consultez les liens suivants :  
+
+- [Désinscription de votre appareil Android](unenroll-your-device-from-intune-android.md)
+- [Désinscription de votre appareil iOS](unenroll-your-device-from-intune-ios.md)
+- [Désinscription de votre appareil macOS](unenroll-your-device-from-intune-macos.md)
+- [Désinscription de votre appareil Windows](unenroll-your-device-from-intune-windows.md)
+
+Quand vous réinitialisez un ordinateur ou un appareil, le portail d’entreprise tente de rétablir les paramètres par défaut d’origine sur votre ordinateur ou votre appareil. La réinitialisation de votre appareil supprime toutes les données personnelles et d’entreprise figurant sur l’appareil. Si vous avez perdu votre appareil, vous pouvez le réinitialiser à distance à partir du site web Portail d’entreprise.  
+
+Pour savoir comment réinitialiser votre appareil, consultez [réinitialiser votre appareil depuis le site Web portail d’entreprise](reset-erase-your-device-cpwebsite.md).  
+
+## <a name="can-you-remove-a-computer-or-device-from-the-microsoft-intune-app"></a>Peut supprimer un ordinateur ou un appareil à partir de l’application Microsoft Intune ?
+Non, il n’existe aucun moyen pour vous permet de supprimer un appareil d’entreprise à partir de l’application Microsoft Intune.  
+
+## <a name="what-if-i-cant-see-my-device-in-the-company-portal-or-microsoft-intune-app"></a>Que se passe-t-il si je ne peux pas voir mon appareil dans l’application portail d’entreprise ou Microsoft Intune ?
+Pour que vous puissiez voir un appareil, il doit d’abord être ajouté au Portail d’entreprise. Accédez au portail d’entreprise recommandé par votre administrateur et suivez les étapes pour votre appareil. Vous ne verrez pas non plus les appareils détenus et gérés par votre entreprise.
+
+Si vous utilisez l’application Microsoft Intune, vous verrez seulement l’appareil que vous utilisez actuellement. Autres appareils inscrits ne seront pas visibles dans l’application.  
+
+## <a name="where-else-can-i-go-for-help"></a>Où puis-je encore trouver de l’aide ?  
+Pour résoudre les problèmes courants et des questions, consultez ces documents spécifiques à la plateforme :  
+
+- [Résoudre les problèmes courants rencontrés avec votre appareil Android](check-compliance-on-your-device-android.md)  
+- [Résoudre les problèmes courants rencontrés avec votre appareil iOS](troubleshoot-your-device-ios.md)
+- [Résoudre les problèmes courants rencontrés avec votre appareil macOS](troubleshoot-your-device-macos.md)
+- [Résoudre les problèmes courants rencontrés avec votre appareil Windows](troubleshoot-your-device-windows.md)
+
+Vous pouvez également contacter votre support technique. Le portail d’entreprise et l’application Microsoft Intune proposent des solutions et prennent en charge les pages qui répertorient les informations de contact et des méthodes pour signaler un problème. Informations de contact sont également disponibles sur de votre organisation [site Web portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+## <a name="next-steps"></a>Étapes suivantes  
+
+Accédez à l’aide en commençant par l’inscription, qui est spécifique à la plateforme de votre appareil :  
 
 - [Utilisation de votre appareil Android](using-your-android-device-with-intune.md)
 - [Utilisation de votre appareil iOS](using-your-ios-device-with-intune.md)
@@ -50,50 +106,4 @@ Des conseils sur le portail d’entreprise spécifiques à la plateforme de votr
 - [Utilisation de votre appareil Windows](using-your-windows-device-with-intune.md)
 - [Utilisation du site web du portail de l'entreprise](using-the-intune-company-portal-website.md)
 
-## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Que se passe-t-il quand vous ajoutez un ordinateur ou un appareil au Portail d’entreprise ?
-Quand vous ajoutez un ordinateur ou un appareil au portail d’entreprise, certains logiciels sont parfois installés ou une application est éventuellement téléchargée (en fonction de l’appareil). Vous autorisez également le support technique de votre entreprise à gérer votre appareil pour protéger les informations de l’entreprise sur l’appareil.
 
-Pour savoir ce que le support technique de votre entreprise peut voir ou non sur votre appareil, utilisez le lien correspondant au type d’appareil que vous utilisez :
-
-- [Installation de l’application Portail d’entreprise pour Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [Installation de l’application Portail d’entreprise pour iOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Installation de l’application Portail d’entreprise pour macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
-- [Installation de l’application Portail d’entreprise pour Windows](about-cp-app-for-windows-10.md)
-
-## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Quel type d’ordinateurs ou d’appareils pouvez-vous ajouter au Portail d’entreprise ?
--   Appareils Apple utilisant iOS (par ex., iPhone et iPad) et Mac OS (par ex., MacBook et iMac)
--   Appareils Android
--   Appareils Windows
-    -   Windows 10 Mobile
-    -   Windows 10 Desktop
-    -   Windows Phone 8.1
-    -   Windows 8.1
-
-## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Pouvez-vous supprimer un ordinateur ou un appareil du Portail d’entreprise ?
-Vous pouvez supprimer ou réinitialiser un ordinateur ou un appareil à partir du Portail d’entreprise. Il existe une différence entre **supprimer** et **réinitialiser**.
-
-Quand vous *supprimez* un ordinateur ou un appareil du portail d’entreprise, vous désinscrivez votre appareil dans Intune. Une fois l’appareil désinscrit, vous ne pouvez plus accéder au portail d’entreprise à partir de cet appareil et certaines données d’entreprise peuvent également être supprimées de l’appareil. Pour savoir comment supprimer votre appareil sur le portail d’entreprise, choisissez l’un des liens suivants :
-
-- [Désinscription de votre appareil Android](unenroll-your-device-from-intune-android.md)
-- [Désinscription de votre appareil iOS](unenroll-your-device-from-intune-ios.md)
-- [Désinscription de votre appareil macOS](unenroll-your-device-from-intune-macos.md)
-- [Désinscription de votre appareil Windows](unenroll-your-device-from-intune-windows.md)
-
-Quand vous *réinitialisez* un ordinateur ou un appareil, le portail d’entreprise tente de rétablir les paramètres par défaut d’origine sur votre ordinateur ou votre appareil. La réinitialisation de votre appareil supprime toutes les données personnelles et d’entreprise figurant sur l’appareil. Si vous avez perdu votre appareil, vous pouvez le réinitialiser à distance à partir du site web Portail d’entreprise.
-
-Vous pouvez savoir comment réinitialiser votre appareil ici :
-
-- [Réinitialiser (effacer) votre appareil à partir du site web du portail d’entreprise](reset-erase-your-device-cpwebsite.md)
-
-## <a name="what-if-i-cant-see-my-device-in-the-company-portal"></a>Que se passe-t-il si mon appareil n’apparaît pas dans le portail d’entreprise ?
-Pour que vous puissiez voir un appareil, il doit d’abord être ajouté au Portail d’entreprise. Accédez au portail d’entreprise recommandé par votre administrateur et suivez les étapes pour votre appareil. Vous ne verrez pas non plus les appareils détenus et gérés par votre entreprise.
-
-## <a name="where-else-can-i-go-for-help"></a>Où puis-je encore trouver de l’aide ?
-Microsoft vous recommande d’essayer de commencer par voir si vous pouvez résoudre le problème vous-même. Nous fournissons une liste des méthodes que vous pouvez tenter afin de résoudre les problèmes que vous pouvez rencontrer pour chaque plateforme prise en charge par Intune.
-
-- [Résoudre les problèmes courants rencontrés avec votre appareil Android](troubleshoot-your-device-android.md)
-- [Résoudre les problèmes courants rencontrés avec votre appareil iOS](troubleshoot-your-device-ios.md)
-- [Résoudre les problèmes courants rencontrés avec votre appareil macOS](troubleshoot-your-device-macos.md)
-- [Résoudre les problèmes courants rencontrés avec votre appareil Windows](troubleshoot-your-device-windows.md)
-
-Vous pouvez publier un commentaire ci-dessous pour demander de l’aide. Toutefois, comme chaque organisation a des exigences différentes, nous ne pouvons pas toujours répondre à vos questions. Vous obtiendrez probablement la réponse la plus adaptée et la plus rapide en contactant le support technique de votre entreprise pour lui demander de l’aide. Ses informations de contact sont normalement disponibles sur le [site web Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 506bdc73717ed9af11ab8db0e5f459145ab27f83
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
+ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407105"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558389"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Liaisons Xamarin du kit SDK d’application Microsoft Intune
 
@@ -61,9 +61,9 @@ Si votre application est déjà configurée pour utiliser la bibliothèque ADAL 
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Activation des stratégies de protection des applications Intune dans votre application mobile iOS
 1. Ajoutez le paquet NuGet [Microsoft.Intune.MAM.Xamarin.iOS](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS) à votre projet Xamarin.iOS.
-2.  Suivez les étapes générales requises pour l’intégration du Kit SDK d’application Intune dans une app mobile iOS. Vous pouvez commencer à l’étape 3 des instructions de l’intégration dans le [Guide du kit SDK d’application Intune pour les développeurs iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). Vous pouvez ignorer l’étape finale indiquée dans cette section sur l’exécution de l’outil IntuneMAMConfigurator, car il est inclus dans le package Microsoft.Intune.MAM.Xamarin.iOS et il s’exécute automatiquement au moment de la génération.
+2. Suivez les étapes générales requises pour l’intégration du Kit SDK d’application Intune dans une app mobile iOS. Vous pouvez commencer à l’étape 3 des instructions de l’intégration dans le [Guide du kit SDK d’application Intune pour les développeurs iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). Vous pouvez ignorer l’étape finale indiquée dans cette section sur l’exécution de l’outil IntuneMAMConfigurator, car il est inclus dans le package Microsoft.Intune.MAM.Xamarin.iOS et il s’exécute automatiquement au moment de la génération.
     **Important** : l’activation du partage de trousseau pour une application est légèrement différente dans Visual Studio par rapport à Xcode. Ouvrez le fichier plist de droits de l’application et vérifiez que l’option « Activer le trousseau » est activée et que les groupes de partage de trousseau appropriés sont ajoutés dans cette section. Vérifiez ensuite que le fichier plist des droits est spécifié dans le champ « Droits personnalisés » des options « Signature du bundle iOS » du projet pour toutes les combinaisons de configuration/plate-forme appropriées.
-3.  Une fois les liaisons ajoutées et l’application correctement configurée, celle-ci peut commencer à utiliser les API du kit SDK Intune. Pour cela, vous devez inclure l’espace de noms suivant :
+3. Une fois les liaisons ajoutées et l’application correctement configurée, celle-ci peut commencer à utiliser les API du kit SDK Intune. Pour cela, vous devez inclure l’espace de noms suivant :
 
       ```csharp
       using Microsoft.Intune.MAM;
@@ -88,7 +88,6 @@ Si votre application est déjà configurée pour utiliser la bibliothèque ADAL 
 > Il n’existe pas de remappeur pour iOS. L’intégration dans une application Xamarin.Forms doit être la même que pour un projet Xamarin.iOS normal. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Activation de stratégies de protection des applications Intune dans votre application mobile Android
-
 1. Ajoutez le paquet NuGet [Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android) à votre projet Xamarin.Android.
     1. Pour une application Xamarin.Forms, ajoutez le [package NuGet Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) à votre projet Xamarin.Android. 
 2. Suivez les étapes générales nécessaires pour [l’intégration du SDK d’application Intune](app-sdk-android.md) dans une application mobile Android tout en vous référant à ce document pour des informations plus détaillées.
@@ -136,7 +135,7 @@ public override void OnMAMCreate()
     IMAMNotificationReceiverRegistry registry = MAMComponents.Get<IMAMNotificationReceiverRegistry>();
     foreach (MAMNotificationType notification in MAMNotificationType.Values())
     {
-    registry.RegisterReceiver(new ToastNotificationReceiver(this), notification);
+        registry.RegisterReceiver(new ToastNotificationReceiver(this), notification);
     }
     ...
 ```
@@ -172,6 +171,14 @@ C’est normal puisque quand le remappeur modifie l’héritage des classes Xama
 
 > [!NOTE]
 > Le remappeur réécrit une dépendance que Visual Studio utilise pour l’autocomplétion IntelliSense. Ainsi, il peut être nécessaire de recharger et de regénérer le projet quand le remappeur est ajouté, pour qu’IntelliSense reconnaisse correctement les modifications.
+
+### <a name="company-portal-app"></a>Application Portail d’entreprise
+Les liaisons Xamarin du SDK Intune s’appuient sur la présence de la [portail d’entreprise](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) application Android sur l’appareil pour activer les stratégies de protection d’applications. Le portail d’entreprise récupère les stratégies de protection des applications à partir du service Intune. Quand l’application s’initialise, elle charge la stratégie et le code pour appliquer cette stratégie à partir du portail d’entreprise. L’utilisateur n’a pas besoin de se connecter.
+
+> [!NOTE]
+> Quand l’application Portail d’entreprise n’est pas sur l’appareil **Android**, une application gérée par Intune se comporte comme une application normale qui ne prend pas en charge les stratégies de protection des applications Intune.
+
+Pour la protection des applications sans inscription des appareils, l’utilisateur n’est _**pas**_ obligé d’inscrire l’appareil à l’aide de l’application Portail d’entreprise.
 
 ## <a name="support"></a>Prise en charge
 Si votre organisation est déjà un client Intune, contactez votre conseiller du support Microsoft pour ouvrir un ticket de support et créer un enregistrement [dans la page des problèmes GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). Nous vous aiderons dès que possible. 

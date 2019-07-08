@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f93416a8fd6190549a958f1b1a7e5f3bdf6df1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045301"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547914"
 ---
 # <a name="reference-for-devices-entities"></a>Référence pour les entités d’appareils
 
 La catégorie **Appareils** contient des entités pour appareils mobiles qui font le suivi d’informations, notamment les suivantes :
 
-  -  Type d'appareil
-  -  État de l’inscription des appareils
-  -  Propriété des appareils
-  -  État de la gestion des appareils
-  -  État de l’appartenance des appareils à Azure AD
-  -  État de l'inscription
-  -  Informations d’historique sur l’appareil
-  -  Inventaire des applications sur l’appareil
+  - Type d'appareil
+  - État de l’inscription des appareils
+  - Propriété des appareils
+  - État de la gestion des appareils
+  - État de l’appartenance des appareils à Azure AD
+  - État de l'inscription
+  - Informations d’historique sur l’appareil
+  - Inventaire des applications sur l’appareil
 
 ## <a name="devicetypes"></a>DeviceTypes
 

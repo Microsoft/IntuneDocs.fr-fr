@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a87b54dde9afe9803d71f7cbef62f7c55375f51b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3bf59f75d41d50cfd9280251e20964a35a149a8
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040650"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403571"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et les profils dans Microsoft Intune  
 
@@ -34,7 +34,7 @@ Cet article décrit progressivement ces deux options de supervision.
 
 Quand vous supervisez une base de référence, vous obtenez un aperçu de l’état de sécurité de vos appareils selon les recommandations de Microsoft. Vous pouvez afficher ces informations à partir du volet Vue d’ensemble de la base de référence de la sécurité dans la console Intune.  L’affichage des données peut prendre jusqu’à 24 heures après l’affectation initiale d’une base de référence. L’affichage des modifications ultérieures prend jusqu’à six heures.  
 
-Pour afficher les données de supervision de la base de référence et des appareils, connectez-vous au [portail Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Ensuite, sélectionnez **Sécurité des appareils** > **Bases de référence de la sécurité (préversion)** et sélectionnez une base de référence pour afficher le volet **Vue d’ensemble**.
+Pour afficher les données de supervision de la base de référence et des appareils, connectez-vous au [portail Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Ensuite, sélectionnez **Sécurité des appareils** > **Bases de référence de la sécurité** et sélectionnez une base de référence pour afficher le volet **Vue d’ensemble**.
 
 Le volet **Vue d’ensemble** propose deux méthodes pour superviser l’état :
 - **Vue de l’appareil** : synthèse du nombre d’appareils figurant dans chaque catégorie d’état pour la base de référence.  
