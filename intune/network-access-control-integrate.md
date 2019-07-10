@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 400de55e26076a8d612ac31388d5c5daec68d4a0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044538"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572181"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
@@ -39,7 +39,7 @@ Si l’appareil est inscrit et conforme avec Intune, la solution de contrôle d�
 
 Les appareils qui se synchronisent activement avec Intune ne peuvent pas passer de l’état **Conforme** / **Non conforme** à l’état **Non synchronisé** (ou **Inconnu**). L’état **Inconnu** est réservé aux appareils récemment inscrits, dont la conformité n’a pas encore été évaluée.
 
-Pour les appareils dont l’accès aux ressources est bloqué, le service de blocage doit rediriger tous les utilisateurs vers le [portail de gestion](https://portal.manage.microsoft.com) pour déterminer l’origine du blocage de l’appareil.  Si les utilisateurs consultent cette page, la conformité de leurs appareils est réévaluée de façon synchrone.
+Pour les appareils dont l’accès aux ressources est bloqué, le service de blocage doit rediriger tous les utilisateurs vers le [portail de gestion](https://portal.manage.microsoft.com) pour déterminer l’origine du blocage de l’appareil.  Si les utilisateurs consultent cette page, la conformité de leurs appareils est réévaluée de façon synchrone.
 
 ## <a name="nac-and-conditional-access"></a>Contrôle d’accès réseau et accès conditionnel
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c4f5fd3f8c92d1d78ed37946663a127df440f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530693"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572576"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Connecteur de protection contre les menaces mobiles Check Point SandBlast Mobile avec Intune
 
@@ -45,11 +45,11 @@ Voici quelques scénarios courants :
 
 Lorsque des applications malveillantes, des logiciels malveillants par exemple, sont détectées sur des appareils, vous pouvez bloquer ces appareils jusqu'à ce que la menace soit écartée :
 
--   Connexion à la messagerie de l’entreprise
+- Connexion à la messagerie de l’entreprise
 
--   Synchroniser les fichiers d’entreprise à l’aide de l’application OneDrive for Work
+- Synchroniser les fichiers d’entreprise à l’aide de l’application OneDrive for Work
 
--   Accès aux applications d’entreprise
+- Accès aux applications d’entreprise
 
 **Blocage lorsque des applications malveillantes sont détectées :**
 
@@ -61,7 +61,7 @@ Lorsque des applications malveillantes, des logiciels malveillants par exemple, 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et protégez l’accès aux réseaux Wi-Fi compte tenu du risque de l’appareil.
+Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), sur le réseau et protégez l’accès aux réseaux Wi-Fi compte tenu du risque de l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 
@@ -73,7 +73,7 @@ Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et protége
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Contrôler l’accès à SharePoint Online en fonction de la menace pour le réseau
 
-Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et empêchez la synchronisation des fichiers d’entreprise compte tenu du risque de l’appareil.
+Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), sur le réseau et empêchez la synchronisation des fichiers d’entreprise compte tenu du risque de l’appareil.
 
 **Bloquer SharePoint Online lorsque des menaces réseau sont détectées :**
 
@@ -85,18 +85,18 @@ Détectez les menaces comme  **Man-in-the-middle**  sur le réseau et empêche
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
--   **Android 4.1 et versions ultérieures**
+- **Android 4.1 et versions ultérieures**
 
--   **iOS 8 et versions ultérieures**
+- **iOS 8 et versions ultérieures**
 
 ## <a name="pre-requisites"></a>Conditions préalables
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Abonnement Microsoft Intune
+- Abonnement Microsoft Intune
 
--   Abonnement Check Point SandBlast Mobile Threat Defense
-    -   Pour plus d’informations, consultez le [site web de CheckPoint SandBlast](https://www.checkpoint.com/).
+- Abonnement Check Point SandBlast Mobile Threat Defense
+    - Pour plus d’informations, consultez le [site web de CheckPoint SandBlast](https://www.checkpoint.com/).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

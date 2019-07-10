@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bd03075e6088b4cf06237429a723e93e87029fd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494587"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548362"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Phase 1 : Préparer Microsoft Intune à la gestion des appareils mobiles (MDM)
 
@@ -31,30 +31,30 @@ Avant d’étudier plus en détail la configuration d’Intune, passons en revue
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Quels appareils devez-vous prendre en charge ?
 
--   Quelles [plates-formes](supported-devices-browsers.md) devez-vous prendre en charge ?
+- Quelles [plates-formes](supported-devices-browsers.md) devez-vous prendre en charge ?
 
--   Les appareils que vous devez prendre en charge appartiennent-ils à l’entreprise ou s’agit d’appareils personnels ?
+- Les appareils que vous devez prendre en charge appartiennent-ils à l’entreprise ou s’agit d’appareils personnels ?
 
--   Quel type de connectivité utilisez-vous ? Wi-Fi, mobile ou VPN ?
+- Quel type de connectivité utilisez-vous ? Wi-Fi, mobile ou VPN ?
 
 ### <a name="what-do-your-users-need-to-do-on-managed-devices"></a>Quelles opérations vos utilisateurs doivent-ils exécuter sur les appareils gérés ?
 
--   Devez-vous configurer des applications pour vos utilisateurs finaux ?
+- Devez-vous configurer des applications pour vos utilisateurs finaux ?
 
--   Utilisez-vous des applications métier personnalisées ? Avez-vous uniquement besoin d’applications de Store public ?
+- Utilisez-vous des applications métier personnalisées ? Avez-vous uniquement besoin d’applications de Store public ?
 
--   Devez-vous configurer des comptes e-mail ?
+- Devez-vous configurer des comptes e-mail ?
 
 ### <a name="what-kinds-of-users"></a>Quels sont les types d’utilisateurs ?
 
--   Combien de personnes utiliseront un seul appareil ?
+- Combien de personnes utiliseront un seul appareil ?
 
--   De quelles conditions d’utilisation avez-vous besoin ?
+- De quelles conditions d’utilisation avez-vous besoin ?
 
-    -   Veillez à faire appel au service juridique aussitôt que possible.
-    -   Quelle est la localisation requise ?
+    - Veillez à faire appel au service juridique aussitôt que possible.
+    - Quelle est la localisation requise ?
 
--   Les utilisateurs sont-ils familiarisés avec la technologie et l’informatique en général ?
+- Les utilisateurs sont-ils familiarisés avec la technologie et l’informatique en général ?
 
 ### <a name="what-is-your-device-security-policy"></a>Quelle stratégie de sécurité des appareils mobiles comptez-vous appliquer ?
 
@@ -68,11 +68,11 @@ Avant d’étudier plus en détail la configuration d’Intune, passons en revue
 
 - Quels types d’authentification devez-vous prendre en charge ? Si vous avez besoin d’une authentification basée sur un certificat, quels types de certificat faut-il configurer ?
   - Intune peut configurer des certificats avec des profils d’accès aux ressources pour les appareils inscrits.
-  -   Quel type d’infrastructure à clé publique (PKI) devez-vous prendre en charge ?
+  - Quel type d’infrastructure à clé publique (PKI) devez-vous prendre en charge ?
   <br></br>
 - Devez-vous prendre en charge un réseau privé virtuel (VPN) au niveau des appareils ou des applications ?
 
-  -   Intune peut configurer des configurations VPN pour les fournisseurs VPN tiers.
+  - Intune peut configurer des configurations VPN pour les fournisseurs VPN tiers.
   <br/><br/>
 - Est-il possible de mettre en place des exceptions temporaires pour certaines exigences afin d’éviter les temps d’arrêt ? Ou les appareils dotés d’un accès doivent-ils toujours se conformer aux exigences de sécurité ?
 

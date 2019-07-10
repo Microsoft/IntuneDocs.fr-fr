@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da6c9b544d86c9c4b09c061c0f1500ed8612a047
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e7ff4e1fd9f055268a461d1a81b8a2e31fe3d32b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530710"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548994"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutoriel : Configurer Slack afin d’utiliser Intune pour l’EMM et la configuration d’applications
 
@@ -62,8 +62,8 @@ Ajouter Slack pour l’EMM en tant qu’application iOS managée dans Intune et 
 6. Dans la barre de recherche, entrez « Slack pour l’EMM » et sélectionnez l’application que vous venez d’ajouter.
 7. Sous Gérer, sélectionnez **Affectations**.
 8. Sélectionnez **Ajouter un groupe**. En fonction des utilisateurs choisis pour être affectés lorsqu’EMM pour Slack est activé, sous **Type d’affectation** vous pouvez souhaiter sélectionner :
-    -  **Disponible pour les appareils inscrits** si vous choisissez « Tous les membres (invités compris) » OU
-    -  **Disponible avec ou sans inscription** si vous avez choisi « Tous les membres (sauf les invités) » ou « Facultatif ».
+    - **Disponible pour les appareils inscrits** si vous choisissez « Tous les membres (invités compris) » OU
+    - **Disponible avec ou sans inscription** si vous avez choisi « Tous les membres (sauf les invités) » ou « Facultatif ».
 9. Sélectionnez **Groupes inclus** et, sous Rendre cette application accessible à tous les utilisateurs, sélectionnez **Oui**.
 10. Cliquez sur **OK**, puis de nouveau sur **OK**.
 11. Cliquez sur **Save**.
@@ -77,7 +77,7 @@ Ajouter une stratégie de configuration des applications pour Slack pour l’EMM
 5. Sélectionnez **Application associée**.
 6. Dans la barre de recherche, entrez « Slack pour l’EMM » et sélectionnez l’application.
 7. Cliquez sur **OK**, puis sélectionnez **Paramètres de configuration**. 
-    -   Pour plus d’informations sur les clés de configuration et leurs valeurs, consultez la documentation sur l’onglet « Technique » de la [page web AppConfig de Slack](https://www.appconfig.org/company/slack/).
+    - Pour plus d’informations sur les clés de configuration et leurs valeurs, consultez la documentation sur l’onglet « Technique » de la [page web AppConfig de Slack](https://www.appconfig.org/company/slack/).
 8. Sélectionnez **OK**, puis **Ajouter**.
 9. Dans la barre de recherche, entrez « Test de stratégie de configuration de l’application Slack » et sélectionnez la stratégie que vous venez d’ajouter.
 10. Sous Gérer, sélectionnez **Affectations**.
@@ -92,13 +92,13 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 4. Sous Plateforme, sélectionnez **iOS**.
 5. Sélectionnez **Intégrité de l’appareil**. En regard d’Appareils jailbreakés, sélectionnez **Bloquer**, puis **OK**.
 6. Sélectionnez **Sécurité système** et entrez les paramètres du mot de passe. Pour ce tutoriel, sélectionnez les paramètres recommandés suivants :
-    -   Pour Exiger un mot de passe pour déverrouiller des appareils mobiles, sélectionnez **Exiger**.
-    -   Pour Mots de passe simples, sélectionnez **Bloquer**.
-    -   Pour Longueur minimale du mot de passe, entrez 4.
-    -   Pour Type de mot de passe requis, choisissez**Alphanumérique**.
-    -   Pour Nombre maximal de minutes après le verrouillage d’écran avant que le mot de passe ne soit obligatoire, choisissez **Immédiatement**.
-    -   Pour Expiration du mot de passe (jours), entrez 41.
-    -   Pour Nombre de mots de passe précédents pour empêcher la réutilisation, entrez 5.
+    - Pour Exiger un mot de passe pour déverrouiller des appareils mobiles, sélectionnez **Exiger**.
+    - Pour Mots de passe simples, sélectionnez **Bloquer**.
+    - Pour Longueur minimale du mot de passe, entrez 4.
+    - Pour Type de mot de passe requis, choisissez**Alphanumérique**.
+    - Pour Nombre maximal de minutes après le verrouillage d’écran avant que le mot de passe ne soit obligatoire, choisissez **Immédiatement**.
+    - Pour Expiration du mot de passe (jours), entrez 41.
+    - Pour Nombre de mots de passe précédents pour empêcher la réutilisation, entrez 5.
 7. Cliquez sur **OK**, puis sélectionnez à nouveau **OK**.
 8. Cliquez sur **Create (Créer)** .
 
@@ -114,8 +114,8 @@ Ajouter Slack en tant qu’application Google Play managée dans Intune et affec
 5. Dans la barre de recherche, entrez « Slack » et sélectionnez l’application que vous venez d’ajouter.
 6. Sous Gérer, sélectionnez **Affectations**.
 7. Sélectionnez **Ajouter un groupe**. En fonction des utilisateurs choisis pour être affectés lorsqu’EMM pour Slack est activé, sous **Type d’affectation** vous pouvez souhaiter sélectionner :
-    -   **Disponible pour les appareils inscrits** si vous choisissez « Tous les membres (invités compris) » OU
-    -   **Disponible avec ou sans inscription** si vous avez choisi « Tous les membres (sauf les invités) » ou « Facultatif ».
+    - **Disponible pour les appareils inscrits** si vous choisissez « Tous les membres (invités compris) » OU
+    - **Disponible avec ou sans inscription** si vous avez choisi « Tous les membres (sauf les invités) » ou « Facultatif ».
 8. Sélectionnez Groupes inclus et, sous Rendre cette application accessible à tous les utilisateurs, sélectionnez **Oui**.
 9. Cliquez sur **OK**, puis de nouveau sur **OK**.
 10. Cliquez sur **Save**.
@@ -129,7 +129,7 @@ Ajouter une stratégie de configuration des applications pour Slack. Les straté
 5. Sélectionnez **Application associée**.
 6. Dans la barre de recherche, entrez « Slack pour » et sélectionnez l’application.
 7. Sélectionnez **OK**, puis **Paramètres de configuration**.
-    -   Pour plus d’informations sur les clés de configuration et leurs valeurs, consultez la documentation sur l’onglet « Technique » de la [page web AppConfig de Slack](https://www.appconfig.org/company/slack/).
+    - Pour plus d’informations sur les clés de configuration et leurs valeurs, consultez la documentation sur l’onglet « Technique » de la [page web AppConfig de Slack](https://www.appconfig.org/company/slack/).
 8. Sélectionnez **OK**, puis **Ajouter**.
 9. Dans la barre de recherche, entrez « Test de stratégie de configuration de l’application Slack » et sélectionnez la stratégie que vous venez d’ajouter.
 10. Sous Gérer, sélectionnez **Affectations**.
@@ -145,12 +145,12 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 5. Sous Type de profil, sélectionnez **Profil professionnel**.
 6. Sélectionnez **Intégrité de l’appareil**. En regard d’Appareils rootés, sélectionnez **Bloquer**, puis sélectionnez **OK**.
 7. Sélectionnez **Sécurité système** et entrez les **Paramètres du mot de passe**. Pour ce tutoriel, sélectionnez les paramètres recommandés suivants :
-    -   Pour Exiger un mot de passe pour déverrouiller des appareils mobiles, sélectionnez **Exiger**.
-    -   Pour le type de mot de passe requis, sélectionnez **Au moins alphanumérique**.
-    -   Pour Longueur minimale du mot de passe, entrez 4.
-    -   Pour Nombre maximal de minutes après le verrouillage d’écran avant que le mot de passe ne soit obligatoire, choisissez **15 minutes**.
-    -   Pour Expiration du mot de passe (jours), entrez 41.
-    -   Pour Nombre de mots de passe précédents pour empêcher la réutilisation, entrez 5.
+    - Pour Exiger un mot de passe pour déverrouiller des appareils mobiles, sélectionnez **Exiger**.
+    - Pour le type de mot de passe requis, sélectionnez **Au moins alphanumérique**.
+    - Pour Longueur minimale du mot de passe, entrez 4.
+    - Pour Nombre maximal de minutes après le verrouillage d’écran avant que le mot de passe ne soit obligatoire, choisissez **15 minutes**.
+    - Pour Expiration du mot de passe (jours), entrez 41.
+    - Pour Nombre de mots de passe précédents pour empêcher la réutilisation, entrez 5.
 8. Cliquez sur **OK**, puis de nouveau sur **OK**.
 9. Cliquez sur **Create (Créer)** .
 

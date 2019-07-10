@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64349d2e4c681bf0fac8cf231085cc63e42ffc62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041463"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548326"
 ---
 # <a name="develop-a-support-plan"></a>Développer un plan de support
 
 Un plan de support Intune peut vous aider à identifier et à résoudre plus efficacement les problèmes liés à Intune, améliorant ainsi l’expérience Intune globale de vos utilisateurs. Voici quelques questions à prendre en compte quand vous développez votre plan de support Intune :
 
--   Quelles équipes sont chargées du support Intune ?
+- Quelles équipes sont chargées du support Intune ?
 
--   Quel processus sera utilisé pour le support Intune ?
+- Quel processus sera utilisé pour le support Intune ?
 
--   Comment comptez-vous assurer la formation du support Intune ?
+- Comment comptez-vous assurer la formation du support Intune ?
 
--   Quelles sont les possibilités d’impliquer en amont l’équipe de support dans le processus de déploiement Intune ?
+- Quelles sont les possibilités d’impliquer en amont l’équipe de support dans le processus de déploiement Intune ?
 
 Examinons chacun de ces domaines.
 
@@ -50,23 +50,23 @@ En savoir plus sur le [support Intune](/intune/get-support).
 
 Pour les phases de déploiement de production initiales, les trois niveaux de support peuvent participer à une conférence téléphonique ou une conversation Skype. Voici un exemple montrant comment une organisation peut implémenter ses workflows de support technique ou d’assistance informatique :
 
-1.  L’utilisateur final contacte le support technique ou l’assistance informatique de niveau 1 et lui expose le problème d’inscription.
+1. L’utilisateur final contacte le support technique ou l’assistance informatique de niveau 1 et lui expose le problème d’inscription.
 
-2.  Le support technique ou l’assistance informatique de niveau 1 ne parvient pas en à identifier la cause racine et le transmet au niveau 2.
+2. Le support technique ou l’assistance informatique de niveau 1 ne parvient pas en à identifier la cause racine et le transmet au niveau 2.
 
-3.  Celui-ci examine le problème, mais ne parvient pas à le résoudre et le transfère au niveau 3, en lui fournissant des informations supplémentaires afin de lui faciliter la tâche.
+3. Celui-ci examine le problème, mais ne parvient pas à le résoudre et le transfère au niveau 3, en lui fournissant des informations supplémentaires afin de lui faciliter la tâche.
 
-4.  Le niveau 3 poursuit les recherches, détermine la cause racine et communique la résolution aux niveaux 2 et 1.
+4. Le niveau 3 poursuit les recherches, détermine la cause racine et communique la résolution aux niveaux 2 et 1.
 
-5.  Le niveau de support/assistance 1 contacte alors le client et résout le problème.
+5. Le niveau de support/assistance 1 contacte alors le client et résout le problème.
 
 Ce type d’approche, en particulier lors des premières étapes du déploiement Intune, offre de nombreux avantages, notamment :
 
--   Accompagner l’apprentissage et la prise en main de la technologie.
+- Accompagner l’apprentissage et la prise en main de la technologie.
 
--   Identifier rapidement les problèmes et les résoudre.
+- Identifier rapidement les problèmes et les résoudre.
 
--   Améliorer l’expérience globale de l'utilisateur.
+- Améliorer l’expérience globale de l'utilisateur.
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>Comment comptez-vous assurer la formation du support Intune ?
 
@@ -74,15 +74,15 @@ Il est important de fournir une formation technique Intune à votre personnel d�
 
 Vous trouverez ci-dessous un exemple de calendrier de formation au support Intune.
 
--   Révision du plan de support Intune
+- Révision du plan de support Intune
 
--   Vue d’ensemble d’Intune
+- Vue d’ensemble d’Intune
 
--   Dépannage des problèmes courants
+- Dépannage des problèmes courants
 
--   Outils et ressources
+- Outils et ressources
 
--   Questions et réponses
+- Questions et réponses
 
 La [documentation Intune](https://docs.microsoft.com/intune/) fournit une vue d’ensemble d’Intune, des descriptions détaillées des fonctionnalités et des informations de dépannage. Le [forum Intune](https://social.technet.microsoft.com/Forums/home) est une ressource communautaire où vous trouverez des questions et des rubriques non traitées dans la documentation Intune.
 

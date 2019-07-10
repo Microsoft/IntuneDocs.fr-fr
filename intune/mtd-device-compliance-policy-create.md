@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58ee82e44e8aa8d68c0fb00c4497cc0455ed21d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2315136fe277f06f6dbb11c13139a9dc193ce6f7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528625"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549365"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Créer une stratégie de conformité des appareils Mobile Threat Defense (MTD) avec Intune
 
@@ -37,23 +37,23 @@ Dans le cadre de l’installation de MTD, dans la console de partenaire MTD, vou
 
 Conditions préalables pour la stratégie de conformité de l’appareil avec MTD :
 
--   Configurer l’intégration de MTD avec Intune
+- Configurer l’intégration de MTD avec Intune
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Pour créer une stratégie de conformité de l’appareil MTD
 
-1.  Accédez au [portail Azure](https://portal.azure.com/) et connectez-vous avec vos informations d’identification Intune.
+1. Accédez au [portail Azure](https://portal.azure.com/) et connectez-vous avec vos informations d’identification Intune.
 
-2.  Dans le **tableau de bord Azure**, choisissez **Tous les services** dans le menu de gauche, puis tapez **Intune** dans le filtre de la zone de texte.
+2. Dans le **tableau de bord Azure**, choisissez **Tous les services** dans le menu de gauche, puis tapez **Intune** dans le filtre de la zone de texte.
 
-3.  Choisissez **Intune**. Le **Tableau de bord Intune** s’ouvre.
+3. Choisissez **Intune**. Le **Tableau de bord Intune** s’ouvre.
 
 4. Dans le **Tableau de bord Intune**, choisissez **Conformité de l’appareil**, puis choisissez **Stratégies** dans la section **Gérer**.
 
-5.  Choisissez **Créer une stratégie**, entrez le **Nom** de la stratégie de conformité d’appareil, sa **Description**, sélectionnez la **Plateforme**, puis choisissez **Configurer** dans la section **Paramètres**.
+5. Choisissez **Créer une stratégie**, entrez le **Nom** de la stratégie de conformité d’appareil, sa **Description**, sélectionnez la **Plateforme**, puis choisissez **Configurer** dans la section **Paramètres**.
 
-6.  Dans le volet **Stratégie de conformité**, choisissez **Intégrité de l’appareil**.
+6. Dans le volet **Stratégie de conformité**, choisissez **Intégrité de l’appareil**.
 
-7.  Dans le volet **Intégrité de l’appareil**, choisissez le niveau de menace mobile dans la liste déroulante sous **Exiger que l’appareil se situe au Niveau de menace pour l'appareil ou en dessous**.
+7. Dans le volet **Intégrité de l’appareil**, choisissez le niveau de menace mobile dans la liste déroulante sous **Exiger que l’appareil se situe au Niveau de menace pour l'appareil ou en dessous**.
 
     a.  **Sécurisé** : ce niveau est le plus sûr. L'appareil ne peut pas avoir de menace présente et accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme.
 
@@ -63,7 +63,7 @@ Conditions préalables pour la stratégie de conformité de l’appareil avec MT
 
     d.  **Élevé** : ce niveau est le moins sûr. Cela active tous les niveaux de menace et utilise la défense contre les menaces mobiles uniquement à des fins de création de rapport. L’application MTD doit être activée avec ce paramètre sur les appareils.
 
-8.  Cliquez sur **OK** à deux reprises, puis choisissez **Créer**.
+8. Cliquez sur **OK** à deux reprises, puis choisissez **Créer**.
 
 > [!IMPORTANT]
 > Si vous créez des stratégies d’accès conditionnel pour Office 365 ou d’autres services, l’évaluation de la conformité de l’appareil est effectuée et les appareils non conformes ne peuvent pas accéder aux ressources d’entreprise tant que la menace n’est pas résolue sur l’appareil.

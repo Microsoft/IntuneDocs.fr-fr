@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faceee883194dbbdcec83f282806035ffc0432d1
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: 1fda4268e66703c8bd2132c9af22fed52f1791b1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174184"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548951"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Tutoriel : Utiliser les fonctionnalités d’inscription des appareils d’entreprise d’Apple dans Apple Business Manager (ABM) pour inscrire des appareils iOS dans Intune
 Les fonctionnalités d’inscription des appareils dans Apple Business Manager simplifient l’inscription des appareils. Intune prend également en charge l’ancien portail du Programme d’inscription des appareils (DEP) d’Apple, mais nous vous encourageons à utiliser Apple Business Manager. Avec Microsoft Intune et l’inscription des appareils d’entreprise d’Apple, les appareils sont inscrits de façon automatique et sécurisée la première fois que l’utilisateur allume l’appareil. Vous pouvez par conséquent livrer des appareils à de nombreux utilisateurs sans avoir à configurer chaque appareil individuellement. 
@@ -53,7 +53,7 @@ Vous utilisez le portail ABM ou DEP pour créer un jeton d’inscription d’app
 
 4. Choisissez **Créer un jeton pour le Programme d’inscription des appareils d’Apple** pour ouvrir le portail du programme de déploiement d’Apple, et connectez-vous avec votre ID Apple d’entreprise. Vous pouvez utiliser cet ID Apple pour renouveler votre jeton DEP.
 
-5.  Dans le portail des [programmes de déploiement](https://deploy.apple.com) d’Apple, choisissez **Get Started** (Prise en main) pour **Programme d’inscription des appareils**. Votre procédure peut être légèrement différente des étapes suivantes dans [Apple Business Manager](https://business.apple.com).
+5. Dans le portail des [programmes de déploiement](https://deploy.apple.com) d’Apple, choisissez **Get Started** (Prise en main) pour **Programme d’inscription des appareils**. Votre procédure peut être légèrement différente des étapes suivantes dans [Apple Business Manager](https://business.apple.com).
 
 4. Dans la page **Gérer les serveurs** choisissez **Ajouter un serveur MDM**.
 

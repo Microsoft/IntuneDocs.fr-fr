@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8134b9db0e478efa69391edeb570b39c91a41c9
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511778"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547291"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Connecteur Better Mobile Threat Defense avec Intune
 
@@ -41,11 +41,11 @@ Voici quelques scénarios courants.
 
 Quand des applications malveillantes telles que des programmes malveillants sont détectés sur des appareils, vous pouvez bloquer les actions suivantes sur ces appareils jusqu’à ce que la menace soit écartée :
 
--   Connexion à la messagerie de l’entreprise
+- Connexion à la messagerie de l’entreprise
 
--   Synchroniser les fichiers d’entreprise à l’aide de l’application OneDrive for Work
+- Synchroniser les fichiers d’entreprise à l’aide de l’application OneDrive for Work
 
--   Accès aux applications d’entreprise
+- Accès aux applications d’entreprise
 
 **Blocage lorsque des applications malveillantes sont détectées :**
 
@@ -81,19 +81,19 @@ Détectez les menaces pour votre réseau, comme les **attaques de l’intercepte
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
--   **Android 4.1 et versions ultérieures**
+- **Android 4.1 et versions ultérieures**
 
--   **iOS 8.0 et versions ultérieures**
+- **iOS 8.0 et versions ultérieures**
 
 ## <a name="prerequisites"></a>Prérequis
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Abonnement Microsoft Intune
+- Abonnement Microsoft Intune
 
--   Abonnement Better Mobile Threat Defense
+- Abonnement Better Mobile Threat Defense
 
-    -   Pour plus d’informations, voir le [site web Better Mobile](https://www.better.mobi/).
+    - Pour plus d’informations, voir le [site web Better Mobile](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530746"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548044"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -53,7 +53,7 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 4. Sous **Plateforme**, sélectionnez **iOS**. 
 5. Sélectionnez **Paramètres** > **E-mail**. 
      
-    1.  En regard de **Exiger que les appareils mobiles aient un profil de messagerie géré**, sélectionnez **Exiger**.
+    1. En regard de **Exiger que les appareils mobiles aient un profil de messagerie géré**, sélectionnez **Exiger**.
     2. Sélectionnez **OK**.
 
     ![Définir la stratégie de conformité e-mail pour exiger un profil de messagerie géré](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
@@ -77,7 +77,7 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 ## <a name="create-the-conditional-access-policy"></a>Créer la stratégie d'accès conditionnel
 Nous allons maintenant créer une stratégie d’accès conditionnel qui requiert que toutes les plateformes d’appareils soient inscrites dans Intune et respectent notre stratégie de conformité Intune pour accéder à Exchange Online. Nous allons également avoir besoin de l’application Outlook pour l’accès à la messagerie. Les stratégies d’accès conditionnel sont configurables dans le portail Azure AD ou le portail Intune. Étant donné que nous sommes déjà dans le portail Intune, nous allons créer la stratégie ici.
 1. Dans Intune, sélectionnez **Accès conditionnel** > **Stratégies** > **Nouvelle stratégie**.
-1.  Dans **Nom**, entrez **Stratégie de test pour la messagerie Office 365**. 
+1. Dans **Nom**, entrez **Stratégie de test pour la messagerie Office 365**. 
 3. Sous **Affectations**, sélectionnez **Utilisateurs et groupes**. Dans l’onglet **Inclure**, sélectionnez **Tous les utilisateurs**, puis **Terminé**.
 
 4. Sous **Affectations**, sélectionnez **Applications cloud**. Étant donné que nous souhaitons protéger la messagerie Office 365 Exchange Online, nous allons la sélectionner en suivant ces étapes :

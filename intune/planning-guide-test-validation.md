@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2820007f167b2f79b8dd98ca31d7e50968ac1969
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7aaeb94aad7e31c3346b088239024c14f9e190da
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046054"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549351"
 ---
 # <a name="intune-testing-and-validation"></a>Test et validation Intune
 
@@ -33,17 +33,17 @@ Nous vous recommandons d’impliquer votre personnel de support et d’assistanc
 
 Nous vous recommandons de documenter les éléments suivants :
 
--   **Critères de test** : ils identifient les tests d’évaluation à effectuer.
+- **Critères de test** : ils identifient les tests d’évaluation à effectuer.
 
--   **Composants de conception** : ils doivent figurer dans au moins un des critères de test.
+- **Composants de conception** : ils doivent figurer dans au moins un des critères de test.
 
 Si un composant de conception ne figure pas dans au moins un des critères de test en adéquation avec une exigence ou un scénario, déterminez si ce composant de conception est nécessaire ou non. En outre, assurez-vous de disposer des éléments suivants :
 
--   **Comptes** : comptes de test EMS et Office 365 concédés sous licence pour tester tous les scénarios de cas d’usage.
+- **Comptes** : comptes de test EMS et Office 365 concédés sous licence pour tester tous les scénarios de cas d’usage.
 
--   **Appareils** : appareils de test qui peuvent être réinitialisés ou dont les paramètres d’usine peuvent être rétablis.
+- **Appareils** : appareils de test qui peuvent être réinitialisés ou dont les paramètres d’usine peuvent être rétablis.
 
--   **Composants d’intégration** : Tous les composants d’intégration (connecteurs de certificat et connecteur local Exchange d’Intune) doivent être installés et configurés, si nécessaire.
+- **Composants d’intégration** : Tous les composants d’intégration (connecteurs de certificat et connecteur local Exchange d’Intune) doivent être installés et configurés, si nécessaire.
 
 Des modifications de conception peuvent s’avérer nécessaires pour prendre en compte les problèmes imprévus. En outre, toutes les modifications de conception doivent être entièrement documentées en justifiant chaque changement. Voici un exemple de modification :
 
@@ -51,9 +51,9 @@ Des modifications de conception peuvent s’avérer nécessaires pour prendre en
 
 Vous pouvez rencontrer des difficultés qui requièrent des conseils techniques ou un dépannage spécialisé pendant le processus de test et de validation. Nous vous recommandons de demander de l’aide via les canaux de support Microsoft.
 
--   [Découvrir comment obtenir du support Intune](get-support.md)
+- [Découvrir comment obtenir du support Intune](get-support.md)
 
--   [Contacter le support par téléphone pour Microsoft Intune](get-support.md)
+- [Contacter le support par téléphone pour Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Test de validation fonctionnel
 

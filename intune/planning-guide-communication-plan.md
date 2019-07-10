@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ec922d76ca08639139a7d130fb14c5e8bfa413
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046223"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548345"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Développer un plan de communication de déploiement
 
 Une bonne gestion des modifications s’appuie sur des communications claires et utiles concernant les modifications à venir. Pour simplifier votre déploiement d’Intune, votre plan de communication de déploiement doit couvrir les quatre domaines suivants :
 
--   Informations communiquées
+- Informations communiquées
 
--   La méthode de remise utilisée pour les communications
+- La méthode de remise utilisée pour les communications
 
--   Le destinataire des communications
+- Le destinataire des communications
 
--   La chronologie des communications
+- La chronologie des communications
 
 Examinons chacun de ces domaines.
 
@@ -56,13 +56,13 @@ Ce [guide d’inscription de l’utilisateur final](https://gallery.technet.micr
 
 Il existe plusieurs méthodes de remise que vous pouvez utiliser pour communiquer des informations de déploiement Intune aux utilisateurs et groupes ciblés de votre organisation. La liste suivante présente quelques exemples et la vague avec laquelle vous pouvez utiliser la méthode :
 
--   Réunions individuelles ou par Microsoft Teams à l’échelle de l’organisation pour la vague de lancement
+- Réunions individuelles ou par Microsoft Teams à l’échelle de l’organisation pour la vague de lancement
 
--   E-mail utilisé pour les vagues de pré-inscription, d’inscription et de post-inscription
+- E-mail utilisé pour les vagues de pré-inscription, d’inscription et de post-inscription
 
--   Sites web de l'organisation utilisés pour toutes les vagues
+- Sites web de l'organisation utilisés pour toutes les vagues
 
--   Yammer, affiches et prospectus utilisés pour les vagues de lancement et de pré-inscription
+- Yammer, affiches et prospectus utilisés pour les vagues de lancement et de pré-inscription
 
 ## <a name="communications-timeline"></a>Chronologie des communications
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e5ac06e93027b577d42b27e7d15b9b18e11020
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 30e104d82580a5a0b6b01edb0eaade0673b33d83
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046370"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548399"
 ---
 # <a name="typical-migration-cycle"></a>Cycle de migration classique
 
@@ -55,9 +55,9 @@ Intune met à votre disposition plusieurs méthodes pour surveiller la migration
 
 Suivez le nombre d’utilisateurs ayant inscrit des appareils après chaque phase de façon à pouvoir :
 
--   évaluer l’efficacité de votre plan de communication ;
+- évaluer l’efficacité de votre plan de communication ;
 
--   estimer l’impact d’une stratégie d’accès conditionnel.
+- estimer l’impact d’une stratégie d’accès conditionnel.
 
 
 ## <a name="post-migration"></a>Post-migration

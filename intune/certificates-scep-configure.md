@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 22ce9ace7848ea1535b04ab6f0c0249c970e8c34
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494302"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547369"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -429,7 +429,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         >  - Dans le texte statique de l’objet, des accolades  **{ }** qui n’englobent pas une variable sont résolues en erreur. 
         >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }** .
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
-        >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
+        >  - Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans le nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue. 
 
 
@@ -472,7 +472,7 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
         >  - Dans le texte statique du SAN, les accolades **{}** , les barres verticales **|** et les points-virgules **;** ne fonctionnent pas. 
         >  - Quand vous utilisez une variable de certificat d’appareil, placez la variable entre accolades **{ }** .
         >  - `{{FullyQualifiedDomainName}}` fonctionne uniquement pour Windows et les appareils joints à un domaine. 
-        >  -  Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
+        >  - Quand vous utilisez des propriétés d’appareil telles que l’IMEI, le numéro de série et le nom de domaine complet dans l’objet ou le SAN pour un certificat d’appareil, n’oubliez pas que ces propriétés peuvent être usurpées par une personne ayant accès à l’appareil.
         >  - Le profil ne s’installe pas sur l’appareil si les variables d’appareil spécifiées ne sont pas prises en charge. Par exemple, si {{IMEI}} est utilisé dans l’autre nom d’objet du profil SCEP attribué à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  
 
    - **Période de validité du certificat** : si vous avez exécuté la commande `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` sur l'Autorité de certification émettrice, qui autorise une période de validité personnalisée, vous pouvez entrer le temps restant avant l'expiration du certificat.<br>Vous pouvez entrer une valeur inférieure à la période de validité du modèle de certificat, mais pas une valeur supérieure. Par exemple, si la période de validité du certificat dans le modèle de certificat est de 2 ans, vous pouvez entrer une valeur de 1 an, mais pas une valeur de 5 ans. La valeur doit également être inférieure à la période de validité restante du certificat de l’autorité de certification émettrice. 

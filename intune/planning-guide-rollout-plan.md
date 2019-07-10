@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09e2f88168acd1bc77051df924f756a326a02b21
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041506"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548414"
 ---
 # <a name="develop-a-rollout-plan"></a>Développer un plan de déploiement
 
@@ -53,11 +53,11 @@ Incluez votre plan de [communication](planning-guide-communication-plan.md), vot
 ### <a name="production-rollout"></a>Déploiement de production
 Après la réussite d’un pilote, vous êtes prêt à commencer un déploiement en production, en ciblant le reste des groupes de votre organisation. Voici quelques exemples de groupes et phases de déploiement différents :
 
--   **Services** <br/>Chaque service peut être une phase de déploiement. Vous ciblez un service à la fois. Dans ce type de déploiement, les utilisateurs de chaque service ont tendance à utiliser l’appareil mobile de la même manière et à accéder aux mêmes applications. Les utilisateurs auront probablement les mêmes types de stratégies.
+- **Services** <br/>Chaque service peut être une phase de déploiement. Vous ciblez un service à la fois. Dans ce type de déploiement, les utilisateurs de chaque service ont tendance à utiliser l’appareil mobile de la même manière et à accéder aux mêmes applications. Les utilisateurs auront probablement les mêmes types de stratégies.
 
--   **Géographie** <br/>Dans cette approche, vous déployez sur tous les utilisateurs d’une zone géographique spécifique, qu'il s'agisse des mêmes continent, pays, région ou bâtiment de la société. Ce type de déploiement par phases vous permet de vous concentrer sur l’emplacement spécifique des utilisateurs. Il favorise également une meilleure approche de type [gant blanc](#user-assisted-enrollment) car le nombre d’emplacements de déploiement Intune simultanés est réduit. Étant donné qu’il est probable que différents services ou cas d’utilisation se trouvent au même endroit, différents cas d’utilisation peuvent être déployés en même temps.
+- **Géographie** <br/>Dans cette approche, vous déployez sur tous les utilisateurs d’une zone géographique spécifique, qu'il s'agisse des mêmes continent, pays, région ou bâtiment de la société. Ce type de déploiement par phases vous permet de vous concentrer sur l’emplacement spécifique des utilisateurs. Il favorise également une meilleure approche de type [gant blanc](#user-assisted-enrollment) car le nombre d’emplacements de déploiement Intune simultanés est réduit. Étant donné qu’il est probable que différents services ou cas d’utilisation se trouvent au même endroit, différents cas d’utilisation peuvent être déployés en même temps.
 
--   **Plateforme** <br/>Ce type de déploiement consiste à déployer simultanément des plateformes similaires. Exemple : tous les appareils iOS le premier mois, puis les appareils Android, suivis des appareils Windows. Ce type de déploiement échelonné simplifie la prise en charge du support technique, car le support technique n’a à prendre en charge qu’une seule plateforme à la fois.
+- **Plateforme** <br/>Ce type de déploiement consiste à déployer simultanément des plateformes similaires. Exemple : tous les appareils iOS le premier mois, puis les appareils Android, suivis des appareils Windows. Ce type de déploiement échelonné simplifie la prise en charge du support technique, car le support technique n’a à prendre en charge qu’une seule plateforme à la fois.
 
 Voici un exemple de plan de déploiement Intune incluant des groupes et des délais ciblés :
 

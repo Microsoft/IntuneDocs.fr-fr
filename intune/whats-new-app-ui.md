@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e3b6bf1acbce88b45c9ebc78c45279d718a44c
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.openlocfilehash: c8e87f8df43468428877d93be03e6f2d7316de9a
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468757"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572616"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les dernières mises à jour pour les applications Microsoft Intune. Nous apportons régulièrement des améliorations au site web et à l’application Portail d’entreprise Intune. Si vous êtes un administrateur Intune ou un technicien de support, vous trouverez dans cet article les informations dont vous aurez besoin pour :
@@ -246,7 +246,7 @@ Nous continuons à optimiser la façon dont la pertinence est suivie : faites-no
 ## <a name="week-of-october-16-2017"></a>Semaine du 16 octobre 2017
 
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Améliorations de la recherche apportées au site web du portail d’entreprise <!-- 1331697 -->
-Nous améliorons nos fonctions de recherche d’application, en commençant par le [site web du portail d’entreprise](https://portal.manage.microsoft.com). Les recherches sont désormais effectuées sur les catégories d’applications, en plus des champs Nom et Description. Par défaut, les résultats sont triés par ordre décroissant de pertinence. 
+Nous améliorons nos fonctions de recherche d’application, en commençant par le [site web du portail d’entreprise](https://portal.manage.microsoft.com). Les recherches sont désormais effectuées sur les catégories d’applications, en plus des champs Nom et Description. Par défaut, les résultats sont triés par ordre décroissant de pertinence. 
 
 Les utilisateurs iOS bénéficient aussi de cette modification, car le site web est également utilisé dans le cadre de l’application Portail d’entreprise pour iOS. Les applications du portail d’entreprise pour Android et Windows bénéficieront de mises à jour similaires dans les prochains mois.
 
@@ -260,7 +260,7 @@ Cette version corrige un problème connu sur la façon dont le portail d’entre
 ## <a name="week-of-october-2-2017"></a>Semaine du 2 octobre 2017
 
 ### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Améliorations apportées au workflow de configuration des appareils dans le Portail d’entreprise <!-- 1490692 -->
-Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour Android. Le texte de l’interface est plus convivial et spécifique à votre entreprise, et nous avons regroupé des écrans quand cela était possible. 
+Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour Android. Le texte de l’interface est plus convivial et spécifique à votre entreprise, et nous avons regroupé des écrans quand cela était possible. 
 
 |Avant|Après|
 |---|---|
@@ -288,7 +288,7 @@ Nous avons également mis à jour l’écran d’activation par e-mail de l’ac
 
 ## <a name="week-of-september-11-2017"></a>Semaine du 11 septembre 2017
 
-### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Formulation plus facile à comprendre pour l’application Portail d’entreprise pour Android <!-- 1396349 -->  
+### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Formulation plus facile à comprendre pour l’application Portail d’entreprise pour Android <!-- 1396349 -->  
 
 Le processus d’inscription de l’application Portail d’entreprise pour Android a été simplifié à l’aide d’un nouveau texte afin de faciliter l’inscription des utilisateurs finaux. Si vous avez une documentation personnalisée pour l’inscription, vous pouvez la mettre à jour de façon à refléter les nouveaux écrans. Vous pouvez trouver des exemples d’images ci-dessous :
 
@@ -305,7 +305,7 @@ Le processus d’inscription de l’application Portail d’entreprise pour Andr
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>L’application Mail iOS 11 prend en charge OAuth <!-- 1196951 -->
 
-L’accès conditionnel avec Intune prend en charge une authentification plus sécurisée sur les appareils iOS avec OAuth. Pour cela, il y aura désormais un flux différent sur l’application Portail d’entreprise pour iOS afin de permettre une authentification plus sécurisée. Quand des utilisateurs finaux essaieront de se connecter à un nouveau compte Exchange dans l’application Mail, ils recevront une invite de vue web. Lors de leur inscription dans Intune, les utilisateurs recevront une invite pour autoriser l’application Mail native à accéder à un certificat. La plupart des utilisateurs ne verront plus d’e-mails mis en quarantaine. Les comptes de messagerie existants continueront à utiliser le protocole d’authentification de base. Ces utilisateurs recevront donc toujours des e-mails mis en quarantaine. Cette expérience de connexion pour les utilisateurs finaux est semblable à celle des applications mobiles Office.
+L’accès conditionnel avec Intune prend en charge une authentification plus sécurisée sur les appareils iOS avec OAuth. Pour cela, il y aura désormais un flux différent sur l’application Portail d’entreprise pour iOS afin de permettre une authentification plus sécurisée. Quand des utilisateurs finaux essaieront de se connecter à un nouveau compte Exchange dans l’application Mail, ils recevront une invite de vue web. Lors de leur inscription dans Intune, les utilisateurs recevront une invite pour autoriser l’application Mail native à accéder à un certificat. La plupart des utilisateurs ne verront plus d’e-mails mis en quarantaine. Les comptes de messagerie existants continueront à utiliser le protocole d’authentification de base. Ces utilisateurs recevront donc toujours des e-mails mis en quarantaine. Cette expérience de connexion pour les utilisateurs finaux est semblable à celle des applications mobiles Office.
 
 ![Sélection du type de compte dans une application de messagerie native.](./media/ios-11-ca-email-after-1708-01.png)
 

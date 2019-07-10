@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 86aefbfc37db7929f9748d4783db319cf97d4545
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512266"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548464"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Configurer des stratégies de gestion des applications et de conformité lors de la migration vers Microsoft Intune
 
@@ -30,13 +30,13 @@ Durant la migration vers Intune, l’objectif principal consiste à assurer l’
 
 Chaque plate-forme d’appareil peut proposer des paramètres différents, mais les stratégies de gestion des appareils de Microsoft Intune fonctionnent avec chacune d’elles, en fournissant les fonctionnalités de gestion des appareils mobiles suivantes :
 
--   Régulation du nombre d’appareils inscrits par chaque utilisateur
+- Régulation du nombre d’appareils inscrits par chaque utilisateur
 
--   Gestion des paramètres des appareils (par exemple : inscription au niveau de l’appareil, longueur du mot de passe, utilisation de l’appareil photo)
+- Gestion des paramètres des appareils (par exemple : inscription au niveau de l’appareil, longueur du mot de passe, utilisation de l’appareil photo)
 
--   Fourniture d’applications, de profils d’e-mail et VPN, etc.
+- Fourniture d’applications, de profils d’e-mail et VPN, etc.
 
--   Évaluation des critères au niveau de l’appareil dans le cadre des stratégies de conformité de la sécurité
+- Évaluation des critères au niveau de l’appareil dans le cadre des stratégies de conformité de la sécurité
 
 > [!IMPORTANT]
 > Les stratégies de gestion des appareils ne sont pas directement affectées à des appareils ou utilisateurs individuels, mais plutôt à des groupes d’utilisateurs. Les stratégies peuvent être appliquées directement à un groupe d’utilisateurs et, de ce fait, à l’appareil d’un de ces utilisateurs. Cependant, vous pouvez aussi les appliquer à un groupe d’appareils et donc aux membres de ce groupe.
@@ -61,9 +61,9 @@ Vous devez créer un profil de configuration d’appareil pour appliquer des par
 
 #### <a name="directly-import-ios-configuration-profiles-optional"></a>Importer directement des profils de configuration iOS (facultatif)
 
--   **Profils iOS Apple Configurator (iOS 7.1 et versions ultérieures) :** si votre solution MDM utilise des profils Apple Configurator (fichiers .mobileconfig), Intune peut les importer directement comme stratégies de configuration personnalisées.
+- **Profils iOS Apple Configurator (iOS 7.1 et versions ultérieures) :** si votre solution MDM utilise des profils Apple Configurator (fichiers .mobileconfig), Intune peut les importer directement comme stratégies de configuration personnalisées.
 
--   **Stratégies de configuration des applications mobiles iOS :** si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS, Intune peut les importer directement, à condition que les listes de propriétés présentent le format XML spécifié par Apple.
+- **Stratégies de configuration des applications mobiles iOS :** si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS, Intune peut les importer directement, à condition que les listes de propriétés présentent le format XML spécifié par Apple.
 
 - Découvrez comment ajouter une stratégie personnalisée pour [iOS](custom-settings-ios.md).
 
@@ -71,25 +71,25 @@ Vous devez créer un profil de configuration d’appareil pour appliquer des par
 
 Les stratégies de conformité des appareils évaluent les paramètres axés sur la sécurité et fournissent des rapports qui indiquent si les appareils sont conformes aux normes de l’entreprise ou non. Parmi ces paramètres, citons les suivants :
 
--   Longueur du code PIN
+- Longueur du code PIN
 
--   Statut jailbreaké
+- Statut jailbreaké
 
--   Version du système d'exploitation
+- Version du système d'exploitation
 
 Consultez les ressources supplémentaires pour connaître les paramètres de conformité des appareils :
 
--   Découvrez plus d’informations sur les [stratégies de conformité des appareils](device-compliance.md).
+- Découvrez plus d’informations sur les [stratégies de conformité des appareils](device-compliance.md).
 
--   Découvrez comment [créer une stratégie de conformité des appareils](device-compliance-get-started.md).
+- Découvrez comment [créer une stratégie de conformité des appareils](device-compliance-get-started.md).
 
 ### <a name="task-5-publish-and-deploy-apps"></a>Tâche 5 : Publier et déployer des applications
 
 Quand vous utilisez Intune MDM, vous pouvez fournir des applications en demandant leur installation automatique ou en les mettant à la disposition des utilisateurs sur le portail d’entreprise.
 
--   [Guide pratique pour ajouter des applications](apps-add.md)
+- [Guide pratique pour ajouter des applications](apps-add.md)
 
--   [Guide pratique pour déployer des applications](apps-deploy.md)
+- [Guide pratique pour déployer des applications](apps-deploy.md)
 
 ### <a name="task-6-enable-device-enrollment"></a>Tâche 6 : Activer l’inscription d’appareil
 

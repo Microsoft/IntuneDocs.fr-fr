@@ -17,79 +17,79 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044407"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572279"
 ---
 # <a name="create-a-design"></a>Créer un design
 
 Votre conception Intune est basée sur les informations que vous collectez et les décisions que vous prenez quand vous effectuez les autres [sections de ce guide](planning-guide.md). Elle vous permet de rassembler :
 
--   L'environnement actuel
+- L'environnement actuel
 
--   Options de déploiement Intune
+- Options de déploiement Intune
 
--   Conditions d’identité requises pour les dépendances externes
+- Conditions d’identité requises pour les dépendances externes
 
--   Considérations relatives aux plateformes d'appareils
+- Considérations relatives aux plateformes d'appareils
 
--   Conditions requises pour la remise  
+- Conditions requises pour la remise  
 
 Bien qu’il existe des conditions minimales concernant l’infrastructure en local, un plan de conception est toujours utile pour vérifier que vous disposez d’une solution de gestion d’appareils mobiles adéquate qui répond à vos objectifs et exigences.
 
-Examinons chacun de ces domaines plus en détail. 
+Examinons chacun de ces domaines plus en détail. 
 
 ## <a name="record-your-current-environment"></a>Enregistrer votre environnement actuel
 Il est par ailleurs courant de changer de conception pendant les phases de test et d’implémentation. Utilisez votre plan de conception pour documenter ces changements et les raisons qui les motivent.
 
 Votre environnement actuel peut influencer les décisions en matière de conception et doit être documenté et référencé quand vous prenez d’autres décisions de conception Intune. Voici quelques exemples d’enregistrement de l’environnement actuel :
 
--   **Identifier dans le cloud**
+- **Identifier dans le cloud**
 
-    -   Utilisez-vous DirSync ou Azure Active Directory (Azure AD) Connect ?
+    - Utilisez-vous DirSync ou Azure Active Directory (Azure AD) Connect ?
 
-    -   Votre environnement est-il fédéré ?
+    - Votre environnement est-il fédéré ?
 
-    -   Est-ce que l’authentification multifacteur est activée ?
+    - Est-ce que l’authentification multifacteur est activée ?
 
--   **Environnement de courrier électronique**
+- **Environnement de courrier électronique**
 
-    -   Vous utilisez Exchange ? Localement ou dans le cloud ?
+    - Vous utilisez Exchange ? Localement ou dans le cloud ?
 
-    -   Êtes-vous au milieu d’un projet de migration Exchange vers le cloud ?
+    - Êtes-vous au milieu d’un projet de migration Exchange vers le cloud ?
 
--   **Solution actuelle de gestion des appareils mobiles (MDM)**
+- **Solution actuelle de gestion des appareils mobiles (MDM)**
 
-    -   Utilisez-vous d'autres solutions de gestion des appareils mobiles ?
+    - Utilisez-vous d'autres solutions de gestion des appareils mobiles ?
 
-    -   Quelles solutions de gestion des appareils mobiles utilisez-vous pour l’entreprise et les scénarios d’utilisation BYOD ?
+    - Quelles solutions de gestion des appareils mobiles utilisez-vous pour l’entreprise et les scénarios d’utilisation BYOD ?
 
-    -   Quelles fonctionnalités utilisez-vous (par exemple : paramètres d’appareils d’applications, configurations Wi-Fi) ?
+    - Quelles fonctionnalités utilisez-vous (par exemple : paramètres d’appareils d’applications, configurations Wi-Fi) ?
 
-    -   Quelles sont les plateformes d'appareils prises en charge ?
+    - Quelles sont les plateformes d'appareils prises en charge ?
 
-    -   Quels groupes et combien d’utilisateurs exploitent la solution de gestion des appareils mobiles ?
+    - Quels groupes et combien d’utilisateurs exploitent la solution de gestion des appareils mobiles ?
 
--   **Solution de certificat**
+- **Solution de certificat**
 
-    -   Avez-vous implémenté une solution de certificat ?
+    - Avez-vous implémenté une solution de certificat ?
 
-    -   Quel type de certificats utilisez-vous ?
+    - Quel type de certificats utilisez-vous ?
 
--   **Gestion des systèmes**
+- **Gestion des systèmes**
 
-    -   Comment gérez-vous votre environnement PC et serveur ?
+    - Comment gérez-vous votre environnement PC et serveur ?
 
-    -   Utilisez-vous System Center Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
+    - Utilisez-vous System Center Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
 
--   **Solution VPN**
+- **Solution VPN**
 
-    -   Quelle est votre solution VPN ?
+    - Quelle est votre solution VPN ?
 
-    -   Est-ce que vous l’utilisez pour des scénarios d’utilisation en entreprise et BYOD ?
+    - Est-ce que vous l’utilisez pour des scénarios d’utilisation en entreprise et BYOD ?
 
 Veillez à noter tous les projets ou tous les autres plans mis en place susceptibles d’affecter votre environnement durant l’enregistrement de l’environnement de gestion des appareils mobiles actuel. Voici un exemple de méthode d’enregistrement de l’environnement actuel durant la création de votre conception Intune :
 
@@ -118,11 +118,11 @@ Intune propose deux options de déploiement : autonome et hybride. Autonome fai
 
 Si votre organisation est présente dans plusieurs pays, tenez compte de l’emplacement de votre locataire quand vous vous abonnez au service. Le pays est défini lorsque vous souscrivez un abonnement Intune pour la première fois. Voici les régions du monde concernées :
 
--   Amérique du Nord
+- Amérique du Nord
 
--   Europe, Moyen-Orient et Afrique
+- Europe, Moyen-Orient et Afrique
 
--   Asie et Pacifique
+- Asie et Pacifique
 
 >[!IMPORTANT]
 > Il n’est pas possible de modifier l’emplacement du pays et du client ultérieurement.
@@ -131,11 +131,11 @@ Si votre organisation est présente dans plusieurs pays, tenez compte de l’emp
 
 Les dépendances externes sont des services et des produits distincts d'Intune, mais elles constituent une condition requise pour Intune ou peuvent s'intégrer à Intune. Il est important d’identifier les exigences de toutes les dépendances externes et la façon dont elles sont configurées. Voici quelques exemples de dépendances externes courantes :
 
--   Fournisseur
+- Fournisseur
 
--   Groupes d’utilisateurs et d’appareils
+- Groupes d’utilisateurs et d’appareils
 
--   Infrastructure à clé publique (PKI)
+- Infrastructure à clé publique (PKI)
 
 Nous allons examiner les dépendances externes courantes plus en détail.
 
@@ -157,9 +157,9 @@ Les groupes d’utilisateurs et d’appareils déterminent la cible d’un dépl
 
 Nous vous recommandons de créer tous les groupes dans l’annuaire Active Directory local, puis de le synchroniser à Azure AD. Découvrez plus en détail la planification et la création de groupes d’utilisateurs et d’appareils :
 
--   [Planifier vos groupes d’utilisateurs et d’appareils](users-add.md).
+- [Planifier vos groupes d’utilisateurs et d’appareils](users-add.md).
 
--   [Créer des groupes d’utilisateurs et d’appareils](groups-add.md).
+- [Créer des groupes d’utilisateurs et d’appareils](groups-add.md).
 
 ### <a name="public-key-infrastructure-pki"></a>Infrastructure à clé publique (PKI)
 L’infrastructure à clé publique fournit des certificats aux appareils ou utilisateurs pour qu’ils puissent s’authentifier en toute sécurité auprès d’un service. Intune prend en charge une infrastructure PKI Microsoft. Les certificats d’utilisateur et d’appareil peuvent être transmis à un appareil mobile pour répondre aux exigences de l’authentification basée sur un certificat. Avant d’utiliser des certificats, vous devez déterminer si vous en avez besoin, si l’infrastructure du réseau peut prendre en charge l’authentification basée sur un certificat, et si des certificats sont actuellement utilisés dans l’environnement existant.
@@ -170,11 +170,11 @@ En outre, si des certificats SCEP seront émis, vous devez choisir le serveur qu
 
 Informations supplémentaires :
 
--   [Guide pratique pour configurer des profils de certificats Intune](certificates-configure.md)
+- [Guide pratique pour configurer des profils de certificats Intune](certificates-configure.md)
 
--   [Comment configurer l’infrastructure de certificats pour SCEP](certificates-scep-configure.md)
+- [Comment configurer l’infrastructure de certificats pour SCEP](certificates-scep-configure.md)
 
--   [Guide pratique pour configurer l’infrastructure de certificat pour PFX](certficates-pfx-configure.md)
+- [Guide pratique pour configurer l’infrastructure de certificat pour PFX](certficates-pfx-configure.md)
 
 
 
@@ -183,13 +183,13 @@ Informations supplémentaires :
 
 Examinez de plus près les aspects suivants de vos appareils pour comprendre comment les gérer correctement.
 
--   Plateformes d’appareil prises en charge
+- Plateformes d’appareil prises en charge
 
--   Appareils
+- Appareils
 
--   Propriété des appareils
+- Propriété des appareils
 
--   Inscription en bloc
+- Inscription en bloc
 
 Examinons ces domaines plus en détail.
 
@@ -226,17 +226,17 @@ Consultez la [Section 3 : déterminer les exigences du scénario d’utilisati
 
 Dans les sections suivantes, nous examinons les fonctionnalités et capacités qui répondent aux besoins de votre scénario d’utilisation :
 
--   Stratégies de conditions générales
+- Stratégies de conditions générales
 
--   Stratégies de configuration
+- Stratégies de configuration
 
--   Profils de ressources
+- Profils de ressources
 
--   Applications
+- Applications
 
--   Stratégie de conformité
+- Stratégie de conformité
 
--   Accès conditionnel
+- Accès conditionnel
 
 Examinons chacun de ces domaines plus en détail.
 
@@ -274,13 +274,13 @@ Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://ga
 
 Utilisez des profils pour aider l’utilisateur final à se connecter aux données d’entreprise. Intune prend en charge plusieurs types de profils. Consultez les scénarios d’utilisation et les exigences pour déterminer quand les profils seront configurés. Tous les profils d’appareils sont classés par type de plateforme et doivent être inclus dans la documentation de conception.
 
--   Profils de certificat
+- Profils de certificat
 
--   Profil Wi-Fi
+- Profil Wi-Fi
 
--   Profil VPN
+- Profil VPN
 
--   Profil de messagerie
+- Profil de messagerie
 
 Examinons chaque type de profil plus en détail.
 
@@ -288,11 +288,11 @@ Examinons chaque type de profil plus en détail.
 
 Les profils de certificat permettent à Intune de transmettre un certificat à un utilisateur ou à un appareil. Intune prend en charge les profils suivants :
 
--   Protocole SCEP (Simple Certificate Enrollment Protocol)
+- Protocole SCEP (Simple Certificate Enrollment Protocol)
 
--   Certificat racine approuvé
+- Certificat racine approuvé
 
--   Certificat PFX.
+- Certificat PFX.
 
 Nous vous recommandons de documenter quel groupe d’utilisateurs a besoin d’un certificat, le nombre de profils de certificat dont vous avez besoin et les groupes d’utilisateurs sur lesquels ils sont déployés.
 
@@ -353,27 +353,27 @@ Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://ga
 
 Vous pouvez utiliser Intune pour fournir des applications à des utilisateurs ou à des appareils de plusieurs façons. Parmi les types d’applications pris en charge, citons les applications logicielles d’installation, les applications d’un App Store public, les liens externes ou les applications iOS gérées. En plus des déploiements d’applications individuels, vous pouvez gérer et déployer des applications achetées en volume dans le cadre des programmes d’achat en volume pour iOS et Windows. Informations supplémentaires :
 
--   [Types d’applications que vous pouvez fournir](app-management.md)
+- [Types d’applications que vous pouvez fournir](app-management.md)
 
--   [Programme d’achat en volume (VPP) iOS pour les entreprises](vpp-apps-ios.md)
+- [Programme d’achat en volume (VPP) iOS pour les entreprises](vpp-apps-ios.md)
 
--   [Applications Microsoft Store pour Entreprises](windows-store-for-business.md)
+- [Applications Microsoft Store pour Entreprises](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Exigences de type d’application
 
 Comme les applications peuvent être déployées sur des utilisateurs et des appareils, nous vous est recommandons de déterminer les applications qui seront gérées par Intune. Lorsque vous en dressez la liste, essayez de répondre aux questions suivantes :
 
--   Les applications nécessitent-elle une intégration à des services cloud ?
+- Les applications nécessitent-elle une intégration à des services cloud ?
 
--   Les applications sont-elles toutes accessibles aux utilisateurs BYOD ?
+- Les applications sont-elles toutes accessibles aux utilisateurs BYOD ?
 
--   Quelles sont les options de déploiement disponibles pour ces applications ?
+- Quelles sont les options de déploiement disponibles pour ces applications ?
 
--   Votre entreprise doit-elle fournir un accès à des données d’applications SaaS (Software as a service) à ses partenaires ?
+- Votre entreprise doit-elle fournir un accès à des données d’applications SaaS (Software as a service) à ses partenaires ?
 
--   Les applications nécessitent-elle un accès à Internet à partir des appareils de l'utilisateur ?
+- Les applications nécessitent-elle un accès à Internet à partir des appareils de l'utilisateur ?
 
--   Les applications sont-elles disponibles publiquement dans un App Store, ou s’agit-il d’applications métier personnalisées ?
+- Les applications sont-elles disponibles publiquement dans un App Store, ou s’agit-il d’applications métier personnalisées ?
 
 
 #### <a name="app-protection-policies"></a>Stratégies de protection des applications
@@ -407,7 +407,7 @@ L’accès conditionnel est utilisé pour autoriser uniquement les appareils com
 
 Pour l’accès en ligne, déterminez les plateformes et les groupes d’utilisateurs que vous allez cibler par stratégies d’accès conditionnel. Vous devez également déterminer si vous devez installer ou configurer le connecteur Intune pour Exchange sur site : 
 
--   [Exchange local](exchange-connector-install.md)
+- [Exchange local](exchange-connector-install.md)
 
 Voici un exemple montrant comment documenter des stratégies d’accès conditionnel :
 

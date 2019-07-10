@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce8d87a653e87a2b9ba91552f6857fdab6bee12
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 28e48d64ba220f75f412ef117a08b07dfd477d06
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045987"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549289"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifier les scénarios d'utilisation de la gestion des périphériques mobiles
 
@@ -33,9 +33,9 @@ Examinons quelques exemples qui aideront votre organisation à identifier les sc
 ## <a name="device-ownership"></a>Propriété des appareils
 Pour commencer, vous pouvez vous reporter aux objectifs de déploiement Intune de votre organisation afin d’identifier les principaux scénarios d’utilisation de votre déploiement. Dans le cadre de votre plan de déploiement d’Intune, répondez aux questions suivantes :
 
--   Envisagez-vous de prendre en charge des appareils appartenant à l’entreprise ?
+- Envisagez-vous de prendre en charge des appareils appartenant à l’entreprise ?
 
--   Envisagez-vous de prendre en charge des appareils appartenant aux employés (BYOD) ?
+- Envisagez-vous de prendre en charge des appareils appartenant aux employés (BYOD) ?
 
 Il n’y a pas d’options soit/ou. Vous aurez peut-être besoin de prendre en charge les deux types de propriétaires des appareils pour répondre aux objectifs de votre entreprise. Les cas d’utilisation secondaires vous aideront à savoir à quoi appliquer les différentes stratégies de gestion de périphériques.
 
@@ -43,11 +43,11 @@ Il n’y a pas d’options soit/ou. Vous aurez peut-être besoin de prendre en c
 
 Pour chaque scénario d’utilisation, déterminez s’il comprend également des cas d’usage secondaires. Par exemple, votre organisation peut avoir identifié les exigences à respecter pour prendre en charge un scénario d’utilisation professionnelle qui comprend d'autres cas d’usage secondaires concernant le type utilisateur ou le rôle de l’appareil, notamment :
 
--   Travailleur de l'information
+- Travailleur de l'information
 
--   Équipe dirigeante
+- Équipe dirigeante
 
--   Kiosk
+- Kiosk
 
 Voici quelques exemples de scénarios d’utilisation principaux et secondaires :
 

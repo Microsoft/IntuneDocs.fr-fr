@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d07d9466cda86270898d0e54e8d50b358bcb1b84
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0c962085ce61f01613bfc04ef0c80699e6f5a3e8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494118"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547428"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
 
@@ -44,15 +44,15 @@ Une liste d’identificateurs d’appareils (numéros de série et IMEI) est ajo
 ## <a name="prerequisites"></a>Prérequis
 
 Pour vous inscrire à Intune en utilisant KME, vous devez d’abord inscrire votre société sur le portail Samsung Knox en effectuant les étapes suivantes :
-1.  [Assurez-vous que KME est disponible dans votre région](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries) : KME est disponible dans plus de 55 pays. Vérifiez que votre pays de déploiement est pris en charge.
+1. [Assurez-vous que KME est disponible dans votre région](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries) : KME est disponible dans plus de 55 pays. Vérifiez que votre pays de déploiement est pris en charge.
 
-2.  [Appareils pris en charge](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+) : KME est disponible sur tous les appareils Samsung ayant au minimum Knox 2.4 pour l’inscription d’appareils Android, et au minimum Knox 2.8 pour l’inscription d’appareils Android Entreprise.
+2. [Appareils pris en charge](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+) : KME est disponible sur tous les appareils Samsung ayant au minimum Knox 2.4 pour l’inscription d’appareils Android, et au minimum Knox 2.8 pour l’inscription d’appareils Android Entreprise.
 
-3.  [Configuration réseau requise](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm) : vérifiez que les règles d’accès réseau et de pare-feu nécessaires sont autorisées sur votre réseau.
+3. [Configuration réseau requise](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm) : vérifiez que les règles d’accès réseau et de pare-feu nécessaires sont autorisées sur votre réseau.
 
-4.  [Obtention d’un compte Samsung](https://www2.samsungknox.com/en/user/register) : un compte Samsung est nécessaire pour inscrire et activer KME et pour gérer tous les droits Knox Enterprise à partir d’un emplacement unique.
+4. [Obtention d’un compte Samsung](https://www2.samsungknox.com/en/user/register) : un compte Samsung est nécessaire pour inscrire et activer KME et pour gérer tous les droits Knox Enterprise à partir d’un emplacement unique.
 
-5.  Examen de l’inscription : une fois que vous avez créé et envoyé votre profil, Samsung examine votre demande et l’approuve immédiatement ou la place en attente en vue d’un examen plus approfondi. Une fois votre compte approuvé, vous pouvez passer aux étapes suivantes.
+5. Examen de l’inscription : une fois que vous avez créé et envoyé votre profil, Samsung examine votre demande et l’approuve immédiatement ou la place en attente en vue d’un examen plus approfondi. Une fois votre compte approuvé, vous pouvez passer aux étapes suivantes.
 
 ## <a name="create-mdm-profile"></a>Créer un profil de gestion des appareils mobiles
 
