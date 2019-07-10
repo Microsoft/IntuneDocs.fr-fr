@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: ebd8f15a8f8633043f64cb4e004aafbb3c399042
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558514"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648891"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -51,17 +51,17 @@ Les détails de l’erreur d’installation de l’application indiquent le prob
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Installation de l’application groupe d’utilisateurs ciblé n’atteint pas l’appareil
-Les actions suivantes doivent être considérées lorsque vous rencontrez des problèmes d’installation d’applications :
-- Si l’application ne s’affiche pas dans le portail d’entreprise, assurez-vous de l’application est déployée avec **disponible** intention et que l’utilisateur accède au portail d’entreprise avec le type d’appareil pris en charge par l’application.
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>L’installation de l’application ciblée du groupe d’utilisateurs n’atteint pas le périphérique
+Les actions suivantes doivent être prises en compte lorsque vous rencontrez des problèmes lors de l’installation des applications:
+- Si l’application ne s’affiche pas dans le Portail d’entreprise, assurez-vous que l’application est déployée avec l’intention **disponible** et que l’utilisateur accède au portail d’entreprise avec le type d’appareil pris en charge par l’application.
 - Pour les appareils Windows BYOD, l’utilisateur doit ajouter un compte professionnel à l’appareil.
-- Vérifiez si l’utilisateur dépasse la limite d’appareils AAD :
-  1. Accédez à [paramètres d’appareil Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
-  2. Prenez note de la valeur définie pour **nombre maximal de périphériques par utilisateur**.
-  3. Accédez à [utilisateurs Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
-  4. Sélectionnez l’utilisateur concerné, cliquez sur **appareils**.
-  5. Si l’utilisateur dépasse la limite définie, puis supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
-- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est répertorié en tant que **inscrits par utilisateur** dans le panneau de vue d’ensemble des appareils Intune. S’il affiche NA, vous devez ensuite déployer une stratégie de configuration pour le portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
+- Vérifiez si l’utilisateur se trouve au-delà de la limite d’appareils AAD:
+  1. Accédez à [Azure Active Directory paramètres](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId)de l’appareil.
+  2. Prenez note de la valeur définie pour **nombre maximal d’appareils par utilisateur**.
+  3. Accédez à [Azure Active Directory utilisateurs](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  4. Sélectionnez l’utilisateur concerné, puis cliquez sur **appareils**.
+  5. Si l’utilisateur dépasse la limite définie, supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
+- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est listé comme inscrit **par l’utilisateur** dans le panneau vue d’ensemble des appareils Intune. S’il affiche NA, déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 
@@ -161,8 +161,14 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 
 Les informations de la rubrique [Résolution des problèmes d’empaquetage, de déploiement et de requête des applications du Microsoft Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vous aident à résoudre les problèmes courants que vous pouvez rencontrer durant l’installation d’applications du Microsoft Store, en utilisant Intune ou par tout autre moyen.
 
+## <a name="app-troubleshoooting-resources"></a>Ressources troubleshoooting de l’application
+- [Déploiement de Visio et de Project dans le cadre de votre déploiement Office Pro plus](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [Prendre des mesures pour garantir que les applications MSfB déployées via l’installation d’Intune sur Windows 10 1903](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
+- [Résolution des problèmes de déploiement d’applications MSI dans Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
+- [Meilleures pratiques pour la distribution de logiciels à l’agent Windows PC classique Intune](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Pour plus d’informations de résolution des problèmes Intune, consultez [Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise](help-desk-operators.md). 
-- Découvrez plus d’informations sur les problèmes connus de Microsoft Intune. Pour plus d’informations, consultez [Problèmes connus dans Microsoft Intune](known-issues.md).
+- Découvrez plus d’informations sur les problèmes connus de Microsoft Intune. Pour plus d’informations, consultez [succès des clients Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 - Besoin d’aide supplémentaire ? Consultez [Guide pratique pour obtenir un support technique pour Microsoft Intune](get-support.md).
