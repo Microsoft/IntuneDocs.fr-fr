@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd6d24b5a897c5a6bcd075da111fa579d8d74154
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735735"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Résoudre les problèmes liés au connecteur Exchange local Intune
 
@@ -32,17 +32,17 @@ Cet article explique comment résoudre les problèmes liés au connecteur Exchan
 
 Vérifiez que la [configuration du connecteur Exchange local Intune](exchange-connector-install.md) est correcte. Voici quelques problèmes courants. Après avoir effectué les corrections, vérifiez si le problème est résolu.
 
- - Dans la boîte de dialogue Connecteur Microsoft Intune Exchange, vérifiez que vous avez spécifié un compte d’utilisateur qui dispose des autorisations appropriées pour exécuter les [applets de commande Windows PowerShell Exchange nécessaires](exchange-connector-install.md#exchange-cmdlet-requirements).
+- Dans la boîte de dialogue Connecteur Microsoft Intune Exchange, vérifiez que vous avez spécifié un compte d’utilisateur qui dispose des autorisations appropriées pour exécuter les [applets de commande Windows PowerShell Exchange nécessaires](exchange-connector-install.md#exchange-cmdlet-requirements).
 - Activez les notifications et spécifiez un compte de notification.
- - Lors de la configuration du connecteur Exchange, spécifiez un serveur d’accès au client qui est aussi proche que possible du serveur qui héberge le connecteur Exchange. La latence de communication entre le serveur d’accès au client et le connecteur Exchange peut entraîner des retards dans la découverte des appareils, en particulier lors de l’utilisation d’Exchange Online dédié.
- - L’accès d’un utilisateur avec un appareil nouvellement inscrit peut être retardé jusqu’au moment où le connecteur Exchange se synchronise avec le serveur d’accès au client Exchange. Une synchronisation complète est effectuée une fois par jour et une synchronisation (rapide) delta se produit plusieurs fois par jour.  Vous pouvez [forcer manuellement une synchronisation rapide ou complète](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) pour minimiser les délais.
+- Lors de la configuration du connecteur Exchange, spécifiez un serveur d’accès au client qui est aussi proche que possible du serveur qui héberge le connecteur Exchange. La latence de communication entre le serveur d’accès au client et le connecteur Exchange peut entraîner des retards dans la découverte des appareils, en particulier lors de l’utilisation d’Exchange Online dédié.
+- L’accès d’un utilisateur avec un appareil nouvellement inscrit peut être retardé jusqu’au moment où le connecteur Exchange se synchronise avec le serveur d’accès au client Exchange. Une synchronisation complète est effectuée une fois par jour et une synchronisation (rapide) delta se produit plusieurs fois par jour.  Vous pouvez [forcer manuellement une synchronisation rapide ou complète](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) pour minimiser les délais.
  
 ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Appareil Exchange ActiveSync non découvert à partir d’Exchange
 [Surveillez l’activité du connecteur Exchange](exchange-connector-install.md#on-premises-exchange-connector-high-availability-support) pour voir si le connecteur Exchange se synchronise avec le serveur Exchange. Si une synchronisation complète ou rapide a été effectuée correctement depuis que l’appareil est joint, vous pouvez passer à la recherche d’autres problèmes possibles, répertoriés ci-dessous. Si aucune synchronisation n’a eu lieu, collectez les journaux de synchronisation et joignez-les à une demande de support.
 
- - Vérifiez que les utilisateurs ont une licence Intune ; si ce n’est pas le cas, le connecteur Exchange ne détecte pas leurs appareils.
- - Si l’adresse SMTP principale d’un utilisateur est différente de son UPN dans Azure Active Directory, le connecteur Exchange ne détecte aucun appareil pour cet utilisateur. Corrigez l’adresse SMTP principale pour résoudre le problème.
- - Si vous avez des serveurs de boîtes aux lettres Exchange 2010 et Exchange 2013 dans votre environnement, nous vous recommandons de faire pointer le connecteur Exchange vers un serveur d’accès au client Exchange 2013. Dans le cas contraire, si le connecteur Exchange est configuré pour communiquer avec un serveur d’accès au client Exchange 2010, le connecteur Exchange ne découvre pas les appareils des utilisateurs Exchange 2013. 
+- Vérifiez que les utilisateurs ont une licence Intune ; si ce n’est pas le cas, le connecteur Exchange ne détecte pas leurs appareils.
+- Si l’adresse SMTP principale d’un utilisateur est différente de son UPN dans Azure Active Directory, le connecteur Exchange ne détecte aucun appareil pour cet utilisateur. Corrigez l’adresse SMTP principale pour résoudre le problème.
+- Si vous avez des serveurs de boîtes aux lettres Exchange 2010 et Exchange 2013 dans votre environnement, nous vous recommandons de faire pointer le connecteur Exchange vers un serveur d’accès au client Exchange 2013. Dans le cas contraire, si le connecteur Exchange est configuré pour communiquer avec un serveur d’accès au client Exchange 2010, le connecteur Exchange ne découvre pas les appareils des utilisateurs Exchange 2013. 
 - Pour les environnements Exchange Online dédiés, vous devez faire pointer le connecteur Exchange vers un serveur d’accès au client Exchange 2013 (et non pas vers un serveur d’accès au client Exchange 2010) dans l’environnement dédié lors de la configuration initiale, car le connecteur communique seulement avec ce serveur d’accès au client lors de l’exécution d’applets de commande PowerShell.
 
 

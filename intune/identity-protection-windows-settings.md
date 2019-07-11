@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 1cbf45fc337cbe7d7a45081a3b9e05002ca126d8
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 5a8111d2542269441c7305aad0aad0b7c2162037
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735619"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Paramètres des appareils Windows 10 permettant d’activer Windows Hello Entreprise dans Intune
 
@@ -44,57 +44,57 @@ Pour en savoir plus sur les profils Windows Hello Entreprise dans Intune, consul
   
   **Par défaut** : Non configuré
 
-  Lorsque la valeur *activé*, les paramètres suivants sont disponibles :
+  Lorsque cette option *est*activée, les paramètres suivants sont disponibles:
 
-    - **Longueur minimale du code confidentiel**  
-     Spécifiez une longueur minimale du PIN pour les appareils, afin de faciliter la connexion sécurisée. Par défaut du périphérique Windows est six caractères, mais ce paramètre peut mettre en œuvre un minimum de quatre à 127 caractères. 
-  
-      **Par défaut** : *non configuré*
+  - **Longueur minimale du code confidentiel**  
+    Spécifiez une longueur minimale du code confidentiel pour les appareils, afin d’aider à sécuriser la connexion. Les valeurs par défaut des appareils Windows sont de six caractères, mais ce paramètre peut appliquer un minimum de quatre à 127 caractères. 
 
-    - **Longueur maximale du code confidentiel**  
-    Spécifiez une longueur maximale de code confidentiel pour les appareils, afin de faciliter la connexion sécurisée. Par défaut du périphérique Windows est six caractères, mais ce paramètre peut mettre en œuvre un minimum de quatre à 127 caractères.  
+    **Par défaut** : *non configuré*
 
-      **Par défaut** : *non configuré*  
+  - **Longueur maximale du code confidentiel**  
+  Spécifiez une longueur maximale de code confidentiel pour les appareils, afin d’aider à sécuriser la connexion. Les valeurs par défaut des appareils Windows sont de six caractères, mais ce paramètre peut appliquer un minimum de quatre à 127 caractères.  
 
-    - **Lettres minuscules dans le code confidentiel**  
-      vous pouvez demander aux utilisateurs finaux d’inclure des lettres minuscules pour créer un code PIN plus fort. Les options disponibles sont les suivantes :
+    **Par défaut** : *non configuré*  
 
-      - **Non autorisé** : empêche les utilisateurs d’utiliser des minuscules dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
-      - **Autorisé** : autorise les utilisateurs à utiliser des minuscules dans le code confidentiel, mais ce n’est pas obligatoire.
-      - **Requis** : les utilisateurs doivent inclure au moins une lettre minuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
+  - **Lettres minuscules dans le code confidentiel**  
+    vous pouvez demander aux utilisateurs finaux d’inclure des lettres minuscules pour créer un code PIN plus fort. Les options disponibles sont les suivantes :
 
-    - **Lettres majuscules dans le code confidentiel**  
+    - **Non autorisé** : empêche les utilisateurs d’utiliser des minuscules dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
+    - **Autorisé** : autorise les utilisateurs à utiliser des minuscules dans le code confidentiel, mais ce n’est pas obligatoire.
+    - **Requis** : les utilisateurs doivent inclure au moins une lettre minuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
+
+  - **Lettres majuscules dans le code confidentiel**  
     vous pouvez demander aux utilisateurs finaux d’inclure des lettres majuscules pour créer un code PIN plus fort. Les options disponibles sont les suivantes :
 
-      - **Non autorisé** : empêche les utilisateurs d’utiliser des majuscules dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
-      - **Autorisé** : autorise les utilisateurs à utiliser des majuscules dans le code confidentiel, mais ce n’est pas obligatoire.
-      - **Requis** : les utilisateurs doivent inclure au moins une lettre majuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
+    - **Non autorisé** : empêche les utilisateurs d’utiliser des majuscules dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
+    - **Autorisé** : autorise les utilisateurs à utiliser des majuscules dans le code confidentiel, mais ce n’est pas obligatoire.
+    - **Requis** : les utilisateurs doivent inclure au moins une lettre majuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
 
-    - **Caractères spéciaux dans le code confidentiel**  
+  - **Caractères spéciaux dans le code confidentiel**  
     vous pouvez demander aux utilisateurs finaux d’inclure des caractères spéciaux pour créer un code PIN plus fort. Les caractères spéciaux comprennent : `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
- 
-      Les options disponibles sont les suivantes :
-      - **Non autorisé** : empêche les utilisateurs d’utiliser des caractères spéciaux dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
-      - **Autorisé** : autorise les utilisateurs à utiliser des majuscules dans le code confidentiel, mais ce n’est pas obligatoire.
-      - **Requis** : les utilisateurs doivent inclure au moins une lettre majuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
 
-      **Par défaut**: non autorisé
+    Les options disponibles sont les suivantes :
+    - **Non autorisé** : empêche les utilisateurs d’utiliser des caractères spéciaux dans le code confidentiel. (cela se produit également si le paramètre n’est pas configuré).
+    - **Autorisé** : autorise les utilisateurs à utiliser des majuscules dans le code confidentiel, mais ce n’est pas obligatoire.
+    - **Requis** : les utilisateurs doivent inclure au moins une lettre majuscule dans le code confidentiel. Par exemple, il est courant d’exiger au moins une majuscule et un caractère spécial.
+
+    **Valeur**par défaut: non autorisé
 
   - **Expiration du code confidentiel (en jours)**  
-      Nous vous conseillons de spécifier une période d’expiration pour un code confidentiel, après laquelle les utilisateurs finaux doivent le modifier. Par défaut du périphérique Windows est 41 jours.
+    Nous vous conseillons de spécifier une période d’expiration pour un code confidentiel, après laquelle les utilisateurs finaux doivent le modifier. Les valeurs par défaut des appareils Windows sont de 41 jours.
 
     **Par défaut** : non configuré
 
   - **Conserver l’historique des codes confidentiels**  
-    Limite la réutilisation des codes confidentiels précédemment utilisés. Par défaut, les appareils Windows empêchant la réutilisation des cinq dernières broches.  
+    Limite la réutilisation des codes confidentiels précédemment utilisés. Les appareils Windows empêchent par défaut de réutiliser les cinq derniers codes PIN.  
 
     **Par défaut** : non configuré  
 
   - **Activer la récupération du code confidentiel**   
-    Permet à l’utilisateur pour le Windows Hello entreprise recovery service. 
+    Permet à l’utilisateur d’utiliser le service de récupération de code confidentiel Windows Hello entreprise. 
     
-    - **Activé** : code confidentiel de la récupération est stocké sur l’appareil et l’utilisateur peut modifier son code PIN si nécessaire.  
-    - **Désactivé** -le secret de récupération n’est pas créé ou stocké.
+    - **Activé** : le secret de récupération du code confidentiel est stocké sur l’appareil et l’utilisateur peut modifier son code confidentiel si nécessaire.  
+    - **Désactivé** : le secret de récupération n’est pas créé ou stocké.
 
     **Par défaut** : Non configuré
 
@@ -129,10 +129,10 @@ Pour en savoir plus sur les profils Windows Hello Entreprise dans Intune, consul
   **Par défaut** : Non configuré
 
 - **Utiliser des clés de sécurité pour la connexion**  
-  Ce paramètre est disponible pour les appareils qui exécutent Windows 10 version 1903 ou version ultérieure. Il permet de gérer la prise en charge pour l’utilisation de clés de sécurité Windows Hello pour la connexion.  
+  Ce paramètre est disponible pour les appareils qui exécutent Windows 10 version 1903 ou ultérieure. Utilisez-le pour gérer la prise en charge de l’utilisation des clés de sécurité Windows Hello pour la connexion.  
 
-  - **Activé** -les utilisateurs peuvent utiliser une clé de sécurité Windows Hello comme informations d’identification d’ouverture de session pour les PC ciblés avec cette stratégie. 
-  - **Désactivé** - clés de sécurité sont désactivées et que les utilisateurs ne peuvent pas les utiliser pour se connecter à un PC.   
+  - **Activé** : les utilisateurs peuvent utiliser une clé de sécurité Windows Hello comme informations d’identification d’ouverture de session pour les PC ciblés avec cette stratégie. 
+  - **Désactivé** : les clés de sécurité sont désactivées et les utilisateurs ne peuvent pas les utiliser pour se connecter aux PC.   
 
   **Par défaut** : Non configuré
 

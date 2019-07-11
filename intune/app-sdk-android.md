@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 2cad30b0cf446d6591cba2997261f049ad6ae983
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558419"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735634"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -105,6 +105,7 @@ buildscript {
 ```
 
 Ensuite, dans le fichier `build.gradle` de votre projet APK, appliquez simplement le plug-in comme suit :
+
 ```groovy
 apply plugin: 'com.microsoft.intune.mam'
 ```
@@ -141,8 +142,8 @@ intunemam {
     excludeClasses = ['com.contoso.SplashActivity']
     excludeVariants=['savory']
 }
-
 ```
+
 Les effets seraient les suivants :
 * `:product:FooLib` n’est pas réécrit, car il est inclus dans `excludeProjects`
 * `:product:foo-project` est réécrit, à l’exception de `com.contoso.SplashActivity` qui est ignoré, car il se trouve dans `excludeClasses`
@@ -1072,9 +1073,10 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 
 > [!NOTE]
 > La méthode `MAMServiceAuthenticationCallback.acquireToken()` de l’application doit passer *true* pour le nouvel indicateur `forceRefresh` à `acquireTokenSilentSync()` afin de forcer une actualisation du répartiteur.  Ce procédé permet d’éviter un problème de mise en cache lié aux jetons dans la bibliothèque ADAL et pouvant affecter les jetons du service MAM. En règle générale, il est mis en œuvre comme ceci :
-```java
-AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
-```
+>
+> ```java
+> AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
+> ```
 
 > [!NOTE]
 > Si vous souhaitez afficher une expérience utilisateur bloquante personnalisée pendant la tentative de correction, vous devez passer *false* pour le paramètre showUX à `remediateCompliance()`. Vous devez veiller à afficher votre expérience utilisateur et à inscrire votre écouteur de notification avant d’appeler `remediateCompliance()`.  Cela empêche une condition de concurrence pouvant entraîner la perte de la notification si `remediateCompliance()` échoue très rapidement.  Par exemple, la méthode `onCreate()` ou `onMAMCreate()` d’une sous-classe Activity est l’endroit idéal pour inscrire l’écouteur de notification, puis appeler `remediateCompliance()`.  Les paramètres pour `remediateCompliance()` peuvent être passés à votre expérience utilisateur sous forme d’intentions supplémentaires.  Quand la notification de l’état de la conformité est reçue, vous pouvez afficher le résultat ou simplement terminer l’activité.
@@ -1415,6 +1417,7 @@ Pour utiliser `MAMAsyncTask`, héritez simplement de cette tâche, et non de `As
   Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
   ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
 ```
+
 ### <a name="file-protection"></a>Protection des fichiers
 
 Chaque fichier se voit associer une identité au moment de la création, en fonction de l’identité de thread et de processus. Cette identité est utilisée pour le chiffrement de fichier et la réinitialisation sélective. Seuls les fichiers dont l’identité est gérée et a une stratégie qui exige le chiffrement sont chiffrés. La réinitialisation sélective par défaut du SDK réinitialise uniquement les fichiers associés à l’identité gérée pour laquelle une réinitialisation a été demandée. L’application peut interroger ou changer l’identité d’un fichier à l’aide de la classe `MAMFileProtectionManager`.
@@ -1643,6 +1646,7 @@ Ces paires clé-valeur, qui ne sont pas du tout interprétées par Intune, sont 
 > Les configurations destinées à être distribuées par le biais de MAM-WE ne peuvent pas être remises dans `offline`.  Dans ce cas, seul Android Enterprise AppRestrictions est distribué par le biais d’un `MAMUserNotification` sur une identité vide.
 
 ### <a name="example"></a>Exemple
+
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
 String identity = "user@contoso.com"
@@ -1678,6 +1682,7 @@ Les vues générées par le SDK GAM peuvent être personnalisées afin d’avoir
 
 ### <a name="how-to-customize"></a>Comment personnaliser
 Pour que les modifications de style s’appliquent aux vues GAM Intune, vous devez d’abord créer un fichier XML de substitution de style. Vous devez placer ce fichier dans le répertoire « /res/xml » de votre application et vous pouvez le nommer comme vous le souhaitez. Voici un exemple du format que doit avoir ce fichier.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <styleOverrides>
@@ -1722,16 +1727,20 @@ Activez l’inscription par défaut en effectuant les étapes suivantes :
 1. Si vous devez activer l’authentification unique ou que votre application intègre la bibliothèque ADAL, [configurez la bibliothèque ADAL](#configure-azure-active-directory-authentication-library-adal) en suivant la [configuration ADAL courante](#common-adal-configurations) n° 2. Sinon, vous pouvez ignorer cette étape.
    
 2. Activez l’inscription par défaut en insérant la valeur suivante dans le manifeste :
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
+
    > [!NOTE] 
    > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits se produisent.
 
 3. Activez la stratégie MAM requise en insérant la valeur suivante dans le manifeste :
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
    ```
+
    > [!NOTE] 
    > Cela oblige l’utilisateur à télécharger l’application Portail d’entreprise sur l’appareil et à effectuer le flux d’inscription par défaut avant utilisation.
 
@@ -1748,9 +1757,11 @@ Pour les grandes bases de code qui s’exécutent sans [ProGuard](http://proguar
 ### <a name="policy-enforcement-limitations"></a>Limitations concernant l’application de la stratégie
 
 * **Utilisation de programmes de résolution de contenu** : la stratégie Intune de transfert ou de réception peut bloquer entièrement ou en partie l’utilisation d’un programme de résolution de contenu pour accéder au fournisseur de contenu dans une autre application. Par conséquent, les méthodes `ContentResolver` retournent null ou lèvent une valeur d’échec (par exemple,`openOutputStream` lève `FileNotFoundException` en cas de blocage). L’application peut déterminer si l’échec de l’écriture des données par le biais d’un programme de résolution de contenu est causé par une stratégie (ou pourrait être causé par une stratégie) en appelant :
+
     ```java
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```
+
     ou si aucune activité n’est associée
 
     ```java

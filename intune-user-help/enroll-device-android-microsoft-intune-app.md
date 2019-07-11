@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e68e404a91927192f1006626d1b865acd5eb589
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735748"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Inscrire votre appareil d’entreprise avec l’application Microsoft Intune
 
@@ -46,9 +46,9 @@ Effectuez ces étapes pour configurer et inscrire votre appareil.
 2. Sur l’écran de **Bienvenue**, sélectionnez votre langue.   Si vous avez été invité à vous inscrire avec un code QR ou avec NFC, suivez la procédure ci-dessous qui correspond à la méthode.  
      * NFC : Placez votre appareil pris en charge par NFC à côté d’un appareil programmeur pour vous connecter au réseau de votre organisation. Suivez les invites à l’écran. Quand vous atteignez l’écran pour les conditions d’utilisation du service de Chrome, passez à l’étape 5.  
 
-      * Code QR : suivez les étapes de [Inscription avec un code QR](#qr-code-enrollment).  
+     * Code QR : suivez les étapes de [Inscription avec un code QR](#qr-code-enrollment).  
 
-      S’il vous a été demandé d’utiliser une autre méthode, passez à l’étape 3.    
+     S’il vous a été demandé d’utiliser une autre méthode, passez à l’étape 3.    
 
 1. Connectez-vous au Wi-Fi, puis appuyez sur **SUIVANT**. Suivez l’étape qui correspond à votre méthode d’inscription. 
 

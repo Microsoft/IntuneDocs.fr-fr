@@ -1,7 +1,7 @@
 ---
-title: Archive - Intune MDM lignes de base des paramètres de sécurité pour Windows 10
+title: 'Archive: paramètres de lignes de base de sécurité MDM Intune pour Windows 10'
 titleSuffix: Microsoft Intune
-description: Archive des versions précédentes de mise en production les gestion des appareils mobiles de référence des paramètres de sécurité pour la gestion de Windows 10 avec Microsoft Intune
+description: Archive des versions antérieures des paramètres de ligne de base de sécurité MDM pour la gestion de Windows 10 avec Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8e83aa6b13f192da87a78690b0040e545d8943e
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418957"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735792"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
-# <a name="archive-of-mdm-security-baseline-settings"></a>Archive des paramètres de ligne de base de sécurité de gestion des appareils mobiles  
+# <a name="archive-of-mdm-security-baseline-settings"></a>Archive des paramètres de ligne de base de sécurité MDM  
 
-Pour afficher les détails des versions archivées de la ligne de base de sécurité de gestion des appareils mobiles pour Intune.  
+Affichez les détails des versions archivées de la ligne de base de sécurité MDM pour Intune.  
 
-Lorsqu’une nouvelle ligne de base de sécurité de gestion des appareils mobiles libère, la liste précédente des paramètres déplacer à partir de l’article de paramètres de ligne de base de sécurité pour cette archive. Ces versions sont toujours pris en charge, et cette archive est fournie pour aider à comprendre les paramètres par défaut pour les anciennes versions de ligne de base.
+Quand une nouvelle version de ligne de base de sécurité MDM est publiée, la liste précédente de paramètres est déplacée de l’article paramètres de ligne de base de sécurité vers cette archive. Ces versions sont toujours prises en charge pour l’utilisation, et cette archive est fournie pour vous aider à comprendre les paramètres par défaut pour les anciennes versions de référence.
 
-Lorsqu’une version de référence n’est plus pris en charge pour une utilisation, il sera supprimé à partir de cet article.
+Lorsqu’une version de référence n’est plus prise en charge pour l’utilisation, elle est supprimée de cet article.
 
-- Afficher les paramètres qui sont disponibles dans [la ligne de base de sécurité actuel MDM](security-baseline-settings-mdm.md) 
-- En savoir plus sur [bases de sécurité](security-baselines.md)et comment mettre à niveau la version de ligne de base dans vos profils de ligne de base de sécurité.
+- Afficher les paramètres qui sont disponibles dans [la ligne de base de sécurité MDM actuelle](security-baseline-settings-mdm.md) 
+- En savoir [plus sur les](security-baselines.md)lignes de base de sécurité et sur la mise à niveau de la version de référence dans vos profils de ligne de base de sécurité.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Préversion : base de référence de la sécurité GPM pour octobre 2018  
 
-*Cette ligne de base est remplacé par [MDM Security Baseline pour Spring 2019 (19 H 1)](security-baseline-settings-mdm.md)*
+*Cette ligne de base est remplacée [par la ligne de base de sécurité MDM pour Spring 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>Au-dessus du verrouillage  
 
@@ -261,38 +261,38 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : oui  
   
-    Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
+  Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
-    - **Nombre minimal de jeux de caractères du mot de passe**  
-      Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1. 
-      
-      **Par défaut** : 3  
+  - **Nombre minimal de jeux de caractères du mot de passe**  
+    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1. 
+    
+    **Par défaut** : 3  
   
-    - **Nombre d’échecs de connexion avant réinitialisation de l’appareil**  
-      Le nombre d’échecs d’authentification autorisé avant la réinitialisation de l’appareil. La valeur 0 désactive la fonctionnalité de réinitialisation de l’appareil.
-        
-      **Par défaut** : 10  
+  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil**  
+    Le nombre d’échecs d’authentification autorisé avant la réinitialisation de l’appareil. La valeur 0 désactive la fonctionnalité de réinitialisation de l’appareil.
+    
+    **Par défaut** : 10  
   
-    - **Expiration du mot de passe (jours)**  
-      Le paramètre de stratégie Antériorité maximale du mot de passe détermine la période (en jours) pendant laquelle un mot de passe peut être utilisé avant que le système oblige l’utilisateur à le changer. Vous pouvez définir l’expiration des mots de passe après un nombre de jours compris entre 1 et 999, ou vous pouvez spécifier que les mots de passe n’expirent jamais en définissant le nombre de jours sur 0. Si Antériorité maximale du mot de passe est compris entre 1 et 999 jours, l’antériorité minimale du mot de passe doit être inférieure à son antériorité maximale. Si Antériorité maximale du mot de passe est défini sur 0, Antériorité minimale du mot de passe peut avoir une valeur comprise entre 0 et 998 jours.
-      
-      **Par défaut** : 60  
+  - **Expiration du mot de passe (jours)**  
+    Le paramètre de stratégie Antériorité maximale du mot de passe détermine la période (en jours) pendant laquelle un mot de passe peut être utilisé avant que le système oblige l’utilisateur à le changer. Vous pouvez définir l’expiration des mots de passe après un nombre de jours compris entre 1 et 999, ou vous pouvez spécifier que les mots de passe n’expirent jamais en définissant le nombre de jours sur 0. Si Antériorité maximale du mot de passe est compris entre 1 et 999 jours, l’antériorité minimale du mot de passe doit être inférieure à son antériorité maximale. Si Antériorité maximale du mot de passe est défini sur 0, Antériorité minimale du mot de passe peut avoir une valeur comprise entre 0 et 998 jours.
+    
+    **Par défaut** : 60  
   
-    - **Type de mot de passe requis**  
-      Détermine le type de code PIN ou de mot de passe exigé.
-      
-      **Par défaut** : alphanumérique  
+  - **Type de mot de passe requis**  
+    Détermine le type de code PIN ou de mot de passe exigé.
+    
+    **Par défaut** : alphanumérique  
   
-    - **Longueur minimale du mot de passe**  
-      Le paramètre de stratégie Longueur minimale du mot de passe détermine le plus petit nombre de caractères qui peuvent constituer un mot de passe pour un compte d’utilisateur. Vous pouvez définir une valeur comprise entre 1 et 14 caractères, ou vous pouvez établir qu’aucun mot de passe n’est exigé en définissant le nombre de caractères sur 0.
-      
-      **Par défaut** : 8  
-  
-    - **Bloquer les mots de passe simples**  
-      Spécifie si les codes PIN ou les mots de passe comme « 1111 » ou « 1234 » sont autorisés. Pour le poste de travail, il contrôle également l’utilisation de mots de passe image.
-      
-      **Par défaut** : oui  
-        *La valeur Oui empêche l’utilisation de mots de passe simples.* 
+  - **Longueur minimale du mot de passe**  
+    Le paramètre de stratégie Longueur minimale du mot de passe détermine le plus petit nombre de caractères qui peuvent constituer un mot de passe pour un compte d’utilisateur. Vous pouvez définir une valeur comprise entre 1 et 14 caractères, ou vous pouvez établir qu’aucun mot de passe n’est exigé en définissant le nombre de caractères sur 0.
+    
+    **Par défaut** : 8  
+
+  - **Bloquer les mots de passe simples**  
+    Spécifie si les codes PIN ou les mots de passe comme « 1111 » ou « 1234 » sont autorisés. Pour le poste de travail, il contrôle également l’utilisation de mots de passe image.
+    
+    **Par défaut** : oui  
+      *La valeur Oui empêche l’utilisation de mots de passe simples.* 
 
   - **Empêcher la réutilisation des mots de passe précédents**  
     Spécifie le nombre de mots de passe à stocker dans l’historique des mots de passe qui ne peuvent pas être utilisés. Ceci comprend le mot de passe actuel de l’utilisateur. Par exemple, avec un paramètre de *1* l’utilisateur ne peut pas réutiliser son mot de passe actuel lors du choix d’un nouveau mot de passe. Un paramètre de *5* signifie qu’un utilisateur ne peut pas définir son nouveau mot de passe sur leur mot de passe actuel ni l’un de ses quatre mots de passe précédents.
@@ -344,10 +344,10 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
     Spécifie s’il faut autoriser les suggestions d’applications et de contenu provenant d’éditeurs de logiciels tiers dans les fonctionnalités de Windows à la une, comme la une sur l’écran de verrouillage, les applications suggérées dans le menu Démarrer et les conseils Windows. Les utilisateurs peuvent quand même voir les suggestions de fonctionnalités, d’applications et de services Microsoft.
       
     **Par défaut** : oui  
-   - **Bloquer les fonctionnalités spécifiques au grand public**  
-      Permet aux administrateurs informatiques d’activer les fonctionnalités destinées au grand public uniquement, comme les suggestions du démarrage, les notifications d’appartenance, l’installation d’application post-OOBE et les vignettes de redirection.
-      
-     **Par défaut** : oui  
+  - **Bloquer les fonctionnalités spécifiques au grand public**  
+    Permet aux administrateurs informatiques d’activer les fonctionnalités destinées au grand public uniquement, comme les suggestions du démarrage, les notifications d’appartenance, l’installation d’application post-OOBE et les vignettes de redirection.
+    
+    **Par défaut** : oui  
 
 
 ### <a name="exploit-guard"></a>Exploit Guard  
@@ -1441,4 +1441,4 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 ## <a name="next-steps"></a>Étapes suivantes  
 
 [Afficher la version actuelle de la ligne de base](security-baseline-settings-mdm.md)  
-[Profils de mise à niveau pour utiliser une nouvelle version de ligne de base](security-baselines.md#change-the-baseline-instance-for-a-profile)
+[Mettre à niveau les profils pour utiliser une nouvelle version de référence](security-baselines.md#change-the-baseline-instance-for-a-profile)
