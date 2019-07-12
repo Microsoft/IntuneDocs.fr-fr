@@ -1,7 +1,7 @@
 ---
-title: Réinitialiser les données à l’aide d’actions d’accès de stratégie de protection des applications
+title: Réinitialiser les données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications
 titleSuffix: Microsoft Intune
-description: Découvrez comment effectuer une réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Microsoft Intune.
+description: Découvrez comment effectuer une réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 65115f6520122cd4b3429411db67052481984617
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804686"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558445"
 ---
-# <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions d’accès de stratégie de protection des applications dans Intune
+# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
 À l’aide de stratégies de protection des applications, vous pouvez configurer des paramètres pour empêcher les utilisateurs finaux d’accéder à un compte ou à une application d’entreprise. Ces paramètres ciblent des exigences d’accès et de déplacement des données définies par votre organisation pour des éléments tels que les appareils jailbreakés et les versions minimales de système d’exploitation.
  
 Vous pouvez choisir explicitement de réinitialiser les données d’entreprise de votre société de l’appareil de l’utilisateur final en tant qu’action à entreprendre en cas de non-conformité à l’aide de ces paramètres. Pour certains paramètres, vous pourrez configurer plusieurs actions, telles que bloquer l’accès et réinitialiser les données d’après différentes valeurs spécifiées.
 
-## <a name="create-an-app-protection-policy-using-access-actions"></a>Créer une stratégie de protection des applications à l’aide d’actions d’accès
+## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Créer une stratégie de protection des applications à l’aide d’actions de lancement conditionnel
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Stratégie de protection d’application**.
 4. Cliquez sur **Ajouter une stratégie** (vous pouvez également modifier une stratégie existante). 
 5. Cliquez sur **Configurer les paramètres requis** pour afficher la liste des paramètres configurables pour la stratégie. 
-6. En faisant défiler vers le bas le volet Paramètres, vous verrez une section intitulée **Actions d’accès** avec une table modifiable.
+6. En faisant défiler vers le bas le volet Paramètres, vous verrez une section intitulée **Lancement conditionnel** avec une table modifiable.
 
     ![Capture d’écran des actions d’accès de protection des applications Intune](./media/apps-selective-wipe-access-actions01.png)
 
@@ -52,13 +52,13 @@ Le tableau de paramètres de stratégie de protection des applications a des col
 
 ### <a name="ios-policy-settings"></a>Paramètres de stratégie iOS
 Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l’aide de la liste déroulante **Paramètre** :
--  Nombre max. de tentatives de code PIN
--  Période de grâce hors connexion
--  Appareils jailbreakés/rootés
--  Version min. de l’OS
--  Version min. de l’application
--  Version min. du SDK
--  Modèle(s) d’appareil
+- Nombre max. de tentatives de code PIN
+- Période de grâce hors connexion
+- Appareils jailbreakés/rootés
+- Version min. de l’OS
+- Version min. de l’application
+- Version min. du SDK
+- Modèle(s) d’appareil
 
 Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans la [documentation sur la prise en charge d’HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Exemple d’entrée : *iPhone5,2;iPhone5,3*
@@ -74,15 +74,15 @@ Quand des conflits surviennent entre deux stratégies de protection d’applicat
 ### <a name="android-policy-settings"></a>Paramètres de stratégie Android
 
 Pour Android, vous pouvez configurer des actions pour les paramètres suivants à l’aide de la liste déroulante **Paramètre** :
--  Nombre max. de tentatives de code PIN
--  Période de grâce hors connexion
--  Appareils jailbreakés/rootés
--  Version min. de l’OS
--  Version min. de l’application
--  Version min. du correctif
--  Fabricant(s) d’appareil
--  Attestation d’appareil SafetyNet
--  Analyse des menaces sur les applications
+- Nombre max. de tentatives de code PIN
+- Période de grâce hors connexion
+- Appareils jailbreakés/rootés
+- Version min. de l’OS
+- Version min. de l’application
+- Version min. du correctif
+- Fabricant(s) d’appareil
+- Attestation d’appareil SafetyNet
+- Analyse des menaces sur les applications
 
 Pour utiliser le paramètre **Fabricant(s) d’appareil**, entrez une liste de fabricants Android séparés par des points-virgules. Le fabricant d’un appareil Android se trouve sous les paramètres de l’appareil.<br>
 Exemple d’entrée : *Fabricant A;Fabricant B* 
@@ -105,9 +105,9 @@ Par défaut, la table contient des lignes préremplies pour les paramètres **P�
 Pour configurer un paramètre, sélectionnez-en un dans la liste déroulante sous la colonne **Paramètre**. Une fois qu’un paramètre est sélectionné, la zone de texte modifiable est activée sous la colonne **Valeur** sur la même ligne, si une valeur doit être définie. De plus, la liste déroulante est activée sous la colonne **Action** avec l’ensemble des actions de lancement conditionnel applicables au paramètre. 
 
 La liste suivante indique les actions les plus courantes :
--  **Bloquer l’accès** : empêcher l’utilisateur final d’accéder à l’application d’entreprise.
--  **Réinitialiser les données** : effacer les données d’entreprise de l’appareil de l’utilisateur final.
--  **Avertir** : présenter une boîte de dialogue à l’utilisateur final en guise de message d’avertissement.
+- **Bloquer l’accès** : empêcher l’utilisateur final d’accéder à l’application d’entreprise.
+- **Réinitialiser les données** : effacer les données d’entreprise de l’appareil de l’utilisateur final.
+- **Avertir** : présenter une boîte de dialogue à l’utilisateur final en guise de message d’avertissement.
 
 Dans certains cas, comme pour le paramètre **Version min. de l’OS**, vous pouvez configurer le paramètre de façon à effectuer toutes les actions applicables en fonction de différents numéros de version. 
 

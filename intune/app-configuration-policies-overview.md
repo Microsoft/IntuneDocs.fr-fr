@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494054"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649021"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
-Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration pour une application iOS ou Android. Ces paramètres de configuration permettent à une application d’être personnalisée. Vous n’attribuez pas ces stratégies de configuration directement aux appareils ou aux utilisateurs. Au lieu de cela, vous associez une stratégie de configuration à une application, puis vous affectez l’application. Les paramètres de stratégie de configuration sont utilisés quand l’application les vérifie, en général à sa première exécution.
+Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration pour une application iOS ou Android. Ces paramètres de configuration permettent la personnalisation d’une application à l’aide d’une approche relative aux normes industrielles pour la gestion et la configuration des applications. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général lors de sa première exécution.
 
 Vous pouvez attribuer une stratégie de configuration des applications à un groupe d’utilisateurs et d’appareils à l’aide d’une combinaison d’affectations d’inclusion et d’exclusion. Dès que vous ajoutez une stratégie de configuration d’application, vous pouvez définir les affectations de la stratégie de configuration d’application. Quand vous définissez les affectations de la stratégie, vous pouvez choisir d’inclure et d’exclure les groupes d’utilisateurs auxquels la stratégie s’applique. Quand vous choisissez d’inclure un ou plusieurs groupes, vous pouvez choisir de sélectionner des groupes spécifiques à inclure ou sélectionner des groupes intégrés. Les groupes intégrés sont notamment **Tous les utilisateurs**, **Tous les appareils** et **Tous les utilisateurs + Tous les appareils**.
 
@@ -52,9 +52,11 @@ Vous disposez de deux options pour indiquer la façon dont vous souhaitez utilis
 
 ## <a name="apps-that-support-app-configuration"></a>Applications qui prennent en charge la configuration d’application
 
-Vous pouvez utiliser des stratégies de configuration d’applications pour les applications qui les prennent en charge. Pour que la configuration d’application soit prise en charge dans Intune, les applications doivent avoir été écrites afin de prendre en charge l’utilisation des configurations d’applications. Pour plus de détails, consultez l’éditeur de l’application.
+### <a name="managed-devices"></a>Appareils gérés
+Vous pouvez utiliser des stratégies de configuration d’applications pour les applications qui les prennent en charge. Pour que la configuration des applications soit prise en charge dans Intune, les applications doivent avoir été écrites afin de prendre en charge l’utilisation des configurations d’applications, tel que défini par la [Communauté Appconfig](https://www.appconfig.org/members). Pour plus de détails, consultez l’éditeur de l’application.
 
-Vous pouvez préparer votre application métier en incorporant le SDK d’application Intune dans l’application ou en enveloppant (wrap) l’application une fois qu’elle a été développée. Le SDK d’application Intune, disponible pour iOS et Android, permet d’appliquer des stratégies de configuration d’application Intune à votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](app-sdk.md).
+### <a name="managed-apps"></a>Applications gérées
+Vous pouvez préparer votre application métier en incorporant le SDK d’application Intune dans l’application ou en enveloppant (wrap) l’application une fois qu’elle a été développée. Le Kit de développement logiciel (SDK) des applications Intune, disponible pour iOS et Android, permet d'appliquer des stratégies de protection des applications Intune sur votre application. Il s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Prise en charge de l’API Graph pour la configuration d’application
 

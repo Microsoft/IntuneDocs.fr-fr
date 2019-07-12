@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b490d5ff083d344a1b39d27a2298503bdfa1f130
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044909"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548754"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Gérer les versions de système d’exploitation avec Intune
 Sur les plateformes mobiles et de bureau modernes, le rythme de publication des mises à jour importantes, des correctifs et des nouvelles versions est soutenu. Vous disposez d’outils pour gérer entièrement les mises à jour et les correctifs sur Windows, mais d’autres plateformes telles qu’iOS et Android exigent la participation de vos utilisateurs finaux.  Microsoft Intune offre des fonctionnalités qui vous permettent de structurer la gestion des versions de vos systèmes d’exploitation sur différentes plateformes.
@@ -61,7 +61,7 @@ Pour plus d’informations, consultez [Bien démarrer avec la conformité des ap
 Les stratégies de protection des applications Intune et les paramètres d’accès de gestion des applications mobiles (MAM) vous permettent de spécifier la version minimale du système d’exploitation au niveau de la couche application. Vous pouvez ainsi informer vos utilisateurs et les encourager ou les obliger à mettre à jour leur système d’exploitation avec une version minimale spécifiée.
  
 Vous avez deux options : 
-- **Avertir** : cette option conseille à l’utilisateur final d’effectuer la mise à niveau s’il ouvre une application avec une stratégie de protection d’application ou des paramètres d’accès MAM sur un appareil dont la version du système d’exploitation est antérieure à la version spécifiée. L’accès est autorisé pour l’application et les données de l’organisation.
+- **Avertir** : cette option Avertir conseille à l’utilisateur final d’effectuer la mise à niveau s’il ouvre une application avec une stratégie de protection des applications ou des paramètres d’accès MAM sur un appareil dont la version du système d’exploitation est antérieure à la version spécifiée. L’accès est autorisé pour l’application et les données de l’organisation.
   ![Image de la boîte de dialogue Avertissement sur la mise à jour d’Android](./media/os-version-update-warning.png) 
 
 - **Bloquer** : cette option indique à l’utilisateur final qu’il doit obligatoirement effectuer la mise à niveau quand il ouvre une application avec une stratégie de protection d’application ou des paramètres d’accès MAM sur un appareil dont la version du système d’exploitation est antérieure à la version spécifiée. L’accès est autorisé pour l’application et les données de l’organisation.
@@ -77,7 +77,7 @@ Vous pouvez utiliser les fonctionnalités Intune décrites dans cet article pour
 - **Étape 1** : Utilisez des restrictions d’inscription pour exiger le système d’exploitation v2 comme version minimale lors de l’inscription de l’appareil. De cette façon, vous êtes certain que les nouveaux appareils des utilisateurs finaux sont conformes au moment de l’inscription.
 - **Étape 2a** : Utilisez des stratégies de protection des applications Intune pour avertir les utilisateurs de l’obligation d’utiliser le système d’exploitation v2 au moment de l’ouverture ou de la reprise de l’application.
 - **Étape 2b** : Utilisez des stratégies de conformité d’appareil pour exiger le système d’exploitation v2 comme version minimale d’un appareil conforme. Utilisez des **Actions** en cas de non-conformité pour autoriser une période de grâce de sept jours et envoyer aux utilisateurs finaux une notification par e-mail avec votre chronologie et vos exigences.
-  -  Les utilisateurs finaux sont ainsi informés par e-mail de la nécessité de mettre à jour les appareils existants par le biais du portail d’entreprise Intune et au moment de l’ouverture de l’application si elle est associée à une stratégie de protection des applications.
+  - Les utilisateurs finaux sont ainsi informés par e-mail de la nécessité de mettre à jour les appareils existants par le biais du portail d’entreprise Intune et au moment de l’ouverture de l’application si elle est associée à une stratégie de protection des applications.
   - Vous pouvez exécuter un rapport de conformité pour identifier les utilisateurs non conformes. 
 - **Étape 3a** : Utilisez des stratégies de protection des applications Intune pour bloquer les utilisateurs au moment de l’ouverture ou de la reprise d’une application si l’appareil n’exécute pas le système d’exploitation v2.
 - **Étape 3b** : Utilisez des stratégies de conformité d’appareil pour exiger le système d’exploitation v2 comme version minimale d’un appareil conforme.

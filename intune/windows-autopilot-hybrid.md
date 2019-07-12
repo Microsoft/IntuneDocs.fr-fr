@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494532"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649103"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Configurez correctement vos [appareils joints à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Veillez à [vérifier l’inscription de votre appareil]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) avec l’applet de commande Get-MsolDevice.
+Configurez correctement vos [appareils joints à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Veillez à [vérifier l’inscription de votre appareil](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) avec l’applet de commande Get-MsolDevice.
 
 Les appareils à inscrire doivent également :
 - Être en cours d’exécution de Windows 10 v1809 ou version ultérieure.
-- Avoir accès à Internet
-- Avoir accès à votre domaine Active Directory (connexion VPN non prise en charge à l’heure actuelle)
-- Fournir l’expérience utilisateur OOBE (Out-of-Box Experience).
+- Accédez à internet [en suivant les exigences de réseau Windows Autopilot documentées](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Accédez à un contrôleur de domaine Active Directory, pour qu’il puisse être connecté au réseau de l’organisation (où il peut résoudre les enregistrements DNS pour le domaine AD et le contrôleur de domaine AD et communiquer avec le contrôleur de domaine pour authentifier l’utilisateur. La connexion VPN n’étant pas prise en charge pour l’instant).
 - Pouvoir effectuer un test ping sur le contrôleur de domaine du domaine que vous tentez de joindre.
+- Si vous utilisez un Proxy, l’option des paramètres Proxy de WPAD doit être activée et configurée.
+- Fournir l’expérience utilisateur OOBE (Out-of-Box Experience).
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurer l’inscription automatique Windows 10
 
@@ -139,7 +140,7 @@ Si vous avez un proxy web dans votre environnement réseau, vérifiez que le con
 
 1. Si vous avez sélectionné **Appareils dynamiques** pour le type d’adhésion, dans le volet **Groupe**, sélectionnez **Membres de dispositif dynamique** puis, dans la zone **Règle avancée**, effectuez une des actions suivantes :
     - Pour créer un groupe qui inclut tous vos appareils Autopilot, entrez `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Le champ Balise de groupe d’Intune est mappé à l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe (OrderID) spécifique, vous devez taper  `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Le champ Balise de groupe d’Intune est mappé à l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe spécifique (OrderID), vous devez saisir ceci : `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Pour créer un groupe qui inclut tous vos appareils Autopilot avec un ID de bon de commande spécifique, entrez `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Sélectionnez **Enregistrer**.

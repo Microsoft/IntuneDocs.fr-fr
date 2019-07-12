@@ -1,11 +1,11 @@
 ---
 title: Utiliser des autorités de certification tierces avec SCEP dans Microsoft Intune – Azure | Microsoft Docs
-description: Dans Microsoft Intune, vous pouvez ajouter un fournisseur ou une autorité de certification tierce pour émettre des certificats à destination d’appareils mobiles à l’aide du protocole SCEP. Dans cette vue d’ensemble, une application Azure Active Directory (Azure AD) accorde à Microsoft Intune les autorisations de valider des certificats. Utilisez ensuite l’ID d’application, la clé d’authentification et l’ID de locataire de l’application AAD dans le programme d’installation de votre serveur SCEP pour émettre des certificats.
+description: Dans Microsoft Intune, vous pouvez ajouter un fournisseur ou une autorité de certification (AC) tierce pour émettre des certificats à destination d’appareils mobiles à l’aide du protocole SCEP. Dans cette vue d’ensemble, une application Azure Active Directory (Azure AD) accorde à Microsoft Intune les autorisations de valider des certificats. Utilisez ensuite l’ID d’application, la clé d’authentification et l’ID de locataire de l’application AAD dans le programme d’installation de votre serveur SCEP pour émettre des certificats.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,28 +15,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5124796166f27823b7a13b0f3dd239446f778850
-ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
+ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66713868"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648456"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
-Dans Microsoft Intune, des autorités de certification tierces peuvent être ajoutées. Ces autorités de certification peuvent fournir des certificats aux appareils mobiles à l’aide du protocole SCEP (Simple Certificate Enrollment Protocol). Cette fonctionnalité peut émettre de nouveaux certificats et renouveler les certificats sur des appareils Windows, iOS, Android et macOS.
+Utilisez des autorités de certification (AC) tierces avec Intune. Les autorités de certification tierces peuvent configurer des appareils mobiles avec des certificats nouveaux ou renouvelés à l’aide du protocole SCEP (Simple Certificate Enrollment Protocol) et peuvent prendre en charge les appareils Windows, iOS, Android et macOS.
 
 Il existe deux façons d’utiliser cette fonctionnalité : l’API open source et les tâches d’administrateur Intune.
 
 **Partie 1 : utiliser une API open source**  
-Microsoft a créé une API qui s’intègre à Intune pour valider des certificats, envoyer des notifications de réussite ou d’échec et utiliser SSL, en particulier la fabrique de socket SSL, pour communiquer avec Intune.
+Microsoft a créé une API pour intégrer à Intune. Par le biais d’une API, vous pouvez valider des certificats, envoyer des notifications de réussite ou d’échec et utiliser SSL, en particulier la fabrique de socket SSL, pour communiquer avec Intune.
 
-L’API est disponible dans le [dépôt GitHub public d’API Intune SCEP](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) pour que vous puissiez la télécharger et l’utiliser dans vos solutions. Utilisez cette API avec des serveurs SCEP tiers pour exécuter une validation de stimulation personnalisée par rapport à Intune avant de remettre un certificat à un appareil.
+L’API est disponible dans le [dépôt GitHub public d’API Intune SCEP](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) pour que vous puissiez la télécharger et l’utiliser dans vos solutions. Utilisez cette API avec des serveurs SCEP tiers pour exécuter une validation de test personnalisée par rapport à Intune avant que SCEP ne configure un certificat sur un appareil.
 
 [Intégrer à la solution de gestion Intune SCEP](scep-libraries-apis.md) fournit plus de détails sur l’utilisation de l’API, ses méthodes et le test de la solution que vous générez.
 
 **Partie 2 : créer l’application et le profil**  
-À l’aide d’une application Azure Active Directory (Azure AD), vous pouvez déléguer des droits à Intune pour gérer les demandes SCEP provenant des appareils. L’application Azure AD inclut les valeurs d’ID d’application et de clé d’authentification qui sont utilisées au sein de la solution d’API que le développeur crée. Les administrateurs peuvent ensuite créer et déployer des profils de certificat SCEP à l’aide d’Intune. Vous pouvez également afficher des rapports sur l’état du déploiement sur les appareils.
+À l’aide d’une application Azure Active Directory (Azure AD), vous pouvez déléguer des droits à Intune pour gérer les demandes SCEP provenant des appareils. L’application Azure AD inclut les valeurs d’ID d’application et de clé d’authentification qui sont utilisées au sein de la solution d’API que le développeur crée. Les administrateurs créent et déploient des profils de certificats SCEP avec Intune et peuvent afficher des rapports sur l’état du déploiement sur les appareils.
 
 Cet article fournit une vue d’ensemble de cette fonctionnalité du point de vue d’un administrateur, notamment la création de l’application Azure AD.
 
@@ -117,13 +117,14 @@ Quand vous désinscrivez ou réinitialisez l’appareil, les certificats sont su
 ## <a name="third-party-certification-authority-partners"></a>Partenaires des autorités de certification tierces
 Les autorités de certification tierces suivantes prennent en charge Intune :
 
-- [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
+- [Entrust Datacard](https://info.entrustdatacard.com/pki-eval-tool)
 - [Version open source GitHub d’EJBCA](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
 Si vous êtes une autorité de certification tierce intéressée par l’intégration de votre produit à Intune, passez en revue les instructions de l’API :
 

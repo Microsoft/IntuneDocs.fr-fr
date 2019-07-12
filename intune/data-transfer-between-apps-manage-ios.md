@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,51 +17,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 91633aee190b5fb5bda9495f66d4503042aa6a80
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512139"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713324"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
 Pour protéger les données de l’entreprise, limitez les transferts de fichiers aux applications que vous gérez uniquement. Vous pouvez gérer les applications iOS comme suit :
 
--   Empêchez la perte de données d’entreprise en configurant une stratégie de protection des applications pour les applications, appelées applications **gérées par une stratégie**. Consultez [toutes les applications gérées par Intune que vous pouvez gérer avec la stratégie de protection des applications](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Empêchez la perte de données d’entreprise en configurant une stratégie de protection des applications pour les applications, appelées applications **gérées par une stratégie**. Consultez [toutes les applications gérées par Intune que vous pouvez gérer avec la stratégie de protection des applications](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
 
--   Déployez et gérez des applications via le **canal MDM**, ce qui demande d’inscrire les appareils dans une solution de gestion des appareils mobiles (MDM). Les applications que vous déployez peuvent être **gérées par une stratégie** ou d’autres applications gérées.
+- Déployez et gérez des applications via le **canal MDM**, ce qui demande d’inscrire les appareils dans une solution de gestion des appareils mobiles (MDM). Les applications que vous déployez peuvent être **gérées par une stratégie** ou d’autres applications gérées.
 
 La fonctionnalité **Ouvrir dans la gestion** pour les appareils iOS peut limiter les transferts de fichiers entre des applications déployées sur le **canal MDM**. Définissez des restrictions *Open-in management* dans les paramètres de configuration et déployez-les avec votre solution MDM.  Quand l’utilisateur installe l’application déployée, les restrictions que vous avez définies sont appliquées.
 
 ## <a name="use-app-protection-with-ios-apps"></a>Utiliser la protection des applications avec des applications iOS
 Utilisez des stratégies de protection des applications avec la fonctionnalité **Open in management** d’iOS pour protéger les données d’entreprise des façons suivantes :
 
--   **Appareils appartenant à l’entreprise non gérés par une solution MDM :** vous pouvez définir les paramètres de la stratégie de protection des applications pour **autoriser l’application à transférer des données uniquement vers des applications gérées par une stratégie**. Le comportement *Open-In* dans une application gérée par stratégie présente uniquement d’autres applications gérées par stratégie en tant qu’options de partage. Si un utilisateur tente d’envoyer un fichier protégé par stratégie en tant que pièce jointe depuis OneDrive vers l’application de messagerie native, ce fichier est illisible.
+- **Appareils appartenant à l’entreprise non gérés par une solution MDM :** vous pouvez définir les paramètres de la stratégie de protection des applications pour **autoriser l’application à transférer des données uniquement vers des applications gérées par une stratégie**. Le comportement *Open-In* dans une application gérée par stratégie présente uniquement d’autres applications gérées par stratégie en tant qu’options de partage. Si un utilisateur tente d’envoyer un fichier protégé par stratégie en tant que pièce jointe depuis OneDrive vers l’application de messagerie native, ce fichier est illisible.
 
--   **Appareils gérés par Intune :** pour les appareils inscrits dans Intune, le transfert de données entre les applications avec les stratégies de protection des applications et les autres applications iOS gérées qui sont déployées par le biais d’Intune est automatiquement autorisé. Pour spécifier la façon dont vous souhaitez autoriser le transfert de données sur d’autres applications, activez **Autoriser l’application à transférer des données vers d’autres applications** et choisissez le niveau de partage de votre choix. Pour spécifier la façon dont vous souhaitez autoriser une application à recevoir des données d’autres applications, activez **Autoriser l’application à recevoir des données d’autres applications** et choisissez le niveau de réception de données votre choix. Vous pouvez utiliser la fonctionnalité **Ouvrir dans la gestion** pour contrôler le transfert de données entre les applications qui sont déployées via Intune. Pour plus d’informations sur la réception et le partage des données d’application, consultez [Paramètres de réadressage des données](app-protection-policy-settings-ios.md#data-protection).   
-
--   **Appareils gérés par une gestion MDM tierce :** vous pouvez limiter le transfert de données uniquement à des applications gérées en utilisant la fonctionnalité iOS **Ouvrir dans la gestion**.
-Pour vous assurer que les applications que vous déployez à l’aide d’une solution MDM tierce sont également associées à vos stratégies de protection des applications Intune, configurez le paramètre UPN d’utilisateur comme décrit dans la section suivante [Configurer le paramètre UPN d’utilisateur](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Quand les applications sont déployées avec le paramètre UPN de l’utilisateur, les stratégies de protection des applications sont implémentées dans l’application quand l’utilisateur se connecte avec son compte professionnel.
+- **Appareils managés par des solutions de gestion des données de référence** : Pour des appareils inscrits dans Intune ou des solutions de gestion des données de référence tierces, le partage des données entre les applications avec les stratégies de protection des applications et d’autres applications iOS managées déployées via la gestion des données de référence est contrôlé par les stratégies d’application Intune et la fonctionnalité iOS **Ouvrir dans la gestion**. Pour vous assurer que les applications que vous déployez à l’aide d’une solution de gestion des données de référence sont également associées à vos stratégies de protection des applications Intune, configurez le paramètre UPN d’utilisateur comme décrit dans la section suivante [Configurer le paramètre UPN d’utilisateur](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Pour spécifier la façon dont vous souhaitez autoriser le transfert de données sur d’autres applications, activez **Envoyer des données d’organisation vers d’autres applications** et choisissez le niveau de partage de votre choix. Pour spécifier la façon dont vous souhaitez autoriser une application à recevoir des données d’autres applications, activez **Recevoir des données d’autres applications** et choisissez le niveau de réception de données de votre choix. Pour plus d’informations sur la réception et le partage des données d’application, consultez [Paramètres de réadressage des données](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurer le paramètre UPN d’utilisateur pour Microsoft Intune ou une solution de gestion de la mobilité d’entreprise tierce
 Le paramètre UPN d’utilisateur **doit être configuré** pour les appareils gérés par Intune ou par une solution de gestion de la mobilité d’entreprise tierce. La configuration de l’UPN fonctionne avec les stratégies de protection des applications que vous déployez depuis Intune. La procédure suivante est un flux général indiquant comment configurer le paramètre UPN et l’expérience utilisateur qui en résulte :
 
-1.  Dans le [portail Azure](https://portal.azure.com), [créez et attribuez une stratégie de protection des applications](app-protection-policies.md) pour iOS. Configurez les paramètres de stratégie selon les besoins de votre entreprise et sélectionnez les applications iOS qui doivent disposer de cette stratégie.
+1. Dans le [portail Azure](https://portal.azure.com), [créez et attribuez une stratégie de protection des applications](app-protection-policies.md) pour iOS. Configurez les paramètres de stratégie selon les besoins de votre entreprise et sélectionnez les applications iOS qui doivent disposer de cette stratégie.
 
-2.  Déployez les applications et le profil de messagerie que vous souhaitez gérer par le biais d’Intune ou de votre solution MDM tierce en suivant les étapes généralisées suivantes. Cette expérience est également abordée dans l’*Exemple 1*.
+2. Déployez les applications et le profil de messagerie que vous souhaitez gérer par le biais d’Intune ou de votre solution MDM tierce en suivant les étapes généralisées suivantes. Cette expérience est également abordée dans l’*Exemple 1*.
 
-3.  Déployez l’application avec les paramètres de configuration d’application suivants sur l’appareil géré :
+3. Déployez l’application avec les paramètres de configuration d’application suivants sur l’appareil géré :
 
       **clé** = IntuneMAMUPN, **valeur** = <username@company.com>
 
-      Exemple : [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      Exemple : [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
       
-       > [!NOTE]
-       > Dans Intune, la stratégie Configuration de l’application doit être destinée au type d’inscription « Appareils gérés ».
-       > En outre, l’application doit être soit installée à partir du portail d’entreprise Intune si elle est définie comme étant disponible, soit envoyée (push) en fonction des besoins à l’appareil. 
+     > [!NOTE]
+     > Dans Intune, le type d’inscription App Configuration doit être défini sur **Appareils gérés**.
+     > En outre, l’application doit être soit installée à partir du portail d’entreprise Intune (si elle est définie sur disponible) ou envoyée (push) en fonction des besoins à l’appareil. 
 
-4.  Déployez la stratégie **Open in management** en utilisant Intune ou votre fournisseur MDM tiers sur les appareils inscrits.
+4. Déployez la stratégie **Open in management** en utilisant Intune ou votre fournisseur MDM tiers sur les appareils inscrits.
 
 
 ### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Exemple 1 : Expérience de l’administrateur dans Intune ou dans la console MDM tierce
@@ -82,23 +79,26 @@ Le paramètre UPN d’utilisateur **doit être configuré** pour les appareils g
    |Gestion de point de terminaison Citrix | IntuneMAMUPN | Chaîne | ${user.userprincipalname} |
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Chaîne | %upn% |
 
+> [!NOTE]  
+> Pour l’application Outlook dans iOS si vous déployez une stratégie App Configuration avec l’option « Utilisation du concepteur de configuration » la clé de configuration IntuneMAMUPN est configurée automatiquement dans les coulisses de la stratégie. Pour plus d’informations, consultez la section FAQ dans [Nouvelle expérience Outlook pour iOS et de stratégie App Configuration Android – App Configuration générale](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+
 
 ### <a name="example-2-end-user-experience"></a>Exemple 2 : Expérience de l’utilisateur final
 
-1.  L’utilisateur installe l’application Microsoft Word sur un appareil.
+1. L’utilisateur installe l’application Microsoft Word sur un appareil.
 
-2.  L’utilisateur lance l’application de messagerie native gérée pour accéder à son e-mail.
+2. L’utilisateur lance l’application de messagerie native gérée pour accéder à son e-mail.
 
-3.  L’utilisateur tente d’ouvrir un document de la messagerie native dans Microsoft Word.
+3. L’utilisateur tente d’ouvrir un document de la messagerie native dans Microsoft Word.
 
-4.  Quand l’application Word démarre, l’utilisateur est invité à se connecter avec son compte professionnel. Ce compte que l’utilisateur entre doit correspondre à celui que vous avez spécifié dans les paramètres de configuration de l’application pour Microsoft Word.
+4. Quand l’application Word démarre, l’utilisateur est invité à se connecter avec son compte professionnel. Ce compte que l’utilisateur entre doit correspondre à celui que vous avez spécifié dans les paramètres de configuration de l’application pour Microsoft Word.
 
     > [!NOTE]
     > L’utilisateur peut ajouter et utiliser ses comptes personnels avec Word. Les stratégies de protection des applications ne s’appliquent pas quand l’utilisateur se sert de Word en dehors d’un contexte professionnel. 
 
-5.  Après la connexion, les paramètres de stratégie de protection des applications sont implémentés dans l’application Word.
+5. Après la connexion, les paramètres de stratégie de protection des applications sont implémentés dans l’application Word.
 
-6.  Le transfert de données se déroule maintenant avec succès et le document est marqué avec l’identité de l’entreprise dans l’application.  Les données sont traitées dans un contexte professionnel et les paramètres de stratégie s’appliquent. 
+6. Le transfert de données se déroule maintenant avec succès et le document est marqué avec l’identité de l’entreprise dans l’application.  Les données sont traitées dans un contexte professionnel et les paramètres de stratégie s’appliquent. 
 
 ### <a name="validate-user-upn-setting-for-third-party-emm"></a>Valider le paramètre UPN d’utilisateur pour une solution de gestion de la mobilité d’entreprise tierce
 

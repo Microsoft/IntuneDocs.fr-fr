@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9a61b89f07bfacf1dc41be1412f79509e1e147d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 50ac3ff27c22bf63b73f2ae10e6909112564180f
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049954"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648735"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurer l’application Microsoft Managed Home Screen pour Android Entreprise
 
@@ -74,14 +74,14 @@ Le tableau suivant liste les clés de configuration Managed Home Screen disponib
 | Enable home screen feed (Activer le flux d’écran d’accueil) | bool | FALSE | Active le flux de l’écran d’accueil, qui peut être consulté en balayant vers la gauche sur l’écran d’accueil. Ce flux affiche différents types de contenu, tels que des actualités, le calendrier, les applications utilisateur les plus utilisées, l’assistant vocal Cortana, et ainsi de suite. Si vous activez cette option, l’utilisateur final pourra accéder au flux en balayant vers la gauche sur l’écran d’accueil. |
 | Enable overview mode (Activer le mode Vue d’ensemble) | bool | FALSE | Permet aux utilisateurs finaux d’ajouter ou de supprimer différentes pages sur l’écran d’accueil accessible en balayant vers la droite sur l’écran par défaut. Si vous activez cette option, l’utilisateur final pourra ajouter des pages à droite de la page par défaut de l’écran d’accueil, changer la page par défaut, et également accéder aux paramètres sur l’écran d’accueil géré. |
 | Enable device telemetry (Activer la télémétrie d’appareil) | bool | FALSE | Active toutes les données de télémétrie capturées pour l’écran d’accueil géré. Si vous activez cette option, Microsoft pourra capturer les données de télémétrie de l’appareil, telles que le nombre de fois où une application particulière est lancée sur cet appareil. |
-| Set whitelisted applications (Définir les applications de la liste verte) | bundleArray | FALSE | Vous permet de définir le jeu d’applications visibles sur l’écran d’accueil parmi les applications installées sur l’appareil. Vous pouvez définir les applications en entrant le nom du package d’application des applications que vous souhaitez rendre visibles. Par exemple, com.android.settings rendrait les paramètres accessibles sur l’écran d’accueil. Les applications que vous répertoriez avec autorisation dans cette section doivent déjà être installées sur l’appareil afin d’être visibles sur l’écran d’accueil. |
+| Set whitelisted applications (Définir les applications répertoriées avec utilisation) | bundleArray | FALSE | Vous permet de définir le jeu d’applications visibles sur l’écran d’accueil parmi les applications installées sur l’appareil. Vous pouvez définir les applications en entrant le nom du package d’application des applications que vous souhaitez rendre visibles. Par exemple, com.microsoft.emmx rendrait les paramètres accessibles sur l’écran d’accueil. Les applications que vous répertoriez avec autorisation dans cette section doivent déjà être installées sur l’appareil afin d’être visibles sur l’écran d’accueil. |
 | Set pinned web links (Définir les liens web épinglés) | bundleArray | FALSE | Vous permet d’épingler des sites web sous forme d’icônes de lancement rapide sur l’écran d’accueil. Avec cette configuration, vous pouvez définir l’URL et l’ajouter à l’écran d’accueil pour que l’utilisateur final puisse la lancer dans le navigateur avec un simple clic. |
 | Enable search bar (Activer la barre de recherche) | bool | FALSE | Active la barre de recherche sur l’écran d’accueil. Si vous activez cette option, les utilisateurs de l’appareil verront la barre de recherche sur l’écran d’accueil, où ils pourront entrer ce qu’ils souhaitent rechercher sur le web. |
 | Disable settings app (Désactiver l’application Paramètres) | bool | FALSE | Désactive la page des paramètres pour l’écran d’accueil géré. Si vous désactivez cette option, l’utilisateur final de l’appareil ne pourra pas accéder aux paramètres de l’écran d’accueil géré. |
-| Enable screen saver (Activer l’écran de veille) | bool | FALSE | Permet d’activer ou de désactiver le mode Économiseur d’écran. Si la valeur est true, vous pouvez configurer **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** et **media_detect_ screen_saver**. |
-| Screen saver image (Image de l’écran de veille) | string |   | Définissez l’URL de l’image de l’écran de veille. Si aucune URL n’est définie, les appareils affichent l’écran par défaut quand l’écran de veille est activé.  |
-| Screen saver show time (Durée d’affichage de l’écran de veille) | integer | 0 | Permet de définir la durée (en secondes) d’affichage de l’écran de veille quand le mode Économiseur d’écran est activé. Si la valeur est 0, l’écran de veille s’affichera indéfiniment jusqu’à ce que l’appareil redevienne actif.  |
-| Inactive time to enable screen saver (Délai d’inactivité avant d’activer l’écran de veille) | integer | 30 | Nombre de secondes pendant lesquelles l’appareil doit être inactif avant le déclenchement de l’écran de veille. Si la valeur est 0, l’appareil ne basculera jamais en mode Économiseur d’écran. |
+| Enable screen saver (Activer l’écran de veille) | bool | FALSE | Pour activer ou pas le mode Écran de veille. Si la valeur est true, vous pouvez configurer **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** et **media_detect_ screen_saver**. |
+| Screen saver image (Image de l’écran de veille) | string |   | Définissez l’URL de l’image de l’écran de veille. Si aucune URL n’est définie, les appareils affichent l’image de l’écran de veille par défaut quand l’écran de veille est activé. L’image par défaut montre l’icône de l’application Managed Home Screen.  |
+| Screen saver show time (Durée d’affichage de l’écran de veille) | integer | 0 | Permet de définir la durée (en secondes) d’affichage de l’écran de veille quand le mode Écran de veille est activé. Si la valeur est 0, l’écran de veille s’affichera en mode écran de veille indéfiniment jusqu’à ce que l’appareil redevienne actif.  |
+| Inactive time to enable screen saver (Délai d’inactivité avant d’activer l’écran de veille) | integer | 30 | Nombre de secondes pendant lesquelles l’appareil doit être inactif avant le déclenchement de l’écran de veille. Si la valeur est 0, l’appareil ne basculera jamais en mode Écran de veille. |
 | Media detect before showing screen saver (Détection de média avant affichage de l’écran de veille) | bool | TRUE | Choisissez si l’écran de l’appareil doit afficher l’écran de veille en cas de lecture audio/vidéo sur l’appareil. Si la valeur est true, l’appareil ne lira pas d’audio/vidéo, Quelle que soit la valeur fournie dans **inactive_time_to_show_scree_saver**. Si la valeur est false, l’écran de l’appareil affichera l’écran de veille conformément à la valeur définie dans **inactive_time_to_show_screen_saver**.   |
 | Enable virtual home button (Activer le bouton d’accueil virtuel) | bool | FALSE | Affectez la valeur `True` à ce paramètre pour permettre à l’utilisateur final d’accéder à un bouton d’accueil Managed Home Screen qui le ramènera à l’écran d’accueil géré à partir de la tâche en cours.  |
 | Type of virtual home button (Type de bouton d’accueil virtuel) | string | swipe_up | Utilisez **swipe_up** pour accéder au bouton d’accueil avec un mouvement de balayage. Utilisez **float** pour accéder à un bouton d’accueil permanent et persistant qui peut être déplacé sur l’écran par l’utilisateur final. |
@@ -89,6 +89,9 @@ Le tableau suivant liste les clés de configuration Managed Home Screen disponib
 | Exit lock task mode password (Mot de passe de sortie du mode de verrouillage de tâche) | string |   | Entrez un code de quatre à six chiffres à utiliser pour quitter temporairement le mode de verrouillage de tâche, à des fins de dépannage. |
 | Show Wi-Fi setting (Afficher les paramètres Wi-Fi) | bool | FALSE | L’affectation de la valeur `True` à ce paramètre permet à l’utilisateur final d’activer ou de désactiver le Wi-Fi, ou de se connecter à différents réseaux Wi-Fi.  |
 | Show Bluetooth setting (Afficher les paramètres Bluetooth) | bool | FALSE | L’affectation de la valeur `True` à ce paramètre permet à l’utilisateur final d’activer ou de désactiver le Bluetooth, ou de se connecter à différents appareils compatibles Bluetooth.   |
+| Les applications dans le dossier sont classées par nom | bool | TRUE | L’activation `False` de ce paramètre permet l’affichage d’éléments d’un dossier dans l’ordre dans lequel ils sont spécifiés. Sinon, ils apparaîtront dans le dossier par ordre alphabétique.   |
+| Ordre des applications activé | bool | FALSE | L’activation `True` de ce paramètre permet de définir l’ordre des applications, des liens web et des dossiers sur Managed Home Screen. Une fois activé, définissez l’ordre avec **app_order** selon lequel l’utilisateur final peut activer ou désactiver le Bluetooth et se connecter à différents appareils compatibles au Bluetooth.   |
+| Ordre des applications | bundleArray | FALSE | Vous permet de spécifier l’ordre des applications, des liens Web et des dossiers sur Managed Home Screen. Pour utiliser ce paramètre, **Verrouiller l’écran d’accueil** doit être activé, **Définir la taille de la grille** doit être défini et **Ordre des applications activé** doit être défini sur `True`.   |
 
 ## <a name="enter-json-data"></a>Entrer des données JSON
 
@@ -111,10 +114,6 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
     "kind": "androidenterprise#managedConfiguration",
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
-        {
-            "key": "grid_size",
-            "valueString": "Auto"
-        },
         {
             "key": "keep_page_header",
             "valueBool": true
@@ -236,6 +235,87 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "grid_size",
+            "valueString": "4;5"
+        },
+        {
+            "key": "app_order_enabled",
+            "valueBool": true
+        },
+        {
+            "key": "apps_in_folder_ordered_by_name",
+            "valueBool": true
+        },
+        {
+            "key": "app_orders",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.Microsoft.emmx"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "folder_name",
+                            "valueString": "Work"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "managed_folder"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 2
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": "com.microsoft.launcher.launcher"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 3
+                        }
+                    ]
+                }
+            ]
         },
         {
             "key": "managed_folders",
