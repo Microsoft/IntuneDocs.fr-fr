@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 29ae889e99a843a8569782bad2b1303c7bb4304c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882839"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Phase 1 : Préparer Microsoft Intune à la gestion des appareils mobiles (MDM)
 
@@ -51,8 +51,8 @@ Avant d’étudier plus en détail la configuration d’Intune, passons en revue
 
 - De quelles conditions d’utilisation avez-vous besoin ?
 
-    - Veillez à faire appel au service juridique aussitôt que possible.
-    - Quelle est la localisation requise ?
+  - Veillez à faire appel au service juridique aussitôt que possible.
+  - Quelle est la localisation requise ?
 
 - Les utilisateurs sont-ils familiarisés avec la technologie et l’informatique en général ?
 
@@ -63,8 +63,8 @@ Avant d’étudier plus en détail la configuration d’Intune, passons en revue
 - Quelle est la longueur actuelle des codes PIN/codes secrets de vos appareils ?
 
 - Devez-vous désactiver des fonctionnalités de l’appareil, ou imposer des restrictions à certains comportements des appareils ? Vous pouvez contrôler différents paramètres spécifiques de la plateforme grâce aux profils de configuration des appareils, par exemple :
-    - Désactiver l’appareil photo
-    - Verrouiller le mode d’application unique<br/>
+  - Désactiver l’appareil photo
+  - Verrouiller le mode d’application unique<br/>
 
 - Quels types d’authentification devez-vous prendre en charge ? Si vous avez besoin d’une authentification basée sur un certificat, quels types de certificat faut-il configurer ?
   - Intune peut configurer des certificats avec des profils d’accès aux ressources pour les appareils inscrits.

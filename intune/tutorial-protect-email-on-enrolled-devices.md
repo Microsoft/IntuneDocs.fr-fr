@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a5a355c82455e135319b7683756eb0ef5c032876
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882359"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -35,10 +35,10 @@ Dans ce tutoriel, vous apprendrez à :
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Prérequis
-  - Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
-    - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
-  - Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : créer un profil d’appareil de messagerie pour iOS](quickstart-email-profile.md).
+- Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
+  - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : créer un profil d’appareil de messagerie pour iOS](quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 

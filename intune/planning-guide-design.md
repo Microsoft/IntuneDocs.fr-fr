@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884880"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -49,47 +49,47 @@ Votre environnement actuel peut influencer les décisions en matière de concept
 
 - **Identifier dans le cloud**
 
-    - Utilisez-vous DirSync ou Azure Active Directory (Azure AD) Connect ?
+  - Utilisez-vous DirSync ou Azure Active Directory (Azure AD) Connect ?
 
-    - Votre environnement est-il fédéré ?
+  - Votre environnement est-il fédéré ?
 
-    - Est-ce que l’authentification multifacteur est activée ?
+  - Est-ce que l’authentification multifacteur est activée ?
 
 - **Environnement de courrier électronique**
 
-    - Vous utilisez Exchange ? Localement ou dans le cloud ?
+  - Vous utilisez Exchange ? Localement ou dans le cloud ?
 
-    - Êtes-vous au milieu d’un projet de migration Exchange vers le cloud ?
+  - Êtes-vous au milieu d’un projet de migration Exchange vers le cloud ?
 
 - **Solution actuelle de gestion des appareils mobiles (MDM)**
 
-    - Utilisez-vous d'autres solutions de gestion des appareils mobiles ?
+  - Utilisez-vous d'autres solutions de gestion des appareils mobiles ?
 
-    - Quelles solutions de gestion des appareils mobiles utilisez-vous pour l’entreprise et les scénarios d’utilisation BYOD ?
+  - Quelles solutions de gestion des appareils mobiles utilisez-vous pour l’entreprise et les scénarios d’utilisation BYOD ?
 
-    - Quelles fonctionnalités utilisez-vous (par exemple : paramètres d’appareils d’applications, configurations Wi-Fi) ?
+  - Quelles fonctionnalités utilisez-vous (par exemple : paramètres d’appareils d’applications, configurations Wi-Fi) ?
 
-    - Quelles sont les plateformes d'appareils prises en charge ?
+  - Quelles sont les plateformes d'appareils prises en charge ?
 
-    - Quels groupes et combien d’utilisateurs exploitent la solution de gestion des appareils mobiles ?
+  - Quels groupes et combien d’utilisateurs exploitent la solution de gestion des appareils mobiles ?
 
 - **Solution de certificat**
 
-    - Avez-vous implémenté une solution de certificat ?
+  - Avez-vous implémenté une solution de certificat ?
 
-    - Quel type de certificats utilisez-vous ?
+  - Quel type de certificats utilisez-vous ?
 
 - **Gestion des systèmes**
 
-    - Comment gérez-vous votre environnement PC et serveur ?
+  - Comment gérez-vous votre environnement PC et serveur ?
 
-    - Utilisez-vous System Center Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
+  - Utilisez-vous System Center Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
 
 - **Solution VPN**
 
-    - Quelle est votre solution VPN ?
+  - Quelle est votre solution VPN ?
 
-    - Est-ce que vous l’utilisez pour des scénarios d’utilisation en entreprise et BYOD ?
+  - Est-ce que vous l’utilisez pour des scénarios d’utilisation en entreprise et BYOD ?
 
 Veillez à noter tous les projets ou tous les autres plans mis en place susceptibles d’affecter votre environnement durant l’enregistrement de l’environnement de gestion des appareils mobiles actuel. Voici un exemple de méthode d’enregistrement de l’environnement actuel durant la création de votre conception Intune :
 

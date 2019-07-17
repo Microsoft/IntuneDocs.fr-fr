@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 35c0c6e6b65350d3b27c9dc1d9ab55d375dac070
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882861"
 ---
 # <a name="phase-2-migration-campaign"></a>Phase 2 : Campagne de migration
 
@@ -43,19 +43,19 @@ Les conditions de la réussite d’une migration d’un fournisseur MDM tiers ve
 
 - Surveillez la charge du support technique et vérifiez que chaque inscription a abouti. Consacrez un certain temps à l’évaluation des critères de réussite pour chaque groupe avant de passer à la migration du groupe suivant. Votre déploiement pilote doit vérifier les points suivants :
 
-    - Les taux de réussite et d’échec des inscriptions sont inclus dans les plages prévues.
+  - Les taux de réussite et d’échec des inscriptions sont inclus dans les plages prévues.
 
-    - Productivité des utilisateurs :
+  - Productivité des utilisateurs :
 
-        - Les ressources d’entreprise telles que le VPN, le Wi-Fi, la messagerie et les certificats fonctionnent correctement.
+    - Les ressources d’entreprise telles que le VPN, le Wi-Fi, la messagerie et les certificats fonctionnent correctement.
 
-        - Les applications configurées sont accessibles.
+    - Les applications configurées sont accessibles.
 
-    - Sécurité des données :
+  - Sécurité des données :
 
-        - Des rapports de conformité sont créés.
+    - Des rapports de conformité sont créés.
 
-        - Les protections pour applications mobiles sont appliquées.
+    - Les protections pour applications mobiles sont appliquées.
 
 Dès que vous êtes satisfait de la première phase de migration, répétez le [cycle de migration](migration-guide-cycle.md) pour la phase suivante.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6082f4de6a881f211f2c7569fcd052ba1f37ad7b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d96167eb37ac7c3c90bad82783e9ce06814f8c88
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884780"
 ---
 # <a name="data-collection-in-intune"></a>Collecte des données dans Intune
 
@@ -41,48 +41,48 @@ La plupart des données personnelles collectées par Intune sont des données id
 Les données identifiées collectées par Intune peuvent inclure notamment, mais pas exclusivement, les informations suivantes : 
 
 - Informations sur l'utilisateur
-    - Nom de propriétaire/Nom d’affichage de l’utilisateur (nom de l’utilisateur inscrit par Azure, tel qu’identifié par la valeur AzureUserID)
-    - Nom principal ou adresse e-mail de l’utilisateur
-    - Identificateur d’utilisateur tiers (comme l’ID Apple)
+  - Nom de propriétaire/Nom d’affichage de l’utilisateur (nom de l’utilisateur inscrit par Azure, tel qu’identifié par la valeur AzureUserID)
+  - Nom principal ou adresse e-mail de l’utilisateur
+  - Identificateur d’utilisateur tiers (comme l’ID Apple)
 - Informations sur l’inventaire matériel
-    - Nom de l'appareil
-    - Fabricant
-    - Système d'exploitation
-    - Numéro de série
-    - Numéro IMEI
-    - Adresse IP
-    - Adresse MAC Wi-Fi
-    - ICCID
-    - Numéro de téléphone
+  - Nom de l'appareil
+  - Fabricant
+  - Système d'exploitation
+  - Numéro de série
+  - Numéro IMEI
+  - Adresse IP
+  - Adresse MAC Wi-Fi
+  - ICCID
+  - Numéro de téléphone
 - Informations du journal d’audit, notamment les données concernant les activités suivantes
-    - Gestion
-    - Créer
-    - Mettre à jour (modifier)
-    - Supprimer
-    - Affecter
-    - Tâches à distance
+  - Gestion
+  - Créer
+  - Mettre à jour (modifier)
+  - Supprimer
+  - Affecter
+  - Tâches à distance
 - Informations concernant le support
-    - Informations de contact (nom, numéro de téléphone, adresse e-mail)
-    - Discussions par e-mail avec les membres de l’équipe du support technique, de produit et/ou de l’expérience utilisateur Microsoft
+  - Informations de contact (nom, numéro de téléphone, adresse e-mail)
+  - Discussions par e-mail avec les membres de l’équipe du support technique, de produit et/ou de l’expérience utilisateur Microsoft
 - Informations de contrôle d’accès (Intune utilise ces données pour gérer l’accès à des rôles et fonctions d’administration comme le [Contrôle d’accès en fonction du rôle](role-based-access-control.md))
-    - Authentificateurs statiques (mot de passe du client)
-    - Clés de confidentialité pour les certificats 
+  - Authentificateurs statiques (mot de passe du client)
+  - Clés de confidentialité pour les certificats 
 - Informations d’administration et de compte
-    - Prénom et nom de l’utilisateur administrateur
-    - Nom de l’utilisateur administrateur
-    - Nom d’utilisateur principal (e-mail)
-    - Numéro de téléphone
-    - Adresse e-mail du propriétaire du compte
-    - ID Active Directory de chaque administrateur informatique du client
-    - Données de paiement pour la facturation au client
-    - Clé de l’abonnement
+  - Prénom et nom de l’utilisateur administrateur
+  - Nom de l’utilisateur administrateur
+  - Nom d’utilisateur principal (e-mail)
+  - Numéro de téléphone
+  - Adresse e-mail du propriétaire du compte
+  - ID Active Directory de chaque administrateur informatique du client
+  - Données de paiement pour la facturation au client
+  - Clé de l’abonnement
 - Inventaire des applications, comme
-    - nom de l’application
-    - Version
-    - ID de l’application
-    - est
-    - emplacement d’installation
-    - Les données de l’inventaire des applications sont collectées uniquement quand elles sont marquées par l’administrateur comme étant un appareil d’entreprise ou que la fonctionnalité d’application compatible est activée.  
+  - nom de l’application
+  - Version
+  - ID de l’application
+  - est
+  - emplacement d’installation
+  - Les données de l’inventaire des applications sont collectées uniquement quand elles sont marquées par l’administrateur comme étant un appareil d’entreprise ou que la fonctionnalité d’application compatible est activée.  
 - ID de locataires tiers des clients, comme l’ID Apple 
 
 ## <a name="pseudonymized-data"></a>Données pseudonymes
@@ -92,30 +92,30 @@ Les données pseudonymes sont associées à un identificateur unique, générale
 Les données pseudonymes collectées par Intune peuvent inclure notamment, mais pas exclusivement, les informations suivantes : 
 
 - Données de diagnostic, de performances et d’utilisation liées à un utilisateur et/ou un appareil
-    - Nombre de fois où une fonctionnalité est utilisée
-    - Commandes fournies à la fonctionnalité
-    - Temps de réponse d’un service
-    - Taux de réussite des installations et d’autres processus
-    - Erreurs des applications du portail d’entreprise Intune
-    - Identificateurs d’utilisateurs et d’appareils
-    - Identificateurs à des fins de référence, de corrélation et de gestion 
+  - Nombre de fois où une fonctionnalité est utilisée
+  - Commandes fournies à la fonctionnalité
+  - Temps de réponse d’un service
+  - Taux de réussite des installations et d’autres processus
+  - Erreurs des applications du portail d’entreprise Intune
+  - Identificateurs d’utilisateurs et d’appareils
+  - Identificateurs à des fins de référence, de corrélation et de gestion 
 - Données d’appareil non liées à un appareil ou à un utilisateur (si ces données sont liées à un appareil ou à un utilisateur, Intune les traite comme des données identifiées)
-    - ID d’appareil Intune
-    - ID d’appareil Azure Active Directory
-    - ID de gestion d’appareils Intune
-    - ID de locataire
-    - ID de compte
-    - ID d’appareil EAS
-    - ID spécifique à la plateforme
-    - ID Apple pour appareils iOS
-    - Adresse MAC pour appareils Mac
-    - ID Windows pour appareils Windows
+  - ID d’appareil Intune
+  - ID d’appareil Azure Active Directory
+  - ID de gestion d’appareils Intune
+  - ID de locataire
+  - ID de compte
+  - ID d’appareil EAS
+  - ID spécifique à la plateforme
+  - ID Apple pour appareils iOS
+  - Adresse MAC pour appareils Mac
+  - ID Windows pour appareils Windows
 - Informations d’application managée
-    - ID d’application managée
-    - Balise d’appareil avec applications managées
-    - ID de gestion d’appareils Intune
-    - ID d’appareil Azure Active Directory
-    - Clés de chiffrement
+  - ID d’application managée
+  - Balise d’appareil avec applications managées
+  - ID de gestion d’appareils Intune
+  - ID d’appareil Azure Active Directory
+  - Clés de chiffrement
 
 ## <a name="aggregated-data"></a>Données agrégées
 
@@ -125,14 +125,14 @@ Les données agrégées collectées par Intune peuvent inclure notamment, mais p
 
 - Données d’utilisation de l’administrateur provenant de tous les locataires Intune (par exemple, les contrôles d’administration sélectionnés lors de l’interaction avec la console d’administration)
 - Informations de compte de locataire (ces données sont disponibles dans le panneau Intune)
-    - Nombre d’appareils ou d’utilisateurs inscrits
-    - Nombre de plateformes d’appareils identifiées  
-    - Nombre d’appareils installés
-    - installedDeviceCount : nombre d’appareils sur lesquels l’application est installée.
-    - notApplicableDeviceCount : nombre d’appareils pour lesquels l’application n’est pas applicable.
-    - notInstalledDeviceCount : nombre d’appareils pour lesquels l’application est applicable mais pas installée.
-    - pendingInstallDeviceCount : nombre d’appareils pour lesquels l’application est applicable et l’installation en attente.
-    
+  - Nombre d’appareils ou d’utilisateurs inscrits
+  - Nombre de plateformes d’appareils identifiées  
+  - Nombre d’appareils installés
+  - installedDeviceCount : nombre d’appareils sur lesquels l’application est installée.
+  - notApplicableDeviceCount : nombre d’appareils pour lesquels l’application n’est pas applicable.
+  - notInstalledDeviceCount : nombre d’appareils pour lesquels l’application est applicable mais pas installée.
+  - pendingInstallDeviceCount : nombre d’appareils pour lesquels l’application est applicable et l’installation en attente.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 Découvrez des informations supplémentaires sur la façon dont Intune [stocke, traite](privacy-data-store-process.md) et [partage](privacy-data-secure-share.md) les données personnelles. 

@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 861c2dd73e3a78fd833a24500728bd977d1186a2
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883741"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Intégrer Better Mobile à Intune
 
@@ -36,13 +36,13 @@ Avant de commencer le processus d’intégration de Better Mobile à Intune, mun
 
 - Informations d’identification d’administrateur Azure Active Directory pour accorder les autorisations suivantes :
 
-    - Connexion et lecture de profil utilisateur
+  - Connexion et lecture de profil utilisateur
 
-    - Accès à l’annuaire en tant qu’utilisateur connecté
+  - Accès à l’annuaire en tant qu’utilisateur connecté
 
-    - Lecture des données de l’annuaire
+  - Lecture des données de l’annuaire
 
-    - Envoi des informations d’appareil à Intune
+  - Envoi des informations d’appareil à Intune
 
 - Informations d’identification administrateur pour accéder à la console d’administration de Better Mobile.
 

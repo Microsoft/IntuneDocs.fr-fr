@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39b5581ae7dd2a93554c0371da3858f59d6e62b4
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884052"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -37,9 +37,9 @@ Pour utiliser la gestion des applications Win32, veillez à respecter les critè
 
 - Windows 10 version 1607 ou ultérieure (versions Entreprise, Professionnel et Éducation)
 - Le client Windows 10 doit avoir les caractéristiques suivantes : 
-    - Les appareils doivent être joints à Azure AD et automatiquement inscrits. L’extension de gestion Intune prend en charge les appareils joints à Azure AD, les appareils hybrides joints à un domaine et les appareils inscrits dans une stratégie de groupe. 
-    > [!NOTE]
-    > Dans le cadre du scénario d’inscription dans une stratégie de groupe, l’utilisateur final utilise le compte d’utilisateur local pour joindre à AAD son appareil Windows 10. Il doit se connecter à l’appareil à l’aide de son compte d’utilisateur AAD et s’inscrire à Intune. Intune installe l’extension de gestion Intune sur l’appareil si un script PowerShell ou une application Win32 cible l’utilisateur ou l’appareil.
+  - Les appareils doivent être joints à Azure AD et automatiquement inscrits. L’extension de gestion Intune prend en charge les appareils joints à Azure AD, les appareils hybrides joints à un domaine et les appareils inscrits dans une stratégie de groupe. 
+  > [!NOTE]
+  > Dans le cadre du scénario d’inscription dans une stratégie de groupe, l’utilisateur final utilise le compte d’utilisateur local pour joindre à AAD son appareil Windows 10. Il doit se connecter à l’appareil à l’aide de son compte d’utilisateur AAD et s’inscrire à Intune. Intune installe l’extension de gestion Intune sur l’appareil si un script PowerShell ou une application Win32 cible l’utilisateur ou l’appareil.
 - La taille d’application Windows est limitée à 8 Go par application.
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Préparer le contenu d’application Win32 pour le chargement

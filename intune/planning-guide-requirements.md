@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb08757732aa5cad08ed0a4b535fb20c0aa1df0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 703509c316a22995d26223f6c386de0a2ec66c31
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882720"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Déterminer les exigences du scénario d’utilisation
 
@@ -50,21 +50,21 @@ Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.tech
 Voici quelques exemples supplémentaires qui peuvent être utilisés dans la colonne « Exigences » :
 
 - **Messagerie sécurisée**
-    - Accès conditionnel pour Exchange Online/sur site
-    - Stratégies de protection des applications Outlook
+  - Accès conditionnel pour Exchange Online/sur site
+  - Stratégies de protection des applications Outlook
 
 - **Paramètres de l’appareil**
-    - Code confidentiel avec quatre ou six caractères
-    - Restreindre la sauvegarde sur le cloud
+  - Code confidentiel avec quatre ou six caractères
+  - Restreindre la sauvegarde sur le cloud
 
 - **Profils**
-    - Wi-Fi
-    - VPN
-    - E-mail (Windows 10 mobile)
+  - Wi-Fi
+  - VPN
+  - E-mail (Windows 10 mobile)
 
 - **Applications**
-    - Office 365 avec stratégies de protection des applications
-    - Activité commerciale avec stratégies de protection des applications
+  - Office 365 avec stratégies de protection des applications
+  - Activité commerciale avec stratégies de protection des applications
 
 ## <a name="next-steps"></a>Étapes suivantes
 

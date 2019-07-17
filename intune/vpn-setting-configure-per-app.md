@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce08545931d3580ce5ae524b1023d2b734b88f7b
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 1dc78f8126e0fa9c65fdbe70cfd909da70391e3e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884518"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Configurer un VPN par application pour les appareils iOS dans Intune
 
@@ -150,16 +150,16 @@ Une fois votre VPN par application configuré et associé à votre application, 
 
 ### <a name="before-you-attempt-to-connect"></a>Avant d’essayer de se connecter
 
- - Veillez à déployer toutes les stratégies mentionnées ci-dessus dans le même groupe. À défaut, l’expérience VPN par application ne fonctionnera pas.
- - Si vous utilisez l’application VPN Pulse Secure ou une application de client VPN personnalisée, vous pouvez choisir d’utiliser le tunneling de couche paquet ou de couche application. Affectez à **ProviderType** la valeur **app-proxy** pour le tunneling de couche application, ou la valeur **packet-tunnel** pour le tunneling de couche paquet. Consultez la documentation de votre fournisseur VPN pour vérifier que vous utilisez la bonne valeur.
+- Veillez à déployer toutes les stratégies mentionnées ci-dessus dans le même groupe. À défaut, l’expérience VPN par application ne fonctionnera pas.
+- Si vous utilisez l’application VPN Pulse Secure ou une application de client VPN personnalisée, vous pouvez choisir d’utiliser le tunneling de couche paquet ou de couche application. Affectez à **ProviderType** la valeur **app-proxy** pour le tunneling de couche application, ou la valeur **packet-tunnel** pour le tunneling de couche paquet. Consultez la documentation de votre fournisseur VPN pour vérifier que vous utilisez la bonne valeur.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Se connecter avec le VPN par application
 
 Vérifiez l’expérience sans contact en vous connectant sans devoir sélectionner le VPN ni taper vos informations d’identification. L’expérience sans contact signifie que :
 
- - L’appareil ne vous demande pas d’approuver le serveur VPN. Autrement dit, l’utilisateur ne voit pas la boîte de dialogue **Approbation dynamique**.
- - L’utilisateur n’a pas à taper d’informations d’identification.
- - L’appareil de l’utilisateur est connecté au VPN quand l’utilisateur ouvre l’une des applications associées.
+- L’appareil ne vous demande pas d’approuver le serveur VPN. Autrement dit, l’utilisateur ne voit pas la boîte de dialogue **Approbation dynamique**.
+- L’utilisateur n’a pas à taper d’informations d’identification.
+- L’appareil de l’utilisateur est connecté au VPN quand l’utilisateur ouvre l’une des applications associées.
 
 <!-- ## Troubleshooting the per-app VPN
 

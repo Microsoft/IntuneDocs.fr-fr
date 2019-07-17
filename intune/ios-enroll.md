@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94f2bd9237e92b22b9d73e4f7777dc0faf3f0fe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883029"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Inscrire des appareils iOS dans Intune
 
@@ -67,9 +67,9 @@ Découvrez plus en détail l’[inscription avec Apple Configurator](apple-confi
 Des appareils configurés avec une affinité utilisateur peuvent installer et exécuter l’application Portail d’entreprise pour télécharger des applications et gérer des appareils. Une fois que les utilisateurs reçoivent leurs appareils, ils doivent effectuer un certain nombre d’étapes supplémentaires pour terminer l’exécution de l’Assistant Installation et installer l’application Portail d’entreprise.
 
 Une affinité utilisateur est nécessaire pour prendre en charge les éléments suivants :
-  - Applications de gestion des applications mobiles (GAM)
-  - Accès conditionnel aux données e-mail et de l’entreprise
-  - Application Portail d’entreprise
+- Applications de gestion des applications mobiles (GAM)
+- Accès conditionnel aux données e-mail et de l’entreprise
+- Application Portail d’entreprise
 
 **Comment les utilisateurs inscrivent des appareils iOS d’entreprise avec l’affinité utilisateur**
 1. Quand les utilisateurs allument leur appareil, ils sont invités à terminer l’exécution de l’Assistant Installation. 

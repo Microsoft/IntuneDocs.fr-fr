@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b51f310d370876058b8f1a1f872dd0b0e41bd42c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884838"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Intégrer Pradeo à Intune
 
@@ -36,13 +36,13 @@ Avant de commencer le processus d’intégration de Pradeo à Intune, veillez à
 
 - Informations d’identification d’administrateur Azure Active Directory pour accorder les autorisations suivantes :
 
-    - Connexion et lecture de profil utilisateur
+  - Connexion et lecture de profil utilisateur
 
-    - Accès à l’annuaire en tant qu’utilisateur connecté
+  - Accès à l’annuaire en tant qu’utilisateur connecté
 
-    - Lecture des données de l’annuaire
+  - Lecture des données de l’annuaire
 
-    - Envoi des informations d’appareil à Intune
+  - Envoi des informations d’appareil à Intune
 
 - Informations d’identification d’administrateur pour accéder à la console Pradeo Security.
 

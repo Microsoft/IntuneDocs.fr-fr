@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 714a595263475da98a48c982e0ed24d691440097
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 8cc4a109aac22617f2785a74de701e4d1d7bdf09
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885014"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Déterminer les objectifs et les défis liés au déploiement
 
@@ -34,27 +34,27 @@ Les objectifs de déploiement sont les buts à long terme que vous avez l’inte
 
 - **Intégration à Office 365 et prise en charge des applications mobiles Office**
 
-    - **Description :** fournir une intégration étroite à Office 365, et l’utilisation d’applications mobiles Office avec la protection des applications.
+  - **Description :** fournir une intégration étroite à Office 365, et l’utilisation d’applications mobiles Office avec la protection des applications.
 
-    - **Valeur métier :** expérience utilisateur sécurisée et améliorée en permettant aux utilisateurs d’utiliser les applications qu’ils maîtrisent et préfèrent.
+  - **Valeur métier :** expérience utilisateur sécurisée et améliorée en permettant aux utilisateurs d’utiliser les applications qu’ils maîtrisent et préfèrent.
 
 - **Offrir l’accès aux services d’entreprise internes sur les appareils mobiles**
 
-    - **Description :** permettre aux employés d’être productifs quel que soit leur lieu de travail ou l’appareil qui leur convient le mieux. Ce projet a pour but d'améliorer la productivité de l’entreprise et l'accès sécurisé à ses données.
+  - **Description :** permettre aux employés d’être productifs quel que soit leur lieu de travail ou l’appareil qui leur convient le mieux. Ce projet a pour but d'améliorer la productivité de l’entreprise et l'accès sécurisé à ses données.
 
-    - **Valeur métier :** le fait d’offrir aux employés la possibilité d’être flexibles et opérationnels en tout lieu permet à l’entreprise de gagner en compétitivité et de proposer un environnement de travail plus enrichissant.
+  - **Valeur métier :** le fait d’offrir aux employés la possibilité d’être flexibles et opérationnels en tout lieu permet à l’entreprise de gagner en compétitivité et de proposer un environnement de travail plus enrichissant.
 
 - **Garantir la protection des données sur les appareils mobiles**
 
-    - **Description :** les données stockées sur un appareil mobile doivent être protégées contre toute perte ou tout partage, que ce soit de manière malveillante ou accidentelle.
+  - **Description :** les données stockées sur un appareil mobile doivent être protégées contre toute perte ou tout partage, que ce soit de manière malveillante ou accidentelle.
 
-    - **Valeur métier :** la protection des données est essentielle pour rester compétitif et s’assurer que les clients et leurs données sont traités avec la plus grande considération.
+  - **Valeur métier :** la protection des données est essentielle pour rester compétitif et s’assurer que les clients et leurs données sont traités avec la plus grande considération.
 
 - **Réduire les coûts**
 
-    - **Description :** quand cela est possible, le projet permet de réduire les coûts d’exploitation et de déploiement.
+  - **Description :** quand cela est possible, le projet permet de réduire les coûts d’exploitation et de déploiement.
 
-    - **Valeur métier :** en utilisant efficacement ses ressources, l’entreprise peut investir dans d’autres domaines, augmenter sa compétitivité et fournir un meilleur service à ses clients.
+  - **Valeur métier :** en utilisant efficacement ses ressources, l’entreprise peut investir dans d’autres domaines, augmenter sa compétitivité et fournir un meilleur service à ses clients.
 
 ## <a name="deployment-objectives"></a>Objectifs de déploiement
 
@@ -62,19 +62,19 @@ Les objectifs du déploiement sont les actions que votre organisation peut mener
 
 - **Réduire le nombre de solutions de gestion d’appareils**
 
-    - **Implémentation :** consolider une solution unique de gestion d’appareils mobiles, intégrant la protection des données d’entreprise Microsoft Intune ainsi que les applications et les appareils.
+  - **Implémentation :** consolider une solution unique de gestion d’appareils mobiles, intégrant la protection des données d’entreprise Microsoft Intune ainsi que les applications et les appareils.
 
 - **Offrir un accès conditionnel à Exchange et SharePoint Online**
 
-    - **Implémentation :** appliquer un accès conditionnel pour Exchange et SharePoint Online.
+  - **Implémentation :** appliquer un accès conditionnel pour Exchange et SharePoint Online.
 
 - **Empêcher que les données d’entreprise ne soient stockées ou transmises à des services n'appartenant pas à l’entreprise sur l'appareil mobile**
 
-    - **Implémentation :** appliquez des stratégies de protection des applications Intune pour Microsoft Office et les applications métier.
+  - **Implémentation :** appliquez des stratégies de protection des applications Intune pour Microsoft Office et les applications métier.
 
 - **Offrir la possibilité d'effacer les données d’entreprise à partir de l'appareil**
 
-    - **Implémentation :** inscrivez des appareils dans Intune. Cela vous donne la possibilité d’effectuer une réinitialisation à distance des données et des ressources d’entreprise lorsque cela est approprié.
+  - **Implémentation :** inscrivez des appareils dans Intune. Cela vous donne la possibilité d’effectuer une réinitialisation à distance des données et des ressources d’entreprise lorsque cela est approprié.
 
 ## <a name="deployment-challenges"></a>Défis du déploiement
 
@@ -82,15 +82,15 @@ Les défis liés au déploiement représentent des problèmes cruciaux pour une 
 
 - La disponibilité du support et l’expérience de l'utilisateur final ne sont pas prises en compte dans l'élaboration du projet initial. Cela conduit à une mauvaise adoption par les utilisateurs finaux et à des défis pour votre organisation de support.
 
-    - **Atténuation :** intégrez une formation de support. Validez l’expérience utilisateur avec des critères de réussite dans votre plan de déploiement.
+  - **Atténuation :** intégrez une formation de support. Validez l’expérience utilisateur avec des critères de réussite dans votre plan de déploiement.
 
 - Le manque de critères de réussite et d’objectifs clairement définis entraîne des résultats intangibles. Cela peut également mettre votre organisation en position réactive lorsque des problèmes surviennent.
 
-    - **Atténuation :** définissez vos objectifs et des critères de réussite très tôt dans la définition de la portée de votre projet et utilisez ces points de données pour donner vie à vos autres phases de déploiement. Assurez-vous que vos objectifs sont SMART (spécifiques, mesurables, atteignables, réalistes et en temps voulu). Prévoyez des mesures par rapport à vos objectifs à chaque phase et assurez-vous que votre projet de déploiement reste sur les bons rails.
+  - **Atténuation :** définissez vos objectifs et des critères de réussite très tôt dans la définition de la portée de votre projet et utilisez ces points de données pour donner vie à vos autres phases de déploiement. Assurez-vous que vos objectifs sont SMART (spécifiques, mesurables, atteignables, réalistes et en temps voulu). Prévoyez des mesures par rapport à vos objectifs à chaque phase et assurez-vous que votre projet de déploiement reste sur les bons rails.
 
 - Vous oubliez de créer, valider et partager largement une proposition de valeur claire qui correspond aux attentes de votre organisation. Cela aboutit généralement à une adoption limitée et à une limitation du retour sur investissement.
 
-    - **Atténuation :** même si vous êtes très heureux de développer votre projet, veillez à définir précisément vos objectifs. Incluez ces éléments dans toutes les activités de formation afin de garantir que les utilisateurs comprennent pourquoi votre organisation a sélectionné Intune.
+  - **Atténuation :** même si vous êtes très heureux de développer votre projet, veillez à définir précisément vos objectifs. Incluez ces éléments dans toutes les activités de formation afin de garantir que les utilisateurs comprennent pourquoi votre organisation a sélectionné Intune.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

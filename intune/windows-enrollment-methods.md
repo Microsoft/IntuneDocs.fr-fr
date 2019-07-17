@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: cbe533e6a219adf1984c656506ceb7a3b95556ec
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4a0df4f32513eb37bd7396d8e6249f9c6e71a4e4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884182"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Méthodes d’inscription dans Intune pour les appareils Windows
 
@@ -36,8 +36,8 @@ Il existe deux façons d’inscrire des appareils dans Intune :
 Les utilisateurs peuvent inscrire eux-mêmes leur appareil Windows en appliquant l’une des méthodes suivantes :
 
 - [Apportez votre propre appareil (BYOD)](https://docs.microsoft.com/intune-user-help/enroll-windows-10-device) : les utilisateurs inscrivent leurs appareils personnels en choisissant de connecter un compte **Professionnel et scolaire** à partir des **Paramètres** de l’appareil. Ce processus :
-    - Inscrit l’appareil auprès d’Azure Active Directory pour accéder aux ressources d’entreprise telles que les e-mails.
-    - Inscrit l’appareil dans Intune en tant qu’appareil personnel (BYOD).
+  - Inscrit l’appareil auprès d’Azure Active Directory pour accéder aux ressources d’entreprise telles que les e-mails.
+  - Inscrit l’appareil dans Intune en tant qu’appareil personnel (BYOD).
 Si un administrateur a configuré l’inscription automatique (disponible avec les abonnements Azure AD premium), l’utilisateur n’est obligé d’entrer ses informations d’identification qu’une seule fois. Sinon, il devra s’inscrire séparément par le biais de l’inscription à MDM uniquement, et entrer à nouveau ses informations d’identification.  
 - L’**inscription à MDM uniquement** permet aux utilisateurs d’inscrire un PC existant joint à un annuaire Active Directory, à Azure Active Directory ou à un groupe de travail dans Intune. Les utilisateurs s’inscrivent à partir de Paramètres sur le PC Windows existant. Cette méthode n’est pas recommandée, car elle n’inscrit pas l’appareil auprès d’Azure Active Directory. Elle empêche également l’utilisation de fonctionnalités telles que l’accès conditionnel.
 - [Jointure Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) : joint l’appareil à Azure Active Directory et permet aux utilisateurs de se connecter à Windows avec leurs informations d’identification Azure AD. Si l’inscription automatique est activée, l’appareil est inscrit automatiquement dans Intune. L’avantage de l’inscription automatique est qu’il s’agit d’un processus à étape unique pour l’utilisateur. Autrement, il devra s’inscrire séparément par le biais de l’inscription à MDM uniquement, et entrer à nouveau ses informations d’identification. Les utilisateurs s’inscrivent de cette façon pendant la phase OOBE Windows initiale ou à partir de Paramètres. L’appareil est marqué comme appareil d’entreprise dans Intune.

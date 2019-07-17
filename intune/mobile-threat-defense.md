@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0452229d6c1ea2d9e87a302675167d200bd348eb
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
+ms.openlocfilehash: 73c8167c91129d79a98674a92e7ccc5487a6b283
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885079"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Qu’est-ce que l’intégration Mobile Threat Defense avec Intune ?
 Intune peut intégrer les données d’un fournisseur Mobile Threat Defense en tant que source d’informations pour des stratégies de conformité et des règles d’accès conditionnel. Vous pouvez utiliser ces informations pour mieux protéger les ressources d’entreprise comme Exchange et SharePoint, en bloquant l’accès à partir d’appareils mobiles compromis.  
@@ -47,14 +47,14 @@ Ce service est basé sur un abonnement : aucune information d’inventaire des a
 **Inventaire des applications**  
 Si vous activez la synchronisation des applications pour les appareils iOS, les inventaires à partir des appareils iOS personnels et d’entreprise sont envoyés à votre fournisseur de service de détection des menaces mobiles(MDT). Les données de l’inventaire des applications comprennent les informations suivantes :
 
- - ID de l’application
- - Version de l’application
- - Version abrégée de l’application
- - Nom de l’application
- - Taille du bundle d’applications
- - Taille dynamique de l’application
- - Validation, ou non, de l’application
- - Gestion, ou non, de l’application
+- ID de l’application
+- Version de l’application
+- Version abrégée de l’application
+- Nom de l’application
+- Taille du bundle d’applications
+- Taille dynamique de l’application
+- Validation, ou non, de l’application
+- Gestion, ou non, de l’application
 
 ## <a name="sample-scenarios"></a>Exemples de scénario
 

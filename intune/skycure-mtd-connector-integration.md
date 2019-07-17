@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd185a42d36de6aaf1e6d0ff0b8e34619b02c093
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 513001993d890afba848138e01ff823796ea773d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884437"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Configurer l’intégration de Symantec Endpoint Protection Mobile avec Intune
 
@@ -44,7 +44,7 @@ SEP Mobile prend en charge deux modes d’intégration avec Intune :
 
 - **Intégration en lecture seule (configuration de base) :** répertorie uniquement les appareils d’Azure Active Directory et les charge dans la console de gestion Symantec Endpoint Protection Mobile.
 <br>
-    - Si les cases **Report the health and risk of devices to Intune** (Signaler l’intégrité et les risques des appareils à Intune) et **Also report security incidents to Intune** (Signaler également les incidents de sécurité à Intune) ne sont pas cochées dans la console de gestion Symantec Endpoint Protection Mobile, l’intégration s’effectue en lecture seule et par conséquent ne change jamais l’état d’un appareil (conforme ou non conforme) dans Intune.
+  - Si les cases **Report the health and risk of devices to Intune** (Signaler l’intégrité et les risques des appareils à Intune) et **Also report security incidents to Intune** (Signaler également les incidents de sécurité à Intune) ne sont pas cochées dans la console de gestion Symantec Endpoint Protection Mobile, l’intégration s’effectue en lecture seule et par conséquent ne change jamais l’état d’un appareil (conforme ou non conforme) dans Intune.
 <br></br>
 - **Intégration complète :** permet à SEP Mobile de signaler les appareils à risques et les détails des incidents de sécurité à Intune, créant ainsi une communication bidirectionnelle entre les deux services de cloud.
 

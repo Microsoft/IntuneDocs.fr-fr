@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 1e5ddf39a201f1a70f997e03f0b65706853adefa
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885114"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
@@ -44,8 +44,8 @@ Les stratégies de configuration des applications peuvent vous aider à élimine
 Les paramètres de configuration sont utilisés chaque fois que l’application les vérifie. En général, une application vérifie les paramètres de configuration la première fois qu’elle est exécutée par l’utilisateur.
 
 Vous disposez de deux options pour indiquer la façon dont vous souhaitez utiliser des configurations d’applications avec Intune :
- - **Appareils gérés** : l’appareil est géré par Intune en tant que fournisseur de gestion des appareils mobiles (MDM).
- - **Applications gérées** : une application est gérée sans inscription des appareils.
+- **Appareils gérés** : l’appareil est géré par Intune en tant que fournisseur de gestion des appareils mobiles (MDM).
+- **Applications gérées** : une application est gérée sans inscription des appareils.
 
 > [!NOTE]
 > En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.
@@ -66,9 +66,9 @@ En outre, vous pouvez utiliser l’API Graph pour accomplir des tâches de confi
 
 ### <a name="managed-devices"></a>Appareils gérés
 
- - Découvrez comment utiliser la configuration d’application avec vos appareils iOS.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md).
- - Découvrez comment utiliser la configuration d’application avec vos appareils Android.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils Android gérés](app-configuration-policies-use-android.md).
+- Découvrez comment utiliser la configuration d’application avec vos appareils iOS.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md).
+- Découvrez comment utiliser la configuration d’application avec vos appareils Android.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils Android gérés](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Applications gérées
 
- - Découvrez comment utiliser la configuration d’application avec des applications gérées. Consultez [Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil](app-configuration-policies-managed-app.md).
+- Découvrez comment utiliser la configuration d’application avec des applications gérées. Consultez [Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil](app-configuration-policies-managed-app.md).

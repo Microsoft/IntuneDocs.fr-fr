@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88ca608027e6509eb56fad74a8edae405fa915fa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882877"
 ---
 # <a name="microsoft-intune-service-description"></a>Description du service Microsoft Intune
 
@@ -60,24 +60,24 @@ Microsoft propose le service d'intégration Intune pour les services éligibles 
 
 - Les mises à jour importantes du service sont également annoncées dans le Centre de messages du [Centre d’administration Microsoft 365](https://admin.microsoft.com/). Si vous installez l’[application mobile d’administration Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), vous pouvez recevoir des notifications sur votre appareil mobile. En savoir plus sur la façon de travailler avec le [Centre de messages Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
-    Quelques conseils utiles :
+  Quelques conseils utiles :
 
-    - Les messages dans le centre de messages Office 365 sont ciblés. Cela signifie que si votre société n’a pas d’offre Intune pour l’Éducation, nous ne vous enverrons pas de messages sur Intune pour l’Éducation.
+  - Les messages dans le centre de messages Office 365 sont ciblés. Cela signifie que si votre société n’a pas d’offre Intune pour l’Éducation, nous ne vous enverrons pas de messages sur Intune pour l’Éducation.
 
-    - Les messages expirent. Par exemple, la notification que votre service a été mis à jour avec un lien vers la page de nouveautés expirera probablement avant la notification de mise à jour de service suivante. Sinon, vous auriez une quantité considérable de messages qui peuvent ne plus être pertinents.
+  - Les messages expirent. Par exemple, la notification que votre service a été mis à jour avec un lien vers la page de nouveautés expirera probablement avant la notification de mise à jour de service suivante. Sinon, vous auriez une quantité considérable de messages qui peuvent ne plus être pertinents.
 
-    - L’application mobile d’administration Office 365 vous permet de parcourir tous les messages et de transférer la notification si vous souhaitez la partager avec d’autres utilisateurs de votre organisation.
+  - L’application mobile d’administration Office 365 vous permet de parcourir tous les messages et de transférer la notification si vous souhaitez la partager avec d’autres utilisateurs de votre organisation.
 
-    - Sous Modifier les préférences du centre de message, nous proposerons une option pour **Intune** afin de pouvoir consulter les messages publiés dans un abonnement Intune. Si vous voyez la gestion des appareils mobiles pour Office 365, il s’agit d’un service différent, et non d’Intune.
+  - Sous Modifier les préférences du centre de message, nous proposerons une option pour **Intune** afin de pouvoir consulter les messages publiés dans un abonnement Intune. Si vous voyez la gestion des appareils mobiles pour Office 365, il s’agit d’un service différent, et non d’Intune.
 
 - Nous utilisons aussi deux blogs pour partager le message EMS et les bonnes pratiques de support Intune :
 
-    - [Blog sur Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
+  - [Blog sur Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
 
-    - [Blog pour le support Intune](https://blogs.technet.microsoft.com/intunesupport/)
+  - [Blog pour le support Intune](https://blogs.technet.microsoft.com/intunesupport/)
 
->[!Note]
->Vous pouvez superviser l’état du service Intune dans le [Centre d’administration Microsoft 365](https://admin.microsoft.com). Choisissez **État du service** dans le volet gauche. Vous pouvez également utiliser [l’application mobile d’administration Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) pour voir l’intégrité du service.
+> [!Note]
+> Vous pouvez superviser l’état du service Intune dans le [Centre d’administration Microsoft 365](https://admin.microsoft.com). Choisissez **État du service** dans le volet gauche. Vous pouvez également utiliser [l’application mobile d’administration Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) pour voir l’intégrité du service.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Types de notifications que Microsoft fournit à propos du service Intune
 

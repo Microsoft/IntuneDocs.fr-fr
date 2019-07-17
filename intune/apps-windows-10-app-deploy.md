@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8168cdaec4d6616b12fa4da225c84fa2d239994d
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883839"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -47,22 +47,22 @@ Les applications Microsoft Store pour Entreprises sont des applications modernes
 En fonction du type d’application, l’application peut être installée sur un appareil Windows 10 de deux manières :
 
 - **Contexte utilisateur** : Quand une application est déployée dans le contexte utilisateur, l’application gérée est installée pour cet utilisateur sur l’appareil quand il se connecte à l’appareil. Notez que l’installation de l’application ne réussit qu’une fois l’utilisateur connecté à l’appareil. 
-    - Les applications métier modernes et les applications Microsoft Store pour Entreprises (en ligne et hors connexion) peuvent être déployées dans le contexte utilisateur et prennent en charge les intentions Obligatoire et Disponible.
-    - Les applications Win32 générées en **Mode utilisateur** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge les intentions **Obligatoire** et **Disponible**. 
+  - Les applications métier modernes et les applications Microsoft Store pour Entreprises (en ligne et hors connexion) peuvent être déployées dans le contexte utilisateur et prennent en charge les intentions Obligatoire et Disponible.
+  - Les applications Win32 générées en **Mode utilisateur** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge les intentions **Obligatoire** et **Disponible**. 
 - **Contexte d’appareil** : Quand une application est déployée dans le contexte d’appareil, l’application gérée est installée directement sur l’appareil par Intune.
-    - Seules les applications métier modernes et les applications Microsoft Store pour Entreprises sous licence hors connexion peuvent être déployées dans le contexte d’appareil, et elles prennent uniquement en charge l’intention Obligatoire.
-    - Les applications Win32 générées en **Mode machine** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge uniquement l’intention **Obligatoire**.
+  - Seules les applications métier modernes et les applications Microsoft Store pour Entreprises sous licence hors connexion peuvent être déployées dans le contexte d’appareil, et elles prennent uniquement en charge l’intention Obligatoire.
+  - Les applications Win32 générées en **Mode machine** ou en **Mode double** peuvent être déployées dans le contexte de l’utilisateur et prennent en charge uniquement l’intention **Obligatoire**.
 
 > [!NOTE]
 > Pour les applications Win32 générées en **Mode double**, vous (l’administrateur) devez choisir si l’application fonctionnera comme une application en **Mode utilisateur** ou en **Mode machine** pour toutes les attributions associées à cette instance. Le contexte de déploiement ne peut pas être changé par attribution.  
 
 Quand une application est déployée dans le contexte d’appareil, l’installation réussit uniquement quand elle cible un appareil qui prend en charge le contexte d’appareil. En outre, le déploiement dans le contexte d’appareil prend en charge les conditions suivantes :
 - Si une application est déployée dans le contexte d’appareil et qu’elle cible un utilisateur, l’installation échoue avec l’état suivant et l’erreur suivante s’affiche dans la console d’administration :
-    - État : Échec.
-    - Erreur : Un utilisateur ne peut pas être ciblé par une installation de contexte d’appareil.
+  - État : Échec.
+  - Erreur : Un utilisateur ne peut pas être ciblé par une installation de contexte d’appareil.
 - Si une application est déployée dans le contexte d’appareil mais qu’elle cible un appareil ne prenant pas en charge le contexte d’appareil, l’installation échoue avec l’état suivant et l’erreur suivante s’affiche dans la console d’administration :
-    - État : Échec.
-    - Erreur : Cette plateforme ne prend pas en charge les installations dans le contexte d’appareil. 
+  - État : Échec.
+  - Erreur : Cette plateforme ne prend pas en charge les installations dans le contexte d’appareil. 
 
 > [!Note]
 > Une fois qu’une attribution d’application est enregistrée avec un déploiement spécifique, le contexte ne peut pas être modifié pour cette attribution, sauf pour les applications modernes. Dans le cas des applications modernes, le contexte peut être changé de contexte utilisateur en contexte d’appareil. 

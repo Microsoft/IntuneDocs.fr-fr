@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883788"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
@@ -38,14 +38,14 @@ Si vous êtes prêt à passer au portail Azure, suivez les étapes dans cette ru
 
 - Désactivez les stratégies conditionnelles dans le portail classique Intune une fois que vous avez vérifié que les nouvelles stratégies fonctionnent comme prévu dans le portail Azure.
 <br /><br />
-    - **Avant de désactiver** les stratégies d’accès conditionnel dans le portail classique Intune, planifiez le déplacement des utilisateurs vers la nouvelle stratégie. Il existe deux approches :
+  - **Avant de désactiver** les stratégies d’accès conditionnel dans le portail classique Intune, planifiez le déplacement des utilisateurs vers la nouvelle stratégie. Il existe deux approches :
 <br /><br />
-        - **Utiliser le même groupe d’inclusions pour appliquer les stratégies créées dans le portail Azure et créer un groupe d’exemptions à utiliser avec les stratégies appliquées par le portail classique Intune**.
-            - Déplacez progressivement certains utilisateurs dans le groupe d’exemptions indiqué dans le portail classique. Cela empêche l’application des stratégies ciblées par le portail classique Intune. Les stratégies créées et ciblées vers le même groupe d’utilisateurs dans le portail Azure sont appliquées en plus de celles appliquées dans le portail classique Intune. 
+    - **Utiliser le même groupe d’inclusions pour appliquer les stratégies créées dans le portail Azure et créer un groupe d’exemptions à utiliser avec les stratégies appliquées par le portail classique Intune**.
+      - Déplacez progressivement certains utilisateurs dans le groupe d’exemptions indiqué dans le portail classique. Cela empêche l’application des stratégies ciblées par le portail classique Intune. Les stratégies créées et ciblées vers le même groupe d’utilisateurs dans le portail Azure sont appliquées en plus de celles appliquées dans le portail classique Intune. 
 <br /><br />
-        - **Créer un groupe pour cibler les stratégies d’accès conditionnel dans le portail Azure**. Si vous choisissez cette approche, vous devez effectuer les opérations suivantes :
-            - Supprimez progressivement des utilisateurs des groupes de sécurité qui sont la cible des stratégies d’accès conditionnel dans le portail classique Intune.
-            - Une fois que vous avez confirmé que la nouvelle stratégie fonctionne pour ces utilisateurs, vous pouvez désactiver la stratégie dans le portail classique Intune. 
+    - **Créer un groupe pour cibler les stratégies d’accès conditionnel dans le portail Azure**. Si vous choisissez cette approche, vous devez effectuer les opérations suivantes :
+      - Supprimez progressivement des utilisateurs des groupes de sécurité qui sont la cible des stratégies d’accès conditionnel dans le portail classique Intune.
+      - Une fois que vous avez confirmé que la nouvelle stratégie fonctionne pour ces utilisateurs, vous pouvez désactiver la stratégie dans le portail classique Intune. 
 <br /><br />
 - Si vous avez des paramètres de stratégie d’accès conditionnel configurés pour utiliser EAS (Exchange Active Sync) dans le portail classique Intune, consultez les [instructions de cette rubrique](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) pour **réaffecter les paramètres de stratégie d’accès conditionnel EAS dans le portail Azure**.
 
@@ -64,10 +64,10 @@ Si vous êtes prêt à passer au portail Azure, suivez les étapes dans cette ru
 Le panneau **Intune App Protection** dans le portail Azure permet aux administrateurs de définir des règles conditionnelles basées sur l’application afin que seules les applications qui prennent en charge les stratégies de protection des applications Intune soient autorisées à accéder aux ressources d’entreprise. Vous pouvez choisir de chevaucher ces stratégies d’accès conditionnel basé sur l’application avec des stratégies d’accès conditionnel basé sur l’appareil. Vous pouvez combiner les stratégies conditionnelles basées sur l’application et l’appareil (AND logique) ou fournir une option (OR logique). Si vos exigences de stratégie d’accès conditionnel sont :
 
 - Exiger un appareil conforme **ET** utiliser l’application approuvée.
-    - Vous devez définir votre stratégie d’accès conditionnel à l’aide du [panneau d’accès conditionnel Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) et du [panneau Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Vous devez définir votre stratégie d’accès conditionnel à l’aide du [panneau d’accès conditionnel Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) et du [panneau Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 <br /><br />
 - Exiger un appareil conforme **OU** utiliser l’application approuvée.
-    - Vous devez définir votre stratégie d’accès conditionnel à l’aide du [portail classique Intune](https://manage.microsoft.com) et du [panneau Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Vous devez définir votre stratégie d’accès conditionnel à l’aide du [portail classique Intune](https://manage.microsoft.com) et du [panneau Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 
 > [!TIP] 
 > Cette rubrique fournit des captures d’écran comparant l’expérience de l’utilisateur dans le portail classique Intune et le portail Azure.

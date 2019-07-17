@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3b6aeb7efc60d32891f4b1c69b387a61a2bc25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882225"
 ---
 # <a name="intune-tenant-status-page"></a>Page État du locataire Intune
 La page État du locataire est un hub centralisé où vous pouvez voir les détails actuels et importants sur votre locataire, notamment la disponibilité et l’utilisation des licences, l’état du connecteur ainsi que des communications importantes sur le service Intune.  
@@ -48,14 +48,14 @@ Quand il existe plusieurs connecteurs d’un type donné, l’état est un résu
 
 **État du connecteur :**
 - **Non sain :**
-    - Le certificat ou les informations d’identification ont expiré
-    - La dernière synchronisation remonte à au moins trois jours
+  - Le certificat ou les informations d’identification ont expiré
+  - La dernière synchronisation remonte à au moins trois jours
 - **Avertissement :**
-    - Le certificat ou les informations d’identification expirent dans les 7 jours
-    - La dernière synchronisation remonte à plus d’une journée
+  - Le certificat ou les informations d’identification expirent dans les 7 jours
+  - La dernière synchronisation remonte à plus d’une journée
 - **Sain :**
-    - Le certificat ou les informations d’identification ne vont pas expirer dans les sept prochains jours
-    - La dernière synchronisation remonte à moins d’une journée  
+  - Le certificat ou les informations d’identification ne vont pas expirer dans les sept prochains jours
+  - La dernière synchronisation remonte à moins d’une journée  
 
 Quand vous sélectionnez un connecteur dans la liste, le portail affiche la page qui se rapporte à la création ou la configuration de ce connecteur.  Par exemple, lorsque vous sélectionnez le connecteur **Date d’expiration de VPP**, la page **Jetons du programme d’achat en volume iOS**, dans laquelle vous pouvez afficher plus de détails sur ce connecteur, s’ouvre. Vous pouvez ensuite créer une configuration ou modifier une configuration existante et en résoudre les problèmes.  
 

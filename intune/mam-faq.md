@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54511e29bd44b862a5ad06bdfda2067ed7248677
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 2d4cf000d395bb278b3207fc7a4327d3307abbe4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883005"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Forum Aux Questions sur la Gestion des applications mobiles (GAM) et la protection des applications
 
@@ -123,9 +123,9 @@ Le PIN (numéro d’identification personnel) est un code secret utilisé pour v
 
 - **À quelle fréquence le code PIN Intune est-il demandé à l’utilisateur ?**<br></br> L’administrateur informatique peut définir le paramètre de stratégie de protection des applications Intune « Revérifier les exigences d’accès après (minutes) » dans la console d’administration Intune. Ce paramètre spécifie le délai avant que les conditions d’accès ne soient vérifiées sur l’appareil et que l’écran du code PIN de l’application ne réapparaisse. Voici cependant des informations importantes sur le code PIN qui affectent la fréquence à laquelle il est demandé à l’utilisateur : 
 
-    - **Le code PIN est partagé entre les applications du même éditeur pour améliorer la facilité d’utilisation :** Sur iOS, un code PIN d’application est partagé entre toutes les applications **du même éditeur d’application**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
-    - **Le comportement « Revérifier les exigences d’accès après (minutes) », après un redémarrage de l’appareil :** Un « minuteur de code PIN » suit le nombre de minutes d’inactivité déterminant quand le code PIN d’application Intune suivant doit être affiché. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
-    - **La nature cyclique du minuteur associé au code PIN :** une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
+  - **Le code PIN est partagé entre les applications du même éditeur pour améliorer la facilité d’utilisation :** Sur iOS, un code PIN d’application est partagé entre toutes les applications **du même éditeur d’application**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
+  - **Le comportement « Revérifier les exigences d’accès après (minutes) », après un redémarrage de l’appareil :** Un « minuteur de code PIN » suit le nombre de minutes d’inactivité déterminant quand le code PIN d’application Intune suivant doit être affiché. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
+  - **La nature cyclique du minuteur associé au code PIN :** une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
 
 Pour les appareils iOS, même si le code PIN est partagé entre les applications de différents éditeurs, l’invite s’affiche à nouveau quand la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est à nouveau atteinte pour l’application qui n’a pas le focus d’entrée principal. Par exemple, un utilisateur a application _A_ de l’éditeur _X_ et l’application _B_ de l’éditeur _Y_, et ces deux applications partagent le même code PIN. L’utilisateur travaille avec l’application _A_ (au premier plan) et l’application _B_ est réduite. Une fois que la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est atteinte et que l’utilisateur passe à l’application _B_, celui-ci doit entrer le code PIN.
 

@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: a7907889a1419ad6ff37b3975fa65adb02389ab6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884513"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils non gérés
 
@@ -32,10 +32,10 @@ Apprenez en plus sur l’utilisation des stratégies de protection des applicati
 > * Créer des stratégies d’accès conditionnel Azure Active Directory (Azure AD) qui donnent une autorisation exclusive à l’application Outlook pour accéder à la messagerie d’entreprise dans Exchange Online. Vous allez également exiger une authentification multifacteur (MFA) pour des clients d’authentification moderne, comme Outlook pour iOS et Android.
 
 ## <a name="prerequisites"></a>Prérequis
-  - Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
-    - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Abonnement Intune ([essai gratuit](free-trial-sign-up.md))
-    - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce tutoriel :
+  - Azure Active Directory Premium ([essai gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Abonnement Intune ([essai gratuit](free-trial-sign-up.md))
+  - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 

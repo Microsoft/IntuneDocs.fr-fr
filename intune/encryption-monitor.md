@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: b4c7e4b2d35eb2662ca74660e2133dcd2c89f0a1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883367"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Superviser le chiffrement des appareils et BitLocker  
 Intune offre un emplacement centralisé pour identifier l’état de chiffrement de vos appareils Windows 10 et vous permet d’accéder à des informations importantes pour BitLocker à partir de vos appareils, comme dans Azure Active Directory (Azure AD).  
@@ -76,22 +76,22 @@ Ce volet fournit les détails suivants :
 
   Voici quelques exemples d’informations d’état qu’Intune peut indiquer :  
 
-   - La stratégie BitLocker nécessite le consentement de l’utilisateur pour lancer l’Assistant Chiffrement de lecteur BitLocker et démarrer le chiffrement du volume de système d’exploitation, mais l’utilisateur n’a pas donné son consentement.  
-   - La méthode de chiffrement du volume de système d’exploitation ne correspond pas à la stratégie BitLocker.  
-   - La stratégie BitLocker nécessite un protecteur par TPM pour protéger le volume de système d’exploitation, mais aucun TPM n’est utilisé.  
-   - La stratégie BitLocker nécessite un protecteur uniquement par TPM pour le volume de système d’exploitation, mais aucune protection par TPM n’est utilisée.  
-   - La stratégie BitLocker nécessite une protection par TPM+code PIN pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
-   - La stratégie BitLocker nécessite une protection par TPM+clé de démarrage pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
-   - La stratégie BitLocker nécessite une protection par TPM+code PIN+clé de démarrage pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
-   - Le volume de système d’exploitation n’est pas protégé.  
-   - La sauvegarde de la clé de récupération a échoué.  
-   - Un lecteur fixe n’est pas protégé.  
-   - La méthode de chiffrement du lecteur fixe ne correspond pas à la stratégie BitLocker.  
-   - Pour chiffrer les lecteurs, la stratégie BitLocker exige que l’utilisateur se connecte en tant qu’administrateur ou, si l’appareil est joint à Azure AD, que la stratégie AllowStandardUserEncryption ait la valeur 1.  
-   - L’environnement de récupération Windows (WinRE) n’est pas configuré.  
-   - Aucun module de plateforme sécurisée (TPM) n’est disponible pour BitLocker, soit parce qu’il n’est pas présent car il est devenu indisponible dans le Registre, soit parce que le système d’exploitation se trouve sur un lecteur amovible.  
-   - Le module de plateforme sécurisée (TPM) n’est pas prêt pour BitLocker.  
-   - Le réseau n’est pas disponible, ce qui est nécessaire pour la sauvegarde des clés de récupération.  
+  - La stratégie BitLocker nécessite le consentement de l’utilisateur pour lancer l’Assistant Chiffrement de lecteur BitLocker et démarrer le chiffrement du volume de système d’exploitation, mais l’utilisateur n’a pas donné son consentement.  
+  - La méthode de chiffrement du volume de système d’exploitation ne correspond pas à la stratégie BitLocker.  
+  - La stratégie BitLocker nécessite un protecteur par TPM pour protéger le volume de système d’exploitation, mais aucun TPM n’est utilisé.  
+  - La stratégie BitLocker nécessite un protecteur uniquement par TPM pour le volume de système d’exploitation, mais aucune protection par TPM n’est utilisée.  
+  - La stratégie BitLocker nécessite une protection par TPM+code PIN pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
+  - La stratégie BitLocker nécessite une protection par TPM+clé de démarrage pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
+  - La stratégie BitLocker nécessite une protection par TPM+code PIN+clé de démarrage pour le volume de système d’exploitation, mais aucun protecteur de ce type n’est utilisé.  
+  - Le volume de système d’exploitation n’est pas protégé.  
+  - La sauvegarde de la clé de récupération a échoué.  
+  - Un lecteur fixe n’est pas protégé.  
+  - La méthode de chiffrement du lecteur fixe ne correspond pas à la stratégie BitLocker.  
+  - Pour chiffrer les lecteurs, la stratégie BitLocker exige que l’utilisateur se connecte en tant qu’administrateur ou, si l’appareil est joint à Azure AD, que la stratégie AllowStandardUserEncryption ait la valeur 1.  
+  - L’environnement de récupération Windows (WinRE) n’est pas configuré.  
+  - Aucun module de plateforme sécurisée (TPM) n’est disponible pour BitLocker, soit parce qu’il n’est pas présent car il est devenu indisponible dans le Registre, soit parce que le système d’exploitation se trouve sur un lecteur amovible.  
+  - Le module de plateforme sécurisée (TPM) n’est pas prêt pour BitLocker.  
+  - Le réseau n’est pas disponible, ce qui est nécessaire pour la sauvegarde des clés de récupération.  
 
 ## <a name="bitlocker-recovery-keys"></a>Clés de récupération BitLocker
 Intune fournit l’accès au panneau Azure AD pour BitLocker pour que vous puissiez voir les ID de clé BitLocker et les clés de récupération de vos appareils Windows 10, à partir du portail Intune.  Pour être accessible, l’appareil doit avoir ses clés déposées dans Azure AD. 

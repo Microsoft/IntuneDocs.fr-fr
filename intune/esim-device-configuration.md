@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a0372180cf516f5a0111cd8fdb7cbd9535f075
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883269"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
 
@@ -160,12 +160,12 @@ Vous pouvez surveiller et afficher une liste détaillée des appareils dans Éta
 1. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM** > Sélectionner un abonnement existant.
 2. Sélectionnez **État de l’appareil**. Intune affiche des détails supplémentaires sur l’appareil :
 
-  - **Nom de l’appareil** : nom de l’appareil ciblé
-  - **Utilisateur** : utilisateur de l’appareil inscrit
-  - **ICCID** : code unique fourni par l’opérateur de téléphonie dans le code d’activation installé sur l’appareil
-  - **État d’activation** : état de mise à disposition et d’installation Intune du code d’activation sur l’appareil
-  - **État du réseau mobile** : état fourni par l’opérateur de téléphonie. Contactez l’opérateur mobile pour résoudre les problèmes.
-  - **Dernier archivage** : date de dernière communication de l’appareil avec Intune
+    - **Nom de l’appareil** : nom de l’appareil ciblé
+    - **Utilisateur** : utilisateur de l’appareil inscrit
+    - **ICCID** : code unique fourni par l’opérateur de téléphonie dans le code d’activation installé sur l’appareil
+    - **État d’activation** : état de mise à disposition et d’installation Intune du code d’activation sur l’appareil
+    - **État du réseau mobile** : état fourni par l’opérateur de téléphonie. Contactez l’opérateur mobile pour résoudre les problèmes.
+    - **Dernier archivage** : date de dernière communication de l’appareil avec Intune
 
 #### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Surveiller les détails du profil eSIM sur l’appareil
 
