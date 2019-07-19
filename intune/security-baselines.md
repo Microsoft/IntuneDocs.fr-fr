@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 16586ece687b5d50ea89b28bfd524f50e65ceb46
+ms.sourcegitcommit: 5ce8726278004bbf072149a9c924091bb0654b7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713275"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67851480"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -70,9 +70,9 @@ Les instances de bases de référence de sécurité suivantes sont disponibles p
   - [Base de référence de la sécurité MDM pour le printemps 2019 (19H1)](security-baseline-settings-mdm.md)
   - [Préversion : Base de référence de la sécurité MDM pour octobre 2018](security-baseline-settings-mdm-archive.md)
 
-- **Base de référence Windows Defender ATP**  
+- **Base de référence Microsoft Defender ATP**  
   *(Pour utiliser cette base de référence, votre environnement doit répondre à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Préversion : base de référence Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+  - [Préversion : Base de référence Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
 Vous pouvez continuer à utiliser et à modifier des profils que vous avez créés précédemment en fonction d’une préversion de modèle, même lorsque cette préversion n’est plus disponible pour la création de nouveaux profils. 
 
@@ -200,6 +200,6 @@ La même équipe de sécurité Microsoft a choisi et organisé les paramètres p
 ## <a name="next-steps"></a>Étapes suivantes
 - Affichez les paramètres dans les dernières versions des bases de référence disponibles :  
   - [Base de référence de la sécurité MDM](security-baseline-settings-mdm.md)  
-  - [Base de référence Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+  - [Base de référence Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
 - Vérifiez l’état et surveillez [la base de référence et le profil](security-baselines-monitor.md).

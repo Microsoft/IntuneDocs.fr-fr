@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1b1197671b54cb5374bd79b6acbeb8137c0135c
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: 54d9fa1016ff39fcf1e7da9c21391ce70f7acaac
+ms.sourcegitcommit: e451295ca3ee3efc31bf9ee360e599b28ef643ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819897"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863082"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Configurer l’inscription Intune des appareils Android Entreprise entièrement gérés (préversion)
 
 Les appareils Android Entreprise entièrement gérés sont des appareils de l’entreprise associés à un seul utilisateur et utilisées exclusivement à des fins professionnelles. Les administrateurs peuvent gérer entièrement l’appareil et appliquer des contrôles de stratégie non disponibles dans les profils professionnels, pour notamment :
-- autoriser l’installation d’applications provenant uniquement du Google Play géré ;
-- bloquer la désinstallation d’applications gérées ;
-- empêcher les utilisateurs de réinitialiser leur appareil aux paramètres d’usine, etc.
+- Autoriser l’installation d’applications provenant uniquement du Google Play géré.
+- Bloquer la désinstallation d’applications gérées.
+- Empêcher les utilisateurs de réinitialiser leur appareil aux paramètres d’usine, etc.
 
 Intune vous permet de déployer des applications et des paramètres sur des appareils Android Entreprise, y compris des appareils Android Entreprise entièrement gérés. Pour plus d’informations sur Android Entreprise, consultez [Exigences Android Entreprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
@@ -58,8 +58,8 @@ Pour configurer la gestion d’appareils Android Entreprise entièrement gérés
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Inscription d’appareil** > **Inscription Android** > **Appareils utilisateur entièrement gérés appartenant à l’entreprise (préversion)** .
 2. Sous **Autoriser les utilisateurs à inscrire des appareils d’utilisateur appartenant à l’entreprise**, choisissez **Oui**.
 
-[!NOTE]
-Si vous avez une stratégie d’accès conditionnel Azure AD définie qui utilise le contrôle *Exiger que l’appareil soit marqué comme conforme* et qui s’applique à **toutes les applications cloud**, à **Android** et aux **navigateurs**, vous devez exclure l’application cloud **Microsoft Intune** de cette stratégie. En effet, les processus de configuration Android utilisent un onglet Chrome pour authentifier vos utilisateurs pendant l’inscription. Pour plus d’informations, consultez la [documentation sur l’accès conditionnel Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> [!NOTE]
+> Si vous avez une stratégie d’accès conditionnel Azure AD définie qui utilise le contrôle *Exiger que l’appareil soit marqué comme conforme* et qui s’applique à **toutes les applications cloud**, à **Android** et aux **navigateurs**, vous devez exclure l’application cloud **Microsoft Intune** de cette stratégie. En effet, les processus de configuration Android utilisent un onglet Chrome pour authentifier vos utilisateurs pendant l’inscription. Pour plus d’informations, consultez la [documentation sur l’accès conditionnel Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 Si vous choisissez **Oui**, vous recevez un jeton d’inscription (chaîne aléatoire) et un code QR pour votre locataire Intune. Ce jeton d’inscription unique est valide pour tous vos utilisateurs et n’expire pas. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour inscrire l’appareil kiosque.
 

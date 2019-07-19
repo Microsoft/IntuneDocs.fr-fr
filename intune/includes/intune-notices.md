@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fab8f2be48a30f6ad058b3eeb6874a44ff04e6ac
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744311"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67812539"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune. 
 
@@ -72,3 +72,19 @@ Vous devez également mettre à jour votre documentation ou vos directives de d�
 
 #### <a name="additional-information"></a>Informations supplémentaires
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+
+### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Modification planifiée : Nouveaux paramètres des mises à jour Windows dans Intune <!-- 4464404 -->
+À partir de la version d’août du service Intune ou 1908, nous ajoutons de nouveaux « Paramètres d’échéance », que vous pouvez configurer à la place des paramètres « Autoriser l’utilisateur à redémarrer (redémarrage engagé) ». Nous prévoyons de désactiver les paramètres de redémarrage activés dans l’interface utilisateur de la version 1909 ou de la mise à jour de septembre, puis de les supprimer complètement de la console vers la fin octobre. 
+
+#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
+Si vous gérez des appareils Windows 10 dans votre environnement : 
+- Avec la mise à jour Intune d’août ou la version 1908, vous verrez de nouveaux paramètres d’échéance dans la console en plus des anciens paramètres de redémarrage.
+- Lorsque ces anciens et nouveaux paramètres sont configurés, les valeurs des paramètres d’échéance remplacent les valeurs du paramètre de redémarrage engagé.
+- Les paramètres d’échéance remplacent l’option « Autoriser l’utilisateur à redémarrer (redémarrage engagé) » dans la console de la mise à jour 1910.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que puis-je faire pour me préparer à cette modification ?
+Commencez à utiliser les paramètres d’échéance dans la version 1908 en les configurant avec les valeurs souhaitées. Une fois cela en place, vous pouvez définir le paramètre de redémarrage engagé sur « Non configuré » pour préparer sa suppression de la console en octobre.
+
+Mettez à jour votre documentation et tous les scripts d’automatisation si nécessaire. 
+
+Nous vous tiendrons au courant et publierons un rappel dans le Centre de messages avant de supprimer les paramètres de redémarrage engagé.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6dfef745157ae96736f8405fd5cafc33d4335f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
+ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045291"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270293"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Utiliser Intune pour corriger les vulnérabilités identifiées par Microsoft Defender ATP  
 
@@ -32,7 +32,7 @@ Lorsque vous intégrez Intune à Microsoft Defender Advanced Threat Protection (
 
 Une fois que vous vous connectez Intune à Microsoft Defender Advanced Threat Protection, ATP reçoit contre les détails des menaces et des vulnérabilités des appareils gérés.  
 
-Dans la console Windows Defender Security Center, les administrateurs de sécurité ATP administrent les données de révision sur les vulnérabilités du point de terminaison. Ensuite, par un simple clic, les administrateurs créent des tâches de sécurité qui signalent les appareils vulnérables à corriger. Les tâches de sécurité sont immédiatement transmises à la console Intune, où les administrateurs Intune peuvent les afficher. La tâche de sécurité identifie le type de vulnérabilité, la priorité, l’état et les étapes à suivre pour corriger la vulnérabilité. L’administrateur Intune choisit d’accepter ou de rejeter la tâche.  
+Dans la console Microsoft Defender Security Center, les administrateurs de sécurité ATP administrent les données de révision sur les vulnérabilités du point de terminaison. Ensuite, par un simple clic, les administrateurs créent des tâches de sécurité qui signalent les appareils vulnérables à corriger. Les tâches de sécurité sont immédiatement transmises à la console Intune, où les administrateurs Intune peuvent les afficher. La tâche de sécurité identifie le type de vulnérabilité, la priorité, l’état et les étapes à suivre pour corriger la vulnérabilité. L’administrateur Intune choisit d’accepter ou de rejeter la tâche.  
 
 Lorsqu’une tâche est acceptée, l’administrateur Intune agit alors pour corriger la vulnérabilité dans tout Intune en suivant les instructions fournies dans le cadre de la tâche de sécurité.  
 
@@ -67,7 +67,7 @@ Un exemple de flux de travail :
 **Configurations Intune pour ATP** :  
 - Configurer une connexion de service à service avec Microsoft Defender ATP.  
 - Déployer une stratégie de conformité d’appareil avec un type de profil de **Microsoft Defender ATP (Windows 10 Desktop)** sur des appareils dont les risques sont évalués par ATP.
-  Pour plus d’informations sur la configuration d’Intune pour utiliser ATP, consultez [Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune).  
+  Pour plus d’informations sur la configuration d’Intune pour utiliser ATP, consultez [Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Travailler avec des tâches de sécurité  
 

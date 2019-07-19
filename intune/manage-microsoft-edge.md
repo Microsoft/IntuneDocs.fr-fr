@@ -1,5 +1,5 @@
 ---
-title: Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
+title: Gérer Microsoft Edge pour iOS et Android avec Intune
 titleSuffix: ''
 description: Utilisez des stratégies de protection des applications Intune avec Microsoft Edge pour veiller à ce que les sites web d’entreprise soient toujours accessibles avec des dispositifs de protection en place.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 147547577615c6e74a9c5b3dd8b200ba387bad79
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
+ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648463"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68287218"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -157,7 +157,7 @@ Voici quelques exemples de scénarios possibles avec la fonctionnalité Proxy d�
 ### <a name="before-you-start"></a>Avant de commencer
 
 - Configurez vos applications internes à l’aide du Proxy d’application Azure AD.
-    - Pour configurer le proxy d’application et publier des applications, consultez la [documentation d’installation](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+  - Pour configurer le proxy d’application et publier des applications, consultez la [documentation d’installation](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 - Une [stratégie de protection des applications Intune](app-protection-policy.md) doit être attribuée à l’application Microsoft Edge.
 
 > [!NOTE]
@@ -228,34 +228,34 @@ Vous pouvez utiliser divers formats d’URL pour créer vos listes de sites auto
 - Vous pouvez utiliser le caractère générique (\*) en fonction des règles de la liste des modèles autorisés, ci-dessous.
 - Un caractère générique peut uniquement correspondre à un composant entier d’un nom d’hôte (séparés par des points) ou à des portions entières d’un chemin (séparées par des barres obliques). Par exemple, `http://*contoso.com` **n’est pas** pris en charge.
 - Vous pouvez spécifier des numéros de port dans l'adresse. Si vous ne spécifiez pas un numéro de port, les valeurs suivantes sont utilisées :
-    - Port 80 pour http
-    - Port 443 pour https
+  - Port 80 pour http
+  - Port 443 pour https
 - L’utilisation de caractères génériques n’est **pas** prise en charge pour les numéros de port. Par exemple, `http://www.contoso.com:*` et `http://www.contoso.com:*/` ne sont pas pris en charge. 
 
     |    Adresse URL    |    Détails    |    Correspond à    |    Ne correspond pas à    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Correspond à une page unique    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Correspond à une page unique    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/&#42;`   |    Correspond à toutes les URL commençant par `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Correspond à tous les sous-domaines sous `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |
-    |    `http://www.contoso.com/images`    |    Correspond à un dossier unique    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
+    |    `http://www.contoso.com/*;`   |    Correspond à toutes les URL commençant par `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://*.contoso.com/*`    |    Correspond à tous les sous-domaines sous `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Correspond à tous les sous-domaines se terminant par `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    `http://www.contoso.com/images`    |    Correspond à un dossier unique    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Correspond à une page unique, par le biais de l’utilisation d’un numéro de port    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Correspond à une page unique sécurisée    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Correspond à un dossier unique et à tous ses sous-dossiers    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Voici quelques exemples d’entrées que vous ne pouvez pas spécifier :
-    - `*.com`
-    - `*.contoso/*`
-    - `www.contoso.com/*images`
-    - `www.contoso.com/*images*pigs`
-    - `www.contoso.com/page*`
-    - Adresses IP
-    - `https://*`
-    - `http://*`
-    - `https://*contoso.com`
-    - `http://www.contoso.com:*`
-    - `http://www.contoso.com: /*`
-  
+  - `*.com`
+  - `*.contoso/*`
+  - `www.contoso.com/*images`
+  - `www.contoso.com/*images*pigs`
+  - `www.contoso.com/page*`
+  - Adresses IP
+  - `https://*`
+  - `http://*`
+  - `https://*contoso.com`
+  - `http://www.contoso.com:*`
+  - `http://www.contoso.com: /*`
+
 ## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Définir le comportement quand des utilisateurs essaient d’accéder à un site bloqué
 
 Avec le modèle à double identité intégré à Microsoft Edge, vous pouvez rendre l’expérience plus flexible pour vos utilisateurs finaux, ce qui n’était pas possible avec Intune Managed Browser. Lorsque les utilisateurs atteignent un site bloqué dans Microsoft Edge, vous pouvez les inviter à ouvrir le lien dans leur contexte personnel plutôt que dans leur contexte professionnel. Cela leur permet de rester protégés, tout en conservant les ressources d’entreprise sécurisées. Par exemple, si un lien vers un article d’actualité est envoyé à un utilisateur via Outlook, ils peuvent ouvrir le lien dans leur contexte personnel ou dans un onglet InPrivate. Leur contexte professionnel n’autorise pas de sites web d’actualité. Par défaut, ces transitions sont autorisées.
