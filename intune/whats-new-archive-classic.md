@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29aa32b02f5ab97707ce76eb10a84a8913a9f702
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d09a996e3e1a47cae33e8a4189b4406a940acfe3
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572307"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353275"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nouveautés du portail classique Intune - mois précédents
 
@@ -375,5 +375,5 @@ __Le certificat de signature Symantec n’a plus besoin du portail d’entrepris
 __Prise en charge du portail d’entreprise Windows Phone 8__ La prise en charge du portail d’entreprise Windows Phone 8 est désormais dépréciée. La prise en charge des plateformes Windows Phone 8 et WinRT a été dépréciée en octobre 2016. La prise en charge du portail d’entreprise Windows 8 a également été dépréciée en octobre 2016.
 
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 Voir [Nouveautés de Microsoft Intune](whats-new.md) pour en savoir plus sur les derniers développements.

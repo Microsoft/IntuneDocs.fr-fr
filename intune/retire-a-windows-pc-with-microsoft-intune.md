@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b6326d30650aa62777ac9ce9c70394904b678f3
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: fefb8feee7f308fca3d3455487aae5f2802d9c5d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549157"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353406"
 ---
 # <a name="retire-a-windows-pc"></a>Mettre hors service un PC Windows
 
@@ -59,6 +59,6 @@ Lorsque vous mettez hors service un ordinateur :
 
     Si la désinstallation du client Endpoint Protection échoue, lisez [Résoudre les problèmes de protection de point de terminaison](/intune/troubleshoot-endpoint-protection-in-microsoft-intune) pour obtenir une aide supplémentaire.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

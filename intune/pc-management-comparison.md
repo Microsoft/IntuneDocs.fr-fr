@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: fec72636a5d76ce4eb1fa0c28978eeb70d1e61b5
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044529"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353556"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles
 
@@ -49,7 +49,7 @@ Les organisations peuvent utiliser Microsoft Intune pour gérer les PC Windows e
 |**Attestation d’intégrité**|Non disponible|Disponible|
 
 
-### <a name="advantages-of-mdm-windows-pc-management"></a>Avantages de la gestion des PC Windows avec gestion des appareils mobiles (MDM)
+## <a name="advantages-of-mdm-windows-pc-management"></a>Avantages de la gestion des PC Windows avec gestion des appareils mobiles (MDM)
 La gestion des PC Windows avec la gestion des appareils mobiles moderne présente les avantages suivants :
 - **Scalabilité** : la gestion MDM évolue avec la gestion cloud Intune. Le logiciel client Intune est limité à 7 000 PC.
 - **Simplicité** : utilise les fonctionnalités de gestion modernes incluses dans le système d’exploitation sans se baser sur un client logiciel téléchargé

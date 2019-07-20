@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0eca9dfddbf9ea2c68cf58b1da64d9b046df7e77
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402897"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353643"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Gérer la liaison utilisateur-appareil pour les PC Windows
 
@@ -32,7 +32,7 @@ Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows
 
 Avant de pouvoir déployer des logiciels vers un utilisateur, vous devez lier l'utilisateur à un ordinateur. Vous pouvez associer un utilisateur à plusieurs ordinateurs, mais chaque ordinateur ne peut être lié qu'à un seul utilisateur. Les utilisateurs sont automatiquement liés à tous les ordinateurs qu’ils inscrivent dans Intune à l’aide du portail de l’entreprise.
 
-Pour plus d’informations sur l’utilisateur principal d’un appareil, consultez [recherche d’utilisateur principal](find-primary-user.md).
+Pour plus d’informations sur l’utilisateur principal d’un appareil, consultez [Rechercher un utilisateur principal](find-primary-user.md).
 
 Pour lier un utilisateur à un ordinateur :
 
@@ -53,6 +53,6 @@ Pour lier un utilisateur à un ordinateur :
 > [!TIP]
 > Si vous souhaitez limiter la capacité des utilisateurs finaux à se lier à des ordinateurs, activez l’option **Limiter la capacité des utilisateurs à se lier à des ordinateurs** dans la stratégie **Paramètres de l’Agent Microsoft Intune**.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

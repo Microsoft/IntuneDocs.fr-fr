@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735735"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354472"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Résoudre les problèmes liés au connecteur Exchange local Intune
 
@@ -51,5 +51,5 @@ Vérifiez que la [configuration du connecteur Exchange local Intune](exchange-co
 - Pour obtenir une liste des adresses SMTP pour une boîte aux lettres, utilisez Get-Mailbox -Identity user | select emailaddresses | fl
 - Pour obtenir des informations détaillées sur l’état de l’accès d’un appareil, utilisez Get-CASMailbox <upn> | fl
 
-### <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Si ces informations ne vous aident pas, vous pouvez également [obtenir du support technique pour Microsoft Intune](get-support.md).

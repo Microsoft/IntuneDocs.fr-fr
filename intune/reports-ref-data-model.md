@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 21f4f55c028c6ff06730e50d9f9862e85d0a9ef1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884760"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modèle de données de l’entrepôt de données Microsoft Intune
 
@@ -32,22 +32,22 @@ L’entrepôt de données Intune échantillonne quotidiennement les données pou
 
 L’entrepôt expose les données dans les zones générales suivantes :
 
-  - Applications protégées par App Protection et utilisation
-  - Appareils inscrits, propriétés et inventaire
-  - Inventaire des applications et des logiciels
-  - Configuration des appareils et stratégies de conformité
+- Applications protégées par App Protection et utilisation
+- Appareils inscrits, propriétés et inventaire
+- Inventaire des applications et des logiciels
+- Configuration des appareils et stratégies de conformité
 
 Ces zones contiennent les entités qui sont significatives pour l’environnement Intune. Pour plus d’informations sur les jeux d’entités, consultez les rubriques suivantes :
 
-  - [Application](reports-ref-application.md)
-  - [Date](reports-ref-date.md)
-  - [Appareils](reports-ref-devices.md)
-  - [Extension de la gestion Intune](reports-ref-intunemanagementextension.md)
-  - [Stratégie](reports-ref-policy.md)
-  - [Gestion des applications mobiles (GAM)](reports-ref-mobile-app-management.md)
-  - [Utilisateur](reports-ref-user.md)
-  - [Utilisateur actuel](reports-ref-current-user.md)
-  - [Associations appareil-utilisateur](reports-ref-user-device.md)
+- [Application](reports-ref-application.md)
+- [Date](reports-ref-date.md)
+- [Appareils](reports-ref-devices.md)
+- [Extension de la gestion Intune](reports-ref-intunemanagementextension.md)
+- [Stratégie](reports-ref-policy.md)
+- [Gestion des applications mobiles (GAM)](reports-ref-mobile-app-management.md)
+- [Utilisateur](reports-ref-user.md)
+- [Utilisateur actuel](reports-ref-current-user.md)
+- [Associations appareil-utilisateur](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relations : modèle de schéma en étoile
 
@@ -63,6 +63,6 @@ L’entrepôt est en aval des données Intune. Intune prend un instantané quoti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
- - Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
- - Pour plus d’informations sur l’utilisation des entrepôts de données, consultez la page [Créer un premier entrepôt de données](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
- - Pour plus d’informations sur l’utilisation de Power BI et d’un entrepôt de données, consultez la page [Créer un rapport Power BI en important un jeu de données](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 
+- Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
+- Pour plus d’informations sur l’utilisation des entrepôts de données, consultez la page [Créer un premier entrepôt de données](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
+- Pour plus d’informations sur l’utilisation de Power BI et d’un entrepôt de données, consultez la page [Créer un rapport Power BI en important un jeu de données](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

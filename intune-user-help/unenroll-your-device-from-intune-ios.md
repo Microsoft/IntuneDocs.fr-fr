@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2eb47240516737f03c10d1280887fea275c5ed99
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883937"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Supprimer votre appareil iOS d’Intune
 
@@ -44,25 +44,25 @@ Pour supprimer votre appareil d’Intune, suivez ces étapes ou regardez cette v
     |![Capture d’écran de l’écran Appareils de l’application Portail d’entreprise, montrant les options une fois que l’utilisateur a cliqué sur le bouton Supprimer l’appareil. Montre le bouton « Supprimer » en rouge, le bouton « En savoir plus » en bleu et le bouton « Annuler ».](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
-  La désinscription de votre appareil d’Intune a les conséquences suivantes :
+    La désinscription de votre appareil d’Intune a les conséquences suivantes :
 
-  - Votre appareil n’apparaît plus dans le portail d’entreprise.
+    - Votre appareil n’apparaît plus dans le portail d’entreprise.
 
-  - Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
+    - Vous ne pouvez plus installer d’applications à partir du portail d’entreprise.
 
-  - Les paramètres que vous avez modifiés au moment d’ajouter l’appareil (par exemple, le fait de désactiver l’appareil photo ou d’imposer une certaine longueur de mot de passe) ne s’appliquent plus.
+    - Les paramètres que vous avez modifiés au moment d’ajouter l’appareil (par exemple, le fait de désactiver l’appareil photo ou d’imposer une certaine longueur de mot de passe) ne s’appliquent plus.
 
-  - Il se peut que vous n'ayez plus accès à certaines ressources de l'entreprise, telles que les partages de fichiers ou les sites Web internes.
+    - Il se peut que vous n'ayez plus accès à certaines ressources de l'entreprise, telles que les partages de fichiers ou les sites Web internes.
 
-  - Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
+    - Vous ne pouvez plus utiliser les applications et les données d'entreprise sur votre appareil.
 
-  - Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
+    - Vous ne pourrez peut-être plus vous connecter au réseau de votre entreprise via le Wi-Fi ou un réseau privé virtuel (VPN).
 
-  - Les profils de messagerie d'entreprise sont supprimés de l'appareil.
+    - Les profils de messagerie d'entreprise sont supprimés de l'appareil.
 
-  - Les appareils configurés pour la messagerie uniquement n’apparaissent plus dans l’application ou le site web Portail d’entreprise.
-  
-  - Les applications sont désinstallées. Les données des applications de l'entreprise sont supprimées.
+    - Les appareils configurés pour la messagerie uniquement n’apparaissent plus dans l’application ou le site web Portail d’entreprise.
+
+    - Les applications sont désinstallées. Les données des applications de l'entreprise sont supprimées.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Suppression des données collectées par l’application Portail d’entreprise
 

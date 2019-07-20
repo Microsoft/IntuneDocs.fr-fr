@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
-ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
+ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883433"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -56,7 +56,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 - **Transmettre des données à l'aide de NFC** : choisissez **Bloquer** afin d’empêcher l’utilisation de la technologie Near Field Communication (NFC) pour transmettre des données à partir d’applications. L’option **Non configuré** autorise l’utilisation de NFC pour partager des données entre les appareils.
 - **Fonctionnalités de débogage** : choisissez **Autoriser** pour permettre l’utilisation des fonctionnalités de débogage sur l’appareil. L’option **Non configuré** empêche l’utilisation des fonctionnalités de débogage sur l’appareil.
 - **Réglage du microphone** : choisissez **Bloquer** pour empêcher les utilisateurs d’activer le microphone et d’en régler le volume. L’option **Non configuré** permet l’utilisation du microphone et le réglage de son volume sur l’appareil.
-- **E-mails de protection contre la réinitialisation aux paramètres d'usine** : choisissez **Adresses e-mail du compte Google**. Entrez les adresses e-mail des administrateurs de l’appareil autorisés à déverrouiller l’appareil réinitialisé. Veillez à séparer les adresses e-mail par un point-virgule, par exemple `admin1@gmail.com;admin2@gmail.com`. Si aucune adresse e-mail n’est spécifiée, quiconque peut déverrouiller un appareil réinitialisé aux paramètres d’usine. Ces e-mails s’appliquent uniquement quand une réinitialisation des paramètres de non-utilisateur est exécuté, telles que l’exécution d’une réinitialisation à l’aide du menu de récupération.
+- **E-mails de protection contre la réinitialisation aux paramètres d'usine** : choisissez **Adresses e-mail du compte Google**. Entrez les adresses e-mail des administrateurs de l’appareil autorisés à déverrouiller l’appareil réinitialisé. Veillez à séparer les adresses e-mail par un point-virgule, par exemple `admin1@gmail.com;admin2@gmail.com`. Si aucune adresse e-mail n’est spécifiée, quiconque peut déverrouiller un appareil réinitialisé aux paramètres d’usine. Ces courriers électroniques s’appliquent uniquement lorsqu’une réinitialisation de la fabrique non-utilisateur est exécutée, comme l’exécution d’une réinitialisation aux paramètres d’usine via le menu récupération.
 - **Trappe de secours du réseau** : choisissez **Activer** pour autoriser les utilisateurs à activer la fonctionnalité de trappe de secours du réseau. Si aucune connexion réseau n’est établie au démarrage de l’appareil, la trappe de secours vous demande de vous connecter temporairement à un réseau et d’actualiser la stratégie de l’appareil. Une fois la stratégie appliquée, le réseau temporaire est oublié et l’appareil continue de démarrer. Cette fonctionnalité connecte les appareils à un réseau si :
   - La dernière stratégie ne contient aucun réseau approprié.
   - L’appareil démarre dans une application en mode de verrouillage de tâche.
@@ -101,7 +101,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   > 
   > L’application **Managed Home Screen** ne doit pas nécessairement figurer dans le profil de configuration, mais elle doit être ajoutée comme une application cliente. Lorsque l’application **Managed Home Screen** est ajoutée comme application cliente, toutes les autres applications que vous ajoutez au profil de configuration apparaissent sous forme d’icônes dans l’application **Managed Home Screen**. 
   >
-  > Lorsque vous utilisez le mode applications multiples plein écran avec Managed écran d’accueil, les applications numéroteur/phone peut ne pas fonctionnent correctement. 
+  > Lorsque vous utilisez le mode plein écran à plusieurs applications avec l’écran d’accueil géré, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
 
   - Choisissez **Ajouter**, puis sélectionnez vos applications dans la liste.
 
@@ -208,9 +208,9 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
     - **ID de package** : entrez l’ID de package de l’application dans le Google Play Store. Par exemple, si l’URL de l’application dans le Play Store est `https://play.google.com/store/details?id=com.contosovpn.android.prod`, l’ID de package est `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  >  - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
-  >  - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
-  >  - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
+  > - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
+  > - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
+  > - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
 
 - **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
 
@@ -315,9 +315,9 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
     - **ID de package** : entrez l’ID de package de l’application dans le Google Play Store. Par exemple, si l’URL de l’application dans le Play Store est `https://play.google.com/store/details?id=com.contosovpn.android.prod`, l’ID de package est `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  >  - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
-  >  - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
-  >  - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
+  > - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
+  > - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
+  > - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
 
 - **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
 

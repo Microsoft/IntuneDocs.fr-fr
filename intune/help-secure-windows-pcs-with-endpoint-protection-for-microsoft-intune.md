@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 61e0a7fa4fa63e17a1fa4165042d9e82a2ffacc2
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548776"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354093"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Contribuer à la sécurisation des PC Windows avec Endpoint Protection pour Microsoft Intune
 
@@ -145,8 +145,8 @@ Le paramètre **Extensions de fichier à exclure pendant l’exécution d’une 
 
 ### <a name="specify-microsoft-active-protection-service-settings"></a>Spécifier les paramètres de Microsoft Active Protection Service
 Microsoft Active Protection Service est une communauté en ligne qui vous aide à décider comment répondre aux menaces potentielles. En outre, la communauté aide à arrêter la propagation de nouvelles infections par des programmes malveillants. Vous pouvez **rejoindre Microsoft Active Protection Service** en sélectionnant **Oui** et en spécifiant votre **niveau d’adhésion** :
-  - **De base** : envoie des informations de base à Microsoft sur les logiciels malveillants détectés. Ces informations sont les suivantes : origine des logiciels détectés, actions appliquées par vous-même ou appliquées automatiquement par Endpoint Protection, indication de la réussite éventuelle de ces actions.
-  - **Options avancées** : envoie plus d’informations à Microsoft sur les programmes malveillants, les logiciels espions et les logiciels potentiellement indésirables. Ces informations sont les suivantes : emplacement des logiciels détectés, noms de fichier, mode de fonctionnement des logiciels détectés et indication de leur impact sur votre ordinateur.
+- **De base** : envoie des informations de base à Microsoft sur les logiciels malveillants détectés. Ces informations sont les suivantes : origine des logiciels détectés, actions appliquées par vous-même ou appliquées automatiquement par Endpoint Protection, indication de la réussite éventuelle de ces actions.
+- **Options avancées** : envoie plus d’informations à Microsoft sur les programmes malveillants, les logiciels espions et les logiciels potentiellement indésirables. Ces informations sont les suivantes : emplacement des logiciels détectés, noms de fichier, mode de fonctionnement des logiciels détectés et indication de leur impact sur votre ordinateur.
 
 Vous pouvez également **Recevoir des définitions dynamiques basées sur les rapports Microsoft Active Protection Service**.
 
@@ -197,5 +197,5 @@ Intune peut effectuer une analyse complète ou rapide des programmes malveillant
 ## <a name="need-more-help"></a>Besoin d'aide ?
 Pour obtenir de l’aide et une assistance, consultez [Résoudre les problèmes liés à Endpoint Protection dans Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md).
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Stratégies pour protéger les PC Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

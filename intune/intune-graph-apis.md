@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b655dc64958350623ea62caf848043f6baf3787c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883291"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Guide pratique pour utiliser Azure AD afin d’accéder aux API Intune dans Microsoft Graph
 
@@ -30,13 +30,13 @@ L’accès aux API Intune dans Microsoft Graph nécessite :
 
 - Un ID d’application avec :
 
-    - L’autorisation d’appeler Azure AD et les API Microsoft Graph.
-    - Les étendues d’autorisation pertinentes pour les tâches spécifiques de l’application.
+  - L’autorisation d’appeler Azure AD et les API Microsoft Graph.
+  - Les étendues d’autorisation pertinentes pour les tâches spécifiques de l’application.
 
 - Informations d'identification d'utilisateur avec :
 
-    - L’autorisation d’accéder au client Azure AD associé à l’application.
-    - Les autorisations de rôle requises pour prendre en charge les étendues d’autorisation de l’application.
+  - L’autorisation d’accéder au client Azure AD associé à l’application.
+  - Les autorisations de rôle requises pour prendre en charge les étendues d’autorisation de l’application.
 
 - L’utilisateur final doit accorder une autorisation à l’application pour qu’elle puisse effectuer des tâches d’application pour leur client Azure.
 
@@ -61,7 +61,7 @@ Pour en savoir plus, consultez :
 
 Pour inscrire une application pour qu’elle utilise l’API Microsoft Graph :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) à l’aide des informations d’identification administratives.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) en utilisant les informations d’identification d’administration.
 
     Selon le cas, vous pouvez utiliser :
     - Le compte d’administrateur du client.
@@ -164,10 +164,10 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 - Paramètre **Activer l’accès** : __Lire des applications Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
-    - Applications clientes
-    - Catégories d’applications mobiles
-    - Stratégies de protection des applications
-    - Configurations d’application
+  - Applications clientes
+  - Catégories d’applications mobiles
+  - Stratégies de protection des applications
+  - Configurations d’application
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
@@ -177,19 +177,19 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 - Autorise également les modifications aux entités suivantes :
 
-    - Applications clientes
-    - Catégories d’applications mobiles
-    - Stratégies de protection des applications
-    - Configurations d’application
+  - Applications clientes
+  - Catégories d’applications mobiles
+  - Stratégies de protection des applications
+  - Configurations d’application
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Paramètre **Activer l’accès** : __Lire la configuration et les stratégies d’appareil Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
-    - Configuration des appareils
-    - Stratégie de conformité des appareils
-    - Messages de notification
+  - Configuration des appareils
+  - Stratégie de conformité des appareils
+  - Messages de notification
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
@@ -198,34 +198,34 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 - Autorise les mêmes opérations que __DeviceManagementConfiguration.Read.All__
 
 - Les applications peuvent également créer, affecter, supprimer et modifier les entités suivantes :
-    - Configuration des appareils
-    - Stratégie de conformité des appareils
-    - Messages de notification
+  - Configuration des appareils
+  - Stratégie de conformité des appareils
+  - Messages de notification
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Paramètre **Activer l’accès** : __Effectuer des actions à distance affectant les utilisateurs sur les appareils Microsoft Intune__
 
 - Permet les actions à distance suivantes sur un appareil géré :
-    - Mettre hors service
-    - Réinitialisation
-    - Code secret de réinitialisation/restauration
-    - Verrouillage à distance
-    - Activer/Désactiver le mode de perte d'appareil
-    - PC propre
-    - Redémarrage
-    - Supprimer un utilisateur d’un appareil partagé
+  - Mettre hors service
+  - Réinitialisation
+  - Code secret de réinitialisation/restauration
+  - Verrouillage à distance
+  - Activer/Désactiver le mode de perte d'appareil
+  - PC propre
+  - Redémarrage
+  - Supprimer un utilisateur d’un appareil partagé
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Paramètre **Activer l’accès** : __Lire des appareils Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
-    - Appareil géré
-    - Catégorie d’appareil
-    - Application détectée
-    - Actions à distance
-    - Informations de programme malveillant
+  - Appareil géré
+  - Catégorie d’appareil
+  - Application détectée
+  - Actions à distance
+  - Informations de programme malveillant
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
@@ -234,22 +234,22 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 - Autorise les mêmes opérations que __DeviceManagementManagedDevices.Read.All__
 
 - Les applications peuvent également créer, supprimer et modifier les entités suivantes :
-    - Appareil géré
-    - Catégorie d’appareil
+  - Appareil géré
+  - Catégorie d’appareil
 
 - Les actions à distance suivantes sont également autorisées :
-    - Localiser des appareils
-    - Contourner le verrou d’activation
-    - Demander l'assistance à distance
+  - Localiser des appareils
+  - Contourner le verrou d’activation
+  - Demander l'assistance à distance
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Paramètre **Activer l’accès** : __Lire des paramètres Microsoft Intune RBAC__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
-    - Attributions de rôles
-    - Définitions de rôle
-    - Opérations sur les ressources
+  - Attributions de rôles
+  - Définitions de rôle
+  - Opérations sur les ressources
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
@@ -258,24 +258,24 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 - Autorise les mêmes opérations que __DeviceManagementRBAC.Read.All__
 
 - Les applications peuvent également créer, affecter, supprimer et modifier les entités suivantes :
-    - Attributions de rôles
-    - Définitions de rôle
+  - Attributions de rôles
+  - Définitions de rôle
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Paramètre **Activer l’accès** : __Lire la configuration Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
-    - Inscription d’appareil
-    - Certificat de notification Apple Push
-    - Programme d'inscription d'appareils Apple
-    - Programme d’achats en volume (VPP) Apple
-    - Connecteur Exchange
-    - Conditions générales
-    - Gestion des dépenses de télécommunications
-    - Infrastructure à clé publique cloud
-    - Marque
-    - Protection contre les menaces mobiles
+  - Inscription d’appareil
+  - Certificat de notification Apple Push
+  - Programme d'inscription d'appareils Apple
+  - Programme d’achats en volume (VPP) Apple
+  - Connecteur Exchange
+  - Conditions générales
+  - Gestion des dépenses de télécommunications
+  - Infrastructure à clé publique cloud
+  - Marque
+  - Protection contre les menaces mobiles
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
@@ -284,16 +284,16 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 - Autorise les mêmes opérations que DeviceManagementServiceConfig.Read.All_
 
 - Les applications peuvent également configurer les fonctionnalités Intune suivantes :
-    - Inscription d’appareil
-    - Certificat de notification Apple Push
-    - Programme d'inscription d'appareils Apple
-    - Programme d’achats en volume (VPP) Apple
-    - Connecteur Exchange
-    - Conditions générales
-    - Gestion des dépenses de télécommunications
-    - Infrastructure à clé publique cloud
-    - Marque
-    - Protection contre les menaces mobiles
+  - Inscription d’appareil
+  - Certificat de notification Apple Push
+  - Programme d'inscription d'appareils Apple
+  - Programme d’achats en volume (VPP) Apple
+  - Connecteur Exchange
+  - Conditions générales
+  - Gestion des dépenses de télécommunications
+  - Infrastructure à clé publique cloud
+  - Marque
+  - Protection contre les menaces mobiles
 
 ## <a name="azure-ad-authentication-examples"></a>Exemples d’authentification Azure AD
 

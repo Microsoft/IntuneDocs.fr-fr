@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f012b1cec67de762bbc245f249125f29d37c6930
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: c3287238900725acebefc23eb00246cd04c7a5bb
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506847"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230085"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Vérifier la conformité de votre appareil Android
 
@@ -31,6 +31,6 @@ Si votre appareil n’a pas été vérifié dans Intune depuis longtemps, vous n
 
 1. Ouvrez l’application Portail d’entreprise pour Android sur votre appareil.  
 
-2. Appuyez sur **Vérifier les paramètres de l’appareil**.  
+2. Appuyez sur **Vérifier les paramètres de l’appareil**.   
 
 Si vous ne parvenez pas à réinitialiser votre appareil perdu ou volé, demandez au support technique de votre entreprise de le faire pour vous. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

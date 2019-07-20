@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f749ab85d283ed9743d227476f8229dc1cf7c3
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402641"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353345"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problèmes Endpoint Protection et solutions possibles dans Microsoft Intune
 
@@ -34,7 +34,7 @@ Passez en revue les journaux des événements et les codes d’erreur pour [rés
 
 ## <a name="common-intune-errors-and-possible-resolutions"></a>Erreurs courantes liées à Intune et solutions possibles
 
-#### <a name="endpoint-protection-engine-unavailable"></a>Moteur Endpoint Protection indisponible
+### <a name="endpoint-protection-engine-unavailable"></a>Moteur Endpoint Protection indisponible
 
 **Cause potentielle** : Le moteur Intune Endpoint Protection est endommagé ou a été supprimé.
 
@@ -45,7 +45,7 @@ Passez en revue les journaux des événements et les codes d’erreur pour [rés
 - Dans le Panneau de configuration > Programmes, sélectionnez **Agent Microsoft Intune Endpoint Protection**. Désinstallez l’application.
 - Lors de la prochaine synchronisation des mises à jour, le Gestionnaire de mise à jour de Microsoft Online Management détecte le programme manquant et le réinstalle au moment de l'installation planifiée.
 
-#### <a name="features-are-disabled"></a>Les fonctionnalités sont désactivées
+### <a name="features-are-disabled"></a>Les fonctionnalités sont désactivées
 
 Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont désactivées. Ces messages peuvent se produire si Intune Endpoint Protection ou Windows Defender est désactivé par un administrateur à l’aide d’un profil de configuration. Ou bien, il est désactivé par un utilisateur final sur l’appareil. Messages possibles :
 
@@ -63,19 +63,19 @@ Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont d�
 - [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
 - [Utilisateurs finaux : activer la protection en temps réel pour accéder aux ressources d’entreprise](/intune-user-help/turn-on-defender-windows)
 
-#### <a name="malware-definitions-out-of-date"></a>Définitions de programmes malveillants obsolètes
+### <a name="malware-definitions-out-of-date"></a>Définitions de programmes malveillants obsolètes
 
 Cet état s’affiche lorsque les définitions de programmes malveillants sur l’appareil sont obsolètes depuis au moins 14 jours. Par exemple, le message peut s’afficher si l’appareil est déconnecté d’Internet ou si les définitions de programmes malveillants sont obsolètes.
 
 **Solutions possibles** : Si les définitions de programmes malveillants sont obsolètes, mettez-les à jour avec [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
 
-#### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Analyse complète en retard ou analyse rapide en retard
+### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Analyse complète en retard ou analyse rapide en retard
 
 Une analyse complète ou une analyse rapide n’a pas été effectuée depuis 14 jours. Ce scénario peut se produire si l’appareil redémarre lors d’une analyse complète.
 
 **Solutions possibles** : Si une analyse complète est en retard, vous pouvez exécuter une analyse une fois ou planifier des analyses régulières. Consultez [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
 
-#### <a name="another-endpoint-protection-application-running"></a>Une autre application de protection de point de terminaison est en cours d'exécution
+### <a name="another-endpoint-protection-application-running"></a>Une autre application de protection de point de terminaison est en cours d'exécution
 
 Une autre application de protection de point de terminaison est en cours d’exécution et l’appareil est intègre.
 

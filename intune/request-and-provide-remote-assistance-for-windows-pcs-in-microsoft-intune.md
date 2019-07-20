@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 41b6109d956272d6368ae294788a8bd54f2fb8f8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549152"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353488"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Demander et fournir une assistance à distance pour les PC Windows
 
@@ -87,6 +87,6 @@ Quand vous aidez les utilisateurs à résoudre leurs problèmes, vous pouvez êt
 
 4. Dans la boîte de dialogue **État de tâche** , passez en revue les tâches à distance en cours, l'état de la tâche, le nom d'appareil et les erreurs signalées.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

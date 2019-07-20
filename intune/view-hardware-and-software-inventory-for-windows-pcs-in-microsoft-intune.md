@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ba447153996383b3f057c4776b643a7a4ccd48b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2b9d17426bf3dde3fd1684c12113adf0c5095d5f
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547965"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353302"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Afficher l’inventaire logiciel et matériel pour les PC Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez afficher l’inventaire pour les PC Windows inscrits en tant qu’appareils mobiles, consultez [afficher les détails de l’appareil dans Intune](device-inventory.md).
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez afficher l’inventaire des PC Windows inscrits en tant qu’appareils mobiles, consultez [afficher les détails des appareils dans Intune](device-inventory.md).
 
 Intune collecte des informations détaillées sur le matériel et les logiciels pour les ordinateurs de bureau que vous gérez en tant que PC à l’aide du client logiciel Intune. Utilisez les informations contenues dans les procédures suivantes pour apprendre à créer :
 
@@ -71,6 +71,6 @@ Intune collecte des informations détaillées sur le matériel et les logiciels 
 
     La boîte de dialogue **État de la tâche** affiche les tâches à distance en cours, l'état de la tâche, le nom de l'appareil et toutes les erreurs signalées et fournit un lien permettant de corriger ces informations.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

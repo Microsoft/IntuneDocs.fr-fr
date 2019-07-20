@@ -17,12 +17,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada708c3ea6f9e8d835b667ac8162037c1de05f9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e8a3ee1aaf2c115d99e0eedfeb187ba23f623264
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884111"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Verrouiller un appareil à partir de l’application Portail d’entreprise pour Windows 10
 
@@ -32,11 +32,11 @@ Verrouillez à distance un appareil perdu ou volé à partir de l’application 
 
 Le verrouillage à distance est pris en charge sur les appareils :  
 
-  * Android
-  * iOS
-  * macOS
-  * Windows 10 Mobile (si un code secret avait déjà été défini sur l’appareil)
-  * Windows Phone 8.1 (si un code secret avait déjà été défini sur l’appareil) 
+* Android
+* iOS
+* macOS
+* Windows 10 Mobile (si un code secret avait déjà été défini sur l’appareil)
+* Windows Phone 8.1 (si un code secret avait déjà été défini sur l’appareil) 
   
 ## <a name="remote-lock-device"></a>Verrouiller à distance l’appareil
 Effectuez les étapes suivantes pour verrouiller votre appareil à partir de l’application Portail d’entreprise.  

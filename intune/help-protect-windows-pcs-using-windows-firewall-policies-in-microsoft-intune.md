@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: b79f488fcaa221523b5833aa1cebcf872d5f9b3d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572513"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354008"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Protéger les PC Windows à l'aide de stratégies de Pare-feu Windows dans Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les paramètres de pare-feu pour les PC Windows inscrits comme appareils mobiles, consultez [ajouter des paramètres de protection de point de terminaison dans Intune](endpoint-protection-configure.md).
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les paramètres de pare-feu pour les PC Windows inscrits en tant qu’appareils mobiles, consultez [Ajouter des paramètres de protection de point de terminaison dans Intune](endpoint-protection-configure.md).
 
 Microsoft Intune peut vous aider à sécuriser les PC Windows que vous gérez avec le client Intune et ce, de plusieurs façons. Par exemple, il peut fournir des stratégies vous permettant de configurer les paramètres du Pare-feu Windows sur des PC.
 
@@ -140,5 +140,5 @@ Vous pouvez configurer des exceptions qui autorisent des types spécifiques de t
 |**Windows Virtual PC**<br>(Windows 7 ou version ultérieure)|Ce paramètre permet à des machines virtuelles de communiquer avec d’autres ordinateurs.|
 |**Appareils mobiles sans fil**|Ce paramètre autorise le transfert de médias depuis un appareil multimédia ou une caméra compatible avec le réseau vers les ordinateurs gérés via le protocole MTP (Media Transfer Protocol). Ce paramètre utilise les protocoles de réseau SSDP et UPnP.|
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Stratégies pour protéger les PC Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

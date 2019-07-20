@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b062dd12f7a9b77f30d4d831a829f3d0316cacf6
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
-ms.translationtype: HT
+ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735459"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794366"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Liaisons Xamarin du kit SDK d’application Microsoft Intune
 
@@ -104,9 +104,10 @@ Si votre application est déjà configurée pour utiliser la bibliothèque ADAL 
 Vous trouverez une présentation complète d’intégration du SDK d’application Intune dans le [Guide du kit SDK d’application Microsoft Intune pour les développeurs Android](app-sdk-android.md). Quand vous lisez le guide et que vous intégrez le SDK d’application Intune à votre application Xamarin, vous pouvez noter que les sections suivantes sont destinées à mettre en évidence les différences entre l’implémentation pour une application Android native développée en Java et une application Xamarin développée en C#. Ces sections doivent être traitées comme venant en complément et non pas comme substitut de la lecture du guide dans son intégralité.
 
 #### <a name="remapper"></a>Remapper
-À partir de la version 1.4428.1, `Microsoft.Intune.MAM.Remapper` le package peut être ajouté à une application Xamarin. Android [en tant qu'](app-sdk-android.md#build-tooling) outils de génération pour effectuer les remplacements de la classe, de la méthode et des services système GAM. Si le remappeur est inclus, les parties de remplacement équivalentes GAM des méthodes renommées et des sections de l’application GAM seront automatiquement exécutées lors de la génération de l’application.
+À partir de la version 1.4428.1, `Microsoft.Intune.MAM.Remapper` le package peut être ajouté à une application Xamarin. Android en tant qu' [outils de génération](app-sdk-android.md#build-tooling) pour effectuer les remplacements de la classe, de la méthode et des services système GAM. Si le remappeur est inclus, les parties de remplacement équivalentes GAM des méthodes renommées et des sections de l’application GAM seront automatiquement exécutées lors de la génération de l’application.
 
 Pour exclure une classe de l’unification des GAM par le remappeur, la propriété suivante peut être ajoutée dans `.csproj` votre fichier de projet.
+
 ```xml
   <PropertyGroup>
     <ExcludeClasses>Semicolon separated list of relative class paths to exclude from MAM-ification</ExcludeClasses>
@@ -200,7 +201,7 @@ C’est normal puisque quand le remappeur modifie l’héritage des classes Xama
 > Le remappeur réécrit une dépendance que Visual Studio utilise pour l’autocomplétion IntelliSense. Ainsi, il peut être nécessaire de recharger et de regénérer le projet quand le remappeur est ajouté, pour qu’IntelliSense reconnaisse correctement les modifications.
 
 ### <a name="company-portal-app"></a>Application Portail d’entreprise
-Les liaisons Xamarin du SDK Intune s’appuient sur la présence [de](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) l’application portail d’entreprise Android sur l’appareil pour activer les stratégies de protection des applications. Le portail d’entreprise récupère les stratégies de protection des applications à partir du service Intune. Quand l’application s’initialise, elle charge la stratégie et le code pour appliquer cette stratégie à partir du portail d’entreprise. L’utilisateur n’a pas besoin d’être connecté.
+Les liaisons Xamarin du SDK Intune s’appuient sur la présence de l’application [portail d’entreprise](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android sur l’appareil pour activer les stratégies de protection des applications. Le portail d’entreprise récupère les stratégies de protection des applications à partir du service Intune. Quand l’application s’initialise, elle charge la stratégie et le code pour appliquer cette stratégie à partir du portail d’entreprise. L’utilisateur n’a pas besoin d’être connecté.
 
 > [!NOTE]
 > Quand l’application Portail d’entreprise n’est pas sur l’appareil **Android**, une application gérée par Intune se comporte comme une application normale qui ne prend pas en charge les stratégies de protection des applications Intune.
@@ -208,7 +209,7 @@ Les liaisons Xamarin du SDK Intune s’appuient sur la présence [de](https://pl
 Pour la protection des applications sans inscription des appareils, l’utilisateur n’est _**pas**_ obligé d’inscrire l’appareil à l’aide de l’application Portail d’entreprise.
 
 ### <a name="sample-applications"></a>Exemples d’applications
-Les exemples d’applications mettant en évidence la fonctionnalité GAM dans les applications de formulaires Xamarin. [Android](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps)et Xamarin sont disponibles sur GitHub.
+Les exemples d’applications mettant en évidence la fonctionnalité GAM dans les applications de formulaires Xamarin. Android et Xamarin sont disponibles sur [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Prise en charge
 Si votre organisation est déjà un client Intune, contactez votre conseiller du support Microsoft pour ouvrir un ticket de support et créer un enregistrement [dans la page des problèmes GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). Nous vous aiderons dès que possible. 

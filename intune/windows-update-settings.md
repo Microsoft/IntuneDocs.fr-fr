@@ -14,12 +14,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5a0ee88a24804294346888facef523f89fee816
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9e9baf3593883cf2fa2402a0b4daec638a336366
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884197"
 ---
 # <a name="windows-update-settings-for-intune"></a>Paramètres de mise à jour Windows pour Intune  
 
@@ -179,8 +179,8 @@ Ce paramètre a des résultats différents selon la version de Windows sur les a
 Autoriser un utilisateur de l’appareil à suspendre l’installation d’une mise à jour ou l’en empêcher. 
 
 ### <a name="block-user-from-scanning-for-windows-updates"></a>Empêcher l’utilisateur de rechercher les mises à jour de Windows  
- - **Valeur Par défaut** : Autoriser
- - **Documentation de référence de Windows** : [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+- **Valeur Par défaut** : Autoriser
+- **Documentation de référence de Windows** : [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
 Spécifie s’il faut autoriser ou bloquer l’accès d’un utilisateur à l’analyse Windows Update. Par exemple, si vous configurez un *blocage*, l’utilisateur ne peut pas accéder aux fonctionnalités Windows Update d’analyse, de téléchargement et d’installation.  
 

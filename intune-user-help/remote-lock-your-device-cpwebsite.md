@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85435acffbad3117f6adbbafe60e1993b2d18bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b55368f5c512ff3efd4059d420717321729450ee
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884065"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Verrouiller à distance un appareil à partir du site web du portail d’entreprise
 
@@ -44,7 +44,7 @@ Le paramètre de verrouillage à distance fonctionne pour :
 
     ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
-3. Sélectionnez **Verrouillage à distance**. Si l’option de verrouillage n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Verrouillage à distance**.  
+3. Sélectionnez **Verrouillage à distance**. Si l’option de verrouillage n’est pas visible en haut de la page, sélectionnez **Plus (...)**  > **Verrouillage à distance**.  
 
    ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png) 
 
@@ -56,9 +56,9 @@ Après la confirmation, le portail d’entreprise tente de verrouiller votre app
 
 L’état Verrouillage à distance s’affiche à trois emplacements :
 
-   * La zone de notification du site web.
-   * La page **Détails** de l’appareil.
-   * La vignette qui affiche le nom de l’appareil dans la section **Appareils** de la page.  
+* La zone de notification du site web.
+* La page **Détails** de l’appareil.
+* La vignette qui affiche le nom de l’appareil dans la section **Appareils** de la page.  
 
 > [!Note]
 > Si vous recevez une notification signalant que le verrouillage à distance a échoué, patientez quelques minutes, puis réessayez de verrouiller votre appareil. L’état passe à « Verrouillage à distance en attente ». Si la nouvelle tentative ne fonctionne pas, contactez le support technique de votre entreprise.

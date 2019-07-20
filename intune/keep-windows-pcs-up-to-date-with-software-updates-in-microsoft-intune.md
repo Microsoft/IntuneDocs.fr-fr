@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70818e038be915a1b756eb391129e6cdb74fb069
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a94c327c8595e83ec9808ed41e788c5756d5510a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548654"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353877"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Maintenir des PC Windows à jour avec les mises à jour logicielles dans Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les mises à jour pour les PC Windows inscrits comme appareils mobiles, consultez [gérer les mises à jour logicielles dans Intune](windows-update-for-business-configure.md).
+> Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les mises à jour pour les PC Windows inscrits en tant qu’appareils mobiles, consultez [gérer les mises à jour logicielles dans Intune](windows-update-for-business-configure.md).
 
 Microsoft Intune peut vous aider à sécuriser vos ordinateurs gérés de plusieurs façons, notamment en gérant les mises à jour logicielles qui maintiennent votre ordinateur à jour et en garantissant une installation rapide des derniers correctifs et mises à jour logicielles.
 
@@ -260,5 +260,5 @@ Lorsque vous sélectionnez une mise à jour dans la liste, d'autres commandes so
 6. Vous pouvez consulter le volet des détails au bas de la page **Toutes les mises à jour** pour connaître les messages de rappel relatifs à la mise à jour.
 
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Stratégies pour protéger les PC Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

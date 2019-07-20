@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62d30d0c404fb8393f5aa2c999cd1fc09b266350
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 44ba77609b3fafd5518378f3edcbbbace0f6a551
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735889"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354084"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installer le logiciel client Intune sur des PC Windows
 
@@ -261,5 +261,5 @@ Le processus d’annulation de l’inscription ne supprime pas le dossier Online
 
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
-### <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 [Tâches courantes de gestion des PC Windows avec le client logiciel Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

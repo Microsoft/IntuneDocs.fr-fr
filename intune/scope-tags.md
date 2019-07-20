@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 627899eafb2175b2d3034045bd765a10f4a203d6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882502"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée
 
@@ -42,8 +42,8 @@ Par exemple, supposons que le rôle de gestionnaire de stratégie et de profil e
 
     ![Capture d’écran de la création d’une balise d’étendue](./media/scope-tags/create-scope-tag.png)
 
-3. Si vous souhaitez que tous les appareils dans des groupes spécifiques, choisissez **affecter la balise d’étendue à tous les appareils dans des groupes sélectionnés**.
-    1. Dans le **sélectionner les groupes à inclure** page, sélectionnez les groupes contenant les appareils que vous souhaitez affecter à cette balise d’étendue.
+3. Si vous souhaitez que tous les appareils se trouvent dans des groupes spécifiques, choisissez **attribuer une étiquette d’étendue à tous les appareils dans les groupes sélectionnés**.
+    1. Dans la page **Sélectionner les groupes à inclure** , choisissez les groupes contenant les appareils auxquels vous souhaitez affecter cette balise d’étendue.
     2. Choisissez **Sélectionner**.
 4. Choisissez **Créer**.
 
@@ -108,17 +108,17 @@ Pour les appareils avec **Type d’inscription de l’appareil** défini sur **A
 Quand vous utilisez des balises d’étendue, rappelez-vous de ceci :
 
 - Vous pouvez actuellement affecter des balises d’étendue aux éléments suivants :
-    - Attributions de rôles
-    - Stratégies de conformité des appareils
-    - Profils de configuration d’appareil
-    - Anneaux des mises à jour Windows 10
-    - Appareils gérés
-    - Applications
-    - Stratégies de configuration d’applications - appareils gérés
-    - Scripts PowerShell
-    - Jetons DEP
-    - Profil de provisionnement d’applications iOS
-    - Jetons Programme d’achat en volume (VPP) Apple
+  - Attributions de rôles
+  - Stratégies de conformité des appareils
+  - Profils de configuration d’appareil
+  - Anneaux des mises à jour Windows 10
+  - Appareils gérés
+  - Applications
+  - Stratégies de configuration d’applications - appareils gérés
+  - Scripts PowerShell
+  - Jetons DEP
+  - Profil de provisionnement d’applications iOS
+  - Jetons Programme d’achat en volume (VPP) Apple
 - Quand un administrateur crée un objet dans Intune, toutes les balises d’étendue affectées à cet administrateur sont automatiquement affectées au nouvel objet.
 - Le contrôle d’accès en fonction du rôle (RBAC) d’Intune ne s’applique pas aux rôles Azure Active Directory. Ainsi, les rôles Administrateur de service et Administrateur général d’Intune ont un accès d’administrateur complet à Intune, quelles que soient leurs balises d’étendue.
 - Les administrateurs dans une attribution de rôle avec des balises d’étendue peuvent également voir les objets Intune sans balises d’étendue.

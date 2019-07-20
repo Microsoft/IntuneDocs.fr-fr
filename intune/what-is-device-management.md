@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5614f0657175658c1a8442d650e16c8550c1ac1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884266"
 ---
 # <a name="what-is-device-management"></a>Qu’est-ce que la gestion des appareils ? 
 
@@ -58,8 +58,8 @@ L’une des tâches clés de toute solution de gestion des appareils consiste à
 
 - **Windows Defender** inclut de nombreuses fonctionnalités de sécurité qui permettent de protéger les appareils Windows 10. Par exemple, en utilisant Intune conjointement avec Windows Defender, vous pouvez : 
 
-    - Activer [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) pour rechercher des activités suspectes dans les fichiers et applications des appareils mobiles 
-    - Utilisez [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) pour empêcher les failles de sécurité sur les appareils mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
+  - Activer [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) pour rechercher des activités suspectes dans les fichiers et applications des appareils mobiles 
+  - Utilisez [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) pour empêcher les failles de sécurité sur les appareils mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
 
 - L’**accès conditionnel** est une fonctionnalité d’Azure Active Directory, qui s’intègre parfaitement avec Intune. À l’aide de l’[accès conditionnel](https://docs.microsoft.com/intune/conditional-access), vous pouvez vérifier que seuls les appareils conformes ont accès aux e-mails, à SharePoint et à d’autres applications. 
 

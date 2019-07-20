@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 220327c48712881e57efa1a91b9d00a64ba3e0be
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884698"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,11 +34,11 @@ Quand une nouvelle version de ligne de base de sécurité MDM est publiée, la l
 Lorsqu’une version de référence n’est plus prise en charge pour l’utilisation, elle est supprimée de cet article.
 
 - Afficher les paramètres qui sont disponibles dans [la ligne de base de sécurité MDM actuelle](security-baseline-settings-mdm.md) 
-- En savoir [plus sur les](security-baselines.md)lignes de base de sécurité et sur la mise à niveau de la version de référence dans vos profils de ligne de base de sécurité.
+- En savoir plus sur les lignes de base de [sécurité](security-baselines.md)et sur la mise à niveau de la version de référence dans vos profils de ligne de base de sécurité.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Préversion : base de référence de la sécurité GPM pour octobre 2018  
 
-*Cette ligne de base est remplacée [par la ligne de base de sécurité MDM pour Spring 2019 (19H1)](security-baseline-settings-mdm.md)*
+*Cette ligne de base est remplacée par la [ligne de base de sécurité MDM pour Spring 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>Au-dessus du verrouillage  
 
@@ -97,23 +97,23 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   Pour la stratégie de lecteur amovible BitLocker, configurez les paramètres suivants :
 
-    - **Exiger le chiffrement pour l’accès en écriture**  
-      **Par défaut** : oui  
-  
-    - **Méthode de chiffrement**  
-      **Par défaut** : AES-CBC 256 bits  
+  - **Exiger le chiffrement pour l’accès en écriture**  
+    **Par défaut** : oui  
+
+  - **Méthode de chiffrement**  
+    **Par défaut** : AES-CBC 256 bits  
 
 - **Stratégie de lecteur fixe BitLocker**  
   Ce paramètre de stratégie permet de contrôler la méthode et le niveau de chiffrement. Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.  
  
-   Pour la stratégie de lecteur fixe BitLocker, configurez les paramètres suivants : 
-   - **Méthode de chiffrement**
-     **par défaut**: AES-XTS 256 bits  
+  Pour la stratégie de lecteur fixe BitLocker, configurez les paramètres suivants : 
+  - **Méthode de chiffrement**  
+    **Par défaut** : AES-CBC 256 bits  
 
 - **Stratégie de lecteur système BitLocker**  
   Ce paramètre de stratégie permet de contrôler la méthode et le niveau de chiffrement. Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.  
 
-   Pour la stratégie de lecteur système BitLocker, configurez les paramètres suivants :
+  Pour la stratégie de lecteur système BitLocker, configurez les paramètres suivants :
   - **Méthode de chiffrement**  
     **Par défaut** : AES-CBC 256 bits  
 
@@ -219,33 +219,33 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
-  
-    - **Supprimer les périphériques matériels correspondants**   
-    Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : oui
-  
-    - **Identificateurs de périphériques matériels bloqués**  
-       Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : oui  
+  Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+
+  - **Supprimer les périphériques matériels correspondants**   
+  Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
+    
+    **Par défaut** : oui
+
+  - **Identificateurs de périphériques matériels bloqués**  
+      Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
+    
+    **Par défaut** : oui  
   
 - **Installation de périphériques matériels par classes d’installation**  
   Ce paramètre de stratégie permet de spécifier une liste de GUID de classe d’installation de périphériques décrivant les pilotes de périphériques que Windows ne peut pas installer. Ce paramètre de stratégie prévaut sur tout autre paramètre de stratégie autorisant l’installation de périphériques par Windows. Si vous activez ce paramètre, Windows ne peut pas installer ou mettre à jour les pilotes de périphériques dont les GUID de classe d’installation de périphériques figurent dans la liste que vous créez. Si vous activez ce paramètre de stratégie sur un serveur Bureau à distance, il a une incidence sur la redirection des périphériques spécifiés à partir d’un client Bureau à distance vers le serveur Bureau à distance. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows peut installer ou mettre à jour des périphériques conformément aux autorisations ou interdictions prévues par d’autres paramètres de stratégie.
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
-    - **Supprimer les périphériques matériels correspondants**    
-    Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.  
+  Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+  - **Supprimer les périphériques matériels correspondants**    
+  Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.  
 
-      **Par défaut** : *Aucune configuration par défaut*  
-  
-    - **Identificateurs de périphériques matériels bloqués**  
-      Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : *Aucune configuration par défaut*  
+    **Par défaut** : *Aucune configuration par défaut*  
+
+  - **Identificateurs de périphériques matériels bloqués**  
+    Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.
+    
+    **Par défaut** : *Aucune configuration par défaut*  
 
 ### <a name="device-lock"></a>Verrouillage d’appareil  
 
@@ -992,12 +992,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
 - **Comportement de l’invite d’élévation d’administrateur**  
   Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
-    - *Élever les privilèges sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
-    - *Demander des informations d’identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
-    - *Demander le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
-    - *Demander des informations d’identification* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
-    - *Demander le consentement* : lorsqu’une opération requiert une élévation de privilège, l’utilisateur est invité à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.  
-    - *Demander le consentement pour les binaires non Windows* : lorsqu’une opération pour une application non Microsoft nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.   
+  - *Élever les privilèges sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
+  - *Demander des informations d’identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
+  - *Demander le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
+  - *Demander des informations d’identification* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
+  - *Demander le consentement* : lorsqu’une opération requiert une élévation de privilège, l’utilisateur est invité à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.  
+  - *Demander le consentement pour les binaires non Windows* : lorsqu’une opération pour une application non Microsoft nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.   
   
   **Par défaut** : demander le consentement sur le bureau sécurisé
   
@@ -1010,12 +1010,12 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
   
 - **Comportement lorsque la carte à puce est retirée**  
-    Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
-     - *Aucune action*. 
-     - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
-     - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
-     - *Déconnecter la session de Bureau à distance* : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Ceci permet à l'utilisateur d'insérer la carte à puce et de reprendre la session ultérieurement ou sur un autre ordinateur équipé d'un lecteur de cartes à puce, sans avoir à ouvrir de nouveau une session. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.  <br><br>
-    
+  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
+  - *Aucune action*. 
+  - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
+  - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
+  - *Déconnecter la session de Bureau à distance* : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Ceci permet à l'utilisateur d'insérer la carte à puce et de reprendre la session ultérieurement ou sur un autre ordinateur équipé d'un lecteur de cartes à puce, sans avoir à ouvrir de nouveau une session. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.  <br><br>
+
   **Par défaut** : verrouiller la station de travail
   
 - **Bloquer l’énumération anonyme des comptes et partages SAM**  
