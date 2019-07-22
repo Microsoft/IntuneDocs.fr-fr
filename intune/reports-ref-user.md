@@ -6,7 +6,7 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 07/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,35 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0551327bfe2b320bb91699e1176985bbdf94de92
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 80a5e931589aaf48d99080a35ee2df040d11d201
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045225"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313708"
 ---
 # <a name="reference-for-user-entity"></a>Informations de référence sur l’entité d’utilisateur
 
-La catégorie **Utilisateur** contient l’entité **User** qui définit les propriétés des utilisateurs dans le modèle de données.
+La catégorie **Users** contient l’entité **user** qui définit les propriétés des utilisateurs dans le modèle de données.
 
-## <a name="user"></a>Utilisateur
+## <a name="users"></a>utilisateurs
 
-L’entité **User** répertorie tous les utilisateurs Azure Active Directory (Azure AD) auxquels des licences ont été attribuées dans votre entreprise.
+L’entité **user** répertorie tous les utilisateurs Azure Active Directory (Azure AD) auxquels des licences ont été attribuées dans votre entreprise.
 
-La collection d’entités **Utilisateur** contient les données des utilisateurs. Parmi ces enregistrements figurent les états utilisateurs de la période de collecte de données, même si l’utilisateur a été supprimé. Il est possible, par exemple, qu’un utilisateur soit ajouté à Intune, puis supprimé au cours du mois précédent. Cet utilisateur n’est pas présent au moment du rapport, mais lui et l’état apparaissent quand même dans les données du mois précédent. Vous pourriez créer un rapport qui afficherait la durée de la présence passée de l’utilisateur dans vos données.
+La collection d’entités **user** contient les données des utilisateurs. Parmi ces enregistrements figurent les états utilisateurs de la période de collecte de données, même si l’utilisateur a été supprimé. Il est possible, par exemple, qu’un utilisateur soit ajouté à Intune, puis supprimé au cours du mois précédent. Cet utilisateur n’est pas présent au moment du rapport, mais lui et l’état apparaissent quand même dans les données du mois précédent. Vous pourriez créer un rapport qui afficherait la durée de la présence passée de l’utilisateur dans vos données.
 
 |          Propriété          |                                                                                                           Description                                                                                                          |                Exemple               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | UserKey                    | Identificateur unique de l’utilisateur dans l’entrepôt de données (clé de substitution).                                                                                                                                                         | 123                                  |
-| UserId                     | Identificateur unique de l’utilisateur (semblable à UserKey, sauf qu’il s’agit d’une clé naturelle).                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | Adresse e-mail de l’utilisateur.                                                                                                                                                                                                     | John@constoso.com                    |
+| userId                     | Identificateur unique de l’utilisateur (semblable à UserKey, sauf qu’il s’agit d’une clé naturelle).                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | Adresse e-mail de l’utilisateur.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | Nom d’utilisateur principal de l’utilisateur.                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | Nom d’affichage de l’utilisateur.                                                                                                                                                                                                      | Jean                                 |
-| IntuneLicensed             | Spécifie si cet utilisateur dispose d’une licence Intune ou non.                                                                                                                                                                              | Vrai/Faux                           |
-| IsDeleted                  | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a, de ce fait, été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. | Vrai/Faux                           |
+| displayName                | Nom d’affichage de l’utilisateur.                                                                                                                                                                                                      | Jean                                 |
+| intuneLicensed             | Spécifie si cet utilisateur dispose d’une licence Intune ou non.                                                                                                                                                                              | Vrai/Faux                           |
+| isDeleted                  | Indique si toutes les licences de l’utilisateur ont expiré et si ce dernier a, de ce fait, été supprimé d’Intune. Pour un enregistrement unique, cet indicateur ne change pas. En revanche, un autre enregistrement est créé pour le nouvel état de l’utilisateur. | Vrai/Faux                           |
 | RowLastModifiedDateTimeUTC | Date et heure UTC de la dernière modification de l’enregistrement dans l’entrepôt de données                                                                                                                                                 | 23/11/2016 0:00                      |
 
 
 ## <a name="next-steps"></a>Étapes suivantes
- - Il est possible d’utiliser la collection d’entités **Utilisateur actuel** pour limiter les données utilisateurs aux seuls utilisateurs actuellement actifs. Pour plus d’informations, consultez la page [Informations de référence sur l’entité Utilisateur en cours](reports-ref-current-user.md).
- - Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).
+- Il est possible d’utiliser la collection d’entités **Utilisateur actuel** pour limiter les données utilisateurs aux seuls utilisateurs actuellement actifs. Pour plus d’informations, consultez la page [Informations de référence sur l’entité Utilisateur en cours](reports-ref-current-user.md).
+- Pour plus d’informations sur la façon dont l’entrepôt de données effectue le suivi de la durée de vie des utilisateurs dans Intune, consultez la page [Représentation de la durée de vie des utilisateurs dans l’entrepôt de données Intune](reports-ref-user-timeline.md).

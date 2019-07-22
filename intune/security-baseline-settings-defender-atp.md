@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdd2171853a8db944c910ef4d912f7681d17077
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549122"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354437"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Paramètres de bases de référence de Windows Defender Advanced Threat Protection pour Intune
 
 Afficher les paramètres de bases de référence de Microsoft Defender Advanced Threat Protection (anciennement Windows Defender Advanced Threat Protection) qui sont pris en charge par Microsoft Intune. Les valeurs par défaut de la base de référence Advanced Threat Protection (ATP) représentent la configuration recommandée pour ATP. Elles peuvent ne pas correspondent aux valeurs par défaut pour d’autres bases de référence de sécurité.  
 
-  Ligne de base Microsoft Defender Advanced Threat Protection est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
+Ligne de base Microsoft Defender Advanced Threat Protection est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
-
+Cette ligne de base est optimisée pour les appareils physiques et n’est actuellement pas recommandée pour une utilisation sur des machines virtuelles ou des points de terminaison VDI. Certains paramètres de base peuvent avoir un impact sur les sessions interactives à distance sur les environnements virtualisés. Pour plus d’informations, voir [augmenter la conformité à la ligne de base de sécurité de Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) dans la documentation Windows.
 
 
 > [!NOTE]  
@@ -164,22 +164,22 @@ Pour plus d’informations, consultez [Paramètres de stratégie de groupe Bitlo
 
   Pour la stratégie de lecteur amovible BitLocker, configurez les paramètres suivants :
 
-    - **Exiger le chiffrement pour l’accès en écriture**  
-      **Par défaut** : oui
+  - **Exiger le chiffrement pour l’accès en écriture**  
+    **Par défaut** : oui
 
-    - **Méthode de chiffrement**  
-      **Par défaut** : AES-CBC 128 bits
+  - **Méthode de chiffrement**  
+    **Par défaut** : AES-CBC 128 bits
 
 - **Stratégie de lecteur fixe BitLocker**  
   Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement des lecteurs amovibles. Les entreprises contrôlent le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.
 
   Pour la stratégie de lecteur fixe BitLocker, configurez les paramètres suivants :
 
-    - **Exiger le chiffrement pour l’accès en écriture**  
-      **Par défaut** : oui
+  - **Exiger le chiffrement pour l’accès en écriture**  
+    **Par défaut** : oui
 
-    - **Méthode de chiffrement**  
-      **Par défaut** : AES-XTS 128 bits
+  - **Méthode de chiffrement**  
+    **Par défaut** : AES-XTS 128 bits
 
 - **Stratégie de lecteur système BitLocker**  
   Les valeurs de cette stratégie déterminent la force du chiffrement utilisé par BitLocker pour le chiffrement du lecteur système. Les entreprises peuvent contrôler le niveau de chiffrement pour renforcer la sécurité (AES-256 est plus puissant que AES-128). Si vous activez ce paramètre, vous pouvez configurer un algorithme de chiffrement et la puissance de chiffrement clé pour les lecteurs de données fixes, les lecteurs de système d’exploitation et les lecteurs de données amovibles individuellement. Pour les lecteurs du système fixe et de fonctionnement, nous vous recommandons d’utiliser l’algorithme AES-XTS. Pour les lecteurs amovibles, vous devez utiliser AES-CBC 128 bits ou AES-CBC 256 bits si le lecteur est utilisé sur d’autres appareils qui n’exécutent pas la version 1511 de Windows 10 ou une version ultérieure. Le changement de la méthode de chiffrement est sans effet si le disque est déjà chiffré ou si le chiffrement est en cours. Dans ces cas, ce paramètre de stratégie est ignoré.  
