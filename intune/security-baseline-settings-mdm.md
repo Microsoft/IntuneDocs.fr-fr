@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
-ms.translationtype: MTE75
+ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735766"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
-Afficher les paramètres de base de sécurité de gestion des appareils mobiles qui sont pris en charge par Microsoft Intune pour les appareils qui exécutent Windows 10 ou version ultérieure. Les valeurs par défaut pour les paramètres dans cette ligne de base représentent la configuration recommandée pour les périphériques applicables et peuvent ne pas correspondent les valeurs par défaut de la ligne de base à partir d’autres lignes de base de sécurité.  
+Affichez les paramètres de ligne de base de sécurité MDM pris en charge par Microsoft Intune pour les appareils qui exécutent Windows 10 ou version ultérieure. Les valeurs par défaut des paramètres de cette base de référence représentent la configuration recommandée pour les appareils applicables et peuvent ne pas correspondre aux valeurs par défaut de référence des autres lignes de base de sécurité.  
 
-La dernière version de ligne de base est **MDM sécurité de base pour la mise à jour de Spring 2019 (19 H 1)**  
+La version de référence la plus récente est la **ligne de base de sécurité MDM pour la mise à jour Spring 2019 (19H1)**  
 
-Pour savoir quelles sont les nouveautés dans la dernière version de cette ligne de base à partir de la version précédente, consultez [quelles sont les nouveautés dans le nouveau modèle](#whats-changed-in-the-new-template).  
+Pour en savoir plus sur les modifications apportées à la version la plus récente de cette base de référence à partir de la version précédente, consultez [ce qui a changé dans le nouveau modèle](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> En juin de 2019, la ligne de base de la sécurité de la gestion des appareils mobiles en version préliminaire a été remplacée par la version de la *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19H 1)* modèle, qui est generaly disponibles (pas dans la version préliminaire). Les profils qui ont été créés avant la disponibilité de la *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19 H 1)* ligne de base ne sont pas mettre à jour pour refléter les paramètres et les valeurs qui se trouvent dans la ligne de base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19 H 1 ) version.  Bien que vous ne pouvez pas créer de nouveaux profils basés sur le modèle de version préliminaire, vous pouvez modifier et continuer à utiliser les profils que vous avez créé précédemment et qui sont basés sur le modèle de version préliminaire.   
+> En juin 2019, la ligne de base de sécurité MDM de la version préliminaire a été remplacée par la publication du modèle de *mise à jour de la ligne de base de sécurité MDM pour Spring 2019 (19H1)* , qui est disponible en général (pas en préversion). Les profils qui ont été créés avant la disponibilité de la ligne de base de *sécurité MDM pour spring 2019 Update (19H1)* ne sont pas mis à jour pour refléter les paramètres et les valeurs qui se trouvent dans la version de la ligne de base de sécurité MDM pour Spring 2019 Update (19H1).  Bien que vous ne puissiez pas créer de nouveaux profils basés sur le modèle d’aperçu, vous pouvez modifier et continuer à utiliser les profils que vous avez créés précédemment, basés sur le modèle d’aperçu.   
   
-Pour en savoir plus sur l’utilisation des bases de sécurité avec Intune, consultez [se servent des configurations de sécurité](security-baselines.md).  
+Pour en savoir plus sur l’utilisation des lignes de base de sécurité avec Intune, consultez [utiliser des lignes de base de sécurité](security-baselines.md).  
 
 
    
@@ -47,7 +47,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : oui  
 
-- **Voice activer des applications à partir de l’écran verrouillé**  
+- **Activer les applications vocales à partir de l’écran verrouillé**  
 
   **Par défaut** : Désactivé
 
@@ -64,16 +64,16 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 ## <a name="application-management"></a>Gestion des applications   
 Pour plus d’informations, consultez [Fournisseur de services de configuration Policy - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) dans la documentation Windows.  
 
-- **Contrôle utilisateur de bloc sur les installations**  
-  Ce paramètre de stratégie permet aux utilisateurs de modifier les options d’installation qui sont généralement disponibles uniquement pour les administrateurs système. Si vous activez ce paramètre de stratégie, certaines fonctionnalités de sécurité de Windows Installer sont ignorés. Il autorise les installations qui devraient s’interrompre en raison d’une violation de sécurité. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les fonctionnalités de sécurité de Windows Installer empêchent les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, telles que la spécification du répertoire dans lequel les fichiers sont installés. Si le programme d’installation de Windows détecte qu’un package d’installation a autorisé l’utilisateur à modifier une option protégée, il arrête l’installation et affiche un message. Ces fonctionnalités de sécurité fonctionnent uniquement lorsque le programme d’installation est en cours d’exécution dans un contexte de sécurité privilégié dans lequel il a accès aux répertoires refusé à l’utilisateur. Ce paramètre de stratégie est conçu pour les environnements moins restrictifs. Il peut servir à contourner les erreurs dans le programme d’installation qui empêche l’installation de logiciel.  
+- **Bloquer le contrôle utilisateur sur les installations**  
+  Ce paramètre de stratégie permet aux utilisateurs de modifier les options d’installation qui ne sont généralement disponibles que pour les administrateurs système. Si vous activez ce paramètre de stratégie, certaines des fonctionnalités de sécurité de Windows Installer sont ignorées. Il permet d’effectuer des installations qui, sinon, sont interrompues en raison d’une violation de sécurité. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les fonctionnalités de sécurité de Windows Installer empêchent les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, par exemple en spécifiant le répertoire dans lequel les fichiers sont installés. Si Windows Installer détecte qu’un package d’installation a autorisé l’utilisateur à modifier une option protégée, il arrête l’installation et affiche un message. Ces fonctionnalités de sécurité fonctionnent uniquement lorsque le programme d’installation s’exécute dans un contexte de sécurité privilégié dans lequel il a accès aux répertoires refusés à l’utilisateur. Ce paramètre de stratégie est conçu pour les environnements moins restrictifs. Il peut être utilisé pour contourner les erreurs dans un programme d’installation qui empêche l’installation de logiciels.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
   **Par défaut** : oui
 
-- **Installations d’applications MSI de bloc avec des privilèges élevés**  
+- **Bloquer les installations d’applications MSI avec des privilèges élevés**  
   Ce paramètre de stratégie dirige Windows Installer pour utiliser des autorisations élevées quand il installe un programme sur le système.  
-  - *Si vous activez ce paramètre de stratégie*, privilèges sont étendus sur tous les programmes. Ces privilèges sont généralement réservés aux programmes qui ont été affectées à l’utilisateur (proposé sur le bureau), affectée à l’ordinateur (automatiquement installés) f ou mis à disposition dans Ajout / Suppression de programmes dans le panneau de configuration. Ce paramètre de profil permet aux utilisateurs d’installer des programmes qui requièrent l’accès aux répertoires que l’utilisateur êtes ne peut-être pas autorisé à afficher ou modifier, y compris les répertoires sur des ordinateurs très restreintes.
-  - *Si vous désactivez ou ne configurez pas ce paramètre de stratégie*, le système applique les autorisations de l’utilisateur actuel lors de l’installation d’un administrateur système ne pas distribuer ou offrent de programmes. Remarque : ce paramètre de stratégie apparaît dans les dossiers Configuration ordinateur et Configuration utilisateur. Pour que ce paramètre de stratégie prenne effet, vous devez l’activer dans les deux dossiers. Attention : Les utilisateurs expérimentés peuvent tirer parti des autorisations ce paramètre accorde à modifier leurs privilèges et obtenir un accès permanent aux fichiers restreints et les dossiers de stratégie. Notez que la version de Configuration de l’utilisateur de ce paramètre de stratégie n’est pas garantie pour être sécurisés.  
+  - *Si vous activez ce paramètre de stratégie*, les privilèges sont étendus à tous les programmes. Ces privilèges sont généralement réservés pour les programmes qui ont été attribués à l’utilisateur (proposés sur le bureau), attribués à l’ordinateur (installé automatiquement) f ou mis à disposition dans Ajout/suppression de programmes dans le panneau de configuration. Ce paramètre de profil permet aux utilisateurs d’installer des programmes qui requièrent l’accès à des répertoires que l’utilisateur n’a pas l’autorisation d’afficher ou de modifier, y compris les répertoires sur les ordinateurs à haut niveau de restriction.
+  - *Si vous désactivez ou ne configurez pas ce paramètre de stratégie*, le système applique les autorisations de l’utilisateur actuel lors de l’installation de programmes qu’un administrateur système ne distribue pas ou n’offre pas. Remarque : ce paramètre de stratégie apparaît dans les dossiers Configuration ordinateur et Configuration utilisateur. Pour que ce paramètre de stratégie soit effectif, vous devez l’activer dans les deux dossiers. ATTENTION: les utilisateurs expérimentés peuvent tirer parti des autorisations accordées par ce paramètre de stratégie pour modifier leurs privilèges et obtenir un accès permanent aux fichiers et dossiers restreints. Notez que la sécurité de la version de la configuration utilisateur de ce paramètre de stratégie n’est pas garantie.  
   
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067134)    
 
@@ -270,44 +270,44 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : oui  
   
-    Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
+  Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
-    - **Nombre minimal de jeux de caractères du mot de passe**  
-      Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067055)  
+  - **Nombre minimal de jeux de caractères du mot de passe**  
+    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067055)  
+    
+    **Par défaut** : 3  
+
+  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil**  
+    Le nombre d’échecs d’authentification autorisé avant la réinitialisation de l’appareil. La valeur 0 désactive la fonctionnalité de réinitialisation de l’appareil.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067030)  
       
-      **Par défaut** : 3  
-  
-    - **Nombre d’échecs de connexion avant réinitialisation de l’appareil**  
-      Le nombre d’échecs d’authentification autorisé avant la réinitialisation de l’appareil. La valeur 0 désactive la fonctionnalité de réinitialisation de l’appareil.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067030)  
-        
-      **Par défaut** : 10  
-  
-    - **Expiration du mot de passe (jours)**  
-      Le paramètre de stratégie Antériorité maximale du mot de passe détermine la période (en jours) pendant laquelle un mot de passe peut être utilisé avant que le système oblige l’utilisateur à le changer. Vous pouvez définir l’expiration des mots de passe après un nombre de jours compris entre 1 et 999, ou vous pouvez spécifier que les mots de passe n’expirent jamais en définissant le nombre de jours sur 0. Si Antériorité maximale du mot de passe est compris entre 1 et 999 jours, l’antériorité minimale du mot de passe doit être inférieure à son antériorité maximale. Si Antériorité maximale du mot de passe est défini sur 0, Antériorité minimale du mot de passe peut avoir une valeur comprise entre 0 et 998 jours.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067028)  
-      
-      **Par défaut** : 60  
-  
-    - **Type de mot de passe requis**  
-      Détermine le type de code PIN ou de mot de passe exigé.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067027)  
-      
-      **Par défaut** : alphanumérique  
-  
-    - **Longueur minimale du mot de passe**  
-      Le paramètre de stratégie Longueur minimale du mot de passe détermine le plus petit nombre de caractères qui peuvent constituer un mot de passe pour un compte d’utilisateur. Vous pouvez définir une valeur comprise entre 1 et 14 caractères, ou vous pouvez établir qu’aucun mot de passe n’est exigé en définissant le nombre de caractères sur 0.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067024)  
-      
-      **Par défaut** : 8  
-  
-    - **Bloquer les mots de passe simples**  
-      Spécifie si les codes PIN ou les mots de passe comme « 1111 » ou « 1234 » sont autorisés. Pour le poste de travail, il contrôle également l’utilisation de mots de passe image.  
-      [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067127) 
-      
-      **Par défaut** : oui  
-        *La valeur Oui empêche l’utilisation de mots de passe simples.* 
+    **Par défaut** : 10  
+
+  - **Expiration du mot de passe (jours)**  
+    Le paramètre de stratégie Antériorité maximale du mot de passe détermine la période (en jours) pendant laquelle un mot de passe peut être utilisé avant que le système oblige l’utilisateur à le changer. Vous pouvez définir l’expiration des mots de passe après un nombre de jours compris entre 1 et 999, ou vous pouvez spécifier que les mots de passe n’expirent jamais en définissant le nombre de jours sur 0. Si Antériorité maximale du mot de passe est compris entre 1 et 999 jours, l’antériorité minimale du mot de passe doit être inférieure à son antériorité maximale. Si Antériorité maximale du mot de passe est défini sur 0, Antériorité minimale du mot de passe peut avoir une valeur comprise entre 0 et 998 jours.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067028)  
+    
+    **Par défaut** : 60  
+
+  - **Type de mot de passe requis**  
+    Détermine le type de code PIN ou de mot de passe exigé.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067027)  
+    
+    **Par défaut** : alphanumérique  
+
+  - **Longueur minimale du mot de passe**  
+    Le paramètre de stratégie Longueur minimale du mot de passe détermine le plus petit nombre de caractères qui peuvent constituer un mot de passe pour un compte d’utilisateur. Vous pouvez définir une valeur comprise entre 1 et 14 caractères, ou vous pouvez établir qu’aucun mot de passe n’est exigé en définissant le nombre de caractères sur 0.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067024)  
+    
+    **Par défaut** : 8  
+
+  - **Bloquer les mots de passe simples**  
+    Spécifie si les codes PIN ou les mots de passe comme « 1111 » ou « 1234 » sont autorisés. Pour le poste de travail, il contrôle également l’utilisation de mots de passe image.  
+    [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067127) 
+    
+    **Par défaut** : oui  
+      *La valeur Oui empêche l’utilisation de mots de passe simples.* 
 
   - **Empêcher la réutilisation des mots de passe précédents**  
     Spécifie le nombre de mots de passe à stocker dans l’historique des mots de passe qui ne peuvent pas être utilisés. Ceci comprend le mot de passe actuel de l’utilisateur. Par exemple, avec un paramètre de *1* l’utilisateur ne peut pas réutiliser son mot de passe actuel lors du choix d’un nouveau mot de passe. Un paramètre de *5* signifie qu’un utilisateur ne peut pas définir son nouveau mot de passe sur leur mot de passe actuel ni l’un de ses quatre mots de passe précédents.  
@@ -328,10 +328,10 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : 1  
 
-## <a name="dma-guard"></a>DMA Guard  
+## <a name="dma-guard"></a>Protection de DMA  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) dans la documentation Windows.
 - **Énumération des périphériques externes incompatibles avec la protection DMA de noyau**  
-  Cette stratégie est conçue pour offrir une sécurité supplémentaire par rapport à des appareils compatibles DMA externes. Elle permet de mieux contrôler l’énumération des appareils compatibles DMA externes qui sont incompatibles avec le sandboxing et l’isolation de la mémoire de l’appareil / du remappage DMA. Cette stratégie n’entre en vigueur que lorsque la protection DMA de noyau est prise en charge et activée par le microprogramme système. Protection contre le DMA du noyau est une fonctionnalité de plateforme qui ne peut pas être contrôlée via la stratégie ou par l’utilisateur final. Il doit être pris en charge par le système au moment de la fabrication. Pour vérifier si le système prend en charge la protection contre le DMA du noyau, vérifiez le champ de noyau DMA Protection dans la page Résumé de MSINFO32.exe.  
+  Cette stratégie est conçue pour fournir une sécurité supplémentaire sur les périphériques externes qui prennent en charge l’accès direct. Elle permet de mieux contrôler l’énumération des appareils compatibles DMA externes qui sont incompatibles avec le sandboxing et l’isolation de la mémoire de l’appareil / du remappage DMA. Cette stratégie n’entre en vigueur que lorsque la protection DMA de noyau est prise en charge et activée par le microprogramme système. La protection DMA du noyau est une fonctionnalité de plateforme qui ne peut pas être contrôlée via une stratégie ou par un utilisateur final. Il doit être pris en charge par le système au moment de la fabrication. Pour vérifier si le système prend en charge la protection DMA du noyau, consultez le champ protection DMA du noyau dans la page Résumé de MSINFO32. exe.  
   [En savoir plus](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Par défaut** : tout bloquer   
@@ -531,11 +531,11 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : aucun site  
 
-- **Prise en charge du chiffrement de Internet Explorer**  
-  Ce paramètre de stratégie vous permet de désactiver la prise en charge pour la sécurité TLS (Transport Layer) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 ou SSL 3.0 dans le navigateur. SSL et TLS sont des protocoles qui aident à protéger les communications entre le navigateur et le serveur cible. Lorsque le navigateur tente de configurer une communication protégée avec le serveur cible, le serveur et le navigateur négocier le protocole et la version à utiliser. Essaient le navigateur et le serveur correspondre à l’autre liste de protocoles pris en charge et les versions, et ils sélectionnent la correspondance préférée. Si vous activez ce paramètre de stratégie, le navigateur négocie ou ne pas négocie un tunnel de chiffrement en utilisant les méthodes de chiffrement que vous sélectionnez dans la liste déroulante. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’utilisateur peut sélectionner chiffrement méthode le navigateur prend en charge.  
+- **Prise en charge du chiffrement Internet Explorer**  
+  Ce paramètre de stratégie vous permet de désactiver la prise en charge de TLS (Transport Layer Security) 1,0, TLS 1,1, TLS 1,2, protocole SSL (SSL) 2,0 ou SSL 3,0 dans le navigateur. Les protocoles TLS et SSL permettent de protéger la communication entre le navigateur et le serveur cible. Lorsque le navigateur tente de configurer une communication protégée avec le serveur cible, le navigateur et le serveur négocient le protocole et la version à utiliser. Le navigateur et le serveur tentent de faire correspondre la liste des protocoles et versions pris en charge par l’autre, et ils sélectionnent la correspondance la plus préférée. Si vous activez ce paramètre de stratégie, le navigateur négocie ou ne négocie pas un tunnel de chiffrement à l’aide des méthodes de chiffrement que vous sélectionnez dans la liste déroulante. Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’utilisateur peut sélectionner la méthode de chiffrement prise en charge par le navigateur.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Par défaut**: 2 éléments : TLS 1.1 et TLS v1.2  
+  **Valeur par défaut**: 2 éléments: TLS v 1.1 et TLS v 1.2  
   *Sélectionnez la flèche vers le bas pour afficher les options que vous pouvez sélectionner pour ce paramètre.*
   
 - **Internet Explorer > Zone Internet verrouillée : SmartScreen**  
@@ -678,7 +678,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zone Internet : Autoriser l’exécution de VBscript**  
-  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options sont les suivantes : 
+  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options disponibles sont les suivantes : 
   - *Activé* : VBScript s’exécute sur les pages de certaines zones, sans intervention de l’utilisateur. 
   - *Invite* : les employés sont invités à choisir s’il faut autoriser l’exécution de VBScript dans la zone. 
   - *Désactivé* : l’exécution de VBScript est empêchée dans la zone. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, VBScript s’exécute dans la zone spécifiée, sans que l’utilisateur n’ait à intervenir.    
@@ -940,7 +940,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Activé  
   
-- **Scriptlets de zone Internet Explorer internet**  
+- **Scriptlets de la zone Internet Internet Explorer**  
   Ce paramètre de stratégie vous permet de déterminer si l’utilisateur peut exécuter des scriptlets. Si vous activez ce paramètre de stratégie, l’utilisateur peut exécuter des scriptlets. Si vous désactivez ce paramètre de stratégie, l’utilisateur ne peut pas exécuter de scriptlets. Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut activer ou désactiver les scriptlets.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067176)  
   
@@ -1185,7 +1185,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
   
 - **Comportement de l’invite d’élévation d’administrateur**  
-  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
+  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options sont les suivantes : 
     - *Élever sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
     - *Invite pour les informations d'identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
     - *Invite pour le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à sélectionner Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
@@ -1198,7 +1198,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : demander le consentement sur le bureau sécurisé
   
 - **Sécurité de session minimale pour les clients basés sur NTLM SSP**  
-  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options disponibles sont :
+  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options sont les suivantes :
   - *Nécessite une sécurité de session NTLMv2* : la connexion échoue si le protocole NTLMv2 n’est pas négocié. 
   - *Nécessite un chiffrement 128 bits* : la connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
   - *Exiger l’authentification NTLMv2 et un chiffrement de 128 bits*.  
@@ -1208,7 +1208,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
   
 - **Comportement lorsque la carte à puce est retirée**  
-    Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
+    Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options sont les suivantes :
      - *Aucune action*. 
      - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
      - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
@@ -1245,7 +1245,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : refuser automatiquement les demandes d’élévation de privilèges
   
 - **Exiger le mode d’approbation Administrateur pour les administrateurs**  
-  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options disponibles sont :   
+  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options sont les suivantes :   
   - *Non configuré* : le mode d’approbation Administrateur et tous les paramètres de stratégie UAC associés sont désactivés. Remarque : Si ce paramètre de stratégie est désactivé, le Centre de sécurité vous avertit que la sécurité globale du système d’exploitation a été réduite. 
   - *Oui* : le mode d’approbation Administrateur est activé. Cette stratégie doit être activée et les paramètres de stratégie UAC associés doivent également être définis en conséquence pour permettre au compte Administrateur intégré et à tous les autres utilisateurs membres du groupe Administrateurs de s’exécuter en mode d’approbation Administrateur.  
 
@@ -1269,7 +1269,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : *O:BAG:BAD:(A;;RC;;;BA)*
 
 - **Utiliser le mode d’approbation Administrateur**  
-  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options disponibles sont : 
+  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options sont les suivantes : 
   - *Oui* : le compte Administrateur intégré utilise le mode d’approbation Administrateur. Par défaut, une invite d’approbation est présentée à l’utilisateur pour chaque opération nécessitant une élévation de privilège. 
   - *Non configuré* : le compte Administrateur intégré exécute toutes les applications avec des privilèges administratifs complets. 
 
@@ -1287,7 +1287,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Détecter les installations d’applications et demander l’élévation**  
-  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options disponibles sont : 
+  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options sont les suivantes : 
   - *Activé* : lorsqu’un package d’installation d’application nécessitant une élévation de privilège est détecté, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
   - *Désactivé* : les packages d’installation d’application ne sont pas détectés ni invités pour une élévation. Les entreprises qui utilisent des ordinateurs de bureau pour utilisateur standard et ont recours à des technologies d’installation déléguée telles que GPSI (Group Policy Software Install) ou SMS (Systems Management Server) doivent désactiver ce paramètre de stratégie. Dans ce cas, la détection d’un programme d’installation n’est pas nécessaire.  
   
@@ -1387,28 +1387,28 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
 ## <a name="remote-assistance"></a>Assistance à distance
 - **Assistance à distance sollicitée**  
-  Ce paramètre de stratégie vous permet d’activer ou désactiver l’Assistance à distance de Solicited (demander) sur cet ordinateur. 
-  - *Si vous activez ce paramètre de stratégie*, les utilisateurs sur cet ordinateur peuvent utiliser des transfert de fichier ou un e-mail à quelqu'un demander de l’aide. En outre, les utilisateurs peuvent utiliser des programmes de messagerie instantanée pour autoriser les connexions à cet ordinateur, et vous pouvez configurer des paramètres supplémentaires de l’Assistance à distance. 
-  - *Si vous désactivez ce paramètre de stratégie*, les utilisateurs sur cet ordinateur ne peut pas utiliser transfert de fichier ou un e-mail pour demander de l’aide. En outre, les utilisateurs ne peut pas utiliser des programmes de messagerie instantanée pour autoriser les connexions à cet ordinateur. 
-  - *Si vous ne configurez pas ce paramètre de stratégie*, les utilisateurs peuvent activer ou désactiver l’Assistance à distance Solicited (demander) eux-mêmes dans les propriétés système dans le panneau de configuration. Les utilisateurs peuvent également configurer des paramètres de l’Assistance à distance. 
+  Ce paramètre de stratégie vous permet d’activer ou de désactiver l’assistance à distance sollicitée (demander) sur cet ordinateur. 
+  - *Si vous activez ce paramètre de stratégie*, les utilisateurs de cet ordinateur peuvent utiliser la messagerie ou le transfert de fichiers pour demander de l’aide à une personne. En outre, les utilisateurs peuvent utiliser des programmes de messagerie instantanée pour autoriser les connexions à cet ordinateur, et vous pouvez configurer des paramètres d’assistance à distance supplémentaires. 
+  - *Si vous désactivez ce paramètre de stratégie*, les utilisateurs de cet ordinateur ne peuvent pas utiliser de courrier électronique ou de transfert de fichiers pour demander de l’aide à une personne. En outre, les utilisateurs ne peuvent pas utiliser les programmes de messagerie instantanée pour autoriser les connexions à cet ordinateur. 
+  - *Si vous ne configurez pas ce paramètre de stratégie*, les utilisateurs peuvent activer ou désactiver l’assistance à distance (demandez) eux-mêmes dans les propriétés système du panneau de configuration. Les utilisateurs peuvent également configurer les paramètres d’assistance à distance. 
 
-  Si vous activez ce paramètre de stratégie, vous disposez de deux façons pour autoriser des programmes d’assistance fournir une Assistance à distance : « Autoriser programmes d’assistance pour affichage uniquement lors de l’ordinateur » ou « Autoriser l’assistance à distance l’ordinateur ». La « durée maximale du ticket « paramètre de stratégie définit une limite sur la quantité de temps qui une invitation d’Assistance à distance créée à l’aide de transfert de fichier ou un e-mail peut rester ouverte. La « sélectionner la méthode d’envoi des invitations par e-mail » paramètre spécifie quelle norme de messagerie à utiliser pour envoyer des invitations d’Assistance à distance. En fonction de votre programme de messagerie, vous pouvez utiliser le Mailto standard (le destinataire de l’invitation se connecte via un lien Internet) ou la SMAPI (Simple MAPI) standard (l’invitation est attachée à votre message électronique). Ce paramètre de stratégie n’est pas disponible dans Windows Vista, car SMAPI est la seule méthode prise en charge. Si vous activez ce paramètre de stratégie, vous devez également activer les exceptions de pare-feu appropriées autoriser les communications de l’Assistance à distance.  
+  Si vous activez ce paramètre de stratégie, vous disposez de deux méthodes pour permettre aux applications d’assistance de fournir une assistance à distance: «autoriser les applications d’assistance à afficher uniquement l’ordinateur» ou «autoriser le contrôle à distance de l’ordinateur par les assistances». Le paramètre de stratégie «durée maximale du ticket» définit une limite sur la durée pendant laquelle une invitation d’assistance à distance créée à l’aide de la messagerie ou du transfert de fichiers peut rester ouverte. Le paramètre «sélectionner la méthode d’envoi d’invitations par courrier électronique» spécifie la norme de messagerie à utiliser pour envoyer des invitations d’assistance à distance. En fonction de votre programme de messagerie, vous pouvez utiliser la norme mailto (le destinataire de l’invitation se connecte via une liaison Internet) ou la norme SMAPI (simple MAPI) (l’invitation est jointe à votre message électronique). Ce paramètre de stratégie n’est pas disponible dans Windows Vista, car SMAPI est la seule méthode prise en charge. Si vous activez ce paramètre de stratégie, vous devez également activer les exceptions de pare-feu appropriées pour permettre les communications d’assistance à distance.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-  **Par défaut**: désactiver l’Assistance à distance
+  **Par défaut**: désactiver l’assistance à distance
 
-  Lorsque la valeur *activer l’Assistance à distance*, configurez les paramètres supplémentaires suivants :  
-  - **L’Assistance à distance sollicitée autorisation**  
+  Quand vous définissez cette *fonctionnalité sur Activer l’assistance à distance*, configurez les paramètres supplémentaires suivants:  
+  - **Autorisation sollicitée d’assistance à distance**  
     **Par défaut** : affichage  
 
-  - **Valeur de durée maximale du ticket**  
+  - **Valeur maximale de la durée du ticket**  
     **Par défaut** : *non configuré*  
 
   - **Période de temps maximale du ticket**  
-    **Par défaut**: Minutes    
+    **Valeur par défaut**: minutes    
 
-  - **Méthode d’invitation de courrier électronique**  
-    **Par défaut**: MAPI Simple
+  - **Méthode d’invitation par courrier électronique**  
+    **Valeur par défaut**: MAPI simple
 
   
 ## <a name="remote-desktop-services"></a>Services Bureau à distance  
@@ -1501,7 +1501,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : authentifié
 
-## <a name="search"></a>Recherche 
+## <a name="search"></a>Rechercher 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Recherche](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) dans la documentation Windows.  
 
 - **Désactiver l’indexation des éléments chiffrés**  
@@ -1528,7 +1528,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : oui
   
-## <a name="system"></a>Système  
+## <a name="system"></a>d'exploitation  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Système](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) dans la documentation Windows.  
 
 - **Système : Initialisation des pilotes de démarrage**  
@@ -1660,7 +1660,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
   
 - **Surveillance du comportement**  
-  Autorise ou interdit la fonctionnalité analyse du comportement de Windows Defender. Intégré dans Windows 10, ces capteurs collectent et traitent les signaux comportementaux du système d’exploitation et envoient ces données de capteur à votre instance cloud, isolée et privée de Windows Defender ATP.  
+  Autorise ou interdit la fonctionnalité de surveillance du comportement de Windows Defender. Intégré dans Windows 10, ces capteurs collectent et traitent les signaux comportementaux du système d’exploitation et envoient ces données de capteur à votre instance cloud, isolée et privée de Windows Defender ATP.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Par défaut** : oui
@@ -1709,9 +1709,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : bloc
 
 ## <a name="windows-defender-firewall"></a>Pare-feu Windows Defender  
-Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) dans la documentation sur les protocoles de Windows.  
+Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) dans la documentation des protocoles Windows.  
 
-- **Domaine de profil de pare-feu**  
+- **Domaine du profil de pare-feu**  
   Spécifie les profils auxquels appartient la règle : domaine, privé, public. Cette valeur représente le profil des réseaux qui sont connectés à des domaines.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2066796)  
 
@@ -1753,7 +1753,7 @@ Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.mic
   Spécifie les profils auxquels appartient la règle : domaine, privé, public. Cette valeur représente le profil des réseaux privés.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067041)  
 
-   - **Connexions entrantes bloquées**  
+  - **Connexions entrantes bloquées**  
     **Par défaut** : oui
 
   - **Connexions sortantes requises**  
@@ -1767,7 +1767,7 @@ Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.mic
 
 ## <a name="windows-hello-for-business"></a>Windows Hello Entreprise  
 - **Exiger la détection d’usurpation avancée, si disponible**  
-  Si Oui, appareils utiliseront l’anti-d’usurpation avancée, quand il est disponible. Si non, détection d’usurpation est bloquée. Non configuré s’honorer les configurations effectuées sur le client.  
+  Si c’est le cas, les appareils utilisent l’anti-usurpation améliorée, le cas échéant. Si ce n’est pas le cas, l’anti-usurpation est bloquée. Non configuré honore les configurations effectuées sur le client.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067192)
 
   **Par défaut** : oui
@@ -1778,22 +1778,22 @@ Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.mic
   **Par défaut** : oui
 
 - **Exiger des minuscules dans le code confidentiel**  
-  Si nécessaire, code confidentiel utilisateur doit inclure au moins une lettre minuscule.
+  Si nécessaire, le code PIN de l’utilisateur doit inclure au moins une lettre minuscule.
 
   **Par défaut** : autorisé
 
 - **Exiger des caractères spéciaux dans le code confidentiel**  
-  Si nécessaire, code confidentiel utilisateur doit inclure au moins un caractère spécial.
+  Si nécessaire, le code PIN de l’utilisateur doit inclure au moins un caractère spécial.
 
   **Par défaut** : autorisé
 
 - **Longueur minimale du code confidentiel**  
-  Longueur minimale du PIN doit comprendre entre 4 et 127 caractères.
+  La longueur minimale du code confidentiel doit être comprise entre 4 et 127.
 
   **Par défaut** : 6
 
 - **Exiger des majuscules dans le code confidentiel**  
-  Si nécessaire, code confidentiel utilisateur doit inclure au moins une lettre majuscule.
+  Si nécessaire, le code PIN de l’utilisateur doit inclure au moins une lettre majuscule.
 
   **Par défaut** : autorisé
 
@@ -1819,35 +1819,35 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : Activé
 
-## <a name="whats-changed-in-the-new-template"></a>Quelles sont les nouveautés dans le nouveau modèle
-Le *base de sécurité de gestion des appareils mobiles pour la mise à jour de Spring 2019 (19H 1)* modèle comporte les modifications suivantes à partir de la *aperçu* modèle.
+## <a name="whats-changed-in-the-new-template"></a>Ce qui a changé dans le nouveau modèle
+Le modèle de *mise à jour de la ligne de base de sécurité MDM pour Spring 2019 Update (19H1)* présente les modifications suivantes par rapport à la version *préliminaire* du modèle.
 
-### <a name="changes-to-the-baseline-settings"></a>Modifications apportées aux paramètres de ligne de base
+### <a name="changes-to-the-baseline-settings"></a>Modifications apportées aux paramètres de base
 Les paramètres suivants sont soit :
-- *Nouvelle* dans cette dernière version de la ligne de base.
-- *Supprimé* à partir de cette dernière version de ligne de base, mais ne figuraient dans la version précédente.
-- *Révisé* d’une certaine façon à partir de la façon dont les paramètres est apparue dans la version précédente. 
+- *Nouveauté* de cette dernière version de la ligne de base.
+- *Supprimé* de cette dernière version de référence, mais qui étaient présents dans la version précédente.
+- *Modifié* de quelque manière que ce soit de la façon dont les paramètres apparaissent dans la version précédente. 
 
-*[Nouveau]*  [ **Par-dessus le verrouillage**](#above-lock):
-- **Voice activer des applications à partir de l’écran verrouillé**    
+*[Nouveau]* [**Au-dessus du verrou**](#above-lock):
+- **Activer les applications vocales à partir de l’écran verrouillé**    
 
 *[Nouveau]* [**Gestion des applications**](#application-management) : 
-- **Contrôle utilisateur de bloc sur les installations**  
-- **Installations d’applications MSI de bloc avec des privilèges élevés**  
+- **Bloquer le contrôle utilisateur sur les installations**  
+- **Bloquer les installations d’applications MSI avec des privilèges élevés**  
 
-*[Supprimé]*  [ **Bitlocker**](#bitlocker):  
-- Bit de stratégie de lecteur amovible Locker > **méthode de chiffrement**
-- **Stratégie de lecteur fixé par BitLocker** *(tous les paramètres)*
-- **Bit de stratégie de lecteur de système de stockage sécurisé des** *(tous les paramètres)*
+*[Supprimé]* [**BitLocker**](#bitlocker):  
+- Stratégie de lecteur amovible de verrouillage de bits > **méthode** de chiffrement
+- **Stratégie de lecteur fixe de verrouillage de bits** *(tous les paramètres)*
+- **Stratégie de lecteur système du dispositif de verrouillage de bit** *(tous les paramètres)*
 
 *[Nouveau]* [**Connectivité**](#connectivity) :
-- **Configurer un accès sécurisé aux chemins d’accès UNC**
+- **Configurer un accès sécurisé aux chemins UNC**
 
 *[Nouveau]* [**Protection de l’appareil**](#device-guard) :
 - **Sécurité basée sur la virtualisation**
 
 
-*[Nouveau]*  [ **DMA Guard**](#dma-guard):
+*[Nouveau]* [**Protection de DMA**](#dma-guard):
 - **Énumération des périphériques externes incompatibles avec la protection DMA de noyau**  
 
 *[Nouveau]* [**Internet Explorer**](#internet-explorer) :
@@ -1855,17 +1855,17 @@ Les paramètres suivants sont soit :
 - **Fichiers glisser et déplacer ou copier et coller de la zone internet Internet Explorer**  
 - **Composants dépendants du .NET Framework de la zone restreinte Internet Explorer**  
 - **La zone de l’ordinateur local Internet Explorer n’exécute pas de logiciel anti-programme malveillant sur les contrôles ActiveX**
-- **Prise en charge du chiffrement de Internet Explorer**  
+- **Prise en charge du chiffrement Internet Explorer**  
 
-*[Révision]*  [ **Internet Explorer**](#internet-explorer):
-- **Invite automatique de la zone d’internet d’Internet Explorer pour les téléchargements de fichiers** > la valeur par défaut est désormais **désactivé**. Dans la version préliminaire, il a été défini sur activé.
+*[Révisé]* [**Internet Explorer**](#internet-explorer):
+- **Invite automatique de la zone Internet Internet Explorer pour les téléchargements de fichiers** > la **** valeur par défaut est désormais désactivée. Dans Aperçu, cette option a été activée.
 
 *[Nouveau]* [**Assistance à distance**](#remote-assistance) :  
 - **Assistance à distance sollicitée** 
-  - **L’Assistance à distance sollicitée autorisation**
-  - **Valeur de durée maximale du ticket**  
+  - **Autorisation sollicitée d’assistance à distance**
+  - **Valeur maximale de la durée du ticket**  
   - **Période de temps maximale du ticket**  
-  - **Méthode d’invitation de courrier électronique**
+  - **Méthode d’invitation par courrier électronique**
 
 
 *[Nouveau]* [**Windows Defender**](#windows-defender) :
@@ -1873,7 +1873,7 @@ Les paramètres suivants sont soit :
 - **Lancement d’applications de communication Office dans un processus enfant** 
 
 *[Nouveau]* [**Pare-feu Windows Defender**](#windows-defender-firewall)
-- **Domaine de profil de pare-feu**  
+- **Domaine du profil de pare-feu**  
   - **Connexions entrantes bloquées**  
   - **Connexions sortantes requises**  
   - **Notifications entrantes bloquées**  
