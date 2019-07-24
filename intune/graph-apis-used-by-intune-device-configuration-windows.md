@@ -1,7 +1,7 @@
 ---
 title: API Graph pour configurer des appareils dans Microsoft Intune-Azure | Microsoft Docs
 titleSuffix: ''
-description: Consultez la liste de toutes les entités API Graph avec le fournisseur de services de chiffrement Windows et l’URI de décalage correspondants sur les appareils Windows 10 et les plus récents utilisés lors de la configuration des appareils dans Microsoft Intune. Consultez l’API et le CSP correspondants pour les PC partagés, Endpoint Protection, Windows Defender-protection avancée contre les menaces, Identity Protection, Windows 10 Teams, Kiosk et Windows Update pour les entreprises.
+description: Consultez la liste de toutes les entités API Graph avec le fournisseur de services de chiffrement Windows et l’URI de décalage correspondants sur les appareils Windows 10 et les plus récents utilisés lors de la configuration des appareils dans Microsoft Intune. Consultez l’API et le CSP correspondants pour les PC partagés, Endpoint Protection, Microsoft Defender-protection avancée contre les menaces, Identity Protection, Windows 10 Teams, Kiosk et Windows Update pour les entreprises.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3732a4539c13ad05ae8c95621246429b7f38987e
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 9db6be9c61455056f7ad32a9dba3fa6be9f6f5c3
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354423"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427282"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>API Graph et les fournisseurs de services de chiffrement Windows 10 correspondants utilisés dans Intune
 
