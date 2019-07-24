@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883269"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354385"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
 
@@ -79,7 +79,7 @@ Les codes d’activation de téléphonie mobile sont fournis par votre opérateu
 4. Sélectionnez le fichier CSV contenant vos codes d’activation.
 5. Cliquez sur **OK** pour enregistrer vos modifications.
 
-#### <a name="csv-file-requirements"></a>Exigences relatives au fichier CSV
+### <a name="csv-file-requirements"></a>Exigences relatives au fichier CSV
 
 Lors de l’utilisation du fichier csv contenant les codes d’activation, veillez à ce que votre opérateur mobile ou vous-même remplissiez les conditions suivantes :
 
@@ -89,7 +89,7 @@ Lors de l’utilisation du fichier csv contenant les codes d’activation, veill
 - Chaque fichier doit être propre à un seul opérateur mobile, et tous les codes d’activation doivent être propres à un même plan de facturation. Intune distribue aléatoirement les codes d’activation aux appareils ciblés. Il n’y a aucune garantie quant à l’appareil qui obtiendra un code d’activation spécifique
 - Vous pouvez importer un maximum de 1000 codes d’activation dans un fichier csv
 
-#### <a name="csv-file-example"></a>Exemple de fichier CSV
+### <a name="csv-file-example"></a>Exemple de fichier CSV
 
 1. La première ligne et la première cellule du fichier csv correspondent à l’URL du service d’activation eSIM de l’opérateur mobile, appelé SM-DP+ (serveur Subscription Manager Data Preparation). L’URL doit être un nom de domaine complet (FQDN) sans virgule.
 2. La deuxième ligne et toutes les suivantes correspondent à des codes d’activation à usage unique qui incluent deux valeurs :
@@ -129,7 +129,7 @@ Les codes d’activation eSIM ne sont utilisés qu’une seule fois. Une fois qu
 
 ## <a name="step-4-monitor-deployment"></a>Étape 4 : Superviser le déploiement
 
-#### <a name="review-the-deployment-status"></a>Consulter l’état du déploiement
+### <a name="review-the-deployment-status"></a>Consulter l’état du déploiement
 
 Une fois que vous avez affecté le profil, vous pouvez surveiller l’état du déploiement d’un pool d’abonnements.
 
@@ -138,7 +138,7 @@ Une fois que vous avez affecté le profil, vous pouvez surveiller l’état du d
 3. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM**. Tous vos pools d’abonnements cellulaires eSIM existants sont répertoriés.
 4. Sélectionnez un abonnement et consultez l’**État du déploiement**.
 
-#### <a name="check-the-profile-status"></a>Vérifier l’état du profil
+### <a name="check-the-profile-status"></a>Vérifier l’état du profil
 Une fois le profil d’appareil créé, Intune fournit des graphiques. Ces graphiques affichent l’état d’un profil, à savoir s’il a été attribué correctement à des appareils ou si le profil indique un conflit.
 
 1. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM** > Sélectionner un abonnement existant.
@@ -167,7 +167,7 @@ Vous pouvez surveiller et afficher une liste détaillée des appareils dans Éta
     - **État du réseau mobile** : état fourni par l’opérateur de téléphonie. Contactez l’opérateur mobile pour résoudre les problèmes.
     - **Dernier archivage** : date de dernière communication de l’appareil avec Intune
 
-#### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Surveiller les détails du profil eSIM sur l’appareil
+### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Surveiller les détails du profil eSIM sur l’appareil
 
 1. Sur votre appareil, ouvrez **Paramètres** > accédez à **Réseau & Internet**.
 2. Sélectionnez **Cellulaire** > **Gérer les profils eSIM**.

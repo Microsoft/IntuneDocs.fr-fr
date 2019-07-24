@@ -14,12 +14,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce7ad6b0254b1c3a8e2843cfcbe70a6b718ce88
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5814a4aac064394dbd0c7f5902dc3f62459ad1d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049919"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353813"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Stratégies de protection des applications et profils professionnels sur des appareils Android Entreprise dans Intune
 
@@ -58,7 +58,7 @@ Pour voir une liste des applications activées avec la stratégie de protection 
 
 Cette section décrit les caractéristiques importantes des scénarios de déploiement de stratégies de protection des applications sans inscription et du profil professionnel Android Entreprise.
 
-#### <a name="app-we"></a>APP-WE
+### <a name="app-we"></a>APP-WE
 
 Le déploiement d’APP-WE (stratégies de protection des applications sans inscription) définit des stratégies pour les applications, pas pour les appareils. Dans ce scénario, les appareils ne sont généralement ni inscrits ni gérés par une autorité de gestion des appareils mobiles comme Intune. Pour protéger des applications et l’accès à des données d’entreprise, les administrateurs utilisent des applications pouvant être gérées par des stratégies de protection des applications et appliquent des stratégies de protection des données à ces applications.
 
@@ -71,7 +71,7 @@ Cette fonctionnalité s’applique à :
 
 Les scénarios des stratégies de protection des applications sans inscription sont destinés aux utilisateurs finaux qui souhaitent avoir une faible empreinte organisationnelle de leurs appareils et ne veulent pas s’engager dans la gestion d’appareils mobiles. En tant qu’administrateur, vous devez toujours protéger vos données. Ces appareils ne sont pas gérés. Des tâches et des fonctionnalités de gestion d’appareils mobiles, telles que le Wi-Fi, le VPN et la gestion des certificats, ne font donc pas partie de ce scénario de déploiement.
 
-#### <a name="android-enterprise-work-profiles"></a>Profils professionnels Android Entreprise
+### <a name="android-enterprise-work-profiles"></a>Profils professionnels Android Entreprise
 
 Les profils professionnels sont au cœur du scénario de déploiement Android Enterprise, qui est le seul ciblant les cas d’utilisation de BYOD. Le profil professionnel est une partition distincte créée au niveau du système d’exploitation Android et pouvant être gérée par Intune.
 
@@ -95,7 +95,7 @@ Les paramètres des profils professionnels et des stratégies de protection des 
 
 ### <a name="suppress-app-policy-for-work-profiles"></a>Supprimer la stratégie de protection des applications pour les profils professionnels
 
-Vous devrez peut-être prendre en charge les utilisateurs individuels qui disposent de plusieurs appareils (appareils non gérés dans un scénario de stratégies de protection des applications sans inscription et appareils gérés avec des profils professionnels). 
+Vous devrez peut-être prendre en charge les utilisateurs individuels qui disposent de plusieurs appareils (appareils non gérés dans un scénario de stratégies de protection des applications sans inscription et appareils gérés avec des profils professionnels).
 
 Par exemple, vous demandez aux utilisateurs finaux d’entrer un PIN lorsqu’ils ouvrent une application professionnelle. En fonction de l’appareil, les fonctionnalités de PIN sont gérées par la stratégie de protection des applications ou par le profil professionnel. Pour les appareils avec des stratégies de protection des applications sans inscription, le comportement du PIN de lancement est appliqué par la stratégie de protection des applications. Pour les appareils de profils professionnels, vous pouvez utiliser un PIN d’appareil ou de profil professionnel appliqué par le système d’exploitation. Pour réaliser ce scénario, configurez les paramètres de la stratégie de protection des applications de manière qu’ils ne s’appliquent pas *lorsqu’* une application est déployée dans un profil professionnel. Si vous ne configurez pas de cette façon, l’utilisateur final est invité à entrer un PIN, d’abord par l’appareil, et ensuite au niveau de la couche de la stratégie de protection des applications.
 
@@ -111,13 +111,13 @@ Pour plus d’informations, consultez [déployer Outlook pour iOS et les paramè
 
 Il existe plusieurs scénarios de mobilité d’entreprise pour lesquels l’utilisation de la stratégie de protection des applications Intune est la meilleure recommandation.
 
-#### <a name="older-devices-running-android-44-51-are-being-used"></a>Des appareils anciens exécutant Android 4.4 à 5.1 sont utilisées
+### <a name="older-devices-running-android-44-51-are-being-used"></a>Des appareils anciens exécutant Android 4.4 à 5.1 sont utilisées
 
 Officiellement, n’importe quel appareil Android à partir de la version 5.0 avec Google Mobile Services prend en charge les profils professionnels et est susceptible d’être géré de cette façon. Toutefois, certains appareils Android 5.0 et 5.1 de certains OEM ne prennent pas en charge les profils professionnels.
 
 Si vous utilisez des versions qui ne prennent pas en charge les profils professionnels, et pour garantir la protection contre les pertes de données de l’organisation sur les appareils, vous devez utiliser les fonctionnalités d’application Intune.
 
-#### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Pas de gestion des appareils mobiles, pas d’inscription, les services Google ne sont pas disponibles
+### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Pas de gestion des appareils mobiles, pas d’inscription, les services Google ne sont pas disponibles
 
 Certains clients ne souhaitent aucune forme de gestion des appareils, notamment la gestion de profil professionnels et ce, pour différentes raisons :
 

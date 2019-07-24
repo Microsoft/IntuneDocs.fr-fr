@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91633aee190b5fb5bda9495f66d4503042aa6a80
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 9a1e370b65d8bfd7e61562347323bf1455dfe55b
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713324"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354299"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -109,5 +109,5 @@ Par exemple, le paramètre de stratégie **Exiger le code confidentiel de l’ap
 Tout d’abord, [créez et attribuez une stratégie de protection des applications](app-protection-policies.md) à l’application iOS. Pour plus d’informations sur la façon de tester la stratégie de protection des applications, consultez [Valider les stratégies de protection des applications](app-protection-policies-validate.md).
 
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Qu’est ce qu’une stratégie de protection d’application Intune ?](app-protection-policy.md)

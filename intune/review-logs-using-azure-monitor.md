@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412701"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354524"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envoyer les données de journal à des comptes de stockage, des hubs d’événements ou Log Analytics dans Intune (préversion)
 
@@ -174,43 +174,43 @@ Pour passer en revue les coûts liés à la gestion de l’espace de travail Log
 
 Obtenez des réponses aux questions fréquemment posées et découvrez les problèmes connus liés aux journaux Intune dans Azure Monitor.
 
-#### <a name="which-logs-are-included"></a>Quels journaux sont inclus ?
+### <a name="which-logs-are-included"></a>Quels journaux sont inclus ?
 
 Les journaux d’audit et les journaux des opérations (préversion) peuvent être acheminés à l’aide de cette fonctionnalité.
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Après une action, quand les journaux correspondants apparaissent-ils dans le hub d’événements ?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Après une action, quand les journaux correspondants apparaissent-ils dans le hub d’événements ?
 
 Les journaux apparaissent généralement dans votre hub d’événements dans les minutes qui suivent l’action. L’article de [présentation d’Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/) fournit des informations supplémentaires.
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Après une action, quand les journaux correspondants apparaissent dans le compte de stockage ?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Après une action, quand les journaux correspondants apparaissent dans le compte de stockage ?
 
 Pour les comptes de stockage Azure, la latence va de 5 à 15 minutes après l’exécution de l’action.
 
-#### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Que se passe-t-il si un administrateur change la période de conservation d’un paramètre de diagnostic ?
+### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Que se passe-t-il si un administrateur change la période de conservation d’un paramètre de diagnostic ?
 
 La nouvelle stratégie de conservation est appliquée aux journaux collectés après le changement. Les journaux collectés avant le changement de stratégie ne sont pas affectés.
 
-#### <a name="how-much-does-it-cost-to-store-my-data"></a>Combien coûte le stockage de mes données ?
+### <a name="how-much-does-it-cost-to-store-my-data"></a>Combien coûte le stockage de mes données ?
 
 Les coûts de stockage dépendent de la taille de vos journaux et de la période de conservation que vous choisissez. Pour obtenir la liste des estimations de coûts pour les locataires, en fonction du volume du fichier journal généré, consultez [Taille de stockage pour les journaux d’activité](#storage-size-for-activity-logs) (dans cet article).
 
-#### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Combien coûte le streaming de mes données vers un hub d’événements ?
+### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Combien coûte le streaming de mes données vers un hub d’événements ?
 
 Les coûts de streaming varient en fonction du nombre de messages reçus par minute. Pour plus d’informations sur le calcul des coûts et les estimations de coûts en fonction du nombre de messages, consultez [Messages du hub d’événements pour les journaux d’activité](#event-hub-messages-for-activity-logs) (dans cet article).
 
-#### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Comment intégrer les journaux d’audit Intune à mon système SIEM ?
+### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Comment intégrer les journaux d’audit Intune à mon système SIEM ?
 
 Utilisez Azure Monitor avec Event Hubs pour diffuser en streaming les journaux vers votre système SIEM. Commencez par [diffuser en streaming les journaux vers un hub d’événements](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Ensuite, [configurez votre outil SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) avec le hub d’événements configuré. 
 
-#### <a name="what-siem-tools-are-currently-supported"></a>Quels sont les outils SIEM actuellement pris en charge ?
+### <a name="what-siem-tools-are-currently-supported"></a>Quels sont les outils SIEM actuellement pris en charge ?
 
 À l’heure actuelle, Azure Monitor est pris en charge par [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar et [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (ouvre un nouveau site web). Pour plus d’informations sur le fonctionnement des connecteurs, consultez [Diffuser en streaming les données de supervision Azure vers un hub d’événements à des fins de consommation par un outil externe](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
-#### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Puis-je accéder aux données à partir d’un hub d’événements sans recourir à un outil SIEM externe ?
+### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Puis-je accéder aux données à partir d’un hub d’événements sans recourir à un outil SIEM externe ?
 
 Oui. Pour accéder aux journaux à partir de votre application personnalisée, vous pouvez utiliser l’[API Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
-#### <a name="what-data-is-stored"></a>Quelles données sont stockées ?
+### <a name="what-data-is-stored"></a>Quelles données sont stockées ?
 
 Intune ne stocke aucune donnée envoyée par le biais du pipeline. Intune achemine les données au pipeline Azure Monitor, sous l’autorité du locataire. Pour plus d’informations, consultez [Vue d’ensemble d’Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
 

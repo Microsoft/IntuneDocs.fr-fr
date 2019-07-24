@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548088"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375243"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -69,7 +69,7 @@ Vérifiez si le nombre d’appareils affectés à l’utilisateur n’est pas su
 
 3. Si le nombre d’appareils inscrits de l’utilisateur est déjà égal à la restriction de limite d’appareils, aucun autre appareil ne peut être inscrit, sauf si :
     - [vous supprimez des appareils existants](devices-wipe.md) ;
-    - vous augmentez la limite d’appareils en [modifiant la restriction de limite d’appareils](enrollment-restrictions-set.md#set-device-limit-restrictions).
+    - vous augmentez la limite d’appareils en [modifiant la restriction de limite d’appareils](enrollment-restrictions-set.md).
 
 Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregistrements d’appareils obsolètes.
 
@@ -499,5 +499,5 @@ Le certificat de compte du compte précédent est toujours présent sur l’ordi
 
 
 
-### <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Si ces informations de dépannage n’ont pas permis de vous aider, contactez le support Microsoft comme décrit dans [Comment obtenir un support technique pour Microsoft Intune](get-support.md).

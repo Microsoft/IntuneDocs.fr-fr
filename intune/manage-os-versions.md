@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a6425c1346255caf70e73feef2aec1097625f921
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548754"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427098"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Gérer les versions de système d’exploitation avec Intune
 Sur les plateformes mobiles et de bureau modernes, le rythme de publication des mises à jour importantes, des correctifs et des nouvelles versions est soutenu. Vous disposez d’outils pour gérer entièrement les mises à jour et les correctifs sur Windows, mais d’autres plateformes telles qu’iOS et Android exigent la participation de vos utilisateurs finaux.  Microsoft Intune offre des fonctionnalités qui vous permettent de structurer la gestion des versions de vos systèmes d’exploitation sur différentes plateformes.
@@ -40,7 +40,7 @@ Pour contrôler l’accès à leurs ressources, les organisations utilisent des 
 1. Spécification d’une version minimale du système d’exploitation pour veiller à ce que les utilisateurs finaux utilisent les plateformes actuelles et prises en charge dans l’organisation 
 2. Non-spécification d’une version maximale du système d’exploitation (aucune limite) ou indication de la dernière version validée dans l’organisation dans le but de tester en interne les nouvelles versions
 
-Pour plus d’informations, consultez [Définition des restrictions de type d’appareil](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions).
+Pour plus d’informations, consultez [Définition des restrictions de type d’appareil](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction).
  
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Signalement des versions de système d’exploitation et respect des stratégies de conformité d’appareil MDM Intune
 Les stratégies de conformité d’appareil MDM Intune vous permettent d’effectuer les tâches suivantes : 
@@ -86,6 +86,6 @@ Vous pouvez utiliser les fonctionnalités Intune décrites dans cet article pour
 ## <a name="next-steps"></a>Étapes suivantes
 Utilisez les ressources suivantes pour gérer les versions de système d’exploitation dans votre organisation : 
 
-- [Définir les restrictions de type d’appareil](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)
+- [Définir les restrictions de type d’appareil](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction)
 - [Bien démarrer avec la conformité des appareils](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Guide pratique pour créer et affecter des stratégies de protection des applications](https://docs.microsoft.com/intune/app-protection-policies)

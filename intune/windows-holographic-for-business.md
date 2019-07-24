@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 2f3c36e0fac3784828c6a4c0bbf077dea83da369
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045994"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354462"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
@@ -105,23 +105,23 @@ Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou
 
 Dans vos profils, vous pouvez utiliser OMA-URI pour personnaliser certains paramètres, imposer des restrictions aux appareils et configurer un réseau VPN (réseau privé virtuel) ou Wi-Fi.
 
-#### <a name="custom-device-settingscustom-settings-windows-holographicmd"></a>[Paramètres d’appareil personnalisés](custom-settings-windows-holographic.md)
+### <a name="custom-device-settingscustom-settings-windows-holographicmd"></a>[Paramètres d’appareil personnalisés](custom-settings-windows-holographic.md)
 
 Pour configurer les paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier), vous pouvez créer un profil personnalisé dans Intune. Utilisez les paramètres OMA-URI pour contrôler différentes fonctionnalités sur vos appareils Windows Holographic for Business, par exemple l’activation d’un VPN ou la recherche de mises à jour sur Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Configurer le mode kiosque](kiosk-settings-holographic.md)
+### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Configurer le mode kiosque](kiosk-settings-holographic.md)
 
 Avec les fonctionnalités de PC partagé ou invité qui sont disponibles dans Intune, vous pouvez configurer les appareils Windows Holographic for Business pour qu’ils s’exécutent en mode kiosque. Ces appareils peuvent exécuter une seule application (mode kiosque mono-application) ou plusieurs applications (mode kiosque multi-application).
 
-#### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Restrictions relatives aux appareils](device-restrictions-windows-holographic.md)
+### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Restrictions relatives aux appareils](device-restrictions-windows-holographic.md)
 
 Les restrictions imposées aux appareils vous permettent de contrôler différents paramètres et fonctionnalités sur vos appareils, notamment la saisie d’un mot de passe obligatoire, l’installation d’applications à partir du [Microsoft Store](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), l’activation de Bluetooth, etc. Vous créez ces restrictions dans un profil Intune. Vous pouvez appliquer ce profil à plusieurs appareils exécutant Windows Holographic for Business.
 
-#### <a name="configure-vpnvpn-settings-configuremd"></a>[Configurer un VPN](vpn-settings-configure.md)
+### <a name="configure-vpnvpn-settings-configuremd"></a>[Configurer un VPN](vpn-settings-configure.md)
 
 Les réseaux privés virtuels (ou VPN) donnent à vos utilisateurs un accès distant sécurisé à votre réseau d’entreprise. Dans Intune, vous pouvez créer un profil VPN comprenant des paramètres spécifiques pour vos appareils Windows Holographic for Business. Par exemple, vous pouvez créer un profil VPN pour que tous les appareils Windows Holographic for Business utilisent une connexion de type VPN Citrix.
 
-#### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Configurer le Wi-Fi](wi-fi-settings-configure.md)
+### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Configurer le Wi-Fi](wi-fi-settings-configure.md)
 
 Vous pouvez également créer un profil Wi-Fi dans Intune pour affecter des paramètres de réseau sans fil à vos appareils Windows Holographic for Business. Quand vous affectez un profil Wi-Fi, vos utilisateurs finaux bénéficient d’un accès au réseau d’entreprise, sans aucune configuration réseau. Par exemple, vous pouvez créer un réseau Wi-Fi dédié uniquement aux appareils Windows Holographic for Business.
 
