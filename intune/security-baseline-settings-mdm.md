@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882295"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
@@ -116,8 +116,8 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   Pour la stratégie de lecteur amovible BitLocker, configurez le paramètre suivant :
 
-    - **Exiger le chiffrement pour l’accès en écriture**  
-      **Par défaut** : oui  
+  - **Exiger le chiffrement pour l’accès en écriture**  
+    **Par défaut** : oui  
   
 
 ## <a name="browser"></a>Navigateur  
@@ -226,17 +226,17 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
-  
-    - **Supprimer les périphériques matériels correspondants**   
+  Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+
+  - **Supprimer les périphériques matériels correspondants**   
     Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : oui
-  
-    - **Identificateurs de périphériques matériels bloqués**  
-       Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : oui  
+    
+    **Par défaut** : oui
+
+  - **Identificateurs de périphériques matériels bloqués**  
+    Ce paramètre est disponible uniquement quand *Installation de périphériques matériels par identificateurs d’appareil* a la valeur *Bloquer l’installation de périphériques matériels*.
+    
+    **Par défaut** : oui  
   
 - **Installation de périphériques matériels par classes d’installation**  
   Ce paramètre de stratégie permet de spécifier une liste de GUID de classe d’installation de périphériques décrivant les pilotes de périphériques que Windows ne peut pas installer. Ce paramètre de stratégie prévaut sur tout autre paramètre de stratégie autorisant l’installation de périphériques par Windows. Si vous activez ce paramètre, Windows ne peut pas installer ou mettre à jour les pilotes de périphériques dont les GUID de classe d’installation de périphériques figurent dans la liste que vous créez. Si vous activez ce paramètre de stratégie sur un serveur Bureau à distance, il a une incidence sur la redirection des périphériques spécifiés à partir d’un client Bureau à distance vers le serveur Bureau à distance. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows peut installer ou mettre à jour des périphériques conformément aux autorisations ou interdictions prévues par d’autres paramètres de stratégie.  
@@ -244,16 +244,16 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   
   **Par défaut** : Bloquer l’installation de périphériques matériels  
 
-    Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
-    - **Supprimer les périphériques matériels correspondants**    
+  Lorsque la case *Bloquer l’installation du périphérique matériel* est sélectionnée, les paramètres suivants sont disponibles.
+  - **Supprimer les périphériques matériels correspondants**    
     Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.  
 
-      **Par défaut** : *Aucune configuration par défaut*  
-  
-    - **Identificateurs de périphériques matériels bloqués**  
-      Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.
-      
-      **Par défaut** : *Aucune configuration par défaut*  
+    **Par défaut** : *Aucune configuration par défaut*  
+
+  - **Identificateurs de périphériques matériels bloqués**  
+    Ce paramètre est disponible seulement quand *Installation de périphériques matériels par classes d’installation* est défini sur *Bloquer l’installation de périphériques matériels*.
+    
+    **Par défaut** : *Aucune configuration par défaut*  
 
 ## <a name="device-lock"></a>Verrouillage d’appareil  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) dans la documentation Windows.  
@@ -678,7 +678,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zone Internet : Autoriser l’exécution de VBscript**  
-  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options disponibles sont les suivantes : 
+  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options sont les suivantes : 
   - *Activé* : VBScript s’exécute sur les pages de certaines zones, sans intervention de l’utilisateur. 
   - *Invite* : les employés sont invités à choisir s’il faut autoriser l’exécution de VBScript dans la zone. 
   - *Désactivé* : l’exécution de VBScript est empêchée dans la zone. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, VBScript s’exécute dans la zone spécifiée, sans que l’utilisateur n’ait à intervenir.    
@@ -1185,20 +1185,20 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
   
 - **Comportement de l’invite d’élévation d’administrateur**  
-  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options sont les suivantes : 
-    - *Élever sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
-    - *Invite pour les informations d'identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
-    - *Invite pour le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à sélectionner Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
-    - *Invite pour les informations d’identification* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
-    - *Invite pour le consentement* : lorsqu’une opération requiert une élévation de privilège, l’utilisateur est invité à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.  
-    - *Invite pour le consentement pour les binaires non Windows* : lorsqu’une opération pour une application non Microsoft nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
+  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
+  - *Élever sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
+  - *Invite pour les informations d'identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
+  - *Invite pour le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à sélectionner Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
+  - *Invite pour les informations d’identification* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
+  - *Invite pour le consentement* : lorsqu’une opération requiert une élévation de privilège, l’utilisateur est invité à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur.  
+  - *Invite pour le consentement pour les binaires non Windows* : lorsqu’une opération pour une application non Microsoft nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à choisir entre Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
   
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067215)   
   
   **Par défaut** : demander le consentement sur le bureau sécurisé
   
 - **Sécurité de session minimale pour les clients basés sur NTLM SSP**  
-  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options sont les suivantes :
+  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options disponibles sont :
   - *Nécessite une sécurité de session NTLMv2* : la connexion échoue si le protocole NTLMv2 n’est pas négocié. 
   - *Nécessite un chiffrement 128 bits* : la connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
   - *Exiger l’authentification NTLMv2 et un chiffrement de 128 bits*.  
@@ -1208,11 +1208,11 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
   
 - **Comportement lorsque la carte à puce est retirée**  
-    Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options sont les suivantes :
-     - *Aucune action*. 
-     - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
-     - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
-     - *Déconnecter la session de Bureau à distance* : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Ceci permet à l'utilisateur d'insérer la carte à puce et de reprendre la session ultérieurement ou sur un autre ordinateur équipé d'un lecteur de cartes à puce, sans avoir à ouvrir de nouveau une session. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.
+  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
+  - *Aucune action*. 
+  - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
+  - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
+  - *Déconnecter la session de Bureau à distance* : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Ceci permet à l'utilisateur d'insérer la carte à puce et de reprendre la session ultérieurement ou sur un autre ordinateur équipé d'un lecteur de cartes à puce, sans avoir à ouvrir de nouveau une session. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.
   
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067331) 
     
@@ -1245,7 +1245,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : refuser automatiquement les demandes d’élévation de privilèges
   
 - **Exiger le mode d’approbation Administrateur pour les administrateurs**  
-  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options sont les suivantes :   
+  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options disponibles sont :   
   - *Non configuré* : le mode d’approbation Administrateur et tous les paramètres de stratégie UAC associés sont désactivés. Remarque : Si ce paramètre de stratégie est désactivé, le Centre de sécurité vous avertit que la sécurité globale du système d’exploitation a été réduite. 
   - *Oui* : le mode d’approbation Administrateur est activé. Cette stratégie doit être activée et les paramètres de stratégie UAC associés doivent également être définis en conséquence pour permettre au compte Administrateur intégré et à tous les autres utilisateurs membres du groupe Administrateurs de s’exécuter en mode d’approbation Administrateur.  
 
@@ -1269,7 +1269,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : *O:BAG:BAD:(A;;RC;;;BA)*
 
 - **Utiliser le mode d’approbation Administrateur**  
-  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options sont les suivantes : 
+  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options disponibles sont : 
   - *Oui* : le compte Administrateur intégré utilise le mode d’approbation Administrateur. Par défaut, une invite d’approbation est présentée à l’utilisateur pour chaque opération nécessitant une élévation de privilège. 
   - *Non configuré* : le compte Administrateur intégré exécute toutes les applications avec des privilèges administratifs complets. 
 
@@ -1287,7 +1287,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Détecter les installations d’applications et demander l’élévation**  
-  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options sont les suivantes : 
+  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options disponibles sont : 
   - *Activé* : lorsqu’un package d’installation d’application nécessitant une élévation de privilège est détecté, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
   - *Désactivé* : les packages d’installation d’application ne sont pas détectés ni invités pour une élévation. Les entreprises qui utilisent des ordinateurs de bureau pour utilisateur standard et ont recours à des technologies d’installation déléguée telles que GPSI (Group Policy Software Install) ou SMS (Systems Management Server) doivent désactiver ce paramètre de stratégie. Dans ce cas, la détection d’un programme d’installation n’est pas nécessaire.  
   
@@ -1501,7 +1501,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : authentifié
 
-## <a name="search"></a>Rechercher 
+## <a name="search"></a>Recherche 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Recherche](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) dans la documentation Windows.  
 
 - **Désactiver l’indexation des éléments chiffrés**  
@@ -1528,7 +1528,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : oui
   
-## <a name="system"></a>d'exploitation  
+## <a name="system"></a>Système  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Système](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) dans la documentation Windows.  
 
 - **Système : Initialisation des pilotes de démarrage**  
@@ -1858,7 +1858,7 @@ Les paramètres suivants sont soit :
 - **Prise en charge du chiffrement Internet Explorer**  
 
 *[Révisé]* [**Internet Explorer**](#internet-explorer):
-- **Invite automatique de la zone Internet Internet Explorer pour les téléchargements de fichiers** > la **** valeur par défaut est désormais désactivée. Dans Aperçu, cette option a été activée.
+- **Invite automatique de la zone Internet Internet Explorer pour** les téléchargements de fichiers > la **valeur**par défaut est désormais désactivée. Dans Aperçu, cette option a été activée.
 
 *[Nouveau]* [**Assistance à distance**](#remote-assistance) :  
 - **Assistance à distance sollicitée** 
