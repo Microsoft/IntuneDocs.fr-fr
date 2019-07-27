@@ -18,16 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e43fccabd142527d9e17317d56fa029844fa270d
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329463"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467309"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscrire un appareil avec un profil professionnel Android
 
-Inscrivez votre appareil Android personnel pour obtenir l’accès à l’e-mail, aux applications et à d’autres données professionnelles de l’entreprise. Lors de l’inscription, vous allez configurer un profil professionnel Android. Ce profil sépare les données personnelles des données professionnelles sur votre appareil. Le support technique de votre entreprise gère seulement le profil professionnel, qui est constitué de fichiers et de données professionnels. Il ne peut pas gérer les données personnelles de votre appareil. Obtenez plus d’informations sur [ce qui se passe quand vous créez un profil professionnel](what-happens-when-you-create-a-work-profile-android.md).  
+Inscrivez votre appareil Android personnel pour obtenir l’accès à l’e-mail, aux applications et à d’autres données professionnelles de l’entreprise. Lors de l’inscription, vous allez configurer un profil professionnel Android. Ce profil sépare les données personnelles des données professionnelles sur votre appareil. Le support technique de votre entreprise gère seulement le profil professionnel, qui est constitué de fichiers et de données professionnels. Il ne peut pas gérer les données personnelles de votre appareil.
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
+
+Obtenez plus d’informations sur [ce qui se passe quand vous créez un profil professionnel](what-happens-when-you-create-a-work-profile-android.md).
 
 ## <a name="create-work-profile-and-enroll-device"></a>Créer un profil professionnel et inscrire un appareil
 

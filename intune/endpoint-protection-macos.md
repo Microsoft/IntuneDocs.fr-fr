@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d110013c10f0330c0edbbf230c508009fb47b2a6
-ms.sourcegitcommit: 11a31cd39b727f2254e2705b07d18924e103bd2e
+ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341318"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467414"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Paramètres Endpoint Protection pour MacOS dans Intune  
 
@@ -92,36 +92,24 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
   - **Type de clé de récupération**  
     Les clés de récupération de *clé personnelle* sont créées pour les appareils. Configurez les paramètres suivants pour la clé personnelle.  
 
-     - **Emplacement de la clé de récupération personnelle** : spécifiez un message bref à l’utilisateur qui explique comment il peut récupérer sa clé de récupération personnelle. Ce texte est inséré dans le message que l’utilisateur voit lors de l’activation de FileVault.  
+    - **Emplacement de la clé de récupération personnelle** : spécifiez un message bref à l’utilisateur qui explique comment et où il peut récupérer sa clé de récupération personnelle. Ce texte est inséré dans le message que l’utilisateur voit sur l’écran de connexion quand il est invité à entrer sa clé de récupération personnelle si un mot de passe est oublié.  
       
-     - **Rotation de clé de récupération personnelle** -spécifiez la fréquence de rotation de la clé de récupération personnelle d’un appareil. Vous pouvez sélectionner la valeur par défaut **non configurée**ou une valeur de **1** à **12** mois.  
+    - **Rotation de clé de récupération personnelle** -spécifiez la fréquence de rotation de la clé de récupération personnelle d’un appareil. Vous pouvez sélectionner la valeur par défaut **non configurée**ou une valeur de **1** à **12** mois.  
 
-  - **Différer FileVault jusqu’à la déconnexion** 
-    > [!NOTE]
-    > La prise en charge de FileVault est limitée jusqu’à ce que la version de juillet termine le déploiement dans quelques jours. Tant que le déploiement n’est pas terminé, si vous configurez FileVault, vous devez définir *defer FileVault jusqu'* à la déconnexion pour l' **activer**.   
-
-    FileVault ne sera pas activé tant que l’utilisateur ne se déconnecte pas. Un utilisateur local ou un compte mobile est invité à activer FileVault lors de la déconnexion ou à la prochaine connexion.  
+  - **Désactiver l’invite à la déconnexion**  
+    Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  Lorsque cette valeur est désactivée, l’invite à la déconnexion est désactivée et, à la place, l’utilisateur est invité à le faire lorsqu’il se connecte.  
     - **Non configuré**  
-    - **Activer**  
-    
+    - **Désactiver**  
+
     **Par défaut** : Non configuré  
 
+  - **Nombre de fois où le contournement est autorisé**  
+  Définissez le nombre de fois qu’un utilisateur peut ignorer les invites pour activer FileVault avant que FileVault soit requis pour que l’utilisateur se connecte.  
 
-
-    - **Désactiver l’invite à la déconnexion**  
-      Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  
-      - **Non configuré**  
-      - **Activer**  
-
-      **Par défaut** : Non configuré  
-
-    - **Nombre de fois où le contournement est autorisé**  
-      Définissez le nombre de fois qu’un utilisateur peut ignorer les invites pour activer FileVault avant que FileVault soit requis pour que l’utilisateur se connecte.  
-
-      - **Non configuré** : le chiffrement sur l’appareil est nécessaire pour que la connexion suivante soit autorisée.  
-      -  **1** à **10** : permet à un utilisateur d’ignorer l’invite de 1 à 10 fois avant d’exiger un chiffrement sur l’appareil.  
-      - **Aucune limite, toujours demander** : l’utilisateur est invité à activer FileVault mais le chiffrement n’est jamais requis.  
+    - **Non configuré** : le chiffrement sur l’appareil est nécessaire pour que la connexion suivante soit autorisée.  
+    - **1** à **10** : permet à un utilisateur d’ignorer l’invite de 1 à 10 fois avant d’exiger un chiffrement sur l’appareil.  
+    - **Aucune limite, toujours demander** : l’utilisateur est invité à activer FileVault mais le chiffrement n’est jamais requis.  
  
-      **Par défaut** : Non configuré  
+    **Par défaut** : Non configuré  
 
 
