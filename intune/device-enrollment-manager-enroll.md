@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2548e0ff3d4406f64d2091001c38056fe585896
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: bd870a788ff5cac7e0aff47c5b8175c0bdfacff2
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883528"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427289"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils dans Intune avec un compte de gestionnaire d’inscription d’appareil
 
-Vous pouvez inscrire jusqu’à 1 000 appareils mobiles avec un seul compte Azure Active Directory en utilisant un compte de gestionnaire d’inscription d’appareil (DEM). DEM est une autorisation Intune qui peut être appliquée à un compte d’utilisateur AAD, permettant à l’utilisateur d’inscrire jusqu’à 1 000 appareils. Un compte DEM est utile pour les scénarios où les appareils sont inscrits et préparés avant d’être remis à leurs utilisateurs.
+Vous pouvez inscrire jusqu’à 1 000 appareils mobiles avec un seul compte Azure Active Directory en utilisant un compte de gestionnaire d’inscription d’appareil (DEM). DEM est une autorisation Intune qui peut être appliquée à un compte d’utilisateur AAD, permettant à l’utilisateur d’inscrire jusqu’à 1 000 appareils. Un compte DEM est utile pour les scénarios où les appareils sont inscrits et préparés avant d’être remis à leurs utilisateurs. Par défaut, il existe une limite de 25 comptes de gestionnaire d’inscription d’appareil dans Microsoft Intune.
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Limitations des appareils qui sont inscrits avec un compte de gestionnaire d’inscription d’appareil
 

@@ -17,15 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8760bde5f6c53f6e73d8c8dd0f795809726b2
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: aa4a0ff4c651e20a9f772551f1664bd8bf2d879f
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649114"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387331"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+
+Il existe quatre types de déploiement Autopilot : [Mode de déploiement automatique](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/self-deploying) pour les kiosques, la signalisation numérique ou un appareil partagé ; [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permet aux partenaires ou au personnel informatique de préprovisionner un PC Windows 10 pour qu’il soit entièrement configuré et prêt à l’emploi ; [Autopilot pour les appareils existants](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vous permet de déployer facilement la dernière version de Windows 10 sur vos appareils existants ; [Mode piloté par l’utilisateur](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/user-driven) pour les utilisateurs traditionnels. 
 
 
 ## <a name="prerequisites"></a>Prérequis

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4712c2958e2beee8853ad0d2620414d823da327
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 9828b04ae30d8f35313564b93dfc9b997795bf76
+ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804496"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306716"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Points de terminaison du gouvernement américain pour Microsoft Intune
 
@@ -45,14 +45,14 @@ Les tableaux suivants répertorient les ports et services auxquels le client Int
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## <a name="us-government-customer-designated-endpoints"></a>Points de terminaison désignés par les clients du gouvernement américain :
-- Portail Azure : https://portal.azure.us/ 
-- Office 365 : https://portal.office365.us/ 
-- Portail d’entreprise Intune : https://portal.manage.microsoft.us/ 
+- Portail Azure : https:\//portal.azure.us/ 
+- Office 365 : https:\//portal.office365.us/ 
+- Portail d’entreprise Intune : https:\//portal.manage.microsoft.us/ 
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Points de terminaison de services partenaires dont dépend Intune :
-- Service de synchronisation AAD : https://syncservice.gov.us.microsoftonline.com/DirectoryService.svc
-- EVO STS : https://login.microsoftonline.us
-- Proxy d’annuaire : https://directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph : https://directory.microsoftazure.us et https://graph.microsoftazure.us
-- MS Graph : https://graph.microsoft.us
-- ADRS : https://enterpriseregistration.microsoftonline.us
+- Service de synchronisation AAD : https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Evo STS : https:\//login.microsoftonline.us
+- Proxy d’annuaire : https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
+- AAD Graph : https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
+- MS Graph : https:\//graph.microsoft.us
+- ADRS : https:\//enterpriseregistration.microsoftonline.us

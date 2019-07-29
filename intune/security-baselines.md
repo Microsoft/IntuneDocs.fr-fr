@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16586ece687b5d50ea89b28bfd524f50e65ceb46
-ms.sourcegitcommit: 5ce8726278004bbf072149a9c924091bb0654b7c
+ms.openlocfilehash: bbab505d668f0e348b3b4d34fb2c39ac683f340b
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67851480"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353597"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -73,6 +73,9 @@ Les instances de bases de référence de sécurité suivantes sont disponibles p
 - **Base de référence Microsoft Defender ATP**  
   *(Pour utiliser cette base de référence, votre environnement doit répondre à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
   - [Préversion : Base de référence Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
+
+  > [!NOTE]
+  > La base de référence de la sécurité Microsoft Defender ATP a été optimisée pour les appareils physiques et n’est actuellement pas recommandée pour une utilisation sur des machines virtuelles ou des points de terminaison VDI. Certains paramètres de la base de référence peuvent impacter les sessions interactives à distance sur les environnements virtualisés.  Pour plus d’informations, consultez [Améliorer la conformité à la base de référence de la sécurité de Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) dans la documentation Windows.
 
 Vous pouvez continuer à utiliser et à modifier des profils que vous avez créés précédemment en fonction d’une préversion de modèle, même lorsque cette préversion n’est plus disponible pour la création de nouveaux profils. 
 
@@ -177,19 +180,19 @@ Parmi les autres processus susceptibles de modifier ultérieurement les paramèt
 
 ## <a name="q--a"></a>Questions et réponses
 
-#### <a name="why-these-settings"></a>Pourquoi ces paramètres ?
+### <a name="why-these-settings"></a>Pourquoi ces paramètres ?
 
 L’équipe de sécurité Microsoft travaille directement avec les développeurs Windows et de la communauté de sécurité depuis des années pour créer ces recommandations. Les paramètres de cette base de référence sont considérées comme les options de configuration liées à la sécurité les plus pertinentes. Dans chaque nouvelle build de Windows, l’équipe ajuste ses recommandations en fonction des nouvelles fonctionnalités.
 
-#### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Existe-t-il une différence dans les recommandations pour les bases de référence de sécurité Windows pour la stratégie de groupe et Intune ?
+### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Existe-t-il une différence dans les recommandations pour les bases de référence de sécurité Windows pour la stratégie de groupe et Intune ?
 
 La même équipe de sécurité Microsoft a choisi et organisé les paramètres pour chaque base de référence. Intune inclut tous les paramètres pertinents dans la base de référence de sécurité Intune. Il existe certains paramètres dans la base de référence de la stratégie de groupe qui sont spécifiques à un contrôleur de domaine local. Ces paramètres sont exclus des recommandations d’Intune. Tous les autres paramètres sont les mêmes.
 
-#### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Les bases de référence de sécurité d’Intune sont-elles conformes à CIS ou NSIT ?
+### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Les bases de référence de sécurité d’Intune sont-elles conformes à CIS ou NSIT ?
 
 À strictement parler, non. L’équipe de sécurité Microsoft consulte des organisations, comme CIS, pour compiler ses recommandations. Toutefois, il n’existe pas de correspondance directe entre les bases de référence « conformes à CIS » et les bases de référence Microsoft.
 
-#### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Quelles sont les certifications des bases de référence de sécurité Microsoft ? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Quelles sont les certifications des bases de référence de sécurité Microsoft ? 
 
 - Microsoft continue de publier des bases de référence de sécurité pour les stratégies de groupe (GPO) et la [Boîte à outils de conformité de la sécurité](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), comme depuis de nombreuses années. Ces bases de référence sont utilisées par de nombreuses organisations. Les recommandations contenues dans ces bases de référence sont issues de l’engagement de l’équipe de sécurité Microsoft avec des clients d’entreprise et des agences externes, notamment le DOD (Department of Defense), le NIST (National Institute of Standards et Technology) et bien plus encore. Nous partageons nos recommandations et bases de référence avec ces organisations. Ces organisations ont également leurs propres recommandations qui reflètent celles de Microsoft. Alors que la gestion des appareils mobiles continue de croître dans le cloud, Microsoft a créé des recommandations de gestion des appareils mobiles équivalentes à ces bases de référence de la stratégie de groupe. Ces bases de référence supplémentaires sont intégrées à Microsoft Intune et incluent des rapports de conformité sur les utilisateurs, groupes et appareils qui respectent (ou pas) la base de référence.
 
@@ -202,4 +205,5 @@ La même équipe de sécurité Microsoft a choisi et organisé les paramètres p
   - [Base de référence de la sécurité MDM](security-baseline-settings-mdm.md)  
   - [Base de référence Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
-- Vérifiez l’état et surveillez [la base de référence et le profil](security-baselines-monitor.md).
+- Vérifier l’état et surveiller [la base de référence et le profil](security-baselines-monitor.md)
+

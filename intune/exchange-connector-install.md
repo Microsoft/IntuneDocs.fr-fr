@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7663009c7d45171ab6469f7f6e96b4c8f979b744
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883280"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427329"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Configurer le connecteur Exchange local Intune dans Microsoft Intune
 Les informations contenues dans cet article vous aident à installer, puis à superviser le connecteur local Exchange Active Sync pour Intune.  Vous utilisez le connecteur Exchange local Intune avec vos [stratégies d’accès conditionnel pour autoriser ou bloquer l’accès aux boîtes aux lettres locales Exchange](conditional-access-exchange-create.md). 
@@ -152,8 +152,22 @@ Avec la haute disponibilité, le connecteur Exchange local peut, en cas d’indi
 Pour effectuer le basculement, après avoir correctement créé une connexion à Exchange à l’aide du serveur d’accès au client spécifié, le connecteur découvre des serveurs d’accès au client supplémentaires pour cette organisation Exchange. Connaissant des serveurs d’accès au client supplémentaires, le connecteur peut basculer vers un d’entre eux, sous réserve qu’il soit disponible, jusqu’à ce que le serveur d’accès au client principal redevienne disponible. Par défaut, la découverte de serveurs d’accès au client supplémentaires est activée. Vous pouvez désactiver le basculement en procédant de la façon suivante :  
 1. Sur le serveur où est installé le connecteur Exchange, accédez à %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. À l’aide d’un éditeur de texte, ouvrez **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Remplacez &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; par &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt; pour désactiver la fonctionnalité.    
+3. Remplacez &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; par &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt; pour désactiver la fonctionnalité.  
  
+## <a name="optional-performance-tuning-for-the-exchange-connector"></a>Optimisation des performances facultative pour le connecteur Exchange  
+
+Quand vous prenez en charge 5 000 appareils ou plus avec Exchange ActiveSync, vous pouvez configurer un paramètre facultatif pour améliorer les performances du connecteur. Les performances améliorées sont obtenues en permettant à Exchange d’utiliser plusieurs instances d’un espace d’exécution de commandes PowerShell. 
+
+Avant de procéder à cette modification, vérifiez que le compte que vous utilisez pour exécuter le connecteur Exchange n’est pas utilisé à d’autres fins de gestion d’Exchange. Cela est dû au fait qu’Exchange a une limite de 18 espaces d’exécution par compte, dont la plupart seront utilisés par le connecteur. 
+
+Cette modification des performances n’est pas adaptée aux connecteurs qui s’exécutent sur du matériel plus ancien ou plus lent.  
+
+1. Sur le serveur où le connecteur est installé, ouvrez le répertoire d’installation des connecteurs.  L’emplacement par défaut est *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+2. Éditez le fichier *OnPremisesExchangeConnectorServiceConfiguration.xml*.
+3. Recherchez **EnableParallelCommandSupport** et définissez sa valeur sur **true** :  
+     
+   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+4. Enregistrez le fichier, puis redémarrez le service Microsoft Intune Exchange Connector.
 
 ## <a name="reinstall-the-on-premises-exchange-connector"></a>Réinstaller le connecteur Exchange local
 Vous pouvez être amené à réinstaller un connecteur Exchange. Un seul connecteur étant pris en charge pour la connexion à chaque organisation Exchange, si vous installez un deuxième connecteur pour une organisation, ce nouveau connecteur remplace le connecteur d’origine.
