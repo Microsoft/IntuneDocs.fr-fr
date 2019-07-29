@@ -5,7 +5,7 @@ description: Paramètres de base de référence de la sécurité pour Intune pou
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882295"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491907"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
@@ -1773,7 +1773,12 @@ Pour plus d’informations, consultez [2.2.2 FW_PROFILE_TYPOE]( https://docs.mic
   **Par défaut** : oui
 
 - **Configurer Windows Hello for Business**   
-  Windows Hello Entreprise est une méthode alternative de connexion à Windows en remplaçant les mots de passe, les cartes à puce et les cartes à puce virtuelles. Si vous activez ou ne configurez pas ce paramètre de stratégie, l’appareil configure Windows Hello for Business. Si vous désactivez ce paramètre de stratégie, l’appareil ne configure pas Windows Hello for Business pour tous les utilisateurs.
+    Windows Hello Entreprise est une méthode alternative de connexion à Windows en remplaçant les mots de passe, les cartes à puce et les cartes à puce virtuelles.  
+
+  - Lorsque la valeur est *Oui*, vous activez cette stratégie et l’appareil provisionne Windows Hello entreprise.  
+  - Lorsque la valeur *n’est pas configurée*, la ligne de base n’affecte pas le paramètre de stratégie de l’appareil. Cela signifie que si Windows Hello entreprise est désactivé sur un appareil, il reste désactivé. Si elle est activée, elle reste activée. 
+
+  Vous ne pouvez pas désactiver Windows Hello entreprise par le biais de cette ligne de base. Vous pouvez désactiver Windows Hello entreprise lors de la configuration de l' [inscription Windows](windows-hello.md)ou dans le cadre d’un profil de configuration d’appareil pour la [protection d’identité](identity-protection-configure.md).  
 
   **Par défaut** : oui
 
@@ -1858,7 +1863,7 @@ Les paramètres suivants sont soit :
 - **Prise en charge du chiffrement Internet Explorer**  
 
 *[Révisé]* [**Internet Explorer**](#internet-explorer):
-- **Invite automatique de la zone Internet Internet Explorer pour** les téléchargements de fichiers > la **valeur**par défaut est désormais désactivée. Dans Aperçu, cette option a été activée.
+- **Invite automatique de la zone Internet Internet Explorer pour les téléchargements de fichiers** > la valeur par défaut est désormais **désactivée**. Dans Aperçu, cette option a été activée.
 
 *[Nouveau]* [**Assistance à distance**](#remote-assistance) :  
 - **Assistance à distance sollicitée** 
