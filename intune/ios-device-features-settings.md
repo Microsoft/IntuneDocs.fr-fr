@@ -1,6 +1,6 @@
 ---
 title: Paramètres des fonctionnalités d’appareil iOS dans Microsoft Intune - Azure | Microsoft Docs
-description: 'Découvrez tous les paramètres à votre disposition pour configurer les fonctionnalités d’appareil iOS dans Microsoft Intune : AirPrint, disposition de l’écran d’accueil, notifications des applications, appareil partagé, authentification unique et filtre de contenu web. Définissez ces paramètres dans un profil de configuration d’appareil pour activer ces différentes fonctionnalités Apple sur les appareils iOS utilisés dans votre organisation.'
+description: 'Découvrez tous les paramètres à votre disposition pour configurer les fonctionnalités d’appareil iOS dans Microsoft Intune : AirPrint, disposition de l’écran d’accueil, notifications des applications, appareil partagé, authentification unique et filtre de contenu web. Utilisez ces paramètres dans un profil de configuration de périphérique pour configurer des périphériques iOS et utiliser ces fonctionnalités Apple dans votre organisation.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: bac591a625fd915056234a75b26bc2f90f50cae7
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413807"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387113"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
 
@@ -41,7 +41,7 @@ Cet article liste ces paramètres et décrit le rôle de chaque paramètre.
 - **Port** : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut. Disponible sur iOS 11.0 et ultérieur.
 - **Protocole TLS** : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security). Disponible sur iOS 11.0 et ultérieur.
 
-L’option **Ajouter** ajoute le serveur AirPrint à la liste. Vous pouvez ajouter plusieurs serveurs AirPrint. Vous pouvez également **importer** un fichier de valeurs séparées par des virgules (.csv) contenant ces informations. Après avoir créé la liste, vous pouvez aussi **exporter** votre liste de serveurs AirPrint.
+L’option **Ajouter** ajoute le serveur AirPrint à la liste. De nombreux serveurs d’impression peuvent être ajoutés. Vous pouvez également **importer** un fichier de valeurs séparées par des virgules (.csv) contenant ces informations. L' **exportation** crée une liste des serveurs d’impression que vous avez ajoutés.
 
 Sélectionnez **OK** pour enregistrer votre liste.
 
@@ -253,7 +253,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="web-content-filter-settings"></a>Paramètres du filtre de contenu web
 
-Ces paramètres contrôlent l’accès aux URL par le navigateur sur les appareils iOS.
+Ces paramètres contrôlent l’accès de l’URL du navigateur sur des périphériques iOS supervisés.
 
 - **Type de filtre** : choisissez les sites web spécifiques que vous voulez autoriser. Les options disponibles sont les suivantes :
 

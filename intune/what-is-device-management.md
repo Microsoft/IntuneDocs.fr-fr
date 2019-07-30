@@ -4,7 +4,7 @@ description: Microsoft 365 Entreprise inclut Microsoft Intune. Découvrez comme
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884266"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427311"
 ---
 # <a name="what-is-device-management"></a>Qu’est-ce que la gestion des appareils ? 
 
@@ -59,7 +59,7 @@ L’une des tâches clés de toute solution de gestion des appareils consiste à
 - **Windows Defender** inclut de nombreuses fonctionnalités de sécurité qui permettent de protéger les appareils Windows 10. Par exemple, en utilisant Intune conjointement avec Windows Defender, vous pouvez : 
 
   - Activer [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) pour rechercher des activités suspectes dans les fichiers et applications des appareils mobiles 
-  - Utilisez [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) pour empêcher les failles de sécurité sur les appareils mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
+  - Utilisez [Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) afin de mieux éviter les violations de la sécurité sur des périphériques mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
 
 - L’**accès conditionnel** est une fonctionnalité d’Azure Active Directory, qui s’intègre parfaitement avec Intune. À l’aide de l’[accès conditionnel](https://docs.microsoft.com/intune/conditional-access), vous pouvez vérifier que seuls les appareils conformes ont accès aux e-mails, à SharePoint et à d’autres applications. 
 
@@ -73,11 +73,11 @@ Vous pouvez également utiliser conjointement les approches [MDM et GAM](https:/
 
 Quand vous configurez Intune, vous choisissez également d’utiliser uniquement le Portail Azure pour gérer les appareils, ou d’utiliser simultanément Intune et Microsoft 365 pour gérer les appareils. [Migrating mobile device management to Intune in the Azure portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) (Migration de la gestion des appareils mobiles vers Intune dans le portail Azure) est une étude de cas Microsoft IT. Dans cette étude de cas, vous verrez comment Microsoft IT a choisi une approche moderne de gestion des appareils et découvrirez les leçons qu’il en a tirées.
 
-## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Simplifier les tâches informatiques à l’aide du tableau de bord de gestion des appareils
+## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Simplifier les tâches informatiques à l’aide du centre d’administration de gestion des périphériques
 
-Le [tableau de bord de gestion des appareils](https://devicemanagement.portal.azure.com/) est l’emplacement qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Ce tableau de bord inclut les services utilisés pour la gestion des appareils, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications clientes. 
+Le [centre d’administration de gestion des périphériques](https://devicemanagement.portal.azure.com/) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client. 
 
-Dans le tableau de bord de gestion des appareils, vous pouvez :
+Dans le centre d’administration de la gestion des appareils, vous pouvez:
 
 - [Inscrire des appareils](https://docs.microsoft.com/intune/device-enrollment)
 - [Définir la conformité des appareils](https://docs.microsoft.com/intune/device-compliance-get-started)

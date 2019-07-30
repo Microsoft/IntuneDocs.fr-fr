@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 06/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4f9f3cabf0826380dfd97b9c0f772f9846912f0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f75317678034a488e689461982550bbb0a8afad8
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530264"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533161"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils iOS dans Microsoft Intune
 
@@ -31,13 +31,17 @@ Quand vous utilisez des appareils iOS, il existe deux façons d’obtenir des pa
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Gestionnaire de profils Apple](https://support.apple.com/profile-manager)
 
-Vous pouvez utiliser ces outils pour exporter les paramètres dans un profil de configuration. Dans Intune, importez ce fichier, puis attribuez le profil à vos utilisateurs et appareils iOS. Une fois le profil attribué, les paramètres sont distribués et créent une base de référence ou un standard pour iOS dans votre organisation.
+Vous pouvez utiliser ces outils pour exporter les paramètres dans un profil de configuration. Dans Intune, importez ce fichier, puis attribuez le profil à vos utilisateurs et appareils iOS. Une fois attribués, les paramètres sont distribués. Ils créent également une ligne de base ou une norme pour iOS dans votre organisation.
 
-Cet article vous montre comment créer un profil personnalisé pour les appareils iOS. Il fournit également des conseils sur l’utilisation d’Apple Configurator et du Gestionnaire de profils Apple.
+Cet article fournit des conseils sur l’utilisation d’Apple Configurator et du gestionnaire de profils Apple, et décrit les propriétés que vous pouvez configurer.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-- Quand vous utilisez **Apple Configurator** pour créer le profil de configuration, vérifiez que les paramètres que vous exportez sont compatibles avec la version iOS des appareils dont vous vous servez. Pour plus d’informations sur la résolution des paramètres incompatibles, recherchez les éléments **Configuration Profile Reference** et **Mobile Device Management Protocol Reference** sur le site web [Apple Developer](https://developer.apple.com/).
+[Créez le profil](device-profile-create.md).
+
+## <a name="what-you-need-to-know"></a>Ce que vous devez savoir
+
+- Lorsque vous utilisez **Apple Configurator** pour créer le profil de configuration, vérifiez que les paramètres exportés sont compatibles avec la version iOS sur les périphériques. Pour plus d’informations sur la résolution des paramètres incompatibles, recherchez les éléments **Configuration Profile Reference** et **Mobile Device Management Protocol Reference** sur le site web [Apple Developer](https://developer.apple.com/).
 
 - Quand vous utilisez le **Gestionnaire de profils Apple**, veillez à effectuer les actions suivantes :
 
@@ -47,25 +51,19 @@ Cet article vous montre comment créer un profil personnalisé pour les appareil
 
     Téléchargez et enregistrez ce fichier. Vous intégrerez ce fichier au profil Intune.
 
-  - Vérifiez que les paramètres que vous exportez à partir du Gestionnaire de profils Apple sont compatibles avec la version d’iOS sur les appareils que vous utilisez. Pour plus d’informations sur la résolution des paramètres incompatibles, recherchez les éléments **Configuration Profile Reference** et **Mobile Device Management Protocol Reference** sur le site web [Apple Developer](https://developer.apple.com/).
+  - Vérifiez que les paramètres que vous exportez à partir du Gestionnaire de profils Apple sont compatibles avec la version d’iOS sur les périphériques. Pour plus d’informations sur la résolution des paramètres incompatibles, recherchez les éléments **Configuration Profile Reference** et **Mobile Device Management Protocol Reference** sur le site web [Apple Developer](https://developer.apple.com/).
 
-## <a name="create-the-profile"></a>Créer le profil
+## <a name="custom-configuration-profile-settings"></a>Paramètres du profil de configuration personnalisé
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
-3. entrez les paramètres suivants :
+- **Nom du profil de configuration personnalisé** : entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
+- **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
 
-    - **Nom** : entrez un nom pour le profil, par exemple `ios custom profile`.
-    - **Description :** entrez une description pour le profil.
-    - **Plateforme** : choisissez **iOS**.
-    - **Type de profil** : choisissez **Personnalisé**.
+  Vous pouvez également ajouter des jetons d’appareil à vos fichiers de configuration personnalisés. Les jetons de périphérique sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte présente un aspect `123456789ABC` semblable à celui de chaque appareil. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
 
-4. Dans **Configuration personnalisée**, entrez les paramètres suivants :
+  > [!NOTE]
+  > Les variables ne sont pas validées dans l’interface utilisateur et respectent la casse. Par conséquent, vous pouvez voir des profils enregistrés avec une entrée incorrecte. Par exemple, si vous entrez `{{DeviceID}}` au lieu de `{{deviceid}}`, la chaîne littérale s’affiche à la place de l’ID unique de l’appareil. Veillez à entrer les informations correctes.
 
-    - **Nom du profil de configuration personnalisé** : entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
-    - **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
-
-5. Sélectionnez **OK** > **Créer** pour créer le profil Intune. Quand vous avez terminé, votre profil apparaît dans la liste **Configuration de l’appareil - Profils**.
+Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil est créé et affiché dans la liste des profils.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

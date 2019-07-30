@@ -5,7 +5,7 @@ description: Paramètres de bases de référence de la sécurité pris en charge
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354437"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491930"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Paramètres de bases de référence de Windows Defender Advanced Threat Protection pour Intune
 
@@ -29,7 +29,7 @@ Afficher les paramètres de bases de référence de Microsoft Defender Advanced 
 
 Ligne de base Microsoft Defender Advanced Threat Protection est disponible lorsque votre environnement répond à la configuration requise pour l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
-Cette ligne de base est optimisée pour les appareils physiques et n’est actuellement pas recommandée pour une utilisation sur des machines virtuelles ou des points de terminaison VDI. Certains paramètres de base peuvent avoir un impact sur les sessions interactives à distance sur les environnements virtualisés. Pour plus d’informations, voir [augmenter la conformité à la ligne de base de sécurité de Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) dans la documentation Windows.
+Cette ligne de base est optimisée pour les appareils physiques et n’est actuellement pas recommandée pour une utilisation sur des machines virtuelles ou des points de terminaison VDI. Certains paramètres de la base de référence peuvent impacter les sessions interactives à distance sur les environnements virtualisés. Pour plus d’informations, consultez [Améliorer la conformité à la base de référence de la sécurité de Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) dans la documentation Windows.
 
 
 > [!NOTE]  
@@ -292,7 +292,7 @@ Pour plus d’informations, consultez [WindowsAdvancedThreatProtection CSP](http
 
   **Par défaut** : mode audit
 
-## <a name="web-network-protection"></a>Protection réseau web  
+## <a name="web--network-protection"></a>Protection réseau et Web  
 
 - **Type de protection réseau**  
   [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) : cette stratégie vous permet d’activer la protection réseau (bloquer/auditer) ou de la désactiver dans Windows Defender Exploit Guard.This policy allows you to turn network protection on or off in Windows Defender Exploit Guard. La protection réseau est une fonctionnalité de Windows Defender Exploit Guard qui protège les employés utilisant une application d’accéder à des tentatives d’hameçonnage, à des sites hébergeant du code malveillant exploitant une faille de sécurité et à du contenu malveillant sur Internet. Cela inclut le fait d’empêcher des navigateurs tiers de se connecter à des sites dangereux.  
@@ -600,6 +600,13 @@ Pour plus d’informations, consultez [PassportForWork CSP](https://docs.microso
 
 - **Configurer Windows Hello Entreprise** - *TenantId/stratégies/UsePassportForWork*    
   Windows Hello Entreprise est une méthode alternative de connexion à Windows en remplaçant les mots de passe, les cartes à puce et les cartes à puce virtuelles.  
+
+  - Lorsque la valeur est *Oui*, vous activez cette stratégie et l’appareil provisionne Windows Hello entreprise.  
+  - Lorsque la valeur *n’est pas configurée*, la ligne de base n’affecte pas le paramètre de stratégie de l’appareil. Cela signifie que si Windows Hello entreprise est désactivé sur un appareil, il reste désactivé. Si elle est activée, elle reste activée. 
+
+  Vous ne pouvez pas désactiver Windows Hello entreprise par le biais de cette ligne de base. Vous pouvez désactiver Windows Hello entreprise lors de la configuration de l' [inscription Windows](windows-hello.md)ou dans le cadre d’un profil de configuration d’appareil pour la [protection d’identité](identity-protection-configure.md).  
+
+Windows Hello Entreprise est une méthode alternative de connexion à Windows en remplaçant les mots de passe, les cartes à puce et les cartes à puce virtuelles.  
 
   Si vous activez ou ne configurez pas ce paramètre de stratégie, l’appareil configure Windows Hello Entreprise. Si vous désactivez ce paramètre de stratégie, l’appareil ne configure pas Windows Hello Entreprise pour tous les utilisateurs.
 
