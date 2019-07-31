@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: cd310cea29a3dac7a178d88c0f29d1a4e36ad37d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528311"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482808"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Démarrage rapide : ajouter et attribuer une application cliente
 
@@ -43,7 +43,6 @@ Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’[administra
 Vous pouvez ajouter une application pour permettre à Intune d’en gérer certains aspects. 
 
 Effectuez les étapes suivantes pour ajouter une application dans Intune :
-
 1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications clientes** > **Applications** > **Ajouter**. 
 2. Sélectionnez **Windows 10** dans la section **Suite Office 365** de la zone de liste déroulante **Type d’application**.
 3. Sélectionnez **Configurer la suite d’applications** pour sélectionner les applications Office à attribuer à l’utilisateur Intune.
@@ -56,9 +55,9 @@ Effectuez les étapes suivantes pour ajouter une application dans Intune :
 
     ![Capture d’écran de l’ajout d’informations sur la suite d’applications](media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
 
-8. Sélectionnez **Paramètres de la suite d’applications**.
-9. Dans la zone de liste déroulante **Canal de mise à jour**, sélectionnez **Mensuel**.
-10. Cliquez sur **OK** > **Ajouter**.
+10. Sélectionnez **Paramètres de la suite d’applications**.
+11. Dans la zone de liste déroulante **Canal de mise à jour**, sélectionnez **Mensuel**.
+12. Cliquez sur **OK** > **Ajouter**.
 
 ## <a name="assign-the-app-to-a-group"></a>Attribuer l’application à un groupe
 

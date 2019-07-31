@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: d0e3e67cd227c5ce8ac2cb42f79bdea1da8e2d75
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375109"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482767"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Ajouter des paramètres Endpoint Protection dans Intune  
 
@@ -63,7 +63,7 @@ Quand vous planifiez des profils avec des règles de pare-feu personnalisées, p
 - Pour chaque profil, si l’application d’une seule règle échoue, toutes les règles sont considérées en échec et aucune des règles n’est appliquée à l’appareil.  
 - Quand l’application d’une règle échoue, toutes les règles du profil sont signalées comme étant en échec. Intune ne peut pas identifier la règle qui a échoué.  
 
-Les règles de pare-feu qu’Intune peut gérer sont détaillées dans le [fournisseur de services de configuration du pare-feu]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) Windows. Pour consulter la liste des paramètres de pare-feu personnalisés pour les appareils Windows 10 pris en charge par Intune, consultez [Règles de pare-feu personnalisées](endpoint-protection-windows-10.md#custom-firewall-rules).  
+Les règles de pare-feu qu’Intune peut gérer sont détaillées dans le [fournisseur de services de configuration du pare-feu]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) Windows. Pour consulter la liste des paramètres de pare-feu personnalisés pour les appareils Windows 10 pris en charge par Intune, consultez [Règles de pare-feu personnalisées](endpoint-protection-windows-10.md#firewall-rules).  
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Pour ajouter des règles de pare-feu personnalisées à un profil Endpoint Protection  
 
@@ -73,7 +73,7 @@ Les règles de pare-feu qu’Intune peut gérer sont détaillées dans le [fourn
 
 3. Sélectionnez **Pare-feu Windows Defender** pour ouvrir la page de configuration puis, pour *Règles de pare-feu*, sélectionnez **Ajouter** pour ouvrir la règle **Créer une règle**.  
 
-4. Spécifiez les paramètres de la règle de pare-feu, puis sélectionnez **OK** pour l’enregistrer. Pour passer en revue les options des règles de pare-feu personnalisées disponibles dans la documentation, consultez [Règles de pare-feu personnalisées](endpoint-protection-windows-10.md#custom-firewall-rules).  
+4. Spécifiez les paramètres de la règle de pare-feu, puis sélectionnez **OK** pour l’enregistrer. Pour passer en revue les options des règles de pare-feu personnalisées disponibles dans la documentation, consultez [Règles de pare-feu personnalisées](endpoint-protection-windows-10.md#firewall-rules).  
 
 5. Une fois la règle enregistrée, elle apparaît dans la page *Pare-feu Windows Defender*, dans la liste des règles.  
 

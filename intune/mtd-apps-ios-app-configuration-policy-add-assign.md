@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d27cd977909bb7aa237441102110a7abc27ad301
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: fef4b6969680101e2e4f045bc83a8974536eaf2a
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884990"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660969"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Ajouter et affecter des applications Mobile Threat Defense (MTD) avec Intune  
 
@@ -164,26 +164,23 @@ Choisissez la section correspondant à votre fournisseur MTD :
 - Consultez les instructions [d’utilisation de stratégies de configuration d’application Microsoft Intune pour iOS](app-configuration-policies-use-ios.md) pour ajouter la stratégie de configuration d’application iOS Check Point SandBlast Mobile.
   - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu ci-dessous et collez-le dans le corps de la stratégie de configuration.
 
-```
-<dict><key>MDM</key><string>INTUNE</string></dict>
-```
+        <dict><key>MDM</key><string>INTUNE</string></dict>
+
 
 ### <a name="zimperium-app-configuration-policy"></a>Stratégie de configuration des applications Zimperium  
 - Consultez les instructions [d’utilisation de stratégies de configuration d’application Microsoft Intune pour iOS](app-configuration-policies-use-ios.md) pour ajouter la stratégie de configuration d’application iOS Zimperium.
   - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu ci-dessous et collez-le dans le corps de la stratégie de configuration.
-
-```
-<dict>
-<key>provider</key><string>Intune</string>
-<key>userprincipalname</key><string>{{userprincipalname}}</string>
-<key>deviceid</key>
-<string>{{deviceid}}</string>
-<key>serialnumber</key>
-<string>{{serialnumber}}</string>
-<key>udidlast4digits</key>
-<string>{{udidlast4digits}}</string>
-</dict>
-```
+ 
+        <dict>
+        <key>provider</key><string>Intune</string>
+        <key>userprincipalname</key><string>{{userprincipalname}}</string>
+        <key>deviceid</key>
+        <string>{{deviceid}}</string>
+        <key>serialnumber</key>
+        <string>{{serialnumber}}</string>
+        <key>udidlast4digits</key>
+        <string>{{udidlast4digits}}</string>
+        </dict>
 
 ### <a name="pradeo-app-configuration-policy"></a>Stratégies de configuration des applications Pradeo  
 Pradeo ne prend en charge la stratégie de configuration des applications sur iOS.  Au lieu de cela, pour obtenir une application configurée, collaborez avec Pradeo pour implémenter des fichiers IPA ou APK personnalisés qui sont préconfigurées avec les paramètres souhaités.
@@ -192,16 +189,15 @@ Pradeo ne prend en charge la stratégie de configuration des applications sur iO
 - Consultez les instructions [d’utilisation de stratégies de configuration d’application Microsoft Intune pour iOS](app-configuration-policies-use-ios.md) pour ajouter la stratégie de configuration d’application iOS Better Mobile.
   - À l’**étape 8**, utilisez l’option **Entrer des données XML**, copiez le contenu ci-dessous et collez-le dans le corps de la stratégie de configuration. Remplacez l’URL `https://client.bmobi.net` par l’URL de la console concernée.
 
-```
-<dict>
-<key>better_server_url</key>
-<string>https://client.bmobi.net</string>
-<key>better_udid</key>
-<string>{{aaddeviceid}}</string>
-<key>better_user</key>
-<string>{{userprincipalname}}</string>
-</dict>
-```
+        <dict>
+        <key>better_server_url</key>
+        <string>https://client.bmobi.net</string>
+        <key>better_udid</key>
+        <string>{{aaddeviceid}}</string>
+        <key>better_user</key>
+        <string>{{userprincipalname}}</string>
+        </dict>
+
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Stratégie de configuration des applications Sophos Mobile  
 Créez la stratégie de configuration d’application iOS comme décrit dans l’article [Utilisation de la stratégie de configuration d’application iOS](app-configuration-policies-use-ios.md).
@@ -210,22 +206,20 @@ Créez la stratégie de configuration d’application iOS comme décrit dans l�
 Pour ajouter la stratégie de configuration des applications iOS Wandera, consultez les instructions concernant l’[utilisation de stratégies de configuration d’applications Microsoft Intune pour iOS](app-configuration-policies-use-ios.md).
 - À l’**étape 8**, utilisez l’option **Entrer des données XML**. Connectez-vous au portail Wandera RADAR, puis accédez à **Settings** > **EMM Integration** > **App Push** (Paramètres/Intégration EMM/Envoyer l’application). Sélectionnez **Intune**, puis copiez le contenu ci-dessous et collez-le dans le corps de la stratégie de configuration.  
 
-  ```
-  <dict><key>secretKey</key>
-  <string>SeeRADAR</string>
-  <key>apiKey</key>
-  <string> SeeRADAR </string>
-  <key>customerId</key>
-  <string> SeeRADAR </string>
-  <key>email</key>
-  <string>{{mail}}</string>
-  <key>firstName</key>
-  <string>{{username}}</string>
-  <key>lastName</key>
-  <string></string>
-  <key>activationType</key>
-  <string>PROVISION_THEN_AWP</string></dict>  
-  ```
+      <dict><key>secretKey</key>
+       <string>SeeRADAR</string>
+       <key>apiKey</key>
+       <string> SeeRADAR </string>
+       <key>customerId</key>
+       <string> SeeRADAR </string>
+       <key>email</key>
+       <string>{{mail}}</string>
+       <key>firstName</key>
+       <string>{{username}}</string>
+       <key>lastName</key>
+       <string></string>
+       <key>activationType</key>
+       <string>PROVISION_THEN_AWP</string></dict>  
 
 ## <a name="assign-apps-to-groups"></a>Affecter des applications à des groupes  
 - Cette étape s’applique à tous les partenaires MTD. Consultez les instructions relatives à [l’affectation des applications à des groupes avec Intune](apps-deploy.md).
