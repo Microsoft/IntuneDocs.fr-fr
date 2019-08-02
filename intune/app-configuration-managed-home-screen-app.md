@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/16/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b1f8308463e76b09a041bb952ad09515435c54c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 758230d3d2f1dd1cb42532cce9fe1ff530000a16
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374843"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482856"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurer l’application Microsoft Managed Home Screen pour Android Entreprise
 
@@ -386,6 +386,9 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
 
 ## <a name="googles-android-device-policy-app"></a>Application Android Device Policy de Google
 L’application Managed Home Screen permet désormais d’accéder à l’application Android Device Policy de Google. L’application Managed Home Screen est un lanceur personnalisé utilisé pour les appareils inscrits dans Intune en tant qu’appareils dédiés Android Enterprise (AE) utilisant le mode kiosque multi-application. Vous pouvez accéder à l’application Android Device Policy ou guider les utilisateurs vers cette application à des fins de support et de débogage. Cette fonctionnalité de lancement est disponible au moment de l’inscription et du verrouillage de l’appareil dans Managed Home Screen. Aucune installation supplémentaire n’est nécessaire pour utiliser cette fonctionnalité.
+
+## <a name="managed-home-screen-debug-screen"></a>Écran de débogage de Managed Home Screen
+Vous pouvez accéder à l’écran de débogage de Managed Home Screen en cliquant sur le bouton **Précédent** jusqu’à ce que l’écran de débogage s’affiche (cliquez sur le bouton **Précédent** 15 fois ou plus). À partir de cet écran de débogage, vous pouvez lancer l’application de stratégie d’appareil Android, afficher et charger des journaux ou suspendre temporairement le mode plein écran pour mettre à jour l’appareil. Pour plus d’informations sur la suspension du mode plein, consultez l’élément **Quitter le mode plein écran** dans les [paramètres de l’appareil dédié](device-restrictions-android-for-work.md#dedicated-device-settings) à Android Enterprise.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

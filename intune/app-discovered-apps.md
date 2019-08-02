@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1827375dc1905b5c881f743777a73340f0215e0c
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388511"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590903"
 ---
 # <a name="intune-discovered-apps"></a>Applications découvertes par Intune
 
@@ -37,6 +37,15 @@ Intune fournit une liste des applications détectées sur les appareils inscrits
 
 >[!NOTE]
 >Vous pouvez exporter la liste des applications découvertes dans un fichier. csv en sélectionnant **Exporter** dans le panneau **Applications découvertes**.
+>
+>Pour les applications Win32 découvertes, il n’existe actuellement pas de compte d’agrégats. Ce type de données ne peut être affiché que sur une base par appareil.
+
+Intune fournit également la liste des applications découvertes pour l’appareil individuel dans votre locataire. 
+
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Dans le volet Intune, sélectionnez **Appareils** > **Tous les appareils**.
+3. Sélectionnez un appareil.
+4. Pour afficher les applications détectées pour cet appareil , sélectionnez **Applications découvertes** dans la section **Moniteur**. 
 
 ## <a name="details-of-discovered-apps"></a>Détails des applications découvertes
 

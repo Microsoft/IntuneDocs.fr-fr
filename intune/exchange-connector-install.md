@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427329"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660946"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Configurer le connecteur Exchange local Intune dans Microsoft Intune
 Les informations contenues dans cet article vous aident à installer, puis à superviser le connecteur local Exchange Active Sync pour Intune.  Vous utilisez le connecteur Exchange local Intune avec vos [stratégies d’accès conditionnel pour autoriser ou bloquer l’accès aux boîtes aux lettres locales Exchange](conditional-access-exchange-create.md). 
@@ -121,7 +121,7 @@ Effectuez les étapes suivantes pour installer le connecteur Exchange local d’
 
 5. Fournissez les informations d’identification nécessaires pour envoyer des notifications à la boîte aux lettres Exchange Server d’un utilisateur. Cet utilisateur peut être dédié aux notifications seulement. Il a besoin d’une boîte aux lettres Exchange pour envoyer des notifications par e-mail. Vous pouvez configurer ces notifications avec des stratégies d’accès conditionnel dans Intune.  
 
-       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Vérifiez que le service de découverte automatique et les services web Exchange sont configurés sur le serveur d'accès au client Exchange. Pour plus d’informations, consultez [Serveur d’accès au client](https://technet.microsoft.com/library/dd298114.aspx).
 
 6. Dans le champ **Mot de passe** , entrez le mot de passe de ce compte pour permettre à Intune d’accéder au serveur Exchange Server.
 
@@ -158,7 +158,7 @@ Pour effectuer le basculement, après avoir correctement créé une connexion à
 
 Quand vous prenez en charge 5 000 appareils ou plus avec Exchange ActiveSync, vous pouvez configurer un paramètre facultatif pour améliorer les performances du connecteur. Les performances améliorées sont obtenues en permettant à Exchange d’utiliser plusieurs instances d’un espace d’exécution de commandes PowerShell. 
 
-Avant de procéder à cette modification, vérifiez que le compte que vous utilisez pour exécuter le connecteur Exchange n’est pas utilisé à d’autres fins de gestion d’Exchange. Cela est dû au fait qu’Exchange a une limite de 18 espaces d’exécution par compte, dont la plupart seront utilisés par le connecteur. 
+Avant de procéder à cette modification, vérifiez que le compte que vous utilisez pour exécuter le connecteur Exchange n’est pas utilisé à d’autres fins de gestion d’Exchange. Cela est dû au fait qu’Exchange a un nombre limité d’espaces d’exécution par compte, dont la plupart seront utilisés par le connecteur. 
 
 Cette modification des performances n’est pas adaptée aux connecteurs qui s’exécutent sur du matériel plus ancien ou plus lent.  
 

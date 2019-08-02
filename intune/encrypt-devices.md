@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57b459efa5b423f1c73a0d6b7b9172f71f4c86d3
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467465"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune  
 
@@ -66,10 +66,7 @@ Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer
 
    Par exemple : Pour récupérer une clé de récupération perdue ou ayant récemment fait l’objet d’une rotation, connectez-vous au site web Portail d’entreprise Intune à partir de n’importe quel appareil. Dans le portail, accédez à *Appareils*, sélectionnez l’appareil où FileVault est activé, puis sélectionnez *Obtenir la clé de récupération*. La clé de récupération actuelle est affichée.  
 
-6. Configurez les paramètres restants selon vos besoins métier, puis sélectionnez **OK**.  
-
-   > [!NOTE]
-   > La prise en charge de FileVault est limitée jusqu’au déploiement de la version de juillet, qui sera terminé d’ici quelques jours. Tant que le déploiement n’est pas terminé, si vous configurez FileVault, vous devez définir *Différer FileVault jusqu’à la déconnexion* sur **Activer**.  
+6. Configurez les [paramètres FileVault](endpoint-protection-macos.md#filevault) selon vos besoins métier, puis sélectionnez **OK**.  
 
 7. Procédez à la configuration des autres paramètres, puis enregistrez le profil.  
 

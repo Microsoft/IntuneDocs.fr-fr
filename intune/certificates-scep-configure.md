@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b073047455cd21dc3ffe5efcb52f51584db5ff30
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: b6db255cc4c4bb8466d36e25deaf36e5c3480106
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353782"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467496"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Configurer et utiliser des certificats SCEP avec Intune
 
@@ -373,7 +373,14 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
      - Windows 10 et versions ultérieures
 
 
-   - **Format du nom de l'objet** : sélectionnez la manière dont Intune crée automatiquement le nom de l'objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**. 
+   - **Format du nom de l'objet** : sélectionnez la manière dont Intune crée automatiquement le nom de l'objet dans la demande de certificat. Les options changent selon que vous choisissez un type de certificat **Utilisateur** ou **Appareil**.  
+
+     > [!NOTE]  
+     > Il existe un [problème connu](#avoid-certificate-signing-requests-with-escaped-special-characters) lié à l’utilisation de SCEP pour obtenir des certificats lorsque le nom d’objet dans la demande de signature de certificat (CSR) résultante inclut l’un des caractères suivants comme caractère d’échappement (suivi d’une barre oblique inverse \\) :
+     > - \+
+     > - ;
+     > - ,
+     > - =
 
         **Type de certificat Utilisateur**  
 
@@ -495,6 +502,42 @@ Pour valider que le service s’exécute, ouvrez un navigateur et entrez l’URL
      - Sélectionnez **OK** et **créez** votre profil.
 
 Le profil est créé et apparaît dans le volet de la liste des profils.
+
+### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Éviter les demandes de signature de certificat avec des caractères spéciaux placés dans une séquence d’échappement
+Il existe un problème connu pour les demandes de certificat SCEP qui incluent un nom d’objet (CN) avec un ou plusieurs des caractères spéciaux suivants comme caractère d’échappement. Les noms d’objet qui incluent l’un des caractères spéciaux sous la forme d’un caractère d’échappement se produisent dans un CSR avec un nom d’objet incorrect qui, à son tour, entraîne l’échec de validation de la stimulation SCEP Intune et aucun certificat émis.  
+
+Les caractères spéciaux ont les suivants :
+- \+
+- ,
+- ;
+- =
+
+Lorsque le nom de votre objet contient un des caractères spéciaux, utilisez l’une des options suivantes pour contourner cette limitation :  
+- Encapsulez la valeur CN qui contient le caractère spécial avec des guillemets.  
+- Supprimez le caractère spécial de la valeur CN.  
+
+**Par exemple**, vous avez un nom d’objet qui apparaît en tant qu’*utilisateur de test (TestCompany, LLC)* .  Un CSR qui inclut un CN avec une virgule entre *TestCompany* et *LLC* présente un problème.  Le problème peut être évité en plaçant des guillemets autour de la totalité du CN ou en supprimant la virgule entre *TestCompany* et *LLC* :
+- **Ajouter des guillemets** : *CN =* « Utilisateur de test (TestCompany, LLC) » OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Supprimez la virgule** : *CN =Utilisateur de test (TestCompany, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+ Toutefois, toute tentative d’échappement de la virgule à l’aide d’un caractère de barre oblique inverse échoue et génère une erreur dans les journaux CRP :  
+- **Virgule d’échappement** : *CN =Utilisateur de test (TestCompany\\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+L’erreur est semblable à la suivante : 
+
+```
+Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
+
+  Exception: System.ArgumentException: Subject Name in CSR and challenge do not match
+
+   at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+   at Microsoft.ConfigurationManager.CertRegPoint.Controllers.CertificateController.VerifyRequest(VerifyChallengeParams value
+```
+
+
 
 ## <a name="assign-the-certificate-profile"></a>Affecter le profil de certificat
 

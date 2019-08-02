@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d76e170627d7e08cc3da6fe4a48eb14ee839de98
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883839"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590922"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -41,7 +41,7 @@ Les applications métier Windows 10 sont signées et chargées dans la console 
 
 ## <a name="microsoft-store-for-business-apps"></a>Applications Microsoft Store pour Entreprises
 
-Les applications Microsoft Store pour Entreprises sont des applications modernes achetées à partir du portail d’administration Microsoft Store pour Entreprises, et sont ensuite synchronisées avec Microsoft Intune pour la gestion. Les applications peuvent être **sous licence en ligne** ou **sous licence hors connexion**. Les mises à jour des applications Microsoft Store pour Entreprises sont gérées directement par le Microsoft Store, sans aucune action supplémentaire requise de la part de l’administrateur. L’administrateur peut également empêcher les mises à jour d’applications spécifiques à l’aide d’un URI (Uniform Resource Identifier) personnalisé. Pour plus d’informations, consultez [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Sur l’appareil, l’utilisateur final peut également désactiver les mises à jour pour toutes les applications Microsoft Store pour Entreprises sur l’appareil. 
+Les applications Microsoft Store pour Entreprises sont des applications modernes achetées à partir du portail d’administration Microsoft Store pour Entreprises et sont ensuite synchronisées avec Microsoft Intune pour la gestion. Les applications peuvent être **sous licence en ligne** ou **sous licence hors connexion**. Les mises à jour des applications Microsoft Store pour Entreprises sont gérées directement par Microsoft Store, sans aucune action supplémentaire requise de la part de l’administrateur, c’est-à-dire vous-même. Vous pouvez également empêcher les mises à jour d’applications spécifiques à l’aide d’un URI (Uniform Resource Identifier) personnalisé. Pour plus d’informations, consultez [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Sur l’appareil, l’utilisateur final peut également désactiver les mises à jour pour toutes les applications Microsoft Store pour Entreprises sur l’appareil. 
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Installation d’applications sur les appareils Windows 10
 En fonction du type d’application, l’application peut être installée sur un appareil Windows 10 de deux manières :

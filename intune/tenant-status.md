@@ -14,14 +14,14 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: c744878c49dfa5adb1b4f64587abfe06151a69a0
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882225"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670985"
 ---
-# <a name="intune-tenant-status-page"></a>Page État du locataire Intune
+# <a name="use-the-intune-tenant-status-page"></a>Utiliser la page État du locataire Intune
 La page État du locataire est un hub centralisé où vous pouvez voir les détails actuels et importants sur votre locataire, notamment la disponibilité et l’utilisation des licences, l’état du connecteur ainsi que des communications importantes sur le service Intune.  
 
 Pour voir le tableau de bord, dans le portail Azure, accédez à **Intune > État du locataire**.  La page État du locataire s’affiche sous le **groupe Aide et support**.  

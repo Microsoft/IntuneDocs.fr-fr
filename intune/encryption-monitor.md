@@ -16,14 +16,14 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a04a8b9f1973479fd0695ad0e782488fdef43d10
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375150"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671060"
 ---
-# <a name="monitor-device-encryption"></a>Superviser le chiffrement des appareils  
+# <a name="monitor-device-encryption-with-intune"></a>Analyser le chiffrement d’appareil avec Intune   
 
 Le rapport de chiffrement Microsoft Intune est un emplacement centralisé pour voir des détails sur l’état de chiffrement de vos appareils gérés. Affichez des détails sur l’état de chiffrement d’un appareil et accédez aux options de gestion des clés de récupération de l’appareil. Les options des clés de récupération disponibles dépendent du type d’appareil que vous visualisez.  
 
@@ -59,7 +59,7 @@ Le volet Rapport de chiffrement affiche une liste des appareils que vous gérez 
     
     Pour plus d’informations, consultez le [fournisseur de service de configuration de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) dans la documentation de Windows.  
 
-  - **Non prêt** : L’appareil n’a pas toutes les fonctionnalités de chiffrement, mais il prend quand même en charge le chiffrement. Par exemple, un appareil peut être chiffré manuellement par un utilisateur ou via une stratégie de groupe définie pour permettre le chiffrement sans TMP.
+  - **Non prêt** : L’appareil n’a pas toutes les fonctionnalités de chiffrement, mais il prend quand même en charge le chiffrement. Par exemple, un appareil Windows peut être chiffré manuellement par un utilisateur ou via une stratégie de groupe définie pour permettre le chiffrement sans TPM.
   - **Non applicable** : Les informations ne sont pas suffisantes pour classifier cet appareil.  
 
 - **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré.  
@@ -93,8 +93,6 @@ Quand vous sélectionnez un appareil dans le rapport de chiffrement, Intune affi
 - **Résumé de l’état du profil** : résumé des profils qui s’appliquent à cet appareil. Le récapitulatif représente la condition la moins favorable parmi les profils applicables. Par exemple, si un seul profil parmi plusieurs profils applicables entraîne une erreur, le *Résumé de l’état du profil* indique *Erreur*.  
 
 - **Informations d’état** : détails avancés sur l’état du chiffrement de l’appareil.  
-  > [!NOTE]
-  > La prise en charge de FileVault est limitée jusqu’au déploiement de la version de juillet, qui sera terminé d’ici quelques jours. Tant que le déploiement n’est pas terminé, les détails de l’état des appareils et les détails du chiffrement des appareils pour macOS peuvent ne pas s’afficher correctement dans le rapport de chiffrement.
 
   > [!IMPORTANT]  
   > Pour les appareils Windows 10, Intune montre les *Informations d’état* seulement pour les appareils qui exécutent la *mise à jour d’avril 2019 de Windows 10* ou une version ultérieure.  

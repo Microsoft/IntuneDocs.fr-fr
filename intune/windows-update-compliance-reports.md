@@ -1,5 +1,6 @@
 ---
-title: Utiliser des rapports Update Compliance pour les mises à jour Windows dans Microsoft Intune | Microsoft Docs
+title: Utiliser des rapports Update Compliance pour les mises à jour Windows dans Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Utilisez OMS Update Compliance pour afficher les données de rapport des mises à jour Windows que vous déployez avec Intune.
 keywords: ''
 author: brenduns
@@ -14,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2b236d01cb5ffcf5a26e71ac0a9b65bb586dcb1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 09f3cafc16d8a08885731aa244a089367c6c0933
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039665"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660408"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Rapports de conformité Intune pour les mises à jour
 Quand vous utilisez Intune pour déployer une mise à jour Windows sur des appareils Windows 10, affichez les détails de la conformité des mises à jour à l’aide d’Intune ou d’une solution gratuite appelée *Update Compliance*, qui fait partie de Microsoft Operations Management Suite (OMS).
