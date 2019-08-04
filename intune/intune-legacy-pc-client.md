@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 921934eead9ff3a1074203dad55ee60f3fe77947
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c626bb50868e6b966eb7c8867f4c4ff7178eadcf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047270"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756525"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune dans la console Azure et client PC Intune hérité
 
@@ -45,7 +45,7 @@ Suite à ce passage aux groupes Azure AD, le filtrage « basé sur les groupes �
 1. Sélectionnez un affichage.
 2. Dans la zone **Filtres**, entrez le nom du groupe à filtrer et appuyez sur la touche Entrée. La liste ainsi filtrée affichera uniquement les appareils appartenant à ce groupe.
 
-   ![](media/intune-legacy-pc-client/image01.png)
+   ![Entrée de la liste déroulante des filtres avec aucun sélectionné](media/intune-legacy-pc-client/image01.png)
 
 
 ## <a name="continue-to-manage-windows-7-by-using-intune-pc-client"></a>Continuer à gérer Windows 7 via le PC client Intune
@@ -61,7 +61,7 @@ Pour obtenir une comparaison détaillée entre les fonctions du PC client et les
 Pour passer de la gestion des appareils Windows 10 via le PC client Intune à la gestion via GPM, procédez comme suit :
 
 1. Dans la console de Silverlight, effectuez une **réinitialisation sélective** pour désinscrire l’appareil du PC client.
-  ![](media/intune-legacy-pc-client/image02.png)
+  ![Menu contextuel d’avertissement avec la case d’option «Réinitialiser sélectivement l’appareil» sélectionnée](media/intune-legacy-pc-client/image02.png)
 2. Réinscrivez l’appareil à l’aide de la [GPM (et/ou Azure AD Join)](https://docs.microsoft.com/intune/windows-enroll). 
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 07/26/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,22 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 494269b82840331041ac2607ea853dbfb1d979de
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 3c764d0bf5cccecef692b8efe1e45af383584cd2
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546328"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625065"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installer l’application Portail d’entreprise et s’y connecter
 
 Installez l’application Portail d’entreprise sur votre appareil iOS pour accéder au réseau, aux applications et aux messageries de votre entreprise ou établissement scolaire. Utilisez l’application pour inscrire votre appareil dans Microsoft Intune et sécuriser ainsi l’accès aux ressources professionnelles et scolaires à partir de cet appareil. Pour plus d’informations, consultez [Que se passe-t-il si vous installez l’application Portail d’entreprise et que vous inscrivez votre appareil dans Intune ?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-1. Ouvrez l’**App Store** et recherchez **portail d’entreprise Intune**.
+1. Ouvrez l’**App Store** et recherchez le **Portail d’entreprise Intune**.
 
 2. Téléchargez l’application **Portail d’entreprise Intune**.
 
-    ![Capture d’écran de la façon dont l’application Portail d’entreprise Intune apparaît dans l’App Store.](./media/CP_iosRedesign_after_1803_04.PNG)
+    ![Capture d’écran de la façon dont l’application Portail d’entreprise Intune apparaît dans l’App Store.](./media/cp-ios-redesign-after-1904.PNG)  
 
 3. Ouvrez l’application Portail d’entreprise, entrez votre adresse e-mail professionnelle ou scolaire ainsi que votre mot de passe, puis appuyez sur **Se connecter**.
 
