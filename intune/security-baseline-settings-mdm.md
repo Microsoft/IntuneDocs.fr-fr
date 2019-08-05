@@ -1,7 +1,7 @@
 ---
 title: Paramètres de base de référence de la sécurité Intune pour Windows 10
 titleSuffix: Microsoft Intune
-description: Paramètres de base de référence de la sécurité pour Intune pour la gestion de Windows 10
+description: Passez en revue les valeurs par défaut et les paramètres disponibles qui se trouvent dans la ligne de base de sécurité Windows MDM pour les appareils Windows 10 que vous gérez avec Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,23 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
-ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.openlocfilehash: 5565ce7a355136a749d79b52e4830af91684440a
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491907"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680037"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
 Affichez les paramètres de ligne de base de sécurité MDM pris en charge par Microsoft Intune pour les appareils qui exécutent Windows 10 ou version ultérieure. Les valeurs par défaut des paramètres de cette base de référence représentent la configuration recommandée pour les appareils applicables et peuvent ne pas correspondre aux valeurs par défaut de référence des autres lignes de base de sécurité.  
 
-La version de référence la plus récente est la **ligne de base de sécurité MDM pour la mise à jour Spring 2019 (19H1)**  
+La dernière version de référence est la **ligne de base de sécurité MDM pour mai 2019**  
 
 Pour en savoir plus sur les modifications apportées à la version la plus récente de cette base de référence à partir de la version précédente, consultez [ce qui a changé dans le nouveau modèle](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> En juin 2019, la ligne de base de sécurité MDM de la version préliminaire a été remplacée par la publication du modèle de *mise à jour de la ligne de base de sécurité MDM pour Spring 2019 (19H1)* , qui est disponible en général (pas en préversion). Les profils qui ont été créés avant la disponibilité de la ligne de base de *sécurité MDM pour spring 2019 Update (19H1)* ne sont pas mis à jour pour refléter les paramètres et les valeurs qui se trouvent dans la version de la ligne de base de sécurité MDM pour Spring 2019 Update (19H1).  Bien que vous ne puissiez pas créer de nouveaux profils basés sur le modèle d’aperçu, vous pouvez modifier et continuer à utiliser les profils que vous avez créés précédemment, basés sur le modèle d’aperçu.   
+> En juin 2019, la ligne de base de sécurité MDM préliminaire a été remplacée par la publication de la *ligne de base de sécurité MDM pour le modèle mai 2019* , qui est généralement disponible (pas en version préliminaire). Les profils qui ont été créés avant la disponibilité de la ligne de base de *sécurité MDM pour la ligne de base de mai 2019* ne sont pas mis à jour pour refléter les paramètres et valeurs de la ligne de base de sécurité MDM pour la version de mai 2019.  Bien que vous ne puissiez pas créer de nouveaux profils basés sur le modèle d’aperçu, vous pouvez modifier et continuer à utiliser les profils que vous avez créés précédemment, basés sur le modèle d’aperçu.   
   
 Pour en savoir plus sur l’utilisation des lignes de base de sécurité avec Intune, consultez [utiliser des lignes de base de sécurité](security-baselines.md).  
 
@@ -1825,7 +1825,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Activé
 
 ## <a name="whats-changed-in-the-new-template"></a>Ce qui a changé dans le nouveau modèle
-Le modèle de *mise à jour de la ligne de base de sécurité MDM pour Spring 2019 Update (19H1)* présente les modifications suivantes par rapport à la version *préliminaire* du modèle.
+La *ligne de base de sécurité MDM pour le modèle 2019 mai* présente les modifications suivantes par rapport à la version *préliminaire* du modèle.
 
 ### <a name="changes-to-the-baseline-settings"></a>Modifications apportées aux paramètres de base
 Les paramètres suivants sont soit :
