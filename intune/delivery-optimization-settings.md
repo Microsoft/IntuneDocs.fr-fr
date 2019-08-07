@@ -1,11 +1,12 @@
 ---
-title: Paramètres Optimisation de la distribution de Windows 10 pour Intune | Microsoft Docs
+title: Paramètres d’optimisation de la distribution Windows 10 pour Intune
+titleSuffix: Microsoft Intune
 description: Paramètres Optimisation de la distribution pour les appareils Windows 10 que vous pouvez déployer à l’aide d’Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2019
+ms.date: 08/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +15,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab4871da52f5df0aec0a698f31daa5608a57c1c3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 11361b65735a7ed7e724a77349e3624e0e35ecaf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493903"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756564"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Paramètres d’optimisation de la distribution pour Intune
 
@@ -66,6 +67,15 @@ Pour configurer Intune afin d’utiliser ces paramètres, consultez [Distribuer 
 | [Âge maximal du cache (en jours)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | Spécifiez la durée pendant laquelle un fichier correctement téléchargé est conservé dans le cache de l’optimisation de la distribution sur un appareil.   <br><br>Avec Intune, vous configurez l’âge du cache en jours. Le nombre de jours que vous définissez est converti en nombre de secondes, qui est la façon dont Windows définit ce paramètre. Par exemple, une configuration Intune de 3 jours est convertie sur l’appareil en 259200 secondes (3 jours).  <br><br>**Par défaut** : *aucune valeur n’est configurée*     <br><br>**Recommandé** : 7   <br><br>Fournisseur CSP de stratégie : [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
 | Type de taille maximale du cache  | *Voir les détails*    | Sélectionnez la façon de gérer la quantité d’espace disque sur un appareil qui est utilisé par l’optimisation de la distribution. Si ce paramètre n’est pas configuré, la taille du cache par défaut est 20 % de l’espace disque libre disponible.  <br><ul><li>**Non configuré** (par défaut)</li><br><li>**Absolu** : spécifiez la [Taille maximale absolue du cache (en Go)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#absolute-max-cache-size) pour configurer la quantité maximale d’espace disque qu’un appareil peut utiliser pour l’optimisation de la distribution. Si ce paramètre est défini sur 0 (zéro), la taille du cache est illimitée, bien que l’optimisation de la distribution efface le cache si l’appareil manque d’espace disque. <br><br>Requiert Windows 1607<br><br> Fournisseur CSP de stratégie : [DOAbsoluteMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize) </li><br><li>**Pourcentage** : spécifiez la [Taille maximale du cache (en %)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-size) pour configurer la quantité maximale d’espace disque qu’un appareil peut utiliser pour l’optimisation de la distribution. Le pourcentage est défini par rapport à l’espace disque disponible. L’optimisation de la distribution évalue constamment cet espace et efface éventuellement le cache pour maintenir la taille maximale du cache sous le pourcentage défini. <br><br>Requiert Windows 1511<br><br>Fournisseur CSP de stratégie : [DOMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)  |
 | [Mise en cache partagé entre systèmes pairs via VPN](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#enable-peer-caching-while-the-device-connects-via-vpn)  | 1709  | Sélectionnez **Activé** pour configurer un appareil afin qu’il participe à la mise en cache partagé entre systèmes pairs quand il est connecté via VPN au réseau avec domaine. Les appareils qui sont activés peuvent télécharger des données à partir d’autres appareils du réseau avec domaine ou en charger sur ces derniers, via le VPN ou le réseau avec domaine d’entreprise.  <br><br>**Par défaut** : Non configuré  <br><br>Fournisseur CSP de stratégie : [DOAllowVPNPeerCaching](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)    |
+
+## <a name="local-server-caching"></a>Mise en cache du serveur local  
+
+|Paramètre  |Version de Windows  |Détails  |
+|---------|-----------------|---------|
+|Noms d’hôtes du serveur de cache | 1809  |Spécifiez l’adresse IP ou le nom de domaine complet des serveurs de cache réseau qui seront utilisés par vos appareils pour l’optimisation de la distribution, puis sélectionnez **Ajouter** pour ajouter cette entrée à la liste.  <br><br>**Par défaut** : Non configuré  <br><br>CSP de la stratégie: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
+|[Délai de secours du serveur de cache pour le téléchargement en premier plan (en secondes)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Spécifiez une durée en secondes (0-2592000) pour retarder le secours d’un serveur de cache à la source HTTP d’un pour un téléchargement de contenu en premier plan. Lorsque la stratégie pour différer le téléchargement du premier plan à partir de http, elle s’applique en premier (pour autoriser les téléchargements des homologues en premier). (0-2592000)    <br><br>**Par défaut** : 0  <br><br>[DODELAYCACHESERVERFALLBACKFOREGROUND](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground) CSP de stratégie  |
+|[Retarder le cache de téléchargement en arrière-plan serveur de secours (en secondes)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Spécifiez une durée (en secondes) (0-2592000) pour retarder le basculement d’un serveur de cache vers la source HTTP pour un téléchargement de contenu en arrière-plan. Lorsque *l’option téléchargement http en arrière-plan (en secondes)* est configurée, ce paramètre s’applique en premier pour autoriser les téléchargements à partir de pairs. (0-2592000)   <br><br>**Par défaut** : 0 <br><br>CSP de la stratégie: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

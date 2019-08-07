@@ -703,18 +703,20 @@
           href: tenant-status.md
         - name: Dépannage
           items:
+            - name: Aider les utilisateurs à résoudre les problèmes
+              href: help-desk-operators.md
             - name: Résoudre les problèmes d’inscription
               items:
                 - name: Résoudre les problèmes d’inscription des appareils iOS
                   href: troubleshoot-ios-enrollment-errors.md
                 - name: Résoudre les problèmes d’inscription des appareils Windows
                   href: troubleshoot-windows-enrollment-errors.md
-            - name: Aider les utilisateurs à résoudre les problèmes
-              href: help-desk-operators.md
             - name: Résoudre les problèmes d'accès aux ressources d'entreprise
               href: troubleshoot-company-resource-access-problems.md
             - name: Résoudre les problèmes d’installation d’applications
               href: troubleshoot-app-install.md
+            - name: Résoudre les problèmes d’actions de l’appareil
+              href: troubleshoot-device-actions.md
             - name: Résoudre les problèmes de gestion des applications mobiles
               href: troubleshoot-mam.md
             - name: Journaux d’audit pour les activités Intune

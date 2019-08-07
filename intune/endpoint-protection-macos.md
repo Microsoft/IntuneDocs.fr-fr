@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467414"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756507"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Paramètres Endpoint Protection pour MacOS dans Intune  
 
@@ -97,11 +97,18 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
     - **Rotation de clé de récupération personnelle** -spécifiez la fréquence de rotation de la clé de récupération personnelle d’un appareil. Vous pouvez sélectionner la valeur par défaut **non configurée**ou une valeur de **1** à **12** mois.  
 
   - **Désactiver l’invite à la déconnexion**  
-    Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  Lorsque cette valeur est désactivée, l’invite à la déconnexion est désactivée et, à la place, l’utilisateur est invité à le faire lorsqu’il se connecte.  
+    Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  Lorsque cette valeur est définie sur Enable, l’invite à la déconnexion est désactivée et, à la place, l’utilisateur est invité à indiquer quand il se connecte.  
     - **Non configuré**  
-    - **Désactiver**  
+    - **Activer** : désactive l’invite à la déconnexion.
 
     **Par défaut** : Non configuré  
+
+     > [!IMPORTANT]  
+     > Il existe un problème connu lorsque l’option de désactivation de l' **invite à** la déconnexion est définie sur *activer*. Lorsque cette option est définie sur *Enable*, le paramètre du **nombre de fois autorisé à contourner** doit être défini sur une valeur et ne doit pas être défini comme *non configuré*. Si la valeur *n’est pas configurée*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale qu’il s’agit d’un résumé de l' **État du profil** comme **erreur** sans plus de détails.
+     > 
+     > Lorsque l’invite de désactivation de la **connexion** est définie sur *non configurée*, le **nombre de fois autorisées à ignorer** peut être *non configuré* ou avoir une valeur.  
+     > 
+     > Ce problème sera résolu dans une mise à jour ultérieure. 
 
   - **Nombre de fois où le contournement est autorisé**  
   Définissez le nombre de fois qu’un utilisateur peut ignorer les invites pour activer FileVault avant que FileVault soit requis pour que l’utilisateur se connecte.  

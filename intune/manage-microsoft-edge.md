@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
-ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
+ms.openlocfilehash: 7636e1914e23e7009a25f45f330fe85af2a03536
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68287218"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701015"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -76,9 +76,6 @@ Pour obliger les applications web connectées à Azure AD à utiliser Microsoft 
 
 9. Dans la section **Affectations**, sélectionnez **Utilisateurs et groupes**, puis choisissez les utilisateurs ou groupes à attribuer à cette stratégie.
 
-    > [!NOTE]
-    > Les utilisateurs doivent aussi être ciblés avec la stratégie Intune App Protection afin de recevoir des stratégies de configuration d’applications. Pour plus d’informations sur la création de stratégies de protection des applications Intune, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md)
-
 10. Dans la section **Affectations**, sélectionnez **Applications cloud** pour choisir les applications à protéger avec cette stratégie.
 
 Une fois la stratégie ci-dessus configurée, les utilisateurs sont obligés d’utiliser Microsoft Edge pour accéder aux applications web connectées à Azure AD que vous avez protégées avec cette stratégie. Si les utilisateurs essaient d’utiliser un navigateur non géré dans ce scénario, un message s’affiche pour les informer qu’ils doivent obligatoirement utiliser Microsoft Edge.
@@ -96,8 +93,6 @@ Pour pouvoir utiliser l’authentification unique, votre appareil doit être ins
 > L’inscription d’un appareil est un simple enregistrement auprès du service Azure AD. Il ne nécessite pas une inscription complète de l’appareil et ne donne au service informatique aucun autre privilège supplémentaire sur l’appareil.
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Créer une configuration d’application de navigateur protégé
-
-Pour les configurations d’application à appliquer, le navigateur protégé de l’utilisateur ou toute autre application sur l’appareil doit déjà être managé par la [stratégie de protection des applications Intune](app-protection-policy.md).
 
 Pour créer la configuration d’application pour Microsoft Edge :
 
