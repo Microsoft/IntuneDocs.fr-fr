@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 2254c1e83764e9b29ab6fb99c016edef75aad43e
+ms.sourcegitcommit: bc3450fc7f19006b500edf5b395c01559b483ea4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883029"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738273"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Inscrire des appareils iOS dans Intune
 
@@ -32,8 +32,10 @@ En tant qu’administrateur Intune, vous pouvez activer l’inscription pour les
 
 ## <a name="prerequisites-for-ios-enrollment"></a>Prérequis pour l’inscription d’appareils iOS
 Avant de pouvoir activer des appareils iOS, effectuez les étapes suivantes :
+- [Assurez-vous que votre appareil est pris en charge par la procédure d’inscription d’appareils Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Configurer Intune](setup-steps.md) : ces étapes ont pour but de configurer votre infrastructure Intune. Pour inscrire des appareils, vous devez notamment [définir votre autorité de gestion des appareils mobiles](mdm-authority-set.md).
 - [Obtenir un certificat Push MDM Apple](apple-mdm-push-certificate-get.md) : Apple exige un certificat pour activer la gestion des appareils iOS et macOS.
+
 
 ## <a name="user-owned-ios-devices-byod"></a>Appareils iOS de l’utilisateur (BYOD)
 

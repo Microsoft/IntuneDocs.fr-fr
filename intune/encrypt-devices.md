@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 09b5e59f4af534d4919574631568a7581bb3fba9
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467465"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756541"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune  
 
@@ -67,6 +67,13 @@ Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer
    Par exemple : Pour récupérer une clé de récupération perdue ou ayant récemment fait l’objet d’une rotation, connectez-vous au site web Portail d’entreprise Intune à partir de n’importe quel appareil. Dans le portail, accédez à *Appareils*, sélectionnez l’appareil où FileVault est activé, puis sélectionnez *Obtenir la clé de récupération*. La clé de récupération actuelle est affichée.  
 
 6. Configurez les [paramètres FileVault](endpoint-protection-macos.md#filevault) selon vos besoins métier, puis sélectionnez **OK**.  
+
+   > [!IMPORTANT]  
+   > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Activer*. Lorsque cette option est définie sur *Activer*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale que le **résumé de l’état du profil** a la valeur **Erreur**, sans fournir d’informations supplémentaires.
+   > 
+   > Lorsque l’option **Désactiver l’invite à la déconnexion** a la valeur *Non configuré*, la zone **Nombre d’autorisations de contournement** peut avoir la valeur *Non configuré* ou avoir une valeur.  
+   > 
+   > Ce problème sera résolu dans une mise à jour ultérieure. 
 
 7. Procédez à la configuration des autres paramètres, puis enregistrez le profil.  
 

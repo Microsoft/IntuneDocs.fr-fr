@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f938afb738e75789194db0c74fee56deb1476dbc
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660377"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680098"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
@@ -38,8 +38,9 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 ## <a name="considerations-for-using-custom-notifications"></a>Considérations relatives à l’utilisation des notifications personnalisées  
 
 **Configuration de l’appareil** :  
-- L’application Portail d’entreprise doit être installée sur les appareils avant que les utilisateurs puissent recevoir des notifications personnalisées. Ils doivent également avoir des autorisations configurées pour permettre à l’application Portail d’entreprise d’envoyer des notifications Push. Le portail d’entreprise invite les utilisateurs à autoriser les notifications.  
+- L’application Portail d’entreprise doit être installée sur les appareils avant que les utilisateurs puissent recevoir des notifications personnalisées. Ils doivent également avoir des autorisations configurées pour permettre à l’application Portail d’entreprise d’envoyer des notifications Push. L’application Portail d’entreprise invite les utilisateurs à autoriser les notifications à chaque installation ou mise à jour.  
 - Sur Android, Google Play Services est une dépendance obligatoire.  
+- L’appareil doit être inscrit auprès de MDM.
 
 **Création de notifications** :  
 - Pour créer un message, utilisez un compte qui est affecté à un rôle Intune incluant l’autorisation **Mettre à jour** pour **Organisation**. Pour affecter des autorisations à un utilisateur, consultez [Attributions de rôles](role-based-access-control.md#role-assignments).  

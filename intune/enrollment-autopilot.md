@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9ac1830bcc407431cf0a5df8e8c11baa0c27c9c
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 7e0be106b47d933c4407a02369edff3645682b1c
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625107"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68700997"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -99,7 +99,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
     - **Contrat de Licence Utilisateur Final (CLUF)**  : (Windows 10, version 1709 ou ultérieure) choisissez de montrer ou non le CLUF aux utilisateurs.
     - **Paramètres de confidentialité** : choisissez de montrer ou non les paramètres de confidentialité aux utilisateurs.
     >[!IMPORTANT]
-    >Pour les déploiements Autopilot sur les appareils Windows 10 version 1903 et ultérieure, la valeur par défaut de Données de diagnostic est automatiquement définie sur Complètes. Pour plus d’informations, consultez [Données de diagnostic Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
+    >La valeur par défaut du paramètre Données de diagnostic varie selon la version de Windows. Pour les appareils exécutant Windows 10 version 1903, la valeur par défaut est définie sur Complet au cours de l’expérience OOBE (Out-Of-Box Experience). Pour plus d’informations, consultez [Données de diagnostic Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
     
     - **Masquer les options de changement de compte (nécessite Windows 10, version 1809 ou ultérieure)**  : choisissez **Masquer** pour empêcher l’affichage des options de changement de compte sur les pages de connexion et d’erreur de domaine de l’entreprise. Ces options nécessitent la [configuration de la marque de société dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Type de compte d’utilisateur** : choisissez le type de compte de l’utilisateur (**Administrateur** ou **Standard**).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d76e170627d7e08cc3da6fe4a48eb14ee839de98
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 4e46eae92dfa145f1fc2b38379285dbb45b24590
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590922"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680073"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -34,6 +34,8 @@ Les applications métier et Microsoft Store pour Entreprises sont les types d’
 > Les mises à jour Windows 10 minimales nécessaires pour déployer des applications modernes sont les suivantes :
 > - Pour Windows 10 1803, [23 mai 2018 - KB4100403 (build du système d’exploitation 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
 > - Pour Windows 10 1709, [21 juin 2018 - KB4284822 (build du système d’exploitation 16299.522)](https://support.microsoft.com/help/4284822).
+>
+> Seul le système Windows 10 1803 et plus prennent en charge l’installation d’applications lorsqu’aucun utilisateur principal n’est associé.
 
 ## <a name="windows-10-line-of-business-apps"></a>Applications métier Windows 10
 

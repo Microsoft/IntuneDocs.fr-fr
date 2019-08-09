@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8b39c9f4f875ca458817940819716e1188d36eef
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882248"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783269"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Utiliser TeamViewer pour administrer à distance des appareils Intune
 
@@ -28,7 +28,10 @@ Il est possible d’administrer à distance des appareils gérés par Intune à 
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Utilisez un appareil pris en charge. Les appareils Android, Windows, iOS et macOS gérés par Intune prennent en charge l’administration à distance. TeamViewer peut ne pas prendre en charge Windows Holographique (HoloLens), Windows Collaboration (Surface Hub) ou Windows 10 S. Pour obtenir les dernières informations sur la prise en charge, visitez [TeamViewer](https://www.teamviewer.com).
+- Utilisez un appareil pris en charge. Les appareils Android, Windows, iOS et macOS, les profils de travail Android et Android Device Admin managés par Intune prennent en charge l’administration à distance. TeamViewer peut ne pas prendre en charge Windows Holographique (HoloLens), Windows Collaboration (Surface Hub) ou Windows 10 S. Pour obtenir les dernières informations sur la prise en charge, visitez [TeamViewer](https://www.teamviewer.com).
+
+> [!NOTE]
+> Les paramètres Android dédié et Complètement managé ne sont plus pris en charge.
 
 - L’administrateur Intune dans le portail Azure doit avoir les [rôles Intune](role-based-access-control.md) suivants :  
 

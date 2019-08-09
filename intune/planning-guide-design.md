@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884880"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783241"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -116,7 +116,7 @@ Intune propose deux options de déploiement : autonome et hybride. Autonome fai
 
 ## <a name="intune-tenant-location"></a>Emplacement du client Intune
 
-Si votre organisation est présente dans plusieurs pays, tenez compte de l’emplacement de votre locataire quand vous vous abonnez au service. Le pays est défini lorsque vous souscrivez un abonnement Intune pour la première fois. Voici les régions du monde concernées :
+Si votre organisation est présente dans plusieurs pays/régions, tenez compte de l’emplacement de votre locataire quand vous vous abonnez au service. Le pays/la région sont définis lorsque vous souscrivez un abonnement Intune pour la première fois. Voici les régions/pays du monde concernés :
 
 - Amérique du Nord
 
@@ -125,7 +125,7 @@ Si votre organisation est présente dans plusieurs pays, tenez compte de l’emp
 - Asie et Pacifique
 
 >[!IMPORTANT]
-> Il n’est pas possible de modifier l’emplacement du pays et du client ultérieurement.
+> Il n’est pas possible de modifier l’emplacement du pays/de la région et du client ultérieurement.
 
 ## <a name="external-dependencies"></a>Dépendances externes
 

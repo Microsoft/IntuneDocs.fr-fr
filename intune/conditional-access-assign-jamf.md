@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc4fdaea99a0e8fb247ac6a70b853497927cdc04
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d23e725db965a249522f7f8fa89f8bb27bc24fd8
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045199"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680006"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Appliquer la conformité sur les Mac gérés par Jamf Pro
 
@@ -33,7 +33,10 @@ Vous pouvez utiliser Azure Active Directory et les stratégies d’accès condit
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configuration des stratégies de conformité d’appareils dans Intune
 
 1. Ouvrez Microsoft Azure, puis accédez à **Intune** > **Conformité de l’appareil** > **Stratégies**. Vous pouvez créer des stratégies pour macOS, notamment choisir une série d’actions (par exemple, l’envoi d’avertissements par e-mail) pour les utilisateurs et groupes non conformes.
-2. Recherchez les groupes désirés et appliquez-leur les stratégies.
+2. Sélectionnez la stratégie, puis cliquez sur Affectations. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
+3. Choisissez Groupes sélectionnés pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez Enregistrer pour déployer la stratégie auprès des utilisateurs.
+
+Vous avez appliqué la stratégie aux utilisateurs. Les appareils utilisés par les utilisateurs que cible cette stratégie sont évalués et marqués comme conformes pour le paramètre « Exiger que l’appareil soit géré » dans Azure Active Directory.
 
 > [!Note]
 > Intune exige le chiffrement de disque complet pour être conforme.

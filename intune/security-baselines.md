@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252a42b9c8ef6612301bc913e187295be47d27bb
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671016"
+ms.locfileid: "68679968"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -67,7 +67,7 @@ Les profils de bases de référence de sécurité prennent en charge une [modifi
 Les instances de bases de référence de sécurité suivantes sont disponibles pour une utilisation avec Intune. Utilisez les liens pour afficher les paramètres de l’instance la plus récente de chaque base de référence. 
 
 - **Base de référence de la sécurité MDM**
-  - [Base de référence de la sécurité MDM pour le printemps 2019 (19H1)](security-baseline-settings-mdm.md)
+  - [Base de référence de la sécurité MDM pour mai 2019](security-baseline-settings-mdm.md)
   - [Préversion : Base de référence de la sécurité MDM pour octobre 2018](security-baseline-settings-mdm-archive.md)
 
 - **Base de référence Microsoft Defender ATP**  
