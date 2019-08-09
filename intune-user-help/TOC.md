@@ -39,8 +39,8 @@
 ### Questions concernant le système d'exploitation
 #### [Mettre à jour votre appareil](you-need-to-update-your-android-device.md)
 #### [Version non prise en charge](your-android-version-isnt-yet-supported.md)
-#### [Votre appareil est rooté et vous ne pouvez pas vous connecter](your-device-is-rooted-and-you-cant-connect-android.md)
-#### [Certificat obligatoire manquant](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [L’appareil est rooté et ne peut pas se connecter](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Certificat obligatoire manquant](your-device-is-missing-an-IT-required-certificate-android.md)
 #### [Désactiver les sources inconnues](you-need-to-turn-off-unknown-sources-android.md)
 #### [Désactiver le débogage USB](you-need-to-turn-off-usb-debugging-android.md)
 #### [Activer la recherche des menaces de sécurité](you-need-to-turn-on-scanning-for-security-threats-android.md)
