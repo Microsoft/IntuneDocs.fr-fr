@@ -18,16 +18,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625124"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862136"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installer le certificat manquant requis par votre organisation  
 
-Si votre appareil n’est pas inscrit dans Intune et qu’il manque un certificat exigé par le support technique de votre entreprise, vous ne pouvez pas vous connecter à l’application Portail d’entreprise. Quand vous essayez de vous connecter, le message suivant s’affiche :
+Si votre appareil n’est pas inscrit dans Intune et qu’il manque un certificat obligatoire, vous ne pourrez pas vous connecter à l’application Portail d’entreprise. Quand vous essayez de vous connecter, le message suivant s’affiche :
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -43,8 +43,8 @@ Effectuez les étapes suivantes pour activer l’accès au navigateur. Une fois 
 
 1. Dans l’application Portail d’entreprise, accédez à l’angle droit et sélectionnez le menu.  
 2. Cliquez sur **Paramètres**.  
-3. En regard de **activer l’accès au navigateur** , sélectionnez **activer**.  
-4. Dans l’écran administrateur de l’appareil, sélectionnez **activer**. 
+3. En regard **de activer l'** accès **au**navigateur, sélectionnez Activer.  
+4. Dans l’écran administrateur de l’appareil **,** sélectionnez Activer. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identifier et télécharger le certificat manquant via la recherche Web
 Procédez comme suit pour identifier et installer manuellement le certificat sur votre appareil.  
@@ -82,3 +82,7 @@ Procédez comme suit pour identifier et installer manuellement le certificat sur
 7. Rouvrez l’application Portail d’entreprise. Vous devriez pouvoir vous connecter à l’application Portail d’entreprise. Si vous avez besoin d’aide, contactez le support technique de votre entreprise.
 
 Si un message « Certificat manquant » semblable à celui indiqué précédemment s’affiche alors que vous avez déjà suivi la procédure, il manque probablement un autre certificat. Vous devez demander au support technique de votre entreprise de vous aider à l’installer. Contactez le support technique de votre entreprise pour obtenir de l’aide sur les informations de contact disponibles sur le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Étapes suivantes  
+
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
