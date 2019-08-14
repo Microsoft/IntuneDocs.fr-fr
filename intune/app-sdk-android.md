@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f2015bb6997861d8856c7fe89662c21be105f5b
-ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
-ms.translationtype: MTE75
+ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68482946"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783211"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -636,7 +636,7 @@ Les notifications suivantes sont envoyées à l’application et certaines d’e
 > [!NOTE]
 > Une application ne doit jamais s’inscrire à la fois pour les notifications `WIPE_USER_DATA` et `WIPE_USER_AUXILIARY_DATA`.
 
-### <a name="managementremoved"></a>MANAGEMENT_REMOVED
+### <a name="management_removed"></a>MANAGEMENT_REMOVED
 
 La notification `MANAGEMENT_REMOVED` indique qu’un utilisateur précédemment géré par une stratégie ne sera plus géré par la stratégie MAM Intune. Cela ne nécessite pas d’effacer les données utilisateur ou de déconnecter l’utilisateur (si une réinitialisation est nécessaire, une notification `WIPE_USER_DATA` est envoyée). De nombreuses applications n’ont peut-être pas besoin de gérer cette notification. Toutefois, les applications qui utilisent `MAMDataProtectionManager` doivent [tenir compte de cette notification](#data-protection).
 
@@ -1370,7 +1370,7 @@ La méthode `onMAMIdentitySwitchRequired` est appelée pour toutes les modificat
 
   * Si un changement d’identité est bloqué, le résultat est le même que si les paramètres de partage `Receive` avaient interdit la saisie de données.
 
-  * Si un service est en cours d’exécution sur le thread principal, `reportIdentitySwitchResult` **doit** être appelé de façon synchrone, sinon le thread d’interface utilisateur se bloque.
+  * Si un service est en cours d’exécution sur le thread principal, `reportIdentitySwitchResult` **doit** être appelé de façon synchrone, sinon le thread d’interface utilisateur cesse de répondre.
 
   * Pour la création de **`Activity`** , `onMAMIdentitySwitchRequired` est appelé avant `onMAMCreate`. Si l’application doit afficher l’interface utilisateur pour déterminer s’il faut autoriser le changement d’identité, cette interface utilisateur doit être affichée à l’aide d’une *autre* activité.
 

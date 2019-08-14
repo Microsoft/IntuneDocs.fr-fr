@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3941c41b24d458d14acb1361bc463af657a0ca67
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511929"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783018"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrire l’appareil macOS fourni par votre organisation dans la gestion
 
@@ -40,10 +40,10 @@ Il se peut que votre organisation ait acheté ses appareils par le biais du *Pro
 Effectuez les étapes suivantes pour inscrire votre appareil macOS dans la gestion. Si vous utilisez votre propre appareil, plutôt qu’un appareil d’entreprise, suivez les étapes relatives aux [appareils personnels et BYOD](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Mettez sous tension votre appareil macOS. 
-2. Choisissez votre pays et cliquez sur **Continuer**.  
+2. Choisissez votre pays/région et cliquez sur **Continuer**.  
 
    ![Capture de l’écran d’accueil de l’Assistant Configuration d’un appareil macOS, affichant la liste des langues dans laquelle effectuer la sélection.](./media/macos-dep-welcome-1808.png)   
-3. Choisissez une disposition du clavier. La liste affiche une ou plusieurs options en fonction du pays sélectionné. Pour afficher toutes les options de disposition, quel que soit le pays sélectionné, cliquez sur **Afficher tout**. Quand vous avez terminé, cliquez sur **Continuer**.  
+3. Choisissez une disposition du clavier. La liste affiche une ou plusieurs options en fonction du pays ou de la région que vous sélectionnez. Pour afficher toutes les options de disposition, peu importe le pays ou la région que vous sélectionnez, cliquez sur **Afficher tout**. Quand vous avez terminé, cliquez sur **Continuer**.  
 
    ![Capture de l’écran Disposition du clavier de l’Assistant Configuration d’un appareil macOS, affichant la liste des langues dans laquelle effectuer la sélection, une option Afficher tout décochée, un bouton Précédent et un bouton Continuer.](./media/macos-dep-keyboard-1808.png)  
 4. Sélectionnez votre réseau Wi-Fi. Vous devez disposer d’une connexion Internet pour continuer l’installation. Si vous ne voyez pas votre réseau, ou si vous avez besoin de vous connecter via un réseau câblé, cliquez sur **Autres options réseau**. Quand vous avez terminé, cliquez sur **Continuer**.  
