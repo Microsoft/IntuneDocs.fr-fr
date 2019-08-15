@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969e7bc4804e1f66230c76d742bec2c67c2fa006
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
-ms.translationtype: HT
+ms.openlocfilehash: 95eede7c62e728aa0dbade4478eb87f31c252558
+ms.sourcegitcommit: a6775522df49d17a4125ccb31be395f2343bdae8
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670912"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833545"
 ---
 # <a name="in-development-for-microsoft-intune---august-2019"></a>En développement pour Microsoft Intune - Août 2019
 
@@ -62,7 +62,7 @@ Pour faciliter votre préparation et votre planification, cette page liste les m
 Les administrateurs pourront gérer si une application est supprimée ou conservée sur un appareil quand l’appareil est désinscrit au niveau d’un utilisateur ou d’un groupe d’appareils. 
 
 ### <a name="categorize-microsoft-store-for-business-apps----3926922---"></a>Catégoriser les applications du Microsoft Store pour Entreprises <!-- 3926922 -->
-Vous pouvez classer Microsoft Store pour les applications métier. Pour ce faire, choisissez applications**clientes** >  **Intune** > **applications** > sélectionnez une**catégorie**d' **informations** > d’application Microsoft Store pour l’application métier >. Dans le menu déroulant, attribuez une catégorie.
+Vous pouvez classer Microsoft Store pour les applications métier. Pour ce faire, choisissez **applications** > **clientes**  >  **Intuneapplications** > sélectionnez une application de >**d’Microsoft Store pour l’application métier**   > **Catégoried'** informations. Dans le menu déroulant, attribuez une catégorie.
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Configurer le contenu de la notification d’application pour les comptes d’organisation <!-- 2576686 -->
 Les stratégies de protection des applications Intune (application) sur les appareils Android et iOS vous permettront de contrôler le contenu des notifications d’application pour les comptes d’organisation. Cette fonctionnalité nécessite la prise en charge des applications et peut ne pas être disponible pour toutes les applications prenant en charge l’application. Pour plus d’informations sur APP, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md).
 
@@ -73,7 +73,7 @@ Pour les installations d’applications disponibles sur les appareils avec profi
 ## <a name="device-configuration"></a>Configuration des appareils
 
 ### <a name="some-unsupervised-ios-device-restrictions-will-become-supervised-only-with-the-ios-130-release----4867809----"></a>Certaines restrictions d’appareils iOS non supervisés seront supervisées uniquement avec la version iOS 13,0 <!-- 4867809  -->
-Certains paramètres s’appliquent aux appareils supervisés uniquement avec la version iOS 13,0. Ces paramètres incluent :
+Certains paramètres s’appliquent aux appareils supervisés à partir de la version 13,0 d’iOS. Ces paramètres incluent :
 
 - App Store, affichage de document, jeux
   - App Store
@@ -98,16 +98,16 @@ S’applique à :
 - iOS 13,0 et versions ultérieures
 
 ### <a name="new-settings-and-changes-to-existing-settings-to-restrict-features-on-ios-and-macos-devices----4867699-4867709----"></a>Nouveaux paramètres et modifications apportées aux paramètres existants pour restreindre les fonctionnalités sur les appareils iOS et macOS <!-- 4867699 4867709  -->
-Vous pouvez créer des profils pour limiter les paramètres sur les appareils exécutant iOS et MacOS (**profils** > de**configuration** > d’appareil**créer un profil** > **iOS** ou **MacOS** pour la plateforme). tapez > **restrictions**de l’appareil). Les fonctionnalités suivantes seront ajoutées :
+Vous pouvez créer des profils pour limiter les paramètres sur les appareils exécutant iOS et MacOS (**profils** >  **de configuration** > **d’appareil créer un profil**  > **iOS** **ouMacOS**pour le type de plateforme >**restrictionsd’appareil)** . Les fonctionnalités suivantes seront ajoutées :
 
-- Dans le**Cloud et le stockage**des**restrictions** > d’appareils **MacOS** > , utilisez le nouveau paramètre de **transfert** pour empêcher les utilisateurs de démarrer le travail sur un appareil MacOS et continuer à travailler sur un autre appareil MacOS ou iOS.
+- Dans **le**Cloud et le stockage  > **desrestrictions** >   **d’appareils MacOS** ,**utilisez le nouveau paramètre de remise pour** Empêchez les utilisateurs de commencer à travailler sur un appareil macOS et continuez à travailler sur un autre appareil macOS ou iOS.
   Pour consulter les paramètres en cours, accédez à la section [Paramètres des appareils macOS pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune](device-restrictions-macos.md).
-- Sur les**restrictions d’appareils** **iOS** > , il existe quelques modifications:
-  - **Applications intégrées Rechercher** **mon iPhone (mode supervisé uniquement)** : nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. >  
-  - **Applications intégrées trouver** **mes amis (mode supervisé uniquement)** : nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. >  
-  - **Modification sans fil** > **de l’État Wi-Fi (mode supervisé uniquement)** : nouveau paramètre qui empêche les utilisateurs d’activer ou de désactiver le Wi-Fi sur l’appareil.
-  - **Clavier et dictionnaire** > **QuickPath (mode supervisé uniquement)** : nouveau paramètre qui bloque la fonctionnalité QuickPath.
-  - **Cloud et stockage**: la continuation d' **activité** est renommée en **remise**.
+- Sur **les** > restrictions**d’appareils iOS, il existe quelques modifications:**
+  - **Applications** >  **intégrées Rechercher mon iPhone (mode supervisé uniquement)** : nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. 
+  - **Applications** >  **intégrées trouver mes amis (mode supervisé uniquement)** : nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. 
+  - **Modification**sans fil >  **de l’État Wi-Fi (mode supervisé uniquement)** : nouveau paramètre qui empêche les utilisateurs d’activer ou de désactiver le Wi-Fi sur l’appareil.
+  - **Clavier et dictionnaire** >  **QuickPath (mode supervisé uniquement)** : nouveau paramètre qui bloque la fonctionnalité QuickPath.
+  - **Cloud et stockage**: **la continuation** d’activité est renommée **en**remise.
 
   Pour voir les paramètres actuels, accédez à [Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune](device-restrictions-ios.md).
 
@@ -116,7 +116,7 @@ S’applique à :
 - iOS 13 et versions ultérieures
 
 ### <a name="control-the-apps-files-documents-and-folders-that-open-when-user-signs-in-to-macos-devices---3914202----"></a>Contrôler les applications, les fichiers, les documents et les dossiers qui s’ouvrent quand l’utilisateur se connecte à des appareils macOS <!--3914202  -->
-Vous serez en mesure d’activer et de configurer des fonctionnalités sur les appareils MacOS (**profils** > de**configuration** > d’appareil**créer un profil** > **MacOS** pour la plateforme > fonctionnalités de l' **appareil** pour type de profil). 
+Vous pouvez activer et configurer les fonctionnalités sur les appareils MacOS (**profils** > **de configuration**  > **d’appareil créer** un profil >  **MacOS** pour plateforme >**lesfonctionnalités** de l’appareil pour le type de profil). 
 
 De nouveaux paramètres d’éléments de connexion s’affichent pour contrôler les applications, fichiers, documents et dossiers ouverts lorsqu’un utilisateur se connecte à l’appareil inscrit. 
 
@@ -126,13 +126,13 @@ S’applique à :
 - macOS
 
 ### <a name="new-features-for-android-enterprise-dedicated-devices-in-multi-app-mode----3755304-3041943-3041946----"></a>Nouvelles fonctionnalités pour les appareils Android Enterprise dédiés en mode multi-application <!-- 3755304 3041943 3041946  -->
-Vous pouvez contrôler les fonctionnalités et les paramètres dans une expérience de type plein écran sur vos appareils Android Enterprise dédiés. Pour ce faire, choisissez**profils** > de **configuration** > d’appareil**Créer profil** > **Android Enterprise** pour plateforme > propriétaire de l' **appareil uniquement, restrictions** de l’appareil pour le type de profil.
+Vous pouvez contrôler les fonctionnalités et les paramètres dans une expérience de type plein écran sur vos appareils Android Enterprise dédiés. Pour ce faire, choisissez **configuration**  >  **de l’appareil profils créer unprofil** >  **Android Enterprise** >  **pour la plateforme** **> propriétaire de l’appareil uniquement** , restrictions de l’appareil pour le type de profil.
 
 Les fonctionnalités suivantes seront ajoutées :
-- **Périphériques dédiés** > **multi-application**: le **bouton Accueil virtuel** peut être affiché en balayant sur l’appareil ou flottant à l’écran afin que les utilisateurs puissent le déplacer.
-- **Périphériques dédiés** > **multi-application**: l' **accès au flash** permet aux utilisateurs d’utiliser la torche. 
-- **Périphériques dédiés** > **multi-application**: **le contrôle du volume de média** permet aux utilisateurs de contrôler le volume de média de l’appareil à l’aide d’un curseur. 
-- **Périphériques dédiés** > **multi-application**: activez un économiseur d’écran, téléchargez une image personnalisée et contrôlez le moment où l’écran de veille est affiché.
+- **Périphériques dédiés** >  **multi-application**: **lebouton** Accueil virtuel peut être affiché en balayant sur l’appareil ou flottant à l’écran afin que les utilisateurs puissent le déplacer.
+- **Périphériques** >  dédiés **multi-application** :**l'accès** au flash permet aux utilisateurs d’utiliser la torche. 
+- **Périphériques** >  dédiés **multi-application** :**lecontrôle** du volume de média permet aux utilisateurs de contrôler le volume de média de l’appareil à l’aide d’un curseur. 
+- **Périphériques** >  **dédiés multi-application**: activez un économiseur d’écran, téléchargez une image personnalisée et contrôlez le moment où l’écran de veille est affiché.
 
 Pour voir les paramètres actuels, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune](device-restrictions-android-for-work.md#dedicated-device-settings).
 
@@ -167,11 +167,11 @@ Vous pouvez définir des profils de Programme d’inscription des appareils pour
 - Extinction de l’écran
 - Configuration Touch ID
 
-Pour ce faire, accédez à **inscription de l’appareil inscription** > **Apple** > **jetons du programme d’inscription** > Choisissez un jeton > des **profils** > Choisissez un profil > **Propriétés** > **modifier** en regard de personnalisation de l' **Assistant Configuration**.
-Pour plus d’informations sur la personnalisation de l’Assistant Configuration, consultez [créer un profil d’inscription Apple ](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Pour ce faire, accédez à **inscriptiond'**  > **appareil inscription** Apple > jetons**duprogrammed’inscription>** **choisissez un jeton > Profils** > Choisissez un profil > **propriétés** >  **modifier en regard de lapersonnalisation**de l’**Assistant Configuration**.
+Pour plus d’informations sur la personnalisation de l’Assistant [configuration, consultez créer un profil ](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)d’inscription Apple.
 
 ### <a name="android-enrollment-device-administrator-support----4869749----"></a>Prise en charge des administrateurs d’appareils d’inscription Android <!-- 4869749  -->
-L’option d’inscription de l’administrateur des appareils Android sera ajoutée à la page inscription Android (**inscription des** > **appareils** > **Android**inscription à l’inscription d'appareils). L’administrateur de l’appareil Android est toujours activé par défaut pour tous les locataires.  
+L’option d’inscription de l’administrateur d’appareils Android sera ajoutée à la page**inscription Android (inscription** > **d’appareil Intune**  >  **Android inscription**). L’administrateur de l’appareil Android est toujours activé par défaut pour tous les locataires.  
 
 ### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>Pour les appareils iOS, personnalisez l’écran de confidentialité du processus d’inscription de l’Portail d’entreprise <!-- 4394993  -->
 À l’aide de la démarque, vous serez en mesure de personnaliser l’écran de confidentialité de Portail d’entreprise que les utilisateurs finaux voient lors de l’inscription iOS. Plus précisément, vous serez en mesure de personnaliser la liste des éléments que votre organisation ne peut pas voir ou faire sur l’appareil.
@@ -183,13 +183,13 @@ L’option d’inscription de l’administrateur des appareils Android sera ajou
 Une nouvelle entrée sur la page matériel de chaque appareil Android inclut le numéro de version du système d’exploitation de l’appareil.
 
 ### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Configurer la limite de temps de nettoyage automatique des appareils jusqu’à 30 jours <!--4231059  -->
-Vous serez en mesure de définir la limite de temps de nettoyage automatique des appareils sur 30 jours (au lieu de la limite actuelle de 90 jours) après la dernière connexion. Pour ce faire, accédez à la**configuration** > **appareils** >  **Intune** > **configurer les règles de nettoyage des appareils**.
+Vous serez en mesure de définir la limite de temps de nettoyage automatique des appareils sur 30 jours (au lieu de la limite actuelle de 90 jours) après la dernière connexion. Pour ce faire, accédez à **la**configuration > **appareilsIntuneconfigurer** > **les règlesde** > **nettoyage des appareils**.
 
 <!-- ***********************************************-->
 ## <a name="role-based-access-control"></a>Contrôle d'accès en fonction du rôle
 
 ### <a name="default-scope-tag----3702875---"></a>Balise d’étendue par défaut <!-- 3702875 -->
-Une nouvelle balise d’étendue par défaut intégrée sera disponible. Tous les objets Intune non balisés qui prennent en charge les balises d’étendue sont automatiquement affectés à la balise d’étendue par défaut. La balise d’étendue **par défaut** sera ajoutée à toutes les attributions de rôles existantes pour maintenir la parité avec l’expérience d’administration dès aujourd’hui. Si vous ne souhaitez pas qu’un administrateur affiche des objets Intune avec des balises d’étendue par défaut, supprimez la balise d’étendue par défaut de l’attribution de rôle. Cette fonctionnalité est similaire à la fonctionnalité étendues de sécurité de System Center Configuration Manager.
+Une nouvelle balise d’étendue par défaut intégrée sera disponible. Tous les objets Intune non balisés qui prennent en charge les balises d’étendue sont automatiquement affectés à la balise d’étendue par défaut. La **balise d’étendue par défaut** sera ajoutée à toutes les attributions de rôles existantes pour maintenir la parité avec l’expérience d’administration dès aujourd’hui. Si vous ne souhaitez pas qu’un administrateur affiche des objets Intune avec des balises d’étendue par défaut, supprimez la balise d’étendue par défaut de l’attribution de rôle. Cette fonctionnalité est similaire à la fonctionnalité étendues de sécurité de System Center Configuration Manager.
 
 <!-- ***********************************************-->
 ## <a name="security"></a>Sécurité
