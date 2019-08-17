@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a80e4cf4e68235ef9e88943a8b62121e0cfb6623
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
+ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046973"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69487749"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -66,9 +66,7 @@ Exécute une seule application sur l’appareil.
     > [!NOTE]
     > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer des paramètres propres à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** pour la plateforme > **Restrictions de l’appareil** >  **Navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) liste et décrit les paramètres disponibles.
 
-    Cliquez sur **OK** pour enregistrer vos modifications.
-
-  - **Ajouter un navigateur kiosque** : sélectionnez **Paramètres du navigateur kiosque**. Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à obtenir l’[application de navigateur kiosque](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) dans le Store, ajoutez-la à Intune en tant qu’[application cliente](apps-add.md), puis affectez l’application aux appareils kiosques.
+  - **Ajouter un navigateur kiosque** : sélectionnez **Paramètres du navigateur kiosque**. Ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à obtenir l' [application de navigateur Kiosk](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) à partir du Store, puis à l’ajouter à Intune en tant qu' [application cliente](apps-add.md). Ensuite, attribuez l’application aux appareils kiosque.
 
     entrez les paramètres suivants :
 
@@ -91,15 +89,14 @@ Exécute une seule application sur l’appareil.
       `http://bing.com`  
       `https://bing.com`  
       `http://contoso.com/*`  
-      `https://contoso.com/*`  
+      `https://contoso.com/*`
 
-    Cliquez sur **OK** pour enregistrer vos modifications.
+    > [!NOTE]
+    > Les kiosques Windows 10 avec ouverture de la ligne automatique activée à l’aide de Microsoft Kiosk Browser doivent utiliser une licence hors connexion de la Microsoft Store pour l’entreprise. Cette exigence est due au fait que l’ouverture de la chaîne automatique utilise un compte d’utilisateur local sans informations d’identification d’Azure Active Directory (AD). Ainsi, les licences en ligne ne peuvent pas être évaluées. Pour plus d’informations, consultez [Distribuer des applications hors connexion](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Ajouter une application de Store** : sélectionnez **Ajouter une application de Store**, puis choisissez une application dans la liste.
 
     Aucune application n’est répertoriée ? En ajouter à l’aide de la procédure sous [Applications clientes](apps-add.md).
-
-  Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="multi-app-kiosks"></a>Applications multiples plein écran
 
@@ -132,8 +129,6 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
       > [!NOTE]
       > Ce paramètre active le navigateur Microsoft Edge sur l’appareil. Pour configurer des paramètres propres à Microsoft Edge, créez un profil de configuration d’appareil (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** pour la plateforme > **Restrictions de l’appareil** >  **Navigateur Microsoft Edge**). [Navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) liste et décrit les paramètres disponibles.
 
-      Cliquez sur **OK** pour enregistrer vos modifications.
-
     - **Ajouter le navigateur du kiosque** : ces paramètres contrôlent une application de navigateur web sur le kiosque. Veillez à déployer une application de navigateur web sur les appareils de type kiosque via des [Applications clientes](apps-add.md).
 
       entrez les paramètres suivants :
@@ -152,13 +147,12 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 
         Pour autoriser des sites web spécifiques, chargez un fichier .csv qui inclut une liste des sites web autorisés. Si vous n’ajoutez pas de fichier .csv, tous les sites web sont autorisés.
 
-      Cliquez sur **OK** pour enregistrer vos modifications.
+      > [!NOTE]
+      > Les kiosques Windows 10 avec ouverture de la ligne automatique activée à l’aide de Microsoft Kiosk Browser doivent utiliser une licence hors connexion de la Microsoft Store pour l’entreprise. Cette exigence est due au fait que l’ouverture de la chaîne automatique utilise un compte d’utilisateur local sans informations d’identification d’Azure Active Directory (AD). Ainsi, les licences en ligne ne peuvent pas être évaluées. Pour plus d’informations, consultez [Distribuer des applications hors connexion](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Applications**
 
     - **Ajouter une application de Store** : ajoutez une application de Microsoft Store pour Entreprises. Si vous n’avez aucune application répertoriée, vous pouvez obtenir des applications et [les ajouter à Intune](store-apps-windows.md). Par exemple, vous pouvez ajouter Kiosk Browser, Excel, OneNote et bien plus encore.
-
-      Cliquez sur **OK** pour enregistrer vos modifications.
 
     - **Application Win32** : une application Win32 est une application de bureau traditionnelle, telle que Visual Studio Code ou Google Chrome. Entrez les propriétés suivantes :
 
@@ -166,14 +160,10 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
       - **Chemin d’accès local** : requis. Entrez le chemin d’accès au fichier exécutable, par exemple `C:\Program Files (x86)\Microsoft VS Code\Code.exe` ou `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
       - **Identifiant AUMID de l’application** : entrez l’ID AUMID de l’application Win32. Ce paramètre détermine la mise en page de démarrage de la mosaïque sur le bureau. Pour obtenir cet ID, consultez [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
 
-      Cliquez sur **OK** pour enregistrer vos modifications.
-
     - **Ajouter par AUMID** : utilisez cette option pour ajouter des applications Windows de boîte de réception, telles que le bloc-notes ou la calculatrice. Entrez les propriétés suivantes :
 
       - **Nom de l’application** : requis. Entrez un nom pour l'application.
       - **Identifiant du modèle utilisateur de l’application (AUMID)**  : requis. Entrez l’identifiant AUMID de l’application Windows. Pour obtenir cet ID, consultez [Rechercher l’identifiant AUMID d’une application installée](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-
-      Cliquez sur **OK** pour enregistrer vos modifications.
 
     - **Démarrage automatique** : facultatif. Choisissez une application à lancer automatiquement quand l’utilisateur se connecte. Une seule application peut être lancée automatiquement.
     - **Taille de la mosaïque** : requise. Choisissez la taille de la mosaïque application : petite, moyenne ou grande.
@@ -186,8 +176,6 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 - **Barre des tâches Windows** : choisissez d’**Afficher** ou de **Masquer** la barre des tâches. Par défaut, la barre des tâches ne s’affiche pas. Des icônes, telles que l’icône Wi-Fi, sont visibles, mais les paramètres ne sont pas modifiables par les utilisateurs finaux.
 
 - **Autoriser l’accès au dossier Téléchargements** : choisissez **Oui** pour autoriser les utilisateurs à accéder au dossier Téléchargements dans l’Explorateur Windows. Par défaut, l’accès au dossier Téléchargements est désactivé. Cette fonctionnalité est couramment utilisée pour permettre aux utilisateurs finaux d’accéder aux éléments téléchargés à partir d’un navigateur.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

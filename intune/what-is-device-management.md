@@ -4,7 +4,7 @@ description: Microsoft 365 Entreprise inclut Microsoft Intune. Découvrez comme
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 37a1c9fad9b77e39145f1b4183b8176fb1677613
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427311"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022863"
 ---
 # <a name="what-is-device-management"></a>Qu’est-ce que la gestion des appareils ? 
 
@@ -75,7 +75,7 @@ Quand vous configurez Intune, vous choisissez également d’utiliser uniquement
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Simplifier les tâches informatiques à l’aide du centre d’administration de gestion des périphériques
 
-Le [centre d’administration de gestion des périphériques](https://devicemanagement.portal.azure.com/) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client. 
+Le [centre d’administration de gestion des périphériques](https://devicemanagement.microsoft.com/) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client. 
 
 Dans le centre d’administration de la gestion des appareils, vous pouvez:
 

@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
-ms.translationtype: HT
+ms.openlocfilehash: 527d71f0e48627498b05af8ee497579c648d3156
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783211"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960549"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -1726,7 +1726,7 @@ Activez l’inscription par défaut en effectuant les étapes suivantes :
 
 1. Si vous devez activer l’authentification unique ou que votre application intègre la bibliothèque ADAL, [configurez la bibliothèque ADAL](#configure-azure-active-directory-authentication-library-adal) en suivant la [configuration ADAL courante](#common-adal-configurations) n° 2. Sinon, vous pouvez ignorer cette étape.
    
-2. Activez l’inscription par défaut en insérant la valeur suivante dans le manifeste :
+2. Activez l’inscription par défaut en ajoutant la valeur suivante dans le manifeste sous la `<application>` balise:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
@@ -1735,7 +1735,7 @@ Activez l’inscription par défaut en effectuant les étapes suivantes :
    > [!NOTE] 
    > Il doit s’agir de la seule intégration MAM-WE dans l’application. Si d’autres tentatives sont effectuées pour appeler des API MAMEnrollmentManager, des conflits se produisent.
 
-3. Activez la stratégie MAM requise en insérant la valeur suivante dans le manifeste :
+3. Activez la stratégie GAM requise en ajoutant la valeur suivante dans le manifeste sous `<application>` la balise:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />

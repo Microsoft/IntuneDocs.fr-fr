@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756507"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960412"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Paramètres Endpoint Protection pour MacOS dans Intune  
 
@@ -82,6 +82,9 @@ Utilisez le pare-feu pour contrôler les connexions par application, et non par 
 ## <a name="filevault"></a>FileVault  
 Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) dans le contenu des développeurs Apple. 
 
+> [!IMPORTANT]  
+> À compter de macOS 10,15, la configuration FileVault nécessite l’inscription MDM approuvée par l’utilisateur. 
+
 - **FileVault**  
   Vous pouvez *activer* le chiffrement de disque complet à l’aide de XTS-AES 128 avec FileVault sur les appareils qui exécutent MacOS 10,13 et versions ultérieures.  
   - **Non configuré**  
@@ -104,9 +107,9 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
     **Par défaut** : Non configuré  
 
      > [!IMPORTANT]  
-     > Il existe un problème connu lorsque l’option de désactivation de l' **invite à** la déconnexion est définie sur *activer*. Lorsque cette option est définie sur *Enable*, le paramètre du **nombre de fois autorisé à contourner** doit être défini sur une valeur et ne doit pas être défini comme *non configuré*. Si la valeur *n’est pas configurée*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale qu’il s’agit d’un résumé de l' **État du profil** comme **erreur** sans plus de détails.
+     > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Activer*. Lorsque cette option est définie sur *Activer*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale que le **résumé de l’état du profil** a la valeur **Erreur**, sans fournir d’informations supplémentaires.
      > 
-     > Lorsque l’invite de désactivation de la **connexion** est définie sur *non configurée*, le **nombre de fois autorisées à ignorer** peut être *non configuré* ou avoir une valeur.  
+     > Lorsque l’option **Désactiver l’invite à la déconnexion** a la valeur *Non configuré*, la zone **Nombre d’autorisations de contournement** peut avoir la valeur *Non configuré* ou avoir une valeur.  
      > 
      > Ce problème sera résolu dans une mise à jour ultérieure. 
 

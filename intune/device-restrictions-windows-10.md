@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 08/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe155c5b2a18b1931894b05694b53bbc2c497e0b
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494485"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550175"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -57,15 +57,15 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 - **Installer des données d’application sur le volume système** : **Bloquer** empêche les applications de stocker des données sur le volume système de l’appareil. **Non configuré** (valeur par défaut) autorise les applications à stocker des données sur le volume de disque du système.
 - **Installer les applications sur le lecteur système** : **Bloquer** empêche l’installation des applications sur le lecteur système de l’appareil. **Non configuré** (valeur par défaut) autorise l’installation des applications sur le lecteur système.
 - **Jeux DVR** (poste de travail uniquement) : **Bloquer** désactive l’enregistrement et la diffusion des jeux Windows. **Non configuré** (valeur par défaut) autorise l’enregistrement et la diffusion des jeux.
-- **Applications du Windows store uniquement**: ce paramètre détermine l’expérience utilisateur quand les utilisateurs installent des applications à partir d’emplacements autres que le Microsoft Store. Les options disponibles sont les suivantes :
+- **Applications du Store uniquement**: ce paramètre détermine l’expérience de l’utilisateur lorsque les utilisateurs installent des applications à partir d’emplacements autres que le Microsoft Store. Les options disponibles sont les suivantes :
 
-  - **Ne pas configuré** (valeur par défaut) : permet aux utilisateurs finaux installer des applications à partir d’emplacements autres que le Microsoft Store, y compris les applications définies dans les autres paramètres de stratégie.  
-  - **N’importe quel endroit**: désactive les recommandations de l’application, et permet aux utilisateurs d’installer des applications à partir de n’importe quel emplacement.  
-  - **Store uniquement**: force les utilisateurs finaux d’installer uniquement les applications à partir du Microsoft Store.
-  - **Recommandations**: lorsque vous installez une application à partir du web qui est disponible dans le Microsoft Store, les utilisateurs voient un message recommandant ils le téléchargent à partir du magasin.  
-  - **Préférez Store**: avertit les utilisateurs lorsqu’ils installent des applications à partir d’emplacements autres que le Microsoft Store.
+  - **Non configuré** (par défaut): permet aux utilisateurs finaux d’installer des applications à partir d’emplacements autres que les Microsoft Store, y compris les applications définies dans d’autres paramètres de stratégie.  
+  - **Partout**: désactive les recommandations d’application et permet aux utilisateurs d’installer des applications à partir de n’importe quel emplacement.  
+  - **Stocker uniquement**: force les utilisateurs finaux à installer uniquement des applications à partir du Microsoft Store.
+  - **Recommandations**: lors de l’installation d’une application à partir du Web disponible dans le Microsoft Store, les utilisateurs voient un message le recommandant de le télécharger à partir du Windows Store.  
+  - **Préférer Store**: avertit les utilisateurs quand ils installent des applications à partir d’emplacements autres que le Microsoft Store.
 
-  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+  [CSP SmartScreen/EnableAppInstallControl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
 - **Forcer le redémarrage des applications en cas d’échec de la mise à jour** : lorsqu’une application est utilisée, elle peut ne pas se mettre à jour. Utilisez ce paramètre pour forcer une application à redémarrer. **Non configuré** (valeur par défaut) ne force pas les applications à redémarrer. **Exiger** permet aux administrateurs de forcer un redémarrage à une date et une heure spécifiques, ou selon une planification périodique. Lorsque la valeur **Exiger** est sélectionnez, entrez également :
 
@@ -429,7 +429,7 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), qui liste également les éditions de Windows prises en charge.
 
-- **Mot de passe** : **Exige** que l’utilisateur final entre un mot de passe pour accéder à l’appareil. **Non configuré** (valeur par défaut) autorise l’accès à l’appareil sans mot de passe. S’applique aux comptes locaux uniquement. Mots de passe de compte domaine restent configurés par Active Directory (AD) et Azure AD.
+- **Mot de passe** : **Exige** que l’utilisateur final entre un mot de passe pour accéder à l’appareil. **Non configuré** (valeur par défaut) autorise l’accès à l’appareil sans mot de passe. S’applique uniquement aux comptes locaux. Les mots de passe de compte de domaine restent configurés par Active Directory (AD) et Azure AD.
 
   - **Type de mot de passe requis** : choisissez le type de mot de passe. Les options disponibles sont les suivantes :
     - **Non configuré** : le mot de passe peut inclure des chiffres et des lettres.
@@ -440,7 +440,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Dev
     > [!IMPORTANT]
     > Lorsque la configuration requise du mot de passe est modifiée sur un ordinateur de bureau Windows, les utilisateurs sont affectés lors de leur prochaine connexion, car c’est à ce moment-là que l’appareil passe d’inactif à actif. Les utilisateurs dont les mots de passe sont conformes à la configuration requise sont toujours invités à modifier leur mot de passe.
     
-  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs d’authentification autorisés avant réinitialisation de l’appareil (jusqu’à 11). Le numéro valid que vous entrez dépend de l’édition. [Fournisseur de services cryptographiques DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) répertorie les valeurs prises en charge. `0` (zéro) peut désactiver la fonctionnalité de réinitialisation de l’appareil.
+  - **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre d’échecs d’authentification autorisés avant réinitialisation de l’appareil (jusqu’à 11). Le nombre valide que vous entrez dépend de l’édition. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) répertorie les valeurs prises en charge. `0` (zéro) peut désactiver la fonctionnalité de réinitialisation de l’appareil.
 
     Ce paramètre a également un impact différent selon l’édition. Pour obtenir des informations spécifiques sur ce paramètre, consultez la section sur le [fournisseur de service de configuration DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
@@ -753,9 +753,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
   [Fournisseur de services de configuration Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  > [!WARNING]
-  > Ce paramètre dans Intune dans le portail Azure peut afficher l’état Échec. Il s’agit d’un bogue avec la fonctionnalité de création de rapports. Après la reproduction du comportement et le dépannage, le groupe de produits Intune a confirmé que l’état était en fait Succès. Ce bogue de création de rapports sera résolu dans une prochaine version. Il n’existe pas d’ETA actuellement, car les calendriers évoluent. Les mises à jour de cette fonctionnalité sont annoncées dans [En développement pour Microsoft Intune](in-development.md).
-
 - **Type d’analyse système à effectuer** : planifier une analyse du système, notamment le niveau de l’analyse, et le jour et l’heure auxquels exécuter l’analyse. Les options disponibles sont les suivantes :
   - **Non configuré** : ne planifie d’analyse système sur l’appareil. Les utilisateurs finaux peuvent exécuter manuellement des analyses selon ce qui est nécessaire ou souhaité sur leurs appareils.
   - **Désactiver** : désactive les systèmes d’analyse sur l’appareil. Choisissez cette option si vous utilisez une solution anti-virus d’un partenaire qui analyse les appareils.
@@ -776,9 +773,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   [Fournisseur de services de configuration Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Fournisseur de services de configuration Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
   [Fournisseur de services de configuration Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
-
-  > [!WARNING]
-  > Ce paramètre dans Intune dans le portail Azure peut afficher l’état Échec. Il s’agit d’un bogue avec la fonctionnalité de création de rapports. Après la reproduction du comportement et le dépannage, le groupe de produits Intune a confirmé que l’état était en fait Succès. Ce bogue de création de rapports sera résolu dans une prochaine version. Il n’existe pas d’ETA actuellement, car les calendriers évoluent. Les mises à jour de cette fonctionnalité sont annoncées dans [En développement pour Microsoft Intune](in-development.md).
 
 - **Détecter les applications potentiellement indésirables** : choisissez le niveau de protection quand Windows détecte des applications potentiellement indésirables. Les options disponibles sont les suivantes :
   - **Non configuré** (valeur par défaut) : la protection Windows Defender contre les applications potentiellement indésirables est désactivée.
