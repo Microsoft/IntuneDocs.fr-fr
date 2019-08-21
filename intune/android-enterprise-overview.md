@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a003e4ab912452f278c838c600f75ddec0c1f5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 3a51951d02d73a0d79f6246dd9502c3c7fe89759
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885142"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550093"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Gérer les appareils avec profil professionnel Android avec Intune
 
@@ -68,7 +68,7 @@ Les stratégies de protection des applications sont entièrement prises en charg
 
 La prise en charge VPN est similaire à celle des profils VPN Android. Les mêmes fournisseurs de VPN et les mêmes options de configuration de base sont disponibles pour la gestion Android Entreprise, à deux différences près :
 
-- **VPN limité au profil professionnel** : les connexions VPN sont limitées aux applications déployées sur le profil professionnel. Seules les applications gérées par Android Entreprise peuvent utiliser la connexion VPN. Les applications personnelles sur l’appareil ne peuvent pas utiliser de connexion VPN gérée. Pour plus d’informations, consultez [Paramètres VPN pour Android Entreprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **VPN limité au profil professionnel** : les connexions VPN sont limitées aux applications déployées sur le profil professionnel. Seules les applications gérées par Android Entreprise peuvent utiliser la connexion VPN. Les applications personnelles sur l’appareil ne peuvent pas utiliser de connexion VPN gérée. Pour plus d’informations, consultez [Paramètres VPN pour Android Entreprise](vpn-settings-android-enterprise.md).
 
 - **VPN spécifique à une application** : un VPN spécifique à une application peut être configuré dans Intune si le fournisseur de VPN prend en charge les éléments suivants :
   - configuration pour un VPN spécifique à l’application
