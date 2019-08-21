@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883433"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550190"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -85,13 +85,13 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
 - **Application unique** : les utilisateurs ne peuvent accéder qu’à une seule application sur l’appareil. Lors du démarrage de l’appareil, seule l’application spécifique démarre. Les utilisateurs ne peuvent pas ouvrir de nouvelles applications, ni changer l’application en cours d’exécution.
 
-  **Étapes**
-  1. Choisissez **Sélectionner une application gérée**, puis choisissez dans la liste l’application Google Play gérée. 
+  - **Sélectionner une application gérée** : sélectionnez l’application Google Play gérée dans la liste.
 
-      Si la liste ne contient aucune application, [ajoutez des applications Android](apps-add-android-for-work.md) à l’appareil. Veillez à [attribuer l’application au groupe d’appareils créé pour vos appareils dédiés](apps-deploy.md).
+    Si la liste ne contient aucune application, [ajoutez des applications Android](apps-add-android-for-work.md) à l’appareil. Veillez à [attribuer l’application au groupe d’appareils créé pour vos appareils dédiés](apps-deploy.md).
 
-  2. Choisissez **OK** > **OK** pour ajouter l’application.
-
+  > [!IMPORTANT]
+  > Lors de l’utilisation d’un mode plein écran, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
+  
 - **Multi-application**: les utilisateurs peuvent accéder à un ensemble limité d’applications sur l’appareil. Lors du démarrage de l’appareil, seules les applications que vous ajoutez s’exécutent. Vous pouvez également ajouter des liens web que les utilisateurs peuvent ouvrir. Quand la stratégie est appliquée, les utilisateurs voient des icônes pour les applications autorisées dans l’écran d’accueil.
 
   > [!IMPORTANT]
@@ -101,43 +101,65 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   > 
   > L’application **Managed Home Screen** ne doit pas nécessairement figurer dans le profil de configuration, mais elle doit être ajoutée comme une application cliente. Lorsque l’application **Managed Home Screen** est ajoutée comme application cliente, toutes les autres applications que vous ajoutez au profil de configuration apparaissent sous forme d’icônes dans l’application **Managed Home Screen**. 
   >
-  > Lorsque vous utilisez le mode plein écran à plusieurs applications avec l’écran d’accueil géré, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
+  > Lorsque vous utilisez le mode plein écran à plusieurs applications, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
 
-  - Choisissez **Ajouter**, puis sélectionnez vos applications dans la liste.
+  - **Ajouter**: sélectionnez vos applications dans la liste.
 
     Si l’application **Managed Home Screen** n’est pas répertoriée, [ajoutez-la à partir de Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Veillez à [attribuer l’application](apps-deploy.md) au groupe d’appareils créé pour vos appareils dédiés.
 
     Vous pouvez également ajouter à l’appareil d’autres [applications Android](apps-add-android-for-work.md) et [applications web](web-app.md) créées par votre organisation. Veillez à [attribuer l’application au groupe d’appareils créé pour vos appareils dédiés](apps-deploy.md).
 
-  - **Bouton d’accueil virtuel** : choisissez **Activer** pour afficher un bouton accueil sur l’appareil dédié. Si cette option est sélectionnée, ramène l’utilisateur à l’écran d’accueil de l’appareil pour lui permettre de basculer facilement entre les applications. Sur certains appareils Android, les utilisateurs devront peut-être balayer vers le haut de l’écran pour afficher le bouton d’accueil. L’option **Désactiver** n’affiche aucun bouton d’accueil, et les utilisateurs doivent utiliser le bouton Précédent pour basculer entre les applications.
-  - **Quitter le mode kiosque** : choisissez **Activer** pour autoriser les administrateurs à quitter temporairement le mode plein écran (kiosque) pour mettre à jour l’appareil. Pour utiliser cette fonctionnalité, l’administrateur : 
-  
-    1. Sélectionne plusieurs fois le bouton Précédent jusqu’à ce que le bouton « Quitter le kiosque » s’affiche. 
-    2. Sélectionne le bouton, puis entre le **code confidentiel permettant de quitter le mode kiosque**.
-    3. Après avoir apporté vos modifications, sélectionnez l’application **Managed Home Screen**. Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application. 
+  - **Bouton Accueil virtuel**: bouton de touche programmable qui renvoie les utilisateurs à l’écran d’accueil géré afin que les utilisateurs puissent basculer entre les applications. Les options disponibles sont les suivantes :
 
-    L’option **Désactiver** empêche la suspension du mode kiosque. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton « Quitter le kiosque », un message indique qu’un code secret est requis.
+    - **Non configuré** (valeur par défaut): un bouton de démarrage n’est pas affiché. Les utilisateurs doivent utiliser le bouton précédent pour basculer entre les applications.
+    - **Balayer vers le haut**: un bouton d’installation s’affiche lorsqu’un utilisateur passe sur l’appareil.
+    - **Floating**: affiche un bouton d’hébergement permanent et flottant sur l’appareil.
+
+  - **Quitter le mode kiosque** : choisissez **Activer** pour autoriser les administrateurs à quitter temporairement le mode plein écran (kiosque) pour mettre à jour l’appareil. Pour utiliser cette fonctionnalité, l’administrateur :
+  
+    1. continue à sélectionner le bouton de retour jusqu’à ce que le bouton **Quitter le kiosque** s’affiche ; 
+    2. sélectionne le bouton **Quitter le kiosque** et entre le code confidentiel **Quitter le code de mode kiosque**.
+    3. Lorsque vous avez terminé, sélectionnez l’application gérée de l' **écran d’accueil** . Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application.
+
+      Si la valeur **n’est pas configurée**, les administrateurs ne peuvent pas suspendre le mode plein écran. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton **Quitter le kiosque**, un message indique qu’un code secret est requis.
 
     - **Code permettant de quitter le mode kiosque** : entrez un code PIN composé de 4 à 6 chiffres. L’administrateur utilise ce code PIN pour interrompre temporairement le mode kiosque.
 
   - **Définir l’arrière-plan de l’URL personnalisée** : entrez une URL pour personnaliser l’arrière-plan de l’appareil dédié.
-    
+
     > [!NOTE]
     > Dans la plupart des cas, nous recommandons de commencer avec des images des tailles minimales suivantes :
     >
     > - Téléphone : 1080 x 1920 px
     > - Tablette : 1920 x 1080 px
-    >    
+    >
     > Pour une expérience optimale et claire, il est conseillé de créer des composants d’images par appareil selon les caractéristiques de l’écran.
     >
     > Les écrans modernes affichent une densité supérieure de pixels et peuvent obtenir une définition d’image 2K/4K.
-  - **Configuration Wi-Fi** : choisissez **Activer** pour autoriser les utilisateurs à connecter l’appareil à différents réseaux Wi-Fi. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) empêche les utilisateurs de se connecter aux réseaux Wi-Fi lorsqu’ils sont dans l’application Managed Home Screen (mode de verrouillage de tâche).
 
-    Plus d’informations sur le [mode de verrouillage de tâche](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (dirige sur le site web d’Android).
+  - **Configuration Wi-Fi**: **activer** affiche le contrôle Wi-Fi sur l’écran d’accueil géré et permet aux utilisateurs finaux de connecter l’appareil à différents réseaux WiFi. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) n’affiche pas le contrôle Wi-Fi sur l’écran d’accueil géré. Il empêche les utilisateurs de se connecter aux réseaux Wi-Fi tout en utilisant l’écran d’accueil géré.
 
-  - **Configuration Bluetooth** : choisissez **Activer** pour activer le Bluetooth sur l’appareil et permettre aux utilisateurs finaux de jumeler leurs appareils via Bluetooth. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) empêche les utilisateurs de configurer le Bluetooth et de jumeler leurs appareils lorsqu’ils sont dans l’application Managed Home Screen (mode de verrouillage de tâche). 
+  - **Configuration Bluetooth**: **activer** affiche le contrôle Bluetooth sur l’écran d’accueil géré et permet aux utilisateurs finaux de coupler des appareils sur Bluetooth. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) n’affiche pas le contrôle Bluetooth sur l’écran d’accueil géré. Il empêche les utilisateurs de configurer Bluetooth et d’apparier les appareils tout en utilisant l’écran d’accueil géré.
 
-    Plus d’informations sur le [mode de verrouillage de tâche](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (dirige sur le site web d’Android).
+  - **Accès torche**: **activer** affiche le contrôle torche sur l’écran d’accueil géré et permet aux utilisateurs finaux d’activer ou de désactiver le flash. **Non configuré** (par défaut) n’affiche pas le contrôle torche sur l’écran d’accueil géré. Il empêche les utilisateurs d’utiliser la torche lors de l’utilisation de l’écran d’accueil géré.
+
+  - **Media Volume Control**: **Enable** affiche le contrôle du volume de média sur l’écran d’accueil géré et permet aux utilisateurs finaux d’ajuster le volume multimédia de l’appareil à l’aide d’un curseur. **Non configuré** (par défaut) n’affiche pas le contrôle du volume de média sur l’écran d’accueil géré. Il empêche les utilisateurs d’ajuster le volume de média de l’appareil lors de l’utilisation de l’écran d’accueil géré, sauf si leurs boutons matériels le prennent en charge. 
+
+  - **Mode**d’économiseur d’écran: **activer** affiche un économiseur d’écran sur l’écran d’accueil géré lorsque l’appareil est verrouillé ou expire. **Non configuré** (par défaut) n’affiche pas un économiseur d’écran sur l’écran d’accueil géré.
+
+    Lorsque cette option est activée, configurez également:
+
+    - **Définir l’image de l’écran de veille personnalisée**: entrez l’URL d’une image personnalisée. Par exemple, entrez :
+
+      - `http://www.contoso.com/image.jpg`
+      - `www.contoso.com/image.bmp`
+      - `https://www.contoso.com/image.html`
+
+      Si vous n’entrez pas d’URL, l’image par défaut de l’appareil est utilisée, s’il existe une image par défaut.
+
+    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran: choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0-9999999 secondes. La valeur par défaut est de `0` secondes. Si vous ne renseignez pas le champ,`0`ou la valeur zéro (), l’écran de veille est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
+    - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1-9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
+    - **Détecter le support avant de démarrer**l’économiseur d’écran: **activer** (par défaut) n’affiche pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** affiche l’écran de veille, même si l’audio ou la vidéo est en train de fonctionner.
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
 

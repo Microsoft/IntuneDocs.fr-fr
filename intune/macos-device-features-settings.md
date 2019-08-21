@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 08/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1826498b3bfa2191900d7574f79051af8f758558
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 63f2832dd321425efe8092f1bb12dd0d479ef71b
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041702"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549920"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -65,6 +65,19 @@ Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l�
    Notez l’adresse IP. La sortie obtenue peut ressembler à ceci : `PING myprinter.local (10.50.25.21)`.
 
 4. Utilisez les valeurs de l’adresse IP et du chemin de la ressource. Dans cet exemple, l’adresse IP est `10.50.25.21` et le chemin de ressource est `/ipp/port1`.
+
+## <a name="login-items"></a>Éléments de connexion
+
+- **Fichiers, dossiers et applications personnalisées**: **Ajoutez** le chemin d’accès d’un fichier, d’un dossier, d’une application personnalisée ou d’une application système que vous souhaitez ouvrir lorsqu’un utilisateur se connecte à l’appareil. Les applications système ou les applications générées ou personnalisées pour votre organisation se `Applications` trouvent généralement dans le dossier, avec `/Applications/AppName.app`un chemin d’accès similaire à. 
+
+  Vous pouvez ajouter de nombreux fichiers, dossiers et applications. Par exemple, entrez :  
+  
+  - `/Applications/Calculator.app`
+  - `/Applications`
+  - `/Applications/Microsoft Office/root/Office16/winword.exe`
+  - `/Users/UserName/music/itunes.app`
+  
+  Lors de l’ajout d’une application, d’un dossier ou d’un fichier, veillez à entrer le chemin d’accès correct. Tous les éléments ne se trouvent `Applications` pas dans le dossier. Si un utilisateur déplace un élément d’un emplacement à un autre, alors le chemin d’accès change. Cet élément déplacé ne s’ouvre pas lorsque l’utilisateur se connecte.
 
 ## <a name="login-window"></a>Fenêtre de connexion
 
