@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550175"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998941"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -66,13 +66,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
   - **Préférer Store**: avertit les utilisateurs quand ils installent des applications à partir d’emplacements autres que le Microsoft Store.
 
   [CSP SmartScreen/EnableAppInstallControl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
-
-- **Forcer le redémarrage des applications en cas d’échec de la mise à jour** : lorsqu’une application est utilisée, elle peut ne pas se mettre à jour. Utilisez ce paramètre pour forcer une application à redémarrer. **Non configuré** (valeur par défaut) ne force pas les applications à redémarrer. **Exiger** permet aux administrateurs de forcer un redémarrage à une date et une heure spécifiques, ou selon une planification périodique. Lorsque la valeur **Exiger** est sélectionnez, entrez également :
-
-  - **Date/heure de début** : choisissez une date et une heure spécifiques pour redémarrer les applications.
-  - **Périodicité** : choisissez un redémarrage quotidien, hebdomadaire ou mensuel.
-
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 - **Contrôle utilisateur sur les installations** : lorsque la valeur **Non configuré** (valeur par défaut) est sélectionnée, Windows Installer empêcher les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, comme l’entrée dans le répertoire pour installer les fichiers. **Bloquer** permet aux utilisateurs de modifier ces options d’installation, et certaines des fonctionnalités de sécurité de Windows Installer sont ignorées.
 
