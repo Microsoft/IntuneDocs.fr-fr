@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 890d398de938680447b71a46d4e329a6bdf52616
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884052"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960586"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -283,6 +283,8 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 ## <a name="app-dependencies"></a>Dépendances d’application
 
 Les dépendances d’application sont des applications que vous devez installer avant votre application Win32. Vous pouvez exiger que d’autres applications soient installées en tant que dépendances. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Le nombre maximal de dépendances s’élève à 100. Il inclut les dépendances de toutes les dépendances incluses, ainsi que l’application elle-même. Vous pouvez ajouter des dépendances d’application Win32 uniquement une fois que votre application Win32 a été ajoutée et chargée dans Intune. Une fois que votre application Win32 a été ajoutée, l’option **Dépendances** apparaît dans le panneau de votre application Win32. 
+
+Toute dépendance d’application Win32 doit également être une application Win32. Elle ne prend pas en charge la dépendance envers d’autres types d’applications, telles que les applications LOB MSI uniques ou les applications du Store.
 
 Quand vous ajoutez une dépendance d’application, vous pouvez la rechercher avec le nom de l’application et son éditeur. De plus, vous pouvez trier vos dépendances ajoutées selon le nom de l’application et l’éditeur. Les dépendances d’application précédemment ajoutées ne sont pas sélectionnables dans la liste des dépendances d’application ajoutées. 
 

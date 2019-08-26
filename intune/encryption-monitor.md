@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671060"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550123"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Analyser le chiffrement d’appareil avec Intune   
 
@@ -102,15 +102,15 @@ Quand vous sélectionnez un appareil dans le rapport de chiffrement, Intune affi
   Voici quelques exemples d’informations d’état qu’Intune peut indiquer :  
   
   **macOS** :
-  - Le profil ne peut pas être installé actuellement, car nous attendons un prérequis.  
+  - La clé de récupération n’a pas encore été récupérée et stockée. Il est très probable que l’appareil n’a pas été déverrouillé ou n’a pas été archivé.  
  
-    *Considérez ceci : Ce résultat ne représente pas nécessairement une condition d’erreur, mais un état temporaire qui peut être dû à la synchronisation sur l’appareil où la mise en dépôt pour les clés de récupération doit être configurée avant que la demande de chiffrement soit envoyée à l’appareil. Cela peut également indiquer que l’appareil reste verrouillé ou n’a pas fait l’objet d’un check-in récent avec Intune. Enfin, étant donné que le chiffrement FileVault ne démarre pas tant qu’un appareil n’est pas branché (en charge), il est possible qu’un utilisateur reçoive une clé de récupération pour un appareil qui n’est pas encore chiffré*.  
+    *Considérez ceci : Ce résultat ne représente pas nécessairement une condition d’erreur, mais un état temporaire qui peut être dû à la synchronisation sur l’appareil où la mise en dépôt pour les clés de récupération doit être configurée avant que la demande de chiffrement soit envoyée à l’appareil. Cet état peut également indiquer que l’appareil reste verrouillé ou n’a pas fait l’objet d’un check-in récent avec Intune. Enfin, étant donné que le chiffrement FileVault ne démarre pas tant qu’un appareil n’est pas branché (en charge), il est possible qu’un utilisateur reçoive une clé de récupération pour un appareil qui n’est pas encore chiffré*.  
 
-  - Le profil FileVault est installé, mais FileVault n’est pas activé sur l’appareil.  
+  - L’utilisateur retarde le chiffrement ou est actuellement en cours de chiffrement.  
  
     *Considérez ceci : L’utilisateur ne s’est pas encore déconnecté après avoir reçu la demande de chiffrement, ce qui est nécessaire avant que FileVault puisse chiffrer l’appareil, ou bien l’utilisateur a déchiffré l’appareil manuellement. Intune ne peut pas empêcher un utilisateur de déchiffrer son appareil.*  
 
-  - FileVault est déjà activé par l’utilisateur et Intune ne peut donc pas gérer sa récupération.  
+  - L’appareil est déjà chiffré. L’utilisateur de l’appareil doit déchiffrer l’appareil pour continuer.  
  
     *Considérez ceci : Intune ne peut pas configurer FileVault sur un appareil qui est déjà chiffré. Au lieu de cela, l’utilisateur doit déchiffrer son appareil manuellement pour qu’il puisse être géré par une stratégie de configuration d’appareil et par Intune*. 
  
@@ -118,9 +118,9 @@ Quand vous sélectionnez un appareil dans le rapport de chiffrement, Intune affi
  
     *Considérez ceci : À compter de macOS version 10.15 (Catalina), les paramètres d’inscription approuvés par l’utilisateur peuvent entraîner la nécessité pour les utilisateurs d’approuver manuellement le chiffrement FileVault. Pour plus d’informations, consultez [Inscription approuvée par l’utilisateur](macos-enroll.md) dans la documentation Intune*.  
 
-  - L’appareil iOS a retourné « NotNow » (il est verrouillé).  
+  - Inconnu.  
 
-    *Considérez ceci : L’appareil est actuellement verrouillé et Intune ne peut pas démarrer le processus de mise en dépôt ou de chiffrement. Une fois l’appareil déverrouillé, la progression peut se poursuivre*.  
+    *Considérez ceci : L’une des causes possibles d’un état inconnu est que l’appareil est verrouillé et qu’Intune ne peut pas démarrer le processus de dépôt de clé ou de chiffrement. Une fois l’appareil déverrouillé, la progression peut se poursuivre*.  
 
   **Windows 10** :  
   - La stratégie BitLocker nécessite le consentement de l’utilisateur pour lancer l’Assistant Chiffrement de lecteur BitLocker et démarrer le chiffrement du volume de système d’exploitation, mais l’utilisateur n’a pas donné son consentement.  
@@ -161,7 +161,7 @@ Quand vous affichez le volet Rapport de chiffrement , vous pouvez sélectionner 
   
 ![Exporter les détails](./media/encryption-monitor/export.png) 
  
-Ce rapport peut être utilisé pour identifier les problèmes liés aux groupes d’appareils. Par exemple, vous pouvez utiliser le rapport pour identifier une liste d’appareils macOS indiquant tous *FileVault est déjà activé par l’utilisateur*, ce qui signifie que ces appareils doivent être déchiffrés manuellement avant qu’Intune puisse commencer à gérer leurs paramètres FileVault.  
+Ce rapport peut être utilisé pour identifier les problèmes liés aux groupes d’appareils. Par exemple, vous pouvez utiliser le rapport pour identifier une liste d’appareils macOS indiquant tous *FileVault est déjà activé par l’utilisateur*, ce qui signifie que ces appareils doivent être déchiffrés manuellement avant qu’Intune puisse gérer leurs paramètres FileVault.  
  
 ## <a name="filevault-recovery-keys"></a>Clés de récupération FileVault   
 Quand Intune chiffre un appareil macOS avec FileVault pour la première fois, une clé de récupération personnelle est créée. Lors du chiffrement, l’appareil affiche une seule fois la clé personnelle à l’utilisateur final.  

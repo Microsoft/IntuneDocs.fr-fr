@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80be1d39d9a562dbc13b9384c6256eb02c9ef50e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530559"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582919"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Configurer un profil de certificat pour vos appareils dans Microsoft Intune
 
@@ -88,30 +88,35 @@ Exportez le certificat d’autorité de certification racine approuvée sous la 
 Vous importez ce certificat quand vous configurez un profil de certificat approuvé.
 
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Étape 3 : Créer des profils de certificat approuvés
+
 Vous devez créer un profil de certificat approuvé pour pouvoir créer un profil de certificat SCEP ou PKCS. Un profil de certificat approuvé et un profil SCEP ou PKCS sont nécessaires pour chaque plateforme d’appareil. Les étapes de création de certificats approuvés sont similaires pour chaque plateforme d’appareil.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Sélectionnez **Configuration de l’appareil** > **Gérer** > **Profils** > **Créer un profil**.
-4. Entrez un **Nom** et une **Description** pour le profil de certificat approuvé.
-5. Dans la liste déroulante **Plateforme**, sélectionnez la plateforme d’appareil pour ce certificat approuvé. Les options disponibles sont les suivantes :
+1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Configuration de l’appareil** > **Gérer** > **Profils** > **Créer un profil**.
+2. Entrez les propriétés suivantes :
 
-    - **Android**
-    - **Android Entreprise**
-    - **iOS**
-    - **MacOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 et versions ultérieures**
-    - **Windows 10 et versions ultérieures**
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **un profil de certificat approuvé pour les appareils de propriétaire d’appareils Android Entreprise** ou **un profil de certificat approuvé pour les appareils iOS**.
+    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
+    - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
 
-6. Dans la liste déroulante **Type de profil**, choisissez **Certificat approuvé**.
-7. Accédez au certificat que vous avez enregistré à l’[Étape 2 : Exporter votre certificat d’autorité de certification racine approuvée](#step-2-export-your-trusted-root-ca-certificate), puis sélectionnez **OK**.
-8. Pour les appareils Windows 8.1 et Windows 10 uniquement, sélectionnez le **Magasin de destination** pour le certificat approuvé à partir de :
+      - **Android**
+      - **Android Entreprise** > **Propriétaire d’appareil uniquement**
+      - **Android Entreprise** > **Profil professionnel**
+      - **iOS**
+      - **MacOS**
+      - **Windows Phone 8.1**
+      - **Windows 8.1 et versions ultérieures**
+      - **Windows 10 et versions ultérieures**
 
-    - **Boutique de certificats de l’ordinateur - Racine**
-    - **Boutique de certificats de l’ordinateur - Intermédiaire**
-    - **Boutique de certificats de l’utilisateur - Intermédiaire**
+    - **Type de profil** : Choisir un **certificat approuvé**.
 
-9. Lorsque vous avez terminé, choisissez **OK**, revenez au volet **Créer un profil** et sélectionnez **Créer**.
+3. Accédez au certificat que vous avez enregistré à l’[Étape 2 : Exporter votre certificat d’autorité de certification racine approuvée](#step-2-export-your-trusted-root-ca-certificate), puis sélectionnez **OK**.
+4. Pour les appareils Windows 8.1 et Windows 10 uniquement, sélectionnez le **Magasin de destination** pour le certificat approuvé à partir de :
+
+    - **Magasin de certificats de l'ordinateur – Racine** (SCEP)
+    - **Magasin de certificats de l'ordinateur – Intermédiaire** (SCEP)
+    - **Magasin de certificats pour l'utilisateur – Intermédiaire** (PKCS, SCEP)
+
+5. Lorsque vous avez terminé, choisissez **OK**, revenez au volet **Créer un profil** et sélectionnez **Créer**.
 
 Le profil est créé et apparaît dans la liste. Pour affecter ce profil à des groupes, consultez [Affecter des profils d’appareil](device-profile-assign.md).
 
@@ -128,6 +133,7 @@ Consultez l’un des articles suivants pour vous aider à configurer et affecter
 Après avoir créé un profil de certificat approuvé, créez des profils de certificat SCEP ou PKCS pour chaque plateforme que vous voulez utiliser. Quand vous créez un profil de certificat SCEP, entrez un profil de certificat approuvé pour cette même plateforme. Cette étape lie les deux profils de certificat, mais vous devez quand même affecter chaque profil séparément.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 [Attribuer des profils d’appareils](device-profile-assign.md)  
 [Utiliser S/MIME pour signer et chiffrer des e-mails](certificates-s-mime-encryption-sign.md)  
 [Utiliser une autorité de certification tierce](certificate-authority-add-scep-overview.md)

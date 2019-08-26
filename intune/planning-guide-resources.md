@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3ed61f556cadf3ba04f7c33fbede2102c94b18f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 886241dcde88765c4879357ee42b2b281e7f3408
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549322"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861873"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Ressources supplémentaires pour la planification de votre déploiement Intune
 
@@ -45,17 +45,14 @@ Voici une liste des modèles de table pour chaque section.
 | | Stratégie de conformité | |
 | | Stratégie d’accès conditionnel|-|
 
-
 ## <a name="further-reading"></a>Informations supplémentaires
 
 Consultez ces ressources pour obtenir des informations qui peuvent se révéler utiles lors du processus de planification, de consultez et d’implémentation du déploiement Intune.
 
-- [Documentation Microsoft Intune](/intune/) : l’ensemble complet de documentation pour Intune.
+- [Documentation Microsoft Intune](http://docs.microsoft.com/intune/) : l’ensemble complet de documentation pour Intune.
 
-- [Blog Intune](https://blogs.technet.microsoft.com/enterprisemobility/) : des billets pour vous aider à comprendre comment Intune s’intègre dans la sphère globale de la mobilité d’entreprise.
+- [Centre de gestion de la confidentialité Microsoft](https://www.microsoft.com/TrustCenter) : découvrez l’approche de Microsoft pour la sécurité, la confidentialité, la conformité et la transparence dans tous ses services et produits cloud.
 
-- [Centre de gestion de la confidentialité Microsoft](http://www.microsoft.com/TrustCenter) : découvrez l’approche de Microsoft pour la sécurité, la confidentialité, la conformité et la transparence dans tous ses services et produits cloud.
+- [Intune User Voice](https://microsoftintune.uservoice.com/) : vous souhaitez demander une fonctionnalité ou voter avec d’autres clients pour de nouvelles fonctionnalités ? Partagez vos commentaires sur Intune via User Voice. Nous sommes à votre écoute.
 
-- [Intune User Voice](http://microsoftintune.uservoice.com/) : vous souhaitez demander une fonctionnalité ou voter avec d’autres clients pour de nouvelles fonctionnalités ? Partagez vos commentaires sur Intune via User Voice. Nous sommes à votre écoute.
-
-- [Guide d’inscription](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) : un ensemble de documents que vous pouvez utiliser en l’état ou modifier dans le cadre de votre plan de communication avec vos utilisateurs finaux pour les aider à comprendre ce qu’implique l’inscription de leurs appareils personnels dans Intune.
+- [Communication de plan](migration-guide-communication-plan.md) : le plan de communication est un élément clé de l’adoption d’Intune. Dans cet article, vous pouvez télécharger le kit d’adoption d’Intune, qui comprend des modèles de courrier électronique, un guide d’inscription Intune et des liens vers des vidéos de démonstration pour vous aider à éduquer vos utilisateurs finaux lors de l’inscription.

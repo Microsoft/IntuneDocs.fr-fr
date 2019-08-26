@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: cba8b59931bd60db0d9169af5016f01118c64cf0
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548345"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022827"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Développer un plan de communication de déploiement
 
@@ -50,7 +50,7 @@ Les informations à communiquer dépendent de la phase du processus de déploiem
 
 **Vague de post-inscription**<br/> Communications ciblant les groupes d’organisation et les utilisateurs qui se sont inscrits dans Intune. Elles doivent fournir des ressources supplémentaires qui peuvent être utiles à l’utilisateur, et recueillir des commentaires sur leur expérience pendant et après l’inscription.
 
-Ce [guide d’inscription de l’utilisateur final](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) peut se révéler utile. Vous pouvez l’utiliser tel quel ou le modifier pour l’adapter à votre organisation.
+Ce [kit d’adoption Intune](https://aka.ms/IntuneAdoptionKit) peut vous être utile. Vous pouvez l’utiliser tel quel ou le modifier pour l’adapter à votre organisation.
 
 ## <a name="communication-delivery-methods"></a>Méthodes de remise des communications
 

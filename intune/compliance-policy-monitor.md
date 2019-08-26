@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ce117f21c1ad78c2c977466398ce6d30989cc6a
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041297"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651214"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -152,7 +152,9 @@ Le rapport **Conformité des appareils** > **Définition de la conformité** vou
 Quand vous sélectionnez un paramètre spécifique, vous pouvez voir **l’état de conformité**, **l’alias d’e-mail de l’utilisateur**, le **modèle d’appareil** et **l’emplacement** pour chaque appareil ciblé par ce paramètre.
 
 > [!NOTE]
-> Les appareils Windows 10 qui sont joints à Azure AD peuvent afficher le compte système en tant qu'utilisateur non conforme. Ce comportement est normal et n’affecte pas la conformité globale des appareils. 
+> Une stratégie peut être affectée à un appareil et à un utilisateur sur ce même appareil. Dans certains scénarios, un appareil peut se synchroniser avant que l’utilisateur se connecte, par exemple lorsque l’appareil redémarre. La conformité peut évaluer cet utilisateur et afficher l’appareil comme non conforme. Ce comportement peut également indiquer le compte système comme étant un utilisateur non conforme.
+>
+> Il s’agit d’un problème connu avec les appareils Windows 10 multi-utilisateurs. Toutes les modifications ou mises à jour de ce comportement sont annoncées dans [En développement](in-development.md) et/ou [Nouveautés](whats-new.md).
 
 ## <a name="view-status-of-device-policies"></a>Voir l’état des stratégies d’appareil
 

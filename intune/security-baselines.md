@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
+ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68679968"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978504"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -37,7 +37,7 @@ Des types de base de référence distincts peuvent inclure les mêmes paramètre
 > [!NOTE]
 > Microsoft déconseille l’utilisation de préversions de bases de référence de sécurité dans un environnement de production. Les paramètres d’une base de référence en préversion peuvent changer au cours de la préversion. 
 
-L’objectif de l’utilisation des bases de référence de sécurité consiste à fournir un flux de travail sécurisé de bout en bout lorsque vous travaillez avec Microsoft 365. Vous trouverez ci-dessous certains des avantages :
+Les bases de référence de sécurité peuvent vous aider à fournir un flux de travail sécurisé de bout en bout lorsque vous travaillez avec Microsoft 365. Vous trouverez ci-dessous certains des avantages :
 
 - Une base de référence de sécurité inclut les meilleures pratiques et des recommandations sur les paramètres qui affectent la sécurité. Intune collabore avec la même équipe de sécurité Windows qui crée les bases de référence de sécurité de la stratégie de groupe. Ces recommandations sont basées sur des conseils et une grande expérience.
 - Si vous débutez dans Intune et ne savez pas par où commencer, alors les bases de référence de sécurité vous donnent un avantage. Vous pouvez rapidement créer et déployer un profil sécurisé, en sachant que vous aidez à protéger les données et les ressources de votre organisation.
@@ -47,20 +47,21 @@ L’objectif de l’utilisation des bases de référence de sécurité consiste 
 
 Les [bases de référence de sécurité Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) sont une ressource précieuse pour en savoir plus sur cette fonctionnalité. La [Gestion des appareils mobiles](https://docs.microsoft.com/windows/client-management/mdm/) est une ressource précieuse sur la gestion des appareils mobiles, et ce que vous pouvez faire sur les appareils Windows.
 
-## <a name="security-baseline-versions-and-instances"></a>Versions et instances de bases de référence de sécurité
-De temps à autre, de nouvelles mises à jour d'une base de référence sont disponibles. Chaque nouvelle instance d’une version de base de référence peut ajouter ou supprimer des paramètres ou introduire d'autres modifications. Par exemple, à mesure que de nouveaux paramètres Windows 10 sont disponibles avec les nouvelles versions de Windows 10, la base de référence de sécurité MDM peut recevoir une nouvelle instance de version qui inclut les derniers paramètres.  
+## <a name="about-baseline-versions-and-instances"></a>Versions et instances des bases de référence
 
-Dans la console Intune, vous pouvez afficher les bases de référence de sécurité disponibles et les informations les concernant. Les informations disponibles incluent le nombre de profils qui utilisent ce type de base de référence, le nombre d'instances distinctes du type de base de référence disponibles, et la date à laquelle la dernière instance a été publiée.  L’exemple suivant montre la vignette d’une base de référence de sécurité MDM bien utilisée :  
+Chaque nouvelle instance d’une version de base de référence peut ajouter ou supprimer des paramètres ou introduire d'autres modifications. Par exemple, à mesure que de nouveaux paramètres Windows 10 sont disponibles avec les nouvelles versions de Windows 10, la base de référence de sécurité MDM peut recevoir une nouvelle instance de version qui inclut les derniers paramètres.  
+
+Dans la console Intune, la vignette de chaque base de référence indique le nom de la référence de base et les informations de base sur cette base de référence. Les informations incluent le nombre de profils qui utilisent ce type de base de référence, le nombre d'instances distinctes (versions) du type de base de référence disponibles et une date de *Dernière publication* qui identifie quand ce modèle de base de référence a été ajouté à votre abonné. L’exemple suivant montre la vignette d’une base de référence de sécurité MDM bien utilisée :  
 
 ![Vignette de la base de référence](./media/security-baselines/baseline-tile.png)
 
-Pour afficher des informations sur les versions de base de référence, que vous utilisez, sélectionnez une base de référence, puis choisissez **Versions**. Intune affiche des détails sur les versions en cours d’utilisation par vos profils. Dans le volet Versions, vous pouvez sélectionner une version unique pour afficher plus de détails sur les profils qui utilisent cette version. Vous pouvez également sélectionner deux versions différentes, puis choisir **Comparer les bases de référence** pour télécharger un fichier CSV qui détaille ces différences.  
+Pour afficher plus d’informations sur les versions de base de référence que vous utilisez, sélectionnez une vignette de base de référence pour ouvrir son volet *Vue d'ensemble*, puis sélectionnez **Versions**. Intune affiche des détails sur les versions de la base de référence utilisée par vos profils. Dans le volet Versions, vous pouvez sélectionner une version unique pour afficher plus de détails sur les profils qui utilisent cette version. Vous pouvez également sélectionner deux versions différentes, puis choisir **Comparer les bases de référence** pour télécharger un fichier CSV qui détaille ces différences.  
 
 ![Comparer les bases de référence](./media/security-baselines/compare-baselines.png)
 
 Lorsque vous créez un *profil* de base de référence de sécurité, ce profil utilise automatiquement l’instance de base de référence de sécurité la plus récente.  Vous pouvez continuer à utiliser et à modifier les profils que vous avez créés précédemment et qui utilisent une instance de version de base de référence antérieure, y compris des bases de référence créées à l’aide d’une préversion. 
 
-Les profils de bases de référence de sécurité prennent en charge une [modification de la version](#change-the-baseline-instance-for-a-profile) de la base de référence en cours d’utilisation. Ainsi, à la sortie d’une nouvelle version, vous n’êtes pas obligé de créer un profil de base pour tirer parti de cette nouvelle version. Au lieu de cela, lorsque vous êtes prêt, vous pouvez sélectionner un profil de base puis utiliser l’option intégrée pour modifier la version de l’instance pour ce profil.  
+Vous pouvez choisir [de modifier la version](#change-the-baseline-version-for-a-profile) d’une base de référence utilisée avec un profil donné. Ainsi, à la sortie d’une nouvelle version, vous n’êtes pas obligé de créer un profil de base pour tirer parti de cette nouvelle version. Au lieu de cela, lorsque vous êtes prêt, vous pouvez sélectionner un profil de base puis utiliser l’option intégrée pour remplacer la version de l’instance pour ce profil par une nouvelle version.  
 
 ## <a name="available-security-baselines"></a>Bases de référence de la sécurité disponibles 
 
@@ -79,18 +80,21 @@ Les instances de bases de référence de sécurité suivantes sont disponibles p
 
 Vous pouvez continuer à utiliser et à modifier des profils que vous avez créés précédemment en fonction d’une préversion de modèle, même lorsque cette préversion n’est plus disponible pour la création de nouveaux profils. 
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="manage-baselines"></a>Gérer les bases de référence  
+
+Les tâches courantes lorsque vous travaillez avec des bases de référence de sécurité sont notamment les suivantes :
+- [Créer un profil](#create-the-profile) : pour configurer les paramètres que vous souhaitez utiliser, puis affectez la base de référence à des groupes.
+- [Modifier la version](#change-the-baseline-version-for-a-profile) : modifiez la version de la base de référence utilisée par un profil.
+- [Supprimer une attribution de base de référence](#remove-a-security-baseline-assignment) : découvrez ce qui se passe lorsque vous cessez de gérer les paramètres avec une base de référence de sécurité.
+
+
+### <a name="prerequisites"></a>Prérequis
 - Pour gérer les bases de référence dans Intune, votre compte doit avoir le rôle intégré [Gestionnaire de stratégie et de profils](role-based-access-control.md#built-in-roles).
 
 - L’utilisation de certaines bases de référence peut nécessiter un abonnement actif à des services supplémentaires tels que Microsoft Defender ATP.  
 
-## <a name="co-managed-devices"></a>Appareils cogérés
 
-Les bases de référence de sécurité sur les appareils managés par Intune sont similaires aux appareils comanagés avec Configuration Manager. Les appareils comanagés utilisent System Center Configuration Manager et Microsoft Intune pour gérer les appareils Windows 10 simultanément. Cela vous permet de joindre via le cloud votre investissement dans Configuration Manager existant aux avantages d’Intune. [Vue d’ensemble de la cogestion](https://docs.microsoft.com/sccm/comanage/overview) est une excellente ressource si vous utilisez Configuration Manager et souhaitez également bénéficier des avantages du cloud.
-
-Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de travail **Configuration de l’appareil** (ses paramètres) vers Intune. Vous trouverez des informations supplémentaires dans [Charges de travail de configuration d’appareil](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).
-
-## <a name="create-the-profile"></a>Créer le profil
+### <a name="create-the-profile"></a>Créer le profil
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité** pour afficher la liste des bases de référence disponibles.
 
@@ -131,12 +135,13 @@ Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de
    ![Réviser la base de référence](./media/security-baselines/review.png) 
 
   
-8. Après avoir créé un profil, modifiez-le en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**.  Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.  
+8. Après avoir créé un profil, modifiez-le en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**. Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.  
 
-## <a name="change-the-baseline-instance-for-a-profile"></a>Modifier l’instance de base de référence pour un profil
-Les profils de base prennent en charge un changement de l'instance de base de référence utilisée par le profil. Vous pouvez sélectionner une instance plus ancienne ou, plus généralement, une instance plus récente de la même base de référence.  Vous ne pouvez pas passer d'une base de référence à l’autre, par exemple changer un profil d'une base de référence pour Defender ATP à une base de référence de sécurité MDM. 
+### <a name="change-the-baseline-version-for-a-profile"></a>Modifier la version de base de référence pour un profil  
 
-Lors de la configuration d'une modification de la version de la base de référence, vous aurez la possibilité de télécharger un fichier CSV qui répertorie les différences entre les deux versions de base de référence concernées. Vous pouvez également conserver toutes vos personnalisations dans la version de la base de référence d'origine et les appliquer à la nouvelle version, ou implémenter toutes les valeurs par défaut de la nouvelle version de base de référence que vous avez sélectionnée. 
+Vous pouvez modifier la version de l’instance de base de référence utilisée avec un profil.  Lorsque vous modifiez la version, vous sélectionnez une instance disponible de la même base de référence. Vous ne pouvez pas passer d'un type de base de référence à l’autre, par exemple changer un profil d'une base de référence pour Defender ATP à une base de référence de sécurité MDM. 
+
+Lors de la configuration d'une modification de la version de la base de référence, vous pouvez télécharger un fichier CSV qui répertorie les différences entre les deux versions de base de référence concernées. Vous pouvez également choisir de conserver toutes vos personnalisations de la version d’origine de la base de référence ou d’implémenter la nouvelle version à l’aide de toutes ses valeurs par défaut. Vous ne pouvez pas apporter de modifications à des paramètres individuels lorsque vous modifiez la version d’une base de référence pour un profil. 
 
 Lors de l’enregistrement, une fois la conversion terminée, la base de référence est immédiatement redéployée vers les groupes attribués.  
 
@@ -147,7 +152,7 @@ Lors de l’enregistrement, une fois la conversion terminée, la base de référ
 
   Lorsqu'un paramètre n'est plus géré par un profil de base de référence, ce paramètre n'est pas réinitialisé sur l'appareil. Au lieu de cela, le réglage sur l'appareil reste réglé sur sa dernière configuration jusqu'à ce qu'un autre processus gère le réglage pour le modifier. Parmi les exemples de processus pouvant modifier un paramètre après la fin de sa gestion, citons un profil de base de référence différent, un paramètre de stratégie de groupe ou une configuration manuelle effectuée sur l'appareil. 
 
-### <a name="to-change-the-instance-for-a-baseline"></a>Pour modifier l'instance d'une base de référence  
+#### <a name="to-change-the-baseline-version-for-a-profile"></a>Pour modifier la version de base de référence pour un profil  
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité**, puis sélectionnez la vignette du type de base de référence contenant le profil que vous souhaitez modifier.  
 
@@ -159,7 +164,7 @@ Lors de l’enregistrement, une fois la conversion terminée, la base de référ
 
    ![sélectionner une version](./media/security-baselines/select-instance.png)  
    
-4. Sélectionnez **Review update** (Examiner la mise à jour) pour télécharger un fichier CSV qui affiche la différence entre la version actuelle du profil et la nouvelle version que vous avez sélectionnée. Consultez ce fichier afin de comprendre quels paramètres sont ajoutés, supprimés et quelles sont les valeurs par défaut de ces paramètres dans le profil mis à jour.  
+4. Sélectionnez **Review update** (Examiner la mise à jour) pour télécharger un fichier CSV qui affiche la différence entre la version actuelle du profil et la nouvelle version que vous avez sélectionnée. Consultez ce fichier afin de comprendre quels paramètres sont nouveaux ou ont été supprimés et quelles sont les valeurs par défaut de ces paramètres dans le profil mis à jour.  
 
    Lorsque vous êtes prêt, passez à l’étape suivante.  
 
@@ -169,14 +174,16 @@ Lors de l’enregistrement, une fois la conversion terminée, la base de référ
 
 6. Sélectionnez **Envoyer**. Le profil est mis à jour avec la version de base de référence sélectionnée, et une fois la conversion terminée, la base de référence est immédiatement redéployée vers les groupes attribués.
 
-## <a name="remove-a-security-baseline-assignment"></a>Supprimer une attribution de base de référence de sécurité
+### <a name="remove-a-security-baseline-assignment"></a>Supprimer une attribution de base de référence de sécurité
 Lorsqu'un paramètre de base de référence de sécurité ne s'applique plus à un appareil ou que les paramètres d'une base de référence sont définis sur *Non configuré*, ces paramètres sur un appareil ne sont pas rétablis avec une configuration prégérée. Au lieu de cela, les paramètres précédemment gérés sur l'appareil conservent leurs dernières configurations reçues depuis la base de référence, jusqu'à ce qu'un autre processus mette à jour ces paramètres sur l’appareil.  
 
 Parmi les autres processus susceptibles de modifier ultérieurement les paramètres de l’appareil, nous pouvons citer une base de référence de sécurité différente ou nouvelle, un profil de configuration de l’appareil, des configurations de stratégie de groupe ou la modification manuelle des paramètres sur l’appareil.  
 
+## <a name="co-managed-devices"></a>Appareils cogérés
 
+Les bases de référence de sécurité sur les appareils managés par Intune sont similaires aux appareils comanagés avec Configuration Manager. Les appareils comanagés utilisent System Center Configuration Manager et Microsoft Intune pour gérer les appareils Windows 10 simultanément. Cela vous permet de joindre via le cloud votre investissement dans Configuration Manager existant aux avantages d’Intune. [Vue d’ensemble de la cogestion](https://docs.microsoft.com/sccm/comanage/overview) est une excellente ressource si vous utilisez Configuration Manager et souhaitez également bénéficier des avantages du cloud.
 
-
+Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de travail **Configuration de l’appareil** (ses paramètres) vers Intune. Vous trouverez des informations supplémentaires dans [Charges de travail de configuration d’appareil](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).  
 
 ## <a name="q--a"></a>Questions et réponses
 

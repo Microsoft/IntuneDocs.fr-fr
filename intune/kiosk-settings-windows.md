@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
-ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
+ms.openlocfilehash: e8300e9a4faf29ada79fad2a11e2470b965b53d1
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487749"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998888"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -97,6 +97,17 @@ Exécute une seule application sur l’appareil.
   - **Ajouter une application de Store** : sélectionnez **Ajouter une application de Store**, puis choisissez une application dans la liste.
 
     Aucune application n’est répertoriée ? En ajouter à l’aide de la procédure sous [Applications clientes](apps-add.md).
+    
+ - **Spécifier la fenêtre de maintenance pour les redémarrages de l’application**: la valeur par défaut est «non configuré», sélectionnez «exiger» pour rechercher les applications qui nécessitent un redémarrage pour terminer l’installation.
+ 
+     Si vous utilisez le navigateur Kiosk ou une autre Microsoft Store pour l’application métier, déterminez la fréquence de vérification des mises à jour d’application qui nécessitent un redémarrage afin de terminer l’installation de l’application. S’il n’est pas configuré, les Microsoft Store pour les applications métier redémarreront à une heure non planifiée 3 jours après l’installation d’une mise à jour d’application.
+     
+     - **Heure de début**de la fenêtre de maintenance: sélectionnez la date et l’heure de début de la vérification des clients pour les mises à jour d’applications qui nécessitent un redémarrage. L’heure de début par défaut est minuit, soit zéro minute.
+     
+     - **Récurrence**de la fenêtre de maintenance: la valeur par défaut est quotidienne.
+         Définir la fréquence à laquelle les fenêtres de maintenance pour les mises à jour d’application sont effectuées. La recommandation est quotidienne afin d’éviter les redémarrages d’application non planifiés.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosks"></a>Applications multiples plein écran
 

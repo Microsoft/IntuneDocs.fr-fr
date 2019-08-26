@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dc28a614514bf9b1a4987976cb057529b75a5fc
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: 75cdd958d9663d5b2d330a947a19963c219feaea
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412007"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545915"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Ajoutez et utilisez des paramètres Wi-Fi sur vos appareils dans Microsoft Intune
 
@@ -40,7 +40,7 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 - Android 4 et versions ultérieures
 - Android Enterprise et Kiosk
 - iOS 8.0 et versions ultérieures
-- macOS (Mac OS X 10.11 et ultérieur)
+- macOS X 10.11 et versions plus récentes
 - Windows 10 et versions ultérieures, Windows 10 Mobile et Windows Holographic for Business
 
 > [!NOTE]
@@ -48,35 +48,39 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
-3. Entrez un **Nom** et une **Description** pour le profil Wi-Fi.
-4. Dans la liste déroulante de la **Plateforme**, sélectionnez la plateforme de l’appareil auquel appliquer les paramètres Wi-Fi. Les options disponibles sont les suivantes :
+1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+2. Entrez les propriétés suivantes :
 
-    - **Android**
-    - **Android Entreprise**
-    - **iOS**
-    - **MacOS**
-    - **Windows 8.1 et versions ultérieures**
-    - **Windows 10 et versions ultérieures**
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil WiFi pour toute l’entreprise**.
+    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
+    - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
 
-5. Dans **Type de profil**, choisissez **Wi-Fi**.
+      - **Android**
+      - **Android Entreprise**
+      - **iOS**
+      - **MacOS**
+      - **Windows 8.1 et versions ultérieures**
+      - **Windows 10 et versions ultérieures**
 
-    - Pour **Android Enterprise** les appareils s’exécutant en tant que kiosque, vous pouvez choisir **propriétaire de l’appareil uniquement** > **Wi-Fi**.
-    - Pour **Windows 8.1 et versions ultérieures**, vous pouvez choisir **Importer Wi-Fi**. Cette option vous permet d’importer des paramètres Wi-Fi dans un fichier XML que vous avez préalablement exporté à partir d’un autre appareil.
+    - **Type de profil** : Sélectionnez **Wi-Fi**.
 
-6. Certains des paramètres Wi-Fi sont différents pour chaque plateforme. Pour afficher les paramètres pour une plateforme spécifique, choisissez :
+      > [!TIP]
+      >
+      > - Pour les appareils **Android Enterprise** s’exécutant en tant qu’appareil dédié (plein écran), choisissez **Propriétaire de l’appareil uniquement** > **WiFi**.
+      > - Pour **Windows 8.1 et versions ultérieures**, vous pouvez choisir **Importer Wi-Fi**. Cette option vous permet d’importer des paramètres Wi-Fi dans un fichier XML que vous avez préalablement exporté à partir d’un autre appareil.
+
+3. Certains des paramètres Wi-Fi sont différents pour chaque plateforme. Pour afficher les paramètres pour une plateforme spécifique, choisissez votre plateforme :
 
     - [Android](wi-fi-settings-android.md)
-    - [Android Enterprise et Kiosk](wi-fi-settings-android-enterprise.md)
+    - [Android Entreprise](wi-fi-settings-android-enterprise.md), notamment des appareils dédiés
     - [iOS](wi-fi-settings-ios.md)
     - [MacOS](wi-fi-settings-macos.md)
     - [Windows 10 et versions ultérieures](wi-fi-settings-windows.md)
     - [Windows 8.1 et versions ultérieures](wi-fi-settings-import-windows-8-1.md), y compris Windows Holographic for Business
 
-    La plupart des plateformes ont des paramètres **De base** et **D’entreprise**. **De base** inclut des fonctionnalités telles que le nom de réseau et le SSID. **Entreprise** vous permet de fournir des informations supplémentaires comme le protocole d’authentification extensible (EAP).
+4. Quand vous avez terminé, sélectionnez **Créer un profil** > **Créer**.
 
-7. Lorsque vous avez fini d’ajouter vos paramètres Wi-Fi, sélectionnez **Créer un profil** > **Créer** pour ajouter le profil de configuration. Le profil est créé et s’affiche dans la liste des profils (**Configuration de l’appareil** > **Profils**).
+Le profil est créé et s’affiche dans la liste des profils (**Configuration de l’appareil** > **Profils**).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

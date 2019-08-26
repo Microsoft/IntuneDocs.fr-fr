@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 83b1de6c246baaef54a31c0b3f4c5094d066c64d
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528242"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549969"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -85,16 +85,16 @@ Vous pouvez affecter des rôles personnalisés et intégrés à vos utilisateurs
 Pour afficher une attribution de rôle, choisissez **Intune** > **Rôles** > **Tous les rôles** > choisissez un rôle > choisissez une attribution. Vous verrez les pages suivantes :
 
 - **Propriétés** : nom, description, rôle, membres, étendues et balises de l’attribution.
-- **Membres** : tous les utilisateurs des groupes listés sont autorisés à gérer les utilisateurs/appareils figurant dans Étendue (groupes).
-- **Étendue (groupes)**  : tous les utilisateurs/appareils dans ces groupes peuvent être gérés par les utilisateurs figurant dans Membres.
+- **Membres** : tous les utilisateurs des groupes de sécurité Azure listés sont autorisés à gérer les utilisateurs/appareils figurant dans Étendue (groupes).
+- **Étendue (groupes)**  : tous les utilisateurs/appareils dans ces groupes de sécurité Azure peuvent être gérés par les utilisateurs figurant dans Membres.
 - **[Étendue balises)](scope-tags.md)**  : les utilisateurs figurant dans Membres peuvent voir les ressources qui ont les mêmes balises d’étendue.
 
 ### <a name="multiple-role-assignments"></a>Attributions de rôles multiples
-Si un utilisateur a plusieurs attributions de rôles, les autorisations dans ces attributions de rôles s’étendent à différents objets comme suit :
+Si un utilisateur a plusieurs attributions de rôles, autorisations et balises d’étendue, ces attributions de rôles s’étendent à différents objets comme suit :
 
-- Les autorisations d’affectation s’appliquent uniquement aux objets (tels que les stratégies ou applications) dans l’Étendue (groupe) de l’affectation de ce rôle. Les autorisations d’affectation ne s’appliquent aux objets dans d’autres attribution de rôles, sauf si l’autre attribution les accorde spécifiquement.
-- Les autres autorisations (telles que Créer et Lire) s’appliquent à tous les objets du même type (par exemple toutes les stratégies ou toutes les applications) dans toutes les affectations de l’utilisateur.
-- Les autorisations pour les objets de types différents (tels que les stratégies ou applications) ne s’appliquent pas les unes aux autres. Par exemple, une autorisation de lecture pour une stratégie ne fournit pas d’autorisation de lecture aux applications dans les attributions de l’utilisateur.
+- Les autorisations d’affectation et les balises d’étendue s’appliquent uniquement aux objets (tels que les stratégies ou applications) dans l’Étendue (groupe) de l’affectation de ce rôle. Les autorisations d’affectation et les balises d’étendue ne s’appliquent aux objets dans d’autres attribution de rôles, sauf si l’autre attribution les accorde spécifiquement.
+- Les autres autorisations (telles que Créer, Mettre à jour, Supprimer) et les balises d’étendue s’appliquent à tous les objets du même type (par exemple toutes les stratégies ou toutes les applications) dans toutes les affectations de l’utilisateur.
+- Les autorisations et les balises d’étendue pour les objets de types différents (tels que les stratégies ou applications) ne s’appliquent pas les unes aux autres. Par exemple, une autorisation de lecture pour une stratégie ne fournit pas d’autorisation de lecture aux applications dans les attributions de l’utilisateur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [Attribuer un rôle à un utilisateur](assign-role.md)
