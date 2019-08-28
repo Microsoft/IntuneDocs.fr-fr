@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680098"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021751"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
@@ -51,7 +51,6 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 - Les groupes peuvent inclure des utilisateurs ou des appareils, mais les messages sont envoyés seulement aux utilisateurs, et ils sont envoyés à chacun des appareils iOS ou Android que l’utilisateur a inscrits.  
 
 **Remise** :  
-- Intune tente de délivrer les notifications jusqu’à une heure après leur envoi.  
 - Intune envoie les messages à l’application Portail d’entreprise des utilisateurs, qui crée ensuite la notification Push. Les utilisateurs n’ont pas besoin d’être connectés à l’application pour que la notification soit envoyée sur l’appareil.  
 - Intune et l’application Portail d’entreprise ne peuvent pas garantir la remise d’une notification personnalisée. Les notifications personnalisées peuvent apparaître au bout de plusieurs heures, voire pas du tout : elles ne peuvent donc pas être utilisées pour des messages urgents.  
 - Les messages de notification personnalisés d’Intune apparaissent sur les appareils en tant que notifications Push standard. Si l’application Portail d’entreprise est ouverte sur un appareil iOS lors de la réception de la notification, la notification s’affiche dans l’application au lieu d’être une notification Push.  
