@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
-ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
+ms.openlocfilehash: b7c4cf67c93277ef4b54cdd72a6e06f64dd442e4
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978504"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063042"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -64,6 +64,12 @@ Lorsque vous créez un *profil* de base de référence de sécurité, ce profil 
 Vous pouvez choisir [de modifier la version](#change-the-baseline-version-for-a-profile) d’une base de référence utilisée avec un profil donné. Ainsi, à la sortie d’une nouvelle version, vous n’êtes pas obligé de créer un profil de base pour tirer parti de cette nouvelle version. Au lieu de cela, lorsque vous êtes prêt, vous pouvez sélectionner un profil de base puis utiliser l’option intégrée pour remplacer la version de l’instance pour ce profil par une nouvelle version.  
 
 ## <a name="available-security-baselines"></a>Bases de référence de la sécurité disponibles 
+
+ Vous pouvez utiliser une ou plusieurs des bases de référence disponibles dans votre environnement Intune en même temps. Vous pouvez également utiliser plusieurs instances des mêmes bases de référence de sécurité qui ont des personnalisations différentes. 
+
+Lorsque vous utilisez plusieurs bases de référence de sécurité, passez en revue les paramètres de chacune d’elles pour déterminer quand différentes bases de référence introduisent des valeurs conflictuelles pour le même paramètre. Étant donné que vous pouvez déployer des bases de référence de sécurité conçues pour différentes intentions et déployer plusieurs instances de la même base de référence qui incluent des paramètres personnalisés, vous pouvez créer des [conflits de configuration d’appareils qui doivent être examinés et résolus](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Tenez également compte de [vos profils de configuration d’appareil](device-profiles.md), qui peuvent configurer un grand nombre des mêmes paramètres que les bases de référence de sécurité. 
+
+
 
 Les instances de bases de référence de sécurité suivantes sont disponibles pour une utilisation avec Intune. Utilisez les liens pour afficher les paramètres de l’instance la plus récente de chaque base de référence. 
 

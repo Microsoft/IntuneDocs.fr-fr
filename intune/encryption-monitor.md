@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550123"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027384"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Analyser le chiffrement d’appareil avec Intune   
 
-Le rapport de chiffrement Microsoft Intune est un emplacement centralisé pour voir des détails sur l’état de chiffrement de vos appareils gérés. Affichez des détails sur l’état de chiffrement d’un appareil et accédez aux options de gestion des clés de récupération de l’appareil. Les options des clés de récupération disponibles dépendent du type d’appareil que vous visualisez.  
+Le rapport de chiffrement Microsoft Intune est un emplacement centralisé qui permet de voir des détails sur l’état de chiffrement d’un appareil et de trouver des options pour gérer les clés de récupération d’appareil. Les options des clés de récupération disponibles dépendent du type d’appareil que vous visualisez.  
 
 Pour trouver le rapport, connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et accédez à **Configuration de l’appareil**, puis sous *Surveiller*, sélectionnez **Rapport de chiffrement**.  
 
@@ -64,7 +64,7 @@ Le volet Rapport de chiffrement affiche une liste des appareils que vous gérez 
 
 - **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré.  
 
-- **Nom principal de l’utilisateur** : L’utilisateur principal de l’appareil.  
+- **Nom principal de l’utilisateur** : utilisateur principal de l’appareil.  
 
 ### <a name="device-encryption-status"></a>État du chiffrement de l’appareil  
 
@@ -74,9 +74,11 @@ Quand vous sélectionnez un appareil dans le rapport de chiffrement, Intune affi
 
 - **Préparation du chiffrement** : Évaluation de la préparation des appareils à la prise en charge du chiffrement via la stratégie MDM.  
   
-  Par exemple : Quand un appareil Windows 10 a un état de préparation *Non prêt*, il peut néanmoins prendre en charge le chiffrement. Pour avoir la désignation*Prêt*, l’appareil Windows 10 doit avoir une puce TPM. Les puces TPM ne sont pas nécessaires pour prendre en charge le chiffrement. (Consultez Préparation du chiffrement dans la section précédente pour plus d’informations.)  
+  Par exemple : Quand un appareil Windows 10 a un état de préparation *Non prêt*, il peut néanmoins prendre en charge le chiffrement. Pour avoir la désignation*Prêt*, l’appareil Windows 10 doit avoir une puce TPM. Les puces TPM ne sont pas nécessaires pour prendre en charge le chiffrement. (Consultez *Préparation du chiffrement* dans la section précédente pour plus d’informations.)  
 
-- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré. Jusqu’à 24 heures peuvent être nécessaires pour qu’Intune signale l’état de chiffrement d’un appareil ou un changement de cet état.  
+- **État du chiffrement** : indique si le lecteur du système d’exploitation est chiffré. Jusqu’à 24 heures peuvent être nécessaires pour qu’Intune signale l’état de chiffrement d’un appareil ou un changement de cet état. Cette durée inclut le temps nécessaire au chiffrement du système d’exploitation, ainsi que le temps nécessaire pour que l’appareil envoie un rapport à Intune.  
+
+  Pour accélérer la création de rapports sur l’état de chiffrement FileVault avant le check-in de l’appareil, demandez aux utilisateurs de synchroniser leurs appareils une fois le chiffrement effectué.  
 
 - **Profils** : Une liste des profils de *Configuration de l’appareil* qui s’appliquent à cet appareil et sont configurés avec les valeurs suivantes :  
 
@@ -91,6 +93,8 @@ Quand vous sélectionnez un appareil dans le rapport de chiffrement, Intune affi
   Vous pouvez utiliser la liste des profils pour identifier des stratégies individuelles à passer en revue si le *Résumé de l’état du profil* indique des problèmes.  
 
 - **Résumé de l’état du profil** : résumé des profils qui s’appliquent à cet appareil. Le récapitulatif représente la condition la moins favorable parmi les profils applicables. Par exemple, si un seul profil parmi plusieurs profils applicables entraîne une erreur, le *Résumé de l’état du profil* indique *Erreur*.  
+  
+  Pour afficher plus de détails sur un état, accédez à **Intune** > **Configuration de l’appareil** > **Profils**, puis sélectionnez le profil. Si vous le souhaitez, sélectionnez **État de l’appareil**, puis sélectionnez un appareil.  
 
 - **Informations d’état** : détails avancés sur l’état du chiffrement de l’appareil.  
 
@@ -168,7 +172,7 @@ Quand Intune chiffre un appareil macOS avec FileVault pour la première fois, un
  
 Pour les appareils gérés, Intune peut mettre en dépôt une copie de la clé de récupération personnelle. La mise en dépôt de clés permet aux administrateurs Intune d’effectuer une rotation des clés de façon à mieux protéger les appareils, et à faciliter la récupération par les utilisateurs d’une clé de récupération personnelle perdue ou ayant fait l’objet d’une rotation.  
  
-Intune prend en charge plusieurs options pour la rotation et la récupération des clés de récupération personnelles. Une des raisons pour effectuer une rotation de clé est que la clé personnelle actuelle est perdue et que cela est considéré comme présentant un risque.  
+Intune prend en charge plusieurs options pour la rotation et la récupération des clés de récupération personnelles. Une des raisons pour effectuer une rotation de clé est que la clé personnelle actuelle est perdue ou qu’elle est considérée comme présentant un risque.  
  
 > [!IMPORTANT]  
 >  Les appareils chiffrés par les utilisateurs et non pas par Intune ne peuvent pas être gérés par Intune. Cela signifie qu’Intune ne peut pas mettre en dépôt la récupération personnelle de ces appareils, ni gérer la rotation de la clé de récupération.  Avant qu’Intune puisse gérer les FileVault et les clés de récupération pour l’appareil, l’utilisateur doit déchiffrer son appareil, puis laisser Intune chiffrer celui-ci.  

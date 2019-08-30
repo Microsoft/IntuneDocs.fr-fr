@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330bfa319ca0202a5edc09d8f27e40c18ce89d39
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: 0cda32e72956e5998d5ebc8d8bed2baea39951ec
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582936"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021801"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -70,9 +70,10 @@ Pour utiliser des certificats PKCS avec Intune, vous devez disposer de l’infra
   Ce connecteur gère les demandes des fichiers PFX importés dans Intune en vue de chiffrer les e-mails S/MIME pour un utilisateur spécifique.  
 
   Ce connecteur peut automatiquement se mettre à jour quand de nouvelles versions deviennent disponibles. Pour utiliser la fonctionnalité de mise à jour, vous devez :
-  - Installer Imported PFX Certificate Connector pour Microsoft Intune sur votre serveur.
-  - Vérifier que des pare-feux sont ouverts autorisant le connecteur à contacter **autoupdate.msappproxy.net** sur le port **443**, pour recevoir automatiquement les mises à jour importantes.  
+  - Installer Imported PFX Certificate Connector pour Microsoft Intune sur votre serveur.  
+  - Vérifier que des pare-feux sont ouverts autorisant le connecteur à contacter **autoupdate.msappproxy.net** sur le port **443**, pour recevoir automatiquement les mises à jour importantes.   
 
+  Pour plus d’informations sur tous les points de terminaison réseau auxquels le connecteur doit pouvoir accéder, consultez [Microsoft Intune Certificate Connector](intune-endpoints.md#microsoft-intune-certificate-connector).
 
 - **Windows Server** :  
   Vous utilisez un serveur Windows pour héberger :

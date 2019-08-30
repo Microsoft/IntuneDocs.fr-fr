@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf808a9a7f5a801997f37bd2ecf4c13e3823c332
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1c13bffa797d8480ee0ba1db2b72c787ed94274f
+ms.sourcegitcommit: dbb2410de7e4849626f84ef07cf6a2891bcdd542
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044804"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974262"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes dans Intune
 
@@ -103,7 +103,13 @@ Vous pouvez également ajouter une autre action quand vous créez une stratégie
     
     - **Verrouiller à distance l’appareil non conforme** : Quand l’appareil n’est pas conforme, verrouillez-le. L’utilisateur est ainsi obligé d’entrer un code PIN ou un mot de passe pour déverrouiller l’appareil. 
     
-5. Configurer une **planification** : Entrez le nombre de jours de non-conformité (0 à 365) au terme desquels l’action doit être déclenchée sur les appareils des utilisateurs. Après cette période de grâce, vous pouvez appliquer une stratégie d’accès conditionnel. Si vous entrez **0** (zéro) comme nombre de jours, l’accès conditionnel prend effet **immédiatement**. Par exemple, vous pouvez bloquer l’accès aux ressources d’entreprise immédiatement si un appareil n’est pas conforme.
+5. Configurer une **planification** : Entrez le nombre de jours de non-conformité (0 à 365) au terme desquels l’action doit être déclenchée sur les appareils des utilisateurs. Après cette période de grâce, vous pouvez appliquer une stratégie d’[accès conditionnel](conditional-access-intune-common-ways-use.md). Si vous entrez **0** (zéro) comme nombre de jours, l’accès conditionnel prend effet **immédiatement**. Par exemple, si un appareil n’est pas conforme, utilisez l’accès conditionnel pour bloquer immédiatement l’accès à la messagerie, à SharePoint et à d’autres ressources de l’organisation.
+
+    Lorsque vous créez une stratégie de conformité, l’action **Marquer l’appareil comme non conforme** est automatiquement créée et définie automatiquement sur **0** jour (immédiatement). Avec cette action, lorsque l’appareil fait l’objet d’un check-in, il est évalué comme non conforme immédiatement. Si vous utilisez également l’accès conditionnel, ce dernier démarre immédiatement. Si vous souhaitez autoriser une période de grâce, modifiez la **Planification** en la définissant sur l’action **Marquer l’appareil comme non conforme**.
+    
+    Dans votre stratégie de conformité, par exemple, vous pouvez également notifier l’utilisateur. Vous pouvez ajouter l’action **Envoyer un e-mail à l’utilisateur final**. Dans cette action **Envoyer un e-mail**, définissez la **planification** sur 2 jours. Si l’appareil ou l’utilisateur final est toujours évalué comme non conforme le jour 2, votre e-mail est envoyé le jour 2. Si vous souhaitez envoyer un nouveau message à l’utilisateur le jour 5 de la non-conformité, ajoutez une autre action et définissez la **planification** sur 5 jours.
+
+    Pour plus d’informations sur la conformité et les actions intégrées, consultez la [présentation de la conformité](device-compliance-get-started.md).
 
 6. Quand vous avez terminé, sélectionnez **Ajouter** > **OK** pour enregistrer les modifications.
 
