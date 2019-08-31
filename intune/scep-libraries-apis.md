@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7baa95d6719dfa3161ae6644bbc9351d3f3d9f0
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: b6daa574b983b4a03346e521c61f267e13c7de1a
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882377"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122355"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Utiliser des API pour ajouter des autorités de certification tierces pour SCEP à Intune
 
@@ -304,4 +304,4 @@ Il est indispensable de tester et de valider l’intégration correcte de votre 
 - [Vue d’ensemble de l’ajout d’une autorité de certification tierce](certificate-authority-add-scep-overview.md)
 - [Configurer Intune](setup-steps.md)
 - [Inscription des appareils](device-enrollment.md)
-- [Configurer des profils de certificat SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) (la configuration Connecteur/Serveur NDES Microsoft n’est pas utilisée pour ce scénario)
+- [Configurer des profils de certificat SCEP](certificates-profile-scep.md) (la configuration Connecteur/Serveur NDES Microsoft n’est pas utilisée pour ce scénario)
