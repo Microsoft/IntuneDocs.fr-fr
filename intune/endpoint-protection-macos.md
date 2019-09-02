@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
+ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960412"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70158016"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Paramètres Endpoint Protection pour MacOS dans Intune  
 
@@ -100,14 +100,14 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
     - **Rotation de clé de récupération personnelle** -spécifiez la fréquence de rotation de la clé de récupération personnelle d’un appareil. Vous pouvez sélectionner la valeur par défaut **non configurée**ou une valeur de **1** à **12** mois.  
 
   - **Désactiver l’invite à la déconnexion**  
-    Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  Lorsque cette valeur est définie sur Enable, l’invite à la déconnexion est désactivée et, à la place, l’utilisateur est invité à indiquer quand il se connecte.  
+    Empêcher l’invite de l’utilisateur qui demande à l’utilisateur d’activer FileVault lorsqu’il se déconnecte.  Lorsque la valeur est Disable, l’invite à la déconnexion est désactivée. à la place, l’utilisateur est invité à indiquer quand il se connecte.  
     - **Non configuré**  
-    - **Activer** : désactive l’invite à la déconnexion.
+    - **Désactiver** : désactive l’invite à la déconnexion.
 
     **Par défaut** : Non configuré  
 
      > [!IMPORTANT]  
-     > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Activer*. Lorsque cette option est définie sur *Activer*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale que le **résumé de l’état du profil** a la valeur **Erreur**, sans fournir d’informations supplémentaires.
+     > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Désactiver*. Lorsque cette option est définie sur *Désactiver*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale que le **résumé de l’état du profil** a la valeur **Erreur**, sans fournir d’informations supplémentaires.
      > 
      > Lorsque l’option **Désactiver l’invite à la déconnexion** a la valeur *Non configuré*, la zone **Nombre d’autorisations de contournement** peut avoir la valeur *Non configuré* ou avoir une valeur.  
      > 
@@ -122,4 +122,5 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
  
     **Par défaut** : Non configuré  
 
+Pour plus d’informations sur FileVault avec Intune, consultez [clés de récupération FileVault](encryption-monitor.md#filevault-recovery-keys).
 

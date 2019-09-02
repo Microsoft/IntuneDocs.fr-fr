@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca7e7646f51331e4d24cec9b50d7afae4870ebe3
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
-ms.translationtype: HT
+ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894356"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021830"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guide du Kit SDK d’application Microsoft Intune pour les développeurs iOS
 
@@ -115,21 +115,8 @@ Pour activer le SDK d’application Intune, procédez comme suit :
      Ajoutez le groupe de ressources `IntuneMAMResources.bundle` au projet en faisant glisser le groupe de ressources sous **Copier les ressources de groupe** dans **Phases de la build**.
 
      ![SDK d’application Intune pour iOS : copier les ressources de groupe](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-     
-2. Si vous devez appeler l’une des API Intune à partir de SWIFT, votre application/extension doit importer les en-têtes du kit de développement logiciel (SDK) Intune requis via un en-tête de pontage objective-C. Si votre application/extension n’inclut pas encore d’en-tête de pontage objective-c, vous pouvez `SWIFT_OBJC_BRIDGING_HEADER` en spécifier une via le paramètre de configuration de build ou le champ d' **en-tête d’en-tête de pontage objective-c** de Xcode. Votre en-tête de pontage doit ressembler à ceci:
-
-   ```objc
-      #import <IntuneMAMSwift/IntuneMAM.h>
-   ```
-   
-   Toutes les API du kit de développement logiciel (SDK) Intune seront ainsi disponibles dans tous les fichiers sources SWIFT de votre application/extension. 
-   
-    > [!NOTE]
-    > * Vous pouvez choisir de relier uniquement des en-têtes du kit de développement logiciel (SDK) Intune spécifiques à SWIFT, plutôt qu’à IntuneMAM. h
-    > * Selon le Framework/la bibliothèque statique que vous avez intégré, le chemin d’accès au (x) fichier (s) d’en-tête peut différer.
-    > * Le fait de rendre les API du kit de développement logiciel (SDK) Intune disponibles dans SWIFT via une instruction d’importation de module (par exemple, Import IntuneMAMSwift) n’est pas pris en charge actuellement. L’utilisation d’un en-tête de pontage objective-C est l’approche recommandée.
-    
-3. Ajoutez ces infrastructures iOS au projet :  
+         
+2. Ajoutez ces infrastructures iOS au projet :  
 -  MessageUI.framework  
 -  Security.framework  
 -  MobileCoreServices.framework  
@@ -142,7 +129,7 @@ Pour activer le SDK d’application Intune, procédez comme suit :
 -  QuartzCore.framework  
 -  WebKit.framework
 
-4. Activez le partage de trousseau (s’il ne l’est pas déjà) en cliquant sur **Fonctionnalités** dans chaque cible du projet et en activant le commutateur **Partage de trousseau**. Le partage de trousseau est nécessaire pour passer à l’étape suivante.
+3. Activez le partage de trousseau (s’il ne l’est pas déjà) en cliquant sur **Fonctionnalités** dans chaque cible du projet et en activant le commutateur **Partage de trousseau**. Le partage de trousseau est nécessaire pour passer à l’étape suivante.
 
    > [!NOTE]
    > Votre profil d’approvisionnement doit prendre en charge de nouvelles valeurs de partage de trousseau. Les groupes de trousseau d’accès doivent prendre en charge un caractère générique. Vous pouvez le vérifier en ouvrant le fichier .mobileprovision dans un éditeur de texte, en recherchant **keychain-access-groups** et en vérifiant que vous avez un caractère générique. Par exemple :
@@ -154,7 +141,7 @@ Pour activer le SDK d’application Intune, procédez comme suit :
    >  </array>
    >  ```
 
-5. Après avoir activé le partage de trousseau, procédez comme suit pour créer un groupe d’accès distinct dans lequel le kit de développement logiciel (SDK) de l’application Intune stockera ses données. Vous pouvez créer un groupe d’accès au trousseau à l’aide de l’interface utilisateur ou du fichier des droits. Si vous utilisez l’interface utilisateur pour créer le groupe d’accès au trousseau, assurez-vous de suivre les étapes ci-dessous :
+4. Après avoir activé le partage de trousseau, procédez comme suit pour créer un groupe d’accès distinct dans lequel le kit de développement logiciel (SDK) de l’application Intune stockera ses données. Vous pouvez créer un groupe d’accès au trousseau à l’aide de l’interface utilisateur ou du fichier des droits. Si vous utilisez l’interface utilisateur pour créer le groupe d’accès au trousseau, assurez-vous de suivre les étapes ci-dessous :
 
      a. Si votre application mobile n’a pas de groupes d’accès au trousseau définis, ajoutez l’ID de bundle de l’application comme **premier** groupe.
     
@@ -172,11 +159,11 @@ Pour activer le SDK d’application Intune, procédez comme suit :
       > [!NOTE]
       > Un fichier de droits d’accès est un fichier XML propre à votre application mobile. Il permet de spécifier des fonctionnalités et des autorisations spéciales dans votre application iOS. Si vous ne disposiez pas d’un fichier de droits, l’activation du partage de trousseau (étape 3) doit entraîner Xcode à en générer un pour votre application. Vérifiez que l’ID de bundle de l’application est la première entrée de la liste.
 
-6. Incluez chaque protocole que votre application mobile passe à `UIApplication canOpenURL` dans le tableau `LSApplicationQueriesSchemes` du fichier Info.plist de votre application. Veillez à enregistrer vos modifications avant de passer à l’étape suivante.
+5. Incluez chaque protocole que votre application mobile passe à `UIApplication canOpenURL` dans le tableau `LSApplicationQueriesSchemes` du fichier Info.plist de votre application. Veillez à enregistrer vos modifications avant de passer à l’étape suivante.
 
-7. Si votre application n’utilise pas encore FaceID, vérifiez que la clé [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) est configurée avec un message par défaut. Cela est obligatoire pour permettre à iOS d’informer l’utilisateur de la façon dont l’application a l’intention d’utiliser FaceID. Un paramètre de stratégie de protection des applications Intune permet que FaceID soit utilisé comme méthode d’accès aux applications quand il est configuré par l’administrateur informatique.
+6. Si votre application n’utilise pas encore FaceID, vérifiez que la clé [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) est configurée avec un message par défaut. Cela est obligatoire pour permettre à iOS d’informer l’utilisateur de la façon dont l’application a l’intention d’utiliser FaceID. Un paramètre de stratégie de protection des applications Intune permet que FaceID soit utilisé comme méthode d’accès aux applications quand il est configuré par l’administrateur informatique.
 
-8. Utilisez l’outil IntuneMAMConfigurator inclus dans le [référentiel du Kit SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) pour terminer la configuration du fichier Info.plist de votre application. L’outil a trois paramètres :
+7. Utilisez l’outil IntuneMAMConfigurator inclus dans le [référentiel du Kit SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) pour terminer la configuration du fichier Info.plist de votre application. L’outil a trois paramètres :
 
    |Propriété|Comment l’utiliser|
    |---------------|--------------------------------|
@@ -228,7 +215,7 @@ Si votre application utilise déjà ADAL ou MSAL, les configurations suivantes s
 
 En outre, les applications peuvent remplacer ces paramètres Azure AD lors de l’exécution. Pour ce faire, il vous suffit de définir les propriétés `aadAuthorityUriOverride`, `aadClientIdOverride` et `aadRedirectUriOverride` sur l’instance `IntuneMAMPolicyManager`.
 
-4. Vérifiez que les étapes pour donner des autorisations à votre application iOS pour le service de stratégie de protection d’application (APP) sont respectées. Suivez les instructions de la [mise en route avec le guide du SDK Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) sous « Autoriser votre application à accéder au service de protection d’application Intune (facultatif) ».  
+4. Vérifiez que les étapes pour donner des autorisations à votre application iOS pour le service de stratégie de protection d’application (APP) sont respectées. Suivez les instructions du [guide de mise en route avec le SDK Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) sous « [Autoriser votre application à accéder au service de protection d’application Intune (facultatif)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional) ».  
 
 > [!NOTE]
 > L’approche du fichier Info.plist est recommandée pour tous les paramètres statiques et qui n’ont pas besoin d’être définis lors de l’exécution. Les valeurs affectées aux propriétés `IntuneMAMPolicyManager` prévalent sur toutes les valeurs correspondantes spécifiées dans le fichier Info.plist et persistent même après le redémarrage de l’application. Le Kit SDK continue à les utiliser pour les archivages de stratégie, jusqu'à ce que l’utilisateur soit désinscrit ou que les valeurs soient effacées ou modifiées.
