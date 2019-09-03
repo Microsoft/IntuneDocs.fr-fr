@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993697"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063001"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Résolution des problèmes d’inscription d’appareils Windows dans Microsoft Intune
 
@@ -205,7 +205,7 @@ Erreur: «un problème est survenu. Votre organisation ne prend pas en charge ce
 Pour résoudre ce problème dans un environnement Intune autonome, procédez comme suit: 
  
 1. Connectez-vous au [portail Azure](https://portal.azure.com/) en tant qu’administrateur.    
-2. Sélectionnez **Intune** sur la gauche, puis accédez à  > inscription d’appareil restrictions d'**inscription**.    
+2. Sélectionnez **Intune** sur la gauche, puis accédez à **inscription d’appareil** > **restrictions d’inscription**.    
 3. Dans **restrictions de type d’appareil**, cliquez sur **plateformes**, puis sélectionnez **autoriser** pour **Windows (MDM)** .    
 4. Cliquez sur **Save**.    
  
@@ -223,7 +223,7 @@ Pour résoudre ce problème dans le MDM hybride avec Intune et Configuration Man
 #### <a name="resolution"></a>Résolution
 1. Connectez-vous au [portail Azure](https://portal.azure.com/) en tant qu’administrateur.    
 2. Accédez à **Azure Active Directory > appareils > paramètres**de l’appareil.    
-3. Définissez **les utilisateurs peuvent joindre des appareils à Azure ad** à **tout** ou **sélectionné**.
+3. Définissez **Les utilisateurs peuvent joindre des appareils à Azure AD** sur **Tous** ou **Sélectionné**.
 
    Si vous choisissez **sélectionné**, cliquez sur **sélectionné**, puis cliquez sur **Ajouter des membres** pour ajouter tous les utilisateurs qui peuvent joindre leurs appareils à Azure ad. Assurez-vous que tous les comptes de Azure AD pour le package de configuration sont ajoutés.
  
@@ -331,11 +331,11 @@ Erreur 0x80070774: un problème s’est produit. Vérifiez que vous utilisez les
 
 Ce problème se produit généralement avant le redémarrage de l’appareil dans un scénario de Azure AD Hybride AutoPilot, lorsque l’appareil expire pendant l’écran de connexion initial. Cela signifie que le contrôleur de domaine est introuvable ou a été correctement atteint en raison de problèmes de connectivité. Ou que l’appareil est entré dans un État qui ne peut pas rejoindre le domaine.
 
-**Cause:** La cause la plus courante est que jonction Azure AD Hybride est utilisé et que la fonctionnalité attribuer un utilisateur est configurée dans le profil AutoPilot. L’utilisation de la fonctionnalité attribuer un utilisateur permet d’effectuer une jonction de Azure AD sur l’appareil au cours de l’écran de connexion initial, qui place l’appareil dans un État où il ne peut pas joindre votre domaine local. Par conséquent, la fonctionnalité attribuer un utilisateur doit être utilisée uniquement dans les scénarios de connexion Azure AD standard.  La fonctionnalité doit être utilisée dans les scénarios de jonction Azure AD Hybride.
+**Cause:** La cause la plus courante est que jonction Azure AD Hybride est utilisé et que la fonctionnalité attribuer un utilisateur est configurée dans le profil AutoPilot. L’utilisation de la fonctionnalité attribuer un utilisateur permet d’effectuer une jonction de Azure AD sur l’appareil au cours de l’écran de connexion initial, qui place l’appareil dans un État où il ne peut pas joindre votre domaine local. Par conséquent, la fonctionnalité attribuer un utilisateur doit être utilisée uniquement dans les scénarios de connexion Azure AD standard.  La fonctionnalité ne doit pas être utilisée dans les scénarios de jonction Azure AD Hybride.
 
 #### <a name="resolution"></a>Résolution
 
-1. Accédez à  >  **inscription** >  d’appareil Intune appareils d’inscription Windows. > 
+1. Accédez à **inscription** >  **d’appareil** > **Intuneappareilsd'** > **inscriptionWindows**.
 2. Sélectionnez l’appareil qui rencontre le problème > cliquez sur les points de suspension (...) du côté le plus à droite.
 3. Sélectionnez **Annuler l’affectation** de l’utilisateur et attendez la fin du processus.
 4. Vérifiez que le profil AutoPilot Azure AD Hybride est affecté avant de retenter l’installation de OOBE.
