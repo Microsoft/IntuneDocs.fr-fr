@@ -58,7 +58,7 @@ Les paramètres de mise à jour contrôlent quels bits un appareil va téléchar
   CSP Windows Update: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Autoriser** : sélectionnez *autoriser* pour rechercher des mises à jour d’application à partir de Microsoft Update.  
-  - Bloc-sélectionnez bloquer pour empêcher l’analyse des mises à jour d’application.  
+  - **Bloc**-sélectionnez bloquer pour empêcher l’analyse des mises à jour d’application.  
 
 - **Pilotes Windows**  
   **Valeur Par défaut** : Autoriser  
@@ -165,7 +165,7 @@ Paramètres de l’expérience utilisateur contrôlent l’expérience de l’ut
  
   - *Version 1703 de Windows et versions antérieures* : lorsque vous redémarrez un appareil, certaines vérifications sont effectuées : utilisateurs actifs, niveaux de batterie, jeux en cours d’exécution, etc.  
   
-  - *À compter de la version 1709 de Windows *: pendant les heures d’activité, les processus suivants n’exécutent pas de mises à jour : analyse, téléchargement, installation et redémarrage. Après les heures d’activité, les processus de mise à jour sont exécutés et peuvent sortir l’appareil de veille, analyser, télécharger, installer et redémarrer l’appareil tant que les vérifications de la batterie et de l’alimentation électrique donnent de bons résultats. 
+  - *À compter de la version 1709 de Windows*: pendant les heures d’activité, les processus suivants n’exécutent pas de mises à jour : analyse, téléchargement, installation et redémarrage. Après les heures d’activité, les processus de mise à jour sont exécutés et peuvent sortir l’appareil de veille, analyser, télécharger, installer et redémarrer l’appareil tant que les vérifications de la batterie et de l’alimentation électrique donnent de bons résultats. 
 
 - **Empêcher l’utilisateur de suspendre les mises à jour Windows**  
   **Valeur Par défaut** : Autoriser  
