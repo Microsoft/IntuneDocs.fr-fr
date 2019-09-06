@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a3055d375c98f9a74d0e738b7e894ba038b31776
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783241"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121862"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -166,7 +166,7 @@ L’infrastructure à clé publique fournit des certificats aux appareils ou uti
 
 Si vous comptez utiliser des certificats avec des profils VPN, Wi-Fi ou de messagerie avec Intune, veillez à [mettre en place une infrastructure PKI](certificates-configure.md) prise en charge, prête à créer et à déployer des profils de certificat.
 
-En outre, si des certificats SCEP seront émis, vous devez choisir le serveur qui hébergera la fonctionnalité Service d’inscription de périphériques réseau (NDES), et comment la communication s’effectuera.
+Par ailleurs, si des profils de certificat SCEP sont utilisés, vous devez choisir le serveur qui héberge la fonctionnalité Service d’inscription de périphériques réseau (NDES), et la façon dont la communication s’établit.
 
 Informations supplémentaires :
 
@@ -297,7 +297,7 @@ Les profils de certificat permettent à Intune de transmettre un certificat à u
 Nous vous recommandons de documenter quel groupe d’utilisateurs a besoin d’un certificat, le nombre de profils de certificat dont vous avez besoin et les groupes d’utilisateurs sur lesquels ils sont déployés.
 
 >[!NOTE]
-> N’oubliez pas que le certificat racine approuvé est requis pour le certificat SCEP. Assurez-vous par conséquent que tous les utilisateurs ciblés pour le certificat SCEP reçoivent également un certificat racine approuvé. Si vous avez besoin de certificats SCEP, concevez et documentez les modèles de certificat SCEP nécessaires.
+> N’oubliez pas que le certificat racine approuvé est nécessaire pour le profil de certificat SCEP. Vous devez donc vérifier que tous les utilisateurs ciblés dans le profil de certificat SCEP reçoivent également un certificat racine approuvé. Si vous avez besoin de certificats SCEP, concevez et documentez les modèles de certificat SCEP nécessaires.
 
 Voici un exemple montrant comment documenter les certificats lors de la conception :
 

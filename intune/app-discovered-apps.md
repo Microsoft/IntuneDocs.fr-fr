@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 1d545e5848330e8c4f34eca21a992ad05ca8c85d
+ms.sourcegitcommit: ffbd1542d33810ab97a0be8faf26f8061328c228
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590903"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206403"
 ---
 # <a name="intune-discovered-apps"></a>Applications découvertes par Intune
 
@@ -62,6 +62,9 @@ La liste suivante fournit le type de plate-forme d’application, les applicatio
 | macOS | Toutes les applications installées sur l’appareil | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Android | Uniquement les applications gérées | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Android Entreprise | Uniquement les applications gérées | Uniquement les applications installées dans le profil professionnel | Tous les 7 jours à partir de l’inscription de l’appareil |
+
+> [!NOTE]
+>Les appareils Windows 10 avec une jonction Azure AD Hybride et l’extension de gestion Intune ne collectent pas l’inventaire des applications en suivant la planification ci-dessus. Il s'agit d'un problème connu. Toutes les modifications ou mises à jour de ce comportement sont annoncées dans [En développement](in-development.md) et/ou [Nouveautés](whats-new.md).
 
 Il peut arriver que le nombre d’applications découvertes ne corresponde pas au nombre d’états d’installation d’applications. Voici quelques sources d’incohérences :
 - Une modification de ciblage d’une application managée installée peut faire baisser le nombre d’installations dans le panneau d’état, tandis que l’application reste comptée parmi les applications détectées.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/07/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,130 +16,87 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: 4d9554893a8317b014007bd7089ed62f222975c8
+ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582919"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214293"
 ---
-# <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Configurer un profil de certificat pour vos appareils dans Microsoft Intune
+# <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utiliser des certificats pour l’authentification dans Microsoft Intune  
 
-Vous accordez aux utilisateurs l’accès aux ressources d’entreprise par le biais de profils VPN, Wi-Fi ou de messagerie. À l’aide de certificats, vous pouvez authentifier ces connexions. Quand vous utilisez des certificats, les utilisateurs finaux n’ont pas besoin d’entrer un nom d’utilisateur et un mot de passe pour s’authentifier.
+Utilisez des certificats avec Intune pour authentifier vos utilisateurs dans les applications et les ressources de l’entreprise avec des profils VPN, Wi-Fi ou e-mail. Quand vous utilisez des certificats pour authentifier ces connexions, vos utilisateurs finaux n’ont pas besoin d’entrer un nom d’utilisateur et un mot de passe, ce qui leur permet de bénéficier d’un accès transparent. Les certificats sont également utilisés pour signer et chiffrer les e-mails à l’aide de S/MIME.
 
-Vous pouvez utiliser Intune pour affecter ces certificats aux appareils que vous gérez. Intune prend en charge l’affectation et la gestion des types de certificats suivants :
+Intune prend en charge les types de certificat suivants :  
 
-- Protocole SCEP (Simple Certificate Enrollment Protocol)
-- PKCS#12 (ou PFX)
+- Protocole SCEP (Simple Certificate Enrollment Protocol)  
+- PKCS#12 (ou PFX)  
+- Certificats PKCS importés
 
-Chacun de ces types de certificats a ses propres prérequis et exigences en matière d’infrastructure.
+Pour déployer ces certificats, vous créez des profils de certificat et les attribuez à des appareils.  
 
+Chaque profil de certificat que vous créez prend en charge une seule plateforme. Par exemple, si vous utilisez des certificats PKCS, vous créez un profil de certificat PKCS pour Android et un autre profil de certificat PKCS pour iOS. Si vous utilisez également des certificats SCEP pour ces deux plateformes, vous créez un profil de certificat SCEP pour Android et un autre pour iOS.  
 
-## <a name="overview"></a>Vue d’ensemble
+**Éléments généraux à prendre en compte** :  
+- Si vous n’avez pas d’autorité de certification d’entreprise, vous devez la créer ou utiliser [celle d’un de nos partenaires pris en charge](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).
+- Si vous utilisez des profils de certificat SCEP à l’aide des services de certificats Active Directory, vous configurez un serveur de service d’inscription de périphérique réseau (NDES).
+- Si vous utilisez SCEP avec l’un de nos partenaires d’autorité de certification, vous devez [l’intégrer à Intune](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
+- Les profils de certificat SCEP et PKCS impliquent le téléchargement, l’installation et la configuration de Microsoft Intune Certificate Connector. 
+- Les certificats PCKS importés impliquent le téléchargement, l’installation et la configuration de PFX Certificate Connector pour Microsoft Intune.
+- Les certificats PKCS importés impliquent l’exportation des certificats de votre autorité de certification et leur importation dans Microsoft Intune. Voir le [projet PowerShell PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)
+- Pour qu’un appareil utilise des profils de certificat SCEP, PCKS ou PKCS importés, il doit approuver votre autorité de certification racine. Vous utilisez un *profil de certificat approuvé* pour déployer votre certificat d’autorité de certification racine de confiance sur les appareils.  
 
-1. Veillez à ce que l’infrastructure de certificat appropriée soit configurée. Vous pouvez utiliser des [certificats SCEP](certificates-scep-configure.md) et des [certificats PKCS](certficates-pfx-configure.md).
+## <a name="supported-platforms-and-certificate-profiles"></a>Profils de certificat et plateformes prises en charge  
+| Plate-forme              | Profil de certificat approuvé | Profil de certificat PKCS | Profil de certificat SCEP | Profil de certificat PKCS importé  |
+|--|--|--|--|---|
+| Administrateur d’appareil Android | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png)|  ![Pris en charge](./media/certificates-configure/green-check.png) |
+| Android Entreprise <br> - Propriétaire de l’appareil   | ![Pris en charge](./media/certificates-configure/green-check.png) |   |  |   |
+| Android Entreprise <br> - Profil professionnel    | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
+| iOS                   | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
+| macOS                 | ![Pris en charge](./media/certificates-configure/green-check.png) |   |![Pris en charge](./media/certificates-configure/green-check.png)|![Pris en charge](./media/certificates-configure/green-check.png)|
+| Windows Phone 8.1     |![Pris en charge](./media/certificates-configure/green-check.png)  |  | ![Pris en charge](./media/certificates-configure/green-check.png)| ![Pris en charge](./media/certificates-configure/green-check.png) |
+| Windows 8.1 et versions ultérieures |![Pris en charge](./media/certificates-configure/green-check.png)  |  |![Pris en charge](./media/certificates-configure/green-check.png) |   |
+| Windows 10 et versions ultérieures  | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
 
-2. Installez un certificat racine ou un certificat intermédiaire d’une autorité de certification sur chaque appareil pour qu’il reconnaisse la légitimité de votre autorité de certification. Pour installer le certificat, créez et affectez un **profil de certificat approuvé** sur chaque appareil. Quand vous affectez ce profil, les appareils gérés par Intune demandent et reçoivent le certificat racine. Vous devez créer un profil distinct pour chaque plateforme. Les profils de certificat approuvés sont disponibles pour les plateformes suivantes :
+## <a name="export-the-trusted-root-ca-certificate"></a>Exporter le certificat d’autorité de certification racine de confiance  
+Pour utiliser des certificats PKCS, SCEP et PKCS importés, les appareils doivent approuver votre autorité de certification racine. Pour établir cette approbation, vous exportez le certificat d’autorité de certification racine de confiance, ainsi que les certificats d’autorité de certification intermédiaire ou émettrice, sous la forme d’un certificat public (.cer). Vous pouvez obtenir ces certificats auprès de l’autorité de certification émettrice ou de n’importe quel appareil qui approuve votre autorité de certification émettrice.  
 
-    - iOS 8.0 et versions ultérieures
-    - macOS 10.11 et ultérieur
-    - Android 4.0 et versions ultérieures
-    - Android Entreprise  
-    - Windows 8.1 et versions ultérieures
-    - Windows Phone 8.1 et versions ultérieures
-    - Windows 10 et versions ultérieures
+Pour exporter le certificat, consultez la documentation de votre autorité de certification. Vous devez exporter le certificat public dans un fichier .cer.  N’exportez pas la clé privée (fichier .pfx).  
 
-    > [!NOTE]  
-    > Les profils de certificat ne sont pas pris en charge sur les appareils qui exécutent *Android Entreprise pour les appareils dédiés*.
+Vous utilisez ce fichier .cer pour [créer des profils de certificat approuvé](#create-trusted-certificate-profiles) afin de déployer ce certificat sur vos appareils.  
 
-3. Créez des profils de certificat pour que les appareils demandent l’utilisation d’un certificat à des fins d’authentification pour l’accès au VPN, au Wi-Fi et aux e-mails. Les types de profil suivants sont disponibles pour différentes plateformes :  
+## <a name="create-trusted-certificate-profiles"></a>Créer des profils de certificat approuvés  
+Créez un profil de certificat approuvé pour pouvoir créer un profil de certificat SCEP, PKCS ou PKCS importé. Le déploiement d’un profil de certificat approuvé garantit que chaque appareil reconnaît la légitimité de votre autorité de certification. Les profils de certificat SCEP référencent directement un profil de certificat approuvé. Les profils de certificat PKCS ne référencent pas directement le profil de certificat approuvé, mais référencent directement le serveur qui héberge votre autorité de certification. Les profils de certificat PKCS importé ne référencent pas directement le profil de certificat approuvé, mais peuvent l’utiliser sur l’appareil. Le déploiement d’un profil de certificat approuvé sur des appareils garantit que cette confiance est établie. Quand un appareil ne fait pas confiance à l’autorité de certification racine, la stratégie de profil de certificat SCEP ou PKCS échoue.  
 
-   | Plate-forme     |Certificat PKCS|Certificat SCEP| Certificat importé PKCS | 
-   |--------------|----------------|----------------|-------------------|
-   | Android                | Oui    | Oui    | Oui    |
-   | Android Entreprise     | Oui    | Oui    | Oui    |
-   | iOS                    | Oui    | Oui    | Oui    |
-   | macOS                  |        | Oui    | Oui    |
-   | Windows Phone 8.1      |        | Oui    | Oui    |
-   | Windows 8.1 et versions ultérieures  |        | Oui    |        |
-   | Windows 10 et versions ultérieures   | Oui    | Oui    | Oui    |
-
-   Veillez à créer un profil distinct pour chaque plateforme d’appareil. Quand vous créez le profil, associez-le au profil de certificat racine approuvé que vous avez déjà créé.
-
-### <a name="further-considerations"></a>Autres considérations
-
-- Si vous n’avez pas d’autorité de certification d’entreprise, vous devez en créer une.
-- Si vous utilisez des profils SCEP, configurez un serveur NDES (service d’inscription de périphérique réseau).
-- Que vous envisagiez d’utiliser des profils SCEP ou PKCS, téléchargez et configurez Microsoft Intune Certificate Connector.
+Créez un profil de certificat approuvé distinct pour chaque plateforme d’appareil que vous voulez prendre en charge, tout comme pour les profils de certificat SCEP, PCKS et PKCS importés.  
 
 
-## <a name="step-1-configure-your-certificate-infrastructure"></a>Étape 1 : Configurer votre infrastructure de certificat
+### <a name="to-create-a-trusted-certificate-profile"></a>Pour créer un profil de certificat approuvé  
 
-Consultez l’un des articles suivants pour vous aider à configurer l’infrastructure pour chaque type de profil de certificat :
+1. Connectez-vous au [portail Intune](https://aka.ms/intuneportal).  
+2. Sélectionnez **Configuration de l’appareil** > **Gérer** > **Profils** > **Créer un profil**.  
+3. Entrez un **nom et une description** pour le profil de certificat approuvé.  
+4. Dans la liste déroulante **Plateforme**, sélectionnez la plateforme d’appareil pour ce certificat approuvé.  
+5. Dans la liste déroulante **Type de profil**, choisissez **Certificat approuvé**.  
+6. Accédez au fichier .cer du certificat d’autorité de certification racine de confiance que vous avez exporté pour l’utiliser avec ce profil de certificat, puis sélectionnez **OK**.  
+7. Pour les appareils Windows 8.1 et Windows 10 uniquement, sélectionnez le **Magasin de destination** pour le certificat approuvé à partir de :  
+   - **Boutique de certificats de l’ordinateur - Racine**
+   - **Boutique de certificats de l’ordinateur - Intermédiaire**
+   - **Boutique de certificats de l’utilisateur - Intermédiaire**
+8. Lorsque vous avez terminé, choisissez **OK**, revenez au volet **Créer un profil** et sélectionnez **Créer**.
+Le profil apparaît dans la liste des profils dans le volet de la vue *Configuration de l’appareil – Profils*, avec le type de profil **Certificat approuvé**.  Veillez à attribuer ce profil aux appareils qui utilisent des certificats SCEP ou PCKS. Pour attribuer ce profil à des groupes, consultez [Attribuer des profils d’appareil](device-profile-assign.md).
 
-- [Configurer et gérer les certificats SCEP avec Intune](certificates-scep-configure.md)
-- [Configurer et gérer les certificats PKCS avec Intune](certficates-pfx-configure.md)
+> [!NOTE]  
+> Les appareils Android peuvent afficher un message indiquant qu’un tiers a installé un certificat approuvé.  
 
+## <a name="additional-resources"></a>Ressources supplémentaires  
+- [Attribuer des profils d’appareils](device-profile-assign.md)  
+- [Utiliser S/MIME pour signer et chiffrer des e-mails](certificates-s-mime-encryption-sign.md)  
+- [Utiliser l’autorité de certification tierce](certificate-authority-add-scep-overview.md)  
 
-## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Étape 2 : Exporter votre certificat d’autorité de certification racine approuvée
+## <a name="next-steps"></a>Étapes suivantes  
+Une fois que vous avez créé et attribué des profils de certificat approuvé, créez des profils de certificat SCEP, PKCS ou PKCS importé pour chaque plateforme que vous voulez utiliser. Pour continuer, consultez les articles suivants :  
+- [Configurer l’infrastructure pour prendre en charge les certificats SCEP avec Intune](certificates-scep-configure.md)  
+- [Configurer et gérer les certificats PKCS avec Intune](certficates-pfx-configure.md)  
+- [Créer un profil de certificat PKCS importé](certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile)  
 
-Exportez le certificat d’autorité de certification racine approuvée sous la forme d’un certificat public (.cer) à partir de l’autorité de certification émettrice ou d’un appareil qui approuve votre autorité de certification émettrice. N’exportez pas la clé privée (.pfx).
-
-Vous importez ce certificat quand vous configurez un profil de certificat approuvé.
-
-## <a name="step-3-create-trusted-certificate-profiles"></a>Étape 3 : Créer des profils de certificat approuvés
-
-Vous devez créer un profil de certificat approuvé pour pouvoir créer un profil de certificat SCEP ou PKCS. Un profil de certificat approuvé et un profil SCEP ou PKCS sont nécessaires pour chaque plateforme d’appareil. Les étapes de création de certificats approuvés sont similaires pour chaque plateforme d’appareil.
-
-1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Configuration de l’appareil** > **Gérer** > **Profils** > **Créer un profil**.
-2. Entrez les propriétés suivantes :
-
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **un profil de certificat approuvé pour les appareils de propriétaire d’appareils Android Entreprise** ou **un profil de certificat approuvé pour les appareils iOS**.
-    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
-    - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
-
-      - **Android**
-      - **Android Entreprise** > **Propriétaire d’appareil uniquement**
-      - **Android Entreprise** > **Profil professionnel**
-      - **iOS**
-      - **MacOS**
-      - **Windows Phone 8.1**
-      - **Windows 8.1 et versions ultérieures**
-      - **Windows 10 et versions ultérieures**
-
-    - **Type de profil** : Choisir un **certificat approuvé**.
-
-3. Accédez au certificat que vous avez enregistré à l’[Étape 2 : Exporter votre certificat d’autorité de certification racine approuvée](#step-2-export-your-trusted-root-ca-certificate), puis sélectionnez **OK**.
-4. Pour les appareils Windows 8.1 et Windows 10 uniquement, sélectionnez le **Magasin de destination** pour le certificat approuvé à partir de :
-
-    - **Magasin de certificats de l'ordinateur – Racine** (SCEP)
-    - **Magasin de certificats de l'ordinateur – Intermédiaire** (SCEP)
-    - **Magasin de certificats pour l'utilisateur – Intermédiaire** (PKCS, SCEP)
-
-5. Lorsque vous avez terminé, choisissez **OK**, revenez au volet **Créer un profil** et sélectionnez **Créer**.
-
-Le profil est créé et apparaît dans la liste. Pour affecter ce profil à des groupes, consultez [Affecter des profils d’appareil](device-profile-assign.md).
-
-   >[!NOTE]
-   > Les appareils Android peuvent afficher un message indiquant qu’un tiers a installé un certificat approuvé.
-
-## <a name="step-4-create-scep-or-pkcs-certificate-profiles"></a>Étape 4 : Créer des profils de certificat SCEP ou PKCS
-
-Consultez l’un des articles suivants pour vous aider à configurer et affecter chaque type de profil de certificat :
-
-- [Configurer et gérer les certificats SCEP avec Intune](certificates-scep-configure.md)
-- [Configurer et gérer les certificats PKCS avec Intune](certficates-pfx-configure.md)
-
-Après avoir créé un profil de certificat approuvé, créez des profils de certificat SCEP ou PKCS pour chaque plateforme que vous voulez utiliser. Quand vous créez un profil de certificat SCEP, entrez un profil de certificat approuvé pour cette même plateforme. Cette étape lie les deux profils de certificat, mais vous devez quand même affecter chaque profil séparément.
-
-## <a name="next-steps"></a>Étapes suivantes
-
-[Attribuer des profils d’appareils](device-profile-assign.md)  
-[Utiliser S/MIME pour signer et chiffrer des e-mails](certificates-s-mime-encryption-sign.md)  
-[Utiliser une autorité de certification tierce](certificate-authority-add-scep-overview.md)
-
-## <a name="see-also"></a>Voir aussi
-
-[Résolution des problèmes de configuration NDES pour une utilisation avec des profils de certificat Microsoft Intune](https://support.microsoft.com/help/4459540)
-
-[Dépannage du déploiement de profil de certificat SCEP dans Microsoft Intune](https://support.microsoft.com/help/4457481)

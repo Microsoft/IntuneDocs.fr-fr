@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 267eb630b962893d5ab32530a095fe2fd3f7102e
-ms.sourcegitcommit: cbd406e3c6ab8c9a29d58dfda4a18e34277a1594
+ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620220"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122139"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -53,6 +53,18 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-august-26-2019"></a>Semaine du 26 août 2019
+
+### <a name="configure-microsoft-edge-settings-using-administrative-templates-for-windows-10-and-newer----5228061---"></a>Configurer les paramètres Microsoft Edge à l’aide de modèles d’administration pour Windows 10 et versions ultérieures <!-- 5228061 -->
+
+Sur les appareils Windows 10 et versions ultérieures, vous pouvez créer des modèles d’administration pour configurer des paramètres de stratégie de groupe dans Intune. Dans cette mise à jour, vous pouvez configurer les paramètres qui s’appliquent à partir de la version 77 de Microsoft Edge.
+
+Pour en savoir plus sur les modèles d’administration, consultez [Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Intune](administrative-templates-windows.md).
+
+S’applique à :
+
+- Windows 10 et versions ultérieures (Windows RS4+)
 
 ## <a name="week-of-august-12-2019"></a>Semaine du 12 août 2019
 
@@ -1016,8 +1028,8 @@ Tout changement apporté à une stratégie de mot de passe nouvelle ou existante
 S’applique à :  
 macOS
 
-#### <a name="assign-scep-certificates-to-a-userless-macos-device-----2340521----"></a>Attribuer des certificats SCEP à un appareil macOS sans utilisateur  <!-- 2340521  -->
-Vous pouvez attribuer des certificats SCEP (Simple Certificate Enrollment Protocol, protocole d’inscription de certificats simple) à l’aide d’attributs d’appareil à des appareils macOS, notamment à des appareils sans affinité utilisateur, et associer le profil de certificat à des profils Wi-Fi ou VPN. La prise en charge existante est ainsi étendue, permettant d’[attribuer des certificats SCEP à des appareils avec et sans affinité utilisateur](certificates-scep-configure.md#create-a-scep-certificate-profile) qui exécutent Windows, iOS et Android.  Cette mise à jour ajoute la possibilité de sélectionner le type de certificat *Appareil* quand vous configurez un profil de certificat SCEP pour macOS.
+#### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521------"></a>Attribuer des certificats SCEP à un appareil macOS sans utilisateur    <!-- 2340521    -->
+Vous pouvez attribuer des certificats SCEP (Simple Certificate Enrollment Protocol, protocole d’inscription de certificats simple) à l’aide d’attributs d’appareil à des appareils macOS, notamment à des appareils sans affinité utilisateur, et associer le profil de certificat à des profils Wi-Fi ou VPN. La prise en charge existante est ainsi étendue, permettant d’[attribuer des certificats SCEP à des appareils avec et sans affinité utilisateur](certificates-profile-scep.md) qui exécutent Windows, iOS et Android.  Cette mise à jour ajoute la possibilité de sélectionner le type de certificat *Appareil* quand vous configurez un profil de certificat SCEP pour macOS.
 
 S’applique à : 
 - macOS

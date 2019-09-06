@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: faff917dfafaaedb988cbbfb8174547f0b0ccf3b
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648456"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122261"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -42,7 +42,7 @@ Cet article fournit une vue d’ensemble de cette fonctionnalité du point de vu
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Les étapes suivantes fournissent une vue d’ensemble de l’émission de certificats SCEP dans Intune :
+Les étapes suivantes fournissent une vue d’ensemble de l’utilisation de SCEP pour les certificats dans Intune :
 
 1. Dans Intune, un administrateur crée un profil de certificat SCEP, puis cible le profil sur des utilisateurs ou appareils.
 2. L’appareil s’enregistre auprès d’Intune.
@@ -106,9 +106,9 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Configurer et déployer un profil de certificat SCEP
 En tant qu’administrateur, créez un profil de certificat SCEP pour cibler des utilisateurs ou appareils. Ensuite, affectez le profil.
 
-- [Créer un profil de certificat SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile)
+- [Créer un profil de certificat SCEP](certificates-profile-scep.md#create-a-scep-certificate-profile)
 
-- [Affecter le profil de certificat](certificates-scep-configure.md#assign-the-certificate-profile)
+- [Affecter le profil de certificat](certificates-profile-scep.md#assign-the-certificate-profile)
 
 ## <a name="removing-certificates"></a>Suppression de certificats
 

@@ -1,11 +1,11 @@
 ---
-title: Acheminer les journaux d’audit dans Azure Monitor à l’aide de Microsoft Intune - Azure | Microsoft Docs
+title: Router des journaux vers Azure Monitor à l’aide de Microsoft Intune - Azure | Microsoft Docs
 description: Utilisez les paramètres de diagnostic pour envoyer les journaux d’audit et des opérations dans Microsoft Intune à Azure (comptes de stockage, hubs d’événements ou Log Analytics). Choisissez la durée pendant laquelle vous souhaitez conserver les données et passez en revue les estimations de coûts pour des locataires de tailles différentes.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 08/28/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ed32ad564f850c06b37b15e1994ac066a929ffaa
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354524"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122412"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envoyer les données de journal à des comptes de stockage, des hubs d’événements ou Log Analytics dans Intune (préversion)
 
-Microsoft Intune intègre des journaux qui fournissent des informations sur votre environnement. Les **journaux d’audit** donnent des détails sur différents événements ou tâches qui se produisent dans Intune. Les **journaux des opérations (préversion)** donnent des détails sur les utilisateurs et les appareils dont l’inscription a réussi (ou échoué), ainsi que des détails sur les appareils non conformes.
+Microsoft Intune intègre des journaux qui fournissent des informations sur votre environnement :
+
+- Les **journaux d’audit** donnent des détails sur différents événements ou tâches qui se produisent dans Intune.
+- Les **journaux des opérations (préversion)** donnent des détails sur les utilisateurs et les appareils dont l’inscription a réussi (ou échoué), ainsi que des détails sur les appareils non conformes.
+- Les **journaux organisationnels de conformité des appareils (préversion)** montrent un rapport organisationnel de conformité des appareils dans Intune, et des détails sur les appareils non conformes.
 
 Ces journaux peuvent également être envoyés à des services Azure Monitor, notamment des comptes de stockage, des hubs d’événements et Log Analytics. Plus précisément, vous pouvez :
 
@@ -35,7 +39,7 @@ Ces journaux peuvent également être envoyés à des services Azure Monitor, no
 
 Ces fonctionnalités font partie des **paramètres de diagnostic** dans Intune.
 
-Cet article montre comment utiliser les **paramètres de diagnostic** pour envoyer les données de journal à différents services, donne des exemples et des estimations de coûts, et répond à certaines questions fréquemment posées.
+Cet article montre comment utiliser les **paramètres de diagnostic** pour envoyer les données de journal à différents services, donne des exemples et des estimations de coûts, et répond à certaines questions fréquemment posées. Une fois cette fonctionnalité activée, vos journaux sont routés vers le service Azure Monitor que vous choisissez.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -54,7 +58,7 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
 ## <a name="send-logs-to-azure-monitor"></a>Envoyer des journaux à Azure Monitor
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sous **Supervision**, sélectionnez **Paramètres de diagnostic**. Vous devez les activer la première fois que vous les utilisez :
+2. Sous **Supervision**, sélectionnez **Paramètres de diagnostic**. Vous devez les activer la première fois que vous les utilisez. Sinon, ajoutez un paramètre.
 
     ![Activer Paramètres de diagnostic dans Intune pour envoyer les journaux à Azure Monitor](media/diagnostics-settings-turn-on.png)
 
@@ -87,7 +91,14 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
       Si vous choisissez d’utiliser un compte de stockage, entrez également le nombre de jours pendant lesquels vous souhaitez conserver les données. Pour conserver les données indéfiniment, définissez **Conservation (jours)** avec la valeur `0` (zéro).
 
       > [!NOTE]
-      > Les journaux des opérations sont en préversion. Pour fournir des commentaires, notamment des informations incluses dans les journaux des opérations, accédez à [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback) (un nouveau site web s’ouvre).
+      > Les journaux des opérations sont en préversion. Pour fournir des commentaires, notamment des informations incluses dans les journaux des opérations, accédez à [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
+
+    - **LOG** > **DeviceComplianceOrg** : Les journaux organisationnels de conformité des appareils (préversion) montrent le rapport organisationnel de conformité des appareils dans Intune, et des détails sur les appareils non conformes. Choisissez cette option pour envoyer les journaux de conformité à votre compte de stockage, votre hub d’événements ou Log Analytics.
+
+      Si vous choisissez d’utiliser un compte de stockage, entrez également le nombre de jours pendant lesquels vous souhaitez conserver les données. Pour conserver les données indéfiniment, définissez **Conservation (jours)** avec la valeur `0` (zéro).
+ 
+      > [!NOTE]
+      > Les journaux organisationnels de conformité des appareils sont en préversion. Pour fournir des commentaires, notamment des informations incluses dans le rapport, accédez à [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
     Quand vous avez terminé, vos paramètres ressemblent aux suivants : 
 
