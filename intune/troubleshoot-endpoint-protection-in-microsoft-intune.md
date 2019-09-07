@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 08/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: c76466acb375fe49afefc542606350733970f416
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353345"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302348"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problèmes Endpoint Protection et solutions possibles dans Microsoft Intune
 
@@ -60,20 +60,20 @@ Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont d�
 **Solutions possibles** : Activez ces fonctionnalités. Pour obtenir des instructions, consultez :
 
 - [Ajouter des paramètres Endpoint Protection](endpoint-protection-configure.md)
-- [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Antivirus Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Utilisateurs finaux : activer la protection en temps réel pour accéder aux ressources d’entreprise](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Définitions de programmes malveillants obsolètes
 
 Cet état s’affiche lorsque les définitions de programmes malveillants sur l’appareil sont obsolètes depuis au moins 14 jours. Par exemple, le message peut s’afficher si l’appareil est déconnecté d’Internet ou si les définitions de programmes malveillants sont obsolètes.
 
-**Solutions possibles** : Si les définitions de programmes malveillants sont obsolètes, mettez-les à jour avec [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Solutions possibles** : Si les définitions de programmes malveillants sont obsolètes, mettez-les à jour avec [Antivirus Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Analyse complète en retard ou analyse rapide en retard
 
 Une analyse complète ou une analyse rapide n’a pas été effectuée depuis 14 jours. Ce scénario peut se produire si l’appareil redémarre lors d’une analyse complète.
 
-**Solutions possibles** : Si une analyse complète est en retard, vous pouvez exécuter une analyse une fois ou planifier des analyses régulières. Consultez [Antivirus Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Solutions possibles** : Si une analyse complète est en retard, vous pouvez exécuter une analyse une fois ou planifier des analyses régulières. Consultez [Antivirus Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Une autre application de protection de point de terminaison est en cours d'exécution
 
