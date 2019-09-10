@@ -857,8 +857,8 @@
                   href: custom-settings-windows-10.md
             - name: Bases de référence de sécurité
               items:
-                - name: "Paramètres de la base de référence Windows\_10"
-                  href: security-baseline-settings-mdm.md
+                - name: "Paramètres de référence MDM Windows\_10"
+                  href: security-baseline-settings-mdm-all.md
                 - name: Paramètres de la base de référence Microsoft Defender ATP
                   href: security-baseline-settings-defender-atp.md
             - name: Paramètres de Windows Update
@@ -1047,10 +1047,6 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Erreurs courantes liées à la protection des points de terminaison
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Archive des bases de référence de sécurité
-          items:
-            - name: Bases de référence de la sécurité MDM archivées
-              href: security-baseline-settings-mdm-archive.md
     - name: Guides d’implémentation de scénarios
       items:
         - name: Protéger Exchange Online
