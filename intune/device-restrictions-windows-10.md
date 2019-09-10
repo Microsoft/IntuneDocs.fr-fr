@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
-ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
+ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69998941"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302292"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
-Cet article liste et décrit tous les paramètres que vous pouvez contrôler sur les appareils Windows 10 et versions ultérieures. Dans votre solution de gestion des appareils mobiles, utilisez ces paramètres pour autoriser ou désactiver certaines fonctionnalités, pour définir des règles de mot de passe, pour personnaliser l’écran de verrouillage, pour utiliser Windows Defender, et bien plus encore.
+Cet article liste et décrit tous les paramètres que vous pouvez contrôler sur les appareils Windows 10 et versions ultérieures. Dans votre solution de gestion des appareils mobiles, utilisez ces paramètres pour autoriser ou désactiver certaines fonctionnalités, pour définir des règles de mot de passe, pour personnaliser l’écran de verrouillage, pour utiliser Microsoft Defender, et bien plus encore.
 
 Ces paramètres sont ajoutés à un profil de configuration d’appareil dans Intune, puis affectés ou déployés sur les appareils Windows 10.
 
@@ -59,7 +59,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 - **Jeux DVR** (poste de travail uniquement) : **Bloquer** désactive l’enregistrement et la diffusion des jeux Windows. **Non configuré** (valeur par défaut) autorise l’enregistrement et la diffusion des jeux.
 - **Applications du Store uniquement**: ce paramètre détermine l’expérience de l’utilisateur lorsque les utilisateurs installent des applications à partir d’emplacements autres que le Microsoft Store. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut): permet aux utilisateurs finaux d’installer des applications à partir d’emplacements autres que les Microsoft Store, y compris les applications définies dans d’autres paramètres de stratégie.  
+  - **Non configuré** (par défaut) : permet aux utilisateurs finaux d’installer des applications à partir d’emplacements autres que les Microsoft Store, y compris les applications définies dans d’autres paramètres de stratégie.  
   - **Partout**: désactive les recommandations d’application et permet aux utilisateurs d’installer des applications à partir de n’importe quel emplacement.  
   - **Stocker uniquement**: force les utilisateurs finaux à installer uniquement des applications à partir du Microsoft Store.
   - **Recommandations**: lors de l’installation d’une application à partir du Web disponible dans le Microsoft Store, les utilisateurs voient un message le recommandant de le télécharger à partir du Windows Store.  
@@ -78,8 +78,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 - **Applications de démarrage** : entrez une liste d’applications à ouvrir lorsqu’un utilisateur se connecte à l’appareil. Veillez à utiliser une liste délimitée par des points-virgules pour les noms des familles de packages (NFP) des applications Windows. Pour que cette stratégie fonctionne, le manifeste dans les applications Windows doit utiliser une tâche de démarrage.
 
   [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="cellular-and-connectivity"></a>Cellulaire et connectivité
 
@@ -114,8 +112,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Blu
 
   [Le guide d’utilisation ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) contient plus d’informations sur la liste des services.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Accounts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), qui liste également les éditions de Windows prises en charge.
@@ -124,8 +120,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Acc
 - **Compte non-Microsoft** : **Bloquer** empêche les utilisateurs finaux d’ajouter des comptes non-Microsoft à l’aide de l’interface utilisateur. **Non configuré** (valeur par défaut) permet aux utilisateurs d’ajouter des comptes de messagerie qui ne sont pas associés à un compte Microsoft.
 - **Synchronisation des paramètres du compte Microsoft** : **Non configuré** (valeur par défaut) permet aux paramètres d’appareil et d’application associés à un compte Microsoft de se synchroniser entre les appareils. **Bloquer** empêche cette synchronisation.
 - **Assistant Connexion avec un compte Microsoft** : quand vous choisissez **Non configuré** (valeur par défaut), les utilisateurs finaux peuvent démarrer et arrêter le service **Assistant Connexion avec un compte Microsoft** (wlidsvc). Ce service de système d’exploitation permet aux utilisateurs de se connecter à leur compte Microsoft. **Désactiver** empêche les utilisateurs finaux de contrôler le service Assistant Connexion avec un compte Microsoft (wlidsvc).
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="cloud-printer"></a>Imprimante cloud
 
@@ -140,8 +134,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Ent
 
 > [!TIP]
 > Après avoir configuré une [impression cloud hybride Windows Server](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview), vous pouvez configurer ces paramètres et les déployer sur vos appareils Windows.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="control-panel-and-settings"></a>Panneau de configuration et paramètres
 
@@ -165,8 +157,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
   - **Confidentialité** : **Bloquer** empêche l’accès à la zone Confidentialité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
   - **Mise à jour et sécurité** : **Bloquer** empêche l’accès à la zone Mise à jour et sécurité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="display"></a>Afficher
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Display](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), qui liste également les éditions de Windows prises en charge.
@@ -182,8 +172,6 @@ La mise à l’échelle DPI GDI permet aux applications sans prise en charge DPI
   La mise à l’échelle DPI GDI est désactivée pour toutes les applications héritées dans votre liste.
 
 Vous pouvez également **importer** un fichier .csv avec la liste des applications.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="general"></a>Général
 
@@ -230,8 +218,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 - **Terminer les processus à partir du Gestionnaire des tâches** : ce paramètre détermine si les non-administrateurs peuvent utiliser le Gestionnaire des tâches pour mettre fin aux tâches. L’option **Empêcher** empêche les utilisateurs standard (non-administrateurs) d’utiliser le Gestionnaire des tâches pour terminer un processus ou une tâche sur l’appareil. L’option **Non configuré** (par défaut) permet aux utilisateurs standard d’arrêter un processus ou une tâche à l’aide du Gestionnaire des tâches.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="locked-screen-experience"></a>Expérience d’écran de verrouillage
 
 - **Notifications du centre de notifications (mobile uniquement)**  : **Bloquer** empêche l’affichage des notifications du Centre de notifications sur l’écran de verrouillage de l’appareil. **Non configuré** (valeur par défaut) permet aux utilisateurs de choisir quelles applications affichent des notifications sur l’écran de verrouillage.
@@ -255,8 +241,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   [Fournisseur de service de configuration DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="messaging"></a>Messagerie
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Messaging](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging), qui liste également les éditions de Windows prises en charge.
@@ -264,8 +248,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Mes
 - **Synchronisation des messages (mobile uniquement)**  : **Bloquer** désactive la sauvegarde et la restauration des messages texte, ainsi que la synchronisation des messages entre les appareils Windows. La désactivation aide à éviter que des informations soient stockées sur des serveurs en dehors du contrôle de l’organisation. **Non configuré** (valeur par défaut) permet aux utilisateurs de modifier ces paramètres et de synchroniser leurs messages.
 - **MMS (mobile uniquement)**  : **Bloquer** désactive la fonctionnalité d’envoi et de réception de MMS sur l’appareil. Pour les entreprises, utilisez cette stratégie afin de désactiver MMS sur les appareils dans le cadre des exigences d’audit ou de gestion. **Non configuré** (valeur par défaut) autorise l’envoi et la réception de MMS.
 - **RCS (mobile uniquement)**  : **Bloquer** désactive la fonctionnalité d’envoi et de réception de RCS (Rich Communication Services) sur l’appareil. Pour les entreprises, utilisez cette stratégie afin de désactiver RCS sur les appareils dans le cadre des exigences d’audit ou de gestion. **Non configuré** (valeur par défaut) autorise l’envoi et la réception RCS.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="microsoft-edge-browser"></a>Navigateur Microsoft Edge
 
@@ -327,7 +309,7 @@ Ce profil de restrictions d’appareil est directement lié au profil de kiosque
 - **Message lors de l’ouverture de sites dans Internet Explorer** : utiliser ce paramètre pour configurer Microsoft Edge afin d’afficher une notification avant l’ouverture d’un site dans Internet Explorer 11. Les options disponibles sont les suivantes :
   - **Ne pas afficher de message** : le comportement par défaut du système d’exploitation est utilisé, ce qui peut ne pas afficher de message.
   - **Afficher un message indiquant que le site est ouvert dans Internet Explorer 11** : afficher le message lors de l’ouverture des sites dans Internet Explorer. Les sites s’ouvrent dans Internet Explorer. 
-  - **Afficher le message avec option pour ouvrir des sites dans Microsoft Edge** : afficher le message lors de l’ouverture de sites dans Edge. Le message inclut un lien **Poursuivre dans Microsoft Edge** qui permet aux utilisateurs de Microsoft Edge au lieu d’Internet Explorer.
+  - **Afficher le message avec option pour ouvrir des sites dans Microsoft Edge** : afficher le message lors de l’ouverture de sites dans Microsoft Edge. Le message inclut un lien **Poursuivre dans Microsoft Edge** qui permet aux utilisateurs de Microsoft Edge au lieu d’Internet Explorer.
 
   > [!IMPORTANT]
   > Ce paramètre exige que vous utilisiez l’option **Emplacement de la liste des sites en mode Entreprise**, l’option **Envoyer le trafic intranet vers Internet Explorer**, ou les deux.
@@ -335,8 +317,6 @@ Ce profil de restrictions d’appareil est directement lié au profil de kiosque
 - **Autoriser la liste de compatibilité Microsoft** : **Oui** (valeur par défaut) autorise l’utilisation d’une liste de compatibilité Microsoft. **Non** empêche l’affichage de la liste de compatibilité Microsoft dans Microsoft Edge. Cette liste de Microsoft permet à Microsoft Edge d’afficher correctement les sites ayant des problèmes de compatibilité connus.
 - **Précharger les pages d’accueil et la page Nouvel onglet** : **Oui** (valeur par défaut) utilise le comportement par défaut du système d’exploitation, qui peut consister à précharger ces pages. Le préchargement réduit le temps de démarrage de Microsoft Edge et de chargement des nouveaux onglets. **Non** empêche Microsoft Edge de précharger les pages d’accueil et la page Nouvel onglet.
 - **Prélancer les pages d’accueil et la page Nouvel onglet** : **Oui** (valeur par défaut) utilise le comportement par défaut du système d’exploitation, qui peut consister à prélancer ces pages. Le prélancement aide les performances de Microsoft Edge et réduit le temps nécessaire pour démarrer Microsoft Edge. **Non** empêche Microsoft Edge de prélancer les pages d’accueil et la page Nouvel onglet.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ### <a name="favorites-and-search"></a>Favoris et recherche
 
@@ -357,8 +337,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 - **Autoriser les changements du moteur de recherche** : **Oui** (par défaut) permet aux utilisateurs d’ajouter de nouveaux moteurs de recherche, ou de changer le moteur de recherche par défaut dans Microsoft Edge. Choisissez **Non** pour empêcher les utilisateurs de personnaliser le moteur de recherche.
 
   Ce paramètre est disponible seulement lors de l’exécution en [mode normal (kiosque multi-application)](#use-microsoft-edge-kiosk-mode).
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ### <a name="privacy-and-security"></a>Confidentialité et sécurité
 
@@ -383,8 +361,6 @@ Quand « Bloquer et activer le remplacement utilisateur » est sélectionné, 
 - **Autoriser la collecte des données de vignette dynamique** : **Oui** (valeur par défaut) autorise Microsoft Edge à recueillir des informations à partir des vignettes dynamiques épinglées au menu Démarrer. **Non** empêche la collecte de ces informations, ce qui est susceptible de limiter l’expérience des utilisateurs.
 - **L’utilisateur peut ignorer les erreurs de certificat** : **Oui** (valeur par défaut) permet aux utilisateurs d’accéder aux sites web qui contiennent des erreurs SSL/TLS (Secure Sockets Layer/Transport Layer Security). **Non** (recommandé pour une sécurité accrue) empêche les utilisateurs d’accéder à des sites web présentant des erreurs SSL ou TLS.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ### <a name="additional"></a>Supplémentaire
 
 - **Autoriser le navigateur Microsoft Edge** (mobile uniquement) : **Oui** (valeur par défaut) autorise l’utilisation du navigateur Microsoft Edge sur l’appareil mobile. **Non** empêche l’utilisation de Microsoft Edge sur l’appareil. Si vous choisissez **Non**, les autres paramètres individuels s’appliquent uniquement au poste de travail.
@@ -401,8 +377,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   Vous pouvez également **importer** un fichier CSV qui inclut les noms des familles de packages. Ou bien **exportez** les noms des familles de packages que vous entrez.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="network-proxy"></a>Proxy réseau
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy NetworkProxy](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), qui liste également les éditions de Windows prises en charge.
@@ -415,8 +389,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Net
   - **Numéro de port** : entrez le numéro de port de votre serveur proxy.
   - **Exceptions du proxy** : entrez les URL qui ne doivent pas utiliser le serveur proxy. Utilisez des points-virgules pour séparer chaque élément.
   - **Ignorer le serveur proxy pour les adresses locales** : **Non configuré** (valeur par défaut) empêche l’utilisation d’un serveur proxy pour les adresses locales sur votre intranet. **Autoriser** utilise un serveur proxy pour les adresses locales.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="password"></a>Mot de passe
 
@@ -466,8 +438,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Dev
 
   [Fournisseur de services de configuration Authentication/PreferredAadTenantDomainName](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="per-app-privacy-exceptions"></a>Exceptions de confidentialité par application
 
 Vous pouvez ajouter des applications qui doivent avoir un comportement de confidentialité différent de celui défini dans « Confidentialité par défaut ».
@@ -496,23 +466,17 @@ Vous pouvez ajouter des applications qui doivent avoir un comportement de confid
 - **Commentaires et diagnostics** : définir si cette application peut accéder aux informations de diagnostic.
 - **Synchroniser avec les appareils** : choisir si cette application peut automatiquement partager et synchroniser des informations avec des appareils sans fil qui ne sont pas explicitement jumelés avec l’appareil.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="personalization"></a>Personalization
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Personalization](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), qui liste également les éditions de Windows prises en charge.
 
 - **URL de l’image d’arrière-plan du poste de travail (Desktop uniquement)**  : entrez l’URL d’une image au format .jpg, .jpeg ou .png que vous souhaitez utiliser comme papier peint du Bureau Windows. Les utilisateurs ne peuvent pas changer d’image. Par exemple, entrez `https://contoso.com/logo.png`.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="printer"></a>Imprimante
 
 - **Imprimantes** : liste des imprimantes locales qui ont été ajoutées.
 - **Imprimante par défaut** : définissez l’imprimante par défaut.
 - **Accès utilisateur pour ajouter de nouvelles imprimantes** : autorisez ou bloquez l’utilisation d’imprimantes locales.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="privacy"></a>Confidentialité
 
@@ -524,8 +488,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Pri
 - **Activités locales uniquement** : sélectionnez **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches en fonction uniquement de l’activité locale. **Non configuré** (valeur par défaut) active cette fonctionnalité.
 
 Vous pouvez configurer les informations auxquelles toutes les applications sur l’appareil peuvent accéder. Définissez également des exceptions pour chaque application à l’aide de l’option **Exceptions de confidentialité par application**.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ### <a name="exceptions"></a>Exceptions
 
@@ -548,8 +510,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 - **Commentaires et diagnostics** : choisir si cette application peut accéder aux informations de diagnostic.
 - **Synchroniser avec les appareils** - Définir si cette application peut automatiquement partager et synchroniser des informations avec des appareils sans fil qui ne sont pas explicitement jumelés avec ce PC, cette tablette ou ce téléphone.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="projection"></a>Projection
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), qui liste également les éditions de Windows prises en charge.
@@ -557,8 +517,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Wir
 - **Entrées utilisateur à partir de récepteurs d’affichage sans fil** : **Bloquer** empêche l’entrée d’utilisateur à partir de récepteurs d’affichage sans fil. **Non configuré** (valeur par défaut) autorise un affichage sans fil à renvoyer l’entrée clavier, souris, stylet et tactile vers l’appareil source.
 - **Projection sur ce PC** : **Bloquer** empêche les autres appareils de trouver cet appareil pour la projection. **Non configuré** (valeur par défaut) permet à l’appareil d’être détectable, et autorise la projection sur l’appareil par-dessus l’écran de verrouillage.
 - **Demander le code PIN pour le couplage** : choisissez **Exiger** pour toujours demander un code PIN lors de la connexion à un projecteur. **Non configuré** (valeur par défaut) ne nécessite pas de code PIN pour coupler l’appareil à un projecteur.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="reporting-and-telemetry"></a>Création de rapports et les données de télémétrie
 
@@ -602,8 +560,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sea
   - **Strict** : niveau de filtrage le plus élevé en matière de contenu pour adultes.
   - **Modéré** : niveau de filtrage modéré en matière de contenu pour adultes. Les résultats de recherche valides ne sont pas filtrés.
 - **Afficher les résultats web dans la recherche** : si vous choisissez **Bloquer**, les utilisateurs ne peuvent pas effectuer de recherche et les résultats web ne sont pas visibles dans la Recherche. **Non configuré** (valeur par défaut) permet aux utilisateurs d’effectuer des recherches sur le web, et les résultats sont affichés sur l’appareil.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="start"></a>Démarrer
 
@@ -675,8 +631,6 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sta
   - **Masquer** : le raccourci est masqué et le paramètre est désactivé dans l’application Paramètres.
   - **Afficher** : le raccourci est affiché et le paramètre est désactivé dans l’application Paramètres.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
 - **SmartScreen pour Microsoft Edge** : **Exiger** désactive Windows Defender SmartScreen et empêche les utilisateurs de l’activer. **Non configuré** (valeur par défaut) active SmartScreen. Aide à protéger les utilisateurs contre les menaces potentielles, et empêche les utilisateurs de le désactiver.
@@ -693,8 +647,6 @@ Cliquez sur **OK** pour enregistrer vos modifications.
 
   [Fournisseur de services de configuration Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
 ## <a name="windows-spotlight"></a>Windows à la une
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), qui liste également les éditions de Windows prises en charge.
@@ -709,38 +661,96 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
   - **Personnalisation de Windows à la une** : **Bloquer** empêche Windows d’utiliser des données de diagnostic pour fournir des expériences personnalisées à l’utilisateur. **Non configuré** (valeur par défaut) permet à Microsoft d’utiliser des données de diagnostic pour fournir des recommandations personnalisées, des conseils et des offres afin d’adapter Windows aux besoins de l’utilisateur.
   - **Écrans d’accueil de Windows** : **Bloquer** désactive la fonctionnalité Écrans d’accueil de Windows de Windows à la une. L’expérience Écrans d’accueil de Windows ne s’affichera pas en cas de mises à jour et de modifications apportées à Windows et à ses applications. **Non configuré** (valeur par défaut) autorise l’expérience Écrans d’accueil de Windows qui montre à l’utilisateur des informations sur les fonctionnalités nouvelles ou mises à jour.
 
-Cliquez sur **OK** pour enregistrer vos modifications.
-
-## <a name="windows-defender-antivirus"></a>Antivirus Windows Defender
+## <a name="microsoft-defender-antivirus"></a>Antivirus Microsoft Defender
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), qui liste également les éditions de Windows prises en charge.
 
-- **Surveillance en temps réel** : **Activer** empêche la recherche en temps réel des logiciels malveillants, logiciels espions et autres logiciels indésirables. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Analyse du comportement** : **Activer** empêche Defender de rechercher certains modèles connus d’activité suspecte sur les appareils. **Non configuré** (valeur par défaut) autorise l’analyse du comportement de Windows Defender.
-- **Système NIS (Network Inspection System)** : le système NIS vous aide à vous protéger contre les attaques réseau. Il utilise les signatures de vulnérabilités connues fournies par le Microsoft Endpoint Protection Center pour faciliter la détection et le blocage du trafic malveillant.
-- **Analyser tous les téléchargements** : contrôle si Defender analyse tous les fichiers téléchargés depuis Internet.
-- **Analyser les scripts chargés dans les navigateurs web Microsoft** : **Non configuré** (valeur par défaut) permet à Defender d’analyser les scripts utilisés dans Internet Explorer. **Activer** empêche cette analyse.
-- **Accès de l’utilisateur final à Defender** : **Bloquer** masque l’interface utilisateur de Windows Defender aux utilisateurs finaux. Toutes les notifications de Windows Defender sont également supprimées. **Non configuré** (valeur par défaut) autorise l’accès utilisateur à l’interface utilisateur de Windows Defender. Quand ce paramètre est modifié, le changement est appliqué au prochain redémarrage de l’ordinateur de l’utilisateur final.
-- **Intervalle de mise à jour des signatures (en heures)**  : entrez l’intervalle auquel Defender vérifie les nouveaux fichiers de signatures (de 0 à 24). Les options disponibles sont les suivantes :
+- **Surveillance en temps réel** : **Activer** désactive la recherche en temps réel des logiciels malveillants, logiciels espions et autres logiciels indésirables. **Non configuré** (par défaut) autorise cette fonctionnalité.
 
-  - **Non configuré** (valeur par défaut)
-  - **Ne pas vérifier** : Defender ne vérifie pas l’existence de nouveaux fichiers de signatures.
+  [CSP Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+- **Analyse du comportement** : **Activer** désactive la recherche par Defender de certains modèles connus d’activité suspecte sur les appareils. **Non configuré** (valeur par défaut) autorise l’analyse du comportement de Windows Defender.
+
+  [CSP Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+
+- **Système NIS (Network Inspection System)** : le système NIS vous aide à vous protéger contre les attaques réseau. Il utilise les signatures de vulnérabilités connues fournies par le Microsoft Endpoint Protection Center pour faciliter la détection et le blocage du trafic malveillant.
+
+  **Non configuré** (valeur par défaut) désactive cette fonctionnalité. Les utilisateurs ne sont pas bloqués pour se connecter à des vulnérabilités connues. Lorsque la valeur est définie sur **activer**, la protection réseau et le blocage réseau sont activés, et les utilisateurs ne peuvent pas le désactiver. La connexion des utilisateurs aux vulnérabilités connues est bloquée.
+
+  [CSP Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+- **Analyser tous les téléchargements**: **non configuré** (par défaut) : Defender analyse tous les fichiers téléchargés à partir d’Internet. Lorsque cette option est **activée, cette**fonctionnalité est désactivée. Par conséquent, Defender n’analyse pas tous les fichiers Internet téléchargés.
+
+  [CSP Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+
+- **Analyser les scripts chargés dans les navigateurs web Microsoft** : **Non configuré** (valeur par défaut) permet à Defender d’analyser les scripts utilisés dans Internet Explorer. **Activer** empêche cette analyse.
+
+  [CSP Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+- **Accès de l’utilisateur final à Defender** : **Bloquer** masque l’interface utilisateur de Windows Defender aux utilisateurs finaux. Toutes les notifications de Windows Defender sont également supprimées. **Non configuré** (valeur par défaut) autorise l’accès utilisateur à l’interface utilisateur de Windows Defender. Quand ce paramètre est modifié, le changement est appliqué au prochain redémarrage de l’ordinateur de l’utilisateur final.
+
+  [CSP Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+
+- **Intervalle de mise à jour de sécurité (en heures)** : entrez l’intervalle pendant lequel Defender vérifie les nouvelles informations de sécurité, à partir de 0-24. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Rechercher les mises à jour toutes les 8 heures.
+  - **Ne pas vérifier**: Defender ne recherche pas les nouvelles mises à jour de la sécurité.
   - **1-24** : `1` vérifie toutes les heures, `2` vérifie toutes les deux heures, `24` vérifie tous les jours, et ainsi de suite.
-- **Surveiller l’activité des fichiers et des programmes** : autorise Defender à surveiller l’activité des fichiers et des programmes sur des appareils.
-- **Nombre de jours avant la suppression des programmes malveillants en quarantaine** : continuer le suivi des logiciels malveillants résolus pendant le nombre de jours que vous entrez, pour vous permettre de vérifier manuellement les appareils précédemment affectés. Si vous définissez le nombre de jours du suivi sur **0**, les logiciels malveillants restent dans le dossier de quarantaine et ne sont pas automatiquement supprimés. Quand vous affectez la valeur `90`, les éléments mis en quarantaine sont stockés pendant 90 jours sur le système, puis supprimés.
-- **Limite de l'utilisation du processeur pendant une analyse** : limitez la quantité de ressources du processeur que les analyses sont autorisées à utiliser, de **1** à **100**.
-- **Analyser les fichiers d’archive** : **Activer** empêche Defender d’analyser les fichiers archivés, tels que les fichiers .zip ou .cab. **Non configuré** (valeur par défaut) autorise cette analyse.
+  
+  [CSP Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  
+- **Surveiller l’activité des fichiers et des programmes** : autorise Defender à surveiller l’activité des fichiers et des programmes sur des appareils. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : analyse tous les fichiers
+  - **Analyse désactivée**
+  - **Surveiller tous les fichiers**
+  - **Surveiller les fichiers entrants uniquement**
+  - **Surveiller les fichiers sortants uniquement**
+
+  [CSP Defender/RealTimeScanDirection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+
+- **Nombre de jours avant la suppression des programmes malveillants en quarantaine** : continuer le suivi des logiciels malveillants résolus pendant le nombre de jours que vous entrez, pour vous permettre de vérifier manuellement les appareils précédemment affectés. Si vous définissez le nombre de jours du suivi sur `0`, les logiciels malveillants restent dans le dossier de quarantaine et ne sont pas automatiquement supprimés. Quand vous affectez la valeur `90`, les éléments mis en quarantaine sont stockés pendant 90 jours sur le système, puis supprimés.
+
+  [CSP Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+
+- **Limite de l'utilisation du processeur pendant une analyse** : limitez la quantité de ressources du processeur que les analyses sont autorisées à utiliser, de `0` à `100`.
+- **Analyser les fichiers d’archive**: **permet** à l’option de désactiver Defender d’analyser les fichiers d’archive, tels que les fichiers zip ou CAB. **Non configuré** (valeur par défaut) autorise cette analyse.
+
+  [CSP Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+
 - **Analyser les e-mails entrants** : **Activer** permet à Defender d’analyser les e-mails quand ils arrivent sur l’appareil. **Non configuré** (valeur par défaut) empêche l’analyse des e-mails.
+
+  [CSP Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+
 - **Analyser les disques amovibles lors d’une analyse complète** : **Activer** empêche les analyses complètes des lecteurs amovibles. **Non configuré** (valeur par défaut) permet à Defender d’analyser les lecteurs amovibles, tels que les clés USB.
+
+  Pendant une analyse rapide, les lecteurs amovibles peuvent toujours être analysés.
+
+  [CSP Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+
 - **Analyser les lecteurs réseau mappés lors d’une analyse complète** : **Activer** permet à Defender d’analyser les fichiers sur un lecteur réseau mappé. **Non configuré** (valeur par défaut) désactive l’analyse complète. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
+
+  Pendant une analyse rapide, les lecteurs réseau mappés peuvent toujours être analysés.
+
+  [CSP Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+
 - **Analyser les fichiers ouverts à partir de dossiers réseau** : **Non configuré** (valeur par défaut) permet à Defender d’analyser les fichiers sur des lecteurs réseau partagés, tels que des fichiers accessibles à partir d’un chemin UNC. **Activer** empêche cette analyse. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
+
+  [CSP Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+
 - **Protection du cloud** : **Non configuré** (valeur par défaut) autorise Microsoft Active Protection Service à recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. **Activer** bloque cette fonctionnalité.
+
+  [CSP Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
 - **Demander confirmation aux utilisateurs avant l’envoi d’un échantillon** : contrôle si les fichiers potentiellement malveillants susceptibles de nécessiter une analyse plus approfondie sont envoyés automatiquement à Microsoft. Les options disponibles sont les suivantes :
-  - **Non configuré**
+
+  - **Non configuré** (par défaut) : envoyer automatiquement des échantillons sécurisés.
   - **Toujours demander**
   - **Demander confirmation avant d’envoyer des données personnelles**
   - **Ne jamais envoyer de données**
-  - **Envoyer toutes les données sans demande de confirmation** : les données sont envoyées automatiquement
+  - **Envoyer toutes les données sans demande de confirmation** : les données sont envoyées automatiquement.
+
+  [CSP Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Heure de l’analyse rapide quotidienne** : choisissez l’heure à laquelle exécuter une analyse rapide quotidienne. **Non configuré** : n’exécute pas d’analyse quotidienne. Si vous voulez davantage de personnalisation, configurez le paramètre **Type d’analyse système à effectuer**.
 
@@ -756,12 +766,16 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
     - **Jour planifié** : choisissez le jour où exécuter l’analyse.
     - **Heure planifiée** : choisissez l’heure où exécuter l’analyse.
 
-  Ce paramètre peut entrer en conflit avec le paramètre **Heure de l’analyse rapide quotidienne**. Quelques recommandations :
-
-  - Pour exécuter une analyse rapide quotidienne, configurez le paramètre **Heure de l’analyse rapide quotidienne**.
-  - Pour exécuter une analyse rapide quotidienne et une analyse complète hebdomadaire, configurez l’**Heure de l’analyse rapide quotidienne**. Définissez **Type d’analyse système à effectuer** pour une analyse complète avec le jour et l’heure.
-  - Ne configurez pas le paramètre **Heure de l’analyse rapide quotidienne** en combinaison avec **Type d’analyse système à effectuer** défini sur **Analyse rapide**. Ces paramètres peuvent être en conflit, l’analyse pouvant alors ne pas s’exécuter.
-  - Pour exécuter une analyse rapide tous les mardis à 6h00, configurez le paramètre **Type d’analyse système à effectuer**.
+  > [!TIP]
+  > Ce paramètre peut entrer en conflit avec le paramètre **Heure de l’analyse rapide quotidienne**. Quelques recommandations :  
+  >
+  > - Si vous souhaitez planifier une analyse rapide quotidienne et une analyse complète hebdomadaire, procédez comme suit :
+  >   1. Configurez la **durée d’exécution d’un paramètre d’analyse rapide quotidienne** .
+  >   2. Configurez le **type d’analyse système à effectuer** pour effectuer une analyse complète.
+  > 
+  > - Si vous souhaitez une analyse rapide uniquement quotidienne (aucune analyse complète), utilisez l’un des paramètres suivants **pour effectuer une analyse rapide quotidienne ou un** **type d’analyse système à effectuer**. Par exemple, pour exécuter une analyse rapide tous les mardis à 6h00, configurez le paramètre **Type d’analyse système à effectuer**.
+  > 
+  > - Ne configurez pas le paramètre **Heure de l’analyse rapide quotidienne** en combinaison avec **Type d’analyse système à effectuer** défini sur **Analyse rapide**. Ces paramètres peuvent être en conflit, l’analyse pouvant alors ne pas s’exécuter.
 
   [Fournisseur de services de configuration Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Fournisseur de services de configuration Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
@@ -774,7 +788,10 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
   Pour plus d’informations sur les applications potentiellement indésirables, consultez [Détecter et bloquer les applications potentiellement indésirables](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Actions en cas de détection de menaces de programmes malveillants** : choisissez les actions que Defender doit exécuter pour chaque niveau de menace détecté (faible, modéré, élevé et grave). Si ce n’est pas possible, Windows Defender choisit la meilleure option pour s’assurer que la menace est éliminée. Les options disponibles sont les suivantes :
+  [CSP Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+- **Actions sur les menaces de programmes malveillants détectées**: choisissez la façon dont vous souhaitez gérer les threads de programmes malveillants. **Non configuré** (par défaut) permet à Microsoft Defender de choisir la meilleure option. Lorsque cette option est définie sur **Activer**, choisissez les actions que Defender doit exécuter pour chaque niveau de menace détecté : faible, modéré, élevé et grave. Les options disponibles sont les suivantes :
+  
   - **Nettoyer**
   - **Quarantaine**
   - **Supprimer**
@@ -782,15 +799,15 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   - **Défini par l’utilisateur**
   - **Bloquer**
 
-Cliquez sur **OK** pour enregistrer vos modifications.
+  Si votre action n’est pas possible, Windows Defender choisit la meilleure option pour s’assurer que la menace est corrigée. 
+
+  [CSP Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="windows-defender-antivirus-exclusions"></a>Exclusions de l’antivirus Windows Defender
 
 - **Fichiers et dossiers à exclure des analyses et de la protection en temps réel** : ajoute un ou plusieurs fichiers et dossiers comme **C:\Chemin** ou **%ProgramFiles%\Chemin\NomFichier.exe** à la liste des exclusions. Ces fichiers et dossiers ne sont pas inclus dans les analyses en temps réel ou planifiées.
 - **Extensions de fichier à exclure des analyses et de la protection en temps réel** : ajoute une ou plusieurs extensions de fichier comme **jpg** ou **txt** à la liste des exclusions. Tous les fichiers avec ces extensions ne sont pas inclus dans les analyses en temps réel ou planifiées.
 - **Processus à exclure des analyses et de la protection en temps réel** : ajoute un ou plusieurs processus de type **.exe**, **.com** ou **.scr** à la liste des exclusions. Ces processus ne sont pas inclus dans les analyses en temps réel ou planifiées.
-
-Cliquez sur **OK** pour enregistrer vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

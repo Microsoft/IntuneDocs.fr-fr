@@ -1,11 +1,11 @@
 ---
-title: Votre mot de passe ne répond pas aux exigences du support technique de votre entreprise | Microsoft Docs
-description: ''
+title: Exigences de mot de passe pour les appareils dans Portail d’entreprise Intune | Microsoft Docs
+description: Cet article décrit les exigences de mot de passe courantes que votre organisation peut appliquer.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 09/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,42 +16,86 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac0a8b076fe6f21621826dec32f7aaa72eba88c7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bce3ae1fd5386c749285313f29fc88cf7b464750
+ms.sourcegitcommit: d0d320fbac69b063b4264491d8a918cfe12bd485
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837014"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751775"
 ---
-# <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Votre mot de passe ne répond pas aux exigences du support technique de votre entreprise
+# <a name="device-password-requirements-for-enrolled-devices"></a>Exigences de mot de passe d’appareil pour les appareils inscrits
 
-Le support technique de votre entreprise exige un mot de passe pour protéger votre appareil. À l’heure actuelle, le mot de passe que vous utilisez pour accéder aux ressources de votre entreprise ou établissement scolaire ne répond pas à une ou plusieurs des exigences configurées par le support technique de votre entreprise. Pour résoudre ce problème, suivez les instructions qui sont affichées sur votre appareil. Les descriptions des problèmes sont répertoriées ci-dessous.
+Votre organisation peut vous obliger à créer un mot de passe plus sécurisé avant d’autoriser l’accès aux ressources professionnelles ou scolaires. Cet article décrit les exigences de mot de passe courantes pour les appareils Windows 10, iOS, macOS et Android. Votre organisation peut ne pas appliquer toutes ces exigences.  
 
-Pour découvrir comment définir votre code PIN ou mot de passe, cliquez sur le lien correspondant au type d’appareil dont vous disposez :
 
-- [Définir le code confidentiel ou le mot de passe de votre appareil Android](set-your-pin-or-password-android.md)
-- [Définir ou modifier votre mot de passe d’appareil iOS](set-or-change-your-passcode-ios.md)
-- [Définir ou modifier votre mot de passe d’appareil Windows](set-or-change-your-password-windows.md)
+Lorsqu’un mot de passe ou un code secret ne répond plus à une exigence, vous recevez un message de Portail d’entreprise. Il décrira les modifications que vous devez apporter. Si aucun détail n’est fourni dans le message, utilisez cet article comme référence à comparer à votre mot de passe actuel.  
 
-> [!NOTE]
-> Si vous avez des difficultés à déterminer comment rendre votre mot de passe conforme aux exigences définies par le support technique de votre entreprise, contactez ce service. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
+> [!IMPORTANT]
+> Si vous avez modifié votre mot de passe pour répondre aux exigences, mais que vous recevez toujours des notifications, redémarrez votre appareil.  
 
-## <a name="pin-or-password-issue-descriptions"></a>Descriptions des problèmes liés au code PIN ou au mot de passe
+Pour obtenir de l’aide supplémentaire ou pour connaître les exigences spécifiques de votre organisation, contactez votre responsable de support informatique. Consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) pour obtenir les coordonnées.  
 
-| **Problème** | **Description** |
+## <a name="windows-10-password-requirements"></a>Conditions requises pour le mot de passe Windows 10
+
+| Message | Comment résoudre le problème |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Le mot de passe ne contient pas de caractères complexes**. | Le support technique de votre entreprise vous impose d’utiliser des caractères complexes dans votre mot de passe. Les nombres, les lettres majuscules et les symboles comme $, % et # sont des exemples de caractères complexes. |
-| **Le mot de passe est trop simple et pas assez sécurisé**. | 1234 ou 1111 sont des exemples de mots de passe simples. Si vous ne savez pas quels types de mots de passe sont autorisés, assurez-vous que votre mot de passe ne contient pas de nombres séquentiels ou répétés, comme ceux cités en exemple. |
-| **Le mot de passe a expiré**. | Votre mot de passe a expiré ; vous devez en définir un nouveau qui soit conforme aux exigences définies par le support technique de votre entreprise. |
-| **Le mot de passe n’est pas défini**. | Pour pouvoir accéder aux données et e-mails professionnels sur votre appareil, vous devez définir un mot de passe qui satisfait aux exigences définies par le support technique de votre entreprise. |
-| **Le mot de passe est trop court**. | Le support technique de votre entreprise vous impose d’utiliser un mot de passe plus long avec plus de caractères. |
-| **Votre mot de passe a été utilisé trop récemment**. | Le support technique de votre entreprise vous empêche d’utiliser des mots de passe que vous avez déjà utilisés. Choisissez un mot de passe que vous n’avez jamais utilisé. |
-| **Le mot de passe n’est pas assez complexe pour répondre aux exigences**. | Le support technique de votre entreprise vous impose d’utiliser des caractères plus complexes dans votre mot de passe. Essayez d’utiliser des caractères tels que des nombres, des lettres majuscules et des symboles comme $, % et #. Cela peut aussi concerner d’autres comptes sur votre appareil. Passez en revue tous les comptes professionnels pour vérifier que votre mot de passe répond aux exigences définies par l’administrateur informatique pour votre appareil. |
+| Le mot de passe est obligatoire. | Définissez un mot de passe. Votre organisation exige que vous entriez un mot de passe pour déverrouiller votre appareil. |
+| Le mot de passe est trop simple. |  Assurez-vous que votre mot de passe ne contient pas de nombres séquentiels ou répétitifs, tels que 1234 ou 1111. |
+| Le mot de passe est trop court.| Mettez à jour ou définissez un mot de passe contenant plus de caractères. Votre organisation exige que votre mot de passe soit d’une certaine longueur. Ce qu’ils choisissent en fait varient, mais la longueur minimale qu’ils peuvent nécessiter est de 4 caractères, et la valeur maximale est 16. |
+| Le mot de passe doit contenir uniquement des chiffres. | Définissez un mot de passe qui contient uniquement des nombres.|
+| Le mot de passe doit contenir uniquement des caractères alphanumériques. | Définissez un mot de passe qui contient un mélange de chiffres et de lettres.|
+| Le mot de passe doit contenir des caractères complexes. | Ajoutez des caractères complexes tels que des nombres, des majuscules et `$`des `%`symboles tels `#`que, et. Votre organisation a besoin d’une combinaison de lettres, de chiffres et de caractères non alphanumériques pour compliquer la découverte du mot de passe par d’autres utilisateurs.|  
+| Le mot de passe a expiré. | Définissez un nouveau mot de passe. Votre organisation vous demande de modifier votre mot de passe après un certain nombre de jours. |
+| Votre mot de passe a été utilisé trop récemment. | Choisissez un mot de passe que vous n’avez jamais utilisé. Votre organisation exige qu’un certain laps de temps s’écoule avant que vous réutilisiez un mot de passe. |
+
+## <a name="ios-passcode-requirements"></a>spécifications du code secret iOS
+
+| Message | Comment résoudre le problème |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Le code secret est obligatoire.| Définissez un code secret. Votre organisation exige que vous entriez un code secret pour déverrouiller votre appareil. |
+| Le code secret est trop simple. |  Assurez-vous que votre code secret ne contient pas de nombres séquentiels ou répétitifs, tels que 1234 ou 1111. |
+| Le code secret est trop petit. | Mettez à jour ou définissez un code secret avec plus de caractères. Votre organisation exige que votre code secret soit d’une certaine longueur. Ce qu’ils choisissent en fait varient, mais la longueur minimale qu’ils peuvent nécessiter est de 4 caractères, et la valeur maximale est 14. Lorsque vous modifiez votre code secret, vous pouvez voir une invite d’Apple vous invitant à entrer au moins 6 caractères. ce message est une recommandation du système Apple. Si votre organisation ne requiert qu’un code secret de 4 ou 5 caractères, vous n’avez pas à entrer un code secret à 6 chiffres.|  
+| Le code secret doit contenir uniquement des chiffres. | Définissez un code secret qui contient uniquement des nombres.|
+| Le code secret doit contenir uniquement des caractères alphanumériques.| Définissez un code secret contenant un mélange de chiffres et de lettres.|
+| Le code secret doit contenir des caractères non alphanumériques. | Ajoutez des caractères spéciaux tels `&`que `!` `$`, `%`,, et `#`. Votre organisation a besoin d’une combinaison de lettres, de chiffres et de caractères non alphanumériques pour compliquer la découverte du code secret par d’autres utilisateurs.|
+| Le code secret a expiré. | Définissez un nouveau mot de passe. Votre organisation vous demande de modifier votre mot de passe après un certain nombre de jours. |
+| Votre code secret a été utilisé trop récemment.| Choisissez un code d’accès que vous n’avez pas encore utilisé. Votre organisation exige qu’un certain laps de temps s’écoule avant que vous réutilisiez un code secret. |
+|Authentification tactile ou ID de visage requis. | Configurez Touch ID ou face ID. Votre organisation exige que vous vous authentifiez avec l’une de ces méthodes avant d’utiliser la fonction de remplissage automatique pour les mots de passe ou les informations de carte de crédit. | 
+
+## <a name="macos-password-requirements"></a>conditions requises pour le mot de passe macOS
+| Message | Comment résoudre le problème |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Le mot de passe est obligatoire. | Définissez un mot de passe. Votre organisation exige que vous entriez un mot de passe pour déverrouiller votre appareil. |
+| Le mot de passe est trop simple.|  Assurez-vous que votre mot de passe ne contient pas de nombres séquentiels ou répétitifs, tels que 1234 ou 1111. |
+| Le mot de passe est trop court. | Mettez à jour ou définissez un mot de passe contenant plus de caractères. Votre organisation exige que votre mot de passe soit d’une certaine longueur.|
+| Le mot de passe doit contenir uniquement des chiffres. | Définissez un mot de passe qui contient uniquement des nombres.|
+| Le mot de passe doit contenir uniquement des caractères alphanumériques. | Définissez un mot de passe qui contient un mélange de chiffres et de lettres.|
+| Le mot de passe doit contenir des caractères non alphanumériques. | Ajoutez des caractères spéciaux tels `&`que `!` `$`, `%`,, et `#`. Votre organisation a besoin d’une combinaison de lettres, de chiffres et de caractères non alphanumériques pour compliquer la découverte du mot de passe par d’autres utilisateurs.|
+| Le mot de passe a expiré. | Définissez un nouveau mot de passe. Votre organisation vous demande de modifier votre mot de passe après un certain nombre de jours. |
+| Votre mot de passe a été utilisé trop récemment. | Choisissez un mot de passe que vous n’avez jamais utilisé. Votre organisation exige qu’un certain laps de temps s’écoule avant que vous réutilisiez un mot de passe. |
+
+## <a name="android-password-requirements"></a>Conditions requises pour le mot de passe Android
+| Message | Comment résoudre le problème |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Le mot de passe est obligatoire. | Définissez un mot de passe ou un code PIN. Votre organisation exige que vous entriez un mot de passe pour déverrouiller votre appareil. |
+| Le mot de passe est trop simple. |  Assurez-vous que votre mot de passe ou votre code PIN ne contient pas de nombres séquentiels ou répétitifs, tels que 1234 ou 1111. |
+| Le mot de passe est trop court. | Mettez à jour ou définissez un mot de passe contenant plus de caractères. Votre organisation exige que votre mot de passe soit d’une certaine longueur.|
+| Le mot de passe doit contenir des chiffres. | Définissez un mot de passe ou un code PIN qui contient des nombres.|
+| Le mot de passe doit contenir des lettres. | Définissez un mot de passe qui contient des lettres de l’alphabet.|
+| Le mot de passe doit contenir des caractères alphanumériques. | Définissez un mot de passe qui contient un mélange de chiffres et de lettres.|
+| Le mot de passe doit contenir des caractères alphanumériques et des symboles. | Définissez un mot de passe qui contient une combinaison de lettres, de chiffres et de caractères `&`spéciaux `!`tels `$`que `%`,, `#`, et. |
+| Le mot de passe doit utiliser la technologie biométrique.| Configurez votre appareil pour utiliser l’authentification biométrique, telle que l’empreinte digitale ou la reconnaissance faciale.
+| Le mot de passe a expiré. | Définissez un nouveau mot de passe. Votre organisation vous demande de modifier votre mot de passe après un certain nombre de jours. |
+| Votre mot de passe a été utilisé trop récemment. | Choisissez un mot de passe que vous n’avez jamais utilisé. Votre organisation exige qu’un certain laps de temps s’écoule avant que vous réutilisiez un mot de passe. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour découvrir comment définir votre code PIN ou mot de passe, cliquez sur le lien correspondant au type d’appareil dont vous disposez :
+Consultez les articles suivants pour créer ou modifier le mot de passe de votre appareil, votre code secret ou votre code confidentiel.  
 
-- [Définir le code confidentiel ou le mot de passe de votre appareil Android](set-your-pin-or-password-android.md)
-- [Définir ou modifier votre mot de passe d’appareil iOS](set-or-change-your-passcode-ios.md)
-- [Définir ou modifier votre mot de passe d’appareil Windows](set-or-change-your-password-windows.md)
+- [Définir le mot de passe de l’appareil Windows 10](set-or-change-your-password-windows.md)  
+- [Définir le code secret de l’appareil iOS](set-or-change-your-passcode-ios.md)  
+- [Définir le code confidentiel ou le mot de passe de l’appareil Android](set-your-pin-or-password-android.md)  
+
+Encore besoin d’aide ? Contactez votre personne de support. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+
