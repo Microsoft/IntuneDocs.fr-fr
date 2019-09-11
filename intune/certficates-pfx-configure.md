@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf4559d03f7dfc8ec8c48242defa391b4b49e41a
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 25beef7e6593865b92e349163768ded5ce3b9e2d
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122398"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376932"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -73,7 +73,7 @@ Pour utiliser des certificats PKCS avec Intune, vous devez disposer de l’infra
   - Installer Imported PFX Certificate Connector pour Microsoft Intune sur votre serveur.  
   - Vérifier que des pare-feux sont ouverts autorisant le connecteur à contacter **autoupdate.msappproxy.net** sur le port **443**, pour recevoir automatiquement les mises à jour importantes.   
 
-  Pour plus d’informations sur tous les points de terminaison réseau auxquels le connecteur doit pouvoir accéder, consultez [Microsoft Intune Certificate Connector](intune-endpoints.md#microsoft-intune-certificate-connector).
+  Pour plus d’informations sur tous les points de terminaison réseau auxquels le connecteur doit pouvoir accéder, consultez [Microsoft Intune Certificate Connector](intune-endpoints.md).
 
 - **Windows Server** :  
   Vous utilisez un serveur Windows pour héberger :
