@@ -164,7 +164,7 @@
           href: mdm-authority-set.md
         - name: Gérer les rôles
           items:
-            - name: Contrôle d'accès en fonction du rôle
+            - name: Contrôle d'accès basé sur les rôles
               href: role-based-access-control.md
             - name: Attribuer un rôle à un utilisateur
               href: assign-role.md
@@ -172,7 +172,7 @@
               href: create-custom-role.md
             - name: Utiliser des balises d’étendue
               href: scope-tags.md
-    - name: Inscrire des appareils
+    - name: Inscrire des périphériques
       items:
         - name: "Qu’est-ce que l’inscription d’appareils\_?"
           href: device-enrollment.md
@@ -259,7 +259,7 @@
         - name: Résoudre les problèmes d’inscription d’appareils
           href: troubleshoot-device-enrollment-in-intune.md
           displayName: sso
-    - name: Gérer des unités
+    - name: Gérer des périphériques
       items:
         - name: Vue d’ensemble de la gestion des appareils
           href: device-management.md
@@ -546,10 +546,11 @@
         - name: "Qu’est-ce que la gestion des applications Intune\_?"
           href: app-management.md
           displayName: mam-we
-        - name: Vue d’ensemble Ajouter des applications
-          href: apps-add.md
-          displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
+        - name: Ajouter des applications
           items:
+            - name: Vue d’ensemble Ajouter des applications
+              href: apps-add.md
+              displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
             - name: Applications protégées par Intune
               href: apps-supported-intune-apps.md
             - name: Applications du Windows Store
@@ -561,9 +562,10 @@
                 - name: "Application du Windows Phone\_8.1 Store"
                   href: store-apps-windows-phone-8-1.md
                 - name: Applications Microsoft Store
-                  href: store-apps-windows.md
                   items:
-                    - name: Ajouter manuellement l’application Portail d’entreprise
+                    - name: Applications Windows
+                      href: store-apps-windows.md
+                    - name: Application Portail d’entreprise
                       href: store-apps-company-portal-app.md
                 - name: Applications Google Play gérées
                   href: apps-add-android-for-work.md
@@ -571,10 +573,13 @@
                   href: apps-add-office365.md
                 - name: Applications Office 365 pour macOS
                   href: apps-add-office365-macos.md
+            - name: Applications web
+              href: web-app.md
+              displayName: web; web link; weblink; web-link
+            - name: Applications intégrées
+              href: apps-add-built-in.md
             - name: Créer votre application (métier)
               items:
-                - name: Gestion des applications Win32
-                  href: apps-win32-app-management.md
                 - name: Applications métier Android
                   href: lob-apps-android.md
                 - name: Applications métier iOS
@@ -587,11 +592,8 @@
                   href: app-sideload-windows.md
                 - name: Applications métier macOS
                   href: lob-apps-macos.md
-            - name: Applications web
-              href: web-app.md
-              displayName: web; web link; weblink; web-link
-            - name: Applications intégrées
-              href: apps-add-built-in.md
+            - name: Gestion des applications Win32
+              href: apps-win32-app-management.md
             - name: Scripts PowerShell
               href: intune-management-extension.md
         - name: Attribuer des applications
@@ -606,7 +608,7 @@
               href: apps-windows-10-app-deploy.md
             - name: Déployer des applications dans des environnements de secteur public
               href: apps-deploy-gcc-dod.md
-        - name: Surveiller les applications
+        - name: Superviser les applications
           href: apps-monitor.md
         - name: Applications découvertes
           href: app-discovered-apps.md
@@ -756,9 +758,9 @@
               items:
                 - name: Restrictions d’appareil
                   href: device-restrictions-android.md
-                - name: E-mail
+                - name: Courrier électronique
                   href: email-settings-android.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-android.md
                 - name: Wi-Fi
                   href: wi-fi-settings-android.md
@@ -775,9 +777,9 @@
               items:
                 - name: Restrictions d’appareil
                   href: device-restrictions-android-for-work.md
-                - name: E-mail
+                - name: Courrier électronique
                   href: email-settings-android-enterprise.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-android-enterprise.md
                 - name: Wi-Fi
                   href: wi-fi-settings-android-enterprise.md
@@ -793,9 +795,9 @@
                   href: ios-device-features-settings.md
                 - name: Restrictions d’appareil
                   href: device-restrictions-ios.md
-                - name: E-mail
+                - name: Courrier électronique
                   href: email-settings-ios.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-ios.md
                 - name: Wi-Fi
                   href: wi-fi-settings-ios.md
@@ -815,7 +817,7 @@
                   href: device-restrictions-macos.md
                 - name: Endpoint Protection
                   href: endpoint-protection-macos.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-macos.md
                 - name: Wi-Fi
                   href: wi-fi-settings-macos.md
@@ -837,7 +839,7 @@
                   href: device-restrictions-windows-10-teams.md
                 - name: Mise à niveau de l’édition et changement de mode
                   href: edition-upgrade-windows-settings.md
-                - name: E-mail
+                - name: Courrier électronique
                   href: email-settings-windows-10.md
                 - name: Endpoint Protection
                   href: endpoint-protection-windows-10.md
@@ -845,11 +847,11 @@
                   href: identity-protection-windows-settings.md
                 - name: Kiosk
                   href: kiosk-settings-windows.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-windows-10.md
                 - name: Wi-Fi
                   href: wi-fi-settings-windows.md
-                - name: Éducation
+                - name: Évaluation sécurisée
                   href: education-settings-windows.md
                 - name: Appareil multiutilisateur partagé
                   href: shared-user-device-settings-windows.md
@@ -879,7 +881,7 @@
                   href: kiosk-settings-holographic.md
                 - name: Personnalisé
                   href: custom-settings-windows-holographic.md
-        - name: "Windows\_8.1"
+        - name: Windows 8.1
           items:
             - name: Paramètres de stratégie de conformité
               href: compliance-policy-create-windows-8-1.md
@@ -887,11 +889,11 @@
               items:
                 - name: Restrictions d’appareil
                   href: device-restrictions-windows-8-1.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-windows-8-1.md
                 - name: Importation Wi-Fi
                   href: wi-fi-settings-import-windows-8-1.md
-        - name: Windows Phone 8.1
+        - name: "Windows\_Phone\_8.1"
           items:
             - name: Paramètres de stratégie de conformité
               href: compliance-policy-create-windows-8-1.md
@@ -899,9 +901,9 @@
               items:
                 - name: Restrictions d’appareil
                   href: device-restrictions-windows-phone-8-1.md
-                - name: E-mail
+                - name: Courrier électronique
                   href: email-settings-windows-phone-8-1.md
-                - name: VPN
+                - name: Réseau privé virtuel
                   href: vpn-settings-windows-phone-8-1.md
                 - name: Personnalisé
                   href: custom-settings-windows-phone-8-1.md
@@ -1035,7 +1037,7 @@
                   href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
                 - name: Pare-feu Windows
                   href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
-                - name: Endpoint Protection
+                - name: Endpoint Protection de
                   href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
             - name: Ajouter des applications pour les PC clients Intune
               href: add-apps-for-windows-pcs-in-microsoft-intune.md
