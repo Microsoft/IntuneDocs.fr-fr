@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 0d9fe180e81c9e661954dd0986f05ac3b5e749ed
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960648"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739184"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune  
 
@@ -101,13 +101,14 @@ Lorsque vous avez établi la connexion à Microsoft Defender ATP, Intune a reçu
 
 Si vous avez intégré un appareil à l’aide du package de configuration, vous n’avez pas besoin de le refaire. Vous pouvez également intégrer les appareils [à l’aide d’une stratégie de groupe ou de SCCM (System Center Configuration Manager)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
+
 ### <a name="create-the-device-configuration-profile"></a>Créer un profil de configuration d’appareil
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 3. Entrez un **Nom** et une **Description**.
 4. Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Pour **Type de profil**, sélectionnez **Microsoft Defender ATP (Windows 10 Desktop)** .
+5. Pour **Type de profil**, sélectionnez **Microsoft Defender ATP (Windows 10 Desktop)**.
 6. Configurez les paramètres :
 
    - **Type de package de configuration des clients Microsoft Defender ATP** : Sélectionnez **Intégrer** pour ajouter le package de configuration au profil. Sélectionnez **Désintégrer** pour supprimer le package de configuration du profil.
@@ -122,6 +123,7 @@ Si vous avez intégré un appareil à l’aide du package de configuration, vous
 
 7. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer le profil.
 8. [Utilisez un profil de configuration d’appareil](device-profile-assign.md) pour des périphériques que vous souhaitez évaluer avec Microsoft Defender ATP.  
+
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Créer et affecter la stratégie de conformité  
 
@@ -179,6 +181,9 @@ Ensuite, monitorez l’état des appareils qui ont la stratégie de conformité 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Conformité de l’appareil** > **Conformité à la stratégie**.
 3. Recherchez votre stratégie Microsoft Defender ATP dans la liste, et identifiez les appareils qui sont conformes ou non.
+
+## <a name="view-onboarding-status"></a>Afficher l’état de l'intégration
+Pour afficher l’état de l’intégration de tous les appareils Windows 10 managés par Intune, vous pouvez accéder à **Conformité des appareils** > **Microsoft Defender ATP**. À partir de cette page, vous pouvez également lancer la création d’un profil de configuration d’appareil pour l’intégration d’un plus grand nombre d’appareils à Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Étapes suivantes  
 

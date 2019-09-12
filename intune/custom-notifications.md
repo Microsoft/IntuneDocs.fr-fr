@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2019
+ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: bffbc96e945d522453c299717a6eb413354a4af4
+ms.sourcegitcommit: 98f2597eec28c6096985d5a1acae72430c2afb1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021751"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878038"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
-Utilisez Microsoft Intune pour envoyer des notifications personnalisées aux utilisateurs d’appareils iOS et Android gérés. Ces messages apparaissent sous la forme de notifications Push standard provenant de l’application Portail d’entreprise sur l’appareil d’un utilisateur, tout comme les notifications d’autres applications apparaissent sur l’appareil. Les notifications personnalisées d’Intune ne sont pas prises en charge par les appareils Windows.   
+Utilisez Microsoft Intune pour envoyer des notifications personnalisées aux utilisateurs d’appareils iOS et Android gérés. Ces messages apparaissent sous la forme de notifications Push standard provenant de l’application Portail d’entreprise et de l’application Microsoft Intune sur l’appareil d’un utilisateur, tout comme les notifications d’autres applications apparaissent sur l’appareil. Les notifications personnalisées d’Intune ne sont pas prises en charge par les appareils Windows.   
 
 Les messages de notification personnalisés incluent un titre court et un corps de message de 500 caractères au maximum. Ces messages peuvent être personnalisés à des fins de communication générale.
 
@@ -38,7 +38,7 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 ## <a name="considerations-for-using-custom-notifications"></a>Considérations relatives à l’utilisation des notifications personnalisées  
 
 **Configuration de l’appareil** :  
-- L’application Portail d’entreprise doit être installée sur les appareils avant que les utilisateurs puissent recevoir des notifications personnalisées. Ils doivent également avoir des autorisations configurées pour permettre à l’application Portail d’entreprise d’envoyer des notifications Push. L’application Portail d’entreprise invite les utilisateurs à autoriser les notifications à chaque installation ou mise à jour.  
+- L’application Portail d’entreprise ou l’application Microsoft Intune doit être installée sur les appareils avant que les utilisateurs puissent recevoir des notifications personnalisées. Ils doivent également avoir des autorisations configurées pour permettre à l’application Portail d’entreprise ou à l’application Microsoft Intune d’envoyer des notifications Push. Si nécessaire, l’application Portail d’entreprise et l’application Microsoft Intune peuvent inviter les utilisateurs à autoriser les notifications.  
 - Sur Android, Google Play Services est une dépendance obligatoire.  
 - L’appareil doit être inscrit auprès de MDM.
 
@@ -51,8 +51,8 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 - Les groupes peuvent inclure des utilisateurs ou des appareils, mais les messages sont envoyés seulement aux utilisateurs, et ils sont envoyés à chacun des appareils iOS ou Android que l’utilisateur a inscrits.  
 
 **Remise** :  
-- Intune envoie les messages à l’application Portail d’entreprise des utilisateurs, qui crée ensuite la notification Push. Les utilisateurs n’ont pas besoin d’être connectés à l’application pour que la notification soit envoyée sur l’appareil.  
-- Intune et l’application Portail d’entreprise ne peuvent pas garantir la remise d’une notification personnalisée. Les notifications personnalisées peuvent apparaître au bout de plusieurs heures, voire pas du tout : elles ne peuvent donc pas être utilisées pour des messages urgents.  
+- Intune envoie les messages à l’application Portail d’entreprise ou à l’application Microsoft Intune des utilisateurs, qui crée ensuite la notification Push. Les utilisateurs n’ont pas besoin d’être connectés à l’application pour que la notification soit envoyée sur l’appareil.  
+- Intune, ainsi que l’application Portail d’entreprise et l’application Microsoft Intune ne peuvent pas garantir la remise d’une notification personnalisée. Les notifications personnalisées peuvent apparaître au bout de plusieurs heures, voire pas du tout : elles ne peuvent donc pas être utilisées pour des messages urgents.  
 - Les messages de notification personnalisés d’Intune apparaissent sur les appareils en tant que notifications Push standard. Si l’application Portail d’entreprise est ouverte sur un appareil iOS lors de la réception de la notification, la notification s’affiche dans l’application au lieu d’être une notification Push.  
 - Les notifications personnalisées peuvent être visibles sur les écrans de verrouillage sur les appareils iOS et Android en fonction des paramètres de l’appareil.  
 - Sur les appareils Android, les autres applications peuvent avoir accès aux données de vos notifications personnalisées. Ne les utilisez pas pour les communications sensibles.  
@@ -80,7 +80,7 @@ Intune ne fait pas le suivi des notifications personnalisées que vous envoyez, 
 
 ## <a name="receive-a-custom-notification"></a>Recevoir une notification personnalisée  
 
-Sur un appareil, les utilisateurs voient les messages de notification personnalisés qui sont envoyés par Intune en tant que notification Push standard provenant de l’application Portail d’entreprise. Ces notifications sont similaires aux notifications Push que les utilisateurs reçoivent d’autres applications sur l’appareil.  
+Sur un appareil, les utilisateurs voient les messages de notification personnalisés qui sont envoyés par Intune en tant que notification Push standard provenant de l’application Portail d’entreprise ou de l’application Microsoft Intune. Ces notifications sont similaires aux notifications Push que les utilisateurs reçoivent d’autres applications sur l’appareil.  
 
 Sur les appareils iOS, si l’application Portail d’entreprise est ouverte lors de la réception de la notification, la notification s’affiche dans l’application au lieu d’être une notification Push.  
 

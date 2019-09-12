@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 48474ca9fcfafcd050b7ef9c5a64adb56388b9a4
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122139"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842143"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -53,6 +53,25 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-september-9-2019"></a>Semaine du 9 septembre 2019
+
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="updates-to-microsoft-intune-app----4997846---"></a>Mise à jour de l’application Microsoft Intune <!-- 4997846 -->
+L’application Microsoft Intune pour Android a été mise à jour avec les améliorations suivantes :
+- Mise à jour et amélioration de la disposition pour inclure la navigation inférieure pour les actions les plus importantes.
+- Ajout d’une page supplémentaire qui affiche le profil de l’utilisateur.
+- Ajout de l’affichage des notifications actionnables dans l’application pour l’utilisateur, comme la nécessité de mettre à jour les paramètres de l’appareil.
+- Ajout de l’affichage des notifications push personnalisées, alignant l’application sur la prise en charge récemment ajoutée dans les applications Portail d’entreprise pour iOS et Android. Pour plus d’informations, voir [Envoyer des notifications personnalisées dans Intune](custom-notifications.md).
+
+## <a name="week-of-september-2-2019"></a>Semaine du 2 septembre 2019
+
+### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
+
+#### <a name="intune-user-interface-update--tenant-status-dashboard-----5273210----"></a>Mise à jour de l’interface utilisateur Intune - Tableau de bord État du locataire  <!-- 5273210  -->
+L’interface utilisateur du tableau de bord État du locataire a été mise à jour pour s’aligner sur les styles d’interface utilisateur d’Azure. Pour plus d’informations, consultez [État du locataire](tenant-status.md).
+
 
 ## <a name="week-of-august-26-2019"></a>Semaine du 26 août 2019
 
@@ -185,7 +204,7 @@ Dans Intune, vous pouvez créer des stratégies afin d’utiliser l’antivirus 
 
 Dans cette mise à jour, ce comportement est corrigé. Ainsi, les paramètres **Durée d’exécution d’une analyse quotidienne rapide** et **Type d’analyse système à effectuer** montrent un état de réussite lorsque l’analyse est terminée et un état d’échec lorsque les paramètres ne sont pas appliqués. 
 
-Pour plus d’informations sur les paramètres de l’antivirus Windows Defender, consultez [Paramètres de l’appareil Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune](device-restrictions-windows-10.md#windows-defender-antivirus). 
+Pour plus d’informations sur les paramètres de l’antivirus Windows Defender, consultez [Paramètres de l’appareil Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune](device-restrictions-windows-10.md#microsoft-defender-antivirus). 
 
 ### <a name="device-enrollment"></a>Inscription des appareils
 

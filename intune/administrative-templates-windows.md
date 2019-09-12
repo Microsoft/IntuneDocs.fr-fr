@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/28/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 608f9045d676a756c4ee7440072040075e497605
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214339"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376924"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
 Vous gérez les appareils dans votre organisation et souhaitez créer des groupes de paramètres à appliquer à différents groupes d’appareils. Supposons que vous avez plusieurs groupes d’appareils. Vous souhaitez assigner des ensembles de paramètres distincts au groupe A et au groupe B. Vous voulez également voir rapidement tous les paramètres que vous pouvez configurer.
 
-Vous pouvez effectuer tout cela à l’aide des **modèles d’administration** fournis dans Microsoft Intune. Les modèles d’administration contiennent des centaines de paramètres qui contrôlent des fonctionnalités dans Microsoft Edge, Internet Explorer, les programmes Microsoft Office, le Bureau à distance, OneDrive, les mots de passe et les codes PIN, et plus encore. Ces paramètres permettent aux administrateurs de groupe de gérer les stratégies de groupe à l’aide du cloud.
+Vous pouvez effectuer tout cela à l’aide des **modèles d’administration** fournis dans Microsoft Intune. Les modèles d’administration contiennent des centaines de paramètres qui contrôlent des fonctionnalités dans Microsoft Edge version 77 et ultérieure, Internet Explorer, les programmes Microsoft Office, le Bureau à distance, OneDrive, les mots de passe et les codes PIN, et plus encore. Ces paramètres permettent aux administrateurs de groupe de gérer les stratégies de groupe à l’aide du cloud.
 
-Les paramètres Windows sont similaires aux paramètres de stratégie de groupe (GPO) dans Active Directory (AD). Ces paramètres sont intégrés à Windows et sont des [paramètres basés sur ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) qui utilisent XML. Les paramètres Office sont ingérés par ADMX et utilisent les paramètres ADMX dans les [fichiers de modèles d’administration Office](https://www.microsoft.com/download/details.aspx?id=49030). Toutefois, les modèles Intune sont entièrement basés dans le cloud. Ils offrent un moyen simple et rapide de configurer les paramètres et de trouver les paramètres souhaités.
+Les paramètres Windows sont similaires aux paramètres de stratégie de groupe (GPO) dans Active Directory (AD). Ces paramètres sont intégrés à Windows et sont des [paramètres basés sur ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) qui utilisent XML. Les paramètres Office et Microsoft Edge sont ingérés par ADMX et utilisent les paramètres ADMX dans les [fichiers de modèles d’administration Office](https://www.microsoft.com/download/details.aspx?id=49030) et les [fichiers de modèles d’administration Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). Toutefois, les modèles Intune sont entièrement basés dans le cloud. Ils offrent un moyen simple et rapide de configurer les paramètres et de trouver les paramètres souhaités.
 
 Les **modèles d’administration** sont intégrés à Intune et ne nécessitent aucune personnalisation, y compris l’utilisation d’OMA-URI. Dans votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres de modèle comme un moyen centralisé de gérer vos appareils Windows 10.
 
@@ -58,16 +58,17 @@ Cet article présente les étapes de la création d’un modèle pour les appare
     > [!TIP]
     > Les paramètres Windows dans Intune sont mis en corrélation avec le chemin d’accès à la stratégie de groupe locale que vous voyez dans l’éditeur de stratégie de groupe local (`gpedit`).
 
-5. Par défaut, la liste déroulante affiche **tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Microsoft Edge** :
+5. Par défaut, la liste déroulante affiche **tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Edge version 77 ou ultérieure** :
 
     ![Filtrer la liste pour afficher tous les paramètres Windows ou Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Les paramètres Microsoft Edge s’appliquent à :
     >
-    > - Windows 10 RS4 et versions ultérieures avec la mise à jour [KB 4512509](https://support.microsoft.com/kb/4512509) installée.
-    > - Windows 10 RS5 et versions ultérieures avec la mise à jour [KB 4512534](https://support.microsoft.com/kb/4512534) installée.
-    > - Windows 10 19H1 et versions ultérieures avec la mise à jour [KB 4512941](https://support.microsoft.com/kb/4512941) installée.
+    > - Microsoft Edge version 77 ou ultérieure. Pour configurer Microsoft Edge version 45 et les versions antérieures, consultez [Paramètres de restriction d’appareil du navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Windows 10 RS4 et versions ultérieures avec la mise à jour [KB 4512509](https://support.microsoft.com/kb/4512509) installée
+    > - Windows 10 RS5 et versions ultérieures avec la mise à jour [KB 4512534](https://support.microsoft.com/kb/4512534) installée
+    > - Windows 10 19H1 et versions ultérieures avec la mise à jour [KB 4512941](https://support.microsoft.com/kb/4512941) installée
 
 6. Sélectionnez l’un des paramètres. Par exemple, filtrez sur **Office**, puis sélectionnez **Activer la navigation restreinte**. Une description détaillée du paramètre s’affiche. Choisissez **Activé** ou **Désactivé**, ou laissez le paramètre défini sur **Non configuré** (valeur par défaut). La description détaillée explique également ce qui se produit quand vous choisissez l’option **Activé**, **Désactivé** ou **Non configuré**.
 7. Cliquez sur **OK** pour enregistrer vos modifications.

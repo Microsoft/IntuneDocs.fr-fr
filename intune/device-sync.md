@@ -5,9 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,19 +15,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f13e00abad5b48dcd7996cf9df1cc5756f250d3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 30910de4ae17aa3fde573155bde4643e2c3d67f7
+ms.sourcegitcommit: 1925eba3fb0b30592f07a924119e20b661588d12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388115"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808632"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchroniser des appareils pour obtenir les stratégies et les actions les plus récentes avec Intune
 
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-L’action d’appareil **Synchroniser** force l’appareil sélectionné à s’enregistrer immédiatement auprès d’Intune. Quand un appareil s’enregistre, il reçoit immédiatement les actions ou les stratégies en attente qui lui ont été affectées. Cette fonctionnalité peut vous aider à valider et dépanner immédiatement les stratégies que vous avez assignées, sans attendre la prochaine vérification planifiée.
+L’action d’appareil **Synchroniser** force l’appareil sélectionné à s’enregistrer immédiatement auprès d’Intune. Quand un appareil s’enregistre, il reçoit immédiatement les actions ou les stratégies en attente qui lui ont été affectées. Cette fonctionnalité peut vous aider à valider et dépanner immédiatement les stratégies que vous avez assignées, sans attendre la prochaine vérification planifiée.
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -40,15 +37,14 @@ L’action d’appareil **Synchroniser** force l’appareil sélectionné à s�
 
 ## <a name="sync-a-device"></a>Synchroniser un appareil
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Sélectionnez **Tous les services**, filtrez pour **Intune**, puis sélectionnez **Microsoft Intune**. 
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
 3. Dans **Intune**, sélectionnez **Appareils** > **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, sélectionnez un appareil, sélectionnez **Plus**, puis **Synchroniser**.
+4. Dans la liste des appareils que vous gérez, sélectionnez un appareil pour ouvrir son volet *Vue d’ensemble*, puis sélectionnez **Synchroniser**.
 5. Pour confirmer, sélectionnez **Oui**.
 
 Pour voir l’état de l’action de synchronisation, choisissez **Appareils** > **Actions de l’appareil**.
 
-Vous pouvez trouver les fréquences d’archivage standard des stratégies Intune dans [Durées de cycle d’actualisation](device-profiles.md).
+Vous pouvez trouver les fréquences d’archivage standard des stratégies Intune dans [Durées de cycle d’actualisation](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## <a name="retryable-error-codes"></a>Codes d’erreur renouvelable
 

@@ -17,17 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: e0f1f7d937f08e32b30ee9facdcca03d263bc27e
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062939"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842179"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
-Il existe quatre types de déploiement Autopilot : [Mode de déploiement automatique](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pour les kiosques, la signalisation numérique ou un appareil partagé ; [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permet aux partenaires ou au personnel informatique de préprovisionner un PC Windows 10 pour qu’il soit entièrement configuré et prêt à l’emploi ; [Autopilot pour les appareils existants](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vous permet de déployer facilement la dernière version de Windows 10 sur vos appareils existants ; [Mode piloté par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pour les utilisateurs traditionnels. 
+Il existe quatre types de déploiement Autopilot :
+- [Mode de déploiement automatique](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pour les kiosques, la signalisation numérique ou un appareil partagé
+- [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permet aux partenaires ou au personnel informatique de préprovisionner un PC Windows 10 pour qu’il soit entièrement configuré et prêt à l’emploi ; [Autopilot pour les appareils existants](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vous permet de déployer facilement la dernière version de Windows 10 sur vos appareils existants
+- [Mode piloté par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pour les utilisateurs traditionnels 
 
 
 ## <a name="prerequisites"></a>Prérequis
@@ -74,9 +77,9 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
     3. Pour **Type d’appartenance**, choisissez **Affecté** ou **Appareil dynamique**.
 3. Si vous avez choisi **Affecté** pour **Type d’appartenance** à l’étape précédente, dans le panneau **Groupe**, choisissez **Membres**, puis ajoutez les appareils Autopilot au groupe.
     Les appareils Autopilot qui ne sont pas encore inscrits sont ceux dont le nom correspond au numéro de série de l’appareil.
-4. Si vous avez choisi **Appareils dynamiques** pour **Type d’appartenance** ci-dessus, dans le panneau **Groupe**, choisissez **Membres de dispositif dynamique**, puis tapez le code suivant dans la zone **Règle avancée**.
+4. Si vous avez choisi **Appareils dynamiques** pour **Type d’appartenance** ci-dessus, dans le panneau **Groupe**, choisissez **Membres de dispositif dynamique**, puis tapez le code suivant dans la zone **Règle avancée**. Seuls les appareils AutoPilot sont rassemblés par ces règles, car elles ciblent des attributs qui n’appartiennent qu’à des appareils AutoPilot.
     - Si vous souhaitez créer un groupe comprenant tous vos appareils Autopilot, tapez `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Le champ de balises de groupe d’Intune est mis en correspondance avec l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe spécifique (OrderID), vous devez taper ceci : `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Le champ de balises de groupe d’Intune est mis en correspondance avec l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe spécifique (OrderID d’appareil Azure AD), vous devez saisir ceci : `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Si vous souhaitez créer un groupe qui inclut tous vos appareils Autopilot associés à un ID de bon de commande spécifique, tapez `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     Après avoir ajouté le code dans la zone **Règle avancée**, choisissez **Enregistrer**.
@@ -93,7 +96,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
 4. Sélectionnez **Suivant**.
 5. Sur la page **Out-of-box experience (OOBE)** , choisissez entre ces deux options pour **Mode de déploiement** :
     - **Géré par l’utilisateur** : Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
-    - **Auto-déploiement (préversion)**  : (nécessite Windows 10, version 1809 ou ultérieure) les appareils avec ce profil ne sont pas associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur ne sont pas obligatoires pour l’inscription de l’appareil.
+    - **Auto-déploiement (préversion)**  : (nécessite Windows 10, version 1809 ou ultérieure) les appareils avec ce profil ne sont pas associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur ne sont pas obligatoires pour l’inscription de l’appareil. Quand aucun utilisateur n’est associé à un appareil, les stratégies de conformité basées sur l’utilisateur ne s’appliquent pas à ce dernier. Lorsque vous utilisez le mode de déploiement automatique, seules les stratégies de conformité ciblant l’appareil sont appliquées.
 
     ![Capture d’écran de la page OOBE](media/enrollment-autopilot/create-profile-outofbox.png)
 

@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 6df42d908169ab591150e88e03f2f419710c9e54
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739200"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Ajouter des stratégies de mise à jour de logiciel iOS dans Intune
 
@@ -53,14 +53,8 @@ L’appareil effectue une vérification auprès d’Intune toutes les huit heur
 
     - **Différer la visibilité des mises à jour logicielles pour les utilisateurs finaux sans changer les mises à jour planifiées (jours)**  : 
 
-      **Ce paramètre a été déplacé vers [Restrictions de l’appareil](device-restrictions-ios.md#general). Il sera supprimé de cet emplacement dans le portail**. Pendant une courte période, les stratégies existantes peuvent être changées ici. Après environ un mois, ce paramètre sera supprimé des stratégies existantes.
-
-      Pour limiter l’impact, nous vous recommandons de :
-        - Supprimer la stratégie existante de cet emplacement dans le portail
-        - Créer une [stratégie de restriction d’appareil](device-restrictions-ios.md#general)
-        - Cibler les mêmes utilisateurs que la stratégie d’origine
-
-      En cas de conflit, ce paramètre n’a aucun effet, *sauf si* les deux valeurs sont identiques. Pour éviter un conflit, veillez à changer la stratégie existante ou à la supprimer de cet emplacement dans le portail.
+      **Si vous souhaitez retarder la visibilité des mises à jour logicielles pendant un laps de temps spécifique sur vos appareils iOS supervisés, configurez ces paramètres dans [Restrictions de l’appareil](device-restrictions-ios.md#general).
+     
       > [! Important]  
       > Une stratégie dont l’*heure de début* et l’*heure de fin* sont définies sur minuit couvre 0 heure, et non pas 24 heures. Cette stratégie aboutit à l’absence de restriction.  
 
