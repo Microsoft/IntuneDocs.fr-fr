@@ -1,6 +1,6 @@
 # Aide utilisateur pour Intune
 
-## [Utiliser des appareils gérés pour réaliser vos tâches](use-managed-devices-to-get-work-done.md)
+## [Qu’est-ce que l’inscription d’appareils ?](use-managed-devices-to-get-work-done.md)
 
 ## [Quelles informations mon entreprise peut-elle voir avec Intune ?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
