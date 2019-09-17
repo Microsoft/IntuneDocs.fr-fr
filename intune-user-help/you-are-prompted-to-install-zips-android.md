@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 09/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f83504e5d651d7f981fa605fc9157287bdb09a4
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: b12cb83485c25181bdcc015857c68da795676219
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529271"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864438"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Installer Zimperium zIPS sur votre appareil Android
 
@@ -31,7 +31,7 @@ Si vous rencontrez des difficultés lors de l’installation, essayez de suivre 
 
 ## <a name="what-you-need-to-do"></a>Opérations à effectuer
 
-1. À partir du haut de l’écran, faites glisser vers le bas pour ouvrir la barre Notifications, puis appuyez sur l’option **Application obligatoire - Installer Skycure à partir du Play Store**. Vous pouvez également trouver cette option dans l’application du portail d’entreprise, sous __Détails de la conformité__.
+1. À partir du haut de l’écran, faites glisser vers le bas pour ouvrir la barre Notifications, puis appuyez sur l’option **Application obligatoire - Installer Zimperium à partir du Play Store**. Vous pouvez également trouver cette option dans l’application du portail d’entreprise, sous __Détails de la conformité__.
 
 2. Vous accédez à la page d’installation de Zimperium zIPS dans le Play Store. Installez Zimperium zIPS, puis appuyez sur **ACCEPTER** pour permettre à Zimperium zIPS d’accéder à votre appareil.
 
