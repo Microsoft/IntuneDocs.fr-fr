@@ -11,17 +11,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a22fef1c04ae52a8a4cc65eaadc1ef6fcd524c19
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0539e4d12173ba2c7ba8d3af3364daf69ddbbf34
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071528"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Attribuer un rôle à un utilisateur d’Intune
 
@@ -47,11 +47,11 @@ Pour obtenir une liste complète des autorisations pour chaque rôle intégré, 
 
 7. Dans le panneau **Attributions de rôles**, entrez un **Nom d’affectation** et, éventuellement, une **Description d’affectation** pour l’affectation.
 
-8. Pour **Membres (groupes)**, choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
+8. Pour **Membres (groupes)** , choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
 
-9. Pour **Étendue (groupes)**, choisissez un groupe contenant les utilisateurs/appareils que le membre ci-dessus sera autorisé à gérer.
+9. Pour **Étendue (groupes)** , choisissez un groupe contenant les utilisateurs/appareils que le membre ci-dessus sera autorisé à gérer.
 
-10. Pour **Étendue (balises)**, choisissez des balises où cette attribution de rôle s’appliquera.
+10. Pour **Étendue (balises)** , choisissez des balises où cette attribution de rôle s’appliquera.
 
 11. Quand vous avez terminé, choisissez **OK**. La nouvelle affectation s’affiche dans la liste des affectations.
 
