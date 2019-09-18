@@ -8,17 +8,17 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cf4e365f4e68920ea5d24dc3ce2e1bd5eb9f817
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f63bbc80c055cfcb3bd52f79e7b810094107ec2a
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511569"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080051"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et affecter un rôle personnalisé
 
@@ -56,10 +56,10 @@ Pour permettre à votre opérateur de sécurité d’utiliser les nouvelles auto
 1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > **Opérations de sécurité**.
 2. Sous **Rôles Intune**, choisissez **Affectations** > **Attribuer**.
 3. Dans la zone **Nom de l’attribution**, entrez *Opérateurs de sécurité*.
-4. Choisissez **Membre (groupes)** > **Ajouter**.
+4. Choisissez **Membre (groupes)**  > **Ajouter**.
 5. Choisissez le groupe **Testeurs Contoso**.
 6. Choisissez **Sélectionner** > **OK**.
-7. Choisissez **Étendue (Groupes)** > **Sélectionnez les groupes à inclure** > **Testeurs Contoso**.
+7. Choisissez **Étendue (Groupes)**  > **Sélectionnez les groupes à inclure** > **Testeurs Contoso**.
 8. Choisissez **Sélectionner** > **OK** > **OK**.
 
 Désormais, tous les membres du groupe sont membres du rôle *Opérations de sécurité* et peuvent consulter les informations suivantes relatives à un appareil : identificateurs d’appareil d’entreprise, stratégies de conformité d’appareil, configurations d’appareil et informations sur l’organisation.

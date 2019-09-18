@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
-ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
+ms.openlocfilehash: 469bdc54385f943fd0c42ccfd921293970b03b64
+ms.sourcegitcommit: 05139901411d14a85c2340c0ebae02d2c178a851
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70027384"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70905040"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Analyser le chiffrement d’appareil avec Intune   
 
@@ -201,8 +201,7 @@ Intune prend en charge plusieurs options pour la rotation et la récupération d
   1. Connectez-vous au site web *Portail d’entreprise Intune* à partir de n’importe quel appareil.  
   2. Dans le portail, accédez à **Appareils**, puis sélectionnez l’appareil macOS qui est chiffré avec FileVault.  
   3. Sélectionnez **Obtenir la clé de récupération**. La clé de récupération actuelle est affichée.  
-  
-     Sur un iPhone, vous devez sélectionner les *trois* points avant que l’option *Obtenir la clé de récupération* s’affiche.  
+ 
 
 ## <a name="bitlocker-recovery-keys"></a>Clés de récupération BitLocker  
 

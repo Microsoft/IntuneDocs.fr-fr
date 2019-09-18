@@ -14,19 +14,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 863d8d03836573a7425f2958e52a1e0331b34a10
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354385"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080068"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
-
-> [!NOTE]
-> Microsoft souhaite connaître votre opinion. Envoyez vos questions ou démarrez une discussion en envoyant un e-mail à `eSIMonIntune@microsoft.com`.
-
-## <a name="introduction"></a>Introduction
 
 eSIM est une puce SIM intégrée qui vous permet de vous connecter à Internet par le biais d’une connexion de données cellulaires sur un appareil compatible avec eSIM, tel que la [LTE Surface Pro](https://www.microsoft.com/surface/business/surface-pro). Avec une eSIM, il n’est pas nécessaire de vous procurer une carte SIM auprès de votre opérateur mobile. En tant que voyageur dans le monde entier, vous pouvez aussi basculer entre divers opérateurs mobiles et forfaits de données pour rester toujours connecté.
 
