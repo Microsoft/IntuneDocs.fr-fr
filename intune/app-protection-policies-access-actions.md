@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cf55084951c3a423b79e4588f8814b5e73ce8e8
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: a038f55f6dbdd894742a8712c878e77557a77210
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063014"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061537"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
@@ -44,7 +44,7 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 8. Sélectionnez l’**Action** à effectuer si les utilisateurs ne remplissent pas les critères. Dans certains cas, vous pouvez configurer plusieurs actions pour un même paramètre. Pour plus d’informations, consultez [Guide pratique pour créer et affecter des stratégies de protection des applications](app-protection-policies.md).
 
 >[!NOTE]
-> Pour utiliser le paramètre **Modèle(s) d’appareil ou Fabricant(s) d’appareil**, entrez une liste d’identificateurs de modèle séparés par des points-virgules. Évitez les espaces dans les listes de plusieurs valeurs. Ces valeurs ne respectent pas la casse. 
+> Pour utiliser le paramètre **Modèle(s) d’appareil ou Fabricant(s) d’appareil**, entrez une liste d’identificateurs de modèle d’appareil (iOS) ou de fabricants d’appareil (Android) séparés par des points-virgules. Évitez les espaces dans les listes de plusieurs valeurs. Ces valeurs ne respectent pas la casse. 
 
 ## <a name="policy-settings"></a>Paramètres de stratégie 
 

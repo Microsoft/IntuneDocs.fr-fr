@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 8b41405e2256d6d2608b05a9c7e8a40cbb3ab349
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70376924"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071069"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
@@ -36,7 +36,7 @@ Cet article présente les étapes de la création d’un modèle pour les appare
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-- Certains de ces paramètres sont disponibles à partir de la version 1703 de Windows 10 (RS2). Pour une expérience optimale, il est recommandé d’utiliser Windows 10 Entreprise version 1903 (19H1) et les versions ultérieures.
+- Certains de ces paramètres sont disponibles à partir de la version 1703 de Windows 10 (RS2). Certains paramètres ne sont pas inclus dans toutes les éditions de Windows. Pour une expérience optimale, il est recommandé d’utiliser Windows 10 Entreprise version 1903 (19H1) et les versions ultérieures.
 
 - Les paramètres Windows utilisent des [fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Les fournisseurs de services de configuration fonctionnent sur les différentes éditions de Windows, telles que les éditions Famille, Professionnel et Entreprise. Pour voir si un fournisseur de services de configuration fonctionne sur une édition spécifique, accédez à [Fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d96167eb37ac7c3c90bad82783e9ce06814f8c88
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 08066c0742ad4ad02f907e55cc84eb65068c9b99
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884780"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70986425"
 ---
 # <a name="data-collection-in-intune"></a>Collecte des données dans Intune
 
@@ -33,6 +33,9 @@ Quand les utilisateurs inscrivent leurs appareils personnels ou d’entreprise �
 - Informations de diagnostic, de performances et d’utilisation.
 
 À partir de ces sources, Intune collecte des informations qui sont réparties dans les trois catégories suivantes : [identifiées](#identified-data), [pseudonymes](#pseudonymized-data) et [agrégées](#aggregated-data).
+
+> [!NOTE]
+> Nous ne vendons pas les données collectées par notre service à des tiers pour une raison quelconque.
 
 ## <a name="identified-data"></a>Données identifiées
 

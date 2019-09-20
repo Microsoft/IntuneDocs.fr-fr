@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecfd482df452c52d81621cdc49c6ca78c4d4c1f6
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354534"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061737"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 Découvrez les dernières mises à jour pour les applications Microsoft Intune. Nous apportons régulièrement des améliorations au site web et à l’application Portail d’entreprise Intune. Si vous êtes un administrateur Intune ou un technicien de support, vous trouverez dans cet article les informations dont vous aurez besoin pour :
@@ -33,6 +33,23 @@ Découvrez les dernières mises à jour pour les applications Microsoft Intune. 
 Si vous êtes un employé ou un étudiant, veillez à consulter les captures d’écran et les liens vers la documentation d’aide de Portail d’entreprise. Pour plus d’informations sur l’utilisation de l’application Portail d’entreprise, consultez la [documentation d’aide pour les utilisateurs de Portail d’entreprise](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+
+## <a name="week-of-september-9-2019"></a>Semaine du 9 septembre 2019
+
+### <a name="updates-to-microsoft-intune-app----4997846---"></a>Mise à jour de l’application Microsoft Intune <!-- 4997846 -->
+L’application Microsoft Intune pour Android a été mise à jour avec les améliorations suivantes :
+- Mise à jour et amélioration de la disposition pour inclure la navigation inférieure pour les actions les plus importantes.
+- Ajout d’une page supplémentaire qui affiche le profil de l’utilisateur.
+- Ajout de l’affichage des notifications actionnables dans l’application pour l’utilisateur, comme la nécessité de mettre à jour les paramètres de l’appareil.
+- Ajout de l’affichage des notifications push personnalisées, alignant l’application sur la prise en charge récemment ajoutée dans les applications Portail d’entreprise pour iOS et Android. Pour plus d’informations, voir [Envoyer des notifications personnalisées dans Intune](custom-notifications.md).
+
+    Exemple de profil utilisateur :<br>
+    <img src="./media/intune-app-android-device-profile.png" alt="Screenshot of Microsoft Intune app for Android - User Profile" width="300">   
+
+    Notifications et exemple de navigation inférieure :<br>
+    <img src="./media/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
+
 
 ## <a name="week-of-june-24-2019"></a>Semaine du 24 juin 2019  
 
@@ -95,7 +112,7 @@ La page d’accueil de l’application Portail d’entreprise pour les appareils
 
 ## <a name="week-of-february-19-2019"></a>Semaine du 19 février 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nouvel écran Catégories d’application dans l’application Portail d’entreprise pour Windows 10<!-- 3834780 WNready4Review -->  
-Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)** , **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
+Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Cette modification apparaît dans les versions de Portail d’entreprise 10.3.3451.0 et ultérieures. Pour plus d’informations sur l’installation des applications dans Portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows).  
 
 ![Capture d’écran de Portail d’entreprise pour Windows 10, écran Catégories d’application.](./media/1902_CP_app_categories.png)   
 
@@ -524,7 +541,7 @@ __Après__ ![Image de la version mise à jour de l’écran de chargement, qui a
 
 ![À gauche, une image de l’application Portail d’entreprise pour Android avant la mise à jour. À droite, une image de l’application Portail d’entreprise pour Android après la mise à jour. Les deux images montrent l’onglet Applications sélectionné parmi les trois onglets disponibles Applications, Appareils et Contacter le service informatique.](./media/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigation__ : La vue Toutes les applications montre une vue à onglets avec __Proposée(s)__ , __Toutes__ et __Catégories__ afin de faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
+* __Navigation__ : La vue Toutes les applications montre une vue à onglets avec __Proposée(s)__, __Toutes__ et __Catégories__ afin de faciliter la navigation. L’onglet __Contacter le service informatique__ a été simplifié pour une meilleure lisibilité.
 
 <html>
 <body>

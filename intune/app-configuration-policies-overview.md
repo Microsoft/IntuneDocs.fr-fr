@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cda0453009855d96e7c13e170ba908479a0773ea
-ms.sourcegitcommit: 513e805bbea8bf652c2901dfc5460e34946077df
+ms.openlocfilehash: c0cbc2c7334675e91450b9c2d7129a098498d978
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160576"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061590"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
 Les stratégies de configuration des applications peuvent vous aider à éliminer les problèmes d’installation des applications en vous permettant d’affecter des paramètres de configuration à une stratégie, à son tour attribuée aux utilisateurs finaux avant qu’ils n’exécutent l’application. Les paramètres sont ensuite fournis automatiquement quand l’application est configurée sur l’appareil des utilisateurs finaux, lesquels n’ont aucune action à effectuer. Les paramètres de configuration sont uniques pour chaque application. 
 
-Vous pouvez créer et utiliser des stratégies de configuration des applications afin de fournir des paramètres de configuration pour des applications iOS ou Android. Ces paramètres de configuration permettent de personnaliser une application selon une [approche conforme aux standards du secteur](https://www.appconfig.org/) pour la gestion et la configuration des applications. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général à la première exécution. 
+Vous pouvez créer et utiliser des stratégies de configuration des applications afin de fournir des paramètres de configuration pour des applications iOS ou Android. Ces paramètres de configuration permettent de personnaliser une application en utilisant la gestion et la configuration des applications. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général à la première exécution. 
 
 Un paramètre de configuration d’application, par exemple, peut vous obliger à spécifier les détails suivants :
 
@@ -60,7 +60,7 @@ Vous avez deux options pour utiliser les stratégies de configuration des applic
 ## <a name="apps-that-support-app-configuration"></a>Applications qui prennent en charge la configuration d’application
 
 ### <a name="managed-devices"></a>Appareils gérés
-Vous pouvez utiliser des stratégies de configuration des applications pour les applications qui les prennent en charge. Pour que la configuration des applications soit prise en charge dans Intune, les applications doivent être écrites de sorte à prendre en charge l’utilisation des configurations d’applications, comme défini par la [Communauté Appconfig](https://www.appconfig.org/members). Pour plus de détails, consultez l’éditeur de l’application.
+Vous pouvez utiliser des stratégies de configuration des applications pour les applications qui les prennent en charge. Pour que la configuration des applications soit prise en charge dans Intune, les applications doivent être écrites de sorte à prendre en charge l’utilisation des configurations d’applications, comme défini par le système d’exploitation. Pour plus d’informations sur les clés de configuration d’application prises en charge, consultez le fournisseur de votre application.
 
 ### <a name="managed-apps"></a>Applications gérées
 Vous pouvez préparer votre application métier en incorporant le [SDK d’application Intune](app-sdk.md) dans l’application ou en wrappant l’application une fois qu’elle a été développée à l’aide de l’[outil de wrapping d’application Intune](apps-prepare-mobile-application-management.md). Le SDK d’application Intune s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](app-sdk.md). Pour voir la différence entre le SDK d’application Intune et l’outil de wrapping d’application Intune, consultez [Préparer des applications métier pour les stratégies de protection des applications](apps-prepare-mobile-application-management.md#feature-comparison).
