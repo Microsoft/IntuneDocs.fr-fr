@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b333c848368f00f005ed0febc61f67f098ee7e5e
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: eb470885be8f09f0c99dfe26a1d982570644ac8a
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979182"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167603"
 ---
 # <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -731,5 +731,4 @@ L’entité **VppProgramTypes** répertorie les types de VPP possibles pour une 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur Intune Data Warehouse, consultez [modèle de données Data Warehouse](https://docs.microsoft.com/intune/reports-ref-data-model).
-
+Pour plus d’informations sur Intune Data Warehouse, consultez [modèle de données Data Warehouse](reports-ref-data-model.md).

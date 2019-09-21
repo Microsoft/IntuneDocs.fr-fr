@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 052190185159dfdee4adee94d4c43c72ce6f41d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac74cc547d13e92b87a8e148845ff1bc7be8efe4
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046325"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166990"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Où se trouve ma fonctionnalité Intune dans Azure ?
 Lors du transfert d’Intune vers le portail Azure, nous en avons profité pour organiser certaines tâches de manière plus logique. Toutefois, ces améliorations nécessitent de se familiariser avec la nouvelle organisation. Ce guide de référence est destiné à ceux d’entre vous qui connaissent parfaitement Intune dans le portail classique et qui se demandent comment effectuer certaines tâches spécifiques dans Intune dans le portail Azure. Si cet article ne couvre pas l’une des fonctionnalités que vous recherchez, laissez-nous un commentaire à la fin de l’article pour que nous puissions le mettre à jour.
@@ -77,7 +77,7 @@ Si vous voulez afficher des stratégies d’accès conditionnel et leur apporter
 ## <a name="where-did-my-compliance-policies-go"></a>Où se trouvent mes stratégies de conformité ?
 Une fois que votre locataire migre vers le portail Azure, ses stratégies de conformité continuent d’être appliquées. Toutefois, vous ne pouvez pas les afficher ou les modifier à partir d’Intune dans le portail Azure.
 
-Si vous voulez afficher des stratégies de conformité et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](https://docs.microsoft.com/intune/device-compliance-get-started). 
+Si vous voulez afficher des stratégies de conformité et leur apporter des modifications à partir du portail Azure, vous devez supprimer les anciennes stratégies du portail classique. Recréez-les ensuite dans le portail Azure. Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Bien démarrer avec les stratégies de conformité des appareils dans Intune](device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Où est passé le programme Apple DEP ?
 Dans le portail classique, vous pouviez configurer Intune pour l’intégrer au programme DEP (Programme d’inscription des appareils) d’Apple et demander manuellement la synchronisation avec le service d’Apple :

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6b07c77b0d92ceb7bdc960d8c2fd754c277499
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 91b7fc7414c3a6d6517cd4b704cb5e99ddcf96d0
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713236"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167185"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Guide du SDK de l’application Microsoft Intune pour les tests développeurs Android
 
@@ -30,20 +30,20 @@ Le guide de test du SDK d’application Microsoft Intune pour Android a pour but
 ## <a name="prerequisite-test-accounts"></a>Prérequis : comptes de test
 Vous pouvez créer des comptes avec ou sans données prégénérées. Comment créer un compte :
 1. Accédez au site [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
-2. [Configurez Intune](https://docs.microsoft.com/intune/setup-steps) pour activer la gestion des appareils mobiles.
-3. [Créez des utilisateurs](https://docs.microsoft.com/intune/users-add).
-4. [Créer des groupes](https://docs.microsoft.com/intune/groups-add).
-5. [Attribuez les licences](https://docs.microsoft.com/intune/licenses-assign) à des fins de test.
+2. [Configurez Intune](setup-steps.md) pour activer la gestion des appareils mobiles.
+3. [Créez des utilisateurs](users-add.md).
+4. [Créer des groupes](groups-add.md).
+5. [Attribuez les licences](licenses-assign.md) à des fins de test.
 
 
 ## <a name="azure-portal-policy-configuration"></a>Configuration des stratégies dans le portail Azure
-[Créez et affectez des stratégies de protection des applications](https://docs.microsoft.com/intune/app-protection-policies) dans le [panneau Intune du portail Azure](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). Vous pouvez également créer et affecter votre [stratégie de configuration des applications](https://docs.microsoft.com/intune/app-configuration-policies-overview) dans le panneau Intune.
+[Créez et affectez des stratégies de protection des applications](app-protection-policies.md) dans le [panneau Intune du portail Azure](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). Vous pouvez également créer et affecter votre [stratégie de configuration des applications](app-configuration-policies-overview.md) dans le panneau Intune.
 
 > [!NOTE]
 > Si votre application n’est pas listée dans le portail Azure, vous pouvez la cibler avec une stratégie en sélectionnant l’option **Autres applications** et en indiquant le nom du package dans la zone de texte.
 
 > [!IMPORTANT]
-> Pour qu’une stratégie de configuration des applications soit appliquée, l’utilisateur qui s’inscrit doit être ciblé par une [stratégie de protection des applications Intune](https://docs.microsoft.com/intune/app-protection-policy).
+> Pour qu’une stratégie de configuration des applications soit appliquée, l’utilisateur qui s’inscrit doit être ciblé par une [stratégie de protection des applications Intune](app-protection-policy.md).
 
 ## <a name="test-cases"></a>Cas de test
 
@@ -103,7 +103,7 @@ Vous pouvez contrôler la sauvegarde des applications de la façon suivante :
 ### <a name="unenrollment"></a>Désinscription
 Pour réinitialiser à distance les applications gérées afin d’en supprimer les adresses e-mail et les documents d’entreprise, et pour déchiffrer les données personnelles lorsque celles-ci ne sont plus gérées, procédez de la façon suivante :
 
-1. Dans le portail Azure, [démarrez un processus de réinitialisation](https://docs.microsoft.com/intune/apps-selective-wipe).
+1. Dans le portail Azure, [démarrez un processus de réinitialisation](apps-selective-wipe.md).
 2. Si votre application n’est pas inscrite à un gestionnaire de réinitialisation, vérifiez les conditions suivantes :
     - Une réinitialisation complète de l’application s’est produite.
 3. Si votre application est inscrite à `WIPE_USER_DATA` ou `WIPE_USER_AUXILARY_DATA`, vérifiez les conditions suivantes :
@@ -123,7 +123,7 @@ Pour les scénarios multi-identités suivants, vous devez au minimum effectuer u
 ### <a name="app-configuration-optional"></a>Configuration de l’application (facultatif)
 Vous pouvez configurer le comportement des applications gérées de la façon suivante :
 
-1. Si votre application utilise des paramètres de configuration d’application, vous devez effectuer des tests pour vérifier que votre application peut gérer correctement toutes les valeurs que vous (en tant qu’administrateur) pouvez définir. Les [stratégies de configuration d’application](https://docs.microsoft.com/intune/app-configuration-policies-overview) peuvent être créées et affectées dans Intune.
+1. Si votre application utilise des paramètres de configuration d’application, vous devez effectuer des tests pour vérifier que votre application peut gérer correctement toutes les valeurs que vous (en tant qu’administrateur) pouvez définir. Les [stratégies de configuration d’application](app-configuration-policies-overview.md) peuvent être créées et affectées dans Intune.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

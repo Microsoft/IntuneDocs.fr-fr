@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c626bb50868e6b966eb7c8867f4c4ff7178eadcf
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: f3891ce150ea740baa3ba18591139c66d78d9d00
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756525"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166370"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune dans la console Azure et client PC Intune hérité
 
@@ -31,7 +31,7 @@ Lors de l’utilisation d’Intune dans Azure pour gérer les appareils Windows 
 
 ## <a name="manage-windows-10-devices-by-using-mdm"></a>Gérer les appareils Windows 10 via GPM
 
-Nous vous recommandons d’utiliser la [gestion des périphériques mobiles (GPM) pour gérer vos appareils Windows 10](https://docs.microsoft.com/intune/device-restrictions-windows-10) au lieu d’utiliser le PC client Intune hérité. La capacité à gérer Windows 10 via GPM est disponible dans Intune sur le portail Azure. La GPM sous Windows 10 fournit un grand nombre de nouvelles fonctions de gestion et de sécurité qui ne sont pas disponibles via le PC client Intune hérité.
+Nous vous recommandons d’utiliser la [gestion des périphériques mobiles (GPM) pour gérer vos appareils Windows 10](device-restrictions-windows-10.md) au lieu d’utiliser le PC client Intune hérité. La capacité à gérer Windows 10 via GPM est disponible dans Intune sur le portail Azure. La GPM sous Windows 10 fournit un grand nombre de nouvelles fonctions de gestion et de sécurité qui ne sont pas disponibles via le PC client Intune hérité.
 
 ## <a name="legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Les fonctionnalités du PC client hérité sont uniquement disponibles dans la console Silverlight
 
@@ -54,17 +54,15 @@ Pour Windows 7, qui ne peut pas être géré via GPM, nous continuerons à prend
 
 ## <a name="mdm-capabilities"></a>Fonctions GPM
 
-Pour obtenir une comparaison détaillée entre les fonctions du PC client et les fonctions GPM, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md). Les mises à jour GPM continueront à introduire de nouvelles fonctions de gestion pour les appareils Windows 10 inscrits auprès de la GPM, notamment des options d’évaluation pour les applications Win 32. Consultez [Nouveautés](https://docs.microsoft.com/intune/whats-new) pour connaître les derniers ajouts de version à ce service.
+Pour obtenir une comparaison détaillée entre les fonctions du PC client et les fonctions GPM, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md). Les mises à jour GPM continueront à introduire de nouvelles fonctions de gestion pour les appareils Windows 10 inscrits auprès de la GPM, notamment des options d’évaluation pour les applications Win 32. Consultez [Nouveautés](whats-new.md) pour connaître les derniers ajouts de version à ce service.
 
 ## <a name="switch-from-pc-client-to-mdm"></a>Passer du PC client à la GPM
 
 Pour passer de la gestion des appareils Windows 10 via le PC client Intune à la gestion via GPM, procédez comme suit :
 
 1. Dans la console de Silverlight, effectuez une **réinitialisation sélective** pour désinscrire l’appareil du PC client.
-  ![Menu contextuel d’avertissement avec la case d’option «Réinitialiser sélectivement l’appareil» sélectionnée](media/intune-legacy-pc-client/image02.png)
-2. Réinscrivez l’appareil à l’aide de la [GPM (et/ou Azure AD Join)](https://docs.microsoft.com/intune/windows-enroll). 
+  ![Menu contextuel d’avertissement avec la case d’option « Réinitialiser sélectivement l’appareil » sélectionnée](media/intune-legacy-pc-client/image02.png)
+2. Réinscrivez l’appareil à l’aide de la [GPM (et/ou Azure AD Join)](windows-enroll.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
-[Inscrire des appareils Windows](https://docs.microsoft.com/intune/windows-enroll)
-
- 
+[Inscrire des appareils Windows](windows-enroll.md)
