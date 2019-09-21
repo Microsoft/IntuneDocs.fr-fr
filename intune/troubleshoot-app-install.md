@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa723942c9633a3851f75e3e08bf843cbb4bdf55
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 850c7a28c4df1638e9f635713695dcf2e914ffce
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842169"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166938"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -61,7 +61,7 @@ Les actions suivantes doivent être prises en compte lorsque vous rencontrez des
   3. Accédez à [Azure Active Directory utilisateurs](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
   4. Sélectionnez l’utilisateur concerné, puis cliquez sur **appareils**.
   5. Si l’utilisateur dépasse la limite définie, supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
-- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est listé comme inscrit **par l’utilisateur** dans le panneau vue d’ensemble des appareils Intune. S’il affiche NA, déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
+- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est listé comme inscrit **par l’utilisateur** dans le panneau vue d’ensemble des appareils Intune. S’il affiche NA, déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 
