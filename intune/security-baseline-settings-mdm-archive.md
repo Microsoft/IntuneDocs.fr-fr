@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df943fdc0105b0f32401b79434045811f065bef
-ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
+ms.openlocfilehash: 19307f2ffc234a1eacf30b3aa43fe9c626073f6c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70864540"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167827"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,12 +34,12 @@ Quand une nouvelle version de ligne de base de sécurité MDM est publiée, la l
 
 Lorsqu’une version de référence n’est plus prise en charge pour l’utilisation, elle est supprimée de cet article.
 
-- Affichez les paramètres qui sont disponibles dans [la ligne de base de sécurité MDM actuelle](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019). 
+- Affichez les paramètres qui sont disponibles dans [la ligne de base de sécurité MDM actuelle](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019).
 - En savoir plus sur les lignes de base de [sécurité](security-baselines.md)et sur la mise à niveau de la version de référence dans vos profils de ligne de base de sécurité.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Préversion : base de référence de la sécurité GPM pour octobre 2018  
 
-*Cette ligne de base est remplacée par la [ligne de base de sécurité MDM pour mai 2019](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)*
+*Cette ligne de base est remplacée par la [ligne de base de sécurité MDM pour mai 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)*
 
 ### <a name="above-lock"></a>Au-dessus du verrouillage  
 
@@ -1441,5 +1441,5 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
  
 ## <a name="next-steps"></a>Étapes suivantes  
 
-[Afficher la version actuelle de la ligne de base](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)  
+[Afficher la version actuelle de la ligne de base](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)  
 [Mettre à niveau les profils pour utiliser une nouvelle version de référence](security-baselines.md#change-the-baseline-version-for-a-profile)

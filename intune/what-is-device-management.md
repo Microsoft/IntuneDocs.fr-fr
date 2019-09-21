@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a1c9fad9b77e39145f1b4183b8176fb1677613
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 99dcf53d7571dfa660ee669c1d7adcea65f0797e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022863"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167733"
 ---
 # <a name="what-is-device-management"></a>Qu’est-ce que la gestion des appareils ? 
 
@@ -28,7 +28,7 @@ L’une des tâches clés d’un administrateur est de protéger et sécuriser l
 
 À l’aide d’un fournisseur de gestion des appareils, les organisations peuvent vérifier que seuls les utilisateurs et les appareils autorisés ont accès aux informations propriétaires. De même, les utilisateurs d’appareils peuvent facilement accéder aux données professionnelles à partir de leur téléphone, car ils savent que leur appareil répond aux exigences de sécurité de leur organisation. En tant qu’organisation, vous pouvez vous poser la question suivante : **que devons-nous utiliser pour protéger nos ressources ?**
 
-La réponse est : [Microsoft Intune](https://docs.microsoft.com/intune/introduction-intune). Intune offre une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles). Voici certaines tâches clés d’une solution MDM ou GAM :
+La réponse est : [Microsoft Intune](introduction-intune.md). Intune offre une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles). Voici certaines tâches clés d’une solution MDM ou GAM :
 
 - Prendre en charge un environnement mobile varié et gérer des appareils iOS, Android, Windows et macOS de manière sécurisée
 - Vérifier que les appareils et les applications sont conformes aux exigences de sécurité de l’organisation
@@ -44,7 +44,7 @@ Il est courant pour de nombreuses personnes d’utiliser plusieurs appareils bas
 
 Avec Intune, vous pouvez gérer plusieurs appareils par personne, ainsi que les différentes plateformes qui s’exécutent sur chaque appareil, notamment iOS, macOS, Android et Windows. Intune sépare les stratégies et les paramètres selon la plateforme de l’appareil. Ainsi, vous pouvez facilement gérer et voir les appareils d’une plateforme donnée.
 
-La rubrique **[Scénarios courants](https://docs.microsoft.com/intune/common-scenarios)** est une excellente ressource pour savoir comment Intune répond aux questions courantes liées à l’utilisation des appareils mobiles. Vous y trouverez des scénarios sur les sujets suivants :  
+La rubrique **[Scénarios courants](common-scenarios.md)** est une excellente ressource pour savoir comment Intune répond aux questions courantes liées à l’utilisation des appareils mobiles. Vous y trouverez des scénarios sur les sujets suivants :  
 - Protection des e-mails avec Exchange sur site
 - Accès à Office 365 de manière sécurisée
 - Utilisation d’appareils personnels pour accéder aux ressources de l’organisation
@@ -52,16 +52,16 @@ La rubrique **[Scénarios courants](https://docs.microsoft.com/intune/common-sce
 ## <a name="integration-with-secure-and-protect-services"></a>Intégration avec des services de sécurisation et de protection
 L’une des tâches clés de toute solution de gestion des appareils consiste à assurer la sécurité et la protection. Intune fait un excellent travail en s’intégrant avec d’autres services pour effectuer cette tâche. Par exemple :
 
-- **Microsoft 365** est un composant clé pour la simplification des tâches informatiques courantes. Dans le centre d’administration Microsoft 365, vous pouvez créer des utilisateurs et gérer des groupes. Vous pouvez également accéder à d’autres services, comme Intune, Azure AD et bien plus encore. 
+- **Microsoft 365** est un composant clé pour la simplification des tâches informatiques courantes. Dans le centre d’administration Microsoft 365, vous pouvez créer des utilisateurs et gérer des groupes. Vous pouvez également accéder à d’autres services, comme Intune, Azure AD et bien plus encore.
 
   Par exemple, vous pouvez créer un groupe d’appareils iOS dans Microsoft 365. Vous pouvez ensuite utiliser Intune pour envoyer (push) au groupe d’appareils iOS des stratégies qui se concentrent sur des fonctionnalités iOS, par exemple l’accès à l’App Store, l’utilisation d’AirDrop, la sauvegarde sur iCloud, l’utilisation du filtre web d’Apple, etc.
 
 - **Windows Defender** inclut de nombreuses fonctionnalités de sécurité qui permettent de protéger les appareils Windows 10. Par exemple, en utilisant Intune conjointement avec Windows Defender, vous pouvez : 
 
-  - Activer [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) pour rechercher des activités suspectes dans les fichiers et applications des appareils mobiles 
-  - Utilisez [Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) afin de mieux éviter les violations de la sécurité sur des périphériques mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
+  - Activer [Windows Defender SmartScreen](endpoint-protection-windows-10.md) pour rechercher des activités suspectes dans les fichiers et applications des appareils mobiles 
+  - Utilisez [Microsoft Defender Advanced Threat Protection (ATP)](advanced-threat-protection.md) afin de mieux éviter les violations de la sécurité sur des périphériques mobiles. Vous pouvez également limiter l’impact d’une violation de la sécurité en empêchant un utilisateur d’accéder aux ressources de l’entreprise.
 
-- L’**accès conditionnel** est une fonctionnalité d’Azure Active Directory, qui s’intègre parfaitement avec Intune. À l’aide de l’[accès conditionnel](https://docs.microsoft.com/intune/conditional-access), vous pouvez vérifier que seuls les appareils conformes ont accès aux e-mails, à SharePoint et à d’autres applications. 
+- L’**accès conditionnel** est une fonctionnalité d’Azure Active Directory, qui s’intègre parfaitement avec Intune. À l’aide de l’[accès conditionnel](conditional-access.md), vous pouvez vérifier que seuls les appareils conformes ont accès aux e-mails, à SharePoint et à d’autres applications. 
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Choisir la solution de gestion des appareils qui vous convient
 
@@ -69,7 +69,7 @@ Il existe deux façons d’aborder la gestion des appareils. Tout d’abord, vou
 
 Dans la seconde approche, vous gérez les applications situées sur les appareils. Cette approche s’appelle la **gestion des applications mobiles** (MAM). Les utilisateurs peuvent utiliser leurs appareils personnels pour accéder aux ressources de l’organisation. À l’ouverture d’une application, par exemple une application d’e-mail ou SharePoint, les utilisateurs sont invités à fournir une authentification supplémentaire. Si un appareil est perdu ou volé, vous pouvez supprimer toutes les données de l’organisation qu’il contient. 
 
-Vous pouvez également utiliser conjointement les approches [MDM et GAM](https://docs.microsoft.com/intune/byod-technology-decisions).
+Vous pouvez également utiliser conjointement les approches [MDM et GAM](byod-technology-decisions.md).
 
 Quand vous configurez Intune, vous choisissez également d’utiliser uniquement le Portail Azure pour gérer les appareils, ou d’utiliser simultanément Intune et Microsoft 365 pour gérer les appareils. [Migrating mobile device management to Intune in the Azure portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) (Migration de la gestion des appareils mobiles vers Intune dans le portail Azure) est une étude de cas Microsoft IT. Dans cette étude de cas, vous verrez comment Microsoft IT a choisi une approche moderne de gestion des appareils et découvrirez les leçons qu’il en a tirées.
 
@@ -77,22 +77,22 @@ Quand vous configurez Intune, vous choisissez également d’utiliser uniquement
 
 Le [centre d’administration de gestion des périphériques](https://devicemanagement.microsoft.com/) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client. 
 
-Dans le centre d’administration de la gestion des appareils, vous pouvez:
+Dans le centre d’administration de la gestion des appareils, vous pouvez :
 
-- [Inscrire des appareils](https://docs.microsoft.com/intune/device-enrollment)
-- [Définir la conformité des appareils](https://docs.microsoft.com/intune/device-compliance-get-started)
-- [Gérer les appareils](https://docs.microsoft.com/intune/device-management)
-- [Gérer les applications](https://docs.microsoft.com/intune/app-management)  
-- [Livres électroniques iOS](https://docs.microsoft.com/intune/vpp-ebooks-ios)  
-- [Installer le connecteur Exchange sur site](https://docs.microsoft.com/intune/exchange-connector-install)  
-- [Gérer les rôles](https://docs.microsoft.com/intune/role-based-access-control)  
+- [Inscrire des appareils](device-enrollment.md)
+- [Définir la conformité des appareils](device-compliance-get-started.md)
+- [Gérer les appareils](device-management.md)
+- [Gérer les applications](app-management.md)  
+- [Livres électroniques iOS](vpp-ebooks-ios.md)  
+- [Installer le connecteur Exchange sur site](exchange-connector-install.md)  
+- [Gérer les rôles](role-based-access-control.md)  
 - Gérer les mises à jour logicielles
-  - [Gérer les mises à jour Windows 10](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-  - [Gérer les mises à jour iOS](https://docs.microsoft.com/intune/software-updates-ios)  
+  - [Gérer les mises à jour Windows 10](windows-update-for-business-configure.md)  
+  - [Gérer les mises à jour iOS](software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Gérer les utilisateurs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Gérer les groupes et les membres](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Dépannage](https://docs.microsoft.com/intune/help-desk-operators)
+- [Dépannage](help-desk-operators.md)
 
 ## <a name="next-step"></a>Étape suivante
 Une fois que vous êtes prêt à utiliser une solution MDM ou MAM, suivez les différentes étapes de configuration d’Intune, inscrivez des appareils et créez des stratégies. [Gestion des appareils mobiles pour Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) est une ressource très intéressante.

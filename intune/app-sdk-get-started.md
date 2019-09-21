@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbaeb5efa2b23a7fad4761878b25118786609447
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 4b24387636408d2e28891aae13962c2febf9f329
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842132"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167191"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune
 
@@ -161,7 +161,7 @@ Après avoir terminé les étapes nécessaires pour intégrer votre application 
 
   * Si vous développez une application métier qui n’est pas destinée au Store, vous êtes tenu d’avoir accès à Microsoft Intune dans votre organisation. Vous pouvez aussi vous inscrire à une version d’évaluation gratuite de [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) valable un mois.
 
-  * Si vous testez votre application sur un appareil mobile à l’aide d’un compte d’utilisateur final, vérifiez que vous avez affecté à ce compte une licence Intune dans le site web du centre d’administration Microsoft 365 après vous être connecté à un compte Administrateur. Pour plus d’informations, consultez [Affecter une licence Microsoft Intune](https://docs.microsoft.com/intune/licenses-assign).
+  * Si vous testez votre application sur un appareil mobile à l’aide d’un compte d’utilisateur final, vérifiez que vous avez affecté à ce compte une licence Intune dans le site web du centre d’administration Microsoft 365 après vous être connecté à un compte Administrateur. Pour plus d’informations, consultez [Affecter une licence Microsoft Intune](licenses-assign.md).
 
 * **Stratégies de protection des applications Intune**: pour tester votre application avec toutes les stratégies de protection des applications Intune, vous devez connaître le comportement attendu pour chaque paramètre de la stratégie. Consultez les descriptions des [stratégies de protection des applications iOS](app-protection-policy-settings-ios.md) et des [stratégies de protection des applications Android](app-protection-policy-settings-android.md). Si votre application a intégré le kit de développement logiciel (SDK) Intune, mais qu’il ne figure pas encore dans le portail Azure en tant qu’application ciblée, vous pouvez le cibler avec une stratégie en sélectionnant l’option « + Plus d’applications » et en fournissant l’ID de l’offre groupée (iOS) ou le nom du package (Android) dans la zone de texte.
 

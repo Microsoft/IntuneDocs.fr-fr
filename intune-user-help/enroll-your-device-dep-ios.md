@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c592b558ace0a2a39059de9f64531f1e078c539d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 40fe8f1f54779d3ab0a49951ad13c0cb2d0f0ff5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847758"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166798"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Inscrire l’appareil iOS fourni par votre organisation dans la gestion
 
@@ -34,15 +34,16 @@ Les appareils iOS qui vous sont fournis par votre entreprise ou votre établisse
 Pour commencer la configuration, mettez votre appareil sous tension, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires. Le reste de cet article décrit les étapes à suivre et les écrans qui s’affichent quand vous parcourez l’Assistant Configuration. 
 
 ## <a name="what-is-apple-dep"></a>Qu’est-ce qu’Apple DEP ?
-Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)*. Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
 
-## <a name="set-up-your-ios-device"></a>Configurer votre appareil iOS  
+Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios.md).  
+
+## <a name="set-up-your-ios-device"></a>Configurer votre appareil iOS
+
 Si vous utilisez votre propre appareil iOS, plutôt qu’un appareil d’entreprise, suivez les étapes relatives aux [appareils personnels et BYOD](enroll-your-device-in-intune-ios.md).  
 
-1. Allumez votre appareil iOS. 
+1. Allumez votre appareil iOS.
 2. Après avoir sélectionné votre langue (**Language**), connectez votre appareil en Wi-Fi.
-3. Dans l’écran **Configurer l’appareil iOS**, indiquez ce que vous voulez faire : 
- 
+3. Dans l’écran **Configurer l’appareil iOS**, indiquez ce que vous voulez faire :
    - **Configurer en tant que nouvel appareil**
    - **Restaurer à partir d’une sauvegarde iCloud**
    - **Restaurer à partir d’une sauvegarde iTunes**
@@ -53,7 +54,7 @@ Si vous utilisez votre propre appareil iOS, plutôt qu’un appareil d’entrepr
  
    **La configuration est fournie par : [Adresse] de l’équipe iOS de [Votre entreprise]**
 
-5. Connectez-vous avec votre ID Apple. La connexion vous permet d’installer l’application Portail d’entreprise et le profil de gestion permettant à votre entreprise d’accéder à ses ressources, comme les e-mails et les applications. 
+5. Connectez-vous avec votre ID Apple. La connexion vous permet d’installer l’application Portail d’entreprise et le profil de gestion permettant à votre entreprise d’accéder à ses ressources, comme les e-mails et les applications.
 6. Acceptez les conditions générale (**Terms and Conditions**) et indiquez si vous souhaitez envoyer des informations de diagnostic à Apple.
 7. Une fois l’inscription terminée, votre appareil peut vous demander d’effectuer d’autres actions. Certaines de ces étapes peuvent nécessiter l’entrée de votre mot de passe pour accéder aux e-mails ou la configuration d’un code secret.
 

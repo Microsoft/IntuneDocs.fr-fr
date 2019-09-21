@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,20 +16,21 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346e6219c10cc8b90d3bf83170adffa677c6c484
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dddcb16a0067ed6e278ff3f9032695e075a0fb6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55849004"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163295"
 ---
 # <a name="set-or-change-your-passcode"></a>Définir ou modifier votre code secret
 
-Si votre appareil iOS n’est pas conforme à la stratégie de code secret du support technique de votre entreprise, un message s’affiche qui décrit brièvement le problème et explique ce que vous devez faire pour que votre code secret soit conforme aux exigences.
+Créez un nouveau code secret ou modifiez-en un en fonction des exigences de votre organisation. Le code secret empêchera les personnes non autorisées de déverrouiller et d’utiliser votre appareil. 
 
-Le support technique de votre entreprise peut définir plusieurs exigences pour le code secret. Par exemple, le code secret peut devoir contenir un certain nombre de caractères et comporter une combinaison de chiffres, de lettres et de caractères. Comme plusieurs exigences peuvent être définies, ces instructions peuvent expliquer uniquement comment définir ou modifier votre code secret. Elles n’expliquent pas toutes les combinaisons possibles d’exigences. Ces codes secrets sont utilisés, par exemple, pour accéder à votre appareil à partir de l’écran verrouillé.
+Votre organisation peut définir plusieurs exigences de code secret. Pour obtenir la liste des exigences courantes relatives aux mots de passe, consultez [Configuration requise des mots de passe pour les appareils inscrits](password-does-not-meet-it-administrator-requirements.md).  
 
-Si vous rencontrez des difficultés à définir un code secret qui répond aux exigences, demandez de l’aide au support technique de votre entreprise.
+Si vous avez des difficultés à créer ou à modifier votre code secret, contactez votre personne chargée du support technique.  
+
 
 ## <a name="set-your-passcode"></a>Définir votre code d’accès
 

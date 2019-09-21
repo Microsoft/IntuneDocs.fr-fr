@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 09/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 53a9c3e8b80f611bc9e293ba7e07c1aece0cfc58
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550190"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163035"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -111,7 +111,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
   - **Bouton Accueil virtuel**: bouton de touche programmable qui renvoie les utilisateurs à l’écran d’accueil géré afin que les utilisateurs puissent basculer entre les applications. Les options disponibles sont les suivantes :
 
-    - **Non configuré** (valeur par défaut): un bouton de démarrage n’est pas affiché. Les utilisateurs doivent utiliser le bouton précédent pour basculer entre les applications.
+    - **Non configuré** (valeur par défaut) : un bouton de démarrage n’est pas affiché. Les utilisateurs doivent utiliser le bouton précédent pour basculer entre les applications.
     - **Balayer vers le haut**: un bouton d’installation s’affiche lorsqu’un utilisateur passe sur l’appareil.
     - **Floating**: affiche un bouton d’hébergement permanent et flottant sur l’appareil.
 
@@ -119,7 +119,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   
     1. continue à sélectionner le bouton de retour jusqu’à ce que le bouton **Quitter le kiosque** s’affiche ; 
     2. sélectionne le bouton **Quitter le kiosque** et entre le code confidentiel **Quitter le code de mode kiosque**.
-    3. Lorsque vous avez terminé, sélectionnez l’application gérée de l' **écran d’accueil** . Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application.
+    3. Lorsque vous avez terminé, sélectionnez l’application **gérée** de l’écran d’accueil. Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application.
 
       Si la valeur **n’est pas configurée**, les administrateurs ne peuvent pas suspendre le mode plein écran. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton **Quitter le kiosque**, un message indique qu’un code secret est requis.
 
@@ -145,9 +145,9 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
   - **Media Volume Control**: **Enable** affiche le contrôle du volume de média sur l’écran d’accueil géré et permet aux utilisateurs finaux d’ajuster le volume multimédia de l’appareil à l’aide d’un curseur. **Non configuré** (par défaut) n’affiche pas le contrôle du volume de média sur l’écran d’accueil géré. Il empêche les utilisateurs d’ajuster le volume de média de l’appareil lors de l’utilisation de l’écran d’accueil géré, sauf si leurs boutons matériels le prennent en charge. 
 
-  - **Mode**d’économiseur d’écran: **activer** affiche un économiseur d’écran sur l’écran d’accueil géré lorsque l’appareil est verrouillé ou expire. **Non configuré** (par défaut) n’affiche pas un économiseur d’écran sur l’écran d’accueil géré.
+  - **Mode d’économiseur d’écran**: **activer** affiche un économiseur d’écran sur l’écran d’accueil géré lorsque l’appareil est verrouillé ou expire. **Non configuré** (par défaut) n’affiche pas un économiseur d’écran sur l’écran d’accueil géré.
 
-    Lorsque cette option est activée, configurez également:
+    Lorsque cette option est activée, configurez également :
 
     - **Définir l’image de l’écran de veille personnalisée**: entrez l’URL d’une image personnalisée. Par exemple, entrez :
 
@@ -157,9 +157,9 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
       Si vous n’entrez pas d’URL, l’image par défaut de l’appareil est utilisée, s’il existe une image par défaut.
 
-    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran: choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0-9999999 secondes. La valeur par défaut est de `0` secondes. Si vous ne renseignez pas le champ,`0`ou la valeur zéro (), l’écran de veille est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
+    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran : choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0-9999999 secondes. La valeur par défaut est de `0` secondes. Si vous ne renseignez pas le champ,`0`ou la valeur zéro (), l’écran de veille est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
     - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1-9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
-    - **Détecter le support avant de démarrer**l’économiseur d’écran: **activer** (par défaut) n’affiche pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** affiche l’écran de veille, même si l’audio ou la vidéo est en train de fonctionner.
+    - **Détecter le support avant de démarrer l’économiseur d’écran**: **activer** (par défaut) n’affiche pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** affiche l’écran de veille, même si l’audio ou la vidéo est en train de fonctionner.
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
 
@@ -200,6 +200,9 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 - **Ajouter de nouveaux utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter de nouveaux utilisateurs. Chaque utilisateur dispose d’un espace personnel sur l’appareil, regroupant les écrans d’accueil personnalisés ainsi que les comptes, applications et paramètres. L’option **Non configuré** autorise les utilisateurs à ajouter d’autres utilisateurs à l’appareil.
 - **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
 - **Modifications apportées aux comptes** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
+
+  > [!NOTE]
+  > Ce paramètre n’est pas respecté sur les appareils du propriétaire de l’appareil (entièrement géré). Si vous configurez ce paramètre, le paramètre est ignoré et n’a aucun impact.
 
 ### <a name="applications"></a>Applications
 
@@ -270,6 +273,10 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 - **Rechercher des contacts professionnels à partir du profil personnel** : choisissez **Bloquer** pour empêcher les utilisateurs de rechercher des contacts professionnels dans des applications du profil personnel. L’option **Non requis** permet de rechercher des contacts professionnels dans le profil personnel.
 
 - **Appareil photo** : choisissez **Bloquer** pour empêcher l’accès à l’appareil photo de l’appareil dans le profil professionnel. L’appareil photo dans le profil personnel n’est pas affectée par ce paramètre. L’option **Non requis** autorise l’accès à l’appareil photo dans le profil professionnel.
+
+- **Autoriser les widgets à partir des applications de profil de travail**: **activer** permet aux utilisateurs finaux de placer les widgets exposés par les applications sur l’écran d’accueil. **Non configuré** (valeur par défaut) désactive cette fonctionnalité.
+
+  Par exemple, Outlook est installé sur les profils professionnels de vos utilisateurs. Lorsque cette valeur est définie sur **activer**, les utilisateurs peuvent placer le widget Agenda sur l’écran d’accueil de l’appareil.
 
 #### <a name="work-profile-password"></a>Mot de passe de profil professionnel
 

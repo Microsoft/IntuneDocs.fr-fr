@@ -18,25 +18,26 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9c25166ed9b004cc4e43e777008e33e88983912
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ced8f1ec37f652b7e283328141bc591b5961587
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55843491"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099832"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Utilisation de votre appareil iOS avec le Portail d’entreprise Intune
 Cet article répertorie les tâches et les informations relatives au Portail d’entreprise pour iOS. Il peut vous aider à gérer et dépanner votre appareil iOS. Cliquez sur un lien pour consulter des informations détaillées, des étapes et des captures d’écran supplémentaires.
 
 ## <a name="supported-versions"></a>Versions prises en charge
 
-Le Portail d’entreprise pour iOS prend actuellement en charge iOS 10.0 et versions ultérieures.
+Le Portail d’entreprise pour iOS prend actuellement en charge iOS 10.0 et versions ultérieures.  
+
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscription dans Intune et installation du portail d’entreprise
 
 - [Installer l’application Portail d’entreprise Intune et s’y connecter](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Inscrire un appareil iOS dans Intune](enroll-your-device-in-intune-ios.md)
-- [Que se passe-t-il si vous installez l’application Portail d’entreprise et inscrivez votre appareil dans Intune ?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Que se passe-t-il si vous installez l’application Portail d’entreprise et inscrivez votre appareil dans Intune ?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Ce que vous pouvez faire quand votre appareil est inscrit dans Intune
 

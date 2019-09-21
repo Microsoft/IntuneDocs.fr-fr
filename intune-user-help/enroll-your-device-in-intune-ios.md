@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,21 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c8dfdea552d035c036828bfd2e6695cc5e4cb7b
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: f207f1f94d34e6aa1768bb5ae0f5179710839c71
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402707"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099865"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurer l’accès d’un appareil iOS aux ressources de l’entreprise  
 
 Inscrivez votre appareil iOS avec l’application Portail d’entreprise Intune pour obtenir un accès sécurisé aux e-mails, aux fichiers et aux applications de votre organisation.
 
 Une fois que votre appareil est inscrit, il devient *géré*. Votre organisation peut affecter des stratégies et des applications à l’appareil via un fournisseur MDM, comme Intune.  
+
+> [!NOTE]
+> Nous ne vendons pas les données collectées par notre service à des tiers pour une raison quelconque.  
 
 Pour conserver l’accès aux informations professionnelles ou scolaires à partir de votre appareil, vous devez configurer votre appareil avec les paramètres par défaut de votre organisation. Cet article décrit comment utiliser le portail d’entreprise pour inscrire votre appareil et pour gérer les exigences de configuration de votre organisation.  
 </br>

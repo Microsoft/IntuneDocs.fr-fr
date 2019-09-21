@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
-ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
+ms.openlocfilehash: 68ffdcccdd3588ac5127e6c54426acfdcad17d34
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298396"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071704"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
@@ -30,8 +30,8 @@ Microsoft Intune propose des fonctionnalités de résolution des problèmes int�
 
 Cet article présente certaines techniques de dépannage courantes et décrit certains problèmes que vous êtes susceptible de rencontrer.
 
-## <a name="check-tenant-status"></a>Vérification du statut de client
-Vérifier le [état du locataire](tenant-status.md) et confirmez l’abonnement est actif. Vous pouvez également afficher les détails pour les incidents actifs et conseils qui peuvent affecter votre déploiement de stratégie ou de profil.
+## <a name="check-tenant-status"></a>Vérifier l’état du locataire
+Vérifiez l' [État du locataire](tenant-status.md) et confirmez que l’abonnement est actif. Vous pouvez également afficher des informations sur les incidents et les avis actifs qui peuvent avoir un impact sur votre déploiement de stratégie ou de profil.
 
 ## <a name="use-built-in-troubleshooting"></a>Utiliser la fonctionnalité de résolution des problèmes intégrée
 
@@ -118,10 +118,10 @@ Vérifier le [état du locataire](tenant-status.md) et confirmez l’abonnement 
 
 ## <a name="policy-troubleshooting-resources"></a>Ressources de dépannage des stratégies
 
-- [Résolution des problèmes iOS ou Android stratégies ne s’appliquent aux appareils](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (ouvre un autre site de Microsoft)
-- [Résolution des problèmes de stratégie de Windows 10 Intune](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (ouvre un blog)
-- [Résoudre les problèmes de paramètres personnalisés de fournisseur de services cryptographiques pour Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (ouvre un autre site de Microsoft)
-- [Stratégie de groupe Windows 10 vs MDM Intune stratégie](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (ouvre un autre site de Microsoft)
+- [Résolution des problèmes des stratégies iOS ou Android qui ne s’appliquent pas aux appareils](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (ouvre un autre site Microsoft)
+- [Résolution des problèmes de stratégie Windows 10 Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (ouvre un blog)
+- [Résoudre les problèmes des paramètres personnalisés du CSP pour Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (ouvre un autre site Microsoft)
+- [Stratégie MDM Windows 10 stratégie de groupe vs Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (ouvre un autre site Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerte : L’enregistrement de règles d’accès dans Exchange a échoué
 
@@ -135,7 +135,7 @@ La ressource [Résoudre les problèmes liés au connecteur Exchange local Intune
 
 Les appareils Windows Phone n’autorisent pas l’assouplissement des stratégies de sécurité définies par MDM ou EAS a posteriori. Par exemple, si vous définissez **Nombre minimal de caractères des mots de passe** sur 8, vous ne pouvez plus le réduire à 4. La stratégie la plus restrictive est appliquée à l’appareil.
 
-Appareils Windows 10 ne peuvent pas supprimer les stratégies de sécurité lorsque vous dissociez la stratégie (arrêter le déploiement). Vous devrez peut-être laisser la stratégie affectée et modifiez les paramètres de sécurité les valeurs par défaut.
+Les appareils Windows 10 ne peuvent pas supprimer les stratégies de sécurité lorsque vous désaffectez la stratégie (arrêter le déploiement). Vous devrez peut-être conserver la stratégie affectée, puis rétablir les valeurs par défaut des paramètres de sécurité.
 
 Selon la plateforme de l’appareil, si vous voulez attribuer à la stratégie une valeur moins sûre, vous devrez peut-être réinitialiser les stratégies de sécurité.
 

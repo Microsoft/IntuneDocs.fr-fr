@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2019
+ms.date: 09/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
-ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
+ms.openlocfilehash: 80b904893f118bac1f4d0d79da0cd10498b9f2ed
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158016"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71162863"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Paramètres Endpoint Protection pour MacOS dans Intune  
 
@@ -105,13 +105,6 @@ Pour plus d’informations sur les paramètres Apple FileVault, consultez [FDEFi
     - **Désactiver** : désactive l’invite à la déconnexion.
 
     **Par défaut** : Non configuré  
-
-     > [!IMPORTANT]  
-     > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Désactiver*. Lorsque cette option est définie sur *Désactiver*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale que le **résumé de l’état du profil** a la valeur **Erreur**, sans fournir d’informations supplémentaires.
-     > 
-     > Lorsque l’option **Désactiver l’invite à la déconnexion** a la valeur *Non configuré*, la zone **Nombre d’autorisations de contournement** peut avoir la valeur *Non configuré* ou avoir une valeur.  
-     > 
-     > Ce problème sera résolu dans une mise à jour ultérieure. 
 
   - **Nombre de fois où le contournement est autorisé**  
   Définissez le nombre de fois qu’un utilisateur peut ignorer les invites pour activer FileVault avant que FileVault soit requis pour que l’utilisateur se connecte.  

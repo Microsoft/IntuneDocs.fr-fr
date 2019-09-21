@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d63ecdb23b107d844c37d7a805247092116618e1
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022733"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167430"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Appareil chiffré, mais les applications disent autrement
 
@@ -35,7 +35,7 @@ Certains appareils Android exigent la création d’un code de démarrage pour e
 
 ## <a name="encrypt-the-entire-device"></a>Chiffrer l’appareil entier
 
-Cette section s’applique uniquement à l’application Portail d’entreprise. Certains appareils vous offrent le choix entre le chiffrement de l’appareil entier ou juste de l’espace utilisé. Choisissez l’option permettant de chiffrer la totalité de l’appareil. Si vous avez choisi de chiffrer uniquement l’espace utilisé:
+Cette section s’applique uniquement à l’application Portail d’entreprise. Certains appareils vous offrent le choix entre le chiffrement de l’appareil entier ou juste de l’espace utilisé. Choisissez l’option permettant de chiffrer la totalité de l’appareil. Si vous avez choisi de chiffrer uniquement l’espace utilisé :
 
 1. [Supprimez cet appareil du portail d’entreprise](unenroll-your-device-from-intune-android.md).
 2. Déchiffrez l’espace utilisé.  
@@ -48,16 +48,17 @@ Cette section s’applique uniquement à l’application Portail d’entreprise.
 
 ## <a name="specific-manufacturer-issues"></a>Problèmes propres à certains fabricants
 
-Certains appareils Android exécutant la version 7.0+ et des versions ultérieures chiffrent les données de manière non conforme à certaine normes de la plateforme Android. Ces méthodes de chiffrement placent les informations sur les appareils en danger. Par conséquent, ces appareils ne sont pas pris en charge. 
+Certains appareils Android exécutant la version 7.0+ et des versions ultérieures chiffrent les données de manière non conforme à certaine normes de la plateforme Android. Ces méthodes de chiffrement placent les informations sur les appareils en danger. Par conséquent, ces appareils ne sont pas pris en charge.
 
-Pour obtenir une liste non exhaustive des appareils Android pris en charge, consultez l’article [systèmes d’exploitation et navigateurs pris en charge dans Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Si votre appareil n’est pas listé, reportez-vous au fabricant de l’appareil ou contactez votre personne de support. 
+Pour obtenir une liste non exhaustive des appareils Android pris en charge, consultez l’article [systèmes d’exploitation et navigateurs pris en charge dans Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Si votre appareil n’est pas listé, reportez-vous au fabricant de l’appareil ou contactez votre personne de support.
 
 > [!Note]
-> Microsoft travaille avec les fabricants pour résoudre les problèmes que nous identifions lors des tests ou que les utilisateurs nous signalent. Cet article est mis à jour chaque fois que de nouvelles informations sont disponibles. 
+> Microsoft travaille avec les fabricants pour résoudre les problèmes que nous identifions lors des tests ou que les utilisateurs nous signalent. Cet article est mis à jour chaque fois que de nouvelles informations sont disponibles.
 
-## <a name="update-devices"></a>Mettre à jour les appareils   
+## <a name="update-devices"></a>Mettre à jour les appareils
 
 Si vous n’avez pas mis à jour votre appareil vers la version la plus récente d’Android, accédez à l’application **paramètres** de votre appareil, puis sélectionnez **mettre à jour**.  
 
-## <a name="next-steps"></a>Étapes suivantes   
+## <a name="next-steps"></a>Étapes suivantes
+
 Encore besoin d’aide ? Contactez le support technique de votre entreprise (consultez le [site web du portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980) pour les informations de contact) ou écrivez à <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">l’équipe Microsoft Android</a>.  

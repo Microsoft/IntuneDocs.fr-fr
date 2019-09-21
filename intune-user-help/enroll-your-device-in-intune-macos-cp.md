@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9047dd9bbc55162eae4693d3035cb05ff4becb91
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545725"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099842"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise
 
@@ -46,7 +46,7 @@ Si après l’inscription, votre organisation impose une nouvelle exigence de s�
 Pour plus d’informations sur l’inscription, consultez [Que se passe-t-il quand j’installe l’application Portail d’entreprise et que j’inscris mon appareil ?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
 ## <a name="get-your-device-managed"></a>Configurer la gestion de votre appareil  
-Utilisez les étapes suivantes pour inscrire des appareils macOS exécutant OS X El Capitan versions 10.11 et ultérieures.   
+Procédez comme suit pour inscrire des appareils macOS exécutant macOS 10,12 et versions ultérieures.   
 
 
 1. Pour accéder au site web du portail d’entreprise, ouvrez une nouvelle fenêtre dans __Safari__ et accédez à https://portal.manage.microsoft.com.  

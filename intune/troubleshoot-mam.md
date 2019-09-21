@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cf8f7753a92ad45a68f976359560ef6da2d1cec
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: a5e1ea8a0f8ea054b2eb75e1c98e60f184b0a45c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648720"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166764"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Résoudre les problèmes de gestion des applications mobiles
 
@@ -63,8 +63,8 @@ Android | Pourquoi l’utilisateur final **doit-il installer l’application de 
 iOS/Android | La stratégie de protection des applications n’est pas appliquée au brouillon de l’application Outlook | Dans la mesure où Outlook prend en charge le contexte d’entreprise et le contexte personnel, il n’applique pas GAM lors de la rédaction d’un message électronique.
 iOS/Android | Stratégie de protection des applications non appliquée aux nouveaux documents dans WXP (Word, Excel, PowerPoint) | Étant donné que WXP prend en charge le contexte d’entreprise et le contexte personnel, il n’applique pas les GAM sur les nouveaux documents tant qu’ils n’ont pas été enregistrés dans un emplacement d’entreprise identifié comme OneDrive.
 iOS/Android | Applications qui n’autorisent pas l’enregistrement dans un stockage local lorsque la stratégie est activée | Le comportement de l’application pour ce paramètre est contrôlé par le développeur de l’application.
-Android | Android a plus de restrictions que iOS sur les applications «natives» qui peuvent accéder au contenu protégé GAM | Android est une plateforme ouverte et l’Association d’applications «natives» peut être modifiée par l’utilisateur final en applications potentiellement dangereuses. Appliquez des [exceptions de stratégie de transfert de données](app-protection-policies-exception.md) pour exempter des applications spécifiques.
-Android | Les Azure Information Protection (AIP) peuvent être enregistrés au format PDF quand l’enregistrement est évité | AIP honore la stratégie GAM pour «désactiver l’impression» lorsque l’enregistrement au format PDF est utilisé.
+Android | Android a plus de restrictions que iOS sur les applications « natives » qui peuvent accéder au contenu protégé GAM | Android est une plateforme ouverte et l’Association d’applications « natives » peut être modifiée par l’utilisateur final en applications potentiellement dangereuses. Appliquez des [exceptions de stratégie de transfert de données](app-protection-policies-exception.md) pour exempter des applications spécifiques.
+Android | Les Azure Information Protection (AIP) peuvent être enregistrés au format PDF quand l’enregistrement est évité | AIP honore la stratégie GAM pour « désactiver l’impression » lorsque l’enregistrement au format PDF est utilisé.
 iOS | L’ouverture des pièces jointes PDF dans l’application Outlook échoue avec «action non autorisée | Cela peut se produire si l’utilisateur ne s’est pas authentifié sur Acrobat Reader pour Intune ou s’il a utilisé l’empreinte numérique pour s’authentifier auprès de son organisation. Ouvrez Acrobat Reader au préalable et authentifiez-vous à l’aide des informations d’identification UPN.
 
 
@@ -90,7 +90,7 @@ Message d’erreur ou boîte de dialogue | Cause | Mise à jour |
 **Appareil non conforme** : impossible d’utiliser cette application car vous utilisez un appareil jailbreaké. Contactez votre administrateur informatique pour obtenir de l’aide. | Intune a détecté que l’utilisateur utilisait un appareil jailbreaké. | Rétablissez les paramètres d’usine de l’appareil. Suivez [ces instructions](https://support.apple.com/HT201274) sur le site de support technique d’Apple.
 **Connexion Internet obligatoire** : vous devez être connecté à Internet pour vérifier que vous pouvez utiliser cette application. | Cet appareil n’est pas connecté à Internet. | Connectez l’appareil à un réseau Wi-Fi ou un réseau de données.
 **Erreur inconnue** : essayez de redémarrer cette application. Si le problème persiste, contactez votre administrateur informatique pour obtenir de l’aide. | Une erreur inconnue s’est produite. | Attendez un moment, puis réessayez. Si l’erreur persiste, créez un [ticket de support](get-support.md#create-an-online-support-ticket) avec Intune.
-**Accès aux données de votre organisation** : le compte professionnel ou scolaire que vous avez spécifié n’a pas accès à cette application. Vous devrez peut-être vous connecter avec un compte différent. Contactez votre administrateur informatique pour obtenir de l’aide. | Intune a détecté que l’utilisateur avait tenté de se connecter avec un deuxième compte professionnel ou scolaire différent du compte inscrit auprès du service GAM pour l’appareil. Un seul compte professionnel ou scolaire peut être géré par GAM sur un même appareil. | Demandez à l’utilisateur de se connecter avec le compte dont le nom d’utilisateur est prérenseigné dans l’écran de connexion, Vous devrez peut-être [configurer le paramètre UPN de l’utilisateur pour Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> ou demandez-lui de se connecter avec le nouveau compte professionnel ou scolaire et supprimez le compte GAM existant.
+**Accès aux données de votre organisation** : le compte professionnel ou scolaire que vous avez spécifié n’a pas accès à cette application. Vous devrez peut-être vous connecter avec un compte différent. Contactez votre administrateur informatique pour obtenir de l’aide. | Intune a détecté que l’utilisateur avait tenté de se connecter avec un deuxième compte professionnel ou scolaire différent du compte inscrit auprès du service GAM pour l’appareil. Un seul compte professionnel ou scolaire peut être géré par GAM sur un même appareil. | Demandez à l’utilisateur de se connecter avec le compte dont le nom d’utilisateur est prérenseigné dans l’écran de connexion, Vous devrez peut-être [configurer le paramètre UPN de l’utilisateur pour Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> ou demandez-lui de se connecter avec le nouveau compte professionnel ou scolaire et supprimez le compte GAM existant.
 **Problème de connexion** : Un problème de connexion inattendu s’est produit. Vérifiez votre connexion et réessayez.  |  Erreur inattendue. | Attendez un moment, puis réessayez. Si l’erreur persiste, créez un [ticket de support](get-support.md#create-an-online-support-ticket) avec Intune.
 **Alerte** : Cette application ne peut plus être utilisée. Pour plus d'informations, contactez votre administrateur informatique. | Impossible de valider le certificat de l’application. | Vérifiez que la version de l’application est à jour. <br><br> Réinstallez l’agent.
 **Erreur** : Cette application a rencontré un problème et doit être fermée. Si l’erreur persiste, contactez votre département informatique. | Impossible de lire le code confidentiel de l’application GAM dans le trousseau Apple iOS. | Redémarrez l’appareil. Vérifiez que la version de l’application est à jour. <br><br> Réinstallez l’agent.
