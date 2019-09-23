@@ -18,31 +18,33 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783018"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166622"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrire l’appareil macOS fourni par votre organisation dans la gestion
 
 Découvrez comment passer votre appareil macOS en mode géré dans Intune.  
 
-Les appareils qui vous sont fournis par votre entreprise ou votre établissement scolaire sont souvent préconfigurés quand vous les recevez. Votre organisation envoie ces paramètres préconfigurés à votre appareil la première fois que vous l’activez et que vous vous connectez. Une fois la configuration de votre appareil terminée, vous recevez l’accès aux ressources de votre entreprise ou de votre établissement scolaire. 
+Les appareils qui vous sont fournis par votre entreprise ou votre établissement scolaire sont souvent préconfigurés quand vous les recevez. Votre organisation envoie ces paramètres préconfigurés à votre appareil la première fois que vous l’activez et que vous vous connectez. Une fois la configuration de votre appareil terminée, vous recevez l’accès aux ressources de votre entreprise ou de votre établissement scolaire.
 
-Pour commencer la configuration de la gestion, mettez votre appareil sous tension, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires. Le reste de cet article décrit les étapes à suivre et les écrans qui s’affichent quand vous parcourez l’Assistant Configuration.   
+Pour commencer la configuration de la gestion, mettez votre appareil sous tension, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires. Le reste de cet article décrit les étapes à suivre et les écrans qui s’affichent quand vous parcourez l’Assistant Configuration.
 
 ## <a name="what-is-apple-dep"></a>Qu’est-ce qu’Apple DEP ?
-Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
-## <a name="get-your-device-managed"></a>Configurer la gestion de votre appareil 
+Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+
+## <a name="get-your-device-managed"></a>Configurer la gestion de votre appareil
+
 Effectuez les étapes suivantes pour inscrire votre appareil macOS dans la gestion. Si vous utilisez votre propre appareil, plutôt qu’un appareil d’entreprise, suivez les étapes relatives aux [appareils personnels et BYOD](enroll-your-device-in-intune-macos-cp.md).  
 
-1. Mettez sous tension votre appareil macOS. 
+1. Mettez sous tension votre appareil macOS.
 2. Choisissez votre pays/région et cliquez sur **Continuer**.  
 
-   ![Capture de l’écran d’accueil de l’Assistant Configuration d’un appareil macOS, affichant la liste des langues dans laquelle effectuer la sélection.](./media/macos-dep-welcome-1808.png)   
+   ![Capture de l’écran d’accueil de l’Assistant Configuration d’un appareil macOS, affichant la liste des langues dans laquelle effectuer la sélection.](./media/macos-dep-welcome-1808.png)
 3. Choisissez une disposition du clavier. La liste affiche une ou plusieurs options en fonction du pays ou de la région que vous sélectionnez. Pour afficher toutes les options de disposition, peu importe le pays ou la région que vous sélectionnez, cliquez sur **Afficher tout**. Quand vous avez terminé, cliquez sur **Continuer**.  
 
    ![Capture de l’écran Disposition du clavier de l’Assistant Configuration d’un appareil macOS, affichant la liste des langues dans laquelle effectuer la sélection, une option Afficher tout décochée, un bouton Précédent et un bouton Continuer.](./media/macos-dep-keyboard-1808.png)  
@@ -62,14 +64,17 @@ Effectuez les étapes suivantes pour inscrire votre appareil macOS dans la gesti
     * Créer un compte d’ordinateur
     * Effectuer une installation rapide
     * Configurer votre Mac  
-## <a name="get-the-company-portal-app"></a>Obtenir l’application Portail d’entreprise      
-Téléchargez l’application Portail d’entreprise Intune pour macOS sur votre appareil. Cette application vous permet de surveiller, de synchroniser, d’ajouter et de supprimer votre appareil de la gestion, ainsi que d’installer des applications. Ces étapes décrivent également comment inscrire votre appareil dans Portail d’entreprise.  
-1. Sur votre appareil macOS, accédez à https://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
+
+## <a name="get-the-company-portal-app"></a>Obtenir l’application Portail d’entreprise
+
+Téléchargez l’application Portail d’entreprise Intune pour macOS sur votre appareil. Cette application vous permet de surveiller, de synchroniser, d’ajouter et de supprimer votre appareil de la gestion, ainsi que d’installer des applications. Ces étapes décrivent également comment inscrire votre appareil dans Portail d’entreprise.
+
+1. Sur votre appareil macOS, accédez à [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
 2. Connectez-vous au site web du portail d’entreprise avec votre compte professionnel ou scolaire. 
 3. Cliquez sur **Obtenir l’application** pour télécharger le programme d’installation du Portail d’entreprise pour macOS.
 4. Lorsque vous y êtes invité, ouvrez le fichier .pkg et effectuez les étapes d’installation.
-4. Ouvrez l’application Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire.
-5. Recherchez votre appareil et cliquez sur **Inscrire**.
-6. Cliquez sur **Continuer** > **Terminé**. Votre appareil doit maintenant apparaître dans l’application Portail d’entreprise comme un appareil d’entreprise conforme.
+5. Ouvrez l’application Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire.
+6. Recherchez votre appareil et cliquez sur **Inscrire**.
+7. Cliquez sur **Continuer** > **Terminé**. Votre appareil doit maintenant apparaître dans l’application Portail d’entreprise comme un appareil d’entreprise conforme.
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
