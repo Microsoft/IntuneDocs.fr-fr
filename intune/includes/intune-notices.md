@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0721c62d44234a44881cdc562376c9bb62412187
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 041f37e56e85b0ac26a4dd7a9dbbdb49bc0ebd9e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68775867"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166344"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Diminution du support pour l’administrateur d’appareil Android 
-L’administrateur d’appareil Android (parfois appelé gestion Android « héritée » et publiée avec Android 2.2) est un moyen de gérer les appareils Android. Toutefois, des fonctionnalités de gestion améliorées sont désormais disponibles avec [Android Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (fournie avec Android 5.0). Dans le but de passer à une gestion des périphériques modernes, plus riche et plus sécurisée, Google diminue le support des administrateurs d’appareil dans les nouvelles versions Android.
+L’administrateur d’appareil Android (parfois appelé gestion Android « héritée » et publiée avec Android 2.2) est un moyen de gérer les appareils Android. Toutefois, des fonctionnalités de gestion améliorées sont désormais disponibles avec [Android Enterprise](../connect-intune-android-enterprise.md) (fournie avec Android 5.0). Dans le but de passer à une gestion des périphériques modernes, plus riche et plus sécurisée, Google diminue le support des administrateurs d’appareil dans les nouvelles versions Android.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
 En raison de ces modifications apportées par Google, les utilisateurs Intune seront affectés des manières suivantes : 
@@ -66,7 +66,7 @@ Vous n’avez rien à faire, mais nous vous recommandons de mettre à jour vos r
 #### <a name="additional-information"></a>Informations supplémentaires 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Modification planifiée : Intune est appelé à prendre en charge iOS versions 11 et ultérieures en septembre <!-- 4665342-->
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665324--"></a>Modification planifiée : Intune est appelé à prendre en charge iOS versions 11 et ultérieures en septembre <!-- 4665324-->
 En septembre, nous pensons qu’iOS 13 sera publié par Apple. L’inscription à Intune, le Portail d’entreprise et Managed Browser prendront en charge iOS versions 11 et ultérieures, peu de temps après la publication d’iOS 13.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
@@ -76,7 +76,7 @@ Dans la mesure où les applications mobiles O365 seront prises en charge sur iOS
 - iPhone 5c
 - iPad (4e génération)
 
-À compter de juillet, les appareils inscrits à MDM utilisant iOS 10 et le Portail d’entreprise recevront une invite de mise à niveau du système d’exploitation ou de l’appareil. Si vous utilisez des stratégies de protection des applications, vous pouvez également définir le paramètre d’accès « Exiger une version minimale du système d’exploitation iOS (avertissement seulement) ».
+Si vous utilisez des stratégies de protection des applications, vous pouvez également définir le paramètre d’accès « Exiger une version minimale du système d’exploitation iOS (avertissement seulement) ».
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
 Vérifiez vos rapports Intune pour voir quels appareils ou utilisateurs sont concernés. Accédez à **Appareils** > **Tous les appareils**, puis filtrez par Système d’exploitation. Vous pouvez ajouter des colonnes supplémentaires pour aider à identifier les membres de votre organisation disposant d’appareils exécutant iOS 10. Demandez aux utilisateurs finaux de mettre à niveau leurs appareils avant septembre, avec une version de système d’exploitation prise en charge.
@@ -96,7 +96,7 @@ Vérifiez vos applications Microsoft, tierces et métier. Veillez à ce que tout
 Vous devez également mettre à jour votre documentation ou vos directives de développement le cas échéant afin d’intégrer ce changement dans la prise en charge du SDK.
 
 #### <a name="additional-information"></a>Informations supplémentaires
-https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+[Préparer les applications métier aux stratégies de protection des applications](../apps-prepare-mobile-application-management.md)
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Modification planifiée : Nouveaux paramètres des mises à jour Windows dans Intune <!-- 4464404 -->
 À partir de la version d’août du service Intune ou 1908, nous ajoutons de nouveaux « Paramètres d’échéance », que vous pouvez configurer à la place des paramètres « Autoriser l’utilisateur à redémarrer (redémarrage engagé) ». Nous prévoyons de désactiver les paramètres de redémarrage activés dans l’interface utilisateur de la version 1909 ou de la mise à jour de septembre, puis de les supprimer complètement de la console vers la fin octobre. 
