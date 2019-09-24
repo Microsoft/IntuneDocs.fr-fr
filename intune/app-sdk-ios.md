@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 09/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: ea31c06019643a3eaf10d79857dfdc319a8453c3
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021830"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167221"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guide du Kit SDK d’application Microsoft Intune pour les développeurs iOS
 
@@ -185,7 +185,7 @@ Il est recommandé que votre application soit liée à la dernière version de [
 
 ### <a name="link-to-adal-or-msal-binaries"></a>Lien vers des binaires ADAL ou MSAL
 
-**Option 1:** Suivez [ces étapes](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) pour lier votre application aux fichiers binaires Adal.
+**Option 1 :** Suivez [ces étapes](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) pour lier votre application aux fichiers binaires Adal.
 
 **Option 2-** Vous pouvez également suivre [ces instructions](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) pour lier votre application aux fichiers binaires MSAL.
 
@@ -215,22 +215,22 @@ Si votre application utilise déjà ADAL ou MSAL, les configurations suivantes s
 
 En outre, les applications peuvent remplacer ces paramètres Azure AD lors de l’exécution. Pour ce faire, il vous suffit de définir les propriétés `aadAuthorityUriOverride`, `aadClientIdOverride` et `aadRedirectUriOverride` sur l’instance `IntuneMAMPolicyManager`.
 
-4. Vérifiez que les étapes pour donner des autorisations à votre application iOS pour le service de stratégie de protection d’application (APP) sont respectées. Suivez les instructions du [guide de mise en route avec le SDK Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) sous « [Autoriser votre application à accéder au service de protection d’application Intune (facultatif)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional) ».  
+4. Vérifiez que les étapes pour donner des autorisations à votre application iOS pour le service de stratégie de protection d’application (APP) sont respectées. Suivez les instructions du [guide de mise en route avec le SDK Intune](app-sdk-get-started.md#next-steps-after-integration) sous « [Autoriser votre application à accéder au service de protection d’application Intune (facultatif)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional) ».  
 
 > [!NOTE]
 > L’approche du fichier Info.plist est recommandée pour tous les paramètres statiques et qui n’ont pas besoin d’être définis lors de l’exécution. Les valeurs affectées aux propriétés `IntuneMAMPolicyManager` prévalent sur toutes les valeurs correspondantes spécifiées dans le fichier Info.plist et persistent même après le redémarrage de l’application. Le Kit SDK continue à les utiliser pour les archivages de stratégie, jusqu'à ce que l’utilisateur soit désinscrit ou que les valeurs soient effacées ou modifiées.
 
 ### <a name="if-your-app-does-not-use-adal-or-msal"></a>Si votre application n’utilise pas ADAL ni MSAL
 
-Comme mentionné précédemment, le kit de développement logiciel (SDK) d’application Intune peut utiliser la [bibliothèque d’authentification Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ou la [bibliothèque d’authentification Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-objc) pour ses scénarios d’authentification et de lancement conditionnel. Il s’appuie également sur la bibliothèque ADAL/MSAL pour inscrire l’identité de l’utilisateur auprès du service GAM pour les scénarios sans inscription des appareils. Si **votre application n’utilise pas Adal ou MSAL pour son propre mécanisme d’authentification**, vous devrez peut-être configurer des paramètres AAD personnalisés, en fonction de la bibliothèque d’authentification que vous choisissez d’intégrer:   
+Comme mentionné précédemment, le kit de développement logiciel (SDK) d’application Intune peut utiliser la [bibliothèque d’authentification Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ou la [bibliothèque d’authentification Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-objc) pour ses scénarios d’authentification et de lancement conditionnel. Il s’appuie également sur la bibliothèque ADAL/MSAL pour inscrire l’identité de l’utilisateur auprès du service GAM pour les scénarios sans inscription des appareils. Si **votre application n’utilise pas Adal ou MSAL pour son propre mécanisme d’authentification**, vous devrez peut-être configurer des paramètres AAD personnalisés, en fonction de la bibliothèque d’authentification que vous choisissez d’intégrer :   
 
 ADAL - Le SDK d’application Intune fournit des valeurs par défaut pour les paramètres ADAL et gère l’authentification auprès d’Azure AD. Les développeurs n’ont pas besoin de spécifier de valeurs pour les paramètres ADAL précédemment mentionnés. 
 
-MSAL: les développeurs doivent créer une inscription d’application dans AAD avec un URI de redirection personnalisé au format spécifié [ici](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). Les développeurs doivent définir `ADALClientID` les `ADALRedirectUri` paramètres et mentionnés précédemment, ou les `aadClientIdOverride` propriétés `aadRedirectUriOverride` et équivalentes `IntuneMAMPolicyManager` de l’instance. Les développeurs doivent également s’assurer qu’ils suivent l’étape 4 de la section précédente, pour accorder à leur application l’accès d’inscription au service de protection des applications Intune.
+MSAL : les développeurs doivent créer une inscription d’application dans AAD avec un URI de redirection personnalisé au format spécifié [ici](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). Les développeurs doivent définir `ADALClientID` les `ADALRedirectUri` paramètres et mentionnés précédemment, ou les `aadClientIdOverride` propriétés `aadRedirectUriOverride` et équivalentes `IntuneMAMPolicyManager` de l’instance. Les développeurs doivent également s’assurer qu’ils suivent l’étape 4 de la section précédente, pour accorder à leur application l’accès d’inscription au service de protection des applications Intune.
 
 ### <a name="special-considerations-when-using-msal"></a>Considérations particulières lors de l’utilisation de MSAL 
 
-1. **Vérifiez votre WebView** . il est recommandé que les applications n’utilisent pas SFSafariViewController, SFAuthSession ou ASWebAuthSession comme WebView pour les opérations d’authentification interactive MSAL initiées par l’application. Si, pour une raison quelconque, votre application doit utiliser l’une de ces vues WebView pour les opérations d’authentification MSAL interactives `true` , elle `IntuneMAMSettings` doit également être définie `SafariViewControllerBlockedOverride` sur sous le dictionnaire dans le fichier info. plist de l’application. AVERTISSEMENT: cette opération désactive les hooks SafariViewController d’Intune pour activer la session d’authentification. Cela risque de provoquer des fuites de données ailleurs dans l’application si l’application utilise SafariViewController pour afficher les données d’entreprise, de sorte que l’application ne doit pas afficher les données d’entreprise dans l’un de ces types WebView.
+1. **Vérifiez votre WebView** . il est recommandé que les applications n’utilisent pas SFSafariViewController, SFAuthSession ou ASWebAuthSession comme WebView pour les opérations d’authentification interactive MSAL initiées par l’application. Si, pour une raison quelconque, votre application doit utiliser l’une de ces vues WebView pour les opérations d’authentification MSAL interactives `true` , elle `IntuneMAMSettings` doit également être définie `SafariViewControllerBlockedOverride` sur sous le dictionnaire dans le fichier info. plist de l’application. AVERTISSEMENT : cette opération désactive les hooks SafariViewController d’Intune pour activer la session d’authentification. Cela risque de provoquer des fuites de données ailleurs dans l’application si l’application utilise SafariViewController pour afficher les données d’entreprise, de sorte que l’application ne doit pas afficher les données d’entreprise dans l’un de ces types WebView.
 2. La **liaison de Adal et de MSAL** -les développeurs doit s’inscrire pour qu’INTUNE préfère MSAL sur Adal dans ce scénario. Par défaut, Intune préfère les versions de ADAL prises en charge aux versions MSAL prises en charge, si elles sont toutes les deux liées au moment de l’exécution. Intune préfère uniquement une version de MSAL prise en charge quand, à l’heure de la première opération d' `IntuneMAMUseMSALOnNextLaunch` authentification `true` d' `NSUserDefaults`Intune, se trouve dans. Si `IntuneMAMUseMSALOnNextLaunch` est `false` ou n’est pas défini, Intune revient au comportement par défaut. Comme son nom l’indique, une modification `IntuneMAMUseMSALOnNextLaunch` apportée à prend effet au lancement suivant.
 
 
@@ -259,7 +259,7 @@ AutoEnrollOnLaunch| Booléen| Spécifie si l’application doit tenter de s’in
 MAMPolicyRequired| Booléen| Spécifie si le démarrage de l’application doit être bloqué si l’application n’a pas de stratégie de protection d’application Intune. La valeur par défaut est NON. <br><br> Remarques : Les applications ne peuvent pas être envoyées à l’App Store avec MAMPolicyRequired défini avec la valeur OUI. Lorsque vous définissez MAMPolicyRequired avec la valeur Oui, AutoEnrollOnLaunch doit également être défini avec la valeur Oui. | Facultatif. La valeur par défaut est Non. |
 MAMPolicyWarnAbsent | Booléen| Spécifie si l’application avertit l’utilisateur pendant le lancement si l’application n’a pas de stratégie de protection d’application Intune. <br><br> Remarque : Les utilisateurs pourront continuer à utiliser l’application sans stratégie après avoir ignoré l’avertissement. | Facultatif. La valeur par défaut est Non. |
 MultiIdentity | Booléen| Spécifie si l’application prend en charge plusieurs identités. | Facultatif. La valeur par défaut est Non. |
-SafariViewControllerBlockedOverride | Booléen| Désactive les hooks SafariViewController d’Intune pour activer l’authentification MSAL via SFSafariViewController, SFAuthSession ou ASWebAuthSession. | Facultatif. La valeur par défaut est Non. AVERTISSEMENT: peut entraîner une fuite de données en cas d’utilisation incorrecte. Activez uniquement si cela est absolument nécessaire. Pour plus d’informations, consultez [considérations particulières lors de l’utilisation de MSAL](#special-considerations-when-using-msal) .  |
+SafariViewControllerBlockedOverride | Booléen| Désactive les hooks SafariViewController d’Intune pour activer l’authentification MSAL via SFSafariViewController, SFAuthSession ou ASWebAuthSession. | Facultatif. La valeur par défaut est Non. AVERTISSEMENT : peut entraîner une fuite de données en cas d’utilisation incorrecte. Activez uniquement si cela est absolument nécessaire. Pour plus d’informations, consultez [considérations particulières lors de l’utilisation de MSAL](#special-considerations-when-using-msal) .  |
 SplashIconFile <br>SplashIconFile~ipad | Chaîne  | Spécifie le fichier d’icône de démarrage Intune. | Facultatif. |
 SplashDuration | Nombre | Durée minimale en secondes d’affichage de l’écran de démarrage Intune au lancement de l’application. La valeur par défaut est 1,5. | Facultatif. |
 BackgroundColor| Chaîne| Spécifie la couleur d’arrière-plan pour les écrans de démarrage et d’entrée du code confidentiel. Accepte une chaîne hexadécimale RVB au format #XXXXXX, où X peut être 0-9 ou A-F. Le signe dièse peut être omis.   | Facultatif. La valeur par défaut est le gris clair. |
@@ -276,6 +276,9 @@ WebViewHandledURLSchemes | Tableau de chaînes | Spécifie les schémas d’URL 
 ### <a name="overview"></a>Vue d’ensemble
 
 Pour recevoir la stratégie de protection des applications Intune, les applications doivent lancer une demande d’inscription auprès du service de gestion des applications mobiles Intune. Les applications peuvent être configurées dans la console Intune pour recevoir la stratégie de protection des applications avec ou sans inscription de l’appareil. La stratégie de protection des applications sans inscription, également appelée **APP-WE** ou MAM-WE, permet aux applications d’être gérées par Intune sans nécessiter l’inscription de l’appareil auprès de la gestion des appareils mobiles (MDM) Intune. Dans les deux cas, l’inscription auprès du service de gestion des applications mobiles Intune est nécessaire pour recevoir la stratégie.
+
+> [!Important]
+> Le kit de développement logiciel (SDK) Intune App pour iOS utilise des clés de chiffrement 256 bits lorsque le chiffrement est activé par des stratégies App Protection. Toutes les applications doivent disposer d’une version actuelle du kit de développement logiciel (SDK) pour permettre le partage des données protégées.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Applications qui utilisent déjà ADAL ou MSAL
 
@@ -412,9 +415,6 @@ Ces méthodes déléguées retournent un objet `IntuneMAMEnrollmentStatus` qui c
 * Un code d’état indiquant le résultat de la demande
 * Une chaîne d’erreur avec une description du code d’état
 * Objet `NSError`. Cet objet est défini dans `IntuneMAMEnrollmentStatus.h`, ainsi que les codes d’état spécifiques qui peuvent être renvoyés.
-
-> [!NOTE]
-> Ces informations sont destinées à des fins de débogage uniquement. Aucune logique métier dans votre application ne doit être basée sur ces notifications. Ces informations peuvent être envoyées à un service de télémétrie à des fins de débogage ou de surveillance.
 
 ### <a name="sample-code"></a>Exemple de code
 
@@ -593,7 +593,7 @@ Les administrateurs Intune peuvent cibler et déployer des données de configura
 
 Pour plus d’informations sur les fonctionnalités de l’API Graph, consultez [Référence de l’API Graph](https://developer.microsoft.com/graph/docs/concepts/overview).
 
-Pour plus d’informations sur la façon de créer une stratégie de configuration ciblée de gestion des applications mobiles dans iOS, consultez la section sur la configuration ciblée de gestion des applications mobiles dans [How to use Microsoft Intune app configuration policies for iOS (Guide pratique pour utiliser des stratégies de configuration d’application Microsoft Intune pour iOS)](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
+Pour plus d’informations sur la façon de créer une stratégie de configuration ciblée de gestion des applications mobiles dans iOS, consultez la section sur la configuration ciblée de gestion des applications mobiles dans [How to use Microsoft Intune app configuration policies for iOS (Guide pratique pour utiliser des stratégies de configuration d’application Microsoft Intune pour iOS)](app-configuration-policies-use-ios.md).
 
 ## <a name="telemetry"></a>Télémétrie
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,38 +14,40 @@ ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6880cd679aa88896ff78a350e3b43f4568052918
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e2a0c408868297375ea39e2c09d70740dc316864
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55833954"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163320"
 ---
-# <a name="reset-your-device-from-the-company-portal-website"></a>Réinitialiser votre appareil à partir du site web du portail d’entreprise
+# <a name="reset-device-from-company-portal-website"></a>Réinitialiser l’appareil à partir d’Portail d’entreprise site Web
 
-Découvrez comment restaurer les paramètres d’usine d’un appareil perdu, volé ou précédemment utilisé, à partir du site web Portail d’entreprise.  
+Restaurez les paramètres d’usine d’un appareil perdu, volé ou précédemment utilisé, à partir du site web Portail d’entreprise.  
 
-Lorsque vous restaurez ses paramètres d’usine, l’appareil n’apparaît plus dans le Portail d’entreprise. Les applications et les fichiers existants sont effacés, et les paramètres d’usine par défaut de l’appareil sont restaurés.
+Lorsque vous restaurez ses paramètres d’usine, l’appareil n’apparaît plus dans le Portail d’entreprise. Les applications et les fichiers existants sont effacés, et les paramètres d’usine par défaut de l’appareil sont restaurés. 
+
+La réinitialisation de l’appareil dans la Portail d’entreprise n’est pas disponible pour tous les appareils iOS. Si vous êtes une personne du support informatique et que vous souhaitez en savoir plus sur la réinitialisation des appareils et ses limitations, consultez [supprimer des appareils à l’aide de la fonction réinitialiser, mettre hors service ou désinscrire manuellement l’appareil](https://docs.microsoft.com/intune/devices-wipe).  
 
 > [!Note]
-> Vous pouvez également effectuer les étapes suivantes à partir d’un autre appareil inscrit. Ouvrez l’application Portail d’entreprise sur cet appareil et effectuez les étapes de réinitialisation.  
+> Vous pouvez également effectuer les étapes suivantes à partir d’un autre appareil inscrit. Ouvrez l’application Portail d’entreprise et suivez les étapes pour une expérience de réinitialisation similaire. 
 
 1. Accédez au site web du portail d’entreprise, puis sélectionnez le bouton __Menu__ > __Appareils__.  
 
 2. Sélectionnez l’appareil à réinitialiser.
 
-    ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png)  
+    ![Capture d’écran de la page Appareils, avec deux vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png)  
 
-3. Sélectionnez **Réinitialiser**. Si l’option de réinitialisation n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Réinitialiser**.  
+3. Sélectionnez **Réinitialiser**. Si l’option de réinitialisation n’est pas visible en haut de la page, sélectionnez **Plus (...)**  > **Réinitialiser**.  
 
      ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)  
 
-    ![Zoom avant sur l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)  
+    ![Capture d’écran de l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. Un message s’affiche pour vous avertir que vous êtes sur le point d’effacer tout le contenu de votre appareil. Pour confirmer, appuyez sur **Réinitialiser**.  
+4. Un message vous avertit que vous êtes sur le ou l’impossibilité d’effacer tout le contenu sur votre appareil. Pour confirmer, appuyez sur **Réinitialiser**.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

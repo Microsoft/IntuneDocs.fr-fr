@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18279fd9cca88de5f04c57a8bcccce1c211c6de
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
+ms.openlocfilehash: 4494d5f75336f7152668cfa1bb6fa1cd1a94305c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894312"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167863"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Créer un rapport Intune à partir du flux OData avec Power BI
 
@@ -108,7 +108,7 @@ Pour répondre à des questions supplémentaires à l’aide de votre applicatio
 1. Pour ajouter un filtre, sélectionnez le canevas de rapport, puis l’**icône Segment** (![Treemap avec le modèle de données et les relations prises en charge](media/reports-create-slicer.png)) sous **Visualisations**. La visualisation de **segment** vide s’affiche sur le canevas.
 2. Dans le volet **champs** , recherchez la `ownerTypes` table.
 3. Développez `ownerTypes` la table et sélectionnez `ownerTypeName` le champ de données.
-4. Faites glisser `onwerTypeName` le champ de données `ownerTypes` de la table vers le volet **filtres** et déposez-le sous la section **filtres de cette page** dans la zone intitulée **Ajouter des champs de données ici**.  
+4. Faites glisser `onwerTypeName` le champ de données `ownerTypes` de la table vers le volet **Filtres** et déposez-le sous la section **Filtres sur cette page** de la zone intitulée **Ajouter des champs de données ici**.  
 
    Dans le `OwnerTypes` tableau, un champ de données appelé `OwnerTypeKey`contient une donnée indiquant si un appareil est propriétaire de l’entreprise ou personnel. Pour afficher des noms conviviaux dans ce filtre, recherchez la table `ownerTypes` et faites glisser le champ de données **ownerTypeName** vers le segment. Cet exemple montre comment le modèle de données prend en charge les relations entre les tables.
 
@@ -122,4 +122,4 @@ Vous disposez maintenant d’un filtre interactif qui vous permet de basculer en
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Découvrez plus en détail [la création et la gestion des relations](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) dans Power BI Desktop dans la documentation sur Power BI.
-- Consultez le [modèle de l’entrepôt de données Intune](https://docs.microsoft.com/intune/reports-ref-data-model).
+- Consultez le [modèle de l’entrepôt de données Intune](reports-ref-data-model.md).

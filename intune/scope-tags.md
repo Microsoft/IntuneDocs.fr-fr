@@ -14,18 +14,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90865b8a8881ab85089fb379a8398e276574b771
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 2fb82b02057e1e028755da16a05755b0b8ddb93a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550029"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163797"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée
 
 Vous pouvez utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour garantir que les administrateurs ont la visibilité et l’accès appropriés pour les bons objets Intune. Les rôles déterminent quel accès ont les administrateurs sur quels objets. Les balises d’étendue déterminent quels objets les administrateurs peuvent voir.
 
-Par exemple, supposons que l’administrateur d’un bureau régional de Seattle a le rôle de gestionnaire de stratégie et de profil. Vous voulez que cet administrateur voie et gère seulement les profils et les stratégies qui s’appliquent uniquement aux appareils de Seattle. Pour configurer cet accès, vous pouvez:
+Par exemple, supposons que l’administrateur d’un bureau régional de Seattle a le rôle de gestionnaire de stratégie et de profil. Vous voulez que cet administrateur voie et gère seulement les profils et les stratégies qui s’appliquent uniquement aux appareils de Seattle. Pour configurer cet accès, vous pouvez :
 
 1. Créer une balise d’étendue nommée Seattle.
 2. Créer une attribution de rôle pour le rôle de gestionnaire de stratégie et de profil avec : 
@@ -38,7 +38,7 @@ Par exemple, supposons que l’administrateur d’un bureau régional de Seattle
 ## <a name="default-scope-tag"></a>Balise d’étendue par défaut
 La balise d’étendue par défaut est automatiquement ajoutée à tous les objets non balisés qui prennent en charge les balises d’étendue.
 
-La fonctionnalité de balise d’étendue par défaut est similaire à la fonctionnalité étendues de sécurité dans System Center Configuration Manager. 
+La fonctionnalité de balise d’étendue par défaut sont similaires à la fonctionnalité des étendues de sécurité de System Center Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Pour créer une étiquette de délimitation
 
@@ -78,7 +78,7 @@ La fonctionnalité de balise d’étendue par défaut est similaire à la foncti
 
 ## <a name="assign-scope-tags-to-other-objects"></a>Affecter des balises d’étendue à d’autres objets
 
-Pour les objets qui prennent en charge les balises d’étendue, les balises d’étendue apparaissent généralement sous **Propriétés**. Par exemple, pour affecter une étiquette d’étendue à un profil de configuration, procédez comme suit:
+Pour les objets qui prennent en charge les balises d’étendue, les balises d’étendue apparaissent généralement sous **Propriétés**. Par exemple, pour affecter une étiquette d’étendue à un profil de configuration, procédez comme suit :
 
 1. Dans Intune, choisissez **Configuration de l’appareil** > **Profils** > choisissez un profil.
 
@@ -96,12 +96,11 @@ Pour les objets qui prennent en charge les balises d’étendue, les balises d�
 Quand vous utilisez des balises d’étendue, rappelez-vous de ceci : 
 
 - Vous pouvez assigner des balises d’étendue à un type d’objet Intune si le locataire peut avoir plusieurs versions de cet objet (telles que des attributions de rôles ou des applications).
-  Les objets Intune suivants sont des exceptions à cette règle et ne prennent actuellement pas en charge les balises d’étendue:
+  Les objets Intune suivants sont des exceptions à cette règle et ne prennent actuellement pas en charge les balises d’étendue :
     - Profils Windows ESP
     - Catégories d'appareils
     - Restrictions d'inscription
     - Identificateurs d’appareils Corp
-    - Conditions générales
     - Appareils AutoPilot
     - Emplacements de conformité des appareils
     - Appareils JAMF

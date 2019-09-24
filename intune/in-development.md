@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b96fa9fac25f6de4180d3dcc9ee4022a2cc43fe
-ms.sourcegitcommit: 7484ef8006f6b81d8976c328dd704512a31872ec
-ms.translationtype: MTE75
+ms.openlocfilehash: 4bd5392abba3ea22127cb9bcbbb53ec4929f2d5e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190250"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166326"
 ---
 # <a name="in-development-for-microsoft-intune---september-2019"></a>En développement pour Microsoft Intune - Septembre 2019
 
@@ -62,7 +62,7 @@ Pour faciliter votre préparation et votre planification, cette page liste les m
 Intune permettra aux administrateurs informatiques de publier des applications métier Android privées sur des Google Play gérés via un IFRAME incorporé dans la console Intune.  Actuellement, les administrateurs informatiques doivent publier des applications métier directement sur la console de publication de Google, ce qui nécessite de nombreuses étapes et prend beaucoup de temps.  Cette nouvelle fonctionnalité permet de faciliter la publication d’applications métier avec un ensemble minimal d’étapes sans avoir à sortir de la console Intune.  Les scénarios de gestion d’entreprise Android qui utilisent des Google Play gérés peuvent tirer parti de cette fonctionnalité (profil de travail, appareils dédiés, entièrement gérés et non inscrits).  Dans Intune, sélectionnez **Applications clientes** > **Applications** > **Ajouter**. Sélectionnez ensuite **Google Play géré** dans la liste **type d’application** . Pour plus d’informations sur les applications de Google Play gérées, consultez [Ajouter des applications de Google Play gérées à des appareils Android Enterprise avec Intune](apps-add-android-for-work.md).
 
 ### <a name="company-portal-app-installation-status-messages----2514416----"></a>Portail d’entreprise les messages d’état d’installation de l’application <!-- 2514416  -->
-L’application Portail d’entreprise affiche des messages d’état d’installation d’application supplémentaires pour les utilisateurs finaux. Les conditions suivantes s’appliquent aux nouvelles fonctionnalités de dépendance Win32:
+L’application Portail d’entreprise affiche des messages d’état d’installation d’application supplémentaires pour les utilisateurs finaux. Les conditions suivantes s’appliquent aux nouvelles fonctionnalités de dépendance Win32 :
 - Échec d’installation de l’application. Les dépendances définies par l’administrateur n’ont pas été satisfaites.
 - L’application a été correctement installée mais nécessite un redémarrage.
 - L’application est en cours d’installation, mais nécessite un redémarrage pour continuer.
@@ -70,18 +70,18 @@ L’application Portail d’entreprise affiche des messages d’état d’instal
 ### <a name="managed-google-play-iframe-support----2871756----"></a>Prise en charge des Google Play iframe managés <!-- 2871756  -->
 Intune fournit la prise en charge de l’ajout et de la gestion des liens Web directement dans la console Intune, via le Google Play iframe géré.  Cela permet aux administrateurs informatiques de soumettre une URL et une image d’icône, puis de les déployer sur des appareils comme des applications Android standard. Les scénarios de gestion d’entreprise Android qui utilisent des Google Play gérés peuvent tirer parti de cette fonctionnalité (profil de travail, appareils dédiés, entièrement gérés et non inscrits).  Dans Intune, sélectionnez **Applications clientes** > **Applications** > **Ajouter**. Sélectionnez ensuite **Google Play géré** dans la liste **type d’application** . Pour plus d’informations sur les applications de Google Play gérées, consultez [Ajouter des applications de Google Play gérées à des appareils Android Enterprise avec Intune](apps-add-android-for-work.md).
 
-### <a name="macos-support-for-vpp-apps----3173501----"></a>prise en charge macOS pour les applications VPP <!-- 3173501  -->
-les applications macOS que vous avez achetées à l’aide d’Apple Business Manager s’affichent dans la console lorsque les jetons Apple VPP sont synchronisés dans Intune. Vous pouvez affecter, révoquer et réassigner des licences d’appareil et d’utilisateur pour des groupes à l’aide de la console. Microsoft Intune vous aide à gérer les applications VPP achetées pour une utilisation dans votre entreprise par:
+### <a name="macos-support-for-vpp-apps----3173501----"></a>Prise en charge macOS pour les applications VPP <!-- 3173501  -->
+Les applications macOS, achetées à l’aide d’Apple Business Manager, s’afficheront dans la console lors de la synchronisation des jetons Apple VPP dans Intune. Vous pouvez attribuer, révoquer et réassigner des licences d’appareil et d’utilisateur pour des groupes à l’aide de la console. Microsoft Intune vous aide à gérer les applications VPP achetées pour une utilisation dans votre entreprise en :
 - Signalant les informations de licence de l’App Store.
 - Effectuant le suivi du nombre de licences utilisées.
 - Vous empêchant d’installer davantage de copies de l’application que vous n’en possédez.
 Pour plus d’informations sur Intune et VPP, consultez [Gérer les applications et les livres achetés en volume avec Microsoft Intune](vpp-apps.md).
 
-### <a name="macos-support-for-web-apps----3174427----"></a>prise en charge macOS pour les applications Web <!-- 3174427  -->
-Vous pouvez installer Web Apps, qui vous permet d’ajouter un raccourci vers une URL sur le Web, vers l’ancre à l’aide de l’Portail d’entreprise macOS. Les utilisateurs finaux peuvent accéder à l’action d' **installation** à partir de la page Détails de l’application pour une application Web dans le portail d’entreprise MacOS. Pour plus d’informations sur le type d’application **lien Web** , consultez [Ajouter des applications à Microsoft Intune](apps-add.md).
+### <a name="macos-support-for-web-apps----3174427----"></a>prise en charge macOS pour les applications web <!-- 3174427  -->
+Vous pourrez installer les applications web, qui vous permettent d’ajouter un raccourci vers une URL sur le web, sur le Dock à l’aide du Portail d’entreprise macOS. Les utilisateurs finaux peuvent accéder à l’action **Installer** à partir de la page des détails de l’application pour une application web dans le Portail d’entreprise MacOS. Pour plus d’informations sur le type d’application **lien Web** , consultez [Ajouter des applications à Microsoft Intune](apps-add.md).
 
 #### <a name="assign-microsoft-edge-beta-for-macos----4678761----"></a>Affecter Microsoft Edge Beta pour macOS <!-- 4678761  -->
-Vous pourrez ajouter et affecter la dernière version de Microsoft Edge Beta à Intune pour les appareils macOS. Dans Intune, sélectionnez **applications clientes**  > **applications** > **Ajouter une application** > **Microsoft Edge-MacOS**. Ensuite, affectez la version bêta de Microsoft Edge aux groupes prévus. Microsoft AutoUpdate (MAU) assure la mise à jour de Microsoft Edge. Pour plus d’informations sur Microsoft Edge, consultez [gérer l’accès Web à l’aide de Microsoft Edge avec Microsoft Intune](manage-microsoft-edge.md).
+Vous pourrez ajouter et affecter la dernière version de Microsoft Edge Beta à Intune pour les appareils macOS. Dans Intune, sélectionnez applications **clientes** > **applications** > **Ajouter une application** > **Microsoft Edge-MacOS**. Ensuite, affectez la version bêta de Microsoft Edge aux groupes prévus. Microsoft AutoUpdate (MAU) assure la mise à jour de Microsoft Edge. Pour plus d’informations sur Microsoft Edge, consultez [gérer l’accès Web à l’aide de Microsoft Edge avec Microsoft Intune](manage-microsoft-edge.md).
 
 ### <a name="read-and-write-graph-api-operations-for-intune-apps----5031704----"></a>Lire et écrire des opérations de API Graph pour les applications Intune <!-- 5031704  -->
 Les applications peuvent appeler le API Graph Intune avec des opérations de lecture et d’écriture à l’aide de l’identité de l’application sans informations d’identification de l’utilisateur. Pour en savoir plus sur l’accès à l’API Microsoft Graph API pour Intune, consultez la section relative à [l’utilisation d’Intune dans Microsoft Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
@@ -90,7 +90,7 @@ Les applications peuvent appeler le API Graph Intune avec des opérations de lec
 Les stratégies de protection des applications Intune (application) sur les appareils Android et iOS vous permettront de contrôler le contenu des notifications d’application pour les comptes d’organisation. Cette fonctionnalité nécessite la prise en charge des applications et peut ne pas être disponible pour toutes les applications prenant en charge l’application. Pour plus d’informations sur APP, consultez [Que sont les stratégies de protection des applications ?](app-protection-policy.md).
 
 ### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956----"></a>Application Google Play disponible créant des rapports pour des profils professionnels Android <!-- 3041956  -->
-Pour les installations d’applications disponibles sur les appareils avec profil professionnel Android, vous pouvez afficher l’état d’installation des applications, ainsi que la version installée des applications Google Play managées. Pour plus d’informations, consultez [Guide pratique pour superviser les stratégies de protection des applications](app-protection-policies-monitor.md), [Gérer les appareils avec profil professionnel Android avec Intune](android-enterprise-overview.md) et [Type d’application Google Play gérée](apps-add-android-for-work.md#managed-google-play-app-type).
+Pour les installations d’applications disponibles sur les appareils avec profil professionnel Android, vous pouvez afficher l’état d’installation des applications, ainsi que la version installée des applications Google Play managées. Pour plus d’informations, consultez [Guide pratique pour superviser les stratégies de protection des applications](app-protection-policies-monitor.md), [Gérer les appareils avec profil professionnel Android avec Intune](android-enterprise-overview.md) et [Type d’application Google Play gérée](apps-add-android-for-work.md#managed-google-play-app-types).
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Configuration des appareils
@@ -99,7 +99,7 @@ Pour les installations d’applications disponibles sur les appareils avec profi
 
 Dans Intune, vous créez des profils pour les appareils iOS et MacOS (**profils** > de**configuration** > d’appareil**créer un profil** > **iOS** ou **MacOS** pour les fonctionnalités de plateforme > **appareil** , **Restrictions d’appareil**ou **Extensions** pour le type de profil). Actuellement, les paramètres disponibles dans ces profils sont répertoriés. 
 
-Dans une prochaine mise à jour, les paramètres disponibles dans le portail Intune sont catégorisés par le type d’inscription auquel ils s’appliquent:
+Dans une prochaine mise à jour, les paramètres disponibles dans le portail Intune sont catégorisés par le type d’inscription auquel ils s’appliquent :
 
 - iOS
   - Tous les types d’inscription
@@ -127,12 +127,12 @@ S’applique à :
 
 Dans Intune, vous pouvez créer des stratégies pour exécuter des appareils iOS supervisés comme une borne ou un appareil dédié (**profils** > de**configuration** > d’appareil**créer un profil** > **iOS** pour la plateforme >  **Restrictions d’appareil** pour le type de profil > **kiosque (mode supervisé uniquement)** ). 
 
-Dans une prochaine mise à jour, vous pouvez contrôler les nouveaux paramètres suivants:
+Dans une prochaine mise à jour, vous pouvez contrôler les nouveaux paramètres suivants :
 
 - **Contrôle vocal**: active le contrôle vocal sur l’appareil en mode plein écran.
 - **Modification du contrôle vocal**: permet aux utilisateurs de modifier le paramètre de contrôle vocal sur l’appareil en mode plein écran.
 
-Pour afficher les paramètres actuels, accédez à [iOS bornes (mode supervisé uniquement)](device-restrictions-ios.md#kiosk-supervised-only).
+Pour afficher les paramètres actuels, accédez à [iOS bornes (mode supervisé uniquement)](device-restrictions-ios.md#kiosk).
 
 S’applique à :
 
@@ -159,15 +159,15 @@ S’applique à :
 
 - macOS 10.15 et ultérieur
 
-### <a name="use-itunes-and-apps-in-the-itunes-app-store-url-when-showing-or-hiding-apps-on-ios-supervised-devices----4928474----"></a>Utilisez «iTunes» et «apps» dans l’URL de l’App Store iTunes lors de l’émission ou du masquage d’applications sur des appareils iOS supervisés <!-- 4928474  --> 
+### <a name="use-itunes-and-apps-in-the-itunes-app-store-url-when-showing-or-hiding-apps-on-ios-supervised-devices----4928474----"></a>Utilisez « iTunes » et « apps » dans l’URL de l’App Store iTunes lors de l’émission ou du masquage d’applications sur des appareils iOS supervisés <!-- 4928474  --> 
 Dans Intune, vous pouvez créer des stratégies pour afficher ou masquer des applications sur vos appareils iOS supervisés (**profils** > de**configuration** > d’appareil**créer un profil** > **iOS** pour la plateforme > **appareil restrictions** pour le type de profil > **afficher ou masquer des applications (mode supervisé uniquement)** ). 
 
-Vous pouvez entrer l’URL de l’App Store iTunes, `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`telle que. Dans une prochaine mise à jour, vous serez en mesure d' `apps` utiliser `itunes` à la fois et dans l’URL, par exemple:
+Vous pouvez entrer l’URL de l’App Store iTunes, `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`telle que. Dans une prochaine mise à jour, vous serez en mesure d' `apps` utiliser `itunes` à la fois et dans l’URL, par exemple :
 
 - `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`
 - `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`
 
-Pour plus d’informations sur ces paramètres, consultez [afficher ou masquer des applications (mode supervisé uniquement)](device-restrictions-ios.md#show-or-hide-apps-supervised-only).
+Pour plus d’informations sur ces paramètres, consultez [afficher ou masquer des applications](device-restrictions-ios.md#show-or-hide-apps).
 
 S’applique à :
 
@@ -187,14 +187,14 @@ S’applique à : iOS
 ## <a name="device-enrollment"></a>Inscription des appareils
 
 ### <a name="new-tenants-will-default-away-from-android-device-administrator-management----4869790----"></a>Par défaut, les nouveaux locataires sont éloignés de la gestion des administrateurs d’appareils Android <!-- 4869790  -->
-Les fonctionnalités d’administrateur d’appareils Android ont été remplacées par Android Enterprise. Par conséquent, nous vous recommandons d’utiliser Android Enterprise pour de nouvelles inscriptions à la place. Dans une prochaine mise à jour, les nouveaux locataires devront suivre les étapes préalables suivantes de l’inscription Android pour utiliser la gestion des administrateurs d’appareils: accéder à l’inscription d'**appareils** >  **Intune** > inscription**Android** Les appareils **personnels et d’entreprise avec des privilèges** > d’administration d’appareils**utilisent l’administrateur de l’appareil pour gérer les appareils.**  > 
+Les fonctionnalités d’administrateur d’appareils Android ont été remplacées par Android Enterprise. Par conséquent, nous vous recommandons d’utiliser Android Enterprise pour de nouvelles inscriptions à la place. Dans une prochaine mise à jour, les nouveaux locataires devront suivre les étapes préalables suivantes de l’inscription Android pour utiliser la gestion des administrateurs d’appareils : accéder à l’inscription d'**appareils** >  **Intune** > inscription**Android** Les appareils **personnels et d’entreprise avec des privilèges** > d’administration d’appareils**utilisent l’administrateur de l’appareil pour gérer les appareils.**  > 
 
 Les locataires existants ne subissent aucune modification dans leurs environnements. 
 
-Pour plus d’informations sur l’administrateur d’appareils Android dans Intune, consultez inscription de l' [administrateur d’appareils Android](https://docs.microsoft.com/intune/android-enroll-device-administrator).
+Pour plus d’informations sur l’administrateur d’appareils Android dans Intune, consultez inscription de l' [administrateur d’appareils Android](android-enroll-device-administrator.md).
 
-### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>Pour les appareils iOS, personnalisez l’écran de confidentialité du processus d’inscription de l’Portail d’entreprise <!-- 4394993  -->
-À l’aide de la démarque, vous serez en mesure de personnaliser l’écran de confidentialité de Portail d’entreprise que les utilisateurs finaux voient lors de l’inscription iOS. Plus précisément, vous serez en mesure de personnaliser la liste des éléments que votre organisation ne peut pas voir ou faire sur l’appareil.
+### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>Pour les appareils iOS, personnalisez l’écran de confidentialité du processus d’inscription du Portail d’entreprise <!-- 4394993  -->
+À l’aide de Markdown, vous pourrez personnaliser l’écran de confidentialité du Portail d’entreprise que les utilisateurs finaux voient lors de l’inscription à iOS. Plus précisément, vous serez en mesure de personnaliser la liste des éléments que votre organisation ne peut pas voir ou faire sur l’appareil.
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Gestion des appareils
@@ -207,14 +207,14 @@ Vous pouvez envoyer des notifications personnalisées à des appareils spécifiq
 
 ### <a name="updates-to-android-enterprise-fully-managed-features----3464667-5227935-4062195-4631425-4631440---"></a>Mises à jour apportées aux fonctionnalités entièrement managées d’Android Enterprise <!-- 3464667, 5227935, 4062195, 4631425, 4631440 -->
 
-Nous allons ajouter la prise en charge suivante pour les appareils Android entièrement gérés:
+Nous allons ajouter la prise en charge suivante pour les appareils Android entièrement gérés :
 
-- Les certificats SCEP pour Android entièrement géré seront disponibles pour l’authentification par certificat sur les appareils gérés en tant que propriétaire de l’appareil. Les certificats SCEP sont déjà pris en charge sur les appareils de profil professionnel.  Avec les certificats SCEP pour le propriétaire de l’appareil, vous serez en mesure d’effectuer les opérations suivantes: <!-- 5227935 -->
+- Les certificats SCEP pour Android entièrement géré seront disponibles pour l’authentification par certificat sur les appareils gérés en tant que propriétaire de l’appareil. Les certificats SCEP sont déjà pris en charge sur les appareils de profil professionnel.  Avec les certificats SCEP pour le propriétaire de l’appareil, vous serez en mesure d’effectuer les opérations suivantes : <!-- 5227935 -->
     - créer un profil SCEP sous DO section of Android Enterprise
     - lier les certificats SCEP pour effectuer un profil Wi-Fi pour l’authentification
     - lier les certificats SCEP pour effectuer des profils VPN pour l’authentification
-    - lier les certificats SCEP pour effectuer des profils de messagerie pour l’authentification (via AppConfig)
-- Les applications système seront prises en charge sur les appareils Android Enterprise. Dans Intune, vous allez ajouter une application de système d’entreprise Android en sélectionnant **applications clientes**  > **applications** > **Ajouter**. Dans la liste **type d’application** , sélectionnez **application système Android Enterprise**. Pour plus d’informations sur l’ajout d’applications à Intune, consultez [Ajouter des applications à Microsoft Intune](apps-add.md). <!-- 4062195 -->
+    - lier les certificats SCEP pour effectuer des profils de messagerie pour l’authentification (via la configuration de l’application)
+- Les applications système seront prises en charge sur les appareils Android Enterprise. Dans Intune, vous allez ajouter une application de système d’entreprise Android en sélectionnant applications **clientes** > **applications** > **Ajouter**. Dans la liste **type d’application** , sélectionnez **application système Android Enterprise**. Pour plus d’informations sur l’ajout d’applications à Intune, consultez [Ajouter des applications à Microsoft Intune](apps-add.md). <!-- 4062195 -->
 - Dans **conformité** > de l’appareil,**propriétaire**de l’appareil**Android Enterprise** > , vous pouvez créer une stratégie de conformité qui définit le niveau d’attestation Google SafetyNet.   <!-- 4631425 -->
 - Sur les appareils Android Enterprise entièrement gérés, les fournisseurs de protection contre les menaces mobiles sont pris en charge. Dans **conformité** > de l’appareil,**propriétaire**de l’appareil**Android Enterprise** > , vous pouvez choisir un niveau de menace acceptable. <!-- 4631440 --> [Paramètres Android Entreprise pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune](compliance-policy-create-android-for-work.md#device-owner) répertorie les paramètres actuels.
 
@@ -232,7 +232,7 @@ Dans le cadre des améliorations continues, nous mettons à jour l’expérience
 ## <a name="security"></a>Sécurité
 
 ### <a name="tamper-protection-for-windows-defender-antivirus-----4705448---------"></a>Protection contre les falsifications de l’antivirus Windows Defender  <!-- 4705448       -->
-Nous allons ajouter une *protection contre* les falsifications aux paramètres que Intune peut gérer pour l’antivirus Windows Defender. Vous pouvez utiliser un profil de configuration d’appareil pour Windows 10 Endpoint Protection pour activer ou désactiver la protection contre les falsifications.  Pour plus d’informations sur la protection contre les falsifications, voir [empêcher la modification des paramètres de sécurité avec protection contre la falsification](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) dans la documentation Windows. 
+Nous allons ajouter une *protection contre les falsifications* aux paramètres que Intune peut gérer pour l’antivirus Windows Defender. Vous pouvez utiliser un profil de configuration d’appareil pour Windows 10 Endpoint Protection pour activer ou désactiver la protection contre les falsifications.  Pour plus d’informations sur la protection contre les falsifications, voir [empêcher la modification des paramètres de sécurité avec protection contre la falsification](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) dans la documentation Windows. 
 
 
 <!-- ***********************************************-->

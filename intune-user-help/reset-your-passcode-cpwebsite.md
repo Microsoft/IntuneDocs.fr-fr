@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,21 +18,20 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 690fb81350c0c264677c6c75b8942e9cdcd4e8f0
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546799"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163356"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Guide pratique pour réinitialiser le code secret de votre appareil à partir du site web du portail d’entreprise
 
-Si vous perdez le code PIN ou le mot de passe de votre appareil, vous pouvez utiliser le [site web du portail d’entreprise](https://portal.manage.microsoft.com) pour le réinitialiser.  
+Si vous perdez le code PIN ou le mot de passe de votre appareil, vous pouvez utiliser le [site web du portail d’entreprise](https://portal.manage.microsoft.com) pour le réinitialiser. 
 
-Si vous utilisez un appareil d’entreprise, vous ne verrez peut-être pas l’option permettant de réinitialiser votre code secret. Contactez le support de votre entreprise pour réinitialiser le code secret.
+L’option réinitialiser le code d’accès peut ne pas s’afficher pour un appareil inscrit dans l’entreprise. Dans ce cas, contactez le support technique de votre entreprise pour qu’il soit réinitialisé pour vous.  
 
-   > [!NOTE]
-   > Vous ne pouvez pas réinitialiser le code secret pour les appareils exécutant Android 7.0 et versions ultérieures. Si vous oubliez votre code secret, vous devez réinitialiser l’appareil avec les paramètres d’usine. 
+La réinitialisation du code secret n’est pas disponible pour les appareils exécutant Android 7,0 et versions ultérieures. Si vous oubliez votre code d’accès sur l’un de ces appareils, vous devez le réinitialiser aux paramètres d’usine.  
 
 ## <a name="reset-your-passcode"></a>Réinitialiser votre code d’accès
 
@@ -40,15 +39,15 @@ Si vous utilisez un appareil d’entreprise, vous ne verrez peut-être pas l’o
 
 2. Sélectionnez l’appareil dont le code secret doit être réinitialisé.  
 
-    ![Capture d’écran de la page Appareils, avec 2 vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
+    ![Capture d’écran de la page Appareils, avec deux vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
 3. Sélectionnez **Réinitialiser le code secret**. Si cette option n’est pas visible en haut de la page, sélectionnez **Plus (...)**  > **Réinitialiser le code secret**.   
 
    ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)   
 
-    ![Zoom avant sur l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)  
+    ![Capture d’écran de l’icône Plus, mise en surbrillance avec une flèche rouge.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. À l’invite, cliquez sur **Se déconnecter**. À la nouvelle invite, reconnectez-vous. Vous devez vous reconnecter au site web du portail d’entreprise dans les cinq minutes, sinon le portail d’entreprise ne réinitialise pas le code secret de l’appareil.  
+4. À l’invite, cliquez sur **Se déconnecter**. À la nouvelle invite, reconnectez-vous. Reconnectez-vous au site web du portail d’entreprise dans les cinq minutes, sinon le portail d’entreprise ne réinitialise pas le code secret de l’appareil.  
 
    > [!NOTE]
    > Vous devez vous reconnecter afin de confirmer votre identité. Cette mesure vite à éviter toute tentative malveillante de réinitialisation de votre code d’accès.
@@ -76,7 +75,7 @@ Cette section décrit le comportement relatif à la réinitialisation du code se
 
 **Android** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres.
 
-**iOS** : supprime le code secret existant et ne crée pas de code secret temporaire. Si vous utilisez le scanneur d’empreinte digitale Touch ID pour ouvrir votre appareil ou effectuer des achats, vous devez le reconfigurer.  
+**iOS** : supprime le code secret existant et ne crée pas de code secret temporaire. Si vous utilisez Touch ID pour ouvrir votre appareil ou effectuer des achats, vous devez le reconfigurer.  
 
 **Windows 10 Mobile** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres. Si la reconnaissance faciale Windows Hello est configurée, elle continuera à fonctionner avec l’appareil.
 
