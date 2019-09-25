@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a282662032fe77cbf39da279c587bff31ad9e24
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 682d51269798dff181a3bd8384268da862118a70
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123222"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167762"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Événements et codes de diagnostic d’Intune Certificate Connector
 
@@ -60,7 +60,7 @@ ms.locfileid: "70123222"
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Opération réussie  | Opération réussie |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | L’autorité de certification n’est pas valide ou est inaccessible. Vérifiez que l’autorité de certification est disponible et que votre serveur peut communiquer avec elle. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Le certificat d’authentification client Symantec est introuvable dans le magasin de certificats local. Pour plus d’informations, consultez [Installer le certificat d’autorisation d’inscription Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Le certificat d’authentification client Symantec est introuvable dans le magasin de certificats local. Pour plus d’informations, consultez [Installer le certificat d’autorisation d’inscription Symantec](certificates-digicert-configure.md#install-the-digicert-ra-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Le compte spécifié ne dispose pas d’autorisations pour révoquer un certificat d’une autorité de certification. Pour déterminer l’autorité de certification émettrice, consultez le champ Nom de l’autorité de certification dans les détails du message d’événement.  |
 | 0x00000403 | CertThumbprint_NotFound  | Impossible de trouver un certificat correspondant à votre entrée. Inscrivez le connecteur de certificat, puis réessayez. |
 | 0x00000404 | Certificate_NotFound  | Impossible de trouver un certificat correspondant à l’entrée fournie. Réinscrivez le connecteur de certificat, puis réessayez. |
