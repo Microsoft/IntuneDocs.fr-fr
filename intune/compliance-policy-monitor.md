@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
-ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
+ms.openlocfilehash: 22bee478160347256e7e2fa1422b74ccbead57b9
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69651214"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167053"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -60,7 +60,7 @@ En explorant ce rapport, vous pouvez également voir toutes les stratégies et p
 Le graphique montre les états de conformité pour tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory. 
 
 > [!IMPORTANT]
-> Intune suit la planification des enregistrements de l’appareil pour toutes les évaluations de conformité sur l’appareil. [Découvrez-en plus sur la planification des enregistrements d’appareils](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune suit la planification des enregistrements de l’appareil pour toutes les évaluations de conformité sur l’appareil. [Découvrez-en plus sur la planification des enregistrements d’appareils](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Descriptions des différents états des stratégies de conformité des appareils :
 

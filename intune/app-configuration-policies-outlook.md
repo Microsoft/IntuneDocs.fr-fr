@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14eded43200aed7e9ebf4454bcde61133351e4e2
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: d6fe60cf53f88186448cd9586d5c75fca4d517ad
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979213"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167392"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Paramètres de configuration Microsoft Outlook 
 
@@ -30,7 +30,7 @@ Pour les appareils inscrits :
 - Pour créer une stratégie de configuration des applications pour les appareils iOS gérés, consultez [Ajouter des stratégies de configuration des applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md). 
 - Pour créer une stratégie de configuration des applications pour les appareils Android gérés, consultez [Ajouter des stratégies de configuration des applications pour les appareils Android gérés](app-configuration-policies-use-android.md). 
 
-Pour les appareils non inscrits, consultez [Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) pour créer une stratégie de configuration d’application pour Outlook pour iOS et Android.
+Pour les appareils non inscrits, consultez [Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil](app-configuration-policies-managed-app.md) pour créer une stratégie de configuration d’application pour Outlook pour iOS et Android.
 
 ## <a name="configuration-settings"></a>Paramètres de configuration
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5688039101e7cecf5631a0ad8dee4f343e183d96
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 325a0efeff56a2bc930fa0082023202f9c2e7696
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022851"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166771"
 ---
 # <a name="plan-communications"></a>Planifier les communications
 
@@ -59,6 +59,6 @@ Nous avons créé de courtes vidéos de procédures pas à pas pour aider vos ut
 
 Intune propose des ressources supplémentaires dont vous pouvez vous servir pour encourager vos utilisateurs à inscrire leurs appareils :
 
-- [Comment former vos utilisateurs finaux à Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate) détaille les étapes d’inscription par plateforme de système d’exploitation mobile.
-- [Inscription d’appareils Intune pour les administrateurs informatiques](https://docs.microsoft.com/intune/device-enrollment) explique comment inscrire des appareils Android, iOS et Mac dans Intune.
+- [Comment former vos utilisateurs finaux à Microsoft Intune](end-user-educate.md) détaille les étapes d’inscription par plateforme de système d’exploitation mobile.
+- [Inscription d’appareils Intune pour les administrateurs informatiques](device-enrollment.md) explique comment inscrire des appareils Android, iOS et Mac dans Intune.
 - Partagez l’[URL de l’application du portail d’entreprise](http://go.microsoft.com/fwlink/?LinkID=396941) avec vos utilisateurs Android, iOS et Windows. Cette URL redirige vers l’application du portail d’entreprise appropriée présente sur les appareils Android, iOS et Windows.

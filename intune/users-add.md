@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4e25ab5a546f20309853346d0d4ded42fee6e8b
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: fed90635a450ed59827482d2f2c03d17a05d9673
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568308"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71239659"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Ajouter des utilisateurs et accorder une autorisation d’administration à Intune
 
@@ -56,7 +55,7 @@ Vous pouvez ajouter manuellement des utilisateurs à votre abonnement Intune via
 6. Choisissez **Ajouter** pour créer l’utilisateur.
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Ajouter des utilisateurs Intune dans le portail Azure
-1. Connectez-vous au [portail Azure](https://portal.azure.com) et accédez à **Tous les services** > **Surveillance + Gestion** > **Intune**. Vous pouvez aussi rechercher **Intune** dans les *ressources*.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Sélectionnez **Utilisateurs** > **Tous les utilisateurs**.
 3. Dans le centre d’administration, sélectionnez **Nouvel utilisateur**.
    ![Capture d’écran de l’ajout d’un nouvel utilisateur](media/intune-add-user.png)
@@ -65,7 +64,7 @@ Vous pouvez ajouter manuellement des utilisateurs à votre abonnement Intune via
    - **Nom d’utilisateur** : nouveau nom dans le portail Azure Active Directory ![Capture d’écran de l’ajout d’un nom et d’un nom d’utilisateur](media/intune-add-user-info.png) Choisissez **OK** pour continuer.
 5. Si vous le souhaitez, vous pouvez spécifier les propriétés utilisateur suivantes :
    - **Profil** : informations professionnelles, notamment la **Fonction** et le **Service**
-   -  **Groupes** : sélectionnez les groupes à ajouter pour l’utilisateur
+   - **Groupes** : sélectionnez les groupes à ajouter pour l’utilisateur
    - **Rôle d’annuaire** : accordez à l’utilisateur des autorisations d’administration incluant un rôle Administrateur de services fédérés Intune.
 
    Sélectionnez **Créer** pour ajouter le nouvel utilisateur à Intune.
@@ -119,4 +118,4 @@ Vous pouvez configurer la synchronisation d’annuaires pour importer des compte
 Le seul outil dont vous avez besoin pour synchroniser vos comptes d’utilisateur avec Azure AD est l’[Assistant Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). L’Assistant Azure AD Connect vous offre une expérience simplifiée qui vous guide pour connecter votre infrastructure d’identité locale au cloud. Choisissez votre topologie en fonction de vos besoins (un ou plusieurs annuaires, synchronisation de hachage du mot de passe, authentification directe ou fédération). L’Assistant déploie et configure tous les composants nécessaires au fonctionnement de votre connexion. Notamment les services de synchronisation, les services AD FS et le module PowerShell Azure AD.
 
 > [!TIP]
-> Azure AD Connect comporte des fonctionnalités qui étaient auparavant connues sous les noms Dirsync et Azure AD Sync. Obtenez des informations plus détaillées sur l’[intégration d’annuaire](http://technet.microsoft.com/library/jj573653.aspx). Pour plus d’informations sur la synchronisation des comptes d’utilisateurs entre un annuaire local et Azure AD, consultez [Ressemblances entre Active Directory et Azure AD](http://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect comporte des fonctionnalités qui étaient auparavant connues sous les noms Dirsync et Azure AD Sync. Obtenez des informations plus détaillées sur l’[intégration d’annuaire](https://technet.microsoft.com/library/jj573653.aspx). Pour plus d’informations sur la synchronisation des comptes d’utilisateurs entre un annuaire local et Azure AD, consultez [Ressemblances entre Active Directory et Azure AD](https://technet.microsoft.com/library/dn518177.aspx).

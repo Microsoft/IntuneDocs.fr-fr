@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e636e2df8271210d8938727eb99491e1ffdd5bdc
-ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
+ms.openlocfilehash: a5372d079b08a3a324d8ef1d98d26c07073ccd45
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/18/2019
-ms.locfileid: "71080030"
+ms.locfileid: "71094657"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -43,7 +43,7 @@ Pour afficher un rôle, choisissez **Intune** > **Rôles** > **Tous les rôles**
 - **Affectations** : liste d’[attributions de rôles]( assign-role.md) identifiant quels utilisateurs ont accès à quels utilisateurs/appareils. Un rôle peut avoir plusieurs attributions, et un utilisateur peut figurer dans plusieurs attributions.
 
 ### <a name="built-in-roles"></a>Rôles intégrés
-Vous pouvez attribuer des rôles intégrés aux groupes sans configuration supplémentaire. Vous ne pouvez pas supprimer ou modifier le nom, la description, le type ou les autorisations d’un rôle intégré. Pour obtenir une liste complète des autorisations pour chaque rôle intégré, consultez le [tableau RBAC d’Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Vous pouvez attribuer des rôles intégrés aux groupes sans configuration supplémentaire. Vous ne pouvez pas supprimer ou modifier le nom, la description, le type ou les autorisations d’un rôle intégré.
 
 - **Opérateur du support technique** : Effectue des tâches à distance sur les utilisateurs et les appareils, et peut attribuer des applications ou des stratégies aux utilisateurs ou aux appareils.
 - **Gestionnaire de stratégie et de profils** : Gère la stratégie de conformité, les profils de configuration, l’inscription auprès d’Apple, les identificateurs d’appareils d’entreprise et les bases de référence de la sécurité.

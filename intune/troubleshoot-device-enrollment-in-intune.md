@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 23b3e8df9b3d5bafb567b6795b08d4be32aa8c88
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375243"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167804"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -447,7 +447,7 @@ La liste des erreurs d’inscription iOS est fournie dans notre documentation, d
 
 |Message d'erreur|Problème|Résolution|
 |---|---|---|
-|**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies : <ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Découvrez comment [attribuer des licences Intune à vos comptes d’utilisateur](https://docs.microsoft.com/intune/licenses-assign).|
+|**L’administrateur informatique doit affecter une licence pour autoriser l’accès**<br>Votre administrateur informatique ne vous a pas accordé l’accès à cette application. Demandez-lui de l’aide ou réessayez plus tard.|Impossible d’inscrire l’appareil, car le compte de l’utilisateur ne dispose pas de la licence nécessaire.|Pour que les utilisateurs puissent inscrire leurs appareils, ils doivent avoir reçu la licence nécessaire. Ce message signifie qu’ils ont un type de licence incorrect pour l’autorité de gestion des appareils mobiles. Par exemple, ils voient cette erreur si les deux conditions suivantes sont remplies : <ol><li>Intune a été défini en tant qu’autorité de gestion des appareils mobiles</li><li>Ils utilisent une licence System Center 2012 R2 Configuration Manager.</li></ol>Découvrez comment [attribuer des licences Intune à vos comptes d’utilisateur](licenses-assign.md).|
 
 
 

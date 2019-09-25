@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/04/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691edceda70bf2e148d939635caf7bb94b9d1cd0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 86bfcf11ebaac6e53f9314bdf2b2ab670d814976
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392565"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71239484"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Vue d’ensemble du cycle de vie de la gestion des appareils mobiles dans Microsoft Intune
 
@@ -38,13 +37,13 @@ L’inscription de vos appareils n’est que la première étape. Pour tirer par
 
 - [**Configuration des appareils**](device-profiles.md). Ces stratégies vous permettent de configurer les fonctionnalités des appareils que vous gérez. Par exemple, vous pouvez exiger l’utilisation d’un mot de passe sur un Windows Phone, ou désactiver l’utilisation de la caméra sur un iPhone.
 - [**Accès aux ressources de l’entreprise**](device-profiles.md). Le fait d’autoriser vos utilisateurs à accéder à leurs ressources de travail sur leur appareil personnel peut représenter un réel défi. Par exemple, comment vous assurez-vous que tous les appareils qui doivent accéder à la messagerie d’entreprise sont configurés correctement ? Comment faire en sorte que les utilisateurs puissent accéder au réseau de l’entreprise par le biais d’une connexion VPN sans avoir à connaître les paramètres complexes associés ? Intune peut réduire ce fardeau en configurant automatiquement les appareils que vous gérez de manière à ce qu’ils puissent accéder aux ressources d’entreprise les plus couramment utilisées.
-- [**Stratégies de gestion des PC Windows (avec le logiciel client Intune)**](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). L’inscription des PC Windows auprès d’Intune permet de tirer le meilleur parti des fonctionnalités de gestion des appareils. Toutefois, Intune continue à prendre en charge la gestion des PC Windows avec le logiciel client Intune. Si vous avez besoin d’informations sur certaines des tâches que vous pouvez effectuer sur des PC, lisez ce qui suit.
+- [**Stratégies de gestion des PC Windows (avec le logiciel client Intune)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). L’inscription des PC Windows auprès d’Intune permet de tirer le meilleur parti des fonctionnalités de gestion des appareils. Toutefois, Intune continue à prendre en charge la gestion des PC Windows avec le logiciel client Intune. Si vous avez besoin d’informations sur certaines des tâches que vous pouvez effectuer sur des PC, lisez ce qui suit.
 
 ## <a name="protect"></a>Protéger
 Dans le monde informatique moderne, la protection des appareils contre tout accès non autorisé est l’une des tâches les plus importantes à réaliser. Outre les éléments de l’étape de **configuration** du cycle de vie des appareils, Intune fournit davantage de fonctionnalités qui protègent les appareils que vous gérez de tout accès non autorisé ou d’attaques malveillantes :
 - [**Authentification multifacteur**](multi-factor-authentication.md). L’ajout d’une couche supplémentaire d’authentification pour les connexions utilisateur peut renforcer davantage la sécurité des appareils. De nombreux appareils prennent en charge l’authentification multifacteur qui nécessite un second niveau d’authentification, tels qu’un appel téléphonique ou un SMS avant que les utilisateurs puissent disposer d’un accès.
 - [**Paramètres Windows Hello Entreprise**](windows-hello.md). Windows Hello Entreprise est une autre méthode d’authentification qui permet aux utilisateurs d’utiliser un *geste* (par exemple, la reconnaissance des empreintes digitales ou Windows Hello) pour se connecter sans avoir besoin d’un mot de passe.
-- [**Stratégies permettant de protéger les PC Windows (avec le logiciel client Intune)**](policies-to-protect-windows-pcs-in-microsoft-intune.md). Quand vous gérez des ordinateurs Windows à l’aide du logiciel client Intune, vous pouvez utiliser des stratégies qui permettent de contrôler les paramètres pour Endpoint Protection, les mises à jour logicielles et le pare-feu Windows sur les ordinateurs que vous gérez.
+- [**Stratégies permettant de protéger les PC Windows (avec le logiciel client Intune)** ](policies-to-protect-windows-pcs-in-microsoft-intune.md). Quand vous gérez des ordinateurs Windows à l’aide du logiciel client Intune, vous pouvez utiliser des stratégies qui permettent de contrôler les paramètres pour Endpoint Protection, les mises à jour logicielles et le pare-feu Windows sur les ordinateurs que vous gérez.
 
 ## <a name="retire"></a>Mettre hors service
 Quand un appareil est perdu ou volé, lorsqu’il doit être remplacé ou lorsque des utilisateurs changent de poste, il doit généralement être [mis hors service ou réinitialisé](device-management.md). Pour ce faire, vous pouvez, par exemple, réinitialiser l’appareil, le supprimer de la gestion ou réinitialiser les données d’entreprise qu’il contient.

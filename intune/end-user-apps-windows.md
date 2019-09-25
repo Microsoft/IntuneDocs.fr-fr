@@ -7,7 +7,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/05/2016
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d9d4216026487541cbdd798f247dde3bf08e1ea
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 421815c6f17e4e9eddf23b3123c95cec51157d61
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388350"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71239815"
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Comment vos utilisateurs Windows obtiennent leurs applications
 
@@ -38,6 +37,6 @@ Les **applications gérées** sont des applications qui peuvent être gérées a
 
 Les **applications non gérées** sont des applications qui peuvent être gérées avec des stratégies et qui n’ont pas été « enveloppées » par Intune, ou qui ne sont pas intégrées au kit SDK d’application Intune. Vous ne pouvez pas appliquer de stratégies de protection à ces applications.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Comment vos utilisateurs Android obtiennent leurs applications](end-user-apps-android.md)
 [Comment vos utilisateurs iOS obtiennent leurs applications](end-user-apps-android.md)

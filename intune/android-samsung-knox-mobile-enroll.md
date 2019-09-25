@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4236b3fd1b7dab25a3450b95b75f3623ec7ba95
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 02006acc58789f2a6fb5944e677a1983f7ea9614
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071639"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167422"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
 
@@ -105,7 +105,7 @@ Pour les appareils inscrits à Intune via KME pour Android, vous pouvez configur
 
 - **Sans association de nom d’utilisateur :** dans le portail Knox, sous **Device details** (Détails de l’appareil), laissez les champs **User ID** (ID utilisateur) et **Password** (Mot de passe) vides pour les appareils ajoutés. Cette option exige que l’utilisateur final entre à la fois le nom d’utilisateur et le mot de passe lors de l’inscription à Intune.
 
-- **Avec association de nom d’utilisateur :** dans le portail Knox, sous **Device details** (Détails de l’appareil), spécifiez un **User ID** (ID utilisateur) (tel qu’un nom d’utilisateur pour l’utilisateur affecté ou un compte de [gestionnaire d’inscription d’appareil](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) pour les appareils ajoutés. Cette option préremplit le nom d’utilisateur et exige que l’utilisateur final entre un mot de passe lors de l’inscription à Intune.
+- **Avec association de nom d’utilisateur :** dans le portail Knox, sous **Device details** (Détails de l’appareil), spécifiez un **User ID** (ID utilisateur) (tel qu’un nom d’utilisateur pour l’utilisateur affecté ou un compte de [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md)) pour les appareils ajoutés. Cette option préremplit le nom d’utilisateur et exige que l’utilisateur final entre un mot de passe lors de l’inscription à Intune.
 
 > [!NOTE]
 >
