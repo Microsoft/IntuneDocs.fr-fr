@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 03/11/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5b20be667159689aaaee9a790c0a4c5b5864fd
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 8a4e6cbf2d9edcff83ae756c2dbcf098cae0ae54
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798396"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "71301876"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise
 
@@ -47,8 +46,7 @@ Quand un utilisateur contacte le support technique pour signaler un problème av
 
 Dans le volet de dépannage, choisissez **Sélectionner un utilisateur** pour afficher les informations d’un utilisateur. Les informations de l’utilisateur peuvent vous aider à comprendre l’état actuel des utilisateurs et de leurs appareils.  
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Dépanner**.
 4. Cliquez sur **Sélectionnez** pour sélectionner un utilisateur à dépanner.
 5. Sélectionnez un utilisateur en tapant son nom ou son adresse e-mail. Cliquez sur **Sélectionner**. Les informations sur le dépannage pour l’utilisateur s’affichent dans le volet Dépannage. Le tableau suivant explique les informations.
@@ -60,7 +58,7 @@ Dans le volet de dépannage, choisissez **Sélectionner un utilisateur** pour af
 
 Vous pouvez utiliser le volet **Dépanner** pour consulter les informations de l’utilisateur.
 
-![](/intune/media/troubleshooting-dash.png)
+![Tableau de bord de dépannage, avec les zones numérotées décrites dans le tableau suivant](/intune/media/troubleshooting-dash.png)
 
 | Domaine | Nom | Description |
 | ---  | ---  | ---         |
@@ -108,7 +106,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection status
 
-An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -121,7 +119,7 @@ An app protection policy is available to mobile apps that integrate with Enterpr
 
 ## App protection policies reference
 
-An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 ### Properties
 
@@ -154,7 +152,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ## Compliance policies reference
 
-Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
+Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
 
 ### Properties
 
@@ -186,7 +184,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection policies
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -199,7 +197,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 ## Configuration policies reference
 
-An app configuration policy is available to mobile apps with vendor-specific configuration. 
+An app configuration policy is available to mobile apps with vendor-specific configuration. 
 
 ### Properties
 
@@ -232,7 +230,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection policies
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -294,11 +292,11 @@ Quand vous choisissez une ligne d’échec, des détails supplémentaires sont f
 ## <a name="collect-available-data-from-mobile-device"></a>Collecter les données disponibles à partir d’un appareil mobile
 
 Utilisez les ressources suivantes pour collecter les données d’un appareil lors de la résolution des problèmes de l’appareil de l’utilisateur :
-  - [Envoyer les erreurs d’inscription iOS à votre administrateur informatique](/intune-user-help/send-errors-to-your-it-admin-ios)
-  - [Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
-  - [Envoyer des journaux Android au support technique de votre entreprise via un câble USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-  - [Envoyer les journaux de données de diagnostic Android à votre administrateur informatique par e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
-  - [Envoyer les erreurs d’inscription Android à votre administrateur informatique](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
+- [Envoyer les erreurs d’inscription iOS à votre administrateur informatique](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
+- [Envoyer des journaux Android au support technique de votre entreprise via un câble USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+- [Envoyer les journaux de données de diagnostic Android à votre administrateur informatique par e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
+- [Envoyer les erreurs d’inscription Android à votre administrateur informatique](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

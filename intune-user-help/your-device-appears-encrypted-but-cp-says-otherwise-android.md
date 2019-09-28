@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: caae22e59e8adb6952e9a69ff03c575ae4467b2d
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71167430"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238971"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Appareil chiffré, mais les applications disent autrement
 
@@ -50,7 +50,7 @@ Cette section s’applique uniquement à l’application Portail d’entreprise.
 
 Certains appareils Android exécutant la version 7.0+ et des versions ultérieures chiffrent les données de manière non conforme à certaine normes de la plateforme Android. Ces méthodes de chiffrement placent les informations sur les appareils en danger. Par conséquent, ces appareils ne sont pas pris en charge.
 
-Pour obtenir une liste non exhaustive des appareils Android pris en charge, consultez l’article [systèmes d’exploitation et navigateurs pris en charge dans Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Si votre appareil n’est pas listé, reportez-vous au fabricant de l’appareil ou contactez votre personne de support.
+Pour obtenir une liste non exhaustive des appareils Android pris en charge, consultez l’article [systèmes d’exploitation et navigateurs pris en charge dans Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Si votre appareil n’est pas listé, reportez-vous au fabricant de l’appareil ou contactez votre personne de support.
 
 > [!Note]
 > Microsoft travaille avec les fabricants pour résoudre les problèmes que nous identifions lors des tests ou que les utilisateurs nous signalent. Cet article est mis à jour chaque fois que de nouvelles informations sont disponibles.

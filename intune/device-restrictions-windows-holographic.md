@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fed8c33bbf4ff302d08576dc5e34ce1257425090
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bea8d6d8e3503b9ec6fba7b2eda4842b68786e54
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565245"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71302315"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows Holographic for Business pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -91,9 +90,9 @@ Un appareil plein écran exécute généralement une application spécifique. Le
   - **Application unique plein écran** : le profil autorise l’appareil à exécuter une seule application. Quand l’utilisateur se connecte, une application spécifique démarre. Ce mode empêche également l’utilisateur d’ouvrir de nouvelles applications ou de basculer vers une autre application.
   - **Kiosque multi-application** : le profil autorise l’appareil à exécuter plusieurs applications. Seules les applications que vous ajoutez sont disponibles pour l’utilisateur. L’avantage d’un kiosque multi-application ou d’un appareil à usage fixe est que l’utilisateur n’accède qu’aux applications dont il a besoin. Celles dont il n’a pas besoin sont retirées de sa vue. 
   
-    Quand vous ajoutez des applications en vue de proposer une expérience de kiosque multi-application, vous ajoutez également un fichier de disposition du menu Démarrer. Le [fichier de disposition du menu Démarrer](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) inclut un exemple de code XML qui peut être utilisé dans Intune. 
+    Quand vous ajoutez des applications en vue de proposer une expérience de kiosque multi-application, vous ajoutez également un fichier de disposition du menu Démarrer. Le [fichier de disposition du menu Démarrer](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) inclut un exemple de code XML qui peut être utilisé dans Intune. 
 
-#### <a name="single-app-kiosks"></a>Applications uniques plein écran
+### <a name="single-app-kiosks"></a>Applications uniques plein écran
 
 entrez les paramètres suivants :
 

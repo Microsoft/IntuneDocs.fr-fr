@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82950259746010c347e5dafa832a7335026721c
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 20621246f76810ba7efaac3cadbdde1a0229c923
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "71302339"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Paramètres de restriction d’appareil Windows 10 Collaboration dans Microsoft Intune
 
@@ -34,9 +33,9 @@ Cet article décrit les paramètres des restrictions d’appareils de Microsoft 
 
 - **Sortir l'écran du mode veille quand une personne est dans la pièce** - Permet à l’appareil de sortir automatiquement quand son capteur détecte la présence d’une personne dans la pièce.
 - **Informations sur la réunion affichées sur l’écran d’accueil** - Activez cette option pour choisir les informations qui s’affichent sur la vignette Réunions de l’écran d’accueil. Vous pouvez :
-    - **Afficher uniquement l’organisateur et l’heure**
-    - **Afficher l’organisateur, l’heure et l’objet (objet masqué pour les réunions privées)**
-- **URL de l'image d'arrière-plan de l'écran d'accueil** - Activez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://**.
+  - **Afficher uniquement l’organisateur et l’heure**
+  - **Afficher l’organisateur, l’heure et l’objet (objet masqué pour les réunions privées)**
+- **URL de l'image d'arrière-plan de l'écran d'accueil** - Activez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://** .
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 

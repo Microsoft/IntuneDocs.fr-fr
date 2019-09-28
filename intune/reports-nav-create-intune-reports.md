@@ -6,9 +6,8 @@ keywords: Entrepôt de données Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 08/27/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,29 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0728fefc40bc82db7926faf282a69d0471c3a1ea
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: 88681696716080b38d0f7d9e79264d002f335029
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798117"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "71303299"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Utiliser l’entrepôt de données Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Utilisez l’entrepôt de données Intune pour générer des rapports qui fournissent des insights sur l’environnement mobile de votre entreprise. Voici quelques-uns des rapports générés :
--   Tendance des inscriptions d’utilisateurs dans Intune pour vous permettre d’optimiser vos achats de licences
--   Répartition des versions des applications et des systèmes d’exploitation pour vous permettre d’examiner l’état des appareils mobiles
--   Tendance des inscriptions et de la conformité des appareils pour vous permettre de déployer facilement les mises à jour de la stratégie
+- Tendance des inscriptions d’utilisateurs dans Intune pour vous permettre d’optimiser vos achats de licences
+- Répartition des versions des applications et des systèmes d’exploitation pour vous permettre d’examiner l’état des appareils mobiles
+- Tendance des inscriptions et de la conformité des appareils pour vous permettre de déployer facilement les mises à jour de la stratégie
 
 ## <a name="data-warehouse-benefits"></a>Avantages de l’entrepôt de données
 
 L’entrepôt de données vous donne plus d’informations sur votre environnement mobile que le portail Azure. Grâce à l’entrepôt de données Intune, vous pouvez accéder à ce qui suit :
 
-  -  Données d’historique Intune
-  -  Données actualisées quotidiennement
-  -  Modèle de données utilisant la norme OData
+- Données d’historique Intune
+- Données actualisées quotidiennement
+- Modèle de données utilisant la norme OData
 
 > [!Note]
 > Si vous utilisez une gestion des appareils mobiles (GAM) co-managée par System Center Configuration Manager et Microsoft Intune, vous pouvez récupérer vos données depuis Configuration Manager. L’entrepôt de données Intune ne contient que des données Intune. Vous pouvez utiliser un tableau de bord Configuration Manager Power BI pour vos rapports personnalisés. Pour plus d’informations, consultez [Announcing the Power BI solution template for System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template) et [Contenu Power BI pour Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page).

@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 0de0e676e72d46bde922fd97b651cc1a9268e45e
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166622"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239771"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrire l’appareil macOS fourni par votre organisation dans la gestion
 
@@ -35,7 +35,7 @@ Pour commencer la configuration de la gestion, mettez votre appareil sous tensio
 
 ## <a name="what-is-apple-dep"></a>Qu’est-ce qu’Apple DEP ?
 
-Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils macOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
 ## <a name="get-your-device-managed"></a>Configurer la gestion de votre appareil
 

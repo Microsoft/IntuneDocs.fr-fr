@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f7a14d605ae3d1a5a951f40ec789c50c847c455
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 132123b15073569c9a9601841579ca4592f27bd7
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "71301903"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Paramètres de profil de messagerie dans Microsoft Intune pour les appareils exécutant Windows Phone 8.1
 
@@ -33,7 +32,7 @@ Cet article liste les paramètres de profil de messagerie que vous pouvez config
 - **Appliquer tous les paramètres à Windows Phone 8.1 uniquement** : il s’agit d’un paramètre que vous pouvez configurer dans le portail classique Intune. Dans le portail Azure, ce paramètre ne peut pas être modifié. Si la valeur est **Configuré**, les paramètres sont appliqués uniquement aux appareils Windows Phone 8.1. Si la valeur est **Non configuré**, ces paramètres s’appliquent également aux appareils Windows 10 Mobile.
 - **Serveur de messagerie** : le nom d’hôte de votre serveur Exchange.
 - **Nom du compte** : spécifiez le nom complet du compte de messagerie, tel qu’il apparaît aux utilisateurs sur leurs appareils.
-- **Attribut de nom d’utilisateur d’AAD** : il s’agit de l’attribut dans Active Directory (AD) ou Azure AD, qui est utilisé pour générer le nom d’utilisateur de ce profil de messagerie. Sélectionnez **Adresse SMTP principale**, comme **user1@contoso.com** ou **Nom d’utilisateur principal**, comme **user1** ou **user1@contoso.com**.
+- **Attribut de nom d’utilisateur d’AAD** : il s’agit de l’attribut dans Active Directory (AD) ou Azure AD, qui est utilisé pour générer le nom d’utilisateur de ce profil de messagerie. Sélectionnez **Adresse SMTP principale**, comme **user1@contoso.com** ou **Nom d’utilisateur principal**, comme **user1** ou **user1@contoso.com** .
 - **Attribut d’adresse de messagerie d’AAD** : la façon dont l’adresse de messagerie de l’utilisateur est générée sur chaque appareil. Sélectionnez **Adresse SMTP principale** pour utiliser l’adresse SMTP principale pour vous connecter à Exchange ou **Nom d’utilisateur principal** pour utiliser le nom principal complet comme adresse de messagerie.
 
 
@@ -51,6 +50,6 @@ Cet article liste les paramètres de profil de messagerie que vous pouvez config
 ## <a name="content-sync-settings"></a>Paramètres de synchronisation du contenu
 
 - **Type de contenu à synchroniser** : sélectionnez les types de contenu à synchroniser avec les appareils :
-    - **Contacts**
-    - **Calendrier**
-    - **Tâches**
+  - **Contacts**
+  - **Calendrier**
+  - **Tâches**

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 528819452accf4a7f17e54b3c05693dee5cab74f
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884255"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239451"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Ajouter des paramètres Wi-Fi pour appareils Windows 10 (et ultérieurs) dans Intune
 
@@ -62,6 +62,9 @@ Cet article décrit ces paramètres.
     
       > [!NOTE]
       > Quand vous enregistrez le profil WiFi, la clé prépartagée que vous avez entrée est masquée pour des raisons de sécurité. Le filigrane de la clé prépartagée affiche toujours **Non configuré** même si la clé prépartagée a été enregistrée dans le profil. Pour changer la clé prépartagée, entrez une nouvelle clé, puis enregistrez le profil. Si vous enregistrez une clé prépartagée, modifiez la stratégie et ne renseignez pas le champ de clé prépartagée afin de continuer à utiliser la clé prépartagée existante.
+      
+      > [!IMPORTANT]
+      > La clé PSK est la même pour tous les appareils sur lesquels vous ciblez le profule. Si la clé est compromise, elle peut être utilisée par n’importe quel appareil pour se connecter au réseau Wi-Fi. Protégez vos PSK pour éviter tout accès non autorisé.
 
 - **Paramètres du proxy de l’entreprise** : pour utiliser les paramètres proxy au sein de votre organisation. Les options disponibles sont les suivantes :
   - **Aucun** : aucun paramètre de proxy n’est configuré.

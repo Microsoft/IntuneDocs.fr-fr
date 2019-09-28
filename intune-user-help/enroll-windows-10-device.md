@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77b7f3adf4fa8675e3734f7eab8fbaa9391d952a
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2e4def9f0e4e91f7db9e0a81e2ad55852df524f7
+ms.sourcegitcommit: 0d1a02fb3d2a801a95c2244e9ef13ecf22be2eb1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527961"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71302461"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Inscrire des appareils Windows 10 avec le portail d’entreprise Intune
 
@@ -45,7 +45,7 @@ Ces étapes expliquent comment inscrire un appareil qui exécute Windows 10, ver
 
     ![Sélectionner le compte Accès Professionnel ou Scolaire](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-4. Entrez votre e-mail professionnel ou scolaire, puis sélectionnez **Suivant**.  
+4. Pour accéder à la page de connexion Intune de votre organisation, entrez votre adresse de messagerie professionnelle ou scolaire. Puis sélectionnez **Suivant**.  
 
 
    ![Entrer votre compte professionnel ou scolaire](./media/w10-enroll-rs1-set-up-work-or-school-account.png)  

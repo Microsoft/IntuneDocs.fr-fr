@@ -5,23 +5,26 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 08/07/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
+ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e37d6a2b7371cf20cd36a6f3f75a4dd252c332f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8e13c2dce5e8da2ce71b97de496d5234096c3b22
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048045"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "71301960"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Paramètres des appareils Android Enterprise permettant de configurer les e-mails, l’authentification et la synchronisation dans Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Cet article liste et décrit les différents paramètres de messagerie que vous pouvez contrôler sur les appareils Android Entreprise. Dans votre solution de gestion des appareils mobiles, définissez ces paramètres pour configurer un serveur de messagerie, utiliser SSL pour chiffrer les e-mails et bien plus encore.
 
@@ -31,7 +34,7 @@ Pour plus d’informations sur les profils de messagerie dans Intune, consultez 
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-[Créez un profil de configuration d’appareil](email-settings-configure.md#create-a-device-profile), puis choisissez le profil professionnel.
+Créez un [profil de configuration d’appareil](email-settings-configure.md#create-a-device-profile) (choisissez le profil professionnel) ou créez une [stratégie de configuration d’application](app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Entreprise
 

@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0b8230a842a7b4e3b1368388cb186defa8df72
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8747a398447dc1f477e2b0149104c4c65d3ed741
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566588"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71302190"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Configurer les paramètres d’Intune Education pour les appareils iPad partagés
 
@@ -68,8 +67,7 @@ Vous pouvez importer des informations dans SDS en appliquant l’une des méthod
 
 ### <a name="configure-general-settings"></a>Configurer les paramètres généraux
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Configuration de l’appareil**.
 2. Dans le volet **Configuration de l’appareil**, sous la section **Gérer**, choisissez **Profils**.
 5. Dans le volet de profils, choisissez **Créer un profil**.
@@ -139,8 +137,7 @@ Le profil est créé et apparaît dans le volet de la liste des profils.
 
 ## <a name="step-3---create-a-device-category"></a>Étape 3 : Créer une catégorie d’appareils
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Inscription de l’appareil**.
 4. Dans le volet **Inscription de l’appareil - Vue d’ensemble**, choisissez **Catégories d’appareils**.
 5. Dans le volet **Inscription de l’appareil - Catégories d’appareils**, choisissez **Créer**.
@@ -151,8 +148,7 @@ La catégorie d’appareils est créée dans le volet **Inscription - Catégorie
 
 ## <a name="step-4--create-a-dynamic-group"></a>Étape 4 : Créer un groupe dynamique
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Groupes**.
 4. Dans le volet **Utilisateurs et groupes – Tous les groupes**, choisissez **Nouveau groupe**.
 5. Dans le volet **Groupe**, choisissez un **Type de groupe**, puis entrez un **Nom** et une **Description** pour le groupe.
@@ -169,8 +165,7 @@ Le groupe dynamique est créé dans le volet **Utilisateurs et groupes – Tous 
 
 ## <a name="step-5--assign-a-device-to-a-category-carts"></a>Étape 5 : Affecter un appareil à une catégorie (paniers)
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Appareils**.
 4. Dans le volet **Appareils**, choisissez **Tous les appareils**.
 5. Dans le volet **Appareils – Tous les appareils**, choisissez un appareil.
@@ -182,14 +177,13 @@ L’appareil est maintenant associé à la catégorie d’appareils. Répétez c
 
 ## <a name="step-6--create-classroom-profiles"></a>Étape 6 : Créer des profils de classe
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Configuration de l’appareil**.
 4. Dans le volet **Configuration de l’appareil**, choisissez **Gérer** > **Profils de panier**.
 5. Dans le volet de profils, choisissez **Créer un profil**.
 6. Dans le volet **Créer une association**, entrez un **Nom** et une **Description**.
 7. Choisissez **Sélectionner des classes** > **Configurer** pour associer des groupes au profil de panier.
-8. Choisissez les classes à inclure au profil de panier, puis choisissez **Sélectionnez**. 
+8. Choisissez les classes à inclure au profil de panier, puis choisissez **Sélectionnez**. 
 9. Choisissez **Sélectionner des paniers** > **Configurer** pour associer des groupes au profil de panier.
 10. Choisissez les groupes à inclure au profil de panier, puis choisissez **Sélectionnez**.
 11. Dans le volet **Créer une association**, choisissez **Enregistrer** pour enregistrer le profil de panier.
@@ -198,13 +192,12 @@ Le profil est créé et apparaît dans le volet de la liste des profils.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Étape 7 : Affecter le profil de panier à des classes
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Configuration de l’appareil**.
 4. Dans le volet **Configuration de l’appareil**, choisissez **Surveiller** > **État de l’attribution**.
 5. Dans le volet **État de l’attribution**, sélectionnez le **Profil de panier** que vous avez créé.
 6. Dans le volet **Profil de panier**, choisissez **Affectations** puis, sous **Inclure**, choisissez **Sélectionner les groupes à inclure**.
-7. Sélectionnez les classes que vous voulez que le profil de panier cible (ne sélectionnez pas un groupe), puis choisissez **Sélectionner**. 
+7. Sélectionnez les classes que vous voulez que le profil de panier cible (ne sélectionnez pas un groupe), puis choisissez **Sélectionner**. 
 8. Lorsque vous avez terminé, choisissez **Enregistrer**.
 
 L’affectation se termine et Intune déploie le profil de classe sur les appareils ciblés en fonction de l’attribution de classe.

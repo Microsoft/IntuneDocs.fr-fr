@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/04/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec071622a2e0d49068864f8bfb47954f54c8ba4
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
-ms.translationtype: HT
+ms.openlocfilehash: bde1c296abb99e8c0c81b44908e78b204c62388e
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71304125"
 ---
 # <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres iOS pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
@@ -99,6 +98,6 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [Utiliser des balises d’étendue pour filtrer les stratégies](scope-tags.md).
+- [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) et [Utiliser des étiquettes d’étendue pour filtrer les stratégies](scope-tags.md).
 - [Superviser vos stratégies de conformité](compliance-policy-monitor.md).
 - Consultez [Paramètres de stratégie de conformité pour les appareils macOS](compliance-policy-create-mac-os.md).
