@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,24 +16,27 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: 1ed123bcf8c5c1a5df1a356cf8d2522caad20ea2
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59569127"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "71239367"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Aider les utilisateurs finaux à comprendre les messages de l’application Portail d’entreprise
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 > [!NOTE]
-> Les informations ci-après s’appliquent uniquement aux appareils équipés d’Android 6.0 ou d’une version ultérieure.
+> Les informations ci-après s’appliquent uniquement aux appareils équipés d’Android 6.0 ou d’une version ultérieure et d’iOS 10 ou d’une version ultérieure.
 
 Découvrez les différents messages liés aux applications, que les utilisateurs finaux peuvent voir dans le Portail d’entreprise. Ces messages liés aux applications sont généralement affichés à différents moments du processus d’inscription. Découvrez où les messages s’affichent, ce qu’ils signifient et ce qui se passe si les utilisateurs refusent l’accès. Découvrez aussi comment mieux expliquer les messages aux utilisateurs.
 
 - __Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?__
 - __Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?__
+
+> [!NOTE]
+> Nous ne vendons pas les données collectées par notre service à des tiers pour une raison quelconque.
 
 ## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Autoriser l’application Portail d’entreprise à passer et gérer des appels téléphoniques ?
 
@@ -57,7 +59,7 @@ Si les utilisateurs autorisent, puis refusent par la suite l’accès, le messag
 Si les utilisateurs décident par la suite d’autoriser l’accès, ils peuvent accéder à **Paramètres** > **Applications** > **Portail d’entreprise** > **Autorisations** > **Téléphone**, puis activer l’accès.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Explication de ce mode de fonctionnement à vos utilisateurs
-Pour plus d’informations, envoyez à vos utilisateurs la procédure [Inscrire un appareil Android dans Intune](/intune-user-help/enroll-your-device-in-intune-android).
+Pour plus d’informations, envoyez à vos utilisateurs la procédure [Inscrire un appareil Android dans Intune](/intune-user-help/enroll-device-android-company-portal).
 
 ## <a name="allow-company-portal-to-access-your-contacts"></a>Autoriser le portail d’entreprise à accéder à vos contacts ?
 
@@ -78,7 +80,7 @@ Si les utilisateurs autorisent, puis refusent par la suite l’accès, le messag
 Si les utilisateurs décident par la suite d’autoriser l’accès, ils peuvent accéder à **Paramètres** > **Applications** > **Portail d’entreprise** > **Autorisations** > **Téléphone**, puis activer l’accès.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Explication de ce mode de fonctionnement à vos utilisateurs
-Pour plus d’informations, envoyez à vos utilisateurs la procédure [Inscrire un appareil Android dans Intune](/intune-user-help/enroll-your-device-in-intune-android).
+Pour plus d’informations, envoyez à vos utilisateurs la procédure [Inscrire un appareil Android dans Intune](/intune-user-help/enroll-device-android-company-portal).  
 
 ## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Autoriser l’application Portail d’entreprise à accéder aux photos, aux fichiers multimédias et aux fichiers de votre appareil ?
 
@@ -132,7 +134,7 @@ Lorsque vous installez ces applications à l’aide du Portail d’entreprise et
 
 3. Sélectionnez **Profil de gestion** > **Application d’entreprise**.
 4. Sélectionnez le nom du développeur.
-5. Appuyez sur **Faire confiance à _nom du développeur_**.
+5. Appuyez sur **Faire confiance à _nom du développeur_** .
 6. Confirmez l’application en sélectionnant **Faire confiance** dans le message contextuel d’installation d’application.
 
    ![IU d’appareil iOS - Message d’application de confiance](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
@@ -140,5 +142,5 @@ Lorsque vous installez ces applications à l’aide du Portail d’entreprise et
     Vous pourrez lancer et utiliser l’application d’entreprise.
 
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Comment former vos utilisateurs finaux à Microsoft Intune](end-user-educate.md)

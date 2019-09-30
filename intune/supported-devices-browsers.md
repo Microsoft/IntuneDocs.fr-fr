@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/03/2018
+ms.date: 07/29/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0cf701450e594fd4b72a8e0565246994bb8a9e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5946f8ffb8179bb5109de45df8f89012ec706023
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460612"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "71239576"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systèmes d’exploitation et navigateurs pris en charge dans Intune
 
@@ -115,12 +114,12 @@ Les navigateurs suivants sont pris en charge pour ces portails :
 
 ### <a name="intune-classic-portal"></a>Portail classique Intune
 
-Les fonctionnalités propres à la console classique Intune, telles que le client logiciel PC Intune et l’intégration avec les partenaires Mobile Threat Defense, sont disponibles uniquement dans le portail classique Intune (https://manage.microsoft.com)). Le portail classique Intune nécessite la prise en charge du navigateur Silverlight.
+Le portail classique Intune est utilisé uniquement pour gérer les appareils inscrits auprès du client logiciel Intune PC (https://manage.microsoft.com). Le portail classique Intune nécessite la prise en charge du navigateur Silverlight.
 
 Les navigateurs Silverlight suivants prennent en charge la console Intune :
 - Internet Explorer 10 ou version ultérieure
 - Google Chrome (versions antérieures à la version 42)
-- Mozilla Firefox avec Silverlight activé [En savoir plus](https://go.microsoft.com/fwlink/?linkid=836872)
+- Mozilla Firefox avec Silverlight activé (versions antérieures à 56)
 
 > [!Note]
 > Microsoft Edge et les navigateurs mobiles ne sont pas pris en charge pour le portail classique Intune, car ils ne prennent pas en charge [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).

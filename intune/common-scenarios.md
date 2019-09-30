@@ -7,7 +7,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 11/29/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32be10340e1e77d2f994c5f038e6328ea42a6303
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d158cb01dbd13f032916f4dc2bf443ed0f6bfaae
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394770"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "71238592"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Utilisations courantes de Microsoft Intune
 
@@ -56,7 +55,7 @@ Dans ce cas, la seule façon d’accéder à des données d’entreprise consist
 ## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Protection de votre messagerie et de vos données Office 365 pour qu’elles soient accessibles en toute sécurité par les appareils mobiles
 La protection des données d’entreprise dans Office 365 (messagerie, documents, messages instantanés, contacts) ne pourrait pas être plus facile pour vous ou plus transparente pour vos utilisateurs.
 
-Intune et Microsoft Enterprise Mobility + Security fournissent une solution d’accès conditionnel intégrée unique qui garantit qu’aucun utilisateur, appareil ou application ne peut accéder aux données Office 365 s’ils ne répondent pas aux exigences de conformité de votre entreprise (exécution de l’[authentification multifacteur](multi-factor-authentication.md), inscription avec Intune, utilisation d’une application gérée, version de système d’exploitation prise en charge, code confidentiel d’appareil, profil utilisateur à faible risque, etc.).
+Intune et Microsoft Enterprise Mobility + Security fournissent une solution d’accès conditionnel intégrée unique qui garantit qu’aucun utilisateur, appareil ou application ne peut accéder aux données Office 365 s’il ne répond pas aux exigences de conformité de votre entreprise (exécution de l’[authentification multifacteur](multi-factor-authentication.md), inscription avec Intune, utilisation d’une application gérée, version de système d’exploitation prise en charge, code confidentiel de l’appareil, profil utilisateur à faible risque, etc.).
 
 
 Les applications mobiles Office comprises dans leurs magasins d’applications respectifs sont prêtes à utiliser les stratégies de relation contenant-contenu de données que vous pouvez configurer via Intune. Vous pouvez ainsi empêcher des données d’être partagées avec des applications (par exemple, avec des applications de messagerie natives) et des emplacements de stockage (par exemple, Dropbox) qui ne sont pas gérés par IT. Toutes ces fonctionnalités sont intégrées à Office 365 et EMS. Vous n’avez aucune infrastructure supplémentaire à déployer.

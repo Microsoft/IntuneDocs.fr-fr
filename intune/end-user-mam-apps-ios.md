@@ -7,7 +7,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 02/15/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f013ec1d40b9593e7eb8d317b5b63545c58f181
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4039c9e3ae53d8db8ee282f802cd86149b40021e
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399098"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "71239760"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application
 
@@ -30,7 +29,7 @@ ms.locfileid: "57399098"
 
  Cette rubrique décrit l’expérience utilisateur des applications auxquelles des stratégies de protection des applications sont appliquées. Les stratégies de protection des applications ne s’appliquent que quand les applications sont utilisées dans le contexte professionnel, par exemple quand l’utilisateur accède à des applications à l’aide d’un compte professionnel ou accède à des fichiers stockés à l’emplacement OneDrive Entreprise d’une société.
 
-##  <a name="access-apps"></a>Accéder aux applications
+## <a name="access-apps"></a>Accéder aux applications
 
 Si l’appareil **n’est pas inscrit dans Intune**, l’utilisateur est invité à redémarrer l’application quand il l’utilise pour la première fois. Un redémarrage est nécessaire pour que les stratégies de protection d’application soient appliquées à l’application.
 
@@ -41,7 +40,7 @@ Si l’appareil **n’est pas inscrit dans Intune**, l’utilisateur est invité
 
 Si l’appareil est **inscrit pour la gestion dans Intune**, l’utilisateur voit un message indiquant que son application est désormais gérée.
 
-##  <a name="use-apps-with-multi-identity-support"></a>Utiliser des applications avec prise en charge de plusieurs identités
+## <a name="use-apps-with-multi-identity-support"></a>Utiliser des applications avec prise en charge de plusieurs identités
 
 Les applications qui prennent en charge plusieurs identités vous permettent d’utiliser des comptes différents (professionnels et personnels) pour accéder aux mêmes applications, alors que les stratégies de protection des applications sont appliquées uniquement quand les applications sont utilisées dans le contexte professionnel.  
 
@@ -51,13 +50,13 @@ Par exemple, l’utilisateur reçoit une invite de code confidentiel quand il ac
 
 Les stratégies de protection d’application s’appliquent uniquement dans le contexte professionnel. Ainsi, l’application peut se comporter différemment selon qu’il s’agit d’un contexte professionnel ou personnel.
 
-##  <a name="manage-user-accounts-on-the-device"></a>Gérer les comptes d’utilisateur sur l’appareil
+## <a name="manage-user-accounts-on-the-device"></a>Gérer les comptes d’utilisateur sur l’appareil
 
 Les applications avec plusieurs identités permettent aux utilisateurs d’ajouter plusieurs comptes.  Intune APP prend en charge un seul compte géré.  Intune APP ne limite pas le nombre de comptes non gérés.
 
 Quand une application contient un compte géré :
-*   Si un utilisateur tente d’ajouter un deuxième compte géré, il est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
-*   Si l’administrateur informatique ajoute une stratégie à un deuxième compte existant, l’utilisateur est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
+* Si un utilisateur tente d’ajouter un deuxième compte géré, il est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
+* Si l’administrateur informatique ajoute une stratégie à un deuxième compte existant, l’utilisateur est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
 
 Lisez l’exemple de scénario suivant pour mieux comprendre le comportement quand il existe plusieurs comptes d’utilisateur.
 

@@ -7,22 +7,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
-ms.reviewer: amyro
+ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14d5e01577100e0a66cfcf6ce935289a1dc26fab
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dd8b35fbbff89ca7f4c259e1903f4c9f9a6e3b38
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57459898"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71238387"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Affecter des licences aux utilisateurs pour qu’ils puissent inscrire des appareils dans Intune
 
@@ -45,7 +44,7 @@ Vous pouvez utiliser le [Centre d’administration Microsoft 365](http://go.micr
 4. Maintenant, le compte d’utilisateur dispose des autorisations permettant d’utiliser le service et d’inscrire des appareils dans la fonction de gestion.
 
 > [!NOTE]
-> Les utilisateurs apparaissent dans la console d’administration une fois qu’ils ont inscrit un appareil. En outre, vous pouvez sélectionner un groupe d’utilisateurs afin de les modifier tous en même temps, en sélectionnant l’ajout ou le remplacement d’une licence pour tous les utilisateurs sélectionnés.
+> Les utilisateurs s’affichent dans le portail Intune classique uniquement après avoir inscrit un appareil à l’aide du client Intune PC. En outre, vous pouvez sélectionner un groupe d’utilisateurs afin de les modifier tous en même temps, en sélectionnant l’ajout ou le remplacement d’une licence pour tous les utilisateurs sélectionnés.
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>Affecter une licence Intune à l’aide d’Azure Active Directory
 
@@ -63,7 +62,7 @@ Quand vous affectez une licence Intune pour l’Éducation, vérifiez que la lic
 Pour en savoir plus sur SDS, consultez cette [vue d’ensemble de School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Impact des licences utilisateur et d’appareil sur l’accès aux services
-* Chaque **utilisateur** auquel vous affectez une licence de logiciel utilisateur peut accéder à et utiliser les services en ligne et logiciels liés (y compris les logiciels de System Center) pour gérer les applications et jusqu’à 15 appareils.
+* Chaque **utilisateur** auquel vous affectez une licence de logiciel utilisateur peut accéder à et utiliser les services en ligne et logiciels liés (y compris les logiciels de System Center) pour gérer les applications et jusqu’à 15 appareils MDM. L’agent Intune PC autorise 5 machines physiques et 1 machine virtuelle par licence d’utilisateur.
 * Vous pouvez acheter des licences pour un appareil indépendamment de la licence utilisateur. Les licences appareil ne sont pas nécessairement affectées aux appareils. Chaque appareil qui accède aux services en ligne et aux logiciels liés (y compris le logiciel System Center) et les utilise doit avoir une licence appareil.
 * Si un appareil est utilisé par plusieurs utilisateurs, chacun requiert une licence de logiciel pour appareil, ou tous les utilisateurs requièrent une licence de logiciel utilisateur.
 

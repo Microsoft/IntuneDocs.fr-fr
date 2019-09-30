@@ -5,9 +5,8 @@ keywords: définition d’Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/26/2019
+ms.date: 06/20/2019
 ms.topic: overview
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 511e672193ec609f817c10572c99ac73831c54ae
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2cde4e37889b981decfd18138feeb4edac46c4c8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460578"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71238271"
 ---
 # <a name="what-is-microsoft-intune"></a>Qu'est-ce que Microsoft Intune ?
 
@@ -85,7 +84,7 @@ Quand nous parlons de configuration des applications et d’Intune, nous faisons
 Quand vous utilisez Intune avec les autres services dans EMS, vous pouvez accroître la sécurité des applications mobiles de votre organisation bien au-delà de celle fournie par le système d’exploitation mobile et les applications mobiles elles-mêmes par le biais de la configuration des applications. Une application gérée avec EMS a accès à un ensemble plus large de fonctionnalités de protection des applications mobiles et des données :
 
 * [Authentification unique](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Authentification multifacteur](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
+* [Authentification multifacteur](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
 * [Accès conditionnel de l’application, pour autoriser l’accès si l’application mobile contient des données d’entreprise](app-based-conditional-access-intune.md)
 * [Isolement des données d’entreprise des données personnelles dans la même application](app-protection-policy.md)
 * [Stratégie de protection des applications (code confidentiel, chiffrement, Enregistrer sous, Presse-papiers, etc.)](app-protection-policies.md)

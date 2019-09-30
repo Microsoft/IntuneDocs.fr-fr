@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8405aceaa1fd9c00b966d03a1f7b80e5946d96
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 52f8af06fffb3643714ed318e474b73be21963ed
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59569777"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239793"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Comment former vos utilisateurs finaux à Microsoft Intune
 
@@ -44,7 +43,7 @@ __Quel est le niveau d’expérience technique des utilisateurs ?__ Les connaiss
 
 __Que signifie la gestion de la mobilité pour les utilisateurs ?__ Les utilisateurs peuvent ne pas comprendre totalement l’accès que vous avez, ou que vous n’avez pas, à leurs appareils et informations. Il est probable que les utilisateurs s’inquiètent du fait que les techniciens informatiques ou la direction suivent éventuellement leurs actions. Les utilisateurs d’appareils moins expérimentés peuvent penser que toute activité sur leurs appareils relève du domaine privé. 
 
-__En quoi Intune pourrait-il déranger les utilisateurs ?__  Identifiez et respectez le temps nécessaire aux utilisateurs pour installer les applications, inscrire les appareils et conserver la conformité. La priorité numéro un de tout déploiement Intune est de garantir la sécurité des données de l’entreprise. Toutefois, l’attitude des utilisateurs à l’égard de la gestion des appareils peut être affectée si vous adoptez des stratégies qui, par exemple :  
+__En quoi Intune pourrait-il déranger les utilisateurs ?__  Identifiez et respectez le temps nécessaire aux utilisateurs pour installer les applications, inscrire les appareils et conserver la conformité. La priorité numéro un de tout déploiement Intune est de garantir la sécurité des données de l’entreprise. Toutefois, l’attitude des utilisateurs en matière de gestion des appareils peut être affectée si vous adoptez des stratégies qui, par exemple :  
 * Exigent indûment des codes secrets sur des appareils personnels
 * Envoient des mises à jour d’applications obligatoires au milieu d’appels professionnels critiques  
 
@@ -58,9 +57,9 @@ Lisez la liste de conseils suivante pour simplifier le déploiement Intune de vo
 
 * __Soyez accessible.__ Indiquez aux utilisateurs où ils peuvent chercher de l’aide pour les problèmes liés à leurs appareils. Quand vous [personnalisez le portail d’entreprise](company-portal-customize.md), veillez à inclure les informations de contact de votre administrateur informatique.
 
-* __Adaptez-vous.__ Fournissez des instructions spécifiques au déploiement de votre organisation. Cette action montre aux utilisateurs que vous vous intéressez à leur expérience. Utilisez ce [modèle personnalisable d’inscription d’utilisateur auprès d’Intune](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c) afin de créer vos propres instructions d’inscription pour vos utilisateurs.
+* __Adaptez-vous.__ Fournissez des instructions spécifiques au déploiement de votre organisation. Cette action montre aux utilisateurs que vous vous intéressez à leur expérience. Utilisez ce [kit d’adoption Intune](https://aka.ms/IntuneAdoptionKit) personnalisable pour créer vos propres instructions d’inscription pour vos utilisateurs.
 
-* __Trouvez différents moyens de communiquer.__ Les utilisateurs ont [différents styles de formation](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) et des préférences d’utilisation des informations. Pour les apprenants visuels, Intune fournit des [vidéos sur l’inscription des différents types d’appareils](https://channel9.msdn.com/Series/IntuneEnrollment) sur Channel 9. Les vidéos peuvent être incorporées directement à votre propre [site SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Vous pouvez également télécharger des copies locales de la vidéo ou de la piste audio.
+* __Trouvez différents moyens de communiquer.__ Les utilisateurs ont [différents styles de formation](https://www.umassd.edu/dss/resources/faculty--staff/how-to-teach-and-accommodate/how-to-accommodate-different-learning-styles/) et des préférences d’utilisation des informations. Pour les apprenants visuels, Intune fournit des [vidéos sur l’inscription des différents types d’appareils](https://channel9.msdn.com/Series/IntuneEnrollment) sur Channel 9. Les vidéos peuvent être incorporées directement à votre propre [site SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Vous pouvez également télécharger des copies locales de la vidéo ou de la piste audio.
 
 * __Soyez à l’écoute.__ L’expérience utilisateur Intune a un impact sur votre productivité. Comprendre l’expérience utilisateur vous permet de résoudre plus facilement les problèmes des appareils et des utilisateurs. Par exemple, vous pouvez découvrir et comprendre comment vos utilisateurs acquièrent leurs applications. Le fait de connaître ces informations à l’avance facilite et accélère le diagnostic et la résolution des problèmes.
 

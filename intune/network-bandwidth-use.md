@@ -6,30 +6,29 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
-ms.reviewer: angerobe
+ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40f9ada715570de7b5b2f95292b7ed0d238242d2
-ms.sourcegitcommit: 04d29d47b61486b3586a0e0e5e8e48762351f2a3
+ms.openlocfilehash: e6d5e8d76a06ac45fed2b9759e519ffc7fabf7ec
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59570791"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71238305"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Configuration requise pour le réseau Intune et bande passante
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Ce guide aide les administrateurs Intune à comprendre la configuration réseau requise pour le service Intune. Vous pouvez utiliser ces informations pour comprendre les besoins en bande passante et les paramètres d’adresse IP et de port nécessaires pour les paramètres de proxy.
+Vous pouvez utiliser ces informations pour comprendre les besoins en bande passante de vos déploiements Intune.
 
 ## <a name="average-network-traffic"></a>Trafic réseau moyen
 Ce tableau répertorie la taille et la fréquence approximatives du contenu commun qui transite sur le réseau pour chaque client.
@@ -79,7 +78,15 @@ Pendant les périodes que vous configurez, vous pouvez utiliser BITS sur un ordi
 > [!NOTE]
 > Pour la GPM sur Windows, seule l’interface de gestion du système d’exploitation pour le type d’application MobileMSI utilise BITS pour télécharger. AppX/MsiX utilisent leur propre pile de téléchargement non BITS et les applications Win32 via l’agent Intune utilisent l’optimisation de livraison au lieu des BITS.
 
-Pour en savoir plus sur BITS et les ordinateurs Windows, consultez [Background Intelligent Transfer Service](http://technet.microsoft.com/library/bb968799.aspx) (Service de transfert intelligent en arrière-plan) dans la bibliothèque TechNet.
+Pour en savoir plus sur BITS et les ordinateurs Windows, consultez [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) (Service de transfert intelligent en arrière-plan) dans la bibliothèque TechNet.
+
+### <a name="delivery-optimization"></a>Optimisation de la distribution
+L’optimisation de la distribution vous permet d’utiliser Intune pour réduire la consommation de bande passante quand vos appareils Windows 10 téléchargent des applications et des mises à jour. Grâce à l’utilisation d’un cache distribué en libre-emploi, les téléchargements peuvent être extraits de serveurs traditionnels et de sources secondaires (comme les peers réseau).
+
+Pour afficher la liste complète des versions de Windows 10 et des types de contenu pris en charge par l’optimisation de la distribution, consultez [l’article Optimisation de la distribution pour les mises à jour de Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+
+Vous pouvez [configurer l’optimisation de la distribution](delivery-optimization-settings.md) dans le cadre de vos profils de configuration d’appareil.
+
 
 ### <a name="use-branchcache-on-computers"></a>Utiliser BranchCache sur les ordinateurs
 Les clients Intune peuvent utiliser BranchCache pour réduire le trafic WAN. Les systèmes d’exploitation suivants prennent en charge BranchCache :
@@ -93,78 +100,13 @@ Pour utiliser BranchCache, il doit être activé sur l’ordinateur client et ce
 
 Lorsque le client Intune est installé sur des ordinateurs, BranchCache et le mode cache distribué sont activés par défaut. Toutefois, si la stratégie de groupe a désactivé BranchCache, Intune ne remplace pas cette stratégie et BranchCache reste désactivé.
 
-Si vous utilisez BranchCache, contactez les autres administrateurs de votre organisation pour gérer la stratégie de groupe et la stratégie de pare-feu Intune. Vérifiez qu’ils ne déploient pas une stratégie qui désactive BranchCache ou des exceptions de pare-feu. Pour plus d’informations sur BranchCache, consultez [Vue d’ensemble de BranchCache](http://technet.microsoft.com/library/hh831696.aspx).
+Si vous utilisez BranchCache, contactez les autres administrateurs de votre organisation pour gérer la stratégie de groupe et la stratégie de pare-feu Intune. Vérifiez qu’ils ne déploient pas une stratégie qui désactive BranchCache ou des exceptions de pare-feu. Pour plus d’informations sur BranchCache, consultez [Vue d’ensemble de BranchCache](https://technet.microsoft.com/library/hh831696.aspx).
 
-## <a name="network-communication-requirements"></a>Configuration requise des communications du réseau
-
-Activez les communications réseau entre les appareils que vous gérez et les points de terminaison nécessaires pour les services cloud.
-
-En tant que service cloud uniquement, Intune ne nécessite pas d’infrastructure sur site telle que des serveurs ou des passerelles.
-
-Pour gérer les appareils qui se trouvent derrière des pare-feu et des serveurs proxy, vous devez activer la communication pour Intune.
-
-- Le serveur proxy doit prendre en charge les protocoles **HTTP (80)** et **HTTPS (443)**, car les clients Intune utilisent ces deux protocoles
-- Pour certaines tâches (telles que le téléchargement des mises à jour logicielles), Intune nécessite un accès de serveur proxy non authentifié à manage.microsoft.com
-
-Vous pouvez modifier les paramètres du serveur proxy sur des ordinateurs clients. Vous pouvez également utiliser des paramètres de stratégie de groupe pour modifier les paramètres pour tous les ordinateurs clients situés derrière un serveur proxy spécifié.
+> [!NOTE]
+> Vous pouvez utiliser Microsoft Intune pour gérer les PC Windows [en tant qu’appareils mobiles avec la gestion des appareils mobiles (MDM)](windows-enroll.md) ou en tant qu’ordinateurs avec le logiciel client Intune. Microsoft recommande que les clients [utilisent la solution MDM](windows-enroll.md) dans la mesure du possible. Si la gestion est effectuée de cette manière, BranchCache n’est pas pris en charge. Pour plus d’informations, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou qu’appareils mobiles](pc-management-comparison.md).
 
 
-<!--
-> [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
+## <a name="next-steps"></a>Étapes suivantes
 
-Les appareils gérés nécessitent des configurations qui permettent à **Tous les utilisateurs** d’accéder à des services à travers des pare-feu.
+[Passer en revue les points de terminaison pour Intune](intune-endpoints.md)
 
-Les tableaux suivants répertorient les ports et services auxquels le client Intune accède :
-
-|**Domaines**|**Adresse IP**|
-|---------------------|-----------|
-|login.microsoftonline.com | Plus d’informations [URL et plages d’adresses IP Office 365](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
-|portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 |
-| sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84|
-|Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com | 40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212|
-|fei.msua01.manage.microsoft.com<br>portal.fei.msua01.manage.microsoft.com <br>m.fei.msua01.manage.microsoft.com<br>fei.msua02.manage.microsoft.com<br>portal.fei.msua02.manage.microsoft.com<br>m.fei.msua02.manage.microsoft.com<br>fei.msua04.manage.microsoft.com<br>portal.fei.msua04.manage.microsoft.com <br>m.fei.msua04.manage.microsoft.com<br>fei.msua05.manage.microsoft.com <br>portal.fei.msua05.manage.microsoft.com <br>m.fei.msua05.manage.microsoft.com<br>fei.amsua0502.manage.microsoft.com <br>portal.fei.amsua0502.manage.microsoft.com <br>m.fei.amsua0502.manage.microsoft.com<br>fei.msua06.manage.microsoft.com <br>portal.fei.msua06.manage.microsoft.com <br>m.fei.msua06.manage.microsoft.com<br>fei.amsua0602.manage.microsoft.com <br>portal.fei.amsua0602.manage.microsoft.com <br>m.fei.amsua0602.manage.microsoft.com<br>fei.amsua0202.manage.microsoft.com <br>portal.fei.amsua0202.manage.microsoft.com <br>m.fei.amsua0202.manage.microsoft.com<br>fei.amsua0402.manage.microsoft.com <br>portal.fei.amsua0402.manage.microsoft.com <br>m.fei.amsua0402.manage.microsoft.com|52.160.70.20<br>52.168.54.64 |
-|fei.msub01.manage.microsoft.com <br>portal.fei.msub01.manage.microsoft.com <br>m.fei.msub01.manage.microsoft.com<br>fei.amsub0102.manage.microsoft.com <br>portal.fei.amsub0102.manage.microsoft.com <br>m.fei.amsub0102.manage.microsoft.com<br>fei.msub02.manage.microsoft.com <br>portal.fei.msub02.manage.microsoft.com <br>m.fei.msub02.manage.microsoft.com<br>fei.msub03.manage.microsoft.com <br>portal.fei.msub03.manage.microsoft.com <br>m.fei.msub03.manage.microsoft.com<br>fei.msub05.manage.microsoft.com <br>portal.fei.msub05.manage.microsoft.com <br>m.fei.msub05.manage.microsoft.com<br>fei.amsub0202.manage.microsoft.com <br>portal.fei.amsub0202.manage.microsoft.com <br>m.fei.amsub0202.manage.microsoft.com<br>fei.amsub0302.manage.microsoft.com <br>portal.fei.amsub0302.manage.microsoft.com <br>m.fei.amsub0302.manage.microsoft.com|52.138.193.149<br>51.144.161.187|
-|fei.msuc01.manage.microsoft.com <br>portal.fei.msuc01.manage.microsoft.com <br>m.fei.msuc01.manage.microsoft.com<br>fei.msuc02.manage.microsoft.com <br>portal.fei.msuc02.manage.microsoft.com <br>m.fei.msuc02.manage.microsoft.com<br>fei.msuc03.manage.microsoft.com <br>portal.fei.msuc03.manage.microsoft.com <br>m.fei.msuc03.manage.microsoft.com<br>fei.msuc05.manage.microsoft.com <br>portal.fei.msuc05.manage.microsoft.com <br>m.fei.msuc05.manage.microsoft.com|52.175.12.209<br>20.188.107.228|
-|fef.msua01.manage.microsoft.com|138.91.243.97|
-|fef.msua02.manage.microsoft.com|52.177.194.236|
-|fef.msua04.manage.microsoft.com|23.96.112.28|
-|fef.msua05.manage.microsoft.com|138.91.244.151|
-|fef.msua06.manage.microsoft.com|13.78.185.97|
-|fef.msua07.manage.microsoft.com|52.175.208.218|
-|fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
-|fef.msub05.manage.microsoft.com|23.97.166.52|
-|fef.msuc01.manage.microsoft.com|52.230.19.86|
-|fef.msuc02.manage.microsoft.com|23.98.66.118|
-|fef.msuc03.manage.microsoft.com|23.101.0.100|
-|fef.msuc05.manage.microsoft.com|52.230.16.180|
-|fef.amsua0202.manage.microsoft.com|52.165.165.17|
-|fef.amsua0402.manage.microsoft.com|40.69.157.122|
-|fef.amsua0502.manage.microsoft.com|13.85.68.142|
-|fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|fef.amsub0102.manage.microsoft.com|40.118.98.207|
-|fef.amsub0202.manage.microsoft.com|40.69.208.122|
-|fef.amsub0302.manage.microsoft.com|13.74.145.65|
-|enterpriseregistration.windows.net|52.175.211.189|
-|Admin.manage.microsoft.com|52.224.221.227<br>52.161.162.117<br>52.178.44.195<br>52.138.206.56<br>52.230.21.208<br>13.75.125.10|
-|wip.mam.manage.microsoft.com|52.187.76.84<br>13.76.5.121<br>52.165.160.237<br>40.86.82.163<br>52.233.168.142<br>168.63.101.57|
-|mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180|
-
-
-
-
-
-
-### <a name="apple-device-network-information"></a>Informations réseau de l’appareil Apple
-
-
-|Utilisé pour|Nom d’hôte (adresse IP/sous-réseau)|Protocole|Port|
-|-----|--------|------|-------|
-|Réception de notifications Push du service Intune via Apple Push Notification Service (APNS). Consultez la documentation d’Apple [ici](https://support.apple.com/en-us/HT203609)|                                    gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |
-|Envoi de commentaires au service Intune via Apple Push Notification Service (APNS)|                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |
-|Récupération et affichage de contenu de serveurs Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|Communications avec des serveurs APNS|#-courier.push.apple.com (17.0.0.0/8)<br>« # » est un nombre aléatoire compris entre 0 et 50.|    TCP     |  5223 et 443  |
-|Diverses fonctionnalités telles que l’accès au World Wide Web, iTunes Store, macOS App Store, iCloud, messagerie, etc. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 ou 443   |
-
-Pour plus d’informations, consultez des documents Apple relatifs aux [ports TCP et UDP utilisés par les produits logiciels Apple](https://support.apple.com/en-us/HT202944), aux [connexions hôtes serveurs macOS, iOS et iTunes et processus d’arrière-plan iTunes](https://support.apple.com/en-us/HT201999) et [si vos clients macOS et iOS reçoivent des notifications Push Apple](https://support.apple.com/en-us/HT203609).

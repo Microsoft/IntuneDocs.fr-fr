@@ -5,9 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/28/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 368eeec3c47b53d00e9130f41d36f05976a66b8f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8f069405d75b196c26c9c844e0d0a4bd57299199
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394241"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71239314"
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Comment vos utilisateurs iOS obtiennent leurs applications
 
@@ -36,7 +35,7 @@ Utilisez ces informations pour comprendre comment et où vos utilisateurs finaux
 
 **Applications gérées** : applications pouvant être gérées avec des stratégies et qui ont été « enveloppées » par Intune, ou qui ont été créées à l’aide du kit SDK d’application Intune. Ces applications peuvent être gérées par Intune et faire l’objet de stratégies de protection des applications.
 
-**Applications non gérées** : applications pouvant être gérées avec des stratégies et qui n’ont pas été « enveloppées » par Intune, ou qui ne sont pas intégrées au kit SDK d’application Intune. Vous ne pouvez pas appliquer de stratégies d'application à ces applications.
+**Applications non gérées** : applications que les utilisateurs peuvent télécharger dans l’App Store iOS et qui ne sont pas intégrées dans le kit de développement logiciel (SDK) Intune. Intune n’a aucun contrôle sur la distribution, la gestion ou la réinitialisation sélective de ces applications.  
 
 Les restrictions d’Apple n’autorisent pas l’affichage des applications métier et gérées de l’App Store dans l’application Portail d’entreprise. Pour contourner ce problème, les vignettes dans l’application Portail d’entreprise pour iOS dirigent les utilisateurs vers différentes vues dans un emplacement unique (à savoir le site web du Portail d’entreprise) pour toutes leurs applications.
 
@@ -53,7 +52,7 @@ Les utilisateurs inscrits obtiennent leurs applications en appuyant sur les vign
 
 Pour savoir plus en détail comment ajouter des applications, consultez la page [Guide pratique pour ajouter une application à Microsoft Intune](apps-add.md).
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Comment vos utilisateurs Android obtiennent leurs applications](end-user-apps-android.md)
 
 [Comment vos utilisateurs Windows obtiennent leurs applications](end-user-apps-windows.md)

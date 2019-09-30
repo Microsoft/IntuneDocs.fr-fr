@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd4a195af0b3be5038a34b44606abcddf02c5a1e
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 8ca3cf1cfed2d19a4b40aa667c0b6a1325eee531
+ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071553"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71140766"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -115,7 +115,7 @@ Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en env
 
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 
-Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils DEP. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
+Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils DEP. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription. Il y a une limite de 100 profils d’inscription par jeton DEP.
 
 > [!NOTE]
 > Les appareils sont bloqués s’il n’y a pas suffisamment de licences Portail d’entreprise pour un jeton VPP, ou si le jeton a expiré. Intune affiche une alerte lorsqu’un jeton est sur le point d’expirer ou qu’il n’y a presque plus de licences.

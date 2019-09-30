@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 36e7b8468e4ee9d1f6be71a82d18f066bd7568d4
+ms.sourcegitcommit: 9110124a481160039d476cf0374a4fa0464a8509
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883788"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256194"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Réaffecter les stratégies d’accès conditionnel à partir du portail classique Intune vers le portail Azure
 
@@ -194,15 +194,9 @@ Une fois que vous avez réaffecté vos stratégies d’accès conditionnel dans 
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Pour désactiver les stratégies d’accès conditionnel
 
-1. Accédez au [portail classique Intune](https://manage.microsoft.com) et connectez-vous à l’aide de vos informations d’identification.
+Étant donné que la gestion des appareils mobiles (MDM) a été supprimée du portail Intune classique, le lien suivant a été fourni pour afficher/désactiver ces stratégies classiques :
 
-2. Choisissez **Stratégie** dans le menu de gauche.
-
-3. Choisissez **Accès conditionnel**, puis sélectionnez le service cloud Microsoft (par exemple, Exchange Online ou SharePoint Online) pour lequel vous avez créé une stratégie d’accès conditionnel.
-
-4. Décochez l’option **Activer la stratégie d’accès conditionnel**, puis cliquez sur **Enregistrer**.
-
-    ![Image de la désactivation des stratégies d’accès conditionnel dans le portail classique Intune](./media/reassign-ca-18.png)
+https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies
 
 ## <a name="see-also"></a>Voir aussi
 
