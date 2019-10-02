@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 90c770fec5bd9456151e601188254a3a022cd13f
-ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
+ms.openlocfilehash: fa251a0edd943d566849b138af5cbab0be248a53
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71279902"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71726399"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Diminution du support pour l’administrateur d’appareil Android 
-L’administrateur d’appareil Android (parfois appelé gestion Android « héritée » et publiée avec Android 2.2) est un moyen de gérer les appareils Android. Toutefois, des fonctionnalités de gestion améliorées sont désormais disponibles avec [Android Enterprise](../connect-intune-android-enterprise.md) (fournie avec Android 5.0). Dans le but de passer à une gestion des périphériques modernes, plus riche et plus sécurisée, Google diminue le support des administrateurs d’appareil dans les nouvelles versions Android.
+L’administrateur d’appareil Android (parfois appelé gestion Android « héritée » et publiée avec Android 2.2) est un moyen de gérer les appareils Android. Toutefois, des fonctionnalités de gestion améliorées sont désormais disponibles avec [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (fournie avec Android 5.0). Dans le but de passer à une gestion des périphériques modernes, plus riche et plus sécurisée, Google diminue le support des administrateurs d’appareil dans les nouvelles versions Android.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
 En raison de ces modifications apportées par Google, les utilisateurs Intune seront affectés des manières suivantes : 
@@ -67,10 +67,11 @@ Vous n’avez rien à faire, mais nous vous recommandons de mettre à jour vos r
 https://aka.ms/intune_fullscreen
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Modification planifiée : Nouveaux paramètres des mises à jour Windows dans Intune <!-- 4464404 -->
-À partir de la version d’août du service Intune ou 1908, nous ajoutons de nouveaux « Paramètres d’échéance », que vous pouvez configurer à la place des paramètres « Autoriser l’utilisateur à redémarrer (redémarrage engagé) ». Nous prévoyons de désactiver les paramètres de redémarrage activés dans l’interface utilisateur de la version 1909 ou de la mise à jour de septembre, puis de les supprimer complètement de la console vers la fin octobre. 
+À partir de la version d’août du service Intune ou 1908, nous ajoutons de nouveaux « Paramètres d’échéance », que vous pouvez configurer à la place des paramètres « Autoriser l’utilisateur à redémarrer (redémarrage engagé) ». Nous prévoyons de désactiver les paramètres de redémarrage activés dans l’interface utilisateur de la version 1909 ou de la mise à jour de septembre, puis de les supprimer complètement de la console vers la fin octobre.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
-Si vous gérez des appareils Windows 10 dans votre environnement : 
+Si vous gérez des appareils Windows 10 dans votre environnement :
+
 - Avec la mise à jour Intune d’août ou la version 1908, vous verrez de nouveaux paramètres d’échéance dans la console en plus des anciens paramètres de redémarrage.
 - Lorsque ces anciens et nouveaux paramètres sont configurés, les valeurs des paramètres d’échéance remplacent les valeurs du paramètre de redémarrage engagé.
 - Les paramètres d’échéance remplacent l’option « Autoriser l’utilisateur à redémarrer (redémarrage engagé) » dans la console de la mise à jour 1910.
@@ -78,7 +79,7 @@ Si vous gérez des appareils Windows 10 dans votre environnement :
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que puis-je faire pour me préparer à cette modification ?
 Commencez à utiliser les paramètres d’échéance dans la version 1908 en les configurant avec les valeurs souhaitées. Une fois cela en place, vous pouvez définir le paramètre de redémarrage engagé sur « Non configuré » pour préparer la suppression de ces paramètres de la console en octobre.
 
-Mettez à jour votre documentation et tous les scripts d’automatisation si nécessaire. 
+Mettez à jour votre documentation et tous les scripts d’automatisation si nécessaire.
 
 Nous vous tiendrons au courant et publierons un rappel dans le Centre de messages avant de supprimer les paramètres de redémarrage engagé.
 
@@ -86,12 +87,13 @@ Nous vous tiendrons au courant et publierons un rappel dans le Centre de message
 Intune passera au support d’Android 5.x (lollipop) et versions ultérieures en octobre. Mettez à jour les applications inclues dans un wrapper avec le dernier Kit de développement logiciel (SDK) des applications Intune et mettez à jour vos appareils.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
-Si vous n’utilisez pas ou si vous envisagez d’utiliser le Kit de développement logiciel (SDK) ou l’APP pour Android, cette modification n’aura aucun effet. Si vous utilisez le Kit de développement logiciel (SDK) d’applications Intune, veillez à mettre à jour vers la dernière version et à mettre à jour vos appareils vers Android 5.x et versions ultérieures. Si vous ne mettez pas à jour, les applications ne recevront aucune mise à jour et perdront en qualité au fil du temps. 
+Si vous n’utilisez pas ou si vous envisagez d’utiliser le Kit de développement logiciel (SDK) ou l’APP pour Android, cette modification n’aura aucun effet. Si vous utilisez le Kit de développement logiciel (SDK) d’applications Intune, veillez à mettre à jour vers la dernière version et à mettre à jour vos appareils vers Android 5.x et versions ultérieures. Si vous ne mettez pas à jour, les applications ne recevront aucune mise à jour et perdront en qualité au fil du temps.
 
 Vous trouverez ci-dessous une liste des appareils courants inscrits dans Intune qui exécutent Android version 4.x. Si vous avez l’un de ces appareils, prenez les mesures appropriées pour vous assurer que cet appareil prendra en charge Android version 5.0 ou ultérieure ou qu’il sera remplacé par un appareil qui prend en charge Android version 5.0 ou ultérieure. Cette liste n’est pas exhaustive de tous les appareils qui peuvent avoir besoin d’être évalués :
+
 - Samsung SM-T561  
-- Samsung SM-T365 
-- Samsung GT-I9195 
+- Samsung SM-T365
+- Samsung GT-I9195
 - Samsung SM-G800F
 - Samsung SM-G357FZ
 - Motorola XT1080
@@ -100,7 +102,6 @@ Vous trouverez ci-dessous une liste des appareils courants inscrits dans Intune 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
 Incluez dans un wrapper vos applications avec le dernier Kit de développement logiciel (SDK) d’application Intune. Vous pouvez également définir le paramètre de lancement conditionnel « Exiger une version minimale du système d’exploitation (avertissement uniquement) » pour informer les utilisateurs finaux des appareils personnels à mettre à niveau.
-
 
 ### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Calendrier des modifications Intune : la prise en charge de Windows 7 touche à sa fin <!-- 3042987 -->
 Comme nous l'avons annoncé dans le message MC148476 publié en septembre 2018, et de nouveau dans le message MC176794 de mars 2019, la prise en charge étendue de Windows 7 cessera le 14 janvier 2020. À cette date, Intune arrêtera la prise en charge des appareils fonctionnant sous Windows 7 pour se concentrer sur ses investissements dans la prise en charge de nouvelles technologies et offrir une nouvelle expérience de qualité à ses utilisateurs finaux. Après cette date, l'assistance technique et les mises à jour automatiques qui aident à protéger votre PC Windows 7 ne seront plus disponibles via Intune. Microsoft vous recommande fortement de passer à Windows 10 avant janvier 2020 afin d'éviter un scénario où vous avez besoin d'un service ou d'une assistance qui n'est plus disponible. Cliquez [ici](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) pour en savoir plus sur le cycle de vie du support Windows.
