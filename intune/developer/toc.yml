@@ -1,0 +1,79 @@
+- name: Guide pour développeurs
+  href: index.yml
+- name: Guides pratiques
+  expanded: true
+  items:
+    - name: Protéger des applications avec le kit SDK d’application Intune
+      href: app-sdk.md
+      items:
+        - name: Prise en main du kit SDK d’application Intune
+          href: app-sdk-get-started.md
+        - name: Préparer des applications métier pour la protection des applications
+          href: apps-prepare-mobile-application-management.md
+        - name: Outil de création de package de restrictions d’application pour iOS
+          href: app-wrapper-prepare-ios.md
+        - name: SDK d’application Intune pour iOS
+          href: app-sdk-ios.md
+        - name: Outil de création de package de restrictions d’application pour Android
+          href: app-wrapper-prepare-android.md
+          displayName: dex
+        - name: SDK d’application Intune pour Android
+          href: app-sdk-android.md
+          items:
+            - name: Guide SDK d’application Intune pour les tests Android
+              href: app-sdk-android-testing-guide.md
+        - name: Liaisons Xamarin du SDK d’application Intune
+          href: app-sdk-xamarin.md
+    - name: Utiliser l’entrepôt de données Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Journal des modifications pour l’entrepôt de données
+          href: reports-changelog.md
+        - name: "Se connecter à l’entrepôt de données avec Power\_BI"
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Créer un rapport à partir du flux OData avec Power BI
+          href: reports-proc-create-with-odata.md
+    - name: Créer un rapport avec l’API d’entrepôt de données Intune
+      href: reports-nav-intune-data-warehouse.md
+      items:
+        - name: Obtenir des données à partir de l’API d’entrepôt de données avec un client REST
+          href: reports-proc-data-rest.md
+        - name: Point de terminaison de l’API d’entrepôt de données
+          href: reports-api-url.md
+        - name: Authentification Data Warehouse des applications uniquement
+          href: data-warehouse-app-only-auth.md
+        - name: Modèle de données de l’entrepôt de données
+          href: reports-ref-data-model.md
+          items:
+            - name: Collections de l’entrepôt de données
+              href: intune-data-warehouse-collections.md
+            - name: Collections de l’entrepôt de données (bêta)
+              items:
+                - name: Représentation de durée de vie utilisateur dans l’entrepôt de données Intune
+                  href: reports-ref-user-timeline.md
+                - name: Informations de référence sur les entités d’application
+                  href: reports-ref-application.md
+                - name: Informations de référence sur l’entité de date
+                  href: reports-ref-date.md
+                - name: Référence pour les entités d’appareils
+                  href: reports-ref-devices.md
+                - name: Informations de référence sur l’entité d’extension de la gestion Intune
+                  href: reports-ref-intunemanagementextension.md
+                - name: Informations de référence sur les entités de gestion des applications mobiles (GAM)
+                  href: reports-ref-mobile-app-management.md
+                - name: Informations de référence sur les entités de stratégie
+                  href: reports-ref-policy.md
+                - name: Informations de référence sur l’entité d’association appareil-utilisateur
+                  href: reports-ref-user-device.md
+                - name: Informations de référence sur l’entité User
+                  href: reports-ref-user.md
+        - name: Déplacer les données de votre compte Intune Data Warehouse
+          href: data-warehouse-account-move.md
+    - name: Accès aux API Intune dans Microsoft Graph
+      items:
+        - name: Utiliser Azure AD pour accéder aux APIs Intune dans Microsoft Graph
+          href: intune-graph-apis.md
+        - name: Référence de l’API Intune
+          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+        - name: API Graph utilisées pour configurer des appareils
+          href: graph-apis-used-by-intune-device-configuration-windows.md

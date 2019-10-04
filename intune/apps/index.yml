@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: Gérer des applications
+summary: Microsoft Intune vous permet de gérer les applications clientes que votre organisation utilise. Vous pouvez configurer, ajouter, attribuer, protéger, surveiller, mettre à jour et mettre hors service des applications pour un large éventail de plateformes et d’utilisateurs.
+metadata:
+  title: Gérer des applications
+  description: Gérer les applications et les protéger
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: landing-page
+  ms.collection: collection
+  author: erikre
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 09/25/2019
+  ms.openlocfilehash: ba12c3a3253fd35bf803342214b73fc094abc3aa
+  ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71729007"
+landingContent:
+- title: Prise en main des applications
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble de la gestion des applications
+      url: app-management.md
+  - linkListType: quickstart
+    links:
+    - text: Ajouter et attribuer une application
+      url: quickstart-add-assign-app.md
+  - linkListType: concept
+    links:
+    - text: Cycle de vie de l’application
+      url: app-lifecycle.md
+- title: Ajouter des applications
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble Ajouter des applications
+      url: apps-add.md
+    - text: Applications protégées par Intune
+      url: apps-supported-intune-apps.md
+  - linkListType: how-to-guide
+    links:
+    - text: Applications du Windows Store
+      url: store-apps-android.md
+    - text: Applications métier
+      url: lob-apps-android.md
+    - text: Gestion des applications Win32 pour Intune autonome
+      url: apps-win32-app-management.md
+    - text: Utiliser des scripts PowerShell sur des appareils Windows 10
+      url: intune-management-extension.md
+    - text: Affecter des applications à des groupes
+      url: apps-deploy.md
+- title: Attribuer des applications
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Affecter des applications à des groupes
+      url: apps-deploy.md
+    - text: Intune et exclure des applications
+      url: apps-inc-exl-assignments.md
+    - text: Déploiement d’applications Windows 10
+      url: apps-windows-10-app-deploy.md
+    - text: Déployer des applications dans des environnements de secteur public
+      url: apps-deploy-gcc-dod.md
+- title: Configurer des applications
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Réinitialiser des applications de manière sélective
+      url: apps-selective-wipe.md
+    - text: iOS périphériques gérés
+      url: app-configuration-policies-use-ios.md
+    - text: Appareils Android Entreprise gérés
+      url: app-configuration-policies-use-android.md
+    - text: Applications gérées sans inscription d’appareils
+      url: app-configuration-policies-managed-app.md
+    - text: Configurer Managed Browser
+      url: app-configuration-managed-browser.md
+    - text: Gérer les applications et les livres VPP
+      url: vpp-apps.md
+- title: Protéger les applications
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble des stratégies de protection des applications
+      url: app-protection-policy.md
+  - linkListType: how-to-guide
+    links:
+    - text: Créer et affecter des stratégies de protection des applications
+      url: app-protection-policies.md
+    - text: Valider des stratégies de protection des applications
+      url: app-protection-policies-validate.md
+    - text: Surveiller l’état de protection des utilisateurs d’applications
+      url: app-protection-policies-monitor.md
+    - text: Créer et attribuer des stratégies de protection des applications WIP
+      url: windows-information-protection-policy-create.md
+    - text: Gérer les transferts de données entre applications iOS
+      url: data-transfer-between-apps-manage-ios.md
+- title: Résoudre les problèmes des applications
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Résoudre les problèmes d’installation d’applications
+      url: troubleshoot-app-install.md
+    - text: Résoudre les problèmes de gestion des applications mobiles
+      url: troubleshoot-mam.md
+    - text: Consulter les journaux de protection d’application
+      url: app-protection-policy-settings-log.md

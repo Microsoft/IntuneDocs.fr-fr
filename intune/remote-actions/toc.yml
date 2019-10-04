@@ -1,0 +1,67 @@
+- name: Actions à distance
+  href: index.yml
+- name: Vue d’ensemble
+  expanded: true
+  items:
+    - name: Vue d’ensemble de la gestion des appareils
+      href: device-management.md
+- name: Guides pratiques
+  items:
+    - name: Verrous et mots de passe
+      items:
+        - name: Verrouiller un appareil
+          href: device-remote-lock.md
+        - name: Réinitialiser le code d’accès
+          href: device-passcode-reset.md
+        - name: Réinitialisation du code PIN Windows 10
+          href: device-windows-pin-reset.md
+    - name: Supprimer et redémarrer
+      items:
+        - name: Supprimer les appareils
+          href: devices-wipe.md
+        - name: Gérer le Redémarrage à zéro Windows
+          href: device-fresh-start.md
+        - name: Redémarrer un appareil
+          href: device-restart.md
+    - name: Actions sur l’appareil Apple
+      items:
+        - name: Localiser un appareil iOS perdu
+          href: device-locate.md
+        - name: Activer le mode Perdu d’iOS
+          href: device-lost-mode.md
+        - name: Activer le mode supervisé iOS
+          href: device-supervised-mode.md
+        - name: Effacer un appareil macOS
+          href: device-erase.md
+        - name: Contourner le verrou d’activation
+          href: device-activation-lock-bypass.md
+    - name: Actions de l’utilisateur
+      items:
+        - name: Déconnecter l’utilisateur actuel
+          href: device-logout-user.md
+        - name: Supprimer un utilisateur
+          href: device-remove-user.md
+        - name: Rechercher l’utilisateur principal
+          href: find-primary-user.md
+    - name: Autres actions
+      items:
+        - name: Renommer un appareil
+          href: device-rename.md
+        - name: Envoyer des notifications
+          href: custom-notifications.md
+        - name: Contrôler à distance les appareils mobiles
+          href: teamviewer-support.md
+        - name: Synchroniser l’appareil
+          href: device-sync.md
+        - name: Examiner l’inventaire des appareils
+          href: device-inventory.md
+    - name: Résolution des problèmes
+      items:
+        - name: Résoudre les problèmes d’actions de l’appareil
+          href: troubleshoot-device-actions.md
+- name: Ressources
+  items:
+    - name: Guides d’implémentation de scénarios
+      items:
+        - name: Réduire les frais de support technique
+          href: password-reset.md
