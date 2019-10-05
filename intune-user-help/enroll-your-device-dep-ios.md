@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4484dbc9a8348101c0f7409b009998baca32f8a4
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: bca7ff55653d12d352b4fb90163f4622a9e573ab
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239423"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721005"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Inscrire l’appareil iOS fourni par votre organisation dans la gestion
 
@@ -31,11 +31,11 @@ Découvrez comment passer votre appareil iOS en mode géré dans Intune.
 
 Les appareils iOS qui vous sont fournis par votre entreprise ou votre établissement scolaire sont souvent préconfigurés quand vous les recevez. Votre organisation envoie ces paramètres préconfigurés à votre appareil la première fois que vous l’activez et que vous vous connectez. Une fois la configuration de votre appareil terminée, vous recevez l’accès aux ressources de votre entreprise ou de votre établissement scolaire.  
 
-Pour commencer la configuration, mettez votre appareil sous tension, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires. Le reste de cet article décrit les étapes à suivre et les écrans qui s’affichent quand vous parcourez l’Assistant Configuration. 
+Pour commencer la configuration, mettez votre appareil sous tension, puis connectez-vous avec vos informations d’identification professionnelles ou scolaires. Le reste de cet article décrit les étapes à suivre et les écrans qui s’affichent quand vous parcourez l’Assistant Configuration.
 
 ## <a name="what-is-apple-dep"></a>Qu’est-ce qu’Apple DEP ?
 
-Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
+Il se peut que votre organisation ait acheté ses appareils par le biais du *Programme d’inscription des appareils Apple (DEP, Device Enrollment Program)* . Le programme DEP Apple permet aux organisations d’acheter de grandes quantités d’appareils iOS ou macOS. Elles peuvent ensuite configurer et gérer ces appareils dans leur fournisseur de gestion des appareils mobiles préféré, comme Intune. Si vous êtes administrateur et que vous souhaitez obtenir des informations supplémentaires sur le programme DEP Apple, consultez [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-ios.md).  
 
 ## <a name="set-up-your-ios-device"></a>Configurer votre appareil iOS
 
@@ -51,7 +51,7 @@ Si vous utilisez votre propre appareil iOS, plutôt qu’un appareil d’entrepr
 4. Une fois que vous êtes connecté en Wi-Fi, l’écran **Configuration** s’affiche. Vous pouvez y lire que **[Votre entreprise] configurera automatiquement votre appareil.**
 
    **La configuration permet à [Votre entreprise] de gérer cet appareil à distance. Un administrateur peut vous aider à configurer des comptes e-mail et réseau, à installer et configurer des applications, et à gérer les paramètres à distance. Un administrateur peut désactiver des fonctionnalités, installer et supprimer des applications, surveiller et limiter le trafic Internet, et effacer à distance cet appareil.**
- 
+
    **La configuration est fournie par : [Adresse] de l’équipe iOS de [Votre entreprise]**
 
 5. Connectez-vous avec votre ID Apple. La connexion vous permet d’installer l’application Portail d’entreprise et le profil de gestion permettant à votre entreprise d’accéder à ses ressources, comme les e-mails et les applications.

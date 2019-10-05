@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91aefbc8c3960100ce5e9164ce48a2b9d33c3f3e
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: ecc73fc9c51ae11f7541d1b9d28f0ccc8297c187
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238959"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721206"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Désinscrire votre appareil Android de la gestion  
 
@@ -64,7 +64,7 @@ Ou bien, appuyez sur **Paramètres** > **Applications** > **Portail d’entrepri
 
 En dernier recours, vous pouvez désinstaller l’application de votre appareil en tant qu’administrateur d’appareil.  
 
-Si vous utilisez un appareil appartenant à l’entreprise, votre organisation peut exiger que l’application Portail d’entreprise reste toujours installée sur votre appareil. Si vous la désinstallez, vous risquez de ne plus pouvoir accéder aux ressources protégées de l’entreprise (comme l’e-mail, les applications, le Wi-Fi ou le VPN) tant que vous ne réinstallez pas l’application. Pour plus d’informations sur l’installation, la mise à jour ou la suppression des applications obligatoires, consultez [Ajouter des applications à Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+Si vous utilisez un appareil appartenant à l’entreprise, votre organisation peut exiger que l’application Portail d’entreprise reste toujours installée sur votre appareil. Si vous la désinstallez, vous risquez de ne plus pouvoir accéder aux ressources protégées de l’entreprise (comme l’e-mail, les applications, le Wi-Fi ou le VPN) tant que vous ne réinstallez pas l’application. Pour plus d’informations sur l’installation, la mise à jour ou la suppression des applications obligatoires, consultez [Ajouter des applications à Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-add.md#apps-that-are-added-automatically-by-intune).
 
 Voici comment désactiver l’application Portail d’entreprise en tant qu’administrateur d’appareil. Les noms réels des paramètres peuvent varier en fonction de votre appareil Android.  
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d76ff182ea4402b6a4cd3242b15288d8bea16b9
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: f87848b43e040681085f3e89b063d5006f904464
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166465"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720925"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Code de conduite Microsoft Open Source
 
@@ -23,7 +23,7 @@ Nous **sollicitons et encourageons les contributions** de la communauté (utilis
 * **Utilisez votre navigateur** : deux options s’offrent à vous : 
 
     **Option 1 : Modifier directement à partir de docs.microsoft.com**  
-    1. Consultez la rubrique, par exemple [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](troubleshoot-policies-in-microsoft-intune.md). 
+    1. Consultez la rubrique, par exemple [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](intune/protect/troubleshoot-policies-in-microsoft-intune.md). 
     2. Sélectionnez **Modifier** (en haut à droite). Le fichier Markdown dans le dépôt GitHub s’affiche.
     3. Sélectionnez l’icône de crayon. Quand vous pointez sur l’icône de crayon, l’info-bulle **Modifier ce fichier** s’affiche. 
     4. Apportez les changements souhaités, puis **validez**-le. 
