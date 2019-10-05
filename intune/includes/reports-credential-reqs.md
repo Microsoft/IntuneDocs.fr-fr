@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6ec8f8a613d3b0a0b17f2615de634e70fa282fd7
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8483ed3d4198e228bdaaf4723b2c9c0dca9cecfc
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68229296"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830505"
 ---
 <!-- This include is part of the Intune Data Warehouse documentation. -->
 
@@ -18,4 +18,4 @@ Exigences liées à l’accès à l’entrepôt de données Intune (notamment l�
   - Administrateur général Azure AD
   - Administrateur de service Intune
   - Utilisateur avec accès en fonction du rôle à la ressource **Entrepôt de données Intune**
-  - Authentification sans utilisateur avec [authentification de l’application uniquement](../data-warehouse-app-only-auth.md) 
+  - Authentification sans utilisateur avec [authentification de l’application uniquement](../developer/data-warehouse-app-only-auth.md) 
