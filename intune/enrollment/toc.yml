@@ -89,6 +89,10 @@
       items:
         - name: Programme d’inscription d’appareils
           href: device-enrollment-program-enroll-ios.md
+        - name: Configurer l’inscription des utilisateurs iOS et iPadOS
+          href: ios-user-enrollment.md
+        - name: Actions et options prises en charge par l'inscription des utilisateurs
+          href: ios-user-enrollment-supported-actions.md
         - name: Apple School Manager
           href: apple-school-manager-set-up-ios.md
         - name: Apple Configurator
