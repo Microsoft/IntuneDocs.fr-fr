@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,18 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d9b579e944827e511700073f0b3348b5ef20adc
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c2b20030bd6c7e1dc9108002cc43f105cb8c6784
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724696"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036462"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. En règle générale, ce genre d’application est écrite en interne. Les étapes suivantes fournissent des conseils pour vous aider à ajouter une application métier Windows à Microsoft Intune.
+
+> [!IMPORTANT]
+> Lorsque vous déployez des applications Win32 à l’aide d’un fichier d’installation avec l’extension *.msi*, envisagez d’utiliser l’[extension de gestion Intune](../apps/intune-management-extension.md). Si vous combinez l’installation des applications Win32 et des applications métier au cours de l’accord de mise en œuvre AutoPilot, l’installation de l’application peut échouer.  
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 

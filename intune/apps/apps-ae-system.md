@@ -1,7 +1,7 @@
 ---
 title: Ajouter des applications système Android Enterprise à Microsoft Intune
 titleSuffix: ''
-description: Découvrez comment ajouter des applications système Entreprise à Microsoft Intune
+description: Découvrez comment ajouter des applications système Entreprise à Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ffc99b34016eba6511f63d1df2184abc3cae858
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c07ce82bbc056e1d76abeb5d31bf57e0973fad6e
+ms.sourcegitcommit: bdf948be824cf5390d5166a277f389f3785c81f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725164"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960894"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Ajouter des applications système Android Enterprise à Microsoft Intune
 
@@ -42,9 +42,13 @@ Vous pouvez ajouter une application système Android Enterprise à Intune à par
 5. Sélectionnez **OK**.
 6. Sélectionnez **Ajouter**.
 
+> [!NOTE]
+> Vous devrez travailler avec l’OEM de votre appareil pour trouver le nom du package de l’application que vous souhaitez activer ou désactiver.
+
 L’application créée s’affiche dans la liste des applications, où vous pouvez l’affecter aux groupes de votre choix. 
 
 Les applications système Android Enterprise activeront ou désactiveront les applications qui font déjà partie de la plate-forme. Pour activer une application, attribuez à l'application système la valeur **Required (Nécessaire)** . Pour désactiver une application, attribuez à l'application système la valeur **Uninstall (Désinstaller)** . Les applications système ne peuvent pas être assignées comme disponibles pour un utilisateur.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

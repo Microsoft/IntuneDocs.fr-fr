@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0d495265580bc9801a1fadb636a62274a4f728a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 8b630709646b2f4489cbfea6284689c9436798ca
+ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725749"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71916363"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -67,7 +67,7 @@ Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer
 | Applications issues d’un magasin | Oui | Oui | Non | Oui | Oui |
 | Mettre à jour des applications | Oui | Oui | Non | Oui | Oui |
 
-<sup>1</sup> Envisagez d’utiliser [Windows Information Protection](../windows-information-protection-configure.md) pour protéger les applications sur les appareils qui exécutent Windows 10.<br>
+<sup>1</sup> Envisagez d’utiliser [Windows Information Protection](../protect/windows-information-protection-configure.md) pour protéger les applications sur les appareils qui exécutent Windows 10.<br>
 <sup>2</sup> S’applique uniquement aux appareils gérés par Intune.<br>
 <sup>3</sup> Intune prend en charge les applications disponibles dans le Google Play Store géré sur les appareils Android Enterprise.<br>
 <sup>4</sup> Intune n’installe aucun raccourci vers une application en tant que lien web sur les appareils Android Enterprise standard. Cependant, la prise en charge des liens web est fournie pour [les appareils Android Enterprise dédiés à plusieurs applications ](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 

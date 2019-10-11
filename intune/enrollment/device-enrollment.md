@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a345cdf2162db6b55fe5698488036fad0677a6e1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e3fb9af260b8fddc78b644b8ede056c90bac24d0
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723266"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999355"
 ---
 # <a name="what-is-device-enrollment"></a>Qu’est-ce que l’inscription d’appareils ?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 |**Administration des appareils Android**|**(IMEI ou SN prédéclaré) Lancée par l’utilisateur par le biais du portail d’entreprise**| Non | Oui | Non | [Plus d’informations](./../corporate-identifiers-add.md)|
 |**Administration des appareils Android avec Extensions de mobilité Zebra**|**Lancée par l’utilisateur ou par le [GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager) par le biais du portail d’entreprise**| Non | Oui si lancée par l’utilisateur, non si lancée par le [GESTIONNAIRE D’INSCRIPTION D’APPAREIL](#device-enrollment-manager) | Non | [Plus d’informations](../configuration/android-zebra-mx-overview.md)|
 |**Android Entreprise dédié**|**NFC, jeton, code QR, Zero Touch**| Oui | Non | Configurable par le biais de la stratégie | [Plus d’informations](android-kiosk-enroll.md)|
-|**Android Entreprise complètement géré (préversion)**|**NFC, jeton, code QR, Zero Touch**| Oui | Oui | Configurable par le biais de la stratégie | [Plus d’informations](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise complètement managé**|**NFC, jeton, code QR, Zero Touch**| Oui | Oui | Configurable par le biais de la stratégie | [Plus d’informations](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>(Apportez votre propre appareil)
