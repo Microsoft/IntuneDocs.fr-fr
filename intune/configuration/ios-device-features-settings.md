@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8cd38174b9332f285e0dc4f938d99dbd5aecf74
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 341609afeec02c67b4ea0d85a541fca61345ced4
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816888"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036472"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS et iPadOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
 
@@ -42,6 +42,9 @@ Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Pour
 ## <a name="airprint"></a>AirPrint
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
+
+> [!NOTE]
+> Veillez à ajouter toutes les imprimantes au même profil. Apple empêche que plusieurs profils d’impression ne ciblent le même appareil.
 
 - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez obtenir l’adresse IP en effectuant un test ping sur l’imprimante dans le Terminal. Pour plus de détails, consultez Obtenir l’adresse IP et le chemin dans cet article.
 - **Chemin d’accès** : de manière générale, le chemin est `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez Obtenir l’adresse IP et le chemin dans cet article.
@@ -301,7 +304,7 @@ Cette fonctionnalité s’applique à :
   - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple, `user name`.
   - **Type de valeur**: entrez le type de données. Les options disponibles sont les suivantes :
 
-    - Chaîne
+    - String
     - Booléen : dans la **valeur de configuration**, entrez `True` ou `False`.
     - Entier : dans **valeur de configuration**, entrez un nombre.
     

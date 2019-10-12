@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2019
+ms.date: 10/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 484035603e4fb447b004aad6c6f85726034f3c23
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 493db6299aa8242d0ca6ab669b313e85d0dc14c6
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732826"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251587"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Windows de 10 et ultérieur pour marquer les appareils comme étant conformes ou non conformes avec Intune
 
@@ -39,7 +39,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
 
 [Créer une stratégie de conformité](create-compliance-policy.md#create-the-policy). Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
 
-## <a name="device-health"></a>Device health
+## <a name="device-health"></a>Intégrité des périphériques
 
 - **Exiger BitLocker** : quand la valeur est **Exiger**, l’appareil peut protéger les données stockées sur le lecteur contre tout accès non autorisé quand le système est à l’arrêt ou en veille prolongée. Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le module de plateforme sécurisée (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il contribue également à prévenir la falsification d’un ordinateur, même si celui-ci est laissé sans assistance, perdu ou volé. Si l’ordinateur est équipé d’un module de plateforme sécurisée compatible, BitLocker utilise ce module pour verrouiller les clés de chiffrement qui protègent les données. Par conséquent, les clés sont inaccessibles tant que le TPM n’a pas vérifié l’état de l’ordinateur.
 
@@ -138,6 +138,9 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
 - **Pare-feu**: définissez sur **exiger** pour activer le pare-feu Microsoft Defender et empêcher les utilisateurs de le désactiver. **Non configuré** (par défaut) ne contrôle pas le pare-feu Microsoft Defender et ne modifie pas les paramètres existants.
 
   [CSP de pare-feu](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+
+  > [!NOTE]
+  > Si l’appareil se synchronise immédiatement après un redémarrage ou synchronise immédiatement la sortie du mode veille, ce paramètre peut signaler une **erreur**. Ce scénario peut ne pas affecter l’état général de conformité de l’appareil. Pour réévaluer l’état de conformité, [synchronisez manuellement l’appareil](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows).
 
 - **Module de plateforme sécurisée (TPM) (TPM)** : quand la valeur est **Required**, Intune vérifie la conformité de la version. L’appareil est conforme si la version de la puce du module de plateforme sécurisée est supérieure à 0 (zéro). L’appareil n’est pas conforme s’il n’existe pas de version TPM sur l’appareil. Lorsqu’il **n’est pas configuré**, Intune ne vérifie pas la version de la puce TPM de l’appareil.
 

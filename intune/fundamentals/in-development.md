@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 009b9cf22bcdd73eb563c772cc9995047f05a9c1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
-ms.translationtype: HT
+ms.openlocfilehash: 0e7c4e5ed45455dda941fb0c61c989c12c57135d
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999328"
 ---
 # <a name="in-development-for-microsoft-intune---october-2019"></a>En développement pour Microsoft Intune - Octobre 2019
 
-Pour faciliter votre préparation et votre planification, cette page liste les mises à jour et les fonctionnalités de l’interface utilisateur Intune qui sont en cours de développement, mais qui ne sont pas encore publiées. De plus :
+Pour faciliter votre préparation et votre planification, cette page liste les mises à jour et les fonctionnalités de l’interface utilisateur Intune qui sont en cours de développement, mais qui ne sont pas encore publiées. En outre :
 
 - Si nous pensons que vous devez effectuer une action avant une modification, nous publierons un billet supplémentaire sur le Centre de messages Office.
 - Quand une fonctionnalité est lancée en production, en préversion ou en disponibilité générale, la description de la fonctionnalité disparaît de cette page et de la [page Nouveautés](whats-new.md).
@@ -115,7 +115,7 @@ Sur les appareils iOS et iPados, vous pouvez créer un profil pour restreindre l
 
 Pour voir les paramètres actuels, accédez à [Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune](../configuration/device-restrictions-ios.md).
 
-S’applique à :
+S'applique à :
 - iOS 13.0 et ultérieur
 - iPadOS 13.0 et ultérieur
 
@@ -126,23 +126,23 @@ Si vous utilisez ce paramètre dans un profil Wi-Fi, vous remarquerez peut-être
 
 Pour afficher les paramètres actuels, accédez à [paramètres Wi-fi Android](../configuration/wi-fi-settings-android.md) ou [paramètres Wi-Fi d’Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md).
 
-S’applique à :
+S'applique à :
 - Android
 - Android Entreprise
 
 ### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339----"></a>Créer un proxy HTTP global sur des appareils Android Enterprise propriétaire d’appareils <!-- 4816339  -->
-Sur les appareils Android Enterprise, vous pouvez créer un profil VPN avec différents clients VPN (configuration de l'**appareil** > **profils** > **créer un profil** > **Android Enterprise** pour la plateforme > propriétaire de l' **appareil > Restrictions d’appareil** pour le type de profil > **connectivité**). Vous pourrez configurer un proxy HTTP global pour répondre aux normes de navigation Web de votre organisation. Toutes les applications qui accèdent aux sites Web HTTP utilisent ce proxy.
+Sur les appareils Android Enterprise, vous pouvez configurer un proxy HTTP global pour répondre aux normes de navigation Web de votre organisation (configuration de l'**appareil** > **profils** > **créer un profil** > **Android Enterprise** pour plateforme > **propriétaire de l’appareil > restrictions** de l’appareil pour le type de profil > la **connectivité**). Une fois configuré, tout le trafic HTTP utilise ce proxy.
 
-S’applique à :
+S'applique à :
 - Propriétaire d’appareil Android Entreprise
 
 ### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073----"></a>Nouveau profil d’interface de configuration du microprogramme de l’appareil pour les appareils Windows 10 et versions ultérieures <!-- 2266073  -->
 Sur Windows 10 et versions ultérieures, vous pouvez créer un profil de configuration d’appareil pour contrôler les paramètres et les fonctionnalités (configuration de l'**appareil** > **profils** > **créer un profil** > **Windows 10 et versions ultérieures** pour la plateforme). Il y aura un nouveau type de profil d’interface de configuration du microprogramme de l’appareil qui permet à Intune de gérer les paramètres UEFI (BIOS).
 
-Pour obtenir une vue d’ensemble de tous les paramètres que vous pouvez configurer, consultez [appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide de profils d’appareil dans Microsoft Intune](../configuration/device-profiles.md).
+Pour obtenir une vue d’ensemble de tous les paramètres actuels que vous pouvez configurer, consultez [appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide de profils d’appareil dans Microsoft Intune](../configuration/device-profiles.md).
 
-S’applique à :
-- Windows 10 RS5 (1809) et versions ultérieures sur certains fabricants d’ordinateurs OEM
+S'applique à :
+- Windows 10 RS5 (1809) et versions ultérieures sur des appareils sélectionnés
 
 ### <a name="pkcs-certificates-for-macos-----1333650------------------"></a>Certificats PKCS pour macOS  <!-- 1333650                -->
 Nous allons ajouter une prise en charge complète des certificats PKCS sur les appareils qui exécutent macOS. Les utilisateurs seront en mesure de déployer des certificats d’utilisateur et d’appareil avec des champs objet de personnalisation et autre nom de l’objet. Nous aurons également un nouveau paramètre autoriser l’accès à toutes les applications, ce qui permet à toutes les applications associées d’accéder à la clé privée. Pour plus d’informations sur ce paramètre, consultez la documentation Apple suivante : https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7bba4617aa756c5f7168a2febf1a3f1ffdd2029
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1938f6862fa7b74dccc4ea23ac139fcd955d77d7
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735998"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237264"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
@@ -284,7 +284,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
   - **Nombre minimal de jeux de caractères du mot de passe**  
-    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
+    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
     [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067055)  
     
     **Par défaut** : 3  
@@ -689,7 +689,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zone Internet : Autoriser l’exécution de VBscript**  
-  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options sont les suivantes : 
+  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options disponibles sont les suivantes : 
   - *Activé* : VBScript s’exécute sur les pages de certaines zones, sans intervention de l’utilisateur. 
   - *Invite* : les employés sont invités à choisir s’il faut autoriser l’exécution de VBScript dans la zone. 
   - *Désactivé* : l’exécution de VBScript est empêchée dans la zone. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, VBScript s’exécute dans la zone spécifiée, sans que l’utilisateur n’ait à intervenir.    
@@ -1196,7 +1196,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
   
 - **Comportement de l’invite d’élévation d’administrateur**  
-  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
+  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options sont les suivantes : 
   - *Élever sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
   - *Invite pour les informations d'identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
   - *Invite pour le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à sélectionner Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
@@ -1209,7 +1209,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : demander le consentement sur le bureau sécurisé
   
 - **Sécurité de session minimale pour les clients basés sur NTLM SSP**  
-  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options disponibles sont :
+  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options sont les suivantes :
   - *Nécessite une sécurité de session NTLMv2* : la connexion échoue si le protocole NTLMv2 n’est pas négocié. 
   - *Nécessite un chiffrement 128 bits* : la connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
   - *Exiger l’authentification NTLMv2 et un chiffrement de 128 bits*.  
@@ -1219,7 +1219,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
   
 - **Comportement lorsque la carte à puce est retirée**  
-  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
+  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options sont les suivantes :
   - *Aucune action*. 
   - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
   - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
@@ -1256,7 +1256,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : refuser automatiquement les demandes d’élévation de privilèges
   
 - **Exiger le mode d’approbation Administrateur pour les administrateurs**  
-  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options disponibles sont :   
+  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options sont les suivantes :   
   - *Non configuré* : le mode d’approbation Administrateur et tous les paramètres de stratégie UAC associés sont désactivés. Remarque : Si ce paramètre de stratégie est désactivé, le Centre de sécurité vous avertit que la sécurité globale du système d’exploitation a été réduite. 
   - *Oui* : le mode d’approbation Administrateur est activé. Cette stratégie doit être activée et les paramètres de stratégie UAC associés doivent également être définis en conséquence pour permettre au compte Administrateur intégré et à tous les autres utilisateurs membres du groupe Administrateurs de s’exécuter en mode d’approbation Administrateur.  
 
@@ -1280,7 +1280,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : *O:BAG:BAD:(A;;RC;;;BA)*
 
 - **Utiliser le mode d’approbation Administrateur**  
-  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options disponibles sont : 
+  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options sont les suivantes : 
   - *Oui* : le compte Administrateur intégré utilise le mode d’approbation Administrateur. Par défaut, une invite d’approbation est présentée à l’utilisateur pour chaque opération nécessitant une élévation de privilège. 
   - *Non configuré* : le compte Administrateur intégré exécute toutes les applications avec des privilèges administratifs complets. 
 
@@ -1298,7 +1298,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Détecter les installations d’applications et demander l’élévation**  
-  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options disponibles sont : 
+  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options sont les suivantes : 
   - *Activé* : lorsqu’un package d’installation d’application nécessitant une élévation de privilège est détecté, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
   - *Désactivé* : les packages d’installation d’application ne sont pas détectés ni invités pour une élévation. Les entreprises qui utilisent des ordinateurs de bureau pour utilisateur standard et ont recours à des technologies d’installation déléguée telles que GPSI (Group Policy Software Install) ou SMS (Systems Management Server) doivent désactiver ce paramètre de stratégie. Dans ce cas, la détection d’un programme d’installation n’est pas nécessaire.  
   
@@ -1512,7 +1512,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : authentifié
 
-## <a name="search"></a>Recherche 
+## <a name="search"></a>Rechercher 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Recherche](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) dans la documentation Windows.  
 
 - **Désactiver l’indexation des éléments chiffrés**  
@@ -1539,7 +1539,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : oui
   
-## <a name="system"></a>Système  
+## <a name="system"></a>System  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Système](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) dans la documentation Windows.  
 
 - **Système : Initialisation des pilotes de démarrage**  
@@ -1622,7 +1622,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
 - **Type d’exécution du contenu des e-mails**  
   Cette règle bloque les types de fichiers suivants pour qu’ils ne soient pas exécuter ou lancée à partir d’un email dans Microsoft Outlook ou d’une message sur le Web (par exemple, Gmail.com ou Outlook.com) : fichiers exécutables (par exemple, .exe, .dll ou .scr) fichiers de Script (par exemple, un fichier .ps PowerShell, .vbs VisualBasic, .js ou JavaScript) fichiers d’archive de Script.  
-  [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067063)  
+  [En savoir plus](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) 
   
   **Par défaut** : bloc
 
@@ -1632,7 +1632,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
 - **Type de protection réseau**  
   Cette stratégie vous permet d’activer la protection réseau (bloquer/auditer) ou de la désactiver dans Windows Defender Exploit Guard. La protection réseau est une fonctionnalité de Windows Defender Exploit Guard qui protège les employés utilisant une application d’accéder à des tentatives d’hameçonnage, à des sites hébergeant du code malveillant exploitant une faille de sécurité et à du contenu malveillant sur Internet. Cela inclut le fait d’empêcher des navigateurs tiers de se connecter à des sites dangereux. Le type de la valeur est un entier. Si vous activez ce paramètre, la protection réseau est activée et les employés ne peuvent pas la désactiver. Son comportement peut être contrôlé par les options suivantes : Bloquer et Auditer. Si vous activez cette stratégie avec l’option « Bloquer », la connexion des utilisateurs et des applications à des domaines dangereux est bloquée. Vous pouvez consulter cette activité dans Windows Defender Security Center. Si vous activez cette stratégie avec l’option « Auditer », la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous pouvez néanmoins toujours voir cette activité dans le Centre de sécurité Windows Defender. Si vous désactivez cette stratégie, la connexion des utilisateurs/applications à des domaines dangereux n’est pas bloquée. Vous ne voyez pas cette activité réseau dans le Centre de sécurité Windows Defender. Si vous ne configurez pas cette stratégie, le blocage réseau est désactivé par défaut.  
-  [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067102)  
+  [En savoir plus](/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Par défaut** : activer
   

@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24e597d6dbfbfe399422c3e1679f675c9525abcd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 8048b29bdd456f9db8bb3d01e84bad5899e0b9a6
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720981"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163558"
 ---
 # <a name="get-a-recovery-key-for-a-macos-device"></a>Obtenir une clé de récupération pour un appareil macOS
 
@@ -47,7 +47,7 @@ Si une clé est introuvable mais que votre appareil est correctement chiffré, c
 
 ## <a name="it-pro-support"></a>Support technique pour les professionnels de l’informatique
 
-Si vous êtes une personne du support informatique et que vous souhaitez configurer et gérer le chiffrement FileVault pour les appareils macOS, consultez [utiliser le chiffrement de l’appareil avec Intune](https://docs.microsoft.com/intune/protect/encrypt-devices.md).
+Si vous êtes une personne du support informatique et que vous souhaitez configurer et gérer le chiffrement FileVault pour les appareils macOS, consultez [utiliser le chiffrement de l’appareil avec Intune](/intune/protect/encrypt-devices).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
