@@ -5,7 +5,7 @@ keywords: ''
 author: ralms
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b801da3bd4245361e8c55a40c67daf2c8890fd1e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fead8b9d69f5356876c0b3a2a4ce02e9b754128e
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721602"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999347"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS importés avec Intune
 
@@ -168,7 +168,7 @@ Sélectionnez le fournisseur de stockage de clés qui correspond au fournisseur 
 
 7. Importez l’objet **UserPFXCertificate** dans Intune en exécutant `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Pour valider que le certificat a été importé, exécutez `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UsertList "<UserUPN>"`
+8. Pour valider que le certificat a été importé, exécutez `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
 
 Pour plus d’informations sur les autres commandes disponibles, consultez le fichier Lisez-moi dans [Projet PowerShell PFXImport sur GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -186,7 +186,7 @@ Après avoir importé les certificats dans Intune, créez un profil **Certificat
 
 3. Accédez à **Paramètres** et entrez les propriétés suivantes :
 
-   - **Rôle prévu** : Indiquez la finalité des certificats qui sont importés pour ce profil. Les administrateurs peuvent importer des certificats avec différents rôles (par exemple, l’authentification, la signature S/MIME ou le chiffrement S/MIME). La finalité sélectionnée dans le profil de certificat correspond au profil de certificat comprenant les certificats importés associés. Le rôle prévu est une balise permettant de regrouper les certificats importés et ne garantit pas que les certificats importés avec cette balise seront conformes au rôle prévu.  
+   - **Rôle prévu** : Indiquez la finalité des certificats qui sont importés pour ce profil. Les administrateurs peuvent importer des certificats avec différents rôles (par exemple, la signature S/MIME ou le chiffrement S/MIME). La finalité sélectionnée dans le profil de certificat correspond au profil de certificat comprenant les certificats importés associés. Le rôle prévu est une balise permettant de regrouper les certificats importés et ne garantit pas que les certificats importés avec cette balise seront conformes au rôle prévu.  
    - **Période de validité du certificat** : À moins que la période de validité n’ait été modifiée dans le modèle de certificat, cette option est définie par défaut sur un an.  
    - **Fournisseur de stockage de clés (KSP)**  : pour Windows, sélectionnez l’emplacement où stocker les clés sur l’appareil.  
 

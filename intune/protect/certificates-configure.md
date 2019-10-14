@@ -16,22 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74b920deeb5255f6f938f0c8b07eaab6d765e68e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722967"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999307"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utiliser des certificats pour l’authentification dans Microsoft Intune  
 
 Utilisez des certificats avec Intune pour authentifier vos utilisateurs dans les applications et les ressources de l’entreprise avec des profils VPN, Wi-Fi ou e-mail. Quand vous utilisez des certificats pour authentifier ces connexions, vos utilisateurs finaux n’ont pas besoin d’entrer un nom d’utilisateur et un mot de passe, ce qui leur permet de bénéficier d’un accès transparent. Les certificats sont également utilisés pour signer et chiffrer les e-mails à l’aide de S/MIME.
 
-Intune prend en charge les types de certificat suivants :  
-
-- Protocole SCEP (Simple Certificate Enrollment Protocol)  
-- PKCS#12 (ou PFX)  
-- Certificats PKCS importés
+## <a name="intune-supported-certificates-and-usage"></a>Certificats pris en charge par Intune et utilisation
+| Type              | Authentification | Signature S/MIME | Chiffrement S/MIME  |
+|--|--|--|--|
+| Certificat importé PKCS |  | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png)|
+| PKCS#12 (ou PFX)    | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |  |
+| Protocole SCEP (Simple Certificate Enrollment Protocol)  | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | |
 
 Pour déployer ces certificats, vous créez des profils de certificat et les attribuez à des appareils.  
 

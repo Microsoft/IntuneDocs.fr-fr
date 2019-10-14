@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,61 +17,97 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3542d86429293531a22678e14520e59cd9de9dc6
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 74ee1eaf0581c4500830514fa9ad272f0de09d3b
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721537"
+ms.locfileid: "71813976"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Appliquer la conformité sur les Mac gérés par Jamf Pro
 
-S’applique à : Intune dans le portail Azure
+Lorsque vous [intégrez Jamf Pro à Intune](conditional-access-integrate-jamf.md), vous pouvez utiliser des stratégies d'accès conditionnel pour garantir la conformité de vos appareils Mac aux exigences de votre organisation.  Cet article vous aidera dans les tâches suivantes :  
 
-Vous pouvez utiliser Azure Active Directory et les stratégies d’accès conditionnel de Microsoft Intune. Assurez-vous que vos utilisateurs finaux respectent les exigences de l’organisation. Vous pouvez appliquer ces stratégies à des Mac [gérés par Jamf Pro](conditional-access-integrate-jamf.md). Cela nécessite à la fois un accès aux consoles Intune et Jamf Pro.
+- Créer des stratégies d’accès conditionnel.
+- Configurer Jamf Pro pour déployer l'application Portail d'entreprise Intune sur les appareils que vous gérez avec Jamf.
+- Configurer les appareils pour qu'ils s'inscrivent auprès d’Azure AD lorsque l'utilisateur de l'appareil se connecte à l'application Portail d'entreprise depuis l'application Jamf Self Service. L'inscription d'un appareil crée une identité dans Azure AD permettant d'évaluer l’appareil à l’aide de stratégies d'accès conditionnel pour l'accès aux ressources de l'entreprise.  
+ 
+Les procédures décrites dans cet article nécessitent l'accès aux consoles Intune et Jamf Pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configuration des stratégies de conformité d’appareils dans Intune
 
-1. Ouvrez Microsoft Azure, puis accédez à **Intune** > **Conformité de l’appareil** > **Stratégies**. Vous pouvez créer des stratégies pour macOS, notamment choisir une série d’actions (par exemple, l’envoi d’avertissements par e-mail) pour les utilisateurs et groupes non conformes.
-2. Sélectionnez la stratégie, puis cliquez sur Affectations. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
-3. Choisissez Groupes sélectionnés pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie, puis choisissez Enregistrer pour déployer la stratégie auprès des utilisateurs.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Conformité de l’appareil** > **Stratégies**. 
+2. Si vous utilisez une stratégie précédemment créée, sélectionnez cette stratégie dans la console, puis passez à l'étape suivante de cette procédure.  
+   
+   Sélectionnez **Créer une stratégie**, puis spécifiez les détails d'une stratégie avec une *plate-forme* **macOS**. Configurez les options *Paramètres*et *Actions en cas de non-conformité* pour répondre aux exigences de votre organisation, puis sélectionnez **Créer** pour enregistrer la stratégie.
 
-Vous avez appliqué la stratégie aux utilisateurs. Les appareils utilisés par les utilisateurs que cible cette stratégie sont évalués et marqués comme conformes pour le paramètre « Exiger que l’appareil soit géré » dans Azure Active Directory.
+3. Dans le volet de *présentation* des stratégies, sélectionnez **Affectations**. Utilisez les options disponibles pour choisir les utilisateurs et groupes de sécurité Azure Active Directory (Azure AD) qui recevront cette stratégie. L'intégration de Jamf à Intune ne prend pas en charge une stratégie de conformité qui cible des groupes d’appareils. 
 
-> [!Note]
+4. Lorsque vous sélectionnez **Enregistrer**, la stratégie est appliquée aux utilisateurs.  
+
+Les stratégies que vous déployez ciblent les appareils utilisés par les utilisateurs affectés. La conformité de ces appareils est évaluée. Les appareils conformes sont marqués comme conformes pour le paramètre « *Exiger que l'appareil soit marqué comme conforme* » dans Azure AD.  
+
+> [!NOTE]
 > Intune exige le chiffrement de disque complet pour être conforme.
 
 ## <a name="deploy-the-company-portal-app-for-macos-in-jamf-pro"></a>Déployer l’application Portail d’entreprise pour macOS dans Jamf Pro
 
-Vous devez déployer l’application Portail d’entreprise pour macOS dans Jamf Pro en tant qu’installation en arrière-plan en appliquant la procédure ci-dessous :
+Créez une stratégie dans Jamf Pro pour déployer le Portail d'entreprise Intune. Cette stratégie déploie l'application du portail d'entreprise afin qu'elle soit disponible dans Jamf Self Service. Créez cette stratégie avant de créer une stratégie dans Jamf Pro pour que les utilisateurs puissent enregistrer des appareils avec Azure AD.  
 
-1. Sur un appareil macOS, téléchargez la version actuelle de [l’application Portail d’entreprise pour macOS](https://go.microsoft.com/fwlink/?linkid=862280). Ne l’installez pas ; vous avez besoin d’une copie de l’application à charger vers Jamf Pro.
-2. Ouvrez Jamf Pro, puis accédez à **Gestion de l’ordinateur** > **Packages**.
-3. Créez un package avec l’application Portail d’entreprise pour macOS, puis cliquez sur **Enregistrer**.
+Pour effectuer la procédure suivante, vous devez avoir accès à un appareil macOS et au portail Jamf Pro. 
+
+### <a name="to-deploy-the-company-portal-app"></a>Pour déployer l’app Portail d'entreprise  
+
+1. Sur un appareil macOS, téléchargez la version actuelle de [l’application Portail d’entreprise pour macOS](https://go.microsoft.com/fwlink/?linkid=862280), mais ne l’installez pas. Vous n'avez besoin que d'une copie de l'application pour pouvoir l’uploader sur Jamf Pro.  
+
+2. Ouvrez Jamf Pro, puis sélectionnez **Gestion des ordinateurs** > **Packages**.
+
+3. Créez un package avec l’application Portail d’entreprise pour macOS, puis sélectionnez **Enregistrer**.
+
 4. Ouvrez **Ordinateurs** > **Stratégies**, puis sélectionnez **Nouveau**.
+
 5. Utilisez la charge utile **Général** pour configurer les paramètres de la stratégie. Ces paramètres doivent être configurés comme suit :
    - Déclencheur : sélectionnez **Inscription terminée** et **Archivage récurrent**.
    - Fréquence d’exécution : sélectionnez **Une fois par ordinateur**.
+
 6. Sélectionnez la charge utile **Packages** et cliquez sur **Configurer**.
+
 7. Cliquez sur **Ajouter** pour sélectionner le package avec l’application Portail d’entreprise.
-8. Choisissez l’option **Installer** dans le menu contextuel **Action**.
+
+8. Sélectionnez l’option **Installer** dans le menu contextuel **Action**.
 9. Configurez les paramètres pour le package.
-10. Cliquez sur l’onglet **Étendue** pour spécifier les ordinateurs sur lesquels l’application Portail d’entreprise doit être installée. Cliquez sur **Save**. La stratégie sera appliquée aux appareils inclus dans l’étendue la prochaine fois que le déclencheur sélectionné sera exécuté sur l’ordinateur et qu’il répondra aux critères définis dans la charge utile **Général**.
 
-## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Créer une stratégie dans Jamf Pro pour que les utilisateurs inscrivent leurs appareils auprès d’Azure Active Directory
+10. Sélectionnez l’onglet **Étendue** pour spécifier les ordinateurs sur lesquels l’application Portail d’entreprise doit être installée. Sélectionnez **Enregistrer**. La stratégie sera appliquée aux appareils inclus dans l’étendue la prochaine fois que le déclencheur sélectionné sera exécuté sur l’ordinateur et qu’il répondra aux critères définis dans la charge utile **Général**.
 
-> [!NOTE]
-> Vous devez [déployer le portail d’entreprise](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) pour macOS avant de passer aux étapes suivantes.  
+## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Créer une stratégie dans Jamf Pro pour que les utilisateurs inscrivent leurs appareils auprès d’Azure Active Directory  
 
-Les utilisateurs finaux doivent lancer l’application Portail d’entreprise via le libre-service Jamf pour inscrire l’appareil auprès d’Azure AD en tant qu’appareil géré par Jamf Pro. Cette opération oblige les utilisateurs finaux à agir. Nous vous recommandons de [contacter l’utilisateur final](../fundamentals/end-user-educate.md) par e-mail, à l’aide d’une notification Jamf Pro ou au moyen d’une autre méthode de notification pour l’inviter à cliquer sur le bouton dans Jamf Self Service.
+Après avoir [déployé le portail d'entreprise](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) pour macOS via Jamf Pro Self Service, vous pouvez créer la stratégie Jamf Pro qui inscrit l’appareil d'un utilisateur auprès d’Azure AD. 
+
+L'inscription d'un appareil nécessite que l'utilisateur de l’appareil sélectionne manuellement l'application Portail d'entreprise Intune dans Jamf Self Service. Nous vous recommandons de [contacter vos utilisateurs finaux](../fundamentals/end-user-educate.md) par e-mail, via des notifications Jamf Pro, ou toute autre méthode utilisée par votre organisation pour les inviter à effectuer cette action afin d’inscrire leurs appareils. 
 
 > [!WARNING]
-> L’application Portail d’entreprise doit être lancée à partir de Jamf Self Service pour procéder à l’inscription de l’appareil. <br><br>Le fait de lancer manuellement l’application Portail d’entreprise (par exemple, à partir du dossier Applications ou Téléchargements) n’inscrit pas l’appareil. Si un utilisateur final lance manuellement le Portail d’entreprise, le message d’avertissement « AccountNotOnboarded » s’affiche.
+> Le fait de lancer manuellement l’application Portail d’entreprise (par exemple, à partir du dossier Applications ou Téléchargements) n’inscrit pas l’appareil. Si un utilisateur d’appareil lance manuellement le Portail d’entreprise, le message d’avertissement **'AccountNotOnboarded'** s’affiche.
 
-1. Dans Jamf Pro, accédez à **Ordinateurs** > **Stratégies** et créez une stratégie pour l’inscription d’appareils.
+### <a name="to-create-the-registration-policy"></a>Pour créer la stratégie d’inscription  
+
+1. Dans Jamf Pro, sélectionnez **Ordinateurs** > **Stratégies**, puis créez une stratégie pour l’inscription d’appareils.
+
 2. Configurez la charge utile **Intégration de Microsoft Intune**, notamment la fréquence de déclenchement et d’exécution.
-3. Cliquez sur l’onglet **Étendue** et incluez tous les appareils ciblés dans l’étendue de la stratégie.
-4. Cliquez sur l’onglet **Libre-service** pour rendre la stratégie disponible dans le libre-service Jamf. Incluez la stratégie dans la catégorie **Conformité de l'appareil**. Cliquez sur **Save**.
+
+3. Sélectionnez l’onglet **Étendue** et incluez tous les appareils ciblés dans l’étendue de la stratégie.
+
+4. Sélectionnez l’onglet **Self Service** pour rendre la stratégie disponible dans Jamf Self Service. Incluez la stratégie dans la catégorie **Conformité de l'appareil**. Cliquez sur **Save**.
+
+## <a name="validate-intune-and-jamf-integration"></a>Valider l’intégration Intune et Jamf  
+
+Utilisez la console Jamf Pro pour confirmer que la communication entre Jamf Pro et Microsoft Intune est correctement établie. 
+
+- Dans Jamf Pro, accédez à **Paramètres** > **Gestion globale** > **Intégration Microsoft Intune**, puis sélectionnez **Test**. 
+
+    La console affiche un message indiquant la réussite ou l'échec de la connexion.  
+
+Si le test de connexion de la console Jamf Pro échoue, vérifiez la configuration de Jamf. 
+
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Suppression d’un appareil géré par Jamf dans Intune
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69f214b4fd3f3b7767e719c0f68f19e178a8e29c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 06fdd8a6b64dfd58457b5d9b92144530aa2856cd
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723006"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940490"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Utiliser Intune pour corriger les vulnérabilités identifiées par Microsoft Defender ATP  
 
@@ -70,7 +70,7 @@ Un exemple de flux de travail :
 **Configurations Intune pour ATP** :  
 
 - Configurer une connexion de service à service avec Microsoft Defender ATP.  
-- Déployer une stratégie de conformité d’appareil avec un type de profil de **Microsoft Defender ATP (Windows 10 Desktop)** sur des appareils dont les risques sont évalués par ATP.
+- Déployer une stratégie de configuration d’appareil avec un type de profil de **Microsoft Defender ATP (Windows 10 Desktop)** sur des appareils dont les risques sont évalués par ATP.
 
   Pour plus d’informations sur la configuration d’Intune pour utiliser ATP, consultez [Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
 

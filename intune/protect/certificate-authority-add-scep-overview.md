@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f9b78685e2bbe40a91c80fe71403123dbfaac90
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e8df5f46f411a6aee1c3040fa4a1a37fb49d5fb2
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722850"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036431"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -87,7 +87,7 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
    > [!IMPORTANT]  
    > Avant de quitter cette page, copiez la valeur de la clé secrète client et enregistrez-la pour une utilisation ultérieure avec votre implémentation d’autorité de certification tierce. Cette valeur ne s’affiche plus. Veillez à consulter les instructions de configuration souhaitées par votre autorité de certification tierce pour l’ID d’application, la clé d’authentification et l’ID de locataire.  
 
-6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com* , votre ID de locataire est **name.onmicrosoft.com**.  
+6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com*, votre ID de locataire est **name.onmicrosoft.com**.  
 
 7. Dans le volet de navigation de l’application, accédez à **Autorisations d’API** sous **Gérer**, puis sélectionnez **Ajouter une autorisation**.  
 
@@ -124,6 +124,7 @@ Les autorités de certification tierces suivantes prennent en charge Intune :
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
 Si vous êtes une autorité de certification tierce intéressée par l’intégration de votre produit à Intune, passez en revue les instructions de l’API :

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e9b5eb15cf446b317818a93baa075cdbd33afd2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19389a21aa28f5fa957f62c988753f46bf1bc731
+ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723305"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008350"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -31,6 +31,9 @@ Vous pouvez configurer Intune de façon à inscrire des appareils iOS achetés d
 Pour activer l’inscription DEP, vous utilisez à la fois le portail Intune et le portail DEP Apple. Une liste de numéros de série ou un numéro de bon de commande est nécessaire pour que vous puissiez affecter des appareils à Intune à des fins de gestion. Vous créez des profils d’inscription DEP contenant les paramètres appliqués aux appareils lors de l’inscription.
 
 D’ailleurs, l’inscription DEP ne fonctionne pas avec le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
+
+> [!NOTE]
+> DEP définit les configurations d’appareils qui ne peuvent pas être supprimées par l'utilisateur final. Par conséquent, avant la [migration vers DEP](../fundamentals/migration-guide-considerations.md), l’appareil doit être effacé pour être remis dans un état prêt à l'emploi (neuf).
 
 ## <a name="dep-and-the-company-portal"></a>DEP et le Portail d'entreprise
 
@@ -110,7 +113,7 @@ Dans le portail Azure d’Intune, fournissez l’ID Apple pour référence ulté
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Étape 4. Chargez votre jeton et choisissez des balises d’étendue.
 
 1. Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem) et choisissez **Ouvrir**.
-2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)** , puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
+2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)**, puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
 3. Choisissez **Créer**.
 
 Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.

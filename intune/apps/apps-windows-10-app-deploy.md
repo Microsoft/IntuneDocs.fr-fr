@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 04e943f573fb2485a2ef7f1e3245f08d4222d142
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724969"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830562"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -36,6 +36,8 @@ Les applications métier et Microsoft Store pour Entreprises sont les types d’
 > - Pour Windows 10 1709, [21 juin 2018 - KB4284822 (build du système d’exploitation 16299.522)](https://support.microsoft.com/help/4284822).
 >
 > Seul le système Windows 10 1803 et plus prennent en charge l’installation d’applications lorsqu’aucun utilisateur principal n’est associé.
+>
+> Le déploiement d'applications métier n'est pas pris en charge sur les appareils exécutant les éditions Windows 10 Famille.
 
 ## <a name="windows-10-line-of-business-apps"></a>Applications métier Windows 10
 

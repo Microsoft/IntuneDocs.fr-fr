@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 593c2d2b509047115ebeb3415393d6112484a6a9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 21192d259de0711ad38fa35b294ea82c7d913292
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724982"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036498"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -30,6 +30,9 @@ ms.locfileid: "71724982"
 
 > [!NOTE]
 > Cette fonctionnalité de gestion d’application prend en charge les architectures de système d’exploitation 32 bits et 64 bits pour les applications Windows.
+
+> [!IMPORTANT]
+> Lors du déploiement d'applications Win32, pensez à utiliser exclusivement [Intune Management Extension](../apps/intune-management-extension.md), en particulier si vous avez un programme d'installation d'applications Win32 à plusieurs fichiers. Si vous combinez l’installation des applications Win32 et des applications métier au cours de l’accord de mise en œuvre AutoPilot, l’installation de l’application peut échouer.  
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -89,7 +92,7 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 
 ### <a name="process-flow-to-add-a-win32-app-to-intune"></a>Flux de processus pour ajouter une application Win32 à Intune
 
-   ![Flux de processus pour ajouter une application Win32 à Intune](./media/apps-win32-app-management/add-win32-app.svg)
+<img alt="Process flow to add a Win32 app to Intune" src="./media/apps-win32-app-management/add-win32-app.svg" width="500">
 
 ### <a name="add-a-win32-app-to-intune"></a>Ajouter une application Win32 à Intune
 
