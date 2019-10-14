@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/29/2019
+ms.date: 10/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 149da4c5aafc436156b7b29566bb5d792506de7c
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734789"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251543"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -100,7 +100,7 @@ Ces paramètres utilisent les fournisseurs de service de configuration [Connecti
 - **Configuration manuelle du Wi-Fi** : **Bloquer** empêche les appareils de se connecter au réseau Wi-Fi en dehors des réseaux installés par serveur MDM. **Non configuré** (valeur par défaut) permet aux utilisateurs finaux d’ajouter et de configurer leurs propres SSID réseau de connexions Wi-Fi.
 - **Intervalle de recherche de Wi-Fi** : entrez la fréquence à laquelle les appareils recherchent des réseaux Wi-Fi. Entrez une valeur comprise entre 1 (plus fréquent) et 500 (moins fréquent). La valeur par défaut est `0` (zéro).
 
-### <a name="bluetooth"></a>BlueTooth
+### <a name="bluetooth"></a>Bluetooth
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth), qui liste également les éditions de Windows prises en charge.
 
@@ -157,7 +157,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Ent
   - **Confidentialité** : **Bloquer** empêche l’accès à la zone Confidentialité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
   - **Mise à jour et sécurité** : **Bloquer** empêche l’accès à la zone Mise à jour et sécurité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
 
-## <a name="display"></a>Affichage
+## <a name="display"></a>Écran
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Display](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), qui liste également les éditions de Windows prises en charge.
 
@@ -327,7 +327,7 @@ Ce profil de restrictions d’appareil est directement lié au profil de kiosque
 - **Autoriser le changement des Favoris** : **Oui** (valeur par défaut) utilise le paramètre par défaut du système d’exploitation, qui autorise les utilisateurs à modifier la liste. **Non** empêche les utilisateurs d’ajouter, d’importer, de trier ou de modifier la liste des favoris.
   - **Liste Favoris** : ajouter une liste d’URL au fichier des favoris. Par exemple, ajoutez `http://contoso.com/favorites.html`.
 - **Synchroniser les favoris entre les navigateurs Microsoft (Desktop uniquement)**  : **Oui** force Windows à synchroniser les Favoris entre Internet Explorer et Microsoft Edge. Les ajouts, suppressions, modifications et changements d’ordre dans les favoris sont partagés entre les navigateurs.  **Non** (valeur par défaut) utilise le comportement par défaut du système d’exploitation, qui peut donner aux utilisateurs le choix de synchroniser les favoris entre les navigateurs.
-- **Moteur de recherche par défaut** : choisir le moteur de recherche par défaut sur l’appareil. Les utilisateurs finaux peuvent changer cette valeur à tout moment. Les options disponibles sont les suivantes :
+- **Moteur de recherche par défaut** : choisir le moteur de recherche par défaut sur l’appareil. Les utilisateurs finaux peuvent modifier cette valeur à tout moment. Les options disponibles sont les suivantes :
   - Moteur de recherche dans les paramètres client Microsoft Edge
   - Bing
   - Google
@@ -443,7 +443,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Dev
 Vous pouvez ajouter des applications qui doivent avoir un comportement de confidentialité différent de celui défini dans « Confidentialité par défaut ».
 
 - **Nom du package** : nom de famille du package d'application.
-- **Nom de l’application ** : nom de l’application.
+- **Nom de l’application**  : nom de l’application.
 
 ### <a name="exceptions"></a>Exceptions
 
@@ -574,7 +574,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sta
 - **Mode de l’écran de démarrage** : choisir comment afficher l’écran de démarrage. Les options disponibles sont les suivantes :
   - **Défini par l’utilisateur** : ne force pas la taille de Démarrer. Les utilisateurs peuvent définir la taille.
   - **Plein écran** : force une taille en plein écran de Démarrer.
-  - **Ne pas utiliser le plein écran ** : force une taille non-plein écran de Démarrer.
+  - **Ne pas utiliser le plein écran**  : force une taille non-plein écran de Démarrer.
 - **Éléments ouverts récemment dans les listes de raccourcis** : **Bloquer** masque les listes de raccourcis dans le menu Démarrer et la barre des tâches. Le bouton bascule correspondant dans l’application Paramètres est également désactivé. **Non configuré** (valeur par défaut) affiche les éléments récemment ouverts dans les listes de raccourcis.
 - **Liste d’applications**: choisissez comment les listes d’applications sont affichées. Les options disponibles sont les suivantes :
   - **Défini par l’utilisateur** : aucun paramètre n’est forcé. Les utilisateurs choisissent la façon dont la liste d’applications est présentée sur l’appareil.
@@ -665,29 +665,55 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), qui liste également les éditions de Windows prises en charge.
 
-- **Surveillance en temps réel** : **Activer** désactive la recherche en temps réel des logiciels malveillants, logiciels espions et autres logiciels indésirables. **Non configuré** (par défaut) autorise cette fonctionnalité.
+- **Analyse en temps réel** : **Activer** active la recherche en temps réel des logiciels malveillants, logiciels espions et autres logiciels indésirables. Les utilisateurs ne peuvent pas la désactiver. 
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Analyse du comportement** : **Activer** désactive la recherche par Defender de certains modèles connus d’activité suspecte sur les appareils. **Non configuré** (valeur par défaut) autorise l’analyse du comportement de Windows Defender.
+- **Analyse du comportement** : **Activer** active l’analyse du comportement et vérifie certains modèles connus d’activité suspecte sur les appareils. Les utilisateurs ne peuvent pas désactiver l’analyse du comportement. 
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active l’analyse du comportement et permet aux utilisateurs de le modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Système NIS (Network Inspection System)** : le système NIS vous aide à vous protéger contre les attaques réseau. Il utilise les signatures de vulnérabilités connues fournies par le Microsoft Endpoint Protection Center pour faciliter la détection et le blocage du trafic malveillant.
 
-  **Non configuré** (valeur par défaut) désactive cette fonctionnalité. Les utilisateurs ne sont pas bloqués pour se connecter à des vulnérabilités connues. Lorsque la valeur est définie sur **activer**, la protection réseau et le blocage réseau sont activés, et les utilisateurs ne peuvent pas le désactiver. La connexion des utilisateurs aux vulnérabilités connues est bloquée.
+  **Activer** active la protection réseau et le blocage réseau. Les utilisateurs ne peuvent pas la désactiver. Lorsqu’il est activé, les utilisateurs ne peuvent pas se connecter aux vulnérabilités connues.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active NIS et permet aux utilisateurs de le modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Analyser tous les téléchargements**: **non configuré** (par défaut) : Defender analyse tous les fichiers téléchargés à partir d’Internet. Lorsque cette option est **activée, cette**fonctionnalité est désactivée. Par conséquent, Defender n’analyse pas tous les fichiers Internet téléchargés.
+- **Analyser tous les téléchargements**: **activer** active ce paramètre et Defender analyse tous les fichiers téléchargés à partir d’Internet. Les utilisateurs ne peuvent pas désactiver ce paramètre. 
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
-- **Analyser les scripts chargés dans les navigateurs web Microsoft** : **Non configuré** (valeur par défaut) permet à Defender d’analyser les scripts utilisés dans Internet Explorer. **Activer** empêche cette analyse.
+- **Analyser les scripts chargés dans les navigateurs web Microsoft** : **Activer** permet à Defender d’analyser les scripts utilisés dans Internet Explorer. Les utilisateurs ne peuvent pas désactiver ce paramètre. 
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
-- **Accès de l’utilisateur final à Defender** : **Bloquer** masque l’interface utilisateur de Windows Defender aux utilisateurs finaux. Toutes les notifications de Windows Defender sont également supprimées. **Non configuré** (valeur par défaut) autorise l’accès utilisateur à l’interface utilisateur de Windows Defender. Quand ce paramètre est modifié, le changement est appliqué au prochain redémarrage de l’ordinateur de l’utilisateur final.
+- **Accès de l’utilisateur final à Defender** : **Bloquer** masque l’interface utilisateur de Microsoft Defender aux utilisateurs finaux. Toutes les notifications de Microsoft Defender sont également supprimées.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous bloquez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à l’utilisateur d’accéder à l’interface utilisateur de Microsoft Defender et permet aux utilisateurs de le modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
+
+  Quand ce paramètre est modifié, le changement est appliqué au prochain redémarrage de l’ordinateur de l’utilisateur final.
 
   [CSP Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
@@ -714,31 +740,55 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   [CSP Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Limite de l'utilisation du processeur pendant une analyse** : limitez la quantité de ressources du processeur que les analyses sont autorisées à utiliser, de `0` à `100`.
-- **Analyser les fichiers d’archive**: **permet** à l’option de désactiver Defender d’analyser les fichiers d’archive, tels que les fichiers zip ou CAB. **Non configuré** (valeur par défaut) autorise cette analyse.
+- **Analyser les fichiers d’archive**: **active** active Defender afin qu’il analyse les fichiers d’archive, tels que les fichiers zip ou CAB. Les utilisateurs ne peuvent pas désactiver ce paramètre.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette analyse et permet aux utilisateurs de la modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Analyser les e-mails entrants** : **Activer** permet à Defender d’analyser les e-mails quand ils arrivent sur l’appareil. **Non configuré** (valeur par défaut) empêche l’analyse des e-mails.
+- **Analyser les e-mails entrants** : **Activer** permet à Defender d’analyser les e-mails quand ils arrivent sur l’appareil. Lorsqu’il est activé, le moteur analyse les fichiers de messagerie et de boîte aux lettres pour analyser le corps et les pièces jointes du courrier. Vous pouvez analyser les formats. pst (Outlook),. dbx,. mbx, MIME (Outlook Express) et BinHex (Mac).
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation désactive cette analyse et permet aux utilisateurs de la modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Analyser les disques amovibles lors d’une analyse complète** : **Activer** empêche les analyses complètes des lecteurs amovibles. **Non configuré** (valeur par défaut) permet à Defender d’analyser les lecteurs amovibles, tels que les clés USB.
+- **Analyser les lecteurs amovibles lors d’une analyse complète**: **active** active les analyses de lecteur amovibles Defender pendant une analyse complète. Les utilisateurs ne peuvent pas désactiver ce paramètre.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à Defender d’analyser les lecteurs amovibles, tels que les clés USB, et permet aux utilisateurs de modifier ce paramètre.
 
   Pendant une analyse rapide, les lecteurs amovibles peuvent toujours être analysés.
 
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
+
   [CSP Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
-- **Analyser les lecteurs réseau mappés lors d’une analyse complète** : **Activer** permet à Defender d’analyser les fichiers sur un lecteur réseau mappé. **Non configuré** (valeur par défaut) désactive l’analyse complète. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
+- **Analyser les lecteurs réseau mappés lors d’une analyse complète** : **Activer** amène Defender à analyser les fichiers sur des lecteurs réseau mappés. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers. Les utilisateurs ne peuvent pas désactiver ce paramètre.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
 
   Pendant une analyse rapide, les lecteurs réseau mappés peuvent toujours être analysés.
 
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
+
   [CSP Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Analyser les fichiers ouverts à partir de dossiers réseau** : **Non configuré** (valeur par défaut) permet à Defender d’analyser les fichiers sur des lecteurs réseau partagés, tels que des fichiers accessibles à partir d’un chemin UNC. **Activer** empêche cette analyse. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
+- **Analyser les fichiers ouverts à partir de dossiers réseau**: l' **activation permet** à Defender d’analyser les fichiers ouverts à partir de dossiers réseau ou de lecteurs réseau partagés, tels que les fichiers auxquels vous accédez à partir d’un chemin UNC. Les utilisateurs ne peuvent pas désactiver ce paramètre. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation analyse les fichiers ouverts à partir de dossiers réseau et permet aux utilisateurs de les modifier.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
-- **Protection du cloud** : **Non configuré** (valeur par défaut) autorise Microsoft Active Protection Service à recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. **Activer** bloque cette fonctionnalité.
+- **Protection du cloud** : **Activer** active Microsoft Active Protection Service pour recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. Les utilisateurs ne peuvent pas modifier ce paramètre. 
+
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet au Microsoft Active Protection Service de recevoir des informations et permet aux utilisateurs de modifier ce paramètre.
+
+  Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
   [CSP Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 

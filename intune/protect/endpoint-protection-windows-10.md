@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b9b9119294fe0757671568eb6b627974796b2de
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 22e3779cd0772753ccd8843cd1f1ff38617298d6
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732722"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163578"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Paramètres Windows 10 (et versions ultérieures) pour protéger les appareils à l’aide d’Intune  
 
@@ -161,7 +161,7 @@ Ces paramètres s’appliquent à tous les types de réseaux.
   **Par défaut** : Non configuré  
   Fournisseur CSP de pare-feu : [MdmStore/global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)  
 
-  choisissez la façon dont l’appareil vérifie la liste de révocation de certificats. Les options sont les suivantes :  
+  choisissez la façon dont l’appareil vérifie la liste de révocation de certificats. Les options disponibles sont les suivantes :  
   - **Désactiver la vérification de la liste de révocation**  
   - **Échec de la vérification de la liste de révocation de certificats sur le certificat révoqué uniquement**  
   - **Échec de la vérification de la liste de révocation de certificats en cas d’erreur**.  
@@ -179,14 +179,14 @@ Ces paramètres s’appliquent à tous les types de réseaux.
   **Par défaut** : Non configuré  
   Fournisseur CSP de pare-feu : [MdmStore/global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
-  Spécifiez comment la mise à l’échelle des logiciels côté réception est activée pour la réception chiffrée et efface le texte pour le scénario de passerelle du tunnel IPsec. Ce paramètre confirme la préservation de l’ordre des paquets. Les options sont les suivantes :  
+  Spécifiez comment la mise à l’échelle des logiciels côté réception est activée pour la réception chiffrée et efface le texte pour le scénario de passerelle du tunnel IPsec. Ce paramètre confirme la préservation de l’ordre des paquets. Les options disponibles sont les suivantes :  
   - **Non configuré**  
   - **Désactiver tous les paquets de mise en file d’attente**  
   - **Mise en file d’attente des paquets chiffrés entrants uniquement**  
   - **Les paquets de file d’attente après le déchiffrement sont exécutés pour le transfert uniquement**  
   - **Configurer les paquets entrants et sortants**  
 
-### <a name="network-settings"></a>Paramètres réseau  
+### <a name="network-settings"></a>Paramètres du réseau  
 
 Les paramètres suivants sont répertoriés dans cet article une seule fois, mais tous s’appliquent aux trois types de réseau spécifiques :  
 - **Réseau de domaine (espace de travail)**  
@@ -776,26 +776,27 @@ Ces paramètres s’appliquent spécifiquement aux lecteurs de données amovible
  
 ## <a name="windows-defender-exploit-guard"></a>Windows Defender Exploit Guard  
 
-Utilisez [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) pour gérer et réduire la surface d’attaque des applications utilisées par vos employés.  
+Utilisez la [protection contre](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) les attaques pour gérer et réduire la surface d’attaque des applications utilisées par vos employés.  
 
 ### <a name="attack-surface-reduction"></a>Règles de réduction de la surface d’attaque  
 
-Pour plus d’informations sur les règles de réduction de la *surface d’attaque* , consultez [réduire les surfaces d’attaque avec Windows Defender exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) dans la documentation Windows Defender exploit Guard.  
+Les règles de réduction de la surface d’attaque aident à empêcher les comportements que les logiciels malveillants utilisent souvent pour infecter des ordinateurs avec du code malveillant.  
 
 #### <a name="attack-surface-reduction-rules"></a>Règles de réduction de la surface d'attaque  
 
 - **Marquer le vol des informations d’identification du sous-système de l’autorité de sécurité locale Windows**  
   **Par défaut** : Non configuré  
-  Exploit Guard : [règles de réduction](https://go.microsoft.com/fwlink/?linkid=874499) de la surface d’attaque
+  Règle : [bloquer le vol des informations d’identification du sous-système de l’autorité de sécurité locale Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
 
   Cette fonctionnalité contribue à empêcher les actions et les applications généralement utilisées par les programmes malveillants pour infecter les ordinateurs.  
+
   - **Non configuré**  
   - **Activer** : marquer le vol des informations d’identification du sous-système de l’autorité de sécurité locale Windows (lsass.exe).  
   - **Auditer uniquement**  
 
 - **Création de processus à partir d’Adobe Reader (bêta)**  
   **Par défaut** : Non configuré  
-  Exploit Guard : [règles de réduction](https://go.microsoft.com/fwlink/?linkid=853979) de la surface d’attaque  
+  Règle : [empêcher Adobe Reader de créer des processus enfants](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Non configuré**  
   - **Activer** -bloquer les processus enfants qui sont créés à partir d’Adobe Reader.  
@@ -807,7 +808,7 @@ Empêchez les applications Office d’effectuer les actions suivantes :
 
 - **Applications Office effectuant des injections dans d’autres processus (aucune exception)**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872974)  
+  Règle : [empêcher les applications Office d’injecter du code dans d’autres processus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Non configuré**  
   - **Bloquer** : empêchez les applications Office d’injecter dans d’autres processus.  
@@ -815,7 +816,7 @@ Empêchez les applications Office d’effectuer les actions suivantes :
 
 - **Applications/macros Office créant du contenu exécutable**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872975)  
+  Règle : [empêcher les applications Office de créer du contenu exécutable](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Non configuré**  
   - **Bloquer** : empêchez les applications et les macros Office de créer du contenu exécutable.  
@@ -823,7 +824,7 @@ Empêchez les applications Office d’effectuer les actions suivantes :
 
 - **Applications Office lançant des processus enfants**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872976)  
+  Règle : [bloquer toutes les applications Office de la création de processus enfants](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Non configuré**  
   - **Bloquer** : empêchez les applications Office de lancer des processus enfants.  
@@ -831,7 +832,7 @@ Empêchez les applications Office d’effectuer les actions suivantes :
   
 - **Importations Win32 de code macro Office**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872977)  
+  Règle : [bloquer les appels d'API Win32 à partir des macros Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Non configuré**  
   - **Bloc-bloquer** les importations Win32 à partir du code macro dans Office.  
@@ -839,7 +840,7 @@ Empêchez les applications Office d’effectuer les actions suivantes :
   
 - **Création de processus à partir de produits de communication Office**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=874499)  
+  Règle : [empêcher l’application de communication Office de créer des processus enfants](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Non configuré**  
   - **Activer** -bloquer la création de processus enfants à partir d’applications Office Communications.  
@@ -851,7 +852,7 @@ Bloquez les éléments suivants pour empêcher les menaces sur les scripts :
 
 - **Code js/vbs/ps/macro brouillé**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872978)    
+  Règle : [bloquer l’exécution de scripts potentiellement obfusqués](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Non configuré**  
   - **Bloquer : bloquer** tout code js/vbs/PS/macro masqué.  
@@ -859,7 +860,7 @@ Bloquez les éléments suivants pour empêcher les menaces sur les scripts :
 
 - **js/vbs, exécution de la charge utile téléchargée à partir d’Internet (aucune exception)**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872979)  
+  Règle : [empêcher JavaScript ou VBScript de lancer du contenu exécutable téléchargé](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Non configuré**  
   - **Bloc-bloc** js/vbs à partir de l’exécution de la charge utile téléchargée à partir d’Internet.  
@@ -867,7 +868,7 @@ Bloquez les éléments suivants pour empêcher les menaces sur les scripts :
 
 - **Création de processus à partir des commandes PSExec et WMI**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=874500)  
+  Règle : [bloquer les créations de processus issues des commandes PSExec et WMI](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Non configuré**  
   - **Bloquer** : bloquer les créations de processus issues des commandes PSExec et WMI.  
@@ -876,7 +877,7 @@ Bloquez les éléments suivants pour empêcher les menaces sur les scripts :
 
 - **Processus non approuvés et non signés exécutés à partir d’USB**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=874502)    
+  Règle : [bloquer les processus non approuvés et non signés exécutés à partir d’un lecteur USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Non configuré**  
   - **Bloquer** : bloquer les processus non approuvés et non signés exécutés à partir d’USB.  
@@ -884,7 +885,7 @@ Bloquez les éléments suivants pour empêcher les menaces sur les scripts :
   
 - **Fichiers exécutables qui ne répondent pas à des critères de prédominance, d’âge ou de liste approuvée**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=874503)    
+  Règle : [bloquer l’exécution des fichiers exécutables, sauf s’ils répondent à des critères de prédominance, d’âge ou de liste approuvée](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Non configuré**  
   - **Bloquer** : bloquer l’exécution des fichiers exécutables sauf s’ils répondent à des critères de prédominance, d’âge ou de liste approuvée.  
@@ -896,7 +897,7 @@ Bloquez ce qui suit pour empêcher les menaces sur les e-mails :
 
 - **Exécution du contenu exécutable (exe, dll, ps, js, vbs, etc.) supprimé de la messagerie (messagerie web/client de messagerie) (aucune exception)**  
   **Par défaut** : Non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=872980)  
+  Règle : [bloquer le contenu exécutable du client de messagerie et de la messagerie web](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Non configuré**  
   - **Bloquer** : bloquer l’exécution du contenu exécutable (exe, dll, ps, js, vbs, etc.) supprimé de la messagerie (messagerie web/client de messagerie).  
@@ -906,7 +907,7 @@ Bloquez ce qui suit pour empêcher les menaces sur les e-mails :
 
 - **Protection avancée contre les ransomware**  
   Par défaut : non configuré  
-  [Documentation exploit Guard](https://go.microsoft.com/fwlink/?linkid=874504)  
+  Règle : [utiliser une protection avancée contre les rançongiciels](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Non configuré**  
   - **Activer** : utiliser une protection agressive contre les ransomware.  
@@ -932,7 +933,7 @@ Bloquez ce qui suit pour empêcher les menaces sur les e-mails :
 
 ### <a name="controlled-folder-access"></a>Accès contrôlé aux dossiers  
 
-[Protégez vos données importantes](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) contre des applications malveillantes et des menaces, telles que les ransomware.  
+[Protégez vos données importantes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) contre des applications malveillantes et des menaces, telles que les ransomware.  
 
 - **Protection des dossiers**  
   **Par défaut** : Non configuré  
@@ -979,7 +980,7 @@ Bloquez les connexions sortantes à partir de n’importe quelle application ver
 - **Télécharger XML**  
   **Par défaut** : *non configuré*  
 
-  Pour utiliser exploit protection afin de [protéger les appareils contre les attaques](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), créez un fichier XML qui comprend les paramètres d’atténuation du système et des applications de votre choix. Il existe deux méthodes pour créer le fichier XML :  
+  Pour utiliser exploit protection afin de [protéger les appareils contre les attaques](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), créez un fichier XML qui comprend les paramètres d’atténuation du système et des applications de votre choix. Il existe deux méthodes pour créer le fichier XML :  
 
   - *PowerShell* : utilisez une ou plusieurs des applets de commande PowerShell *Get-ProcessMitigation*, *Set-ProcessMitigation* et *ConvertTo-ProcessMitigationPolicy*. Les applets de commande permettent de configurer les paramètres d’atténuation et de les exporter sous forme d’une représentation XML.  
 
@@ -1246,7 +1247,7 @@ Utilisez ces options pour configurer les paramètres de sécurité locale sur le
   
   Définir un autre nom de compte à associer à l’identificateur de sécurité (SID) pour le compte « Invité ».  
 
-### <a name="devices"></a>Appareils  
+### <a name="devices"></a>Périphériques  
 
 - **Retirer l’appareil de la station d’accueil sans ouverture de session**  
   **Par défaut** : Non configuré  
@@ -1311,7 +1312,7 @@ Utilisez ces options pour configurer les paramètres de sécurité locale sur le
   - **Forcer la fermeture de session** : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.  
   - **Déconnecter en cas de session des services Bureau à distance** : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Cette option permet à l’utilisateur d’insérer la carte à puce et de reprendre la session ultérieurement, ou sur un autre ordinateur équipé d’un lecteur de carte à puce, sans avoir à se reconnecter. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.  
 
-#### <a name="display"></a>Afficher  
+#### <a name="display"></a>Écran  
 
 - **Informations utilisateur sur l’écran de verrouillage**  
   **Par défaut** : Non configuré  

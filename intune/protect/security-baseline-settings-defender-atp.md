@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732956"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163499"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Paramètres de bases de référence de Windows Defender Advanced Threat Protection pour Intune
 
@@ -53,7 +53,7 @@ Lors de l’utilisation de Microsoft Edge, Windows Defender Application Guard pr
     **Par défaut** : oui
 
   - **Comportement du Presse-papiers** - *Paramètres/ClipboardSettings*  
-    Choisissez les actions de copier-coller autorisées entre le PC local et le navigateur virtuel Application Guard.  Les options sont les suivantes :
+    Choisissez les actions de copier-coller autorisées entre le PC local et le navigateur virtuel Application Guard.  Les options disponibles sont les suivantes :
     - *Non configuré*  
     - *Bloquer les deux* : impossible de transférer les données entre l’ordinateur et le navigateur virtuel.  
     - *Bloquer l’hôte vers le conteneur* : impossible de transférer les données à partir de l’ordinateur dans le navigateur virtuel.
@@ -86,7 +86,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 ## <a name="attack-surface-reduction"></a>Règles de réduction de la surface d’attaque  
 
 - **Les applications Office lancent un type de processus enfant**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque définie sur*Bloc*, les applications Office ne seront pas autorisées à créer des processus enfants. Les applications Office incluent Word, Excel, PowerPoint, OneNote et Access. La création d’un processus enfant est un comportement malveillant standard, en particulier pour les attaques basées sur des macros qui tentent d’utiliser des applications Office pour lancer ou télécharger des fichiers exécutables malveillants.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque définie sur*Bloc*, les applications Office ne seront pas autorisées à créer des processus enfants. Les applications Office incluent Word, Excel, PowerPoint, OneNote et Access. La création d’un processus enfant est un comportement malveillant standard, en particulier pour les attaques basées sur des macros qui tentent d’utiliser des applications Office pour lancer ou télécharger des fichiers exécutables malveillants.  
 
   **Par défaut** : bloc
 
@@ -101,7 +101,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : activer
 
 - **Type d’exécution du contenu des e-mails**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, cette règle empêche l’exécution ou le lancement des types de fichiers suivants à partir d’un email affiché dans Microsoft Outlook ou dans une messagerie Web (par exemple Gmail.com ou Outlook.com) :  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, cette règle empêche l’exécution ou le lancement des types de fichiers suivants à partir d’un email affiché dans Microsoft Outlook ou dans une messagerie Web (par exemple Gmail.com ou Outlook.com) :  
 
   - Fichiers exécutables (par exemple, .exe, .dll ou .scr)  
   - Fichiers de script (par exemple, un fichier .ps PowerShell, .vbs VisualBasic ou .js JavaScript)  
@@ -110,17 +110,17 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : bloc
 
 - **Lancement d’Adobe Reader dans un processus enfant**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : *activez* cette règle pour bloquer Adobe Reader à partir de la création d’un processus enfant. Via le piratage psychologique ou des attaques, les programmes malveillants peuvent télécharger et lancer des charges utiles supplémentaires et rompre Adobe Reader.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : *activez* cette règle pour bloquer Adobe Reader à partir de la création d’un processus enfant. Via le piratage psychologique ou des attaques, les programmes malveillants peuvent télécharger et lancer des charges utiles supplémentaires et rompre Adobe Reader.  
 
   **Par défaut** : activer
 
 - **Type de code de macro obfusqué dans les scripts**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : les programme malveillants et d’autres menaces peuvent tenter d’obfusquer ou de masquer leur code malveillant dans certains fichiers de script. Cette règle empêche l’exécution des scripts qui paraissent obfusqués.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : les programme malveillants et d’autres menaces peuvent tenter d’obfusquer ou de masquer leur code malveillant dans certains fichiers de script. Cette règle empêche l’exécution des scripts qui paraissent obfusqués.  
     
   **Par défaut** : bloc
 
 - **Type de processus USB non approuvés**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, les fichiers exécutables, non signés ou non approuvés à partir de lecteurs USB amovibles et de cartes SD ne peuvent pas s’exécuter.
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, les fichiers exécutables, non signés ou non approuvés à partir de lecteurs USB amovibles et de cartes SD ne peuvent pas s’exécuter.
 
   Les fichiers exécutables incluent :
   - Fichiers exécutables (par exemple, .exe, .dll ou .scr)
@@ -129,22 +129,22 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : bloc
 
 - **Applications Office : Type d’injection dans d’autres processus**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, les applications Office, notamment Word, Excel, PowerPoint et OneNote, ne peuvent pas injecter du code dans d’autres processus. L’injection de code est généralement utilisé par des programmes malveillants pour exécuter du code malveillant de façon à tenter de masquer l’activité depuis des moteurs d’analyse antivirus.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, les applications Office, notamment Word, Excel, PowerPoint et OneNote, ne peuvent pas injecter du code dans d’autres processus. L’injection de code est généralement utilisé par des programmes malveillants pour exécuter du code malveillant de façon à tenter de masquer l’activité depuis des moteurs d’analyse antivirus.  
 
   **Par défaut** : bloc
 
 - **Code de macro Office autorisant un type d’importation Win32**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, cette règle tente de bloquer des fichiers Office qui contiennent du code de macro que vous pouvez importer les DLL Win32. Les fichiers Office incluent Word, Excel, PowerPoint et OneNote. Les programmes malveillants peuvent utiliser du code de macro dans des fichiers Office pour importer et charger des DLL Win32, qui peuvent alors être utilisées pour effectuer des appels d’API, permettant ensuite une infection de tout le système.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque définie sur *Bloc*, cette règle tente de bloquer des fichiers Office qui contiennent du code de macro que vous pouvez importer les DLL Win32. Les fichiers Office incluent Word, Excel, PowerPoint et OneNote. Les programmes malveillants peuvent utiliser du code de macro dans des fichiers Office pour importer et charger des DLL Win32, qui peuvent alors être utilisées pour effectuer des appels d’API, permettant ensuite une infection de tout le système.  
 
   **Par défaut** : bloc
 
 - **Lancement d’applications de communication Office dans un processus enfant**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque la valeur est définie sur *Activer*, cette règle empêche Outlook de créer des processus enfants. En bloquant la création d’un processus enfant, cette règle protège contre les attaques de piratage psychologique et empêche le code d’exploitation à partir de l’utilisation abusive d’une vulnérabilité dans Outlook.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque la valeur est définie sur *Activer*, cette règle empêche Outlook de créer des processus enfants. En bloquant la création d’un processus enfant, cette règle protège contre les attaques de piratage psychologique et empêche le code d’exploitation à partir de l’utilisation abusive d’une vulnérabilité dans Outlook.  
 
   **Par défaut** : activer
 
 - **Applications Office : type de création ou de lancement de contenu exécutable**  
-  [Règle de réduction de la surface d’attaque](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) : lorsque la valeur est définie sur *Bloc*, les applications Office ne peuvent pas créer du contenu exécutable. Les applications Office incluent Word, Excel, PowerPoint, OneNote et Access.  
+  [Règle de réduction de la surface d’attaque](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) : lorsque la valeur est définie sur *Bloc*, les applications Office ne peuvent pas créer du contenu exécutable. Les applications Office incluent Word, Excel, PowerPoint, OneNote et Access.  
 
   Cette règle cible des comportements typiques utilisés par des modules complémentaires et des scripts suspects et malveillants (extensions) qui créent ou lancent des fichiers exécutables. Il s’agit d’une technique classique des programmes malveillants. L’utilisation des extensions par les applications Office est bloquée. En général, ces extensions utilisent l’hôte de script Windows (fichiers .wsh) pour exécuter des scripts qui automatisent certaines tâches ou fournissent des fonctionnalités de modules complémentaires créés par l’utilisateur.
 
@@ -207,7 +207,7 @@ Pour plus d’informations, consultez [Paramètres de stratégie de groupe Bitlo
 
   Pour vérifier si le système prend en charge la protection DMA de noyau, exécutez MSINFO32.exe sur le système et révisez le champ *Protection DMA de noyau* sur la page Résumé.  
 
-  Les options sont les suivantes : 
+  Les options disponibles sont les suivantes : 
   - *Valeur par défaut de l’appareil* : après la connexion ou le déverrouillage de l’écran, des appareils avec pilotes compatibles au remappage DMA peuvent être énumérés à tout moment. Les appareils avec pilotes compatibles au remappage DMA seront énumérés uniquement une fois que l’utilisateur déverrouille l’écran
   - *Autoriser tout* : tous les appareils PCIe compatibles DMA externes seront énumérés à tout moment
   - *Bloquer tout* : les appareils avec pilotes compatibles au remappage DMA peuvent être énumérés à tout moment. Les appareils avec pilotes compatibles au remappage DMA ne seront jamais autorisés pour démarrer et effectuer le DMA à tout moment.
@@ -273,7 +273,7 @@ Pour plus d’informations, consultez [WindowsAdvancedThreatProtection CSP](http
 ## <a name="exploit-protection"></a>Exploit Protection  
 
 - **Protection contre le code malveillant XML**  
-  Pour plus d’informations, consultez [Importer, exporter et déployer des configurations de protection contre le code malveillant](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml) dans la documentation de Windows.  
+  Pour plus d’informations, consultez [Importer, exporter et déployer des configurations de protection](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) dans la documentation de Windows.  
 
   Permet à l’administrateur informatique de diffuser une configuration qui représente les options souhaitées d’atténuation des risques pour le système et les applications auprès de tous les appareils de l’organisation. La configuration est représentée par du code XML. 
 
@@ -428,7 +428,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Defender : Niveau de blocage cloud**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) : utilisez cette stratégie pour déterminer le degré d’agressivité de l’Antivirus Windows Defender dans le blocage et l’analyse des fichiers suspects. Les options sont les suivantes :
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) : utilisez cette stratégie pour déterminer le degré d’agressivité de l’Antivirus Windows Defender dans le blocage et l’analyse des fichiers suspects. Les options disponibles sont les suivantes :
 
   - Élevé : bloque de façon agressive les fichiers inconnus tout en optimisant les performances du client (probabilité plus grande de faux positifs)
   - Plus élevé : bloque de façon agressive les fichiers inconnus et applique des mesures de protection supplémentaires (peut affecter les performances du client)
