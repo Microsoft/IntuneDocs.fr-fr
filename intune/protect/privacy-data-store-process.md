@@ -1,5 +1,6 @@
 ---
 title: Stockage et traitement des données dans Intune
+titleSuffix: Microsoft Intune
 description: Découvrez comment les données personnelles sont stockées et traitées dans Intune.
 keywords: ''
 author: ErikjeMS
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2947969c1c07d595a0a5baa48be11ba7a941424
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9c9a8bd5888ab0977d1ca553d059c1e96cccda75
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726880"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306882"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Stockage et traitement des données dans Intune
 

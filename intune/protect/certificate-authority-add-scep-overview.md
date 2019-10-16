@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8df5f46f411a6aee1c3040fa4a1a37fb49d5fb2
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4b82124fe8f6da7116c8333e293f219d7c667f9c
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036431"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310918"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
@@ -31,7 +31,7 @@ Il existe deux façons d’utiliser cette fonctionnalité : l’API open source 
 **Partie 1 : utiliser une API open source**  
 Microsoft a créé une API pour intégrer à Intune. Par le biais d’une API, vous pouvez valider des certificats, envoyer des notifications de réussite ou d’échec et utiliser SSL, en particulier la fabrique de socket SSL, pour communiquer avec Intune.
 
-L’API est disponible dans le [dépôt GitHub public d’API Intune SCEP](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) pour que vous puissiez la télécharger et l’utiliser dans vos solutions. Utilisez cette API avec des serveurs SCEP tiers pour exécuter une validation de test personnalisée par rapport à Intune avant que SCEP ne configure un certificat sur un appareil.
+L’API est disponible dans le [dépôt GitHub public d’API Intune SCEP](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) pour que vous puissiez la télécharger et l’utiliser dans vos solutions. Utilisez cette API avec des serveurs SCEP tiers pour exécuter une validation de test personnalisée par rapport à Intune avant que SCEP ne configure un certificat sur un appareil.
 
 [Intégrer à la solution de gestion Intune SCEP](scep-libraries-apis.md) fournit plus de détails sur l’utilisation de l’API, ses méthodes et le test de la solution que vous générez.
 
@@ -87,7 +87,7 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
    > [!IMPORTANT]  
    > Avant de quitter cette page, copiez la valeur de la clé secrète client et enregistrez-la pour une utilisation ultérieure avec votre implémentation d’autorité de certification tierce. Cette valeur ne s’affiche plus. Veillez à consulter les instructions de configuration souhaitées par votre autorité de certification tierce pour l’ID d’application, la clé d’authentification et l’ID de locataire.  
 
-6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com*, votre ID de locataire est **name.onmicrosoft.com**.  
+6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com* , votre ID de locataire est **name.onmicrosoft.com**.  
 
 7. Dans le volet de navigation de l’application, accédez à **Autorisations d’API** sous **Gérer**, puis sélectionnez **Ajouter une autorisation**.  
 
@@ -129,11 +129,11 @@ Les autorités de certification tierces suivantes prennent en charge Intune :
 
 Si vous êtes une autorité de certification tierce intéressée par l’intégration de votre produit à Intune, passez en revue les instructions de l’API :
 
-- [Dépôt GitHub d’API Intune SCEP](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Dépôt GitHub d’API Intune SCEP](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Instructions de l’API Intune SCEP pour les autorités de certification tierces](scep-libraries-apis.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer les profils de certificat](certificates-scep-configure.md)
-- [Dépôt GitHub d’API Intune SCEP](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Dépôt GitHub d’API Intune SCEP](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Instructions de l’API Intune SCEP pour les autorités de certification tierces](scep-libraries-apis.md)

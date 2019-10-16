@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 312aee3752525ab2898c6d4e4ea06da685d1cdec
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 308f152a585fe7b605d309943545f242031ea177
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728362"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379711"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Rechercher l’utilisateur principal d’un appareil Intune
 
@@ -46,7 +46,7 @@ L’application Portail d’entreprise s’attend à ce que le compte d’utilis
 
 Si aucun utilisateur principal n’est attribué à un appareil Intune, l’application portail d’entreprise le détecte comme un appareil partagé. Les appareils partagés sont visuellement identifiables avec une étiquette « partagé » qui apparaît sur la vignette de l’appareil. Dans ce mode, le portail d’entreprise peut toujours être utilisé pour demander et installer des applications disponibles. Toutefois, les actions en libre-service (réinitialiser/renommer/mettre hors service) ne sont pas disponibles.  
 
-Pour apparaître dans le portail d’entreprise sur les appareils partagés, les applications disponibles doivent être attribuées à un groupe d’utilisateurs. Elles sont installées dans le contexte du système ou le contexte de l’utilisateur, en fonction de la façon dont l’application a été configurée par l’administrateur informatique. Pour plus d’informations sur le contexte de l’application, consultez [Installation d’applications sur les appareils Windows 10](../apps/apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). La version 10.3.4651.0 de portail d’entreprise ou une version ultérieure est requise pour utiliser cette fonctionnalité.
+Pour apparaître dans le portail d’entreprise sur les appareils partagés, les applications disponibles doivent être attribuées à un groupe d’utilisateurs. Elles sont installées dans le contexte du système ou le contexte de l’utilisateur, en fonction de la façon dont l’application a été configurée par l’administrateur informatique. Pour plus d’informations sur le contexte de l’application, consultez [Installation d’applications sur les appareils Windows 10](../apps/apps-windows-10-app-deploy.md). La version 10.3.4651.0 de portail d’entreprise ou une version ultérieure est requise pour utiliser cette fonctionnalité.
 
 
 ## <a name="who-is-assigned-as-the-primary-user"></a>Qui est affecté en tant qu’utilisateur principal ?

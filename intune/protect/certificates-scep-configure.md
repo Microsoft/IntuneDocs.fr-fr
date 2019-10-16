@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 909dba16e04b11989caa79112c5a89fbb7c52114
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 39858a74cd9503ff40de51ab3680ccf509d25c49
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722915"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310946"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurer l’infrastructure pour prendre en charge SCEP avec Intune  
   
@@ -37,7 +37,7 @@ Avant de continuer, vous devez avoir [créé et déployé un *profil de* certifi
 
 ### <a name="servers-and-server-roles"></a>Serveurs et rôles serveur  
 L’infrastructure locale suivante doit s’exécuter sur des serveurs joints à votre domaine Active Directory, à l’exception du serveur proxy d’application web.  
-- **Autorité de certification** : Utilisez une autorité de certification d’entreprise des services de certificats Active Directory Microsoft qui s’exécute sur une édition Entreprise de Windows Server 2008 R2 avec Service Pack 1 ou ultérieur. La version de Windows Server que vous utilisez doit toujours bénéficier du support Microsoft. Une autorité de certification autonome n'est pas prise en charge. Pour plus d’informations, consultez [Installer l’autorité de certification](http://technet.microsoft.com/library/jj125375.aspx). Si votre autorité de certification exécute Windows Server 2008 R2 SP1, vous devez [installer le correctif logiciel de KB2483564](http://support.microsoft.com/kb/2483564/).  
+- **Autorité de certification** : Utilisez une autorité de certification d’entreprise des services de certificats Active Directory Microsoft qui s’exécute sur une édition Entreprise de Windows Server 2008 R2 avec Service Pack 1 ou ultérieur. La version de Windows Server que vous utilisez doit toujours bénéficier du support Microsoft. Une autorité de certification autonome n'est pas prise en charge. Pour plus d’informations, consultez [Installer l’autorité de certification](https://technet.microsoft.com/library/jj125375.aspx). Si votre autorité de certification exécute Windows Server 2008 R2 SP1, vous devez [installer le correctif logiciel de KB2483564](https://support.microsoft.com/kb/2483564/).  
 
 - **Rôle serveur NDES** : Vous devez configurer un rôle serveur de service d’inscription de périphérique réseau (NDES) sur Windows Server 2012 R2 ou ultérieur. Dans une section ultérieure de cet article, nous vous guidons tout au long de l’[installation de NDES](#set-up-ndes).  
 
@@ -45,7 +45,7 @@ L’infrastructure locale suivante doit s’exécuter sur des serveurs joints à
   - Vous ne pouvez pas utiliser le service NDES installé sur le serveur qui héberge l’AC d’entreprise.  
   - Vous installez Microsoft Intune Certificate Connector sur le même serveur qui héberge NDES.  
 
-  Pour plus d'informations sur NDES, consultez [Guide du service d’inscription de périphérique réseau](http://technet.microsoft.com/library/hh831498.aspx) dans la documentation de Windows Server et [Utilisation d’un module de stratégie avec le service d’inscription de périphérique réseau](https://technet.microsoft.com/library/dn473016.aspx).  
+  Pour plus d'informations sur NDES, consultez [Guide du service d’inscription de périphérique réseau](https://technet.microsoft.com/library/hh831498.aspx) dans la documentation de Windows Server et [Utilisation d’un module de stratégie avec le service d’inscription de périphérique réseau](https://technet.microsoft.com/library/dn473016.aspx).  
 
 - **Microsoft Intune Certificate Connector** : nécessaire pour utiliser des profils de certificat SCEP avec Intune. Cet article vous guide tout au long de l’[installation de ce connecteur](#install-the-intune-certificate-connector).  
 
@@ -61,7 +61,7 @@ L’infrastructure locale suivante est facultative :
 
 - **Serveur proxy d’application web** (facultatif) : Utilisez un serveur qui exécute Windows Server 2012 R2 ou ultérieur comme serveur proxy d’application web pour publier votre URL NDES sur Internet.  Cela permet à la fois aux appareils sur intranet et Internet d’obtenir des certificats.
 
-  Le serveur qui héberge le proxy d'application web [doit installer une mise à jour](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) qui permet la prise en charge des longues URL utilisées par le service d'inscription d'appareil réseau. Cette mise à jour est incluse dans le [correctif cumulatif de décembre 2014](http://support.microsoft.com/kb/3013769), ou individuellement à partir de l'article [KB3011135](http://support.microsoft.com/kb/3011135).  
+  Le serveur qui héberge le proxy d'application web [doit installer une mise à jour](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) qui permet la prise en charge des longues URL utilisées par le service d'inscription d'appareil réseau. Cette mise à jour est incluse dans le [correctif cumulatif de décembre 2014](https://support.microsoft.com/kb/3013769), ou individuellement à partir de l'article [KB3011135](https://support.microsoft.com/kb/3011135).  
 
   Le serveur proxy d’application web doit avoir un certificat SSL qui correspond au nom publié sur les clients externes et approuver le certificat SSL utilisé sur l’ordinateur qui héberge le service NDES. Ces certificats permettent au serveur proxy d’application web de mettre fin à la connexion SSL à partir des clients et de créer une connexion SSL au service NDES.  
 

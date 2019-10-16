@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b41405e2256d6d2608b05a9c7e8a40cbb3ab349
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0d4bf6a52fd860695433e0020e9ec7390f98eca6
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724293"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314635"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
@@ -38,7 +38,7 @@ Cet article présente les étapes de la création d’un modèle pour les appare
 
 - Certains de ces paramètres sont disponibles à partir de la version 1703 de Windows 10 (RS2). Certains paramètres ne sont pas inclus dans toutes les éditions de Windows. Pour une expérience optimale, il est recommandé d’utiliser Windows 10 Entreprise version 1903 (19H1) et les versions ultérieures.
 
-- Les paramètres Windows utilisent des [fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Les fournisseurs de services de configuration fonctionnent sur les différentes éditions de Windows, telles que les éditions Famille, Professionnel et Entreprise. Pour voir si un fournisseur de services de configuration fonctionne sur une édition spécifique, accédez à [Fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
+- Les paramètres Windows utilisent des [fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). Les fournisseurs de services de configuration fonctionnent sur les différentes éditions de Windows, telles que les éditions Famille, Professionnel et Entreprise. Pour voir si un fournisseur de services de configuration fonctionne sur une édition spécifique, accédez à [Fournisseurs de services de configuration de stratégie Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-a-template"></a>Créer un modèle
 

@@ -210,7 +210,7 @@
     - name: Dépannage
       items:
         - name: Résoudre les problèmes de stratégies et de profils
-          href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?context=./context/pr-context.yml
+          href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?toc=/intune/protect/toc.json&bc=/protect/breadcrumb/toc.json
         - name: Résoudre les problèmes d’accès conditionnel
           href: troubleshoot-conditional-access.md
         - name: Résoudre les problèmes liés à du connecteur de certificats

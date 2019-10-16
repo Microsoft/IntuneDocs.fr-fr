@@ -158,7 +158,7 @@
                   href: app-protection-policy-settings-android.md
                 - name: Paramètres iOS
                   href: app-protection-policy-settings-ios.md
-                - name: Actions d’accès
+                - name: Lancement conditionnel
                   href: app-protection-policies-access-actions.md
                 - name: Exceptions du transfert de données
                   href: app-protection-policies-exception.md
