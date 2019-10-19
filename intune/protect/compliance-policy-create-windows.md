@@ -8,18 +8,19 @@ manager: dougeby
 ms.date: 10/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 493db6299aa8242d0ca6ab669b313e85d0dc14c6
-ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
+ms.openlocfilehash: 2e427fe0889dcfb51ba5be322ed4db566cc29e9d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251587"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502468"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Windows de 10 et ultérieur pour marquer les appareils comme étant conformes ou non conformes avec Intune
 
@@ -39,7 +40,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
 
 [Créer une stratégie de conformité](create-compliance-policy.md#create-the-policy). Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
 
-## <a name="device-health"></a>Intégrité des périphériques
+## <a name="device-health"></a>Device health
 
 - **Exiger BitLocker** : quand la valeur est **Exiger**, l’appareil peut protéger les données stockées sur le lecteur contre tout accès non autorisé quand le système est à l’arrêt ou en veille prolongée. Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le module de plateforme sécurisée (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il contribue également à prévenir la falsification d’un ordinateur, même si celui-ci est laissé sans assistance, perdu ou volé. Si l’ordinateur est équipé d’un module de plateforme sécurisée compatible, BitLocker utilise ce module pour verrouiller les clés de chiffrement qui protègent les données. Par conséquent, les clés sont inaccessibles tant que le TPM n’a pas vérifié l’état de l’ordinateur.
 

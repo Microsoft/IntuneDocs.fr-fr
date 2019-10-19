@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 06/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b472d26c9f20cbd678ab118b87746e47a613743
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 5c24c120b033a4db0162e985ef185932dd931eda
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735049"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506920"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils macOS dans Microsoft Intune
 
@@ -58,7 +59,7 @@ Cet article fournit des conseils sur l’utilisation d’Apple Configurator et d
 - **Nom du profil de configuration personnalisé** : entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
 - **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
 
-  Vous pouvez également ajouter des jetons d’appareil à vos fichiers `.mobileconfig`. Les jetons de périphérique sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte ressemble à `123456789ABC`, qui est propre à chaque périphérique. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
+  Vous pouvez également ajouter des jetons d’appareil à vos fichiers `.mobileconfig`. Les jetons de périphérique sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte présente un aspect similaire à `123456789ABC`, qui est propre à chaque périphérique. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
 
   > [!NOTE]
   > Les variables ne sont pas validées dans l’interface utilisateur et respectent la casse. Par conséquent, vous pouvez voir des profils enregistrés avec une entrée incorrecte. Par exemple, si vous entrez `{{DeviceID}}` au lieu de `{{deviceid}}`, la chaîne littérale s’affiche à la place de l’ID unique de l’appareil. Veillez à entrer les informations correctes.

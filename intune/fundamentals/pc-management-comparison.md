@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 217b93fcd78010428ce427a755e6c0c20f4372df
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3ab16d79549a7fe7b0249c0c4af79ed56817ecec
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736271"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510048"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Les organisations peuvent utiliser Microsoft Intune pour gérer les PC Windows en tant qu’appareils mobiles avec la gestion des appareils mobiles (MDM) ou en tant qu’ordinateurs avec le logiciel client Intune.  Microsoft recommande l’utilisation de la solution MDM dans la mesure du possible. Toutefois, pour vous aider à mieux comprendre les différences entre ces options, le tableau suivant compare les deux options de gestion.
 

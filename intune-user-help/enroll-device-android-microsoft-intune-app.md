@@ -9,6 +9,7 @@ ms.date: 08/07/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef7ec650c65206eeab69d8f666dc4fb39052bbdb
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 81c842eb27b1b9131c164ced5aeed86a78a37353
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862162"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506298"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Inscrire votre appareil d’entreprise avec l’application Microsoft Intune
 
@@ -78,11 +79,11 @@ Effectuez ces étapes pour configurer et inscrire votre appareil.
 
    ![Exemple d’image de l’écran de configuration de votre téléphone professionnel, mettant en évidence le bouton Installer.](./media/fully-managed-intune-app-11.png)   
 
-10. Appuyez **sur** démarrer pour ouvrir l’application Microsoft Intune et inscrire votre appareil. 
+10. Appuyez sur **Démarrer** pour ouvrir l’application Microsoft Intune et inscrire votre appareil. 
 
     ![Exemple d’image de l’écran de configuration de votre téléphone professionnel, mettant en évidence le bouton Démarrer.](./media/fully-managed-intune-app-17.png)   
 
-11. Appuyez **sur se connecter** , puis sur **suivant** pour commencer l’inscription. Lorsque vous voyez le message indiquant que l’inscription est terminée **,** Appuyez sur terminé.  
+11. Appuyez sur **se connecter** , puis sur **suivant** pour commencer l’inscription. Lorsque vous voyez le message indiquant que l’inscription est terminée, appuyez sur **terminé**.  
 
     ![Exemple d’image de configurer l’accès, inscrire l’écran de votre appareil, en mettant en surbrillance le bouton terminé.](./media/fully-managed-intune-app-19.png)   
 

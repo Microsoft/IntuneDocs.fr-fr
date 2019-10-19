@@ -1,34 +1,52 @@
 ---
-title: Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée | Microsoft Docs
+title: Configurer les paramètres de journalisation dans les applications Intune | Microsoft Docs
 description: Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 2a9183a6-b40d-4132-a1ce-61ce0f1c23aa
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b0eb38b92ff5c18d58cf6ebe6f31e4b8a320dd9
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58068995"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508007"
 ---
-# <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée
+# <a name="configure-logging-settings"></a>Configurer les paramètres de journalisation
 
-Une fois votre appareil Android inscrit dans Intune, vous pouvez utiliser la *journalisation détaillée* pour faire en sorte que l’application Portail d’entreprise et les applications gérées par Intune enregistrent des journaux détaillés de l’activité de votre appareil. Ces journaux aident le support technique de votre entreprise à résoudre les problèmes que vous êtes susceptible de rencontrer quand vous utilisez le portail d’entreprise ou une application gérée par Intune. La journalisation détaillée est activée par défaut sur votre appareil, et les journaux envoyés au support technique de votre entreprise incluent votre adresse e-mail.
+Configurez vos paramètres de journalisation pour permettre aux applications de Portail d’entreprise, aux applications Microsoft Intune et aux applications gérées par Intune d’enregistrer les actions de l’application. Si vous rencontrez un problème dans l’application et que vous la signalez, votre équipe de support examinera ces journaux pour plus de détails. 
 
-Pour activer ou désactiver la journalisation détaillée, connectez-vous à l’application Portail d’entreprise à l’aide de vos informations d’identification professionnelles ou scolaires, appuyez sur **Paramètres**, puis sur le bouton d’activation/de désactivation à côté de **Journalisation détaillée**.
+> [!NOTE]
+> Les journaux que vous envoyez à votre équipe de support incluent votre adresse de messagerie.  
 
-Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="configure-company-portal-logging"></a>Configurer la journalisation Portail d’entreprise
+La journalisation détaillée enregistre toutes les actions que vous effectuez dans l’application Portail d’entreprise. Elle est activée par défaut sur votre appareil. Pour désactiver la journalisation détaillée dans Portail d’entreprise :  
+
+1. Connectez-vous à l’application Portail d’entreprise.
+2. Appuyez sur **paramètres**.
+3. En regard de la **journalisation détaillée**, retournez le commutateur à **off**.
+
+## <a name="configure-microsoft-intune-app-logging"></a>Configurer Microsoft Intune la journalisation de l’application
+Dans l’application Microsoft Intune, vous pouvez configurer le niveau des détails du journal. La valeur par défaut du niveau est **important**. Pour ajuster les détails de la journalisation :  
+
+1. Ouvrez l’application Microsoft Intune.  
+2. Appuyez sur **paramètres**.  
+3. Sous **détail du niveau de journal**, sélectionnez **Commentaires** pour augmenter le niveau des détails enregistrés ou sélectionnez **désactivé** pour désactiver la journalisation.  
+
+## <a name="next-steps"></a>Étapes suivantes  
+
+Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

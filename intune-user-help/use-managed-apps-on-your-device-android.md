@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546033"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501886"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Utiliser des applications gérées sur votre appareil Android
 Les applications gérées sont configurées pour répondre aux exigences de sécurité de votre organisation et protéger les données professionnelles et scolaires. Vous pouvez installer ou utiliser ces applications automatiquement sur votre appareil. 
@@ -52,18 +53,18 @@ Voici quelques exemples d’applications gérées couramment utilisées ou dispo
 - Microsoft Word, Excel et PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Comment obtenir des applications gérées ?
-Il existe trois façons d’obtenir des applications gérées.  
+Il existe trois façons d’accéder aux applications gérées.  
 * Votre organisation installe automatiquement les applications sur votre appareil au moment de l’inscription.  
 * Vous installez une application à partir de Google Play Store, puis vous vous y connectez avec votre compte professionnel ou scolaire.    
 * Votre organisation met des applications gérées à votre disposition dans le Portail d’entreprise. Accédez au site web ou à l’application Portail d’entreprise pour rechercher, afficher et installer les applications disponibles. Pour plus d’informations sur ces applications, consultez la section suivante, [applications disponibles](#available-apps).  
 
 ### <a name="available-apps"></a>Applications disponibles   
- Votre organisation peut sélectionner les applications qui sont appropriées et utiles pour vous au travail ou scolaire et les rendre disponibles pour vous dans le portail d’entreprise.  
+ Votre organisation peut sélectionner des applications qui sont appropriées et utiles pour vous au travail ou à l’école, et les mettre à votre disposition dans Portail d’entreprise.  
 
  Des applications sont également mises à votre disposition en fonction de votre type d’appareil. Par exemple, si vous utilisez l’application Portail d’entreprise pour Android, vous avez accès aux applications Android, mais pas aux applications iOS.   
 
 ## <a name="request-an-app-for-work-or-school"></a>Demander une application dans le cadre professionnel ou scolaire   
- Si vous avez besoin d’une application qui ne figure pas dans le Portail d’entreprise, vous pouvez la demander. Rechercher des informations de contact de votre **support technique** de l’application **contacter le service informatique** onglet. Vous trouverez les mêmes informations de contact sur le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ Si vous avez besoin d’une application qui ne figure pas dans le Portail d’entreprise, vous pouvez la demander. Recherchez les coordonnées de votre **support technique** dans l’onglet **contacter le service informatique** de l’application. Vous trouverez les mêmes informations de contact sur le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Que peut gérer le support technique de mon entreprise dans une application ?  
 La liste suivante décrit les paramètres que le support technique de votre entreprise peut gérer au sein d’une application. Ces paramètres affectent la façon dont vous affichez, parcourez et utilisez les données professionnelles ou scolaires sur votre appareil :

@@ -9,6 +9,7 @@ ms.date: 07/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 50e4bde49f671a7f828ddb982fa18a3e68de25f6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467309"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506284"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscrire un appareil avec un profil professionnel Android
 
@@ -45,7 +46,7 @@ Obtenez plus d’informations sur [ce qui se passe quand vous créez un profil p
 
     ![Capture d’écran de l’écran de confidentialité](./media/android-wp-03-1908.png)  
 
-4. Sur l’écran **what’s Next?** , Découvrez ce qui se passe lors de l’inscription. Appuyez ensuite sur **suivant**.  
+4. Sur l’écran **what’s Next ?** , Découvrez ce qui se passe lors de l’inscription. Appuyez ensuite sur **suivant**.  
 
     ![Capture d’écran de l’écran What’s Next](./media/android-wp-04-1908.png)
 
@@ -55,11 +56,11 @@ Obtenez plus d’informations sur [ce qui se passe quand vous créez un profil p
 
     Votre profil professionnel va commencer l’installation. 
 
-     ![Capture d’écran de l’écran «Configuration du profil professionnel».](./media/android-wp-05a-1908.png) 
+     ![Capture d’écran de l’écran « Configuration du profil professionnel ».](./media/android-wp-05a-1908.png) 
 
      Selon votre version d’Android, vous pouvez voir un écran supplémentaire qui indique que vous êtes à mi-chemin dans le programme d’installation. Si cet écran s’affiche, patientez quelques instants jusqu’à ce que vous soyez Redirigé et connecté à l’application Portail d’entreprise.  
 
-     ![Capture d’écran de l’écran «vous allez à mi-chemin» avec le message de redirection.](./media/android-wp-05b-1908.png) 
+     ![Capture d’écran de l’écran « vous allez à mi-chemin » avec le message de redirection.](./media/android-wp-05b-1908.png) 
 
 6. Dans l’écran Configuration de l’accès à l' **entreprise** , vérifiez que votre profil professionnel est créé. Appuyez ensuite sur **CONTINUER**.  
 

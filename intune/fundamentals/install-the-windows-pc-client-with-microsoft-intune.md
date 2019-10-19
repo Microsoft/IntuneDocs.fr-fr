@@ -7,24 +7,24 @@ ms.author: erikje
 ms.date: 07/13/2017
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology: ''
-ms.assetid: ''
+ms.assetid: 99dcf916-d80f-42c5-863b-a4595e1ec67a
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45a88e4cc1f84c157b5ece1204bddfb7ebe01b57
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1484aa2cf9ab665796b6c02e060d2d7c4cb4fcd1
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736089"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502792"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installer le logiciel client Intune sur des PC Windows
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 > Vous pouvez utiliser Microsoft Intune pour gérer les PC Windows comme [appareils mobiles avec la gestion des appareils mobiles (MDM)](../enrollment/windows-enroll.md) ou comme ordinateurs avec le logiciel client Intune, comme décrit ci-dessous. Cependant, Microsoft recommande aux clients [d’utiliser la solution de gestion MDM](../enrollment/windows-enroll.md) quand c’est possible. Pour plus d’informations, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md) 
@@ -204,7 +204,7 @@ Pour annuler l’inscription du logiciel client à l’aide de la console d’ad
 
 À partir d’une invite de commandes avec élévation de privilèges, exécutez l’une des commandes suivantes.
 
-**Méthode 1** :
+**Méthode 1** :
 
     "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
 
@@ -252,7 +252,7 @@ Consultez « %ProgramFiles%\Microsoft\OnlineManagement » et vérifiez que seu
 
 - AgentInstaller
 - Logs
-- Mises à jour
+- Updates
 - Common
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Supprimer le dossier OnlineManagement

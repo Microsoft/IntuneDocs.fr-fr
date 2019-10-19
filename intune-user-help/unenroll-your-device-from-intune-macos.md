@@ -9,6 +9,7 @@ ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: dd79fc4d-6265-4dd0-87fb-8ab66b1cf692
 searchScope:
@@ -18,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7290820134ffba2638c313adb4297d7da29c3b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d4d6ecdc84371c0f485fc1cf26065ed681f29804
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545954"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501924"
 ---
-# <a name="unenroll-your-macos-device-from-company-portal"></a>Désinscrire votre appareil macOS à partir du portail d’entreprise
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Désinscrire votre appareil macOS de Portail d’entreprise
 
 Quand vous désinscrivez votre appareil macOS d’Intune, il ne peut plus accéder aux ressources d’entreprise.
 
@@ -34,8 +35,8 @@ Suivez ces étapes pour désinscrire votre appareil macOS de la gestion :
 1. Connectez-vous à l’application Portail d’entreprise pour macOS.
 2. Accédez à **Mes appareils**, puis sélectionnez l'appareil que vous voulez désinscrire.
 
-3. Sélectionnez l’icône de menu de points de suspension > **supprimer**.
-4. Un message de confirmation s’affiche. Sélectionnez **supprimer** désinscrire votre appareil. 
+3. Sélectionnez l’icône du menu de sélections > **supprimer**.
+4. Un message de confirmation s’affiche. Sélectionnez **Supprimer pour annuler** l’inscription de votre appareil. 
 
 La désinscription de votre appareil d’Intune a les conséquences suivantes :
 

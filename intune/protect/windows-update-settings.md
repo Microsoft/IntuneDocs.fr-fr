@@ -5,21 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aaa964151477896c236e504ec9b378cf580e838
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736375"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584462"
 ---
 # <a name="windows-update-settings-for-intune"></a>Paramètres de mise à jour Windows pour Intune  
 
@@ -216,45 +217,9 @@ Paramètres de l’expérience utilisateur contrôlent l’expérience de l’ut
   - **Désactiver toutes les notifications, à l’exception des avertissements de redémarrage**
   - **Désactiver toutes les notifications, y compris les avertissements de redémarrage**  
 
-- **Autoriser l’utilisateur à redémarrer (redémarrage engagé)**  
-  **Par défaut** : Non configuré  
-  > [!IMPORTANT]  
-  > Il n’est plus recommandé d’utiliser les paramètres de *redémarrage engagés* . Utilisez plutôt les nouveaux paramètres d' *échéance* qui remplacent les paramètres de *redémarrage engagés* . Intune va [déprécier la prise en charge des paramètres de *redémarrage engagés* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) dans une prochaine mise à jour.
-
-  Le redémarrage engagé est pris en charge pour Windows 10 version 1803 et versions ultérieures. 
-
-  > [!NOTE]  
-  > Windows 10 version 1809 introduit des paramètres de redémarrage engagé supplémentaires permettant d’appliquer des paramètres distincts aux mises à jour de qualité et de fonctionnalité. Toutefois, les paramètres gérés par Intune ne s’appliquent pas séparément pour les types de mise à jour différents. Au lieu de cela, Intune applique les mêmes valeurs aux mises à jour de qualité et de fonctionnalité.  
-  
-  - **Non configuré**  
-  - **Requis** : définir sur *Requis* vous permet d’utiliser les options de redémarrage engagé pour les mises à jour Windows 10. Ces options engagent l’utilisateur d’un appareil pour aider à gérer quand redémarrer un appareil après l’installation d’une mise à jour qui nécessite un redémarrage.  
-
-  Pour plus d’informations sur cette option, consultez [Redémarrage engagé](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) dans la documentation de Windows 10 sur le déploiement des mises à jour.  
-
-  Les paramètres suivants sont utilisés pour contrôler quand les actions de redémarrage engagé se produisent.  
-
-  - **Transition des utilisateurs vers un redémarrage engagé après un redémarrage automatique (jours)**  
-    **Valeur par défaut**: non configuré Windows Update CSP : [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-    
-    Spécifiez une valeur entre **2** et **30** jours pour définir combien de temps après l’installation de la mise à jour l'appareil entre dans le comportement de redémarrage engagé. Après le nombre de jours configuré, les utilisateurs reçoivent une invite de redémarrage de l’appareil.  
-
-  - **Répéter le rappel de redémarrage engagés (jours)**  
-    **Par défaut** : Non configuré    
-    CSP Windows Update : [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-    
-    Spécifiez une valeur comprise entre **1** et **3** pour la durée pendant laquelle une invite de redémarrage peut être répétée.  Après la période de répétition, l’invite de redémarrage est à nouveau proposée. L’utilisateur peut continuer à répéter le rappel jusqu'à ce que l’échéance d’installation soit atteinte.  
-
-  - **Définir une échéance pour les redémarrages en attente (jours)**  
-    **Par défaut** : Non configuré  
-    CSP Windows Update : [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  
-    Spécifiez une valeur entre **2** et **30** comme nombre maximal de jours d’attente après le début du comportement de redémarrage engagé avant qu’un appareil n’applique un redémarrage requis. Ce redémarrage invite les utilisateurs à enregistrer leur travail.
-
 - **Utiliser les paramètres d’échéance**  
   **Par défaut** : Non configuré  
-  > [!IMPORTANT]  
-  > À partir de la mise à jour d’août pour Intune, nous vous recommandons d’utiliser les paramètres d’échéance suivants qui remplacent les paramètres de redémarrage engagés. Intune va [déprécier la prise en charge des paramètres de *redémarrage engagés* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) dans une prochaine mise à jour d’Intune.  
-
+ 
   Permet à l’utilisateur d’utiliser les paramètres d’échéance.  
 
   - **Non configuré**
@@ -263,21 +228,21 @@ Paramètres de l’expérience utilisateur contrôlent l’expérience de l’ut
   Lorsque cette valeur est définie sur *autoriser*, vous pouvez configurer les paramètres suivants pour les échéances :
 
   - **Échéance des mises à jour de fonctionnalités**  
-    **Par défaut** : 7  
+    **Par défaut** : *non configuré*  
     CSP Windows Update : [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Spécifie le nombre de jours avant que les mises à jour de fonctionnalités soient installées automatiquement sur leurs appareils (2-30).
 
   - **Échéance des mises à jour qualité**  
-    **Par défaut** : 7  
+    **Par défaut** : *non configuré*  
     CSP Windows Update : [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Spécifie le nombre de jours pendant lesquels un utilisateur peut installer automatiquement les mises à jour qualité sur leurs appareils (2-30).
 
   - **Période de grâce**  
-    **Valeur par défaut**: 2 Windows Update CSP : [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Valeur par défaut**: *non configuré* Windows Update CSP : [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Spécifie un nombre minimal de jours après l’échéance jusqu’à ce que les redémarrages se produisent automatiquement (0-7).
+    Spécifie un nombre minimal de jours après l’échéance jusqu’à ce que les redémarrages se produisent automatiquement (2-7).
 
   - **Redémarrage automatique avant l’échéance**  
     **Valeur par défaut**: Oui Windows Update CSP : [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
@@ -285,9 +250,6 @@ Paramètres de l’expérience utilisateur contrôlent l’expérience de l’ut
     Spécifie si l’appareil doit redémarrer automatiquement avant l’échéance.
     - **Oui**
     - **Non**
-
-
-
 
 ### <a name="delivery-optimization-download-mode"></a>Mode de téléchargement de l’optimisation de la livraison  
 

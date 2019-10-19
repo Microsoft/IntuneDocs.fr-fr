@@ -7,8 +7,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 0dc35efe-4fd4-4d4a-8569-d649ea704fea
 searchScope:
@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc7a9a1e9cc355a06baa4b7134216ecc6cd0da5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 61825741a5651daa55727c706ba683628e723c8a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545312"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490286"
 ---
 # <a name="installing-the-company-portal-app-for-windows-10"></a>Installation de l’application Portail d’entreprise pour Windows 10  
 
@@ -37,7 +37,7 @@ Après avoir installé l’application Portail d’entreprise et inscrit avec ce
 
 - réinitialiser les paramètres de votre téléphone en cas de perte ou de vol.
 
-Lorsque vous êtes prêt à installer le portail d’entreprise et inscrire votre appareil, consultez [prise en main d’inscription Windows](windows-enrollment-company-portal.md).  
+Lorsque vous êtes prêt à installer Portail d’entreprise et à inscrire votre appareil, consultez [prise en main de l’inscription Windows](windows-enrollment-company-portal.md).  
 
 Lorsque vous ajoutez un ordinateur :
 

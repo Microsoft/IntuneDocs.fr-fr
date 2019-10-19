@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
-ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
+ms.openlocfilehash: a2cb5d7375ae5b76a24861872d4abf786f199dfd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163499"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508993"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Paramètres de bases de référence de Windows Defender Advanced Threat Protection pour Intune
 
@@ -53,7 +54,7 @@ Lors de l’utilisation de Microsoft Edge, Windows Defender Application Guard pr
     **Par défaut** : oui
 
   - **Comportement du Presse-papiers** - *Paramètres/ClipboardSettings*  
-    Choisissez les actions de copier-coller autorisées entre le PC local et le navigateur virtuel Application Guard.  Les options disponibles sont les suivantes :
+    Choisissez les actions de copier-coller autorisées entre le PC local et le navigateur virtuel Application Guard.  Les options sont les suivantes :
     - *Non configuré*  
     - *Bloquer les deux* : impossible de transférer les données entre l’ordinateur et le navigateur virtuel.  
     - *Bloquer l’hôte vers le conteneur* : impossible de transférer les données à partir de l’ordinateur dans le navigateur virtuel.
@@ -207,7 +208,7 @@ Pour plus d’informations, consultez [Paramètres de stratégie de groupe Bitlo
 
   Pour vérifier si le système prend en charge la protection DMA de noyau, exécutez MSINFO32.exe sur le système et révisez le champ *Protection DMA de noyau* sur la page Résumé.  
 
-  Les options disponibles sont les suivantes : 
+  Les options sont les suivantes : 
   - *Valeur par défaut de l’appareil* : après la connexion ou le déverrouillage de l’écran, des appareils avec pilotes compatibles au remappage DMA peuvent être énumérés à tout moment. Les appareils avec pilotes compatibles au remappage DMA seront énumérés uniquement une fois que l’utilisateur déverrouille l’écran
   - *Autoriser tout* : tous les appareils PCIe compatibles DMA externes seront énumérés à tout moment
   - *Bloquer tout* : les appareils avec pilotes compatibles au remappage DMA peuvent être énumérés à tout moment. Les appareils avec pilotes compatibles au remappage DMA ne seront jamais autorisés pour démarrer et effectuer le DMA à tout moment.
@@ -428,7 +429,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Defender : Niveau de blocage cloud**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) : utilisez cette stratégie pour déterminer le degré d’agressivité de l’Antivirus Windows Defender dans le blocage et l’analyse des fichiers suspects. Les options disponibles sont les suivantes :
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) : utilisez cette stratégie pour déterminer le degré d’agressivité de l’Antivirus Windows Defender dans le blocage et l’analyse des fichiers suspects. Les options sont les suivantes :
 
   - Élevé : bloque de façon agressive les fichiers inconnus tout en optimisant les performances du client (probabilité plus grande de faux positifs)
   - Plus élevé : bloque de façon agressive les fichiers inconnus et applique des mesures de protection supplémentaires (peut affecter les performances du client)

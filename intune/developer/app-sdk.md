@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 580e9f51532a5606ca8955abc5bf3b3fa3a63713
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 17b5a4a510dd8310b9c9c7bcc00a63752cdd4155
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733697"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505718"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Microsoft Intune
 Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet à votre application de prendre en charge des [stratégies de protection d’applications](../apps/app-protection-policy.md) Intune. Quand des stratégies de protection sont appliquées à votre application, elle peut être gérée par Intune et est reconnue par Intune comme application gérée. Le Kit de développement logiciel (SDK) s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience de l’utilisateur final et de l’administrateur informatique, vous pouvez utiliser les API du Kit de développement logiciel (SDK) pour personnaliser le comportement de votre application et permettre la prise en charge des fonctionnalités nécessitant sa participation.

@@ -9,6 +9,7 @@ ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: cfd214bc-f072-4808-af2e-a3cbf7af9bca
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16d7142e6dc38a177f8820f60e7335b8b23a1eeb
-ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
+ms.openlocfilehash: 68a44027c14e0a52d72fc032a6ab42413fa8df96
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71099800"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508306"
 ---
 # <a name="sign-in-to-company-portal"></a>Connectez-vous à Portail d’entreprise  
 
@@ -39,7 +40,7 @@ Les étapes suivantes affichent des captures d’écran de l’Portail d’entre
 
 1. Ouvrez l’application sur votre appareil et appuyez sur **se connecter**.  
 
-   [![Exemple de capture d’écran de la page de connexion portail d’entreprise. ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
+   [![Example capture d’écran de la page de connexion Portail d’entreprise. ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
 
 
 2. Entrez votre **compte professionnel ou scolaire** et appuyez sur **Suivant**.
@@ -78,7 +79,7 @@ Si votre entreprise utilise des cartes à puce pour accéder à vos ordinateurs,
 
    ![Suivez les instructions fournies pour accéder à la page https://microsoft.com/devicelogin avec un code d’accès unique à partir de votre ordinateur, puis utilisez le code pour vous connecter.](/intune-user-help/media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Sur votre autre appareil (celui que vous utilisez pour vous authentifier), ouvrez votre navigateur et accédez [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)à. Entrez ou collez le code.  
+3. Sur votre autre appareil (celui que vous utilisez pour vous authentifier), ouvrez votre navigateur et accédez à [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Entrez ou collez le code.  
 
    ![Une image du navigateur de l’utilisateur sur son ordinateur de travail plutôt sur son application Portail d’entreprise. La page « Connexion à l’appareil » invite l’utilisateur à saisir le code qu’il a reçu dans l’application Portail d’entreprise.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 

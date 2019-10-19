@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8de39d0265b6ef4ce7e78f9bbe512928d2e098de
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 535ae4dd986940da17d247136b37185cfaa58b57
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735803"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510227"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Contribuer à la sécurisation des PC Windows avec Endpoint Protection pour Microsoft Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Le service Endpoint Protection de Microsoft Intune vous aide à sécuriser vos ordinateurs gérés. Il offre une protection en temps réel contre les menaces posées par les programmes malveillants, maintient à jour les définitions de logiciels malveillants et analyse automatiquement les ordinateurs. Endpoint Protection fournit également des outils qui vous aident à gérer et à surveiller les attaques de logiciels malveillants.
 
@@ -38,7 +39,7 @@ Utilisez les informations des sections suivantes pour configurer, déployer et s
 En tant qu’administrateur informatique, l’une de vos principales priorités est de maintenir les ordinateurs que vous gérez exempts de programmes malveillants et virus. Avant de déployer Intune sur les PC Windows de votre organisation, vous devez déterminer comment protéger les ordinateurs en sélectionnant l’une des options suivantes et en configurant ses paramètres de stratégie associée :
 
 
-|                                                                                                                                                                       Vous souhaitez :                                                                                                                                                                        |                                                                                                       Paramètres de stratégie Endpoint Protection                                                                                                        |                                                                                                                                                  Informations complémentaires                                                                                                                                                  |
+|                                                                                                                                                                       Vous souhaitez :                                                                                                                                                                        |                                                                                                       Paramètres de stratégie Endpoint Protection                                                                                                        |                                                                                                                                                  Plus d’informations                                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                             Utiliser Microsoft Intune Endpoint Protection uniquement si aucune application tierce de protection de point de terminaison n’est installée.<br /><br />Vous pouvez utiliser Microsoft Intune Endpoint Protection sur tous les ordinateurs sur lesquels aucune application tierce de protection de point de terminaison n’est installée.                                              | Installer Endpoint Protection = <strong>Oui</strong><br /><br />Activer Endpoint Protection = <strong>Oui</strong><br /><br />Installer Endpoint Protection même si une application tierce de protection de point de terminaison est installée = <strong>Non</strong>  |                                                                      Si une application tierce de protection de point de terminaison est détectée, Microsoft Intune Endpoint Protection n’est pas installé, et il est désinstallé s’il était déjà installé.                                                                       |
 | Utiliser Microsoft Intune Endpoint Protection même si une application tierce de protection de point de terminaison est installée.<br /><br />Avec cette approche, vous allez exécuter simultanément Microsoft Intune Endpoint Protection et l’application tierce de protection de point de terminaison. Cette configuration n’est pas recommandée, car elle peut entraîner des problèmes de performances potentiels. | Installer Endpoint Protection = <strong>Oui</strong><br /><br />Activer Endpoint Protection = <strong>Oui</strong><br /><br />Installer Endpoint Protection même si une application tierce de protection de point de terminaison est installée = <strong>Oui</strong> |                        Contexte d'utilisation :<br /><br />-   Vous souhaitez passer à l’utilisation de Microsoft Intune Endpoint Protection.<br />-   Vous déployez un nouveau client qui utilise Microsoft Intune Endpoint Protection.<br />-   Vous mettez à niveau un client qui utilise Microsoft Intune Endpoint Protection.                         |
@@ -103,7 +104,7 @@ Si vous avez attribué la valeur **Oui** aux paramètres de stratégie **Install
 
 ### <a name="specify-scan-schedule-settings"></a>Spécifier les paramètres de la planification d’analyse
 
-|Paramètre de stratégie|Informations complémentaires|
+|Paramètre de stratégie|Plus d’informations|
 |------------------|--------------------|
 |**Planifier une analyse quotidienne rapide**|Permet de planifier une analyse quotidienne rapide des fichiers fréquemment utilisés et des fichiers système importants sur les ordinateurs. Cette analyse rapide n'a qu'une incidence minime sur les performances.<br /><br />Valeur recommandée : **Oui**|
 |**Lancer une analyse rapide à l’issue de deux analyses rapides consécutives non effectuées**|Configure Endpoint Protection pour exécuter automatiquement une analyse rapide sur les ordinateurs sur lesquels deux analyses rapides consécutives n’ont pas été effectuées.<br /><br />Valeur recommandée : **Oui**|
@@ -123,7 +124,7 @@ Si vous avez attribué la valeur **Oui** aux paramètres de stratégie **Install
 |**Analyser les fichiers ouverts à partir de dossiers partagés sur le réseau**|Attribuez la valeur **Oui** pour configurer Endpoint Protection de sorte qu’il analyse les fichiers ouverts à partir de dossiers partagés sur le réseau. Il s’agit généralement de fichiers accessibles à l’aide d’un chemin UNC (Universal Naming Convention). L'activation de cette fonctionnalité peut engendrer des problèmes pour les utilisateurs disposant d'un accès en lecture seule, car ils ne sont pas en mesure de supprimer les programmes malveillants.<br /><br />Valeur recommandée : **Non**|
 |**Analyser les lecteurs réseau mappés**|Attribuez la valeur **Oui** pour configurer Endpoint Protection de sorte qu’il analyse les fichiers sur les lecteurs réseau mappés. L'activation de cette fonctionnalité peut engendrer des problèmes pour les utilisateurs disposant d'un accès en lecture seule, car ils ne sont pas en mesure de supprimer les programmes malveillants.<br /><br />Valeur recommandée : **Non**|
 |**Analyser les lecteurs amovibles**|Attribuez la valeur **Oui** pour configurer Endpoint Protection de sorte qu’il recherche des programmes malveillants et indésirables sur les lecteurs amovibles, comme les disques mémoire flash USB, lors d’une analyse complète sur les ordinateurs.<br /><br />Valeur recommandée : **Oui**|
-|**Limiter l’utilisation de l’UC pendant une analyse**|Définissez le pourcentage maximal d’utilisation du processeur pendant les analyses planifiées sur les ordinateurs. Vous pouvez définir cette valeur entre 1 et 100 %.<br /><br />Valeur recommandée : **50 %**|
+|**Limiter l’utilisation du processeur pendant une analyse**|Définissez le pourcentage maximal d’utilisation du processeur pendant les analyses planifiées sur les ordinateurs. Vous pouvez définir cette valeur entre 1 et 100 %.<br /><br />Valeur recommandée : **50 %**|
 
 ### <a name="choose-default-actions-settings"></a>Choisir les paramètres des actions par défaut
 

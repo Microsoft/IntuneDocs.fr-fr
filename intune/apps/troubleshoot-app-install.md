@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/04/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3aadad0b185f72d9137ed0f2d807df6d035a9ba7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e1067c8ef23add50c921217b9e4b115346be2951
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735335"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72497046"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -151,7 +152,7 @@ Cette section mentionne à la fois l’inscription de l’administrateur de l’
 | Échec de l’installation d’applications quand l’appareil est en mode Kiosque (-2016330856). | Pour installer des applications, essayez d’ajouter cet appareil à un groupe d’exclusion de la stratégie de configuration du mode Kiosque. |
 | Impossible d’installer des applications 32 bits sur cet appareil (-2016330852). | L’appareil ne prend pas en charge l’installation des applications 32 bits. Essayez de déployer la version 64 bits de l’application. |
 | L’utilisateur doit se connecter à l’App Store (-2016330855). | L’utilisateur doit se connecter à l’App Store avant de pouvoir installer l’application. |
-| Problème inconnu. Veuillez recommencer (-2016330854). | L’installation de l’application a échoué en raison d’un problème inconnu. Réessayez ultérieurement. |
+| Problème inconnu. Veuillez recommencer (-2016330854). | L’installation de l’application a échoué en raison d’un problème inconnu. Réessayez plus tard. |
 | Échec de l’installation de l’application. Intune retentera l’installation lors de la prochaine synchronisation de l’appareil (-2016330853). | Une erreur s’est produite lors de l’installation de l’application sur l’appareil. Synchronisez l’appareil pour retenter l’installation de l’application. |
 | Échec de l’attribution de licence avec l’erreur Apple « aucune licence VPP restante » (0x87d13b7e) | Ce comportement est normal. Pour remédier à cela, achetez des licences VPP supplémentaires ou récupérez des licences aux utilisateurs qui ne sont plus ciblés. |
 | Échec de l’installation de l’application 12024 : cause inconnue. (0x87d13b6e) | Apple n’a pas fourni d’informations suffisantes pour déterminer la raison de l’échec de l’installation. Rien à signaler. |
@@ -168,8 +169,8 @@ Cette section mentionne à la fois l’inscription de l’administrateur de l’
 |  Message/Code d’erreur  |  Description  |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  0x80073CFF, 0x80CF201C (erreur du client)  |  Pour installer cette application, vous devez disposer d'un système compatible avec le chargement de versions tests. Assurez-vous que le package d’application dispose d’une signature approuvée et qu’il est installé sur un ordinateur appartenant à un domaine sur lequel la stratégie **AllowAllTrustedApps** est activée ou sur un ordinateur qui a une licence de chargement indépendant Windows sur lequel la stratégie **AllowAllTrustedApps** est activée. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
-|  0x80073CF0  |  Le package n'a pas pu être ouvert. Causes possibles :<ul><li> Le package n'est pas signé.</li><li> Le nom de l'éditeur ne correspond pas à l'objet de signature du certificat.</li></ul> Consultez le journal des événements **AppxPackagingOM** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
-|  0x80073CF3  |  Échec de la mise à jour du package, d'une dépendance ou validation de conflit. Causes possibles :<ul><li> Le package entrant est en conflit avec un package installé.</li><li> Une dépendance de package spécifiée est introuvable.</li><li> Ce package ne prend pas en charge la bonne architecture de processeur.</li></ul> Consultez le journal des événements **AppXDeployment-Server** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
+|  0x80073CF0  |  Le package n'a pas pu être ouvert. Causes possibles :<ul><li> Le package n'est pas signé.</li><li> Le nom de l'éditeur ne correspond pas à l'objet de signature du certificat.</li></ul> Consultez le journal des événements **AppxPackagingOM** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
+|  0x80073CF3  |  Échec de la mise à jour du package, d'une dépendance ou validation de conflit. Causes possibles :<ul><li> Le package entrant est en conflit avec un package installé.</li><li> Une dépendance de package spécifiée est introuvable.</li><li> Ce package ne prend pas en charge la bonne architecture de processeur.</li></ul> Consultez le journal des événements **AppXDeployment-Server** pour plus d'informations. Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x80073CFB  |  Le package fourni est déjà installé, et la réinstallation du package est bloquée. Cette erreur peut s'afficher si vous installez un package qui n'est pas identique au package déjà installé. Confirmez que la signature numérique fait également partie du package. Lorsqu'un package est reconstruit ou resigné, ce package n'est plus identique au niveau des bits au package déjà installé. Deux options possibles s'offrent à vous pour corriger cette erreur :<ul><li> incrémenter le numéro de version de l'application, puis reconstruire et resigner le package ;</li><li> supprimer l'ancien package pour chaque utilisateur sur le système avant d'installer le nouveau package.</li></ul> Pour plus d’informations, consultez [Résolution des problèmes de conditionnement, de déploiement et de requête des applications Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x87D1041C  |  Installation de l’application réussie mais l’application n’est pas détectée. L’application a été déployée correctement par Intune, puis désinstallée par la suite. Voici quelques raisons pour lesquelles l’application est désinstallée :<ul><li> L’utilisateur final a désinstallé l’application.</li><li> Les informations d’identité dans le package ne correspondent pas à ce que l’appareil signale pour les applications incorrectes.</li><li>Pour les fichiers MSI à mise à jour automatique, la version du produit ne correspond pas aux informations de l’application après une mise à jour externe à Intune.</li></ul> Demandez à l’utilisateur de réinstaller l’application depuis le portail d’entreprise. Notez que les applications obligatoires sont automatiquement réinstallées au prochain enregistrement de l’appareil.  |
 |  0x8000FFFF  |  Une erreur inattendue est survenue pendant l’installation. Pour plus d’informations, consultez les journaux d’installation.  |

@@ -9,24 +9,25 @@ manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8005912cdb4a5898eccf7c95500ff7bbdbe34b3c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6342ed23f67c37c2f5084e58594294d826a28e40
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734568"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506715"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Mettre à niveau les appareils exécutant Windows Holographique vers Windows Holographic for Business
 
 Microsoft Intune comporte de nombreux paramètres permettant de gérer et de protéger les appareils. Cet article liste et décrit les paramètres servant à mettre à niveau des appareils Windows Holographic vers Windows Holographic for Business. Ces paramètres sont créés dans un profil de configuration de mise à niveau dans Intune, qui est envoyé (push) ou déployé sur les appareils.
 
-Dans le cadre de votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour mettre à niveau vos appareils Windows Holographic. En ce qui concerne Microsoft HoloLens, vous pouvez acheter Commercial Suite pour obtenir la licence nécessaire à la mise à niveau. Pour plus d’informations, consultez [Déverrouiller les fonctionnalités de Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
+Dans le cadre de votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour mettre à niveau vos appareils Windows Holographic. En ce qui concerne Microsoft HoloLens, vous pouvez acheter Commercial Suite pour obtenir la licence nécessaire à la mise à niveau. Pour plus d’informations, consultez [Déverrouiller les fonctionnalités de Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise).
 
 Pour plus d’informations sur cette fonctionnalité, voir [Mettre à niveau les éditions Windows 10 ou activer le mode S](../edition-upgrade-configure-windows-10.md).
 

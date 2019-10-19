@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ae9637e827330fb33c407122450deb014b3725a
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816865"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506672"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -176,7 +177,7 @@ Cette fonctionnalité s’applique à :
 - **Longueur minimale du mot de passe** (Kerberos uniquement) : entrez le nombre minimal de caractères pouvant commettre le mot de passe d’un utilisateur. **Non configuré** (par défaut) n’impose pas une longueur minimale de mot de passe aux utilisateurs.
 - **Limite de réutilisation du mot de passe** (Kerberos uniquement) : entrez le nombre de nouveaux mots de passe, à partir de 1-24, qui doivent être utilisés jusqu’à ce qu’un mot de passe précédent puisse être réutilisé sur le domaine. **Non configuré** (par défaut) n’impose pas de limite de réutilisation du mot de passe.
 - **Durée de vie minimale du mot de passe** (Kerberos uniquement) : entrez le nombre de jours pendant lesquels un mot de passe doit être utilisé sur le domaine pour qu’un utilisateur puisse le changer. **Non configuré** (par défaut) n’impose pas une ancienneté minimale des mots de passe avant de pouvoir les modifier.
-- **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe expirera. **Non configuré** (par défaut) utilise `15` jour.
+- **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe expirera. **Non configuré** (par défaut) utilise `15` jours.
 - **Expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil. **Non configuré** (valeur par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
 - **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` est le nom de domaine.
 - **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’avez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
@@ -200,13 +201,13 @@ Cette fonctionnalité s’applique à :
 
 - **ID**de l’application : entrez l’identificateur d’application de l’application à associer à un site Web. L’identificateur d’application comprend l’ID d’équipe et un ID de Bundle : `TeamID.BundleID`.
 
-  L’ID d’équipe est une chaîne de 10 caractères alphanumériques (lettres et chiffres) générée par Apple pour les développeurs d’applications, par exemple `ABCDE12345`. Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c)  (ouvre le site Web d’Apple).
+  L’ID d’équipe est une chaîne de 10 caractères alphanumériques (lettres et chiffres) générée par Apple pour les développeurs d’applications, comme `ABCDE12345`. Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c)   (ouvre le site Web d’Apple).
 
   L’ID de Bundle identifie de façon unique l’application, et est généralement mis en forme dans la notation de nom de domaine inverse. Par exemple, l’ID de Bundle du Finder est `com.apple.finder`. Pour trouver l’ID de Bundle, utilisez l’AppleScript dans le terminal :
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domaine**: entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple, `webcredentials:www.contoso.com`.
+- **Domaine**: entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple `webcredentials:www.contoso.com`.
 
   Vous pouvez faire correspondre tous les sous-domaines d’un domaine associé en entrant `*.` (caractère générique astérisque et point) avant le début du domaine. La période est requise. Les domaines exacts ont une priorité plus élevée que les domaines génériques. Par conséquent, les modèles des domaines parents sont mis en correspondance *si* aucune correspondance n’est trouvée dans le sous-domaine complet.
 
@@ -219,7 +220,7 @@ Cette fonctionnalité s’applique à :
 - **Ajouter**: sélectionnez cette option pour ajouter vos applications et les domaines associés.
 
 > [!TIP]
-> Pour résoudre le problèmes, sur votre appareil macOS, ouvrez **Préférences système** > **profils**. Confirmez que le profil que vous avez créé figure dans la liste des profils d’appareil. S’il est listé, vérifiez que la **Configuration des domaines associés** se trouve dans le profil et qu’elle comprend l’ID d’application et les domaines appropriés.
+> Pour résoudre le problèmes, sur votre appareil macOS, ouvrez **Préférences système**  > **profils**. Confirmez que le profil que vous avez créé figure dans la liste des profils d’appareil. S’il est listé, vérifiez que la **Configuration des domaines associés** se trouve dans le profil et qu’elle comprend l’ID d’application et les domaines appropriés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

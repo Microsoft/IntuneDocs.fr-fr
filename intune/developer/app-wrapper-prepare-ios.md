@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c535dbd91605a41fdc1c526ecd8ff9d9fc9e2448
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b42642ec593112b0b247cd85b9230f68d6a803b8
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733671"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490977"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -203,8 +204,8 @@ Vous pouvez utiliser les paramètres de ligne de commande suivants avec l’outi
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Affiche des informations détaillées sur l’utilisation des propriétés de ligne de commande disponibles pour l’outil de création de package de restrictions d’application. |
-|**-aa**|(Facultatif) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, par exemple `login.windows.net/common` |
-|**-ac**|(Facultatif) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` il s’agit du GUID dans le champ ID client à partir de la liste de votre application dans le panneau inscription de l’application. |
+|**-aa**|(Facultatif) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` c.-à-d. `login.windows.net/common` |
+|**-ac**|(Facultatif) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` il s’agit du GUID dans le champ ID client est issu de la liste de votre application dans le panneau inscription de l’application. |
 |**-ar**|(Facultatif) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` il s’agit de l’URI de redirection configuré dans l’inscription de votre application. En général, il s’agit du protocole d’URL de l’application que l’application Microsoft Authenticator retourne à après l’authentification répartie. |
 |**-v**| (Facultatif) Affiche les messages détaillés sur la console. Il est recommandé d’utiliser cet indicateur pour déboguer les éventuelles erreurs. |
 |**-e**| (Facultatif) Utilisez cet indicateur pour que l’outil de création de package de restrictions d’application supprime les droits manquants pendant le traitement de l’application. Pour plus d’informations, consultez [Définition des droits de l’application](#setting-app-entitlements).|

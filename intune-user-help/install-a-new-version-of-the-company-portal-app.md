@@ -9,6 +9,7 @@ ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: d2bdc4433e48fd77c12bfd5db706f8d226bf95a6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840958"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506058"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Guide pratique pour mettre à jour l’application Portail d’entreprise
 
@@ -44,13 +45,13 @@ Quand une nouvelle version est disponible, une option **Mettre à jour** appara�
 
 ## <a name="update-the-company-portal-app-on-your-macos-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil macOS
 
-Configurer le portail d’entreprise pour installer automatiquement les mises à jour dès qu’elles sont disponibles. 
+Configurez Portail d’entreprise pour installer automatiquement les mises à jour dès qu’elles sont disponibles. 
 
-1. Ouvrez le portail d’entreprise et accédez à **aide**. 
+1. Ouvrez Portail d’entreprise et accédez à **aide**. 
 2. Sélectionnez **Rechercher les mises à jour**. 
-3. Dans l’écran de Microsoft AutoUpdate, sélectionnez **télécharger et installer automatiquement**. 
+3. Dans l’écran Microsoft AutoUpdate, sélectionnez **Télécharger et installer automatiquement**. 
 
-Pour afficher les mises à jour disponibles, sélectionnez **vérifier les mises à jour**.  
+Pour afficher les mises à jour disponibles, sélectionnez **Rechercher les mises à jour**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Mettre à jour l’application Portail d’entreprise sur votre appareil Windows
 Pour obtenir automatiquement les mises à jour dès leur mise à disposition, ouvrez Microsoft Store et accédez à **Paramètres**. Activez ensuite l’option **Mises à jour des applications**. Pour afficher les mises à jour récentes et les applications figurant dans la file d’attente de téléchargement, accédez à **Téléchargements et mises à jour**.  

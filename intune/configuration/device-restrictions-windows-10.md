@@ -8,18 +8,19 @@ manager: dougeby
 ms.date: 10/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 149da4c5aafc436156b7b29566bb5d792506de7c
-ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
+ms.openlocfilehash: 164c34f4a46ca11e2788b72dee70bdd40c25e7f3
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251543"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72493897"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -100,7 +101,7 @@ Ces paramètres utilisent les fournisseurs de service de configuration [Connecti
 - **Configuration manuelle du Wi-Fi** : **Bloquer** empêche les appareils de se connecter au réseau Wi-Fi en dehors des réseaux installés par serveur MDM. **Non configuré** (valeur par défaut) permet aux utilisateurs finaux d’ajouter et de configurer leurs propres SSID réseau de connexions Wi-Fi.
 - **Intervalle de recherche de Wi-Fi** : entrez la fréquence à laquelle les appareils recherchent des réseaux Wi-Fi. Entrez une valeur comprise entre 1 (plus fréquent) et 500 (moins fréquent). La valeur par défaut est `0` (zéro).
 
-### <a name="bluetooth"></a>Bluetooth
+### <a name="bluetooth"></a>BlueTooth
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth), qui liste également les éditions de Windows prises en charge.
 
@@ -157,7 +158,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Ent
   - **Confidentialité** : **Bloquer** empêche l’accès à la zone Confidentialité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
   - **Mise à jour et sécurité** : **Bloquer** empêche l’accès à la zone Mise à jour et sécurité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
 
-## <a name="display"></a>Écran
+## <a name="display"></a>Afficher
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Display](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), qui liste également les éditions de Windows prises en charge.
 
@@ -551,7 +552,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Wir
 
 Cliquez sur **OK** pour enregistrer vos modifications.
 
-## <a name="search"></a>Rechercher
+## <a name="search"></a>Recherche
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), qui liste également les éditions de Windows prises en charge. 
 

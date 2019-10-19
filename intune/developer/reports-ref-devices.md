@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/03/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 032b0f8dcc9d4535838b28c8b24247ff6f4a72f1
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 36407bda1f74d0c4601f78cedc2af5426e944fee
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939991"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503418"
 ---
 # <a name="reference-for-devices-entities"></a>Référence pour les entités d’appareils
 
@@ -51,7 +52,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 
 | deviceTypeID  | Nom | Description |
 |---------|------------|--------|
-| 0 |Desktop (Expérience utilisateur) |Appareil Windows Desktop |
+| 0 |Bureau |Appareil Windows Desktop |
 | 1 |WindowsRT |Appareil Windows RT |
 | 2 |WinMO6 |Appareil Windows Mobile 6.0 |
 | 3 |Nokia |Appareil Nokia |
@@ -70,7 +71,7 @@ L’entité **deviceTypes** représente le type d’appareil référencé par d�
 | 17 |AndroidForWork |Appareil Android géré à l’aide du Propriétaire de profil Android |
 | 100 |Blackberry |Appareil Blackberry |
 | 101 |Palm |Appareil Palm |
-| 255 |Inconnu. |Type d’appareil inconnu |
+| 255 |Unknown |Type d’appareil inconnu |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 L’entité **enrollmentActivity** indique l’activité d’une inscription d’appareil.
@@ -99,7 +100,7 @@ L’entité **enrollmentEventStatus** indique le résultat d’une inscription d
 | enrollmentEventStatusName  | Description                            |
 |----------------------------|----------------------------------------|
 | Opération réussie                    | Une inscription d’appareil ayant réussi         |
-| Échec                     | Une inscription d’appareil ayant échoué             |
+| Failed                     | Une inscription d’appareil ayant échoué             |
 | Non disponible              | L’état de l’inscription n’est pas disponible.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
@@ -116,9 +117,9 @@ L’entité **EnrollmentFailureCategory** indique pourquoi une inscription d’a
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Non applicable                  | La catégorie d’échec d’inscription n’est pas applicable.                                                            |
 | Non disponible                   | La catégorie d’échec d’inscription n’est pas disponible.                                                             |
-| Inconnu.                         | Erreur inconnue.                                                                                                |
+| Unknown                         | Erreur inconnue.                                                                                                |
 | Authentification                  | Échec de l’authentification.                                                                                        |
-| Authorization                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
+| Autorisation                   | L’appel a été authentifié, mais l’inscription n’a pas été autorisée.                                                         |
 | AccountValidation               | Impossible de valider le compte pour l’inscription. (Compte bloqué, inscription non activée)                      |
 | UserValidation                  | Impossible de valider l’utilisateur. (L’utilisateur n’existe pas, absence de licence)                                           |
 | DeviceNotSupported              | L’appareil n’est pas pris en charge pour la gestion des appareils mobiles.                                                         |
@@ -143,7 +144,7 @@ L’entité **EnrollmentFailureReason** indique une raison plus détaillée pour
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Non applicable                   | La raison de l’échec d’inscription n’est pas applicable.                                                                                                                                                       |
 | Non disponible                    | La raison de l’échec d’inscription n’est pas disponible.                                                                                                                                                        |
-| Inconnu.                          | Erreur inconnue.                                                                                                                                                                                         |
+| Unknown                          | Erreur inconnue.                                                                                                                                                                                         |
 | UserNotLicensed                  | L’utilisateur est introuvable dans Intune ou ne dispose pas d’une licence valide.                                                                                                                                     |
 | UserUnknown                      | Intune ne connaît pas l’utilisateur.                                                                                                                                                                           |
 | BulkAlreadyEnrolledDevice        | Un seul utilisateur peut inscrire un appareil. Cet appareil a déjà été inscrit par un autre utilisateur.                                                                                                                |
@@ -218,7 +219,7 @@ L’entité **ManagementAgentType** représente les agents utilisés pour gérer
 | 4 |IntuneClient | L’appareil est géré par l’agent Intune PC |
 | 5 |EasIntuneClient | L’appareil est géré à la fois par Exchange Active Sync et par l’agent Intune PC |
 | 8 |ConfigManagerClient | L’appareil est géré par l’agent System Center Configuration Manager |
-| 16 |Inconnu. | Type d’agent de gestion inconnu |
+| 16 |Unknown | Type d’agent de gestion inconnu |
 
 ## <a name="devices"></a>périphériques
 
@@ -247,7 +248,7 @@ L’entité **devices** répertorie tous les appareils inscrits à la gestion et
 | userId                     | Identificateur unique de l’utilisateur associé à l’appareil.                                                                                                                           |
 | rowLastModifiedDateTimeUTC | Date et heure UTC de la dernière modification de cet appareil dans l’entrepôt de données.                                                                                                       |
 | manufacturer               | Fabricant de l’appareil                                                                                                                                                             |
-| modèle                      | Modèle de l’appareil                                                                                                                                                                    |
+| model                      | Modèle de l’appareil                                                                                                                                                                    |
 | operatingSystem            | Système d’exploitation de l’appareil. Windows, iOS,   etc.                                                                                                                                   |
 | isDeleted                  | Binaire pour indiquer si l’appareil est supprimé ou non.                                                                                                                                 |
 | androidSecurityPatchLevel  | Niveau des correctifs de sécurité Android                                                                                                                                                           |
@@ -277,7 +278,7 @@ L’entité **devicePropertyHistory** a les mêmes propriétés que la table d�
 | managementStateKey         | Clé de l’état de gestion associé à cet appareil. Indique l’état le plus récent d’une action à distance ou si l’appareil a été jailbreaké/rooté.                                                |
 | azureADRegistered          | Indique si l’appareil est inscrit dans Azure Active Directory.                                                                                                                             |
 | complianceStateKey         | Une clé pour ComplianceState.                                                                                                                                                            |
-| OSVersion:                  | Version de système d’exploitation.                                                                                                                                                                          |
+| OSVersion                  | Version de système d’exploitation.                                                                                                                                                                          |
 | jailBroken                 | Indique si l’appareil est jailbreaké ou rooté.                                                                                                                                         |
 | deviceCategoryKey          | Clé de l’attribut de type d’appareil pour cet appareil. 
 

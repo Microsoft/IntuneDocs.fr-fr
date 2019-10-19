@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 274b5a8d45f9fb525010e4d225172a6a1ce22275
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734152"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593791"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Ajouter les paramètres VPN sur les appareils iOS dans Microsoft Intune
 
@@ -72,6 +73,8 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
     > [!NOTE]
     > Si le nom d’utilisateur et le mot de passe sont utilisés comme méthode d’authentification pour les VPN IPsec Cisco, ils doivent fournir le SharedSecret par le biais d’un profil Apple Configurator personnalisé.
 
+  - **Informations d’identification dérivées**: si aucun émetteur d’informations d’identification dérivé n’a été configuré, Intune vous invite à le faire.
+
 - **URL exclues** (Zscaler uniquement) : lorsque vous êtes connecté au VPN Zscaler, les URL répertoriées sont accessibles en dehors du cloud Zscaler. 
 
 - **Fractionner le tunneling** : vous pouvez **Activer** ou **Désactiver** cette option pour laisser les appareils décider quelle connexion utiliser en fonction du trafic. Par exemple, un utilisateur dans un hôtel utilise la connexion VPN pour accéder à ses fichiers de travail, mais utilise le réseau standard de l’hôtel pour surfer sur Internet.
@@ -105,7 +108,7 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
 
 ## <a name="ikev2-settings"></a>Paramètres IKEv2
 
-Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** > **IKEv2**.
+Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion**  > **IKEv2**.
 
 - **Identificateur distant**: entrez l’adresse IP réseau, le nom de domaine complet, le UserFQDN ou le ASN1DN du serveur IKEv2. Par exemple, entrez `10.0.0.3` ou `vpn.contoso.com`. En règle générale, vous entrez la même valeur que le nom de la [**connexion**](#base-vpn-settings) (dans cet article). Toutefois, cela dépend de vos paramètres de serveur IKEv2.
 
@@ -154,7 +157,7 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
     - SHA2-256 (valeur par défaut)
     - SHA2-384
     - SHA2-512
-  - **Groupe Diffie-Hellman**: sélectionnez le groupe de votre choix. La valeur par défaut est groupe `2`.
+  - **Groupe Diffie-Hellman**: sélectionnez le groupe de votre choix. La valeur par défaut est `2` de groupe.
   - **Durée de vie** (minutes) : choisissez la durée pendant laquelle l’Association de sécurité reste active jusqu’à ce que les touches pivotent. Entrez une valeur entière comprise entre `10` et `1440` (1440 minutes est de 24 heures). La valeur par défaut est `1440`.
 
 - **Configurer un ensemble distinct de paramètres pour les associations de sécurité enfants**: iOS vous permet de configurer des paramètres distincts pour la connexion IKE et toutes les connexions enfants. 
@@ -173,7 +176,7 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
     - SHA2-256 (valeur par défaut)
     - SHA2-384
     - SHA2-512
-  - **Groupe Diffie-Hellman**: sélectionnez le groupe de votre choix. La valeur par défaut est groupe `2`.
+  - **Groupe Diffie-Hellman**: sélectionnez le groupe de votre choix. La valeur par défaut est `2` de groupe.
   - **Durée de vie** (minutes) : choisissez la durée pendant laquelle l’Association de sécurité reste active jusqu’à ce que les touches pivotent. Entrez une valeur entière comprise entre `10` et `1440` (1440 minutes est de 24 heures). La valeur par défaut est `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Paramètres VPN automatiques

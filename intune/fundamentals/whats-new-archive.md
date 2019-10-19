@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 7/8/2019
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
@@ -18,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1af106227442e91121f6c8c653c261bd677f3a9f
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 327e0d56400a2aac545d1bae92279e242aa2006a
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71814193"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585223"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nouveautés de la préversion de Microsoft Intune - mois précédents
 
@@ -68,7 +69,7 @@ Nous ajoutons un paramètre permettant de personnaliser l’apparence de l’arr
 Pour connaître les paramètres du mode plein écran, voir [Restrictions des appareils Android pour les entreprises](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Enregistrement et application d’attributions de stratégies de protection des applications <!-- 3104570 -->
-Vous avez maintenant un meilleur contrôle de vos [affectations de stratégies App Protection](../apps/app-protection-policies.md#deploy-a-policy-to-users). Lorsque vous sélectionnez *Affectations* afin de définir ou de modifier les affectations d’une stratégie, vous devez **Enregistrer** votre configuration pour que la modification s’applique. Utilisez **Ignorer** pour effacer toutes les modifications apportées sans les enregistrer dans les listes Inclure et Exclure.  Comme il est obligatoire de choisir entre Enregistrer et Ignorer, seuls les utilisateurs souhaités se voient affecter une stratégie App Protection.
+Vous avez maintenant un meilleur contrôle de vos [affectations de stratégies App Protection](../apps/app-protection-policies.md#assign-a-windows-10-policy-to-users). Lorsque vous sélectionnez *Affectations* afin de définir ou de modifier les affectations d’une stratégie, vous devez **Enregistrer** votre configuration pour que la modification s’applique. Utilisez **Ignorer** pour effacer toutes les modifications apportées sans les enregistrer dans les listes Inclure et Exclure.  Comme il est obligatoire de choisir entre Enregistrer et Ignorer, seuls les utilisateurs souhaités se voient affecter une stratégie App Protection.
 
 #### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nouveaux paramètres du navigateur Microsoft Edge pour Windows 10 et versions ultérieures <!-- 3174639 -->
 Cette mise à jour comporte de nouveaux paramètres permettant de contrôler et de gérer le navigateur Microsoft Edge sur les appareils. Pour connaître la liste de ces paramètres, voir [Restriction des appareils pour Windows 10 (et versions ultérieures)](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).

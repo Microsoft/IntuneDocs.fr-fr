@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de635066b2f054b9061f6944bc4010a56d54526
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2c736c905045fd3afd40a12243986fbe69452ecd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735816"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502832"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Protéger les PC Windows à l'aide de stratégies de Pare-feu Windows dans Microsoft Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 > Les informations de cette rubrique s’appliquent uniquement aux bureaux Windows que vous gérez en tant que PC à l’aide du client logiciel Intune. Si vous souhaitez gérer les paramètres de pare-feu pour les PC Windows inscrits en tant qu’appareils mobiles, consultez [Ajouter des paramètres de protection de point de terminaison dans Intune](../protect/endpoint-protection-configure.md).
@@ -43,7 +44,7 @@ La stratégie du Pare-feu Windows vous permet de créer et de déployer les par
 > [!NOTE]
 > Si la stratégie Microsoft Intune et la stratégie de groupe sont configurées pour gérer le même paramètre sur le PC, le paramètre de la stratégie de groupe est prioritaire sur la stratégie Microsoft Intune. Pour en savoir plus sur la façon d’éviter des conflits entre la stratégie Intune et la stratégie de groupe, voir [Résoudre des conflits de stratégie entre les objets de stratégie de groupe et Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Pour déployer les paramètres du Pare-feu Windows sur des ordinateurs exécutant Windows Vista, vous devez d’abord installer le [correctif logiciel KB971800](http://support2.microsoft.com/kb/971800) sur ces ordinateurs.
+> Pour déployer les paramètres du Pare-feu Windows sur des ordinateurs exécutant Windows Vista, vous devez d’abord installer le [correctif logiciel KB971800](https://support2.microsoft.com/kb/971800) sur ces ordinateurs.
 
 > [!IMPORTANT]
 > Pour gérer le Pare-feu Windows à l’aide d’Intune, assurez-vous que les deux services suivants sont activés sur les ordinateurs que vous allez gérer :
@@ -84,7 +85,7 @@ Ces paramètres de stratégie configurent le Pare-feu Windows pour bloquer le t
 La valeur par défaut pour chacun de ces paramètres est **Oui**, qui est la valeur la plus sécurisée.
 
 > [!IMPORTANT]
-> Si votre environnement comprend des ordinateurs gérés exécutant Windows Vista sans Service Pack installé, vous devez installer la mise à jour associée à l’[article 971800](http://go.microsoft.com/fwlink/?LinkId=188405) de la Base de connaissances Microsoft, ou bien désactiver les paramètres de la stratégie **Bloquer toutes les connexions entrantes** dans les stratégies déployées sur ces ordinateurs.
+> Si votre environnement comprend des ordinateurs gérés exécutant Windows Vista sans Service Pack installé, vous devez installer la mise à jour associée à l’[article 971800](https://go.microsoft.com/fwlink/?LinkId=188405) de la Base de connaissances Microsoft, ou bien désactiver les paramètres de la stratégie **Bloquer toutes les connexions entrantes** dans les stratégies déployées sur ces ordinateurs.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Informer l'utilisateur lorsque le Pare-feu Windows bloque un nouveau programme
 

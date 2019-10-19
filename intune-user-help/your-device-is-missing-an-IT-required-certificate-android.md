@@ -9,6 +9,7 @@ ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: f0ba4cbb-ef0a-4335-86bf-f1d006867fa2
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 25ec84946aec9562aedce12b4199269f8de06f76
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862136"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72500012"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installer le certificat manquant requis par votre organisation  
 
@@ -43,8 +44,8 @@ Effectuez les étapes suivantes pour activer l’accès au navigateur. Une fois 
 
 1. Dans l’application Portail d’entreprise, accédez à l’angle droit et sélectionnez le menu.  
 2. Cliquez sur **Paramètres**.  
-3. En regard **de activer l'** accès **au**navigateur, sélectionnez Activer.  
-4. Dans l’écran administrateur de l’appareil **,** sélectionnez Activer. 
+3. En regard de **activer l’accès au navigateur** , sélectionnez **activer**.  
+4. Dans l’écran administrateur de l’appareil, sélectionnez **activer**. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identifier et télécharger le certificat manquant via la recherche Web
 Procédez comme suit pour identifier et installer manuellement le certificat sur votre appareil.  
