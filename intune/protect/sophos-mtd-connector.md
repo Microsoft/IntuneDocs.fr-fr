@@ -1,5 +1,5 @@
 ---
-title: Configurer l’intégration de Sophos Mobile à Intune
+title: Utiliser Sophos Mobile avec Intune
 titleSuffix: Intune on Azure
 description: Découvrez comment configurer la solution Sophos Mobile avec Microsoft Intune pour contrôler l’accès des appareils mobiles aux ressources de votre entreprise.
 keywords: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 550dfe58687806f7ead65dab2d7e15b310ae4b6e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9bacc784b9d9498196186b1fac0ef948789832b5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721914"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306838"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Connecteur Sophos Mobile Threat Defense avec Intune
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise grâce à l’accès conditionnel basé sur une analyse des risques menée par Sophos Mobile, une solution de défense contre les menaces mobiles qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies sur les appareils exécutant l’application Sophos Mobile.

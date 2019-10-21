@@ -1,26 +1,26 @@
 ---
-title: Stratégies de conformité des appareils dans Microsoft Intune - Azure | Microsoft Docs
-description: Prise en main de l’utilisation de stratégies de conformité, la vue d’ensemble des niveaux d’état et de gravité, l’utilisation de l’état InGracePeriod, l’utilisation de l’accès conditionnel, la gestion des appareils sans stratégie attribuée, et les différences de conformité dans le portail Azure et dans le portail Azure Classic au sein de Microsoft Intune
+title: Créer des stratégies de conformité des appareils dans Microsoft Intune - Azure | Microsoft Docs
+description: Création de stratégies de conformité, vue d’ensemble des niveaux d’état et de gravité, utilisation de l’état InGracePeriod, utilisation de l’accès conditionnel, gestion des appareils sans stratégie attribuée et différences de conformité dans le portail Azure et dans le portail classique au sein de Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8b3a99744f830da3c88473e79bce78c97875d73
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722629"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306583"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Créer une stratégie de conformité dans Microsoft Intune
 
@@ -95,15 +95,15 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 4. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements. La stratégie est créée et apparaît dans la liste. Ensuite, attribuez la stratégie à vos groupes.
 
-## <a name="assign-user-groups"></a>Affectation de groupes d’utilisateurs
+## <a name="assign-the-policy"></a>Affecter la stratégie
 
 Une fois qu’une stratégie est créée, l’étape suivante consiste à attribuer la stratégie à vos groupes :
 
 1. Choisissez une stratégie que vous avez créée. Les stratégies existantes se trouvent dans **Conformité de l’appareil** > **Stratégies**.
 2. Sélectionnez la stratégie > **Affectations**. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
-3. Choisissez **Groupes sélectionnés** pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes d’utilisateurs auxquels vous souhaitez appliquer cette stratégie > choisissez **Enregistrer** pour déployer la stratégie auprès des utilisateurs.
+3. Choisissez **Groupes sélectionnés** pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Enregistrer** pour déployer la stratégie.
 
-Vous avez appliqué la stratégie aux utilisateurs. La conformité des appareils utilisés par les utilisateurs ciblés par la stratégie est évaluée.
+La conformité des utilisateurs ou des appareils ciblés par votre stratégie est évaluée lors de l’archivage avec Intune.
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Évaluer le nombre d’utilisateurs ciblés
 

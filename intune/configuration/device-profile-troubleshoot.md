@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 10/15/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618f88d6dbacb886f250b74f6a462b8449b59b18
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9944aa59f47b7263d46ac96f6aaca3f8ae5c9486
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724085"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349990"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questions, problèmes et solutions concernant les stratégies et les profils d’appareil dans Microsoft Intune
 
@@ -67,11 +67,11 @@ Si l’appareil vient d’être inscrit, la vérification de la conformité et d
 | iOS | Toutes les 15 minutes pendant 1 heures, puis environ toutes les 8 heures |  
 | macOS | Toutes les 15 minutes pendant 1 heures, puis environ toutes les 8 heures | 
 | Android | Toutes les 3 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
-| PC Windows 10 inscrits en tant qu’appareils | Toutes les 3 minutes pendant 30 minutes, puis environ toutes les 8 heures | 
+| PC Windows 10 inscrits en tant qu’appareils | Toutes les 3 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
 | Windows Phone | Toutes les 5 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
 | Windows 8.1 | Toutes les 5 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
 
-Les utilisateurs peuvent ouvrir l’application Portail d’entreprise et synchroniser l’appareil à tout moment pour rechercher immédiatement les mises à jour de stratégie ou de profil.
+Les utilisateurs peuvent ouvrir l’application Portail d’entreprise, **Paramètres** > **Synchroniser** à tout moment pour rechercher immédiatement les mises à jour de stratégie ou de profil.
 
 Pour les appareils sans affinité utilisateur, la fréquence de synchronisation immédiatement après l’inscription peut varier entre quelques heures et un jour ou plus. Intune envoie des demandes à des intervalles différents pour qu’un appareil s’enregistre auprès d’Intune. Toutefois, c’est à l’appareil de s’enregistrer. Après l’inscription initiale, le temps nécessaire à un appareil pour terminer l’archivage est imprévisible. Il varie également en fonction du type d’inscription d’appareil et des stratégies et profils attribués à un appareil. Après l’inscription de l’appareil et l’application de l’ensemble des stratégies et profils initiaux, l’appareil recherche de nouvelles stratégies et de nouveaux profils environ toutes les 6 à 8 heures, en fonction du moment où l’appareil s’inscrit dans Intune.
 

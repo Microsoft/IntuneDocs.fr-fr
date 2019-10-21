@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aafce5cefc26f4f86540a6858249e0bdd0af2328
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b1e72e16eba8bb29adc7360db9e923a15d144b6e
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723162"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350042"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune  
 
@@ -135,7 +135,8 @@ La stratégie de conformité détermine le niveau de risque que vous considérez
 2. Sélectionnez **Conformité de l’appareil** > **Stratégies** > **Créer une stratégie**.
 3. Entrez un **Nom** et une **Description**.
 4. Dans **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Dans les paramètres **Microsoft Defender ATP**, définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix. 
+5. Sous **Paramètres**, sélectionnez **Microsoft Defender ATP**.
+6. Définissez **Exiger que l’appareil se situe au niveau du score de risque machine ou en dessous** sur le niveau de votre choix. 
    
    Les classifications des niveaux de menace sont [déterminées par Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
@@ -145,7 +146,7 @@ La stratégie de conformité détermine le niveau de risque que vous considérez
    - **Élevé** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
 
 6. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer la stratégie.  
-7. [Attribuez la stratégie de conformité de l’appareil](create-compliance-policy.md#assign-user-groups) aux groupes applicables.
+7. [Attribuez la stratégie de conformité de l’appareil](create-compliance-policy.md#assign-the-policy) aux groupes applicables.
 
 
 

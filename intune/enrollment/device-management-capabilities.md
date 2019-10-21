@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bac049aebfb0fec6c9d86e1e08e81237867175d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: bf862e59e135a875f5f18af731c581f3e5ea89d5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723110"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306622"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Fonctionnalités de gestion des appareils inscrits de Microsoft Intune
 
@@ -43,6 +43,7 @@ Les utilisateurs ont accès au portail d’entreprise, ce qui leur permet d’in
 |Stratégies de configuration<br><br>Stratégies personnalisées| Vous permettent de gérer de nombreux paramètres et fonctionnalités sur les appareils mobiles de votre organisation. Par exemple, vous pouvez exiger un mot de passe, restreindre le nombre de tentatives de connexion ayant échoué, limiter la durée avant le verrouillage de l’écran, définir une date d’expiration du mot de passe et empêcher la réutilisation de mots de passe déjà utilisés. Vous pouvez également contrôler l’utilisation de fonctionnalités matérielles et logicielles telles que l’appareil photo ou le navigateur web.<br><br>Utilisez des stratégies personnalisées quand les stratégies de configuration ne contiennent pas les paramètres dont vous avez besoin. Pour les appareils iOS, vous pouvez importer les paramètres que vous avez exportés à l’aide de l’outil Apple Configurator. Pour d’autres appareils, vous pouvez utiliser des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour configurer les paramètres et fonctionnalités sur l’appareil.|[Gérer des paramètres et des fonctionnalités sur vos appareils avec des stratégies Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Réinitialisation à distance, verrouillage à distance et réinitialisation du code d'accès|Supprime les données sensibles en cas de perte ou de vol d’un appareil. Par exemple, vous pouvez verrouiller l'appareil à distance, restaurer ses paramètres d'usine ou effacer uniquement les données d'entreprise.<br><br>Vous pouvez réinitialiser les codes secrets si les utilisateurs ne peuvent plus accéder à leur appareil, verrouiller des appareils perdus ou volés ou supprimer les données d'appareils perdus ou volés.|Protéger vos appareils à l’aide du [verrouillage à distance](../remote-actions/device-remote-lock.md) et de la [réinitialisation du code d’accès](../remote-actions/device-passcode-reset.md)|
 |Mode plein écran|Permet de verrouiller certaines fonctionnalités des appareils mobiles, comme la capture d’écran et les boutons d’alimentation. Vous permet également de limiter les appareils à l'exécution d'une seule application que vous spécifiez. |[Paramètres de la stratégie de configuration iOS dans Microsoft Intune](../configuration/device-restrictions-ios.md)|
+|Réinitialisation d’AutoPilot|Envoie une tâche à l’appareil pour démarrer le processus de réinitialisation à distance, évitant au personnel informatique ou aux autres administrateurs d’avoir à se rendre sur chaque ordinateur pour démarrer le processus. Lorsque le logiciel Autopilot est utilisé sur un appareil, l’utilisateur principal de l’appareil sera supprimé. L’utilisateur suivant qui se connecte après la réinitialisation est défini en tant qu’utilisateur principal.|[Réinitialisation à distance de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Gestion d'applications
 

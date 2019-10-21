@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59d93bed7bae2b757a4bd1e7b1dffc814629f6a1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d31126a259274a2c75f933428632e274d8710aa6
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725736"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350022"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android Entreprise gérés
 
@@ -86,9 +86,8 @@ Pour les appareils Android, utilisez les paires clé/valeur suivantes :
 | **Valeurs** | <ul><li>Un ou plusieurs UPN <code>;</code> délimités.</li><li>Le ou les seuls comptes autorisés sont le ou les comptes utilisateur managés définis par cette clé.</li><li> Pour les appareils inscrits à Intune, le jeton <code>{{userprincipalname}}</code> peut être utilisé pour représenter le compte utilisateur inscrit.</li></ul> |
 
    > [!NOTE]
-   > Vous devez utiliser Outlook pour Android 2.2.222 ou version ultérieure lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités.<p></p>
+   > Vous devez utiliser Outlook pour Android 2.2.222 et versions ultérieures, Word, Excel, PowerPoint pour Android 16.0.9327.1000 et versions ultérieures ou OneDrive pour Android 5.28 et versions ultérieures en autorisant uniquement les comptes d’organisation configurés avec la prise en charge plusieurs identités.<p></p>
    > En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.<p></p>
-   > Pour Microsoft Word, Microsoft Excel, Microsoft PowerPoint, vous devez utiliser l’application version 16.0.9327.1000 et versions ultérieures. 
 
 ## <a name="enter-the-json-editor"></a>Utiliser l’éditeur JSON
 

@@ -1,11 +1,11 @@
 ---
-title: Qu'est-ce que Microsoft Intune
+title: Qu’est-ce que Microsoft Intune ? - Azure | Microsoft Docs
 description: Découvrez comment Microsoft Intune constitue le composant de gestion des appareils mobiles (MDM) et de gestion des applications mobiles (MAM) de la solution Enterprise Mobility + Security, et comment il permet de protéger les données de l’entreprise.
 keywords: définition d’Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 10/14/2019
 ms.topic: overview
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,138 +16,97 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0ba46314a7c44e8db89d11a2866c86375a4cdfd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 56c76663330cae5cb771358542fd22ff09398118
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726178"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314726"
 ---
-# <a name="what-is-microsoft-intune"></a>Qu'est-ce que Microsoft Intune ?
+# <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune est un fournisseur MDM et GAM pour vos appareils
 
-Microsoft Intune est un service cloud dans l’espace de gestion de la mobilité en entreprise qui permet à votre personnel de rester productif tout en protégeant les données de l’entreprise. Comme d’autres services Azure, Microsoft Intune est disponible dans le portail Azure. Avec Intune, vous pouvez :
-
-- Gérer les appareils mobiles et les PC que votre personnel utilise pour accéder aux données de l’entreprise.
-- gérer les applications mobiles que votre personnel utilise ;
-- protéger vos informations d’entreprise en contrôlant la façon dont votre personnel y accède et les partage ;
-- vérifier que les appareils et les applications sont conformes aux exigences de sécurité de l’entreprise.
-
-## <a name="common-business-problems-that-intune-helps-solve"></a>Problématiques courantes auxquelles Intune permet de répondre
-
-- [Protéger votre messagerie et vos données locales pour qu’elles soient accessibles par les appareils mobiles](common-scenarios.md#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices)
-- [Protéger votre messagerie et vos données Office 365 pour qu’elles soient accessibles en toute sécurité par les appareils mobiles](common-scenarios.md#protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices)
-- [Fournir des téléphones d’entreprise à votre personnel](common-scenarios.md#issue-corporate-owned-phones-to-your-employees)
-- [Offrir un programme BYOD (Apportez votre propre appareil) à tous les employés](common-scenarios.md#offer-a-bring-your-own-device-program-to-all-employees)
-- [Permettre à vos employés d’accéder en toute sécurité à Office 365 à partir d’une borne publique non gérée](common-scenarios.md#enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk)
-- [Fournir des tablettes partagées à utilisation limitée à vos employés](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
-
-## <a name="how-does-intune-work"></a>Comment fonctionne Intune ?
-
-Intune est le composant de la suite Enterprise Mobility + Security (EMS) de Microsoft qui gère les applications et les appareils mobiles. Intune s’intègre étroitement à d’autres composants EMS comme Azure Active Directory (Azure AD) pour le contrôle d’identité et d’accès, et Azure Information Protection pour la protection des données. Quand vous l’utilisez avec Office 365, vous pouvez permettre à votre force de travail d’être productive sur tous les appareils, tout en assurant la protection des informations de votre organisation.
+Microsoft Intune est un service cloud qui se concentre sur la gestion des appareils mobiles (MDM) et la gestion des applications mobiles (GAM). Intune est inclus dans la suite [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) de Microsoft, et permet aux utilisateurs d’être productifs tout en protégeant les données de votre organisation. Il s’intègre à d’autres services, dont Microsoft 365 et Azure Active Directory (Azure AD) pour contrôler qui a accès à quoi, et Azure Information Protection pour la protection des données. Si vous l’utilisez avec Microsoft 365, vous offrez à vos employés la possibilité de rester productifs sur tous leurs appareils, tout en assurant la protection des informations de votre organisation.
 
 ![Image de l'architecture Intune](./media/what-is-intune/intunearch_sm.png)
 
-Affichez une [version agrandie](./media/intunearchitecture.svg) du diagramme d’architecture Intune.
+Affichez une [version agrandie](./media/what-is-intune/intunearchitecture.svg) du diagramme d’architecture Intune.
 
-La façon d’utiliser les fonctionnalités d’Intune de gestion des appareils et des applications mobiles et la protection des données EMS dépend du [besoin auquel vous essayez de répondre](#common-business-problems-that-intune-helps-solve). Par exemple :
-* Vous allez très souvent recourir à la gestion des appareils si vous créez un pool d’appareils à usage unique à partager entre les employés d’un magasin de vente au détail.
-* Si vous autorisez votre personnel à utiliser ses appareils personnels pour accéder aux données d’entreprise (BYOD), vous allez vous appuyer sur la gestion des applications et la protection des données.  
-* Si vous fournissez des téléphones aux employés, vous allez faire appel à toutes ces technologies.
+Avec Intune, vous pouvez :
 
-## <a name="intune-device-management-explained"></a>Fonctionnement de la gestion des appareils Intune
-La gestion des appareils Intune fonctionne en utilisant les protocoles ou les API disponibles dans les systèmes d’exploitation mobiles. Elle inclut des tâches comme les suivantes :
-* Inscription d’appareils à des fins de gestion pour permettre au service informatique de disposer d’un inventaire des appareils qui accèdent aux services de l’entreprise
-* Configuration des appareils pour vérifier qu’ils respectent les normes de contrôle d’intégrité et de sécurité de l’entreprise
-* Fourniture de certificats et de profils Wi-Fi/VPN pour accéder aux services de l’entreprise
-* Création de rapports et mesure de la conformité aux normes de l’entreprise
-* Suppression des données d’entreprise des appareils gérés  
+- Choisir une solution 100 % cloud % avec Intune, ou [cogérée](https://docs.microsoft.com/sccm/comanage/overview) avec Configuration Manager et Intune.
+- Définir des règles et configurer des paramètres sur des appareils personnels et appartenant à l’organisation pour l’accès aux données et aux réseaux.
+- Déployer et authentifier des applications sur des appareils locaux et mobiles.
+- Protéger les informations de votre entreprise en contrôlant la façon dont les utilisateurs accèdent aux informations et les partagent.
+- Vérifier que les appareils et les applications sont conformes à vos exigences de sécurité.
 
-Certains pensent parfois que le **contrôle d’accès aux données d’entreprise** est une fonctionnalité de gestion des appareils. Or, ce n’est pas le cas, car ce contrôle d’accès n’est pas fourni par le système d’exploitation mobile. C’est plutôt le fournisseur d’identité qui le propose. Dans notre cas, le fournisseur d’identité est Azure Active Directory (Azure AD), système de gestion des identités et des accès de Microsoft.  
+## <a name="manage-devices"></a>Gérer des unités
 
-Intune s’intègre à Azure AD pour gérer un large éventail de scénarios de contrôle d’accès. Par exemple, vous pouvez exiger qu’un appareil mobile soit conforme aux normes de l’entreprise que vous définissez dans Intune pour que l’appareil puisse accéder à un service d’entreprise comme Exchange. De même, vous pouvez verrouiller le service d’entreprise pour qu’il soit accessible à un ensemble spécifique d’applications mobiles. Par exemple, vous pouvez verrouiller Exchange Online pour qu’il soit uniquement accessible par Outlook ou Outlook Mobile.
+Dans Intune, vous gérez les appareils à l’aide d’une approche qui vous convient. Pour les appareils appartenant à l’organisation, vous souhaiterez peut-être disposer d’un contrôle total sur les appareils, notamment les paramètres, les fonctionnalités et la sécurité. Dans cette approche, les appareils et les utilisateurs de ces appareils « s’inscrivent » dans Intune. Une fois inscrits, ils reçoivent vos règles et paramètres par le biais de stratégies configurées dans Intune. Par exemple, vous pouvez définir des exigences de mot de passe et de code confidentiel, créer une connexion VPN, configurer la protection contre les menaces, et bien plus encore.
 
-## <a name="intune-app-management-explained"></a>Fonctionnement de la gestion des applications Intune
-Par gestion des applications, nous entendons :
-* Attribution d’applications mobiles aux employés
-* Configuration d’applications avec des paramètres standard qui sont utilisés lors de l’exécution de l’application
-* Contrôle de la manière dont les données d’entreprise sont utilisées et partagées dans les applications mobiles
-* Suppression des données d’entreprise dans les applications mobiles   
-* Mise à jour des applications
-* Création de rapports sur l’inventaire des applications mobiles
-* Suivi de l’utilisation des applications mobiles
+Pour les appareils personnels ou BYOD, les utilisateurs peuvent ne pas souhaiter que leurs administrateurs d’organisation aient un contrôle total. Dans cette approche, donnez aux utilisateurs des options. Par exemple, les utilisateurs [inscrivent](../enrollment/device-enrollment.md) leurs appareils s’ils veulent un accès total aux ressources de votre organisation. Ou, si ces utilisateurs veulent uniquement accéder à la messagerie ou à Microsoft Teams, utilisez des stratégies de protection des applications qui requièrent l’authentification multifacteur (MFA) pour utiliser ces applications.
 
-Nous avons vu que l’expression « gestion des applications mobiles » sert à la fois à désigner l’une de ces tâches individuellement ou des combinaisons spécifiques. Par exemple, il est d’usage d’associer le concept de configuration des applications à celui de la sécurisation des données d’entreprise au sein des applications mobiles. Cette association vient du fait que certaines applications mobiles exposent des paramètres qui permettent de configurer leurs fonctionnalités de sécurité des données.
+Lorsque les appareils sont inscrits et gérés dans Intune, les administrateurs peuvent :
 
-Quand nous parlons de configuration des applications et d’Intune, nous faisons spécifiquement référence à des technologies comme la [configuration d’applications gérées sur iOS](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html).
+- Consulter les appareils inscrits et obtenir un inventaire des appareils qui accèdent aux ressources de l’organisation.
+- Configurer les appareils pour qu’ils respectent vos normes de sécurité et d’intégrité. Par exemple, vous souhaitez probablement bloquer les appareils jailbroken.
+- Envoyer des certificats aux appareils pour que les utilisateurs puissent accéder facilement à votre réseau Wi-Fi ou utiliser un VPN pour se connecter à votre réseau.
+- Consulter les rapports sur les utilisateurs et les appareils conformes et non conformes.
+- Supprimer les données de l’organisation si un appareil est perdu, volé ou n’est plus utilisé.
 
-Quand vous utilisez Intune avec les autres services dans EMS, vous pouvez accroître la sécurité des applications mobiles de votre organisation bien au-delà de celle fournie par le système d’exploitation mobile et les applications mobiles elles-mêmes par le biais de la configuration des applications. Une application gérée avec EMS a accès à un ensemble plus large de fonctionnalités de protection des applications mobiles et des données :
+**Ressources en ligne** :
 
-* [Authentification unique](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-* [Authentification multifacteur](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
-* [Accès conditionnel de l’application, pour autoriser l’accès si l’application mobile contient des données d’entreprise](../protect/app-based-conditional-access-intune.md)
-* [Isolement des données d’entreprise des données personnelles dans la même application](../apps/app-protection-policy.md)
-* [Stratégie de protection des applications (code confidentiel, chiffrement, Enregistrer sous, Presse-papiers, etc.)](../apps/app-protection-policies.md)
-* [Réinitialisation des données d’entreprise à partir d’une application mobile](../apps/apps-selective-wipe.md)
-* [Prise en charge de la gestion des droits](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
+- [Qu’est-ce que l’inscription d’appareils ?](../enrollment/device-enrollment.md)
+
+- [Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil](../configuration/device-profiles.md)
+
+- [Protéger des appareils avec Microsoft Intune](../protect/device-protect.md)
+
+## <a name="manage-apps"></a>Gérer des applications
+
+La gestion des applications mobiles (GAM) dans Intune est conçue pour protéger les données de l’organisation au niveau de l’application, y compris les applications personnalisées et les applications du Windows Store. La gestion des applications peut être utilisée sur des appareils appartenant à l’organisation et sur des appareils personnels.
+
+Lorsque les applications sont gérées dans Intune, les administrateurs peuvent :
+
+- Ajouter et affecter des applications mobiles à des groupes d’utilisateurs et à des appareils, y compris des utilisateurs dans des groupes spécifiques, des appareils dans des groupes spécifiques, et plus encore.
+- Configurer des applications pour qu’elles démarrent ou s’exécutent avec des paramètres spécifiques activés, et mettre à jour les applications existantes déjà présentes sur l’appareil.
+- Consultez les rapports sur les applications utilisées et suivez leur utilisation.
+- Effectuez une réinitialisation sélective en supprimant uniquement les données d’entreprise des applications.
+
+Intune assure la sécurité des applications mobiles par le biais de ses **[stratégies de protection des applications](../apps/app-protection-policy.md)** . Stratégies de protection des applications :
+
+- Utiliser l’identité Azure AD pour isoler les données d’entreprise des données personnelles. Les informations personnelles ne sont donc pas exposées au service informatique de l’organisation. Une protection de sécurité supplémentaire est accordée aux données accessibles à l’aide des informations d’identification de l’organisation.
+- Sécuriser l’accès aux appareils personnels en restreignant les actions que les utilisateurs peuvent effectuer, comme le copier-coller, l’enregistrement et l’affichage.
+- Vous pouvez créer et déployer cela sur les appareils qui sont inscrits dans Intune, inscrits dans un autre service MDM ou non inscrits dans un service MDM. Sur les appareils inscrits, les stratégies de protection des applications peuvent ajouter une couche de protection supplémentaire.
+
+Par exemple, un utilisateur se connecte à un appareil avec ses informations d’identification d’organisation. Son identité d’organisation lui permet d’accéder aux données qui sont refusées à son identité personnelle. À mesure que ces données de l’organisation sont utilisées, les stratégies de protection d’application contrôlent la façon dont elles sont enregistrées et partagées. Lorsque les utilisateurs se connectent avec leur identité personnelle, ces mêmes protections ne sont pas appliquées. Ainsi, le service informatique contrôle les données de l’organisation tandis que l’utilisateur final garde le contrôle et préserve la confidentialité de ses données personnelles.
+
+Et vous pouvez utiliser Intune avec les autres services dans EMS. Cette fonctionnalité fournit à l’application mobile de votre organisation une sécurité qui va au-delà de ce qui est inclus avec le système d’exploitation et les applications. Les applications gérées avec EMS ont accès à un ensemble plus large de fonctionnalités de protection des applications mobiles et des données.
 
 ![Image qui présente les niveaux de sécurité des données de gestion des applications](./media/what-is-intune/managing-mobile-apps.png)
 
-### <a name="intune-app-security"></a>Sécurité des applications Intune
-Assurer la sécurité des applications fait partie de la gestion des applications et, dans Intune, quand nous parlons de sécurité des applications mobiles, voici ce que nous voulons dire :
-* Isolement des informations personnelles pour ne pas les exposer au service informatique de l’entreprise
-* Limitation des actions que les utilisateurs peuvent effectuer avec les informations d’entreprise, comme copier, couper/coller, enregistrer et afficher
-* Suppression des données d’entreprise dans les applications mobiles, également appelée réinitialisation sélective ou réinitialisation d’entreprise
+## <a name="compliance-and-conditional-access"></a>Conformité et accès conditionnel
 
-Intune assure la sécurité des applications mobiles par le biais de sa fonctionnalité de **stratégie de protection des applications**. La stratégie de protection des applications utilise l’identité Azure AD pour isoler les données d’entreprise des données personnelles. Les données accessibles à l’aide des informations d’identification d’entreprise reçoivent des protections supplémentaires.
+Intune s’intègre à Azure AD pour gérer un large éventail de scénarios de contrôle d’accès. Par exemple, les appareils mobiles doivent être conformes aux normes de l’organisation définies dans Intune avant d’accéder aux ressources réseau, comme la messagerie ou SharePoint. De même, vous pouvez verrouiller les services afin qu’ils soient uniquement disponibles pour un ensemble spécifique d’applications mobiles. Par exemple, vous pouvez verrouiller Exchange Online pour qu’il soit uniquement accessible par Outlook ou Outlook Mobile.
 
-Par exemple, quand un utilisateur se connecte à son appareil avec ses informations d’identification d’entreprise, son identité professionnelle lui donne accès à des données auxquelles son identité personnelle ne peut pas accéder. À mesure que ces données d’entreprise sont utilisées, les stratégies de protection d’application contrôlent la façon dont elles sont enregistrées et partagées. Ces mêmes protections ne sont pas appliquées aux données auxquelles l’utilisateur accède quand il se connecte à son appareil avec son identité personnelle. Ainsi, le service informatique contrôle les données de l’entreprise tandis que l’utilisateur final garde le contrôle et préserve la confidentialité de ses données personnelles.
+**Ressources en ligne** :
 
-## <a name="emm-with-and-without-device-enrollment"></a>Gestion de la mobilité d’entreprise avec et sans inscription d’appareils
-La plupart des solutions de gestion de la mobilité d’entreprise prennent en charge des technologies d’appareils mobiles et d’applications mobiles basiques. Celles-ci sont généralement liées à l’appareil inscrit dans la solution de gestion des appareils mobiles (MDM) de votre organisation. Intune prend en charge ces scénarios et prend également en charge de nombreux scénarios « sans inscription ».  
+- [Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation](../protect/device-compliance-get-started.md)
 
-Les organisations se distinguent selon qu’elles adoptent ou non des scénarios « sans inscription ». Certaines organisations en font leur norme. D’autres les autorisent pour les appareils personnels comme les tablettes. D’autres encore ne les prennent pas du tout en charge. Même dans ce dernier cas, où une organisation exige que tous les appareils de son personnel soient inscrits dans MDM, des scénarios « sans inscription » sont généralement pris en charge pour les sous-traitants, les fournisseurs et d’autres appareils bénéficiant d’une exemption spécifique.
+- [Utilisations courantes de l’accès conditionnel avec Intune](../protect/conditional-access-intune-common-ways-use.md)
 
-Vous pouvez même utiliser la technologie « sans inscription » d’Intune sur des appareils inscrits. Par exemple, un appareil inscrit dans MDM peut bénéficier de protections « Open In » fournies par le système d’exploitation mobile. La protection « Open In » est une fonctionnalité iOS d’Apple qui vous empêche d’ouvrir un document à partir d’une application, comme Outlook, dans une autre application, comme Word, sauf si les deux applications sont gérées par le même fournisseur MDM. Le service informatique peut aussi appliquer la stratégie de protection des applications aux applications mobiles gérées par EMS pour contrôler la fonctionnalité Enregistrer sous ou fournir une authentification multifacteur.
+## <a name="how-to-get-intune"></a>Comment obtenir Intune
 
-Quelle que soit la position de votre organisation vis-à-vis des appareils et applications mobiles inscrits et non inscrits, Intune, dans le cadre d’EMS, dispose d’outils qui vous permettent d’augmenter la productivité de votre personnel tout en protégeant les données de votre entreprise.
+Intune est disponible :
 
-## <a name="microsoft-intune-in-the-azure-portal"></a>Microsoft Intune dans le portail Azure
+- En tant que [service Azure](https://go.microsoft.com/fwlink/?linkid=2090973) autonome
+- Inclus avec [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) et [Microsoft 365 pour le gouvernement](https://www.microsoft.com/microsoft-365/government)
+- En tant que [Gestion des appareils mobiles dans Office 365](https://support.office.com/article/choose-between-mdm-for-office-365-and-microsoft-intune-c93d9ab9-efb2-4349-9b93-30c30562ee22), qui comprend certaines fonctionnalités Intune limitées
 
-Le [portail Azure](https://portal.azure.com) est l’endroit où se trouve le service Microsoft Intune.
-
-Voici quelques points clés de l’expérience Microsoft Intune dans le portail Azure :
-
-- Une console intégrée pour tous vos composants Enterprise Mobility + Security (EMS)
-- Une console HTML basée sur les normes web
-- Prise en charge de l’API Microsoft Graph pour automatiser de nombreuses actions
-- Groupes Azure AD (Active Directory) pour assurer la compatibilité dans toutes vos applications Azure
-- Prise en charge des navigateurs web les plus récents
-
-Pour obtenir un guide rapide afin de personnaliser votre expérience du portail, consultez [Bien démarrer avec Intune dans le portail Azure](tutorial-walkthrough-intune-portal.md).
-
-> [!NOTE]
-> Si vous avez utilisé une version antérieure de Microsoft Intune, les informations suivantes peuvent vous êtres utiles :
-> * [Où se trouvent mes fonctionnalités dans Azure ?](../ui-changes.md) est une référence qui vous montre les flux de travail et interfaces utilisateur spécifiques qui ont été modifiés au cours du passage à Azure.
-> * [Groupes classiques Intune dans le portail Azure](groups-get-started.md) explique les implications du passage aux groupes de sécurité Azure Active Directory pour la gestion des groupes.
-
-### <a name="before-you-start"></a>Avant de commencer
-
-Pour utiliser Intune dans le portail Azure, vous devez disposer d’un compte d’administration et d’un compte client Intune. [Inscrivez-vous pour obtenir un compte](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) si vous n’en avez pas déjà un.
-
-### <a name="supported-web-browsers-for-the-azure-portal"></a>Navigateurs web pris en charge pour le portail Azure
-
-Le portail Azure s’exécute sur la plupart des PC, Mac et tablettes. Les téléphones mobiles ne sont pas pris en charge.
-Actuellement, les navigateurs suivants sont pris en charge :
-
-- Microsoft Edge (dernière version)
-- Microsoft Internet Explorer 11
-- Safari (dernière version, Mac uniquement)
-- Chrome (dernière version)
-- Firefox (dernière version)
-
-Pour obtenir les informations les plus récentes sur les navigateurs pris en charge, consultez le [portail Azure](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices).
+Intune est utilisé dans de nombreux secteurs, notamment [le gouvernement](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [l’éducation](https://www.microsoft.com/en-us/education/intune) et [les kiosques ou appareils dédiés](../configuration/kiosk-settings.md) pour la fabrication et la vente au détail, et bien plus encore.
 
 ## <a name="next-steps"></a>Étapes suivantes
-* En savoir plus sur certaines des [façons courantes d’utiliser Intune](common-scenarios.md).
-* Se familiariser avec le produit [grâce à une période d’essai d’Intune de 30 jours](free-trial-sign-up.md).
-* Explorer [les spécifications techniques et les fonctionnalités](supported-devices-browsers.md) d’Intune.
+
+- Découvrez certains [problèmes courants en entreprise qu’Intune vous aide à résoudre](https://docs.microsoft.com/intune/common-scenarios).
+- Commencez avec une [version d’évaluation de 30 jours d’Intune](free-trial-sign-up.md).
+- Planifiez votre [migration sur Intune](migration-guide.md).
+- À l’aide de votre abonnement ou de votre version d’évaluation gratuite, effectuez le [Démarrage rapide : créer un profil d’appareil de messagerie pour iOS](../configuration/quickstart-email-profile.md).

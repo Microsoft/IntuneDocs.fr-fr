@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: e993df5c37cfed8d5dd0481543b406dd25ad1a49
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999307"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251567"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utiliser des certificats pour l’authentification dans Microsoft Intune  
 
@@ -51,7 +51,8 @@ Chaque profil de certificat que vous créez prend en charge une seule plateforme
 | Plate-forme              | Profil de certificat approuvé | Profil de certificat PKCS | Profil de certificat SCEP | Profil de certificat PKCS importé  |
 |--|--|--|--|---|
 | Administrateur d’appareil Android | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png)|  ![Pris en charge](./media/certificates-configure/green-check.png) |
-| Android Entreprise <br> - Propriétaire de l’appareil   | ![Pris en charge](./media/certificates-configure/green-check.png) |   |  |   |
+| Android Entreprise <br> - Entièrement géré (propriétaire de l’appareil)   | ![Pris en charge](./media/certificates-configure/green-check.png) |   | ![Pris en charge](./media/certificates-configure/green-check.png) |   |
+| Android Entreprise <br> - Dédié (propriétaire de l’appareil)   |  |   |  |   |
 | Android Entreprise <br> - Profil professionnel    | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Pris en charge](./media/certificates-configure/green-check.png) |   |![Pris en charge](./media/certificates-configure/green-check.png)|![Pris en charge](./media/certificates-configure/green-check.png)|

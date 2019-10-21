@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b32d34c1878bc0355c510ca342091010af43bca7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 419fd15f747c8b41377f3aca94c4b96d7c4910c1
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724917"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350005"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -165,7 +165,7 @@ Les utilisateurs peuvent effectuer des actions sur leurs appareils locaux ou dis
 - **Synchroniser** : cette action lance un archivage de l’appareil avec le service Intune. Il s’agit de **Vérifier l'état** dans le portail d’entreprise.
 - **Verrouillage à distance** : cette opération verrouille l’appareil, qui nécessite alors un code confidentiel pour être déverrouillé.
 - **Réinitialiser le code secret**  : cette action permet de réinitialiser le code secret de l’appareil. Sur les appareils iOS, le code secret est supprimé et l’utilisateur final est invité à entrer un nouveau code dans les paramètres. Sur les appareils Android pris en charge, un nouveau code secret est généré par Intune et s’affiche temporairement dans le portail d’entreprise.
-- **Récupération de clé**  : cette action permet de récupérer une clé de chiffrement pour les appareils chiffrés.
+- **Récupération de clé**  : cette action permet de récupérer une clé de récupération personnelle pour les appareils macOS chiffrés à partir du site web du portail d’entreprise. 
 
 ### <a name="self-service-actions"></a>Actions en libre-service
 
@@ -180,7 +180,7 @@ Certaines plateformes et configurations n’autorisent pas les actions d’appar
 
 
 <sup>(1)</sup> La mise hors service est toujours bloquée sur les appareils joints Azure AD Windows.<br>
-<sup>(2)</sup> La récupération de clé pour macOS est disponible uniquement via le portail web.<br>
+<sup>(2) </sup> La récupération de clé personnelle pour macOS est disponible uniquement via le site web du portail d’entreprise.<br> 
 <sup>(3)</sup> Toutes les actions à distance sont désactivées si vous utilisez une inscription du gestionnaire d’inscription d’appareil.<br>
 <sup>(4)</sup> Renommer modifie uniquement le nom de l’appareil dans l’application ou le site web du portail d’entreprise, et non sur l’appareil.<br>
 <sup>(5)</sup> La réinitialisation à distance n’est pas disponible sur les appareils macOS.<br>

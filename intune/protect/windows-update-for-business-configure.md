@@ -14,16 +14,14 @@ ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a9ecc1cabb00122d2812580b663fcd0c1dfabc3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: aa8cc396c05150006799c1e9b86ecb63351cdb36
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728089"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314706"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Utilisez Intune pour définir des anneaux de mise à jour qui spécifient comment et quand Windows en tant que service met à jour vos appareils Windows 10. Les anneaux de mise à jour sont des stratégies que vous attribuez à des groupes d’appareils. En utilisant les anneaux de mise à jour, vous pouvez créer une stratégie de mise à jour qui reflète les besoins de votre entreprise. Pour plus d’informations, consultez [Gérer les mises à jour à l’aide de Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
@@ -92,7 +90,7 @@ En plus de pouvoir consulter l’état d’affectation, vous pouvez sélectionne
 ### <a name="delete"></a>Supprimer  
 Sélectionnez **Supprimer** pour arrêter l’application des paramètres de l’anneau de mise à jour Windows 10 sélectionné. La suppression d’un anneau supprime sa configuration Intune afin qu’Intune n’applique plus ces paramètres.  
 
-La suppression d’un anneau d’Intune ne modifie pas les paramètres sur les appareils auxquels l’anneau de mise à jour a été attribué.  L’appareil conserve ses paramètres actuels. Ceci est dû au fait que les appareils ne conservent pas un enregistrement d’historique des paramètres précédemment appliqués et au fait que l’appareil peut recevoir des paramètres d’autres anneaux de mise à jour qui restent actifs.  
+La suppression d’un anneau d’Intune ne modifie pas les paramètres sur les appareils auxquels l’anneau de mise à jour a été attribué.  L’appareil conserve ses paramètres actuels. Les appareils ne maintiennent pas un enregistrement historique des paramètres qu’ils détenaient précédemment. Les appareils peuvent également recevoir des paramètres d’anneaux de mise à jour supplémentaires qui restent actifs.  
 
 #### <a name="to-delete-a-ring"></a>Pour supprimer un anneau  
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour, sélectionnez **Supprimer**.  
@@ -129,6 +127,12 @@ Lorsqu’un anneau de mise à jour est suspendu, vous pouvez sélectionner **Pro
 
 ### <a name="uninstall"></a>Désinstaller  
 Un administrateur Intune peut utiliser **Désinstaller** pour désinstaller (restaurer) la dernière mise à jour de *fonctionnalité* ou la dernière mise à jour de *qualité* d’un anneau de mise à jour actif ou suspendu. Après la désinstallation d’un type, vous pouvez désinstaller l’autre type. Intune ne prend pas en charge ni ne gère pas la capacité des utilisateurs à désinstaller les mises à jour.  
+
+> [!IMPORTANT] 
+> Lorsque vous utilisez l’option *Désinstaller*, Intune transmet immédiatement la demande de désinstallation aux appareils. 
+> - Les appareils Windows commencent la suppression des mises à jour dès qu’elles reçoivent la modification de la stratégie Intune. La suppression des mises à jour n’est pas limitée aux planifications de maintenance, même lorsqu’elle est configurée dans le cadre de l’anneau de mise à jour. 
+> - Si la suppression des mises à jour nécessite un redémarrage de l’appareil, l’appareil redémarre sans offrir à l’utilisateur de l’appareil une option de délai.
+
 
 Pour que la désinstallation réussisse :  
 - Un appareil doit exécuter la mise à jour d’avril 2018 de Windows 10 (version 1803) ou ultérieure.  

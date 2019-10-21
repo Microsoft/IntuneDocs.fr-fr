@@ -1,5 +1,5 @@
 ---
-title: Tutoriel - Protéger la messagerie Exchange Online sur les appareils gérés par Intune
+title: 'Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés'
 titleSuffix: Microsoft Intune
 description: Apprenez à sécuriser Exchange Online avec les stratégies de conformité iOS Intune et l’accès conditionnel Azure AD pour exiger des appareils gérés et l’application Outlook.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2d6f14b4b3e1e981cce789664203b74523b2474
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c20c0c1543cd8fcbf7345a02295486aaaa6ddcea
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727933"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306871"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 Découvrez l’utilisation des stratégies de conformité des appareils avec accès conditionnel pour vous assurer que les appareils iOS peuvent accéder à la messagerie Exchange Online uniquement s’ils sont gérés par Intune et à l’aide d’une application de messagerie approuvée. 
@@ -95,7 +95,7 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
     2. Dans l’onglet **Inclure**, sélectionnez **N’importe quel appareil**, puis **Terminé**. 
     3. Sélectionnez **Terminé** à nouveau.
    
-    ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
+    ![Inclure un appareil](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
 6. Sous **Affectations**, sélectionnez **Conditions** > **Applications clientes**.
      
@@ -103,7 +103,7 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
     2. Pour ce tutoriel, sélectionnez **Applications mobiles et clients de bureau** et **Clients d'authentification moderne** (qui fait référence aux applications comme Outlook pour iOS et Outlook pour Android). Décochez toutes les autres cases.
     3. Sélectionnez **Terminé**, puis sélectionnez **Terminé** à nouveau.
     
-    ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
+    ![Sélectionner les applications et clients](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
 7. Sous **Contrôles d’accès**, sélectionnez **Accorder**. 
      
@@ -113,11 +113,11 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
     4. Sous **Pour plusieurs contrôles**, sélectionnez **Demander tous les contrôles sélectionnés**. Ce paramètre garantit que les deux exigences que vous avez sélectionnées sont appliquées quand un appareil tente d’accéder à la messagerie.
     5. Choisissez **Sélectionner**.
      
-    ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+    ![Sélectionner les contrôles](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Sous **Activer la stratégie**, sélectionnez **Activé**.
      
-    ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+    ![Activer une stratégie](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Sélectionnez **Créer**.
 

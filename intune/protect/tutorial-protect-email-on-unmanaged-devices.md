@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bb684e787a75900ca2157a04150a8fc6c4ba715
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 7e0a01034bc35ddf8fd8eb1ede5fcf4c942dc735
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721264"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306807"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils non gérés
 
@@ -113,7 +113,7 @@ Nous allons maintenant créer deux stratégies d’accès conditionnel pour couv
    3. Décochez les autres cases.  
    4. Sélectionnez **Terminé** > **Terminé** pour revenir au volet Nouvelle stratégie.  
 
-   ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   ![Sélectionner les applications mobiles et les clients](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 7. Sous **Contrôles d’accès**, sélectionnez **Accorder**. 
      
@@ -123,11 +123,11 @@ Nous allons maintenant créer deux stratégies d’accès conditionnel pour couv
    4. Sous **Pour plusieurs contrôles**, sélectionnez **Demander tous les contrôles sélectionnés**. Ce paramètre garantit que les deux exigences que vous avez sélectionnées sont appliquées quand un appareil tente d’accéder à la messagerie.
    5. Choisissez **Sélectionner**.
      
-   ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   ![Contrôles de sélection](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
 7. Sous **Activer la stratégie**, sélectionnez **Activé**, puis sélectionnez **Créer**.  
      
-    ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+    ![Créer une stratégie](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
 La stratégie d’accès conditionnel pour les clients d’authentification moderne est créée. Vous pouvez maintenant créer une stratégie pour les clients Exchange Active Sync.
 
@@ -153,14 +153,14 @@ La stratégie d’accès conditionnel pour les clients d’authentification mode
    4. Décochez toutes les autres cases.  
    5. Sélectionnez **Terminé**, puis sélectionnez **Terminé** à nouveau.  
     
-   ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   ![Appliquer aux plateformes prises en charge](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
 
 7. Sous **Contrôles d’accès**, sélectionnez **Accorder**.  
    1. Dans le volet **Accorder**, sélectionnez **Accorder l’accès**.  
    2. Sélectionnez **Demander une application cliente approuvée**. Décochez toutes les autres cases.  
    3. Choisissez **Sélectionner**.  
      
-   ![Sélectionnez l’application Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
+   ![Demander une application cliente approuvée](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
 
 8. Sous **Activer la stratégie**, sélectionnez **Activé**.  
 

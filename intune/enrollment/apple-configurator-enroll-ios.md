@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d50fdbb766068e643604cdf729e62cdd07d22b62
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a1c2acc2ebe5528e30c344a31c9551ac64bdf3ca
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723513"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306782"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Configurer l’inscription des appareils iOS avec Apple Configurator
 
@@ -60,6 +60,9 @@ Un profil d’inscription d’appareil définit les paramètres appliqués duran
     - **Inscrire avec affinité utilisateur** : choisissez cette option pour les appareils qui appartiennent à des utilisateurs et qui veulent utiliser le Portail d’entreprise pour des services comme l’installation d’applications. L’appareil doit être affilié à un utilisateur avec l’Assistant Configuration. Il pourra alors accéder aux données et à la messagerie de l’entreprise. Prise en charge seulement pour l’inscription de l’Assistant Configuration. L’affinité utilisateur nécessite un [point de terminaison WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [En savoir plus](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Inscrire sans affinité utilisateur** : choisissez cette option pour les appareils non affiliés à un seul utilisateur, qui effectuent des tâches sans accéder aux données de l’utilisateur local. Les applications qui nécessitent l’affiliation d’un utilisateur (y compris l’application Portail d’entreprise utilisée pour l’installation des applications métier) ne fonctionneront pas. Obligatoire pour l’inscription directe.
+
+     > [!NOTE]
+     > Lorsque **Inscrire avec l’affinité utilisateur** est sélectionné, assurez-vous que l’appareil est affilié à un utilisateur avec l’Assistant Configuration dans les 24 heures qui suivent l’inscription de l’appareil. Sinon, l’inscription peut échouer et une réinitialisation aux paramètres d’usine est alors nécessaire pour inscrire l’appareil.
 
 4. Si vous avez choisi **Inscrire avec affinité utilisateur**, vous avez la possibilité d’autoriser les utilisateurs à s’authentifier avec le Portail d’entreprise au lieu de l’Assistant Configuration Apple.
 
