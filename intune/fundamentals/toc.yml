@@ -41,6 +41,16 @@
       href: device-lifecycle.md
     - name: Cycle de vie de l’application
       href: ../apps/app-lifecycle.md
+    - name: Scénarios guidés
+      items:
+        - name: Vue d’ensemble des scénarios guidés
+          href: guided-scenarios-overview.md
+        - name: Déployer Microsoft Edge pour appareils mobiles
+          href: guided-scenarios-edge.md
+        - name: Bureau moderne géré par le cloud
+          href: guided-scenarios-cloud-managed-pc.md
+        - name: Applications mobiles Microsoft Office sécurisées
+          href: guided-scenarios-office-mobile.md
     - name: Scénarios courants
       href: common-scenarios.md
     - name: Décisions d’ordre informatique pour BYOD avec EMS
@@ -175,6 +185,8 @@
       href: ../protect/index.yml
     - name: Gérer et protéger les applications
       href: ../apps/index.yml
+    - name: Utiliser des ensembles de stratégies
+      href: ~/fundamentals/policy-sets.md
     - name: Guide pour développeurs
       href: ../developer/index.yml
     - name: Obtenir de l’aide et du support
