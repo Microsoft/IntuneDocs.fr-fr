@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfea74c70b81cadfa06c578dc33cdad401fa9e45
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 107624ac5d0c5eab423c0d5051ceca45e41de0b9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940078"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490753"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications Android pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -53,7 +54,7 @@ Avant d’exécuter l’outil, passez en revue les [considérations en matière 
     > [!NOTE]
     > Intune App Wrapping Tool ne prend pas en charge les schémas de signature d’applications de la v2 et de la v3 à venir. Une fois le fichier .apk inclus dans un wrapper à l’aide d’Intune App Wrapping Tool, il est recommandé d’utiliser [l’outil apksigner fourni par Google]( https://developer.android.com/studio/command-line/apksigner). Ainsi, lorsque l’application arrive sur les appareils des utilisateurs finaux, elle peut être lancée correctement selon les standards Android. 
 
-- Parfois, une application peut atteindre la limite de taille du fichier exécutable Dalvik (DEX) à cause des classes du Kit de développement logiciel (SDK) de gestion des applications mobiles Intune ajoutées pendant l’habillage. (en option) Les fichiers DEX font partie de la compilation d’une application Android. L’outil de création de fichier de restrictions d’application Intune gère automatiquement le dépassement de capacité de fichier DEX pendant l’encapsulation pour les applications avec un niveau d’API minimal de 21 ou plus (à partir de [V. 1.0.2501.1 Pour les applications avec un niveau d’API minimal de < 21, il est recommandé d’augmenter le niveau d’API min à l’aide de l’indicateur `-UseMinAPILevelForNativeMultiDex` du wrapper. Pour les clients qui ne peuvent pas augmenter le niveau d’API minimal de l’application, les solutions de contournement de dépassement de capacité de fichier DEX suivantes sont disponibles. Dans certaines organisations, il peut être nécessaire de contacter la personne en charge de compiler l’application (c’est-à-dire l’équipe de génération des applications) :
+- Parfois, une application peut atteindre la limite de taille du fichier exécutable Dalvik (DEX) à cause des classes du Kit de développement logiciel (SDK) de gestion des applications mobiles Intune ajoutées pendant l’habillage. (en option) Les fichiers DEX font partie de la compilation d’une application Android. L’outil de création de fichier de restrictions d’application Intune gère automatiquement le dépassement de capacité de fichier DEX pendant l’encapsulation pour les applications avec un niveau d’API minimal de 21 ou plus (à partir de [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases) Pour les applications avec un niveau d’API minimal de < 21, il est recommandé d’augmenter le niveau d’API min à l’aide de l’indicateur de `-UseMinAPILevelForNativeMultiDex` du wrapper. Pour les clients qui ne peuvent pas augmenter le niveau d’API minimal de l’application, les solutions de contournement de dépassement de capacité de fichier DEX suivantes sont disponibles. Dans certaines organisations, il peut être nécessaire de contacter la personne en charge de compiler l’application (c’est-à-dire l’équipe de génération des applications) :
 * Utilisez ProGuard pour éliminer les références de classe inutilisées du fichier DEX principal de l’application.
 * Pour les clients qui utilisent v 3.1.0 ou une version ultérieure du plug-in Android Gradle, désactivez [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 

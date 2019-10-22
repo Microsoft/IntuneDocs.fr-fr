@@ -1,6 +1,6 @@
 ---
 title: Chiffrer un appareil Android pour Intune | Microsoft Docs
-description: Étapes pour activer le chiffrement d’appareil Android lorsque requis par Intune
+description: Étapes à suivre pour activer le chiffrement d’appareil Android lorsqu’il est requis par Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
@@ -18,55 +19,55 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfc17c60412a1cfe90693216caa69ada3d2d2c9a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545260"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506368"
 ---
 # <a name="encrypting-your-android-device"></a>Chiffrement de votre appareil Android
 
-Chiffrement de l’appareil protège vos fichiers et dossiers contre tout accès non autorisé si votre appareil est perdu ou volé. Une fois que vous activez le chiffrement de l’appareil, seules les personnes qui le mot de passe correct ou un code pin sera en mesure de se connecter à votre appareil. 
+Le chiffrement de l’appareil protège vos fichiers et dossiers contre tout accès non autorisé si votre appareil est perdu ou volé. Une fois que vous avez activé le chiffrement de l’appareil, seules les personnes avec le mot de passe ou le code confidentiel corrects pourront se connecter à votre appareil. 
 
-Avant de pouvoir accéder à des ressources scolaires ou professionnels, votre organisation peut vous obliger à chiffrer votre appareil Android. Certains appareils Android plus récents sont chiffrées par défaut, out-of-the-box.  
+Avant de pouvoir accéder aux ressources scolaires ou professionnelles, votre organisation peut vous demander de chiffrer votre appareil Android. Certains appareils Android plus récents sont chiffrés par défaut, prêts à l’emploi.  
 
 ## <a name="turn-on-encryption"></a>Activer le chiffrement
 
-Si le portail d’entreprise ou de l’application Microsoft Intune vous invite à chiffrer votre appareil, procédez comme suit. 
+Si Portail d’entreprise ou l’application Microsoft Intune vous invite à chiffrer votre appareil, procédez comme suit. 
 
 > [!Note]
-> Certains appareils Android à partir de Huawei Vivo et OPPO ne peut pas être chiffrées. Découvrez-en plus [ici](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Certains appareils Android de Huawei, vivo et OPPO ne peuvent pas être chiffrés. Découvrez-en plus [ici](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1. Définissez un verrouillage d’écran de périphérique.  
+1. Définissez un verrouillage de l’écran de l’appareil.  
     a. Accédez à **Paramètres** > **Écran de verrouillage et sécurité** > **Type d’écran de verrouillage**.  
-    b. Sélectionnez **PIN**, **mot de passe**, ou **modèle**.  
-    c. Suivez les instructions à l’écran pour configurer votre écran de verrouillage.  
+    b. Sélectionnez **pin**, **mot de passe**ou **modèle**.  
+    c. Suivez les instructions à l’écran pour configurer votre verrouillage d’écran.  
 
-2. Revenez à **écran de verrouillage et sécurité** et sélectionnez **le démarrage sécurisé**.
-3. Choisissez **exiger le code PIN lors de l’appareil s’allume** > **OK**.
-4. Entrez votre PIN pour confirmer et chiffrer votre appareil.
-5. Ouvrez l’application portail d’entreprise ou Microsoft Intune.
+2. Revenez à l' **écran de verrouillage et à sécurité** , puis sélectionnez **Démarrage sécurisé**.
+3. Choisissez **exiger un code PIN quand l’appareil s’allume**  > **OK**.
+4. Entrez votre code PIN pour confirmer et chiffrer votre appareil.
+5. Ouvrez l’application Portail d’entreprise ou Microsoft Intune.
     * Utilisateurs Portail d’entreprise : sélectionnez votre appareil, puis appuyez sur **Vérifier les paramètres de l’appareil**. 
-    * Les utilisateurs de Microsoft Intune : vous devez attendre jusqu'à ce que les mises à jour de la page, mais lorsque cela arrive, votre état de chiffrement doit passer à conforme.  
+    * Microsoft Intune utilisateurs : vous devez attendre la mise à jour de la page, mais dans ce cas, votre état de chiffrement doit passer à conforme.  
 
-Appareils exécutant Android 4.4 et versions antérieures ne peuvent pas avoir le **démarrage sécurisé** option. Dans ce cas, effectuez les étapes suivantes pour chiffrer votre appareil.
+Les appareils exécutant Android 4,4 et versions antérieures peuvent ne pas disposer de l’option de **Démarrage sécurisé** . Dans ce cas, procédez comme suit pour chiffrer votre appareil.
 
-1. Accédez à **paramètres** > **sécurité** > **chiffrer appareil**. Les étiquettes à l’écran varient entre les appareils Android. Si vous ne voyez pas le **chiffrer l’appareil** option, l’archivage :
-    * **Stockage** > **chiffrement du stockage**
-    * **Stockage** > **écran de verrouillage et sécurité** > **autres paramètres de sécurité** 
+1. Accédez à **paramètres**  > **sécurité**  > **chiffrer l’appareil**. Les étiquettes à l’écran varient d’un appareil Android à l’autre. Si vous ne voyez pas l’option **chiffrer l’appareil** , cochez la case suivante :
+    * **Stockage**  >  le**chiffrement du stockage**
+    * Écran de verrouillage du  de **stockage** >  **et sécurité**  > **autres paramètres de sécurité** 
 
 2. Suivez les instructions à l'écran. Au cours du chiffrement, votre appareil peut redémarrer plusieurs fois.
-3. Ouvrez l’application portail d’entreprise ou Microsoft Intune.
+3. Ouvrez l’application Portail d’entreprise ou Microsoft Intune.
     * Utilisateurs Portail d’entreprise : sélectionnez votre appareil, puis appuyez sur **Vérifier les paramètres de l’appareil**.  
-    * Les utilisateurs de Microsoft Intune : vous devez attendre jusqu'à ce que les mises à jour de la page, mais lorsque cela arrive, votre état de chiffrement doit passer à conforme.
+    * Microsoft Intune utilisateurs : vous devez attendre la mise à jour de la page, mais dans ce cas, votre état de chiffrement doit passer à conforme.
 
 ## <a name="troubleshoot"></a>Dépannage  
 **Problème**: vous avez déjà chiffré votre appareil et
 
 - Le bouton de chiffrement est désactivé.
 - Un message vous informe que vous devez chiffrer votre appareil.
-- Vous obtenez des erreurs lorsque vous tentez d’utiliser l’application portail d’entreprise ou Microsoft Intune.
+- Vous recevez des erreurs lors de la tentative d’utilisation de l’application Portail d’entreprise ou Microsoft Intune.
 
 **Solutions possibles**
 
