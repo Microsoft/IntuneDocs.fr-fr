@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58eefffac670a12fc1d1a065534b4c1a4505426
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734945"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585378"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -67,7 +68,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 - **Mise à jour système** : choisissez une option pour définir la façon dont l’appareil traite les mises à jour à distance :
   - **Paramètre par défaut de l’appareil** : utiliser le paramètre par défaut de l’appareil.
   - **Automatique** : les mises à jour sont installées automatiquement, sans interaction de l’utilisateur. La définition de cette stratégie entraîne l’installation immédiate des mises à jour en attente.
-  - **Différé** : les mises à jour sont reportées de 30 jours. À la fin des 30 jours, Android invite l’utilisateur à installer la mise à jour. Il est possible pour les fabricants ou les opérateurs d’appareils d’empêcher (exempter) le report des mises à jour de sécurité importantes. Une mise à jour exemptée affiche une notification système sur l’appareil de l’utilisateur. 
+  - **Différé** : les mises à jour sont reportées de 30 jours. À la fin des 30 jours, Android invite l’utilisateur à installer la mise à jour. Il est possible pour les fabricants ou les opérateurs d’appareils d’empêcher (exempter) le report des mises à jour de sécurité importantes. Une mise à jour exemptée affiche une notification système sur l’appareil de l’utilisateur.
   - **Fenêtre de maintenance** : permet d’installer les mises à jour automatiquement durant une fenêtre de maintenance quotidienne définie dans Intune. L’installation est tentée quotidiennement pendant 30 jours, et cette opération peut échouer en raison d’un espace ou d’un niveau de batterie insuffisant. Après 30 jours, Android invite l’utilisateur à procéder à l’installation. Cette fenêtre est également utilisée pour installer les mises à jour des applications Play. Utilisez cette option pour les appareils dédiés, par exemple les bornes, car les applications de premier plan d’appareils mono-application dédiés peuvent être mises à jour.
 
 - **Fenêtre de notification** : quand cette option a la valeur **Désactiver**, les notifications, notamment les toasts, les appels entrants, les appels sortants, les alertes système et les erreurs système, ne sont pas affichées sur l’appareil. quand elle a la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage des notifications).
@@ -98,8 +99,8 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   > Pour les appareils multi-application dédiés, l’application [Managed Home Screen](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) à partir de Google Play **doit être** :
   >   - [Ajoutée en tant qu’application cliente](../apps/apps-add-android-for-work.md) dans Intune
   >   - [Attribuée au groupe d’appareils](../apps/apps-deploy.md) créé pour vos appareils dédiés
-  > 
-  > L’application **Managed Home Screen** ne doit pas nécessairement figurer dans le profil de configuration, mais elle doit être ajoutée comme une application cliente. Lorsque l’application **Managed Home Screen** est ajoutée comme application cliente, toutes les autres applications que vous ajoutez au profil de configuration apparaissent sous forme d’icônes dans l’application **Managed Home Screen**. 
+  >
+  > L’application **Managed Home Screen** ne doit pas nécessairement figurer dans le profil de configuration, mais elle doit être ajoutée comme une application cliente. Lorsque l’application **Managed Home Screen** est ajoutée comme application cliente, toutes les autres applications que vous ajoutez au profil de configuration apparaissent sous forme d’icônes dans l’application **Managed Home Screen**.
   >
   > Lorsque vous utilisez le mode plein écran à plusieurs applications, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
 
@@ -157,8 +158,8 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
       Si vous n’entrez pas d’URL, l’image par défaut de l’appareil est utilisée, s’il existe une image par défaut.
 
-    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran : choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0-9999999 secondes. La valeur par défaut est de `0` secondes. Lorsqu’il est laissé vide, ou défini sur zéro (`0`), l’économiseur d’écran est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
-    - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1-9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
+    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran : choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0 et 9999999 secondes. La valeur par défaut est de `0` secondes. Lorsqu’il est laissé vide, ou défini à zéro (`0`), l’économiseur d’écran est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
+    - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1 et 9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
     - **Détecter le support avant de démarrer l’économiseur d’écran**: **activer** (par défaut) n’affiche pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** affiche l’écran de veille, même si l’audio ou la vidéo est en train de fonctionner.
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
@@ -241,7 +242,22 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
   Choisissez **Non configuré** pour permettre au trafic de passer par le tunnel VPN ou le réseau mobile.
 
-## <a name="work-profile-only"></a>Profil professionnel uniquement 
+- **Proxy global recommandé**: choisissez **activer** pour ajouter un proxy global aux appareils. En cas d’activation, le trafic HTTP et HTTPs, y compris certaines applications sur l’appareil, utilisez le proxy que vous entrez. Ce proxy n’est qu’une recommandation. Il est possible que certaines applications n’utilisent pas le proxy. **Non configuré** (par défaut) n’ajoute pas de proxy global recommandé.
+
+  Pour plus d’informations sur cette fonctionnalité, consultez [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (ouvre un site Android).
+
+  Lorsque cette option est activée, entrez également le **type** de proxy. Les options disponibles sont les suivantes :
+
+  - **Direct**: choisissez cette option pour entrer manuellement les détails du serveur proxy, notamment :
+    - **Hôte**: entrez le nom d’hôte ou l’adresse IP de votre serveur proxy. Par exemple, entrez `proxy.contoso.com` ou `127.0.0.1`.
+    - **Numéro de port** : entrez le numéro de port TCP utilisé par le serveur proxy. Par exemple, entrez `8080`.
+    - **Hôtes exclus**: entrez une liste de noms d’hôtes ou d’adresses IP qui n’utiliseront pas le proxy. Cette liste peut inclure un caractère générique astérisque (`*`) et plusieurs hôtes séparés par des points-virgules (`;`) sans espace. Par exemple, entrez `127.0.0.1;web.contoso.com;*.microsoft.com`.
+
+  - **Configuration automatique de proxy**: entrez l' **URL PAC** vers un script de configuration automatique de proxy. Par exemple, entrez `https://proxy.contoso.com/proxy.pac`.
+
+    Pour plus d’informations sur les fichiers PAC, consultez [fichier de configuration automatique de proxy (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (ouvre un site non-Microsoft).
+
+## <a name="work-profile-only"></a>Profil professionnel uniquement
 
 ### <a name="work-profile-settings"></a>Paramètres de profil professionnel
 
@@ -249,9 +265,10 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
 - **Copier-coller entre les profils professionnel et personnel** : choisissez **Bloquer** pour empêcher les opérations copier et coller entre les applications professionnelles et personnelles. L’option **Non configuré** permet aux utilisateurs de partager des données par copier-coller dans les applications du profil personnel 
 - **Partage des données entre les profils professionnels et personnels** : choisissez si les applications associées au profil professionnel peuvent ou non partager avec des applications du profil personnel. Par exemple, vous pouvez contrôler les actions de partage dans les applications, notamment l’option **Partager** dans l’application de navigateur Chrome. Ce paramètre ne s’applique pas au comportement du Presse-papiers pour les opérations de type copier/coller. Voici vos options de partage :
-  - **Restrictions de partage par défaut** : comportement de partage par défaut de l’appareil, qui varie en fonction de la version d’Android. Par défaut, le partage du profil personnel vers le profil professionnel est autorisé. Le partage du le profil professionnel vers le profil personnel est aussi bloqué par défaut. Ce paramètre empêche les partages de données du profil professionnel vers le profil personnel. Sur les appareils exécutant les versions 6.0 et ultérieures, Google ne bloque pas le partage du profil personnel vers le profil professionnel.
+  - **Périphérique par défaut** : le comportement de partage par défaut de l’appareil, qui varie en fonction de la version d’Android. Par défaut, le partage du profil personnel vers le profil professionnel est autorisé. Le partage du le profil professionnel vers le profil personnel est aussi bloqué par défaut. Ce paramètre empêche les partages de données du profil professionnel vers le profil personnel. Sur les appareils exécutant les versions 6.0 et ultérieures, Google ne bloque pas le partage du profil personnel vers le profil professionnel.
   - **Les applications du profil professionnel peuvent gérer une demande de partage provenant d’un profil personnel** : active la fonctionnalité Android intégrée qui autorise le partage entre le profil personnel et le profil professionnel. Lorsque cette option est activée, une demande de partage à partir d’une application du profil personnel peut partager avec les applications associées au profil professionnel. Ce paramètre est le comportement par défaut des appareils Android exécutant des versions antérieures à 6.0.
-  - **Autoriser le partage en dehors des limites** : permet le partage dans les deux sens au-delà de la limite du profil professionnel. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
+  - **Empêcher le partage entre les limites**: empêche le partage entre les profils professionnels et personnels.
+  - **Aucune restriction sur le partage**: active le partage sur la limite des profils professionnels dans les deux directions. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
 
 - **Notifications du profil professionnel quand l’appareil est verrouillé** : permet de déterminer si les applications du profil professionnel peuvent afficher des données dans des notifications quand l’appareil est verrouillé. L’option **Bloquer** n’affiche pas les données. L’option **Non configuré** affiche les données.
 - **Autorisations des applications par défaut** : définit la stratégie d’autorisation par défaut pour toutes les applications du profil professionnel. À compter d’Android 6, l’utilisateur est invité à accorder certaines autorisations requises par les applications lorsque l’application est lancée. Ce paramètre de stratégie vous permet de décider si les utilisateurs sont invités à accorder des autorisations pour toutes les applications du profil professionnel. Par exemple, vous pouvez affecter au profil professionnel une application qui nécessite un accès à l’emplacement. Normalement, cette application invite l’utilisateur à approuver ou refuser l’accès à l’emplacement pour l’application. Utilisez cette stratégie pour accorder automatiquement les autorisations sans invite, refuser automatiquement les autorisations sans invite, ou laisser l’utilisateur final décider. Choisissez parmi :
@@ -325,6 +342,13 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
 
    > [!Note]
    > Ce paramètre ne fonctionne que pour les appareils Android O et versions supérieures.
+
+- **Empêcher les installations d’applications provenant de sources inconnues dans le profil personnel**: par défaut, les appareils Android Enterprise Work Profile ne peuvent pas installer d’applications à partir de sources autres que le Play Store. Par nature, les appareils de profil professionnel sont conçus pour être à double profil :
+
+  - Un profil professionnel géré à l’aide de MDM.
+  - Profil personnel isolé de la gestion MDM.
+
+  Ce paramètre permet aux administrateurs de contrôler davantage les installations d’applications provenant de sources inconnues. **Non configuré** (par défaut) autorise les installations d’applications provenant de sources inconnues dans le profil personnel. **Bloquer** empêche les installations d’applications à partir de sources autres que les Play Store dans le profil personnel.
 
 ### <a name="connectivity"></a>Connectivité
 

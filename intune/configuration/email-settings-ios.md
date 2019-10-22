@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bd91891fa6da770404dc0af6d59016aeefe30b3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4cbf9c29a1e694726b1b42f7072eea859f812751
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734594"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593810"
 ---
 # <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Ajouter des paramètres de messagerie pour les appareils iOS dans Microsoft Intune
 
@@ -55,7 +56,7 @@ Cet article liste et décrit tous les paramètres d’e-mail qui sont disponible
       - **Nom de domaine personnalisé à utiliser** : entrez une valeur utilisée par Intune pour le nom de domaine, comme `contoso.com` ou `contoso`
 
 - **Attribut d’adresse e-mail d’AAD** : choisissez comment l’adresse e-mail de l’utilisateur est générée. Sélectionnez **Nom d’utilisateur principal** (`user1@contoso.com` ou `user1`) pour utiliser le nom principal complet comme adresse e-mail. Sélectionnez **Adresse SMTP principale** (`user1@contoso.com`) pour utiliser l’adresse SMTP principale des utilisateurs pour se connecter à Exchange.
-- **Méthode d’authentification** : sélectionnez **Nom d’utilisateur et mot de passe** ou **Certificats** comme méthode d’authentification utilisée par le profil de messagerie. L’authentification multifacteur Azure n’est pas prise en charge.
+- **Méthode d’authentification** : sélectionnez **Nom d’utilisateur et mot de passe**, **Certificats** ou **Informations d’identification dérivées** comme méthode d’authentification utilisée par le profil de messagerie. L’authentification multifacteur Azure n’est pas prise en charge.
   - Si vous avez sélectionné **Certificats**, sélectionnez un profil de certificat SCEP ou PKCS client que vous avez créé précédemment et qui sert à authentifier la connexion Exchange.
 - **SSL** : sélectionnez **Activer** pour utiliser une communication SSL (Secure Sockets Layer) afin d’envoyer et de recevoir des e-mails, et de communiquer avec le serveur Exchange.
 - **OAuth** : sélectionnez **Activer** pour utiliser une communication OAuth (Open Authorization) afin d’envoyer et de recevoir des e-mails, et de communiquer avec Exchange. Si votre serveur OAuth utilise l’authentification par certificat, choisissez **certificat** comme **Méthode d’authentification** et incluez le certificat avec le profil. Sinon, choisissez **Nom d’utilisateur et mot de passe** comme **Méthode d’authentification**. Quand vous utilisez OAuth :

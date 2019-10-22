@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 197ad888dc8a07cc35efbaec538fde93c76c81c3
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 440eb2d457783ac71b905d064a6d83abaa966cfe
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817623"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503955"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Résoudre les problèmes des stratégies BitLocker dans Microsoft Intune
 
@@ -32,9 +33,9 @@ Le chiffrement de lecteur BitLocker est un service proposé par les systèmes d�
 
 Avec Microsoft Intune, vous disposez des méthodes suivantes pour gérer BitLocker sur les appareils Windows 10 :
 
-- **Stratégies de configuration des appareils** : certaines options de stratégie intégrées sont disponibles dans la console d’administration Intune, à la configuration de l' **appareil** > **Endpoint Protection** > **stratégie de chiffrement Windows**. Vous trouverez tous les commutateurs et fonctionnalités disponibles ici : [chiffrement Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+- **Stratégies de configuration des appareils** : certaines options de stratégie intégrées sont disponibles dans la console d’administration Intune, à la configuration de l' **appareil**  > **Endpoint Protection**  > **stratégie de chiffrement Windows**. Vous trouverez tous les commutateurs et fonctionnalités disponibles ici : [chiffrement Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
-- **Lignes de base de sécurité** -  les[lignes de base de sécurité](security-baselines.md) sont des groupes connus de paramètres et de valeurs par défaut qui sont recommandés par l’équipe de sécurité appropriée pour sécuriser les appareils Windows. Différentes sources de référence, telles que la ligne de base de *sécurité MDM* ou la *ligne de base de Microsoft Defender ATP* , peuvent gérer les mêmes paramètres que les paramètres les uns avec les autres. Ils peuvent également gérer les mêmes paramètres que ceux que vous gérez avec les stratégies de configuration des appareils. 
+- Les **lignes de base de sécurité**  -  les lignes de[base](security-baselines.md) de sécurité sont des groupes connus de paramètres et de valeurs par défaut qui sont recommandés par l’équipe de sécurité appropriée pour aider à sécuriser les appareils Windows. Différentes sources de référence, telles que la ligne de base de *sécurité MDM* ou la *ligne de base de Microsoft Defender ATP* , peuvent gérer les mêmes paramètres que les paramètres les uns avec les autres. Ils peuvent également gérer les mêmes paramètres que ceux que vous gérez avec les stratégies de configuration des appareils. 
 
 En plus d’Intune, il est possible que les paramètres BitLocker soient gérés par d’autres moyens comme stratégie de groupe ou définis manuellement par un utilisateur de l’appareil.
 
@@ -59,23 +60,23 @@ Comment vérifier que les paramètres ont été appliqués à l’appareil cibl�
 
 ### <a name="device-configuration-policy-device-status"></a>État du périphérique de stratégie de configuration d’appareil  
 
-Lorsque vous utilisez la stratégie de configuration d’appareil pour configurer BitLocker, vous pouvez vérifier l’état de la stratégie dans le portail Intune. Dans le portail, accédez à **configuration**de l’appareil  > **profils** > sélectionnez le profil contenant les paramètres BitLocker, puis sélectionnez état de l' **appareil**. Les appareils attribués au profil sont répertoriés, et la colonne État de l' *appareil* indique si un appareil a réussi à déployer le profil. 
+Lorsque vous utilisez la stratégie de configuration d’appareil pour configurer BitLocker, vous pouvez vérifier l’état de la stratégie dans le portail Intune. Dans le portail, accédez à **configuration** de l’appareil  > **profils** > sélectionnez le profil contenant les paramètres BitLocker, puis sélectionnez état de l' **appareil**. Les appareils attribués au profil sont répertoriés, et la colonne État de l' *appareil* indique si un appareil a réussi à déployer le profil. 
 
 N’oubliez pas qu’il peut y avoir un délai entre un appareil recevant une stratégie BitLocker et le lecteur entièrement chiffré.  
 
  
 ### <a name="use-control-panel-on-the-client"></a>Utiliser le panneau de configuration sur le client  
 
-Sur un appareil qui a activé BitLocker et chiffré un lecteur, vous pouvez afficher l’état de BitLocker à partir d’un panneau de configuration des appareils. Sur l’appareil, ouvrez le **panneau de configuration** > **système et sécurité** > **chiffrement de lecteur BitLocker**. La confirmation s’affiche comme indiqué dans l’image suivante.  
+Sur un appareil qui a activé BitLocker et chiffré un lecteur, vous pouvez afficher l’état de BitLocker à partir d’un panneau de configuration des appareils. Sur l’appareil, ouvrez le **panneau de configuration**  > **système et sécurité**  > **chiffrement de lecteur BitLocker**. La confirmation s’affiche comme indiqué dans l’image suivante.  
 
 ![BitLocker est activé dans le panneau de configuration](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
 ### <a name="use-a-command-prompt"></a>Utiliser une invite de commandes  
 
-Sur un appareil qui a activé BitLocker et chiffré un lecteur, lancez l’invite de commandes avec les informations d’identification d’administrateur, puis exécutez `manage-bde -status`. Les résultats doivent ressembler à l’exemple suivant :  
+Sur un appareil qui a activé BitLocker et chiffré un lecteur, lancez l’invite de commandes avec les informations d’identification d’administrateur, puis exécutez `manage-bde -status`. Les résultats doivent ressembler à l'exemple suivant :  
 ![A résultat de la commande status](./media/troubleshooting-bitlocker-policies/command.png)
 
-Dans l’exemple : 
+Dans l'exemple : 
 - La **protection BitLocker** est **activée**,  
 - Le **pourcentage chiffré** est de **100%**  
 - La **méthode de chiffrement** est **XTS-AES 256**.  
@@ -150,7 +151,7 @@ La **stratégie est présente, mais tous les paramètres ne sont pas configurés
   La stratégie passe à un appareil en tant qu’unité unique. par conséquent, si certains paramètres s’appliquent et que d’autres ne le sont pas, vous pouvez être certain que la stratégie elle-même est reçue. Dans ce scénario, il est possible que la version de Windows sur l’appareil ne prenne pas en charge les paramètres problématiques. Pour plus d’informations sur la configuration requise pour chaque paramètre, consultez [CSP BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) dans la documentation de Windows.  
 
   1. **BitLocker n’est pas pris en charge sur tout le matériel**.  
-  Même si vous disposez de la bonne version de Windows, il est possible que le matériel du périphérique sous-jacent ne réponde pas aux conditions requises pour le chiffrement BitLocker. Vous trouverez la [Configuration système requise pour BitLocker (https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) dans la documentation Windows, mais les principaux éléments à vérifier sont que l’appareil dispose d’une puce TPM compatible (1,2 ou version ultérieure) et d’un microprogramme BIOS ou UEFI compatible Trusted Computing Group (TCG).
+  Même si vous disposez de la bonne version de Windows, il est possible que le matériel du périphérique sous-jacent ne réponde pas aux conditions requises pour le chiffrement BitLocker. Vous trouverez la [Configuration système requise pour BitLocker (https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) dans la documentation de Windows, mais les principaux éléments à vérifier sont que l’appareil dispose d’une puce TPM compatible (1,2 ou version ultérieure) et d’un microprogramme BIOS ou UEFI compatible Trusted Computing Group (TCG).
 
 **Exemple d’investigation** : vous déployez une stratégie BitLocker sur un appareil Windows 10, et le paramètre **chiffrer les appareils** affiche l’état **erreur** dans le portail.
 
@@ -168,7 +169,7 @@ La **stratégie est présente, mais tous les paramètres ne sont pas configurés
 
 - Étant donné que BitLocker s’appuie sur TPM, vous pouvez conclure que BitLocker n’échoue pas en raison d’un problème avec Intune ou la stratégie, mais plutôt parce que l’appareil lui-même n’a pas de puce TPM ou TPM est désactivé dans le BIOS.
 
-  En guise d’astuce supplémentaire, vous pouvez vérifier les mêmes informations dans le observateur d’événements Windows sous **journaux des applications et des Services** > **Windows** > **API BitLocker**. Dans le journal des événements de l' **API BitLocker** , vous trouverez un ID d’événement 853 qui signifie que le module de plateforme sécurisée n’est pas disponible :
+  En guise d’astuce supplémentaire, vous pouvez vérifier les mêmes informations dans le observateur d’événements Windows sous **journaux des applications et des Services**  > **API BitLocker** **Windows**  > . Dans le journal des événements de l' **API BitLocker** , vous trouverez un ID d’événement 853 qui signifie que le module de plateforme sécurisée n’est pas disponible :
 
   ![ID d’événement 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

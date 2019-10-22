@@ -8,17 +8,18 @@ manager: dougeby
 ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d999603abc539fda4d152d15dd1ab965c465f39e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736297"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585241"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Utiliser les journaux d’audit pour suivre et superviser les événements dans Microsoft Intune
 
@@ -49,7 +50,8 @@ Les journaux d’audit et les journaux des opérations peuvent également être 
 
 ![Exporter les données de journal vers Azure Monitor en sélectionnant Exporter les paramètres de données dans Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
 
-Pour plus d’informations sur cette fonctionnalité, consultez [Envoyer les données de journal à des comptes de stockage, des hubs d’événements ou Log Analytics](review-logs-using-azure-monitor.md).
+> [!NOTE]
+> Pour plus d’informations sur cette fonctionnalité et pour connaître les conditions préalables à l’utilisation, consultez [Envoyer des données de journal à Storage, Event hubs ou log Analytics](review-logs-using-azure-monitor.md).
 
 ## <a name="review-audit-events"></a>Consulter les journaux d'audit
 
@@ -67,11 +69,11 @@ Un journal d’audit propose par défaut une vue par liste qui affiche les élé
 
 Pour voir des informations détaillées sur un événement, sélectionnez un élément dans la liste :
 
-![Obtenir des informations détaillées sur les actions effectuées et leurs auteurs dans les journaux d’audit Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "Informations détaillées des journaux d’audit")
+![Obtenir des informations détaillées sur les actions effectuées et leurs auteurs dans les journaux d’audit Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
 
 > [!NOTE]
 > **Initié par (utilisateur)** comprend des informations sur l’utilisateur qui a exécuté la tâche et l’emplacement de l’exécution. Par exemple, si vous exécutez l’activité dans Intune dans le portail Azure, **Application** répertorie toujours **Extension du portail Microsoft Intune** et **l’ID d’application** utilise toujours le même GUID.
-> 
+>
 > La section **Cible(s)** répertorie plusieurs cibles et les propriétés qui ont été modifiées.  
 
 ## <a name="filter-audit-events"></a>Filtrer les événements d’audit

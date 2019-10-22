@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14da6274546cbd4c1867975c08c60ece313714b1
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: e9542212e1b75d97c96c024eed20e20e610e2b5d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71917984"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503651"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Résoudre les problèmes courants liés à Intune Exchange Connector
  
@@ -55,7 +56,7 @@ Un utilisateur peut ne pas recevoir le message électronique de notification car
 Consultez les sections suivantes pour résoudre les problèmes de notification par courrier électronique.
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Vérifier le compte de notification qui récupère les paramètres de découverte automatique
-1. Assurez-vous que le service de découverte automatique et EWS sont configurés sur les services d’accès au client Exchange. Pour plus d’informations, consultez [services d’accès au client](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) et [service de découverte automatique dans Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Vérifiez que le service de découverte automatique et EWS sont configurés sur le serveur d'accès au client Exchange. Pour plus d’informations, consultez [services d’accès au client](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) et [service de découverte automatique dans Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 
 2. Vérifiez que votre compte de notification remplit les conditions suivantes :
@@ -72,7 +73,7 @@ Consultez les sections suivantes pour résoudre les problèmes de notification p
       résultats de la ![Nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
 )
 
-   Vous pouvez également tester le service de découverte automatique à partir d’Internet à https://testconnectivity.microsoft.com. Ou testez-le à partir d’un domaine local à l’aide de l’outil Microsoft Connectivity Analyzer. Pour plus d’informations, consultez [outil Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). Si nécessaire, [Téléchargez l’outil Microsoft Connectivity Analyzer](http://go.microsoft.com/fwlink/?LinkID=313782).
+   Vous pouvez également tester le service de découverte automatique à partir d’Internet sur https://testconnectivity.microsoft.com. Ou testez-le à partir d’un domaine local à l’aide de l’outil Microsoft Connectivity Analyzer. Pour plus d’informations, consultez [outil Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). Si nécessaire, [Téléchargez l’outil Microsoft Connectivity Analyzer](https://go.microsoft.com/fwlink/?LinkID=313782).
 
 
 ### <a name="check-autodiscovery"></a>Vérifier la détection automatique  

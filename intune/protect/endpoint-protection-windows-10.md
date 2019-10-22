@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22e3779cd0772753ccd8843cd1f1ff38617298d6
-ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
+ms.openlocfilehash: 40865dcca0b0109ae36f65b6691672c0035732b5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163578"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502289"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Paramètres Windows 10 (et versions ultérieures) pour protéger les appareils à l’aide d’Intune  
 
@@ -161,7 +162,7 @@ Ces paramètres s’appliquent à tous les types de réseaux.
   **Par défaut** : Non configuré  
   Fournisseur CSP de pare-feu : [MdmStore/global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)  
 
-  choisissez la façon dont l’appareil vérifie la liste de révocation de certificats. Les options disponibles sont les suivantes :  
+  choisissez la façon dont l’appareil vérifie la liste de révocation de certificats. Les options sont les suivantes :  
   - **Désactiver la vérification de la liste de révocation**  
   - **Échec de la vérification de la liste de révocation de certificats sur le certificat révoqué uniquement**  
   - **Échec de la vérification de la liste de révocation de certificats en cas d’erreur**.  
@@ -179,14 +180,14 @@ Ces paramètres s’appliquent à tous les types de réseaux.
   **Par défaut** : Non configuré  
   Fournisseur CSP de pare-feu : [MdmStore/global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
-  Spécifiez comment la mise à l’échelle des logiciels côté réception est activée pour la réception chiffrée et efface le texte pour le scénario de passerelle du tunnel IPsec. Ce paramètre confirme la préservation de l’ordre des paquets. Les options disponibles sont les suivantes :  
+  Spécifiez comment la mise à l’échelle des logiciels côté réception est activée pour la réception chiffrée et efface le texte pour le scénario de passerelle du tunnel IPsec. Ce paramètre confirme la préservation de l’ordre des paquets. Les options sont les suivantes :  
   - **Non configuré**  
   - **Désactiver tous les paquets de mise en file d’attente**  
   - **Mise en file d’attente des paquets chiffrés entrants uniquement**  
   - **Les paquets de file d’attente après le déchiffrement sont exécutés pour le transfert uniquement**  
   - **Configurer les paquets entrants et sortants**  
 
-### <a name="network-settings"></a>Paramètres du réseau  
+### <a name="network-settings"></a>Paramètres réseau  
 
 Les paramètres suivants sont répertoriés dans cet article une seule fois, mais tous s’appliquent aux trois types de réseau spécifiques :  
 - **Réseau de domaine (espace de travail)**  
@@ -412,7 +413,7 @@ Spécifiez les ports locaux et distants auxquels cette règle s’applique.
   Sélectionnez l'une des options suivantes :  
   - **Accès à distance**  
   - **Sans fil**  
-  - **Réseau local**  
+  - **réseau local**  
 
 - **Autoriser uniquement les connexions à partir de ces utilisateurs**  
   **Valeur par défaut**: tous les utilisateurs *(toutes les valeurs par défaut sont utilisées quand aucune liste n’est spécifiée)*  
@@ -1247,7 +1248,7 @@ Utilisez ces options pour configurer les paramètres de sécurité locale sur le
   
   Définir un autre nom de compte à associer à l’identificateur de sécurité (SID) pour le compte « Invité ».  
 
-### <a name="devices"></a>Périphériques  
+### <a name="devices"></a>Appareils  
 
 - **Retirer l’appareil de la station d’accueil sans ouverture de session**  
   **Par défaut** : Non configuré  
@@ -1312,7 +1313,7 @@ Utilisez ces options pour configurer les paramètres de sécurité locale sur le
   - **Forcer la fermeture de session** : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.  
   - **Déconnecter en cas de session des services Bureau à distance** : le retrait de la carte à puce déconnecte la session sans déconnecter l’utilisateur. Cette option permet à l’utilisateur d’insérer la carte à puce et de reprendre la session ultérieurement, ou sur un autre ordinateur équipé d’un lecteur de carte à puce, sans avoir à se reconnecter. Si la session est locale, cette stratégie fonctionne comme l’option Verrouiller la station de travail.  
 
-#### <a name="display"></a>Écran  
+#### <a name="display"></a>Afficher  
 
 - **Informations utilisateur sur l’écran de verrouillage**  
   **Par défaut** : Non configuré  

@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1b3139db8b217dceb495f67e809eae8319eae0c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 96f6dc3d1a8f8589395cf49b3bb934adadf437a4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735699"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508495"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Résoudre les problèmes liés aux actions d’appareil dans Intune
 
@@ -31,7 +32,7 @@ Microsoft Intune comporte de nombreuses actions qui vous aident à gérer les ap
 ## <a name="bypass-activation-lock-action"></a>Action Contourner le verrou d’activation
 
 ### <a name="i-clicked-the-bypass-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>J’ai cliqué sur l’action « contourner Verrouillage d’activation » dans le portail, mais rien ne s’est produit sur l’appareil.
-Cela est attendu. Après le démarrage de l’action de contournement Verrouillage d’activation, Intune demande un code mis à jour à Apple. Vous devez entrer manuellement le code dans le champ code secret une fois que votre appareil se trouve sur l’écran Verrouillage d’activation. Ce code n’est valide que pendant 15 jours. Veillez donc à cliquer sur l’action et à copier le code avant d’émettre la réinitialisation.
+Ce comportement est attendu. Après le démarrage de l’action de contournement Verrouillage d’activation, Intune demande un code mis à jour à Apple. Vous devez entrer manuellement le code dans le champ code secret une fois que votre appareil se trouve sur l’écran Verrouillage d’activation. Ce code n’est valide que pendant 15 jours. Veillez donc à cliquer sur l’action et à copier le code avant d’émettre la réinitialisation.
 
 ### <a name="why-dont-i-see-the-bypass-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Pourquoi ne puis-je pas voir le contournement Verrouillage d’activation code dans le panneau vue d’ensemble du matériel de mon appareil iOS ?
 Les raisons les plus probables sont les suivantes :
@@ -53,7 +54,7 @@ Non. Et vous n’avez pas besoin d’entrer les tirets.
 ## <a name="remove-devices-action"></a>Action de suppression d’appareils
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Comment faire indiquer qui a démarré une mise hors service/réinitialisation ?
-Accédez à **Intune** > **appareils** > **actions** de l’appareil > Vérifiez la colonne **initié par** .
+Accédez à **Intune**  > **appareils**  > **actions** de l’appareil > Vérifiez la colonne **initié par** .
 Si vous ne voyez pas d’entrée, la personne la plus susceptible d’être à l’origine de l’action est l’utilisateur de l’appareil. Ils ont probablement utilisé l’application Portail d’entreprise ou portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Pourquoi mon application n’a-t-elle pas été désinstallée après l’utilisation du retrait ?
@@ -68,7 +69,7 @@ Ce comportement est normal. Google n’autorise pas la réinitialisation des par
 Parce que le retrait d’un appareil ne révoque pas les jetons d’accès. Vous pouvez utiliser des stratégies d’accès conditionnel pour atténuer cette condition.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Comment puis-je surveiller une action de mise hors service/réinitialisation après son émission ?
-Accédez à **Intune** > **appareils** > **actions**de l’appareil.
+Accédez à **Intune**  > **appareils**  > **actions**de l’appareil.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Pourquoi les nettoyages apparaissent-ils parfois comme étant en attente indéfiniment ?
 Les appareils ne signalent pas toujours leur état au service Intune avant le démarrage de la réinitialisation. L’action apparaît donc comme étant en attente. Si vous avez confirmé que l’opération a réussi, supprimez l’appareil du service.

@@ -5,9 +5,10 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 10/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1d1d0c52db57ca6b41c399aeefc948735eea0af
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830524"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503496"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -197,7 +198,7 @@ intunemam {
 }
 ```
 
-#### <a name="incremental-builds"></a>Builds incrémentielles
+#### <a name="incremental-builds"></a>builds incrémentiels
 Pour activer la prise en charge de la génération incrémentielle, spécifiez `incremental = true` dans le bloc de configuration `intunemam`.  Il s’agit d’une fonctionnalité expérimentale visant à améliorer les performances de génération en traitant uniquement les fichiers d’entrée qui ont changé.  La configuration par défaut est `false`.
 
 ```groovy
@@ -547,15 +548,6 @@ Si l’application a sa propre expérience utilisateur de code PIN, vous souhait
 MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 ```
 
-### <a name="example-determine-if-pin-is-required-for-the-app"></a>Exemple : Déterminer si le code PIN est nécessaire pour l’application
-
-Si l’application a sa propre expérience utilisateur de code PIN, vous souhaiterez peut-être la désactiver si l’administrateur informatique a configuré le SDK pour demander un code PIN d’application. Pour déterminer si l’administrateur informatique a déployé la stratégie de code PIN d’application sur cette application, pour l’utilisateur final actuel, appelez la méthode suivante :
-
-```java
-
-MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
-```
-
 ### <a name="example-determine-the-primary-intune-user"></a>Exemple : Déterminer l’utilisateur Intune principal
 
 Outre les API exposées dans AppPolicy, le nom d’utilisateur principal (**UPN**) est également exposé par l’API `getPrimaryUser()` définie dans l’interface `MAMUserInfo`. Pour obtenir l’UPN, appelez ce qui suit :
@@ -622,7 +614,7 @@ NotificationRestriction notificationRestriction =
     MAMPolicyManager.getPolicyForIdentity(notificationIdentity).getNotificationRestriction();
 ```
 
-Si la restriction est `BLOCKED`, l’application ne doit afficher aucune notification pour l’utilisateur associé à cette stratégie. Si `BLOCK_ORG_DATA`, l’application doit afficher une notification modifiée qui ne contient pas de données d’organisation. Si `UNRESTRICTED`, toutes les notifications sont autorisées.
+Si la restriction est `BLOCKED`, l’application ne doit pas afficher les notifications de l’utilisateur associé à cette stratégie. Si `BLOCK_ORG_DATA`, l’application doit afficher une notification modifiée qui ne contient pas de données d’organisation. Si `UNRESTRICTED`, toutes les notifications sont autorisées.
 
 Si `getNotificationRestriction` n’est pas appelé, le kit de développement logiciel (SDK) GAM fait le meilleur effort pour limiter automatiquement les notifications pour les applications à identité unique. Si le blocage automatique est activé et que `BLOCK_ORG_DATA` est défini, la notification ne s’affichera pas du tout. Pour un contrôle plus précis, vérifiez la valeur de `getNotificationRestriction` et modifiez les notifications d’application de façon appropriée.
 
@@ -978,7 +970,7 @@ Quand un compte est inscrit initialement, il commence à l’état `PENDING`, ce
 | `NOT_LICENSED` | L’utilisateur ne dispose pas de licence pour Intune, ou la tentative de contact du service GAM Intune a échoué.  L’application doit continuer dans un état non géré (normal) et l’utilisateur ne doit pas être bloqué.  Les inscriptions seront retentées régulièrement dans le cas où l’utilisateur obtiendrait une licence ultérieurement. |
 | `ENROLLMENT_SUCCEEDED` | La tentative d’inscription a réussi, ou l’utilisateur est déjà inscrit.  En cas de réussite de l’inscription, une notification d’actualisation de la stratégie est envoyée avant cette notification.  L’accès aux données d’entreprise doit être autorisé. |
 | `ENROLLMENT_FAILED` | La tentative d’inscription a échoué.  Les journaux de l’appareil contiennent des informations supplémentaires.  L’application ne doit pas autoriser l’accès aux données d’entreprise dans cet état, car il a été précédemment déterminé que l’utilisateur disposait d’une licence pour Intune.|
-| `WRONG_USER` | Un seul utilisateur par appareil peut inscrire une application auprès du service GAM. Ce résultat indique que l’utilisateur pour lequel ce résultat a été remis (le deuxième utilisateur) est ciblé avec la stratégie GAM, mais qu’un autre utilisateur est déjà inscrit. Étant donné que la stratégie GAM ne peut pas être appliquée pour le deuxième utilisateur, votre application ne doit pas autoriser l’accès aux données de cet utilisateur (peut-être en supprimant l’utilisateur de votre application) à moins que/jusqu’à ce que l’inscription pour cet utilisateur aboutisse ultérieurement. Simultanément, avec la transmission de ce `WRONG_USER`, GAM vous invite à supprimer le compte existant. Si l’utilisateur humain répond à l’affirmative, il sera en effet possible d’inscrire un deuxième utilisateur à un moment donné plus tard. Tant que le deuxième utilisateur est enregistré, GAM réessaiera périodiquement. |
+| `WRONG_USER` | Un seul utilisateur par appareil peut inscrire une application auprès du service GAM. Ce résultat indique que l’utilisateur pour lequel ce résultat a été remis (le deuxième utilisateur) est ciblé avec la stratégie GAM, mais qu’un autre utilisateur est déjà inscrit. Étant donné que la stratégie GAM ne peut pas être appliquée pour le deuxième utilisateur, votre application ne doit pas autoriser l’accès aux données de cet utilisateur (peut-être en supprimant l’utilisateur de votre application) à moins que/jusqu’à ce que l’inscription pour cet utilisateur aboutisse ultérieurement. Simultanément, si vous fournissez ce `WRONG_USER` résultat, GAM vous demande de supprimer le compte existant. Si l’utilisateur humain répond à l’affirmative, il sera en effet possible d’inscrire un deuxième utilisateur à un moment donné plus tard. Tant que le deuxième utilisateur est enregistré, GAM réessaiera périodiquement. |
 | `UNENROLLMENT_SUCCEEDED` | L’annulation de l’inscription a réussi.|
 | `UNENROLLMENT_FAILED` | La demande d’annulation de l’inscription a échoué.  Les journaux de l’appareil contiennent des informations supplémentaires. En général, cela ne se produit pas tant que l’application passe un UPN valide (ni null, ni vide). Il n’existe aucune correction directe et fiable que l’application peut effectuer. Si cette valeur est reçue lors de l’annulation de l’inscription d’un UPN valide, signalez un bogue à l’équipe GAM Intune.|
 | `PENDING` | La tentative d’inscription initiale de l’utilisateur est en cours.  L’application peut bloquer l’accès aux données d’entreprise jusqu’à ce que le résultat de l’inscription soit connu, mais cela n’est pas obligatoire. |
@@ -1119,7 +1111,7 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 ### <a name="implementation-notes"></a>Notes d’implémentation
 > [!NOTE]
 > **Modification importante !**  <br>
-> La méthode `MAMServiceAuthenticationCallback.acquireToken()` de l’application doit passer la *valeur false* pour le nouvel indicateur `forceRefresh` à `acquireTokenSilentSync()`.
+> La méthode `MAMServiceAuthenticationCallback.acquireToken()` de l’application doit passer la *valeur false* pour que le nouvel indicateur de `forceRefresh` `acquireTokenSilentSync()`.
 > Auparavant, nous vous recommandons de passer la *valeur true* pour résoudre un problème lié à l’actualisation des jetons à partir du répartiteur, mais un problème avec Adal a pu empêcher l’acquisition de jetons dans certains scénarios si cet indicateur a la *valeur true*.
 ```java
 AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ false);
@@ -1675,7 +1667,7 @@ Vous pouvez configurer les paires clé-valeur spécifiques à une application da
 Ces paires clé-valeur, qui ne sont pas du tout interprétées par Intune, sont passées à l’application. Les applications qui souhaitent recevoir une telle configuration peuvent utiliser les classes `MAMAppConfigManager` et `MAMAppConfig`. Si plusieurs stratégies ciblent la même application, plusieurs valeurs en conflit peuvent être disponibles pour la même clé.
 
 > [!NOTE] 
-> Configuration des configurations pour la remise via GAM : nous ne pouvons pas être delievered dans `offline` (lorsque le Portail d’entreprise n’est pas installé).  Dans ce cas, seul Android Enterprise AppRestrictions est distribué par le biais d’un `MAMUserNotification` sur une identité vide.
+> Configuration du programme d’installation pour la remise via GAM : nous ne pouvons pas être delievered dans `offline` (lorsque le Portail d’entreprise n’est pas installé).  Dans ce cas, seul Android Enterprise AppRestrictions est distribué par le biais d’un `MAMUserNotification` sur une identité vide.
 
 ### <a name="get-the-app-config-for-a-user"></a>Obtenir la configuration de l’application pour un utilisateur
 La configuration de l’application peut être récupérée comme suit :
@@ -1756,7 +1748,7 @@ enum StringQueryType {
 
 Votre application peut également demander les données brutes sous la forme d’une liste de jeux de paires clé-valeur.
 
-```
+```java
 List<Map<String, String>> getFullData()
 ```
 

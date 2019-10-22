@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1938f6862fa7b74dccc4ea23ac139fcd955d77d7
-ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
+ms.openlocfilehash: 21d70bb0322ec05ceb091844827151ce746cda6f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237264"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508960"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM pour Intune  
 
@@ -284,7 +285,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
   - **Nombre minimal de jeux de caractères du mot de passe**  
-    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
+    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le PIN impose le comportement suivant aux appareils de bureau et mobiles : 1 - Chiffres uniquement 2 - Chiffres et lettres majuscules obligatoires 3 - Chiffres, lettres majuscules et lettres minuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
     [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067055)  
     
     **Par défaut** : 3  
@@ -689,7 +690,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : Désactivé  
   
 - **Internet Explorer > Zone Internet : Autoriser l’exécution de VBscript**  
-  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options disponibles sont les suivantes : 
+  Ce paramètre de stratégie vous permet de décider si VBScript peut être exécuté sur les pages de certaines zones Internet Explorer. Les options sont les suivantes : 
   - *Activé* : VBScript s’exécute sur les pages de certaines zones, sans intervention de l’utilisateur. 
   - *Invite* : les employés sont invités à choisir s’il faut autoriser l’exécution de VBScript dans la zone. 
   - *Désactivé* : l’exécution de VBScript est empêchée dans la zone. Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, VBScript s’exécute dans la zone spécifiée, sans que l’utilisateur n’ait à intervenir.    
@@ -1196,7 +1197,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
   
 - **Comportement de l’invite d’élévation d’administrateur**  
-  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options sont les suivantes : 
+  Ce paramètre de stratégie contrôle le comportement de l’invite d’élévation pour les administrateurs. Les options disponibles sont : 
   - *Élever sans invite utilisateur* : permet aux comptes privilégiés d’effectuer une opération qui nécessite une élévation sans demander de consentement ou d’informations d’identification. Remarque : Utilisez cette option uniquement dans les environnements les plus contraints. 
   - *Invite pour les informations d'identification sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à entrer un nom d’utilisateur et un mot de passe privilégié. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
   - *Invite pour le consentement sur le bureau sécurisé* : lorsqu’une opération nécessite une élévation de privilège, l’utilisateur est invité sur le bureau sécurisé à sélectionner Autoriser et Refuser. Si l’utilisateur sélectionne Autoriser, l’opération continue avec les privilèges les plus élevés disponibles de l’utilisateur. 
@@ -1209,7 +1210,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : demander le consentement sur le bureau sécurisé
   
 - **Sécurité de session minimale pour les clients basés sur NTLM SSP**  
-  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options sont les suivantes :
+  Ce paramètre de sécurité permet à un client d’exiger la négociation d’un chiffrement de 128 bits et/ou de la sécurité de session NTLMv2. Ces valeurs dépendent de la valeur du paramètre de sécurité Niveau d’authentification LAN Manager. Les options disponibles sont :
   - *Nécessite une sécurité de session NTLMv2* : la connexion échoue si le protocole NTLMv2 n’est pas négocié. 
   - *Nécessite un chiffrement 128 bits* : la connexion échoue si un chiffrement fort (128 bits) n’est pas négocié.
   - *Exiger l’authentification NTLMv2 et un chiffrement de 128 bits*.  
@@ -1219,7 +1220,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : exiger le chiffrement 128 de l’authentification NTLM V2
   
 - **Comportement lorsque la carte à puce est retirée**  
-  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options sont les suivantes :
+  Ce paramètre de sécurité détermine ce qui se passe quand la carte à puce d’un utilisateur connecté est retirée du lecteur de cartes à puce. Les options disponibles sont :
   - *Aucune action*. 
   - *Verrouiller la station de travail* : la station de travail est verrouillée lorsque la carte à puce est supprimée, ce qui permet aux utilisateurs de quitter la zone, prendre leur carte à puce avec eux tout en conservant une session protégée.
   - *Forcer la fermeture de session* : l’utilisateur est automatiquement déconnecté lorsque la carte à puce est retirée.
@@ -1256,7 +1257,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : refuser automatiquement les demandes d’élévation de privilèges
   
 - **Exiger le mode d’approbation Administrateur pour les administrateurs**  
-  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options sont les suivantes :   
+  Ce paramètre de stratégie contrôle le comportement de tous les paramètres de stratégie de contrôle de compte d’utilisateur (UAC) pour l’ordinateur. Si vous modifiez ce paramètre de stratégie, vous devez redémarrer votre ordinateur. Les options disponibles sont :   
   - *Non configuré* : le mode d’approbation Administrateur et tous les paramètres de stratégie UAC associés sont désactivés. Remarque : Si ce paramètre de stratégie est désactivé, le Centre de sécurité vous avertit que la sécurité globale du système d’exploitation a été réduite. 
   - *Oui* : le mode d’approbation Administrateur est activé. Cette stratégie doit être activée et les paramètres de stratégie UAC associés doivent également être définis en conséquence pour permettre au compte Administrateur intégré et à tous les autres utilisateurs membres du groupe Administrateurs de s’exécuter en mode d’approbation Administrateur.  
 
@@ -1280,7 +1281,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : *O:BAG:BAD:(A;;RC;;;BA)*
 
 - **Utiliser le mode d’approbation Administrateur**  
-  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options sont les suivantes : 
+  Ce paramètre de sécurité détermine le comportement du mode d’approbation Administrateur pour le compte Administrateur intégré. Les options disponibles sont : 
   - *Oui* : le compte Administrateur intégré utilise le mode d’approbation Administrateur. Par défaut, une invite d’approbation est présentée à l’utilisateur pour chaque opération nécessitant une élévation de privilège. 
   - *Non configuré* : le compte Administrateur intégré exécute toutes les applications avec des privilèges administratifs complets. 
 
@@ -1298,7 +1299,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   **Par défaut** : oui
 
 - **Détecter les installations d’applications et demander l’élévation**  
-  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options sont les suivantes : 
+  Ce paramètre de stratégie contrôle le comportement de détection des installations d’applications pour l’ordinateur. Les options disponibles sont : 
   - *Activé* : lorsqu’un package d’installation d’application nécessitant une élévation de privilège est détecté, l’utilisateur est invité à entrer un nom d’utilisateur et un mot de passe administrateur. Si l’utilisateur entre des informations d’identification valides, l’opération continue avec les privilèges applicables. 
   - *Désactivé* : les packages d’installation d’application ne sont pas détectés ni invités pour une élévation. Les entreprises qui utilisent des ordinateurs de bureau pour utilisateur standard et ont recours à des technologies d’installation déléguée telles que GPSI (Group Policy Software Install) ou SMS (Systems Management Server) doivent désactiver ce paramètre de stratégie. Dans ce cas, la détection d’un programme d’installation n’est pas nécessaire.  
   
@@ -1412,7 +1413,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   - **Autorisation sollicitée d’assistance à distance**  
     **Par défaut** : affichage  
 
-  - **Valeur maximale de la durée du ticket**  
+  - **Délai d'attente maximal du ticket**  
     **Par défaut** : *non configuré*  
 
   - **Période de temps maximale du ticket**  
@@ -1512,7 +1513,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : authentifié
 
-## <a name="search"></a>Rechercher 
+## <a name="search"></a>Recherche 
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Recherche](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) dans la documentation Windows.  
 
 - **Désactiver l’indexation des éléments chiffrés**  
@@ -1539,7 +1540,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   **Par défaut** : oui
   
-## <a name="system"></a>System  
+## <a name="system"></a>Système  
 Pour plus d’informations, consultez [Fournisseur de services de configuration de stratégie - Système](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) dans la documentation Windows.  
 
 - **Système : Initialisation des pilotes de démarrage**  
@@ -1879,7 +1880,7 @@ Les paramètres suivants sont soit :
 *[Nouveau]* [**Assistance à distance**](#remote-assistance) :  
 - **Assistance à distance sollicitée** 
   - **Autorisation sollicitée d’assistance à distance**
-  - **Valeur maximale de la durée du ticket**  
+  - **Délai d'attente maximal du ticket**  
   - **Période de temps maximale du ticket**  
   - **Méthode d’invitation par courrier électronique**
 

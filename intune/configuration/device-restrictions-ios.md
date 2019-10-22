@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcd86cedc7684f31483d7cd3c8294a76a9c306b2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734906"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584886"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -140,13 +141,13 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription de l’appareil, inscription automatique des appareils (supervisé)
 
 > [!IMPORTANT]
-> Sur les appareils inscrits par l’utilisateur, si vous configurez un paramètre de mot de passe, les paramètres de **mots de passe simples** sont automatiquement définis sur **bloquer**et un code pin à 6 chiffres est appliqué.
+> Sur les appareils avec inscription des utilisateurs, si vous configurez un paramètre de mot de passe, le paramètre **Mots de passe simples** est automatiquement défini sur **Bloquer**, et un code confidentiel à 6 chiffres est appliqué.
 >
-> Par exemple, vous configurez le paramètre **d’expiration du mot de passe** et envoyez cette stratégie aux appareils inscrits par l’utilisateur. Sur les appareils, voici ce qui se produit :
+> Par exemple, vous configurez le paramètre **Expiration du mot de passe** et envoyez cette stratégie aux appareils avec inscription des utilisateurs. Sur les appareils, les événements suivants se produisent :
 >
-> - Le paramètre **d’expiration du mot de passe** est ignoré.
-> - Les mots de passe simples, tels que `1111` ou `1234`, ne sont pas autorisés.
-> - Un code pin à 6 chiffres est appliqué.
+> - Le paramètre **Expiration du mot de passe** est ignoré.
+> - Les mots de passe simples comme `1111` ou `1234` ne sont pas autorisés.
+> - Un code PIN à 6 chiffres est appliqué.
 
 - **Mots de passe simples** : choisissez **Bloquer** pour exiger des mots de passe plus complexes. L’option **Non configuré** autorise les mots de passe simples comme `0000` et `1234`.
 
@@ -267,6 +268,11 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
   À compter d’iOS 13,0, ce paramètre nécessite des appareils supervisés.
 
+- **Accès à un lecteur réseau dans l’application fichiers**: à l’aide du protocole SMB (Server Message Block), les appareils peuvent accéder à des fichiers ou à d’autres ressources sur un serveur réseau. **Désactiver** empêche l’accès aux fichiers sur un lecteur SMB réseau. **Non configuré** (valeur par défaut) autorise l’accès.
+
+  Cette fonctionnalité s’applique à :  
+  - iOS et iPados 13,0 et versions ultérieures
+
 ## <a name="built-in-apps"></a>Applications intégrées
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
@@ -377,7 +383,7 @@ S’applique aux appareils exécutant iOS 9,3 ou une version plus récente.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription automatique des appareils (supervisé)
 
-- **Type de liste d’applications**: créer une liste d’applications à afficher ou à masquer. Les options disponibles sont les suivantes :
+- **Type de liste d’applications**: créer une liste d’applications à afficher ou à masquer. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site Web d’Apple contient une liste d' [applications Apple intégrées](https://support.apple.com/HT208094). Les options disponibles sont les suivantes :
 
   - **Applications masquées** : spécifiez une liste d’applications masquée aux utilisateurs. Les utilisateurs ne peuvent ni afficher ni ouvrir ces applications.
   - **Applications visibles** : spécifiez une liste d’applications que les utilisateurs peuvent voir et lancer. Aucune autre application ne peut être affichée ou lancée.
@@ -432,7 +438,12 @@ Pour ajouter des applications, vous pouvez :
   - iOS 12.2 et versions ultérieures
 
 - **Rejoindre uniquement les réseaux Wi-Fi utilisant des profils de configuration** : **activez** cette option pour forcer l’appareil à rejoindre uniquement les réseaux Wi-Fi configurés à l’aide d’un profil de configuration Intune. L’option (par défaut) **Non configuré** autorise l’appareil à utiliser d’autres réseaux Wi-Fi.
-- **Modification de l’État Wi-Fi**: **non configuré** (par défaut) permet aux utilisateurs d’activer ou de désactiver le Wi-Fi sur l’appareil. **Bloquer** empêche l’activation ou la désactivation du Wi-Fi.
+- **Wi-Fi toujours activé**: lorsque la valeur est **Required**, le Wi-Fi reste activé dans l’application Settings. Elle ne peut pas être désactivée dans paramètres ou dans le centre de contrôle, même lorsque l’appareil est en mode avion. **Non configuré** (par défaut) permet à l’utilisateur de contrôler l’activation ou la désactivation du Wi-Fi.
+
+  La configuration de ce paramètre n’empêche pas les utilisateurs de sélectionner un réseau Wi-Fi.
+
+  Cette fonctionnalité s’applique à :  
+  - iOS et iPados 13,0 et versions ultérieures
 
 ## <a name="connected-devices"></a>Appareils connectés
 
@@ -458,6 +469,11 @@ Pour ajouter des applications, vous pouvez :
 
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
+
+- **Accès aux fichiers sur un lecteur USB**: les périphériques peuvent se connecter et ouvrir des fichiers sur un lecteur USB. **Désactiver** empêche l’accès de l’appareil au lecteur USB dans l’application fichiers lorsqu’un périphérique USB est connecté à l’appareil. La désactivation de cette fonctionnalité empêche également les utilisateurs finaux de transférer des fichiers sur un lecteur USB connecté à un iPad. **Non configuré** (par défaut) autorise l’accès à un lecteur USB dans l’application fichiers.
+
+  Cette fonctionnalité s’applique à :  
+  - iOS et iPados 13,0 et versions ultérieures
 
 ## <a name="keyboard-and-dictionary"></a>Clavier et dictionnaire
 

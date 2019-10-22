@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a02e403fdba34b576aa90b82062b7a602cbb517
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e7c7ec23d0408aa4d4cf81baff2d7cdf749fb65e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735686"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509233"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Résoudre des problèmes liés à l’accord de mise en œuvre de périphériques iOS dans Microsoft Intune
 
@@ -62,7 +63,7 @@ Collectez les informations suivantes sur le problème :
 1. Connectez-vous au portail Azure.
 2. Sélectionnez **Plus de services**, recherchez Intune, puis sélectionnez **Intune**.
 3. Sélectionnez **Inscription de l’appareil** > **Restrictions d’inscription**.
-4. Sous **restrictions de type d’appareil**, sélectionnez la restriction que vous souhaitez définir **> Propriétés** > **Sélectionnez plateformes** > sélectionnez **autoriser** pour **iOS**, puis cliquez sur **OK**.
+4. Sous **restrictions de type d’appareil**, sélectionnez la restriction que vous souhaitez définir > **Propriétés**  > **Sélectionnez plateformes** > sélectionnez **autoriser** pour **iOS**, puis cliquez sur **OK**.
 5. Sélectionnez **configurer des plateformes**, sélectionnez **autoriser** pour les appareils iOS personnels, puis cliquez sur **OK**.
 6. Réinscrire le périphérique.
 
@@ -89,10 +90,10 @@ Collectez les informations suivantes sur le problème :
 **Cause :** L’utilisateur tente d’inscrire plus d’appareils que la limite d’inscription de l’appareil.
 
 #### <a name="resolution"></a>Résolution
-1. Ouvrez le [portail d’administration Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **appareils** > **tous les appareils**, puis vérifiez le nombre d’appareils inscrits par l’utilisateur.
+1. Ouvrez le [portail d’administration Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)  > **appareils**  > **tous les appareils**, puis vérifiez le nombre d’appareils inscrits par l’utilisateur.
     > [!NOTE]
     > Vous devez également disposer de l’ouverture de session de l’utilisateur concerné sur le portail de l' [utilisateur Intune](https://portal.manage.microsoft.com/) et vérifier les appareils qui ont été inscrits. Il peut y avoir des appareils qui s’affichent dans le portail de l' [utilisateur Intune](https://portal.manage.microsoft.com/) , mais pas dans le [portail d’administration Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview), ces appareils sont également pris en compte dans la limite d’inscription des appareils.
-2. Accédez à **administrateur** > **gestion des appareils mobiles** > **règles d’inscription** > Vérifiez la limite d’inscription des appareils. Par défaut, la limite est définie sur 15. 
+2. Accédez à **Admin**  > **gestion des appareils mobiles**  > **règles d’inscription** > Vérifiez la limite d’inscription des appareils. La limite par défaut est définie sur 15. 
 3. Si le nombre d’appareils inscrits a atteint la limite, supprimez les appareils inutiles ou augmentez la limite d’inscription des appareils. Étant donné que chaque appareil inscrit utilise une licence Intune, nous vous recommandons de toujours supprimer d’abord les appareils inutiles.
 4. Réinscrire le périphérique.
 
@@ -110,8 +111,8 @@ Collectez les informations suivantes sur le problème :
 **Cause :** L’utilisateur qui essaie d’inscrire l’appareil ne dispose pas d’une licence Intune valide.
 
 #### <a name="resolution"></a>Résolution
-1. Accédez au [Centre d’administration Microsoft 365](https://portal.office.com/adminportal/home#/homepage), puis choisissez **utilisateurs** > **utilisateurs actifs**.
-2. Sélectionnez le compte d’utilisateur affecté > **licences du produit** > **modifier**.
+1. Accédez au [Centre d’administration Microsoft 365](https://portal.office.com/adminportal/home#/homepage), puis choisissez **utilisateurs**  > **utilisateurs actifs**.
+2. Sélectionnez le compte d’utilisateur affecté > **licences du produit**  > **modifier**.
 3. Vérifiez qu’une licence Intune valide est affectée à cet utilisateur.
 4. Réinscrire le périphérique.
 
@@ -119,8 +120,8 @@ Collectez les informations suivantes sur le problème :
 
 **Cause :** L’utilisateur qui essaie d’inscrire l’appareil ne dispose pas d’une licence Intune valide.
 
-1. Accédez au [Centre d’administration Microsoft 365](https://portal.office.com/adminportal/home#/homepage), puis choisissez **utilisateurs** > **utilisateurs actifs**.
-2. Sélectionnez le compte d’utilisateur affecté, puis choisissez **licences du produit** > **modifier**.
+1. Accédez au [Centre d’administration Microsoft 365](https://portal.office.com/adminportal/home#/homepage), puis choisissez **utilisateurs**  > **utilisateurs actifs**.
+2. Sélectionnez le compte d’utilisateur affecté, puis choisissez **licences du produit**  > **modifier**.
 3. Vérifiez qu’une licence Intune valide est affectée à cet utilisateur.
 4. Réinscrire le périphérique.
 
@@ -130,7 +131,7 @@ Collectez les informations suivantes sur le problème :
 
 #### <a name="resolution"></a>Résolution
 
-1. Ouvrez **paramètres** sur le périphérique iOS > **général** > **gestion des appareils**.
+1. Ouvrez **paramètres** sur le périphérique iOS > **général**  >  la**gestion des appareils**.
 2. Appuyez sur le profil de gestion existant, puis sur **Supprimer la gestion**.
 3. Réinscrire le périphérique.
 
@@ -183,7 +184,7 @@ Lorsque vous activez un appareil géré par DEP auquel est affecté un profil d�
 #### <a name="resolution"></a>Résolution
 
 1. Modifiez le profil d’inscription. Vous pouvez apporter des modifications au profil. L’objectif est de mettre à jour l’heure de modification du profil.
-2. Synchroniser les appareils gérés par DEP : Ouvrez le portail Intune > **Admin** > **gestion des appareils mobiles** > **iOS** > **programme d’Inscription des appareils** > **Synchroniser maintenant**. Une demande de synchronisation est envoyée à Apple.
+2. Synchroniser les appareils gérés par DEP : Ouvrez le portail Intune > **Admin**  > **gestion des appareils mobiles**  > **iOS**  > **programme d’Inscription des appareils**  > **Synchroniser maintenant**. Une demande de synchronisation est envoyée à Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>L’inscription DEP est bloquée au moment de la connexion de l’utilisateur
 Lorsque vous activez un appareil géré par DEP auquel est affecté un profil d’inscription, le programme d’installation initial s’inscrit après que vous avez entré les informations d’identification.

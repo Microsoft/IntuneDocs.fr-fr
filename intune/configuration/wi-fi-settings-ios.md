@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adde9049f1e5f88df4a55b473f59f1d4a08e396
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733866"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593762"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ajouter des paramètres Wi-Fi pour les appareils iOS dans Microsoft Intune
 
@@ -79,7 +80,13 @@ Cet article décrit ces paramètres.
     - **Approbation de serveur** - **Noms des serveurs de certificats** : **Ajoutez** un ou plusieurs noms communs utilisés dans les certificats émis par votre autorité de certification approuvée (CA) à vos serveurs d’accès réseau sans fil. Par exemple, ajoutez `mywirelessserver.contoso.com` ou `mywirelessserver`. Lorsque vous entrez ces informations, vous pouvez ignorer la boîte de dialogue d’approbation dynamique qui s’affiche sur les appareils des utilisateurs quand ils se connectent à ce réseau Wi-Fi.
     - **Certificat racine pour la validation du serveur** : choisissez un profil de certificat racine approuvé existant. Ce certificat permet au client d’approuver le certificat du serveur d’accès au réseau sans fil.
 
-    - **Authentification du client** - **Certificat client pour l’authentification du client (certificat d’identité)**  : choisissez le profil de certificat client SCEP ou PKCS qui est également déployée sur l’appareil. Ce certificat est l’identité présentée par l’appareil au serveur pour authentifier la connexion.
+    - **Authentification du client** Choisissez une **méthode d’authentification**. Les options disponibles sont les suivantes :
+      
+      - **Informations d’identification dérivées**: si aucun émetteur d’informations d’identification dérivé n’a été configuré, Intune vous invite à le faire.
+      
+      - **Certificats** : choisissez le profil de certificat client SCEP or PKCS qui est également déployé sur l’appareil. Ce certificat est l’identité présentée par l’appareil au serveur pour authentifier la connexion.
+
+    - **Confidentialité de l’identité (identité externe)**  : entrez le texte envoyé en réponse à une requête d’identité EAP. Ce texte peut être n'importe quelle valeur, par exemple `anonymous`. Lors de l'authentification, cette identité anonyme est envoyée en premier, suivie de l'identification réelle adressée dans un tunnel sécurisé.
 
   - **EAP-TLS** : entrez également :
 
@@ -88,6 +95,8 @@ Cet article décrit ces paramètres.
 
     - **Authentification du client** : choisissez une **méthode d’authentification**. Les options disponibles sont les suivantes :
 
+      - **Informations d’identification dérivées**: si aucun émetteur d’informations d’identification dérivé n’a été configuré, Intune vous invite à le faire.  
+      
       - **Nom d’utilisateur et mot de passe** : invitez l’utilisateur d’un nom d’utilisateur et d’un mot de passe à authentifier la connexion. Entrez également :
         - **Méthode non EAP (identité interne)**  : choisissez comment authentifier la connexion. Veillez à choisir le même protocole que celui qui est configuré sur votre réseau Wi-Fi.
 
@@ -106,6 +115,8 @@ Cet article décrit ces paramètres.
 
     - **Authentification du client** : choisissez une **méthode d’authentification**. Les options disponibles sont les suivantes :
 
+      - **Informations d’identification dérivées**: si aucun émetteur d’informations d’identification dérivé n’a été configuré, Intune vous invite à le faire.  
+      
       - **Nom d’utilisateur et mot de passe** : invitez l’utilisateur d’un nom d’utilisateur et d’un mot de passe à authentifier la connexion. 
 
       - **Certificats** : choisissez le profil de certificat client SCEP or PKCS qui est également déployé sur l’appareil. Ce certificat est l’identité présentée par l’appareil au serveur pour authentifier la connexion.

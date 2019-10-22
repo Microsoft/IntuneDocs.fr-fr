@@ -5,10 +5,11 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
 searchScope:
@@ -18,17 +19,21 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9354c6019821a3d320c9bc50589ce420e969581
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4d6d54556f01ab047cc652f1f27238b74d003795
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847452"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501982"
 ---
 # <a name="turn-off-microsoft-usage-data-collection"></a>Désactiver la collecte de données d’utilisation Microsoft
 
-Microsoft collecte automatiquement certaines données sur nos produits et services. Nous faisons cela pour améliorer la fiabilité et les performances de nos produits, notamment l’application Portail d’entreprise. Bien que ces données soient anonymes, certains utilisateurs peuvent porter un regard négatif sur cette collecte. Le support technique de votre entreprise n’a pas le contrôle de la collecte des données et ne peut pas changer votre sélection pour ce paramètre.
+Microsoft collecte automatiquement certaines données sur des produits et services. Les données sont utilisées pour améliorer la fiabilité et les performances des applications, comme Portail d’entreprise et Microsoft Intune. Bien que ces données soient anonymes, certains utilisateurs peuvent porter un regard négatif sur cette collecte. Votre organisation n’a pas le contrôle sur la collecte de ces données et ne peut pas modifier votre sélection de paramètres.   
 
-Si vous souhaitez désactiver la collecte de ces données sur votre appareil Android, ouvrez le paramètre **Données d’utilisation** dans l’application Portail d’entreprise.
+Pour désactiver la collecte de données sur votre appareil Android :  
+
+1. Ouvrez l’application Portail d’entreprise ou Microsoft Intune.
+2. Cliquez sur **Paramètres**.
+3. Sous le paramètre données d’utilisation, retournez le commutateur en position OFF. 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).

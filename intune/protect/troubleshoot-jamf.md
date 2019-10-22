@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e92e3442e1347cb1a2cd1c737078912b74f075c9
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817636"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503569"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Résoudre les problèmes d’intégration de JAMF Pro avec Microsoft Intune
 
@@ -42,7 +43,7 @@ Avant de commencer le dépannage, recueillez des informations de base pour clari
 
 Tenez compte des informations suivantes lors de l’examen de l’intégration de JAMF Pro à Intune : 
 - Quel est le message d’erreur exact ?
-- Où se trouve le message d’erreur ?
+- Où se trouve le message d'erreur ?
 - Quand le problème a-t-il commencé ?  L’intégration de JAMF Pro avec Intune a-t-elle déjà fonctionné ?
 - Combien d’utilisateurs sont affectés ? Tous les utilisateurs sont-ils affectés ou juste quelques-uns ?
 - Combien d’appareils sont affectés ? Tous les appareils sont-ils affectés ou simplement certains ?
@@ -56,11 +57,11 @@ Les informations suivantes peuvent vous aider à identifier et à résoudre les 
 |-----------------|--------------------------|
 | **Les appareils sont marqués comme ne répondant pas dans JAMF Pro**  | [Les appareils ne parviennent pas à s’archiver avec JAMF Pro ou avec Azure AD](#devices-are-marked-as-unresponsive-in-jamf-pro) |
 | **Les appareils Mac demandent la connexion au trousseau lorsque vous ouvrez une application échec de l’inscription des appareils**  | [Les utilisateurs sont invités à entrer leur mot de passe pour permettre aux applications de s’inscrire auprès de Azure ad](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app). |
-| **Échec de l’inscription des appareils**  | Les causes possibles sont les suivantes : <br> **-** [ ***cause 1*** -l’application JAMF Pro dans Azure possède des autorisations incorrectes](#cause-1) <br> **-** [ ***cause 2*** : il y a un problème pour *le connecteur JAMF Native MacOS* dans Azure ad](#cause-2) <br> **-** [ ***cause 3*** : l’utilisateur n’a pas de licence Intune ou JAMF valide](#cause-3) <br> **-** [ ***cause 4*** : l’utilisateur n’a pas utilisé le libre-service JAMF pour démarrer l’application portail d’entreprise](#cause-4) <br> **-** [ ***cause 5*** -l’intégration d’Intune est désactivée](#cause-5) <br> **-** [ ***cause 6*** -l’appareil a déjà été inscrit dans Intune ou l’utilisateur a tenté d’inscrire l’appareil plusieurs fois](#cause-6) <br> **-** [ ***cause 7*** -JamfAAD demande l’accès à une « clé de Workplace join Microsoft » à partir du trousseau d’utilisateurs](#cause-7) |
+| **Échec de l’inscription des appareils**  | Les causes possibles sont les suivantes : <br> **-** [ ***cause 1*** -l’application JAMF Pro dans Azure possède des autorisations incorrectes](#cause-1) <br> **-** [ ***cause 2*** : il y a un problème pour le *connecteur MacOS natif JAMF* dans Azure ad](#cause-2) <br> **-** [ ***cause 3*** -l’utilisateur n’a pas de licence Intune ou JAMF valide](#cause-3) <br> **-** [ ***cause 4*** -l’utilisateur n’a pas utilisé le libre-service JAMF pour démarrer l’application portail d’entreprise](#cause-4) <br> **-** [ ***cause 5*** -l’intégration d’Intune est désactivée](#cause-5) <br> **-** [ ***cause 6*** -l’appareil a déjà été inscrit dans Intune ou l’utilisateur a tenté d’inscrire l’appareil plusieurs fois](#cause-6) <br> **-** [, les demandes ***7*** -JamfAAD accèdent à une « clé de Workplace join Microsoft » à partir du trousseau d’utilisateurs](#cause-7) |
 |  **L’appareil Mac affiche la conformité dans Intune, mais non conforme dans Azure** | [Problèmes d’inscription de l’appareil](#mac-device-shows-compliant-in-intune-but-noncompliant-in-azure) |
 | **Les entrées en double s’affichent dans la console Intune pour les appareils Mac inscrits à l’aide de JAMF** | [Inscriptions multiples sur le même appareil](#duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf) |
 | **La stratégie de conformité ne parvient pas à évaluer l’appareil** | [La stratégie cible les groupes d’appareils](#compliance-policy-fails-to-evaluate-the-device) |
-| **Impossible de récupérer le jeton d’accès pour l’API Microsoft Graph** | Les causes possibles sont les suivantes : <br> Autorisations -[pour l’application JAMF Pro dans Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> licence - [expirée pour JAMF ou Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> les ports **-** ne [sont pas ouverts](#the-required-ports-arent-open-on-your-network)|
+| **Impossible de récupérer le jeton d’accès pour l’API Microsoft Graph** | Les causes possibles sont les suivantes : <br> -[des autorisations pour l’application JAMF Pro dans Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - [Licence expirée pour JAMF ou Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> **-** [Les ports ne sont pas ouverts](#the-required-ports-arent-open-on-your-network)|
  
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>Les appareils sont marqués comme ne répondant pas dans JAMF Pro  
@@ -145,7 +146,7 @@ Pour qu’un appareil s’inscrive et s’inscrive auprès d’Intune par le bia
 
 Pour déterminer le service que l’appareil a utilisé pour l’inscription et l’inscription, recherchez dans l’application Portail d’entreprise sur l’appareil. Quand vous êtes inscrit via JAMF, vous devez recevoir une notification pour ouvrir l’application libre-service et y apporter des modifications.
 
-Dans l’application Portail d’entreprise, l’utilisateur peut voir **`Not registered`** , et une entrée semblable à l’exemple suivant peut apparaître dans les journaux portail d’entreprise :  
+Dans l’application Portail d’entreprise, l’utilisateur peut voir **`Not registered`** et une entrée semblable à l’exemple suivant peut apparaître dans les journaux de portail d’entreprise :  
 
 ```
    Line 7783: <DATE> <IP ADDRESS> INFO com.microsoft.ssp.application TID=1  
@@ -207,8 +208,8 @@ Si un appareil est désinscrit de JAMF mais qu’il n’a pas été correctement
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/cookies/com. Microsoft. CompanyPortal. binarycookies
-   - /Users/<username>/Library/cookies/com. JAMF. Management. jamfAAD. binarycookies
+   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com. Microsoft. CompanyPortal
    - com. Microsoft. CompanyPortal. HockeySDK
    - enterpriseregistration.windows.net
@@ -273,7 +274,7 @@ Pour résoudre ce problème, suivez la résolution de la [*cause 6*](#cause-6) p
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>La stratégie de conformité ne parvient pas à évaluer l’appareil  
 
-**Cause**: l’intégration de JAMF à Intune ne prend pas en charge la stratégie de conformité qui cible les groupes d’appareils. 
+**Cause** : l'intégration de Jamf à Intune ne prend pas en charge une stratégie de conformité qui cible des groupes d’appareils. 
 
 **Résolution**  
 Modifiez la stratégie de conformité pour les appareils macOS à affecter aux groupes d’utilisateurs. 
@@ -293,7 +294,7 @@ La source de cette erreur peut être l’une des causes suivantes :
 
 Lors de l’inscription de l’application JAMF Pro dans Azure, l’une des conditions suivantes s’est produite :  
 - L’application a reçu plus d’une autorisation.
-- L’option **accorder le consentement de l’administrateur pour l’option de *> de \<your***  n’a pas été sélectionnée.  
+- L’option **accorder le consentement de l’administrateur pour *\<your > d’entreprise***  n’a pas été sélectionnée.  
 
 **Résolution**  
 Consultez la résolution de la cause 1 de l’échec de l' [inscription des appareils](#devices-fail-to-register), plus haut dans cet article.

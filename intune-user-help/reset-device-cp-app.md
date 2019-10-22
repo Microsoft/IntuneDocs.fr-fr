@@ -9,6 +9,7 @@ ms.date: 03/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser; intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5aff186d3850e8f9a6081168a5adc9956504019
-ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
+ms.openlocfilehash: 64612aa8a1d427284778a9aa43b966b05cb0a15f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163340"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502114"
 ---
 # <a name="reset-device-from-the-company-portal-app"></a>Réinitialiser l’appareil à partir de l’application Portail d’entreprise  
 
-Rétablir les paramètres d’usine d’un appareil utilisé, perdu ou volé à partir de l’application Portail d’entreprise.  
+Réinitialisez les paramètres d’usine d’un appareil perdu, volé ou précédemment utilisé, à partir de l’application Portail d’entreprise.  
 
 Une fois que vous avez réinitialisé un appareil, celui-ci n’apparaît plus dans Portail d’entreprise. Ses applications et fichiers existants seront effacés et seront restaurés dans les paramètres prédéfinis.  
 
