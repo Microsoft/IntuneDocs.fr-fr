@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 93cda587-bf56-4d41-b123-9fe203fad788
@@ -16,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49246302cf71fc95d20cdb84099323ba9beffdb3
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 8fab3ea722e94f2613a0fb1e474a16ecb5971569
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940464"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585260"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Configurer des stratégies de protection des applications (facultatif)
 
@@ -51,9 +52,7 @@ Lorsque vous désactivez l’accès conditionnel dans l’ancien fournisseur MD
 
 ## <a name="task-list-for-app-protection-policies"></a>Liste des tâches associées aux stratégies de protection des applications
 
-1. [Créer une stratégie de protection des applications](../apps/app-protection-policies.md#create-an-app-protection-policy)
-2. [Déployer une stratégie](../apps/app-protection-policies.md#deploy-a-policy-to-users)
-
+- [Guide pratique pour créer et affecter des stratégies de protection des applications](~/apps/app-protection-policies.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

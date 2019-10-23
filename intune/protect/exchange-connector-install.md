@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4751b77362567ad18f5b775e5bda9c1081dd181
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: 30b5debc6e1ab113a08d8930f96f6cbc9bf12b48
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71911203"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509524"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Configurer le connecteur Intune Exchange local
 Pour protéger l'accès à Exchange, Intune s'appuie sur un composant local connu sous le nom de connecteur Microsoft Intune Exchange. Ce connecteur est aussi appelé connecteur *Exchange ActiveSync local* dans certaines parties de la console Intune. 
@@ -167,7 +168,7 @@ Pour le basculement, le connecteur utilise le serveur d’accès au client spéc
 Par défaut, la découverte de serveurs d’accès au client supplémentaires est activée. Si vous devez désactiver le basculement :  
 1. Sur le serveur où est installé le connecteur Exchange, accédez à **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**. 
 2. À l’aide d’un éditeur de texte, ouvrez **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Remplacez **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** par **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>**.  
+3. Remplacez **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** par **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .  
  
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Optimisation des performances pour le connecteur Exchange (optionnel)
 

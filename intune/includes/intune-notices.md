@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 5ebab881a524bc361e271856b6762776974cea20
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 9965c6e85173ea9958182be43b6c93d9578d534f
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601532"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749377"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune.
 
@@ -70,7 +70,6 @@ Vous n’avez rien à faire, mais nous vous recommandons de mettre à jour vos r
 
 #### <a name="additional-information"></a>Informations supplémentaires 
 https://aka.ms/intune_fullscreen
-
 
 ### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Modification planifiée : Les stratégies de protection des applications et du Kit de développement logiciel (SDK) des applications Intune pour Android évoluent vers le support d’Android 5.0 et versions ultérieures en octobre <!--4911065 -->
 Intune passera au support d’Android 5.x (lollipop) et versions ultérieures en octobre. Mettez à jour les applications inclues dans un wrapper avec le dernier Kit de développement logiciel (SDK) des applications Intune et mettez à jour vos appareils.

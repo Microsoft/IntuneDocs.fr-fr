@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 05/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19389a21aa28f5fa957f62c988753f46bf1bc731
-ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
+ms.openlocfilehash: 339f6b9476dae438d898b97abcaf3c1759fe9cfc
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008350"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503336"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -113,7 +114,7 @@ Dans le portail Azure d’Intune, fournissez l’ID Apple pour référence ulté
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Étape 4. Chargez votre jeton et choisissez des balises d’étendue.
 
 1. Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem) et choisissez **Ouvrir**.
-2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)**, puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
+2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)** , puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
 3. Choisissez **Créer**.
 
 Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.

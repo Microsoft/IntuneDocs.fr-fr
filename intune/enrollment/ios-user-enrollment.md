@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/2/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57162664d6ca3a35696e56088c4e86acadf45371
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: f201cdac0f881ce03863704dd80d8635de52074a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955325"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505457"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Configurer l’inscription des utilisateurs iOS et iPadOS (préversion)
 
@@ -42,7 +43,7 @@ Pour plus d'informations sur les options disponibles avec l'inscription des util
 
 Un profil d'inscription définit les paramètres appliqués à un groupe d'appareils lors de l’inscription. 
 
-1. Dans le portail Intune, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)** > **Créer un profil** > **iOS**. Ce profil est l'endroit où vous indiquerez l’expérience d'inscription dont vos utilisateurs finaux iOS et iPadOS bénéficieront sur les appareils non inscrits via par une méthode Apple d'entreprise. Si vous souhaitez apporter des modifications, vous pouvez modifier ce profil après l'avoir créé.
+1. Dans le portail Intune, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)**  > **Créer un profil** > **iOS**. Ce profil est l'endroit où vous indiquerez l’expérience d'inscription dont vos utilisateurs finaux iOS et iPadOS bénéficieront sur les appareils non inscrits via par une méthode Apple d'entreprise. Si vous souhaitez apporter des modifications, vous pouvez modifier ce profil après l'avoir créé.
 
     ![Créer un profil d’inscription Apple](./media/ios-user-enrollment/create-profile.png)
 
@@ -58,12 +59,12 @@ Un profil d'inscription définit les paramètres appliqués à un groupe d'appar
     ![Page Paramètres](./media/ios-user-enrollment/settings-page.png)
 
     - Si vous voulez que tous les utilisateurs de ce profil utilisent l'inscription des utilisateurs, procédez comme suit :
-        1. Pour l’option **Require user to select device type (Obliger l'utilisateur à sélectionner le type d’appareil)**, sélectionnez **Not configured (Non configuré)**.
-        2. Pour l’option **Default enrollment type (Type d’inscription par défaut)**, sélectionnez **User Enrollment (Inscription des utilisateurs)**.
+        1. Pour l’option **Require user to select device type (Obliger l'utilisateur à sélectionner le type d’appareil)** , sélectionnez **Not configured (Non configuré)** .
+        2. Pour l’option **Default enrollment type (Type d’inscription par défaut)** , sélectionnez **User Enrollment (Inscription des utilisateurs)** .
     - Si vous voulez que tous les utilisateurs de ce profil utilisent l'inscription des appareils, procédez comme suit :
-        1. Pour l’option **Require user to select device type (Obliger l'utilisateur à sélectionner le type d’appareil)**, sélectionnez **Not configured (Non configuré)**.
-        2. Pour l’option **Default enrollment type (Type d’inscription par défaut)**, sélectionnez **Device Enrollment (Inscription des appareils)**.
-    - Si vous voulez donner à tous les utilisateurs de ce groupe le choix du type d'inscription à utiliser, sélectionnez **Required (Requis)** pour l’option **Require user to select device type (Obliger l’utilisateur à sélectionner un type d’appareil)**. Lorsque les utilisateurs inscrivent leurs appareils, ils peuvent choisir entre l’option **I own this device (Je possède cet appareil)** et **(Company) owns this device ((L’entreprise) possède cet appareil)**. S'ils choisissent la première option, l'appareil sera inscrit à l’aide de l'inscription des utilisateurs. S'ils choisissent la seconde option, l'appareil sera inscrit à l’aide de l'inscription des appareils. Si l'utilisateur choisit **I own this device (Je possède cet appareil)**, il pourra également sécuriser l'ensemble de l’appareil ou uniquement ses applications et données professionnelles. Le choix de l'utilisateur final d’indiquer s’il possède ou non l'appareil détermine uniquement le type d'inscription mis en place sur son appareil. Ce choix n’est pas répercuté dans l'attribut Propriété de l'appareil d’Intune. Pour en savoir plus sur l'expérience utilisateur, voir [Configurer l’accès d’un appareil iOS aux ressources de l’entreprise](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
+        1. Pour l’option **Require user to select device type (Obliger l'utilisateur à sélectionner le type d’appareil)** , sélectionnez **Not configured (Non configuré)** .
+        2. Pour l’option **Default enrollment type (Type d’inscription par défaut)** , sélectionnez **Device Enrollment (Inscription des appareils)** .
+    - Si vous voulez donner à tous les utilisateurs de ce groupe le choix du type d'inscription à utiliser, sélectionnez **Required (Requis)** pour l’option **Require user to select device type (Obliger l’utilisateur à sélectionner un type d’appareil)** . Lorsque les utilisateurs inscrivent leurs appareils, ils peuvent choisir entre l’option **I own this device (Je possède cet appareil)** et **(Company) owns this device ((L’entreprise) possède cet appareil)** . S'ils choisissent la première option, l'appareil sera inscrit à l’aide de l'inscription des utilisateurs. S'ils choisissent la seconde option, l'appareil sera inscrit à l’aide de l'inscription des appareils. Si l'utilisateur choisit **I own this device (Je possède cet appareil)** , il pourra également sécuriser l'ensemble de l’appareil ou uniquement ses applications et données professionnelles. Le choix de l'utilisateur final d’indiquer s’il possède ou non l'appareil détermine uniquement le type d'inscription mis en place sur son appareil. Ce choix n’est pas répercuté dans l'attribut Propriété de l'appareil d’Intune. Pour en savoir plus sur l'expérience utilisateur, voir [Configurer l’accès d’un appareil iOS aux ressources de l’entreprise](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
     
     > [!NOTE]
     > L'information suivante est inexacte et sera retirée de l'interface utilisateur.
@@ -78,7 +79,7 @@ Un profil d'inscription définit les paramètres appliqués à un groupe d'appar
 
 7. Sélectionnez **Suivant**.
 
-8. Dans la page **Review and Create (Examiner et créer)**, passez en revue vos choix, puis sélectionnez **Créer** pour attribuer le profil aux utilisateurs.
+8. Dans la page **Review and Create (Examiner et créer)** , passez en revue vos choix, puis sélectionnez **Créer** pour attribuer le profil aux utilisateurs.
 
     ![Page Affectations](./media/ios-user-enrollment/assignments-page.png)
 
@@ -87,7 +88,7 @@ Un profil d'inscription définit les paramètres appliqués à un groupe d'appar
 
 Après avoir créé plusieurs profils de type d’inscription, vous pouvez modifier l'ordre de priorité dans lequel ils sont appliqués.
 
-1. Dans la section Intune du portail Azure, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)**.
+1. Dans la section Intune du portail Azure, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)** .
 2. Glissez-déplacez les profils dans la liste, dans l'ordre dans lequel vous voulez les appliquer.
 
 En cas de conflit entre les profils d'un utilisateur, le profil avec la priorité la plus élevée est appliqué pour l'utilisateur.

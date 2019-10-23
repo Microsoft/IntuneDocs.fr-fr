@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31fcc3a47a131ca017e3691cc53a7295b81fe67c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 32411e513cec9683faf598c8d73d6d803bcddb3d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724592"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507111"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune
 
@@ -52,7 +53,7 @@ Pour gérer des appareils et installer des applications, vos utilisateurs peuven
 
 7. Sélectionnez **Télécharger** pour télécharger tous les packages sous « Infrastructures requises ».  
 
-    Vous devez effectuer cette opération pour les architectures x86, x64 et ARM .<br> 
+    Vous devez effectuer cette opération pour les architectures x86, x64 et ARM :<br> 
     *Il existe 9 packages de framework requis lorsque vous sélectionnez 1507 comme version minimale du système d'exploitation, 12 packages lorsque vous sélectionnez la version 1511, et 15 packages lorsque vous sélectionnez la version 1607.*
 
 8. Dans Microsoft Intune, dans le portail Azure, chargez l’application Portail d’entreprise comme nouvelle application. Vous ajoutez l’application en sélectionnant Application métier comme **Type d’application** dans le panneau **Ajouter une application**. Sélectionnez ensuite le fichier de package d’application (extension .AppxBundle).

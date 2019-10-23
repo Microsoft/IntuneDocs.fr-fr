@@ -9,6 +9,7 @@ manager: ''
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b16dca0b6a73e7228e65c840bfbc91f3577bb59a
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: 5f290370dd6ec05677a7073d9ca3edd854c9aa5e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999290"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505573"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
 
@@ -121,7 +122,7 @@ Encore besoin d’aide ? Consultez le [Guide d’utilisation complet de KME](ht
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 
-- **Prise en charge du propriétaire de l’appareil :** - **Prise en charge du propriétaire de l’appareil :** Intune prend en charge l’inscription d’appareils dédiés et complètement managés à l’aide du portail KME. Les autres modes Device Owner pour Android Entreprise seront pris en charge quand ils seront disponibles dans Intune.
+- **Prise en charge du propriétaire de l’appareil :**  - **Prise en charge du propriétaire de l’appareil :** Intune prend en charge l’inscription d’appareils dédiés et complètement managés à l’aide du portail KME. Les autres modes Device Owner pour Android Entreprise seront pris en charge quand ils seront disponibles dans Intune.
 
 - **Aucune prise en charge de profil professionnel :** KME est une méthode d’inscription des appareils d’entreprise dans le profil professionnel Android qui garantit la séparation des données personnelles et professionnelles sur les appareils personnels. Par conséquent, l’inscription d’appareils dans un profil professionnel à l’aide de KME n’est pas un scénario pris en charge dans Intune.
 
