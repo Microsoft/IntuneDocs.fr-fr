@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2be1faa1296792d3d40de5ca0b304a287bae8e6f
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550824"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915729"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utiliser et gérer des appareils Android Enterprise avec OEMConfig dans Microsoft Intune
 
@@ -66,7 +66,7 @@ Pour utiliser OEMConfig sur vos appareils, assurez-vous de disposer des élémen
 
 - Un appareil Android Enterprise inscrit dans Intune.
 - Une application OEMConfig générée par l’OEM et chargée sur Google Play. Si elle ne se trouve pas sur Google Play, contactez le fabricant d’ordinateurs OEM pour plus d’informations.
-- L’administrateur Intune dispose des autorisations de contrôle d’accès en fonction du rôle (RBAC) pour les **applications mobiles** et **configurations**. Ces autorisations sont nécessaires car les profils OEMConfig utilisent des configurations d’applications gérées pour gérer les configurations des appareils.
+- L’administrateur Intune dispose des autorisations de contrôle d’accès en fonction du rôle (RBAC) pour les **applications mobiles**, les **configurations des appareils**et l’autorisation de « lecture » sous **Android for Work**. Ces autorisations sont nécessaires car les profils OEMConfig utilisent des configurations d’applications gérées pour gérer les configurations des appareils.
 
 ## <a name="prepare-the-oemconfig-app"></a>Préparer l’application OEMConfig
 

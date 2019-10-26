@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506672"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776904"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -42,7 +42,7 @@ Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il l
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils 
 
 - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez effectuer un test ping dans l’application Terminal pour obtenir l’adresse IP de l’imprimante. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
 - **Chemin d’accès** : entrez le chemin de l’imprimante. Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
@@ -85,7 +85,7 @@ Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l�
 
 ## <a name="login-window"></a>Fenêtre de connexion
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils 
 
 #### <a name="window-layout"></a>Disposition de la fenêtre
 

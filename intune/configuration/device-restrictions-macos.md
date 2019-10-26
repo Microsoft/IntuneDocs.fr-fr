@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb5fe19852ffff30566cb6758e156def3b7d64a5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494013"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776880"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils macOS pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune
 
@@ -40,7 +40,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="general"></a>Général
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Recherche de définition** : choisissez **Bloquer** pour empêcher l’utilisateur de mettre en surbrillance un mot, puis d’en consulter la définition sur l’appareil. L’option (par défaut) **Non configuré** autorise l’accès à la fonctionnalité de recherche de définition.
 - **Dictée** : choisissez **Bloquer** pour empêcher l’utilisateur d’entrer du texte par dictée vocale. L’option **Non configuré** autorise l’utilisation de la dictée.
@@ -82,7 +82,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="password"></a>Mot de passe
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Mot de passe** : **Exige** que l’utilisateur final entre un mot de passe pour accéder à l’appareil. **Non configuré** (par défaut) ne requiert pas de mot de passe. Elle n’impose pas non plus de restrictions, telles que le blocage de mots de passe simples ou la définition d’une longueur minimale.
   - **Type de mot de passe requis** : indique si le mot de passe peut être uniquement de nature numérique ou s’il doit être alphanumérique (c’est-à-dire, contenir des lettres et des chiffres).
@@ -114,7 +114,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="built-in-apps"></a>Applications intégrées
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Bloquer le remplissage automatique dans Safari** : l’option **Bloquer** désactive la fonctionnalité de remplissage automatique dans Safari sur l’appareil. L’option (par défaut) **Non configuré** autorise les utilisateurs à modifier les paramètres de saisie semi-automatique dans le navigateur web.
 - **Bloquer l’appareil photo** : choisissez **Bloquer** pour empêcher l’accès à l’appareil photo de l’appareil. L’option (par défaut)**Non configuré** autorise l’accès à l’appareil photo de l’appareil.
@@ -127,7 +127,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="restricted-apps"></a>Applications restreintes
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Type de liste d’applications restreintes**: créez une liste d’applications que les utilisateurs ne sont pas autorisés à installer ou utiliser. Les options disponibles sont les suivantes :
 
@@ -145,14 +145,14 @@ Pour ajouter des applications à ces listes, vous pouvez :
 
 ## <a name="connected-devices"></a>Appareils connectés
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Bloquer AirDrop** : choisissez l’option **Bloquer** pour empêcher l’utilisation d’AirDrop sur l’appareil. L’option (par défaut)**Non configuré** autorise l’utilisation de la fonctionnalité AirDrop pour échanger du contenu avec des appareils situés à proximité.
 - **Bloquer le déverrouillage automatique avec Apple Watch** : l’option **Bloquer** empêche les utilisateurs de déverrouiller leur appareil macOS avec leur Apple Watch. **Non configuré** (par défaut) permet aux utilisateurs de déverrouiller leur appareil macOS avec leur Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **Bloquer la synchronisation du trousseau iCloud** : choisissez **Bloquer** pour désactiver la synchronisation des identifiants stockés dans le trousseau sur iCloud. L’option (par défaut) **Non configuré** autorise les utilisateurs à synchroniser ces identifiants.
 - **Bloquer la synchronisation des documents avec iCloud** : choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et les données. L’option (par défaut) **Non configuré** autorise la synchronisation des documents et des pairs clé-valeur dans votre espace de stockage iCloud.
@@ -170,7 +170,7 @@ Pour ajouter des applications à ces listes, vous pouvez :
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment"></a>Les paramètres s’appliquent à : inscription de l’appareil
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
 
 - **URL de domaine d’e-mail** : **ajoutez** une ou plusieurs URL à la liste. Quand les utilisateurs reçoivent un e-mail provenant d’un domaine autre que ceux que vous avez configurés, l’e-mail est marqué comme non approuvé dans l’application macOS Mail.
 
