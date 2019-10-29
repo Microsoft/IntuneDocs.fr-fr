@@ -6,7 +6,9 @@
 
 ## [Exigences relatives au mot de passe de l’appareil](password-does-not-meet-it-administrator-requirements.md)
 
-## [Se connecter au portail d’entreprise](sign-in-to-the-company-portal.md)
+## [Se connecter au portail d’entreprise](sign-in-to-the-company-portal.md)  
+
+## [Installer une application de défense contre les menaces mobiles](set-up-mobile-threat-defense.md)  
 
 ## Utilisation de votre appareil Android
 ### [Pourquoi inscrire votre appareil Android](why-enroll-android-device.md)
