@@ -5,23 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afdb365d0ed88a58028287cc7010bb334e9001e
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036450"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749347"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
@@ -48,7 +49,7 @@ Ces modèles offrent aux administrateurs une vue simplifiée des paramètres, à
 
 Cette fonctionnalité prend en charge :
 
-- Windows 10 et versions ultérieures
+- Windows 10 1809 et versions ultérieures sur le microprogramme pris en charge.
 
 ## <a name="certificates"></a>Certificats
 
@@ -66,7 +67,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="custom-profile"></a>Profil personnalisé
 
-Les [paramètres personnalisés](../custom-settings-configure.md) permettent aux administrateurs d’attribuer des paramètres d’appareil qui ne sont pas intégrés à Intune. Sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator.
+Les [paramètres personnalisés](custom-settings-configure.md) permettent aux administrateurs d’attribuer des paramètres d’appareil qui ne sont pas intégrés à Intune. Sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator.
 
 Cette fonctionnalité prend en charge :
 
@@ -78,7 +79,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
 
-[L’optimisation de la distribution](../delivery-optimization-windows.md) fournit une meilleure expérience pour les mises à jour logicielles. Ces paramètres remplacent les paramètres **Mises à jour logicielles** > **Anneau de mise à jour Windows 10**.
+[L’optimisation de la distribution](delivery-optimization-windows.md) fournit une meilleure expérience pour les mises à jour logicielles. Ces paramètres remplacent les paramètres **Mises à jour logicielles** > **Anneau de mise à jour Windows 10**.
 
 Utilisez ces paramètres pour contrôler le mode de téléchargement des mises à jour logicielles sur des appareils dans votre organisation. Par exemple, vous pouvez laisser les utilisateurs obtenir leurs propres mises à jour, ou obtenir les mises à jour avec les services cloud de l’optimisation de la distribution dans un profil d’appareil.
 
@@ -88,12 +89,20 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="device-features"></a>Fonctionnalités de l’appareil
 
-Le profil [Fonctionnalités de l’appareil](../device-features-configure.md) contrôle les fonctionnalités des appareils iOS et macOS, par exemple AirPrint, les notifications et les messages d’écran de verrouillage.
+Le profil [Fonctionnalités de l’appareil](device-features-configure.md) contrôle les fonctionnalités des appareils iOS et macOS, par exemple AirPrint, les notifications et les messages d’écran de verrouillage.
 
 Cette fonctionnalité prend en charge :
 
 - iOS/iPadOS
 - macOS
+
+## <a name="device-firmware-configuration-interface"></a>Interface de configuration du microprogramme d’appareil
+
+L’[interface de configuration du microprogramme d’appareil](device-firmware-configuration-interface-windows.md) (DFCI) permet aux administrateurs d’activer ou de désactiver les paramètres UEFI (BIOS) à l’aide d’Intune. Utilisez ces paramètres pour renforcer la sécurité au niveau du microprogramme, qui est généralement plus résilient aux attaques malveillantes.
+
+Cette fonctionnalité prend en charge :
+
+- Windows 10 et versions ultérieures
 
 ## <a name="device-restrictions"></a>Restrictions d’appareil
 
@@ -210,9 +219,9 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="update-policies"></a>Stratégies de mise à jour
 
-L’article [Stratégies de mise à jour iOS](../software-updates-ios.md) vous montre comment créer et affecter des stratégies iOS pour installer des mises à jour logicielles sur vos appareils iOS. Vous pouvez également consulter l’état de l’installation.
+L’article [Stratégies de mise à jour iOS](../protect/software-updates-ios.md) vous montre comment créer et affecter des stratégies iOS pour installer des mises à jour logicielles sur vos appareils iOS. Vous pouvez également consulter l’état de l’installation.
 
-Pour plus d’informations sur les stratégies de mise à jour des appareils Windows, consultez [Optimisation de la distribution](../delivery-optimization-windows.md). 
+Pour plus d’informations sur les stratégies de mise à jour des appareils Windows, consultez [Optimisation de la distribution](delivery-optimization-windows.md). 
 
 Cette fonctionnalité prend en charge :
 
@@ -265,7 +274,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="manage-and-troubleshoot"></a>Gérer et dépanner
 
-[Gérez vos profils](../device-profile-monitor.md) pour vérifier l’état des appareils et les profils affectés. Ceci vous aide aussi à résoudre les conflits en visualisant les paramètres qui provoquent un conflit et les profils qui incluent ces paramètres. [Solutions aux problèmes courants](device-profile-troubleshoot.md) permet aux administrateurs d’utiliser des profils. Il décrit ce qui se passe lorsque vous supprimez un profil, ce qui entraîne l’envoi de notifications à des appareils, et bien plus encore.
+[Gérez vos profils](device-profile-monitor.md) pour vérifier l’état des appareils et les profils affectés. Ceci vous aide aussi à résoudre les conflits en visualisant les paramètres qui provoquent un conflit et les profils qui incluent ces paramètres. [Solutions aux problèmes courants](device-profile-troubleshoot.md) permet aux administrateurs d’utiliser des profils. Il décrit ce qui se passe lorsque vous supprimez un profil, ce qui entraîne l’envoi de notifications à des appareils, et bien plus encore.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -5,10 +5,10 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
-ms.topic: article
-ms.prod: ''
+ms.date: 10/18/2019
+ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e6b9f7d6aeda219af0f0cf3d0f5c34a3f03d258
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4e28db0d24101ae65ff8c5e49febd0ff5dddc6e2
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722889"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585437"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Créer et attribuer des profils de certificat SCEP dans Intune
 
@@ -50,7 +50,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
    2. Sous Surveillance, le rapport de certificat n’est pas disponible pour les profils de certificat SCEP de propriétaires d’appareils.
    
-   3. La révocation des certificats approvisionnés par les profils de certificat SCEP pour le propriétaire de l’appareil n’est pas prise en charge par Intune, mais peut être gérée par le biais d’un processus externe, ou directement avec l’autorité de certification.
+   3. Vous ne pouvez pas utiliser Intune pour révoquer des certificats provisionnés par les profils de certificat SCEP pour les propriétaires d’appareils. Vous pouvez gérer la révocation via un processus externe ou directement avec l’autorité de certification. 
 
 6. Sélectionnez **Paramètres**, puis effectuez les configurations suivantes :
 
@@ -113,15 +113,13 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
         - **{{DeviceName}}**
         - **{{FullyQualifiedDomainName}}** *(Applicable uniquement aux appareils Windows et joints à un domaine)*
         - **{{MEID}}**
-        
+
         Vous pouvez spécifier ces variables, suivies du texte de la variable, dans la zone de texte. Par exemple, le nom commun d’un appareil nommé *Device1* peut être ajouté sous la forme **CN={{DeviceName}}Device1**.
 
         > [!IMPORTANT]  
         > - Quand vous spécifiez une variable, mettez le nom de la variable entre accolades { }, comme indiqué dans l’exemple, pour éviter une erreur.  
         > - Les propriétés de l’appareil utilisées dans l’*objet* ou le *SAN* d’un certificat d’appareil, par exemple, **IMEI**, **SerialNumber** et **FullyQualifiedDomainName**, sont des propriétés qui peuvent être usurpées par quiconque a accès à l’appareil.
         > - Un appareil doit prendre en charge toutes les variables spécifiées dans un profil de certificat pour que ce profil s’installe sur cet appareil.  Par exemple, si **{{IMEI}}** est utilisé dans le nom d’objet d’un profil SCEP et correspond à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  
- 
-
 
    - **Autre nom de l'objet** :  
      Sélectionnez la manière dont Intune crée automatiquement l’autre nom de l’objet (SAN) dans la demande de certificat. Les options de SAN dépendent du type de certificat que vous sélectionnez, **Utilisateur** ou **Appareil**.  
@@ -198,15 +196,15 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
      Ajoutez des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une *authentification client* pour que l’utilisateur ou l’appareil puisse être authentifié sur un serveur. Vous pouvez ajouter des utilisations de clé supplémentaires selon les besoins.
 
    - **Seuil de renouvellement (%)** :  
-     entrez le pourcentage de durée de vie restante du certificat avant que l'appareil ne demande le renouvellement du certificat. Par exemple, si vous entrez la valeur 20, le renouvellement du certificat est demandé quand le certificat arrive à 80 % d’expiration et les demandes sont envoyées jusqu’à exécution du renouvellement. Le renouvellement génère un nouveau certificat, lui-même entraînant la création d’une nouvelle paire de clés publique/privée.
+     entrez le pourcentage de durée de vie restante du certificat avant que l'appareil ne demande le renouvellement du certificat. Par exemple, si vous entrez la valeur 20, le renouvellement du certificat est tenté quand le certificat arrive à 80 % d’expiration. Les tentatives de renouvellement se poursuivent jusqu’à ce que le renouvellement réussisse. Le renouvellement génère un nouveau certificat, lui-même entraînant la création d’une nouvelle paire de clés publique/privée.
 
    - **URL du serveur SCEP** :  
-     entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP. Par exemple, entrez une URL de type *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Vous pouvez ajouter des URL SCEP supplémentaires pour l’équilibrage de charge selon vos besoins, car les URL sont envoyées de manière aléatoire à l’appareil avec le profil. Si l’un des serveurs SCEP n’est pas disponible, la demande SCEP échoue et, au cours des check-ins suivants de l’appareil, la demande de certificat peut être effectuée sur le même serveur non disponible.
+     entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP. Par exemple, entrez une URL de type *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Vous pouvez ajouter des URL SCEP supplémentaires pour l’équilibrage de charge selon vos besoins, car les URL sont envoyées de manière aléatoire à l’appareil avec le profil. Si l’un des serveurs SCEP n’est pas disponible, la demande SCEP échoue et la demande de certificat peut être effectuée sur le même serveur non disponible lors d’enregistrements ultérieurs de l’appareil.
 
 7. Sélectionnez **OK**, puis **Créer**. Le profil est créé et apparaît dans la liste *Configuration de l’appareil - Profils*.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Éviter les demandes de signature de certificat avec des caractères spéciaux placés dans une séquence d’échappement
-Il existe un problème connu pour les demandes de certificat SCEP qui incluent un nom d’objet (CN) avec un ou plusieurs des caractères spéciaux suivants comme caractère d’échappement. Les noms d’objet qui incluent l’un des caractères spéciaux sous la forme d’un caractère d’échappement se produisent dans un CSR avec un nom d’objet incorrect qui, à son tour, entraîne l’échec de validation de la stimulation SCEP Intune et aucun certificat émis.  
+Il existe un problème connu pour les demandes de certificat SCEP et PKCS qui incluent un nom d’objet (CN) avec un ou plusieurs des caractères spéciaux suivants comme caractère d’échappement. Les noms d’objet qui incluent l’un des caractères spéciaux en tant que caractère d’échappement se produisent dans un CSR avec un nom d’objet incorrect. Un nom d’objet incorrect entraîne l’échec de validation de la stimulation SCEP Intune et aucun certificat n’est émis.
 
 Les caractères spéciaux ont les suivants :
 - \+

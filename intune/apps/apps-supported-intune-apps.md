@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 003ce5af-7ee1-43fb-8d16-9d08c7957a85
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e4d4b3326eda01a1345cd628af31dd66e14533
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 24b69b6da846d54d4f45ede47c932574e006f99f
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724995"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786011"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Applications protégées par Microsoft Intune  
 
@@ -71,6 +72,7 @@ Les tableaux suivants fournissent des détails sur les applications Microsoft et
 | **Microsoft Visio Viewer**<p><img alt="Microsoft app - Microsoft Visio Viewer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-visio-viewer.png" width="100"> | Vous pouvez afficher des diagrammes Visio sur iPhone pendant vos déplacements et interagir avec eux gratuitement. Connectez-vous avec votre compte Microsoft ou ouvrez une pièce jointe Visio depuis un e-mail, puis profitez de l’excellente présentation des diagrammes Visio sur n’importe quel iPhone exécutant iOS 9.0 ou version ultérieure. Vous pouvez également partager les diagrammes avec un tiers, lequel pourra ensuite visualiser ces diagrammes Visio sur son iPhone ou dans un navigateur web, même s’il n’a pas installé Visio sur son ordinateur de bureau Windows.| [Lien App Store iOS](https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983?mt=8) |  
 | **Microsoft Word**<p><img alt="Microsoft app - Microsoft Word icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-word.png" width="100"> | Optimisez l’affichage des documents Word sur votre tablette et votre téléphone. Avec cette application, vous êtes sûr que quand vous modifierez ou créerez des documents, ils auront exactement la même apparence sur les ordinateurs, Mac, tablettes et téléphones. Soyez rapidement opérationnel avec l’ergonomie familière d’Office et une expérience tactile intuitive.<p><p>Cette application peut être utilisée comme application multi-identité pour Android et iOS. | [Lien App Store Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word),<br>[Lien App Store iOS](https://itunes.apple.com/us/app/microsoft-word/id586447913?mt=8) |  
 | **Dossiers de travail Microsoft**<p><img alt="Microsoft app - Microsoft Work Folders icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-work-folders.png" width="100"> | Permettez aux employés individuels d’accéder à leurs fichiers en toute sécurité depuis l’intérieur et l’extérieur de l’environnement d’entreprise grâce à la fonctionnalité Windows Server appelée Dossiers de travail. | [Lien App Store iOS](https://itunes.apple.com/us/app/work-folders/id950878067?mt=8) | 
+| **Tableau blanc collaboratif Microsoft**<p><img alt="Microsoft app - Microsoft Whiteboard icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-whiteboard.png" width="100"> | L’application Tableau blanc collaboratif Microsoft offre un espace intelligent qui permet aux équipes de partager des idées, de créer et de collaborer visuellement via le cloud.  Elle améliore également la collaboration en permettant à tous les membres de votre équipe d’apporter des modifications et d’ajouter des commentaires en temps réel, où qu’ils se trouvent. Votre travail est conservé en toute sécurité dans le cloud et reste accessible n’importe où, sur différents appareils. | [Lien App Store iOS](https://apps.apple.com/us/app/microsoft-whiteboard/id1352499399) |  
 | **Yammer**<p><img alt="Microsoft app - Yammer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-yammer.png" width="100"> | Abattez les cloisons organisationnelles et favorisez la collaboration en équipe avec Yammer. Connectez-vous aux personnes appropriées de votre organisation, partagez et recherchez les informations sur plusieurs équipes et organisez-vous autour de projets et d’idées pour aller plus loin. | [Lien App Store Android](https://play.google.com/store/apps/details?id=com.yammer.v1),<br>[Lien App Store iOS](https://itunes.apple.com/us/app/yammer/id289559439?mt=8) |  
 
 ## <a name="partner-apps"></a>Applications partenaires 

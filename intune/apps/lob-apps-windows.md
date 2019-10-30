@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2b20030bd6c7e1dc9108002cc43f105cb8c6784
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 6df77d168bb8be3775c566f63833b46130515b36
+ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036462"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601572"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -82,12 +83,12 @@ Une application métier est une application que vous ajoutez à partir d’un fi
 
    > [!NOTE]
    > Pour permettre au service Intune de déployer correctement un nouveau fichier APPX sur l’appareil, vous devez incrémenter la chaîne `Version` dans le fichier AppxManifest.xml du package APPX.
-    
+
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Configurer une application MSI mobile avec mise à jour automatique pour ignorer le processus de vérification de version
 
-Vous pouvez configurer une application MSI mobile connue avec mise à jour automatique pour ignorer le processus de vérification de version. 
+Vous pouvez configurer une application MSI mobile connue avec mise à jour automatique pour ignorer le processus de vérification de version.
 
-Certaines applications basées sur un programme d’installation MSI sont automatiquement mises à jour par le développeur de l’application. Pour ces applications MSI mises à jour automatiquement, vous pouvez configurer le paramètre **Ignorer la version de l’application** dans le volet **Informations sur l’application**. Quand vous changez ce paramètre en lui affectant la valeur **Oui**, Microsoft Intune n’applique pas la version de l’application installée sur le client Windows. 
+Certaines applications basées sur un programme d’installation MSI sont automatiquement mises à jour par le développeur de l’application ou une autre méthode de mise à jour. Pour ces applications MSI mises à jour automatiquement, vous pouvez configurer le paramètre **Ignorer la version de l’application** dans le volet **Informations sur l’application**. Quand vous changez ce paramètre en lui affectant la valeur **Oui**, Microsoft Intune n’applique pas la version de l’application installée sur le client Windows.
 
 Cette fonctionnalité est utile pour éviter d’introduire une condition de concurrence. Par exemple, une condition de concurrence peut se produire quand l’application est automatiquement mise à jour par le développeur et en même temps par Intune. Tous deux tentent d’appliquer une version de l’application sur un client Windows, ce qui crée un conflit.
 

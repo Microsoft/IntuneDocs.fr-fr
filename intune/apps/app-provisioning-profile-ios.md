@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624c6cec2a887396cb6ef6508ab26a16d72f8f7c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c0b5f087494e8033cb9645d0a08edd4e1c481a2c
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725320"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584923"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Utiliser les profils de provisionnement d’application iOS pour empêcher l’expiration de vos applications
 
@@ -44,14 +45,22 @@ En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécu
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Comment créer un profil de configuration d’application mobile iOS
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, choisissez **Applications clientes**.
-1. Dans la charge de travail **Applications clientes**, choisissez **Gérer** > **Profils de provisionnement d’application iOS**.
-2. Dans le volet de la liste des profils, choisissez **Créer un profil**.
-3. Dans le volet **Créer un profil**, configurez les valeurs suivantes :
+2. Dans le volet **Intune**, choisissez **Applications clientes** > **Profils de provisionnement d’application iOS** > **Créer un profil**.
+3. Dans la page **De base**, ajoutez les valeurs suivantes :
     - **Nom** : nommez ce profil de configuration mobile.
     - **Description** : vous pouvez également fournir une description de la stratégie (facultatif).
     - **Charger le fichier de profil** : choisissez **Ouvrir**, puis sélectionnez le fichier de profil de configuration mobile Apple (avec l’extension `.mobileprovision`) que vous avez téléchargé depuis le [site web Apple Developer](https://developer.apple.com/).
-4. Quand vous avez terminé, choisissez **Créer**.
+
+   La **date d’expiration** est renseignée à partir d’une valeur dans le fichier de profil de configuration mobile Apple que vous avez ajouté ci-dessus.<br>
+
+   <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+
+4. Cliquez sur **Suivant : Balises d’étendue**.<br>
+   Dans la page **Balises d’étendue**, vous pouvez éventuellement configurer des balises d’étendue pour déterminer qui peut voir le profil de provisionnement d’application iOS dans Intune. Pour plus d’informations sur les balises d’étendue, voir [Utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour l’informatique distribuée](../fundamentals/scope-tags.md).
+5. Cliquez sur **Suivant : Affectations**.<br>
+   La page **Affectations** vous permet d’affecter le profil aux utilisateurs et appareils. Il est important de noter que vous pouvez affecter un profil à un appareil, que celui-ci soit ou non géré par Intune.
+6. Cliquez sur **Suivant : Vérifier + créer** pour examiner les valeurs que vous avez entrées pour le profil.
+7. Après avoir terminé, cliquez sur **Créer** pour créer le profil de provisionnement d’application iOS dans Intune. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -1,13 +1,14 @@
 ---
 title: Utiliser des certificats de clés publiques et privées dans Microsoft Intune - Azure | Microsoft Docs
-description: Découvrez comment ajouter ou créer des certificats PKCS (Public Key Cryptography Standards) avec Microsoft Intune, notamment comment exporter un certificat racine, configurer le modèle de certificat, télécharger et installer Intune Certificate Connector (NDES), créer un profil de configuration d’appareil et créer un profil de certificat PKCS dans Azure et votre autorité de certification.
+description: Utilisez des certificats PKCS (Public Key Cryptography Standards) avec Microsoft Intune. Cela inclut l’utilisation de certificats racines et de modèles de certificats, l’installation d’Intune Certificate Connector (NDES) et de profils de configuration d’appareil pour un certificat PKCS.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee5ef1b5c59bbef3834d44354508b767ae99088
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b0f31add65063665da5a7961e2caf9eb30a847e2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722928"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72787879"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS avec Intune
 
@@ -58,7 +59,7 @@ Pour utiliser des certificats PKCS avec Intune, vous devez disposer de l’infra
 - **Microsoft Intune Certificate Connector** (également appelé *connecteur de certificats NDES*) :  
   Dans le portail Intune, accédez à **Configuration de l’appareil** > **Connecteurs de certificat** > **Ajouter** et suivez les *Étapes d’installation du connecteur pour PKCS #12*. Utilisez le lien de téléchargement dans le portail pour démarrer le téléchargement du programme d’installation du connecteur de certificat **NDESConnectorSetup.exe**.  
 
-  Intune prend en charge jusqu’à 100 instances de ce connecteur par abonné, chaque instance se trouvant sur un serveur Windows distinct. Vous pouvez installer une instance de ce connecteur sur le même serveur qu’une instance du connecteur de certificats PFX pour Microsoft Intune. Lorsque vous utilisez plusieurs connecteurs, l’infrastructure des connecteurs prend en charge la haute disponibilité et l’équilibrage de charge, puisque n’importe quelle instance de connecteur disponible peut traiter vos demandes de certificat PKCS. 
+  Intune prend en charge jusqu’à 100 instances de ce connecteur par locataire. Chaque instance du connecteur doit se trouver sur un serveur Windows distinct. Vous pouvez installer une instance de ce connecteur sur le même serveur qu’une instance du connecteur de certificats PFX pour Microsoft Intune. Lorsque vous utilisez plusieurs connecteurs, l’infrastructure des connecteurs prend en charge la haute disponibilité et l’équilibrage de charge, puisque n’importe quelle instance de connecteur disponible peut traiter vos demandes de certificat PKCS. 
 
   Ce connecteur traite les demandes de certificat PKCS utilisées pour l’authentification ou la signature des e-mails S/MIME.
 
@@ -75,7 +76,7 @@ Pour utiliser des certificats PKCS avec Intune, vous devez disposer de l’infra
   - Installez le connecteur PFX Certificate Connector pour Microsoft Intune sur votre serveur.  
   - Vérifier que des pare-feux sont ouverts autorisant le connecteur à contacter **autoupdate.msappproxy.net** sur le port **443**, pour recevoir automatiquement les mises à jour importantes.   
 
-  Pour plus d’informations sur les points de terminaison réseau auxquels Intune et le connecteur doivent pouvoir accéder, consultez [Points de terminaison réseau pour Microsoft Intune](../fundamentals/intune-endpoints.md).
+  Pour plus d’informations sur les points de terminaison réseau auxquels Intune et le connecteur accèdent, consultez [Points de terminaison réseau pour Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 - **Windows Server** :  
   Vous utilisez un serveur Windows pour héberger :
@@ -102,7 +103,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 
 1. Connectez-vous à votre AC d’entreprise avec un compte disposant de privilèges administratifs.
 2. Ouvrez la console **Autorité de certification**, cliquez avec le bouton droit sur **Modèles de certificats** et sélectionnez **Gérer**.
-3. Recherchez le modèle de certificat **Utilisateur**, cliquez dessus avec le bouton droit et sélectionnez **Dupliquer le modèle**. La fenêtre **Propriétés du nouveau modèle** s’ouvre.
+3. Recherchez le modèle de certificat **Utilisateur**, cliquez dessus avec le bouton droit et choisissez **Dupliquer le modèle** pour ouvrir **Propriétés du nouveau modèle**.
 
     > [!NOTE]
     > Pour les scénarios de signature et de chiffrement des e-mails S/MIME, de nombreux administrateurs utilisent des certificats différents pour la signature et le chiffrement. Si vous utilisez les Services de certificats Active Directory de Microsoft, vous pouvez utiliser le modèle **Signature Exchange uniquement** pour les certificats de signature des e-mails S/MIME, et le modèle **Utilisateur Exchange** pour les certificats de chiffrement S/MIME.  Si vous utilisez une autorité de certification tierce, il est recommandé de lire les instructions qui s’y rapportent pour configurer les modèles de signature et de chiffrement.
@@ -165,7 +166,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 
 ## <a name="create-a-trusted-certificate-profile"></a>Créer un profil de certificat approuvé
 
-1. Dans le [portail Azure](https://portal.azure.com), accédez à **Intune** >  **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), accédez à **Configuration de l’appareil** > **Profils** > **Créer un profil**.
     ![Accéder à Intune et créer un profil pour un certificat approuvé](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
 
 2. Entrez les propriétés suivantes :
@@ -187,7 +188,7 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Créer un profil de certificat PKCS
 
-1. Dans le [portail Azure](https://portal.azure.com), accédez à **Intune** >  **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), accédez à **Configuration de l’appareil** > **Profils** > **Créer un profil**.
 2. Entrez les propriétés suivantes :
 
     - le **Nom** du profil ;
@@ -195,22 +196,81 @@ Pour l’authentification d’un appareil auprès d’un VPN, d’un réseau Wi-
     - la **Plateforme** sur laquelle le profil sera déployé ;
     - Définissez **Type de profil** sur **Certificat PKCS**.
 
-3. Accédez à **Paramètres** et entrez les propriétés suivantes :
-
-    - **Seuil de renouvellement (%)** : la valeur recommandée est 20 %.
-    - **Période de validité du certificat** : si vous n’avez pas changé le modèle de certificat, cette option peut être définie sur un an.
-    - **Fournisseur de stockage de clés (KSP)**  : pour Windows, sélectionnez l’emplacement où stocker les clés sur l’appareil.
-    - **Autorité de certification** : nom de domaine complet (FQDN) interne de l’autorité de certification d’entreprise.
-    - **Nom de l’autorité de certification** : indique le nom de l’autorité de certification d’entreprise, par exemple « Autorité de certification Contoso ».
-    - **Nom du modèle de certificat** : nom du modèle créé précédemment. Rappel : Par défaut, **Nom du modèle** est identique à **Nom complet du modèle**, *sans les espaces*.
-    - **Format du nom de l'objet** : définissez cette option sur **Nom commun**, sauf indication contraire.
-    - **Autre nom de l'objet** : définissez cette option sur **Nom d’utilisateur principal (UPN)** , sauf indication contraire.
+3. Accédez à **Paramètres** et configurez les propriétés qui s’appliquent à la plateforme que vous avez sélectionnée :  
+   
+   |Paramètre     | Plate-forme     | Détails   |
+   |------------|------------|------------|
+   |**Seuil de renouvellement (%)**        |Tous         |La valeur recommandée est 20 %  | 
+   |**Période de validité du certificat**  |Tous         |si vous n’avez pas changé le modèle de certificat, cette option peut être définie sur un an. |
+   |**Fournisseur de stockage de clés (KSP)**   |Windows 10  | pour Windows, sélectionnez l’emplacement où stocker les clés sur l’appareil. |
+   |**Autorité de certification**      |Tous         |nom de domaine complet (FQDN) interne de l’autorité de certification d’entreprise.  |
+   |**Nom de l’autorité de certification** |Tous         |indique le nom de l’autorité de certification d’entreprise, par exemple « Autorité de certification Contoso ». |
+   |**Type de certificat**             |macOS       |Sélectionnez un type : <br> **-** L’objet et le SAN d’un certificat **Utilisateur** peuvent contenir des attributs d’utilisateur et d’appareil. <br><br>**-** L’objet et le SAN d’un certificat de type **Appareil** peuvent contenir uniquement des attributs d’appareil. Utilisez Appareil dans des scénarios de type appareils sans utilisateur, tels que des kiosques ou d’autres appareils partagés.  <br><br> Cette sélection affecte le format du nom de l’objet. |
+   |**Format du nom de l’objet**          |Tous         |Pour la plupart des plateformes, définissez cette option sur **Nom commun**, sauf indication contraire.<br><br>Pour macOS, le format du nom de l’objet est déterminé par le type de certificat. Consultez [Format du nom de l’objet pour macOS](#subject-name-format-for-macos) plus loin dans cet article. |
+   |**Autre nom de l’objet**     |Tous         |définissez cette option sur **Nom d’utilisateur principal (UPN)** , sauf indication contraire. |
+   |**Utilisation avancée de la clé**           |**-** Administrateur d’appareil Android <br>**-** Android Entreprise (*Propriétaire d’appareil*, *Profil professionnel*) <br> **-** Windows 10 |Habituellement, les certificats exigent une *authentification client* afin que l’utilisateur ou l’appareil puisse s’authentifier auprès d’un serveur. |
+   |**Autoriser toutes les applications à accéder à la clé privée** |macOS  |Affectez la valeur **Activer** pour accorder aux applications configurées pour l’appareil Mac associé l’accès à la clé privée des certificats PKCS. <br><br> Pour plus d’informations sur ce paramètre, consultez *AllowAllAppsAccess*, la section sur la charge utile de certificat de [référence de profil de configuration](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf), dans la documentation pour les développeurs Apple. |
+   |**Certificat racine**             |**-** Administrateur d’appareil Android <br> **-** Android Entreprise (*Propriétaire d’appareil*, *Profil professionnel*) |Sélectionnez un profil de certificat d’autorité de certification racine qui a été précédemment affecté. |
 
 4. Sélectionnez **OK** > **Créer** pour enregistrer votre profil.
 5. Pour affecter le nouveau profil à un ou plusieurs appareils, consultez [Affecter des profils d’appareils Microsoft Intune](../configuration/device-profile-assign.md).
 
    > [!NOTE]
    > Sur les appareils dotés d’un profil Android Entreprise, les certificats installés à l’aide d’un profil de certificat PKCS ne sont pas visibles sur l’appareil. Pour confirmer le déploiement réussi du certificat, vérifiez l’état du profil dans la console Intune.
+
+### <a name="subject-name-format-for-macos"></a>Format du nom de l’objet pour macOS
+
+Quand vous créez un profil de certificat PKCS macOS, les options de format du nom de l’objet dépendent du type de certificat que vous sélectionnez, **Utilisateur** ou **Appareil**.  
+
+> [!NOTE]  
+> Il existe un problème connu lié à l’utilisation de PKCS pour obtenir des certificats [qui correspond au même problème détecté pour SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters), lorsque le nom d’objet dans la demande de signature de certificat (CSR) résultante inclut l’un des caractères suivants comme caractère d’échappement (suivi d’une barre oblique inverse \\) :
+> - \+
+> - ;
+> - ,
+> - =
+
+- **Type de certificat Utilisateur**  
+  Les options de *Format du nom de l’objet* incluent deux variables : **Nom commun (CN)** et **E-mail (E)** . **Nom courant (cn)** peut être défini sur une des variables suivantes :
+
+  - **CN={{UserName}}** : Le nom d’utilisateur principal, par exemple, janedoe@contoso.com.
+  - **CN={{AAD_Device_ID}}** : ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
+  - **CN={{SERIALNUMBER}}** : Numéro de série unique (SN) généralement utilisé par le fabricant pour identifier un appareil.
+  - **CN={{IMEINumber}}** : Numéro IMEI (International Mobile Equipment Identity) unique utilisé pour identifier un téléphone mobile.
+  - **CN={{OnPrem_Distinguished_Name}}** : Séquence de noms uniques relatifs séparés par une virgule, par exemple, *CN=Jane Doe,OU=UserAccounts,DC=Corp,DC=contoso,DC=com*.
+
+    Pour utiliser la variable *{{OnPrem_Distinguished_Name}}* , synchronisez l’attribut utilisateur *onpremisesdistinguishedname* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
+
+  - **CN={{onPremisesSamAccountName}}** : Les administrateurs peuvent synchroniser l’attribut samAccountName d’Active Directory sur Azure AD à l’aide d’Azure AD Connect dans un attribut appelé *onPremisesSamAccountName*. Intune peut remplacer cette variable dans le cadre d’une demande d’émission de certificat dans l’objet d’un certificat. L’attribut samAccountName est le nom de connexion de l’utilisateur utilisé pour prendre en charge les clients et serveurs avec une version antérieure de Windows (antérieure à Windows 2000). Le format du nom de connexion de l’utilisateur est : *DomainName\testUser* ou simplement *testUser*.
+
+    Pour utiliser la variable *{{onPremisesSamAccountName}}* , synchronisez l’attribut utilisateur *onPremisesSamAccountName* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
+
+  En combinant une ou plusieurs de ces variables et chaînes statiques, vous pouvez créer un format de nom d’objet personnalisé tel que :  
+  - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+  
+  Cet exemple comprend un format de nom d’objet qui utilise les variables CN et E ainsi que des chaînes pour les valeurs Unité d’organisation, Organisation, Emplacement, Région et Pays. La page [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) (Fonction CertStrToName) illustre cette fonction et ses chaînes prises en charge.
+
+- **Type de certificat Appareil**  
+  Les options de format du nom de l’objet sont notamment les variables suivantes : 
+  - **{{AAD_Device_ID}}**
+  - **{{Device_Serial}}**
+  - **{{Device_IMEI}}**
+  - **{{SerialNumber}}**
+  - **{{IMEINumber}}**
+  - **{{AzureADDeviceId}}**
+  - **{{WiFiMacAddress}}**
+  - **{{IMEI}}**
+  - **{{DeviceName}}**
+  - **{{FullyQualifiedDomainName}}** *(Applicable uniquement aux appareils Windows et joints à un domaine)*
+  - **{{MEID}}**
+   
+  Vous pouvez spécifier ces variables, suivies du texte de la variable, dans la zone de texte. Par exemple, le nom commun d’un appareil nommé *Device1* peut être ajouté sous la forme **CN={{DeviceName}}Device1**.
+
+  > [!IMPORTANT]  
+  > - Quand vous spécifiez une variable, mettez le nom de la variable entre accolades { }, comme indiqué dans l’exemple, pour éviter une erreur.  
+  > - Les propriétés de l’appareil utilisées dans l’*objet* ou le *SAN* d’un certificat d’appareil, par exemple, **IMEI**, **SerialNumber** et **FullyQualifiedDomainName**, sont des propriétés qui peuvent être usurpées par quiconque a accès à l’appareil.
+  > - Un appareil doit prendre en charge toutes les variables spécifiées dans un profil de certificat pour que ce profil s’installe sur cet appareil.  Par exemple, si **{{IMEI}}** est utilisé dans le nom d’objet d’un profil SCEP et correspond à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.  
+ 
+
 
 ## <a name="whats-new-for-connectors"></a>Nouveautés des connecteurs
 Des mises à jour pour les deux connecteurs de certificats sont régulièrement publiées. Quand nous mettons à jour un connecteur, vous pouvez découvrir ici les modifications apportées. 

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 1/15/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2abf391ddbdb1f7087cd06ed1865b3da8b155178
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 755aefb955c2d30652434f2bd2e91981145fc56f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723578"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505596"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurer l’inscription Intune des appareils Android Entreprise entièrement gérés 
 
@@ -61,7 +62,7 @@ Pour configurer la gestion d’appareils Android Entreprise entièrement gérés
 > [!NOTE]
 > Si vous avez une stratégie d’accès conditionnel Azure AD définie qui utilise le contrôle *Exiger que l’appareil soit marqué comme conforme* et qui s’applique à **toutes les applications cloud**, à **Android** et aux **navigateurs**, vous devez exclure l’application cloud **Microsoft Intune** de cette stratégie. En effet, les processus de configuration Android utilisent un onglet Chrome pour authentifier vos utilisateurs pendant l’inscription. Pour plus d’informations, consultez la [documentation sur l’accès conditionnel Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
-Si vous choisissez **Oui**, vous recevez un jeton d’inscription (chaîne aléatoire) et un code QR pour votre locataire Intune. Ce jeton d’inscription unique est valide pour tous vos utilisateurs et n’expire pas. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour inscrire l’appareil kiosque.
+Si vous choisissez **Oui**, vous recevez un jeton d’inscription (chaîne aléatoire) et un code QR pour votre locataire Intune. Ce jeton d’inscription unique est valide pour tous vos utilisateurs et n’expire pas. En fonction du système d’exploitation et de la version Android de l’appareil, vous pouvez utiliser le jeton ou le code QR pour inscrire l’appareil.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Inscrire les appareils entièrement gérés
 Vous pouvez à présent [inscrire vos appareils entièrement gérés](android-dedicated-devices-fully-managed-enroll.md).

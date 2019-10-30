@@ -2,12 +2,13 @@
 title: Créer des stratégies de conformité des appareils dans Microsoft Intune - Azure | Microsoft Docs
 description: Création de stratégies de conformité, vue d’ensemble des niveaux d’état et de gravité, utilisation de l’état InGracePeriod, utilisation de l’accès conditionnel, gestion des appareils sans stratégie attribuée et différences de conformité dans le portail Azure et dans le portail classique au sein de Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: samyada
@@ -15,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306583"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786078"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Créer une stratégie de conformité dans Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Les stratégies de conformité des appareils sont une fonctionnalité clé quand vous utilisez Intune pour protéger les ressources de votre organisation. Dans Intune, vous pouvez créer des règles et des paramètres que les appareils doivent respecter pour être considérés comme conformes, par exemple une version de système d’exploitation minimale. Si l’appareil n’est pas conforme, vous pouvez bloquer l’accès aux données et aux ressources à l’aide de l’[accès conditionnel](conditional-access.md).
 
@@ -48,10 +47,10 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 - Utiliser une plateforme prise en charge :
 
-  - Android
+  - Administrateur d’appareil Android
   - Android Entreprise
   - iOS
-  - macOS (préversion)
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -72,26 +71,40 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 3. Sélectionnez **Stratégies** > **Créer une stratégie**. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS comme non conformes**.
-    - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.
-    - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :  
+   - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS comme non conformes**.  
 
-       - **Android**
-       - **Android Entreprise**
-       - **iOS**
-       - **MacOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 et versions ultérieures**
-       - **Windows 10 et versions ultérieures**
+   - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.  
 
-    - **Paramètres** : Les articles suivants répertorient et décrivent les paramètres pour chaque plateforme :
+   - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
+     - **Administrateur d’appareil Android**
+     - **Android Entreprise**
+     - **iOS/iPadOS**
+     - **MacOS**
+     - **Windows Phone 8.1**
+     - **Windows 8.1 et versions ultérieures**
+     - **Windows 10 et versions ultérieures**
 
-        - [Android](compliance-policy-create-android.md)
-        - [Android Entreprise](compliance-policy-create-android-for-work.md)
-        - [iOS](compliance-policy-create-ios.md)
-        - [MacOS](compliance-policy-create-mac-os.md)
-        - [Windows Phone 8.1, Windows 8.1 et versions ultérieures](compliance-policy-create-windows-8-1.md)
-        - [Windows 10 et versions ultérieures](compliance-policy-create-windows.md)
+     Pour *Android Entreprise*, vous devez sélectionner un **type de profil** :
+     - **Propriétaire de l’appareil**
+     - **Profil professionnel**
+
+   - **Paramètres** : Les articles suivants répertorient et décrivent les paramètres pour chaque plateforme :
+     - [Administrateur d’appareil Android](compliance-policy-create-android.md)
+     - [Android Entreprise](compliance-policy-create-android-for-work.md)
+     - [iOS/iPadOS](compliance-policy-create-ios.md)
+     - [MacOS](compliance-policy-create-mac-os.md)
+     - [Windows Phone 8.1, Windows 8.1 et versions ultérieures](compliance-policy-create-windows-8-1.md)
+     - [Windows 10 et versions ultérieures](compliance-policy-create-windows.md)  
+
+   - **Emplacements** *(Administrateur d’appareil Android)*  : Dans votre stratégie, vous pouvez forcer la conformité selon l’emplacement de l’appareil. Choisissez parmi les emplacements existants. Vous n’avez pas encore d’emplacement ? L’article [Utiliser des emplacements (délimitation du réseau)](use-network-locations.md) dans Intune fournit des conseils.  
+
+   - **Actions en cas de non-conformité** : Pour les appareils qui ne respectent pas vos stratégies de conformité, vous pouvez ajouter une séquence d’actions à appliquer automatiquement. Vous pouvez changer la planification quand l’appareil est marqué comme non conforme, par exemple après un jour. Vous pouvez également configurer une deuxième action qui envoie un e-mail à l’utilisateur quand l’appareil n’est pas conforme.
+    
+     L’article [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) fournit plus d’informations, notamment sur la création d’un e-mail de notification pour vos utilisateurs.
+
+     Par exemple, vous utilisez la fonctionnalité Emplacements et ajoutez un emplacement à une stratégie de conformité. L’action par défaut en cas de non-conformité s’applique quand vous sélectionnez au moins un emplacement. Si l’appareil n’est pas connecté aux emplacements sélectionnés, il est immédiatement considéré comme non conforme. Vous pouvez accorder aux utilisateurs une période de grâce, par exemple un jour.
+
+   - **Étendue (balises)**  : Les balises d’étendue permettent d’attribuer et de filtrer les stratégies à des groupes spécifiques, tels que les ventes, les ressources humaines, tous les employés US-NC, etc. Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue à vos stratégies de conformité. La section [Utiliser des balises d’étendue pour filtrer les stratégies](../fundamentals/scope-tags.md) est une ressource utile.
 
 4. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements. La stratégie est créée et apparaît dans la liste. Ensuite, attribuez la stratégie à vos groupes.
 
@@ -114,17 +127,18 @@ Lorsque vous attribuez la stratégie, vous pouvez également **évaluer** le nom
 
 Si le bouton **Évaluer** est grisé, vérifiez que la stratégie est attribuée à un ou plusieurs groupes.
 
-## <a name="actions-for-noncompliance"></a>Actions en cas de non-conformité
+<!-- ## Actions for noncompliance
 
-Pour les appareils qui ne respectent pas vos stratégies de conformité, vous pouvez ajouter une séquence d’actions à appliquer automatiquement. Vous pouvez changer la planification quand l’appareil est marqué comme non conforme, par exemple après un jour. Vous pouvez également configurer une deuxième action qui envoie un e-mail à l’utilisateur quand l’appareil n’est pas conforme.
+For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
 
-L’article [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) fournit plus d’informations, notamment sur la création d’un e-mail de notification pour vos utilisateurs.
+[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
 
-Par exemple, vous utilisez la fonctionnalité Emplacements et ajoutez un emplacement à une stratégie de conformité. L’action par défaut en cas de non-conformité s’applique quand vous sélectionnez au moins un emplacement. Si l’appareil n’est pas connecté aux emplacements sélectionnés, il est immédiatement considéré comme non conforme. Vous pouvez accorder aux utilisateurs une période de grâce, par exemple un jour.
+For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
 
-## <a name="scope-tags"></a>Balises d'étendue
+## Scope tags
 
-Les balises d’étendue permettent d’attribuer et de filtrer les stratégies à des groupes spécifiques, tels que les ventes, les ressources humaines, tous les employés US-NC, etc. Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue à vos stratégies de conformité. La section [Utiliser des balises d’étendue pour filtrer les stratégies](../fundamentals/scope-tags.md) est une ressource utile.
+Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+-->
 
 ## <a name="refresh-cycle-times"></a>Durées de cycle d’actualisation
 

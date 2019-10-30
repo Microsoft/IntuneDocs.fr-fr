@@ -5,9 +5,10 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db1f0944a6725d1f361ea20c972d8ffa8f5d9035
-ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
+ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
+ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237212"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72550805"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -33,6 +34,10 @@ Cet article vous montre comment attribuer un profil et inclut des informations s
 
 > [!NOTE]  
 > Lorsqu’une stratégie est supprimée ou n’est plus affectée à un appareil, le paramètre peut conserver la valeur existante. Le paramètre ne reprend pas une valeur par défaut. Pour modifier le paramètre sur une autre valeur, créez une nouvelle stratégie et affectez-la.
+
+## <a name="before-you-begin"></a>Avant de commencer
+
+Veillez à disposer du rôle approprié pour affecter des stratégies. Pour plus d’informations, consultez [Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Attribuer un profil d’appareil
 

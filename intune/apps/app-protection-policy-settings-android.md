@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc4c301ebc4e8dc4a26a49957d344ad52316f66a
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4be8c383ded85dbfa9cf1c1b293bb979201ee4ab
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036407"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785659"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Paramètres de la stratégie de protection des applications Android dans Microsoft Intune
 Cet article décrit les paramètres de stratégie de protection d’application pour les appareils Android. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure.
@@ -126,3 +127,4 @@ Par défaut, plusieurs paramètres sont fournis avec des actions et des valeurs 
 | **Fabricant(s) d’appareil** | Spécifiez une liste séparée par des points-virgules de fabricant(s). Évitez les espaces dans les listes de plusieurs valeurs. Ces valeurs ne respectent pas la casse. Les *actions* sont les suivantes : <br><ul><li>**Autoriser spécifié (bloquer non spécifié)**  : seuls les appareils qui correspondent au fabricant spécifié peuvent utiliser l’application. Tous les autres appareils sont bloqués. </li></ul> <ul><li>**Autoriser spécifié (réinitialiser non spécifié)**  : le compte d’utilisateur associé à l’application est effacé de l’appareil. </li></ul> Pour plus d’informations sur l’utilisation de ce paramètre, consultez [Actions de lancement conditionnel](app-protection-policies-access-actions.md#android-policy-settings). |
 | **Attestation d’appareil SafetyNet** | Les stratégies de protection des applications prennent en charge certaines API de Google Play Protect. Ce paramètre configure notamment l’attestation SafetyNet de Google sur les appareils des utilisateurs finaux. Spécifiez soit **Intégrité de base**, soit **Intégrité de base et appareils certifiés**. **Intégrité de base** vous informe sur l’intégrité générale de l’appareil. Les appareils rootés, les émulateurs, les appareils virtuels et les appareils présentant des signes d’altération échouent aux tests d’intégrité de base. **Intégrité de base et appareils certifiés** vous informe sur la compatibilité de l’appareil avec les services de Google. Seuls les appareils non modifiés qui ont été certifiés par Google peuvent satisfaire à ce contrôle. Les *actions* sont les suivantes : <br><ul><li>**Avertir** : l’utilisateur voit une notification si l’appareil ne satisfait pas l’analyse de l’attestation SafetyNet de Google en fonction de la valeur configurée. Cette notification peut être ignorée. </li></ul><ul><li>**Bloquer l’accès** : l’utilisateur se voit bloquer l’accès si l’appareil ne satisfait pas l’analyse de l’attestation SafetyNet de Google en fonction de la valeur configurée. </li></ul> <ul><li>**Réinitialiser les données** : le compte d’utilisateur associé à l’application est effacé de l’appareil. </li></ul> </li></ul> Pour les questions fréquemment posées relatives à ce paramètre, consultez [Forum aux questions sur GAM et la protection des applications](mam-faq.md#app-experience-on-android). |
 | **Analyse des menaces sur les applications** | Les stratégies de protection des applications prennent en charge certaines API de Google Play Protect. Ce paramètre garantit notamment que l’analyse Vérifier les applications de Google est activée pour les appareils des utilisateurs finaux. Si ce paramètre est configuré, l’utilisateur final se boit bloquer l’accès tant qu’il n’a pas activé l’analyse des applications par Google sur son appareil Android. Les *actions* sont les suivantes : <br><ul><li>**Avertir** : l’utilisateur voit une notification si l’analyse Vérifier les applications de Google n’est pas activée sur l’appareil. Cette notification peut être ignorée. </li></ul><ul><li>**Bloquer l’accès** : l’utilisateur se voit bloquer l’accès si l’analyse Vérifier les applications de Google n’est pas activée sur l’appareil. </li></ul></li></ul> Les résultats de l’analyse Vérifier les applications de Google apparaissent dans le rapport sur les **applications potentiellement dangereuses** dans la console. |
+| **Niveau de menace maximal autorisé pour l’appareil** | Les stratégies de protection d’applications peuvent tirer parti du connecteur Intune-MTD. Spécifiez un niveau de menace maximal acceptable pour utiliser cette application. Les menaces sont déterminées par l’application de fournisseur Mobile Threat Defense (MTD) que vous avez choisie sur l’appareil de l’utilisateur final. Spécifiez *Sécurisé*, *Faible*, *Moyen* ou *Élevé*. L’option *Sécurisé* ne requiert aucune menace sur l’appareil et constitue la valeur configurable la plus restrictive, tandis que l’option *Élevé* requiert une connexion active d’Intune à MTD. Les *actions* sont les suivantes : <br><ul><li>**Bloquer l’accès** - L’accès à l’utilisateur sera bloqué si le niveau de menace déterminé par l’application fournisseur Mobile Threat Defense (MTD) que vous avez choisie sur l’appareil de l’utilisateur final n’est pas conforme à cette exigence.</li></ul> <ul><li>**Réinitialiser les données** : le compte d’utilisateur associé à l’application est effacé de l’appareil.</li></ul>Pour plus d’informations sur l’utilisation de ce paramètre, consultez (##Configurer Intune pour MTD sur des appareils non inscrits). |

@@ -5,34 +5,35 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
-ms.reviewer: heenamac
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd87b33d36d17f32945eb591307eb55241173ca9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a1c68421bf7c5dea0d93d45e0cbb748204d0f66b
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724072"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749393"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Suivre les profils d’appareil dans Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune inclut certaines fonctionnalités dans le portail Azure pour faciliter le monitoring et la gestion de vos profils de configuration d’appareil. Vous pouvez, par exemple, vérifier l’état d’un profil, consulter les appareils attribués et mettre à jour les propriétés d’un profil.
+Intune inclut certaines fonctionnalités pour faciliter la supervision et la gestion de vos profils de configuration d’appareil. Vous pouvez, par exemple, vérifier l’état d’un profil, consulter les appareils attribués et mettre à jour les propriétés d’un profil.
 
 ## <a name="view-existing-profiles"></a>Afficher les profils existants
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Sélectionnez **Configuration de l’appareil** > **Profils**.
+2. Sélectionnez **Configuration de l’appareil** > **Profils**.
 
 Tous vos profils existants sont répertoriés et incluent des informations détaillées, comme la plateforme et si le profil est attribué à des appareils.
 
@@ -43,13 +44,13 @@ Une fois le profil d’appareil créé, Intune fournit des graphiques. Ces graph
 1. Sélectionnez un profil existant. Par exemple, sélectionnez un profil macOS.
 2. Sélectionnez l’onglet **Vue d’ensemble**.
 
-    Le graphique du haut montre le nombre d’appareils attribués au profil d’appareil spécifique. Par exemple, si le profil d’appareil de la configuration s’applique aux appareils macOS, le graphique indique le nombre des appareils macOS.
+    Le graphique du haut montre le nombre d’appareils affectés au profil d’appareil. Par exemple, si le profil d’appareil de la configuration s’applique aux appareils macOS, le graphique indique le nombre des appareils macOS.
 
     Il indique également le nombre d’appareils pour d’autres plateformes ayant le même profil d’appareil. Par exemple, il affiche le nombre d’appareils non macOS.
 
     ![Afficher le nombre d’appareils attribués au profil d’appareil](./media/device-profile-monitor/device-configuration-profile-graphical-chart.png)
 
-    Le graphique du bas montre le nombre d’utilisateurs attribués au profil d’appareil spécifique. Par exemple, si le profil d’appareil de la configuration s’applique aux utilisateurs macOS, le graphique indique le nombre d’utilisateurs macOS.
+    Le graphique du bas montre le nombre d’utilisateurs affectés au profil d’appareil. Par exemple, si le profil d’appareil de la configuration s’applique aux utilisateurs macOS, le graphique indique le nombre d’utilisateurs macOS.
 
 3. Sélectionnez le cercle dans le graphique du haut. **État de l’appareil** s’ouvre.
 
@@ -67,12 +68,12 @@ Une fois le profil d’appareil créé, Intune fournit des graphiques. Ces graph
     - **Propriétés** : Modifiez le nom, ou mettez à jour les paramètres existants.
     - **Affectations** : Incluez ou excluez les appareils que la stratégie doit concerner. Choisissez **Groupes sélectionnés** pour choisir des groupes spécifiques.
     - **État de l’appareil** : Les appareils attribués au profil sont répertoriés et il est indiqué si le profil est déployé avec succès. Vous pouvez sélectionner un appareil spécifique pour obtenir davantage d’informations, notamment les applications installées.
-    - **État de l’utilisateur** : Répertorie les noms d’utilisateur avec les appareils concernés par ce profil, et indique si le profil est déployé avec succès. Vous pouvez sélectionner un utilisateur spécifique pour obtenir davantage d’informations.
+    - **État de l’utilisateur** : Dresse la liste des noms d’utilisateur avec des appareils affectés par ce profil, et indique si le profil est déployé avec succès. Vous pouvez sélectionner un utilisateur spécifique pour obtenir davantage d’informations.
     - **État par paramètre** : Filtre la sortie en affichant les paramètres individuels au sein du profil, et indique si le paramètre est correctement appliqué.
 
 ## <a name="view-conflicts"></a>Visualiser les conflits
 
-Dans **Appareils** > **Tous les appareils**, vous pouvez voir les paramètres qui provoquent un conflit. Quand il existe un conflit, vous voyez également tous les profils de configuration qui contiennent ce paramètre. Les administrateurs peuvent utiliser cette fonctionnalité pour résoudre et corriger les éventuelles incohérences dans les profils.
+Dans **Appareils** > **Tous les appareils**, vous pouvez voir les paramètres qui provoquent un conflit. En cas de conflit, vous voyez également tous les profils de configuration qui contiennent ce paramètre. Les administrateurs peuvent utiliser cette fonctionnalité pour résoudre et corriger les éventuelles incohérences dans les profils.
 
 1. Dans Intune, sélectionnez **Appareils** > **Tous les appareils** > sélectionnez un appareil existant dans la liste. Un utilisateur final peut obtenir le nom de l’appareil à partir de son application Portail d’entreprise.
 2. Sélectionnez **Configuration de l’appareil**. Toutes les stratégies de configuration qui s’appliquent à l’appareil sont listées.
@@ -80,6 +81,34 @@ Dans **Appareils** > **Tous les appareils**, vous pouvez voir les paramètres qu
 
 Maintenant que vous savez quel paramètre provoque un conflit et quelles stratégies incluent ce paramètre, il doit être plus facile de résoudre le conflit. 
 
+## <a name="device-firmware-configuration-interface-profile-reporting"></a>Création de rapports sur les profils d’interface de configuration de microprogramme d’appareil
+
+> [!WARNING]
+> La supervision des profils DFCI est en cours de création. Lorsque l’interface DFCI est en préversion publique, les données de supervision peuvent être manquantes ou incomplètes.
+
+Les profils DFCI sont signalés par paramètre, tout comme les autres profils de configuration d’appareil. Selon la prise en charge de l’interface DFCI par le fabricant, certains paramètres peuvent ne pas s’appliquer.
+
+Avec les paramètres de votre profil DFCI, vous pouvez voir les états suivants :
+
+- **Conforme** : Cet état indique que la valeur du paramètre dans le profil correspond au paramètre sur l’appareil. Cet état peut se produire dans les scénarios suivants :
+
+  - Le profil DFCI a correctement configuré le paramètre dans le profil.
+  - L’appareil ne fait pas contrôler la fonctionnalité matérielle par le paramètre et le paramètre de profil est **Désactivé**.
+  - UEFI n’autorise pas l’interface DFCI à désactiver la fonctionnalité, et le paramètre de profil est **Activé**.
+  - L’appareil n’a pas le matériel permettant de désactiver la fonctionnalité, et le paramètre de profil est **Activé**.
+
+- **Non applicable** : Cet état indique que la valeur d’un paramètre dans le profil est **Activé** et que le paramètre correspondant sur l’appareil est introuvable. Cet état peut se produire si le matériel de l’appareil n’a pas la fonctionnalité.
+
+- **Non conforme** : Cet état indique que la valeur du paramètre dans le profil ne correspond pas au paramètre sur l’appareil. Cet état peut se produire dans les scénarios suivants :
+
+  - UEFI n’autorise pas l’interface DFCI à désactiver un paramètre, et le paramètre de profil est **Désactivé**.
+  - L’appareil n’a pas le matériel permettant de désactiver la fonctionnalité, et le paramètre de profil est **Désactivé**.
+  - L’appareil n’a pas la dernière version du microprogramme DFCI.
+  - L’interface DFCI a été désactivée avant d’être inscrite dans Intune à l’aide d’un contrôle « opt-out » local dans le menu UEFI.
+  - L’appareil a été inscrit auprès d’Intune en dehors de l’inscription Autopilot.
+  - L’appareil n’a pas été inscrit pour Autopilot par un fournisseur de solutions Cloud Microsoft ni enregistré directement par l’OEM.
+
 ## <a name="next-steps"></a>Étapes suivantes
-[Attribuer des profils d’utilisateur et d’appareil](../device-profile-assign.md)  
-[Problèmes courants avec les profils d’appareil et résolutions](device-profile-troubleshoot.md)
+
+[Questions, problèmes et solutions concernant les profils d’appareil](device-profile-troubleshoot.md)  
+[Résoudre les problèmes de stratégies et de profils dans Intune](troubleshoot-policies-in-microsoft-intune.md)

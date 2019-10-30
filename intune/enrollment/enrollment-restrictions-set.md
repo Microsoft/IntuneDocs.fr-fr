@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/17/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
@@ -17,20 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f041c76b4d9b3814a020d51ad4cbb8e33df6c27
-ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
+ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
+ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72379810"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587950"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 En tant qu’administrateur Intune, vous pouvez créer et gérer des restrictions d’inscription qui définissent quels appareils peuvent être inscrits en vue d’être gérés par Intune, notamment :
-- le nombre d’appareils
-- les systèmes d’exploitation et les versions Vous pouvez créer plusieurs restrictions et les appliquer à différents groupes d’utilisateurs. Vous pouvez définir [l’ordre de priorité](#change-enrollment-restriction-priority) pour vos différentes restrictions.
+- Le nombre d’appareils.
+- Les systèmes d’exploitation et les versions.
+
+Vous pouvez créer plusieurs restrictions et les appliquer à différents groupes d’utilisateurs. Vous pouvez définir [l’ordre de priorité](#change-enrollment-restriction-priority) pour vos différentes restrictions.
 
 >[!NOTE]
 >Les restrictions d’inscription ne sont pas des fonctionnalités de sécurité. Des appareils compromis peuvent falsifier leur caractère. Ces restrictions représentent une barrière de meilleur effort pour les utilisateurs non malveillants.
@@ -69,8 +72,17 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
     - L’administrateur d’appareil Android et le profil professionnel Android Entreprise prennent en charge major.minor.rev.build.
     - iOS prend en charge major.minor.rev. Les versions du système d’exploitation ne s’appliquent pas aux appareils Apple inscrits par le biais du Programme d’inscription des appareils, d’Apple School Manager ou de l’application Apple Configurator.
     - Windows prend en charge major.minor.build.rev pour Windows 10 uniquement.
-    > [!Note]
-    > Windows 10 ne fournit pas le numéro de rev au cours de l’inscription. Par conséquent, si vous entrez par exemple 10.0.17134.100 et que l’appareil correspond à 10.0.17134.174, il est bloqué lors de l’inscription.
+    
+    > [!IMPORTANT]
+    > Les plateformes Android Entreprise (profil professionnel) et Administrateur d’appareil Android présentent le comportement suivant :
+    > - Si les deux plateformes sont autorisées pour le même groupe, les utilisateurs sont inscrits avec un profil professionnel si leur appareil le prend en charge, sinon ils sont inscrits en tant qu’administrateur d’appareil. 
+    > - Si les deux plateformes sont autorisées pour le groupe et affinées pour des versions spécifiques ne se chevauchant pas, les utilisateurs reçoivent le flux d’inscription défini pour leur version du système d’exploitation. 
+    > - Si les deux plateformes sont autorisées, mais bloquées pour les mêmes versions, les utilisateurs sur les appareils avec les versions bloquées sont descendus jusqu’au flux d’inscription de l’administrateur d’appareil Android, puis voient leur inscription bloquée et sont invités à se déconnecter. 
+    >
+    > Notez que ni le profil professionnel, ni l’inscription de l’administrateur d’appareil ne fonctionneront, à moins d’avoir respecté les prérequis appropriés dans l’inscription Android. 
+    
+   > [!Note]
+   > Windows 10 ne fournit pas le numéro de rev au cours de l’inscription. Par conséquent, si vous entrez par exemple 10.0.17134.100 et que l’appareil correspond à 10.0.17134.174, il est bloqué lors de l’inscription.
 
 8. Sous **Appareils personnels**, choisissez **Autoriser** pour les plateformes que vous souhaitez autoriser comme appareils personnels.
 9. Choisissez **Suivant** pour accéder à la page **Attributions**.

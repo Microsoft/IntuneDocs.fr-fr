@@ -2,29 +2,28 @@
 title: Stratégies de conformité des appareils dans Microsoft Intune - Azure | Microsoft Docs
 description: Prise en main de l’utilisation de stratégies de conformité, la vue d’ensemble des niveaux d’état et de gravité, l’utilisation de l’état InGracePeriod, l’utilisation de l’accès conditionnel, la gestion des appareils sans stratégie attribuée, et les différences de conformité dans le portail Azure et dans le portail Azure Classic au sein de Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a743bb3b2003b1dbdf8088aca19bce898c8e40a8
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721420"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749171"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 De nombreuses solutions de gestion des appareils mobiles vous permettent de protéger les données de l’organisation en obligeant les utilisateurs et les appareils à répondre à certaines exigences. Dans Intune, cette fonctionnalité est appelée « stratégies de conformité ». Les stratégies de conformité définissent les règles et les paramètres que les utilisateurs et les appareils doivent satisfaire pour être conformes. Quand elles sont associées à l’accès conditionnel, les administrateurs peuvent bloquer les utilisateurs et les appareils qui ne respectent pas les règles.
 
@@ -89,7 +88,7 @@ Intune inclut également un ensemble de paramètres de stratégie de conformité
 
 - **Marquer les appareils sans stratégie de conformité comme étant** : Cette propriété a deux valeurs :
 
-  - **Conforme** (par défaut) : fonctionnalité de sécurité désactivée
+  - **Conforme** (*par défaut*) : fonctionnalité de sécurité désactivée
   - **Non conforme** : fonctionnalité de sécurité activée
 
   Si un appareil n’a pas de stratégie de conformité attribuée, il est considéré comme conforme par défaut. Si vous utilisez l’accès conditionnel avec des stratégies de conformité, nous vous recommandons de modifier le paramètre par défaut en **Non conforme**. Si un utilisateur final n’est pas conforme en raison d’un défaut d’attribution de stratégie, [l’application du portail d’entreprise Intune](../apps/company-portal-app.md) indique `No compliance policies have been assigned`.
@@ -115,13 +114,13 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 
 |**Paramètre de stratégie**| **Plateforme** |
 | --- | ----|
-| **Configuration d’un code confidentiel ou mot de passe** | - **Android 4.0 et versions ultérieures** : En quarantaine</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine</br>- **Android Entreprise** : En quarantaine</br></br>- **iOS 8.0 et versions ultérieures** : Corrigé</br>- **macOS 10.11 et versions ultérieures** : Corrigé</br></br>- **Windows 8.1 et versions ultérieures** : Corrigé</br>- **Windows Phone 8.1 et versions ultérieures** : Corrigé|
-| **Chiffrement de l’appareil** | - **Android 4.0 et versions ultérieures** : En quarantaine</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine</br>- **Android Entreprise** : En quarantaine</br></br>- **iOS 8.0 et versions ultérieures** : Corrigé (en définissant le code confidentiel)</br>- **macOS 10.11 et versions ultérieures** : Corrigé (en définissant le code confidentiel)</br></br>- **Windows 8.1 et versions ultérieures** : Non applicable</br>- **Windows Phone 8.1 et versions ultérieures** : Corrigé |
-| **Appareil jailbroken ou rooté** | - **Android 4.0 et versions ultérieures** : En quarantaine (pas un paramètre)</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine (pas un paramètre)</br>- **Android Entreprise** : En quarantaine (pas un paramètre)</br></br>- **iOS 8.0 et versions ultérieures** : En quarantaine (pas un paramètre)</br>- **macOS 10.11 et versions ultérieures** : Non applicable</br></br>- **Windows 8.1 et versions ultérieures** : Non applicable</br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
-| **Profil de messagerie** | - **Android 4.0 et versions ultérieures** : Non applicable</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : Non applicable</br>- **Android Entreprise** : Non applicable</br></br>- **iOS 8.0 et versions ultérieures** : En quarantaine</br>- **macOS 10.11 et versions ultérieures** : En quarantaine</br></br>- **Windows 8.1 et versions ultérieures** : Non applicable</br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
-| **Version minimale du système d’exploitation** | - **Android 4.0 et versions ultérieures** : En quarantaine</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine</br>- **Android Entreprise** : En quarantaine</br></br>- **iOS 8.0 et versions ultérieures** : En quarantaine</br>- **macOS 10.11 et versions ultérieures** : En quarantaine</br></br>- **Windows 8.1 et versions ultérieures** : En quarantaine</br>- **Windows Phone 8.1 et versions ultérieures** : En quarantaine |
-| **Version maximale du système d’exploitation** | - **Android 4.0 et versions ultérieures** : En quarantaine</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine</br>- **Android Entreprise** : En quarantaine</br></br>- **iOS 8.0 et versions ultérieures** : En quarantaine</br>- **macOS 10.11 et versions ultérieures** : En quarantaine</br></br>- **Windows 8.1 et versions ultérieures** : En quarantaine</br>- **Windows Phone 8.1 et versions ultérieures** : En quarantaine |
-| **Attestation de l’intégrité Windows** | - **Android 4.0 et versions ultérieures** : Non applicable</br>- **Samsung Knox Standard 4.0 et versions ultérieures** : Non applicable</br>- **Android Entreprise** : Non applicable</br></br>- **iOS 8.0 et versions ultérieures** : Non applicable</br>- **macOS 10.11 et versions ultérieures** : Non applicable</br></br>- **Windows 10 and Windows 10 Mobile** : En quarantaine</br>- **Windows 8.1 et versions ultérieures** : En quarantaine</br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
+| **Configuration d’un code confidentiel ou mot de passe** | - **Android 4.0 et versions ultérieures** : En quarantaine<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine<br>- **Android Entreprise** : En quarantaine  <br>  <br>- **iOS 8.0 et versions ultérieures** : Corrigé<br>- **macOS 10.11 et versions ultérieures** : Corrigé  <br>  <br>- **Windows 8.1 et versions ultérieures** : Corrigé<br>- **Windows Phone 8.1 et versions ultérieures** : Corrigé|
+| **Chiffrement de l’appareil** | - **Android 4.0 et versions ultérieures** : En quarantaine<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine<br>- **Android Entreprise** : En quarantaine<br><br>- **iOS 8.0 et versions ultérieures** : Corrigé (en définissant le code confidentiel)<br>- **macOS 10.11 et versions ultérieures** : Corrigé (en définissant le code confidentiel)<br><br>- **Windows 8.1 et versions ultérieures** : Non applicable<br>- **Windows Phone 8.1 et versions ultérieures** : Corrigé |
+| **Appareil jailbroken ou rooté** | - **Android 4.0 et versions ultérieures** : En quarantaine (pas un paramètre)<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine (pas un paramètre)<br>- **Android Entreprise** : En quarantaine (pas un paramètre)<br><br>- **iOS 8.0 et versions ultérieures** : En quarantaine (pas un paramètre)<br>- **macOS 10.11 et versions ultérieures** : Non applicable<br><br>- **Windows 8.1 et versions ultérieures** : Non applicable<br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
+| **Profil de messagerie** | - **Android 4.0 et versions ultérieures** : Non applicable<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : Non applicable<br>- **Android Entreprise** : Non applicable<br><br>- **iOS 8.0 et versions ultérieures** : En quarantaine<br>- **macOS 10.11 et versions ultérieures** : En quarantaine<br><br>- **Windows 8.1 et versions ultérieures** : Non applicable<br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
+| **Version minimale du système d’exploitation** | - **Android 4.0 et versions ultérieures** : En quarantaine<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine<br>- **Android Entreprise** : En quarantaine<br><br>- **iOS 8.0 et versions ultérieures** : En quarantaine<br>- **macOS 10.11 et versions ultérieures** : En quarantaine<br><br>- **Windows 8.1 et versions ultérieures** : En quarantaine<br>- **Windows Phone 8.1 et versions ultérieures** : En quarantaine |
+| **Version maximale du système d’exploitation** | - **Android 4.0 et versions ultérieures** : En quarantaine<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : En quarantaine<br>- **Android Entreprise** : En quarantaine<br><br>- **iOS 8.0 et versions ultérieures** : En quarantaine<br>- **macOS 10.11 et versions ultérieures** : En quarantaine<br><br>- **Windows 8.1 et versions ultérieures** : En quarantaine<br>- **Windows Phone 8.1 et versions ultérieures** : En quarantaine |
+| **Attestation de l’intégrité Windows** | - **Android 4.0 et versions ultérieures** : Non applicable<br>- **Samsung Knox Standard 4.0 et versions ultérieures** : Non applicable<br>- **Android Entreprise** : Non applicable<br><br>- **iOS 8.0 et versions ultérieures** : Non applicable<br>- **macOS 10.11 et versions ultérieures** : Non applicable<br><br>- **Windows 10 and Windows 10 Mobile** : En quarantaine<br>- **Windows 8.1 et versions ultérieures** : En quarantaine<br>- **Windows Phone 8.1 et versions ultérieures** : Non applicable |
 
 ---------------------------
 
@@ -156,8 +155,9 @@ Pour utiliser les fonctionnalités liées à la conformité des appareils dans l
   - [Android Entreprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [MacOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 et versions ultérieures](compliance-policy-create-windows.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 et Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 et versions ultérieures](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 et versions ultérieures](compliance-policy-create-windows.md)
 
 - La section [Informations de référence sur les entités de stratégie](../reports-ref-policy.md) contient des informations sur les entités de stratégie Intune Data Warehouse.

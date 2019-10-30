@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ebca165c067afbc3d830e5f75ac9f8e29effb2
-ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
+ms.openlocfilehash: f2a1d964f157f33e439f659713fe8c2e02f852b3
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237230"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749420"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -77,7 +78,7 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
     3. Pour **Type d’appartenance**, choisissez **Affecté** ou **Appareil dynamique**.
 3. Si vous avez choisi **Affecté** pour **Type d’appartenance** à l’étape précédente, dans le panneau **Groupe**, choisissez **Membres**, puis ajoutez les appareils Autopilot au groupe.
     Les appareils Autopilot qui ne sont pas encore inscrits sont ceux dont le nom correspond au numéro de série de l’appareil.
-4. Si vous avez choisi **Appareils dynamiques** pour **Type d’appartenance** ci-dessus, dans le panneau **Groupe**, choisissez **Membres de dispositif dynamique**, puis tapez le code suivant dans la zone **Règle avancée**. Seuls les appareils AutoPilot sont rassemblés par ces règles, car elles ciblent des attributs qui n’appartiennent qu’à des appareils AutoPilot.
+4. Si vous avez choisi **Appareils dynamiques** pour **Type d’appartenance** ci-dessus, dans le panneau **Groupe**, choisissez **Membres de dispositif dynamique**, puis tapez le code suivant dans la zone **Règle avancée**. Seuls les appareils AutoPilot sont rassemblés par ces règles, car elles ciblent des attributs qui n’appartiennent qu’à des appareils AutoPilot. La création d’un groupe basé sur des attributs non-Autopilot ne garantit pas que les appareils inclus dans le groupe sont en fait inscrits à Autopilot.
     - Si vous souhaitez créer un groupe comprenant tous vos appareils Autopilot, tapez `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
     - Le champ de balises de groupe d’Intune est mis en correspondance avec l’attribut OrderID sur les appareils Azure AD. Si vous voulez créer un groupe incluant tous vos appareils Autopilot ayant une étiquette de groupe spécifique (OrderID d’appareil Azure AD), vous devez saisir ceci : `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Si vous souhaitez créer un groupe qui inclut tous vos appareils Autopilot associés à un ID de bon de commande spécifique, tapez `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
@@ -167,6 +168,11 @@ Prérequis : portail d’entreprise Azure Active Directory configuré et Window
     ![Capture d’écran : Nom convivial](./media/enrollment-autopilot/friendly-name.png)
 
 4. Choisissez **OK**.
+
+## <a name="autopilot-deployments-report"></a>Rapport sur les déploiements Autopilot
+Vous pouvez consulter les informations détaillées sur chaque appareil déployé via Windows Autopilot.
+Pour afficher le rapport, accédez à **Intune** et, sous **Surveiller**, choisissez **Déploiements AutoPilot**.
+Les données sont disponibles pendant 30 jours après le déploiement.
 
 
 ## <a name="delete-autopilot-devices"></a>Supprimer des appareils Autopilot

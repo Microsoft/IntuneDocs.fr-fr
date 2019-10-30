@@ -8,18 +8,19 @@ manager: dougeby
 ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 414476389a36cdfafd9169d449ea11adf6e68efd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 816ad4bb5b17f3a480fbf834280c4e9792c394a9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726295"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502984"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Vue d’ensemble du cycle de vie de la gestion des appareils mobiles dans Microsoft Intune
 
@@ -27,7 +28,7 @@ ms.locfileid: "71726295"
 
 Tous les appareils que vous gérez ont un *cycle de vie*. Intune peut vous aider à gérer ce cycle de vie : de l’inscription de l’appareil à sa mise hors service quand il n’est plus nécessaire, en passant par sa configuration et sa protection.
 
-![Le cycle de vie de l'appareil](./media/device-lifecycle/device-lifecycle.png "le cycle de vie de l'appareil Intune")
+![Le cycle de vie de l’appareil](./media/device-lifecycle/device-lifecycle.png "Le cycle de vie de l’appareil Intune")
 
 ## <a name="enroll"></a>Inscription
 De nos jours, les stratégies de gestion des appareils mobiles traitent une large gamme de téléphones, de tablettes et de PC (iOS, Android, Windows et Mac OS X). Si vous devez gérer un appareil, ce qui est généralement le cas pour les appareils d’entreprise, la première étape consiste à [configurer l’inscription de cet appareil](../enrollment/device-enrollment.md). Vous pouvez également gérer les PC Windows en les inscrivant dans Intune (gestion des appareils mobiles) ou en [installant le logiciel client Intune](../manage-windows-pcs-with-microsoft-intune.md).

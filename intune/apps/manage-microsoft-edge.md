@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3fb2f050-ec94-42ab-be05-c3d4101148bb
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ec1af80d52a8331c2bef136cd0947b81beaa3ea
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724774"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593687"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -204,7 +205,7 @@ Pour une plus grande facilité d’accès, vous pouvez configurer les signets qu
 
 Voici plus de détails :
 
-- Ces signets apparaissent uniquement pour les utilisateurs lorsqu’ils utilisent le mode entreprise de Microsoft Edge. 
+- Ces signets apparaissent uniquement pour les utilisateurs lorsqu’ils utilisent le [mode entreprise](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) de Microsoft Edge. 
 - Ces signets ne peuvent pas être supprimés ni modifiés par les utilisateurs.
 - Ces signets s’affichent en haut de la liste. Tous les signets créés par les utilisateurs sont affichés sous ces signets.
 - Si vous avez activé la redirection du Proxy d’application, vous pouvez ajouter des applications web du Proxy d’application en utilisant leur URL interne ou externe.

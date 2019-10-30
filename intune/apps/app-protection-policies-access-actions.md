@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9306c7429adbe4a5159879ccbe7cb0f13e65ed
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725567"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785689"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
@@ -59,6 +60,7 @@ Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l�
 - Version min. de l’application
 - Version min. du SDK
 - Modèle(s) d’appareil
+- Niveau de menace maximal autorisé pour l’appareil
 
 Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans la [documentation sur la prise en charge d’HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Exemple d’entrée : *iPhone5,2;iPhone5,3*
@@ -83,6 +85,7 @@ Pour Android, vous pouvez configurer des actions pour les paramètres suivants �
 - Fabricant(s) d’appareil
 - Attestation d’appareil SafetyNet
 - Analyse des menaces sur les applications
+- Niveau de menace maximal autorisé pour l’appareil
 
 Pour utiliser le paramètre **Fabricant(s) d’appareil**, entrez une liste de fabricants Android séparés par des points-virgules. Le fabricant d’un appareil Android se trouve sous les paramètres de l’appareil.<br>
 Exemple d’entrée : *Fabricant A;Fabricant B* 

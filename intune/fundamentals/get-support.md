@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d40d3f15fe23511f3f15f7c13181a0fa72f6b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 91627a47f9dccfb436e64aaadeeb392648dff821
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585294"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Comment obtenir un support technique pour Microsoft Intune  
 
@@ -82,7 +83,7 @@ Pour accéder à Aide et support, utilisez les options suivantes :
   4. Sélectionnez le lien page Aide et support Intune.
 
 > [!NOTE]  
-> Si votre instance d’Intune est hébergée sur le cloud de la communauté du secteur public (GCC), également connu en tant que cloud souverain comme Azure Government, consultez Support Intune pour le Cloud de la communauté du secteur public plus loin dans cet article. L’expérience *Aide et support* Intune ne sera disponible sur le GCC que plus tard cette année. 
+> Si votre instance d’Intune est hébergée sur le cloud privé pour organismes publics, aussi appelé cloud souverain à l’instar d’Azure Government, consultez [Support Intune pour le coud privé pour le secteur public](#intune-support-for-private-cloud-for-government) plus loin dans cet article. L’expérience *Aide et support* Intune sera disponible sur le cloud privé pour le secteur public dans le courant de l’année. 
 
 
 Lorsque vous ouvrez *Aide et support*, le portail affiche une vue qui varie selon que vous avez ou non des incidents de support actifs, ainsi que des éléments et options supplémentaires lorsque vous bénéficiez du Support Premier :
@@ -162,20 +163,20 @@ Sélectionnez le bouton d’historique pour voir les incidents que vous avez cr�
 
 Lorsque vous utilisez le volet de navigation gauche **Help + support** ou l’option **?** en haut à droite dans le portail Azure, vous ouvrez l’expérience Aide + support Azure, qui est différente de l’expérience Aide et support Intune.  
 
-Depuis avril 2019, vous ne pouvez pas accéder à l’expérience *Aide + support* Azure pour obtenir de l’aide sur Intune, sauf si votre abonnement se trouve sur le cloud de la communauté du secteur public (GCC).  
+Depuis avril 2019, vous ne pouvez pas accéder à l’expérience *Aide + support* Azure pour obtenir de l’aide sur Intune, sauf si votre abonnement se trouve sur un cloud privé pour organismes publics.  
 
-Si votre instance d’Intune ne s’exécute pas sur GCC, la navigation dans *Aide + support* Azure vous redirige vers l’expérience *Aide et support* Intune pour créer et gérer des incidents de support.  
+Si votre instance d’Intune ne s’exécute pas sur un cloud privé pour le secteur public, la navigation dans *Aide + support* Azure vous redirige vers l’expérience *Aide et support* Intune pour créer et gérer des incidents de support.  
 
 
-## <a name="intune-support-for-government-compute-cloud"></a>Support Intune pour le cloud de la communauté du secteur public  
+## <a name="intune-support-for-private-cloud-for-government"></a>Support Intune pour le cloud privé du secteur public  
 
-Lorsque votre abonnement Intune est hébergé sur le cloud de la communauté du secteur public (GCC), également connu en tant que cloud souverain comme Azure Government, vous n’avez pas encore accès à la nouvelle expérience Aide et support Intune.  À la place, utilisez les informations suivantes pour obtenir un support pour Intune. 
+Quand votre abonnement Intune est hébergé sur le cloud privé pour organismes publics, aussi appelé cloud souverain à l’instar d’Azure Government, vous n’avez pas encore accès à la nouvelle expérience Aide et support Intune.  À la place, utilisez les informations suivantes pour obtenir un support pour Intune. 
 
 
 ### <a name="create-an-online-support-ticket"></a>Créer un ticket de support en ligne 
 
 >[!IMPORTANT]    
-> Étant donné qu’*Aide et support* passe à un nouveau système qui n’est pas encore disponible pour le GCC, lorsque vous créez un incident de support, le portail identifie un cas de support qui utilise un numéro d’identification à 15 chiffres. Lorsque le cas à 15 chiffres est créé, un miroir de ce cas est créé afin d’être utilisé par le support Microsoft. Ce cas de mise en miroir est créé dans un nouveau système de support, utilise un ID de cas à 8 chiffres et est utilisé par les services de support pour assurer le suivi de l’ensemble du travail et des communications pour votre incident de support. Peu après la création de votre cas à 15 chiffres, vous recevrez un e-mail qui identifie le numéro à 8 chiffres du cas de support mis en miroir utilisé par les services de support technique.  
+> Étant donné qu’*Aide et support* passe à un nouveau système qui n’est pas encore disponible pour le cloud privé du secteur public, quand vous créez un incident de support, le portail identifie un cas de support qui utilise un numéro d’identification à 15 chiffres. Lorsque le cas à 15 chiffres est créé, un miroir de ce cas est créé afin d’être utilisé par le support Microsoft. Ce cas de mise en miroir est créé dans un nouveau système de support, utilise un ID de cas à 8 chiffres et est utilisé par les services de support pour assurer le suivi de l’ensemble du travail et des communications pour votre incident de support. Peu après la création de votre cas à 15 chiffres, vous recevrez un e-mail qui identifie le numéro à 8 chiffres du cas de support mis en miroir utilisé par les services de support technique.  
 > 
 > Prenez en charge le travail personnel et communiquez à l’aide du cas de support à 8 chiffres, et utilisez uniquement le dossier de support à 8 chiffres pour consigner les communications et suivre la progression des incidents. Pour cette raison, vous recevez des mises à jour par e-mail de ce cas de support à 8 chiffres qui servent d’enregistrement de suivi de votre cas. Aucun détail n’est consigné dans l’incident de support à 15 chiffres. Lorsque le support se termine et que le cas de support à 8 chiffres se ferme, cet État est reflété par le cas de support à 15 chiffres que vous pouvez afficher dans le portail Azure.  Aucune autre mise à jour ou modification d’état ne doit être attendue dans le cas d’un support à 15 chiffres.  
 > 
@@ -223,7 +224,7 @@ Vous pouvez afficher vos demandes de support à partir du Portail Azure. Cependa
 2. Dans la page **Aide + support**, vous pouvez afficher la liste des **Demandes de support récentes**.
 
    > [!IMPORTANT]  
-   > Les clients du cloud de la communauté du secteur public peuvent uniquement afficher le numéro de cas de support à 15 chiffres et l’état de l’incident. Toutes les communications relatives au cas et le suivi du travail ou les alertes sont envoyés par e-mail et font référence au numéro de cas de support à 8 chiffres créé comme miroir du cas de support ouvert à partir de la console Intune.   
+   > Les clients du cloud privé pour le secteur public peuvent uniquement afficher le numéro de cas de support à 15 chiffres et l’état de l’incident. Toutes les communications relatives au cas et le suivi du travail ou les alertes sont envoyés par e-mail et font référence au numéro de cas de support à 8 chiffres créé comme miroir du cas de support ouvert à partir de la console Intune.   
 
 ## <a name="additional-resources"></a>Ressources supplémentaires  
 

@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d31126a259274a2c75f933428632e274d8710aa6
-ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
+ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72350022"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584990"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android Entreprise gérés
 
@@ -68,14 +69,16 @@ Vous pouvez choisir les options suivantes si vous choisissez une variable comme 
 
 | Option | Exemple |
 |----|----|
-| Mail | john@contoso.com |
-| Nom d'utilisateur principal | john@contoso.com |
-| UPN partiel | john |
-| Domaine | contoso.com |
-| Nom d’utilisateur | John Doe |
+| ID d’appareil AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | ID de compte | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| ID d’appareil Intune | b9841cd9-9843-405f-be28-b2265c59ef97 |
+| Domaine | contoso.com |
+| Mail | john@contoso.com |
+| UPN partiel | john |
 | ID utilisateur | 3ec2c00f-b125-4519-acf0-302ac3761822 |
-| ID Périphérique | b9841cd9-9843-405f-be28-b2265c59ef97 |
+| Nom d’utilisateur | John Doe |
+| Nom d'utilisateur principal | john@contoso.com |
+
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Autoriser uniquement les comptes d’organisation configurés dans les applications avec plusieurs identités 
 

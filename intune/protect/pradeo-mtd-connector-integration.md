@@ -6,24 +6,28 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d9844d7e0e56e46dc6373dfe63ec3e8b18fde3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 32e67ac961f2831a881bc160e19cefdb75723ff0
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722044"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681250"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Intégrer Pradeo Mobile Threat Defense avec Intune
 
 Effectuez les étapes suivantes pour intégrer la solution Pradeo Mobile Threat Defense à Intune.
+
+> [!NOTE]  
+> Ce fournisseur Mobile Threat Defense n’est pas pris en charge pour les appareils non inscrits.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -86,4 +90,4 @@ Le processus d’autorisation de l’application Pradeo est le suivant :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Configurer les applications Pradeo](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configurer des applications Pradeo pour les appareils inscrits](mtd-apps-ios-app-configuration-policy-add-assign.md)

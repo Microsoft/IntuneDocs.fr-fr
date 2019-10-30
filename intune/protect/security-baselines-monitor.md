@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -15,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b16b4ee95647b3bb182af075bbe7f7aad71351f0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9c4d47a11f07a2099d79f5ce4ce90795a087718b
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726802"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681472"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et les profils dans Microsoft Intune  
 
@@ -59,7 +60,7 @@ Par exemple, si un appareil a un paramètre classé comme *Mal configuré* et un
 Vous pouvez cliquer sur le graphique pour voir les détails et afficher la liste des appareils avec différents états. Vous pouvez ensuite sélectionner un appareil dans cette liste pour en afficher les détails. Par exemple :
 - Sélectionnez **Configuration de l’appareil** > sélectionnez le profil avec un état d’erreur :
 
-  ![Vérifier l’état des appareils](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![Afficher l’état d’un profil](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
 - Sélectionnez le profil d’erreur. La liste de tous les paramètres du profil et leur état s’affiche. Maintenant, vous pouvez faire défiler la liste pour trouver le paramètre à l’origine de l’erreur :
 

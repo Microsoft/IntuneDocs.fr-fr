@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dac7069e30c173d80f15977ba2f06fcabcb7179b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724436"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785534"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -93,7 +94,7 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
         > Si vous changez de pays/région, les métadonnées des applications et l’URL du Store sont mises à jour lors de la prochaine synchronisation avec le service Apple pour les applications créées avec ce jeton. L’application n’est pas mise à jour si elle n’existe pas dans le Store du nouveau pays/région.
 
     - **Type de compte VPP** : choisissez **Entreprise** ou **Éducation**.
-    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre. Les mises à jour d’applications automatiques pour les applications Apple VPP mettent automatiquement à jour uniquement les applications déployées avec l’intention d’installation **Obligatoire**. Pour les applications déployées avec l’intention d’installation **Disponible**, la mise à jour automatique génère une notification pour l’administrateur l’informant qu’une nouvelle version de l’application est disponible. En outre, l’utilisateur verra que l’application n’est pas installée sur le portail d’entreprise, même si une version antérieure de l’application est installée. Dans ce cas, l’utilisateur peut réinstaller l’application en cliquant sur **Installer** sur l’écran de détails de l’application dans l’application Portail d’entreprise pour installer la version la plus récente de l’application.
+    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre. Les mises à jour d’applications automatiques pour les applications Apple VPP mettent automatiquement à jour uniquement les applications déployées avec l’intention d’installation **Obligatoire**. Pour les applications déployées avec l’intention d’installation **Disponible**, la mise à jour automatique génère un message d’état pour l’administrateur informatique l’informant qu’une nouvelle version de l’application est disponible. Ce message d’état peut être consulté en sélectionnant l’application, en sélectionnant État de l’installation de l’appareil et en vérifiant les détails du statut. En outre, l’utilisateur verra que l’application n’est pas installée sur le portail d’entreprise, même si une version antérieure de l’application est installée. Dans ce cas, l’utilisateur peut réinstaller l’application en cliquant sur **Installer** sur l’écran de détails de l’application dans l’application Portail d’entreprise pour installer la version la plus récente de l’application.
 
         > [!NOTE]
         > Les mises à jour automatiques des applications fonctionnent pour les applications sous licence d’appareil et d’utilisateur pour iOS version 11.0 et ultérieure, et macOS version 10.12 et ultérieure.

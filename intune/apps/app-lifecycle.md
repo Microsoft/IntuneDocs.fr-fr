@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c351c1bef09d559ee6fb07b2c5135b25ca69d9d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 53425b56985cbafb4033b11df54597959c0b0d59
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725710"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72499707"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Vue d’ensemble du cycle de vie des applications dans Microsoft Intune
 
@@ -29,7 +30,7 @@ ms.locfileid: "71725710"
 
 Le cycle de vie des applications Microsoft Intune commence quand une application est ajoutée et évolue en différentes phases jusqu’à sa suppression. En comprenant ces phases, vous disposerez de toutes les informations nécessaires pour commencer à gérer des applications dans Intune.
 
-![Le cycle de vie de l’application - Ajouter, déployer, configurer, protéger et mettre hors service. ](./media/app-lifecycle/app-lifecycle.png "Le cycle de vie des applications Intune")
+![Le cycle de vie de l’application - Ajouter, déployer, configurer, protéger et mettre hors service.](./media/app-lifecycle/app-lifecycle.png "Cycle de vie des applications Intune")
 
 ## <a name="add"></a>Ajouter
 

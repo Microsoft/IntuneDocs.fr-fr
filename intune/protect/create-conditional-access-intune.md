@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e27997b45f0a68f6eb9247c69fafc363787fb457
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b775bb09c289733cdc2837984874b7c1c7e286bc
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722590"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681366"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Créer une stratégie d’accès conditionnel basée sur l’appareil
 
@@ -61,7 +62,7 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
 
     - **Sélectionner des applications** : sélectionnez cette option, choisissez **Sélectionner**, puis utilisez la liste des applications pour rechercher et sélectionner les applications ou les services que vous souhaitez protéger.
     
-      ![Créer une stratégie d’accès conditionnel](./media/create-conditional-access-intune/create-ca-select-apps.png)
+      ![Configurer des affectations pour la stratégie d’accès conditionnel](./media/create-conditional-access-intune/create-ca-select-apps.png)
 
 7. Sélectionnez **Terminé**.
 8. Sous **Affectations**, sélectionnez **Conditions**.
@@ -71,7 +72,7 @@ Une stratégie d’accès conditionnel spécifie l’application ou les services
     - **Applications clientes** : Choisissez **Oui** pour spécifier si la stratégie doit s’appliquer à des applications de navigateur, des applications mobiles et des clients de bureau. Vous pouvez également sélectionner des **clients d’authentification moderne** (comme Outlook pour iOS ou Outlook pour Android) et des **clients Exchange ActiveSync**.
     - **État de l’appareil** : la stratégie d’accès conditionnel s’applique à tous les états de l’appareil, à moins de choisir Oui et d’exclure spécifiquement les états Appareil Azure AD Hybride joint ou Appareil marqué comme conforme (ou les deux).
     
-      ![Créer une stratégie d’accès conditionnel](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+      ![Définir des conditions pour la stratégie d’accès conditionnel](./media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
       > Si vous souhaitez protéger à la fois les clients **d’authentification moderne** et les **clients Exchange ActiveSync**, créez deux stratégies d’accès conditionnel distinctes, une pour chaque type de client. Bien qu’Exchange ActiveSync prenne en charge l’authentification moderne, la seule condition prise en charge par Exchange ActiveSync est la plateforme. Les autres conditions, y compris l’authentification multifacteur, ne sont pas prises en charge. Pour protéger efficacement l’accès à Exchange Online à partir d’Exchange ActiveSync, créez une stratégie d’accès conditionnel qui spécifie l’application cloud Office 365 Exchange Online et l’application client Exchange ActiveSync, en sélectionnant le paramètre Appliquer la stratégie uniquement aux plateformes prises en charge.

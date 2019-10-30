@@ -5,21 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 10/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: coryfe
+ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8cc396c05150006799c1e9b86ecb63351cdb36
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: 1d34e44c6e046ddbc9b47bbe90900f5992df9e85
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314706"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584556"
 ---
 # <a name="manage-software-updates-in-intune"></a>Gérer les mises à jour logicielles dans Intune
 
@@ -63,17 +64,30 @@ Les conditions préalables suivantes doivent être remplies pour utiliser des mi
 
 ## <a name="create-and-assign-update-rings"></a>Créer et affecter des anneaux de mise à jour
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Sélectionnez **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10** > **Créer**.
-4. Entrez un nom, une description (facultatif), puis choisissez **Configurer**.
-5. Dans **Paramètres**, configurer des paramètres pour les besoins de votre entreprise. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres de Windows Update](../windows-update-settings.md).  
-6. Une fois que vous avez fini, sélectionnez **OK**. Dans **Créer un anneau de mise à jour**, sélectionnez **Créer**. Le nouvel anneau de mise à jour s’affiche dans la liste des anneaux de mises à jour.
-7. Pour attribuer l’anneau, dans la liste des anneaux de mise à jour, sélectionnez un anneau puis, sous l’onglet du \<nom de l’anneau, choisissez **Affectations**.
-8. Utilisez les onglets **Inclure** et **Exclure** pour définir les groupes auxquels cet anneau est attribué, puis sélectionnez **Enregistrer** pour terminer l’affectation.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10** > **Créer**.  
+
+2. Sous l’onglet De base, spécifiez un nom et une description (facultatif), puis sélectionnez **Suivant**.  
+
+   ![Créer le flux de travail des anneaux de mise à jour Windows 10](./media/windows-update-for-business-configure/basics-tab.png)
+
+3. Sous l’onglet **Paramètres d’anneau de mise à jour**, configurez les paramètres conformément aux besoins de votre entreprise. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres de Windows Update](windows-update-settings.md). Après avoir configuré les paramètres *Mise à jour* et *Expérience utilisateur*, sélectionnez **Suivant**.  
+
+4. Sous l’onglet **Balises d’étendue**, sélectionnez **+ Sélectionner des balises d’étendue** pour ouvrir le volet *Sélectionner des balises* si vous voulez appliquer des balises d’étendue à l’anneau de mise à jour.  
+
+   - Dans le volet **Sélectionner des balises**, choisissez une ou plusieurs balises, puis cliquez sur **Sélectionner** pour les ajouter à l’anneau de mise à jour et revenir au volet *Balises d’étendue*.  
+
+   Quand vous êtes prêt, sélectionnez **Suivant** pour accéder à *Affectations*. 
+
+5. Sous l’onglet **Affectations**, choisissez **+ Sélectionner les groupes à inclure**, puis affectez l’anneau de mise à jour à un ou plusieurs groupes. Utilisez le paramètre **+ Sélectionner les groupes à exclure** pour affiner l’affectation. Sélectionnez **Suivant** pour continuer.  
+
+6. Sous l’onglet **Vérifier + créer**, vérifiez les paramètres et sélectionnez **Créer** quand vous êtes prêt à enregistrer votre anneau de mise à jour Windows 10. Votre nouvel anneau de mise à jour s’affiche dans la liste des anneaux de mise à jour.
 
 ## <a name="manage-your-windows-10-update-rings"></a>Gérer vos anneaux de mise à jour Windows 10
-Dans le portail, vous pouvez sélectionner un anneau de mise à jour Windows 10 pour ouvrir son onglet **Vue d’ensemble**. Dans ce volet, vous pouvez consulter l’état d’affectation des anneaux et prendre des mesures supplémentaires pour gérer l’anneau. 
+
+Dans le portail, vous pouvez sélectionner un anneau de mise à jour Windows 10 pour ouvrir son onglet **Vue d’ensemble**. Dans ce volet, vous pouvez consulter l’état d’affectation des anneaux et prendre des mesures supplémentaires pour gérer l’anneau.
+
 ### <a name="to-view-an-updates-rings-overview-pane"></a>Pour afficher un volet de vue d’ensemble des anneaux de mise à jour : 
+
 1. Connectez-vous au portail Azure.
 2. Accédez à **Intune** > **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10**.
 3. Sélectionnez l’anneau de mise à jour que vous souhaitez afficher ou gérer.  
@@ -88,18 +102,22 @@ En plus de pouvoir consulter l’état d’affectation, vous pouvez sélectionne
 ![Actions disponibles](./media/windows-update-for-business-configure/overview-actions.png)
 
 ### <a name="delete"></a>Supprimer  
+
 Sélectionnez **Supprimer** pour arrêter l’application des paramètres de l’anneau de mise à jour Windows 10 sélectionné. La suppression d’un anneau supprime sa configuration Intune afin qu’Intune n’applique plus ces paramètres.  
 
 La suppression d’un anneau d’Intune ne modifie pas les paramètres sur les appareils auxquels l’anneau de mise à jour a été attribué.  L’appareil conserve ses paramètres actuels. Les appareils ne maintiennent pas un enregistrement historique des paramètres qu’ils détenaient précédemment. Les appareils peuvent également recevoir des paramètres d’anneaux de mise à jour supplémentaires qui restent actifs.  
 
 #### <a name="to-delete-a-ring"></a>Pour supprimer un anneau  
+
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour, sélectionnez **Supprimer**.  
 2. Sélectionnez **OK**.  
 
 ### <a name="pause"></a>Suspendre  
+
 Sélectionnez **Suspendre** pour empêcher les appareils attribués de recevoir des mises à jour de fonctionnalité ou de qualité pendant une période jusqu’à 35 jours à partir du moment où vous suspendez l’anneau. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité mise en pause expire automatiquement et l’appareil recherche les mises à jour applicables dans Windows Update. Suite à cette analyse, vous pouvez suspendre à nouveau les mises à jour. Si vous reprenez un anneau de mise à jour suspendu et que vous le suspendez à nouveau, la période de suspension est réinitialisée sur 35 jours.  
 
 #### <a name="to-pause-a-ring"></a>Pour suspendre un anneau  
+
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour, sélectionnez **Suspendre**.  
 2. Sélectionnez **Fonctionnalité** ou **Qualité** pour suspendre ce type de mise à jour, puis sélectionnez **OK**.  
 3. Après la suspension d’un type de mise à jour, vous pouvez sélectionner Suspendre à nouveau pour suspendre l’autre type de mise à jour.  
@@ -110,22 +128,27 @@ Lorsqu’un type de mise à jour est suspendu, le volet Vue d’ensemble de cet 
 > Lorsque vous exécutez une commande de suspension, les appareils la reçoivent à leur prochaine connexion au service. Il se peut qu’ils installent une mise à jour planifiée avant d’effectuer la vérification auprès du service. En outre, si un appareil cible est désactivé lorsque vous émettez la commande de suspension, lorsque vous l’allumez, il peut télécharger et installer les mises à jour planifiées avant d’effectuer les vérifications avec Intune.
 
 ### <a name="resume"></a>Reprendre  
+
 Lorsqu’un anneau de mise à jour est suspendu, vous pouvez sélectionner **Reprendre** pour restaurer les mises à jour de fonctionnalité et de qualité pour cet anneau. Lorsque vous reprenez un anneau de mise à jour, vous pouvez le suspendre à nouveau.  
 
 #### <a name="to-resume-a-ring"></a>Pour reprendre un anneau  
+
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour suspendu, sélectionnez **Reprendre**.  
 2. Sélectionnez parmi les options disponibles pour reprendre les mises à jour de **fonctionnalité** ou de **qualité**, puis sélectionnez **OK**.  
 3. Après la reprise d’un type de mise à jour, vous pouvez sélectionner Reprendre à nouveau pour reprendre l’autre type de mise à jour.  
 
 ### <a name="extend"></a>Extend  
+
 Lorsqu’un anneau de mise à jour est suspendu, vous pouvez sélectionner **Prolonger** pour réinitialiser la période de suspension des mises à jour de fonctionnalité et de qualité de cet anneau de mise à jour sur 35 jours.  
 
 #### <a name="to-extend-the-pause-period-for-a-ring"></a>Pour prolonger la période de suspension d’un anneau  
+
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour suspendu, sélectionnez **Prolonger**. 
 2. Sélectionnez parmi les options disponibles pour reprendre les mises à jour de **fonctionnalité** ou de **qualité**, puis sélectionnez **OK**.  
 3. Lorsque la suspension d’un type de mise à jour est prolongée, vous pouvez sélectionner Prolonger à nouveau pour prolonger l’autre type de mise à jour.  
 
 ### <a name="uninstall"></a>Désinstaller  
+
 Un administrateur Intune peut utiliser **Désinstaller** pour désinstaller (restaurer) la dernière mise à jour de *fonctionnalité* ou la dernière mise à jour de *qualité* d’un anneau de mise à jour actif ou suspendu. Après la désinstallation d’un type, vous pouvez désinstaller l’autre type. Intune ne prend pas en charge ni ne gère pas la capacité des utilisateurs à désinstaller les mises à jour.  
 
 > [!IMPORTANT] 
@@ -148,19 +171,21 @@ Tenez compte des éléments suivants lorsque vous utilisez Désinstaller :
 
 - Pour les mises à jour de fonctionnalité plus précisément, la durée pendant laquelle vous pouvez désinstaller la mise à jour de fonctionnalité est limitée à 2-60 jours, comme configuré par le paramètre de mise à jour des anneaux de mise à jour **Définir la période de désinstallation des mises à jour de fonctionnalité (2-60 jours)** . Vous ne pouvez pas restaurer une mise à jour de fonctionnalité qui a été installée sur un appareil après une durée d’installation supérieure à la période de désinstallation configurée.  
 
-  Par exemple, considérez un anneau de mise à jour avec une période de désinstallation des mises à jour de fonctionnalités de 20 jours. Après 25 jours, vous décidez d’annuler la dernière mise à jour de fonctionnalité et d’utiliser l’option de désinstallation.  Les appareils qui ont installé la mise à jour de fonctionnalité il y a plus de 20 jours ne peuvent pas la désinstaller, puisqu’ils ont supprimé les bits nécessaires dans le cadre de leur maintenance. Cependant, les appareils qui n’ont installé la mise à jour des fonctionnalités qu’il y a 19 jours maximum peuvent désinstaller la mise à jour s’ils ont réussi à s’enregistrer pour recevoir la commande de désinstallation avant que la période de désinstallation de 20 jours n’ait expiré.  
+  Par exemple, considérez un anneau de mise à jour avec une période de désinstallation des mises à jour de fonctionnalités de 20 jours. Après 25 jours, vous décidez d’annuler la dernière mise à jour de fonctionnalité et d’utiliser l’option de désinstallation.  Les appareils qui ont installé la mise à jour de fonctionnalité il y a plus de 20 jours ne peuvent pas la désinstaller, puisqu’ils ont supprimé les bits nécessaires dans le cadre de leur maintenance. Cependant, les appareils qui ont installé la mise à jour des fonctionnalités il y a 19 jours maximum peuvent désinstaller la mise à jour s’ils ont réussi à s’enregistrer pour recevoir la commande de désinstallation avant que la période de désinstallation de 20 jours n’ait expiré.  
 
 Pour plus d’informations sur les stratégies Windows Update, consultez [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) (Mettre à jour CSP) dans la documentation de gestion de client Windows.  
 
 #### <a name="to-uninstall-the-latest-windows-10-update"></a>Pour désinstaller la dernière mise à jour de Windows 10  
+
 1. Dans la page Vue d’ensemble d’un anneau de mise à jour suspendu, sélectionnez **Désinstaller**.  
 2. Sélectionnez parmi les options disponibles pour désinstaller les mises à jour de **fonctionnalité** ou de **qualité**, puis sélectionnez **OK**.  
 3. Après le déclenchement de la désinstallation d’un type de mise à jour, vous pouvez sélectionner Désinstaller à nouveau pour désinstaller le type de mise à jour restant.  
 
 ## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrer les paramètres de mise à jour vers le portail Azure  
+
 Le portail Azure Classic comporte également un nombre limité d’autres paramètres relatifs aux mises à jour Windows 10 dans le profil de configuration des appareils. Si vous avez configuré l’un de ces paramètres durant la migration vers le portail Azure, nous vous recommandons vivement d’effectuer les actions suivantes :  
 
-1. Créez des anneaux de mise à jour Windows 10 dans le portail Azure avec les paramètres dont vous avez besoin. Le paramètre **Autoriser les fonctionnalités en version préliminaire** n’est pas pris en charge dans le portail Azure, car il n’est plus applicable aux dernières builds Windows 10. Lorsque vous créez des anneaux de mise à jour, vous pouvez configurer les trois autres paramètres, ainsi que d’autres paramètres de mises à jour Windows 10.  
+1. Créez des anneaux de mise à jour Windows 10 dans le portail Azure avec les paramètres dont vous avez besoin. Le paramètre **Autoriser les fonctionnalités en version préliminaire** n’est pas pris en charge dans le portail Azure, car il n’est plus applicable aux dernières builds Windows 10. Lorsque vous créez des anneaux de mise à jour, vous pouvez configurer les trois autres paramètres et d’autres paramètres de mise à jour Windows 10.  
 
    > [!NOTE]  
    > Les paramètres de mises à jour Windows 10 créés dans le portail classique ne sont pas affichés dans le portail Azure après la migration. Toutefois, ces paramètres sont appliqués. Si vous effectuez la migration de l’un de ces paramètres et si vous modifiez la stratégie migrée à partir du portail Azure, ces paramètres sont supprimés de la stratégie.  
@@ -168,6 +193,7 @@ Le portail Azure Classic comporte également un nombre limité d’autres param�
 2. Supprimez les paramètres de mise à jour dans le portail classique. Une fois que vous avez effectué la migration vers le portail Azure, et que vous avez ajouté les mêmes paramètres à un anneau de mise à jour, vous devez supprimer les paramètres du portail Azure Classic pour éviter d’éventuels conflits de stratégies. Par exemple, quand le même paramètre est configuré avec des valeurs différentes, un conflit se produit. Cela n’est pas facile à identifier, car le paramètre configuré dans le portail Azure Classic ne s’affiche pas dans le portail Azure.  
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 [Paramètres de Windows Update pris en charge par Intune](../windows-update-settings.md)  
 
 [Rapports de conformité Intune pour les mises à jour](../windows-update-compliance-reports.md)

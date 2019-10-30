@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -15,17 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35fae5ea1b3294772db4f4db51179892e08ed5d1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c1c02248b3208073a3bb09cafe69cf0473eacb2b
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728505"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584534"
 ---
 # <a name="rename-a-device-in-intune"></a>Renommer un appareil dans Intune
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 L’action **Renommer un appareil** vous permet de renommer un appareil inscrit dans Intune. Le nom de l’appareil est modifié dans Intune et sur l’appareil.
 
@@ -44,6 +42,15 @@ Cette fonctionnalité ne prend actuellement pas en charge le renommage des appar
 5. Si vous souhaitez redémarrer l’appareil après l’avoir renommé, choisissez **Oui** en regard de **Redémarrer après le renommage**.
 6. Choisissez **Renommer**.
 
+## <a name="windows-device-rename-rules"></a>Règles de changement de nom d’appareil Windows
+Quand vous renommez un appareil Windows, le nouveau nom doit respecter les règles suivantes :
+- 15 caractères ou moins (doit être inférieur ou égal à 63 octets, à l’exclusion de la valeur NULL de fin)
+- Valeur non null ou chaîne vide
+- Caractères ASCII autorisés : Lettres (a-z, A-Z), chiffres (0-9) et traits d’union
+- Caractères Unicode autorisés : caractères >= 0x80, format UTF8 valide, mappage possible à un nom de domaine international (autrement dit, RtlIdnToNameprepUnicode convient ; voir la RFC 3492)
+- Les noms ne doivent pas contenir que des chiffres
+- Aucun espace dans le nom
+- Caractères non autorisés : { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)
 
 
 ## <a name="next-steps"></a>Étapes suivantes
