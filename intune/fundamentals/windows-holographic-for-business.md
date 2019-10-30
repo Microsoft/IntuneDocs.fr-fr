@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb3623a61c16f69773703b8acdbb8f7c02b4ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e648d2eff8fd95cd3c995e9cce1bd0c9dfff32da
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504742"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889517"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gérer et utiliser différentes fonctionnalités de gestion des appareils sur les appareils Windows Holographic et HoloLens avec Intune
 
@@ -80,7 +80,7 @@ Microsoft Intune peut déployer des applications Windows universelles sur les ap
 - Pour en savoir plus sur le développement d’applications pour Microsoft HoloLens, consultez [Applications de réalité mixte pour Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
 
 > [!NOTE]
-> Les appareils HoloLens exécutant Windows 10 Holographic for Business 1607 ne prennent pas en charge les applications sous licence en ligne du Microsoft Store pour Entreprises. Pour en savoir plus, consultez [Installer des applications sur HoloLens](https://docs.microsoft.com/hololens/hololens-install-apps).
+> Les appareils HoloLens exécutant Windows 10 Holographic for Business 1607 ne prennent pas en charge les applications sous licence en ligne du Microsoft Store pour Entreprises. Pour en savoir plus, consultez [Installer des applications sur HoloLens](/hololens/holographic-store-apps).
 
 ## <a name="device-actions"></a>Actions de l’appareil
 Intune intègre certaines actions qui permettent aux administrateurs informatiques d’effectuer différentes tâches : soit de manière locale sur l’appareil, soit à distance à l’aide d’Intune dans le portail Azure. Les utilisateurs peuvent également émettre une commande à distance à partir de l’application Portail d’entreprise Intune sur les appareils personnels inscrits dans Intune.

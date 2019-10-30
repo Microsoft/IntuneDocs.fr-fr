@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47cee2c26960775d268b317845c118e99b85fe9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507578"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813474"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurer l’application Microsoft Managed Home Screen pour Android Entreprise
 
@@ -60,25 +60,15 @@ Le tableau suivant liste les clés de configuration Managed Home Screen disponib
 | Clé de configuration | Type de valeur | Valeur par défaut | Description |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Set Grid Size (Définir la taille du quadrillage) | string | Auto | Vous permet de définir la taille du quadrillage pour le positionnement des applications sur l’écran d’accueil géré. Vous pouvez définir le nombre de lignes et de colonnes de l’application pour définir la taille du quadrillage au format suivant `columns;rows`. Si vous définissez la taille du quadrillage, le nombre maximal d’applications qui sont affichées sur une ligne sur l’écran d’accueil correspond au nombre de lignes que vous définissez, et le nombre maximal d’applications qui sont affichées dans une colonne sur l’écran d’accueil correspond au nombre de colonnes que vous définissez. |
-| Enable Screen Header (Activer l’en-tête d’écran) | bool | TRUE | Active l’en-tête supérieur pour différentes vues offertes par Managed Home Screen, telles que le flux ou les cartes de flux. Si vous activez ce paramètre, les utilisateurs de l’appareil verront l’en-tête. |
-| Enable device status bar (Activer la barre d’état de l’appareil) | bool | TRUE | Active la barre d’état sur l’écran d’accueil (barre supérieure qui affiche les connexions actuelles, telles que Wi-Fi). Si vous activez cette clé de configuration, l’utilisateur final pourra voir les icônes affichées dans les barres d’état qui représentent des connexions et des applications actives. |
 | Enable notifications badge (Activer le badge de notification) | bool | FALSE | Active le badge de notification pour les icônes d’application, qui montre le nombre de nouvelles notifications sur l’application. Si vous activez ce paramètre, les utilisateurs finaux verront les badges de notification sur les applications qui ont des notifications non lues. Si vous laissez cette clé de configuration désactivée, l’utilisateur final ne verra aucun badge de notification pour les applications susceptibles d’avoir des notifications non lues. |
 | Lock Home Screen (Verrouiller l’écran d’accueil) | bool | TRUE | Supprime la capacité de l’utilisateur final à déplacer des icônes d’application sur l’écran d’accueil. Si vous activez cette clé de configuration, les icônes d’application sur l’écran d’accueil seront verrouillées et l’utilisateur final ne pourra pas les glisser-déplacer vers différentes positions du quadrillage de l’écran d’accueil. Si vous affectez la valeur `false`, les utilisateurs finaux pourront déplacer les icônes d’application et les liens web vers l’écran d’accueil géré.  |
 | Set device wall paper (Définir le papier-peint de l’appareil) | string | Par défaut | Vous permet de définir le papier peint de votre choix en entrant l’URL de l’image que vous souhaitez définir comme papier peint. |
 | Set app icon size (Définir la taille de l’icône d’application) | integer | 2 | Vous permet de définir la taille d’icône pour les applications affichées sur l’écran d’accueil. Vous pouvez choisir parmi les valeurs suivantes dans cette configuration pour obtenir différentes tailles : 0 (la plus petite), 1 (petite), 2 (normale), 3 (grande) et 4 (la plus grande). |
 | Set app folder icon (Définir l’icône du dossier d’application) | integer | 0 | Vous permet de définir l’apparence des dossiers d’application sur l’écran d’accueil. Vous pouvez choisir l’apparence parmi les valeurs suivantes : Carré sombre (0), Cercle sombre (1), Carré clair (2), Cercle clair (3) |
-| Enable gestures (Activer les mouvements) | bool | FALSE | Permet à l’utilisateur final d’affecter des actions à différents mouvements tels que le balayage vers le haut ou vers le bas. Si vous désactivez cette clé de configuration, les utilisateurs finaux pourront seulement balayer vers la droite s’il existe une deuxième page et revenir à la page d’accueil. |
-| Enable vertical scrolling (Activer le défilement vertical) | bool | FALSE | Active le défilement vertical sur l’écran d’accueil géré. Si vous activez cette clé de configuration, l’utilisateur final pourra uniquement naviguer vers différentes pages verticalement plutôt qu’en balayant horizontalement. |
-| Set home screen theme (Définir le thème de l’écran d’accueil) | string | Theme.Light.Blue | Vous permet de choisir le thème de l’écran d’accueil parmi un ensemble prédéfini de thèmes avec différentes couleurs. Vous pouvez choisir les thèmes suivants en entrant la valeur de chaîne au format suivant.   Theme.Light.Green. Où Light peut être remplacé par Dark pour un thème sombre, et Green peut être remplacé par Blue, Yellow, Pink, Red, Orange et Purple. |
-| Enable dock (Activer l’ancrage) | bool | FALSE | Active l’affichage de la section d’ancrage d’application au bas de l’écran d’accueil, avec affichage des applications persistantes et point d’entrée pour toutes les applications installées. Si vous activez cette clé de configuration, l’utilisateur final pourra accéder aux applications ancrées, et également à la section Toutes les applications afin d’accéder à la liste de toutes les applications installées sur les appareils, qu’elles aient été répertoriées avec autorisation ou non. |
 | Set screen orientation (Définir l’orientation de l’écran) | integer | 1 | Vous permet de définir l’orientation de l’écran d’accueil (en mode portrait ou paysage) ou d’autoriser la rotation automatique. Vous pouvez définir l’orientation en entrant les valeurs 1 (pour le mode portrait), 2 (pour le mode paysage) ou 3 (pour la rotation automatique). |
-| Enable home screen feed (Activer le flux d’écran d’accueil) | bool | FALSE | Active le flux de l’écran d’accueil, qui peut être consulté en balayant vers la gauche sur l’écran d’accueil. Ce flux affiche différents types de contenu, tels que des actualités, le calendrier, les applications utilisateur les plus utilisées, l’assistant vocal Cortana, et ainsi de suite. Si vous activez cette option, l’utilisateur final pourra accéder au flux en balayant vers la gauche sur l’écran d’accueil. |
-| Enable overview mode (Activer le mode Vue d’ensemble) | bool | FALSE | Permet aux utilisateurs finaux d’ajouter ou de supprimer différentes pages sur l’écran d’accueil accessible en balayant vers la droite sur l’écran par défaut. Si vous activez cette option, l’utilisateur final pourra ajouter des pages à droite de la page par défaut de l’écran d’accueil, changer la page par défaut, et également accéder aux paramètres sur l’écran d’accueil géré. |
 | Enable device telemetry (Activer la télémétrie d’appareil) | bool | FALSE | Active toutes les données de télémétrie capturées pour l’écran d’accueil géré. Si vous activez cette option, Microsoft pourra capturer les données de télémétrie de l’appareil, telles que le nombre de fois où une application particulière est lancée sur cet appareil. |
 | Set whitelisted applications (Définir les applications répertoriées avec utilisation) | bundleArray | FALSE | Vous permet de définir le jeu d’applications visibles sur l’écran d’accueil parmi les applications installées sur l’appareil. Vous pouvez définir les applications en entrant le nom du package d’application des applications que vous souhaitez rendre visibles. Par exemple, com.microsoft.emmx rendrait les paramètres accessibles sur l’écran d’accueil. Les applications que vous répertoriez avec autorisation dans cette section doivent déjà être installées sur l’appareil afin d’être visibles sur l’écran d’accueil. |
 | Set pinned web links (Définir les liens web épinglés) | bundleArray | FALSE | Vous permet d’épingler des sites web sous forme d’icônes de lancement rapide sur l’écran d’accueil. Avec cette configuration, vous pouvez définir l’URL et l’ajouter à l’écran d’accueil pour que l’utilisateur final puisse la lancer dans le navigateur avec un simple clic. |
-| Enable search bar (Activer la barre de recherche) | bool | FALSE | Active la barre de recherche sur l’écran d’accueil. Si vous activez cette option, les utilisateurs de l’appareil verront la barre de recherche sur l’écran d’accueil, où ils pourront entrer ce qu’ils souhaitent rechercher sur le web. |
-| Disable settings app (Désactiver l’application Paramètres) | bool | FALSE | Désactive la page des paramètres pour l’écran d’accueil géré. Si vous désactivez cette option, l’utilisateur final de l’appareil ne pourra pas accéder aux paramètres de l’écran d’accueil géré. |
 | Enable screen saver (Activer l’écran de veille) | bool | FALSE | Pour activer ou pas le mode Écran de veille. Si la valeur est true, vous pouvez configurer **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** et **media_detect_ screen_saver**. |
 | Screen saver image (Image de l’écran de veille) | string |   | Définissez l’URL de l’image de l’écran de veille. Si aucune URL n’est définie, les appareils affichent l’image de l’écran de veille par défaut quand l’écran de veille est activé. L’image par défaut montre l’icône de l’application Managed Home Screen.  |
 | Screen saver show time (Durée d’affichage de l’écran de veille) | integer | 0 | Permet de définir la durée (en secondes) d’affichage de l’écran de veille quand le mode Écran de veille est activé. Si la valeur est 0, l’écran de veille s’affichera en mode écran de veille indéfiniment jusqu’à ce que l’appareil redevienne actif.  |
@@ -116,18 +106,6 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
         {
-            "key": "keep_page_header",
-            "valueBool": true
-        },
-        {
-            "key": "keep_status_bar",
-            "valueBool": true
-        },
-        {
-            "key": "show_notification_badge",
-            "valueBool": false
-        },
-        {
             "key": "lock_home_screen",
             "valueBool": true
         },
@@ -144,32 +122,8 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
             "valueInteger": 0
         },
         {
-            "key": "gesture_on",
-            "valueBool": false
-        },
-        {
-            "key": "vertical_scrolling",
-            "valueBool": false
-        },
-        {
-            "key": "theme",
-            "valueString": "Theme.Light.Blue"
-        },
-        {
-            "key": "dock_enable",
-            "valueBool": false
-        },
-        {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "feed_enable",
-            "valueBool": false
-        },
-        {
-            "key": "allow_overview_mode",
-            "valueBool": false
         },
         {
             "key": "enable_telemetry",
@@ -204,14 +158,6 @@ Voici un exemple de script JSON avec toutes les clés de configuration disponibl
                     ]
                 }
             ]
-        },
-        {
-            "key": "search_bar",
-            "valueBool": false
-        },
-        {
-            "key": "hide_settings",
-            "valueBool": false
         },
         {
             "key": "show_virtual_home",

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d82813f1292c99cf248c56a102503413d2cb8fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507441"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889596"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Guide pratique de surveillance des stratégies de protection des applications
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Vous pouvez rechercher un utilisateur et vérifier son état de conformité. Le 
 - **Dernière synchronisation** : Lorsque l’application a été synchronisée pour la dernière fois avec Intune. 
 
 >[!NOTE]
-> La colonne **Dernière synchronisation** représente la même valeur dans le rapport d’état de l’utilisateur dans la console et dans le rapport des stratégies de protection d’application [exportable. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities-to-csv). La différence consiste en un petit retard de synchronisation entre la valeur dans les deux rapports. 
+> La colonne **Dernière synchronisation** représente la même valeur dans le rapport d’état de l’utilisateur dans la console et dans le rapport des stratégies de protection d’application [exportable. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). La différence consiste en un petit retard de synchronisation entre la valeur dans les deux rapports. 
 >
 > L’heure référencée dans « Dernière synchronisation » est le moment où Intune a vu l’« instance d’application » pour la dernière fois. Lorsqu’un utilisateur lance une application, il peut informer le service Intune App Protection au moment de son lancement, en fonction de son dernier archivage. Consultez [les intervalles avant nouvelle tentative pour l’archivage des stratégies de protection d’application](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Si un utilisateur final n’a pas utilisé cette application particulière dans le dernier intervalle d’archivage (qui est généralement de 30 minutes pour une utilisation active) et qu’elle lance l’application, alors :
 >
