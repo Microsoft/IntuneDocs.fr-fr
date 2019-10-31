@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e53f50c42e768eeb652a8602bea49c04d29364c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504431"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810293"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Activer le connecteur Mobile Threat Defense dans Intune
 
@@ -44,7 +44,7 @@ Les stratégies d’accès conditionnel classiques pour les applications MTD :
 Pour afficher les stratégies d’accès conditionnel classiques, dans [Azure](https://portal.azure.com/#home), accédez à **Azure Active Directory** > **Accès conditionnel** > **Stratégies classiques**.
 
 
-## <a name="to-enable-the-mtd-connector"></a>Pour activer le connecteur MTD
+## <a name="to-enable-the-mobile-threat-defense-connector"></a>Pour activer le connecteur Mobile Threat Defense
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
@@ -58,20 +58,23 @@ Pour afficher les stratégies d’accès conditionnel classiques, dans [Azure](h
 
 7. Modifiez les options en fonction des besoins de votre organisation. Les options visibles dépendent du partenaire MTD.
 
-## <a name="mtd-toggle-options"></a>Options MTD
+## <a name="mobile-threat-defense-toggle-options"></a>Options de Mobile Threat Defense
 
-Vous pouvez décider des options MTD que vous devez activer en fonction des besoins de votre entreprise. Voici plus de détails :
+Vous pouvez choisir les options de Mobile Threat Defense que vous devez activer en fonction des besoins de votre organisation. Voici plus de détails :
 
-- **Connecter les appareils Android 4.1+ à [nom du partenaire MTD] for Work MTD** : quand vous activez cette option, les appareils Android version 4.1 ou ultérieure peuvent signaler les risques de sécurité à Intune.
-  - **Marquer comme non conforme si aucune donnée n’est reçue** : si Intune ne reçoit pas de données du partenaire MTD concernant un appareil sur cette plateforme, l’appareil est considéré comme non conforme.
-<br></br>
-- **Connecter les appareils iOS 8.0+ à [nom du partenaire MTD] for Work MTD** : quand vous activez cette option, les appareils iOS version 8.0 ou ultérieure peuvent signaler les risques de sécurité à Intune.
-  - **Marquer comme non conforme si aucune donnée n’est reçue** : si Intune ne reçoit pas de données du partenaire MTD concernant un appareil sur cette plateforme, l’appareil est considéré comme non conforme.
-<br></br>
+**Paramètres de stratégie de conformité de gestion des périphériques mobiles**
+- **Connecter les appareils Android 4.1+ à *\<Nom du partenaire MTD>*** : quand vous activez cette option, les appareils Android version 4.1 ou ultérieure peuvent signaler les risques de sécurité à Intune.
+- **Connecter les appareils iOS 8.0+ à *\<Nom du partenaire MTD>*** : quand vous activez cette option, les appareils iOS version 8.0 ou ultérieure peuvent signaler les risques de sécurité à Intune.
 - **Activer la synchronisation des applications pour les appareils iOS** : autorise ce partenaire Mobile Threat Defense à demander les métadonnées des applications iOS dans Intune afin d’analyser les menaces.
-
 - **Bloquer les versions de système d’exploitation non prises en charge** : bloque l’appareil s’il exécute un système d’exploitation d’une version antérieure à la version minimale prise en charge.
 
+**Paramètres de stratégie de protection des applications**
+- **Connecter les appareils Android 4.1 et versions ultérieures à *\<Nom du partenaire MTD >* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection des applications qui utilisent la règle de niveau de menace de l’appareil évaluent les appareils, y compris les données de ce connecteur.
+- **Connecter les appareils iOS version 8.0 et ultérieure à *\<nom du partenaire MTD>* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection des applications qui utilisent la règle de niveau de menace de l’appareil évaluent les appareils, y compris les données de ce connecteur.
+
+Pour en savoir plus sur l’utilisation des connecteurs Mobile Threat Defense pour l’évaluation des stratégies d’Intune App Protection, consultez [Configurer Mobile Threat Defense pour les appareils non inscrits](~/protect/mtd-enable-unenrolled-devices.md).
+
+**Paramètres partagés communs**
 - **Nombre de jours avant de considérer que le partenaire n’est pas réactif** : nombre de jours d’inactivité au bout desquels Intune considère que le partenaire n’est pas réactif en raison de la perte de connexion. Intune ignore l’état de conformité pour les partenaires MTD non réactifs.
 
 > [!IMPORTANT] 

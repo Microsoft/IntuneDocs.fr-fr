@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9faf34a9b417962e412eaa730cf91cd821ff7eb6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0528ec962165f358b35afce98f58c8b9b4efe93c
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509622"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810321"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Intégrer Better Mobile à Intune
 
@@ -28,8 +28,7 @@ Suivez les étapes ci-dessous pour intégrer la solution Better Mobile Threat De
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-> [!NOTE]
-> Les étapes ci-dessous doivent être suivies dans la [console d’administration de Better Mobile](https://aad.bmobi.net).
+Les étapes suivantes doivent être effectuées dans la [console d’administration de Better Mobile](https://aad.bmobi.net) et établissent une connexion au service Better Mobile pour les appareils inscrits dans Intune (à l’aide de la conformité de l’appareil) et les appareils non inscrits (à l’aide des stratégies de protection des applications).
 
 Avant de commencer le processus d’intégration de Better Mobile à Intune, munissez-vous des éléments suivants :
 
@@ -76,4 +75,5 @@ Le processus d’autorisation de l’application Better Mobile est le suivant :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Configurer des applications Better clientes](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configurer Better Mobile pour des appareils inscrits](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configurer Better Mobile pour des appareils non inscrits](~/protect/mtd-add-apps-unenrolled-devices.md)

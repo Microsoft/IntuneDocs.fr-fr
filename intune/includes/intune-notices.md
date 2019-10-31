@@ -7,14 +7,28 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9965c6e85173ea9958182be43b6c93d9578d534f
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: a2675b1b601261e673923ab5e3ac41d0f3d83264
+ms.sourcegitcommit: 71b0cd7b81178e2f9e9f80830fa9a7985781628b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749377"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73057316"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune.
+
+### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Modification planifiée : Le paramètre « Journalisation côté serveur pour les commandes de Siri » sera supprimé de la console Intune <!-- 5468501-->
+
+Nous prévoyons de supprimer le paramètre « Journalisation côté serveur pour les commandes de Siri » de la console Intune avec la mise à jour de novembre du service Intune. Cette modification s’aligne sur le fait qu’Apple a déjà supprimé le paramètre de son côté.
+
+#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
+Lorsque la mise à jour de novembre (ou 1911) sera déployée à la mi-novembre, vous verrez que ce paramètre a été supprimé du menu Restrictions d’appareil (applications intégrées) pour les profils de configuration iOS dans la console Intune. Il peut apparaître dans vos stratégies et dans le profil de gestion de l’appareil ciblé, mais le paramètre n’a aucun effet sur votre appareil. Nous ne nous attendons pas à un impact important sur les fonctionnalités, car ce paramètre n’a pas d’effet sur les appareils, même si vous les voyez dans le profil de gestion.
+
+Vous pouvez choisir une des deux approches suivantes :
+- Si vous souhaitez supprimer ce paramètre de vos stratégies, vous pouvez accéder au profil qui possède ce paramètre, apporter une modification mineure et enregistrer la stratégie. La stratégie sera recalculée dans le serveur principal et le paramètre sera supprimé de votre stratégie.
+- Si vous choisissez de ne pas effectuer cette action, les utilisateurs finaux verront ce paramètre dans le profil de gestion de leur appareil, mais le paramètre n’aura aucun effet.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que puis-je faire pour me préparer à cette modification ?
+Vous pouvez agir conformément à la section ci-dessus ou conserver votre stratégie telle quelle. Nous mettrons à jour notre page Nouveautés et la documentation lorsque cette modification sera apportée.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Fin du support pour la gestion des PC hérités
 
@@ -71,8 +85,8 @@ Vous n’avez rien à faire, mais nous vous recommandons de mettre à jour vos r
 #### <a name="additional-information"></a>Informations supplémentaires 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Modification planifiée : Les stratégies de protection des applications et du Kit de développement logiciel (SDK) des applications Intune pour Android évoluent vers le support d’Android 5.0 et versions ultérieures en octobre <!--4911065 -->
-Intune passera au support d’Android 5.x (lollipop) et versions ultérieures en octobre. Mettez à jour les applications inclues dans un wrapper avec le dernier Kit de développement logiciel (SDK) des applications Intune et mettez à jour vos appareils.
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-an-upcoming-release---4911065---"></a>Modification planifiée : Les stratégies de protection des applications et du Kit de développement logiciel (SDK) des applications Intune pour Android évoluent vers le support d’Android 5.0 et versions ultérieures dans une version à venir <!--4911065 -->
+Intune passera au support d’Android 5.x (lollipop) et versions ultérieures dans une version à venir. Mettez à jour les applications inclues dans un wrapper avec le dernier Kit de développement logiciel (SDK) des applications Intune et mettez à jour vos appareils.
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
 Si vous n’utilisez pas ou si vous envisagez d’utiliser le Kit de développement logiciel (SDK) ou l’APP pour Android, cette modification n’aura aucun effet. Si vous utilisez le Kit de développement logiciel (SDK) d’applications Intune, veillez à mettre à jour vers la dernière version et à mettre à jour vos appareils vers Android 5.x et versions ultérieures. Si vous ne mettez pas à jour, les applications ne recevront aucune mise à jour et perdront en qualité au fil du temps.

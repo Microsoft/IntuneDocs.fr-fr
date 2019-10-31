@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aecbcd91eef668ba2a92acfc9b42e6c68df3672a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 34a4c8adeef7e8b28c90ad38579f0f9ac7c4784d
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057521"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Activer le mode Perdu sur des appareils iOS avec Intune
 
@@ -43,8 +43,10 @@ Cette fonctionnalité n’est pas prise en charge pour :
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Sélectionnez **Appareils**, puis **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, choisissez un appareil iOS, puis **...Plus**. Ensuite, choisissez l’action à distance **Mode Perdu**.
-5. En **Mode Perdu**, activez cette fonctionnalité. Entrez ensuite le message à afficher et le numéro de téléphone du contact.
+4. Dans la liste des appareils que vous gérez, choisissez un appareil iOS, puis choisissez l’action **Mode perdu (supervisé uniquement)** .
+5. Sous **Mode perdu**, sélectionnez **Activer**.
+6. Dans **Message à afficher sur l’écran de verrouillage**, tapez un message à afficher sur l’écran de verrouillage de l’appareil.
+7. Si vous le souhaitez, entrez un numéro de téléphone dans la zone **Numéro de téléphone à afficher**.
 6. Cliquez sur **OK** pour enregistrer vos modifications.
 
 Lorsque vous activez le mode Perdu, vous bloquez toute utilisation de l’appareil. L’utilisateur final ne peut pas accéder à l’appareil tant que vous n’avez pas désactivé le mode Perdu. Quand le mode Perdu est activé, utilisez l’action [Localiser l’appareil](device-locate.md) pour rechercher l’emplacement de l’appareil.

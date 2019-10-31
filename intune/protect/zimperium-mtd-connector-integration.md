@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ba94a649f9d7b49437d5d97bb621b0b0a94466c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d843cf707cf182655d0044dde289caca730ccd6b
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508692"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810303"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Intégrer Zimperium à Intune
 
@@ -31,8 +31,7 @@ Suivez les étapes ci-dessous pour intégrer la solution Zimperium Mobile Threat
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-> [!NOTE]
-> Les étapes suivantes doivent être effectuées dans la [console Zimperium MTD](https://www.zimperium.com/platform).
+Les étapes suivantes doivent être effectuées dans la [console Zimperium MTD](https://www.zimperium.com/platform) et établissent une connexion au service Lookout pour les appareils inscrits dans Intune (à l’aide de la conformité de l’appareil) et les appareils non inscrits (à l’aide des stratégies de protection des applications).
 
 Avant d’entamer le processus d’intégration de Zimperium à Intune, vérifiez que vous disposez de l’abonnement et des informations d’identification suivantes :
 
@@ -90,4 +89,5 @@ Pour plus d’informations sur le consentement et les applications Azure Active 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Configurer les applications Zimperium](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configurer des applications Zimperium pour les appareils inscrits](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configurer des applications Zimperium pour les appareils non inscrits](~/protect/mtd-add-apps-unenrolled-devices.md)
