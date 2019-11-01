@@ -249,6 +249,8 @@
               href: security-baseline-settings-mdm-all.md
             - name: Paramètres de la base de référence Microsoft Defender ATP
               href: security-baseline-settings-defender-atp.md
+            - name: Paramètres de référence Microsoft Edge
+              href: security-baseline-settings-edge.md
         - name: Paramètres de Windows Update
           href: windows-update-settings.md
         - name: Paramètres de stratégie de conformité - Android
