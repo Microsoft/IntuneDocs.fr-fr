@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c42e5ef50f8a5a8514bc43670fc743f42b1b2d6
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 1716da820fd0d9a4b6d1bbc5024440cfb141c5a1
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585824"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889547"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Utiliser des informations d’identification dérivées dans Microsoft Intune
 
@@ -64,7 +64,7 @@ Intune prend en charge un seul émetteur d’informations d’identification dé
 - **Entrust Datacard** : https://www.entrustdatacard.com/
 - **Intercede** : https://www.intercede.com/
 
-Pour obtenir des informations importantes sur l’utilisation des différents émetteurs de certificats, passez en revue les conseils fournis à leur sujet, y compris le flux de travail de leurs utilisateurs finaux. Pour plus d’informations, consultez [Planifier l’obtention d’informations d’identification dérivées](#plan-for-derived-credentials) dans cet article.
+Pour connaître les informations importantes à savoir sur les différents émetteurs, consultez l’aide correspondante<!-- , including the issuers end-user workflow-->. Pour plus d’informations, consultez [Planifier l’obtention d’informations d’identification dérivées](#plan-for-derived-credentials) dans cet article.
 
 > [!IMPORTANT]  
 > Si vous supprimez un émetteur d’informations d’identification dérivées de votre locataire, les informations d’identification dérivées qui ont été configurées par le biais de cet émetteur ne fonctionneront plus.  
@@ -101,11 +101,14 @@ Informations générales :
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) Examiner le flux de travail de l’utilisateur final pour l’émetteur que vous avez choisi
 
-Vous trouverez ci-dessous des éléments essentiels à prendre en compte pour chaque partenaire pris en charge, ainsi que des liens vers le flux de travail de l’utilisateur final de cet émetteur.  Familiarisez-vous avec ces informations afin de vous assurer que vos stratégies et configurations Intune n’empêchent pas les utilisateurs et les appareils d’effectuer correctement leur inscription pour obtenir des informations d’identification dérivées de cet émetteur.
+Voici les principales considérations à prendre en compte pour chacun des partenaires pris en charge<!--  , and links to that issuers end-user workflow -->.  Familiarisez-vous avec ces informations afin de vous assurer que vos stratégies et configurations Intune n’empêchent pas les utilisateurs et les appareils d’effectuer correctement leur inscription pour obtenir des informations d’identification dérivées de cet émetteur.
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Examinez le [flux de travail utilisateur pour DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Les exigences clés relatives à ce flux de travail sont les suivantes :  
+Familiarisez-vous avec le workflow des utilisateurs finaux et les principales conditions requises :  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:  
+-->
 
 - Les utilisateurs doivent avoir accès à un ordinateur ou à une borne où ils peuvent utiliser leur carte à puce pour s’authentifier auprès de l’émetteur. 
 
@@ -120,8 +123,11 @@ Examinez le [flux de travail utilisateur pour DISA Purebred](https://docs.micros
 Pour obtenir des informations sur l’obtention et la configuration de l’application DISA Purebred, consultez [Déployer l’application DISA Purebred](#deploy-the-disa-purebred-app) plus loin dans cet article.  
 
 #### <a name="entrust-datacard"></a>Entrust Datacard  
-Examinez le [flux de travail utilisateur pour Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Les exigences clés relatives à ce flux de travail sont les suivantes : 
 
+Familiarisez-vous avec le workflow des utilisateurs finaux et les principales conditions requises :  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
+--> 
 - Les utilisateurs doivent avoir accès à un ordinateur ou à une borne où ils peuvent utiliser leur carte à puce pour s’authentifier auprès de l’émetteur. 
 
 - Les appareils qui s’inscriront pour obtenir des informations d’identification dérivées doivent installer l’application Portail d’entreprise Intune.
@@ -129,8 +135,11 @@ Examinez le [flux de travail utilisateur pour Entrust Datacard](https://docs.mic
 - L’appareil photo de l’appareil doit être utilisé pour scanner un code QR qui lie la demande d’authentification à la demande d’informations d’identification dérivées de l’appareil mobile.
 
 #### <a name="intercede"></a>Intercede
-Examinez le [flux de travail utilisateur pour Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Les exigences clés relatives à ce flux de travail sont les suivantes : 
 
+Familiarisez-vous avec le workflow des utilisateurs finaux et les principales conditions requises :  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
+-->
 - Les utilisateurs doivent avoir accès à un ordinateur ou à une borne où ils peuvent utiliser leur carte à puce pour s’authentifier auprès de l’émetteur. 
 
 - Les appareils qui s’inscriront pour obtenir des informations d’identification dérivées doivent installer l’application Portail d’entreprise Intune.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f34e321476ea634030a5e602bc362d409eee8f5
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785548"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889570"
 ---
-# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune"></a>Utiliser les profils DFCI sur les appareils Windows dans Microsoft Intune
+# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Utiliser les profils d’interface de configuration du microprogramme des appareils Windows dans Microsoft Intune (préversion publique)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+> [!Note]
+> Le lancement de chaque [mise à jour mensuelle](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) peut prendre plusieurs jours. Le déploiement de certaines fonctionnalités peut s’étaler sur plusieurs semaines. Ces fonctionnalités risquent de ne pas être tout de suite accessibles à tous les clients.
 
 Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer les paramètres UEFI (BIOS) une fois qu’ils sont inscrits, à l’aide de l’interface DFCI (interface de configuration du microprogramme de l’appareil). Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de l’interface DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -167,15 +170,9 @@ Vous êtes maintenant prêt à réinitialiser l’appareil. Une fois l’apparei
 
 ### <a name="recover"></a>Récupérer
 
-Si vous réinitialisez un appareil et supprimez l’enregistrement Autopilot avant de déverrouiller les menus UEFI (BIOS), ces menus restent verrouillés. Intune ne peut pas envoyer les mises à jour de profil pour les déverrouiller. Pour déverrouiller l’appareil, vous pouvez procéder comme suit :
+Si vous réinitialisez un appareil et supprimez l’enregistrement Autopilot avant de déverrouiller les menus UEFI (BIOS), ces menus restent verrouillés. Intune ne peut pas envoyer les mises à jour de profil pour les déverrouiller.
 
-- **Option 1** : Demandez à votre fournisseur de solutions Cloud ou directement au fournisseur OEM de votre appareil de réinscrire l’appareil auprès d’Autopilot. Réinscrivez-le dans Intune pour réappliquer les profils Autopilot et DFCI.
-
-  Ensuite, déverrouillez les menus UEFI en suivant la procédure de [mise hors service de l’appareil](#retire) (dans cet article).
-
-- **Option 2** : Ouvrez le menu UEFI (BIOS) et sélectionnez une option de récupération. Vérifiez que l’appareil n’est pas inscrit pour la gestion DFCI et déverrouillez le menu. Les options de récupération laissent tous les paramètres UEFI (BIOS) avec les valeurs du dernier profil DFCI Intune.
-
-  Ensuite, déverrouillez les menus UEFI en suivant la procédure de [mise hors service de l’appareil](#retire) (dans cet article).
+Pour déverrouiller l’appareil, ouvrez le menu UEFI (BIOS), puis actualisez la gestion à partir du réseau. La récupération déverrouille les menus, mais conserve tous les paramètres UEFI (BIOS) tels qu’ils étaient définis sur les valeurs du profil DFCI Intune précédent.
 
 ## <a name="end-user-impact"></a>Impact sur les utilisateurs finaux
 

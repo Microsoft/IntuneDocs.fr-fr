@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f32637173ec6cf5f7c284a87193eafffb6a16e6c
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 0faa7c7ec70ce7647a6a91ae732d8b15878964b7
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72786128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057638"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -54,20 +54,90 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 
-<!-- ########################## -->
+## <a name="week-of-october-28-2019"></a>Semaine du 28 octobre 2019
 
+### <a name="app-management"></a>Gestion d'applications 
+
+#### <a name="dark-mode-for-ios-company-portal----4911422---"></a>Mode sombre pour le Portail d’entreprise iOS <!-- 4911422 -->
+Le Mode sombre est disponible sur le Portail d’entreprise iOS. Les utilisateurs peuvent télécharger des applications de l’entreprise, gérer leurs appareils et bénéficier d’un support informatique dans le modèle de couleurs de leur choix en fonction des paramètres de l’appareil. Le Portail d’entreprise iOS correspondra automatiquement aux paramètres de l’appareil de l’utilisateur final (Mode sombre ou clair). Pour plus d’informations, voir [Présentation du mode sombre sur le Portail d’entreprise Microsoft Intune pour iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Pour plus d’informations sur le portail d’entreprise iOS, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).
+
+#### <a name="android-company-portal-enforced-minimum-app-version----2378776---"></a>Version minimale de l’application appliquée au Portail d’entreprise Android <!-- 2378776 -->
+Le paramètre **Version minimale du Portail d’entreprise** d’une stratégie de protection d’applications permet de définir une version minimale spécifique du Portail d’entreprise pour l’appliquer sur l’appareil des utilisateurs finaux. Vous pouvez ainsi lancer l’action **Bloquer l’accès**, **Effacer les données** ou **Avertir** lorsque la valeur n’est pas remplie. Les formats possibles de cette valeur suivent le modèle *[Majeure].[Mineure]* , *[Majeure].[Mineure].[Build]* ou *[Majeure].[Mineure].[Build].[Révision]* . 
+
+Le paramètre **Version minimale du Portail d’entreprise**, s’il est configuré, affecte tous les utilisateurs finaux qui utilisent la version 5.0.4560.0 et les versions à venir du Portail d’entreprise. Il n’a aucun effet sur ceux qui utilisent une version antérieure à la version dans laquelle cette fonctionnalité est publiée. Les utilisateurs finaux qui utilisent la mise à jour automatique des applications sur leur appareil ne verront a priori pas de boîtes de dialogue correspondant à cette fonctionnalité, dans la mesure où ils auront normalement la dernière version du Portail d’entreprise. Ce paramètre concerne uniquement les appareils Android inscrits et non inscrits avec protection des applications. Pour plus d’informations, voir [Paramètres de la stratégie de protection d’applications Android – Lancement conditionnel](~/apps/app-protection-policy-settings-android.md#conditional-launch).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="microsoft-365-device-management"></a>Gestion des appareils Microsoft 365
+
+#### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management-------5630102---"></a>Présentation du nœud Sécurité du point de terminaison dans la Gestion des appareils Microsoft 365    <!-- 5630102 -->
+
+Le nœud **Sécurité du point de terminaison** est désormais mis à la disposition générale dans l’espace de travail spécialiste de la Gestion des appareils Microsoft 365, à l’adresse https://devicemanagement.microsoft.com, qui regroupe les fonctionnalités permettant de sécuriser les points de terminaison :
+
+- Bases de référence de la sécurité :  groupe préconfiguré de paramètres permettant d’appliquer un groupe connu de paramètres et de valeurs par défaut recommandés par Microsoft.
+
+- Tâches de sécurité : tirez parti de la Gestion des menaces et des vulnérabilités de Microsoft Defender – PACM et utilisez Intune pour corriger les faiblesses des points de terminaison.
+
+- Microsoft Defender – PACM : Microsoft Defender – Protection avancée contre les menaces intégrée permettant de mieux éviter les violations de la sécurité.
+
+Ces paramètres resteront accessibles à partir d’autres nœuds applicables comme les appareils ; par ailleurs, l’état configuré actuel sera le même quel que soit l’endroit où ces fonctionnalités seront utilisées et activées.
+
+Pour plus d’informations sur ces améliorations, voir le [billet de blog Intune Customer Success](https://aka.ms/Endpoint_security_node) sur le site web Microsoft Tech Community.
+
+### <a name="device-management"></a>Gestion des appareils
+
+#### <a name="intune-supports-ios-11-and-later----4665324----"></a>Intune prend en charge iOS 11 et les versions ultérieures <!-- 4665324  -->
+
+L’inscription à Intune et le Portail d’entreprise Intune prennent maintenant en charge iOS 11 et les versions ultérieures. Les versions antérieures ne sont pas prises en charge.
+
+### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
+
+#### <a name="updated-support-experience------5012398---"></a>Mise à jour de l’expérience de support   <!-- 5012398 -->
+
+L’expérience consistant à [obtenir de l’aide et bénéficier d’un support pour Intune](get-support.md) dans la console a été mise à jour et simplifiée.  Nous avons amélioré la recherche dans la console et les commentaires concernant les problèmes courants, ainsi que le workflow à suivre pour contacter le support. En ouvrant un problème de support, vous verrez apparaître une estimation en temps réel du délai d’attente à prévoir pour un rappel ou une réponse par e-mail ; les clients du Support Premier et du Support Unifié pourront facilement indiquer la gravité de leur problème afin de bénéficier d’un support plus rapide.
+
+<!-- ########################## -->
 ## <a name="week-of-october-21-2019"></a>Semaine du 21 octobre 2019
 
-### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073-idready-wnready---"></a>Nouveau profil d’interface de configuration de microprogramme d’appareil pour les appareils Windows 10 et versions ultérieures <!-- 2266073 idready wnready -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="microsoft-365-device-management"></a>Gestion des appareils Microsoft 365
 
-Sur Windows 10 et versions ultérieures, vous pouvez créer un profil de configuration d’appareil pour contrôler les paramètres et les fonctionnalités (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10 et ultérieur** pour la plateforme). Dans cette mise à jour, il existe un nouveau type de profil d’interface de configuration de microprogramme d’appareil qui permet à Intune de gérer les paramètres UEFI (BIOS).
+#### <a name="improved-administration-experience-in-microsoft-365-device-management"></a>Amélioration de l’expérience d’administration dans la Gestion des appareils Microsoft 365
+
+Une expérience d’administration actualisée et simplifiée est désormais mise à la disposition générale dans l’espace de travail spécialiste de la Gestion des appareils Microsoft 365, à l’adresse [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) :
+
+- **Navigation mise à jour** : vous trouverez une navigation de premier niveau simplifiée qui regroupe les fonctionnalités de façon logique.
+- **Nouveaux filtres de plateforme** : vous pouvez sélectionner une seule plateforme pour afficher uniquement les stratégies et les applications correspondantes, sur les pages Appareils et Applications.
+- **Nouvelle page d’accueil** : identifiez rapidement l’intégrité des services, l’état de votre locataire, les actualités, etc., sur la nouvelle page d’accueil.
+
+Pour plus d’informations sur ces améliorations, voir le [billet de blog Enterprise Mobility + Security](https://go.microsoft.com/fwlink/?linkid=2109094) sur le site web Microsoft Tech Community.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestion d'applications
+
+#### <a name="add-mobile-threat-defense-apps-to-unenrolled-devices----3005337---"></a>Ajouter les applications Mobile Threat Defense sur des appareils non inscrits <!-- 3005337 -->
+Vous pouvez créer une stratégie de protection d’applications Intune permettant de bloquer ou d’effacer de manière sélective les données d’entreprise des utilisateurs en fonction de l’intégrité d’un appareil. L’intégrité de l’appareil est déterminée par la solution Mobile Threat Defense (MTD) choisie. Cette fonctionnalité est aujourd’hui disponible avec les appareils inscrits dans Intune sous la forme d’un paramètre de conformité des appareils. Avec cette nouvelle fonctionnalité, nous étendons aux appareils non inscrits la détection des menaces d’un fournisseur Mobile Threat Defense. Sur Android, la dernière version du Portail d’entreprise est nécessaire sur l’appareil. Sur iOS, cette fonctionnalité sera disponible lorsque les applications auront intégré la dernière version du kit SDK Intune (12.0.15 et versions ultérieures). Nous mettrons à jour la rubrique Nouveautés dès que la première application aura adopté la dernière version de ce kit. Les applications restantes seront mises à disposition au fur et à mesure. Pour plus d’informations, voir [Créer une stratégie de protection d’applications Mobile Threat Defense avec Intune](~/protect/mtd-app-protection-policy.md).
+
+### <a name="device-configuration"></a>Configuration des appareils
+
+#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073----"></a>Nouveau profil d’interface de configuration de microprogramme d’appareil pour les appareils Windows 10 et versions ultérieures <!-- 2266073  -->
+
+Sur Windows 10 et versions ultérieures, vous pouvez créer un profil de configuration d’appareil pour contrôler les paramètres et les fonctionnalités (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10 et ultérieur** pour la plateforme). Dans cette mise à jour, il existe un nouveau type de profil d’interface de configuration de microprogramme d’appareil qui permet à Intune de gérer les paramètres UEFI (BIOS). Nous déployons actuellement cette fonctionnalité pour tous les clients et prévoyons son achèvement d’ici la fin de la semaine prochaine.
 
 Pour plus d’informations sur cette fonctionnalité, consultez [Utiliser des profils DFCI sur des appareils Windows dans Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 
 S’applique à :
-
 - Windows 10 RS5 (1809) et versions plus récentes sur le microprogramme pris en charge
 
+### <a name="device-enrollment"></a>Inscription des appareils
+
+#### <a name="toggle-to-only-show-enrollment-status-page-on-devices-provisioned-by-out-of-box-experience-oobe---3959566--"></a>Afficher uniquement la page d’état d’inscription sur les appareils configurés par l’expérience OOBE (out-of-box experience) <!--3959566-->
+Vous pouvez maintenant choisir d’afficher uniquement la page d’état d’inscription sur les appareils configurés par l’expérience OOBE Autopilot.
+
+Pour afficher le nouveau bouton bascule, choisissez **Intune** > **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription** > **Créer un profil** > **Paramètres** > **Afficher uniquement la page sur les appareils configurés par l’expérience OOBE (out-of-box experience)** .
+
+
+<!-- ########################## -->
 ## <a name="week-of-october-14-2019"></a>Semaine du 14 octobre 2019
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,7 +147,12 @@ S’applique à :
 Pour les installations d’applications disponibles sur les appareils dédiés et entièrement gérés avec un profil professionnel Android Entreprise, vous pouvez afficher l’état d’installation des applications ainsi que la version installée des applications Google Play gérées. Pour plus d’informations, consultez [Guide pratique pour superviser les stratégies de protection des applications](~/apps/app-protection-policies-monitor.md), [Gérer les appareils avec profil professionnel Android avec Intune](~/enrollment/android-enterprise-overview.md) et [Type d’application Google Play gérée](~/apps/apps-add-android-for-work.md#managed-google-play-app-types).
 
 #### <a name="microsoft-edge-version-77-and-later-for-windows-10-and-macos-public-preview----3872025-4678761----"></a>Microsoft Edge version 77 et ultérieures pour Windows 10 et macOS (préversion publique) <!-- 3872025, 4678761  -->
-Microsoft Edge version 77 et ultérieures peuvent désormais être déployés sur des PC exécutant Windows 10 et macOS. La préversion publique offre les canaux **Dev** et **Bêta** pour Windows 10 et un canal **Bêta** pour macOS. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). Par ailleurs, les mises à jour automatiques du navigateur sont définies sur **Activé** par défaut, et Microsoft Edge ne peut pas être désinstallé. Pour plus d’informations, consultez [Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune](~/apps/apps-windows-edge.md) et [Documentation Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2103823).
+Microsoft Edge 77 et les versions ultérieures pourront être déployés sur les PC sous Windows 10 et macOS. 
+
+>[!NOTE]
+>Le déploiement de cette fonctionnalité a été repoussé jusque dans le courant du mois.
+
+La préversion publique offre les canaux **Dev** et **Bêta** pour Windows 10 et un canal **Bêta** pour macOS. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). Par ailleurs, les mises à jour automatiques du navigateur sont définies sur **Activé** par défaut, et Microsoft Edge ne peut pas être désinstallé. Pour plus d’informations, consultez [Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune](~/apps/apps-windows-edge.md) et [Documentation Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2103823).
 
 #### <a name="update-to-app-protection-ui-and-ios-app-provisioning-ui----4102027-4102029-----"></a>Mise à jour de l’interface utilisateur de la protection des applications et de l’interface utilisateur de provisionnement d’applications iOS <!-- 4102027, 4102029   -->
 L’interface utilisateur permettant de créer et modifier les stratégies de protection des applications et les profils de provisionnement d’applications iOS dans Intune a été mise à jour. Les modifications de l’interface utilisateur incluent :
@@ -131,7 +206,7 @@ S’applique à :
 - Profil professionnel Android Entreprise
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339-----"></a>Créer un proxy HTTP global sur les appareils de propriétaires d’appareils Android Entreprise <!-- 4816339   -->
-Sur les appareils Android Entreprise, vous pouvez configurer un proxy HTTP global pour respecter les standards de navigation web de votre organisation (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Entreprise** pour la plateforme > **Propriétaire de l’appareil > Restrictions de l’appareil** pour le type de profil > **Connectivité**). Une fois la configuration terminée, l’ensemble du trafic HTTP utilise ce proxy.
+Sur les appareils Android Entreprise, vous pouvez configurer un proxy HTTP global pour respecter les standards de navigation web de votre organisation (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Entreprise** pour la plateforme > **Propriétaire de l’appareil > Restrictions de l’appareil** pour le type de profil > **Connectivité**). Une fois la configuration terminée, l’ensemble du trafic HTTP utilisera ce proxy.
 
 Pour configurer cette fonctionnalité et voir tous les paramètres que vous pouvez configurer, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -179,7 +254,7 @@ Au moment de renommer un appareil Windows, vous devez suivre les nouvelles règl
 - 15 caractères ou moins (doit être inférieur ou égal à 63 octets, à l’exclusion de la valeur NULL de fin)
 - Valeur non null ou chaîne vide
 - Caractères ASCII autorisés : Lettres (a-z, A-Z), chiffres (0-9) et traits d’union
-- Caractères Unicode autorisés : caractères >= 0x80, format UTF8 valide, mappage possible à un nom de domaine international (autrement dit, RtlIdnToNameprepUnicode convient ; voir le document RFC 3492)
+- Caractères Unicode autorisés : caractères >= 0x80, format UTF8 valide, mappage possible à un nom de domaine international (autrement dit, RtlIdnToNameprepUnicode convient ; voir la RFC 3492)
 - Les noms ne doivent pas contenir que des chiffres
 - Aucun espace dans le nom
 - Caractères non autorisés : { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)

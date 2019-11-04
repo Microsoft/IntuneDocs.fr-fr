@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 492feb3f2ef5f5bbbc1537d4c60ac12d5fd6bdcd
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 22a957e6df2c7f9126cbe9f22c4f3a96213551d3
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585603"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892575"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune
 
@@ -94,7 +94,7 @@ L’application créée s’affiche dans la liste des applications, où vous pou
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 **Microsoft Edge version 77 ou ultérieure pour Windows 10 :**<br>
-Intune utilise l’extension de gestion Intune pour télécharger et déployer le programme d’installation de Microsoft Edge sur les appareils Windows 10 affectés, puis communique les paramètres de déploiement au programme d’installation de Microsoft Edge, qui télécharge et installe le navigateur Microsoft Edge directement à partir du réseau de distribution de contenu. Reportez-vous aux [prérequis pour l’extension de gestion Intune](~/apps/intune-management-extension.md#prerequisites) et aux bonnes pratiques d’accès à Azure Update Service et au réseau de distribution de contenu pour vous assurer que votre configuration réseau permet aux appareils Windows 10 d’accéder à ces emplacements.
+Intune utilise l’extension de gestion Intune pour télécharger et déployer le programme d’installation de Microsoft Edge sur les appareils Windows 10 affectés, puis communique les paramètres de déploiement au programme d’installation de Microsoft Edge, qui télécharge et installe le navigateur Microsoft Edge directement à partir du réseau de distribution de contenu. Reportez-vous aux [prérequis pour l’extension de gestion Intune](~/apps/intune-management-extension.md#prerequisites) et aux bonnes pratiques d’accès à Azure Update Service et au réseau de distribution de contenu pour vous assurer que votre configuration réseau permet aux appareils Windows 10 d’accéder à ces emplacements. En outre, pour autoriser l’accès aux fichiers d’installation à partir d’un CDN afin d’installer le navigateur, vous devez autoriser l’accès aux points de terminaison Windows Update. Pour plus d’informations, voir [Gérer les points de terminaison de connexion pour Windows 10, version 1809 – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) et [Points de terminaison réseau pour Microsoft Intune](~/fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [Affecter des applications à des groupes](~/apps/apps-deploy.md)

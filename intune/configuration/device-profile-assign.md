@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
-ms.reviewer: heenamac
+ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: a19515e859f5e78f7611bbd10088aea5f7c44650
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550805"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892630"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -69,19 +69,28 @@ Sur les appareils Windows 10, vous pouvez ajouter des **règles d'applicabilit�
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Exclure des groupes d’une affectation de profil
 
-Les profils de configuration d’appareil Intune vous permettent d’exclure des groupes de l’attribution de stratégie.
+Les profils de configuration d’appareils Intune permettent d’inclure des groupes dans l’affectation de stratégies et d’en exclure.
 
-Intune ne prend pas en compte les relations de groupe utilisateur-à-appareil. L’inclusion de groupes d’utilisateurs tout en excluant des groupes d’appareils peut ne pas aboutir aux résultats voulus. Dans les scénarios groupe d’utilisateurs-à-groupe d’utilisateurs et groupe d'appareils-à-groupe d’appareils, l'exclusion prime sur l'inclusion.
+Il est recommandé de créer et d’affecter des stratégies propres aux groupes d’utilisateurs, et d’autres stratégies propres aux groupes d’appareils. Pour plus d’informations sur les groupes, voir [Ajouter des groupes pour organiser les utilisateurs et les appareils](../fundamentals/groups-add.md).
 
-Par exemple, vous pouvez attribuer un profil d’appareil au groupe d’utilisateurs de **tous les utilisateurs de l’entreprise**, mais exclure des membres du groupe d’utilisateurs des **cadres supérieurs**. Étant donné que les deux groupes sont des groupes d'utilisateurs, tous les membres du groupe **Cadres supérieurs** sont exclus de la stratégie, même s'ils sont membres du groupe **Tous les utilisateurs de l'entreprise**.
+Lorsque vous affectez vos stratégies, appuyez-vous sur le tableau suivant pour inclure et exclure des groupes. Les affectations prises en charge sont celles qui sont cochées :
 
-L'inclusion prime sur l'exclusion lorsqu'on utilise des groupes mixtes, par exemple une relation groupe d'utilisateurs-à-groupe d’appareils, ou groupe d'appareils-à-groupe d’utilisateurs.
+![Options prises en charge : inclure des groupes dans une affectation de profil ou les en exclure](./media/device-profile-assign/include-exclude-user-device-groups.png)
 
-Par exemple, vous souhaitez attribuer un profil d’appareil à tous les utilisateurs de votre organisation, à l’exception des bornes. Vous incluez le groupe **Tous les utilisateurs**, mais excluez le groupe **Tous les appareils**. Dans ce cas, tous les utilisateurs et leurs appareils obtiennent la stratégie, même si l’appareil de l’utilisateur se trouve dans le groupe **Tous les appareils**.
+### <a name="what-you-should-know"></a>Bon à savoir
 
-L’exclusion examine uniquement les membres directs du groupe. Elle n’inclut pas les appareils associés à un utilisateur. Toutefois, les appareils qui n’ont pas d’utilisateur n’obtiennent pas la stratégie. Ce comportement se produit car les appareils sans utilisateurs n’ont aucune relation au groupe **Tous les utilisateurs**.
+- L’exclusion est prioritaire sur l’inclusion dans les scénarios « même type de groupe » suivants :
 
-Si vous incluez **Tous les appareils** et que vous excluez **Tous les utilisateurs**, tous les appareils reçoivent alors la stratégie. Dans ce scénario, le but est d’exclure les appareils associés à un utilisateur de cette stratégie. Toutefois, les appareils ne sont pas exclus car l’exclusion ne compare que les membres directs des groupes.
+  - Inclure des groupes d’utilisateurs et exclure des groupes d’utilisateurs
+  - Inclure des groupes d’appareils et exclure des groupes d’appareils
+
+  Par exemple, vous pouvez attribuer un profil d’appareil au groupe d’utilisateurs de **tous les utilisateurs de l’entreprise**, mais exclure des membres du groupe d’utilisateurs des **cadres supérieurs**. Comme les deux groupes sont des groupes d’utilisateurs, **Tous les utilisateurs de l’entreprise** à l’exception de la **Direction** reçoivent la stratégie.
+
+- Intune n’évalue pas les relations entre groupes d’utilisateurs et groupes d’appareils. Si vous affectez des stratégies à des groupes mixtes, les résultats risquent de ne pas correspondre à votre intention ou à vos attentes.
+
+  Supposons par exemple que vous affectiez un profil d’appareil au groupe d’utilisateurs **Tous les utilisateurs**, mais que vous excluiez un groupe d’appareils **Tous les appareils personnels**. Dans cette affectation de stratégie de groupe mixte, **Tous les utilisateurs** reçoivent la stratégie. L’exclusion ne s’applique pas.
+
+  Par conséquent, il n’est pas recommandé d’affecter des stratégies à des groupes mixtes.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

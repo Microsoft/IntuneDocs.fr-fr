@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585010"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999541"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -137,6 +137,10 @@ Intune prend en charge les informations d’identification dérivées de vérifi
 
 Pour plus d’informations sur les informations d’identification dérivées pour les appareils iOS, consultez [Utiliser des informations d’identification dérivées dans Microsoft Intune](~/protect/derived-credentials.md).
 
+## <a name="dark-mode-for-ios-company-portal"></a>Mode sombre pour le Portail d’entreprise iOS
+
+Le Mode sombre est disponible sur le Portail d’entreprise iOS. Les utilisateurs peuvent télécharger des applications de l’entreprise, gérer leurs appareils et bénéficier d’un support informatique dans le modèle de couleurs de leur choix en fonction des paramètres de l’appareil. Le Portail d’entreprise iOS correspondra automatiquement aux paramètres de l’appareil de l’utilisateur final (Mode sombre ou clair). 
+
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Raccourcis clavier du Portail d’entreprise Windows
 
 Les utilisateurs finaux peuvent déclencher des actions de navigation, d’application et d’appareil dans le Portail d’entreprise Windows à l’aide de raccourcis clavier (accélérateurs).
@@ -180,25 +184,24 @@ Les utilisateurs peuvent effectuer des actions sur leurs appareils locaux ou dis
 
 Certaines plateformes et configurations n’autorisent pas les actions d’appareil en libre-service. Le tableau ci-dessous fournit des détails supplémentaires sur les actions en libre-service :
 
-|  | Windows 10<sup> (3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS <sup>(3)</sup><sup>(5)</sup> | Android <sup>(3)</sup> |
+|  | Windows 10<sup> (3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android <sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Mettre hors service | Disponible <sup>(1)</sup> | Disponible<sup>(8)</sup> | Disponible | Disponible <sup>(7)</sup> |
-| Réinitialisation | Disponible | Disponible | NA | Disponible <sup>(7)</sup> |
-| Renommer <sup>(4)</sup> | Disponible | Disponible<sup>(8)</sup> | Disponible | Disponible |
+| Mettre hors service | Disponible <sup>(1)</sup> | Disponible | Disponible | Disponible <sup>(7)</sup> |
+| Réinitialisation | Disponible | Disponible<sup>(5)</sup> | NA | Disponible <sup>(7)</sup> |
+| Renommer <sup>(4)</sup> | Disponible | Disponible | Disponible | Disponible |
 | Synchronisation | Disponible | Disponible | Disponible | Disponible |
 | Verrouillage à distance | Uniquement Windows Phone | Disponible | Disponible | Disponible |
-| Réinitialiser le code secret | Uniquement Windows Phone | Disponible | NA | Disponible <sup>(6)</sup> |
+| Réinitialiser le code secret | Uniquement Windows Phone | Disponible<sup>(8)</sup> | NA | Disponible <sup>(6)</sup> |
 | Récupération de clé | NA | NA | Disponible <sup>(2)</sup> | NA |
-| Mode sombre | NA | Disponible | NA | NA |
 
 <sup>(1)</sup> La **mise hors service** est toujours bloquée sur les appareils Windows rattachés à Azure AD.<br>
 <sup>(2)</sup> La **récupération de clé** pour MacOS est disponible uniquement via le portail web.<br>
 <sup>(3)</sup> Toutes les actions à distance sont désactivées si vous utilisez une inscription du gestionnaire d’inscription d’appareil.<br>
-<sup>(4)</sup> **Renommer** modifie uniquement le nom de l’appareil dans l’application ou le site web du portail d’entreprise, et non sur l’appareil.<br>
-<sup>(5)</sup> La **réinitialisation à distance** n’est pas disponible sur les appareils MacOS.<br>
+<sup>(4)</sup> **Renommer** modifie le nom de l’appareil sur l’application du Portail d’entreprise ou le portail web, et non sur l’appareil lui-même.<br>
+<sup>(5)</sup> **Réinitialiser** n’est pas disponible sur les appareils iOS inscrits par l’utilisateur.<br>
 <sup>(6)</sup> La **réinitialisation du code d’accès** n’est pas prise en charge sur certaines configurations Android et Android Entreprise. Pour plus d’informations, consultez [Réinitialiser ou supprimer un code secret de l’appareil dans Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> La **mise hors service** et la **réinitialisation** ne sont pas disponibles dans les scénarios de propriétaire d’appareils Android Entreprise (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Mettre hors service** (supprimer l’appareil) et **renommer** sont disponibles pour tous les types d’inscription. Les autres actions ne sont pas prises en charge pour l’inscription utilisateur.<br> 
+<sup>(8)</sup> **Réinitialiser le code secret** n’est pas pris en charge sur les appareils iOS inscrits par l’utilisateur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
