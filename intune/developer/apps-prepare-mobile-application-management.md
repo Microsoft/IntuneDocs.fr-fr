@@ -17,20 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1750f789cfac98af998ebbd86b10a4e93a1772a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba1ec201cdb7e44570b53ce831b4e5ae26504973
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490816"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413811"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
-
-[!INCLUDE[both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Vous pouvez configurer vos applications pour utiliser des stratégies de protection des applications à l’aide de l’outil de création de package de restrictions d’application Intune ou du SDK d’application Intune. Utilisez ces informations pour en savoir plus sur ces deux méthodes et quand les utiliser.
 
 ## <a name="intune-app-wrapping-tool"></a>Outil de création de package de restrictions d’application Intune
+
 App Wrapping Tool est utilisé principalement pour les applications métier **internes**. Cet outil est une application en ligne de commande qui crée un wrapper autour de l’application, ce qui permet ensuite à l’application d’être gérée par une stratégie de protection des applications Intune. Lorsque l’application à protéger est fournie par un éditeur de logiciels indépendant (ISV), il est important de savoir si ce dernier prendra toujours en charge l’application une fois incluse dans un wrapper.
 
 Vous n’avez pas besoin du code source pour utiliser l’outil, mais vous avez besoin des informations d’identification de signature. Pour plus d’informations sur les informations d’identification de signature, consultez le [blog Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Pour obtenir la documentation de l’outil de création de package de restrictions d’application, consultez [Android App Wrapping Tool](app-wrapper-prepare-android.md) (Outil de création de package de restrictions d’application Android) et [iOS App Wrapping Tool](app-wrapper-prepare-ios.md) (Outil de création de package de restrictions d’application iOS).
@@ -40,6 +39,7 @@ L’outil de création de package de restrictions d’application ne prend **pas
 Pour plus d’informations sur l’outil de création de package de restrictions d’application pour les stratégies de protection des applications sur des appareils qui ne sont pas inscrits dans Intune, consultez [Protéger les données et applications métier sur des appareils non inscrits dans Microsoft Intune](../apps/apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Raisons d’utiliser l’outil de création de package de restrictions d’application
+
 * Votre application n’a pas de fonctionnalités de protection des données intégrées
 * Votre application est simple
 * Votre application est déployée en interne
@@ -55,11 +55,13 @@ Pour plus d’informations sur l’outil de création de package de restrictions
 |**Android**|Non : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Oui|
 
 ## <a name="intune-app-sdk"></a>Kit SDK d’application Intune
+
 Le SDK d’application est conçu principalement pour les clients qui ont des applications dans l’Apple App Store ou dans le Google Play Store, et qui veulent gérer ces applications avec Intune. Cependant, toute application peut tirer parti de l’intégration du SDK, même s’il s’agit d’applications métier.
 
 Pour en savoir plus sur le SDK, consultez sa [présentation](app-sdk.md). Pour commencer à utiliser le SDK, consultez [Prise en main du Kit SDK d’application Microsoft Intune](app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Raisons d’utiliser le SDK
+
 * Votre application n’a pas de fonctionnalités de protection des données intégrées
 * Votre application est complexe et comprend de nombreuses expériences
 * Votre application est déployée dans un App Store public tel que Google Play ou l’App Store d’Apple
@@ -74,10 +76,12 @@ Pour en savoir plus sur le SDK, consultez sa [présentation](app-sdk.md). Pour c
 |**iOS**|Oui : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Non|
 |**Android**| Oui : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Non|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Vous n’utilisez pas une plateforme de développement d’applications listée ci-dessus ? 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Vous n’utilisez pas une plateforme de développement d’applications listée ci-dessus ?
+
 L’équipe de développement SDK Intune teste et maintient activement la prise en charge des applications générées avec les plateformes Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms et Cordova natives. Bien que certains clients aient réussi l’intégration du SDK Intune avec d’autres plateformes comme React Native et NativeScript, nous ne fournissons pas de conseils explicites ou de plug-ins pour les développeurs d’applications utilisant d’autres plateformes que celles que nous prenons en charge. 
 
 ## <a name="feature-comparison"></a>Comparaison des fonctionnalités
+
 Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK et pour l’outil de création de package de restrictions d’application.
 
 > [!NOTE]

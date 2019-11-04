@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785521"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414692"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -167,7 +167,33 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   iOS offre une sécurité intégrée qui peut avoir un impact sur ce paramètre. Par exemple, iOS peut retarder le déclenchement de la stratégie en fonction du nombre d’échecs de connexion. Il peut également envisager d’entrer plusieurs fois le même code secret comme une seule tentative. Le [Guide de sécurité iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) d’Apple (qui ouvre le site Web d’Apple) est une bonne ressource et fournit des détails plus spécifiques sur les codes secrets.
   
 - **Nombre maximal de minutes après verrouillage de l’écran avant de demander un mot de passe**<sup>1</sup> : spécifiez la durée pendant laquelle l’appareil reste inactif avant que l’utilisateur doive entrer à nouveau son mot de passe. Si la durée que vous entrez est supérieure à celle actuellement définie sur l’appareil, celui-ci ignore la valeur saisie. Option prise en charge sur les appareils iOS 8.0 et versions ultérieures.
-- **Nombre maximal de minutes d'inactivité avant le verrouillage de l'appareil**<sup>1</sup> : entrez le nombre maximal de minutes d’inactivité autorisée sur l’appareil avant le verrouillage de l’écran. Si la durée que vous entrez est supérieure à celle actuellement définie sur l’appareil, celui-ci ignore la valeur saisie. Lorsque la valeur est définie sur **immédiatement**, l’écran se verrouille en fonction de la durée minimale de l’appareil. Sur iPhone, il est de 30 secondes. Sur iPad, il s’agit de deux minutes.
+
+- **Nombre maximal de minutes d'inactivité avant le verrouillage de l'appareil**<sup>1</sup> : entrez le nombre maximal de minutes d’inactivité autorisée sur l’appareil avant le verrouillage de l’écran.
+
+  **options iOS**:  
+
+  - **Non configuré** (par défaut) : Intune ne touche pas ce paramètre.
+  - **Immédiatement**: verrous d’écran après 30 secondes d’inactivité.
+  - **1**: verrouillage de l’écran après 1 minute d’inactivité.
+  - **2**: verrouillages de l’écran après 2 minutes d’inactivité.
+  - **3**: verrouillages de l’écran après 3 minutes d’inactivité.
+  - **4**: verrouillages de l’écran après 4 minutes d’inactivité.
+  - **5**: verrouillages de l’écran après 5 minutes d’inactivité.
+    
+  **options ipados**:  
+
+  - **Non configuré** (par défaut) : Intune ne touche pas ce paramètre.
+  - **Immédiatement**: verrous d’écran après 2 minutes d’inactivité.
+  - **2**: verrouillages de l’écran après 2 minutes d’inactivité.
+  - **5**: verrouillages de l’écran après 5 minutes d’inactivité.
+  - **10**: verrouillage de l’écran après 10 minutes d’inactivité.
+  - **15**: verrouillages de l’écran après 15 minutes d’inactivité.
+
+  Si une valeur ne s’applique pas à iOS ou iPados, Apple utilise la valeur la *plus faible la plus* proche. Par exemple, si vous entrez `4` minutes, les appareils iPados utilisent `2` minutes. Si vous entrez `10` minutes, les appareils iOS utilisent `5` minutes. Il s’agit d’une limitation Apple.
+  
+  > [!NOTE]
+  > L’interface utilisateur Intune pour ce paramètre ne sépare pas les valeurs iOS et iPados prises en charge. L’interface utilisateur peut être mise à jour dans une version ultérieure.
+
 - **Expiration du mot de passe (jours)** : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil.
 - **Empêcher la réutilisation des mots de passe précédents** : entrez le nombre de nouveaux mots de passe devant être utilisés avant de pouvoir réutiliser un ancien mot de passe.
 - **Touch ID et face ID Unlock**: choisissez **bloquer** pour empêcher l’utilisation d’une empreinte digitale ou d’un visage pour déverrouiller l’appareil. L’option **Non configuré** autorise l’utilisateur à déverrouiller l’appareil à l’aide de ces méthodes.

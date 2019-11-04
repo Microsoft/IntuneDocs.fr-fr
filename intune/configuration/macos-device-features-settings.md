@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
-ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
+ms.openlocfilehash: 3d0cff4ad624d35843f3388535b60549d1893eeb
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143163"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -129,7 +129,7 @@ Cette fonctionnalité s’applique à :
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription 
 
-- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Lorsque vous enregistrez le profil d’extension d’application SSO, vous ne pouvez pas modifier le type d’extension d’application SSO. Les options disponibles sont les suivantes :
+- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Les options disponibles sont les suivantes :
 
   - **Non configuré**: les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application SSO, basculez le type d’extension de l’application SSO de **Kerberos** ou des **informations d’identification** sur **non configuré**.
   - **Informations d’identification**: utilisez une extension d’application d’informations d’identification générique et personnalisable pour utiliser l’authentification unique. Vérifiez que vous connaissez l’ID d’extension et l’ID d’équipe pour l’extension de l’application SSO de votre organisation.  
@@ -143,7 +143,7 @@ Cette fonctionnalité s’applique à :
 
   Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (qui ouvre le site Web d’Apple).
 
-- **Domaine**: entrez le nom de votre domaine Kerberos. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
+- **Domaine**: entrez le nom de votre domaine d’authentification. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
 - **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` est le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
 
   - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans n’importe quel profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.

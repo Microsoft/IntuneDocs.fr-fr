@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143047"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -42,7 +42,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
   - **Accorder automatiquement** : les autorisations sont automatiquement accordées.
   - **Refuser automatiquement** : les autorisations sont automatiquement refusées.
 - **Changements de date et d'heure** : choisissez **Bloquer** pour empêcher les utilisateurs de régler manuellement la date et l’heure. L’option **Non configuré** autorise les utilisateurs à régler la date et l’heure sur l’appareil.
-- **Changements du volume** : choisissez **Bloquer** pour empêcher les utilisateurs de changer le volume de l’appareil. L’option **Non configuré** autorise l’utilisation des paramètres de volume sur l’appareil.
+- **Volume changes**: **blocage** empêche les utilisateurs de modifier le volume de l’appareil et le volume maître est également muet. L’option **Non configuré** autorise l’utilisation des paramètres de volume sur l’appareil.
 - **Réinitialisation aux paramètres d’usine** : choisissez **Bloquer** pour empêcher les utilisateurs de réinitialiser l’appareil aux paramètres d’usine. L’option **Non configuré** permet aux utilisateurs d’utiliser ce paramètre sur l’appareil.
 - **Démarrage sans échec** : choisissez **Bloquer** pour empêcher les utilisateurs de redémarrer l’appareil en mode sans échec. L’option **Non configuré** autorise les utilisateurs à redémarrer l’appareil en mode sans échec.
 - **Barre d’état** : choisissez **Bloquer** pour empêcher les utilisateurs d’accéder à la barre d’état, notamment aux notifications et aux paramètres rapides. L’option **Non configuré** autorise les utilisateurs à accéder à la barre d’état.

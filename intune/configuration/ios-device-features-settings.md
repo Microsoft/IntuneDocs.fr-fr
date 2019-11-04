@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/28/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3baa1972593c5d836c49905b59e9a28932329fbe
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e3e0ea523d71ff036f1f23c9436c65e105328d8b
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057642"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS et iPadOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
 
@@ -266,7 +266,7 @@ Cette fonctionnalité s’applique à :
   - **Sites web spécifiques uniquement** (pour le navigateur web Safari uniquement) : ces URL sont ajoutées aux signets du navigateur Safari. L’utilisateur est **uniquement** autorisé à accéder à ces sites ; il ne peut ouvrir aucun autre site. Utilisez cette option uniquement si vous connaissez la liste exacte des URL auxquelles les utilisateurs peuvent accéder.
 
     - **URL** : entrez l’URL du site web que vous souhaitez autoriser. Par exemple, entrez `https://www.contoso.com`.
-    - **Chemin de signet** : entrez le chemin où stocker le signet. Par exemple, entrez `/Contoso/Business Apps`. Si vous n’ajoutez pas de chemin, le signet est ajouté au dossier de signets par défaut sur l’appareil.
+    - **Chemin du signet**: Apple a modifié ce paramètre. Tous les signets sont placés dans le dossier **sites approuvés** . Les signets n’entrent pas dans le chemin de signet que vous entrez.
     - **Titre** : entrez un titre descriptif pour le signet.
 
     Si vous n’entrez pas d’URL, les utilisateurs finaux ne pourront accéder à aucun site web à l’exception de `microsoft.com`, `microsoft.net` et `apple.com`. Ces URL sont automatiquement autorisées par Intune.
@@ -280,7 +280,7 @@ Cette fonctionnalité s’applique à :
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
 
-- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Lorsque vous enregistrez le profil d’extension d’application SSO, vous ne pouvez pas modifier le type d’extension d’application SSO. Les options disponibles sont les suivantes :
+- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Les options disponibles sont les suivantes :
 
   - **Non configuré**: les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application, vous pouvez basculer le type d’extension de l’application SSO de **Kerberos** ou des **informations d’identification** sur **non configuré**.
   - **Informations d’identification**: utilisez une extension d’application d’informations d’identification générique et personnalisable pour effectuer l’authentification unique. Vérifiez que vous connaissez l’ID d’extension de l’extension d’application SSO de votre organisation.
