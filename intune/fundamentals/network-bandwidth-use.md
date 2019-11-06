@@ -18,20 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a3ecf2872832af6199620863a05b4275731db5c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0507d607bfac6c084f1ce0b1f59d7474810ec8b7
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505235"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415107"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Configuration requise pour le réseau Intune et bande passante
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Vous pouvez utiliser ces informations pour comprendre les besoins en bande passante de vos déploiements Intune.
 
 ## <a name="average-network-traffic"></a>Trafic réseau moyen
+
 Ce tableau répertorie la taille et la fréquence approximatives du contenu commun qui transite sur le réseau pour chaque client.
 
 > [!NOTE]
@@ -53,9 +52,11 @@ Ce tableau répertorie la taille et la fréquence approximatives du contenu comm
 |Distribution de logiciels|Varie<br /><br />La taille varie selon les logiciels que vous déployez.|**Varie**<br /><br />Dépend du moment auquel vous déployez les logiciels.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Possibilités de réduction de la bande passante réseau
+
 Vous pouvez utiliser une ou plusieurs des méthodes suivantes pour réduire l’utilisation de la bande passante réseau par les clients Intune.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Utiliser un serveur proxy pour mettre en cache les requêtes de contenu
+
 Un serveur proxy peut mettre en cache du contenu pour réduire les téléchargements en double et la bande passante réseau utilisée par le contenu Internet.
 
 Un serveur proxy de mise en cache qui reçoit des requêtes de contenu en provenance de clients peut récupérer ce contenu et mettre en cache les téléchargements et les réponses web. Le serveur utilise les données mises en cache pour répondre aux requêtes ultérieures des clients.
@@ -74,6 +75,7 @@ Voici les paramètres par défaut à utiliser pour un serveur proxy mettant en c
 Pour plus d'informations sur l'utilisation d'un serveur proxy pour mettre en cache du contenu, consultez la documentation de votre solution de serveur proxy.
 
 ### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Utiliser le service de transfert intelligent en arrière-plan (BIST) sur les ordinateurs
+
 Pendant les périodes que vous configurez, vous pouvez utiliser BITS sur un ordinateur Windows afin de réduire la bande passante réseau. Vous pouvez configurer une stratégie BITS dans la page **Bande passante réseau** de la stratégie de l’agent Intune.
 
 > [!NOTE]
@@ -82,14 +84,15 @@ Pendant les périodes que vous configurez, vous pouvez utiliser BITS sur un ordi
 Pour en savoir plus sur BITS et les ordinateurs Windows, consultez [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) (Service de transfert intelligent en arrière-plan) dans la bibliothèque TechNet.
 
 ### <a name="delivery-optimization"></a>Optimisation de la distribution
+
 L’optimisation de la distribution vous permet d’utiliser Intune pour réduire la consommation de bande passante quand vos appareils Windows 10 téléchargent des applications et des mises à jour. Grâce à l’utilisation d’un cache distribué en libre-emploi, les téléchargements peuvent être extraits de serveurs traditionnels et de sources secondaires (comme les peers réseau).
 
 Pour afficher la liste complète des versions de Windows 10 et des types de contenu pris en charge par l’optimisation de la distribution, consultez [l’article Optimisation de la distribution pour les mises à jour de Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
 Vous pouvez [configurer l’optimisation de la distribution](../configuration/delivery-optimization-settings.md) dans le cadre de vos profils de configuration d’appareil.
 
-
 ### <a name="use-branchcache-on-computers"></a>Utiliser BranchCache sur les ordinateurs
+
 Les clients Intune peuvent utiliser BranchCache pour réduire le trafic WAN. Les systèmes d’exploitation suivants prennent en charge BranchCache :
 
 - Windows 7

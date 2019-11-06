@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53425b56985cbafb4033b11df54597959c0b0d59
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ef958468feb7e36f894537989675977e1d96bf8c
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499707"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414737"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Vue d’ensemble du cycle de vie des applications dans Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Le cycle de vie des applications Microsoft Intune commence quand une application est ajoutée et évolue en différentes phases jusqu’à sa suppression. En comprenant ces phases, vous disposerez de toutes les informations nécessaires pour commencer à gérer des applications dans Intune.
 
@@ -34,7 +32,7 @@ Le cycle de vie des applications Microsoft Intune commence quand une application
 
 ## <a name="add"></a>Ajouter
 
-La première étape du déploiement d’applications consiste à ajouter celles que vous voulez gérer et affecter dans Intune. Il existe certes différents types d’applications avec lesquels vous pouvez travailler, mais les procédures de base sont les mêmes. Avec Intune, vous pouvez ajouter différents types d’applications, notamment des applications écrites en interne (applications métier), des applications du Windows Store, des applications intégrées et des applications sur le web. Pour plus d’informations sur chacun de ces types d’application, consultez [Guide pratique pour ajouter une application à Microsoft Intune](apps-add.md). 
+La première étape du déploiement d’applications consiste à ajouter celles que vous voulez gérer et affecter dans Intune. Il existe certes différents types d’applications avec lesquels vous pouvez travailler, mais les procédures de base sont les mêmes. Avec Intune, vous pouvez ajouter différents types d’applications, notamment des applications écrites en interne (applications métier), des applications du Windows Store, des applications intégrées et des applications sur le web. Pour plus d’informations sur chacun de ces types d’application, consultez [Guide pratique pour ajouter une application à Microsoft Intune](apps-add.md).
 
 ## <a name="deploy"></a>Déploiement
 
@@ -43,12 +41,14 @@ Une fois que vous avez ajouté l’application à Intune, vous pouvez [l’affec
 ## <a name="configure"></a>Configurer
 
 Dans le cadre du cycle de vie des applications, des nouvelles versions des applications sont publiées régulièrement. Intune propose des outils permettant de facilement [mettre à jour les applications](apps-add.md) que vous avez déployées vers une version plus récente. En outre, vous pouvez configurer des fonctionnalités supplémentaires pour certaines applications, comme par exemple :
+
 - [des stratégies de configuration des applications iOS](app-configuration-policies-use-ios.md), permettant de définir des paramètres pour des applications compatibles iOS utilisées lorsque l’application est exécutée. Par exemple, une application peut nécessiter des paramètres de marque spécifiques ou le nom d’un serveur auquel elle doit se connecter.
 - [des stratégies de navigateur gérées](app-configuration-managed-browser.md), permettant de configurer les paramètres du navigateur Intune géré qui remplace le navigateur de l’appareil par défaut et vous permet de limiter les sites web auxquels vos utilisateurs peuvent accéder.
 
 ## <a name="protect"></a>Protéger
 
 Intune propose différentes manières de protéger les données dans vos applications. Les principales méthodes sont :
+
 - L’[accès conditionnel](../protect/conditional-access.md), qui contrôle l’accès à la messagerie et aux autres services en fonction des conditions que vous spécifiez. Les conditions incluent les types d’appareils ou la conformité à l’une des [stratégies de conformité des appareils](../protect/device-compliance-get-started.md) que vous avez déployées.
 - Les [stratégies de protection des applications](app-protection-policy.md) fonctionnent avec différentes applications pour protéger les données d’entreprise que ces dernières utilisent. Par exemple, vous pouvez limiter la copie de données entre des applications non gérées et des applications que vous gérez, ou vous pouvez empêcher les applications de s’exécuter sur des appareils jailbroken ou rootés.
 

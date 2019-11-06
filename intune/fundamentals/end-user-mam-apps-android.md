@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe0aa4797de32936e2be7def4aeb670c78a4945
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 946ce31c613ddb3c7dd2bf4dfde7561dd56e4ca0
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502902"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414057"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Ce qui se passe quand votre application Android est gérée par des stratégies de protection d'application
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Cet article décrit l’expérience utilisateur dans les applications associées à des stratégies de protection d’application. Les stratégies de protection d’application s’appliquent uniquement quand les applications sont utilisées dans un contexte professionnel, par exemple, quand l’utilisateur accède à des applications à l’aide d’un compte professionnel ou accède à des fichiers stockés dans un emplacement OneDrive Entreprise.
 
@@ -37,7 +35,6 @@ L’application Portail d’entreprise est requise pour toutes les applications 
 Pour les appareils qui ne sont pas inscrits dans Intune, l’application Portail d’entreprise doit être installée sur l’appareil. Toutefois, l’utilisateur n’a pas besoin de lancer l’application Portail d’entreprise ou de s’y connecter pour utiliser les applications gérées par les stratégies de protection d’application.
 
 L’application Portail d’entreprise est un moyen pour Intune de partager des données dans un emplacement sécurisé. Ainsi, l’application Portail d’entreprise est obligatoire pour toutes les applications qui sont associés à des stratégies de protection d’application, même si l’appareil n’est pas inscrit dans Intune.
-
 
 ## <a name="use-apps-with-multi-identity-support"></a>Utiliser des applications avec prise en charge de plusieurs identités
 
@@ -50,19 +47,24 @@ Par exemple, l’utilisateur reçoit une invite de code confidentiel quand il ac
 Les applications avec plusieurs identités permettent aux utilisateurs d’ajouter plusieurs comptes.  Intune APP prend en charge un seul compte géré.  Intune APP ne limite pas le nombre de comptes non gérés.
 
 Quand une application contient un compte géré :
+
 * Si un utilisateur tente d’ajouter un deuxième compte géré, il est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
 * Si l’administrateur informatique ajoute une stratégie à un deuxième compte existant, l’utilisateur est invité à sélectionner le compte géré à utiliser.  L’autre compte est supprimé.
 
 Lisez l’exemple de scénario suivant pour mieux comprendre le comportement quand il existe plusieurs comptes d’utilisateur.
 
 L’utilisateur A travaille pour deux sociétés : **Société X** et **Société Y**. L’utilisateur A a un compte professionnel pour chaque société, et tous deux utilisent Intune pour déployer des stratégies de protection d'application. **Société X** déploie des stratégies de protection d'application **avant** **Société Y**. Le compte associé à **Société X** obtient la stratégie de protection d’application, contrairement au compte associé à Société Y. Si vous souhaitez que le compte d’utilisateur associé à Société Y soit géré par les stratégies de protection d’application, vous devez supprimer le compte d’utilisateur associé à Société X et ajouter le compte associé à Société Y.
+
 ### <a name="add-a-second-account"></a>Ajouter un deuxième compte
+
 #### <a name="android"></a>Android
+
 Sur un appareil Android, un message de blocage peut s’afficher avec des instructions permettant de supprimer le compte existant et d’en ajouter un nouveau.  Pour supprimer le compte existant, accédez à **Paramètres &gt;Général &gt; Gestionnaire d’applications &gt;Portail d’entreprise**. Ensuite, choisissez **Effacer les données**.
 
 ![Capture d’écran du message d’erreur et des instructions pour supprimer le compte](./media/end-user-mam-apps-android/Android_SwitchUser.png)
 
 ## <a name="view-media-files-with-the-azure-information-protection-app"></a>Afficher des fichiers multimédias avec l’application Azure Information Protection
+
 Pour afficher les fichiers image, AV et PDF d’entreprise sur des appareils Android, utilisez l’[application Azure Information Protection](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) (anciennement « application de partage Microsoft Rights Management »).
 
 Vous pouvez télécharger cette application à partir de Google Play Store.  
@@ -73,7 +75,6 @@ Les types de fichiers suivants sont pris en charge :
 * **Vidéo :** H.263, H.264 AVC, MPEG-4 SP, VP8
 * **Image :** .jpg, .pjpg, .png, .ppng, .bmp, .pbmp, .gif, .pgif, .jpeg, .pjpeg
 * **Documents :** PDF, PPDF
-
 
 |**pfile**|
 |----|

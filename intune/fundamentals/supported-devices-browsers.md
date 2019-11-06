@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bd9fe52bcaa6295d452ade59d6c3c32e1e81a67
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999678"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415065"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systèmes d’exploitation et navigateurs pris en charge dans Intune
 
@@ -37,14 +37,14 @@ Pour plus d’informations sur la prise en charge d’un fournisseur de services
 
 Vous pouvez gérer des appareils qui exécutent les systèmes d’exploitation suivants :
 
-[!INCLUDE [mdm-supported-devices](../../intune-classic/includes/mdm-supported-devices.md)]
+[!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Appareils Samsung Knox Standard pris en charge
 
 Pour éviter les erreurs d’activation Knox qui empêchent l’inscription MDM, l’application Portail d’entreprise tente l’activation de Samsung Knox lors de l’inscription à MDM uniquement si l’appareil figure dans la [liste des appareils Knox pris en charge](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Les appareils qui ne prennent pas en charge l’activation de Samsung Knox s’inscrivent en tant qu’appareils Android standard. Un appareil Samsung peut avoir des numéros de modèles qui prennent en charge Knox, alors que d’autres ne le prennent pas en charge. Vérifiez la compatibilité de Knox auprès du revendeur de votre appareil avant d’acheter et de déployer des appareils Samsung.
 
 > [!NOTE]
-> L’inscription des appareils Samsung Knox peut vous obliger à [activer l’accès aux serveurs de Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+> L’inscription des appareils Samsung Knox peut vous obliger à [activer l’accès aux serveurs de Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers).
 
 Les modèles d’appareils Samsung figurant dans la liste suivante ne prennent pas en charge Knox. Ils sont inscrits comme appareils Android natifs par l’application Portail d’entreprise pour Android :
 
@@ -85,18 +85,17 @@ Les modèles d’appareils Samsung figurant dans la liste suivante ne prennent p
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-
 ### <a name="windows-pc-software-client"></a>Logiciel client pour PC Windows
 
-Vous pouvez déployer et installer un [logiciel client Intune](../manage-windows-pcs-with-microsoft-intune.md) sur les PC Windows en guise d’alternative à l’inscription. Cette fonctionnalité est uniquement disponible dans le portail classique Intune. Vous pouvez utiliser le logiciel client Intune pour gérer des PC Windows 7 et versions ultérieures, à l’exception de Windows 10 Édition familiale.
+Vous pouvez déployer et installer un [logiciel client Intune](manage-windows-pcs-with-microsoft-intune.md) sur les PC Windows en guise d’alternative à l’inscription. Cette fonctionnalité est uniquement disponible dans le portail classique Intune. Vous pouvez utiliser le logiciel client Intune pour gérer des PC Windows 7 et versions ultérieures, à l’exception de Windows 10 Édition familiale.
 
 > [!Note]
 > Microsoft a annoncé que le support de Windows 7 prendra fin le 14 janvier 2020. À cette date, Intune cessera également de prendre en charge les appareils exécutant Windows 7.
-
-> Pour plus d’informations, consultez [Calendrier des modifications Intune : la prise en charge de Windows 7 touche à sa fin](https://docs.microsoft.com/en-us/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
-
+>
+> Pour plus d’informations, consultez [Calendrier des modifications Intune : la prise en charge de Windows 7 touche à sa fin](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
+>
 > Microsoft Intune cessera le support de la console Intune basée sur Silverlight le 15 octobre 2020. Cette mise hors service s’accompagne de la fin du support pour le client logiciel PC configuré avec la console Silverlight (également appelé agent PC)
-
+>
 > Pour plus d’informations, consultez [Fin du support pour la console d’administration basée sur Silverlight par Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249)
 
 <!--  ### Exchange ActiveSync management
@@ -107,24 +106,23 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Différentes tâches administratives vous obligent à utiliser l’un des sites web d’administration suivants.
 
-- [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Portail Azure](https://portal.azure.com/)
 
 Les navigateurs suivants sont pris en charge pour ces portails :
+
 - Microsoft Edge (dernière version)
 - Microsoft Internet Explorer 11
 - Safari (dernière version, Mac uniquement)
 - Chrome (dernière version)
 - Firefox (dernière version)
 
-
-
-
 ### <a name="intune-classic-portal"></a>Portail classique Intune
 
 Le portail classique Intune est utilisé uniquement pour gérer les appareils inscrits auprès du client logiciel Intune PC (https://manage.microsoft.com). Le portail classique Intune nécessite la prise en charge du navigateur Silverlight.
 
 Les navigateurs Silverlight suivants prennent en charge la console Intune :
+
 - Internet Explorer 10 ou version ultérieure
 - Google Chrome (versions antérieures à la version 42)
 - Mozilla Firefox avec Silverlight activé (versions antérieures à 56)

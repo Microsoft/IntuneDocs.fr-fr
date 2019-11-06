@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a6b427552e545421e329b900833c889e67bf35
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143171"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
@@ -191,7 +191,6 @@ Vous trouverez ci-dessous des problèmes connus.
 - La désactivation du profil ESP ne supprime pas la stratégie ESP des appareils, et les utilisateurs ont toujours la protection ESP lorsqu’ils se connectent à l’appareil pour la première fois. La stratégie n’est pas supprimée lorsque le profil ESP est désactivé. Vous devez déployer OMA-URI pour désactiver la protection ESP. Voir ci-dessus pour obtenir des instructions sur la façon de désactiver ESP avec OMA-URI. 
 - Un redémarrage en attente entraînera toujours un délai d’expiration. Le délai d'expiration se produit car l’appareil doit être redémarré. Le redémarrage est nécessaire pour permettre l’exécution de l’objet suivi sur la page d’état d’inscription. Un redémarrage entraîne la fermeture de la page d’état d’inscription et, après le redémarrage, l’appareil n’entre pas dans la configuration du compte après le redémarrage.  Envisagez de ne pas exiger un redémarrage avec l’installation de l’application. 
 - Un redémarrage lors de la configuration de l’appareil force l’utilisateur à entrer ses informations d’identification avant de passer à la phase de configuration du compte. Les informations d’identification de l’utilisateur ne sont pas conservées lors du redémarrage. Demandez à l’utilisateur d’entrer ses informations d’identification avant que la page d’état d’inscription puisse continuer. 
-- Les certificats SCEP avec des stratégies Windows Hello Entreprise entraînent un délai d’expiration, car l’utilisateur ne peut pas terminer la configuration du code confidentiel Hello pour permettre l’installation simultanée du certificat SCEP.  Aucune solution de contournement. La date de correction estimée est l’été 2019. 
 - La page d’état d’inscription expirera toujours pendant l’inscription d’un compte professionnel ou scolaire sur les versions Windows 10 inférieures à 1903. La page d’état d’inscription attend la fin de l’inscription d’Azure AD. Le problème est résolu dans Windows 10 version 1903 et les versions ultérieures.  
 - Le déploiement Autopilot Azure AD Hybride avec ESP prend plus de temps que le délai d’expiration défini dans le profil ESP. Sur les déploiements Autopilot Azure AD Hybride, le protocole ESP prend 40 minutes de plus que la valeur définie dans le profil ESP. Ce délai permet au connecteur AD local de créer le nouvel enregistrement d’appareil pour Azure AD. 
 - La page d’ouverture de session Windows n’est pas préremplie avec le nom d’utilisateur en mode piloté par l’utilisateur AutoPilot. En cas de redémarrage au cours de la phase de configuration de l’appareil d’ESP :

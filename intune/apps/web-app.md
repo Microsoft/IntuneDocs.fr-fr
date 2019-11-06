@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6678b7c3519328623d9c0035c725af3877a36ba8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507058"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592053"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Ajouter des applications web à Microsoft Intune
 
@@ -36,7 +36,7 @@ Avant de pouvoir gérer et attribuer une application pour vos utilisateurs, ajou
 Intune crée un raccourci vers l’application web sur l’appareil de l’utilisateur. Pour les appareils iOS, un raccourci vers l’application web est ajouté à l’écran d’accueil. Pour les appareils Android, un raccourci vers l’application web est ajouté au widget de portail d’entreprise Intune et le widget doit être épinglé manuellement par l’utilisateur. Pour les appareils Windows, un raccourci vers l’application web est placé dans le menu Démarrer.
 
 > [!Note]
-> Les applications web ne sont pas prises en charge sur les appareils avec profil professionnel Android. Un navigateur doit être installé sur le périphérique de l’utilisateur pour lancer les applications web.
+> Un navigateur doit être installé sur le périphérique de l’utilisateur pour lancer les applications web.
 
 ## <a name="add-a-web-app-to-intune"></a>Ajouter une application web à Intune
 Pour ajouter une application à Intune comme raccourci vers une application sur le web, effectuez les étapes suivantes :

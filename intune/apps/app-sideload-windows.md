@@ -16,16 +16,14 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a89392dabe695cf49e989351cef822852676916
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7500000f8a34120e69c27ce01a6cfdb85f447abe
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507382"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414699"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signer des applications métier afin de pouvoir les déployer sur des appareils Windows avec Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 En tant qu’administrateur Intune, vous pouvez déployer des applications métier sur des appareils Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, notamment l’application Portail d’entreprise. Pour déployer des applications .appx sur Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, vous pouvez utiliser un certificat de signature de code d’une autorité de certification publique déjà approuvée par votre propre autorité de certificat.
 
@@ -53,6 +51,7 @@ Si vous déployez l’application en fonction des besoins des utilisateurs ou de
 ### <a name="upload-the-code-signing-certificate"></a>Charger le certificat de signature de code
 
 Si votre appareil Windows 10 n’approuve pas encore l’autorité de certification, après avoir signé votre package appx et l’avoir téléchargé vers le service Intune, vous devez télécharger le certificat de signature de code dans le portail Intune :
+
 1. Cliquez sur Applications clientes
 2. Cliquez sur Certificats d’entreprise Windows
 3. Sélectionnez « Sélectionner un fichier » dans le certificat de signature de code
@@ -77,6 +76,7 @@ Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 Si la période du certificat a expiré, les fichiers appx peuvent stopper son lancement. Vous devez obtenir un nouveau fichier .cer et suivre les instructions permettant de signer le code de chaque fichier appx déployé et de charger à nouveau tous les fichiers appx et le fichier .cer mis à jour dans la section de certificats d’entreprise Windows du portail Intune.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Déployer manuellement l’application Portail d’entreprise Windows 10
+
 Si vous ne voulez pas donner accès au Microsoft Store, vous pouvez déployer manuellement l’application Portail d’entreprise Windows 10 directement à partir d’Intune, même si vous n’avez pas encore intégré Intune avec le Microsoft Store pour Entreprises (MSFB). Une alternative possible si vous avez intégré consiste à déployer l’application Portail d’entreprise à l’aide de [déployer des applications avec MSFB](store-apps-windows.md).
 
  > [!NOTE]
@@ -100,9 +100,11 @@ Si vous ne voulez pas donner accès au Microsoft Store, vous pouvez déployer ma
 Pour plus d’informations sur la façon dont Intune gère les dépendances pour les applications universelles, consultez [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Déploiement d’un appxbundle avec dépendances via Microsoft Intune MDM).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Comment modifier le portail d’entreprise sur les appareils de mes utilisateurs si ceux-ci ont déjà installé les applications plus anciennes à partir du Windows Store ?
-Si vos utilisateurs ont déjà installé les applications Portail d’entreprise Windows 8.1 ou Windows Phone 8.1 à partir du Windows Store, ils doivent être automatiquement mis à jour vers la nouvelle version sans que l’utilisateur ou vous-même n’ayez à intervenir. Si la mise à jour ne se produit pas, demandez à vos utilisateurs de vérifier s’ils ont activé les mises à jour automatiques pour les applications du Windows Store sur leurs appareils.   
+
+Si vos utilisateurs ont déjà installé les applications Portail d’entreprise Windows 8.1 ou Windows Phone 8.1 à partir du Windows Store, ils doivent être automatiquement mis à jour vers la nouvelle version sans que l’utilisateur ou vous-même n’ayez à intervenir. Si la mise à jour ne se produit pas, demandez à vos utilisateurs de vérifier s’ils ont activé les mises à jour automatiques pour les applications du Windows Store sur leurs appareils.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Comment mettre à niveau mon application de portail d’entreprise Windows 8.1 chargée indépendamment vers l’application Portail d’entreprise Windows 10 ?
+
 Nous vous recommandons de supprimer le déploiement de l’application Portail d’entreprise Windows 8.1 en définissant l’action de déploiement sur « Désinstaller ». Une fois cette opération effectuée, l’application Portail d’entreprise Windows 10 peut être déployée à l’aide d’une des options ci-dessus.  
 
 Si vous avez besoin de charger indépendamment l’application et de déployer le portail d’entreprise Windows 8.1 sans le signer avec le certificat Symantec, suivez les étapes de la section Déployer directement via Intune ci-dessus pour terminer la mise à niveau.
@@ -110,6 +112,7 @@ Si vous avez besoin de charger indépendamment l’application et de déployer l
 Si vous souhaitez charger indépendamment l’application et que vous avez signé et déployé le portail d’entreprise Windows 8.1 avec le certificat de signature de code Symantec, suivez les étapes décrites dans la section ci-dessous.  
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Comment mettre à niveau mon application Portail d’entreprise Windows 8.1 ou Windows Phone 8.1 chargée indépendamment et signée vers l’application Portail d’entreprise Windows 10 ?
+
 Nous vous recommandons de supprimer le déploiement existant de l’application Portail d’entreprise Windows Phone 8.1 ou Windows 8.1 en définissant l’action de déploiement sur « Désinstaller ». Une fois cette opération effectuée, l’application Portail d’entreprise Windows 10 peut être déployée normalement.  
 
 Sinon, l’application Portail d’entreprise Windows 10 doit être mise à jour et signée de façon adéquate afin de respecter la procédure de mise à niveau.  
