@@ -1,11 +1,11 @@
 ---
-title: Inscrire le profil professionnel Android dans Portail d’entreprise Intune | Microsoft Docs
-description: Comment créer un profil professionnel et inscrire un appareil dans Portail d’entreprise Intune.
+title: Inscrire un profil professionnel Android avec le portail d’entreprise Intune | Microsoft Docs
+description: Comment créer un profil professionnel et inscrire un appareil avec Portail d’entreprise Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/18/2019
+ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50e4bde49f671a7f828ddb982fa18a3e68de25f6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 210eb94cf77ac703076611d2c0c06c60a12cb0ed
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506284"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414956"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscrire un appareil avec un profil professionnel Android
 
-Inscrivez votre appareil Android personnel pour obtenir l’accès à l’e-mail, aux applications et à d’autres données professionnelles de l’entreprise. Lors de l’inscription, vous allez configurer un profil professionnel Android. Ce profil sépare les données personnelles des données professionnelles sur votre appareil. Le support technique de votre entreprise gère seulement le profil professionnel, qui est constitué de fichiers et de données professionnels. Il ne peut pas gérer les données personnelles de votre appareil.
+Inscrivez votre appareil Android personnel pour obtenir l’accès à l’e-mail, aux applications et à d’autres données professionnelles ou scolaires. Lors de l’inscription, vous allez configurer un profil professionnel Android. Ce profil sépare les données personnelles des données professionnelles sur votre appareil. Votre organisation gère le profil professionnel, qui se compose de fichiers et de données de travail. Il ne peut pas gérer les données personnelles de votre appareil.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 
@@ -36,51 +36,51 @@ Obtenez plus d’informations sur [ce qui se passe quand vous créez un profil p
 
 ## <a name="create-work-profile-and-enroll-device"></a>Créer un profil professionnel et inscrire un appareil
 
-1. Connectez-vous au Portail d’entreprise pour l’application Android avec votre compte professionnel ou scolaire. Si vous n’avez pas installé l’application gratuite, installez-la à partir de [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
+1. Ouvrez l’application Portail d’entreprise et connectez-vous avec votre compte professionnel ou scolaire. Si vous n’avez pas installé l’application gratuite, installez-la à partir de [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
-2. Dans l’écran **Configuration de l’accès à l’entreprise**, appuyez sur **CONTINUER**.  
+2. Dans l’écran **Configuration de l’accès à l’entreprise**, appuyez sur **COMMENCER**.  
 
-    ![Capture d’écran de l’écran de configuration de l’accès à l’entreprise](./media/android-wp-02-1908.png)  
+    ![Capture d’écran de l’écran de configuration de l’accès à l’entreprise](./media/access-setup-work-profile-1911.png)  
 
-3. Lisez la liste de ce que le support technique de votre entreprise peut voir ou non sur votre appareil. Appuyez ensuite sur **CONTINUER**.   
+3. Examinez ce que votre organisation peut et ne peut pas voir. Appuyez ensuite sur **CONTINUER**. 
 
-    ![Capture d’écran de l’écran de confidentialité](./media/android-wp-03-1908.png)  
+    ![Exemple d’image de Portail d’entreprise, nous nous soucions de votre écran de confidentialité, en mettant en surbrillance le bouton continuer.](./media/android-privacy-screen-1911.png)  
+4. Passez en revue ce que vous pouvez attendre dans les étapes à venir. Appuyez ensuite sur **suivant**.  
 
-4. Sur l’écran **what’s Next ?** , Découvrez ce qui se passe lors de l’inscription. Appuyez ensuite sur **suivant**.  
+    ![Exemple d’image de Portail d’entreprise, écran suivant, en mettant en surbrillance le bouton suivant.](./media/android-wp-04-1908.png)  
 
-    ![Capture d’écran de l’écran What’s Next](./media/android-wp-04-1908.png)
-
-5. L’écran suivant montre les termes Google pour créer un profil professionnel. Lisez les termes du contrat, puis appuyez sur **accepter &AMP; continuer**. L’apparence de cet écran varie en fonction de la version d’Android de votre appareil. 
+5. Passez en revue les conditions de Google pour créer un profil professionnel. Appuyez ensuite sur **ACCEPTER ET CONTINUER**. L’apparence de cet écran varie en fonction de la version d’Android de votre appareil. 
 
     ![Capture d’écran des termes du profil professionnel de Google](./media/android-wp-05-1908.png)  
 
-    Votre profil professionnel va commencer l’installation. 
+6. Patientez pendant la configuration de votre profil professionnel.  
 
-     ![Capture d’écran de l’écran « Configuration du profil professionnel ».](./media/android-wp-05a-1908.png) 
+    ![Capture d’écran de l’écran « Configuration du profil professionnel ».](./media/android-wp-05a-1908.png)  
 
-     Selon votre version d’Android, vous pouvez voir un écran supplémentaire qui indique que vous êtes à mi-chemin dans le programme d’installation. Si cet écran s’affiche, patientez quelques instants jusqu’à ce que vous soyez Redirigé et connecté à l’application Portail d’entreprise.  
+   Selon votre version d’Android, vous pouvez voir un écran supplémentaire. Cela indique que vous êtes à mi-chemin d’installation. Si cet écran s’affiche, patientez quelques instants jusqu’à ce que vous soyez Redirigé et connecté à l’application Portail d’entreprise.  
 
-     ![Capture d’écran de l’écran « vous allez à mi-chemin » avec le message de redirection.](./media/android-wp-05b-1908.png) 
+    ![Capture d’écran de l’écran « vous allez à mi-chemin » avec le message de redirection.](./media/android-wp-05b-1908.png)  
 
-6. Dans l’écran Configuration de l’accès à l' **entreprise** , vérifiez que votre profil professionnel est créé. Appuyez ensuite sur **CONTINUER**.  
+7. Dans l’écran Configuration de l’accès à l' **entreprise** , vérifiez que votre profil professionnel est créé. Appuyez ensuite sur **CONTINUER**.  
 
-    ![Capture d’écran de la configuration de l’accès à l’entreprise montrant que le profil professionnel est créé.](./media/android-wp-06-1908.png)  
+    ![Capture d’écran de la configuration de l’accès à l’entreprise montrant que le profil professionnel est créé.](./media/work-profile-complete-1911.png)  
 
-7. Vérifiez que votre profil professionnel est actif. Appuyez ensuite sur **CONTINUER**. 
+8. Vérifiez que votre profil professionnel est actif. Appuyez ensuite sur **CONTINUER**. 
 
-    ![Capture d’écran de la configuration de l’accès à l’entreprise montrant le profil professionnel est actif.](./media/android-wp-07-1908.png)  
+    ![Capture d’écran de la configuration de l’accès à l’entreprise montrant le profil professionnel est actif.](./media/work-profile-active-1911.png)  
 
-8. Votre organisation peut nécessiter la mise à jour des paramètres de votre appareil, tels que la définition d’un mot de passe. Une fois que vous avez terminé, appuyez sur **Continuer**.  
+9. Votre organisation peut vous demander de mettre à jour les paramètres de votre appareil. Appuyez sur **résoudre** pour ajuster un paramètre. Lorsque vous avez terminé la mise à jour des paramètres, appuyez sur **Continuer**.    
 
-    ![Capture d’écran de l’écran mettre à jour les paramètres de l’appareil.](./media/android-wp-08-1908.png) 
-
-9. Lorsque l’écran **Vous voilà prêt !** s’affiche , appuyez sur **terminé**.  
-
-    ![L’écran Configuration de l’accès à l’entreprise indique que le profil professionnel et l’inscription sont terminés](./media/android-wp-09-1908.png)  
+    ![Exemple d’image de Portail d’entreprise, mettre à jour l’écran des paramètres de l’appareil, en mettant en surbrillance les boutons résoudre et continuer.](./media/resolve-settings-1911.png) 
 
 
-Vous pouvez maintenant installer des applications d’entreprise sur votre appareil. Accédez au magasin de Google Play géré pour rechercher et installer ces applications. 
+10. Une fois l’installation terminée, appuyez sur **terminé**.  
+
+    ![Exemple d’image de Portail d’entreprise, écran de configuration de l’accès à l’entreprise, montrant la configuration terminée et le bouton terminé.](./media/work-profile-done-1911.png)  
+
 
 ## <a name="next-steps"></a>Étapes suivantes  
+
+Maintenant que votre appareil est inscrit, vous pouvez installer des applications scolaires ou professionnelles sur votre appareil. Accédez au magasin de Google Play géré pour rechercher et installer ces applications. 
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).
