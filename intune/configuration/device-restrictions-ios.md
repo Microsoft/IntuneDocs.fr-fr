@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73414692"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709745"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -417,6 +417,9 @@ S’applique aux appareils exécutant iOS 9,3 ou une version plus récente.
 - **Type de liste d’applications**: créer une liste d’applications à afficher ou à masquer. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site Web d’Apple contient une liste d' [applications Apple intégrées](https://support.apple.com/HT208094). Les options disponibles sont les suivantes :
 
   - **Applications masquées** : spécifiez une liste d’applications masquée aux utilisateurs. Les utilisateurs ne peuvent ni afficher ni ouvrir ces applications.
+  
+    Apple empêche le masquage de certaines applications natives. Par exemple, vous ne pouvez pas masquer les **paramètres** ou les applications **Wallet** sur l’appareil. [Supprimer les applications Apple intégrées](https://support.apple.com/HT208094) répertorie les applications qui peuvent être masquées.
+  
   - **Applications visibles** : spécifiez une liste d’applications que les utilisateurs peuvent voir et lancer. Aucune autre application ne peut être affichée ou lancée.
 
 - **URL**de l’application : entrez l’URL de l’application de stockage de l’application que vous souhaitez afficher ou masquer. Par exemple :

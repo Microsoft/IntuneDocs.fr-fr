@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413874"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713471"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -44,7 +44,7 @@ Avant d’exécuter l’outil de création de package de restrictions d’applic
 
   * Le fichier de l'application d’entrée doit avoir l’extension **.ipa** ou **.app**.
 
-  * L’application d’entrée doit être compilée pour iOS 10 ou version ultérieure.
+  * L’application d’entrée doit être compilée pour iOS 11 ou version ultérieure.
 
   * L’application d’entrée ne peut pas être chiffrée.
 
@@ -289,26 +289,27 @@ Si l’outil de création de package de restrictions d’application échoue, l�
 |L'application d'entrée spécifiée a déjà été encapsulée et est à la dernière version de modèle de stratégie.|L’outil de création de package de restrictions d’application ne peut pas ré-encapsuler une application encapsulée existante avec la dernière version du modèle de stratégie.|
 |AVERTISSEMENT : vous n’avez pas spécifié de hachage de certificat SHA1. Assurez-vous que votre application encapsulée est signée avant le déploiement.|Veillez à spécifier un hachage SHA1 valide à la suite de l’indicateur de ligne de commande –c. |
 
-### <a name="log-files-for-the-app-wrapping-tool"></a>Fichiers journaux de l’outil de création de package de restrictions d’application
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Collecte des journaux pour vos applications encapsulées à partir de l’appareil
+Procédez comme suit pour obtenir des journaux pour vos applications encapsulées pendant le dépannage.
 
-Les applications qui ont été encapsulées à l’aide de l’outil de création de package de restrictions d’application génèrent des journaux qui sont écrits dans la console de l’appareil iOS client. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application. Pour récupérer ces informations, procédez comme suit :
+1. Accédez à l’app Réglages iOS sur votre appareil et sélectionnez votre application métier.
+2. Basculez la **console Diagnostics** sur **On**.
+3. Lancez votre application métier.
+4. Cliquez sur le lien « Get Started » (Démarrer).
+5. Vous pouvez maintenant partager des journaux par e-mail ou en les copiant dans un emplacement OneDrive.
+
+> [!NOTE]
+> La fonctionnalité de journalisation est activée pour les applications qui ont été encapsulées avec Intune App Wrapping Tool version 7.1.13 ou ultérieure.
+
+### <a name="collecting-crash-logs-from-the-system"></a>Collecte des journaux d’incidents du système
+
+Il se peut que votre application journalise des informations utiles sur la console de l’appareil client iOS. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application. Pour récupérer ces informations, procédez comme suit :
 
 1. Reproduisez le problème en exécutant l'application.
 
 2. Recueillez la sortie de console en suivant les instructions d'Apple pour le [débogage des applications iOS déployées](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
-3. Filtrez les journaux enregistrés pour la sortie de Restrictions d'application en entrant le script suivant dans la console :
-
-    ```bash
-    grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
-    ```
-
-    Vous pouvez envoyer les journaux filtrés à Microsoft.
-
-    > [!NOTE]
-    > Dans le fichier journal, l'élément « build version » représente le numéro de build de Xcode.
-
-    Les applications encapsulées offrent également aux utilisateurs la possibilité d'envoyer les journaux directement à partir de l'appareil par courrier électronique, après un blocage de l'application. Les utilisateurs peuvent vous envoyer les journaux pour que vous les examiniez et le transmettiez à Microsoft si nécessaire.
+Les applications encapsulées offrent également aux utilisateurs la possibilité d'envoyer les journaux directement à partir de l'appareil par courrier électronique, après un blocage de l'application. Les utilisateurs peuvent vous envoyer les journaux pour que vous les examiniez et le transmettiez à Microsoft si nécessaire.
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Exigences concernant le certificat, le profil de configuration et l’authentification
 
@@ -442,19 +443,6 @@ Exécutez simplement votre commande générale d’inclusion d’applications da
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
-
-## <a name="getting-logs-for-your-wrapped-applications"></a>Obtention des journaux pour vos applications encapsulées
-
-Procédez comme suit pour obtenir des journaux pour vos applications encapsulées pendant le dépannage.
-
-1. Accédez à l’app Réglages iOS sur votre appareil et sélectionnez votre application métier.
-2. Basculez la **console Diagnostics** sur **On**.
-3. Lancez votre application métier.
-4. Cliquez sur le lien « Get Started » (Démarrer).
-5. Vous pouvez maintenant partager des journaux par e-mail ou en les copiant dans un emplacement OneDrive.
-
-> [!NOTE]
-> La fonctionnalité de journalisation est activée pour les applications qui ont été encapsulées avec Intune App Wrapping Tool version 7.1.13 ou ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 

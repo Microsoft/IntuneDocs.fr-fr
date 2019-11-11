@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 101f414955a3b60d22003f61678854fecc16910d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 15c78d7e7f602b60b6e9f2cee365c9a02eb904df
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506584"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755002"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Problèmes courants avec les profils de messagerie dans Microsoft Intune et résolutions
 
@@ -32,7 +32,6 @@ Découvrez quelques problèmes de profils de messagerie courants et des instruct
 ## <a name="what-you-need-to-know"></a>Ce que vous devez savoir
 
 - Les profils de messagerie sont déployés pour l’utilisateur qui a inscrit l’appareil. Pour configurer le profil de messagerie, Intune utilise les propriétés de Azure Active Directory (AD) dans le profil de messagerie de l’utilisateur lors de l’inscription. L' [Ajout de paramètres de messagerie aux appareils](email-settings-configure.md) peut être une bonne ressource.
-- Après la migration de Configuration Manager hybride vers la version autonome d’Intune, le profil de messagerie de Configuration Manager hybride reste sur l’appareil pendant 7 jours. Ce comportement est normal. Si vous avez besoin de supprimer le profil de messagerie plus tôt, contactez le [support technique Intune](../fundamentals/get-support.md).
 - Pour Android Enterprise, déployez Gmail ou neuf pour le travail à l’aide de la Google Play Store gérée. [Ajouter des applications de Google Play gérées](../apps/apps-add-android-for-work.md) répertorie les étapes.
 - Microsoft Outlook pour iOS et Android ne prend pas en charge les profils de messagerie. Au lieu de cela, déployez une stratégie de configuration d’application. Pour plus d’informations, consultez [paramètres de configuration d’Outlook](../apps/app-configuration-policies-outlook.md).
 - Les profils de messagerie ciblés sur des groupes d’appareils (et non des groupes d’utilisateurs) peuvent ne pas être remis à l’appareil. Lorsque l’appareil a un utilisateur principal, le ciblage de l’appareil doit fonctionner. Si le profil de messagerie contient des certificats d’utilisateur, assurez-vous de cibler des groupes d’utilisateurs.
@@ -62,22 +61,10 @@ Examinez la configuration de votre profil EAS pour Samsung KNOX et la stratégie
 
 Les utilisateurs qui disposent de comptes de messagerie configurés automatiquement ne peuvent pas envoyer des photos ou des images à partir de leur appareil. Ce scénario peut se produire si l’option **Autoriser l’envoi d’e-mails à partir d’applications tierces** n’est pas activée.
 
-### <a name="intune-solution"></a>Solution Intune
-
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils**.
+1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **appareils** > **profils de configuration**.
 3. Sélectionnez votre profil de messagerie > **propriétés**  > **paramètres**.
 4. Définissez le paramètre **autoriser l’envoi du courrier électronique à partir d’applications tierces** à **activer**.
-
-### <a name="configuration-manager-hybrid"></a>Configuration Manager hybride
-
-1. Dans la console Configuration Manager, ouvrez > **Ressources et Conformité**.
-
-2. Développez **Vue d’ensemble** > **Paramètres de conformité** > **Accès aux ressources d’entreprise**, puis sélectionnez **Profils de messagerie**.
-
-3. Cliquez avec le bouton droit sur le profil de messagerie, puis ouvrez **Propriétés**.
-
-4. Sous l’onglet **Paramètres de synchronisation**, sélectionnez **Autoriser l’envoi de courrier électronique à partir d’applications tierces**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

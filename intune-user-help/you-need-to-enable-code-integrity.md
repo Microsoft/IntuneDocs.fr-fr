@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56982c6ce10f74617471307acd176a0506655398
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6bde7fc554496b2ecc6f13c7e1b899d7ff05bfa1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501231"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754996"
 ---
 # <a name="enable-code-integrity"></a>Activer l’intégrité du code
 
@@ -36,7 +36,7 @@ Si vous vous identifiez comme un utilisateur d’appareil avancé et souhaitez e
 
 ## <a name="additional-resources-for-it-administrators"></a>Ressources supplémentaires pour les administrateurs informatiques
 
-Si vous êtes un administrateur Intune et que vous souhaitez en savoir plus sur les paramètres de conformité d’intégrité des appareils d’Intune, consultez [Ajouter une stratégie de conformité d’appareil pour les appareils Windows 10 dans Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows.md). Pour obtenir une vue détaillée des actions de conformité que vous pouvez effectuer dans Intune, consultez le [CSP HealthAttestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Si vous êtes un administrateur Intune et que vous souhaitez en savoir plus sur les paramètres de conformité d’intégrité des appareils d’Intune, consultez [Ajouter une stratégie de conformité d’appareil pour les appareils Windows 10 dans Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows). Pour obtenir une vue détaillée des actions de conformité que vous pouvez effectuer dans Intune, consultez le [CSP HealthAttestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

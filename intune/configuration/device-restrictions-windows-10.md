@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 164c34f4a46ca11e2788b72dee70bdd40c25e7f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493897"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755266"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -223,12 +223,12 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 - **Notifications du centre de notifications (mobile uniquement)**  : **Bloquer** empêche l’affichage des notifications du Centre de notifications sur l’écran de verrouillage de l’appareil. **Non configuré** (valeur par défaut) permet aux utilisateurs de choisir quelles applications affichent des notifications sur l’écran de verrouillage.
 
-  [Fournisseur de service de configuration AboveLock/AllowActionCenterNotifications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowactioncenternotifications)
+  [Fournisseur de service de configuration AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **URL de l’image de l’écran verrouillé (poste de travail uniquement)**  : entrez l’URL d’une image au format JPG, JPEG ou PNG qui est utilisée comme papier peint de l’écran de verrouillage Windows. Par exemple, entrez `https://contoso.com/image.png`. Ce paramètre verrouille l’image et ne peut pas être modifié par la suite.
 - **Délai d’expiration de l’écran configurable par l’utilisateur (mobile uniquement)**  : **Autoriser** permet aux utilisateurs de configurer le délai d’expiration de l’écran. **Non configuré** (valeur par défaut) n’offre pas cette possibilité aux utilisateurs.
 
-  [Fournisseur de service de configuration DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowscreentimeoutwhilelockeduserconfig)
+  [Fournisseur de service de configuration DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana sur écran verrouillé** (desktop uniquement) : **Bloquer** empêche les utilisateurs d’interagir avec Cortana quand l’appareil est sur l’écran de verrouillage. **Non configuré** (valeur par défaut) autorise l’interaction avec Cortana.
 
@@ -240,7 +240,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 - **Délai d’expiration de l’écran (mobile uniquement)**  : définit la durée (en secondes) entre le verrouillage de l’écran et la désactivation de l’écran. Les valeurs prises en charge sont 11-1800. Par exemple, entrez `300` pour définir ce délai d’attente sur cinq minutes.
 
-  [Fournisseur de service de configuration DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
+  [Fournisseur de service de configuration DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
 ## <a name="messaging"></a>Messagerie
 

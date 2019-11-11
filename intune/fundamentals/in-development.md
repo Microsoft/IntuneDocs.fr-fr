@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea5fae72f6e2057ef0b03a7bd295085ed1ac3bbd
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 3720b0b9a67f0c3462993feef4162ef35f7f3f92
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601550"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182929"
 ---
-# <a name="in-development-for-microsoft-intune---october-2019"></a>En développement pour Microsoft Intune - Octobre 2019
+# <a name="in-development-for-microsoft-intune---november-2019"></a>En développement pour Microsoft Intune - Novembre 2019
 
 Pour faciliter votre préparation et votre planification, cette page répertorie les mises à jour et les fonctionnalités de l’interface utilisateur Intune qui sont en cours de développement, mais qui ne sont pas encore mises en production. Outre les informations de cette page :
 
@@ -58,8 +58,14 @@ Pour faciliter votre préparation et votre planification, cette page répertorie
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Gestion d'applications
 
-### <a name="apply-dark-mode-in-ios-company-portal----4911422----"></a>Appliquer le mode sombre dans iOS Portail d’entreprise <!-- 4911422  -->
-Le mode sombre est prévu pour les Portail d’entreprise iOS. Vous serez en mesure de télécharger des applications d’entreprise, de gérer vos appareils et de bénéficier d’un support informatique dans le modèle de couleurs de votre choix. Pour plus d’informations sur le portail d’entreprise iOS, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](../apps/company-portal-app.md).
+### <a name="smime-support-for-microsoft-outlook-mobile----2669398----"></a>Prise en charge S/MIME pour Microsoft Outlook Mobile <!-- 2669398  -->
+Intune prendra en charge la diffusion de certificats de chiffrement et de signature S/MIME qui peuvent être utilisés avec Outlook Mobile sur iOS et Android. Pour obtenir des informations connexes, consultez [paramètres de messagerie pour les appareils iOS](~/configuration/email-settings-ios.md) et [paramètres de messagerie pour les appareils Android](~/configuration/email-settings-android.md).
+
+### <a name="custom-settings-support-for-macos-applications----4736278----"></a>Prise en charge des paramètres personnalisés pour les applications macOS <!-- 4736278  -->
+Intune prend en charge les paramètres personnalisés, ce qui vous permet d’ajouter des clés et des valeurs spécifiques à un fichier de liste de propriétés de préférences (. plist) existant pour configurer les applications macOS et l’appareil. Toutes les applications ne prennent pas en charge les préférences gérées et, dans certains cas, seuls des paramètres spécifiques peuvent être gérés. Les paramètres sont déployés uniquement via le canal de l’appareil. Vous ne devez télécharger que des fichiers de liste de propriétés ou des fichiers. XML qui ciblent les paramètres de canal de l’appareil.
+
+### <a name="assignment-type-value-in-windows-company-portal----5459950----"></a>Valeur du type d’affectation dans Windows Portail d’entreprise <!-- 5459950  -->
+La page **applications installées** de l’application portail d’entreprise Windows est mise à jour. La colonne **type d’affectation** de la page **applications installées** a été mise à jour pour être appelée « obligatoire pour votre organisation ». Les valeurs possibles sont **Oui** ou **non** pour désigner les applications requises et disponibles. Cette modification est apportée en réponse à une certaine confusion de l’utilisateur final. Pour plus d’informations sur le portail d’entreprise Windows, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).
 
 ### <a name="run-win32-apps-on-windows-10-s-mode-devices----3747604----"></a>Exécuter des applications Win32 sur des appareils Windows 10 en mode S <!-- 3747604  --> 
 Vous pouvez installer et exécuter des applications Win32 sur des appareils gérés en mode Windows 10 S. Créez une ou plusieurs stratégies supplémentaires pour le mode S en utilisant les outils Windows Defender application Control (WDAC) PowerShell. Utilisez le portail de signature Device Guard pour signer les stratégies supplémentaires. Ensuite, chargez et distribuez les stratégies via Intune. 
@@ -93,15 +99,6 @@ L’application Portail d’entreprise affiche des messages d’état d’instal
 - L’application a été correctement installée mais nécessite un redémarrage.
 - L’application est en cours d’installation, mais nécessite un redémarrage pour continuer.
 
-### <a name="assign-the-microsoft-edge-beta-for-macos----4678761----"></a>Affecter la version bêta de Microsoft Edge pour macOS <!-- 4678761  -->
-Vous pourrez ajouter et affecter la dernière version de Microsoft Edge Beta à Intune pour les appareils macOS. 
-
-Pour affecter la version bêta de Microsoft Edge pour les appareils macOS :
-1. Dans Intune, sélectionnez **applications clientes**  > **applications**  > **Ajouter une application**  > **Microsoft Edge-MacOS**. 
-1. Affectez la version bêta Microsoft Edge aux groupes prévus. Microsoft AutoUpdate (MAU) assure la mise à jour de Microsoft Edge. 
- 
-Pour plus d’informations sur Microsoft Edge, consultez [gérer l’accès Web à l’aide de Microsoft Edge avec Microsoft Intune](../apps/manage-microsoft-edge.md).
-
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Configurer le contenu de la notification d’application pour les comptes d’organisation <!-- 2576686 -->
 L’application Intune sur des appareils Android et iOS vous permettra de contrôler le contenu de la notification d’application pour les comptes d’organisation. Cette fonctionnalité nécessite la prise en charge des applications et peut ne pas être disponible pour toutes les applications prenant en charge l’application. Pour plus d’informations sur l’Application, consultez [Que sont les stratégies de protection des applications ?](../apps/app-protection-policy.md)
 
@@ -109,27 +106,55 @@ L’application Intune sur des appareils Android et iOS vous permettra de contr�
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Configuration des appareils
 
-### <a name="new-device-firmware-configuration-interface-profile-for-devices-that-run-windows-10-and-later----2266073----"></a>Nouveau profil d’interface de configuration du microprogramme de l’appareil pour les appareils qui exécutent Windows 10 et versions ultérieures <!-- 2266073  -->
-Sur Windows 10 et versions ultérieures, vous pouvez créer un profil de configuration d’appareil pour contrôler les paramètres et les fonctionnalités : 
+### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices----3246388----"></a>Utiliser des certificats PKCS avec des profils Wi-Fi sur les appareils Windows 10 et versions ultérieures <!-- 3246388  -->
+Actuellement, vous pouvez authentifier les profils Wi-Fi Windows avec des certificats SCEP (configuration de l'**appareil** > **profils** > **créer un profil** > **Windows 10 et versions ultérieures** pour la plateforme > **Wi-Fi** pour type de profil > **Enterprise** > **type EAP**). Vous pouvez utiliser des certificats PKCS avec vos profils Wi-Fi Windows. Cette fonctionnalité permet aux utilisateurs d’authentifier des profils Wi-Fi à l’aide de profils de certificat PKCS nouveaux ou existants dans votre locataire. 
 
-1. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
-1. Pour la plateforme, sélectionnez **Windows 10 et version ultérieure**. 
- 
-Un nouveau type de profil d’interface de configuration du microprogramme de l’appareil permet à Intune de gérer les paramètres UEFI (BIOS).
+Pour plus d’informations sur les profils Wi-Fi, consultez [Ajouter des paramètres Wi-Fi pour les appareils Windows 10 et versions ultérieures dans Intune](../configuration/wi-fi-settings-windows.md).
 
-Pour plus d’informations sur les paramètres actuels que vous pouvez configurer, consultez [appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide de profils d’appareil dans Microsoft Intune](../configuration/device-profiles.md).
+S’applique à :
+- Windows 10 et versions ultérieures
 
-Cette fonctionnalité s’applique à Windows 10 RS5 (1809) et versions ultérieures sur les appareils sélectionnés.
- 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices----4892824----"></a>Nouveaux paramètres ExchangeActiveSync lors de la création d’un profil de configuration de périphérique de messagerie sur des appareils iOS <!-- 4892824  --> 
+Sur les appareils iOS/iPados, vous pouvez configurer la connectivité de messagerie dans un profil de configuration d’appareil (configuration de l'**appareil** > **profils** > **créer un profil** > **iOS/iPad** pour la plateforme > la **messagerie** pour le type de profil). 
+
+De nouveaux paramètres ExchangeActiveSync sont disponibles, notamment :
+- Choisissez les services à synchroniser (ou bloquer la synchronisation), tels que la messagerie, le calendrier et les contacts.
+- Autoriser (ou bloquer) les utilisateurs à modifier les paramètres de synchronisation de ces services sur leurs appareils. 
+
+Pour afficher les paramètres actuels, accédez à la page [paramètres de profil de messagerie pour les appareils iOS dans Intune](../configuration/email-settings-ios.md).
+
+S’applique à :
+- iOS 13.0 et ultérieur
+- iPadOS 13.0 et ultérieur
+
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices----5353228----"></a>Empêcher les utilisateurs d’ajouter des comptes Google personnels au propriétaire des appareils Android Enterprise et à des appareils dédiés <!-- 5353228  -->
+Vous pouvez empêcher les utilisateurs de créer des comptes Google personnels sur Android Enterprise Device owner et dédiés (**configuration** des appareils > **profils** > **créer un profil** > **Android Enterprise** pour la plateforme > propriétaire de l' **appareil uniquement > des restrictions d’appareil** pour le type de profil > **paramètres utilisateurs et comptes**).
+
+Pour voir les paramètres actuels que vous pouvez configurer, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune](../configuration/device-restrictions-android-for-work.md).
+
+S’applique à :
+- Propriétaire d’appareil Android Entreprise
+- Appareils dédiés Android Entreprise
+
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile----5468501----"></a>La journalisation côté serveur pour les commandes Siri est supprimée dans le profil de restrictions d’appareil iOS <!-- 5468501  -->
+Sur les appareils iOS, vous pouvez créer des profils de restriction d’appareil qui configurent la journalisation côté serveur pour les commandes Siri (configuration de l'**appareil** > **profils** > **créer un profil** > **iOS/iPad** pour la plateforme > **Restrictions d’appareil** pour le type de profil > les **applications intégrées**). Le paramètre **de journalisation côté serveur pour les commandes Siri** sera supprimé.
+
+Ce paramètre sera supprimé de la console d’administration Intune. Ce paramètre n’a aucun effet sur l’appareil, même si les stratégies existantes pour lesquelles ce paramètre est configuré continuent à afficher le paramètre. Si vous souhaitez supprimer le paramètre des stratégies existantes, accédez à la stratégie, apportez une modification mineure, enregistrez-la et la stratégie sera mise à jour.
+
+Pour voir les paramètres que vous pouvez configurer, accédez à [Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune](../configuration/device-restrictions-ios.md).
+
+S’applique à :
+- iOS
+
 
 <!-- ***********************************************-->
-## <a name="device-enrollment"></a>Inscription des appareils
-
-### <a name="for-ios-devices-customize-the-enrollment-privacy-window-of-company-portal----4394993----"></a>Pour les appareils iOS, personnalisez la fenêtre de confidentialité de l’inscription de Portail d’entreprise <!-- 4394993  -->
-À l’aide de Markdown, vous pourrez personnaliser la fenêtre de confidentialité du Portail d’entreprise que les utilisateurs finaux voient lors de l’inscription à iOS. Plus précisément, vous serez en mesure de personnaliser la liste des éléments que votre organisation ne peut pas voir ou faire sur l’appareil.
+<!--## Device enrollment-->
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Gestion des appareils
+
+### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Modifier la valeur du nom de l’appareil pour les appareils AutoPilot<!-- 2640074  -->
+Vous pouvez modifier la valeur du nom de l’appareil pour les appareils AutoPilot Azure AD joints. Pour ce faire, accédez à **Intune** > **inscription d’appareils** > **inscription windows** > **Windows AutoPilot** > **appareils** > Choisissez l’appareil > modifier la valeur du nom de l' **appareil** dans le volet droit > **Enregistrer**.
 
 
 ### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Modifier la valeur de balise de groupe pour les appareils AutoPilot<!-- 4816775 -->
@@ -143,25 +168,38 @@ Vous pouvez modifier la valeur de **balise de groupe** pour les appareils AutoPi
 ### <a name="target-macos-user-groups-to-require-jamf-management----4061739---"></a>Cibler des groupes d’utilisateurs macOS pour exiger la gestion de JAMF <!-- 4061739 -->
 Vous pourrez cibler des groupes d’utilisateurs spécifiques pour que les appareils macOS puissent être gérés par JAMF. Cette cible vous permet d’appliquer l’intégration de la conformité JAMF à un sous-ensemble d’appareils macOS, tandis que d’autres appareils continuent d’être gérés par Intune. Le ciblage vous permettra également de migrer progressivement les appareils des utilisateurs d’un système de gestion des appareils mobiles (MDM) vers l’autre.
 
-### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Déployer des mises à jour logicielles sur des appareils macOS <!-- 3194876 -->
-Vous serez en mesure de déployer des mises à jour logicielles sur des groupes d’appareils macOS. Cette fonctionnalité comprend des mises à jour critiques, de microprogramme, de fichier de configuration et autres. Vous pouvez envoyer des mises à jour lors de l’archivage suivant de l’appareil. Ou vous pouvez sélectionner une planification hebdomadaire pour déployer des mises à jour dans ou hors des périodes que vous définissez. 
+<!-- ***********************************************-->
+## <a name="intune-apps"></a>Applications Intune
 
-Cette fonctionnalité vous aide quand vous souhaitez mettre à jour des appareils en dehors des heures de travail standard ou en dehors des heures de travail de votre support technique. Vous obtiendrez également un rapport détaillé de tous les appareils macOS sur lesquels des mises à jour sont déployées. Vous pouvez accéder au rapport par appareil pour voir l’état d’une mise à jour particulière.
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349----"></a>Amélioration de l’expérience d’inscription macOS dans Portail d’entreprise <!-- 5074349  -->
+L’Portail d’entreprise pour l’expérience d’inscription macOS aura un processus d’inscription plus simple qui s’alignera plus étroitement sur le Portail d’entreprise pour l’expérience d’inscription iOS. Les utilisateurs des appareils verront les éléments suivants :  
+
+* Une interface utilisateur plus élégante.  
+* Liste de contrôle d’inscription améliorée.  
+* Instructions claires sur la façon d’inscrire leurs appareils.  
+* Options de dépannage améliorées.  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857----"></a>Conception de liste de contrôle améliorée dans Portail d’entreprise application pour Android<!-- 5550857  -->
+La liste de vérification de l’installation de l’application Portail d’entreprise pour Android sera mise à jour avec une conception légère et de nouvelles icônes. Les modifications seront alignées sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS.
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Analyse et résolution des problèmes
-
-### <a name="android-report-on-the-devices-overview-page----2984353----"></a>Rapport Android sur la page vue d’ensemble des appareils <!-- 2984353  -->
-Nous allons ajouter un nouveau rapport à la page **vue d’ensemble des appareils** . Le rapport affiche le nombre d’appareils Android inscrits dans chaque solution de gestion des appareils. Le graphique affiche le nombre d’appareils pour le profil professionnel, entièrement géré, dédié et administrateur de l’appareil inscrit. 
-
-Pour afficher le rapport, choisissez **Intune** > **appareils** > **vue d’ensemble**.
 
 ### <a name="updated-support-experience-------5012398------"></a>Expérience de support mise à jour   <!--  5012398    -->
 Dans le cadre des améliorations continues, nous allons mettre à jour l’expérience de prise en charge dans la console pour Intune.  Nous allons améliorer la recherche et les commentaires dans la console pour les problèmes courants, et nous allons simplifier le flux de travail pour contacter le support technique.     
 
 <!-- ***********************************************-->
-<!--## Security-->
+## <a name="role-based-access-control"></a>Contrôle d'accès en fonction du rôle
 
+### <a name="duplicate-custom-or-built-in-roles----1081938---"></a>Rôles personnalisés ou intégrés en double <!-- 1081938 -->
+Vous pourrez copier des rôles intégrés et personnalisés. Pour ce faire, accédez à **Intune** > **rôles** > **tous les rôles** > choisissez un rôle dans la liste > **en double**. Veillez à entrer un nouveau nom unique.
+
+<!-- ***********************************************-->
+
+## <a name="security"></a>Sécurité
+
+### <a name="bitlocker-key-rotation--------2564951--------"></a>Rotation de clé BitLocker     <!-- 2564951      -->
+Vous pouvez utiliser Intune pour faire pivoter les clés de récupération BitLocker pour les appareils gérés qui exécutent Windows version 1909 ou ultérieure. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Remarques

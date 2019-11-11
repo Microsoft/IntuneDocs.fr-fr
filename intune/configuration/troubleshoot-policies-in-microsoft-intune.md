@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2e7dc729879eb6d16a4ab3555d8fe319501a53e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492125"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754956"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
 
@@ -32,11 +32,12 @@ Microsoft Intune propose des fonctionnalités de résolution des problèmes int�
 Cet article présente certaines techniques de dépannage courantes et décrit certains problèmes que vous êtes susceptible de rencontrer.
 
 ## <a name="check-tenant-status"></a>Vérifier l’état du locataire
+
 Vérifiez l' [État du locataire](../fundamentals/tenant-status.md) et confirmez que l’abonnement est actif. Vous pouvez également afficher des informations sur les incidents et les avis actifs qui peuvent avoir un impact sur votre déploiement de stratégie ou de profil.
 
 ## <a name="use-built-in-troubleshooting"></a>Utiliser la fonctionnalité de résolution des problèmes intégrée
 
-1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Résoudre les problèmes** :
+1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Dépannage + support**:
 
     ![Dans Intune, accéder à Aide et support, puis sélectionner Résoudre les problèmes](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -102,7 +103,7 @@ Vérifiez l' [État du locataire](../fundamentals/tenant-status.md) et confirmez
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Vous ne savez pas avec certitude si une stratégie est correctement appliquée
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Appareils** > **Tous les appareils** > sélectionnez l’appareil > **Configuration de l’appareil**. 
 
     Chaque appareil liste ses profils. Chaque profil a un **État**. L’état s’applique quand tous les profils affectés, notamment les exigences et les restrictions en matière de système d’exploitation et de matériel, sont considérés ensemble. Les états possibles sont :

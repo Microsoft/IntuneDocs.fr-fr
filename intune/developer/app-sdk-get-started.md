@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6886060cce77004b107dac02ecea57f2090ac8f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503471"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592021"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune
 
@@ -181,6 +181,9 @@ Une fois que vous avez inscrit votre application auprès d’un locataire Azure,
 5. Dans la zone de recherche, entrez **Gestion des applications mobiles Microsoft**.
 6. Sous **Autorisations déléguées**, cochez la case **DeviceManagementManagedApps.ReadWrite : Lire et écrire les données de gestion d’application de l’utilisateur***.
 7. Cliquez sur **Ajouter des autorisations**.
+
+> [!NOTE]
+> Si votre application vous empêche de vous connecter en raison d’une erreur d’accès à cette ressource : https://intunemam.microsoftonline.com, vous devez envoyer une note pour msintuneappsdk@microsoft.com avec l’ID client de votre application. Il s’agit d’un processus d’approbation manuel aujourd’hui.
 
 ### <a name="badge-your-app-optional"></a>Badger votre application (facultatif)
 
