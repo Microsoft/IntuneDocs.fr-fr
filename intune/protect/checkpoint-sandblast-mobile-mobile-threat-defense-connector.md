@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
-ms.reviewer: heenamac
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1d6620c120a3102803c84270ac1880c6904320
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c4cffafd4145ab536157ea55c732ac27bec29538
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504715"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801608"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Connecteur de protection contre les menaces mobiles Check Point SandBlast Mobile avec Intune
 
@@ -36,9 +36,6 @@ Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’�
 L’application Check Point SandBlast Mobile pour Android et iOS capture le système de fichiers, la pile réseau, les données de télémétrie de l’appareil et des applications quand elles sont disponibles, puis les envoie au service cloud Check Point SandBlast pour évaluer les risques de l’appareil face aux menaces mobiles.
 
 La stratégie de conformité des appareils Intune comprend une règle de protection contre les menaces mobiles Check Point SandBlast Mobile, qui est basée sur l’évaluation des risques Check Point SandBlast. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée. Si l’appareil est détecté comme non conforme, les utilisateurs ne peuvent pas accéder aux ressources de l’entreprise comme Exchange Online et SharePoint Online. Les utilisateurs reçoivent aussi des conseils de l’application mobile Check Point SandBlast installée sur leurs appareils pour résoudre le problème et rétablir l’accès aux ressources de l’entreprise.
-
-<!-- ## Sample scenarios 
-closing syntax for comment above is missing. Please insert closing syntax at intended location. -->
 
 Voici quelques scénarios courants :
 

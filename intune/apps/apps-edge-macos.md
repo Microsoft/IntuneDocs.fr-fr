@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2405036535cd6aef74e417f75e22725e1c34bbfa
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585798"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754843"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Ajouter Microsoft Edge sur les appareils macOS à l’aide de Microsoft Intune
 
@@ -45,10 +45,10 @@ Vous pouvez ajouter Microsoft Edge version 77 ou ultérieure à Intune en proc�
 3. Dans la liste **Type d’application**, sous **Microsoft Edge, version 77 ou ultérieure**, sélectionnez **macOS**.
 
 ## <a name="configure-app-information"></a>Configurer les informations de l’application
-Dans cette étape, vous fournissez des informations sur le déploiement de cette application. Ces informations vous aident à identifier l’application dans Intune. Elles permettent également aux utilisateurs de trouver l’application dans le portail d’entreprise.
+Dans cette étape, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
 
 1. Cliquez sur **Informations sur l’application** pour afficher le panneau **Informations sur l’application**.
-2. Dans le panneau **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous aident à identifier l’application dans Intune. Elles permettent également aux utilisateurs de trouver l’application dans le portail d’entreprise.
+2. Dans le panneau **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
     - **Nom** : Entrez le nom de l'application tel qu'il s'affichera dans le portail d'entreprise. Assurez-vous que tous les noms sont uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description** : Entrez une description de l'application. Par exemple, vous pouvez lister les utilisateurs ciblés dans la description.
     - **Éditeur** : Microsoft apparaît comme éditeur.
@@ -88,7 +88,7 @@ L’application créée s’affiche dans la liste des applications, où vous pou
 > Actuellement, Apple n’offre aucun moyen pour Intune de désinstaller Microsoft Edge sur les appareils macOS.
 
 ## <a name="next-steps"></a>Étapes suivantes
-- Pour apprendre à configurer Microsoft Edge sur les appareils macOS, consultez [Configurer Microsoft Edge sur les appareils macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge#configure-microsoft-edge-on-mac).
+- Pour apprendre à configurer Microsoft Edge sur les appareils macOS, consultez [Configurer Microsoft Edge sur les appareils macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
 - Pour en savoir plus sur l’inclusion et l’exclusion d’affectations d’application pour des groupes d’utilisateurs, consultez [Inclure et exclure des affectations d’applications](~/apps/apps-inc-exl-assignments.md).
 - [Affecter des applications à des groupes](~/apps/apps-deploy.md)
 
