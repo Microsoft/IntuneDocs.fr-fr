@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7517a2b60c4b5a893b90b09be72ddb363f23552a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509984"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801777"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 
@@ -36,6 +36,23 @@ Si vous êtes un employé ou un étudiant, veillez à consulter les captures d�
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-october-28-2019"></a>Semaine du 28 octobre 2019  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Conception de liste de contrôle améliorée dans l’application Portail d’entreprise pour Android <!-- 5550857 -->  
+La liste de contrôle de d’installation d’application Portail d’entreprise pour Android a été mise à jour avec un design épuré et de nouvelles icônes. Les modifications s’alignent sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS. Pour consulter les étapes d’inscription mises à jour, consultez [S’inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) et [Inscrire votre appareil Android](/intune-user-help/enroll-device-android-company-portal).  
+
+Les écrans suivants illustrent la liste de vérification mise à jour pour l’inscription de profil professionnel Android :
+
+|Mis à jour|Précédent|  
+|---|---|  
+|![Exemple d’image de configuration de profil professionnel dans le Portail d’entreprise, présentant une liste de vérification simplifiée et de nouvelles icônes.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Exemple d’image de la configuration du profil professionnel précédent dans le Portail d’entreprise, présentant une liste de vérification plus ancienne.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
+
+Les écrans suivants illustrent la liste de vérification mise à jour pour l’inscription de l’administrateur d’appareils Android :  
+
+|Mis à jour|Précédent|  
+|---|---|  
+|![Exemple d’image de configuration de l’administrateur d’appareil Android dans le Portail d’entreprise, présentant une liste de vérification simplifiée et de nouvelles icônes.](./media/whats-new-app-ui/android-checklist-1911.png)|![Exemple d’image de l’ancienne configuration de l’administrateur d’appareil Android dans le Portail d’entreprise, présentant une liste de vérification plus ancienne.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
 ## <a name="week-of-september-9-2019"></a>Semaine du 9 septembre 2019
 
@@ -572,6 +589,6 @@ Voici les moyens envisagés pour améliorer l’expérience utilisateur en metta
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
+* [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882)
 * [Feuille de route de la plateforme cloud](https://www.microsoft.com/cloud-platform/roadmap)
-* [Nouveautés d’Intune](../whats-new.md)
+* [Nouveautés d’Intune](whats-new.md)

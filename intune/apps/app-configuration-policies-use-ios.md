@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c388e632f545b48a18ef6ed7b76132c290f16a9e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
+ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813461"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73566176"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -166,8 +166,8 @@ Intune prend en charge les types de données suivants dans une liste de proprié
 ### <a name="tokens-used-in-the-property-list"></a>Jetons utilisés dans la liste des propriétés
 
 De plus, Intune prend en charge les types de jetons suivants dans la liste de propriétés :
-- \{\{userprincipalname\}\} : par exemple, **John@contoso.com**
-- \{\{mail\}\} : par exemple, **John@contoso.com**
+- \{\{userprincipalname\}\} : par exemple **John\@contoso.com**
+- \{\{mail\}\} : par exemple **John\@contoso.com**
 - \{\{partialupn\}\} : par exemple, **John**
 - \{\{accountid\}\} : par exemple, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\} : par exemple, **b9841cd9-9843-405f-be28-b2265c59ef97**

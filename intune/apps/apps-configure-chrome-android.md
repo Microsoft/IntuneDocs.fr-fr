@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b80b0dbd8128606db9220178baf0d05af1a3800
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 2f667940cc238fe243b05c7ab6f1459f63f18faa
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498803"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635488"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Configurer Google Chrome pour les appareils Android à l’aide d’Intune 
 
@@ -46,7 +46,7 @@ Vous pouvez utiliser une stratégie de configuration d’application Intune pour
 
 Pour plus d’informations sur l’ajout d’une application de Google Play géré à Intune, consultez [Applications Google Play Store gérées](~/apps/apps-add-android-for-work.md#managed-google-play-store-apps).
 
-## <a name="add-an-app-configuration-policy-for-managed-android-enterprise-devices"></a>Ajouter une stratégie de configuration d’applications pour les appareils Android Entreprise gérés
+## <a name="add-app-configuration-for-managed-ae-devices"></a>Ajouter une configuration d’applications pour les appareils AE managés
 
 1. Dans le volet [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Stratégies de configuration d’application** > **Ajouter**.
 2. Ajoutez le nom de votre stratégie, choisissez **Appareils gérés** pour le type d’inscription d’appareil, et **Android** pour la plateforme.

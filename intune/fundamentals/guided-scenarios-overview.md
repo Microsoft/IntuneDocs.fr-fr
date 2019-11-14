@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c88366ea64182ccf8d45bc3e890a2579df20f1
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585642"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635363"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Vue d’ensemble des scénarios guidés Intune 
 
@@ -46,7 +46,7 @@ Les scénarios guidés offrent des fonctionnalités spécifiques. Vous trouverez
 
 ### <a name="launching"></a>Lancement  
 
-Tous les scénarios guidés sont accessibles via **[Portail Gestion des appareils](https://devicemanagement.microsoft.com)**  > **Résolution des problèmes + Aide** > **Scénarios guidés**. 
+Tous les scénarios guidés sont accessibles via **[Portail Gestion des appareils](https://devicemanagement.microsoft.com)**  > **Résolution des problèmes + Support** > **Scénarios guidés**. 
 
 Le scénario guidé commence par une introduction expliquant l’objectif du scénario et indique les prérequis à respecter pour effectuer la configuration. À ce stade, vos autorisations d’administrateur sont vérifiées pour s’assurer que vous avez bien tous les privilèges nécessaires à la mise en œuvre du scénario.  
 

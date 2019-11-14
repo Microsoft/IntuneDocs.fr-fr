@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63079757ee3610d825601921da1d33aa94f851b6
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: b2744a27a733824bab9d920f4de0b49e951c1c34
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72794405"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627636"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Activer le connecteur Mobile Threat Defense dans Intune pour les appareils non inscrits
 
@@ -50,9 +50,9 @@ Pendant l’installation de Mobile Threat Defense (MTD), vous avez configuré un
 
 Vous pouvez décider des options MTD que vous devez activer en fonction des besoins de votre entreprise. Voici plus de détails :
 
-**Paramètres de stratégie de protection d’applications**
-- **Connecter les appareils Android version 4.1 et ultérieure à *\<nom du partenaire MTD>* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection d’applications qui utilisent la règle Niveau de menace pour l’appareil évaluent les appareils, y compris les données de ce connecteur.
-- **Connecter les appareils iOS version 8.0 et ultérieure à *\<nom du partenaire MTD>* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection d’applications qui utilisent la règle Niveau de menace pour l’appareil évaluent les appareils, y compris les données de ce connecteur.
+**Paramètres de stratégie de protection des applications**
+- **Connecter les appareils Android 4.4 et versions ultérieures à *\<Nom du partenaire MTD>* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection des applications qui utilisent la règle de niveau de menace de l’appareil évaluent les appareils, y compris les données de ce connecteur.
+- **Connecter les appareils iOS version 11 et ultérieure à *\<nom du partenaire MTD>* pour l’évaluation de la stratégie de protection des applications** : Lorsque vous activez cette option, les stratégies de protection des applications qui utilisent la règle de niveau de menace de l’appareil évaluent les appareils, y compris les données de ce connecteur.
 
 **Paramètres partagés communs**
 - **Nombre de jours avant de considérer que le partenaire n’est pas réactif** : nombre de jours d’inactivité au bout desquels Intune considère que le partenaire n’est pas réactif en raison de la perte de connexion. Intune ignore l’état de conformité pour les partenaires MTD non réactifs.

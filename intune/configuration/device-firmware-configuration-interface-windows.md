@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,19 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
+ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889570"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73432528"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Utiliser les profils d’interface de configuration du microprogramme des appareils Windows dans Microsoft Intune (préversion publique)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-> [!Note]
-> Le lancement de chaque [mise à jour mensuelle](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) peut prendre plusieurs jours. Le déploiement de certaines fonctionnalités peut s’étaler sur plusieurs semaines. Ces fonctionnalités risquent de ne pas être tout de suite accessibles à tous les clients.
 
 Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer les paramètres UEFI (BIOS) une fois qu’ils sont inscrits, à l’aide de l’interface DFCI (interface de configuration du microprogramme de l’appareil). Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de l’interface DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -45,7 +42,7 @@ Cette fonctionnalité s’applique à :
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-- Le fabricant de l’appareil doit avoir ajouté l’interface DFCI à son microprogramme UEFI dans le processus de fabrication, ou en tant que mise à jour du microprogramme à installer. Collaborez avec vos fournisseurs d’appareils pour déterminer les fabricants qui prennent en charge l’interface DFCI ou la version du microprogramme nécessaire pour utiliser DFCI.
+- Le fabricant de l’appareil doit avoir ajouté l’interface DFCI à son microprogramme UEFI dans le processus de fabrication, ou en tant que mise à jour du microprogramme à installer. Collaborez avec vos fournisseurs d’appareils pour déterminer les [fabricants qui prennent en charge l’interface DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci) ou la version du microprogramme nécessaire pour utiliser DFCI.
 
 - L’appareil doit être inscrit pour Windows Autopilot par un [partenaire fournisseur de solutions Microsoft Cloud (CSP)](https://partner.microsoft.com/cloud-solution-provider), ou inscrit directement par l’OEM. 
 

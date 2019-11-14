@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a75b1403e351981d1f6ab827d4c10648430b21fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 39d687c8c9b75182ba0e7d4020c6b840c753a231
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504618"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627664"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Intégrer Jamf Pro à Intune pour des raisons de conformité
 
@@ -94,7 +94,7 @@ Pour connecter Intune à Jamf Pro :
 
    Sélectionnez **Ajouter une autorisation** pour enregistrer cette configuration.  
 
-8. Sur la page **Autorisations d’API**, choisissez **Accorder le consentement administrateur pour *\<votre locataire>***, puis sélectionnez **Oui**.  Une fois l'application inscrite avec succès, les autorisations d'API devraient apparaître comme suit : ![Autorisations réussies](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
+8. Sur la page **Autorisations d’API**, choisissez **Accorder le consentement administrateur pour _\<votre locataire>_** , puis sélectionnez **Oui**.  Une fois l'application inscrite avec succès, les autorisations d'API devraient apparaître comme suit : ![Autorisations réussies](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
    Le processus d’inscription d’application dans Azure AD est terminé.
 

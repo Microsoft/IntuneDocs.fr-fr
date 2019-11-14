@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ae1b5a51533bf14d4299fcf0248564562289f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507571"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592096"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gérer l’accès web de l’entreprise à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
@@ -179,7 +179,7 @@ Utilisation de la procédure ci-dessus pour créer une configuration d’applica
 > [!NOTE]
 > Dans la stratégie de protection des applications qui gère Microsoft Edge et les applications associées spécifiées dans la configuration de l’application, vérifiez que les paramètres de la stratégie de protection des données suivants sont définis :
 > - Envoyer les données d’organisation à d’autres applications : **Applications gérées par la stratégie**
-> - Partager du contenu web avec des navigateurs gérés par stratégie : **Exiger**
+> - Restreindre le transfert de contenu web à d’autres applications : **Navigateurs gérés par la stratégie**
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Configurer des paramètres de proxy d’application pour les navigateurs protégés
 

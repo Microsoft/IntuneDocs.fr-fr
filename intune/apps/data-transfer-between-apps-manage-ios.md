@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db583b1fc89edf72f329a605cc86363593eaaa9d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cdc849405b7404203faa6e86d3fed1ea8e35ec43
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497920"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414634"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -81,7 +81,7 @@ Le paramètre UPN d’utilisateur est **requis** pour les appareils gérés par 
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Chaîne | %upn% |
 
 > [!NOTE]  
-> Pour l’application Outlook dans iOS si vous déployez une stratégie App Configuration avec l’option « Utilisation du concepteur de configuration » la clé de configuration IntuneMAMUPN est configurée automatiquement dans les coulisses de la stratégie. Pour plus d’informations, consultez la section FAQ dans [Nouvelle expérience Outlook pour iOS et de stratégie App Configuration Android – App Configuration générale](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> Pour Outlook pour iOS, si vous déployez une stratégie de configuration d’application d’appareils gérés avec l’option « Utilisation du concepteur de configuration » et que vous activez **Autoriser uniquement les comptes professionnels ou scolaires**, la clé de configuration IntuneMAMUPN est configurée automatiquement en arrière-plan pour la stratégie. Pour plus d’informations, consultez la section FAQ dans [Nouvelle expérience Outlook pour iOS et de stratégie App Configuration Android – App Configuration générale](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Exemple 2 : Expérience de l’utilisateur final

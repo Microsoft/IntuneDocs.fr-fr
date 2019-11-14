@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d6fb5a703aad09592bfac3b5a16390389059d33
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143215"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -139,7 +139,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 ### <a name="step-4-configure-app-installation-details"></a>Étape 4 : Configurer les détails d’installation de l’application
 1. Dans le volet **Ajouter une application**, sélectionnez **Programme** pour configurer les commandes d’installation et de suppression de l’application.
-2. Ajoutez la ligne de commande d’installation complète pour installer l’application. 
+2. Pour configurer la **commande d’installation**, ajoutez la ligne de commande d’installation complète pour installer l’application. 
 
     Par exemple, si le nom de fichier de votre application est **MyApp123**, ajoutez ce qui suit :<br>
     `msiexec /p “MyApp123.msp”`<p>
@@ -148,9 +148,11 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     Dans la commande ci-dessus, le package `ApplicationName.exe` prend en charge l’argument de commande `/quiet`.<p> 
     Pour connaître les arguments spécifiques pris en charge par le package d’application, contactez le fournisseur de l’application.
 
-3. Ajoutez la ligne de commande de désinstallation complète pour désinstaller l’application à partir de son GUID. 
+3. Pour configurer la **commande de désinstallation**, ajoutez la ligne de commande de désinstallation complète pour désinstaller l’application en fonction de son GUID. 
 
     Par exemple : `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+4. Définissez le **comportement de l’installation** sur **Système** ou **Utilisateur**.
 
     > [!NOTE]
     > Vous pouvez configurer une application Win32 afin qu’elle soit installée dans le contexte **Utilisateur** ou **Système**. Le contexte **Utilisateur** fait référence uniquement à un utilisateur donné. Le contexte **Système** fait référence à tous les utilisateurs d’un appareil Windows 10.
@@ -159,7 +161,13 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     > 
     > L’installation et la désinstallation de Win32 sont exécutées exécutée sous le privilège Administrateur (par défaut) lorsque l’application est définie pour être installée dans le contexte de l’utilisateur et que l’utilisateur final de l’appareil a des privilèges Administrateur.
 
-4. Une fois que vous avez fini, sélectionnez **OK**.
+5. Pour configurer le **comportement de redémarrage de l’appareil**, sélectionnez l’une des options suivantes :
+    - **Déterminer le comportement en fonction des codes de retour** : Choisissez cette option pour redémarrer l’appareil en fonction des paramètres de configuration de [codes de retour](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes).
+    - **Aucune action spécifique** : Choisissez cette option pour supprimer les redémarrages d’appareil lors de l’installation d’applications basées sur MSI.
+    - **L’installation de l’application peut forcer le redémarrage de l’appareil** : Choisissez cette option pour permettre à l’installation de l’application de se terminer sans supprimer les redémarrages.
+    - **Intune force le redémarrage obligatoire de l’appareil** : Choisissez cette option pour toujours redémarrer l’appareil après une installation réussie de l’application.
+
+6. Une fois que vous avez fini, sélectionnez **OK**.
 
 ### <a name="step-5-configure-app-requirements"></a>Étape 5 : Configurer les exigences de l’application
 
@@ -279,10 +287,11 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés.
     - **Désinstaller** : l’application est désinstallée des appareils dans les groupes sélectionnés.
 4. Sélectionnez **Groupes inclus** et affectez les groupes qui doivent utiliser cette application.
-5. Dans le volet **Attribuer**, sélectionnez **OK** pour terminer la sélection des groupes inclus.
-6. Cliquez sur **Exclure des groupes** si vous voulez exclure des groupes d’utilisateurs d’un impact par cette attribution d’applications.
-7. Dans le volet **Ajouter un groupe**, sélectionnez **OK**.
-8. Dans le volet **Affectations** de l’application, sélectionnez **Enregistrer**.
+5. Dans le volet **Attribuer**, sélectionnez l’attribution en fonction des utilisateurs ou des appareils. Lorsque vous choisissez vos attributions, vous pouvez également choisir l’**expérience utilisateur final**. L’**expérience utilisateur final** vous permet de définir des **notifications d’utilisateur final**, une **période de grâce de redémarrage**, la **disponibilité** et l’**échéance d’installation**. Pour plus d’informations, consultez **Définir la disponibilité des applications Win32 et notifications**.
+6. Sélectionnez **OK** pour terminer la sélection des groupes inclus.
+7. Cliquez sur **Exclure des groupes** si vous voulez exclure des groupes d’utilisateurs d’un impact par cette attribution d’applications.
+8. Dans le volet **Ajouter un groupe**, sélectionnez **OK**.
+9. Dans le volet **Affectations** de l’application, sélectionnez **Enregistrer**.
 
 À ce stade, vous avez effectué les étapes permettant d’ajouter une application Win32 à Intune. Pour plus d’informations sur l’affectation et la supervision d’applications, consultez [Affecter des applications à des groupes avec Microsoft Intune](apps-deploy.md) et [Superviser les informations et les affectations d’application avec Microsoft Intune](apps-monitor.md).
 
@@ -328,6 +337,36 @@ L’utilisateur final voit des notifications toast Windows pour l’installation
 L’image suivante indique à l’utilisateur final que des changements sont effectués sur l’application sur l’appareil.
 
 ![Capture d’écran d’une notification faite à l’utilisateur concernant des modifications de l’application](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+## <a name="set-win32-app-availability-and-notifications"></a>Définir la disponibilité des applications Win32 et notifications
+Vous pouvez configurer l’heure de début et l’échéance d’une application Win32. À l’heure de début, l’extension de gestion Intune démarre le téléchargement du contenu de l’application et le met en cache pour l’intention requise. L’application est installée à l’heure définie. Pour les applications disponibles, l’heure de début détermine le moment où l’application est visible dans le Portail d’entreprise et le contenu est téléchargé lorsque l’utilisateur final demande l’application à partir du Portail d’entreprise. En outre, vous pouvez activer une période de grâce de redémarrage. 
+
+Définissez la disponibilité de l’application en fonction de la date et de l’heure d’une application requise, en procédant comme suit :
+
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
+3. Sélectionnez une **application Windows (Win32)** existante dans la liste. 
+4. Dans le volet de l’application, sélectionnez **Attributions** > **Ajouter un groupe**. 
+5. Affectez la valeur **Obligatoire** à **Type d’affectation**. Notez que la disponibilité des applications peut être définie en fonction du type d’attribution. Le **Type d’attribution** peut être **Requis** **Disponible pour les appareils inscrits** ou **Désinstaller**.
+6. Sélectionnez **Groupes inclus** pour déterminer le groupe d’utilisateurs qui sera attribué à l’application. Le volet **Attribuer** s’affiche.
+7. Définissez **Rendre cette application obligatoire pour tous les utilisateurs** sur **Oui**.
+
+    > [!NOTE]
+    > Ces options de **type d’attribution** sont les suivantes :<br>
+    > - **Requis** : Vous pouvez choisir de **rendre cette application obligatoire pour tous les utilisateurs** et/ou **rendre cette application obligatoire sur tous les appareils**.<br>
+    > - **Disponible pour les appareils inscrits** : Vous pouvez choisir de **rendre cette application accessible à tous les utilisateurs avec des appareils inscrits**.<br>
+    > - **Désinstaller** : Vous pouvez choisir de ***désinstaller cette application pour tous les utilisateurs** et/ou de **désinstaller cette application pour tous les appareils**.
+
+8. Pour modifier l’**expérience utilisateur final**, sélectionnez **Modifier**.
+9. Dans le volet **Modifier l’attribution**, définissez les **notifications de l’utilisateur final** sur **Afficher toutes les notifications toast**. Notez que vous pouvez définir **Notifications de l’utilisateur final** sur **Afficher toutes les notifications toast**, **Afficher les notifications toast pour les redémarrages d’ordinateur** ou **Masquer toutes les notifications toast**.
+10. Définissez la **disponibilité de l’application** sur **une date et une heure spécifiques**, puis sélectionnez la date et l’heure. Ces date et heure spécifient le moment où l’application est téléchargée sur l’appareil des utilisateurs finaux. 
+11. Définissez l’**échéance d’installation de l’application** sur **une date et une heure spécifiques**, puis sélectionnez la date et l’heure. Ces date et heure spécifient le moment où l’application est installée sur l’appareil des utilisateurs finaux. Lorsque plusieurs attributions sont effectuées pour le même utilisateur ou appareil, l’heure d’échéance de l’installation de l’application est choisie en fonction de l’heure la plus proche possible.
+12. Cliquez sur **Activé** en regard de **Période de grâce de redémarrage**. La période de grâce de redémarrage démarre dès que l’installation de l’application est terminée sur l’appareil. Lorsque cette option est désactivée, l’appareil peut redémarrer sans avertissement. <br>Vous pouvez personnaliser les options suivantes :
+    - **Période de grâce de redémarrage de l’appareil (minutes)**  : La valeur par défaut est 1440 minutes (24 heures). Cette valeur est limité à 2 semaines.
+    - **Sélectionner quand afficher la boîte de dialogue de compte à rebours avant le redémarrage (en minutes)**  : La valeur par défaut est 15 minutes.
+    - **Autoriser l’utilisateur à répéter la notification de redémarrage** : Vous pouvez choisir **Oui** ou **Non**.
+        - **Sélectionner la durée de répétition (en minutes)**  : La valeur par défaut est 240 minutes (4 heures). La valeur de répétition ne peut pas être supérieure à la période de grâce de redémarrage.
+13. Cliquez sur **OK** > **OK** > **OK** > **Enregistrer** pour ajouter l’attribution.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Notifications toast pour les applications Win32 
 Si nécessaire, vous pouvez supprimer l’affichage des notifications toast à l’utilisateur final par affectation d’applications. Dans Intune, sélectionnez **Applications clientes** > **Applications** > sélectionnez l’application > **Affectations** > **Inclure les groupes**. 
