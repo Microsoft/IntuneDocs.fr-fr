@@ -3,8 +3,8 @@ title: Réduire les frais de support technique
 titleSuffix: Microsoft Intune
 description: Réduction des frais de support technique avec la réinitialisation de mot de passe en libre-service
 keywords: Réinitialisation du mot de passe SSPR d’Azure Active Directory
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: archived
@@ -15,16 +15,17 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1da1758dcc1743087191f69bd4d57bc113774d81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 08dc14a3abed634721b39fedaae840e2b18c151b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509303"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058116"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Réduire les frais de support technique avec la réinitialisation de mot de passe en libre-service
 
 Vous pouvez autoriser les employés à réinitialiser les mots de passe des comptes professionnels ou scolaires sans l’aide du support technique. Ce type de réinitialisation de mot de passe en libre-service est recommandé dans les situations suivantes :
+
 * Votre entreprise ou établissement scolaire utilise Azure Active Directory pour les comptes professionnels et scolaires.
 * Vos employés et étudiants ont accès à Internet.
 * Vous voulez réduire les frais de support technique.
@@ -39,6 +40,7 @@ Vous pouvez autoriser les employés à réinitialiser les mots de passe des comp
 ## <a name="next-steps"></a>Étapes suivantes
 
 Découvrez plus en détail les articles suivants :
+
 * [Bonnes pratiques relatives aux mots de passe](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Conditions de licence pour la réinitialisation de mot de passe en libre-service](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 

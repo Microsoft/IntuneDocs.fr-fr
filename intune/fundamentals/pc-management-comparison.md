@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/13/2018
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ab16d79549a7fe7b0249c0c4af79ed56817ecec
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d8fd53e9d12dd38639d204e214aea03d733e584b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510048"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059194"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles
 
@@ -42,8 +42,8 @@ Les organisations peuvent utiliser Microsoft Intune pour gérer les PC Windows e
 |**Gestion des mises à jour logicielles**| Mises à jour Windows et mises à jour des applications Microsoft<br>[Maintenir des PC Windows à jour avec les mises à jour logicielles](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Microsoft Store pour Entreprises pour les mises à jour des applications Windows 10 et Microsoft<br> [Configurer les paramètres Windows Update Entreprise](../protect/windows-update-for-business-configure.md) |
 |**Gestion des licences logicielles**|Disponible <br>[Gérer les contrats de licence des logiciels de PC Windows](../manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Microsoft Store pour Entreprises (applications .appx uniquement)<br>[Gérer les applications achetées sur le Microsoft Store pour Entreprises](../apps/windows-store-for-business.md)|
 |**Inventaire**|Disponible <br>[Afficher l’inventaire logiciel et matériel pour les PC Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Disponible <br>[Comment surveiller les informations d’applications](../apps/apps-monitor.md)<br>[Qu’est-ce que la gestion des appareils](../remote-actions/device-management.md)|
-|**Stratégie de Pare-feu Windows**|Disponible <br>[Protéger les PC Windows à l’aide de stratégies de Pare-feu Windows](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Disponible <br>[Pare-feu Windows Defender](../protect/endpoint-protection-windows-10.md#windows-defender-firewall)|
-|**Protection contre les programmes malveillants**|Endpoint Protection<br>[Contribuer à la sécurisation des PC Windows avec Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Windows Defender<br>[Activer Windows Defender](../protect/advanced-threat-protection.md)|
+|**Stratégie de Pare-feu Windows**|Disponible <br>[Protéger les PC Windows à l’aide de stratégies de Pare-feu Windows](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Disponible <br>[Pare-feu Microsoft Defender](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Protection contre les programmes malveillants**|Endpoint Protection<br>[Contribuer à la sécurisation des PC Windows avec Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Microsoft Defender<br>[Activer Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Assistance à distance** |TeamViewer<br>[Demander et fournir une assistance à distance pour les PC Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Utiliser TeamViewer pour administrer à distance des appareils Intune](../remote-actions/teamviewer-support.md) |
 |**Déploiement d'applications** | Non disponible pour Microsoft Store pour Entreprises,<br>.exe, .appx, et .msi incluant plusieurs fichiers uniquement<br>[Ajouter des applications pour les PC Windows exécutant le logiciel client Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|Disponible pour les applications du Microsoft Store et les applications métier<br>[Guide pratique d’ajout d’applications du Windows Store](../apps/store-apps-windows.md)<br>[Guide pratique pour ajouter des applications métier Windows](../apps/lob-apps-windows.md)|
 |**Protection d’applications**|Non disponible|Disponible <br>[Que sont les stratégies de protection des applications ?](../apps/app-protection-policy.md)|

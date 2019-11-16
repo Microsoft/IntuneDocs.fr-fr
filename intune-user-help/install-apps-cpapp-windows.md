@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8cb6976121f4c5a9ce755e8feb189ea007e7ffd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 80fd2d54a99bc3f4ab47f48f94eb14aa1a7f630c
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506117"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126201"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installer et partager des applications sur votre appareil
 
@@ -41,7 +41,7 @@ Installez des applications sur votre appareil à partir de l’application Porta
     * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
     * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (à savoir celles déjà installées et celles proposées). Afficher, trier et filtrer les applications. Les résultats de la recherche sont automatiquement triés selon la pertinence.  
     * **Catégories d’applications**: sélectionnez cette page dans le volet de navigation pour choisir les applications en fonction du type ou de la fonction. Les applications sont triées dans des catégories telles que les **fonctionnalités proposées**, d' **éducation**et de **productivité**.  
-    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application.  Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
+    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application. Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
 
 3. Sélectionnez une application.   
 4. Dans la page Détails de l’application, cliquez sur **Installer**. Une fois son installation terminée, l’application présente l’état **Installé**.  
@@ -69,10 +69,10 @@ Partagez des applications avec d’autres personnes de votre entreprise ou étab
 
 Une fois que vous avez partagé l’application, le destinataire reçoit un lien et un message lui permettant d’afficher les détails de l’application. Le lien ouvre la page **Détails de l’application** dans Portail d’entreprise. 
 
-## <a name="available-and-required-apps"></a>Applications disponibles et requises
-Les applications vous sont attribuées par votre organisation et étiquetées dans Portail d’entreprise en tant que **disponible** ou **obligatoire**. 
+## <a name="optional-and-required-apps"></a>Applications facultatives et obligatoires
+Les applications vous sont assignées par votre organisation. Votre organisation doit disposer de certaines applications et rendre les autres applications facultatives. Pour savoir quelles applications sont requises ou facultatives, accédez à **applications installées** et recherchez dans la colonne **requise par votre organisation**.  
 
-* Applications disponibles : ces applications sont sélectionnées par votre organisation et sont appropriées et utiles pour votre travail ou votre école. Ils sont facultatifs pour l’installation et sont les seules applications que vous trouverez dans le Portail d’entreprise à installer. 
+* Applications facultatives : ces applications sont sélectionnées par votre organisation et sont appropriées et utiles pour le travail ou l’école. Ils sont mis à votre disposition, mais c’est à vous de décider si vous souhaitez les installer. Il s’agit du seul type d’application que vous trouverez dans le Portail d’entreprise à installer. 
 
 * Applications requises : ces applications sont nécessaires pour le travail et l’école et sont déployées directement sur votre appareil. Ces applications sont automatiquement installées pour vous sans intervention. 
 
@@ -86,15 +86,13 @@ Si vous avez besoin d’une application qui ne figure pas dans le Portail d’en
 ## <a name="view-installed-apps"></a>Afficher les applications installées  
 Affichez la liste de toutes les applications installées sur votre appareil. La page **applications installées** répertorie les informations suivantes sur chaque application :
 
-* Nom : le nom de l’application. Les applications disponibles incluent un lien vers la page Détails de l' **application** .
+* Nom : le nom de l’application. Les applications facultatives incluent un lien vers la page Détails de l' **application** .
 * Type d’affectation : la manière dont l’application est affectée et mise à votre disposition. 
 * Serveur de publication : nom du développeur ou de la société qui a distribué l’application. Un serveur de publication est généralement un éditeur de logiciels ou votre organisation.  
 * Date de publication : date à laquelle l’application a été mise à disposition pour téléchargement. La date de publication peut afficher la version initiale d’une application ou la mise à jour la plus récente d’une application.
 * État : état actuel de l’installation de l’application sur votre appareil. Les applications peuvent s’afficher en cas d’échec de l’installation, de l’installation et de l’installation. Les applications requises peuvent prendre jusqu’à 10 minutes pour afficher un État à jour. Consultez la remarque sous [installer des applications](#install-apps) pour obtenir des informations importantes sur l’installation d’une application requise. 
 
-Pour accéder à cette page, accédez au menu de navigation et sélectionnez **applications installées**. 
-
-  ![Exemple de capture d’écran de l’application Portail d’entreprise pour Windows 10 - Page Applications installées ](./media/installed-apps-cp-1906.png)  
+Pour accéder à cette page, accédez au menu de navigation et sélectionnez **applications installées**.  
 
 
 Utilisez **Trier par** pour réorganiser le type d’affectation d’applications, l’éditeur, l’ordre alphabétique par nom, ou chronologiquement par date de publication. Utilisez **Filtrer par** pour limiter les applications que vous voyez par État d’installation.  Si aucune application n’est disponible, vous verrez un message indiquant qu’aucune application d’entreprise n’a été installée.  

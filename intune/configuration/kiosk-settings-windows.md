@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17dce8f7c5aa55a2044e663f724a5784cee8b375
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506685"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059339"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque dans Intune
 
@@ -40,6 +40,8 @@ Pour en savoir plus sur la fonctionnalité de kiosque Windows dans Intune, consu
 
   1. Créez ce profil de kiosque pour exécuter l’appareil en mode kiosque.
   2. Créez le [profil de restrictions d’appareil](device-restrictions-windows-10.md#microsoft-edge-browser) et configurez les fonctionnalités et paramètres spécifiques autorisés dans Microsoft Edge.
+
+- Veillez à ce que tous les fichiers, scripts et raccourcis se trouvent sur le système local. Pour plus d’informations, notamment sur les autres conditions requises pour Windows, consultez [personnaliser et exporter la disposition de démarrage](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Veillez à attribuer ce profil de kiosque aux mêmes appareils que ceux de votre [profil Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -194,3 +196,5 @@ Dans ce mode, les applications sont disponibles dans le menu Démarrer. Ce sont 
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
 Vous pouvez également créer des profils kiosque pour des appareils [Android](device-restrictions-android.md#kiosk), [Android Entreprise](device-restrictions-android-for-work.md#dedicated-device-settings) et [Windows Holographic for Business](kiosk-settings-holographic.md).
+
+Consultez également [configurer une borne pour une seule application](https://docs.microsoft.com/windows/configuration/kiosk-single-app) ou [configurer une borne à plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) dans l’aide de Windows.

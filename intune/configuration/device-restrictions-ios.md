@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709745"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984123"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -447,11 +447,20 @@ Pour ajouter des applications, vous pouvez :
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription de l’appareil, inscription automatique des appareils (supervisé)
 
+Remarque nécessaire pour l’itinérance des données (Remarque importante ou importante pour faciliter la confusion du client) : ce paramètre n’apparaît pas dans le profil de gestion de l’appareil ciblé. Cela est dû au fait que ce paramètre est traité comme une action de périphérique distant et que chaque fois que l’état de l’itinérance des données est modifié sur l’appareil, il est de nouveau bloqué par le service Intune. Même s’il ne se trouve pas dans le profil de gestion, il fonctionne s’il s’agit d’une réussite de la création de rapports dans la console d’administration. 
 - **Itinérance de données** : choisissez **Bloquer** pour empêcher l’itinérance de données sur le réseau cellulaire. L’option (par défaut) **Non configuré** autorise l’itinérance de données quand l’appareil se trouve sur un réseau cellulaire.
+
+  > [!IMPORTANT]
+  > Ce paramètre est traité comme une action d’appareil à distance. Ce paramètre n’est donc pas indiqué dans le profil de gestion sur l’appareil. Chaque fois que l’état d’itinérance des données change sur l’appareil, l' **itinérance des données** est bloquée par le service Intune. Dans Intune, si l’état de la création de rapports indique une réussite, sachez qu’elle fonctionne, même si le paramètre n’est pas indiqué dans le profil de gestion sur l’appareil.
+
 - **Récupération en arrière-plan globale en cas d'itinérance**  : choisissez **Bloquer** pour empêcher l’utilisation de la fonctionnalité de récupération en arrière-plan globale lors de l’itinérance sur le réseau cellulaire. L’option (par défaut) **Non configuré** autorise l’appareil à récupérer des données comme les courriers électroniques lorsqu’il est en mode itinérance sur un réseau cellulaire.
 - **Numérotation vocale** : choisissez **Bloquer** pour empêcher l’utilisation de la fonctionnalité de numérotation vocale sur l’appareil. L’option (par défaut) **Non configuré** autorise la numérotation vocale sur l’appareil.
 - **Itinérance vocale** : choisissez **Bloquer** pour empêcher l’itinérance vocale sur le réseau cellulaire. L’option (par défaut) **Non configuré** autorise l’itinérance vocale quand l’appareil se trouve sur un réseau cellulaire.
 - **Point d’accès personnel** : l’option **Bloquer** désactive le point d’accès personnel sur l’appareil de l’utilisateur à chaque synchronisation de l’appareil. Ce paramètre n’est peut-être pas compatible avec certains opérateurs. **Non configuré** (par défaut) conserve la configuration de point d’accès personnel comme la valeur par défaut définie par l’utilisateur.
+
+  > [!IMPORTANT]
+  > Ce paramètre est traité comme une action d’appareil à distance. Ce paramètre n’est donc pas indiqué dans le profil de gestion sur l’appareil. Chaque fois que l’état de la zone réactive personnelle change sur l’appareil, le point d’accès **personnel** est bloqué par le service Intune. Dans Intune, si l’état de la création de rapports indique une réussite, sachez qu’elle fonctionne, même si le paramètre n’est pas indiqué dans le profil de gestion sur l’appareil.
+
 - **Règles d’utilisation des données mobiles (applications gérées uniquement)** : définissez les types de données que les applications gérées peuvent utiliser sur les réseaux mobiles. Les options disponibles sont les suivantes :
   - **Bloquer l’utilisation de données cellulaires** : bloquez l’utilisation de données cellulaires pour **toutes les applications managées** ou **Choisir des applications spécifiques**.
   - **Bloquer l’utilisation de données cellulaires en itinérance** : bloquez l’utilisation de données cellulaires en itinérance pour **toutes les applications managées** ou **Choisir des applications spécifiques**.

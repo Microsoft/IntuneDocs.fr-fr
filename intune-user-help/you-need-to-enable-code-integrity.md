@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,18 +19,18 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bde7fc554496b2ecc6f13c7e1b899d7ff05bfa1
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 2b26717e2e8beed2e92f47dca17cbea0ec47a82b
+ms.sourcegitcommit: 244a75622f9cebaaaf5b33aadd8931407a2e2e48
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754996"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096741"
 ---
 # <a name="enable-code-integrity"></a>Activer l’intégrité du code
 
 Votre organisation peut nécessiter l’activation de votre ordinateur avec une fonctionnalité de protection contre les menaces appelée *intégrité du code*. L’intégrité du code vérifie les pilotes et les fichiers système sur votre appareil pour détecter les signes d’altération ou les logiciels malveillants. Pour que l’intégrité du code fonctionne sur votre appareil, une autre fonctionnalité de sécurité appelée [*Démarrage sécurisé*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) doit également être activée.
 
-Si votre ordinateur n’est pas conforme car l’intégrité du code est désactivée, contactez l’équipe du support informatique de votre organisation. Ils vous aideront à activer le démarrage sécurisé, qui déclenchera l’intégrité du code la prochaine fois que vous démarrerez votre appareil.
+Si votre ordinateur n’est pas conforme en raison de la désactivation de l’intégrité du code, contactez la personne chargée du support informatique de votre organisation. Votre personne du support technique vous aidera à activer le démarrage sécurisé, qui déclenchera l’intégrité du code la prochaine fois que vous démarrerez votre appareil. 
 
 Si vous vous identifiez comme un utilisateur d’appareil avancé et souhaitez essayer les étapes vous-même, consultez [réactiver le démarrage sécurisé](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 

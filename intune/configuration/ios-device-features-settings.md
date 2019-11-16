@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3e0ea523d71ff036f1f23c9436c65e105328d8b
-ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
+ms.openlocfilehash: 381ceea979dedf9b33cb7ef9c47291e3ac6ce20c
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057642"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117893"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS et iPadOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
 
@@ -296,17 +296,17 @@ Cette fonctionnalité s’applique à :
 
 - **Domaine**: entrez le nom de votre domaine Kerberos. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
 
-- **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` est le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
+- **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
 
   - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans n’importe quel profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.
   - Ces domaines ne respectent pas la casse.
 
 - **Configuration supplémentaire** (informations d’identification uniquement) : entrez des données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
-  - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple, `user name`.
+  - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
   - **Type de valeur**: entrez le type de données. Les options disponibles sont les suivantes :
 
     - Chaîne
-    - Booléen : dans la **valeur de configuration**, entrez `True` ou `False`.
+    - Booléen : dans **valeur de configuration**, entrez `True` ou `False`.
     - Entier : dans **valeur de configuration**, entrez un nombre.
     
   - **Valeur de configuration**: entrez les données.
@@ -322,11 +322,12 @@ Cette fonctionnalité s’applique à :
   > - **Activez** ce paramètre si vous utilisez plusieurs domaines. Il définit la valeur de **domaine** que vous avez entrée comme domaine par défaut.
   > - Si vous n’avez qu’un seul domaine, laissez-le **non configuré** (par défaut).
 
-- **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` est le nom de domaine.
+- **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` le nom de domaine.
 - **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’avez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
 - **Nom du cache** (Kerberos uniquement) : entrez le nom du service de sécurité générique (GSS) du cache Kerberos. Vous n’avez probablement pas besoin de définir cette valeur.
 - **ID d’ensemble d’applications** (Kerberos uniquement) : **Ajoutez** les identificateurs de bundle d’applications qui doivent utiliser l’authentification unique sur vos appareils. Ces applications sont autorisées à accéder au ticket d’accord de ticket Kerberos, au ticket d’authentification et à authentifier les utilisateurs auprès des services auxquels ils sont autorisés à accéder.
 - **Mappage** de domaine Kerberos (Kerberos uniquement) : **Ajoutez** les suffixes DNS de domaine qui doivent être mappés à votre domaine. Utilisez ce paramètre lorsque les noms DNS des hôtes ne correspondent pas au nom de domaine. Vous n’avez probablement pas besoin de créer ce mappage de domaine à domaine personnalisé.
+- **Certificat PKINIT** (Kerberos uniquement) : **Sélectionnez** le certificat chiffrement de clé publique pour l’authentification initiale (PKINIT) qui peut être utilisé pour renouveler les informations d’identification Kerberos sans intervention de l’utilisateur. Le certificat doit être un certificat PKCS ou SCEP que vous avez précédemment ajouté à Intune.
 
 ## <a name="wallpaper"></a>Papier peint
 

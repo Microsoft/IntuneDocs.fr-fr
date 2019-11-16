@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7c7ec23d0408aa4d4cf81baff2d7cdf749fb65e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 03ceaf5493f544dbb815146eb67c3fae8856d29e
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509233"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126152"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Résoudre des problèmes liés à l’accord de mise en œuvre de périphériques iOS dans Microsoft Intune
 
@@ -84,6 +84,8 @@ Collectez les informations suivantes sur le problème :
 1. Supprimez l’application Portail d’entreprise du périphérique.
 2. Téléchargez l’application **Portail d’entreprise Microsoft Intune** à partir de l’**App Store** et installez-la.
 3. Réinscrire le périphérique.
+ > [!NOTE]
+    > Cette erreur peut également se produire si l’utilisateur tente d’inscrire plus d’appareils que l’inscription de l’appareil n’est configurée pour autoriser. Suivez les étapes de résolution pour la limite d' **appareils atteinte** ci-dessous si ces étapes ne résolvent pas le problème.
 
 ### <a name="device-cap-reached"></a>Nombre maximal d'appareils atteint
 

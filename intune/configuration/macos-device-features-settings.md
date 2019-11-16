@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d0cff4ad624d35843f3388535b60549d1893eeb
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 54995b54d7810c02c5a8b24e5ddff3fa1f08cb05
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143163"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117873"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -144,17 +144,17 @@ Cette fonctionnalité s’applique à :
   Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (qui ouvre le site Web d’Apple).
 
 - **Domaine**: entrez le nom de votre domaine d’authentification. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
-- **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` est le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
+- **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
 
   - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans n’importe quel profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.
   - Ces domaines ne respectent pas la casse.
 
 - **Configuration supplémentaire** (informations d’identification uniquement) : entrez des données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
-  - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple, `user name`.
+  - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
   - **Type de valeur**: entrez le type de données. Les options disponibles sont les suivantes :
 
     - Chaîne
-    - Booléen : dans la **valeur de configuration**, entrez `True` ou `False`.
+    - Booléen : dans **valeur de configuration**, entrez `True` ou `False`.
     - Entier : dans **valeur de configuration**, entrez un nombre.
     
   - **Valeur de configuration**: entrez les données.
@@ -179,12 +179,13 @@ Cette fonctionnalité s’applique à :
 - **Durée de vie minimale du mot de passe** (Kerberos uniquement) : entrez le nombre de jours pendant lesquels un mot de passe doit être utilisé sur le domaine pour qu’un utilisateur puisse le changer. **Non configuré** (par défaut) n’impose pas une ancienneté minimale des mots de passe avant de pouvoir les modifier.
 - **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe expirera. **Non configuré** (par défaut) utilise `15` jours.
 - **Expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil. **Non configuré** (valeur par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
-- **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` est le nom de domaine.
+- **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` le nom de domaine.
 - **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’avez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
 - **Nom du cache** (Kerberos uniquement) : entrez le nom du service de sécurité générique (GSS) du cache Kerberos. Vous n’avez probablement pas besoin de définir cette valeur.  
 - **Message** sur les exigences de mot de passe (Kerberos uniquement) : entrez une version textuelle des exigences de mot de passe de votre organisation, qui est présentée aux utilisateurs. Le message s’affiche si vous n’avez pas besoin de Active Directory exigences de complexité du mot de passe ou si vous n’entrez pas une longueur minimale pour le mot de passe.  
 - **ID d’ensemble d’applications** (Kerberos uniquement) : **Ajoutez** les identificateurs de bundle d’applications qui doivent utiliser l’authentification unique sur vos appareils. Ces applications sont autorisées à accéder au ticket d’accord de ticket Kerberos, au ticket d’authentification et à authentifier les utilisateurs auprès des services auxquels ils sont autorisés à accéder.
 - **Mappage** de domaine Kerberos (Kerberos uniquement) : **Ajoutez** les suffixes DNS de domaine qui doivent être mappés à votre domaine. Utilisez ce paramètre lorsque les noms DNS des hôtes ne correspondent pas au nom de domaine. Vous n’avez probablement pas besoin de créer ce mappage de domaine à domaine personnalisé.
+- **Certificat PKINIT** (Kerberos uniquement) : **Sélectionnez** le certificat chiffrement de clé publique pour l’authentification initiale (PKINIT) qui peut être utilisé pour renouveler les informations d’identification Kerberos sans intervention de l’utilisateur. Le certificat doit être un certificat PKCS ou SCEP que vous avez précédemment ajouté à Intune.
 
 ## <a name="associated-domains"></a>Domaines associés
 
