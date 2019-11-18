@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e2f654d9e505afba00a1a9090febe4c06ca77ff
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: 454d23038a593829ea8a14929dc435e9f9ddb457
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445342"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709487"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -49,7 +49,7 @@ Pour plus d’informations, consultez la compréhension du cmdlet PowerShell.
 
 Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV contenant leurs informations.
 
-1. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > **Importer**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > **Importer**.
 
     ![Capture d’écran d’appareils Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -71,7 +71,7 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
 
 ## <a name="create-an-autopilot-device-group"></a>Créer un groupe d’appareils Autopilot
 
-1. Dans [Intune dans le Portail Azure](https://aka.ms/intuneportal), choisissez **Groupes** > **Nouveau groupe**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Groupes** > **Nouveau groupe**.
 2. Dans le panneau **Groupe** :
     1. Pour **Type de groupe**, choisissez **Sécurité**.
     2. Renseignez les champs **Nom du groupe** et **Description du groupe**.
@@ -88,7 +88,7 @@ Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Créer un profil de déploiement Autopilot
 Les profils de déploiement Autopilot sont utilisés pour configurer les appareils Autopilot. Vous pouvez créer jusqu’à 350 profils par client.
-1. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
 2. Sur la page **Informations de base**, tapez un **Nom** et une **Description** facultative.
 
     ![Capture d’écran de la page Informations de base](./media/enrollment-autopilot/create-profile-basics.png)
@@ -134,7 +134,7 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
 ## <a name="edit-an-autopilot-deployment-profile"></a>Modifier un profil de déploiement Autopilot
 Une fois que vous avez créé un profil de déploiement Autopilot, vous pouvez en modifier certaines parties.   
 
-1. Dans [Intune du portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils**.
 2. Sous **Inscription Windows**, dans la section **Windows Autopilot**, choisissez **Profils de déploiement**.
 3. Sélectionnez le profil que vous voulez modifier.
 4. Cliquez sur **Propriétés** sur la gauche pour changer le nom ou la description du profil de déploiement. Cliquez sur **Enregistrer** après avoir apporté les modifications.
@@ -155,7 +155,7 @@ Vous pouvez affecter un utilisateur à un appareil Autopilot spécifique. Cette 
 
 Prérequis : portail d’entreprise Azure Active Directory configuré et Windows 10, version 1809 ou ultérieure.
 
-1. Dans [Intune dans le portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > choisissez l’appareil > **Affecter un utilisateur**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > choisissez l’appareil > **Affecter un utilisateur**.
 
     ![Capture d’écran : Affecter un utilisateur](./media/enrollment-autopilot/assign-user.png)
 

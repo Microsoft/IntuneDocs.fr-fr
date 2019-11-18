@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
-ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.openlocfilehash: e9fe2b2174252aa1081eb311d79b4b5ba37f96f2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73432528"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755344"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Utiliser les profils d’interface de configuration du microprogramme des appareils Windows dans Microsoft Intune (préversion publique)
 
@@ -77,8 +77,8 @@ Ce profil garantit que les appareils sont vérifiés et activés pour DFCI lors 
 
 Ce profil inclut les paramètres DFCI que vous configurez.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
     - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **Windows : Configurer les paramètres DFCI sur les appareils Windows**.
@@ -127,9 +127,11 @@ Ce profil inclut les paramètres DFCI que vous configurez.
 
 Une fois que les profils ont été créés, ils sont [prêts à être affectés](../configuration/device-profile-assign.md). Veillez à affecter les profils à vos groupes de sécurité Azure AD qui incluent vos appareils DFCI.
 
-La prochaine fois que l’appareil se synchronise ou qu’il redémarre, les paramètres de profil DFCI sont appliqués. Une fois la stratégie appliquée, redémarrez l’appareil.
+Lorsque l’appareil exécute Windows Autopilot dans la page d’état d’inscription, DFCI peut forcer un redémarrage. Ce premier redémarrage inscrit UEFI dans Intune. 
 
-Lorsque l’appareil exécute le programme d’installation de Windows, DFCI peut forcer un redémarrage au cours de l’exécution de la page d’état d’inscription. Une fois l’installation terminée, vous pouvez vérifier que les paramètres DFCI sont actifs en redémarrant l’appareil. Ensuite, utilisez les instructions du fabricant de l’appareil pour ouvrir le menu UEFI.
+Si vous souhaitez confirmer l’inscription de l’appareil, vous pouvez redémarrer l’appareil, mais ce n’est pas obligatoire. Utilisez les instructions du fabricant de l’appareil pour ouvrir le menu UEFI, puis confirmez la gestion d’UEFI.
+
+La prochaine fois que l’appareil se synchronise avec Intune, Windows reçoit les paramètres DFCI. Redémarrez l’appareil. Ce troisième redémarrage est nécessaire pour permettre à l’UEFI de recevoir les paramètres DFCI de Windows.
 
 ## <a name="update-existing-dfci-settings"></a>Mettre à jour les paramètres DFCI
 
@@ -156,7 +158,7 @@ Après avoir réinitialisé l’appareil, placez-le dans le groupe auquel les no
 
 Lorsque vous êtes prêt à mettre hors service l’appareil et à abandonner sa gestion, mettez à jour le profil DFCI avec les paramètres UEFI (BIOS) que vous souhaitez à l’état de sortie. En règle générale, tous les paramètres doivent être activés. Par exemple :
 
-1. Ouvrez votre profil DFCI (**Configuration de l’appareil** > **Profils**).
+1. Ouvrez votre profil DFCI (**Appareils** > **Profils de configuration**).
 2. Modifiez le paramètre **Autoriser l’utilisateur local à modifier les paramètres UEFI (BIOS)** en spécifiant **Uniquement les paramètres non configurés**.
 3. Définissez tous les autres paramètres sur **Non configuré**.
 4. Enregistrez vos paramètres.

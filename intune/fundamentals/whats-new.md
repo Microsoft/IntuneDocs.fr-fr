@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6da1b15d482d20340163b0bb79e88d74e8e375
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 37ed7bfd204289c963b8134252d9d76f2379ecba
+ms.sourcegitcommit: 768d581cb8bcc5fdcb8ade95d402b11223ab226c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635355"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882494"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -53,12 +53,20 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 ### Role-based access control
 -->  
 
+## <a name="week-of-november-4-2019"></a>Semaine du 4 novembre 2019
+
+### <a name="device-security"></a>Sécurité des appareils
+
+#### <a name="security-baselines-are-supported-on-microsoft-azure-government---4062552---"></a>Les bases de référence de sécurité sont prises en charge dans Microsoft Azure Government<!-- 4062552 -->
+
+Les instances d’Intune hébergées sur *Microsoft Azure Government* peuvent désormais utiliser des [bases de référence de sécurité](../protect/security-baselines.md) pour vous aider à sécuriser et à protéger vos utilisateurs et appareils.
+
 ## <a name="week-of-october-28-2019"></a>Semaine du 28 octobre 2019
 
 ### <a name="app-management"></a>Gestion d'applications
 
 #### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857---"></a>Conception de liste de contrôle améliorée dans l’application Portail d’entreprise pour Android<!-- 5550857 -->  
-La liste de contrôle de d’installation d’application Portail d’entreprise pour Android a été mise à jour avec un design épuré et de nouvelles icônes. Les modifications s’alignent sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS. Nous sommes en train de déployer ces mises à jour d’application pour tous les clients et prévoyons leur achèvement d’ici la fin de la semaine prochaine. Pour une comparaison côte à côte des modifications, consultez [Nouveautés de l’interface utilisateur de l’application](whats-new-app-ui.md). Pour consulter les étapes d’inscription mises à jour, consultez [S’inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) et [Inscrire votre appareil Android](/intune-user-help/enroll-device-android-company-portal).  
+La liste de contrôle de d’installation d’application Portail d’entreprise pour Android a été mise à jour avec un design épuré et de nouvelles icônes. Les modifications s’alignent sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS. Pour une comparaison côte à côte des modifications, consultez [Nouveautés de l’interface utilisateur de l’application](whats-new-app-ui.md). Pour consulter les étapes d’inscription mises à jour, consultez [S’inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) et [Inscrire votre appareil Android](/intune-user-help/enroll-device-android-company-portal).  
 
 #### <a name="win32-apps-on-windows-10-s-mode-devices---3747604---"></a>Applications Win32 sur des appareils Windows 10 en mode S<!-- 3747604 --> 
 Vous pouvez installer et exécuter des applications Win32 sur des appareils gérés en mode S Windows 10. Pour ce faire, vous pouvez créer une ou plusieurs stratégies supplémentaires pour le mode S à l’aide des outils PowerShell Windows Defender application Control (WDAC). Signez les stratégies supplémentaires avec le portail de signature Device Guard, puis chargez et distribuez ces stratégies via Intune. Pour trouver cette fonctionnalité dans Intune, sélectionnez **Applications clientes** > **Stratégies supplémentaires en mode S Windows 10**. Pour plus d’informations, consultez [Activer des applications Win32 sur des appareils en mode S](~/apps/apps-win32-s-mode.md).
