@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7ca53786d372f53d63388fef1179ca271fdb9d9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: be6a254360d8e8e9ef1396515d261b6ff9077b87
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508587"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713121"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -57,10 +57,9 @@ Pour créer un code secret de profil professionnel, utilisez l’action Réiniti
 ## <a name="reset-a-passcode"></a>Réinitialiser un code secret
 
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com) avec l’un des rôles suivants : administrateur général Azure Active Directory, administrateur du service Intune Azure Active Directory, support technique ou administrateur de rôle.
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Appareils**, puis **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **... Plus**. Ensuite, choisissez l’action à distance **Supprimer le code secret**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec l’un des rôles suivants : administrateur général Azure Active Directory, administrateur du service Intune Azure Active Directory, support technique ou administrateur de rôle.
+2. Sélectionnez **Appareils**, puis **Tous les appareils**.
+3. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **... Plus**. Ensuite, choisissez l’action à distance **Supprimer le code secret**.
 
 ## <a name="reset-android-work-profile-passcodes"></a>Réinitialiser les codes secrets des profils professionnels Android
 

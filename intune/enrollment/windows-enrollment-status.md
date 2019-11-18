@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143171"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709364"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
@@ -64,14 +64,14 @@ Vous pouvez également définir l’ordre de priorité de chaque profil pour év
 
 Pour activer la page d’état d’inscription, suivez les étapes ci-dessous.
  
-1. Dans [Intune](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Dans le panneau **Page d’état d’inscription**, choisissez **Par défaut** > **Paramètres**.
 3. Pour **Afficher la progression de l’installation des profils et des applications**, choisissez **Oui**.
 4. Choisissez les autres paramètres que vous voulez activer, puis choisissez **Enregistrer**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Créer un profil de page d’état d’inscription et l’affecter à un groupe
 
-1. Dans [Intune](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription** > **Créer un profil**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription** > **Créer un profil**.
 2. Indiquez un **Nom** et une **Description**.
 3. Choisissez **Créer**.
 4. Choisissez le nouveau profil dans la liste **Page d’état d’inscription**.
@@ -82,7 +82,7 @@ Pour activer la page d’état d’inscription, suivez les étapes ci-dessous.
 
 Un utilisateur peut se trouver dans de nombreux groupes et avoir de nombreux profils de page d’état d’inscription. Pour résoudre ces conflits, vous pouvez définir les priorités de chaque profil. Lors de l’inscription, si un utilisateur possède plusieurs profils de page d’état d’inscription, seul le profil à la priorité la plus élevée est appliqué à l’appareil d’inscription.
 
-1. Dans [Intune](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Pointez sur le profil dans la liste.
 3. À l’aide des trois points verticaux, faites glisser le profil à la position souhaitée dans la liste.
 
@@ -90,7 +90,7 @@ Un utilisateur peut se trouver dans de nombreux groupes et avoir de nombreux pro
 
 Vous pouvez spécifier quelles applications doivent être installés pour que l’utilisateur puisse accéder au bureau.
 
-1. Dans Intune, choisissez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Choisissez un profil > **Paramètres**.
 3. Choisissez **Oui** pour **Afficher la progression de l’installation des profils et des applications**.
 4. Choisissez **Oui** pour **Bloquer l’utilisation de l’appareil jusqu’à ce que toutes les applications et tous les profils soient installés**.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 030d455c366a9c447444c247e9690e5d31613982
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 772cdbe203b0489a9b2312a1cc10ea1b3182b35d
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508607"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713161"
 ---
 # <a name="remove-a-user-from-a-shared-ios-device"></a>Supprimer un utilisateur d’un appareil iOS partagé
 
@@ -41,12 +41,11 @@ L’action **Supprimer l’utilisateur** supprime un utilisateur que vous sélec
 
 ## <a name="remove-a-user"></a>Supprimer un utilisateur
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Appareils**.
-4. Dans le volet **Appareils**, sélectionnez **Tous les appareils**.
-5. Dans la liste des appareils que vous gérez, sélectionnez un appareil iOS.
-6. Dans le volet de l’appareil, sélectionnez **Utilisateurs**.
-7. Dans la liste, cliquez avec le bouton droit sur l’utilisateur que vous souhaitez supprimer, puis sélectionnez **Supprimer l’utilisateur**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Tous les appareils**.
+3. Dans la liste des appareils que vous gérez, sélectionnez un appareil iOS.
+4. Dans le volet de l’appareil, sélectionnez **Utilisateurs**.
+5. Dans la liste, cliquez avec le bouton droit sur l’utilisateur que vous souhaitez supprimer, puis sélectionnez **Supprimer l’utilisateur**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

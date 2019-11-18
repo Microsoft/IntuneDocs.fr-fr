@@ -1,7 +1,7 @@
 ---
 title: Exceptions de la stratégie de transfert de données pour les applications
 titleSuffix: Microsoft Intune
-description: Créez des exceptions à la stratégie de transfert de données de la Gestion des applications mobiles Intune.
+description: Créez des exceptions à la stratégie de transfert de données Intune App Protection (APP).
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6453f5b5886c5691383bc81fb76598146e884e0e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 18b1b8feda00f5c669b39bc365c637dcd3968078
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813327"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984067"
 ---
-# <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Comment créer des exceptions à la stratégie de transfert de données de la Gestion des applications mobiles Intune
+# <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Guide pratique pour créer des exceptions à la stratégie de transfert de données Intune App Protection (APP)
 
-En tant qu’administrateur, vous pouvez créer des exceptions à la stratégie de transfert de données de la Gestion des applications mobiles Intune. Une exception vous permet de choisir spécifiquement quelles applications non gérées peuvent transférer des données vers et depuis des applications gérées. Votre service informatique doit approuver les applications non gérées que vous incluez dans la liste des exceptions. 
+En tant qu’administrateur, vous pouvez créer des exceptions à la stratégie de transfert de données Intune App Protection (APP). Une exception vous permet de choisir spécifiquement quelles applications non gérées peuvent transférer des données vers et depuis des applications gérées. Votre service informatique doit approuver les applications non gérées que vous incluez dans la liste des exceptions. 
 
 >[!WARNING] 
 > Vous êtes responsable des modifications apportées à la stratégie des exceptions de transfert de données. Les ajouts à cette stratégie autorisent les applications non gérées (les applications qui ne sont pas gérées par Intune) à accéder aux données protégées par les applications gérées. Cet accès à des données protégées peut entraîner des fuites de sécurité des données. Ajoutez seulement des exceptions de transfert de données pour les applications que votre organisation doit utiliser, mais qui ne prennent pas en charge les stratégies de protection d’application Intune. Ajoutez des exceptions seulement pour les applications dont vous ne considérez pas qu’elles représentent des risques de fuite de données.
@@ -65,6 +65,8 @@ Si vous ajoutez le package **Webex** comme exception à la stratégie de transfe
     <code>com.android.mms</code>
     
     <code>com.samsung.android.messaging</code>
+
+- Exemple du **programme d’installation de certificats** Android : Pour exempter l’application native du **programme d’installation du certificat** afin qu’Outlook pour Android puisse installer un certificat S/MIME (remis sous forme d’une pièce jointe à un e-mail) dans le magasin de clés Android, vous devez ajouter l’exception de transfert de données pour la chaîne suivante : <code>com.android.certinstaller</code>. Pour plus d’informations, voir [Étiquetage et protection de la confidentialité dans Outlook pour iOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

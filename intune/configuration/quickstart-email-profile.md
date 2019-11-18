@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 11/07/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4890410f5948cdc9bd1c6e3d85125d8e0713d9b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1929e58d3b22e4cb5bc5f6ad2121f2b6f903d023
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492318"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755142"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS
 
@@ -33,39 +33,40 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
+Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) comme Administrateur général ou Administrateur de service Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="create-an-ios-email-profile"></a>Créer un profil e-mail iOS
-1. Dans Intune, sélectionnez **Configuration de l’appareil**, puis **Profils**.
-2. Sélectionnez **Créer un profil**.
-   
+
+1. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
+
    ![Créer un profil e-mail pour iOS](./media/quickstart-email-profile/ios-create-profile.png)
 
-3. Sous **Nom**, attribuez un nom descriptif au nouveau profil. Pour cet exemple, entrez **iOS require work email** (iOS : adresse e-mail professionnelle requise).
-4. Entrez les informations de profil suivantes :
-   - Pour **Description**, entrez **Require iOS devices to use work email** (Exiger que les appareils iOS utilisent l’adresse e-mail professionnelle).
-   - Pour l’option **Plateforme**, sélectionnez **iOS**.
-   - Pour **Type de profil**, sélectionnez **E-mail**.
-    
-     ![Créer un profil de messagerie pour iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+2. Sous **Nom**, attribuez un nom descriptif au nouveau profil. Pour cet exemple, entrez **iOS require work email** (iOS : adresse e-mail professionnelle requise).
+3. Entrez les informations de profil suivantes :
+    - Pour **Description**, entrez **Require iOS devices to use work email** (Exiger que les appareils iOS utilisent l’adresse e-mail professionnelle).
+    - Pour l’option **Plateforme**, sélectionnez **iOS**.
+    - Pour **Type de profil**, sélectionnez **E-mail**.
 
-5. Sélectionnez **Paramètres**, puis entrez les paramètres suivants (laissez les valeurs par défaut pour les autres paramètres) :
+        ![Créer un profil de messagerie pour iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+
+4. Sélectionnez **Paramètres**, puis entrez les paramètres suivants (laissez les valeurs par défaut pour les autres paramètres) :
    - **Serveur de messagerie** : pour ce guide de démarrage rapide, entrez **outlook.office365.com**. Ce paramètre spécifie l’emplacement Exchange (URL) du serveur e-mail que l’application e-mail iOS utilisera pour se connecter à l’e-mail.
    - **Nom du compte** : entrez **E-mail de l’entreprise**.
    - **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (Azure AD). Intune génère dynamiquement le nom d’utilisateur pour ce profil en utilisant ce nom. Pour ce guide de démarrage rapide, nous supposons que le **Nom d’utilisateur principal** doit être utilisé comme nom d’utilisateur pour le profil (par exemple, user1@contoso.com).
    - **Attribut d’adresse e-mail d’AAD** : ce paramètre est l’adresse e-mail issue d’Azure AD qui est utilisée pour la connexion à Exchange. Pour ce guide de démarrage rapide, sélectionnez **Nom d’utilisateur principal**.
    - **Méthode d’authentification** : pour ce guide de démarrage rapide, sélectionnez **Nom d’utilisateur et mot de passe**. (Vous pouvez également choisir **Certificat** si vous avez déjà configuré un certificat pour Intune.)
-    
-     ![Créer un profil de messagerie pour iOS](./media/quickstart-email-profile/ios-email-profile.png)
 
-6. Sélectionnez **OK**.
-7. Sélectionnez **Créer**. Le nouveau profil apparaît dans la liste des profils, et le tableau de bord affiché afin que vous puissiez superviser l’affectation du profil aux appareils iOS et aux utilisateurs d’iOS.
-8. Sélectionnez **Affectations**.
-9. Sélectionnez l’onglet **Inclure**, puis sélectionnez **Tous les utilisateurs et tous les appareils**. 
-10. Sélectionnez **Enregistrer**.
+        ![Créer un profil de messagerie pour iOS](./media/quickstart-email-profile/ios-email-profile.png)
+
+5. Sélectionnez **OK** > **Créer**. Le nouveau profil apparaît dans la liste des profils, et le tableau de bord affiché afin que vous puissiez superviser l’affectation du profil aux appareils iOS et aux utilisateurs d’iOS.
+6. Sélectionnez **Affectations**.
+7. Sélectionnez l’onglet **Inclure**, puis sélectionnez **Tous les utilisateurs et tous les appareils**. 
+8. Sélectionnez **Enregistrer**.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
+
 Si vous n’envisagez pas d’utiliser le profil que vous avez créé pour d’autres tutoriels ou tests, vous pouvez le supprimer maintenant.
+
 1. Dans Intune, sélectionnez **Configuration de l’appareil**, puis **Profils**.
 2. Sélectionnez le profil de test que vous avez créé, **iOS require work email** (iOS : adresse e-mail professionnelle requise).
 3. Sélectionnez les points de suspension ( **...** ) en regard du profil, puis sélectionnez **Supprimer**.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 755aefb955c2d30652434f2bd2e91981145fc56f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 44e757be5f109b81772daa6ff59505ccc0f033f8
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505596"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709435"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurer l’inscription Intune des appareils Android Entreprise entièrement gérés 
 
@@ -56,7 +56,7 @@ Pour configurer la gestion d’appareils Android Entreprise entièrement gérés
 
 ### <a name="enable-corporate-owned-user-devices"></a>Activer les appareils utilisateur appartenant à l’entreprise
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Inscription d’appareil** > **Inscription Android** > **Appareils utilisateur entièrement gérés appartenant à l’entreprise**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Inscription des appareils** > **Inscription Android** > **Appareils utilisateur complètement managés appartenant à l’entreprise**.
 2. Sous **Autoriser les utilisateurs à inscrire des appareils d’utilisateur appartenant à l’entreprise**, choisissez **Oui**.
 
 > [!NOTE]

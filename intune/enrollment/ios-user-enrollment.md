@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f201cdac0f881ce03863704dd80d8635de52074a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e538204306ce80d6a13739fc981edf2748a622de
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505457"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713456"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Configurer l’inscription des utilisateurs iOS et iPadOS (préversion)
 
@@ -43,7 +43,7 @@ Pour plus d'informations sur les options disponibles avec l'inscription des util
 
 Un profil d'inscription définit les paramètres appliqués à un groupe d'appareils lors de l’inscription. 
 
-1. Dans le portail Intune, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)**  > **Créer un profil** > **iOS**. Ce profil est l'endroit où vous indiquerez l’expérience d'inscription dont vos utilisateurs finaux iOS et iPadOS bénéficieront sur les appareils non inscrits via par une méthode Apple d'entreprise. Si vous souhaitez apporter des modifications, vous pouvez modifier ce profil après l'avoir créé.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)**  > **Créer un profil** > **iOS**. Ce profil est l'endroit où vous indiquerez l’expérience d'inscription dont vos utilisateurs finaux iOS et iPadOS bénéficieront sur les appareils non inscrits via par une méthode Apple d'entreprise. Si vous souhaitez apporter des modifications, vous pouvez modifier ce profil après l'avoir créé.
 
     ![Créer un profil d’inscription Apple](./media/ios-user-enrollment/create-profile.png)
 
@@ -88,7 +88,7 @@ Un profil d'inscription définit les paramètres appliqués à un groupe d'appar
 
 Après avoir créé plusieurs profils de type d’inscription, vous pouvez modifier l'ordre de priorité dans lequel ils sont appliqués.
 
-1. Dans la section Intune du portail Azure, choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)** .
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Types d’inscription (préversion)** .
 2. Glissez-déplacez les profils dans la liste, dans l'ordre dans lequel vous voulez les appliquer.
 
 En cas de conflit entre les profils d'un utilisateur, le profil avec la priorité la plus élevée est appliqué pour l'utilisateur.

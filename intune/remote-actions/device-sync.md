@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86dc2e26e3c4091785cb6462a84e75b770634881
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1001a7a3fde9c203fdad3d146ace57736ae7128d
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508550"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713445"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchroniser des appareils pour obtenir les stratégies et les actions les plus récentes avec Intune
 
@@ -38,8 +38,8 @@ L’action d’appareil **Synchroniser** force l’appareil sélectionné à s�
 
 ## <a name="sync-a-device"></a>Synchroniser un appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
-3. Dans **Intune**, sélectionnez **Appareils** > **Tous les appareils**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). 
+3. Sélectionnez **Appareils** > **Tous les appareils**.
 4. Dans la liste des appareils que vous gérez, sélectionnez un appareil pour ouvrir son volet *Vue d’ensemble*, puis sélectionnez **Synchroniser**.
 5. Pour confirmer, sélectionnez **Oui**.
 

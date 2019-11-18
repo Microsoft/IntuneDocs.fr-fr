@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22a957e6df2c7f9126cbe9f22c4f3a96213551d3
-ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
+ms.openlocfilehash: af24b5fe33bc1e794529ef5a5ab6975eed4fb9cc
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72892575"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709906"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune
 
 Pour pouvoir déployer, configurer, superviser ou protéger des applications, vous devez les ajouter au préalable à Intune. L’un des [types d’application](~/apps/apps-add.md#app-types-in-microsoft-intune) disponibles est Microsoft Edge *version 77 ou ultérieure*. En sélectionnant ce type d’application dans Intune, vous pouvez affecter et installer Microsoft Edge *version 77 ou ultérieure* sur des appareils Windows 10 que vous gérez.
 
 > [!IMPORTANT]
-> Ce type d’application est en **préversion publique** et offre des canaux de développement et bêta pour Windows 10. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). De plus, les mises à jour automatiques d’Edge sont **activées** par défaut, et Edge ne peut pas être désinstallé.
+> Ce type d’application est en **préversion publique** et offre des canaux de développement et bêta pour Windows 10. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). Intune détecte les éventuelles installations Microsoft Edge préexistantes. S’il est installé dans le contexte utilisateur, l’installation du système le remplace. S’il est installé dans le contexte système, l’installation est signalée comme réussie. Par ailleurs, les mises à jour automatiques de Microsoft Edge sont définies sur **Activé** par défaut, et il n’est pas possible de désinstaller Microsoft Edge.
 
 > [!NOTE]
 > Microsoft Edge *version 77 ou ultérieure* est également disponible pour macOS.

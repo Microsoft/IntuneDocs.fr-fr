@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39ea8b3859d3d2525433c4cafdf566e7a2c8d2ab
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509205"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709188"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 
@@ -60,7 +60,7 @@ La première étape de la configuration de Windows Autopilot consiste à ajouter
 
 2. Enregistrez le fichier CSV.
 
-3. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > **Importer**.
+3. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > **Importer**.
 
     ![Capture d’écran d’appareils Windows Autopilot](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ La première étape de la configuration de Windows Autopilot consiste à ajouter
 
 Ensuite, vous allez créer un groupe d’appareils et placer dedans les appareils Autopilot que vous venez de charger.
 
-1. Dans [Intune dans le Portail Azure](https://aka.ms/intuneportal), choisissez **Groupes** > **Nouveau groupe**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Groupes** > **Nouveau groupe**.
 2. Dans le panneau **Groupe** :
     1. Pour **Type de groupe**, choisissez **Sécurité**.
     2. Pour **Nom de groupe**, entrez *Groupe Autopilot*. Pour **Description du groupe**, entrez *Groupe de test pour les appareils Autopilot*.
@@ -90,7 +90,7 @@ Ensuite, vous allez créer un groupe d’appareils et placer dedans les appareil
 
 Après avoir créé un groupe d’appareils, vous devez créer un profil de déploiement afin de pouvoir configurer les appareils Autopilot.
 
-1. Accédez à [Intune dans le portail Azure](https://aka.ms/intuneportal), puis choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
 2. Sur la page **Notions de base** page, **Nom** tor, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
 3. Définissez **Convertir tous les appareils ciblés vers Autopilot** sur **Oui**. Ce paramètre permet de s’assurer que tous les appareils dans la liste sont inscrits auprès du service de déploiement Autopilot. Le traitement de l’enregistrement prend 48 heures.
 4. Sélectionnez **Suivant**.
@@ -116,7 +116,7 @@ Si vous ne voulez plus utiliser les appareils Autopilot, vous pouvez les supprim
 
 1. Si les appareils sont inscrits dans Intune, vous devez d’abord [les supprimer dans le portail Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. Dans [Intune dans le portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils**.
+2. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils**.
 
 3. Sous **Appareils Windows Autopilot**, choisissez les appareils à supprimer, puis choisissez **Supprimer**.
 

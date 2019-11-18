@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada1f6e5292684803fbea40430cdd43d61796746
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681356"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984199"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Ajouter des stratégies de mise à jour de logiciel iOS dans Intune
 
@@ -28,7 +28,7 @@ Cette fonctionnalité s’applique à :
 
 - iOS versions 10.3 et ultérieures (supervisé)
 
-L’appareil effectue une vérification auprès d’Intune toutes les huit heures. Si une mise à jour est disponible, l’appareil la télécharge et l’installe, sauf pendant les heures restreintes. Aucune interaction utilisateur n’est nécessaire pour mettre à jour l’appareil. La stratégie n’empêche pas un utilisateur de mettre à jour le système d’exploitation manuellement.
+L’appareil effectue une vérification auprès d’Intune toutes les huit heures. Si une mise à jour est disponible, l’appareil la télécharge et l’installe, sauf pendant les heures restreintes. Bien que le processus de mise à jour n’implique généralement aucune interaction de l’utilisateur, si l’appareil a un code secret, l’utilisateur est invité à l’entrer pour lancer une mise à jour de logiciel. Cela s’applique à iOS 10.3 (et versions ultérieures). La stratégie n’empêche pas un utilisateur de mettre à jour le système d’exploitation manuellement.
 
 ## <a name="configure-the-policy"></a>Configurer la stratégie
 

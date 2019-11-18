@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 882c542d6a1d981b9924bb33eee40f03b41689f7
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b5983742043dca9d07242315d4aaa97de2ead8d6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999488"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984022"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
@@ -44,9 +44,6 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 7. Sélectionnez un **Paramètre** et entrez la **Valeur** que les utilisateurs doivent satisfaire pour se connecter à votre application d’entreprise. 
 8. Sélectionnez l’**Action** à effectuer si les utilisateurs ne remplissent pas les critères. Dans certains cas, vous pouvez configurer plusieurs actions pour un même paramètre. Pour plus d’informations, consultez [Guide pratique pour créer et affecter des stratégies de protection des applications](app-protection-policies.md).
 
->[!NOTE]
-> Pour utiliser le paramètre **Modèle(s) d’appareil ou Fabricant(s) d’appareil**, entrez une liste d’identificateurs de modèle d’appareil (iOS) ou de fabricants d’appareil (Android) séparés par des points-virgules. Évitez les espaces dans les listes de plusieurs valeurs. Ces valeurs ne respectent pas la casse. 
-
 ## <a name="policy-settings"></a>Paramètres de stratégie 
 
 Le tableau de paramètres de stratégie de protection des applications a des colonnes pour **Paramètre**, **Valeur** et **Action**.
@@ -62,7 +59,7 @@ Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l�
 - Modèle(s) d’appareil
 - Niveau de menace maximal autorisé pour l’appareil
 
-Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans la [documentation sur la prise en charge d’HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
+Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Ces valeurs ne respectent pas la casse. En plus des rapports Intune pour l’entrée « Modèle(s) d’appareil », vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans [Documentation de support de HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) ou ce [référentiel GitHub tiers](https://gist.github.com/adamawolf/3048717).<br>
 Exemple d’entrée : *iPhone5,2;iPhone5,3*
 
 Sur les appareils de l’utilisateur final, le client Intune effectuerait une action sur la base d’une mise en correspondance simple des chaînes de modèle d’appareil spécifiées dans Intune pour les stratégies de protection d’application. La mise en correspondance dépend entièrement de ce que signale l’appareil. En tant qu’administrateur informatique, vous êtes encouragé à vérifier que le comportement souhaité se produit. Pour cela, testez ce paramètre sur une variété de modèles et de fabricants d’appareils en ciblant un petit groupe d’utilisateurs. La valeur par défaut est **Non configuré**.<br>
@@ -90,7 +87,7 @@ Pour Android, vous pouvez configurer des actions pour les paramètres suivants �
 
 L’option **Version minimale du Portail d’entreprise** permet de définir une version minimale spécifique du Portail d’entreprise pour l’appliquer sur l’appareil des utilisateurs finaux. Vous pouvez ainsi définir des valeurs aux actions **Bloquer l’accès**, **Effacer les données** et **Avertir** à lancer lorsqu’une des valeurs n’est pas remplie. Les formats possibles de cette valeur suivent le modèle *[Majeure].[Mineure]* , *[Majeure].[Mineure].[Build]* ou *[Majeure].[Mineure].[Build].[Révision]* . Dans la mesure où certains utilisateurs finaux préféreront éviter une mise à jour forcée des applications sur place, l’option « Avertir » peut être idéale pour la configuration de ce paramètre. Même si Google Play Store n’envoie que les octets Delta pour les mises à jour d’applications, cela peut représenter une trop grande quantité de données pour l’utilisateur au moment de la mise à jour. L’application forcée d’une mise à jour et le téléchargement d’une application mise à jour risquent d’occasionner des frais de données imprévus. Le paramètre **Version minimale du Portail d’entreprise**, s’il est configuré, affecte tous les utilisateurs finaux qui utilisent la version 5.0.4560.0 et les versions à venir du Portail d’entreprise. Il n’a aucun effet sur ceux qui utilisent une version antérieure à la version dans laquelle cette fonctionnalité est publiée. Les utilisateurs finaux qui utilisent la mise à jour automatique des applications sur leur appareil ne verront a priori pas de boîtes de dialogue correspondant à cette fonctionnalité, dans la mesure où ils auront normalement la dernière version du Portail d’entreprise. Ce paramètre concerne uniquement les appareils Android inscrits et non inscrits avec protection des applications.
 
-Pour utiliser le paramètre **Fabricant(s) d’appareil**, entrez une liste de fabricants Android séparés par des points-virgules. Le fabricant d’un appareil Android se trouve sous les paramètres de l’appareil.<br>
+Pour utiliser le paramètre **Fabricant(s) d’appareil**, entrez une liste de fabricants Android séparés par des points-virgules. Ces valeurs ne respectent pas la casse. En plus des rapports Intune, vous trouverez le fabricant Android d’un appareil sous les paramètres de l’appareil. <br>
 Exemple d’entrée : *Fabricant A;Fabricant B* 
 
 >[!NOTE]

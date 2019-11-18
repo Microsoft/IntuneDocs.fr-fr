@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785534"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984105"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -72,7 +72,6 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 * Chaque jeton est valide pendant un an.
 * Par défaut, Intune se synchronise avec le service Apple VPP deux fois par jour. Vous pouvez lancer une synchronisation manuelle à tout moment.
 * Avant de commencer à utiliser Apple VPP avec Intune, supprimez les comptes d’utilisateur VPP existants créés avec d’autres fournisseurs de gestion des appareils mobiles (MDM). Par mesure de sécurité, ces comptes d’utilisateur ne sont pas synchronisés dans Intune. Intune synchronise uniquement les données du service Apple VPP qui ont été créées par Intune.
-* Avec Intune, vous pouvez ajouter jusqu’à 256 jetons VPP.
 * Le programme Profil d’inscription des appareils d’Apple automatise l’inscription auprès de la gestion des appareils mobiles (MDM). Avec le Profil d’inscription des appareils, vous pouvez configurer des appareils d’entreprise sans les avoir en main. Vous pouvez inscrire avec le programme Profil d’inscription des appareils en utilisant le même compte d’agent du programme que celui que vous avez utilisé avec le programme d’achat en volume d’Apple. L’ID de programme de déploiement Apple est unique pour les programmes répertoriés dans le site web [Programmes de déploiement Apple](https://deploy.apple.com) et il ne peut pas être utilisé pour se connecter aux services Apple, comme iTunes Store.
 * Quand vous affectez des applications VPP à l’aide du modèle de licence utilisateur à des utilisateurs ou des appareils (avec une affinité d’utilisateur), chaque utilisateur Intune doit être associé à un e-mail ou un ID Apple unique quand il accepte les conditions générales Apple sur son appareil.
 * Vérifiez que, quand vous configurez un appareil pour un nouvel utilisateur Intune, vous le faites avec l’ID Apple unique ou l’adresse e-mail de cet utilisateur. L’ID Apple ou l’adresse e-mail et l’utilisateur Intune forment une paire unique. Ils peuvent être utilisés sur cinq appareils au maximum.
@@ -89,6 +88,8 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 5. Dans le volet **Créer un jeton VPP**, spécifiez les informations suivantes :
     - **Fichier de jeton VPP** : si vous ne l’avez pas encore fait, inscrivez-vous au Programme d’achat en volume Apple pour les entreprises ou au programme pour les organismes éducatifs. Après inscription, téléchargez le jeton VPP Apple de votre compte et sélectionnez-le ici.
     - **ID Apple** : saisissez l’ID Apple du compte associé au programme d’achats en volume.
+    - **Prenez le contrôle du jeton à partir d’un autre MDM** : donnez à cette option la valeur **Oui** pour réaffecter le jeton à Intune à partir d’un autre MDM.
+    - **Nom du jeton** : champ d’administration permettant de définir le nom du jeton.    
     - **Pays/région** : sélectionnez le Store du pays/de la région VPP.  Intune synchronise les applications VPP pour tous les paramètres régionaux à partir du magasin du pays/de la région VPP spécifié(e).
         > [!WARNING]  
         > Si vous changez de pays/région, les métadonnées des applications et l’URL du Store sont mises à jour lors de la prochaine synchronisation avec le service Apple pour les applications créées avec ce jeton. L’application n’est pas mise à jour si elle n’existe pas dans le Store du nouveau pays/région.
@@ -98,6 +99,9 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 
         > [!NOTE]
         > Les mises à jour automatiques des applications fonctionnent pour les applications sous licence d’appareil et d’utilisateur pour iOS version 11.0 et ultérieure, et macOS version 10.12 et ultérieure.
+
+    - **J’autorise Microsoft à envoyer des informations sur l’utilisateur et l’appareil à Apple.** : vous devez sélectionner **J’accepte** pour continuer. Pour vérifier les données que Microsoft envoie à Apple, voir [Données envoyées par Intune à Apple](~/protect/data-intune-sends-to-apple.md).
+
 6. Quand vous avez terminé, sélectionnez **Créer**.
 
 Le jeton est affiché dans le volet de la liste de jetons.

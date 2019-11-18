@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54d7ccabf958c3b8532f1a115724559607783a57
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 272a7303e7d529a4867334cbe05e6df31e6c5683
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495218"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755365"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
 
@@ -200,8 +200,8 @@ S’applique à :
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
     - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **macOS : Configure l’écran de connexion**.

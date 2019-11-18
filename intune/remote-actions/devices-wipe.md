@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbcc50d275a3d3e6a613640e96b363ce7608da81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508570"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712195"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -53,7 +53,7 @@ Une réinitialisation est utile pour réinitialiser un appareil avant de le donn
 
 ### <a name="wiping-a-device"></a>Réinitialisation d’un appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Sélectionnez **Appareils** > **Tous les appareils**.
 4. Sélectionnez le nom de l’appareil à réinitialiser.
 5. Dans le volet qui montre le nom de l’appareil, sélectionnez **Réinitialiser**.
@@ -146,7 +146,7 @@ Vous pouvez réinitialiser seulement des appareils en mode kiosque. Vous ne pouv
 
 ### <a name="retire"></a>Mettre hors service
 
-1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Dans le volet **Appareils**, sélectionnez **Tous les appareils**.
 3. Sélectionnez le nom de l’appareil à mettre hors service.
 4. Dans le volet qui montre le nom de l’appareil, sélectionnez **Mettre hors service**. Pour confirmer, sélectionnez **Oui**.
@@ -157,12 +157,12 @@ Si l’appareil est allumé et connecté, la propagation de l’action **Mettre 
 
 Pour supprimer des appareils à partir du portail Intune, vous pouvez accéder au volet de l’appareil spécifique. La prochaine fois que l’appareil se connecte, toutes les données d’entreprise qu’il contient seront supprimées.
 
-1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choisissez **Appareils** > **Tous les appareils** > choisissez les appareils à supprimer > **Supprimer**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Supprimer automatiquement des appareils avec des règles de nettoyage
 Vous pouvez configurer Intune pour supprimer automatiquement les appareils qui semblent inactifs, obsolètes ou non réactifs. Ces règles de nettoyage surveillent en continu votre parc d’appareils afin que les enregistrements les concernant restent à jour. Les appareils supprimés de cette façon sont enlevés de la gestion Intune.
-1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choisissez **Appareils** > **Règles de nettoyage d’appareil** > **Oui**.
 3. Dans la zone **Supprimer les appareils que vous n’avez pas enregistrés depuis ce nombre de jours**, entrez un nombre compris entre 30 et 270.
 4. Choisissez **Enregistrer**.
@@ -185,7 +185,7 @@ Vous devrez peut-être supprimer des appareils d’Azure AD en cas de problèmes
 
 Si vous souhaitez supprimer complètement un appareil Apple DEP pour qu’il ne soit plus géré par Intune, effectuez les étapes suivantes :
 
-1. Connectez-vous à [Intune dans le portail Azure](https://aka.ms/intuneportal).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choisissez **Appareils** > **Tous les appareils** > choisissez l’appareil > **Mettre hors service**.
 ![Capture d’écran : Mettre hors service](./media/devices-wipe/retire.png)
 3. Visitez [deploy.apple.com](http://deploy.apple.com) et recherchez l’appareil par son numéro de série.

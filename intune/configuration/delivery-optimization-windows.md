@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 7d94a2c7e47b3cfcc9f4592faf0a4c2a09a24ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 908319c588fe2a1bf55a376d3f02a03db780a3ad
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495244"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755398"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Paramètres d’optimisation de la distribution dans Microsoft Intune
 
@@ -32,27 +32,25 @@ Pour obtenir la liste des paramètres d’optimisation de la distribution pris e
 
 Pour en savoir plus sur l’optimisation de la distribution sur Windows 10, consultez [Mises à jour de l’optimisation de la distribution](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) dans la documentation Windows.  
 
-
 > [!NOTE]
-> Le paramètre **Mises à jour de logiciels – Boucles de mise à jour Windows 10** est remplacé par les paramètres **Optimisation de la distribution**. Il est possible de changer des boucles de mise à jour en paramètres **Optimisation de la distribution**. [Déplacer les boucles de mise à jour existantes pour l’optimisation de la distribution](#move-existing-update-rings-to-delivery-optimization) (dans cet article) 
+> Le paramètre **Mises à jour de logiciels – Boucles de mise à jour Windows 10** est remplacé par les paramètres **Optimisation de la distribution**. Il est possible de changer des boucles de mise à jour en paramètres **Optimisation de la distribution**. [Déplacer les boucles de mise à jour existantes pour l’optimisation de la distribution](#move-existing-update-rings-to-delivery-optimization) (dans cet article)
+
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 
 3. Entrez les propriétés suivantes :
 
     - **Nom** : Entrez un nom descriptif pour le nouveau profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
-    - **Plateforme** : sélectionnez la plateforme :  
-
-        - **Windows 10 et versions ultérieures**
-
+    - **Plateforme** : Sélectionnez **Windows 10 et ultérieur**.
     - **Type de profil** : Sélectionnez **Optimisation de la distribution**.
-    - **Paramètres** : configurez les paramètres qui définissent le téléchargement des mises à jour et des applications. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres d’optimisation de la distribution pour Intune](../delivery-optimization-settings.md).
 
-4. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements.
+4. Choisissez **Paramètres** > **Configurer**, puis définissez le mode de téléchargement des mises à jour et des applications. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres d’optimisation de la distribution pour Intune](../delivery-optimization-settings.md).
+
+5. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements.
 
 Le profil est créé, puis apparaît dans la liste. Vous devez à présent [affecter le profil](device-profile-assign.md), puis [superviser son état](device-profile-monitor.md).
 
@@ -62,7 +60,7 @@ Les paramètres **Optimisation de la distribution** remplacent **Mises à jour d
 
 1. Créer un profil de configuration d’optimisation de la distribution :
 
-    1. Dans Intune, sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+    1. Dans le Centre d’administration du Gestionnaire de points de terminaison Microsoft, sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
     2. Entrez les propriétés suivantes :
 
         - **Nom** : Entrez un nom descriptif pour le nouveau profil.
@@ -78,10 +76,11 @@ Les paramètres **Optimisation de la distribution** remplacent **Mises à jour d
             - **Mode de téléchargement simple sans peering**
             - **Mode de contournement**
     3. Configurez les paramètres supplémentaires que vous souhaitez éventuellement gérer.
-1. Affectez ce nouveau profil aux mêmes appareils et utilisateurs que la boucle de mise à jour de logiciels existante. La page [Affectez le profil](device-profile-assign.md) liste les étapes à suivre.
+
+2. Affectez ce nouveau profil aux mêmes appareils et utilisateurs que la boucle de mise à jour de logiciels existante. La page [Affectez le profil](device-profile-assign.md) liste les étapes à suivre.
 
 3. Supprimez la configuration de la boucle logicielle existante :
-    1. Dans Intune, accédez à **Mises à jour de logiciels** > Boucles de mise à jour Windows 10.
+    1. Dans le Centre d’administration du Gestionnaire de points de terminaison Microsoft, accédez à **Mises à jour de logiciels** > Anneaux de mise à jour Windows 10.
     2. Dans la liste, sélectionnez votre boucle de mise à jour.
     3. Dans les paramètres, définissez le **Mode de téléchargement de l’optimisation de la distribution** sur **Non configuré**.
     4. **OK** > **Enregistrez** les modifications apportées.

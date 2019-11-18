@@ -5,22 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/31/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84103c6264431773ab5928f1da22c37a80cc9036
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 15af657ec63c664d91c370fa0f18ff8c4f140b47
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492708"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755233"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
 
@@ -69,11 +70,10 @@ Les appareils suivants ont été annoncés comme compatibles avec eSIM, ou sont 
 
 Les codes d’activation de téléphonie mobile sont fournis par votre opérateur mobile dans un fichier de valeurs séparées par des virgules (csv). Une fois en possession de ce fichier, ajoutez-le à Intune en effectuant les étapes suivantes :
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM** > **Ajouter**.
-4. Sélectionnez le fichier CSV contenant vos codes d’activation.
-5. Cliquez sur **OK** pour enregistrer vos modifications.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils cellulaires eSIM** > **Ajouter**.
+3. Sélectionnez le fichier CSV contenant vos codes d’activation.
+4. Cliquez sur **OK** pour enregistrer vos modifications.
 
 ### <a name="csv-file-requirements"></a>Exigences relatives au fichier CSV
 
@@ -111,8 +111,8 @@ Créez un groupe d’appareils qui comprend les appareils compatibles avec eSIM.
 
 Affectez le profil au groupe Azure AD qui comprend vos appareils eSIM.
 
-1. Dans le [Portail Azure](https://portal.azure.com/), sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-2. Sélectionnez **configuration de l’appareil** > **eSIM cellulaire** > **profils**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils cellulaires eSIM**.
 3. Dans la liste des profils, sélectionnez le pool d’abonnements cellulaires eSIM que vous souhaitez affecter, puis sélectionnez **Affectations**.
 4. Choisissez d’**Inclure** des groupes ou d’**Exclure** des groupes, puis sélectionnez les groupes.
 
@@ -129,15 +129,15 @@ Les codes d’activation eSIM ne sont utilisés qu’une seule fois. Une fois qu
 
 Une fois que vous avez affecté le profil, vous pouvez surveiller l’état du déploiement d’un pool d’abonnements.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM**. Tous vos pools d’abonnements cellulaires eSIM existants sont répertoriés.
-4. Sélectionnez un abonnement et consultez l’**État du déploiement**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils cellulaires eSIM**. Tous vos pools d’abonnements cellulaires eSIM existants sont répertoriés.
+3. Sélectionnez un abonnement et consultez l’**État du déploiement**.
 
 ### <a name="check-the-profile-status"></a>Vérifier l’état du profil
+
 Une fois le profil d’appareil créé, Intune fournit des graphiques. Ces graphiques affichent l’état d’un profil, à savoir s’il a été attribué correctement à des appareils ou si le profil indique un conflit.
 
-1. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM** > Sélectionner un abonnement existant.
+1. Sélectionnez **Appareils** > **Profils cellulaires eSIM** > sélectionnez un abonnement existant.
 2. Sous l’onglet **Vue d’ensemble**, le graphique supérieur affiche le nombre d’appareils affectés au déploiement de pool d’abonnements cellulaires eSIM spécifique.
 
     Il indique également le nombre d’appareils pour d’autres plateformes ayant le même profil d’appareil.
@@ -153,7 +153,7 @@ Une fois le profil d’appareil créé, Intune fournit des graphiques. Ces graph
 
 Vous pouvez surveiller et afficher une liste détaillée des appareils dans État de l’appareil.**
 
-1. Sélectionnez **Configuration de l’appareil** > **Profils cellulaires eSIM** > Sélectionner un abonnement existant.
+1. Sélectionnez **Appareils** > **Profils cellulaires eSIM** > sélectionnez un abonnement existant.
 2. Sélectionnez **État de l’appareil**. Intune affiche des détails supplémentaires sur l’appareil :
 
     - **Nom de l’appareil** : nom de l’appareil ciblé

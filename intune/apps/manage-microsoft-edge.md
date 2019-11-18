@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593687"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754412"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -106,7 +106,7 @@ Pour créer la configuration d’application pour Microsoft Edge :
 7. Sélectionnez **Paramètres de configuration**. Dans le panneau **Configuration**, vous définissez des paires clé-valeur pour fournir des configurations pour Microsoft Edge. Consultez les sections plus bas dans cet article pour en savoir plus sur les différentes paires clé/valeur que vous pouvez définir.
 
     > [!NOTE]
-    > Microsoft Edge utilise les mêmes paires clé/valeur que Managed Browser. 
+    > Microsoft Edge utilise les mêmes paires clé/valeur que Managed Browser. Sur Android, Microsoft Edge doit être ciblé avec des stratégies de protection d’applications pour que les stratégies de configuration des applications prennent effet.
 
 8. Une fois ces opérations effectuées, sélectionnez **OK**.
 9. Dans le panneau **Ajouter une stratégie de configuration**, choisissez **Ajouter**.<br>

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e64c7d977fef66af0fedf556eea34bef9b9079d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 78620818bfd13f0292e159c6a3670b5e3af53dab
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503135"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709508"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Démarrage rapide : Configurer l’inscription automatique pour les appareils Windows 10
 
@@ -35,7 +35,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
+Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) comme Administrateur général ou Administrateur de service Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurer l’inscription automatique Windows 10
 

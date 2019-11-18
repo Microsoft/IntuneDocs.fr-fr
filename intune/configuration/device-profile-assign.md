@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a19515e859f5e78f7611bbd10088aea5f7c44650
-ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
+ms.openlocfilehash: 50b91251572e45669f197df7ac4e5ff94caf47a1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72892630"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755340"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -41,8 +41,8 @@ Veillez à disposer du rôle approprié pour affecter des stratégies. Pour plus
 
 ## <a name="assign-a-device-profile"></a>Attribuer un profil d’appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils**. Tous les profils sont répertoriés.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration**. Tous les profils sont répertoriés.
 3. Sélectionnez le profil que vous souhaitez attribuer > **Affectations**.
 4. Choisissez d’**Inclure** des groupes ou d’**Exclure** des groupes, puis sélectionnez vos groupes. Quand vous sélectionnez vos groupes, vous choisissez un groupe Azure AD. Pour sélectionner plusieurs groupes, maintenez la touche **Ctrl** enfoncée et sélectionnez vos groupes.
 
@@ -54,7 +54,7 @@ Veillez à disposer du rôle approprié pour affecter des stratégies. Pour plus
 
 Lorsque vous attribuez le profil, vous pouvez également **évaluer** le nombre d’utilisateurs affectés. Cette fonctionnalité calcule les utilisateurs ; elle ne calcule pas les appareils.
 
-1. Dans Intune, sélectionnez **Configuration de l’appareil** > **Profils**.
+1. Dans le centre d’administration, sélectionnez **Appareils** > **Profils de configuration**.
 2. Sélectionnez un profil > **Affectations** > **Évaluer**. Un message vous indique le nombre d’utilisateurs ciblés par ce profil.
 
 Si le bouton **Évaluer** est grisé, vérifiez que le profil est attribué à un ou plusieurs groupes.

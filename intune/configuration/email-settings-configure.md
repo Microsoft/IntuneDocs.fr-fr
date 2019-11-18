@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8961614a85992b927e31d590c7abadca75a85a6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 75644ac4d8ccfb8a63e077f2b6625ac96364f5d7
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492869"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755194"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Ajouter des paramètres e-mail à des appareils à l’aide d’Intune
 
@@ -39,8 +39,8 @@ Cet article vous montre comment créer un profil de messagerie dans Microsoft In
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
     - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Paramètres de messagerie pour tous les appareils Windows**.
@@ -71,7 +71,7 @@ Une fois que vous avez entré les paramètres et créé le profil, ce dernier ap
 
 Les profils d’e-mail sont affectés à des groupes d’appareils, et non à des groupes d’utilisateurs. Il existe différentes façons de supprimer un profil d’e-mail d’un appareil, même si celui-ci ne contient qu’un seul profil d’e-mail :
 
-- **Option 1** : Ouvrez le profil d’e-mail (**Configuration de l’appareil** > **Profils**), puis choisissez **Affectations**. L’onglet **Inclure** affiche les groupes auxquels le profil a été affecté. Cliquez avec le bouton droit sur le groupe, puis choisissez **Supprimer**. Veillez à **Enregistrer** vos modifications.
+- **Option 1** : Ouvrez le profil de messagerie (**Appareils** > **Profils de configuration** > sélectionnez votre profil), puis choisissez **Affectations**. L’onglet **Inclure** affiche les groupes auxquels le profil a été affecté. Cliquez avec le bouton droit sur le groupe, puis choisissez **Supprimer**. Veillez à **Enregistrer** vos modifications.
 
 - **Option 2** : [Réinitialisez l’appareil ou mettez-le hors service](../remote-actions/devices-wipe.md). Vous pouvez utiliser ces actions pour supprimer des données et des paramètres en totalité ou de manière sélective.
 
@@ -103,4 +103,4 @@ Si vous apportez des modifications à un profil de messagerie que vous avez attr
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois le profil créé, il ne fait rien pour le moment. L’étape suivante consiste à [attribuer le profil à certains appareils](../device-profile-assign.md).
+Une fois le profil créé, il ne fait rien pour le moment. À présent, [affectez le profil](../device-profile-assign.md).

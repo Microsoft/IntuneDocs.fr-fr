@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5628ba39cafe38cc66827d69584d009c15326bd4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 59a1b5679b81a8de90e39d6ec13bbe87dac90947
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72491752"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984166"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Créer des profils VPN pour se connecter à des serveurs VPN dans Intune
 
@@ -50,7 +50,7 @@ Vous pouvez créer des profils VPN à l’aide des types de connexions suivants 
 |Check Point Capsule VPN|- Android<br/>- Profils professionnels Android Entreprise<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |Cisco AnyConnect|- Android<br/>- Profils professionnels Android Entreprise<br/>- Propriétaire d’appareil Android Entreprise (complètement managé)<br/>- iOS<br/>- macOS|
 |Cisco (IPSec)|iOS|
-|Citrix SSO|- Android<br/>- Profils professionnels Android Entreprise : Utilisez la [stratégie de configuration d’applications](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
+|Citrix SSO|- Android<br/>- Profils professionnels Android Entreprise : Utilisez la [stratégie de configuration d’applications](../apps/app-configuration-policies-use-android.md)<br/>- Propriétaire d’appareil Android Entreprise (complètement managé) : Utilisez la [stratégie de configuration d’applications](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
 |VPN personnalisé|- iOS<br/>- macOS|
 |Accès F5|- Android<br/>- Profils professionnels Android Entreprise<br/>- Propriétaire d’appareil Android Entreprise (complètement managé)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |IKEv2| - iOS<br/>- Windows 10|
@@ -68,8 +68,9 @@ Découvrez comment créer des profils VPN personnalisés à l’aide des paramè
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
-1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
-2. Entrez les propriétés suivantes :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
+3. Entrez les propriétés suivantes :
 
     - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil VPN pour toute l’entreprise**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
@@ -86,7 +87,7 @@ Découvrez comment créer des profils VPN personnalisés à l’aide des paramè
 
     - **Type de profil** : sélectionnez **VPN**.
 
-3. Selon la plateforme que vous choisissez, les paramètres que vous pouvez configurer diffèrent. Consultez l’un des articles suivants pour obtenir les paramètres détaillés pour chaque plateforme :
+4. Selon la plateforme que vous choisissez, les paramètres que vous pouvez configurer diffèrent. Consultez l’un des articles suivants pour obtenir les paramètres détaillés pour chaque plateforme :
 
     - [Paramètres Android](vpn-settings-android.md)
     - [Paramètres Android Entreprise](vpn-settings-android-enterprise.md)
@@ -96,7 +97,7 @@ Découvrez comment créer des profils VPN personnalisés à l’aide des paramè
     - [Paramètres Windows 8.1](vpn-settings-windows-8-1.md)
     - [Paramètres Windows 10](vpn-settings-windows-10.md) (y compris Windows Holographic for Business)
 
-4. Une fois que vous avez fini, il ne vous reste plus qu’à **Créer** votre profil.
+5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 Le profil est créé et apparaît dans la liste des profils. Pour affecter ce profil à des groupes, consultez [Affecter des profils d’appareil](device-profile-assign.md).
 

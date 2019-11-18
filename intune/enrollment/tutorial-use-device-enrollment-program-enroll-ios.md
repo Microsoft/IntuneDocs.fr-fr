@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83a9467065bb5c1d1cde2035df936541bb804ddc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e3fb99a363bda762ccfb834388f3abb4ab80f81a
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503078"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709702"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Tutoriel : Utiliser les fonctionnalités d’inscription des appareils d’entreprise d’Apple dans Apple Business Manager (ABM) pour inscrire des appareils iOS dans Intune
 Les fonctionnalités d’inscription des appareils dans Apple Business Manager simplifient l’inscription des appareils. Intune prend également en charge l’ancien portail du Programme d’inscription des appareils (DEP) d’Apple, mais nous vous encourageons à utiliser Apple Business Manager. Avec Microsoft Intune et l’inscription des appareils d’entreprise d’Apple, les appareils sont inscrits de façon automatique et sécurisée la première fois que l’utilisateur allume l’appareil. Vous pouvez par conséquent livrer des appareils à de nombreux utilisateurs sans avoir à configurer chaque appareil individuellement. 
@@ -44,7 +44,7 @@ Avant d’inscrire des appareils iOS avec les fonctionnalités d’inscription d
 
 Vous utilisez le portail ABM ou DEP pour créer un jeton d’inscription d’appareil. Vous utilisez également les portails pour affecter des appareils à Intune en vue de les gérer.
 
-1. Dans [Intune, sur le Portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
 
 2. Autorisez Microsoft à envoyer des informations d’utilisateur et d’appareil à Apple en sélectionnant **J’accepte**.
 
@@ -80,7 +80,7 @@ Vous utilisez le portail ABM ou DEP pour créer un jeton d’inscription d’app
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils iOS appartenant à l’entreprise. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
 
-1. Dans Intune, sur le Portail Azure, choisissez **Inscription des appareil** > **Inscription Apple** > **Jetons du programme d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription**.
 
 2. Sélectionnez le jeton que vous venez d’installer et choisissez **Profils** > **Créer un profil**.
 
@@ -118,13 +118,13 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 Après avoir configuré un jeton du programme d’inscription avec le portail DEP ABM ou ASM et affecté des appareils sur le serveur MDM, vous pouvez attendre que ces appareils soient synchronisés avec le service Intune ou lancer manuellement une synchronisation. Sans synchronisation manuelle, les appareils peuvent prendre jusqu’à 24 heures pour apparaître dans le portail Azure.
 
-1. Dans Intune, dans le portail Azure, choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**.
 
 ## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Affecter un profil d’inscription à des appareils iOS
 
 Vous devez affecter un profil de programme d’inscription aux appareils pour pouvoir les inscrire. Ces appareils sont synchronisés avec Intune à partir d’Apple et doivent se voir affectés le bon jeton de serveur MDM dans le portail ABM, ASM ou DEP.
 
-1. Dans Intune, dans le portail Azure, choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez votre jeton dans la liste.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez votre jeton dans la liste.
 2. Sélectionnez **Appareils** > choisissez des appareils dans la liste > **Attribuer un profil**.
 3. Sous **Attribuer un profil**, choisissez un profil pour les appareils > **Attribuer**.
 

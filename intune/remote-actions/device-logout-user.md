@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8336f5b29cd21bb6875285177071542080eb95f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fdb23916319b06fb4d85b913209d1ac9e007d551
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509459"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713177"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Déconnecter l’utilisateur actuel sur les appareils iOS gérés par Intune
 
@@ -41,9 +41,7 @@ L’action **Déconnecter l’utilisateur actuel** déconnecte l’utilisateur a
 
 ## <a name="how-to-log-out-the-current-user"></a>Guide pratique pour déconnecter l’utilisateur actuel
 
-1. Connectez-vous au portail Azure.
-2. Choisissez **Autres services** > **Surveillance + Gestion** > **Intune**.
-3. Dans le panneau **Intune**, choisissez **Appareils**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et sélectionnez **Appareils**.
 4. Dans le panneau **Appareils et groupes**, choisissez **Tous les appareils**.
 5. Dans la liste des appareils que vous gérez, choisissez un appareil iOS, puis choisissez l’action à distance **Déconnecter l’utilisateur actuel**.
 

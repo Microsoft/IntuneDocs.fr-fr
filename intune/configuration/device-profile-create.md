@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97227d5ca75b3584cb4e603a16601b2a22deb919
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 51ec328a60ef2737c776bf6cf5d4b8dc1b32460c
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681460"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755314"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Créer un profil d’appareil dans Microsoft Intune
 
@@ -39,16 +39,16 @@ Cet article :
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Sélectionnez **Configuration de l’appareil**. Les options suivantes sont disponibles :
+2. Sélectionnez **Appareils** > **Profils de configuration**. Les options suivantes sont disponibles :
 
     - **Vue d’ensemble** : liste l’état de vos profils et fournit des détails supplémentaires sur les profils que vous avez affectés aux utilisateurs et aux appareils.
     - **Gérer** : créez des profils d’appareil, chargez des [scripts PowerShell](../apps/intune-management-extension.md) personnalisés à exécuter dans le profil, et ajoutez des forfaits de données aux appareils via [eSIM](esim-device-configuration.md).
     - **Surveiller** : vérifiez l’état d’un profil (réussite ou échec), et consultez les journaux de vos profils.
     - **Configurer** : ajoutez une autorité de certification (SCEP ou PFX), ou activez la [Gestion des dépenses de télécommunications](telecom-expenses-monitor.md) dans le profil.
 
-3. Sélectionnez **Profils** > **Créer un profil**. Entrez les propriétés suivantes :
+3. Sélectionnez **Créer un profil**. Entrez les propriétés suivantes :
 
    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil de messagerie WP pour toute l’entreprise**.
    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.

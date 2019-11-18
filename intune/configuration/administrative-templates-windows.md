@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f5a85896a2e6e7be845b2314c4f837dcaeb7b0
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 50fc2d274531dce3d2466ba40a4738035b9b6811
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507021"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756770"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
@@ -43,8 +43,8 @@ Cet article présente les étapes de la création d’un modèle pour les appare
 
 ## <a name="create-a-template"></a>Créer un modèle
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
     - **Nom** : Entrez un nom pour le profil.
@@ -59,7 +59,7 @@ Cet article présente les étapes de la création d’un modèle pour les appare
     > [!TIP]
     > Les paramètres Windows dans Intune sont mis en corrélation avec le chemin d’accès à la stratégie de groupe locale que vous voyez dans l’éditeur de stratégie de groupe local (`gpedit`).
 
-5. Par défaut, la liste déroulante affiche **tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Edge version 77 ou ultérieure** :
+5. Dans la liste déroulante, sélectionnez **Tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Edge version 77 ou ultérieure** :
 
     ![Filtrer la liste pour afficher tous les paramètres Windows ou Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 

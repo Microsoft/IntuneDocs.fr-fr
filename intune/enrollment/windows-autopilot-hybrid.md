@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab90dc9a95e461ad8c5913131a23a0355e9d072c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3724072144a78e1f4f5a17914eff941469e27242
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509222"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709601"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Déployer des appareils joints à un domaine Azure AD Hybride à l’aide d’Intune et de Windows Autopilot
 Vous pouvez utiliser Intune et Windows Autopilot pour configurer des appareils joints à un domaine Azure Active Directory (Azure AD) hybride. Pour cela, effectuez les étapes de cet article.
@@ -42,7 +42,7 @@ Les appareils à inscrire doivent également :
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurer l’inscription automatique Windows 10
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com) puis, dans le volet gauche, sélectionnez **Azure Active Directory**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) puis, dans le volet gauche, sélectionnez **Azure Active Directory**.
 
    ![Le portail Azure](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
@@ -107,7 +107,7 @@ L’unité d’organisation qui a les droits de créer des ordinateurs doit corr
 
 Le connecteur Intune pour Active Directory doit être installé sur un ordinateur qui exécute Windows Server 2016 ou ultérieur. L’ordinateur doit également avoir accès à Internet et à votre annuaire Active Directory. Pour augmenter la scalabilité et la disponibilité, ou pour permettre la prise en charge de plusieurs domaines Active Directory, vous pouvez installer plusieurs connecteurs dans votre environnement. Nous vous recommandons d’installer le connecteur sur un serveur qui n’exécute aucun autre connecteur Intune.
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory** > **Ajouter**. 
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Connecteur Intune pour Active Directory** > **Ajouter**. 
 2. Suivez les instructions pour télécharger le connecteur.
 3. Ouvrez le fichier d’installation du connecteur téléchargé *ODJConnectorBootstrapper.exe* pour installer le connecteur.
 4. À la fin de l’installation, sélectionnez **Configurer**.
@@ -117,7 +117,7 @@ Le connecteur Intune pour Active Directory doit être installé sur un ordinateu
 7. Accédez à **Inscription de l’appareil** > **Inscription Windows** > **Connecteur Intune pour Active Directory**, puis vérifiez que l’état de la connexion indique **Actif**.
 
 > [!NOTE]
-> Une fois que vous êtes connecté au connecteur, il peut être nécessaire d’attendre quelques minutes avant qu’il apparaisse dans [Intune](https://aka.ms/intuneportal). Il apparaît seulement s’il peut communiquer avec le service Intune.
+> Après établissement de la connexion, le connecteur peut mettre quelques minutes à apparaître dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). Il apparaît seulement s’il peut communiquer avec le service Intune.
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>Désactivez la configuration de sécurité renforcée d’Internet Explorer
 Par défaut, sous Windows Server la configuration de sécurité renforcée d’Internet Explorer est activée. Si vous ne parvenez pas à vous connecter au connecteur Intune pour Active Directory, désactivez la configuration de sécurité renforcée d’Internet Explorer pour l’administrateur. [Comment désactiver la configuration de sécurité renforcée d’Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -128,7 +128,7 @@ Si vous avez un proxy web dans votre environnement réseau, vérifiez que le con
 
 
 ## <a name="create-a-device-group"></a>Créer un groupe d'appareils
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Groupes** > **Nouveau groupe**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Groupes** > **Nouveau groupe**.
 
 1. Dans le volet **Groupe**, effectuez ceci :
 
@@ -183,7 +183,7 @@ Une fois vos appareils Autopilot inscrits, leur nom devient le nom d’hôte de 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Créer et affecter un profil de déploiement Autopilot
 Les profils de déploiement Autopilot sont utilisés pour configurer les appareils Autopilot.
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
 2. Sur la page **Informations de base**, tapez un **Nom** et une **Description** facultative.
 3. Si vous souhaitez que tous les appareils des groupes affectés soient automatiquement convertis en appareils Autopilot, affectez à **Convertir tous les appareils ciblés en Autopilot** la valeur **Oui**. Tous les appareils appartenant à l’entreprise et non Autopilot des groupes affectés vont s’inscrire auprès du service de déploiement Autopilot. Les appareils personnels ne seront pas convertis en appareils Autopilot. Le traitement de l’enregistrement prend 48 heures. Quand l’appareil est désinscrit et réinitialisé, Autopilot l’inscrit. Une fois qu’un appareil est inscrit de cette manière, la désactivation de cette option ou la suppression de l’affectation de profil n’entraîne pas la suppression de l’appareil du service de déploiement Autopilot. À la place, vous devez [supprimer l’appareil directement](enrollment-autopilot.md#delete-autopilot-devices).
 4. Sélectionnez **Suivant**.
@@ -200,7 +200,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Facultatif) Activer la page d’état d’inscription
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Page d’état d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
 1. Dans le volet **Page d’état d’inscription**, sélectionnez **Par défaut** > **Paramètres**.
 1. Pour **Afficher la progression de l’installation des applications et des profils**, sélectionnez **Oui**.
 1. Configurez les autres options selon les besoins.
@@ -208,7 +208,7 @@ Environ 15 minutes sont nécessaires pour que l’état du profil de l’appare
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Créer et affecter un profil de jonction de domaine
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Configuration des appareils** > **Profils** > **Créer un profil**.
 1. Entrez les propriétés suivantes :
    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
    - **Description** : Entrez la description du profil.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff1dc2565ef52f81619abe8f14e78c58da0fce7d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 294f06b078b06cfba9376ba6db0eb42cb884e141
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508614"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712320"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Utiliser Fresh Start pour réinitialiser les appareils Windows 10 avec Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72508614"
 
 L’action d’appareil **Redémarrage à zéro** supprime toutes les applications installées sur un PC Windows 10 (version 1703 ou ultérieure). Elle permet de supprimer les applications préinstallées (OEM) qui sont généralement installées avec un nouveau PC. 
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com) et accédez à > **Microsoft Intune** > **Appareils** > **Tous les appareils**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et sélectionnez **Appareils** > **Tous les appareils**.
 2. Dans la liste des appareils que vous gérez, choisissez un appareil de bureau Windows 10.
 3. Cliquez sur **Redémarrage à zéro**. 
 4. Sélectionnez **Conserver les données utilisateur sur cet appareil** pour que :

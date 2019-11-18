@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f03ff1dbb91dcd4592f9f5dd9d8fcc7c6a111e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 84ef86a0b3c0ffbfffde572c9759c62645d57dc5
+ms.sourcegitcommit: 8c651a3ed1f358f19b65206a52f7808282de97c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813309"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844751"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -49,8 +49,8 @@ Quand le tableau de bord s’ouvre, vous obtenez une vue d’ensemble avec tous 
 - Conformité globale des appareils
 - Conformité des appareils par stratégie
 - Conformité des appareils par paramètre
-- État de la protection d’appareil
 - État de l’agent de menace
+- État de la protection d’appareil
 
 ![Image du tableau de bord montrant le tableau de bord de conformité des appareils et les différents rapports](./media/compliance-policy-monitor/idc-1.png)
 
@@ -58,7 +58,7 @@ En explorant ce rapport, vous pouvez également voir toutes les stratégies et p
 
 ### <a name="device-compliance-status-report"></a>Rapport d’état de conformité des appareils
 
-Le graphique montre les états de conformité pour tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory. 
+Le graphique **État de conformité de l’appareil** montre l’état de conformité de tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory.
 
 > [!IMPORTANT]
 > Intune suit la planification des enregistrements de l’appareil pour toutes les évaluations de conformité sur l’appareil. [Découvrez-en plus sur la planification des enregistrements d’appareils](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
@@ -97,7 +97,7 @@ Dans le graphique **État de conformité des appareils**, sélectionnez un état
 
 ![Choisir l’état Non conforme](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-Il vous montre plus de détails sur les appareils dans cet état, notamment la plateforme du système d’exploitation, la dernière date d’enregistrement et d’autres informations. 
+Cette action a pour effet d’ouvrir la fenêtre **Conformité de l’appareil** et d’afficher les appareils dans un graphique **État de l’appareil**. Le graphique donne plus de détails sur les appareils qui se trouvent dans cet état, notamment la plateforme du système d’exploitation et la dernière date d’enregistrement. 
 
 ![Image du tableau de bord montrant plus d’informations sur l’appareil dans cet état spécifique](./media/compliance-policy-monitor/drill-down-details.png)
 
@@ -107,20 +107,20 @@ Si vous voulez voir tous les appareils appartenant à un utilisateur spécifique
 
 ![Sélectionnez Filtrer et Colonne pour changer les résultats apparaissant dans le graphique](./media/compliance-policy-monitor/filter-columns.png)
 
-Quand vous sélectionnez le bouton **Filtrer**, le menu déroulant du filtre s’ouvre avec plus d’options, notamment l’état de conformité, les appareils jailbreakés et d’autres possibilités. **Appliquez** le filtre pour mettre à jour les résultats.
+Quand vous sélectionnez le bouton **Filtrer**, le menu déroulant du filtre s’ouvre avec plus d’options, notamment l’état de **Conformité** et les appareils **Jailbreakés**. **Appliquez** le filtre pour mettre à jour les résultats.
 
 Utilisez la propriété **Colonnes** pour ajouter ou supprimer des colonnes dans la sortie graphique. Par exemple, **Nom principal de l’utilisateur** peut faire apparaître l’adresse e-mail inscrite sur l’appareil. **Appliquez** les colonnes pour mettre à jour les résultats.
 
 #### <a name="device-details"></a>Détails sur l'appareil
 
-Dans le graphique, sélectionnez un appareil spécifique, puis sélectionnez **Conformité de l’appareil** :
+Dans le graphique **Détails des appareils**, sélectionnez un appareil en particulier, puis **Conformité de l’appareil** :
 
 ![Choisir un appareil spécifique, puis Conformité de l’appareil pour voir les stratégies de conformité appliquées](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
 
-Ceci fournit plus de détails sur les paramètres de stratégie de conformité d’appareil appliqués sur cet appareil. Quand vous sélectionnez la stratégie spécifique, tous les paramètres de la stratégie apparaissent.
+Intune affiche plus de détails sur les paramètres de stratégie de conformité appliqués sur cet appareil. Quand vous sélectionnez la stratégie spécifique, tous les paramètres de la stratégie apparaissent.
 
 ### <a name="devices-without-compliance-policy"></a>Appareils sans stratégie de conformité
-Dans **Conformité des appareils** > **Vue d’ensemble**, le rapport identifie également les appareils auxquels aucune stratégie de conformité n’est affectée :
+Sur la page *État de conformité*, à côté du graphique *Conformité à la stratégie*, vous pouvez sélectionner la vignette **Appareils sans stratégie de conformité** pour afficher des informations sur les appareils auxquels aucune stratégie de conformité n’a été affectée :
 
 ![Voir les appareils auxquels aucune stratégie de conformité n’est affectée](./media/compliance-policy-monitor/devices-without-policies.png)
 
@@ -130,7 +130,7 @@ Quand vous sélectionnez la vignette, elle montre tous les appareils sans strat�
 
 - Avec le paramètre de sécurité **Marquer les appareils sans stratégie de conformité comme étant**, il est important d’identifier les appareils sans stratégie de conformité. Vous pouvez ensuite leur affecter au moins une stratégie de conformité.
 
-  Vous pouvez configurer le paramètre de sécurité dans le portail Intune. Sélectionnez **Conformité des appareils** > **Paramètres de stratégie de conformité**. Définissez ensuite **Marquer les appareils sans stratégie de conformité comme étant** sur **Conforme** ou sur **Non conforme**. 
+  Vous pouvez configurer le paramètre de sécurité dans le portail Intune. Accédez à **Appareils** > **Stratégies de conformité** > **Paramètres de stratégie de conformité**. Définissez ensuite **Marquer les appareils sans stratégie de conformité comme étant** sur **Conforme** ou sur **Non conforme**. 
 
   En savoir plus sur cette [amélioration de la sécurité du service Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -138,19 +138,15 @@ Quand vous sélectionnez la vignette, elle montre tous les appareils sans strat�
 
 ### <a name="per-policy-device-compliance-report"></a>Rapport de conformité d’appareil par stratégie
 
-Le rapport **Conformité des appareils** > **Conformité à la stratégie** vous montre les stratégies, et combien d’appareils sont conformes et non conformes. 
+Le graphique **Conformité à la stratégie** montre les stratégies et le nombre d’appareils conformes et non conformes. 
 
 ![Voir une liste des stratégies, et combien d’appareils sont conformes et non conformes pour ces stratégies](./media/compliance-policy-monitor/idc-8.png)
 
-Quand vous sélectionnez une stratégie spécifique, vous pouvez voir **l’état de conformité**, **l’alias d’e-mail de l’utilisateur**, le **modèle d’appareil** et **l’emplacement** pour chaque appareil ciblé par cette stratégie de conformité.
-
 ## <a name="setting-compliance-report"></a>Rapport de conformité par paramètre
 
-Le rapport **Conformité des appareils** > **Définition de la conformité** vous montre, par paramètre de conformité, le nombre total d’appareils dans chaque état de conformité. Il montre tous les paramètres de stratégie de conformité d’appareil de toutes les stratégies de conformité, les plateformes auxquelles les paramètres de stratégie sont appliqués et le nombre d’appareils non conformes.
+Le graphique **Conformité des paramètres** montre tous les paramètres de stratégie de conformité d’appareil de toutes les stratégies de conformité, les plateformes auxquelles les paramètres de stratégie sont appliqués et le nombre d’appareils non conformes.
 
 ![Voir une liste de tous les paramètres dans les différentes stratégies](./media/compliance-policy-monitor/idc-10.png)
-
-Quand vous sélectionnez un paramètre spécifique, vous pouvez voir **l’état de conformité**, **l’alias d’e-mail de l’utilisateur**, le **modèle d’appareil** et **l’emplacement** pour chaque appareil ciblé par ce paramètre.
 
 > [!NOTE]
 > Une stratégie peut être affectée à un appareil et à un utilisateur sur ce même appareil. Dans certains scénarios, un appareil peut se synchroniser avant que l’utilisateur se connecte, par exemple lorsque l’appareil redémarre. La conformité peut évaluer cet utilisateur et afficher l’appareil comme non conforme. Ce comportement peut également indiquer le compte système comme étant un utilisateur non conforme.
@@ -163,14 +159,14 @@ Vous pouvez vérifier les différents états de vos stratégies, par plateforme.
 
 Cette fonctionnalité est incluse dans le rapport d’état des appareils :
 
-1. Sélectionnez **Conformité de l’appareil** > **Stratégies**. La liste des stratégies apparaît, dont la plateforme, si la stratégie est affectée.
+1. Sélectionnez **Appareils** > **Stratégies de conformité** > **Stratégies**. La liste des stratégies apparaît, dont la plateforme, si la stratégie est affectée.
 2. Sélectionnez une stratégie, puis choisissez **Vue d’ensemble**. Dans cette vue, l’affectation de stratégie inclut les états suivants :
 
-    - Réussite : la stratégie est appliquée
-    - Erreur : impossible d’appliquer la stratégie. Ce message s’affiche généralement avec un code d’erreur qui établit un lien vers une explication. 
-    - Conflit : deux paramètres sont appliqués au même appareil et Intune ne peut pas résoudre le conflit. Un administrateur doit examiner le problème.
-    - En attente : l’appareil n’est pas encore enregistré dans Intune pour recevoir la stratégie. 
-    - Non applicable : l’appareil ne peut pas recevoir la stratégie. Par exemple, la stratégie met à jour un paramètre spécifique à iOS 11.1, mais l’appareil utilise iOS 10. 
+    - **Réussite** : la stratégie est appliquée
+    - **Erreur** : impossible d’appliquer la stratégie. Ce message s’affiche généralement avec un code d’erreur qui établit un lien vers une explication. 
+    - **Conflit** : deux paramètres sont appliqués au même appareil et Intune ne peut pas résoudre le conflit. Un administrateur doit examiner le problème.
+    - **En attente** : l’appareil n’est pas encore enregistré dans Intune pour recevoir la stratégie. 
+    - **Non applicable** : l’appareil ne peut pas recevoir la stratégie. Par exemple, la stratégie met à jour un paramètre spécifique à iOS 11.1, mais l’appareil utilise iOS 10. 
 
 3. Pour voir les détails sur les appareils utilisant cette stratégie, sélectionnez un des états. Par exemple, sélectionnez **Réussi**. La fenêtre suivante montre les détails propres aux appareils, notamment leur nom et l’état du déploiement.
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f770db6927ed87786f7806e011cdc6cb9bae6b3f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509274"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713494"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -64,9 +64,9 @@ Ces problèmes peuvent se produire sur toutes les plateformes.
 
 Vérifiez si le nombre d’appareils affectés à l’utilisateur n’est pas supérieur au nombre maximal. Pour cela, effectuez les étapes suivantes :
 
-1. Dans Intune, choisissez **Inscription de l’appareil** > **Restrictions d’inscription** > **Restrictions de limite d’appareils**. Notez la valeur dans la colonne **Limite d’appareils**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Restrictions d’inscription** > **Restrictions Nombre limite d’appareils**. Notez la valeur dans la colonne **Limite d’appareils**.
 
-2. Dans Intune, choisissez **Utilisateurs** > **Tous les utilisateurs** > sélectionnez l’utilisateur > **Appareils**. Notez le nombre d’appareils.
+2. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Utilisateurs** > **Tous les utilisateurs** > sélectionnez l’utilisateur > **Appareils**. Notez le nombre d’appareils.
 
 3. Si le nombre d’appareils inscrits de l’utilisateur est déjà égal à la restriction de limite d’appareils, aucun autre appareil ne peut être inscrit, sauf si :
     - [vous supprimez des appareils existants](../remote-actions/devices-wipe.md) ;

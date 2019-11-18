@@ -2,7 +2,7 @@
 title: Démarrage rapide - Inscrire un appareil Windows 10 Desktop dans Microsoft Intune
 description: Démarrage rapide - Utilisez le portail d’entreprise pour inscrire votre appareil Windows 10 Desktop dans Microsoft Intune.
 services: microsoft-intune
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 07/30/2019
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aeeb55804a2bdd3ef1143bbb88dee968892c5c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 91f20411f668428c8bf3af8b0bd4ae6f4b0b545f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509286"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713519"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Démarrage rapide : Inscrire votre appareil Windows 10
 
@@ -91,7 +91,7 @@ Avant d’inscrire votre appareil Windows 10 Desktop, vous devez confirmer la ve
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Confirmer l’inscription de votre appareil dans Intune
 
-1. Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) comme Administrateur général ou Administrateur de service Intune.
 2. Sélectionnez **Appareils** > **Tous les appareils** pour afficher les appareils inscrits dans Intune.
 3. Vérifiez qu’un appareil supplémentaire est bien inscrit dans Intune.
 

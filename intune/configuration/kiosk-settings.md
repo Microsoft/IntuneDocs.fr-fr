@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271b49a4c927bccb5cd967ea99b0d7bd5c2bd515
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b7d09700847eae6a43111b0a4e865522f01862b9
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492359"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755167"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Paramètres des appareils Windows 10 et Windows Holographic for Business à exécuter en tant que bornes dédiées avec Intune
 
@@ -39,8 +39,8 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
 
 ## <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Profils** > **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
@@ -60,7 +60,7 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
       - [Paramètres de plein écran Windows 10](kiosk-settings-windows.md)
       - [Paramètres de plein écran Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications. 
+5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 Le profil est créé et apparaît dans la liste des profils. Maintenant, [affectez-le](device-profile-assign.md).
 

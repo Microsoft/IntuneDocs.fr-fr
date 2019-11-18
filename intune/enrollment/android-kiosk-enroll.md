@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923387"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709463"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription à Intune pour les appareils Android Entreprise dédiés
 
@@ -59,7 +59,7 @@ Pour configurer la gestion d’appareils Android Enterprise dédiés, effectuez 
 
 Vous devez créer un profil d’inscription pour pouvoir inscrire vos appareils dédiés. Quand le profil est créé, vous obtenez un jeton d’inscription (chaîne aléatoire) et un code QR. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour [inscrire l’appareil dédié](#enroll-the-dedicated-devices).
 
-1. Accédez à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Appareils dédiés appartenant à l’entreprise**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Inscription des appareils** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
 2. Choisissez **Créer** et remplissez les champs requis.
     - **Nom** : tapez un nom que vous utiliserez lors de l’affectation du profil au groupe d’appareils dynamique.
     - **Date d’expiration du jeton** : Date à laquelle le jeton expirera. Google applique un maximum de 90 jours.
@@ -69,7 +69,7 @@ Vous devez créer un profil d’inscription pour pouvoir inscrire vos appareils 
 
 Vous pouvez cibler des applications et des stratégies à des groupes d’appareils dynamiques ou affectés. Vous pouvez configurer des groupes d’appareils AAD dynamiques de façon à spécifier automatiquement des appareils qui sont inscrits avec un profil d’inscription particulier en suivant ces étapes :
 
-1. Accédez à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Groupes** > **Tous les groupes** > **Nouveau groupe**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Groupes** > **Tous les groupes** > **Nouveau groupe**.
 2. Dans le panneau **Groupe**, renseignez les champs obligatoires comme suit :
     - **Type de groupe** : Sécurité
     - **Nom du groupe** : tapez un nom intuitif (par exemple, « appareils de l’usine n°1 »)
@@ -92,7 +92,7 @@ Vous pouvez cibler des applications et des stratégies à des groupes d’appare
 
 Le remplacement ou la révocation d’un jeton/code QR n’a aucun effet sur les appareils qui sont déjà inscrits.
 
-1. Accédez à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et choisissez **Inscription de l’appareil** > **Inscription Android** > **Appareils dédiés appartenant à l’entreprise**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Inscription des appareils** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
 2. Choisissez le profil à utiliser.
 3. Choisissez **Jeton**.
 4. Pour remplacer le jeton, choisissez **Remplacer le jeton**.

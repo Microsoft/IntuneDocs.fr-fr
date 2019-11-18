@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
-ms.reviewer: chrisgre
+ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3cae06c3ce763fe8ca94bbed9bf35e8abef52c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f0b5e67c433f2d3633219650f48307dccae196e9
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502605"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713283"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Accès conditionnel basé sur l’application avec Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Les [stratégies de protection des applications Intune](../apps/app-protection-policy.md) vous aident à protéger vos données d’entreprise sur les appareils qui sont inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez toujours vous assurer que les données et ressources de votre entreprise sont protégées.
 
@@ -39,6 +37,7 @@ L’accès conditionnel basé sur l’application et la gestion d’applications
 Vous pouvez bloquer les applications de messagerie intégrées sur iOS et Android quand vous autorisez seulement l’application Microsoft Outlook à accéder à Exchange Online. En outre, vous pouvez bloquer les applications qui n’ont pas de stratégies de protection des applications Intune appliquées lors de l’accès à SharePoint Online.
 
 ## <a name="prerequisites"></a>Prérequis
+
 Avant de créer une stratégie d’accès conditionnel basé sur l’application, vous devez avoir :
 
 - **Enterprise Mobility + Security (EMS)** ou un **abonnement Azure Active Directory (AD) Premium**
@@ -57,7 +56,7 @@ L’accès conditionnel basé sur l’application [prend également en charge le
 Dans cet exemple, l’administrateur a appliqué des stratégies de protection des applications à l’application Outlook suivies d’une règle d’accès conditionnel qui ajoute l’application Outlook à une liste approuvée d’applications qui peuvent être utilisées lors de l’accès aux e-mails d’entreprise.
 
 > [!NOTE]
-> La structure de l’organigramme ci-dessous peut être utilisée pour d’autres applications gérées.
+> L’organigramme suivant peut être utilisé pour d’autres applications managées.
 
 ![Processus d’accès conditionnel basé sur l’application illustré dans un organigramme](./media/app-based-conditional-access-intune/ca-intune-common-ways-3.png)
 
