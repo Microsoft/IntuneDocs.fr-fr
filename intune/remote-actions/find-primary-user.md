@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f594e20abf1a507d1d4e00641a4821fe1ba9b0
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3d8aadbd876ea03da0f16acea82b71ebd85cf9be
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509329"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712256"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Rechercher l’utilisateur principal d’un appareil Intune
 
@@ -30,7 +30,7 @@ L’utilisateur principal, également appelé affinité entre utilisateur et pé
 
 ## <a name="how-to-find-a-devices-primary-user"></a>Comment trouver l’utilisateur principal d’un appareil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choisissez **appareils** > choisir un appareil.
 3. À la page **Vue d’ensemble**, choisissez **Afficher plus** et vous verrez l’utilisateur principal indiqué.
 
