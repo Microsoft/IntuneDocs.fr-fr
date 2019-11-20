@@ -2,8 +2,8 @@
 title: Stratégies de protection des applications et profils professionnels dans Microsoft Intune - Azure | Microsoft Docs
 description: Voyez les différences ainsi que les avantages et inconvénients de l’utilisation de stratégies de protection des applications ou de profils professionnels pour les appareils personnels ou BYOD Android Entreprise dans Microsoft Intune. Comparez les différences et les fonctionnalités que vous obtenez avec des stratégies de protection des applications sans inscription (APP-WE) et des profils professionnels Android Entreprise.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 02/13/2019
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a2c71e04cf842fda7b16fb8ad4a05668ccbfaa84
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d0b4f8d5124924d013e7ac131dafc947a95c7b65
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507604"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059795"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Stratégies de protection des applications et profils professionnels sur des appareils Android Entreprise dans Intune
 

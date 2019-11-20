@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7779e265680ded1b5d5d5b670bcf694376ee8016
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494404"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199188"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questions, problèmes et solutions concernant les stratégies et les profils d’appareil dans Microsoft Intune
 
@@ -73,10 +73,6 @@ Si l’appareil vient d’être inscrit, la vérification de la conformité et d
 | Windows 8.1 | Toutes les 5 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
 
 Les utilisateurs peuvent ouvrir l’application Portail d’entreprise, **Paramètres** > **Synchroniser** à tout moment pour rechercher immédiatement les mises à jour de stratégie ou de profil.
-
-Pour les appareils sans affinité utilisateur, la fréquence de synchronisation immédiatement après l’inscription peut varier entre quelques heures et un jour ou plus. Intune envoie des demandes à des intervalles différents pour qu’un appareil s’enregistre auprès d’Intune. Toutefois, c’est à l’appareil de s’enregistrer. Après l’inscription initiale, le temps nécessaire à un appareil pour terminer l’archivage est imprévisible. Il varie également en fonction du type d’inscription d’appareil et des stratégies et profils attribués à un appareil. Après l’inscription de l’appareil et l’application de l’ensemble des stratégies et profils initiaux, l’appareil recherche de nouvelles stratégies et de nouveaux profils environ toutes les 6 à 8 heures, en fonction du moment où l’appareil s’inscrit dans Intune.
-
-Nous vous recommandons de vous assurer que vos appareils sont en ligne pendant au moins huit heures consécutives pour obtenir les meilleurs résultats.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Quelles sont les actions qui déclenchent l’envoi immédiat d’une notification par Intune ?
 

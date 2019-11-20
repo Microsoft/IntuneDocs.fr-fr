@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999541"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199212"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "72999541"
 Le portail d’entreprise Microsoft Intune permet aux utilisateurs d’accéder aux données de l’entreprise et d’effectuer des tâches courantes, notamment l’inscription d’appareils ou l’installation d’applications, et d’accéder à des informations d’assistance fournies par le département informatique. En outre, l’application du portail d’entreprise permet aux utilisateurs d’accéder en toute sécurité aux ressources de l’entreprise. L’application du portail d’entreprise fournit plusieurs pages différentes, comme l’accueil, les applications, les détails des applications, les appareils et les détails des appareils. Pour rechercher rapidement des applications dans le portail d’entreprise, vous pouvez filtrer les applications sur la page Applications.
 
 > [!IMPORTANT]
-> Pour prendre en charge Firebase Cloud Messaging (FCM) de Google, vous devez mettre à jour votre application de Portail d’entreprise Android vers la dernière version. Pour plus d’informations, consultez [Mettre à jour votre application de Portail d’entreprise Android vers la dernière version](../fundamentals/whats-new.md#update-your-android-company-portal-app-to-the-latest-version-).
+> Pour prendre en charge Firebase Cloud Messaging (FCM) de Google, vous devez mettre à jour votre application de Portail d’entreprise Android vers la dernière version.  
 
 > [!Tip]
 > Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise. Notez que les utilisateurs doivent disposer d’une licence Intune pour accéder au site web Portail d’entreprise.
