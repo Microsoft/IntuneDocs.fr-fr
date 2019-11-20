@@ -1,11 +1,11 @@
 ---
 title: Paramètres de restriction des appareils pour Windows 10 dans Microsoft Intune - Azure | Microsoft Docs
-description: Affichez la liste de tous les paramètres et leur description pour la création de restrictions d’appareil sur les appareils Windows 10 et versions ultérieures. Utilisez ces paramètres dans un profil de configuration pour contrôler les captures d’écran, les exigences de mot de passe, les paramètres Kiosk, les applications dans le magasin, le navigateur Microsoft Edge, Windows Defender, l’accès au cloud, le menu Démarrer et autres dans Microsoft Intune.
+description: Affichez la liste de tous les paramètres et leur description pour la création de restrictions d’appareil sur les appareils Windows 10 et versions ultérieures. Utilisez ces paramètres dans un profil de configuration pour contrôler les captures d’écran, les exigences de mot de passe, les paramètres Kiosk, les applications dans le magasin, le navigateur Microsoft Edge, Microsoft Defender, l’accès au cloud, le menu Démarrer et autres dans Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
-ms.translationtype: MTE75
+ms.openlocfilehash: f0cf7d6f18b0d345a8c491984987b9ffa234d66e
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755266"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059475"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -523,7 +523,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Wir
 
 - **Partager des données d’utilisation** : choisissez le niveau des données de diagnostic qui sont envoyées. Les options disponibles sont les suivantes :
   - **Non configuré** : aucune donnée n’est partagée.
-  - **Sécurité** : informations requises pour aider à garantir la sécurité de Windows, notamment les données sur les paramètres de composant de télémétrie et d’expérience des utilisateurs connectés, l’outil de suppression des logiciels malveillants et Windows Defender.
+  - **Sécurité** : informations requises pour aider à garantir la sécurité de Windows, notamment les données sur les paramètres de composant de télémétrie et d’expérience des utilisateurs connectés, l’outil de suppression des logiciels malveillants et Microsoft Defender.
   - **De base** : informations de base sur l’appareil, notamment les données relatives à la qualité, la compatibilité des applications, les données d’utilisation des applications et les données du niveau de sécurité.
   - **Amélioré** : informations supplémentaires, notamment comment Windows, Windows Server, System Center et les applications sont utilisés, comment ils fonctionnent, les données de fiabilité avancées ainsi que les données des niveaux Sécurité et De base.
   - **Complètes** : toutes les données nécessaires pour identifier et aider à résoudre les problèmes, ainsi que les données des niveaux Sécurité, De base et Amélioré.
@@ -632,19 +632,19 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sta
   - **Masquer** : le raccourci est masqué et le paramètre est désactivé dans l’application Paramètres.
   - **Afficher** : le raccourci est affiché et le paramètre est désactivé dans l’application Paramètres.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
+## <a name="microsoft-defender-smart-screen"></a>Écran intelligent de Microsoft Defender
 
-- **SmartScreen pour Microsoft Edge** : **Exiger** désactive Windows Defender SmartScreen et empêche les utilisateurs de l’activer. **Non configuré** (valeur par défaut) active SmartScreen. Aide à protéger les utilisateurs contre les menaces potentielles, et empêche les utilisateurs de le désactiver.
+- **SmartScreen pour Microsoft Edge** : **Exiger** désactive Microsoft Defender SmartScreen et empêche les utilisateurs de l’activer. **Non configuré** (valeur par défaut) active SmartScreen. Aide à protéger les utilisateurs contre les menaces potentielles, et empêche les utilisateurs de le désactiver.
 
   Microsoft Edge utilise Windows Defender SmartScreen (activé) pour protéger les utilisateurs contre d’éventuels courriers indésirables d’hameçonnage et logiciels malveillants.
 
   [Fournisseur de services de configuration Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-- **Accès à un site malveillant** : **Bloquer** empêche les utilisateurs d’ignorer les avertissements concernant le filtre Windows Defender SmartScreen et d’accéder au site. **Non configuré** (valeur par défaut) autorise les utilisateurs à ignorer les avertissements et à poursuivre vers le site.
+- **Accès à un site malveillant** : **Bloquer** empêche les utilisateurs d’ignorer les avertissements concernant le filtre Microsoft Defender SmartScreen et d’accéder au site. **Non configuré** (valeur par défaut) autorise les utilisateurs à ignorer les avertissements et à poursuivre vers le site.
 
   [Fournisseur de services de configuration Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
-- **Téléchargement des fichiers non vérifiés** : **Bloquer** empêche les utilisateurs d’ignorer les avertissements concernant le filtre Windows Defender SmartScreen et de télécharger des fichiers non vérifiés. **Non configuré** (valeur par défaut) permet aux utilisateurs d’ignorer les avertissements et de continuer à télécharger les fichiers non vérifiés.
+- **Téléchargement des fichiers non vérifiés** : **Bloquer** empêche les utilisateurs d’ignorer les avertissements concernant le filtre Microsoft Defender SmartScreen et de télécharger des fichiers non vérifiés. **Non configuré** (valeur par défaut) permet aux utilisateurs d’ignorer les avertissements et de continuer à télécharger les fichiers non vérifiés.
 
   [Fournisseur de services de configuration Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
@@ -833,9 +833,9 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   [Fournisseur de services de configuration Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Détecter les applications potentiellement indésirables** : choisissez le niveau de protection quand Windows détecte des applications potentiellement indésirables. Les options disponibles sont les suivantes :
-  - **Non configuré** (valeur par défaut) : la protection Windows Defender contre les applications potentiellement indésirables est désactivée.
-  - **Bloquer** : Windows Defender détecte les applications potentiellement indésirables, et les éléments détectés sont bloqués. Ces éléments s’affichent dans l’historique, ainsi que d’autres menaces.
-  - **Audit** : Windows Defender détecte les applications potentiellement indésirables, mais n’effectue aucune action. Vous pouvez consulter les informations sur les applications pour lesquelles Windows Defender prendrait des mesures, par exemple rechercher les événements créés par Windows Defender dans l’observateur d’événements.
+  - **Non configuré** (valeur par défaut) : la protection Microsoft Defender contre les applications potentiellement indésirables est désactivée.
+  - **Bloquer** : Microsoft Defender détecte les applications potentiellement indésirables, et les éléments détectés sont bloqués. Ces éléments s’affichent dans l’historique, ainsi que d’autres menaces.
+  - **Audit** : Microsoft Defender détecte les applications potentiellement indésirables, mais n’effectue aucune action. Vous pouvez consulter les informations sur les applications pour lesquelles Microsoft Defender prendrait des mesures, par exemple rechercher les événements créés par Microsoft Defender dans l’observateur d’événements.
 
   Pour plus d’informations sur les applications potentiellement indésirables, consultez [Détecter et bloquer les applications potentiellement indésirables](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
@@ -850,11 +850,11 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   - **Défini par l’utilisateur**
   - **Bloquer**
 
-  Si votre action n’est pas possible, Windows Defender choisit la meilleure option pour s’assurer que la menace est corrigée. 
+  Si votre action n’est pas possible, Microsoft Defender choisit la meilleure option pour s’assurer que la menace est corrigée. 
 
   [CSP Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
-### <a name="windows-defender-antivirus-exclusions"></a>Exclusions de l’antivirus Windows Defender
+### <a name="microsoft-defender-antivirus-exclusions"></a>Exclusions de l’antivirus Microsoft Defender
 
 - **Fichiers et dossiers à exclure des analyses et de la protection en temps réel** : ajoute un ou plusieurs fichiers et dossiers comme **C:\Chemin** ou **%ProgramFiles%\Chemin\NomFichier.exe** à la liste des exclusions. Ces fichiers et dossiers ne sont pas inclus dans les analyses en temps réel ou planifiées.
 - **Extensions de fichier à exclure des analyses et de la protection en temps réel** : ajoute une ou plusieurs extensions de fichier comme **jpg** ou **txt** à la liste des exclusions. Tous les fichiers avec ces extensions ne sont pas inclus dans les analyses en temps réel ou planifiées.

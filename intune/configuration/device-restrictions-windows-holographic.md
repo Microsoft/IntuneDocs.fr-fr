@@ -1,11 +1,11 @@
 ---
 title: Paramètres des appareils Windows Holographic for Business - Microsoft Intune - Azure | Microsoft Docs
-description: Découvrez et configurez les paramètres de restriction d’appareil dans Microsoft Intune pour Windows Holographic for Business, notamment la désinscription, la géolocalisation, les mots de passe, l’installation des applications à partir d’un Store, les cookies et les fenêtres contextuelles dans Microsoft Edge, Windows Defender, la recherche, le cloud et le stockage, la connectivité Bluetooth, l’heure système et les données d’utilisation dans Azure.
+description: Découvrez et configurez les paramètres de restriction d’appareil dans Microsoft Intune pour Windows Holographic for Business, notamment la désinscription, la géolocalisation, les mots de passe, l’installation des applications à partir d’un Store, les cookies et les fenêtres contextuelles dans Microsoft Edge, Microsoft Defender, la recherche, le cloud et le stockage, la connectivité Bluetooth, l’heure système et les données d’utilisation dans Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28a697b841d8b264a19d97059d272b7119bc7f4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1f90a5a13859ff19765e22444a84b9c11405af73
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493924"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059503"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows Holographic for Business pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -57,7 +57,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 - **Gestionnaire de mots de passe** : activez ou désactivez la fonctionnalité Gestionnaire de mots de passe Microsoft Edge.
 - **Envoyer un en-tête Do Not Track** : configure le navigateur Microsoft Edge pour envoyer des en-têtes Do Not Track aux sites web que les utilisateurs visitent.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
+## <a name="microsoft-defender-smart-screen"></a>Écran intelligent de Microsoft Defender
 
 - **SmartScreen pour Microsoft Edge** : activer Microsoft Edge SmartScreen pour accéder au site et aux téléchargements de fichiers.
 

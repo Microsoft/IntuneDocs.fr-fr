@@ -1,11 +1,11 @@
 ---
 title: Message courants sur Endpoint Protection dans Microsoft Intune - Azure | Microsoft Docs
-description: Consultez les messages courants et les solutions possibles lorsque vous utilisez et dépannez Endpoint Protection et Windows Defender dans Microsoft Intune.
+description: Consultez les messages courants et les solutions possibles lorsque vous utilisez et dépannez Endpoint Protection et Microsoft Defender dans Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 11/13/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e34e1cb30469593c8ec9e756659ad03589ae38bc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 819586a923f5c0f3a81a6d59c4a3895898182f6b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509780"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059154"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problèmes Endpoint Protection et solutions possibles dans Microsoft Intune
 
 Cet article répertorie les causes et solutions possibles pour quelques erreurs et avertissements. Utilisez les informations pour vous aider à résoudre les problèmes liés à la protection des points de terminaison.
 
-## <a name="windows-defender-error-codes"></a>Codes d’erreur Windows Defender
+## <a name="microsoft-defender-error-codes"></a>Codes d’erreur de Microsoft Defender
 
-Passez en revue les journaux des événements et les codes d’erreur pour [résoudre les problèmes avec Windows Defender AV](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Passez en revue les journaux des événements et les codes d’erreur pour [résoudre les problèmes avec Microsoft Defender AV](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
 ## <a name="common-intune-errors-and-possible-resolutions"></a>Erreurs courantes liées à Intune et solutions possibles
 
@@ -48,7 +48,7 @@ Passez en revue les journaux des événements et les codes d’erreur pour [rés
 
 ### <a name="features-are-disabled"></a>Les fonctionnalités sont désactivées
 
-Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont désactivées. Ces messages peuvent se produire si Intune Endpoint Protection ou Windows Defender est désactivé par un administrateur à l’aide d’un profil de configuration. Ou bien, il est désactivé par un utilisateur final sur l’appareil. Messages possibles :
+Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont désactivées. Ces messages peuvent se produire si Intune Endpoint Protection ou Microsoft Defender est désactivé par un administrateur à l’aide d’un profil de configuration. Ou bien, il est désactivé par un utilisateur final sur l’appareil. Messages possibles :
 
 `Endpoint Protection disabled`  
 `Real-time protection disabled`  
@@ -61,20 +61,20 @@ Vous pouvez recevoir un message indiquant que certaines fonctionnalités sont d�
 **Solutions possibles** : Activez ces fonctionnalités. Pour obtenir des instructions, consultez :
 
 - [Ajouter des paramètres Endpoint Protection](../protect/endpoint-protection-configure.md)
-- [Antivirus Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
+- [Antivirus Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Utilisateurs finaux : activer la protection en temps réel pour accéder aux ressources d’entreprise](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Définitions de programmes malveillants obsolètes
 
 Cet état s’affiche lorsque les définitions de programmes malveillants sur l’appareil sont obsolètes depuis au moins 14 jours. Par exemple, le message peut s’afficher si l’appareil est déconnecté d’Internet ou si les définitions de programmes malveillants sont obsolètes.
 
-**Solutions possibles** : Si les définitions de programmes malveillants sont obsolètes, mettez-les à jour avec [Antivirus Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Solutions possibles** : Si les définitions de programmes malveillants sont obsolètes, mettez-les à jour avec [Antivirus Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Analyse complète en retard ou analyse rapide en retard
 
 Une analyse complète ou une analyse rapide n’a pas été effectuée depuis 14 jours. Ce scénario peut se produire si l’appareil redémarre lors d’une analyse complète.
 
-**Solutions possibles** : Si une analyse complète est en retard, vous pouvez exécuter une analyse une fois ou planifier des analyses régulières. Consultez [Antivirus Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Solutions possibles** : Si une analyse complète est en retard, vous pouvez exécuter une analyse une fois ou planifier des analyses régulières. Voir [antivirus Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Une autre application de protection de point de terminaison est en cours d'exécution
 

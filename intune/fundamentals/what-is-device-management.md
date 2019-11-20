@@ -4,7 +4,7 @@ description: Microsoft 365 Entreprise inclut Microsoft Intune. Découvrez comme
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfa7e34d19465eb43b5eb9cd68b7513545938fa8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504781"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058529"
 ---
 # <a name="device-management-overview"></a>Vue d’ensemble de la gestion des appareils
 
@@ -84,7 +84,7 @@ Quand vous configurez Intune, vous choisissez également d’utiliser uniquement
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Simplifier les tâches informatiques à l’aide du centre d’administration de gestion des périphériques
 
-Le [centre d’administration de gestion des périphériques](https://devicemanagement.microsoft.com/) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client.
+Le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) est un emplacement centralisé qui permet de gérer et d’exécuter les tâches relatives à vos appareils mobiles. Cet espace de travail inclut les services utilisés pour la gestion des périphériques, notamment Intune et Azure Active Directory, ainsi que pour la gestion des applications client.
 
 Dans le centre d’administration de la gestion des appareils, vous pouvez :
 

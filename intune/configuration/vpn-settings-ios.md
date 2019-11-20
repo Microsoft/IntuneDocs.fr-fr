@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593791"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059819"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Ajouter les paramètres VPN sur les appareils iOS dans Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Microsoft Intune inclut de nombreux paramètres VPN que vous pouvez déployer sur vos appareils iOS. Ces paramètres permettent de créer et de configurer des connexions VPN au réseau de votre organisation. Cet article décrit ces paramètres. Certains paramètres sont disponibles uniquement sur certains clients VPN, par exemple Citrix, Zscaler, etc.
 
@@ -73,7 +71,7 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
     > [!NOTE]
     > Si le nom d’utilisateur et le mot de passe sont utilisés comme méthode d’authentification pour les VPN IPsec Cisco, ils doivent fournir le SharedSecret par le biais d’un profil Apple Configurator personnalisé.
 
-  - **Informations d’identification dérivées**: si aucun émetteur d’informations d’identification dérivé n’a été configuré, Intune vous invite à le faire.
+  - **Informations d’identification dérivées**: utilisez un certificat dérivé de la carte à puce d’un utilisateur. Si aucun émetteur d’informations d’identification dérivé n’est configuré, Intune vous invite à en ajouter un. Pour plus d’informations, consultez [utiliser des informations d’identification dérivées dans Microsoft Intune](../protect/derived-credentials.md).
 
 - **URL exclues** (Zscaler uniquement) : lorsque vous êtes connecté au VPN Zscaler, les URL répertoriées sont accessibles en dehors du cloud Zscaler. 
 
@@ -102,7 +100,7 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
   - Quand le contrôle d’accès réseau est activé, le VPN est déconnecté toutes les 24 heures. Le VPN peut être immédiatement reconnecté.
   - L’ID d’appareil fait partie du profil, mais il n’est pas visible dans Intune. Cet ID n’est stocké nulle part et n’est pas partagé par Microsoft.
 
-  Lorsque l’ID d’appareil est pris en charge par des partenaires VPN, le client VPN, tel que Citrix SSO, peut obtenir l’ID. Il peut ensuite interroger Intune afin de confirmer l’inscription de l’appareil et la conformité du profil VPN.
+  Pour les partenaires VPN qui prennent en charge l’ID de périphérique, le client VPN, tel que Citrix SSO, peut obtenir l’ID. Il peut ensuite interroger Intune afin de confirmer l’inscription de l’appareil et la conformité du profil VPN.
 
   - Pour supprimer ce paramètre, recréez le profil et ne sélectionnez pas **J’accepte**. Réaffectez ensuite le profil.
 
@@ -189,7 +187,10 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
 - **VPN à la demande** : configurez des règles conditionnelles qui contrôlent le démarrage de la connexion VPN. Par exemple, créez une condition dans laquelle la connexion VPN est utilisée uniquement quand un appareil n’est pas connecté au réseau Wi-Fi d’une entreprise. Sinon, créez une condition. Par exemple, la connexion VPN n’est pas lancée si un appareil ne peut pas accéder au domaine de recherche DNS que vous entrez.
 
   - **Domaines de recherche DNS ou SSID** : indiquez si cette condition utilise les **SSID** de réseau sans fil ou les **domaines de recherche DNS**. Cliquez sur **Ajouter** pour configurer un ou plusieurs SSID ou domaines de recherche.
-  - **Sonde de chaîne d’URL** : facultatif. Entrez une URL que la règle utilise comme test. Si l’appareil ayant ce profil accède à cette URL sans redirection, la connexion VPN est lancée. Et l’appareil se connecte à l’URL cible. L’utilisateur ne voit pas le site de la sonde de chaîne d’URL. Par exemple, une sonde de chaîne d’URL peut être l’adresse d’un serveur web d’audit qui vérifie la compatibilité de l’appareil avant la connexion du VPN. Autre exemple, l’URL teste la capacité du VPN à se connecter à un site avant de connecter l’appareil à l’URL cible via le VPN.
+  - **Sonde de chaîne d’URL** : facultatif. Entrez une URL que la règle utilise comme test. Si l’appareil accède à cette URL sans redirection, la connexion VPN est lancée. Et l’appareil se connecte à l’URL cible. L’utilisateur ne voit pas le site de la sonde de chaîne d’URL.
+
+    Par exemple, une sonde de chaîne d’URL est l’URL d’un serveur web d’audit qui vérifie la compatibilité de l’appareil avant la connexion du VPN. Ou, l’URL teste la capacité du VPN à se connecter à un site avant de connecter l’appareil à l’URL cible via le VPN.
+.
   - **Action du domaine** : choisissez l’un des éléments suivants :
     - Se connecter si nécessaire
     - Ne jamais se connecter

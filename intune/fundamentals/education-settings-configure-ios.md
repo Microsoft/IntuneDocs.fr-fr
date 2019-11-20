@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/9/2018
+ms.date: 11/14/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 893c663902f4b33ba9082550c22031fc9ab4229a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0dd9a97fdafff784bab2eae1d466855082fd397a
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510301"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117827"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Guide pratique pour configurer des paramètres Intune pour l’application iOS Classroom
 
 > [!NOTE]
-> Les paramètres Intune de l’application Classroom sont obsolètes dans Intune. Cet article s’applique uniquement aux utilisateurs ayant des profils Éducation existants dans Intune.
+> Intune ne prend pas actuellement en charge la configuration de l’application Classroom. Cet article s’applique uniquement aux utilisateurs ayant des profils iOS Éducation existants dans Intune.  
 
 ## <a name="introduction"></a>Introduction
 [Classroom](https://itunes.apple.com/app/id1085319084) est une application qui permet aux enseignants d’orienter l’apprentissage et de contrôler les appareils des étudiants dans la salle de classe. Par exemple, l’application permet aux enseignants d’effectuer les tâches suivantes :
