@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 839a62e32c2fafcaaa591e38cd5b2e297ed3750f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 86b61f628dc559bf0520dbe16ef58644bd360269
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502948"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188445"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Configurer les paramètres d’Intune Education pour les appareils iPad partagés
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!NOTE]
-> Les paramètres Intune de l’application Classroom sont obsolètes dans Intune. Cet article s’applique uniquement aux utilisateurs ayant des profils Éducation existants dans Intune.
+> Intune ne prend pas actuellement en charge la configuration de l’application Classroom. Cet article s’applique uniquement aux utilisateurs ayant des profils iOS Éducation existants dans Intune.
 
 Intune prend en charge l’application iOS Classroom, qui permet aux enseignants d’orienter l’apprentissage et de contrôler les appareils des étudiants dans la salle de classe. En outre, pour l’application Classroom, Apple prend en charge la possibilité de configurer les appareils iPad des étudiants de sorte que plusieurs étudiants puissent partager un même appareil. Ce document vous explique comment atteindre cet objectif avec Intune.
 

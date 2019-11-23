@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: 751ddfae96ebcd190d4d9ce2ca93bfccba972df5
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984123"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390858"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -130,9 +130,6 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
     - iOS 11.3 et versions ultérieures
 
 ## <a name="password"></a>Mot de passe
-
-> [!NOTE]
-> Dans une version ultérieure, ces paramètres de mot de passe dans l’interface utilisateur Intune sont mis à jour pour correspondre au type d’inscription.
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
 
@@ -266,7 +263,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Exiger le mot de passe du magasin iTunes pour tous les achats**: **demander** à l’utilisateur d’entrer le mot de passe d’ID Apple pour chaque achat dans une application ou iTunes. **Non configuré** (par défaut) autorise les achats sans demander un mot de passe à chaque fois.
 - **Achats dans l’application** : choisissez **Bloquer** pour empêcher les achats sur l’App Store dans l’application. L’option **Non configuré** (par défaut) autorise les achats au sein d’une application en cours d’exécution.
 - **Télécharger du contenu de l'iBook Store indiqué comme étant de la « Littérature érotique »**  : choisissez **Bloquer** pour empêcher les utilisateurs de télécharger du contenu de l’iBook Store indiqué comme étant de la littérature érotique. L’option **Non configuré** (par défaut) autorise l’utilisateur à télécharger des livres de la catégorie « Littérature érotique ».
-- **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés**: lorsque la valeur est définie sur **autoriser**, les applications gérées, telles que l’application mobile Outlook, peuvent enregistrer ou synchroniser les informations de contact, y compris les contacts professionnels et d’entreprise, dans les contacts iOS intégrés. lancement. Lorsque la valeur **n’est pas configurée** (valeur par défaut), les applications gérées ne peuvent pas enregistrer ou synchroniser les informations de contact avec l’application contacts iOS intégrée sur l’appareil.
+- **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés**: lorsque la valeur est définie sur **autoriser**, les applications gérées, telles que l’application mobile Outlook, peuvent enregistrer ou synchroniser les informations de contact, y compris les contacts professionnels et d’entreprise, dans l’application contacts iOS intégrée. Lorsque la valeur **n’est pas configurée** (valeur par défaut), les applications gérées ne peuvent pas enregistrer ou synchroniser les informations de contact avec l’application contacts iOS intégrée sur l’appareil.
   
   Pour utiliser ce paramètre, définissez le paramètre **Affichage des documents d’entreprise dans les applications non gérées**  sur **Bloquer**.
 
@@ -321,16 +318,6 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **JavaScript dans Safari** : choisissez **Bloquer** pour empêcher que les scripts Java dans le navigateur s’exécutent sur l’appareil. **Non configuré** (valeur par défaut) autorise les scripts Java.
 
 - **Fenêtres publicitaires dans Safari**  : choisissez **Bloquer** pour désactiver le bloqueur de fenêtres publicitaires dans le navigateur web. **Non configuré** (valeur par défaut) autorise le bloqueur de fenêtres publicitaires.
-
-- **Journalisation côté serveur pour les commandes Siri**: lorsque la valeur est définie sur **Disable**, la journalisation Siri côté serveur est désactivée. Cela peut également empêcher la journalisation des requêtes des utilisateurs sur les serveurs Siri. **Non configuré** (par défaut) enregistre les commandes Siri côté serveur. Ce paramètre ne dépend pas du paramètre Siri bloqué ou non configuré.
-
-  Cette fonctionnalité s’applique à :  
-  - iOS 12.2 et versions ultérieures
-
-  > [!NOTE]
-  > Le paramètre **de journalisation côté serveur pour les commandes Siri** est déconseillé par Apple. Dans une version à venir, ce paramètre est supprimé de la console Intune.
-  >
-  > Actuellement, ce paramètre n’a aucun effet sur les appareils, même si le paramètre est affiché dans profils gestion. Pour supprimer ce paramètre d’une stratégie, ouvrez la stratégie, apportez une modification mineure, puis enregistrez la stratégie. La stratégie est mise à jour et le paramètre est supprimé des appareils.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription automatique des appareils (supervisé)
 

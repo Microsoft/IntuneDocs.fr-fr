@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bacb7e26df8a5b0d6c7500b24a5e749a85ca62f2
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 075e7a99f72de30e83447a2869154859e33356b9
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059644"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390841"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utiliser et gérer des appareils Android Enterprise avec OEMConfig dans Microsoft Intune
 
@@ -80,8 +80,8 @@ Assurez-vous que l’appareil prend en charge OEMConfig, que l’application OEM
 
 ## <a name="create-an-oemconfig-profile"></a>Créer un profil OEMConfig
 
-1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Sélectionnez les **appareils** > **profils de configuration** > créer un **Profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
     - **Nom** : attribuez un nom descriptif au nouveau profil.
@@ -146,6 +146,11 @@ Par rapport aux applications standard, les applications OEMConfig étendent les 
 | Datalogic | com. Datalogic. oemconfig | [Documentation utilisateur pour Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |
 | Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
+| SpectraLink-codes-barres | com. spectralink. code-barres. service |  |
+| SpectraLink-boutons | com. spectralink. Buttons |  |
+| SpectraLink-appareil | com. spectralink. slnkdevicesettings  |  |
+| SpectraLink-journalisation | com. spectralink. slnklogger |  |
+| Spectralink - VQO | com. spectralink. slnkvqo |  |
 
 -----------------
 
