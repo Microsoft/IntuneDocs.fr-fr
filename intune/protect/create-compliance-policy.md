@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72786078"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188259"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Créer une stratégie de conformité dans Microsoft Intune
 
@@ -61,19 +61,15 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 ## <a name="create-the-policy"></a>Créer la stratégie
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Conformité de l’appareil**. Les options suivantes sont disponibles :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Vue d’ensemble** : Affiche un résumé et le nombre d’appareils conformes, non évalués, etc. Répertorie également les stratégies et les paramètres dans vos stratégies. [Surveiller les stratégies de conformité d’appareils Intune](compliance-policy-monitor.md) fournit des informations utiles.
-    - **Gérer** : Créez des stratégies d’appareil, envoyez des [notifications](quickstart-send-notification.md) aux appareils non conformes et activez la [délimitation du réseau](use-network-locations.md).
-    - **Surveiller** : Vérifiez l’état de conformité de vos appareils et au niveau du paramètre et de la stratégie. La section [Surveiller les stratégies de conformité d’appareils Intune](compliance-policy-monitor.md) est une ressource utile. Affiche également les journaux et vérifie l’état de l’agent de menace de vos appareils.
-    - **Configurer** : Utilisez les [stratégies de conformité intégrées](device-compliance-get-started.md#ways-to-deploy-device-compliance-policies), activez [Microsoft Defender - Protection avancée contre les menaces (ATP)](advanced-threat-protection.md), ajoutez un [connecteur de défense contre les menaces mobiles](mobile-threat-defense.md) et utilisez [Jamf](conditional-access-integrate-jamf.md).
+2. Sélectionnez **Appareils** > **Stratégies de conformité** > **Créer une stratégie**.
 
-3. Sélectionnez **Stratégies** > **Créer une stratégie**. Entrez les propriétés suivantes :
+3. Spécifiez les propriétés suivantes :
 
-   - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS comme non conformes**.  
+   - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS comme non conformes**.
 
-   - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.  
+   - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.
 
    - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
      - **Administrateur d’appareil Android**
@@ -99,7 +95,7 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
    - **Emplacements** *(Administrateur d’appareil Android)*  : Dans votre stratégie, vous pouvez forcer la conformité selon l’emplacement de l’appareil. Choisissez parmi les emplacements existants. Vous n’avez pas encore d’emplacement ? L’article [Utiliser des emplacements (délimitation du réseau)](use-network-locations.md) dans Intune fournit des conseils.  
 
    - **Actions en cas de non-conformité** : Pour les appareils qui ne respectent pas vos stratégies de conformité, vous pouvez ajouter une séquence d’actions à appliquer automatiquement. Vous pouvez changer la planification quand l’appareil est marqué comme non conforme, par exemple après un jour. Vous pouvez également configurer une deuxième action qui envoie un e-mail à l’utilisateur quand l’appareil n’est pas conforme.
-    
+
      L’article [Ajouter des actions pour les appareils non conformes](actions-for-noncompliance.md) fournit plus d’informations, notamment sur la création d’un e-mail de notification pour vos utilisateurs.
 
      Par exemple, vous utilisez la fonctionnalité Emplacements et ajoutez un emplacement à une stratégie de conformité. L’action par défaut en cas de non-conformité s’applique quand vous sélectionnez au moins un emplacement. Si l’appareil n’est pas connecté aux emplacements sélectionnés, il est immédiatement considéré comme non conforme. Vous pouvez accorder aux utilisateurs une période de grâce, par exemple un jour.
@@ -112,8 +108,10 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 Une fois qu’une stratégie est créée, l’étape suivante consiste à attribuer la stratégie à vos groupes :
 
-1. Choisissez une stratégie que vous avez créée. Les stratégies existantes se trouvent dans **Conformité de l’appareil** > **Stratégies**.
-2. Sélectionnez la stratégie > **Affectations**. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
+1. Choisissez une stratégie que vous avez créée. Les stratégies existantes se trouvent dans **Appareil** > **Stratégies de conformité** > **Stratégies**.
+
+2. Sélectionnez les *Affectations de* > **stratégie**. Vous pouvez inclure ou exclure des groupes de sécurité Azure AD (Azure Active Directory).
+
 3. Choisissez **Groupes sélectionnés** pour voir vos groupes de sécurité Azure AD. Sélectionnez les groupes auxquels vous souhaitez appliquer cette stratégie, puis choisissez **Enregistrer** pour déployer la stratégie.
 
 La conformité des utilisateurs ou des appareils ciblés par votre stratégie est évaluée lors de l’archivage avec Intune.
@@ -122,8 +120,9 @@ La conformité des utilisateurs ou des appareils ciblés par votre stratégie es
 
 Lorsque vous attribuez la stratégie, vous pouvez également **évaluer** le nombre d’utilisateurs affectés. Cette fonctionnalité calcule les utilisateurs ; elle ne calcule pas les appareils.
 
-1. Dans Intune, sélectionnez **Conformité des appareils** > **Stratégies**.
-2. Sélectionnez une stratégie > **Affectations** > **Évaluer**. Un message vous indique le nombre d’utilisateurs ciblés par cette stratégie.
+1. Dans Intune, sélectionnez **Appareils** > **Stratégies de conformité** > **Stratégies**.
+
+2. Sélectionnez une *Évaluation* > **d’affectations** > **de stratégie**. Un message vous indique le nombre d’utilisateurs ciblés par cette stratégie.
 
 Si le bouton **Évaluer** est grisé, vérifiez que la stratégie est attribuée à un ou plusieurs groupes.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3372fc83e467b08b479490b3707f2be03409156
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f78f3696827ebd50084f0e4b012c5f94427eeb35
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749331"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164551"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénario guidé – Bureau moderne géré par le cloud
 
-Le bureau moderne est la plateforme de productivité à la pointe de la technologie destinée aux travailleurs de l’information. Office 365 ProPlus et Windows 10 sont les principaux composants du bureau moderne, parallèlement aux dernières bases de référence de sécurité pour Windows 10 et à Windows Defender ATP (Advanced Threat Protection). 
+Le bureau moderne est la plateforme de productivité à la pointe de la technologie destinée aux travailleurs de l’information. Office 365 ProPlus et Windows 10 sont les principaux composants du bureau moderne, parallèlement aux dernières bases de référence de sécurité pour Windows 10 et à Microsoft Defender ATP (Advanced Threat Protection). 
 
 Les actions à distance à l’échelle d’Internet constituent l’atout supplémentaire de la gestion du bureau moderne à partir du cloud. La gestion cloud s’appuie sur les stratégies intégrées de gestion des appareils mobiles Windows et élimine les dépendances vis-à-vis de la stratégie de groupe locale Active Directory. 
 
@@ -33,7 +33,7 @@ Si vous voulez évaluer un bureau moderne géré par le cloud dans votre propre 
 
 ## <a name="prerequisites"></a>Prérequis
 - [Définir l’autorité MDM sur Intune](~/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) – Le paramètre d’autorité de gestion des appareils mobiles (MDM) détermine la façon dont vous gérez vos appareils. En tant qu’administrateur informatique, vous devez définir une autorité de gestion des appareils mobiles (MDM) avant que les utilisateurs puissent inscrire des appareils pour la gestion.
-- M356 E3 minimum (ou M365 E5 pour une sécurité optimale)
+- M365 E3 minimum (ou M365 E5 pour une sécurité optimale)
 - Appareil Windows 10 1903 (inscrit auprès de Windows Autopilot pour une expérience utilisateur optimale)
 - Autorisations d’administrateur de service Intune nécessaires pour suivre ce scénario guidé :
   - Lecture, création, suppression, affectation et mise à jour pour la configuration de l’appareil
@@ -118,5 +118,5 @@ Une fois que l’utilisateur a joint l’appareil à Azure Active Directory, les
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Si vous utilisez Windows Defender ATP, créez une [stratégie de conformité Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) pour mettre en conformité l’analyse des menaces de Defender.
+- Si vous utilisez Microsoft Defender ATP, créez une [stratégie de conformité Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) pour mettre en conformité l’analyse des menaces de Defender.
 - Créez une [stratégie d’accès conditionnel en fonction de l’appareil](~/protect/advanced-threat-protection.md#create-a-conditional-access-policy) pour bloquer l’accès si l’appareil ne respecte pas les règles de conformité Intune.

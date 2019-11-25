@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 997cf043f8ea61133d6e61f4584ad9349aedbf73
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592053"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060041"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Ajouter des applications web à Microsoft Intune
 
@@ -36,7 +36,7 @@ Avant de pouvoir gérer et attribuer une application pour vos utilisateurs, ajou
 Intune crée un raccourci vers l’application web sur l’appareil de l’utilisateur. Pour les appareils iOS, un raccourci vers l’application web est ajouté à l’écran d’accueil. Pour les appareils Android, un raccourci vers l’application web est ajouté au widget de portail d’entreprise Intune et le widget doit être épinglé manuellement par l’utilisateur. Pour les appareils Windows, un raccourci vers l’application web est placé dans le menu Démarrer.
 
 > [!Note]
-> Un navigateur doit être installé sur le périphérique de l’utilisateur pour lancer les applications web.
+> Un navigateur doit être installé sur le périphérique de l’utilisateur pour lancer les applications web. 
 
 ## <a name="add-a-web-app-to-intune"></a>Ajouter une application web à Intune
 Pour ajouter une application à Intune comme raccourci vers une application sur le web, effectuez les étapes suivantes :
@@ -67,6 +67,8 @@ Pour ajouter une application à Intune comme raccourci vers une application sur 
 > Les utilisateurs doivent ajouter le widget Intune à leur écran d’accueil pour afficher les applications web qui ont été affectées à des appareils Android.
 >
 > Actuellement, le déploiement d’applications web Intune sur des appareils iOS est associé au profil de gestion et ne peut pas être supprimé manuellement. Vous pouvez modifier le type de déploiement sur **Désinstaller** dans le portail Intune, où l’application web peut être supprimée automatiquement. Toutefois, si vous supprimez le déploiement avant de modifier l’intention d’affectation d'applications sur **Désinstaller**, l’application web sera définitivement en place sur l’appareil jusqu'à ce qu’il soit désinscrit d’Intune.
+
+Les utilisateurs finaux peuvent lancer des applications web directement à partir de l’application Windows Portail d’entreprise en sélectionnant l’application web, puis en choisissant l’option **Ouvrir dans le navigateur**. L’URL web publiée est ouverte directement dans le navigateur web. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

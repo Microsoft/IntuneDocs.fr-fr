@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
-ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
+ms.openlocfilehash: 38ddec9d76a51ca0afe7561c3616e3a97050ba02
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627685"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199222"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Activer le connecteur Mobile Threat Defense dans Intune
 
@@ -33,6 +33,8 @@ ms.locfileid: "73627685"
 Pendant l’installation de Mobile Threat Defense (MTD), vous avez configuré une stratégie de classification des menaces dans votre console de partenaire MTD et avez créé la stratégie de conformité des appareils dans Intune. Si vous avez déjà configuré le connecteur Intune dans la console de partenaire MTD, vous pouvez maintenant activer la connexion MTD pour les applications de partenaire.
 
 Quand vous intégrez une nouvelle application à Intune Mobile Threat Defense et que vous activez la connexion à Intune, Intune crée une stratégie d’accès conditionnel classique dans Azure Active Directory. Chaque application MTD que vous intégrez, notamment [Defender ATP](advanced-threat-protection.md) ou un de nos autres [partenaires MTD](mobile-threat-defense.md#mobile-threat-defense-partners), crée une stratégie d’accès conditionnel classique. Ces stratégies peuvent être ignorées, mais elles ne doivent pas être modifiées, supprimées ou désactivées.
+
+Si la stratégie classique est supprimée, vous devrez supprimer la connexion à Intune qui était responsable de sa création, puis la configurer à nouveau. Ce processus recrée la stratégie classique. Il n’est pas possible de migrer des stratégies classiques pour les applications MTD vers le nouveau type de stratégie pour l’accès conditionnel.
 
 Les stratégies d’accès conditionnel classiques pour les applications MTD : 
 

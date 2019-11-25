@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ed7bfd204289c963b8134252d9d76f2379ecba
-ms.sourcegitcommit: 768d581cb8bcc5fdcb8ade95d402b11223ab226c
+ms.openlocfilehash: 71045489ac703860073a3023e6d6170778117d33
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882494"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199288"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -52,6 +52,46 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+## <a name="week-of-november-18-2019"></a>Semaine du 18 novembre 2019
+
+### <a name="device-configuration"></a>Configuration des appareils
+
+#### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Mises à jour des fonctionnalités Windows 10 (préversion publique)<!-- 2384877 -->
+
+Vous pouvez maintenant déployer des [mises à jour de fonctionnalités Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) sur des appareils Windows 10. Les mises à jour des fonctionnalités de Windows 10 sont une nouvelle stratégie de mise à jour logicielle qui définit la version de Windows 10 que les appareils doivent installer et conserver. Vous pouvez utiliser ce nouveau type de stratégie avec vos anneaux de mise à jour Windows 10 existants.
+
+Les appareils qui reçoivent la stratégie de mises à jour des fonctionnalités de Windows 10 installent la version spécifiée de Windows, puis restent à cette version jusqu’à ce que la stratégie soit modifiée ou supprimée. Les appareils qui exécutent une version ultérieure de Windows restent à leur version actuelle. Les appareils qui sont conservés sur une version spécifique de Windows peuvent toujours installer des mises à jour de qualité et de sécurité pour cette version à partir d’anneaux de mise à jour Windows 10.
+
+Le déploiement de ce nouveau type de stratégie sur les locataires commence cette semaine. Si cette stratégie n’est pas encore à la disposition de votre locataire, elle le sera bientôt.
+
+### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
+
+#### <a name="updated-support-experience---5012398---"></a>Mise à jour de l’expérience de support<!-- 5012398 -->
+
+À partir d’aujourd’hui, une expérience mise à jour et rationalisée dans la console pour [obtenir de l’aide et du support pour Intune](get-support.md) est déployée sur les locataires. Si cette nouvelle expérience n’est pas encore à votre disposition, elle le sera bientôt.
+
+Nous avons amélioré la recherche dans la console et les commentaires concernant les problèmes courants, ainsi que le workflow à suivre pour contacter le support. En ouvrant un problème de support, vous verrez apparaître une estimation en temps réel du délai d’attente à prévoir pour un rappel ou une réponse par e-mail ; les clients du Support Premier et du Support Unifié pourront facilement indiquer la gravité de leur problème afin de bénéficier d’un support plus rapide.
+
+## <a name="week-of-november-11-2019"></a>Semaine du 11 novembre 2019  
+
+### <a name="app-management"></a>Gestion d'applications  
+
+#### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Amélioration de l’expérience d’inscription macOS dans Portail d’entreprise <!-- 5074349 WNready -->  
+L’expérience d’inscription pour l’application Portail d’entreprise macOS a un processus d’inscription plus simple, qui est plus proche de l’expérience d’inscription de Portail d’entreprise iOS. Maintenant, les utilisateurs de l'appareil bénéficient des caractéristiques et des fonctionnalités suivantes :  
+
+* Interface utilisateur épurée.  
+* Liste de contrôle d’inscription améliorée.  
+* Instructions plus claires sur la façon d’inscrire leurs appareils.  
+* Amélioration des options de résolution des problèmes.  
+
+#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Lancement des applications web à partir de l’application Windows Portail d’entreprise<!-- 5030972 -->
+Les utilisateurs finaux peuvent désormais lancer des applications web directement à partir de l’application Windows Portail d’entreprise. Les utilisateurs finaux peuvent sélectionner l’application web, puis choisir l’option **Ouvrir dans le navigateur**. L’URL web publiée est ouverte directement dans un navigateur web. Cette fonctionnalité sera déployée au cours de la semaine prochaine. Pour plus d’informations sur les d’applications web, consultez [Ajouter des applications web à Microsoft Intune](~/apps/web-app.md).  
+
+
+#### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950-wnready---"></a>Nouvelle colonne de type d’attribution dans Portail d’entreprise pour Windows 10 <!-- 5459950 WNready -->
+La colonne Portail d’entreprise > **Applications installées** > **Type d’affectation** a été renommée **Obligatoire par votre organisation**.  Dans cette colonne, les utilisateurs voient une valeur **Oui** ou **Non** pour indiquer qu’une application est obligatoire ou rendue facultative par leur organisation. Ces modifications ont été apportées suite à une confusion d’utilisateurs des appareils concernant le concept des applications disponibles. Vos utilisateurs peuvent trouver plus d’informations sur l’installation des applications de Portail d’entreprise dans [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows). Pour plus d’informations sur la configuration de l’application Portail d’entreprise pour vos utilisateurs, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).  
+
 
 ## <a name="week-of-november-4-2019"></a>Semaine du 4 novembre 2019
 
@@ -139,7 +179,7 @@ Vous pouvez créer une stratégie de protection d’applications Intune permetta
 
 ### <a name="device-configuration"></a>Configuration des appareils
 
-#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices---2266073----"></a>Nouveau profil d’interface de configuration de microprogramme d’appareil pour les appareils Windows 10 et versions ultérieures<!-- 2266073  -->
+#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices-public-preview---2266073----"></a>Nouveau profil d’interface de configuration de microprogramme d’appareil pour les appareils Windows 10 et versions ultérieures (préversion publique)<!-- 2266073  -->
 
 Sur Windows 10 et versions ultérieures, vous pouvez créer un profil de configuration d’appareil pour contrôler les paramètres et les fonctionnalités (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10 et ultérieur** pour la plateforme). Dans cette mise à jour, il existe un nouveau type de profil d’interface de configuration de microprogramme d’appareil qui permet à Intune de gérer les paramètres UEFI (BIOS).
 
@@ -516,7 +556,7 @@ Utilisez les paramètres de protection de point de terminaison Intune pour confi
 Ce paramètre déclenche une actualisation du mot de passe de récupération piloté par le client après la récupération d’un lecteur de système d’exploitation (à l’aide de bootmgr ou de WinRE) et le déverrouillage du mot de passe de récupération sur un lecteur de données fixe. Ce paramètre actualise le mot de passe de récupération spécifique qui a été utilisé. Les autres mots de passe inutilisés sur le volume restent inchangés. Pour plus d’informations, consultez la documentation du fournisseur de services de chiffrement BitLocker pour [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Protection contre les falsifications pour l’antivirus Windows Defender<!-- 4705448        -->
-Utilisez Intune pour gérer la *protection contre les falsifications* pour l’antivirus Windows Defender. Vous trouverez le [paramètre de protection contre les falsifications](../protect/endpoint-protection-windows-10.md#windows-defender-security-center) dans le groupe Centre de sécurité Microsoft Defender si vous utilisez des profils de configuration pour la protection des points de terminaison Windows 10. Vous pouvez définir la protection contre les falsifications sur *Activée* pour activer les restrictions de protection contre les falsifications, sur *Désactivée* pour la désactiver, ou sur *Non configurée* pour conserver la configuration actuelle des appareils.  
+Utilisez Intune pour gérer la *protection contre les falsifications* pour l’antivirus Windows Defender. Vous trouverez le [paramètre de protection contre les falsifications](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) dans le groupe Centre de sécurité Microsoft Defender si vous utilisez des profils de configuration pour la protection des points de terminaison Windows 10. Vous pouvez définir la protection contre les falsifications sur *Activée* pour activer les restrictions de protection contre les falsifications, sur *Désactivée* pour la désactiver, ou sur *Non configurée* pour conserver la configuration actuelle des appareils.  
 
 Pour plus d’informations sur la protection contre les falsifications, consultez [Empêcher les modifications des paramètres de sécurité avec la protection contre les falsifications](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) dans la documentation de Windows.
 

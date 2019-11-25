@@ -1,11 +1,11 @@
 ---
 title: Fonctionnalités et paramètres d’appareil dans Microsoft Intune - Azure | Microsoft Docs
-description: Vue d’ensemble des différents profils d’appareil Microsoft Intune. Obtenez des informations sur les profils de fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, Éducation, certificats, mise à niveau Windows 10, BitLocker et Windows Defender, Protection des informations Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le Portail Azure. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
+description: Vue d’ensemble des différents profils d’appareil Microsoft Intune. Obtenez des informations sur les profils de fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, Éducation, certificats, mise à niveau Windows 10, BitLocker et Microsoft Defender, Protection des informations Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le Portail Azure. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f0dd9eddd986e6717e6bf706b02a7b06f712a032
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749347"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059894"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
@@ -145,7 +145,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-Le profil [Paramètres Endpoint Protection pour Windows 10](../protect/endpoint-protection-windows-10.md) configure les paramètres de BitLocker et Windows Defender pour les appareils Windows 10.
+Le profil [Paramètres Endpoint Protection pour Windows 10](../protect/endpoint-protection-windows-10.md) configure les paramètres de BitLocker et Microsoft Defender pour les appareils Windows 10.
 
 Pour intégrer Microsoft Defender - Protection avancée contre les menaces avec Microsoft Intune, consultez [Configurer des points de terminaison à l’aide des outils de gestion des appareils mobiles](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 

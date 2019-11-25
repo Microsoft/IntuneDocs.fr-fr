@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a9eb45898102e9d5fcde88f69026467255c513
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: d2ab21321b171c8fe8f5f9dab3032507c0e740cf
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445275"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059752"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Activer les applications Win32 sur les appareils en mode S
 
-[Le mode S Windows 10](https://docs.microsoft.com/windows/deployment/s-mode) est un système d’exploitation verrouillé qui exécute uniquement les applications du Store. Par défaut, les appareils en mode S Windows n’autorisent pas l’installation et l’exécution d’applications Win32. Ces appareils incluent une *stratégie de base Win 10S* unique, qui empêche l’appareil en mode S d’y exécuter des applications Win32. Toutefois, en créant et en utilisant une **stratégie supplémentaire en mode S** dans Intune, vous pouvez installer et exécuter des applications Win32 sur des appareils managés en mode S Windows 10. À l’aide des outils PowerShell [Windows Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), vous pouvez créer une ou plusieurs stratégies supplémentaires pour le mode S Windows. Vous devez signer les stratégies supplémentaires avec le service de signature [Device Guard Signing Service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) ou avec [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool), puis charger et distribuer les stratégies via Intune. Vous pouvez également signer les stratégies supplémentaires avec un certificat de coconception de votre organisation, mais la méthode recommandée consiste à utiliser DGSS. Si vous utilisez le certificat de coconception de votre organisation, le certificat racine auquel le certificat de coconception est lié doit être présent sur l’appareil.
+[Le mode S Windows 10](https://docs.microsoft.com/windows/deployment/s-mode) est un système d’exploitation verrouillé qui exécute uniquement les applications du Store. Par défaut, les appareils en mode S Windows n’autorisent pas l’installation et l’exécution d’applications Win32. Ces appareils incluent une *stratégie de base Win 10S* unique, qui empêche l’appareil en mode S d’y exécuter des applications Win32. Toutefois, en créant et en utilisant une **stratégie supplémentaire en mode S** dans Intune, vous pouvez installer et exécuter des applications Win32 sur des appareils managés en mode S Windows 10. À l’aide des outils PowerShell [Microsoft Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), vous pouvez créer une ou plusieurs stratégies supplémentaires pour le mode S Windows. Vous devez signer les stratégies supplémentaires avec le service de signature [Device Guard Signing Service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) ou avec [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool), puis charger et distribuer les stratégies via Intune. Vous pouvez également signer les stratégies supplémentaires avec un certificat de coconception de votre organisation, mais la méthode recommandée consiste à utiliser DGSS. Si vous utilisez le certificat de coconception de votre organisation, le certificat racine auquel le certificat de coconception est lié doit être présent sur l’appareil.
 
 En attribuant la stratégie supplémentaire en mode S dans Intune, vous autorisez l’appareil à faire une exception à la stratégie en mode S existante de l’appareil, qui autorise le catalogue d’applications signé correspondant chargé. La stratégie définit une liste verte d’applications (catalogue d’applications) qui peuvent être utilisées sur l’appareil en mode S.
 
@@ -40,7 +40,7 @@ Les étapes permettant d’autoriser les applications Win32 à s’exécuter sur
 
 1. Activez les appareils en mode S via Intune dans le cadre du processus d’inscription de Windows 10 S.
 2. Créez une stratégie supplémentaire pour autoriser les applications Win32 :
-   - Vous pouvez utiliser les [outils Windows Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) pour créer une stratégie supplémentaire. L’ID de stratégie de base de la stratégie doit correspondre à l’ID de stratégie de base en mode S (qui est codé en dur sur le client). En outre, assurez-vous que la version de la stratégie est supérieure à la version précédente.
+   - Vous pouvez utiliser les [outils Microsoft Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) pour créer une stratégie supplémentaire. L’ID de stratégie de base de la stratégie doit correspondre à l’ID de stratégie de base en mode S (qui est codé en dur sur le client). En outre, assurez-vous que la version de la stratégie est supérieure à la version précédente.
    - Vous utilisez DGSS pour signer votre stratégie supplémentaire. Pour plus d’informations, consultez [Stratégie d’intégrité de code de signature avec la signature Device Guard](https://docs.microsoft.com/microsoft-store/sign-code-integrity-policy-with-device-guard-signing).
    - Vous chargez la stratégie supplémentaire signée sur Intune en créant une stratégie supplémentaire en mode S Windows 10 (voir ci-dessous).
 3. Vous autorisez les catalogues d’applications Win32 via Intune :

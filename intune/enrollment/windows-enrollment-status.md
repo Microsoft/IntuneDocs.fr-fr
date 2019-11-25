@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709364"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059702"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
@@ -197,7 +197,7 @@ Vous trouverez ci-dessous des problèmes connus.
     - les informations d’identification de l’utilisateur ne sont pas conservées
     - l’utilisateur doit à nouveau entrer les informations d’identification avant de passer de la phase de configuration de l’appareil à la phase de configuration du compte
 - ESP est bloqué pendant une longue période ou ne termine jamais la phase d’identification. Intune calcule les stratégies ESP au cours de la phase d’identification. Un appareil peut ne jamais terminer le calcul des stratégies ESP si l’utilisateur actuel n’a pas de licence Intune affectée.  
-- La configuration du contrôle d’application Windows Defender provoque une invite de redémarrage lors de l’Autopilot. La configuration de l’application Windows Defender (Fournisseur de services de configuration AppLocker) requiert un redémarrage. Lorsque cette stratégie est configurée, elle peut entraîner le redémarrage d’un appareil pendant l’Autopilot. Actuellement, il n’existe aucun moyen de supprimer ou de différer le redémarrage.
+- La configuration du contrôle d’application Microsoft Defender provoque une invite de redémarrage lors de l’Autopilot. La configuration de l’application Microsoft Defender (Fournisseur de services de configuration AppLocker) requiert un redémarrage. Lorsque cette stratégie est configurée, elle peut entraîner le redémarrage d’un appareil pendant l’Autopilot. Actuellement, il n’existe aucun moyen de supprimer ou de différer le redémarrage.
 - Lorsque la stratégie DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) est activée dans le cadre d’un profil ESP, l’OOBE ou l’ouverture automatique de session du bureau de l’utilisateur peut échouer de façon inattendue pour deux raisons.
   - Si l’appareil n’a pas redémarré avant de quitter la phase de configuration de l’appareil ESP, l’utilisateur peut être invité à entrer ses informations d’identification Azure AD. Cette invite s’affiche au lieu d’une ouverture de session automatique réussie où l’utilisateur voit l’animation de la première connexion à Windows.
   - L’ouverture automatique de session échoue si l’appareil a redémarré une fois que l’utilisateur a entré ses informations d’identification Azure AD, mais avant de quitter la phase de configuration de l’appareil ESP. Cet échec se produit car la phase de configuration de l’appareil ESP ne s’est jamais terminée. La solution de contournement consiste à réinitialiser l’appareil.

@@ -2,10 +2,10 @@
 title: Lier des appareils Android par emplacement réseau dans Microsoft Intune - Azure | Microsoft Docs
 description: Créez ou configurez des emplacements réseau dans Microsoft Intune pour les appareils Android. Vous pouvez marquer des appareils comme non conformes en fonction de l’emplacement réseau de l’appareil. Si l’appareil sort de l’emplacement réseau, vous pouvez bloquer l’accès aux ressources de l’entreprise.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 847ab759b697d402acb07d9c8d83d3a3ef9aaef2
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749439"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058147"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Utiliser des emplacements (délimitation du réseau) dans Intune
 
@@ -50,7 +50,7 @@ Pour créer une stratégie de conformité basée sur l’emplacement :
 
 ## <a name="create-a-location"></a>Créer un emplacement
 
-1. Dans Intune, sélectionnez **Conformité de l’appareil** > **Emplacements** > **Créer**.
+1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Stratégies de conformité** > **Emplacements** > **Créer un profil**.
 
 2. Entrez les propriétés suivantes :  
 
@@ -69,8 +69,7 @@ Pour créer une stratégie de conformité basée sur l’emplacement :
 
 ## <a name="create-the-location-compliance-policy"></a>Créer la stratégie de conformité des emplacements
 
-Quand vous [créez la stratégie de conformité](create-compliance-policy.md), sélectionnez **Android** pour **Plateforme**. Dans **Emplacements**, vous pouvez choisir un ou plusieurs des emplacements réseau que vous avez ajoutés. Ces emplacements font partie de la délimitation du réseau que vous créez pour vos appareils. 
-
+Quand vous [créez la stratégie de conformité](create-compliance-policy.md), sélectionnez **Android** pour **Plateforme**. Dans **Emplacements**, vous pouvez choisir un ou plusieurs des emplacements réseau que vous avez ajoutés. Ces emplacements font partie de la délimitation du réseau que vous créez pour vos appareils.
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Configurer les actions en cas de non-conformité
 
@@ -83,5 +82,6 @@ L’article [Ajouter des actions en cas de non-conformité](actions-for-noncompl
 Quand l’appareil est connecté à vos emplacements, il est affiché comme étant conforme dans l’application Portail d’entreprise. Quand l’appareil n’est pas connecté à l’un de vos emplacements, il est indiqué comme étant non conforme.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 [Surveiller les stratégies de conformité des appareils](compliance-policy-monitor.md)  
 [Bien démarrer avec les stratégies de conformité](device-compliance-get-started.md)

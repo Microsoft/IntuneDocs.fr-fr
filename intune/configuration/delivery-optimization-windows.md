@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 908319c588fe2a1bf55a376d3f02a03db780a3ad
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 44078f61e4f1939b1f0b15b3dde5ac54938ffbc3
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755398"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059977"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Paramètres d’optimisation de la distribution dans Microsoft Intune
 
@@ -60,7 +60,7 @@ Les paramètres **Optimisation de la distribution** remplacent **Mises à jour d
 
 1. Créer un profil de configuration d’optimisation de la distribution :
 
-    1. Dans le Centre d’administration du Gestionnaire de points de terminaison Microsoft, sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
+    1. Dans le Centre d’administration du gestionnaire de points de terminaison Microsoft, sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
     2. Entrez les propriétés suivantes :
 
         - **Nom** : Entrez un nom descriptif pour le nouveau profil.
@@ -80,7 +80,7 @@ Les paramètres **Optimisation de la distribution** remplacent **Mises à jour d
 2. Affectez ce nouveau profil aux mêmes appareils et utilisateurs que la boucle de mise à jour de logiciels existante. La page [Affectez le profil](device-profile-assign.md) liste les étapes à suivre.
 
 3. Supprimez la configuration de la boucle logicielle existante :
-    1. Dans le Centre d’administration du Gestionnaire de points de terminaison Microsoft, accédez à **Mises à jour de logiciels** > Anneaux de mise à jour Windows 10.
+    1. Dans le Centre d’administration du gestionnaire de points de terminaison Microsoft, accédez à **Mises à jour logicielles** > Anneaux de mise à jour Windows 10.
     2. Dans la liste, sélectionnez votre boucle de mise à jour.
     3. Dans les paramètres, définissez le **Mode de téléchargement de l’optimisation de la distribution** sur **Non configuré**.
     4. **OK** > **Enregistrez** les modifications apportées.

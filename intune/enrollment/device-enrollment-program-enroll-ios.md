@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b553c89704ca68ab6be261e74f1cc62ad58476ed
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 99d946366724b03ecdf5c47d8ba7b1d820ed3055
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713013"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164733"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
@@ -155,7 +155,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     >
     > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
 
-6. Si vous avez choisi **Portail d’entreprise** pour **Sélectionnez où les utilisateurs doivent s'authentifier**, vous pouvez utiliser un jeton VPP pour installer automatiquement le Portail d’entreprise sur l’appareil. Dans ce cas, l’utilisateur n’a pas besoin de fournir un ID Apple. Pour installer le portail d’entreprise avec un jeton VPP, choisissez un jeton sous **Installer le portail d’entreprise avec un jeton VPP**. Requiert que le Portail d’entreprise ait déjà été ajouté au jeton VPP. Ne configurez pas une stratégie pour exiger l’application pour les utilisateurs. Intune installe automatiquement le Portail d’entreprise sur les appareils auxquels ce profil d’inscription est appliqué. Vérifiez que le jeton n’arrive pas à expiration et que vous avez suffisamment de licences d’appareil pour l’application Portail d’entreprise. Si le jeton arrive à expiration ou s’il manque des licences, Intune installe le portail d’entreprise de l’App Store à la place (et demande un identifiant Apple). 
+6. Si vous avez choisi **Portail d’entreprise** pour **Sélectionnez où les utilisateurs doivent s'authentifier**, vous pouvez utiliser un jeton VPP pour installer automatiquement le Portail d’entreprise sur l’appareil. Dans ce cas, l’utilisateur n’a pas besoin de fournir un ID Apple. Pour installer le portail d’entreprise avec un jeton VPP, choisissez un jeton sous **Installer le portail d’entreprise avec un jeton VPP**. Requiert que le Portail d’entreprise ait déjà été ajouté au jeton VPP. Pour être certain que l’application Portail d'entreprise continuera à être mise à jour après l’inscription, pensez à configurer un déploiement d’application dans Intune (Intune>Applications clientes). Pour que l’interaction de l’utilisateur ne soit pas obligatoire, vous souhaiterez probablement que Portail d'entreprise soit une application VPP iOS, en faire une application obligatoire et utiliser la gestion des licences des appareils pour l’attribution. Vérifiez que le jeton n’arrive pas à expiration et que vous avez suffisamment de licences d’appareil pour l’application Portail d’entreprise. Si le jeton arrive à expiration ou s’il manque des licences, Intune installe le portail d’entreprise de l’App Store à la place (et demande un identifiant Apple). 
 
     > [!NOTE]
     > Lorsque **Sélectionnez où les utilisateurs doivent s'authentifier** est défini sur **Portail d'entreprise**, assurez-vous que le processus d’inscription de l’appareil est effectué dans les 24 premières heures suivant le téléchargement du portail d’entreprise vers l’appareil DEP. Sinon, l’inscription peut échouer et une réinitialisation aux paramètres d’usine est alors nécessaire pour inscrire l’appareil.

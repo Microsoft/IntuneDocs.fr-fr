@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3fb99a363bda762ccfb834388f3abb4ab80f81a
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: cc950f9e60f5549a7a74c2963f33c36369d3ebd3
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709702"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126173"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Tutoriel : Utiliser les fonctionnalités d’inscription des appareils d’entreprise d’Apple dans Apple Business Manager (ABM) pour inscrire des appareils iOS dans Intune
 Les fonctionnalités d’inscription des appareils dans Apple Business Manager simplifient l’inscription des appareils. Intune prend également en charge l’ancien portail du Programme d’inscription des appareils (DEP) d’Apple, mais nous vous encourageons à utiliser Apple Business Manager. Avec Microsoft Intune et l’inscription des appareils d’entreprise d’Apple, les appareils sont inscrits de façon automatique et sécurisée la première fois que l’utilisateur allume l’appareil. Vous pouvez par conséquent livrer des appareils à de nombreux utilisateurs sans avoir à configurer chaque appareil individuellement. 
@@ -90,7 +90,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 5. Déterminez si vous voulez inscrire vos appareils avec ou sans **Affinité utilisateur**. L’affinité utilisateur est conçue pour les appareils qui seront utilisés par des utilisateurs particuliers. Si vos utilisateurs souhaitent utiliser le Portail d’entreprise pour des services comme l’installation d’applications, choisissez **Inscrire avec l’affinité utilisateur**. Si vos utilisateurs n’ont pas besoin du Portail d’entreprise ou si vous souhaitez provisionner l’appareil pour de nombreux utilisateurs, choisissez **Inscrire sans l’affinité utilisateur**.
 
-6. Si vous avez choisi d’inscrire avec l’affinité utilisateur, déterminez si vous souhaitez vous authentifier avec le Portail d’entreprise ou l’Assistant Configuration d’Apple. Si vous souhaitez utiliser l’authentification multifacteur, autoriser les utilisateurs à changer de mot de passe lors de leur première connexion, ou leur demander de réinitialiser leur mots de passe expiré lors de l’inscription, choisissez **Oui** sous **Authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration d’Apple** . Si vous êtes habitué à utiliser l’authentification HTTP de base fournie par Apple via l’Assistant Configuration d’Apple, choisissez **Non**.
+6. Si vous avez choisi d’inscrire avec l’affinité utilisateur, déterminez si vous souhaitez vous authentifier avec le Portail d’entreprise ou l’Assistant Configuration d’Apple. Si vous souhaitez utiliser l’authentification multifacteur, autoriser les utilisateurs à changer de mot de passe lors de leur première connexion, ou leur demander de réinitialiser leur mots de passe expiré lors de l’inscription, choisissez **Oui** sous **Authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration d’Apple** . Si vous êtes habitué à utiliser l’authentification HTTP de base fournie par Apple via l’Assistant Configuration d’Apple, choisissez **Non**. Si vous choisissez **Oui** et que vous souhaitez que l’application Portail d’entreprise soit mise à jour automatiquement sur les appareils des utilisateurs finaux, vous devez déployer séparément Portail d’entreprise en tant qu’application requise pour ces utilisateurs par le biais du programme d’achat en volume (VPP) d’Apple.
 
 7. Si vous avez choisi d’inscrire avec l’affinité utilisateur et de vous authentifier avec le Portail d’entreprise, déterminez si vous souhaitez installer le Portail d’entreprise avec le Programme d’achat en volume (VPP) Apple. Si vous installez le Portail d’entreprise avec un jeton VPP, votre utilisateur n’a pas à entrer d’identifiant ni de mot de passe Apple pour télécharger le Portail d’entreprise à partir de l’App store lors de l’inscription. Choisissez **Utiliser un jeton :** sous **Installer le portail d’entreprise avec VPP** pour sélectionner un jeton VPP qui a des licences gratuites disponibles du Portail d’entreprise. Si vous ne souhaitez pas utiliser VPP pour déployer le Portail d’entreprise, choisissez **Ne pas utiliser VPP** sous **Installer le portail d’entreprise avec VPP**. 
 

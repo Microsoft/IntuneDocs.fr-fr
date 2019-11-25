@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3552eca925865eb3278b50490a6b70ee5807e2b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b09b30fd32caace9ed3259350c01548d5e5fae15
+ms.sourcegitcommit: 93265c2491058afde7168134075bed77031b9311
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502455"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161589"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Appliquer la conformité sur les Mac gérés par Jamf Pro
 
@@ -37,12 +37,11 @@ Les procédures décrites dans cet article nécessitent l'accès aux consoles In
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configuration des stratégies de conformité d’appareils dans Intune
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Conformité de l’appareil** > **Stratégies**. 
-2. Si vous utilisez une stratégie précédemment créée, sélectionnez cette stratégie dans la console, puis passez à l'étape suivante de cette procédure.  
-   
-   Sélectionnez **Créer une stratégie**, puis spécifiez les détails d'une stratégie avec une *plate-forme* **macOS**. Configurez les options *Paramètres*et *Actions en cas de non-conformité* pour répondre aux exigences de votre organisation, puis sélectionnez **Créer** pour enregistrer la stratégie.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-3. Dans le volet de *présentation* des stratégies, sélectionnez **Affectations**. Utilisez les options disponibles pour choisir les utilisateurs et groupes de sécurité Azure Active Directory (Azure AD) qui recevront cette stratégie. L'intégration de Jamf à Intune ne prend pas en charge une stratégie de conformité qui cible des groupes d’appareils. 
+2. Sélectionnez **Appareils** > **Stratégies de conformité**. Si vous utilisez une stratégie précédemment créée, sélectionnez cette stratégie dans la console, puis passez à l'étape suivante de cette procédure. Pour créer une stratégie, sélectionnez **Créer une stratégie**, puis spécifiez les détails d'une stratégie avec une *plate-forme* **macOS**. Configurez les options *Paramètres*et *Actions en cas de non-conformité* pour répondre aux exigences de votre organisation, puis sélectionnez **Créer** pour enregistrer la stratégie.
+
+3. Dans le volet de *présentation* des stratégies, sélectionnez **Affectations**. Utilisez les options disponibles pour choisir les utilisateurs et groupes de sécurité Azure Active Directory (Azure AD) qui recevront cette stratégie. L'intégration de Jamf à Intune ne prend pas en charge une stratégie de conformité qui cible des groupes d’appareils.
 
 4. Lorsque vous sélectionnez **Enregistrer**, la stratégie est appliquée aux utilisateurs.  
 
@@ -103,7 +102,7 @@ L'inscription d'un appareil nécessite que l'utilisateur de l’appareil sélect
 
 Utilisez la console Jamf Pro pour confirmer que la communication entre Jamf Pro et Microsoft Intune est correctement établie. 
 
-- Dans Jamf Pro, accédez à **Paramètres** > **Gestion globale** > **Intégration Microsoft Intune**, puis sélectionnez **Test**. 
+- Dans Jamf Pro, accédez à **Paramètres** > **Gestion globale** > **Intégration Microsoft Intune**, puis sélectionnez **Test**.
 
     La console affiche un message indiquant la réussite ou l'échec de la connexion.  
 
@@ -112,7 +111,7 @@ Si le test de connexion de la console Jamf Pro échoue, vérifiez la configurat
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Suppression d’un appareil géré par Jamf dans Intune
 
-Vous pouvez supprimer un appareil géré par Jamf dans la console Intune en sélectionnant **Supprimer** dans l’affichage **Tous les appareils**. Pour supprimer des appareils en bloc, sélectionnez les appareils concernés, puis cliquez sur **Supprimer**.
+Pour supprimer un appareil géré par Jamf, ouvrez le Centre d’administration du gestionnaire de point de terminaison Microsoft et sélectionnez **Appareils** > **Tous les appareils**, sélectionnez l’appareil, puis sélectionnez **Supprimer**.  Pour supprimer des appareils en bloc, sélectionnez les appareils concernés, puis cliquez sur **Supprimer**.
 
 Vous pouvez obtenir des informations sur la façon de [supprimer un appareil géré par Jamf dans la documentation de Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Vous pouvez aussi ouvrir un ticket de support auprès du [Support Jamf](https://www.jamf.com/support/) pour obtenir une aide supplémentaire. 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d223fb0cac7ad7435366db70bbb5bf4117216aa0
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983978"
+ms.locfileid: "74059778"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Paramètres de la stratégie de protection des applications Android dans Microsoft Intune
 Cet article décrit les paramètres de stratégie de protection d’application pour les appareils Android. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure.
@@ -45,7 +45,7 @@ Il existe trois catégories de paramètres de stratégie : les paramètres de p
 | **Limiter les opérations couper, copier et coller entre les autres applications** | Spécifiez quand autoriser les actions couper, copier et coller avec cette application. Choisissez parmi : <ul><li>**Bloqué** :  ne pas autoriser les actions couper, copier et coller entre cette application et une autre application.</li><li>**Applications gérées par la stratégie** : autoriser les actions couper, copier et coller entre cette application et d’autres applications gérées par la stratégie.</li><li>**Applications gérées par la stratégie avec Coller dans** : autoriser les actions couper et copier entre cette application et d’autres applications gérées par la stratégie. Autoriser le collage dans cette application de données à partir de n'importe quelle application.</li><li>**N’importe quelle application** : aucune restriction pour les actions couper, copier et coller vers et depuis cette application. | **N’importe quelle application** |
 | <ul><ui>**Limite du nombre de caractères à couper/copier pour toutes les applications** | Spécifiez le nombre de caractères qui peuvent être coupés ou copiés depuis les données et comptes de l’organisation.  Cela permet de partager le nombre spécifié de caractères avec toutes les applications, sans considération du paramètre de « restriction des opérations couper, copier et coller avec d’autres applications ».<p>Valeur par défaut = 0<p>**Remarque** : Nécessite le portail d’entreprise Intune version 5.0.4364.0 ou ultérieure.  | **0** |
 | **Capture d’écran et Google Assistant** | Sélectionnez **Désactiver** pour bloquer les fonctionnalités de capture d’écran et **Google Assistant** de l’appareil quand cette application est utilisée. Par ailleurs, en choisissant **Désactiver**, l’image d’aperçu du sélecteur d’application sera floue si vous utilisez cette application avec un compte professionnel ou scolaire.| **Activer** |
-
+| **Notifications de données de l’organisation** | Spécifiez la quantité de données d’organisation partagées par le biais des notifications du système d’exploitation pour les comptes d’organisation. Ce paramètre de stratégie a un impact sur l’appareil local et tous les appareils connectés, comme les enceintes connectées et les technologies portables. Les applications peuvent fournir des contrôles supplémentaires pour personnaliser le comportement en matière de notifications ou choisir de ne pas honorer toutes les valeurs. Sélectionnez parmi : <ul><li>**Bloquer** :  ne pas partager les notifications.</li><ul><li>S’il n’est pas pris en charge par l’application, les notifications sont autorisées.</li></ul><li>**Bloquer les données de l’organisation** : Ne partagez pas les données de l’organisation dans les notifications. Par exemple, « Vous avez un nouveau message » ou « Vous avez une réunion ».</li><UL><li>S’il n’est pas pris en charge par l’application, les notifications sont bloquées.</li></ul><li>**Autoriser** : partager les données de l’organisation dans les notifications.</li><li>**N’importe quelle application** : aucune restriction pour les actions couper, copier et coller vers et depuis cette application.</ul> <p>**Remarque** : *Ce paramètre requiert la prise en charge des applications. À l’heure actuelle, Outlook pour Android 4.75.0 (ou version ultérieure) prendra en charge ce paramètre, dont la sortie est prévue pour la semaine du 16 décembre 2019.* | **Autoriser**   |
   
 ### <a name="encryption"></a>Chiffrement
 | Paramètre | Procédure d'utilisation | Valeur par défaut |

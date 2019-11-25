@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801777"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098223"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 
@@ -36,6 +36,20 @@ Si vous êtes un employé ou un étudiant, veillez à consulter les captures d�
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-november-11-2019"></a>Semaine du 11 novembre 2019  
+
+#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Lancement des applications web à partir de l’application Windows Portail d’entreprise<!-- 5030972 -->
+Les utilisateurs finaux peuvent désormais lancer des applications web directement à partir de l’application Windows Portail d’entreprise. Les utilisateurs finaux peuvent sélectionner l’application web, puis choisir l’option **Ouvrir dans le navigateur**. L’URL web publiée est ouverte directement dans un navigateur web. Cette fonctionnalité sera déployée au cours de la semaine prochaine. Pour plus d’informations sur les d’applications web, consultez [Ajouter des applications web à Microsoft Intune](~/apps/web-app.md).
+
+![Exemple d’image du lancement d’une application web à partir de l’application Windows Portail d’entreprise](./media/whats-new-app-ui/webapp-open-in-browser.png)  
+
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Amélioration de l’expérience d’inscription macOS dans Portail d’entreprise <!-- 5074349 WNready -->  
+L’expérience d’inscription pour l’application Portail d’entreprise macOS a un processus d’inscription plus simple, qui est plus proche de l’expérience d’inscription de Portail d’entreprise iOS. Maintenant, les utilisateurs de l'appareil bénéficient des caractéristiques et des fonctionnalités suivantes :  
+
+* Interface utilisateur épurée.  
+* Liste de contrôle d’inscription améliorée.  
+* Instructions plus claires sur la façon d’inscrire leurs appareils.  
+* Amélioration des options de résolution des problèmes.  
 
 ## <a name="week-of-october-28-2019"></a>Semaine du 28 octobre 2019  
 

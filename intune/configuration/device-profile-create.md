@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51ec328a60ef2737c776bf6cf5d4b8dc1b32460c
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 02603651587837211d9a67d7e4bbeb90cb358dc5
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755314"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059574"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Créer un profil d’appareil dans Microsoft Intune
 
@@ -83,7 +83,7 @@ Cet article :
        - [Stratégies de mise à jour](../software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Defender ATP](../protect/advanced-threat-protection.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Protection des informations Windows](../protect/windows-information-protection-configure.md)
 
      Par exemple, si vous sélectionnez **iOS/iPadOS** pour la plateforme, les options de type de votre profil ressemblent au profil suivant :

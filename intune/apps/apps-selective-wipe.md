@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5bcdf9c3218df91bea85858ea21e88718e81633
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0fafe7c17c698a5eb4e5ad6825bee0ae3fe874c2
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498317"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199236"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Guide pratique pour effacer uniquement les données d’entreprise des applications gérées par Intune
 
@@ -44,23 +44,12 @@ Les stratégies de protection des informations Windows peuvent être déployées
 
 ## <a name="create-a-wipe-request"></a>Créer une demande de réinitialisation
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-
-2. Choisissez **Tous les services**, saisissez **Intune** dans la zone de texte de filtre, puis sélectionnez **Intune**. Le volet Intune s’ouvre. Choisissez le volet **Applications clientes**.
-
-    ![Capture d’écran du volet Microsoft Intune](./media/apps-selective-wipe/apps-selective-wipe01.png)
-
-3. Dans le volet **Applications clientes**, choisissez **Réinitialisation sélective des applications**.
-
-4. Choisissez **Nouvelle demande de réinitialisation**. Le volet **Nouvelle demande de réinitialisation** s’ouvre.
-
-    ![Capture d’écran du panneau Nouvelle demande de réinitialisation](./media/apps-selective-wipe/AzurePortal_MAM_NewWipeRequest.png)
-
-5. Choisissez un utilisateur, puis choisissez **Sélectionnez** pour sélectionner l’utilisateur dont vous souhaitez réinitialiser les données d’application.
-
-6. Ensuite, choisissez **Appareil** dans le volet **Nouvelle demande de réinitialisation**. Cette opération ouvre le volet **Sélectionner un appareil**, qui répertorie tous les appareils associés à l’utilisateur sélectionné et fournit également deux colonnes : le nom de l’appareil, qui est un nom convivial défini par l’utilisateur et le type d’appareil, à savoir sa plateforme. Sélectionnez l’appareil à réinitialiser.
-
-7. Vous voilà revenu dans le volet **Nouvelle demande de réinitialisation**. Choisissez **Ok** pour effectuer une demande de réinitialisation.
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Dans le volet Intune, sélectionnez **Applications clientes** > **Réinitialisation sélective de l’application** > **Créer une demande de réinitialisation**.<br>
+   Le volet **Créer une demande de réinitialisation** s’affiche.
+3. Cliquez sur **sélectionner l’utilisateur**, choisissez l’utilisateur dont vous souhaitez réinitialiser les données de l’application, puis cliquez sur **Sélectionner** en bas du volet **Utilisateur**.
+4. Cliquez sur **Sélectionner l’appareil**, choisissez l’appareil, puis cliquez sur **Sélectionner** en bas du volet **Sélectionner l’appareil**.
+5. Cliquez sur **Créer** pour effectuer une demande de réinitialisation.
 
 Le service crée une demande de réinitialisation distincte pour chaque application protégée sur l’appareil et l’utilisateur associé à la demande de réinitialisation, et en fait le suivi.
 

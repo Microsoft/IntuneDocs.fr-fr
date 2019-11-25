@@ -18,18 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9802b85a9674535cea62ae28f135153352ef76c
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: aeae231e07ceeee6a54f8f60ec5d53cc96d55be0
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813273"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117886"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Guide pratique pour ajouter des applications métier macOS à Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Utilisez les informations contenues dans cet article pour ajouter des applications métier macOS à Microsoft Intune. Vous devez télécharger un outil externe pour pré-traiter vos fichiers *.pkg* avant de pouvoir charger votre fichier métier dans Microsoft Intune. Le traitement préalable de vos fichiers *.pkg* doit avoir lieu sur un appareil macOS.
+
+> [!NOTE]
+> Depuis la publication de macOS Catalina 10.15, avant d’ajouter vos applications à Intune, vérifiez que vos applications métier macOS sont certifiées. Si les développeurs de vos applications métier n’ont pas certifié leurs applications, elles ne pourront pas s’exécuter sur les appareils macOS de vos utilisateurs. Pour plus d’informations sur la façon de vérifier si une application est certifiée, visitez [Certifier vos applications macOS pour vous préparer à macOS Catalina](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
 
 > [!NOTE]
 > Bien que les utilisateurs d’appareils macOS puissent supprimer certaines applications macOS intégrées, telles que Stocks et Maps, vous ne pouvez pas vous servir d’Intune pour redéployer ces applications. Si des utilisateurs finaux suppriment ces applications, ils doivent se rendre sur l’App Store et les réinstaller manuellement.

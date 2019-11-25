@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb5a8f462846afd97ae4ea84b7431ae147d918c
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709203"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098187"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -117,6 +117,15 @@ Pour obtenir des instructions d’inscription pour l’utilisateur final, consul
 > Si vous n’avez pas activé l’inscription MDM automatique, alors que des appareils Windows 10 sont joints à Azure AD, deux enregistrements sont visibles dans la console Intune après l’inscription. Vous pouvez mettre fin à ce double affichage en vérifiant que les utilisateurs dotés d’appareils joints à Azure AD accèdent à **Comptes** > **Accès Professionnel ou Scolaire** et **Connect** en utilisant le même compte. 
 
 Pour plus d’informations sur les tâches de l’utilisateur final, consultez [Ressources concernant l’expérience utilisateur final avec Microsoft Intune](../fundamentals/end-user-educate.md).
+
+## <a name="registration-and-enrollment-cnames"></a>Enregistrements CNAME d’enregistrement et d’inscription
+Azure Active Directory a un CNAME (enregistrement de nom canonique) différent, utilisé pour l’enregistrement des appareils iOS, Android et Windows. L’accès conditionnel Intune nécessite l’inscription d’appareils, également appelée « rattachement à l’espace de travail ». Si vous prévoyez d’utiliser l’accès conditionnel, vous devez également configurer le CNAME EnterpriseRegistration pour chaque nom de société.
+
+| Type | Nom de l'hôte | Pointe vers | TTL |
+| --- | --- | --- | --- |
+| NOM | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 heure|
+
+Pour plus d’informations sur l’inscription des appareils, consultez [Gérer les identités des appareils à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

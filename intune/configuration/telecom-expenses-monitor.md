@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20743d19ba101a9c400cb9f72dca59223254e6de
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 340659adfa3bbd40f98ccec9d8d44e952f7ec9b9
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755057"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059938"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configurer un service de gestion des dépenses en télécommunications dans Intune
 
@@ -54,7 +54,7 @@ Pour utiliser le service Datalert avec Intune, il existe des paramètres de conf
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Un abonnement à Microsoft Intune et à l’accès au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431)
+- Un abonnement à Microsoft Intune et l’accès au [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431)
 - Un abonnement à [Datalert](http://www.datalert.biz/) (ouvre le site web de Datalert)
 
 ## <a name="telecom-expense-management-providers"></a>Fournisseurs de gestion des dépenses en télécommunications
@@ -138,7 +138,7 @@ Ces catégories sont présentées aux utilisateurs lors de l’inscription ([ins
 
 Les étapes suivantes ajoutent l’application Datalert. Pour cet exemple, iOS est utilisé. [Ajouter des applications](../apps/apps-add.md) et [Utiliser des balises d’étendue](../fundamentals/scope-tags.md) contiennent des informations plus spécifiques sur ces étapes.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 
 2. Sélectionnez votre **Type d’application**. Par exemple, pour iOS, sélectionnez **Application Store - iOS**.
 
@@ -183,7 +183,7 @@ Pour l’expérience utilisateur final, les articles suivants peuvent vous aider
 
 ## <a name="turn-off-the-datalert-service"></a>Désactivation du service Datalert
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Administration client** > **Connecteurs et jetons** > **Gestion des dépenses de télécommunications**.
+1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Administration client** > **Connecteurs et jetons** > **Gestion des dépenses de télécommunications**.
 2. Définissez **Activer la gestion des dépenses en télécommunications et bloquer les données cellulaires ou itinérantes sur les appareils qui dépassent les quotas d’utilisation que vous configurez** sur **Désactiver**.
 3. **Enregistrez** les changements apportés.
 

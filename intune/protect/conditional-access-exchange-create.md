@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
-ms.reviewer: stama
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18da57282a190dec363e3dfbde5293f5228cb0b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504623"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188466"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Créer une stratégie d’accès conditionnel pour Exchange sur site et Exchange Online Dedicated hérité
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Cet article montre comment configurer l’accès conditionnel pour Exchange sur site basé sur la conformité des appareils.
 
@@ -46,7 +44,7 @@ Avant de configurer l’accès conditionnel, vérifiez que les configurations su
 
 - Vous pouvez installer le connecteur d’une organisation Exchange locale sur n’importe quelle machine, tant que celle-ci peut communiquer avec le serveur Exchange.
 
-- Le connecteur prend en charge l’**Environnement CAS Exchange**. Intune prend en charge l’installation directe du connecteur sur le serveur CAS Exchange, mais nous vous recommandons de l’installer sur un ordinateur distinct en raison de la charge supplémentaire placée par le connecteur sur le serveur. Quand vous configurez le connecteur, vous devez faire en sorte qu’il communique avec l’un des serveurs CAS Exchange.
+- Le connecteur prend en charge l’**Environnement CAS Exchange**. Intune prend en charge l’installation du connecteur directement sur le serveur CAS Exchange. Nous vous recommandons de l’installer sur un autre ordinateur distinct en raison de la charge supplémentaire que le connecteur met sur le serveur. Quand vous configurez le connecteur, vous devez faire en sorte qu’il communique avec l’un des serveurs CAS Exchange.
 
 - Vous devez configurer **Exchange ActiveSync** avec l’authentification par certificat ou via les informations d’identification entrées par l’utilisateur.
 
@@ -60,7 +58,7 @@ Avant de configurer l’accès conditionnel, vérifiez que les configurations su
 
 - Si l’appareil ne répond pas aux paramètres d’accès conditionnel, l’utilisateur reçoit un des messages suivants quand il tente de se connecter :
   - Si l’appareil n’est pas inscrit auprès d’Intune ni dans Azure Active Directory, l’utilisateur reçoit un message contenant des instructions pour installer l’application Portail d’entreprise, inscrire l’appareil et activer la messagerie. Ce processus associe également l’ID Exchange ActiveSync de l’appareil à l’enregistrement de l’appareil dans Azure Active Directory.
-  - Si l’appareil n’est pas conforme, l’utilisateur reçoit un message le dirigeant vers l’application Portail d’entreprise ou le site web du portail d’entreprise Intune, où il peut trouver des informations sur le problème et des solutions pour y remédier.
+  - Si l’appareil n’est pas conforme, un message s’affiche et dirige l’utilisateur vers le site web de Portail d’entreprise Intune ou vers l’application Portail d’entreprise. À partir du portail d'entreprise, l’utilisateur trouver des informations sur le problème et la façon d’y remédier.
 
 ### <a name="support-for-mobile-devices"></a>Prise en charge des appareils mobiles
 
@@ -70,7 +68,7 @@ Avant de configurer l’accès conditionnel, vérifiez que les configurations su
 - Clients de messagerie EAS sur les **appareils avec profil professionnel Android** : seules les applications **Gmail** et **Nine Work for Android Enterprise** dans le **profil professionnel** sont prises en charge sur les appareils avec profil professionnel Android. Pour que l’accès conditionnel fonctionne avec les profils professionnels Android, vous devez déployer un profil de messagerie pour l’application Gmail ou Nine Work for Android Enterprise, et également déployer ces applications comme installation obligatoire.
 
 > [!NOTE]
-> Microsoft Outlook pour Android et iOS n’est pas pris en charge via le connecteur local Exchange. Si vous souhaitez tirer parti des stratégies d’accès conditionnel d’Azure Active Directory et des stratégies Intune App Protection avec Outlook pour iOS et Android pour vos boîtes aux lettres locales, consultez [Utilisation de l’authentification hybride moderne avec Outlook pour iOS et Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
+> Microsoft Outlook pour Android et iOS n’est pas pris en charge via le connecteur local Exchange. Si vous souhaitez tirer parti des stratégies d’accès conditionnel d’Azure Active Directory et des stratégies Intune App Protection avec Outlook pour iOS et Android pour vos boîtes aux lettres locales, consultez [Utilisation de l’authentification hybride moderne avec Outlook pour iOS et Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Prise en charge des PC
 
@@ -80,19 +78,19 @@ L'application native **Courrier** sur Windows 8.1 et les versions ultérieures (
 
 Avant de pouvoir utiliser la procédure suivante pour configurer le contrôle d’accès Exchange sur site, vous devez installer et configurer au moins un [Connecteur Exchange local Intune](exchange-connector-install.md) pour Exchange sur site.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Accédez à **Accès à Exchange**, puis sélectionnez **Accès à Exchange sur site**. 
+2. Accédez à **Administration de locataire** > **Accès à Exchange**, puis sélectionnez **Accès à Exchange local**.
 
 3. Dans le volet **Accès à Exchange sur site**, choisissez **Oui** pour *Activer le contrôle d’accès à Exchange sur site*.
 
-4. Sous **Affectation**, choisissez **Sélectionner les groupes à inclure**, puis sélectionnez un ou plusieurs groupes pour configurer l’accès. 
+4. Sous **Affectation**, choisissez **Sélectionner les groupes à inclure**, puis sélectionnez un ou plusieurs groupes pour configurer l’accès.
 
    Les membres des groupes que vous sélectionnez disposent d’une stratégie d’accès conditionnel pour l’accès à Exchange sur site. Les utilisateurs qui reçoivent cette stratégie doivent inscrire leurs appareils dans Intune et être conformes aux profils de conformité avant de pouvoir accéder à Exchange sur site.
 
 5. Pour exclure des groupes, choisissez **Sélectionner les groupes à exclure**, puis sélectionnez un ou plusieurs groupes exempts des conditions pour inscrire des appareils et être conformes aux profils de conformité avant d’accéder à Exchange sur site. 
 
-6. Ensuite, configurez les paramètres du connecteur Exchange local Intune.  Sous **Configuration** dans le **volet d’accès Exchange**, sélectionnez **Connecteur Exchange ActiveSync sur site**, puis sélectionnez le connecteur de l’organisation Exchange que vous souhaitez configurer.
+6. Ensuite, configurez les paramètres du connecteur Exchange local Intune.  Sous **Configuration** dans la fenêtre *Accès Exchange local*, sélectionnez **Connecteur Exchange ActiveSync sur site**, puis sélectionnez le connecteur de l’organisation Exchange que vous souhaitez configurer.
 
 7. Sous **Paramètres**, choisissez **Notifications utilisateur** pour modifier l’e-mail par défaut envoyé aux utilisateurs si leur appareil n’est pas conforme et qu’ils veulent accéder à Exchange sur site. Le modèle de message utilise le langage de balisage.  Vous voyez également un aperçu du message en cours de frappe.
    > [!TIP]
@@ -120,6 +118,6 @@ Avant de pouvoir utiliser la procédure suivante pour configurer le contrôle d�
 
 Ensuite, créez une stratégie de conformité et affectez-la aux utilisateurs pour qu’Intune évalue leurs appareils mobiles. Voir [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="next-steps"></a>Étapes suivantes
 
 [Résolution des problèmes du connecteur Exchange local Intune dans Microsoft Intune](https://support.microsoft.com/help/4471887)
