@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143047"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390921"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -72,7 +72,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
   - **Fenêtre de maintenance** : permet d’installer les mises à jour automatiquement durant une fenêtre de maintenance quotidienne définie dans Intune. L’installation est tentée quotidiennement pendant 30 jours, et cette opération peut échouer en raison d’un espace ou d’un niveau de batterie insuffisant. Après 30 jours, Android invite l’utilisateur à procéder à l’installation. Cette fenêtre est également utilisée pour installer les mises à jour des applications Play. Utilisez cette option pour les appareils dédiés, par exemple les bornes, car les applications de premier plan d’appareils mono-application dédiés peuvent être mises à jour.
 
 - **Fenêtre de notification** : quand cette option a la valeur **Désactiver**, les notifications, notamment les toasts, les appels entrants, les appels sortants, les alertes système et les erreurs système, ne sont pas affichées sur l’appareil. quand elle a la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage des notifications).
-- **Ignorer les premiers conseils d’utilisation** : choisissez **Activer** pour masquer ou ignorer les suggestions des applications concernant l’exécution de tutoriels ou la lecture de conseils d’introduction lors du démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
+- **Ignorer les indicateurs de première utilisation**: **activer** masque ou ignore les suggestions des applications qui parcourent des didacticiels ou des conseils au démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
 
 ### <a name="system-security-settings"></a>Paramètres de sécurité système
 
@@ -150,13 +150,16 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
     Lorsque cette option est activée, configurez également :
 
-    - **Définir l’image de l’écran de veille personnalisée**: entrez l’URL d’une image personnalisée. Par exemple, entrez :
+    - **Définir l’image de l’écran de veille personnalisée**: entrez l’URL d’un fichier PNG, jpg, JPEG, GIF, BMP, WebP ou ICOimage personnalisé. Par exemple, entrez :
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.html`
+      - `https://www.contoso.com/image.webp`
 
       Si vous n’entrez pas d’URL, l’image par défaut de l’appareil est utilisée, s’il existe une image par défaut.
+      
+      > [!TIP]
+      > Toute URL de ressource de fichier qui peut être transformée en bitmap est prise en charge.
 
     - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran : choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0 et 9999999 secondes. La valeur par défaut est de `0` secondes. Lorsqu’il est laissé vide, ou défini à zéro (`0`), l’économiseur d’écran est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
     - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1 et 9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
@@ -199,12 +202,14 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
 ### <a name="users-and-accounts-settings"></a>Paramètres des utilisateurs et des comptes
 
-- **Ajouter de nouveaux utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter de nouveaux utilisateurs. Chaque utilisateur dispose d’un espace personnel sur l’appareil, regroupant les écrans d’accueil personnalisés ainsi que les comptes, applications et paramètres. L’option **Non configuré** autorise les utilisateurs à ajouter d’autres utilisateurs à l’appareil.
-- **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
-- **Modifications apportées aux comptes** : choisissez **Bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
+- **Ajouter de nouveaux utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter de nouveaux utilisateurs. Chaque utilisateur dispose d’un espace personnel sur l’appareil, regroupant les écrans d’accueil personnalisés ainsi que les comptes, applications et paramètres. L’option **Non configuré** (par défaut) autorise les utilisateurs à ajouter d’autres utilisateurs à l’appareil.
+- **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** (par défaut) autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
+- **Modifications de compte** (appareils dédiés uniquement) : choisissez **bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** (par défaut) autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
 
   > [!NOTE]
   > Ce paramètre n’est pas respecté sur les appareils du propriétaire de l’appareil (entièrement géré). Si vous configurez ce paramètre, le paramètre est ignoré et n’a aucun impact.
+
+- **Comptes Google personnels**: **bloquer** empêche les utilisateurs d’ajouter leur compte Google personnel à l’appareil. **Non configuré** (par défaut) permet aux utilisateurs d’ajouter leur compte Google personnel.
 
 ### <a name="applications"></a>Applications
 
@@ -342,7 +347,7 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
 - **Analyse des menaces sur les applications** : l’option **Exiger** applique la règle indiquant que le paramètre **Vérifier les applications** est activé pour les profils professionnels et personnels.
 
    > [!Note]
-   > Ce paramètre ne fonctionne que pour les appareils Android O et versions supérieures.
+   > Ce paramètre ne fonctionne que pour les appareils Android 8 (Oreo) et versions supérieures.
 
 - **Empêcher les installations d’applications provenant de sources inconnues dans le profil personnel**: par défaut, les appareils Android Enterprise Work Profile ne peuvent pas installer d’applications à partir de sources autres que le Play Store. Par nature, les appareils de profil professionnel sont conçus pour être à double profil :
 

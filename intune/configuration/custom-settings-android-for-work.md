@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/01/2019
+ms.date: 11/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d85793dcf0ee6fa0186147606c9fd695a268e529
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: bd2ab7ad8eb155719695bede1f539d5c264d455b
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506975"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319827"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils Android Entreprise dans Microsoft Intune
 
@@ -30,11 +30,11 @@ ms.locfileid: "72506975"
 
 Les profils personnalisés Android Entreprise utilisent des paramètres OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour contrôler les fonctionnalités sur les appareils Android Entreprise. Ces paramètres sont généralement utilisés par les fabricants d’appareils mobiles pour contrôler ces fonctionnalités.
 
-Intune prend en charge un nombre limité de profils personnalisés Android Enterprise, notamment :
+Intune prend en charge le nombre limité suivant de profils personnalisés Android Enterprise :
 
 - ./Vendor/MSFT/WiFi/Profile/SSID/Settings : [créer un profil Wi-Fi avec une clé prépartagée](wi-fi-profile-shared-key.md) présente quelques exemples.
 - ./Vendor/MSFT/VPN/Profile/Name/PackageList : [créer un profil VPN par application](android-pulse-secure-per-app-vpn.md) présente quelques exemples.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste : consultez l' [exemple](#example) (dans cet article).
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste : consultez l' [exemple](#example) de cet article. Ce paramètre est également disponible dans l’interface utilisateur. Pour plus d’informations, consultez [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités](device-restrictions-android-for-work.md).
 
 Si vous avez besoin de paramètres supplémentaires, consultez [OEMConfig pour Android Enterprise](android-oem-configuration-overview.md).
 
