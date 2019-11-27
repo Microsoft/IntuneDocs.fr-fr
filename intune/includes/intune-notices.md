@@ -7,14 +7,23 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b59419be9f381a1c646a7778b73ed172526f6ef6
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188429"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309804"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune.
+
+### <a name="end-support-for-windows-phone-81--3544909--"></a>Fin de support pour Windows Phone 8.1<!--3544909-->
+Le support standard de Microsoft pour Windows Phone 8.1 s’est terminé en juillet 2017, et le support étendu s’est terminé en juin 2019. L’application Portail d’entreprise pour Windows Phone 8.1 est en mode soutenu depuis octobre 2017. La prise en charge de Microsoft Intune se terminera le 20 février 2020 pour Windows Phone 8.1.
+
+#### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
+Après le 20 février 2020, ces appareils ne recevront aucune mise à jour de sécurité et vous ne pourrez pas inscrire de nouveaux appareils. Les appareils Windows Phone 8.1 existants resteront inscrits (stratégie, applications, création de rapports). Toutefois, notez que le dépannage d’une inscription existante ne sera pas pris en charge après cette date, car de nombreux composants, tels que les certificats tiers, ont déjà terminé la prise en charge de la plateforme. Intune arrêtera les tests de compatibilité avec Intune et Windows Phone 8.1.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
+Vous pouvez vérifier vos rapports Intune pour voir quels appareils ou utilisateurs sont concernés. Accédez à Appareils > Tous les appareils, puis filtrez par système d’exploitation. Vous pouvez ajouter des colonnes supplémentaires pour aider à identifier les membres de votre organisation disposant d’appareils exécutant Windows Phone 8.1. Demandez aux utilisateurs finaux de mettre à niveau leurs appareils avec une version de système d’exploitation prise en charge.
 
 ### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Mettre à jour vos stratégies de protection des applications Outlook Intune (APP)<!--2576686-->
 Vous devrez peut-être agir si vous avez reçu MC195618 dans votre centre de messages. Comme partagé dans les ID de fonctionnalité de feuille de route Microsoft 365 : 56325 et 56326, Intune et Outlook pour iOS et Android déploient une prise en charge pour limiter les données sensibles dans les notifications de messagerie et les rappels de calendrier. Suite à ces améliorations, Outlook pour iOS et Android vont supprimer la prise en charge de plusieurs clés de configuration d’applications de protection des données que vous utilisez actuellement pour gérer les notifications.
