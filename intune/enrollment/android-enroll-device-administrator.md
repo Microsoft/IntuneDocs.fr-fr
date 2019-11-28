@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a72d3a16c5180b51fcc019d726a498e0d15ad1d3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 08193aa329a1bee4e66638de5c0d7518d15db2a4
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503411"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547909"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscription de l’administrateur d’appareil Android
 
@@ -47,8 +47,6 @@ Pour plus d’informations sur les fonctionnalités d’Android Enterprise de Go
 
 
 ## <a name="set-up-device-administrator-enrollment"></a>Configurer l’inscription de l’administrateur d’appareil
-
-Intune par défaut autorise l’inscription d’appareil Android avec des fonctionnalités d’administrateur d’appareil.
 
 1. Pour préparer la gestion des appareils mobiles, vous devez définir l’autorité de gestion des appareils mobiles (MDM) sur **Microsoft Intune**. Consultez la page [Configurer l’autorité MDM](../fundamentals/mdm-authority-set.md) pour obtenir des instructions. Cet élément ne se définit qu’une seule fois, quand vous configurez pour la première fois Intune pour la gestion des appareils mobiles.
 2. Accédez à **Intune** > **Inscription d’un appareil** > **Inscription Android** > **Appareils personnels et appartenant à l’entreprise avec privilèges d’administration d’appareils** > **Utiliser un administrateur d’appareils pour gérer les appareils**.

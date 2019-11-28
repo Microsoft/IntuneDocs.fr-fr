@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99e89db1bbef3d08cd6709b2600c4a684ac618f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498612"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540743"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -94,35 +94,23 @@ Les informations contenues dans le tableau suivant peuvent vous aider à compren
 | Intention du groupe 1 | Intention du groupe 2 | Intention résultante |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Utilisateur obligatoire|Utilisateur disponible|Obligatoire et disponible|
-|Utilisateur obligatoire|Utilisateur non disponible|Obligatoire|
 |Utilisateur obligatoire|Désinstallation utilisateur|Obligatoire|
-|Utilisateur disponible|Utilisateur non disponible|Non disponible|
 |Utilisateur disponible|Désinstallation utilisateur|Désinstaller|
-|Utilisateur non disponible|Désinstallation utilisateur|Désinstaller
 |Utilisateur obligatoire|Appareil obligatoire|Toutes deux existent, Intune traite Obligatoire
 |Utilisateur obligatoire|Désinstallation appareil|Toutes deux existent, Intune résout Obligatoire
 |Utilisateur disponible|Appareil obligatoire|Toutes deux existent, Intune résout Obligatoire (Obligatoire et Disponible)
 |Utilisateur disponible|Désinstallation appareil|Toutes deux existent, Intune résout Disponible.<br><br>L’application apparaît dans le Portail d’entreprise.<br><br>Si l’application est déjà installée (en tant qu’application obligatoire avec intention précédente), elle est désinstallée.<br><br>Si l’utilisateur sélectionne **Installer à partir du Portail d’entreprise**, l’application est installée et l’intention de désinstallation n’est pas honorée.|
-|Utilisateur non disponible|Appareil obligatoire|Obligatoire|
-|Utilisateur non disponible|Désinstallation appareil|Désinstaller|
 |Désinstallation utilisateur|Appareil obligatoire|Toutes deux existent, Intune résout Obligatoire|
 |Désinstallation utilisateur|Désinstallation appareil|Toutes deux existent, Intune résout Désinstaller|
 |Appareil obligatoire|Désinstallation appareil|Obligatoire|
 |Utilisateur obligatoire et disponible|Utilisateur disponible|Obligatoire et disponible|
 |Utilisateur obligatoire et disponible|Désinstallation utilisateur|Obligatoire et disponible|
-|Utilisateur obligatoire et disponible|Utilisateur non disponible|Obligatoire et disponible|
 |Utilisateur obligatoire et disponible|Appareil obligatoire|Toutes deux existent, Obligatoire et Disponible
-|Utilisateur obligatoire et disponible|Appareil non disponible|Obligatoire et disponible|
 |Utilisateur obligatoire et disponible|Désinstallation appareil|Toutes deux existent, Intune résout Obligatoire (Obligatoire et Disponible)
-|Utilisateur non disponible|Appareil non disponible|Non disponible|
-|Utilisateur disponible|Appareil non disponible|Disponible|
-|Utilisateur obligatoire|Appareil non disponible|Obligatoire|
 |Utilisateur disponible sans inscription|Utilisateur obligatoire et disponible|Obligatoire et disponible
 |Utilisateur disponible sans inscription|Utilisateur obligatoire|Obligatoire
-|Utilisateur disponible sans inscription|Utilisateur non disponible|Non disponible
 |Utilisateur disponible sans inscription|Utilisateur disponible|Disponible|
 |Utilisateur disponible sans inscription|Appareil obligatoire|Obligatoire et disponible sans inscription|
-|Utilisateur disponible sans inscription|Appareil non disponible|Disponible sans inscription|
 |Utilisateur disponible sans inscription|Désinstallation appareil|Désinstaller et disponible sans inscription.<br><br>Si l’utilisateur n’a pas installé l’application à partir du Portail d’entreprise, la désinstallation est honorée.<br><br>Si l’utilisateur installe l’application à partir du Portail d’entreprise, l’installation est prioritaire par rapport à la désinstallation.|
 
 > [!NOTE]
