@@ -14,7 +14,11 @@
     - name: Créer un profil
       href: device-profile-create.md
     - name: Modèles d’administration sur Windows
-      href: administrative-templates-windows.md
+      items:
+        - name: Modèles d’administration sur Windows
+          href: administrative-templates-windows.md
+        - name: Mettre à jour Office à l’aide de modèles d’administration
+          href: administrative-templates-update-office.md
     - name: Fonctionnalités des appareils sur iOS et macOS
       href: device-features-configure.md
     - name: Limiter les fonctionnalités et les paramètres des appareils
@@ -47,6 +51,8 @@
       items:
         - name: Wi-Fi avec clé prépartagée
           href: wi-fi-profile-shared-key.md
+        - name: Résoudre les problèmes liés au Wi-Fi
+          href: troubleshoot-wi-fi-profiles.md
     - name: Extensions sur macOS
       href: kernel-extensions-overview-macos.md
     - name: Application Examen Éducation

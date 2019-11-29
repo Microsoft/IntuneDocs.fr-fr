@@ -16,6 +16,8 @@
           href: whats-new-app-ui.md
         - name: Fonctionnalités en développement
           href: in-development.md
+        - name: Avis importants
+          href: 'whats-new.md#notices'
 - name: Guides de démarrage rapide
   items:
     - name: Essayer Intune gratuitement

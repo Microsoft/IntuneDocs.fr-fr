@@ -43,7 +43,7 @@ Les applications mobiles Office, à l’instar de Microsoft Edge pour mobile, pr
 
 ![Image de données d’entreprise et de données personnelles](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
-Les [stratégies de protection des applications Intune](~/apps/app-protection-policy.md) vous aident à protéger vos fichiers de travail sur les appareils inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez quand même veiller à que les fichiers de travail et les ressources soient protégés.
+Les [stratégies de protection des applications Intune](~/apps/app-protection-policy.md) vous aident à protéger vos fichiers de travail sur les appareils inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez quand même veiller à ce que les fichiers de travail et les ressources soient protégés.
 
 Vous pouvez utiliser des stratégies de protection des applications pour empêcher les utilisateurs d’enregistrer les fichiers de travail à des emplacements non protégés. Vous pouvez également limiter le déplacement de données vers d’autres applications qui ne sont pas protégées par des stratégies de protection des applications. Les paramètres de stratégie de protection d’application comprennent :
 - Des stratégies de réadressage des données comme Interdire « Enregistrer sous » et Restreindre les opérations couper, copier et coller.
