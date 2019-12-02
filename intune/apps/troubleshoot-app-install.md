@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1067c8ef23add50c921217b9e4b115346be2951
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4783d24e3fc25583a61f88c2e7375d4eed673186
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497046"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563481"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -32,8 +32,8 @@ Sur les appareils gérés par MDM Microsoft Intune, les installations d’applic
 
 Intune fournit des informations de résolution des problèmes d’une application en fonction des applications installées sur l’appareil d’un utilisateur spécifique.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, choisissez **Dépanner**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **résoudre les problèmes + support**.
 4. Cliquez sur **Sélectionner un utilisateur** pour sélectionner un utilisateur à aider. Le volet **Sélectionner les utilisateurs** s’affiche.
 5. Sélectionnez un utilisateur en tapant son nom ou son adresse e-mail. Cliquez sur **Sélectionner** en bas du volet. Les informations sur la résolution des problèmes pour l’utilisateur s’affichent dans le volet **Résoudre les problèmes**. 
 6. Sélectionnez dans la liste **Appareils** l’appareil sur lequel exécuter la résolution des problèmes.
@@ -57,12 +57,12 @@ Les actions suivantes doivent être prises en compte lorsque vous rencontrez des
 - Si l’application ne s’affiche pas dans le Portail d’entreprise, assurez-vous que l’application est déployée avec l’intention **disponible** et que l’utilisateur accède au portail d’entreprise avec le type d’appareil pris en charge par l’application.
 - Pour les appareils Windows BYOD, l’utilisateur doit ajouter un compte professionnel à l’appareil.
 - Vérifiez si l’utilisateur se trouve au-delà de la limite d’appareils AAD :
-  1. Accédez à [Azure Active Directory paramètres](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId)de l’appareil.
+  1. Accédez à [Azure Active Directory paramètres](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId)de l’appareil.
   2. Prenez note de la valeur définie pour **nombre maximal d’appareils par utilisateur**.
-  3. Accédez à [Azure Active Directory utilisateurs](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  3. Accédez à [Utilisateurs Azure Active Directory](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Sélectionnez l’utilisateur concerné, puis cliquez sur **appareils**.
   5. Si l’utilisateur dépasse la limite définie, supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
-- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est listé comme inscrit **par l’utilisateur** dans le panneau vue d’ensemble des appareils Intune. S’il affiche NA, déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- Pour les appareils iOS DEP, assurez-vous que l’utilisateur est listé comme inscrit **par l’utilisateur** dans le volet vue d’ensemble des appareils Intune. S’il affiche NA, déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [configurer l’application portail d’entreprise](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 
@@ -75,7 +75,7 @@ Sélectionnez l’application Win32 qui a été déployée à l’aide de l’e
 
 Pour collecter vos journaux d’installation d’application Win32, vous devez d’abord suivre les étapes fournies dans la section [Résolution des problèmes liés aux applications](troubleshoot-app-install.md#app-troubleshooting-details). Ensuite, poursuivez avec les étapes suivantes :
 
-1. Cliquez sur l’option **Collecter les journaux** située dans le panneau **Détails de l’installation**.
+1. Cliquez sur l’option **Collecter les journaux** située dans le volet **Détails de l’installation**.
 
     <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
 
