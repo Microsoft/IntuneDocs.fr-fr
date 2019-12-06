@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53ac86ce88481176ab6f2472b1c0fbae8d3453c1
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199326"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291089"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -208,13 +208,18 @@ Quand un appareil reçoit une stratégie de mise à jour des fonctionnalités de
 
 - Contrairement à l’utilisation de *Suspendre* avec un anneau de mise à jour, qui expire au bout de 35 jours, la stratégie de mise à jour des fonctionnalités de Windows 10 reste en vigueur. Tant que vous ne modifiez pas ou ne supprimez pas la stratégie de mise à jour des fonctionnalités de Windows 10, les appareils n’installent pas une nouvelle version de Windows. Si vous modifiez la stratégie pour spécifier une version plus récente, les appareils peuvent alors installer les fonctionnalités à partir de cette version de Windows.
 
-> [!IMPORTANT]
-> Lorsque vous déployez à la fois une *mise à jour de fonctionnalité Windows 10* et une stratégie d’ *anneau de mise à jour Windows10*, passez en revue les configurations suivantes de l’anneau de mise à jour :
->
-> - La **période de report des mises à jour des fonctionnalités (jours)** doit être définie sur **0**
-> - Les mises à jour des fonctionnalités de l’anneau de mise à jour doivent être *en cours d’exécution*. Elles ne doivent pas être suspendues.
+### <a name="limitations-for-windows-10-feature-updates"></a>Limitations pour les mises à jour des fonctionnalités de Windows 10
 
-Les mises à jour des fonctionnalités de Windows 10 ne sont pas prises en charge avec Windows Autopilot.
+- Lorsque vous déployez une *mise à jour de fonctionnalité Windows 10* sur un appareil qui reçoit également une stratégie d’ *anneau de mise à jour Windows10*, passez en revue les configurations suivantes de l’anneau de mise à jour :
+  - La **période de report des mises à jour des fonctionnalités (jours)** doit être définie sur **0**.
+  - Les mises à jour des fonctionnalités de l’anneau de mise à jour doivent être *en cours d’exécution*. Elles ne doivent pas être suspendues.
+
+- La stratégie *Mises à jour des fonctionnalités de Windows 10* n’est pas prise en charge avec AutoPilot. Intune ne déploiera pas la stratégie sur :
+  - Les appareils en configurés par AutoPilot.
+  - Les appareils précédemment configurés avec AutoPilot.
+
+  Cette limitation est examinée pour déterminer si elle peut être prise en charge à l’avenir.
+
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Créer et attribuer des mises à jour de fonctionnalités Windows 10
 

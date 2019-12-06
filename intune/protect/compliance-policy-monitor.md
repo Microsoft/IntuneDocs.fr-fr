@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84ef86a0b3c0ffbfffde572c9759c62645d57dc5
-ms.sourcegitcommit: 8c651a3ed1f358f19b65206a52f7808282de97c3
+ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844751"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410162"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -56,7 +57,7 @@ Quand le tableau de bord s’ouvre, vous obtenez une vue d’ensemble avec tous 
 
 En explorant ce rapport, vous pouvez également voir toutes les stratégies et paramètres de conformité spécifiques qui s’appliquent à un appareil individuel, avec l’état de conformité pour chaque paramètre.
 
-### <a name="device-compliance-status-report"></a>Rapport d’état de conformité des appareils
+### <a name="device-compliance-status"></a>État de conformité de l’appareil
 
 Le graphique **État de conformité de l’appareil** montre l’état de conformité de tous les appareils inscrits auprès d’Intune. Les états de conformité des appareils sont conservés dans deux bases de données : Intune et Azure Active Directory.
 
@@ -119,7 +120,8 @@ Dans le graphique **Détails des appareils**, sélectionnez un appareil en parti
 
 Intune affiche plus de détails sur les paramètres de stratégie de conformité appliqués sur cet appareil. Quand vous sélectionnez la stratégie spécifique, tous les paramètres de la stratégie apparaissent.
 
-### <a name="devices-without-compliance-policy"></a>Appareils sans stratégie de conformité
+### <a name="devices-without-compliance"></a>Appareils sans conformité
+
 Sur la page *État de conformité*, à côté du graphique *Conformité à la stratégie*, vous pouvez sélectionner la vignette **Appareils sans stratégie de conformité** pour afficher des informations sur les appareils auxquels aucune stratégie de conformité n’a été affectée :
 
 ![Voir les appareils auxquels aucune stratégie de conformité n’est affectée](./media/compliance-policy-monitor/devices-without-policies.png)
@@ -136,13 +138,13 @@ Quand vous sélectionnez la vignette, elle montre tous les appareils sans strat�
 
 - Les utilisateurs auxquels une stratégie de conformité est affectée n’apparaissent pas dans le rapport, quelle que soit la plateforme de l’appareil. Par exemple, si vous avez affecté une stratégie de conformité Windows à un utilisateur qui a un appareil Android, celui-ci ne figure pas dans le rapport. Cependant, Intune considère que cet appareil Android n’est pas conforme. Pour éviter les problèmes, nous vous recommandons de créer des stratégies pour chaque plateforme d’appareil et de les déployer pour tous les utilisateurs.
 
-### <a name="per-policy-device-compliance-report"></a>Rapport de conformité d’appareil par stratégie
+### <a name="per-policy-device-compliance"></a>Conformité des appareils par stratégie
 
 Le graphique **Conformité à la stratégie** montre les stratégies et le nombre d’appareils conformes et non conformes. 
 
 ![Voir une liste des stratégies, et combien d’appareils sont conformes et non conformes pour ces stratégies](./media/compliance-policy-monitor/idc-8.png)
 
-## <a name="setting-compliance-report"></a>Rapport de conformité par paramètre
+### <a name="setting-compliance"></a>Configuration de la conformité
 
 Le graphique **Conformité des paramètres** montre tous les paramètres de stratégie de conformité d’appareil de toutes les stratégies de conformité, les plateformes auxquelles les paramètres de stratégie sont appliqués et le nombre d’appareils non conformes.
 
@@ -152,6 +154,24 @@ Le graphique **Conformité des paramètres** montre tous les paramètres de stra
 > Une stratégie peut être affectée à un appareil et à un utilisateur sur ce même appareil. Dans certains scénarios, un appareil peut se synchroniser avant que l’utilisateur se connecte, par exemple lorsque l’appareil redémarre. La conformité peut évaluer cet utilisateur et afficher l’appareil comme non conforme. Ce comportement peut également indiquer le compte système comme étant un utilisateur non conforme.
 >
 > Il s’agit d’un problème connu avec les appareils Windows 10 multi-utilisateurs. Toutes les modifications ou mises à jour de ce comportement sont annoncées dans [En développement](../fundamentals/in-development.md) et/ou [Nouveautés](../fundamentals/whats-new.md).
+
+## <a name="view-compliance-reports"></a>Afficher les rapports de conformité
+
+En plus d’utiliser les graphiques sur l’*État de conformité*, vous pouvez afficher les rapports de compatibilité à partir de la page *Surveiller* du centre d’administration.
+
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Sélectionnez **Appareils** > **Surveiller**, puis sous **Conformité**, sélectionnez le rapport que vous souhaitez afficher. Voici quelques-uns des rapports de conformité disponibles :
+
+   - Conformité de l’appareil
+   - Appareils non conformes
+   - Appareils sans stratégie de conformité
+   - Configuration de la conformité
+   - Conformité aux stratégies
+   - Rapport d’attestation de l’intégrité Windows
+   - État de l’agent de menace
+
+Pour plus d’informations sur les rapports, consultez [Rapports Intune](../fundamentals/reports.md)
 
 ## <a name="view-status-of-device-policies"></a>Voir l’état des stratégies d’appareil
 

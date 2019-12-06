@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,14 +17,14 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ce5db670f0084626f1c053b64679623ccf28eb21
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164648"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390338"
 ---
-# <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune  
+# <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune
 
 Utilisez Intune pour gérer le chiffrement d’un disque ou d’un lecteur intégré d’un appareil pour protéger les données sur vos appareils.
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer
 
    Envisagez d’ajouter un message pour aider les utilisateurs finaux à récupérer la clé de récupération pour leur appareil. Ces informations peuvent être utiles pour les utilisateurs finaux quand vous utilisez le paramètre Rotation de la clé de récupération personnelle, qui peut générer automatiquement une nouvelle clé de récupération pour un appareil à intervalles réguliers.
 
-   Par exemple : Pour récupérer une clé de récupération perdue ou ayant récemment fait l’objet d’une rotation, connectez-vous au site web Portail d’entreprise Intune à partir de n’importe quel appareil. Dans le portail, accédez à *Appareils*, sélectionnez l’appareil où FileVault est activé, puis sélectionnez *Obtenir la clé de récupération*. La clé de récupération actuelle est affichée.  
+   Par exemple : Pour récupérer une clé de récupération perdue ou ayant récemment fait l’objet d’une rotation, connectez-vous au site web Portail d’entreprise Intune à partir de n’importe quel appareil. Dans le portail, accédez à *Appareils*, sélectionnez l’appareil où FileVault est activé, puis sélectionnez *Obtenir la clé de récupération*. La clé de récupération actuelle est affichée.
 
 7. Configurez les [paramètres FileVault](endpoint-protection-macos.md#filevault) selon vos besoins métier, puis sélectionnez **OK**.
 
@@ -114,13 +114,37 @@ Configurez BitLocker quand vous créez un [profil de configuration d’appareil]
 
 6. Procédez à la configuration des autres paramètres, puis enregistrez le profil.
 
-### <a name="manage-bitlocker"></a>Gérer BitLocker  
+### <a name="manage-bitlocker"></a>Gérer BitLocker
 
 Une fois qu’Intune a chiffré un appareil Windows 10 avec BitLocker, vous pouvez voir et récupérer les clés de récupération BitLocker quand vous consultez le [rapport de chiffrement](encryption-monitor.md) d’Intune.
 
+### <a name="rotate-bitlocker-recovery-keys"></a>Rotation des clés de récupération BitLocker
+
+Vous pouvez utiliser une action d’appareil Intune pour faire pivoter à distance la clé de récupération BitLocker d’un appareil qui exécute Windows 10 version 1909 ou une version ultérieure.
+
+#### <a name="prerequisites"></a>Prérequis
+
+Les appareils doivent remplir les conditions préalables suivantes pour prendre en charge la rotation de clés de récupération BitLocker :
+
+- Les appareils doivent exécuter Windows 10, version 1909 ou ultérieure
+
+- Les appareils joints à Azure AD et hybrides doivent prendre en charge l’activation de la rotation des clés :
+
+  - **Rotation du mot de passe de récupération déclenchée par le client**
+
+  Ce paramètre se trouve sous *Chiffrement Windows* dans le cadre d’une stratégie de configuration d’appareil pour Windows 10 Endpoint Protection.
+  
+#### <a name="to-rotate-the-bitlocker-recovery-key"></a>Faire pivoter la clé de récupération BitLocker
+
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Sélectionnez **Appareils** > **Tous les appareils**.
+
+3. Dans la liste des appareils que vous gérez, sélectionnez un appareil, sélectionnez **Plus**, puis l’action à distance **Rotation de clés BitLocker**.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
-Créer [une stratégie de conformité des appareils](compliance-policy-create-windows.md)
+Créez [une stratégie de conformité des appareils](compliance-policy-create-windows.md).
 
 Utilisez le rapport de chiffrement pour gérer les éléments suivants :
 

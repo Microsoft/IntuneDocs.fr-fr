@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e81b8dc4938ea080018efae97093bb5e70dbcde8
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059702"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74548011"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurer une page d’état d’inscription
  
@@ -64,14 +64,14 @@ Vous pouvez également définir l’ordre de priorité de chaque profil pour év
 
 Pour activer la page d’état d’inscription, suivez les étapes ci-dessous.
  
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Dans le panneau **Page d’état d’inscription**, choisissez **Par défaut** > **Paramètres**.
 3. Pour **Afficher la progression de l’installation des profils et des applications**, choisissez **Oui**.
 4. Choisissez les autres paramètres que vous voulez activer, puis choisissez **Enregistrer**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Créer un profil de page d’état d’inscription et l’affecter à un groupe
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription** > **Créer un profil**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Page de statut d’inscription** > **Créer un profil**.
 2. Indiquez un **Nom** et une **Description**.
 3. Choisissez **Créer**.
 4. Choisissez le nouveau profil dans la liste **Page d’état d’inscription**.
@@ -82,7 +82,7 @@ Pour activer la page d’état d’inscription, suivez les étapes ci-dessous.
 
 Un utilisateur peut se trouver dans de nombreux groupes et avoir de nombreux profils de page d’état d’inscription. Pour résoudre ces conflits, vous pouvez définir les priorités de chaque profil. Lors de l’inscription, si un utilisateur possède plusieurs profils de page d’état d’inscription, seul le profil à la priorité la plus élevée est appliqué à l’appareil d’inscription.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Pointez sur le profil dans la liste.
 3. À l’aide des trois points verticaux, faites glisser le profil à la position souhaitée dans la liste.
 
@@ -90,7 +90,7 @@ Un utilisateur peut se trouver dans de nombreux groupes et avoir de nombreux pro
 
 Vous pouvez spécifier quelles applications doivent être installés pour que l’utilisateur puisse accéder au bureau.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Page de statut d’inscription**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Page de statut d’inscription**.
 2. Choisissez un profil > **Paramètres**.
 3. Choisissez **Oui** pour **Afficher la progression de l’installation des profils et des applications**.
 4. Choisissez **Oui** pour **Bloquer l’utilisation de l’appareil jusqu’à ce que toutes les applications et tous les profils soient installés**.

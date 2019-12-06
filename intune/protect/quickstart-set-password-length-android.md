@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/21/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f73bc84be46252cb99a47966b480e585545dde12
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 61fdf91d57ce5d187a0c43153f317b0b42c6b46c
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504172"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409775"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Démarrage rapide : Créer une stratégie de conformité des mots de passe pour les appareils Android
 
-Dans ce démarrage rapide, vous allez utiliser Microsoft Intune pour exiger de votre personnel utilisant Android qu’il entre un mot de passe d’une longueur spécifique avant de pouvoir accéder aux informations sur ses appareils Android. 
+Dans ce démarrage rapide, vous allez utiliser Microsoft Intune pour exiger de votre personnel utilisant Android qu’il entre un mot de passe d’une longueur spécifique avant de pouvoir accéder aux informations sur ses appareils Android.
 
 Une stratégie de conformité des appareils Intune spécifie les règles et les paramètres que ces appareils doivent respecter pour être considérés conformes. Vous pouvez utiliser ces stratégies de conformité avec un accès conditionnel pour autoriser ou bloquer l’accès aux ressources de l’entreprise. Vous pouvez également obtenir des rapports sur les appareils et prendre des mesures en cas de non-conformité.
 
@@ -38,25 +38,33 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
-Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’administrateur général ou en tant qu’administrateur de services fédérés Intune. 
+Connectez-vous au [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) comme [Administrateur général](../fundamentals/users-add.md#types-of-administrators) ou [Administrateur de service Intune](../fundamentals/users-add.md#types-of-administrators).
 
 ## <a name="create-a-device-compliance-policy"></a>Créer une stratégie de conformité des appareils
 
-Dans ce guide de démarrage rapide, vous allez utiliser Intune pour demander aux utilisateurs d’appareils Android de votre organisation d’entrer un mot de passe d’une longueur donnée afin de pouvoir accéder aux informations stockées sur leurs appareils Android.
+Créez une stratégie de conformité des appareils pour demander aux utilisateurs Android de votre effectif d’entrer un mot de passe d’une longueur donnée afin de pouvoir accéder aux informations stockées sur leurs appareils Android.
 
-1. Dans Intune, sélectionnez **Conformité des appareils** > **Stratégies** > **Créer une stratégie**.
+1. Dans Intune, sélectionnez **Appareils** > **Stratégies de conformité** > **Créer une stratégie**.
+
 2. Ajoutez **Conformité Android** comme **Nom**. Ajoutez également une **Description**.
-3. Pour l’option **Plateforme**, sélectionnez **Android**. 
-4. Sélectionnez **Paramètres** > **Sécurité système** pour afficher le panneau Android **Sécurité système**.
-5. Cliquez sur **Exiger** à côté de **Exiger un mot de passe pour déverrouiller des appareils mobiles**.
-6. Sélectionnez **Au moins numérique** en regard de **Type de mot de passe requis**.
-7. Entrez **6** à côté de **Longueur minimale du mot de passe**. 
+
+3. Pour **Plateforme**, sélectionnez **Android Entreprise**.
+
+4. Pour **Type de profil**, sélectionnez **Profil professionnel**.
+
+5. Sélectionnez **Paramètres** > **Sécurité système** pour afficher le panneau Android **Sécurité système**.
+
+6. Pour **Exiger un mot de passe pour déverrouiller des appareils mobiles**, sélectionnez **Exiger**.
+
+7. Pour le **Type de mot de passe requis**, sélectionnez **Au moins numérique**.
+
+8. Pour **Longueur minimale du mot de passe**, entrez **6**.
 
     ![Capture d’écran de création d’un groupe dans Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-7. Quand vous avez terminé, cliquez sur **OK** > **OK** > **Créer** pour créer la stratégie.
+9. Quand vous avez terminé, sélectionnez **OK** > **OK** > **Créer** pour créer la stratégie.
 
-Une fois que la stratégie a été créée, elle apparaît dans votre liste de stratégies de conformité des appareils. 
+Une fois que la stratégie a été créée, elle apparaît dans votre liste de stratégies de conformité des appareils.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 

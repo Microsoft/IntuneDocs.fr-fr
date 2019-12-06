@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14ff8ad2d41a6f2235c18f155e3a5b865e3a32e4
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 5aca7dbae7a74af399bcbf21aec1dd9dd2d1e851
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199306"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390761"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Comment obtenir un support technique pour Microsoft Intune
 
@@ -39,7 +39,7 @@ En tant qu’administrateur informatique, vous pouvez utiliser l’option **Aide
 
 ## <a name="help-and-support-experience"></a>Expérience Aide et support
 
-L’expérience Aide et support pour Intune est disponible sur le [portail de gestion des appareils Microsoft 365](https://devicemanagement.microsoft.com) et dans tous les panneaux (ou pages) du portail Azure sous Intune.
+L’expérience Aide et support pour Intune est disponible sur le [centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) et dans tous les panneaux (ou pages) du portail Azure sous Intune.
 
 :’expérience *Aide et support* est similaire à celle du [Centre d’administration Microsoft 365](https://admin.microsoft.com/) et remplace l’expérience *Aide + support* précédente, qui demeure pour d’autres services dans Azure.
 
@@ -48,16 +48,27 @@ L’expérience Aide et support pour Intune est disponible sur le [portail de ge
 
 ### <a name="options-to-access-help-and-support"></a>Options d’accès à l’aide et au support
 
-- **Dans le portail Azure :**
+Lorsque vous utilisez un locataire nouvellement créé pour Intune, il est possible qu’*Aide et support* ne s’ouvre pas et que le message suivant soit retourné :
+
+- *Nous avons rencontré un problème inconnu. Actualisez la page, mais si le problème persiste, créez un incident via le [Centre d’administration M365](https://admin.microsoft.com) et référencez l’ID de session fourni.*
+
+Les détails de l’erreur incluent un *ID de session*, les détails de l’*Extension*, entre autres. 
+ 
+Ce problème se produit lorsque vous n’avez pas encore authentifié votre nouveau compte de locataire par le biais du **Centre d’administration M365** sur https://admin.microsoft.com, ou à partir du **portail Office 365** sur https://portal.office.com. Pour résoudre ce problème, sélectionnez le lien pour le *Centre d’administration M365* dans le message, ou visitez https://portal.office.com et connectez-vous. Après l’authentification sur l’un des deux sites, *Aide et support* pour Intune devient accessible.
+
+
+**Accéder à l’aide et au support** :
+
+- **Dans le portail Azure**
 
   - Sélectionnez **Aide et support** sur un panneau ou une page Intune.
 
   > [!NOTE]  
   > Si votre instance d’Intune est hébergée sur le cloud privé pour le secteur public, également appelé cloud souverain à l’instar d’Azure Government, voir [Support Intune du cloud privé pour le secteur public](#intune-support-for-private-cloud-for-government) plus loin dans cet article. L’expérience *Aide et support* Intune sera disponible sur le cloud privé pour le secteur public l’année prochaine seulement.
 
-- **À partir du tableau de bord de gestion des appareils :**
+- **À partir du Centre d’administration de Microsoft Endpoint Manager**
   - Une fois que vous avez sélectionné une zone de fonctionnalités pour Intune, sélectionnez l’option **Aide et support**.
-  - À partir de n’importe quel nœud dans le portail de gestion des appareils, sélectionnez l’icône **?** en haut à droite dans le portail, puis utilisez la liste déroulante pour sélectionner le service pour lequel vous souhaitez obtenir de l’aide. L’icône **?** dans le portail de gestion des appareils prend en charge plusieurs services, et vous devez sélectionner le service spécifique pour lequel vous souhaitez obtenir de l’aide.  
+  - Dans le Centre d’administration de Microsoft Endpoint Manager, sélectionnez le **?** en haut à droite dans le portail, puis utilisez la liste déroulante pour sélectionner le service pour lequel vous souhaitez obtenir de l’aide. L’icône **?** dans le Centre d’administration de Microsoft Endpoint Manager prend en charge plusieurs services, et vous devez sélectionner le service spécifique pour lequel vous souhaitez obtenir de l’aide.  
 
     ![Sélectionnez votre service](./media/get-support/select-a-service.png)
 

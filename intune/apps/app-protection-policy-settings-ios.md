@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c6e519f4f5f31a11bd2e762b9e33357825d783d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984152"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390372"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Paramètres de stratégie de protection d’application iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -46,6 +46,7 @@ Il existe trois catégories pour les paramètres de stratégie : *Réadressage 
 | **Limiter les opérations couper, copier et coller entre les autres applications** | Spécifiez quand autoriser les actions couper, copier et coller avec cette application. Sélectionnez parmi : <ul><li>**Bloqué** :  ne pas autoriser les actions couper, copier et coller entre cette application et une autre application.</li><li>**Applications gérées par la stratégie** : autoriser les actions couper, copier et coller entre cette application et d’autres applications gérées par la stratégie.</li><li>**Applications gérées par la stratégie avec Coller dans** : autoriser les actions couper et copier entre cette application et d’autres applications gérées par la stratégie. Autoriser le collage dans cette application de données à partir de n'importe quelle application.</li><li>**N’importe quelle application** : aucune restriction pour les actions couper, copier et coller vers et depuis cette application.</ul> | **N’importe quelle application**   |
 | <ul><ui>**Limite du nombre de caractères à couper/copier pour toutes les applications** | Spécifiez le nombre de caractères qui peuvent être coupés ou copiés depuis les données et comptes de l’organisation.  Cela permet de partager le nombre spécifié de caractères avec toutes les applications, sans considération du paramètre de **Restreindre les opérations couper, copier et coller avec d’autres applications**.<p>Valeur par défaut = 0<p>**Remarque** : *L’application doit obligatoirement avoir le SDK Intune version 9.0.14 ou ultérieure.*  | **0**   |
 | **Notifications de données de l’organisation** | Spécifiez la quantité de données d’organisation partagées par le biais des notifications du système d’exploitation pour les comptes d’organisation. Ce paramètre de stratégie a un impact sur l’appareil local et tous les appareils connectés, comme les enceintes connectées et les technologies portables. Les applications peuvent fournir des contrôles supplémentaires pour personnaliser le comportement en matière de notifications ou choisir de ne pas honorer toutes les valeurs. Sélectionnez parmi : <ul><li>**Bloquer** :  ne pas partager les notifications.</li><ul><li>S’il n’est pas pris en charge par l’application, les notifications sont autorisées.</li></ul><li>**Bloquer les données de l’organisation** : ne pas partager les données de l’organisation dans les notifications, par exemple</li><UL><li>« Vous avez un nouveau message » ou « Vous avez une réunion ».</li><li>S’il n’est pas pris en charge par l’application, les notifications sont bloquées.</li></ul><li>**Autoriser** : partager les données de l’organisation dans les notifications.</li><li>**N’importe quelle application** : aucune restriction pour les actions couper, copier et coller vers et depuis cette application.</ul> <p>**Remarque** : *Ce paramètre requiert la prise en charge des applications. À l’heure actuelle, Outlook pour iOS 4.16.0 (ou version ultérieure) prendra en charge ce paramètre, dont la sortie est prévue pour la semaine du 16 décembre 2019.* | **Autoriser**   |
+| **Claviers tiers** | Choisissez **Bloquer** pour empêcher l’utilisation de claviers tiers dans les applications gérées.<p>Quand ce paramètre est activé, l’utilisateur reçoit une seule fois un message indiquant que l’utilisation des claviers tiers est bloquée. Ce message apparaît la première fois qu’un utilisateur interagit avec des données de l’organisation nécessitant l’utilisation d’un clavier. Seul le clavier iOS standard est disponible lors de l’utilisation d’applications gérées, et toutes les autres options de clavier sont désactivées. Ce paramètre affecte à la fois l’organisation et les comptes personnels des applications à plusieurs identités. Ce paramètre n’affecte pas l’utilisation de claviers tiers dans les applications non gérées.<p>**Remarque :** Cette fonctionnalité nécessite que l’application utilise le kit de développement logiciel (SDK) Intune version 12.0.16 ou ultérieure. Les applications avec des versions du kit de développement logiciel (SDK) de 8.0.14 à 12.0.15 (compris) ne pourront pas utiliser cette fonctionnalité correctement pour les applications à plusieurs identités. Pour plus de détails, consultez [Problème connu : Les claviers tiers ne sont pas bloqués dans iOS pour les comptes personnels](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Autoriser**  |
 
 ### <a name="encryption"></a>Chiffrement
 | Paramètre | Procédure d'utilisation | Valeur par défaut |

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: bc781ea72b54468b21fb70e60e334f1c8d8832ea
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709188"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547948"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 
@@ -60,9 +60,9 @@ La première étape de la configuration de Windows Autopilot consiste à ajouter
 
 2. Enregistrez le fichier CSV.
 
-3. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils** > **Importer**.
+3. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Windows** > **Appareils** (sous **Programme de déploiement Windows Autopilot** > **Importer**.
 
-    ![Capture d’écran d’appareils Windows Autopilot](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
+    ![Capture d’écran d’appareils Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
 4. Sous **Ajouter des appareils Windows Autopilot**, recherchez le fichier CSV que vous avez enregistré.
 
@@ -70,7 +70,7 @@ La première étape de la configuration de Windows Autopilot consiste à ajouter
 
 5. Choisissez **Importer** pour démarrer l’importation des informations sur les appareils. L’importation peut prendre plusieurs minutes.
 
-4. Une fois l’importation effectuée, choisissez **Inscription de l’appareil** > **Inscription Windows** > **Windows Autopilot** > **Appareils** > **Synchroniser**. Un message indique que la synchronisation est en cours. Le processus peut durer quelques minutes, en fonction du nombre d’appareils que vous synchronisez.
+4. Une fois l’importation terminée, choisissez **Appareils** > **Windows** > **Inscription Windows** > **Appareils** (sous **Programme de déploiement Windows Autopilot** > **Synchroniser**). Un message indique que la synchronisation est en cours. Le processus peut durer quelques minutes, en fonction du nombre d’appareils que vous synchronisez.
 
 5. Actualisez la vue pour voir les nouveaux appareils.
 
@@ -90,7 +90,7 @@ Ensuite, vous allez créer un groupe d’appareils et placer dedans les appareil
 
 Après avoir créé un groupe d’appareils, vous devez créer un profil de déploiement afin de pouvoir configurer les appareils Autopilot.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
 2. Sur la page **Notions de base** page, **Nom** tor, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
 3. Définissez **Convertir tous les appareils ciblés vers Autopilot** sur **Oui**. Ce paramètre permet de s’assurer que tous les appareils dans la liste sont inscrits auprès du service de déploiement Autopilot. Le traitement de l’enregistrement prend 48 heures.
 4. Sélectionnez **Suivant**.
@@ -116,9 +116,9 @@ Si vous ne voulez plus utiliser les appareils Autopilot, vous pouvez les supprim
 
 1. Si les appareils sont inscrits dans Intune, vous devez d’abord [les supprimer dans le portail Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Windows** > **Appareils**.
+2. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Windows** > **Inscription Windows** > **Appareils** (sous **Programme de déploiement Windows Autopilot**).
 
-3. Sous **Appareils Windows Autopilot**, choisissez les appareils à supprimer, puis choisissez **Supprimer**.
+3. Sélectionnez les appareils que vous souhaitez supprimer, puis choisissez **Supprimer**.
 
 4. Confirmez la suppression en choisissant **Oui**. La suppression peut prendre quelques minutes.
 

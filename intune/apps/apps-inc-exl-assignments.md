@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47ecc2363244634cb355fdeaeb51074417322e4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507299"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547963"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inclure et exclure des affectations d’applications dans Microsoft Intune
 
@@ -31,9 +31,20 @@ Dans Intune, vous pouvez déterminer qui a accès à une application en affectan
 
 Pour définir la disponibilité d’une application, vous incluez et excluez des affectations d’applications à un groupe d’utilisateurs ou d’appareils à l’aide d’une combinaison d’affectations de groupes d’inclusion et d’exclusion. Cette fonctionnalité est utile quand vous rendez l’application disponible en incluant un grand groupe, puis que vous affinez les utilisateurs sélectionnés en excluant un groupe plus petit. Le groupe plus petit peut être un groupe de test ou un groupe exécutif. 
 
-Quand vous excluez des groupes d’une affectation d’applications, vous devez exclure uniquement des groupes d’utilisateurs ou uniquement des groupes d’appareils. Vous ne pouvez pas exclure un mélange de groupes d’utilisateurs et de groupes d’appareils. 
+Il est recommandé de créer et d’affecter des applications spécifiquement pour vos groupes d’utilisateurs, et séparément pour vos groupes d’appareils. Pour plus d’informations sur les groupes, voir [Ajouter des groupes pour organiser les utilisateurs et les appareils](~/fundamentals/groups-add.md).  
 
-Intune ne prend pas en compte l’association entre utilisateurs et appareils quand vous excluez des groupes. L’inclusion de groupes d’utilisateurs tout en excluant des groupes d’appareils n’aboutira vraisemblablement pas aux résultats voulus. L’inclusion est prioritaire sur l’exclusion. Par exemple, si vous ciblez une application iOS sur **Tous les utilisateurs** et excluez **Tous les iPad**, le résultat net est que tous les utilisateurs utilisant un iPad peuvent obtenir l’application. Cependant, si vous ciblez l’application iOS sur **Tous les appareils** et excluez **Tous les iPad**, le déploiement est réussi.  
+Il existe des scénarios importants lorsque vous incluez ou excluez des affectations d’applications :
+
+- L’exclusion est prioritaire sur l’inclusion dans les scénarios « même type de groupe » suivants :
+    - Inclure des groupes d’utilisateurs et exclure des groupes d’utilisateurs lors de l’affectation d’applications
+    - Inclure des groupes d’appareils et exclure des groupes d’appareils lors de l’affectation d’applications
+
+    Par exemple, si vous affectez un groupe d’appareils au groupe **Tous les utilisateurs d’entreprise**, mais excluez les membres du groupe **Cadres supérieurs**, **tous les utilisateurs de l’entreprise** à l’exception des **cadres supérieurs** obtiennent l’attribution, car les deux groupes sont des groupes d’utilisateurs.
+- Intune n’évalue pas les relations entre groupes d’utilisateurs et groupes d’appareils. Si vous affectez des applications à des groupes mixtes, les résultats risquent de ne pas correspondre à votre intention ou à vos attentes.
+
+    Supposons par exemple que vous affectiez un groupe d’appareils au groupe d’utilisateurs **Tous les utilisateurs**, mais que vous excluiez un groupe d’appareils **Tous les appareils personnels**. Dans cette affectation d’application de groupe mixte, **Tous les utilisateurs** reçoivent l’application. L’exclusion ne s’applique pas.
+
+Par conséquent, il n’est pas recommandé d’affecter des applications à des groupes mixtes.
 
 > [!NOTE]
 > Quand vous définissez une affectation de groupe pour une application, le type **Non applicable** est déprécié et remplacé par la fonctionnalité d’exclusion de groupe. 
@@ -41,7 +52,6 @@ Intune ne prend pas en compte l’association entre utilisateurs et appareils qu
 > Intune fournit des groupes **Tous les utilisateurs** et **Tous les appareils** précréés dans la console. Les groupes ont des optimisations intégrées pour votre confort. Nous vous recommandons vivement d’utiliser ces groupes pour cibler tous les utilisateurs et tous les appareils au lieu de créer vous-même des groupes « Tous les utilisateurs » ou « Tous les appareils ».  
 >
 > Android Enterprise prend en charge l’inclusion et l’exclusion de groupes. Vous pouvez tirer parti des groupes intégrés **Tous les utilisateurs** et **Tous les appareils** pour l’affectation d’applications Android Entreprise. 
-
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Inclure et exclure des groupes lors de l’affectation d’applications 
 Pour affecter une application à des groupes à l’aide de l’affectation d’inclusion et d’exclusion :

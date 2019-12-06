@@ -6,30 +6,31 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-ms.reviewer: chrisbal
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3683d2aeada791c6ec827e915e02365a336e6045
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 62f418e396c5030a47ea0bcb31914cd4e1069c40
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059673"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319840"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Utiliser un profil personnalisé Microsoft Intune pour créer un profil VPN par application pour les appareils Android
 
-[!INCLUDE[azure_portal](../includes/azure_portal.md)]
-
 Vous pouvez créer un profil VPN par application pour les appareils Android 5.0 et ultérieur gérés par Intune. Commencez par créer un profil VPN qui utilise le type de connexion Pulse Secure ou Citrix. Ensuite, créez une stratégie de configuration personnalisée qui associe le profil VPN à des applications spécifiques.
+
+> [!NOTE]
+> Pour utiliser le VPN par application sur les appareils Android Enterprise, vous pouvez également suivre ces étapes. Toutefois, il est recommandé d’utiliser une [stratégie de configuration des applications](../apps/app-configuration-policies-use-android.md) pour votre application cliente VPN.
 
 Une fois que vous avez affecté la stratégie à votre appareil Android ou à des groupes d’utilisateurs, ces derniers doivent démarrer le client VPN Pulse Secure ou Citrix. Le client VPN autorise ensuite uniquement le trafic provenant des applications spécifiées à utiliser la connexion VPN ouverte.
 
@@ -48,7 +49,7 @@ Une fois que vous avez affecté la stratégie à votre appareil Android ou à de
     - **Plateforme** : Sélectionnez **Android**.
     - **Type de profil** : sélectionnez **VPN**.
 
-4. Choisissez **Paramètres** > **Configurer**, puis configurez le profil VPN selon les paramètres de la [configuration des paramètres VPN](vpn-settings-configure.md) et des [paramètres Intune VPN pour les appareils Android](vpn-settings-android.md).
+4. Choisissez **Paramètres** > **Configurer**. Ensuite, configurez le profil VPN. Pour plus d’informations, consultez [Comment configurer les paramètres de VPN](vpn-settings-configure.md) et [Paramètres de VPN Intune pour les appareils Android](vpn-settings-android.md).
 
 Prenez note de la valeur de **Nom de connexion** que vous spécifiez lors de la création du profil VPN. Ce nom est nécessaire lors de l’étape suivante. Par exemple, **MonProfilVpnApp**.
 
@@ -75,7 +76,7 @@ Prenez note de la valeur de **Nom de connexion** que vous spécifiez lors de la 
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Définir votre liste d’applications comme liste rouge ou liste verte (facultatif)
 
-Pour entrer une liste d’applications qui *ne peuvent pas* utiliser la connexion VPN, utilisez la valeur **BLACKLIST**. Toutes les autres applications se connectent par le biais du VPN. Vous pouvez également utiliser la valeur **WHITELIST** pour entrer une liste d’applications qui *peuvent* utiliser la connexion VPN. Les applications qui ne figurent pas dans la liste ne se connectent pas par le biais du VPN.
+Pour entrer une liste d’applications qui *ne peuvent pas* utiliser la connexion VPN, utilisez la valeur **BLACKLIST**. Toutes les autres applications se connectent par le biais du VPN. Vous pouvez aussi utiliser la valeur **WHITELIST** pour entrer une liste d’applications qui *peuvent* utiliser la connexion VPN. Les applications qui ne figurent pas dans la liste ne se connectent pas par le biais du VPN.
 
 1. Dans le volet **Paramètres OMA-URI personnalisés**, choisissez **Ajouter**.
 2. Entrez un nom de paramètre.

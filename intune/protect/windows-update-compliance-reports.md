@@ -6,63 +6,66 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55fa1109fde57e3104c8bb15e1f45761d661c735
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0de98a0820e15a09c2b3724b216359580327259e
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508731"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465726"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Rapports de conformité Intune pour les mises à jour
+
 Quand vous utilisez Intune pour déployer une mise à jour Windows sur des appareils Windows 10, affichez les détails de la conformité des mises à jour à l’aide d’Intune ou d’une solution gratuite appelée *Update Compliance*, qui fait partie de Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Utiliser Intune
-Pour consulter un rapport de stratégie sur l’état de déploiement des boucles de mise à jour Windows 10 que vous avez configurées : 
-1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Sélectionnez **Tous les services**, filtrez sur **Intune**, puis sélectionnez **Microsoft Intune**.
-3. Sélectionnez **Mises à jour logicielles** > **Vue d’ensemble**. Vous pouvez voir des informations générales sur l’état des anneaux de mise à jour que vous avez affectés.
-4. Ouvrez un des rapports suivants :  
 
-   **Pour tous les anneaux de déploiement** :
-   1. Dans **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10**
-   2. Dans la section **Surveiller**, choisissez **Par état d’anneau de déploiement de mises à jour**.  
+Pour consulter un rapport de stratégie sur l’état de déploiement des boucles de mise à jour Windows 10 que vous avez configurées :
 
-   **Pour des anneaux de déploiement spécifiques** :  
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   1. Dans **Mises à jour logicielles** > **Anneaux de mise à jour Windows 10**, choisissez l’anneau de déploiement à examiner.  
-   2. Dans la section **Surveiller**, choisissez les rapports suivants pour voir des informations plus détaillées sur l’anneau de mise à jour :  
-      - **État de l’appareil**  
-      - **État de l’utilisateur**  
+2. Sélectionnez **Appareils** > **Vue d’ensemble** > **État des mises à jour logicielles**. Vous pouvez voir des informations générales sur l’état des anneaux de mise à jour que vous avez affectés.
+
+3. Pour afficher des détails supplémentaires, sélectionnez **Analyser**. Ensuite, sous **Mises à jour logicielles**, sélectionnez **Par état d’anneau de déploiement de mises à jour** et choisissez l’anneau de déploiement à examiner.
+
+   Dans la section **Surveiller**, choisissez les rapports suivants pour voir des informations plus détaillées sur l’anneau de mise à jour :
+
+   - **État de l’appareil** : cette opération affiche l’état de la configuration de l’appareil. Pour plus d’informations, consultez [Mettre à jour deviceConfigurationDeviceStatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
+
+   - **État de l’utilisateur** : affiche le nom d’utilisateur, l’état et la date du dernier rapport. Pour plus d’informations, consultez [Répertorier deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
+
+   - **État de la mise à jour de l’utilisateur final** : cette opération affiche l’état de mise à jour des appareils Windows. Pour plus d’informations, consultez [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## <a name="use-update-compliance"></a>Utiliser Update Compliance
+
 Vous pouvez superviser les déploiements de mises à jour Windows 10 à l’aide d’[Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), solution Windows Analytics gratuite. Update Compliance est disponible gratuitement par le biais du portail Azure pour les appareils qui répondent à ses [prérequis](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 Quand vous utilisez cette solution, vous déployez un ID commercial sur un des appareils Windows 10 gérés par Intune pour lequel vous souhaitez générer des rapports sur la conformité des mises à jour.  
 
-Dans la console Intune, vous utilisez les paramètres OMA-URI d’une stratégie personnalisée pour configurer l’ID commercial. Pour plus d’informations, consultez [Paramètres de stratégie Intune pour les appareils Windows 10 dans Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
+Dans Intune, utilisez les paramètres OMA-URI d’une stratégie personnalisée pour configurer l’ID commercial. Consultez [Paramètres de stratégie Intune pour les appareils Windows 10 dans Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
 
 Le chemin OMA-URI (qui respecte la casse) pour la configuration de l’ID commercial est : *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
 
 Par exemple, vous pouvez utiliser les valeurs suivantes dans **Ajouter ou modifier un paramètre OMA-URI** :
+
 - **Nom du paramètre** : ID commercial Windows Analytics
 - **Description du paramètre** : configuration d’un ID commercial pour les solutions Windows Analytics
 - **OMA-URI** (sensible à la casse) : *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 - **Type de données** : Chaîne
 - **Valeur** : \<utilisez le GUID indiqué sous l’onglet Télémétrie Windows dans votre espace de travail OMS>
- 
-> [!NOTE]  
+
+> [!NOTE]
 > Pour plus d’informations sur MS DM Server, consultez [Fournisseur de services de configuration DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
 
 ## <a name="next-steps"></a>Étapes suivantes
-[Gérer les mises à jour logicielles dans Intune](windows-update-for-business-configure.md)
 
+[Gérer les mises à jour logicielles dans Intune](windows-update-for-business-configure.md)

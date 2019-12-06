@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02603651587837211d9a67d7e4bbeb90cb358dc5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059574"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390865"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Créer un profil d’appareil dans Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Les profils d’appareil vous permettent d’ajouter et configurer des paramètres, puis de transmettre ces paramètres aux appareils de votre organisation. [Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune](device-profiles.md) fournit des informations plus détaillées, y compris sur ce que vous pouvez faire.
 
@@ -78,6 +76,7 @@ Cet article :
        - [Kiosque](kiosk-settings.md)
        - [Certificat PKCS](../protect/certficates-pfx-configure.md)
        - [Certificat importé PKCS](../protect/certificates-imported-pfx-configure.md)
+       - [Fichier de préférences](preference-file-settings-macos.md)
        - [Certificat SCEP](../protect/certificates-scep-configure.md)
        - [Certificat approuvé](../protect/certificates-configure.md)
        - [Stratégies de mise à jour](../software-updates-ios.md)
@@ -160,6 +159,32 @@ Lorsque vous attribuez le profil aux groupes, les règles de mise en application
 Intune utilise différents cycles d’actualisation pour rechercher les mises à jour des profils de configuration. Si l’appareil vient d’être inscrit, la fréquence d’archivage est plus élevée. [Cycles d’actualisation de la stratégie et du profil](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) répertorie les temps d’actualisation estimés.
 
 Les utilisateurs peuvent ouvrir l’application Portail d’entreprise et synchroniser l’appareil à tout moment pour rechercher immédiatement les mises à jour de profil.
+
+## <a name="recommendations"></a>Recommandations
+
+Lorsque vous créez des profils, tenez compte des recommandations suivantes :
+
+- Nommez vos stratégies afin de savoir ce qu’elles sont, et ce qu’elles font. Toutes les [stratégies de conformité](../protect/create-compliance-policy.md) et tous les [profils de configuration](../configuration/device-profile-create.md) ont une propriété **Description** facultative. Dans **Description**, soyez spécifique et incluez des informations afin que d’autres personnes sachent ce que fait la stratégie.
+
+  Voici quelques exemples de profils de configuration :
+
+  **Nom du profil** : Modèle d’administration - Profil de configuration OneDrive pour tous les utilisateurs Windows 10  
+  **Description du profil** : Profil de modèle d’administrateur OneDrive qui comprend les paramètres minimaux et de base pour tous les utilisateurs de Windows 10. Créé par user@contoso.com pour empêcher les utilisateurs de partager des données organisationnelles sur des comptes OneDrive personnels.
+
+  **Nom du profil** : Profil VPN pour tous les utilisateurs iOS  
+  **Description du profil** : Profil VPN qui comprend les paramètres minimaux et de base de tous les utilisateurs d’iOS pour se connecter au VPN Contoso. Créé par user@contoso.com afin que les utilisateurs s’authentifient automatiquement auprès du VPN, au lieu de demander à l’utilisateur d’entrer son nom d’utilisateur et son mot de passe.
+
+- Créez votre profil par tâche, par exemple configurer les paramètres de Microsoft Edge, activer les paramètres antivirus de Microsoft Defender, bloquer les appareils iOS jailbroken, et ainsi de suite.
+
+- Créez des profils qui s’appliquent à des groupes spécifiques, par exemple Marketing, Ventes, Administrateurs informatiques, ou par emplacement ou système scolaire.
+
+- Séparez les stratégies utilisateur des stratégies d’appareil.
+
+  Par exemple, les [Modèles d’administration dans Intune](administrative-templates-windows.md) ont des centaines de paramètres ADMX. Ces modèles indiquent si un paramètre s’applique aux utilisateurs ou aux appareils. Lorsque vous créez des modèles d’administration, affectez vos paramètres utilisateur à un groupe d’utilisateurs, puis affectez les paramètres d’appareil à un groupe d’appareils.
+
+  L’illustration suivante montre un exemple de paramètre qui peut s’appliquer aux utilisateurs et/ou aux appareils :
+
+  ![Modèle d’administration Intune qui s’applique aux utilisateurs et aux appareils](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

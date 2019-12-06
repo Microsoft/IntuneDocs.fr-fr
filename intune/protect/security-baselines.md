@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53014376a7e220e975878031ffd759da40db7f6b
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413838"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409996"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -81,7 +81,7 @@ Les instances de bases de référence de sécurité suivantes sont disponibles p
   > [!NOTE]
   > La base de référence de la sécurité Microsoft Defender ATP a été optimisée pour les appareils physiques et n’est actuellement pas recommandée pour une utilisation sur des machines virtuelles ou des points de terminaison VDI. Certains paramètres de la base de référence peuvent impacter les sessions interactives à distance sur les environnements virtualisés.  Pour plus d’informations, consultez [Améliorer la conformité à la base de référence de la sécurité de Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) dans la documentation Windows.
 
-- **Base de référence Microsoft Edge** 
+- **Base de référence Microsoft Edge**
   - [Préversion : Base de référence Microsoft Edge](security-baseline-settings-edge.md)
 
 Vous pouvez continuer à utiliser et à modifier des profils que vous avez créés précédemment en fonction d’une préversion de modèle, même lorsque cette préversion n’est plus disponible pour la création de nouveaux profils.
@@ -103,13 +103,15 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
 ### <a name="create-the-profile"></a>Créer le profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité** pour afficher la liste des bases de référence disponibles.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Sélectionnez **Sécurité des points de terminaison** > **Bases de référence de sécurité** pour afficher la liste des bases de référence disponibles.
 
    ![Sélectionnez une base de référence de sécurité pour configurer](./media/security-baselines/available-baselines.png)
 
-2. Sélectionnez la base de référence que vous souhaitez utiliser, puis sélectionnez **Créer un profil**.
+3. Sélectionnez la base de référence que vous souhaitez utiliser, puis sélectionnez **Créer un profil**.
 
-3. Dans l'onglet **Notions de base**, spécifiez les propriétés suivantes :
+4. Dans l'onglet **Notions de base**, spécifiez les propriétés suivantes :
 
    - **Nom** : Entrez un nom pour votre profil de base de référence de sécurité. Par exemple, entrez *Profil standard pour Defender ATP*.
 
@@ -117,7 +119,7 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
    Sélectionnez **Suivant** pour passer à l’onglet suivant. Lorsque vous accédez à un nouvel onglet, vous pouvez sélectionner le nom de l’onglet pour revenir à un onglet affiché précédemment.
 
-4. Sous l’onglet Paramètres de configuration, affichez les groupes de **paramètres** disponibles dans la base de référence que vous avez sélectionnée. Vous pouvez développer un groupe pour afficher les paramètres de celui-ci ainsi que les valeurs par défaut pour ces paramètres dans la base de référence. Pour rechercher des paramètres spécifiques :
+5. Sous l’onglet Paramètres de configuration, affichez les groupes de **paramètres** disponibles dans la base de référence que vous avez sélectionnée. Vous pouvez développer un groupe pour afficher les paramètres de celui-ci ainsi que les valeurs par défaut pour ces paramètres dans la base de référence. Pour rechercher des paramètres spécifiques :
    - Sélectionnez un groupe à développer et passez en revue les paramètres disponibles.
    - Utilisez la barre de *recherche* et spécifiez des mots clés qui filtrent la vue afin d’afficher uniquement les groupes qui contiennent vos critères de recherche.
 
@@ -125,13 +127,13 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
    ![Développez un groupe pour afficher ses paramètres](./media/security-baselines/sample-list-of-settings.png)
 
-5. Dans l’onglet **Balises d’étendue**, sélectionnez **Sélectionner les balises d’étendue** pour ouvrir l’onglet *Sélectionner des balises* afin d’attribuer des balises d’étendue au profil.
+6. Dans l’onglet **Balises d’étendue**, sélectionnez **Sélectionner les balises d’étendue** pour ouvrir l’onglet *Sélectionner des balises* afin d’attribuer des balises d’étendue au profil.
 
-6. Dans l’onglet **Attributions**, sélectionnez **Sélectionner les groupes à inclure**, puis attribuez la base de référence à un ou plusieurs groupes. Utilisez le paramètre **Sélectionner des groupes à inclure** pour affiner l’attribution.
+7. Dans l’onglet **Attributions**, sélectionnez **Sélectionner les groupes à inclure**, puis attribuez la base de référence à un ou plusieurs groupes. Utilisez le paramètre **Sélectionner des groupes à inclure** pour affiner l’attribution.
 
    ![Attribuer un profil](./media/security-baselines/assignments.png)
 
-7. Lorsque vous êtes prêt à déployer la base de référence, ouvrez l’onglet **Réviser + créer** et consultez les détails de la base de référence. Sélectionnez **Créer** pour enregistrer et déployer le profil.
+8. Lorsque vous êtes prêt à déployer la base de référence, ouvrez l’onglet **Réviser + créer** et consultez les détails de la base de référence. Sélectionnez **Créer** pour enregistrer et déployer le profil.
 
    Dès que vous créez le profil, celui-ci est placé dans le groupe attribué et peut-être aussitôt appliqué.
 
@@ -140,7 +142,7 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
    ![Réviser la base de référence](./media/security-baselines/review.png)
 
-8. Après avoir créé un profil, modifiez-le en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**. Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.
+9. Après avoir créé un profil, modifiez-le en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**. Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Modifier la version de base de référence pour un profil
 
@@ -160,25 +162,27 @@ Lors de l’enregistrement, une fois la conversion terminée, la base de référ
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Pour modifier la version de base de référence pour un profil
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), puis sélectionnez **Sécurité des appareils** > **Bases de référence de sécurité**, puis sélectionnez la vignette du type de base de référence contenant le profil que vous souhaitez modifier.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Sélectionnez ensuite **Profils**, cochez la case correspondant au profil que vous souhaitez modifier, puis choisissez **Modifier la version**.
+2. Sélectionnez **Sécurité des points de terminaison** > **Bases de référence de sécurité**, puis sélectionnez la vignette du type de base de référence contenant le profil que vous souhaitez modifier.
+
+3. Sélectionnez ensuite **Profils**, cochez la case correspondant au profil que vous souhaitez modifier, puis choisissez **Modifier la version**.
 
    ![sélectionner une base de référence](./media/security-baselines/select-baseline.png)
 
-3. Dans le volet **Modifier la version**, utilisez la liste déroulante **Sélectionner une base de référence de sécurité à mettre à jour**, puis sélectionnez l'instance de version que vous souhaitez utiliser.
+4. Dans le volet **Modifier la version**, utilisez la liste déroulante **Sélectionner une base de référence de sécurité à mettre à jour**, puis sélectionnez l'instance de version que vous souhaitez utiliser.
 
    ![sélectionner une version](./media/security-baselines/select-instance.png)
 
-4. Sélectionnez **Review update** (Examiner la mise à jour) pour télécharger un fichier CSV qui affiche la différence entre la version actuelle du profil et la nouvelle version que vous avez sélectionnée. Consultez ce fichier afin de comprendre quels paramètres sont nouveaux ou ont été supprimés et quelles sont les valeurs par défaut de ces paramètres dans le profil mis à jour.
+5. Sélectionnez **Review update** (Examiner la mise à jour) pour télécharger un fichier CSV qui affiche la différence entre la version actuelle du profil et la nouvelle version que vous avez sélectionnée. Consultez ce fichier afin de comprendre quels paramètres sont nouveaux ou ont été supprimés et quelles sont les valeurs par défaut de ces paramètres dans le profil mis à jour.
 
    Lorsque vous êtes prêt, passez à l’étape suivante.
 
-5. Choisissez l'une des deux options pour le paramètre **Sélectionner une méthode pour mettre à jour le profil** :
+6. Choisissez l'une des deux options pour le paramètre **Sélectionner une méthode pour mettre à jour le profil** :
    - **Accept baseline changes but keep my existing setting customizations** (Accepter les changements de base de référence mais conserver mes personnalisations de paramètres existantes) : cette option conserve les personnalisations que vous avez apportées au profil de la base de référence et les applique à la nouvelle version que vous avez sélectionnée.
    - **Accept baseline changes and discard existing setting customizations** (Accepter les changements de base de référence et ignorer les personnalisations de paramètres existantes) : cette option écrase complètement votre profil original. Le profil mis à jour utilisera les valeurs par défaut pour tous les paramètres.
 
-6. Sélectionnez **Envoyer**. Le profil est mis à jour avec la version de base de référence sélectionnée, et une fois la conversion terminée, la base de référence est immédiatement redéployée vers les groupes attribués.
+7. Sélectionnez **Envoyer**. Le profil est mis à jour avec la version de base de référence sélectionnée, et une fois la conversion terminée, la base de référence est immédiatement redéployée vers les groupes attribués.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Supprimer une attribution de base de référence de sécurité
 

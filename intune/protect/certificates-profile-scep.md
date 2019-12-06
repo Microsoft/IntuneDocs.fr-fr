@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f9d6626d26e919efbd3a3d8b5dd735ecb7fb62
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199135"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390303"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Créer et attribuer des profils de certificat SCEP dans Intune
 
@@ -53,6 +53,9 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
    2. Vous ne pouvez pas utiliser Intune pour révoquer des certificats provisionnés par les profils de certificat SCEP pour les propriétaires d’appareils. Vous pouvez gérer la révocation via un processus externe ou directement avec l’autorité de certification. 
 
+   4. Pour les appareils Android Enterprise dédiés, les profils de certificat SCEP sont pris en charge pour l’authentification et la configuration du réseau Wi-Fi uniquement.  Les profils de certificat SCEP sur les appareils Android Enterprise dédiés ne sont pas pris en charge pour l’authentification d’application ou VPN.   
+
+   
 7. Sélectionnez **Paramètres**, puis effectuez les configurations suivantes :
 
    - **Type de certificat** :

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: d4ff9126fec182d1e0d2f3eb75297ede8a632e2e
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709463"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390723"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription à Intune pour les appareils Android Entreprise dédiés
 
@@ -101,6 +101,9 @@ Le remplacement ou la révocation d’un jeton/code QR n’a aucun effet sur les
 ## <a name="enroll-the-dedicated-devices"></a>Inscrire les appareils dédiés
 
 Vous pouvez à présent [inscrire vos appareils dédiés](android-dedicated-devices-fully-managed-enroll.md).
+
+> [!NOTE]
+> L’application **Microsoft Intune** est automatiquement installée lors de l’inscription d’un appareil dédié.  Cette application est requise pour l’inscription et ne peut pas être désinstallée. 
 
 ## <a name="managing-apps-on-android-enterprise-dedicated-devices"></a>Gestion d’applications sur des appareils Android Entreprise dédiés
 

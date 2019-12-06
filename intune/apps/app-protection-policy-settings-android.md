@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: c420446d9293ae2a2d1905dcff218056e8e6c875
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059778"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540714"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Paramètres de la stratégie de protection des applications Android dans Microsoft Intune
 Cet article décrit les paramètres de stratégie de protection d’application pour les appareils Android. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure.
@@ -66,7 +66,7 @@ Il existe trois catégories de paramètres de stratégie : les paramètres de p
 
 ## <a name="data-transfer-exemptions"></a>Exemptions au transfert de données
 
-  La stratégie de protection des applications Intune peut autoriser le transfert de données à destination et à partir d’applications et de services de plateforme exemptés. Par exemple, pour que le texte affiché à l’écran d’un appareil mobile puisse être lu à voix haute, toutes les applications gérées par Intune sur Android doivent pouvoir transférer des données à destination et en provenance de l’application Synthèse vocale de Google. Cette liste, qui est susceptible d’être modifiée, reflète les services et les applications considérés comme utiles pour sécuriser la productivité.
+  Les stratégies de protection des applications Intune autorisent le transfert de données à destination et à partir d’applications et de services de plateforme exemptés. Par exemple, pour que le texte affiché à l’écran d’un appareil mobile puisse être lu à voix haute, toutes les applications gérées par Intune sur Android doivent pouvoir transférer des données à destination et en provenance de l’application Synthèse vocale de Google. Cette liste, qui est susceptible d’être modifiée, reflète les services et les applications considérés comme utiles pour sécuriser la productivité.
 
 ### <a name="full-exemptions"></a>Exemptions totales
 

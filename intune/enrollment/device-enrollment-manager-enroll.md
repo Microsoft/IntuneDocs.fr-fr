@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b3c82faab08248640e19573582ccbd232e0587d
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
+ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923351"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239220"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils dans Intune avec un compte de gestionnaire d’inscription d’appareil
 
@@ -37,6 +37,7 @@ Les comptes d’utilisateur DEM et les appareils inscrits avec un compte d’uti
 - La réinitialisation ne peut pas être effectuée à partir du Portail d’entreprise. La réinitialisation d’un appareil inscrit par un compte d’utilisateur DEM peut être effectuée à partir d’Intune dans le portail Azure.
 - Seul l’appareil local s’affiche dans l’application Portail d’entreprise ou le site web.
 - Les comptes d’utilisateur DEM ne peuvent pas utiliser les applications du programme d’achat en volume (VPP) Apple avec des licences utilisateur VPP Apple en raison des critères des identifiants Apple par utilisateur pour la gestion des applications.
+- Les comptes DEM ne peuvent pas être utilisés lors de l’inscription d’appareils via le Programme d’inscription des appareils Apple (DEP).
 - Les appareils peuvent installer des applications VPP s’ils ont des licences d’appareil VPP Apple.
 - Les appareils sont bloqués pour l’accès conditionnel à l’exception de Windows 10 1803+
 - Tout appareil inscrit auprès de comptes DEM doit bénéficier de la licence appropriée pour être géré par Intune. La licence peut être une licence d’utilisateur Intune ou une licence d’appareil Intune.
