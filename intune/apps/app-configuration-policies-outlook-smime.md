@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2f483415d050486ae9979899d9308154a9b131
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 348d1fe2fd236a2af11f7e58dc11530a5ce397bc
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74411357"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564201"
 ---
 # <a name="configure-smime-with-outlook-for-ios"></a>Configurer S/MIME avec Outlook pour iOS
 
@@ -62,14 +62,14 @@ Outlook pour iOS prend en charge deux méthodes pour remettre des certificats au
 Pour configurer Outlook pour S/MIME iOS dans Endpoint Manager, y compris pour la diffusion automatique de certificats S/MIME qu’Outlook pour iOS peut utiliser, procédez comme suit :
 
 ### <a name="add-the-microsoft-outlook-app"></a>Ajouter l’application Microsoft Outlook
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Ajoutez l’application Microsoft Outlook pour iOS de l’App Store à Endpoint Manager ou synchronisez Outlook pour iOS à partir du Programme d’achat en volume (VPP) Apple. Pour plus d’informations, consultez [Ajouter des applications de l’App Store iOS dans Microsoft Intune](~/apps/store-apps-ios.md) ou [Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune](~/apps/vpp-apps-ios.md).
 
 ### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Créer la stratégie de configuration Outlook pour S/MIME iOS
 
 Les étapes suivantes vous permettent de créer et de configurer la stratégie S/MIME d’Outlook pour iOS dans Endpoint Manager. Ces paramètres fournissent la remise automatisée des certificats de signature et de chiffrement.
 
-1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter**.<br>
+1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter**.<br>
 Le volet **Ajouter une stratégie de configuration** s’affiche.
 2. Entrez le **nom** et la **description** de la stratégie de configuration.
 3. Sélectionnez **Appareils gérés** comme **Type d’inscription de l’appareil**.

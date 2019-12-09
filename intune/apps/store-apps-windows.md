@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19d14b2f2cfa838d79af1c6fbb3c3500004e56e
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 3c13d7960c0bb5c73908a0a574ab7d6c169d6460
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74548039"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563433"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Ajouter des applications du Microsoft Store à Microsoft Intune
 
@@ -34,12 +34,10 @@ Pour pouvoir affecter, surveiller, configurer ou protéger des applications, vou
 ## <a name="add-an-app-to-intune"></a>Ajouter une application à Intune
 Pour ajouter une application du Microsoft Store à Intune, effectuez les étapes suivantes :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
-4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**.
-5. Dans le volet **Applications**, sélectionnez **Ajouter**.
-6. Dans le volet **Ajouter une application**, sélectionnez **Windows** comme **Type d’application**, puis sélectionnez **Informations sur l’application**.
-7. Renseignez le volet **Informations sur l’application**. Selon l’application choisie, certaines valeurs de ce volet peuvent avoir été renseignées automatiquement :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans le volet **Ajouter une application**, sélectionnez **Windows** comme **Type d’application**, puis sélectionnez **Informations sur l’application**.
+4. Renseignez le volet **Informations sur l’application**. Selon l’application choisie, certaines valeurs de ce volet peuvent avoir été renseignées automatiquement :
     - **Nom** : Entrez le nom de l’application tel qu’il apparaîtra dans le portail d’entreprise. Veillez à choisir un nom d’application unique. Si vous utilisez un nom d’application qui existe déjà, un seul sera présenté aux utilisateurs dans le portail d’entreprise.
     - **Description** : Entrez une description de l'application. Cette description est fournie aux utilisateurs dans le portail d’entreprise.
     - **Éditeur** : Entrez le nom de l'éditeur de l'application.
@@ -52,8 +50,8 @@ Pour ajouter une application du Microsoft Store à Intune, effectuez les étapes
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple, *Ressources humaines*).
     - **Remarques** : entrez les éventuelles remarques à associer à cette application.
     - **Logo** : si vous le souhaitez, chargez une icône à associer à l’application. Cette icône s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
-8. Sélectionnez **OK**.
-9. Sélectionnez **Ajouter**.
+5. Sélectionnez **OK**.
+6. Sélectionnez **Ajouter**.
 
 L’application créée s’affiche dans la liste des applications, où vous pouvez l’affecter aux groupes de votre choix. Les applications Microsoft Store peuvent uniquement être affectées à des groupes ayant le type d’affectation **Disponible pour les appareils inscrits** (les utilisateurs installent l’application à partir du site web ou de l’application Portail d’entreprise).
 

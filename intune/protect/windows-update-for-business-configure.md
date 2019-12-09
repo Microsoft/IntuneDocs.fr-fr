@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291089"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691767"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -214,9 +214,7 @@ Quand un appareil reçoit une stratégie de mise à jour des fonctionnalités de
   - La **période de report des mises à jour des fonctionnalités (jours)** doit être définie sur **0**.
   - Les mises à jour des fonctionnalités de l’anneau de mise à jour doivent être *en cours d’exécution*. Elles ne doivent pas être suspendues.
 
-- La stratégie *Mises à jour des fonctionnalités de Windows 10* n’est pas prise en charge avec AutoPilot. Intune ne déploiera pas la stratégie sur :
-  - Les appareils en configurés par AutoPilot.
-  - Les appareils précédemment configurés avec AutoPilot.
+- Les stratégies de mise à jour des fonctionnalités Windows 10 ne peuvent pas être appliquées au cours de l’expérience OOBE (out of box experience) et s’appliquent uniquement à la première analyse de Windows Update une fois que l’appareil a été provisionné (généralement un jour après). Par ailleurs, les appareils qui ont été provisionnés avec AutoPilot ne reçoivent pas la stratégie.
 
   Cette limitation est examinée pour déterminer si elle peut être prise en charge à l’avenir.
 

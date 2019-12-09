@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e827075b56d1751e837c25d85c304201bcafa01
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390424"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564018"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Guide pratique pour effacer uniquement les données d’entreprise des applications gérées par Intune
 
@@ -44,8 +44,8 @@ Les stratégies de protection des informations Windows peuvent être déployées
 
 ## <a name="create-a-wipe-request"></a>Créer une demande de réinitialisation
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet Intune, sélectionnez **Applications clientes** > **Réinitialisation sélective de l’application** > **Créer une demande de réinitialisation**.<br>
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Réinitialisation sélective de l’application** > **Créer une demande de réinitialisation**.<br>
    Le volet **Créer une demande de réinitialisation** s’affiche.
 3. Cliquez sur **sélectionner l’utilisateur**, choisissez l’utilisateur dont vous souhaitez réinitialiser les données de l’application, puis cliquez sur **Sélectionner** en bas du volet **Sélectionner un utilisateur**.
 
@@ -65,7 +65,7 @@ Le service crée une demande de réinitialisation distincte pour chaque applicat
 
 Vous pouvez obtenir un rapport de synthèse indique l’état global de la demande de réinitialisation et inclut le nombre de demandes en attente et d’échecs. Pour obtenir plus de détails, procédez comme suit :
 
-1. Dans le volet **Applications clientes** > **Réinitialisation sélective des applications**, vous pouvez voir la liste de vos demandes regroupées par utilisateurs. Étant donné que le système crée une demande de réinitialisation pour chaque application protégée en cours d’exécution sur l’appareil, vous pouvez voir plusieurs demandes pour un même utilisateur. L’état de la demande de réinitialisation est indiquée : **en attente**, **échec**ou **réussite**.
+1. Dans le volet **Applications** > **Réinitialisation sélective des applications**, vous pouvez voir la liste de vos demandes regroupées par utilisateurs. Étant donné que le système crée une demande de réinitialisation pour chaque application protégée en cours d’exécution sur l’appareil, vous pouvez voir plusieurs demandes pour un même utilisateur. L’état de la demande de réinitialisation est indiquée : **en attente**, **échec**ou **réussite**.
 
     ![Capture d’écran de l’état de demande de réinitialisation dans le volet Réinitialisation sélective des applications](./media/apps-selective-wipe/wipe-request-status-1.png)
 

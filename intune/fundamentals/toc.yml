@@ -31,6 +31,8 @@
       href: quickstart-create-custom-role.md
 - name: Didacticiels
   items:
+    - name: Visite guidée d’Intune dans le Gestionnaire de points de terminaison Microsoft
+      href: tutorial-walkthrough-endpoint-manager.md
     - name: "Procédure pas à pas\_: Intune dans le portail Azure"
       href: tutorial-walkthrough-intune-portal.md
 - name: Concepts

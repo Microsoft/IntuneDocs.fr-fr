@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: ba3b145c3a48992b1e8a01ad2cee4be60646df6f
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390372"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781241"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Paramètres de stratégie de protection d’application iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Cet article décrit les paramètres de stratégie de protection d’application pour les appareils iOS. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le panneau **Paramètres** du portail Azure lorsque vous créez une nouvelle stratégie.
+Cet article décrit les paramètres de stratégie de protection d’application pour les appareils iOS. Vous pouvez [configurer](app-protection-policies.md) les paramètres décrits pour une stratégie de protection d’application dans le volet **Paramètres** du portail Azure lorsque vous créez une nouvelle stratégie.
 
 Il existe trois catégories pour les paramètres de stratégie : *Réadressage des données*, *Exigences d’accès* et *Lancement conditionnel*. Dans cet article, le terme ***applications gérées par la stratégie*** fait référence aux applications qui sont configurées avec des stratégies de protection d’application.
 
@@ -88,7 +88,7 @@ La stratégie de protection des applications Intune peut autoriser le transfert 
 | <ul><ui> **Sélectionner la longueur minimale du code PIN** | spécifiez le nombre minimal de chiffres que doit contenir un code PIN.  | **4**  |
 | <ul><ui> **Accès par Touch ID plutôt que par code PIN (iOS 8+)** | Sélectionnez **Autoriser** pour autoriser l’utilisateur à se servir de [Touch ID](https://support.apple.com/HT201371) plutôt qu’un code PIN pour accéder à l’application.    | **Autoriser**  |
 |<ul><ui><ul><ui>**Remplacer Touch ID par le code PIN au terme du délai d’attente**|  Pour utiliser ce paramètre, sélectionnez **Exiger**, puis configurez un délai d’inactivité.  |**Exiger**  |
-| <ul><ui><ul><ui><ul><ui> **Délai d’attente (minutes d’inactivité)** |  spécifiez une durée en minutes au terme de laquelle un code secret ou un code PIN numérique (configuré) remplace l’utilisation d’une empreinte digitale. Cette valeur de délai d’attente doit être supérieure à la valeur spécifiée sous « Revérifier les exigences d’accès après (minutes d’inactivité) ».  |**30**  |
+| <ul><ui><ul><ui><ul><ui> **Délai d’attente (minutes d’inactivité)** |  spécifiez une durée en minutes au terme de laquelle un code secret ou un code PIN numérique (configuré) remplace l’utilisation d’une empreinte digitale ou du visage comme méthode d’accès. Cette valeur de délai d’attente doit être supérieure à la valeur spécifiée sous « Revérifier les exigences d’accès après (minutes d’inactivité) ».  |**30**  |
 | <ul><ui><ul><ui>**Accès par Face ID plutôt que par code PIN (iOS 11+)** | Sélectionnez **Autoriser** pour autoriser l’utilisateur à utiliser la technologie de reconnaissance faciale pour authentifier les utilisateurs sur les appareils iOS. Si cette option est autorisée, un Face ID doit être utilisé pour accéder à l’application sur un appareil compatible Face ID.    | **Autoriser**  |
 | <ul><ui>**Réinitialisation du code PIN au bout d’un nombre de jours** | Sélectionnez **Oui** pour contraindre les utilisateurs à changer leur code PIN d’application après une période définie, en jours.  <br><br>Quand la valeur définie est *Oui*, vous devez alors configurer le nombre de jours au-delà duquel la réinitialisation est exigée. |**Non**  |  
 | <ul><ui><ul><ui> **Nombre de jours** | Configurez le nombre de jours au-delà duquel la réinitialisation du code PIN est exigée.  |**90**  |

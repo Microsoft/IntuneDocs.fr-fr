@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ff9126fec182d1e0d2f3eb75297ede8a632e2e
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 83f0d980bc4fa1bfd0b48f87839fd6efa130aa70
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390723"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563875"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurer l’inscription à Intune pour les appareils Android Entreprise dédiés
 
@@ -59,7 +59,7 @@ Pour configurer la gestion d’appareils Android Enterprise dédiés, effectuez 
 
 Vous devez créer un profil d’inscription pour pouvoir inscrire vos appareils dédiés. Quand le profil est créé, vous obtenez un jeton d’inscription (chaîne aléatoire) et un code QR. En fonction du système d’exploitation Android et de la version de l’appareil, vous pouvez utiliser le jeton ou le code QR pour [inscrire l’appareil dédié](#enroll-the-dedicated-devices).
 
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Inscription des appareils** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Appareils** > **Android** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
 2. Choisissez **Créer** et remplissez les champs requis.
     - **Nom** : tapez un nom que vous utiliserez lors de l’affectation du profil au groupe d’appareils dynamique.
     - **Date d’expiration du jeton** : Date à laquelle le jeton expirera. Google applique un maximum de 90 jours.
@@ -92,7 +92,7 @@ Vous pouvez cibler des applications et des stratégies à des groupes d’appare
 
 Le remplacement ou la révocation d’un jeton/code QR n’a aucun effet sur les appareils qui sont déjà inscrits.
 
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Inscription des appareils** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) et choisissez **Appareils** > **Android** > **Inscription Android** > **Appareils utilisateur dédiés appartenant à l’entreprise**.
 2. Choisissez le profil à utiliser.
 3. Choisissez **Jeton**.
 4. Pour remplacer le jeton, choisissez **Remplacer le jeton**.
