@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a2575c0d4e6cdcfdffe09e37880f56647bc835
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496434"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563769"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune
 
@@ -71,53 +71,51 @@ Une fois Intune configuré dans votre organisation, vous pouvez créer une strat
 > Pour plus d’informations sur la création de stratégies WIP pour Intune, notamment les paramètres disponibles et la façon de les configurer, consultez [Créer une stratégie Protection des informations Windows (WIP) avec GAM à l’aide du portail Azure pour Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) dans la bibliothèque de documentation sur la sécurité Windows. 
 
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
-2. Choisissez **Tous les services** > **Intune**.
-3. Sélectionnez **Applications clientes** dans le panneau **Microsoft Intune**.
-4. Sélectionnez **Stratégies de protection des applications**  sur le panneau **Applications clientes**.
-5. Sélectionnez **Ajouter une stratégie** pour afficher le panneau **Ajouter une stratégie**.
-6. Ajoutez les valeurs suivantes :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de protection des applications** > **Créer une stratégie**.
+3. Ajoutez les valeurs suivantes :
     - **Nom :** tapez un nom (obligatoire) pour votre nouvelle stratégie.
     - **Description :** entrez une description (facultatif).
     - **Plateforme :** choisissez **Windows 10** comme plateforme prise en charge pour votre stratégie de protection d’application.
     - **État d’inscription :** choisissez **Sans inscription** comme état d’inscription de votre stratégie.
-7. Choisissez **Créer**. La stratégie est créée et apparaît dans le tableau du panneau **Stratégies de protection des applications**.
+4. Choisissez **Créer**. La stratégie est créée et apparaît dans le tableau du volet **Stratégies de protection des applications**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Pour ajouter les applications recommandées à votre liste d’applications protégées
 
-1. Sélectionnez **Applications clientes** dans le panneau **Microsoft Intune**.
-2. Sélectionnez **Stratégies de protection des applications**  sur le panneau **Applications clientes**.
-3. Sur le panneau **Stratégies de protection des applications**, choisissez la stratégie que vous souhaitez modifier. Le panneau **Protection des applications Intune** s’affiche.
-4. Choisissez **Applications protégées** dans le panneau **Protection des applications Intune**. Le panneau **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
-5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du panneau vous permet de modifier le filtre de la liste.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de protection des applications**.
+3. Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier. Le volet **Protection des applications Intune** s’affiche.
+4. Choisissez **Applications protégées** dans le volet **Protection des applications Intune**. Le volet **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
+5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du volet vous permet de modifier le filtre de la liste.
 6. Sélectionnez chaque application pouvant accéder à vos données d’entreprise.
-7. Cliquez sur **OK**. Le panneau **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
+7. Cliquez sur **OK**. Le volet **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
 8. Cliquez sur **Save**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Ajouter une application de Store à votre liste d’applications protégées
 
 **Pour ajouter une application du Windows Store**
-1. Sélectionnez **Applications clientes** dans le panneau **Microsoft Intune**.
-2. Sélectionnez **Stratégies de protection des applications**  sur le panneau **Applications clientes**.
-3. Sur le panneau **Stratégies de protection des applications**, choisissez la stratégie que vous souhaitez modifier. Le panneau **Protection des applications Intune** s’affiche.
-4. Choisissez **Applications protégées** dans le panneau **Protection des applications Intune**. Le panneau **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
-5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du panneau vous permet de modifier le filtre de la liste.
+
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de protection des applications**.
+3. Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier. Le volet **Protection des applications Intune** s’affiche.
+4. Choisissez **Applications protégées** dans le volet **Protection des applications Intune**. Le volet **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
+5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du volet vous permet de modifier le filtre de la liste.
 6. Dans la liste, sélectionnez **Applications Store**.
 7. Entrez les valeurs **Nom**, **Éditeur**, **Nom du produit** et **Action**. Veillez à définir la valeur **Action** sur **Autoriser**, de sorte que l’application ait accès à vos données d’entreprise.
-9. Cliquez sur **OK**. Le panneau **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
+9. Cliquez sur **OK**. Le volet **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
 10. Cliquez sur **Save**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Ajouter une application de bureau à votre liste d’applications protégées
 
 **Pour ajouter une application de bureau**
-1. Sélectionnez **Applications clientes** dans le panneau **Microsoft Intune**.
-2. Sélectionnez **Stratégies de protection des applications**  sur le panneau **Applications clientes**.
-3. Sur le panneau **Stratégies de protection des applications**, choisissez la stratégie que vous souhaitez modifier. Le panneau **Protection des applications Intune** s’affiche.
-4. Choisissez **Applications protégées** dans le panneau **Protection des applications Intune**. Le panneau **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
-5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du panneau vous permet de modifier le filtre de la liste.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de protection des applications**.
+3. Dans le volet **Stratégies de protection des applications**, choisissez la stratégie à modifier. Le volet **Protection des applications Intune** s’affiche.
+4. Choisissez **Applications protégées** dans le volet **Protection des applications Intune**. Le volet **Applications protégées** s’ouvre et affiche toutes les applications qui sont déjà incluses dans la liste pour cette stratégie de protection des applications.
+5. Sélectionnez **Ajouter des applications**. Les informations **Ajouter des applications** affichent une liste filtrée des applications. La liste en haut du volet vous permet de modifier le filtre de la liste.
 6. Dans la liste, sélectionnez **Applications de bureau**.
 7. Entrez les valeurs **Nom**, **Éditeur**, **Nom du produit**, **Fichier**, **Version mini**, **Version maxi** et **Action**. Veillez à définir la valeur **Action** sur **Autoriser**, de sorte que l’application ait accès à vos données d’entreprise.
-9. Cliquez sur **OK**. Le panneau **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
+9. Cliquez sur **OK**. Le volet **Applications protégées** est mis à jour et affiche toutes les applications sélectionnées.
 10. Cliquez sur **Save**.
 
 ## <a name="wip-learning"></a>WIP Learning
@@ -150,7 +148,7 @@ Après avoir désactivé WIP, une tentative est effectuée pour déchiffrer les 
 
 ### <a name="add-a-protection-mode"></a>Ajouter un mode de protection
 
-1. Dans le panneau **Stratégie d’application**, choisissez le nom de votre stratégie, puis **Paramètres obligatoires**.
+1. Dans le volet **Stratégie d’application**, choisissez le nom de votre stratégie, puis **Paramètres obligatoires**.
 
     ![Capture d’écran du volet Mode d’apprentissage](./media/windows-information-protection-policy-create/learning-mode-sc1.png)
 
@@ -160,7 +158,7 @@ Après avoir désactivé WIP, une tentative est effectuée pour déchiffrer les 
 
 1. Ouvrez le [portail Azure](https://portal.azure.com). Choisissez **Tous les services**. Tapez **Intune** dans la zone de texte du filtre.
 
-3. Choisissez **Intune** > **Applications clientes**.
+3. Choisissez **Intune** > **Applications**.
 
 4. Choisissez **État de protection de l’application** > **Rapports** > **Apprentissage Protection des informations Windows**.  
 
@@ -188,9 +186,9 @@ En plus de définir l’option **Autoriser l’indexeur de recherche Windows à 
 
 Une fois que vous avez créé votre stratégie de protection d’application WIP, vous devez la déployer dans votre organisation à l’aide de MAM.
 
-1. Dans le panneau **Stratégie d’application**, choisissez votre nouvelle stratégie de protection d’application, puis **Groupes d’utilisateurs** > **Ajouter un groupe d’utilisateurs**.
+1. Dans le volet **Stratégie d’application**, choisissez votre nouvelle stratégie de protection d’application, puis **Groupes d’utilisateurs** > **Ajouter un groupe d’utilisateurs**.
 
-    Une liste de groupes d’utilisateurs, composée de tous les groupes de sécurité figurant dans Azure Active Directory, s’ouvre dans le panneau **Ajouter un groupe d’utilisateurs**.
+    Une liste de groupes d’utilisateurs, composée de tous les groupes de sécurité figurant dans Azure Active Directory, s’ouvre dans le volet **Ajouter un groupe d’utilisateurs**.
 
 2. Choisissez le groupe auquel vous souhaitez appliquer votre stratégie, puis **Sélectionner** pour déployer la stratégie.
 

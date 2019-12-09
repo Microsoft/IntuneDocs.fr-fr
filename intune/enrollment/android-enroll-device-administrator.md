@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08193aa329a1bee4e66638de5c0d7518d15db2a4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 678eb92bb6f5f23756092cd5d9cc1a645e1e8db3
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547909"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562366"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscription de l’administrateur d’appareil Android
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur les fonctionnalités d’Android Enterprise de Go
 ## <a name="set-up-device-administrator-enrollment"></a>Configurer l’inscription de l’administrateur d’appareil
 
 1. Pour préparer la gestion des appareils mobiles, vous devez définir l’autorité de gestion des appareils mobiles (MDM) sur **Microsoft Intune**. Consultez la page [Configurer l’autorité MDM](../fundamentals/mdm-authority-set.md) pour obtenir des instructions. Cet élément ne se définit qu’une seule fois, quand vous configurez pour la première fois Intune pour la gestion des appareils mobiles.
-2. Accédez à **Intune** > **Inscription d’un appareil** > **Inscription Android** > **Appareils personnels et appartenant à l’entreprise avec privilèges d’administration d’appareils** > **Utiliser un administrateur d’appareils pour gérer les appareils**.
+2. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison](https://go.microsoft.com/fwlink/?linkid=2109431), puis choisissez > **Appareils** > **Android** > **Inscription Android** > **Appareils personnels et appartenant à l’entreprise avec privilèges d’administration d’appareils** > **Utiliser un administrateur d’appareils pour gérer les appareils**.
 3. [Indiquez à vos utilisateurs comment inscrire leurs appareils](/intune-user-help/enroll-your-device-in-intune-android).  
 
 Une fois qu’un utilisateur est inscrit, vous pouvez commencer à gérer ses appareils dans Intune, notamment [affecter des stratégies de conformité](../protect/compliance-policy-create-android.md), [gérer les applications](../apps/app-management.md), etc.

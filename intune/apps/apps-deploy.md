@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540743"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563995"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -55,13 +55,12 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 
 ## <a name="assign-an-app"></a>Attribuer une application
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
-4. Dans la section **Gérer** du menu, sélectionnez **Applications**.
-5. Dans le volet **Applications**, sélectionnez l’application que vous souhaitez attribuer.
-6. Dans la section **Gérer** du menu, sélectionnez **Affectations**.
-7. Sélectionnez **Ajouter un groupe** pour ouvrir le volet **Ajouter un groupe** lié à l’application.
-8. Pour l’application spécifique, sélectionnez un **type d’affectation** :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications**.
+3. Dans le volet **Applications**, sélectionnez l’application que vous souhaitez attribuer.
+4. Dans la section **Gérer** du menu, sélectionnez **Affectations**.
+5. Sélectionnez **Ajouter un groupe** pour ouvrir le volet **Ajouter un groupe** lié à l’application.
+6. Pour l’application spécifique, sélectionnez un **type d’affectation** :
    - **Disponible pour les appareils inscrits** : attribuez l’application à des groupes d’utilisateurs qui peuvent installer l’application à partir de l’application ou du site web Portail d’entreprise.
    - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les utilisateurs doivent disposer d’une licence Intune, consultez [Licences Intune](../fundamentals/licenses.md).
    - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés. Certaines plateformes peuvent avoir des invites supplémentaires dont l’utilisateur final doit accuser réception avant le démarrage de l’installation.
@@ -76,13 +75,13 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
      >
      > Pour **Disponible pour les appareils inscrits** : L’application s’affiche uniquement comme disponible si l’utilisateur connecté au Portail d’entreprise est l’utilisateur principal qui a inscrit l’appareil et si l’application s’applique à l’appareil.
 
-9. Sélectionnez **Groupes inclus** pour choisir les groupes d’utilisateurs concernés par cette attribution d’application.
-10. Cliquez sur **Sélectionner** une fois que vous avez sélectionné un ou plusieurs groupes à inclure.
-11. Dans le volet **Attribuer**, sélectionnez **OK** pour terminer la sélection des groupes inclus.
-12. Cliquez sur **Exclure des groupes** si vous voulez exclure des groupes d’utilisateurs d’un impact par cette attribution d’applications.
-13. Si vous avez choisi d’exclure des groupes, dans **Sélectionner des groupes**, choisissez **Sélectionner**.
-14. Dans le volet **Ajouter un groupe**, sélectionnez **OK**.
-15. Dans le volet **Affectations** de l’application, sélectionnez **Enregistrer**.
+7. Sélectionnez **Groupes inclus** pour choisir les groupes d’utilisateurs concernés par cette attribution d’application.
+8. Cliquez sur **Sélectionner** une fois que vous avez sélectionné un ou plusieurs groupes à inclure.
+9. Dans le volet **Attribuer**, sélectionnez **OK** pour terminer la sélection des groupes inclus.
+10. Cliquez sur **Exclure des groupes** si vous voulez exclure des groupes d’utilisateurs d’un impact par cette attribution d’applications.
+11. Si vous avez choisi d’exclure des groupes, dans **Sélectionner des groupes**, choisissez **Sélectionner**.
+12. Dans le volet **Ajouter un groupe**, sélectionnez **OK**.
+13. Dans le volet **Affectations** de l’application, sélectionnez **Enregistrer**.
 
 L’application est maintenant attribuée aux groupes que vous avez sélectionnés. Pour en savoir plus sur l’inclusion et l’exclusion des attributions d’applications, consultez [Inclure et exclure des attributions d’applications](apps-inc-exl-assignments.md).
 

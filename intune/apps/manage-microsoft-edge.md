@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754412"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563899"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -58,15 +58,15 @@ Si Microsoft Edge n’est pas ciblé avec la stratégie Intune, les utilisateurs
 Vous pouvez utiliser l’accès conditionnel Azure AD pour rediriger vos utilisateurs vers du contenu d’entreprise uniquement par le biais de Microsoft Edge. Cela limite l’accès du navigateur mobile aux applications web connectées à Azure AD vers Microsoft Edge protégé par une stratégie. L’accès à partir de n’importe quel autre navigateur non protégé, comme Safari ou Chrome, est alors bloqué. Vous pouvez appliquer l’accès conditionnel aux ressources Azure comme Exchange Online et SharePoint Online, le Centre d’administration Microsoft 365 et même les sites locaux exposés aux utilisateurs externes par le biais du [Proxy d’application Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
 Pour obliger les applications web connectées à Azure AD à utiliser Microsoft Edge sur iOS et Android :
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sous le nœud Intune, sélectionnez **Accès conditionnel** > **Nouvelle stratégie**.
-3. Sélectionnez **Octroi** dans la section **Contrôles d’accès** du panneau.
+3. Sélectionnez **Octroi** dans la section **Contrôles d’accès** du volet.
 4. Sélectionnez **Demander une application cliente approuvée**.
-5. Choisissez **Sélectionner** dans le panneau **Octroi**. Cette stratégie doit être attribuée aux applications cloud à rendre accessibles uniquement pour l’application Intune Managed Browser.
+5. Choisissez **Sélectionner** dans le volet **Octroi**. Cette stratégie doit être attribuée aux applications cloud à rendre accessibles uniquement pour l’application Intune Managed Browser.
 
     ![Capture d’écran de Stratégie d’accès conditionnel : octroi](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. Dans la section Affectations, sélectionnez **Conditions** > **Applications clientes**. Le panneau **Applications clientes** s’affiche.
+6. Dans la section Affectations, sélectionnez **Conditions** > **Applications**. Le volet **Applications** apparaît.
 7. Sous **Configurer**, sélectionnez **Oui** pour appliquer la stratégie à des applications clientes spécifiques.
 8. Vérifiez que **Browser** est sélectionné comme application cliente.
 
@@ -97,29 +97,29 @@ Pour pouvoir utiliser l’authentification unique, votre appareil doit être ins
 
 Pour créer la configuration d’application pour Microsoft Edge :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Applications clientes** > **Stratégies de configuration des applications** > **Ajouter**.
-3. Dans le panneau **Ajouter une stratégie de configuration**, entrez un **Nom** et une **Description** facultative pour les paramètres de configuration de l’application.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter**.
+3. Dans le volet **Ajouter une stratégie de configuration**, entrez un **Nom** et une **Description** facultative pour les paramètres de configuration de l’application.
 4. Pour **Inscription de l’appareil**, choisissez **Applications gérées**.
-5. Choisissez **Sélectionner l’application requise**. Puis, sur le panneau **Applications ciblées** choisissez **Managed Browser** ou **Edge** pour iOS, Android ou les deux.
-6. Sélectionnez **OK** pour revenir au panneau **Ajouter une stratégie de configuration**.
-7. Sélectionnez **Paramètres de configuration**. Dans le panneau **Configuration**, vous définissez des paires clé-valeur pour fournir des configurations pour Microsoft Edge. Consultez les sections plus bas dans cet article pour en savoir plus sur les différentes paires clé/valeur que vous pouvez définir.
+5. Choisissez **Sélectionner l’application requise**. Puis, sur le volet **Applications ciblées** choisissez **Managed Browser** ou **Edge** pour iOS, Android ou les deux.
+6. Sélectionnez **OK** pour revenir au volet **Ajouter une stratégie de configuration**.
+7. Sélectionnez **Paramètres de configuration**. Dans le volet **Configuration**, vous définissez des paires clé-valeur pour fournir des configurations pour Microsoft Edge. Consultez les sections plus bas dans cet article pour en savoir plus sur les différentes paires clé/valeur que vous pouvez définir.
 
     > [!NOTE]
     > Microsoft Edge utilise les mêmes paires clé/valeur que Managed Browser. Sur Android, Microsoft Edge doit être ciblé avec des stratégies de protection d’applications pour que les stratégies de configuration des applications prennent effet.
 
 8. Une fois ces opérations effectuées, sélectionnez **OK**.
-9. Dans le panneau **Ajouter une stratégie de configuration**, choisissez **Ajouter**.<br>
-    La nouvelle configuration est créée et s’affiche dans le panneau **Configuration des applications**.
+9. Dans le volet **Ajouter une stratégie de configuration**, choisissez **Ajouter**.<br>
+    La nouvelle configuration est créée et s’affiche dans le volet **Configuration des applications**.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Affecter les paramètres de configuration que vous avez créés 
 
 Vous attribuez les paramètres à des groupes d’utilisateurs dans Azure AD. Si cet utilisateur a installé l’application de navigateur protégé ciblée, cette dernière est gérée par les paramètres que vous avez spécifiés.
 
-1. Dans le panneau **Applications clientes** du tableau de bord de gestion des applications mobiles Intune, sélectionnez **Stratégies de configuration des applications**.
+1. Dans le volet **Applications** du tableau de bord de gestion des applications mobiles Intune, sélectionnez **Stratégies de configuration des applications**.
 2. Dans la liste de configurations de l’application, sélectionnez celle que vous souhaitez affecter.
-3. Dans le panneau suivant, sélectionnez **Affectations**.
-4. Dans le panneau **Affectations**, sélectionnez le groupe Azure AD auquel vous voulez attribuer la configuration d’application, puis sélectionnez **OK**.
+3. Dans le volet suivant, sélectionnez **Affectations**.
+4. Dans le volet **Affectations**, sélectionnez le groupe Azure AD auquel vous voulez attribuer la configuration d’application, puis sélectionnez **OK**.
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Diriger les utilisateurs vers Microsoft Edge plutôt que vers Intune Managed Browser 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56814550cae814bd89d55a6f72df98dd24df4caf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507468"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564366"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -76,14 +76,14 @@ Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer
 
 ## <a name="get-started"></a>Prise en main
 
-Vous pouvez trouver la plupart des informations relatives aux applications dans la charge de travail **Applications clientes**, à laquelle vous pouvez accéder comme suit :
+Vous trouverez la plupart des informations relatives aux applications dans la charge de travail **Applications**, à laquelle vous pouvez accéder comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Microsoft Intune**, sélectionnez **Applications clientes**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **Applications**.
 
-    ![Volet de la charge de travail « Applications clientes »](./media/app-management/apps-workload.png)
+    ![Volet de la charge de travail Applications](./media/app-management/apps-workload.png)
 
-Les quatre prochaines sections décrivent les options disponibles dans le volet **Applications clientes**.
+Les quatre prochaines sections décrivent les options disponibles dans le volet **Applications**.
 
 ### <a name="manage"></a>Gestion
 - **Applications** : sélectionnez cette option pour ajouter, afficher, affecter et analyser les applications que le personnel utilise. Pour plus d'informations, voir :

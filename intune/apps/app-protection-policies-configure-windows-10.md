@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e1ff8fd39d301bd685e9806c319f49e9189d7f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 41c08d1912bf9c79507c2a6627205979504f340d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507418"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564239"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Préparer la configuration des stratégies de protection d’application pour Windows 10 
 
@@ -33,13 +33,12 @@ Activez la gestion des applications mobiles (GAM) pour Windows 10 en définissan
 
 ## <a name="to-configure-the-mam-provider"></a>Pour configurer le fournisseur MAM
 
-1. Connectez-vous au portail Azure et sélectionnez **Azure Active Directory**.
-
-2. Sélectionnez **Mobilité (MDM et GAM)** dans le groupe **Gérer**.
-
-3. Cliquez sur **Microsoft Intune**.
-
-4. Configurez les paramètres dans le groupe **Restaurer les URL Gestion des applications mobiles par défaut** du panneau **Configurer**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Tous les services**, puis **M365 Azure Active Directory** pour basculer entre les tableaux de bord.
+3. Sélectionnez **Azure Active Directory**.
+4. Sélectionnez **Mobilité (MDM et GAM)** dans le groupe **Gérer**.
+5. Cliquez sur **Microsoft Intune**.
+6. Configurez les paramètres dans le groupe **Restaurer les URL Gestion des applications mobiles par défaut** du volet **Configurer**.
 
    **Portée de l'utilisateur Gestion des applications mobiles**  
    Utilisez l’inscription automatique GAM pour gérer les données d’entreprise sur les périphériques Windows de vos employés. L’inscription automatique GAM sera configurée pour des scénarios BYOD (Apportez votre propre appareil).<ul><li>**Aucune.**<br>Sélectionnez cette option si aucun utilisateur ne peut être inscrit dans MAM.</li><li>**Quelques-uns**<br>Sélectionnez les groupes Azure AD qui contiennent les utilisateurs qui seront inscrits dans GAM.</li><li>**Tous**<br>Sélectionnez cette option si tous les utilisateurs peuvent être inscrits dans GAM.</li></ul>
@@ -53,7 +52,7 @@ Activez la gestion des applications mobiles (GAM) pour Windows 10 en définissan
    **URL de conformité GAM**  
    L’URL de conformité MAM n’est pas prise en charge pour Microsoft Intune. Cette zone d’entrée doit être vide pour appliquer des stratégies de protection. 
 
-5. Cliquez sur **Save**.
+7. Cliquez sur **Save**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

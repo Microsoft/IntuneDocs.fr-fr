@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754843"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563581"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Ajouter Microsoft Edge sur les appareils macOS à l’aide de Microsoft Intune
 
@@ -40,15 +40,15 @@ Pour pouvoir déployer, configurer, superviser ou protéger des applications, vo
 ## <a name="add-microsoft-edge-to-intune"></a>Ajouter Microsoft Edge à Intune
 Vous pouvez ajouter Microsoft Edge version 77 ou ultérieure à Intune en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications** > **Ajouter**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 3. Dans la liste **Type d’application**, sous **Microsoft Edge, version 77 ou ultérieure**, sélectionnez **macOS**.
 
 ## <a name="configure-app-information"></a>Configurer les informations de l’application
 Dans cette étape, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
 
-1. Cliquez sur **Informations sur l’application** pour afficher le panneau **Informations sur l’application**.
-2. Dans le panneau **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
+1. Cliquez sur **Informations sur l’application** pour afficher le volet **Informations sur l’application**.
+2. Dans le volet **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
     - **Nom** : Entrez le nom de l'application tel qu'il s'affichera dans le portail d'entreprise. Assurez-vous que tous les noms sont uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description** : Entrez une description de l'application. Par exemple, vous pouvez lister les utilisateurs ciblés dans la description.
     - **Éditeur** : Microsoft apparaît comme éditeur.
@@ -64,8 +64,8 @@ Dans cette étape, vous fournissez des informations sur le déploiement de cette
 ## <a name="configure-microsoft-edge-settings"></a>Configurer les paramètres Microsoft Edge
 Dans cette étape, configurez les options d’installation de l’application.
 
-1. Dans le panneau **Ajouter une application**, sélectionnez **Paramètres de l’application**.
-2. Dans le panneau **Paramètres de l’application**, le canal **Bêta** est automatiquement sélectionné et ne peut pas être modifié.
+1. Dans le volet **Ajouter une application**, sélectionnez **Paramètres de l’application**.
+2. Dans le volet **Paramètres de l’application**, le canal **Bêta** est automatiquement sélectionné et ne peut pas être modifié.
     - Le canal **Bêta** correspond à l’expérience de préversion la plus stable de Microsoft Edge et au meilleur choix pour un pilote complet au sein de votre organisation. Avec des mises à jour majeures toutes les six semaines.
 
     > [!NOTE]
@@ -80,7 +80,7 @@ Vous pouvez utiliser des balises d’étendue pour déterminer qui peut afficher
 4.  Cliquez sur **Sélectionner** > **OK**.
 
 ## <a name="add-the-app"></a>Ajouter l’application
-Une fois que vous avez terminé la configuration, sélectionnez **Ajouter** dans le panneau **Ajouter une application**. 
+Une fois que vous avez terminé la configuration, sélectionnez **Ajouter** dans le volet **Ajouter une application**. 
 
 L’application créée s’affiche dans la liste des applications, où vous pouvez l’affecter aux groupes de votre choix. 
 

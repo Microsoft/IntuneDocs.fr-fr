@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcda312274e78d327a3a515eb6c95454e38c96f1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1800fa91ed5650fd57a31d24fdb3767a60dc5816
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507122"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563790"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Démarrage rapide : Créer et affecter une stratégie de protection des applications
 
@@ -43,7 +43,7 @@ Connectez-vous à [Intune](https://aka.ms/intuneportal) en tant qu’[administra
 
 Effectuez les étapes suivantes pour créer une stratégie de protection des applications :
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications clientes** > **Stratégies de protection des applications** > **Créer une stratégie**. 
+1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications** > **Stratégies de protection des applications** > **Créer une stratégie**. 
 2. Entrez les informations suivantes : 
 
     - **Nom** : *Protection du contenu Windows 10*
@@ -67,7 +67,7 @@ Une fois que vous avez créé une stratégie de protection des applications dans
 
 Effectuez les étapes suivantes pour attribuer la stratégie de protection des applications :
 
-1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Intune** > **Applications clientes** > **Stratégies de protection des applications**. 
+1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Intune** > **Applications** > **Stratégies de protection des applications**. 
 2. Sélectionnez la stratégie de protection des applications que vous avez créée précédemment. Dans ce guide de démarrage rapide, la stratégie s’appelle **Protection du contenu Windows 10**.
 3. Sélectionnez **Affectations**.
 4. Cliquez sur **Sélectionner les groupes à inclure** dans l’onglet **Inclure**.

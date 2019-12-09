@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3137db9d1ab82ebb99686f8f98aa768dae222caf
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 0e57aa0546950a12cdb2d4a2e3c8ed721bfc24b8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584959"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564151"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Ajouter des applications de Google Play géré à des appareils d’entreprise Android avec Intune
 
@@ -62,17 +62,16 @@ Il existe deux façons de parcourir et d’approuver des applications Google Pla
 
 ### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Ajouter une application Google Play Store gérée directement dans la console Intune
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
-5. Dans le volet **Applications**, sélectionnez **Ajouter**.
-6. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
-7. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
-7. Sélectionnez **Rechercher dans Play Store** dans le catalogue Google Play.
-8. Utilisez la zone de recherche pour rechercher des applications que vous souhaitez gérer.
-9. Cliquez sur **Approuver** pour approuver l’application Google Play managée, puis sur **Approuver** pour accepter les autorisations de l’application.
-10. Sélectionnez **Keep approved when app requests new permissions** (Laisser approuvé quand l’application demande de nouvelles autorisations) dans la fenêtre Paramètres d’autorisation, puis cliquez sur **Enregistrer**. Si vous ne choisissez pas cette option, vous devez approuver manuellement les nouvelles autorisations si le développeur d’applications publie une mise à jour. Les installations et les mises à jour de l’application sont stoppées jusqu'à ce que les autorisations soient approuvées. Pour cette raison, il est recommandé de sélectionner l’option permettant d’approuver automatiquement de nouvelles autorisations. 
-11. Cliquez sur **OK** pour inclure la ou les applications approuvées.
-12. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
+4. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
+5. Sélectionnez **Rechercher dans Play Store** dans le catalogue Google Play.
+6. Utilisez la zone de recherche pour rechercher des applications que vous souhaitez gérer.
+7. Cliquez sur **Approuver** pour approuver l’application Google Play managée, puis sur **Approuver** pour accepter les autorisations de l’application.
+8. Sélectionnez **Keep approved when app requests new permissions** (Laisser approuvé quand l’application demande de nouvelles autorisations) dans la fenêtre Paramètres d’autorisation, puis cliquez sur **Enregistrer**. Si vous ne choisissez pas cette option, vous devez approuver manuellement les nouvelles autorisations si le développeur d’applications publie une mise à jour. Les installations et les mises à jour de l’application sont stoppées jusqu'à ce que les autorisations soient approuvées. Pour cette raison, il est recommandé de sélectionner l’option permettant d’approuver automatiquement de nouvelles autorisations. 
+9. Cliquez sur **OK** pour inclure la ou les applications approuvées.
+10. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré.
 
 ### <a name="add-a-managed-google-play-store-app-in-the-managed-google-play-console-alternative"></a>Ajouter une application Google Play Store gérée dans la console Google Play gérée (alternative)
 Si vous préférez synchroniser une application Google Play géré avec Intune, au lieu de l’ajouter directement à l’aide d’Intune, effectuez les étapes ci-après.
@@ -108,17 +107,16 @@ Il existe deux façons d’ajouter des applications métier à Google Play gér�
 
 ### <a name="managed-google-play-private-lob-app-publishing-directly-in-the-intune-console"></a>Publication d’applications Google Play gérées privées (métier) directement dans la console Intune
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
-5. Dans le volet **Applications**, sélectionnez **Ajouter**.
-6. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
-7. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
-7. Sélectionnez **Applications privées** dans le catalogue Google Play.
-7. Cliquez sur le bouton **« + »** pour ajouter une nouvelle application
-8. Envoyer un titre d’application et un package APK pour l’application
-9. Cliquez sur **Créer**
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
+4. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
+5. Sélectionnez **Applications privées** dans le catalogue Google Play.
+6. Cliquez sur le bouton **« + »** pour ajouter une nouvelle application
+7. Envoyer un titre d’application et un package APK pour l’application
+8. Cliquez sur **Créer**
 9. Fermez le volet Google Play géré si vous avez fini d’ajouter des applications
-12. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré. Notez que les applications privées peuvent nécessiter plusieurs minutes pour être synchronisées. Si elle n’apparaît pas la première fois que vous effectuez une synchronisation, patientez quelques minutes et lancez une nouvelle synchronisation.
+10. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré. Notez que les applications privées peuvent nécessiter plusieurs minutes pour être synchronisées. Si elle n’apparaît pas la première fois que vous effectuez une synchronisation, patientez quelques minutes et lancez une nouvelle synchronisation.
 
 Pour plus d’informations sur les applications Google Play gérées privées, avec notamment un Forum aux questions, consultez l’article du support technique de Google : https://support.google.com/googleplay/work/answer/9146439
 
@@ -151,32 +149,30 @@ Les liens web s’ouvrent avec Microsoft Edge ou toute autre application de navi
 > [!IMPORTANT]
 > En date de la publication de ce document, il existe un bogue de Google connu qui empêche les liens web de s’ouvrir sur des appareils avec des navigateurs autres que Chrome. Google s’est engagé à résoudre ce bogue.  Cet avis sera supprimé lorsque Microsoft aura confirmé que Google a publié son correctif.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
-5. Dans le volet **Applications**, sélectionnez **Ajouter**.
-6. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
-7. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
-7. Sélectionnez **Applications web** dans le catalogue Google Play.
-7. Cliquez sur le bouton **« + »** pour ajouter une nouvelle application
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans la liste déroulante **Type d’application**, sélectionnez **Google Play géré**.
+4. Sélectionnez **Google Play managé - Ouvrir** pour ouvrir le catalogue Google Play managé.
+5. Sélectionnez **Applications web** dans le catalogue Google Play.
+6. Cliquez sur le bouton **« + »** pour ajouter une nouvelle application
 7. Entrez les informations demandées, puis cliquez sur **Créer**
-7. Fermez le volet Google Play géré si vous avez fini d’ajouter des applications
-12. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré. Notez que les applications privées peuvent nécessiter plusieurs minutes pour être synchronisées. Si elle n’apparaît pas la première fois que vous effectuez une synchronisation, patientez quelques minutes et lancez une nouvelle synchronisation.
+8. Fermez le volet Google Play géré si vous avez fini d’ajouter des applications
+9. Cliquez sur **Synchroniser** dans le volet **Application** pour vous synchroniser avec le service Google Play géré. Notez que les applications privées peuvent nécessiter plusieurs minutes pour être synchronisées. Si elle n’apparaît pas la première fois que vous effectuez une synchronisation, patientez quelques minutes et lancez une nouvelle synchronisation.
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchroniser une application de Google Play géré avec Intune
 
-Si vous avez approuvé une application à partir du Store et qu’elle ne se trouve pas dans la charge de travail **Applications clientes**, forcez une synchronisation immédiate en procédant de la manière suivante :
+Si vous avez approuvé une application à partir du Store et qu’elle ne se trouve pas dans la charge de travail **Applications**, forcez une synchronisation immédiate en procédant de la manière suivante :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
-4. Dans le volet de la charge de travail **Applications clientes**, sous **Installation**, sélectionnez **Google Play géré**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **Applications** > **Administration client** > **Connecteurs et jetons** > **Google Play géré**.
 5. Dans le volet **Google Play géré**, choisissez **Actualiser**.  
     La page met à jour l’heure et l’état de la dernière synchronisation.
-6. Dans le volet de la charge de travail **Applications clientes**, sélectionnez **Applications**.  
+6. Dans le Centre d’administration du Gestionnaire de points de terminaison Microsoft, sélectionnez **Applications** > **Toutes les applications**.  
     L’application Google Play géré nouvellement disponible est affichée.
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Affectation d’applications Google Play gérées supplémentaires à des appareils avec profil professionnel Android Entreprise
 
-Quand l’application s’affiche dans le nœud **Applications sous licence** du volet de la charge de travail **Applications clientes**, vous pouvez [l’assigner comme toute autre application](/intune-azure/manage-apps/deploy-apps) en l’assignant à des groupes d’utilisateurs.
+Quand l’application s’affiche dans le nœud **Applications sous licence** du volet de la charge de travail **Applications**, vous pouvez [l’assigner comme toute autre application](/intune-azure/manage-apps/deploy-apps) en l’assignant à des groupes d’utilisateurs.
 
 Une fois l’application affectée, elle est installée (ou disponible pour installation) sur les appareils des utilisateurs que vous avez ciblés. L’utilisateur de l’appareil n’est pas invité à approuver l’installation. Pour plus d’informations sur les appareils de profil professionnel Android Entreprise, consultez [Configurer l’inscription d’appareils de profil professionnel Android Entreprise](../enrollment/android-work-profile-enroll.md). 
 
@@ -213,7 +209,7 @@ Vous pouvez également configurer Google Play pour réapprouver automatiquement 
 Pour les applications Google Play gérées qui sont déployées sur des appareils avec profil professionnel Android Entreprise, vous pouvez afficher l’état et le numéro de version de l’application installée sur un appareil à l’aide d’Intune. 
 
 ## <a name="delete-managed-google-play-apps"></a>Supprimer des applications Google Play géré
-Si besoin, vous pouvez supprimer des applications Google Play géré à partir de Microsoft Intune. Pour supprimer une application Google Play géré, ouvrez Microsoft Intune dans le portail Azure et sélectionnez **Applications clientes** > **Applications**. À partir de la liste des applications, sélectionnez les points de suspension (...) à droite de l’application Google Play géré, puis sélectionnez **Supprimer** dans la liste affichée. Lorsque vous supprimez une application Google Play gérée à partir de la liste des applications, l’application Google Play gérée devient automatiquement non approuvée.
+Si besoin, vous pouvez supprimer des applications Google Play géré à partir de Microsoft Intune. Pour supprimer une application Google Play géré, ouvrez Microsoft Intune dans le portail Azure et sélectionnez **Applications** > **Toutes les applications**. À partir de la liste des applications, sélectionnez les points de suspension (...) à droite de l’application Google Play géré, puis sélectionnez **Supprimer** dans la liste affichée. Lorsque vous supprimez une application Google Play gérée à partir de la liste des applications, l’application Google Play gérée devient automatiquement non approuvée.
 
 ## <a name="android-enterprise-system-apps"></a>Applications système Android Entreprise
 

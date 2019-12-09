@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143215"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564021"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -101,11 +101,11 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications** > **Ajouter**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 4. Dans le volet d’application **Ajouter**, sélectionnez **Application Windows (Win32)** dans la liste déroulante fournie.
 
-    ![Capture d’écran du panneau Ajouter une application - Liste déroulante Ajouter un type](./media/apps-win32-app-management/apps-win32-app-01.png)
+    ![Capture d’écran du volet Ajouter une application - Liste déroulante Ajouter un type](./media/apps-win32-app-management/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Étape 2 : Charger le fichier de package d’application
 
@@ -180,7 +180,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
     - **Nombre minimal de processeurs logiques nécessaires** : vous pouvez ajouter le nombre minimal de processeurs logiques nécessaires pour installer l’application.
     - **Vitesse minimale du processeur nécessaire (MHz)** : vous pouvez ajouter la vitesse de processeur minimale nécessaire pour installer l’application.
 
-3. Cliquez sur **Ajouter** pour afficher le panneau **Ajouter une règle de spécification** et configurez d’autres règles de spécification. Sélectionnez le **type de spécification** pour choisir le type de règle que vous allez utiliser pour déterminer le mode de validation d’une spécification. Les règles de spécification peuvent se baser sur des informations du système de fichiers, des valeurs de Registre ou des scripts PowerShell. 
+3. Cliquez sur **Ajouter** pour afficher le volet **Ajouter une règle de spécification** et configurez d’autres règles de spécification. Sélectionnez le **type de spécification** pour choisir le type de règle que vous allez utiliser pour déterminer le mode de validation d’une spécification. Les règles de spécification peuvent se baser sur des informations du système de fichiers, des valeurs de Registre ou des scripts PowerShell. 
     - **Fichier** : Quand vous choisissez **Fichier** en tant que **type de spécification**, la règle de spécification doit détecter un fichier ou dossier, une date, une version ou une taille. 
         - **Chemin** : Chemin complet du dossier contenant le fichier ou dossier à détecter.
         - **Fichier ou dossier** : Fichier ou dossier à détecter.
@@ -297,7 +297,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 ## <a name="app-dependencies"></a>Dépendances d’application
 
-Les dépendances d’application sont des applications que vous devez installer avant votre application Win32. Vous pouvez exiger que d’autres applications soient installées en tant que dépendances. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Le nombre maximal de dépendances s’élève à 100. Il inclut les dépendances de toutes les dépendances incluses, ainsi que l’application elle-même. Vous pouvez ajouter des dépendances d’application Win32 uniquement une fois que votre application Win32 a été ajoutée et chargée dans Intune. Une fois que votre application Win32 a été ajoutée, l’option **Dépendances** apparaît dans le panneau de votre application Win32. 
+Les dépendances d’application sont des applications que vous devez installer avant votre application Win32. Vous pouvez exiger que d’autres applications soient installées en tant que dépendances. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Le nombre maximal de dépendances s’élève à 100. Il inclut les dépendances de toutes les dépendances incluses, ainsi que l’application elle-même. Vous pouvez ajouter des dépendances d’application Win32 uniquement une fois que votre application Win32 a été ajoutée et chargée dans Intune. Une fois que votre application Win32 a été ajoutée, l’option **Dépendances** apparaît dans le volet de votre application Win32. 
 
 Toute dépendance d’application Win32 doit également être une application Win32. Elle ne prend pas en charge la dépendance envers d’autres types d’applications, telles que les applications LOB MSI uniques ou les applications du Store.
 
@@ -307,7 +307,7 @@ Vous pouvez choisir d’installer automatiquement ou non chaque application dép
 
 Pour ajouter une dépendance d’application à votre application Win32, utilisez les étapes suivantes :
 
-1. Dans Intune, sélectionnez **Applications clientes** > **Applications** pour voir la liste de vos applications clientes ajoutées. 
+1. Dans Intune, sélectionnez **Applications** > **Toutes les applications** pour voir la liste de vos applications clientes ajoutées. 
 2. Sélectionnez une **application Windows (Win32)** ajoutée. 
 3. Sélectionnez **Dépendances** pour ajouter la ou les applications dépendantes à installer avant l’application Win32. 
 4. Cliquez sur **Ajouter** pour ajouter une dépendance d’application.
@@ -343,8 +343,8 @@ Vous pouvez configurer l’heure de début et l’échéance d’une application
 
 Définissez la disponibilité de l’application en fonction de la date et de l’heure d’une application requise, en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications**.
 3. Sélectionnez une **application Windows (Win32)** existante dans la liste. 
 4. Dans le volet de l’application, sélectionnez **Attributions** > **Ajouter un groupe**. 
 5. Affectez la valeur **Obligatoire** à **Type d’affectation**. Notez que la disponibilité des applications peut être définie en fonction du type d’attribution. Le **Type d’attribution** peut être **Requis** **Disponible pour les appareils inscrits** ou **Désinstaller**.
@@ -362,14 +362,14 @@ Définissez la disponibilité de l’application en fonction de la date et de l�
 10. Définissez la **disponibilité de l’application** sur **une date et une heure spécifiques**, puis sélectionnez la date et l’heure. Ces date et heure spécifient le moment où l’application est téléchargée sur l’appareil des utilisateurs finaux. 
 11. Définissez l’**échéance d’installation de l’application** sur **une date et une heure spécifiques**, puis sélectionnez la date et l’heure. Ces date et heure spécifient le moment où l’application est installée sur l’appareil des utilisateurs finaux. Lorsque plusieurs attributions sont effectuées pour le même utilisateur ou appareil, l’heure d’échéance de l’installation de l’application est choisie en fonction de l’heure la plus proche possible.
 12. Cliquez sur **Activé** en regard de **Période de grâce de redémarrage**. La période de grâce de redémarrage démarre dès que l’installation de l’application est terminée sur l’appareil. Lorsque cette option est désactivée, l’appareil peut redémarrer sans avertissement. <br>Vous pouvez personnaliser les options suivantes :
-    - **Période de grâce de redémarrage de l’appareil (minutes)**  : La valeur par défaut est 1440 minutes (24 heures). Cette valeur est limité à 2 semaines.
+    - **Période de grâce de redémarrage de l’appareil (minutes)**  : La valeur par défaut est 1440 minutes (24 heures). Cette valeur est limité à 2 semaines.
     - **Sélectionner quand afficher la boîte de dialogue de compte à rebours avant le redémarrage (en minutes)**  : La valeur par défaut est 15 minutes.
     - **Autoriser l’utilisateur à répéter la notification de redémarrage** : Vous pouvez choisir **Oui** ou **Non**.
         - **Sélectionner la durée de répétition (en minutes)**  : La valeur par défaut est 240 minutes (4 heures). La valeur de répétition ne peut pas être supérieure à la période de grâce de redémarrage.
 13. Cliquez sur **OK** > **OK** > **OK** > **Enregistrer** pour ajouter l’attribution.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Notifications toast pour les applications Win32 
-Si nécessaire, vous pouvez supprimer l’affichage des notifications toast à l’utilisateur final par affectation d’applications. Dans Intune, sélectionnez **Applications clientes** > **Applications** > sélectionnez l’application > **Affectations** > **Inclure les groupes**. 
+Si nécessaire, vous pouvez supprimer l’affichage des notifications toast à l’utilisateur final par affectation d’applications. Dans Intune, sélectionnez **Applications** > **Toutes les applications** > sélectionnez l’application > **Affectations** > **Inclure les groupes**. 
 
 > [!NOTE]
 > Les applications Win32 installées par l’extension de gestion Intune ne sont pas désinstallées sur les appareils non inscrits. Les administrateurs peuvent exploiter l’exclusion des affectations pour ne pas offrir les applications Win32 aux appareils BYOD.

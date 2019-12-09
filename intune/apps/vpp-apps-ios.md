@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984105"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563825"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -82,8 +82,8 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Pour obtenir et charger un jeton Apple VPP
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, choisissez **Applications clientes** > **Jetons VPP Apple** sous **Installation**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **Administration client** > **Connecteurs et jetons** > **Jetons VPP Apple**.
 4. Dans le volet qui présente la liste des jetons VPP, sélectionnez **Créer**.
 5. Dans le volet **Créer un jeton VPP**, spécifiez les informations suivantes :
     - **Fichier de jeton VPP** : si vous ne l’avez pas encore fait, inscrivez-vous au Programme d’achat en volume Apple pour les entreprises ou au programme pour les organismes éducatifs. Après inscription, téléchargez le jeton VPP Apple de votre compte et sélectionnez-le ici.
@@ -110,7 +110,7 @@ Vous pouvez synchroniser les données détenues par Apple avec Intune à tout mo
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Pour affecter une application achetée en volume
 
-1. Dans le volet **Intune**, choisissez **Applications clientes** > **Applications** sous **Gérer**.
+1. Sélectionnez **Applications** > **Toutes les applications**.
 2. Dans le volet qui présente la liste des applications, choisissez l’application que vous voulez assigner, puis choisissez **Attributions**.
 3. Dans le volet ***Nom de l’application*** - **Attributions**, choisissez **Ajouter des groupes** puis, dans le volet **Ajouter des groupes**, choisissez un **Type d’attribution** et choisissez les groupes d’utilisateurs ou d’appareils Azure AD auxquels vous voulez assigner l’application.
 5. Pour chaque groupe que vous avez sélectionné, choisissez les paramètres suivants :
@@ -176,8 +176,8 @@ Actuellement, vous ne pouvez pas supprimer une application VPP iOS à partir de 
 
 L’accès aux jetons VPP Apple et aux applications VPP peut être contrôlé indépendamment à l’aide d’autorisations affectées à des rôles d’administrateur personnalisés dans Intune.
 
-* Pour permettre à un rôle personnalisé Intune de gérer des jetons VPP Apple sous **Applications clientes** > **Jetons VPP Apple**, affectez des autorisations pour les **applications gérées**.
-* Pour permettre à un rôle personnalisé Intune de gérer des applications achetées avec des jetons VPP iOS sous **Applications clientes** > **Applications**, affectez des autorisations pour les **applications mobiles**. 
+* Pour permettre à un rôle personnalisé Intune de gérer des jetons VPP Apple sous **Applications** > **Jetons VPP Apple**, affectez des autorisations pour les **applications gérées**.
+* Pour permettre à un rôle personnalisé Intune de gérer des applications achetées avec des jetons VPP iOS sous **Applications** > **Toutes les applications**, affectez des autorisations pour les **applications mobiles**. 
 
 ## <a name="additional-information"></a>Informations supplémentaires
 
@@ -196,7 +196,7 @@ La licence doit être mise à jour dans les heures qui suivent l’installation 
 Oui. L’administrateur Intune peut manquer d’abonnements pour une application. C’est le cas, par exemple, si l’administrateur achète 100 licences pour l’application XYZ, puis cible un groupe de 500 membres. Les 100 premiers membres (utilisateurs ou appareils) reçoivent la licence qui leur est affectée. En revanche, aucune licence n’est affectée aux membres restants.
 
 ### <a name="how-frequently-does-intune-sync-vpp-tokens-with-apple"></a>À quelle fréquence Intune synchronise-t-il les jetons VPP avec Apple ?
-Intune synchronise les jetons VPP et les licences deux fois par jour avec Apple. L’administrateur Intune peut lancer une synchronisation manuelle sous **Applications clientes** > **Jetons VPP Apple**.
+Intune synchronise les jetons VPP et les licences deux fois par jour avec Apple. L’administrateur Intune peut lancer une synchronisation manuelle sous **Applications** > **Jetons VPP Apple**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

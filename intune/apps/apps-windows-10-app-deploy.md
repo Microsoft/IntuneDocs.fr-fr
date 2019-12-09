@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ce24081eae1808d3db0c5078026b306fd209d5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507244"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563941"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -51,9 +51,10 @@ Les applications Microsoft Store pour Entreprises sont des applications modernes
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Catégoriser les applications du Microsoft Store pour Entreprises 
 Pour catégoriser les applications du Microsoft Store pour Entreprises : 
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Applications clientes** > **Applications**. Sélectionnez une application du Microsoft Store pour Entreprises. Sélectionnez ensuite **Informations sur l’application** > **Catégorie**. 
-3. Sélectionnez une catégorie.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications**. 
+3. Sélectionnez une application du Microsoft Store pour Entreprises. Puis sélectionnez **Propriétés** > **Informations sur l’application** > **Catégorie**. 
+4. Sélectionnez une catégorie.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Installer des applications sur les appareils Windows 10
 En fonction du type d’application, l’application peut être installée sur un appareil Windows 10 de deux manières :

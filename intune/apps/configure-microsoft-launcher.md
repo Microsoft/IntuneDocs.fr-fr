@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e404f6591eb042fa4d035f3377e211a219fabe4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1dc2e2ce7e19933accdb1063ccacf99fa3f54b09
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497964"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563964"
 ---
 # <a name="configure-microsoft-launcher"></a>Configurer Microsoft Launcher
 
@@ -33,7 +33,7 @@ Sur les appareils Android Entreprise entièrement gérés, Launcher permet aux a
 
 ## <a name="how-to-configure-the-microsoft-managed-home-screen-app"></a>Procédure de configuration de l’application Microsoft Managed Home Screen 
 
-Accédez à la console Intune dans le portail Azure et accédez à **Applications clientes** > **Stratégies de configuration des applications**. Ajoutez une stratégie de configuration pour les **Appareils gérés** exécutant **Android** et choisissez **Microsoft Launcher** comme application associée. Cliquez sur **Paramètres de configuration** pour configurer les différents paramètres Managed Home Screen disponibles. 
+Ouvrez le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), puis sélectionnez **Applications** > **Stratégies de configuration des applications**. Ajoutez une stratégie de configuration pour les **Appareils gérés** exécutant **Android** et choisissez **Microsoft Launcher** comme application associée. Cliquez sur **Paramètres de configuration** pour configurer les différents paramètres Managed Home Screen disponibles. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Choix d’un format des paramètres de configuration 
 

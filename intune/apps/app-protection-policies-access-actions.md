@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5983742043dca9d07242315d4aaa97de2ead8d6
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984022"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564134"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
@@ -33,16 +33,16 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Créer une stratégie de protection des applications à l’aide d’actions de lancement conditionnel
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Stratégie de protection d’application**.
-4. Cliquez sur **Ajouter une stratégie** (vous pouvez également modifier une stratégie existante). 
-5. Cliquez sur **Configurer les paramètres requis** pour afficher la liste des paramètres configurables pour la stratégie. 
-6. En faisant défiler vers le bas le volet Paramètres, vous verrez une section intitulée **Lancement conditionnel** avec une table modifiable.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de protection des applications**.
+3. Cliquez sur **Créer une stratégie**, puis sélectionnez la plateforme de l’appareil pour votre appareil. 
+4. Cliquez sur **Configurer les paramètres requis** pour afficher la liste des paramètres configurables pour la stratégie. 
+5. En faisant défiler vers le bas le volet Paramètres, vous verrez une section intitulée **Lancement conditionnel** avec une table modifiable.
 
     ![Capture d’écran des actions d’accès de protection des applications Intune](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
 
-7. Sélectionnez un **Paramètre** et entrez la **Valeur** que les utilisateurs doivent satisfaire pour se connecter à votre application d’entreprise. 
-8. Sélectionnez l’**Action** à effectuer si les utilisateurs ne remplissent pas les critères. Dans certains cas, vous pouvez configurer plusieurs actions pour un même paramètre. Pour plus d’informations, consultez [Guide pratique pour créer et affecter des stratégies de protection des applications](app-protection-policies.md).
+6. Sélectionnez un **Paramètre** et entrez la **Valeur** que les utilisateurs doivent satisfaire pour se connecter à votre application d’entreprise. 
+7. Sélectionnez l’**Action** à effectuer si les utilisateurs ne remplissent pas les critères. Dans certains cas, vous pouvez configurer plusieurs actions pour un même paramètre. Pour plus d’informations, consultez [Guide pratique pour créer et affecter des stratégies de protection des applications](app-protection-policies.md).
 
 ## <a name="policy-settings"></a>Paramètres de stratégie 
 

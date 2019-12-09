@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a62a048ebb15bac620ad9aad57ed3903e9568cf
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712980"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691819"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Configurer l’inscription des appareils iOS avec Apple School Manager
 
@@ -48,9 +48,9 @@ Avant de pouvoir inscrire des appareils iOS d’entreprise avec Apple School Man
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Étape 1. Télécharger le certificat de clé publique Intune nécessaire à la création d’un jeton Apple
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > **Ajouter**.
 
-   ![Récupérez un jeton du programme d’inscription.](./media/apple-school-manager-set-up-ios/image01.png)
+   ![Récupérez un jeton du programme d’inscription.](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. Dans le panneau **Jeton du programme d’inscription**, choisissez **Télécharger votre clé publique** pour télécharger et enregistrer le fichier de clé de chiffrement (.pem) localement. Le fichier .pem est utilisé pour demander un certificat de relation d'approbation à partir du portail Apple School Manager.
      ![Volet Jeton du programme d’inscription.](./media/apple-school-manager-set-up-ios/image02.png)
@@ -81,7 +81,7 @@ Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisiss
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils Apple School. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription**.
 2. Sélectionnez un jeton et choisissez **Profils**, puis **Créer un profil**.
 
 3. Dans **Créer un profil**, entrez le **Nom** et la **Description** du profil qui serviront à des fins d’administration. Les utilisateurs ne voient pas ces détails. Vous pouvez utiliser ce champ **Nom** pour créer un groupe dynamique dans Azure Active Directory. Utilisez le nom du profil pour définir le paramètre enrollmentProfileName et attribuer des appareils avec ce profil d’inscription. En savoir plus sur les [groupes dynamiques Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
@@ -155,7 +155,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 ## <a name="connect-school-data-sync"></a>Connexion School Data Sync
 (Facultatif) Apple School Manager prend en charge la synchronisation de données de liste de classe avec Azure Active Directory (AD) à l’aide de Microsoft School Data Sync (SDS). SDS ne permet de synchroniser qu’un seul jeton. Si vous configurez un autre jeton avec School Data Sync, SDS sera retiré du jeton qui l’avait précédemment. Une nouvelle connexion remplacera le jeton actuel. Effectuez les étapes suivantes pour utiliser SDS pour synchroniser les données d’école.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription**.
 2. Sélectionnez un jeton Apple School Manager, puis choisissez **School Data Sync**.
 3. Sous **School Data Sync**, choisissez **Autoriser**. Ce paramètre permet à Intune de se connecter avec SDS dans Office 365.
 4. Pour activer une connexion entre Apple School Manager et Azure AD, choisissez **Configurer Microsoft School Data Sync**. Découvrez-en davantage sur [la configuration de School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
@@ -165,7 +165,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 Une fois qu’Intune a reçu l’autorisation de gérer vos appareils Apple School Manager, synchronisez Intune avec le service Apple pour voir vos appareils gérés dans Intune.
 
-Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Captures d’écran du nœud d’appareils du programme d'inscription et lien de synchronisation.](./media/apple-school-manager-set-up-ios/image06.png)
+Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Captures d’écran du nœud d’appareils du programme d'inscription et lien de synchronisation.](./media/apple-school-manager-set-up-ios/image06.png)
 
 Pour respecter les conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
 - Une synchronisation complète ne peut pas s’exécuter plus d’une fois tous les sept jours. Pendant une synchronisation complète, Intune actualise tous les numéros de série Apple affectés à Intune. Si une synchronisation complète est tentée dans les sept jours de la synchronisation complète précédente, Intune actualise seulement les numéros de série qui ne figurent pas déjà dans Intune.
@@ -178,7 +178,7 @@ Pour respecter les conditions d’Apple relatives à un trafic de programme d’
 ## <a name="assign-a-profile-to-devices"></a>Attribuer un profil aux appareils
 Un profil d’inscription doit être affecté aux appareils Apple School Manager gérés par Intune avant leur inscription.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Appareils** > choisissez des appareils dans la liste > **Attribuer un profil**.
 3. Sous **Attribuer un profil**, choisissez un profil pour les appareils, puis sélectionnez **Attribuer**.
 

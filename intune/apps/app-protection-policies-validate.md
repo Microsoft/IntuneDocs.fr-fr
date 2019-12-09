@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b9dda9a1aa1e81b46533c1c15d996807984193d
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: e9c3e775773ab08721cb3a65858f3d8c8402104f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712940"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563741"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Guide pratique de validation de votre configuration de stratégie de protection d’application dans Microsoft Intune
 
@@ -43,8 +43,8 @@ Si les tests montrent que le comportement de votre stratégie de protection d’
 - L’état de chacune des applications de protection d’application des utilisateurs est-il comme prévu ? Les états possibles des applications sont **Archivé** et **Non archivé**.
 
 ### <a name="user-app-protection-status"></a>État de protection d’application utilisateur
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Sélectionnez **Applications clientes** >  **État de protection d’application**, puis sélectionnez la vignette **Utilisateurs attribués**. 
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Sélectionnez **Applications** >  **État de protection d’application**, puis sélectionnez la vignette **Utilisateurs attribués**. 
 4. Sur la page **Rapports d’application**, sélectionnez **Sélectionner un utilisateur** pour afficher la liste des utilisateurs et des groupes. 
 5. Recherchez et sélectionnez un utilisateur dans la liste, puis choisissez **Sélectionner un utilisateur**. En haut du volet **Rapports d’application**, vous voyez si l’utilisateur a une licence pour la protection d’application. Vous voyez aussi si l’utilisateur a une licence pour O365, et l’état de l’application pour tous les appareils de l’utilisateur est indiqué.
 

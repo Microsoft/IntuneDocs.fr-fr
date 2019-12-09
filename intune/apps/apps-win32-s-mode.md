@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2ab21321b171c8fe8f5f9dab3032507c0e740cf
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 7e17972a3a87bd9c42db54753d4da3bb81703377
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059752"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563623"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Activer les applications Win32 sur les appareils en mode S
 
@@ -58,7 +58,7 @@ Les étapes permettant d’autoriser les applications Win32 à s’exécuter sur
 Pour créer une stratégie supplémentaire en mode S Windows 10, procédez comme suit :
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Stratégies supplémentaires en mode S** > **Créer une stratégie**.
+2. Sélectionnez **Applications** > **Stratégies supplémentaires en mode S** > **Créer une stratégie**.
 3. Avant d’ajouter le **fichier de stratégie**, vous devez le créer et le signer. Pour plus d'informations, voir :
     - [Créer une stratégie WDAC à l’aide des outils PowerShell et la convertir au format binaire](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Signer à l’aide du service de Device Guard Signing Service](https://go.microsoft.com/fwlink/?linkid=2095629) **(recommandé)**

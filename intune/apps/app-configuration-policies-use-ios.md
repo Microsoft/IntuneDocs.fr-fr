@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
-ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
+ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73566176"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564167"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -51,8 +51,7 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 ## <a name="create-an-app-configuration-policy"></a>Créer une stratégie de configuration des applications
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Choisissez la charge de travail **Applications clientes**.
-4. Choisissez **Stratégies de configuration des applications** dans le groupe **Gérer**, puis choisissez **Ajouter**.
+3. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter**.
 5. Définissez les détails suivants :
     - **Nom** : nom du profil qui s’affiche dans le portail Azure.
     - **Description** : description du profil qui s’affiche dans le portail Azure.
@@ -74,7 +73,7 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 13. Sélectionnez l’onglet **Exclure**. 
 14. Cliquez sur **Sélectionner des groupes à exclure** pour afficher le volet correspondant.
 
-    ![Capture d’écran du panneau Sélectionner les groupes à exclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    ![Capture d’écran du volet Sélectionner les groupes à exclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 15. Choisissez les groupes à exclure, puis cliquez sur **Sélectionner**.
 
     >[!NOTE]
@@ -181,10 +180,9 @@ De plus, Intune prend en charge les types de jetons suivants dans la liste de pr
 
 Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Toutefois, vous pouvez configurer l’application Portail d’entreprise pour prendre en charge les appareils DEP iOS en procédant comme suit.
 
-1. Dans le portail Intune sur Azure :
-    - Ajoutez le Portail d’entreprise Intune si nécessaire, en accédant à **Intune** > **Applications clientes** > **Applications** > **Ajouter**.
-    - Accédez à **Applications clientes** > **Stratégie de configuration des applications**, pour créer une stratégie de configuration des applications pour l’application Portail d’entreprise.
-2. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Vous trouverez plus d’informations sur la création d’une stratégie de configuration des applications et la saisie de données XML dans [Ajouter des stratégies de configuration des applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md) ou, pour le MDM hybride, [Appliquer des paramètres aux applications iOS avec des stratégies de configuration des applications dans System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+1. Dans Intune, ajoutez l’application Portail d’entreprise Intune si nécessaire, en accédant à **Intune** > **Applications** > **Toutes les applications** > **Ajouter**.
+2. Accédez à **Applications** > **Stratégie de configuration des applications**, pour créer une stratégie de configuration des applications pour l’application Portail d’entreprise.
+3. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Vous trouverez plus d’informations sur la création d’une stratégie de configuration des applications et la saisie de données XML dans [Ajouter des stratégies de configuration des applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md) ou, pour le MDM hybride, [Appliquer des paramètres aux applications iOS avec des stratégies de configuration des applications dans System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
     ``` xml
     <dict>
@@ -202,7 +200,7 @@ Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont
 4. Dites aux utilisateurs finaux de se connecter à l’application Portail d’entreprise lorsqu’elle est automatiquement installée.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Suivre l’état de configuration d’applications iOS par appareil 
-Une fois qu’une stratégie de configuration a été affectée, vous pouvez suivre l’état de configuration d’applications iOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le panneau correspondant. Dans le panneau de l’appareil, sélectionnez **Configuration de l’application**.  
+Une fois qu’une stratégie de configuration a été affectée, vous pouvez suivre l’état de configuration d’applications iOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le volet correspondant. Dans le volet de l’appareil, sélectionnez **Configuration de l’application**.  
 
 ## <a name="additional-information"></a>Informations supplémentaires
 

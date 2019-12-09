@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d73d28f34258bce99199731579969604c0a3d97
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059723"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563459"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utiliser des scripts PowerShell sur des appareils Windows 10 dans Intune
 
@@ -62,7 +62,7 @@ L’extension de gestion Intune est soumise aux prérequis suivants : Une fois 
     
     - L’utilisateur se connecte à l’appareil en utilisant son compte Azure AD, puis qu’il s’inscrit dans Intune.
 
-  - Appareils cogérés qui utilisent Configuration Manager et Intune. Vérifiez que la charge de travail des **applications clientes** est définie sur **Piloter Intune**  ou sur **Intune**. Consultez les articles suivants pour obtenir des conseils : 
+  - Appareils cogérés qui utilisent Configuration Manager et Intune. Vérifiez que la charge de travail des **applications** est définie sur **Piloter Intune**  ou sur **Intune**. Consultez les articles suivants pour obtenir des conseils : 
   
     - [Qu’est-ce que la cogestion ?](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Charge de travail des applications clientes](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -73,8 +73,8 @@ L’extension de gestion Intune est soumise aux prérequis suivants : Une fois 
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Créer une stratégie de script et l’affecter
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Configuration de l’appareil** > **Scripts PowerShell** > **Ajouter**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Scripts PowerShell** > **Ajouter**.
 
     ![Ajouter et utiliser des scripts PowerShell dans Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 

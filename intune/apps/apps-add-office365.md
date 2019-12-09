@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cb247ec25b134fa9810a426be88b7fc90999394
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635398"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563675"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Ajouter des applications Office 365 à des appareils Windows 10 avec Microsoft Intune
 
@@ -49,11 +49,9 @@ Pour pouvoir affecter, surveiller, configurer ou protéger des applications, vou
 
 ## <a name="get-started"></a>Prise en main
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
-4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**.
-5. Sélectionnez **Ajouter**.
-6. Dans le volet **Ajouter des applications**, dans la liste **Type d’application**, sous **Suite Office 365**, sélectionnez **Windows 10**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans le volet **Ajouter des applications**, dans la liste **Type d’application**, sous **Suite Office 365**, sélectionnez **Windows 10**.
 
 ## <a name="select-settings-format"></a>Sélectionner le format des paramètres
 
@@ -61,13 +59,13 @@ Vous pouvez choisir une méthode pour configurer les paramètres d’application
 - Concepteur de configuration
 - Entrer des données XML
 
-Quand vous choisissez **Concepteur de configuration**, le panneau **Ajouter une application** change pour vous proposer deux options de paramètres supplémentaires :
+Quand vous choisissez **Concepteur de configuration**, le volet **Ajouter une application** change pour vous proposer deux options de paramètres supplémentaires :
 - Configurer la suite d’applications
 - Paramètres de la suite d’applications
 
 <img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-Quand vous choisissez **Entrer des données XML**, le panneau **Ajouter une application** affiche l’option **Entrer des données XML**. Sélectionnez-la pour afficher le panneau **Fichier de configuration**. 
+Quand vous choisissez **Entrer des données XML**, le volet **Ajouter une application** affiche l’option **Entrer des données XML**. Sélectionnez-la pour afficher le volet **Fichier de configuration**. 
 
 ![Ajouter le concepteur de configuration d’Office 365](./media/apps-add-office365/apps-add-office365-01.png)
     
@@ -94,7 +92,7 @@ Dans cette étape, indiquez des informations sur la suite d’applications. Ces 
 
 ## <a name="configure-app-suite"></a>Configurer la suite d’applications
 
-Si vous avez sélectionné l’option **Concepteur de configuration** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Configurer la suite d’applications** dans le panneau **Ajouter une application**. Sélectionnez les applications Office à affecter aux appareils.
+Si vous avez sélectionné l’option **Concepteur de configuration** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Configurer la suite d’applications** dans le volet **Ajouter une application**. Sélectionnez les applications Office à affecter aux appareils.
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Configurer la suite d’applications**.
 2. Dans le volet **Configurer la suite d’applications**, sélectionnez les applications Office standard à affecter aux appareils.  
@@ -103,7 +101,7 @@ Si vous avez sélectionné l’option **Concepteur de configuration** dans la zo
 
 ## <a name="configure-app-suite-settings"></a>Configurer les paramètres de la suite d’applications
 
-Si vous avez sélectionné l’option **Concepteur de configuration** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Paramètres de la suite d’applications** dans le panneau **Ajouter une application**. Dans cette étape, configurez les options d’installation de la suite d’applications. Les paramètres s’appliquent à toutes les applications que vous avez ajoutées à la suite.
+Si vous avez sélectionné l’option **Concepteur de configuration** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Paramètres de la suite d’applications** dans le volet **Ajouter une application**. Dans cette étape, configurez les options d’installation de la suite d’applications. Les paramètres s’appliquent à toutes les applications que vous avez ajoutées à la suite.
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Paramètres de la suite d’applications**.
 2. Dans le volet **Paramètres de la suite d’applications**, procédez comme suit :
@@ -126,7 +124,7 @@ Si vous avez sélectionné l’option **Concepteur de configuration** dans la zo
     - **Accepter automatiquement le contrat de licence utilisateur final (CLUF)** : sélectionnez cette option si vous n’obligez pas les utilisateurs finaux à accepter le contrat de licence. Intune accepte alors automatiquement le contrat.
     - **Utiliser l’activation d’ordinateurs partagés** : sélectionnez cette option quand plusieurs utilisateurs partagent un ordinateur. Pour plus d’informations, consultez [Vue d’ensemble de l’activation d’ordinateurs partagés pour Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Langues** : Office est automatiquement installé dans toute langue prise en charge installée avec Windows sur l’appareil de l’utilisateur final. Sélectionnez cette option pour installer des langues supplémentaires avec la suite d’applications. <p></p>
-    Vous pouvez déployer des langues supplémentaires pour les applications Office 365 Pro Plus gérées par le biais d’Intune. La liste des langues disponibles inclut le **Type** du module linguistique (principal, partiel et de vérification). Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications clientes** > **Applications** > **Ajouter**. Dans la liste **Type d’application** du panneau **Ajouter une application**, sélectionnez **Windows 10** sous la **Suite Office 365**. Sélectionnez **Langues** dans le panneau **Paramètres de la suite d’applications**. Pour plus d’informations, consultez [Vue d’ensemble du déploiement de langues dans Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+    Vous pouvez déployer des langues supplémentaires pour les applications Office 365 Pro Plus gérées par le biais d’Intune. La liste des langues disponibles inclut le **Type** du module linguistique (principal, partiel et de vérification). Dans le portail Azure, sélectionnez **Microsoft Intune** > **Applications** > **Toutes les applications** > **Ajouter**. Dans la liste **Type d’application** du volet **Ajouter une application**, sélectionnez **Windows 10** sous la **Suite Office 365**. Sélectionnez **Langues** dans le volet **Paramètres de la suite d’applications**. Pour plus d’informations, consultez [Vue d’ensemble du déploiement de langues dans Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## <a name="select-scope-tags-optional"></a>Sélectionner les balises d’étendue (facultatif)
 Vous pouvez utiliser des balises d’étendue pour déterminer qui peut afficher des informations sur l’application cliente dans Intune. Pour plus d’informations sur les balises d’étendue, consultez [Utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour l’informatique distribuée](../fundamentals/scope-tags.md).
@@ -138,7 +136,7 @@ Vous pouvez utiliser des balises d’étendue pour déterminer qui peut afficher
 
 ## <a name="enter-xml-format"></a>Entrer le format XML
 
-Si vous avez sélectionné l’option **Entrer des données XML** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Entrer le format XML** dans le panneau **Ajouter une application**. Pour plus d’informations, consultez [Options de configuration pour l’outil Déploiement d’Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+Si vous avez sélectionné l’option **Entrer des données XML** dans la zone de liste déroulante **Format des paramètres**, vous verrez l’option **Entrer le format XML** dans le volet **Ajouter une application**. Pour plus d’informations, consultez [Options de configuration pour l’outil Déploiement d’Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="finish-up"></a>Terminer
 

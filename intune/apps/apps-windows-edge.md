@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af24b5fe33bc1e794529ef5a5ab6975eed4fb9cc
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709906"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563562"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune
 
@@ -34,7 +34,7 @@ Pour pouvoir déployer, configurer, superviser ou protéger des applications, vo
 > [!NOTE]
 > Microsoft Edge *version 77 ou ultérieure* est également disponible pour macOS.
 > 
-> Vous ne pouvez pas utiliser le déploiement d’applications intégré de Microsoft Edge pour des ordinateurs à rattacher à l’espace de travail. Le déploiement d’applications intégré nécessite l’extension de gestion Intune, qui existe uniquement pour les appareils rattachés à AAD. Vous pouvez toujours déployer Microsoft Edge *version 77 ou ultérieure* en chargeant un fichier *.msi* sur les **applications clientes**. Consultez [Ajouter une application métier Windows à Microsoft Intune](~/apps/lob-apps-windows.md).
+> Vous ne pouvez pas utiliser le déploiement d’applications intégré de Microsoft Edge pour des ordinateurs à rattacher à l’espace de travail. Le déploiement d’applications intégré nécessite l’extension de gestion Intune, qui existe uniquement pour les appareils rattachés à AAD. Vous pouvez toujours déployer Microsoft Edge *version 77 ou ultérieure* en chargeant un fichier *.msi* sur les **applications**. Consultez [Ajouter une application métier Windows à Microsoft Intune](~/apps/lob-apps-windows.md).
 
 ## <a name="prerequisites"></a>Prérequis
 - Windows 10 RS2 ou version ultérieure est nécessaire.
@@ -43,15 +43,15 @@ Pour pouvoir déployer, configurer, superviser ou protéger des applications, vo
 ## <a name="configure-the-app-in-intune"></a>Configurer l’application dans Intune
 Vous pouvez ajouter Microsoft Edge version 77 ou ultérieure à Intune en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet **Intune**, sélectionnez **Applications clientes** > **Applications** > **Ajouter**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 3. Dans la liste **Type d’application**, sous **Microsoft Edge, version 77 ou ultérieure**, sélectionnez **Windows 10**.
 
 ## <a name="configure-app-information"></a>Configurer les informations de l’application
 Dans cette étape, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
 
-1. Cliquez sur **Informations sur l’application** pour afficher le panneau **Informations sur l’application**.
-2. Dans le panneau **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
+1. Cliquez sur **Informations sur l’application** pour afficher le volet **Informations sur l’application**.
+2. Dans le volet **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
     - **Nom** : Entrez le nom de l'application tel qu'il s'affichera dans le portail d'entreprise. Assurez-vous que tous les noms sont uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description** : Entrez une description de l'application. Par exemple, vous pouvez lister les utilisateurs ciblés dans la description.
     - **Éditeur** : Microsoft apparaît comme éditeur.
@@ -67,8 +67,8 @@ Dans cette étape, vous fournissez des informations sur le déploiement de cette
 ## <a name="configure-app-settings"></a>Configurer les paramètres de l’application
 Dans cette étape, configurez les options d’installation de l’application.
 
-1. Dans le panneau **Ajouter une application**, sélectionnez **Paramètres de l’application**.
-2. Dans le panneau **Paramètres de l’application**, sélectionnez **Bêta** ou **Dev** dans la liste **Canal** pour déterminer le canal Edge à partir duquel vous allez déployer l’application.
+1. Dans le volet **Ajouter une application**, sélectionnez **Paramètres de l’application**.
+2. Dans le volet **Paramètres de l’application**, sélectionnez **Bêta** ou **Dev** dans la liste **Canal** pour déterminer le canal Edge à partir duquel vous allez déployer l’application.
     - Le canal **Bêta** correspond à l’expérience de préversion la plus stable de Microsoft Edge et au meilleur choix pour un pilote complet au sein de votre organisation. Avec des mises à jour majeures toutes les six semaines, chaque version intègre les connaissances et les améliorations du canal Dev.
     - Le canal **Dev** est prêt pour les commentaires d’entreprise sur Windows, Windows Server et macOS. Il est mis à jour chaque semaine et contient les dernières améliorations et les derniers correctifs.
 
@@ -85,7 +85,7 @@ Vous pouvez utiliser des balises d’étendue pour déterminer qui peut afficher
 4.  Cliquez sur **Sélectionner** > **OK**.
 
 ## <a name="add-the-app"></a>Ajouter l’application
-Une fois que vous avez terminé la configuration de l’application, sélectionnez **Ajouter** dans le panneau **Ajouter une application**. 
+Une fois que vous avez terminé la configuration de l’application, sélectionnez **Ajouter** dans le volet **Ajouter une application**. 
 
 L’application créée s’affiche dans la liste des applications, où vous pouvez l’affecter aux groupes de votre choix. 
 

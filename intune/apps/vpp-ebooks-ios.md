@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae29d2ee5add475db89f6895b22299793a94ac36
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: 08275e2573fe8aae8c59ea25c85cdd8f7a3246ee
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984097"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563763"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les livres électroniques iOS que vous avez achetés par le biais d’un programme d’achat en volume avec Microsoft Intune
 
@@ -57,15 +57,14 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Pour obtenir et charger un jeton Apple VPP
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, choisissez **Applications clientes**.
-1. Dans la charge de travail **Applications clientes**, choisissez **Installation** > **Jetons VPP iOS**.
-2. Dans la liste du volet des jetons VPP, cliquez sur **Créer**.
-3. Dans le volet **Nouveau jeton VPP**, spécifiez les informations suivantes :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Administration client** > **Connecteurs et jetons** > **Jetons VPP Apple**.
+3. Dans la liste du volet des jetons VPP, cliquez sur **Créer**.
+5. Dans le volet **Nouveau jeton VPP**, spécifiez les informations suivantes :
     - **Fichier de jeton VPP** : vérifiez que vous êtes inscrit au Programme d’achat en volume (VPP) Apple pour les entreprises ou au Programme d’achat en volume (VPP) Apple pour l’éducation. Ensuite, téléchargez le jeton Apple VPP pour votre compte et sélectionnez-le ici.
     - **ID Apple** : saisissez l’ID Apple du compte associé au programme d’achats en volume.
     - **Type de compte VPP** : choisissez **Entreprise** ou **Éducation**.
-4. Quand vous avez terminé, cliquez sur **Créer**.
+5. Quand vous avez terminé, cliquez sur **Créer**.
 
 Le jeton est affiché dans le volet de la liste de jetons.
 
@@ -74,8 +73,7 @@ Vous pouvez synchroniser les données détenues par Apple avec Intune à tout mo
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Pour affecter une application achetée en volume
 
-3. Dans le volet **Intune**, choisissez **Livres électroniques**.
-1. Dans la charge de travail **Livres électroniques**, choisissez **Gérer** > **Tous les livres électroniques**.
+1. Sélectionnez **Apps** > **Livres électroniques** > **Tous les livres électroniques**.
 2. Dans le volet contenant la liste des livres, choisissez le livre à attribuer, puis choisissez «  **...**  » > **Attribuer des groupes**.
 3. Dans le volet <*nom du livre*> - **Groupes affectés**, choisissez **Gérer** > **Groupes affectés**.
 4. Choisissez **Affecter des groupes** puis, dans le volet **Sélectionner des groupes**, sélectionnez les groupes d’utilisateurs Azure AD auxquels vous souhaitez affecter le livre. Pour le moment, les groupes d’appareils ne sont pas pris en charge.

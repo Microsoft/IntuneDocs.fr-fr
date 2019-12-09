@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584990"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564263"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android Entreprise gérés
 
@@ -34,7 +34,7 @@ Les stratégies de configuration des applications dans Microsoft Intune fourniss
 > [!NOTE]  
 > Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application prend en charge les stratégies de configuration des applications.
 
-1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Applications clientes** > **Stratégies de configuration des applications** >  **Ajouter**.
+1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Applications** > **Stratégies de configuration des applications** >  **Ajouter**.
 2. Entrez les propriétés suivantes :
 
     - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Stratégie de l’application Android Enterprise Nine Work pour toute l’entreprise**.
@@ -110,7 +110,7 @@ Vous pouvez également préconfigurer l’autorisation pour les applications d�
 
 Par exemple, une application utilise le microphone de l’appareil. L’utilisateur est invité à accorder à l’application l’autorisation d’utiliser le microphone.
 
-1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Applications clientes** > **Stratégies de configuration des applications** >  **Ajouter**.
+1. Dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), sélectionnez **Applications** > **Stratégies de configuration des applications** >  **Ajouter**.
 2. Entrez les propriétés suivantes :
 
     - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Stratégie de l’application de demande d’autorisations Android Enterprise pour toute l’entreprise**.

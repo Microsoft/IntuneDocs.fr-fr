@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199212"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563635"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -37,7 +37,7 @@ Le portail d’entreprise Microsoft Intune permet aux utilisateurs d’accéder 
 > [!Tip]
 > Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise. Notez que les utilisateurs doivent disposer d’une licence Intune pour accéder au site web Portail d’entreprise.
 
-La personnalisation du Portail d’entreprise Intune permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour ce faire, dans le portail Intune, sélectionnez **Applications clientes** > **Branding et personnalisation**, puis configurez les paramètres requis.
+La personnalisation du Portail d’entreprise Intune permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour ce faire, dans le portail Intune, sélectionnez **Applications** > **Branding et personnalisation**, puis configurez les paramètres requis.
 
 Lorsqu’un utilisateur installe une application iOS à partir du portail d’entreprise, il reçoit une invite. Cela se produit lorsque l’application iOS est liée à l’App Store, à un programme d’achat en volume (VPP) ou à une application métier. L’invite permet aux utilisateurs d’accepter l’action ou d’autoriser la gestion de l’application. L’invite affiche le nom de votre société, ou, lorsque le nom de votre société n’est pas disponible, le **Portail d’entreprise**. 
 
@@ -92,7 +92,7 @@ Choisissez un logo qui ressort bien sur un arrière-plan blanc ou clair.
 
 ### <a name="brand-image-for-company-portal"></a>Image de marque pour le Portail d’entreprise
 
-Affichez une image de marque qui reflète la marque de votre société. Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du panneau pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
+Affichez une image de marque qui reflète la marque de votre société. Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du volet pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
 
 |Nom du champ|Plus d’informations|
 |---|---|

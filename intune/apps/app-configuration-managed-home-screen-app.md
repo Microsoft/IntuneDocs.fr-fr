@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: e86aeb3191c1cfdf2fc9dfab3a4474327b3fbb06
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813474"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564209"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurer l’application Microsoft Managed Home Screen pour Android Entreprise
 
@@ -31,12 +31,12 @@ Managed Home Screen est l’application utilisée pour les appareils d’entrepr
 
 ## <a name="when-to-configure-the-microsoft-managed-home-screen-app"></a>Quand configurer l’application Microsoft Managed Home Screen ?
 
-En règle générale, si les paramètres vous sont accessibles par le biais de la configuration de l’appareil, vous devez les configurer à cet endroit. Ceci vous permettra de gagner du temps, de limiter les erreurs et de bénéficier d’une meilleure expérience de support Intune. Toutefois, certains paramètres Managed Home Screen sont actuellement disponibles uniquement par le biais du panneau **Stratégies de configuration des applications** dans la console Intune. Dans ce document, vous allez découvrir comment configurer les différents paramètres à l’aide du concepteur de configuration ou d’un script JSON. 
+En règle générale, si les paramètres vous sont accessibles par le biais de la configuration de l’appareil, vous devez les configurer à cet endroit. Ceci vous permettra de gagner du temps, de limiter les erreurs et de bénéficier d’une meilleure expérience de support Intune. Toutefois, certains paramètres Managed Home Screen sont actuellement disponibles uniquement par le biais du volet **Stratégies de configuration des applications** dans la console Intune. Dans ce document, vous allez découvrir comment configurer les différents paramètres à l’aide du concepteur de configuration ou d’un script JSON. 
 
 > [!NOTE]
-> Il est actuellement possible, et recommandé, de définir les applications répertoriées avec autorisation et les liens web épinglés par le biais d’**Applications clientes** et de **Configuration de l’appareil**. Pour obtenir la liste complète des paramètres disponibles dans **Configuration de l’appareil** ayant un impact sur Managed Home Screen, consultez [Paramètres de l’appareil dédié](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> Il est actuellement possible, et recommandé, de définir les applications répertoriées avec autorisation et les liens web épinglés par le biais des options **Applications** et **Configuration de l’appareil**. Pour obtenir la liste complète des paramètres disponibles dans **Configuration de l’appareil** ayant un impact sur Managed Home Screen, consultez [Paramètres de l’appareil dédié](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-Tout d’abord, accédez à la console Intune dans le portail Azure et accédez à **Applications clientes** > **Stratégies de configuration des applications**. Ajoutez une stratégie de configuration pour les **Appareils gérés** exécutant **Android** et choisissez **Managed Home Screen** comme application associée. Cliquez sur **Paramètres de configuration** pour configurer les différents paramètres Managed Home Screen disponibles. 
+Ouvrez tout d’abord le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), puis sélectionnez **Applications** > **Stratégies de configuration des applications**. Ajoutez une stratégie de configuration pour les **Appareils gérés** exécutant **Android** et choisissez **Managed Home Screen** comme application associée. Cliquez sur **Paramètres de configuration** pour configurer les différents paramètres Managed Home Screen disponibles. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Choix d’un format des paramètres de configuration
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796b1709260c7f507e78aa8404129fa996b59088
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 01ca17c9f8e3fd86e12f225621e6dc0e07bb4acb
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498817"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564074"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Affecter Office 365 à des appareils macOS avec Microsoft Intune
 
@@ -41,14 +41,12 @@ Avant d’ajouter Office 365 à des appareils macOS, vous devez comprendre les 
 ## <a name="create-and-configure-the-app-suite"></a>Créer et configurer la suite d’applications
 
 Ajoutez Office 365 à partir du volet **Applications**.
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Dans le volet **Intune**, sélectionnez **Applications clientes**.
-4. Dans le volet de la charge de travail **Applications clientes**, sous **Gérer**, sélectionnez **Applications**. 
-5. Sélectionnez **Ajouter**.
-6. Dans la liste **Type d’application**, sélectionnez **macOS** dans le groupe **Suite Office 365**.
-7. Sélectionnez **Informations sur la suite d’applications** pour obtenir des informations sur la suite d’applications.  
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+3. Dans la liste **Type d’application**, sélectionnez **macOS** dans le groupe **Suite Office 365**.
+4. Sélectionnez **Informations sur la suite d’applications** pour obtenir des informations sur la suite d’applications.  
     Ces informations vous permettent d’identifier la suite d’applications dans Intune. Elles aident aussi les utilisateurs à trouver la suite d’applications dans le portail d’entreprise.
-8. Entrez les informations suivantes :
+5. Entrez les informations suivantes :
     - **Nom de la suite** : entrez le nom de la suite d’applications tel qu’il apparaît dans le portail d’entreprise. Vérifiez que chaque nom de suite que vous utilisez est unique. Si un même nom de suite d’applications est utilisé deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description de la suite** : Entrez une description pour la suite d’applications.
     - **Éditeur** : Microsoft apparaît comme éditeur.
@@ -60,8 +58,8 @@ Ajoutez Office 365 à partir du volet **Applications**.
     - **Propriétaire** : Microsoft apparaît comme propriétaire.
     - **Remarques** : entrez les éventuelles remarques à associer à cette application.
     - **Logo** : le logo Office 365 est affiché avec l’application quand les utilisateurs naviguent dans le portail d’entreprise.
-9. Sélectionnez **OK**.
-10. Dans le volet **Ajouter une application**, sélectionnez **Ajouter**.  
+6. Sélectionnez **OK**.
+7. Dans le volet **Ajouter une application**, sélectionnez **Ajouter**.  
     La suite apparaît dans la liste des applications en tant qu’entrée unique.
 
 ## <a name="configure-app-assignments"></a>Configurer les affectations d’applications

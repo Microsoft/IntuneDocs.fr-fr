@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0dd9eddd986e6717e6bf706b02a7b06f712a032
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
+ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059894"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74694945"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
@@ -49,7 +49,7 @@ Ces modèles offrent aux administrateurs une vue simplifiée des paramètres, à
 
 Cette fonctionnalité prend en charge :
 
-- Windows 10 1809 et versions ultérieures sur le microprogramme pris en charge.
+- Windows 10 et versions ultérieures
 
 ## <a name="certificates"></a>Certificats
 
@@ -102,7 +102,7 @@ L’[interface de configuration du microprogramme d’appareil](device-firmware-
 
 Cette fonctionnalité prend en charge :
 
-- Windows 10 et versions ultérieures
+- Windows 10 1809 et versions ultérieures sur le microprogramme pris en charge
 
 ## <a name="device-restrictions"></a>Restrictions d’appareil
 

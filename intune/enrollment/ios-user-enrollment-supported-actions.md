@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445311"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562404"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Actions et options Intune prises en charge par l’inscription des utilisateurs d’Apple
 
@@ -57,13 +57,18 @@ Sur les appareils avec inscription des utilisateurs, les utilisateurs finaux peu
 - Verrouillage à distance
 - Vérifier le statut
 
+## <a name="app-deployment-options"></a>Options de déploiement d’applications
+Les types d'applications suivants peuvent être déployés sur les appareils d'inscription des utilisateurs :
+- Applications du Programme d’achat en volume (VPP) sous licence utilisateur, y compris les applications personnalisées
+- Applications métier
+- Applications web
+
 ## <a name="other-supported-options"></a>Autres options prises en charge
 
 Les options suivantes sont prises en charge dans Intune pour les appareils inscrits avec l'inscription des utilisateurs d’Apple :
 - VPN par application Cette prise en charge exclut les domaines Safari car l'inscription des utilisateurs ne prend pas en charge la configuration des paramètres Safari.
 - Wi-Fi 
 - Suppression d'une application d'entreprise lors de la désinscription
-- Déploiement d’une application via un Programme d'achat en volume (VPP) sous licence utilisateur
 - Détection de jailbreak
 
 Les restrictions suivantes sont prises en charge :
@@ -97,6 +102,7 @@ Les options suivantes ne sont pas prises en charge sur les appareils inscrits av
 - Profils d'utilisateur SCEP avec format du nom de l’objet de type Numéro de série.
 - VPN au niveau de l'appareil.
 - Déploiement d'applications VPP sous licence.
+- Installez les apps de l’App Store en tant qu'applications gérées.
 - Contrôle MDM des applications en dehors du volume APFS géré.
 - Les stratégies de protection des applications s'appliqueront toujours à ces applications. Cependant, vous ne pourrez pas prendre en charge la gestion ou déployer une version gérée de ces applications, à moins que l'utilisateur ne les supprime de son appareil.
 - Actions, configurations, paramètres et commandes nécessitant une supervision. 

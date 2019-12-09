@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98976403d58c33f22f7ceeabec1d38f076f9bbe7
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592069"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563720"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -44,9 +44,9 @@ Pour plus d’informations sur l’ajout d’applications métier professionnell
 Lorsque vous créez une stratégie de protection d’applications pour les applications iOS/iPadOS et Android, vous suivez un flux de processus Intune moderne qui génère une nouvelle stratégie de protection d’applications.
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Créer une stratégie de protection d’applications pour les applications iOS/iPadOS ou Android
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le portail Intune, choisissez **Applications clientes** > **Stratégies de protection des applications**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
-3. Sélectionnez **Créer une stratégie** et sélectionnez **iOS/iPadOS** ou **Android**. Le panneau **Créer une stratégie** s’affiche.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Dans le portail Intune, choisissez **Applications** > **Stratégies de protection des applications**. Cette sélection ouvre les informations des **Stratégies de protection des applications**, où vous pouvez créer des stratégies et modifier les stratégies existantes.
+3. Sélectionnez **Créer une stratégie** et sélectionnez **iOS/iPadOS** ou **Android**. Le volet **Créer une stratégie** s’affiche.
 4. Dans la page **De base**, ajoutez les valeurs suivantes :
 
     | Valeur | Description |
@@ -57,7 +57,7 @@ Lorsque vous créez une stratégie de protection d’applications pour les appli
 
     La valeur de **Plateforme** est définie en fonction de votre choix ci-dessus.
 
-    ![Capture d’écran de la page De base du panneau Créer une stratégie](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Capture d’écran de la page De base du volet Créer une stratégie](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Cliquez sur **Suivant** pour afficher la page **Applications**.<br>
     La page **Applications** vous permet de choisir la façon dont vous souhaitez appliquer cette stratégie aux applications sur différents appareils. Vous devez ajouter au moins une application.<p>
@@ -171,7 +171,7 @@ Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs 
 
 Dans la mesure où les stratégies de protection des applications Intune ciblent l’identité d’un utilisateur, les paramètres de protection d’un utilisateur peuvent s’appliquer à la fois aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non gérés par MDM). Ainsi, vous pouvez cibler une stratégie de protection des applications Intune sur des appareils iOS et Android inscrits ou non inscrits auprès d’Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. Pour plus d’informations sur le fonctionnement de cette stratégie sur les appareils personnels Android Entreprise, consultez [Stratégies de protection des applications et profils professionnels](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Pour créer ces stratégies, accédez à **Applications clientes** > **Stratégies de protection des applications** dans la console Intune, puis sélectionnez **Créer une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Pour que la stratégie de protection des applications s’applique aux appareils gérés et non gérés, accédez à la page **Applications** et vérifiez que l’option **Cibler les applications de tous les types d’appareil** a la valeur par défaut **Oui**. Si vous souhaitez effectuer une affectation précise en fonction de l’état de gestion, affectez à l’option **Cibler les applications de tous les types d’appareil** la valeur **Non**. 
+Pour créer ces stratégies, accédez à **Applications** > **Stratégies de protection des applications** dans la console Intune, puis sélectionnez **Créer une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Pour que la stratégie de protection des applications s’applique aux appareils gérés et non gérés, accédez à la page **Applications** et vérifiez que l’option **Cibler les applications de tous les types d’appareil** a la valeur par défaut **Oui**. Si vous souhaitez effectuer une affectation précise en fonction de l’état de gestion, affectez à l’option **Cibler les applications de tous les types d’appareil** la valeur **Non**. 
 
 ### <a name="device-types"></a>Types d’appareils
 

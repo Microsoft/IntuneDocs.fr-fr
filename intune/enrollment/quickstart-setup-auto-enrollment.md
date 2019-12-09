@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78620818bfd13f0292e159c6a3670b5e3af53dab
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: e9649a84650a555e964cd9200ed2295fee5efb9a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709508"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562313"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Démarrage rapide : Configurer l’inscription automatique pour les appareils Windows 10
 
@@ -41,7 +41,7 @@ Connectez-vous au [Centre d’administration du Gestionnaire de points de termin
 
 Dans cet exemple, vous allez utiliser l’inscription à MDM pour inscrire automatiquement les appareils d’entreprise et les appareils BYOD (Apportez votre propre appareil). Vous vous inscrirez à un abonnement Azure Active Directory Premium gratuit.
 
-1. Dans Azure, choisissez **Azure Active Directory** > **Mobility (MDM et MAM)** .
+1. Dans le [portail Azure](https://portal.azure.com), choisissez **Azure Active Directory** > **Mobility (MDM et MAM)** .
 2. Sélectionnez **Obtenir une version d’évaluation Premium gratuite pour utiliser cette fonctionnalité**. Cette option permet l’inscription automatique avec l’essai gratuit d’Azure Active Directory Premium. 
 
     ![Sélectionner l’essai gratuit d’Azure Active Directory Premium](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
