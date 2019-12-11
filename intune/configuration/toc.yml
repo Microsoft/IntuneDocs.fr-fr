@@ -145,6 +145,8 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
+            - name: Réseau câblé
+              href: wired-network-settings-macos.md
             - name: Personnalisé
               href: custom-settings-macos.md
         - name: "Windows\_10 et versions ultérieures"
