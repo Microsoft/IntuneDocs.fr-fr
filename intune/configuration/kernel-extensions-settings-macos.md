@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506696"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>paramètres de l’appareil macOS pour configurer et utiliser des extensions de noyau dans Intune
@@ -63,7 +63,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   > [!TIP]
   > Pour obtenir l’ID d’ensemble d’une extension de noyau (kext) sur un appareil macOS, vous pouvez :
   >
-  > 1. Dans le terminal, exécutez `kextstat | grep -v com.apple` et notez la sortie. Installez le logiciel ou kext souhaité. Réexécutez `kextstat | grep -v com.apple` et recherchez les modifications.
+  > 1. Dans le terminal, exécutez `kextstat | grep -v com.apple`et notez la sortie. Installez le logiciel ou kext souhaité. Réexécutez `kextstat | grep -v com.apple` et recherchez les modifications.
   >
   >    Dans le terminal, `kextstat` répertorie toutes les extensions du noyau sur le système d’exploitation. 
   >

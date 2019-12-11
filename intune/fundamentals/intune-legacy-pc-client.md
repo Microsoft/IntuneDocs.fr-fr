@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5ab1be3d34d52e824d1ff06124e28206fb7b07a1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72510193"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune dans la console Azure et client PC Intune hérité
@@ -63,7 +63,7 @@ Pour obtenir une comparaison détaillée entre les fonctions du PC client et les
 Pour passer de la gestion des appareils Windows 10 via le PC client Intune à la gestion via GPM, procédez comme suit :
 
 1. Dans la console de Silverlight, effectuez une **réinitialisation sélective** pour désinscrire l’appareil du PC client.
-  ![Warning fenêtre contextuelle avec la case d’option « réinitialiser l’appareil de manière sélective » sélectionnée ](./media/intune-legacy-pc-client/image02.png)
+  ![fenêtre contextuelle d’avertissement avec la case d’option « Réinitialiser sélectivement l’appareil »](./media/intune-legacy-pc-client/image02.png)
 2. Réinscrivez l’appareil à l’aide de la [GPM (et/ou Azure AD Join)](../enrollment/windows-enroll.md).
 
 ## <a name="next-steps"></a>Étapes suivantes

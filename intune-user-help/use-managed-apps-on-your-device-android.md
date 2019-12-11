@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 12/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501886"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74781207"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Utiliser des applications gérées sur votre appareil Android
 Les applications gérées sont configurées pour répondre aux exigences de sécurité de votre organisation et protéger les données professionnelles et scolaires. Vous pouvez installer ou utiliser ces applications automatiquement sur votre appareil. 
@@ -39,9 +39,7 @@ Pour optimiser la protection des données, votre organisation peut configurer pl
 Les organisations peuvent vous obliger à utiliser une application gérée pour effectuer une opération, telle que l’ouverture d’un fichier de travail ou l’accès à un lien web. Si vous n’avez pas l’application, vous n’êtes peut-être pas en mesure de continuer votre tâche. Certaines applications gérées sont prêtes à être installées, mais ne sont pas nécessaires.
 
 ## <a name="how-do-i-know-im-using-a-managed-app"></a>Comment savoir si j’utilise une application gérée ?
-Quand vous accédez pour la première fois à des données professionnelles ou scolaires dans une application gérée, vous recevez un message similaire à la capture d’écran ci-dessous. Le message vous invite à redémarrer l’application pour continuer.
-
-![Capture d’écran du message qui s’affiche quand un utilisateur ouvre une application gérée sur son appareil. Le message indique « Votre organisation protège désormais ses données dans cette application. Vous devez redémarrer l’application pour continuer. », suivi d’un bouton OK.](./media/managed-apps-message.png)
+Lorsque vous essayez d’accéder aux données professionnelles ou scolaires dans une application gérée, vous recevez un message à l’écran indiquant que l’application est protégée par votre organisation. 
 
 ## <a name="commonly-managed-apps"></a>Applications gérées couramment  
 Voici quelques exemples d’applications gérées couramment utilisées ou disponibles dans les établissements scolaires et au travail :

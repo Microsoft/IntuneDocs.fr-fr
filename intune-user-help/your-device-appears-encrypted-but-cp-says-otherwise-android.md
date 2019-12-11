@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af1c7d1f9d8236fd95413317acefbe8887d90f47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507662"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Appareil chiffré, mais les applications disent autrement
@@ -32,7 +32,7 @@ Si Portail d’entreprise ou l’application Microsoft Intune indiquent que votr
 
 ## <a name="add-a-startup-pin"></a>Ajouter un code confidentiel de démarrage
 
-Certains appareils Android exigent la création d’un code de démarrage pour en garantir la sécurité. L’emplacement de ce paramètre se trouve dans l’application **paramètres** de votre appareil. Le nom et l’emplacement du paramètre peuvent varier. Par exemple, sur le S7 Samsung Galaxy, le paramètre est appelé **Démarrage sécurisé**. Pour l’activer et créer un code secret, accédez à **paramètres**  > **écran de verrouillage et sécurité**  > **Démarrage sécurisé**.  
+Certains appareils Android exigent la création d’un code de démarrage pour en garantir la sécurité. L’emplacement de ce paramètre se trouve dans l’application **paramètres** de votre appareil. Le nom et l’emplacement du paramètre peuvent varier. Par exemple, sur le S7 Samsung Galaxy, le paramètre est appelé **Démarrage sécurisé**. Pour l’activer et créer un code secret, accédez à **paramètres** > **écran de verrouillage et sécurité** > **Démarrage sécurisé**.  
 
 ## <a name="encrypt-the-entire-device"></a>Chiffrer l’appareil entier
 

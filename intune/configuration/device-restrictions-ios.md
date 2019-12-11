@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 5f9a01adaa6f5ab59819c2924172c30a437ebd8c
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465655"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992940"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Cet article liste et décrit les différents paramètres que vous pouvez contrôler sur les appareils iOS et iPadOS. Dans votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour autoriser ou désactiver certaines fonctionnalités, définir des règles de mot de passe, autoriser ou restreindre des applications spécifiques, et bien d’autres opérations.
 
@@ -52,7 +50,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription de l’appareil, inscription automatique des appareils (supervisé)
 
 - **Certificats TLS non approuvés** : choisissez l’option **Bloquer** pour empêcher les certificats Transport Layer Security (TLS) non autorisés sur l’appareil. L’option **Non configuré** (par défaut) autorise les certificats TLS.
-- **Autoriser les mises à jour PKI à distance** : l’option **Autoriser** permet à vos utilisateurs de recevoir des mises à jour logicielles sans connecter leurs appareils à un ordinateur.
+- **Bloquer les mises à jour de l’infrastructure à clé publique**: **bloquer** empêche vos utilisateurs de recevoir des mises à jour logicielles sans connecter leurs appareils à un ordinateur. **Non configuré** (par défaut) ne met pas à jour ce paramètre sur l’appareil.
 - **Limiter le suivi des publicités** : choisissez **Limiter** pour désactiver l’identificateur de publicités de l’appareil. **Non configuré** (par défaut) maintient l’activation de l’identificateur.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : inscription automatique des appareils (supervisé)
@@ -95,7 +93,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Modifications au profil de configuration** : choisissez **Bloquer** pour empêcher l’utilisateur de modifier le profil de configuration sur l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisateur à installer des profils de configuration.
 - **Verrou d’activation** : choisissez **Autoriser** pour activer le verrou d’activation sur les appareils iOS supervisés. Le verrouillage d'activation rend plus difficile la réactivation d'un appareil perdu ou volé.
 - **Bloquer la suppression d’applications** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des applications. L’option (par défaut) **Non configuré** autorise les utilisateurs à supprimer des applications de l’appareil.
-- **Bloque le mode USB restreint** : choisissez **Bloquer** pour désactiver le mode USB restreint sur les appareils supervisés. Le mode USB restreint empêche les accessoires USB d'échanger des données avec un appareil verrouillé depuis plus d'une heure. L’option **Non configuré** (par défaut) autorise le mode USB restreint.
+- **Autoriser les accessoires USB quand l’appareil est verrouillé**: **autoriser** permet aux accessoires USB d’échanger des données avec un appareil qui a été verrouillé pendant plus d’une heure. **Non configuré** (par défaut) ne met pas à jour le mode restreint USB sur l’appareil.
 - **Application de la date et de l’heure automatique** : **activez** cette option pour forcer les appareils supervisés à définir automatiquement la date et l’heure. Le fuseau horaire de l’appareil est mis à jour quand l’appareil se connecte à des réseaux cellulaires ou si les services de localisation ont été activés en mode Wi-Fi.
 - **Require students to request permission to leave Classroom course** (Obliger les élèves à demander l’autorisation de quitter le cours Classroom) : **activez** cette option pour obliger les élèves inscrits à un cours non managé et qui utilisent l’app Classroom à demander à l’enseignant l’autorisation de quitter le cours. L’option (par défaut) **Non configuré** dispense les étudiants de demander une autorisation.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9acad2e8539da7210c349ffb254af62f370af5f6
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 6ed04c1bf135793da9cece9debc2c7cdd481601a
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74391496"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74691689"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Ajouter un fichier de liste de propriétés aux appareils macOS à l’aide de Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "74391496"
 
 Cette fonctionnalité s’applique à :
 
-- appareils macOS exécutant 10,7 et versions ultérieures
+- Appareils macOS exécutant la version 10.7 ou une version ultérieure
 
 Les fichiers de liste de propriétés incluent généralement des informations sur les applications macOS. Pour plus d’informations, consultez [à propos des informations sur les fichiers de liste de propriétés](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (site Web d’Apple) et paramètres de [charge utile personnalisés](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
@@ -58,4 +58,6 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le profil est créé, mais il ne fait rien pour le moment. Ensuite, [attribuez le profil](device-profile-assign.md) et [supervisez son état](device-profile-monitor.md).
+Le profil est créé, mais il ne fait rien pour le moment. Vous devez à présent [affecter le profil](device-profile-assign.md) et [superviser son état](device-profile-monitor.md).
+
+Pour plus d’informations sur les fichiers de préférences pour Microsoft Edge, consultez [configurer les paramètres de stratégie Microsoft Edge sur MacOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

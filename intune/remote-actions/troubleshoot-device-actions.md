@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f6dc3d1a8f8589395cf49b3bb934adadf437a4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 239dd8630eb361da8609e3a34eb2c9346a64dab0
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508495"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907183"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Résoudre les problèmes liés aux actions d’appareil dans Intune
 
@@ -54,7 +54,7 @@ Non. Et vous n’avez pas besoin d’entrer les tirets.
 ## <a name="remove-devices-action"></a>Action de suppression d’appareils
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Comment faire indiquer qui a démarré une mise hors service/réinitialisation ?
-Accédez à **Intune**  > **appareils**  > **actions** de l’appareil > Vérifiez la colonne **initié par** .
+Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), accédez à administration des **clients** > **journaux d’audit** > Vérifiez la colonne **initié par** .
 Si vous ne voyez pas d’entrée, la personne la plus susceptible d’être à l’origine de l’action est l’utilisateur de l’appareil. Ils ont probablement utilisé l’application Portail d’entreprise ou portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Pourquoi mon application n’a-t-elle pas été désinstallée après l’utilisation du retrait ?
@@ -69,7 +69,7 @@ Ce comportement est normal. Google n’autorise pas la réinitialisation des par
 Parce que le retrait d’un appareil ne révoque pas les jetons d’accès. Vous pouvez utiliser des stratégies d’accès conditionnel pour atténuer cette condition.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Comment puis-je surveiller une action de mise hors service/réinitialisation après son émission ?
-Accédez à **Intune**  > **appareils**  > **actions**de l’appareil.
+Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), accédez à administration des **clients** > **journaux d’audit**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Pourquoi les nettoyages apparaissent-ils parfois comme étant en attente indéfiniment ?
 Les appareils ne signalent pas toujours leur état au service Intune avant le démarrage de la réinitialisation. L’action apparaît donc comme étant en attente. Si vous avez confirmé que l’opération a réussi, supprimez l’appareil du service.

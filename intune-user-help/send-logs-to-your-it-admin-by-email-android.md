@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8eef3af9a82e7a61bc5200bf45143657072d6db7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508370"
 ---
 # <a name="upload-and-email-logs"></a>Charger et envoyer par e-mail des journaux  
@@ -38,7 +38,7 @@ Les détails de l’erreur sont conservés sur votre appareil dans un document s
 ## <a name="upload-and-email-logs-from-company-portal"></a>Charger et envoyer des journaux à partir de Portail d’entreprise  
 
 1. Dans l’application Portail d’entreprise, il existe deux façons de lancer la prise en charge de la messagerie.
-    * À partir de l’écran d’accueil : Appuyez sur **Menu**  > **aide  >  l'** **assistance par courrier électronique**.  
+    * À partir de l’écran d’accueil : Appuyez sur **Menu** > **aide > l'** **assistance par courrier électronique**.  
     * À partir d’un message d’erreur : Appuyez sur **aide** ou sur **Envoyer des informations**, le cas échéant.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Les détails de l’erreur sont conservés sur votre appareil dans un document s
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Charger et envoyer des journaux à partir de Microsoft Intune application   
 
 1. Dans l’application Microsoft Intune, il existe deux façons de lancer la prise en charge de la messagerie.  
-    * À partir de l’écran d’accueil : Appuyez sur **Menu**  >  aide  > **obtenir**de l'**aide** .  
+    * À partir de l’écran d’accueil : Appuyez sur **Menu** > aide > **obtenir**de l' **aide** .  
     * À partir d’un message d’erreur : Appuyez sur **aide** ou sur **Envoyer des informations**, le cas échéant.  
 
     > [!NOTE]

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508865"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Résoudre les erreurs courantes pour Intune Exchange Connector
@@ -77,7 +77,7 @@ Lorsque vous essayez de configurer la Connecteur Microsoft Intune Exchange, vous
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Cette erreur peut se produire si un serveur proxy est utilisé pour se connecter à Internet et bloque le trafic vers le service Intune. Pour déterminer si un proxy est en cours d’utilisation, accédez à **panneau de configuration**  > **Options Internet**, sélectionnez l’onglet **connexion** , puis cliquez sur **paramètres réseau**.
+Cette erreur peut se produire si un serveur proxy est utilisé pour se connecter à Internet et bloque le trafic vers le service Intune. Pour déterminer si un proxy est en cours d’utilisation, accédez à **panneau de configuration** > **Options Internet**, sélectionnez l’onglet **connexion** , puis cliquez sur **paramètres réseau**.
 
 **Résolution** :  
 
@@ -132,7 +132,7 @@ Pour affecter le droit d’utilisateur **ouvrir une session en tant que service*
 
 1. Connectez-vous à l’ordinateur en tant qu’administrateur ou membre du groupe administrateurs.
 2. Exécutez **secpol. msc** pour ouvrir la stratégie de sécurité locale.
-3. Accédez à **paramètres de sécurité**  > **stratégies locales**, puis sélectionnez **attribution des droits utilisateur**.
+3. Accédez à **paramètres de sécurité** > **stratégies locales**, puis sélectionnez **attribution des droits utilisateur**.
 4. Dans le volet droit, double-cliquez sur **Ouvrir une session en tant que service**.
 5. Sélectionnez **Ajouter un utilisateur ou un groupe**, ajoutez **WIEC_USER** à la stratégie, puis sélectionnez **OK** deux fois.
 

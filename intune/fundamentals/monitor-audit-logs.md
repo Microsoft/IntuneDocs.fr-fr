@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: d6af0718f2b926383bb943b6321b4d5839346ce7
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585241"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991978"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Utiliser les journaux d’audit pour suivre et superviser les événements dans Microsoft Intune
 
@@ -40,9 +40,14 @@ Les utilisateurs disposant des autorisations suivantes peuvent consulter les jou
 
 Vous pouvez consulter les journaux d’audit dans le groupe d’analyse pour chaque charge de travail Intune :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Choisissez la charge de travail pour laquelle vous souhaitez consulter les journaux d’audit. Par exemple, sélectionnez **Appareils**.
-3. Sous **Surveillance**, choisissez **Journaux d’audit**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **administration du locataire** > **journaux d’audit**.
+3. Pour filtrer les résultats, sélectionnez **Filtrer** et affiner les résultats à l’aide des options suivantes.
+    - **Catégorie**: par exemple, **la conformité**, l' **appareil**et le **rôle**.
+    - **Activité**: les options répertoriées ici sont limitées par l’option choisie sous **catégorie**.
+    - **Plage de dates**: vous pouvez choisir des journaux pour le mois, la semaine ou le jour précédent.
+4. Choisissez **Appliquer**.
+4. Sélectionnez un élément dans la liste pour afficher les détails de l’activité.
 
 ## <a name="route-logs-to-azure-monitor"></a>Router des journaux vers Azure Monitor
 
@@ -53,32 +58,10 @@ Les journaux d’audit et les journaux des opérations peuvent également être 
 > [!NOTE]
 > Pour plus d’informations sur cette fonctionnalité et pour connaître les conditions préalables à l’utilisation, consultez [Envoyer des données de journal à Storage, Event hubs ou log Analytics](review-logs-using-azure-monitor.md).
 
-## <a name="review-audit-events"></a>Consulter les journaux d'audit
-
-![Choisir des journaux d’audit dans Intune pour voir les actions et les dates auxquelles sont survenus les événements](./media/monitor-audit-logs/monitor-audit-logs.png "Journaux d’audit")
-
-Un journal d’audit propose par défaut une vue par liste qui affiche les éléments suivants :
-
-- Date et heure de l’événement
-- Initié par (acteur)
-- Nom de l'application
-- Activité
-- Cible(s)
-- Category
-- État
-
-Pour voir des informations détaillées sur un événement, sélectionnez un élément dans la liste :
-
-![Obtenir des informations détaillées sur les actions effectuées et leurs auteurs dans les journaux d’audit Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
-
 > [!NOTE]
 > **Initié par (utilisateur)** comprend des informations sur l’utilisateur qui a exécuté la tâche et l’emplacement de l’exécution. Par exemple, si vous exécutez l’activité dans Intune dans le portail Azure, **Application** répertorie toujours **Extension du portail Microsoft Intune** et **l’ID d’application** utilise toujours le même GUID.
 >
 > La section **Cible(s)** répertorie plusieurs cibles et les propriétés qui ont été modifiées.  
-
-## <a name="filter-audit-events"></a>Filtrer les événements d’audit
-
-Chaque charge de travail comporte un élément de menu qui pré-filtre la catégorie d’événements d’audit associée à ce volet. Une option de filtre distincte vous permet de sélectionner d’autres catégories ainsi que les détails de l’action de l’événement pour cette catégorie. Vous pouvez rechercher par nom d’utilisateur principal (UPN), par exemple l’utilisateur qui a effectué l’action. Un filtre de plage de dates permet d’afficher les dernières 24 heures, les 7 derniers jours ou les 30 derniers jours. Par défaut, les événements d’audit des 30 derniers jours sont affichés.
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Utiliser l’API Graph pour récupérer des événements d’audit
 

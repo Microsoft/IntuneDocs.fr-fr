@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059266"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Résoudre les problèmes de stratégies et de profils dans Intune
@@ -103,7 +103,7 @@ Vérifiez l' [État du locataire](../fundamentals/tenant-status.md) et confirmez
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Vous ne savez pas avec certitude si une stratégie est correctement appliquée
 
-1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Appareils** > **Tous les appareils** > sélectionnez l’appareil > **Configuration de l’appareil**. 
 
     Chaque appareil liste ses profils. Chaque profil a un **État**. L’état s’applique quand tous les profils affectés, notamment les exigences et les restrictions en matière de système d’exploitation et de matériel, sont considérés ensemble. Les états possibles sont :

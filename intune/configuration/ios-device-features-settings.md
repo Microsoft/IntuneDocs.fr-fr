@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 381ceea979dedf9b33cb7ef9c47291e3ac6ce20c
-ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
+ms.openlocfilehash: e73612080e52c8eb49a0c090b68e917e24fef3ab
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117893"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992960"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Paramètres des appareils iOS et iPadOS permettant d’utiliser les principales fonctionnalités d’iOS dans Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune inclut certains paramètres prédéfinis pour permettre aux utilisateurs d’utiliser différentes fonctionnalités Apple sur leurs appareils iOS. Par exemple, les administrateurs peuvent contrôler la façon dont les utilisateurs d’appareils iOS se servent des imprimantes AirPrint, ajoutent des applications et dossiers à l’écran d’accueil et aux pages de l’écran d’accueil, affichent les notifications d’applications, affichent les détails de l’étiquette d’inventaire sur l’écran de verrouillage, utilisent l’authentification unique et s’authentifient avec des certificats.
 
@@ -280,36 +278,43 @@ Cette fonctionnalité s’applique à :
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
 
-- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Les options disponibles sont les suivantes :
+- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO. Les options disponibles sont les suivantes :
 
-  - **Non configuré**: les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application, vous pouvez basculer le type d’extension de l’application SSO de **Kerberos** ou des **informations d’identification** sur **non configuré**.
-  - **Informations d’identification**: utilisez une extension d’application d’informations d’identification générique et personnalisable pour effectuer l’authentification unique. Vérifiez que vous connaissez l’ID d’extension de l’extension d’application SSO de votre organisation.
+  - **Non configuré**: les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application, vous pouvez basculer le type d’extension d’application SSO sur **non configuré**.
+  - **Redirection**: utilisez une extension d’application de redirection générique et personnalisable pour effectuer une authentification unique avec des flux d’authentification modernes. Vérifiez que vous connaissez l’ID d’extension de l’extension d’application de votre organisation.
+  - **Informations d’identification**: utilisez une extension d’application d’informations d’identification générique et personnalisable pour exécuter l’authentification unique avec des flux d’authentification de stimulation/réponse. Vérifiez que vous connaissez l’ID d’extension de l’extension d’application de votre organisation.
   - **Kerberos**: utilisez l’extension Kerberos intégrée d’Apple, qui est incluse sur iOS 13,0 (et versions ultérieures) et ipados 13,0 (et versions ultérieures). Cette option est une version spécifique à Kerberos de l’extension **d’application d’informations d’identification** .
 
   > [!TIP]
-  > Avec le type **d’informations d’identification** , vous ajoutez vos propres valeurs de configuration pour transmettre l’extension. Au lieu de cela, envisagez d’utiliser les paramètres de configuration intégrés fournis par Apple dans le type **Kerberos** .
+  > Avec les types de **redirection** et **d’informations d’identification** , vous ajoutez vos propres valeurs de configuration pour transmettre l’extension. Si vous utilisez des **informations d’identification**, envisagez d’utiliser les paramètres de configuration intégrés fournis par Apple dans le type **Kerberos** .
 
-- **ID d’extension** (informations d’identification uniquement) : entrez l’identificateur de bundle qui identifie votre extension d’application SSO, par exemple `com.apple.extensiblesso`.
-- **ID d’équipe** (informations d’identification uniquement) : entrez l’identificateur d’équipe de votre extension d’application SSO. Un identificateur d’équipe est une chaîne de 10 caractères alphanumériques (nombres et lettres) générée par Apple, par exemple `ABCDE12345`. L’ID d’équipe n’est pas obligatoire.
+- **ID d’extension** (redirection et informations d’identification) : entrez l’identificateur de bundle qui identifie votre extension d’application SSO, par exemple `com.apple.extensiblesso`.
+
+- **ID d’équipe** (redirection et informations d’identification) : entrez l’identificateur d’équipe de votre extension d’application SSO. Un identificateur d’équipe est une chaîne de 10 caractères alphanumériques (nombres et lettres) générée par Apple, par exemple `ABCDE12345`. L’ID d’équipe n’est pas obligatoire.
 
   Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (qui ouvre le site Web d’Apple).
 
-- **Domaine**: entrez le nom de votre domaine Kerberos. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
+- **Domaine** (informations d’identification et Kerberos) : entrez le nom de votre domaine d’authentification. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
 
-- **Domaines**: entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
+- **Domaines** (informations d’identification et Kerberos) : entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
 
   - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans n’importe quel profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.
   - Ces domaines ne respectent pas la casse.
 
-- **Configuration supplémentaire** (informations d’identification uniquement) : entrez des données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
-  - **Clé de configuration**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
-  - **Type de valeur**: entrez le type de données. Les options disponibles sont les suivantes :
+- **URL** (redirection uniquement) : entrez les préfixes d’URL de vos fournisseurs d’identité au nom desquels l’extension d’application de redirection effectue l’authentification unique. Lorsqu’un utilisateur est redirigé vers ces URL, l’extension de l’application SSO est en intervention et invite l’authentification unique.
+
+  - Toutes les URL dans vos profils d’extension d’application d’authentification unique Intune doivent être uniques. Vous ne pouvez pas répéter un domaine dans un profil d’extension d’application SSO, même si vous utilisez différents types d’extensions d’application SSO.
+  - Les URL doivent commencer par http://ou https://.
+
+- **Configuration supplémentaire** (redirection et informations d’identification) : entrez les données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
+  - **Clé**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
+  - **Type**: entrez le type de données. Les options disponibles sont les suivantes :
 
     - Chaîne
     - Booléen : dans **valeur de configuration**, entrez `True` ou `False`.
     - Entier : dans **valeur de configuration**, entrez un nombre.
     
-  - **Valeur de configuration**: entrez les données.
+  - **Valeur**: entrez les données.
 
   - **Ajouter**: sélectionnez cette option pour ajouter vos clés de configuration.
 
@@ -323,11 +328,16 @@ Cette fonctionnalité s’applique à :
   > - Si vous n’avez qu’un seul domaine, laissez-le **non configuré** (par défaut).
 
 - **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` le nom de domaine.
+
+  > [!TIP]
+  > - Vous pouvez également utiliser des variables dans le nom du principal en entrant des accolades `{{ }}`. Par exemple, pour afficher le nom d’utilisateur, entrez `Username: {{username}}`. 
+  > - Toutefois, soyez vigilant avec la substitution de variable, car les variables ne sont pas validées dans l’interface utilisateur et sont sensibles à la casse. Veillez à entrer les informations correctes.
+
 - **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’avez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
 - **Nom du cache** (Kerberos uniquement) : entrez le nom du service de sécurité générique (GSS) du cache Kerberos. Vous n’avez probablement pas besoin de définir cette valeur.
 - **ID d’ensemble d’applications** (Kerberos uniquement) : **Ajoutez** les identificateurs de bundle d’applications qui doivent utiliser l’authentification unique sur vos appareils. Ces applications sont autorisées à accéder au ticket d’accord de ticket Kerberos, au ticket d’authentification et à authentifier les utilisateurs auprès des services auxquels ils sont autorisés à accéder.
 - **Mappage** de domaine Kerberos (Kerberos uniquement) : **Ajoutez** les suffixes DNS de domaine qui doivent être mappés à votre domaine. Utilisez ce paramètre lorsque les noms DNS des hôtes ne correspondent pas au nom de domaine. Vous n’avez probablement pas besoin de créer ce mappage de domaine à domaine personnalisé.
-- **Certificat PKINIT** (Kerberos uniquement) : **Sélectionnez** le certificat chiffrement de clé publique pour l’authentification initiale (PKINIT) qui peut être utilisé pour renouveler les informations d’identification Kerberos sans intervention de l’utilisateur. Le certificat doit être un certificat PKCS ou SCEP que vous avez précédemment ajouté à Intune.
+- **Certificat PKINIT** (Kerberos uniquement) : **Sélectionnez** le certificat chiffrement à clé publique pour l’authentification initiale (PKINIT) qui peut être utilisé pour l’authentification Kerberos. Vous pouvez choisir parmi les certificats [PKCS](../protect/certficates-pfx-configure.md) ou [SCEP](../protect/certificates-scep-configure.md) que vous avez ajoutés dans Intune. Pour plus d’informations sur les certificats, consultez [utiliser des certificats pour l’authentification dans Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="wallpaper"></a>Papier peint
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfe795a812572fa92c51a23b9e15b7fe48254174
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a167fa4f0ddc9832ea70b4281a42b5c0aae5bb81
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495767"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74694928"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils iOS dans Microsoft Intune
 
@@ -57,7 +57,7 @@ Cet article fournit des conseils sur l’utilisation d’Apple Configurator et d
 ## <a name="custom-configuration-profile-settings"></a>Paramètres du profil de configuration personnalisé
 
 - **Nom du profil de configuration personnalisé** : entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
-- **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
+- **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. La taille de fichier maximale est de 1 million octets (juste moins de 1 Mo). Le fichier importé s’affiche dans la zone **Contenu du fichier**.
 
   Vous pouvez également ajouter des jetons d’appareil à vos fichiers de configuration personnalisés. Les jetons de périphérique sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte présente un aspect similaire à `123456789ABC` qui est unique à chaque périphérique. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
 
