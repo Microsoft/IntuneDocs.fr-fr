@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72585707"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénario guidé – Applications mobiles Microsoft Office sécurisées 
@@ -43,7 +43,7 @@ Les applications mobiles Office, à l’instar de Microsoft Edge pour mobile, pr
 
 ![Image de données d’entreprise et de données personnelles](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
-Les [stratégies de protection des applications Intune](~/apps/app-protection-policy.md) vous aident à protéger vos fichiers de travail sur les appareils inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez quand même veiller à ce que les fichiers de travail et les ressources soient protégés.
+Les [stratégies de protection des applications Intune](~/apps/app-protection-policy.md) vous aident à protéger vos fichiers de travail sur les appareils inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez quand même veiller à que les fichiers de travail et les ressources soient protégés.
 
 Vous pouvez utiliser des stratégies de protection des applications pour empêcher les utilisateurs d’enregistrer les fichiers de travail à des emplacements non protégés. Vous pouvez également limiter le déplacement de données vers d’autres applications qui ne sont pas protégées par des stratégies de protection des applications. Les paramètres de stratégie de protection d’application comprennent :
 - Des stratégies de réadressage des données comme Interdire « Enregistrer sous » et Restreindre les opérations couper, copier et coller.
