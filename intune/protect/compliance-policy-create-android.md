@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8efb9dcf9129375252b5d9a7d1e6255dce39625c
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73801408"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Android pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
@@ -149,7 +149,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 - **Bloquer les applications provenant de sources inconnues** :
 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
-  - Bloquer **les appareils** avec **sécurité > sources inconnues** sources activées (*prises en charge sur Android 4,0 via Android 7. x. Non pris en charge par Android 8.0 et les versions ultérieures).
+  - Bloquer **les appareils** avec **sécurité > sources inconnues** sources activées (*prises en charge sur Android 4,0 via Android 7. x. Non pris en charge par Android 8.0 et les versions ultérieures*).
 
   Pour effectuer un chargement indépendant des applications, vous devez autoriser les sources inconnues. Si vous n’effectuez pas de chargement indépendant des applications Android, configurez la fonctionnalité sur **Bloquer** pour activer cette stratégie de conformité.
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503569"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Résoudre les problèmes d’intégration de JAMF Pro avec Microsoft Intune
@@ -111,7 +111,7 @@ Il existe plusieurs causes courantes pour les appareils Mac qui ne parviennent p
 
 **L’application JAMF Pro Enterprise dans Azure a une autorisation incorrecte ou a plus d’une autorisation**  
 
-  Lorsque vous créez l’application dans Azure, vous devez supprimer toutes les autorisations d’API par défaut, puis attribuer à Intune une seule autorisation *update_device_attributes*. 
+  Lorsque vous créez l’application dans Azure, vous devez supprimer toutes les autorisations d’API par défaut, puis attribuer à Intune une seule autorisation de *update_device_attributes*. 
 
   **Résolution**  
   Passez en revue et, si nécessaire, corrigez les autorisations pour l’application JAMF que vous avez créée dans Azure AD. Consultez la procédure de [création d’une application pour JAMF dans Azure ad](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory). 
@@ -294,7 +294,7 @@ La source de cette erreur peut être l’une des causes suivantes :
 
 Lors de l’inscription de l’application JAMF Pro dans Azure, l’une des conditions suivantes s’est produite :  
 - L’application a reçu plus d’une autorisation.
-- L’option **accorder le consentement de l’administrateur pour *\<your > d’entreprise***  n’a pas été sélectionnée.  
+- L’option **accorder le consentement de l’administrateur pour *\<votre entreprise >***  n’a pas été sélectionnée.  
 
 **Résolution**  
 Consultez la résolution de la cause 1 de l’échec de l' [inscription des appareils](#devices-fail-to-register), plus haut dans cet article.

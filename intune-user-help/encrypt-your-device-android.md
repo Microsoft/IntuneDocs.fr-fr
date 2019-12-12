@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506368"
 ---
 # <a name="encrypting-your-android-device"></a>Chiffrement de votre appareil Android
@@ -45,7 +45,7 @@ Si Portail d’entreprise ou l’application Microsoft Intune vous invite à chi
     c. Suivez les instructions à l’écran pour configurer votre verrouillage d’écran.  
 
 2. Revenez à l' **écran de verrouillage et à sécurité** , puis sélectionnez **Démarrage sécurisé**.
-3. Choisissez **exiger un code PIN quand l’appareil s’allume**  > **OK**.
+3. Choisissez **exiger un code PIN quand l’appareil s’allume** > **OK**.
 4. Entrez votre code PIN pour confirmer et chiffrer votre appareil.
 5. Ouvrez l’application Portail d’entreprise ou Microsoft Intune.
     * Utilisateurs Portail d’entreprise : sélectionnez votre appareil, puis appuyez sur **Vérifier les paramètres de l’appareil**. 
@@ -53,9 +53,9 @@ Si Portail d’entreprise ou l’application Microsoft Intune vous invite à chi
 
 Les appareils exécutant Android 4,4 et versions antérieures peuvent ne pas disposer de l’option de **Démarrage sécurisé** . Dans ce cas, procédez comme suit pour chiffrer votre appareil.
 
-1. Accédez à **paramètres**  > **sécurité**  > **chiffrer l’appareil**. Les étiquettes à l’écran varient d’un appareil Android à l’autre. Si vous ne voyez pas l’option **chiffrer l’appareil** , cochez la case suivante :
-    * **Stockage**  >  le**chiffrement du stockage**
-    * Écran de verrouillage du  de **stockage** >  **et sécurité**  > **autres paramètres de sécurité** 
+1. Accédez à **paramètres** > **sécurité** > **chiffrer l’appareil**. Les étiquettes à l’écran varient d’un appareil Android à l’autre. Si vous ne voyez pas l’option **chiffrer l’appareil** , cochez la case suivante :
+    * **Stockage** > le **chiffrement du stockage**
+    * **de stockage**  > **écran de verrouillage et sécurité** > **autres paramètres de sécurité** 
 
 2. Suivez les instructions à l'écran. Au cours du chiffrement, votre appareil peut redémarrer plusieurs fois.
 3. Ouvrez l’application Portail d’entreprise ou Microsoft Intune.

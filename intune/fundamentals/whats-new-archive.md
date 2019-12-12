@@ -20,10 +20,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6a6b5585501851bb52db70ca222f8cfff7ad0597
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73635466"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nouveautés de la préversion de Microsoft Intune - mois précédents
@@ -272,7 +272,7 @@ La console Intune ne prend plus en charge l’affichage et la gestion des appare
 - utiliser les contrôles Exchange comme indiqué dans [Appareils clients et mobiles dans Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online).
 
 #### <a name="search-the-all-devices-page-for-an-exact-device-by-using-name--4254930---"></a>Rechercher un appareil précis dans la page Tous les appareils à l’aide de [nom]<!--4254930 -->
-Vous pouvez désormais rechercher un nom de d’appareil exact. Accédez à **Intune** > **Appareils** > **Tous les appareils** > dans la zone de recherche, placez le nom de l’appareil entre {} pour rechercher un correspondance exacte. Par exemple, **{Appareil12345}**.
+Vous pouvez désormais rechercher un nom de d’appareil exact. Accédez à **Intune** > **Appareils** > **Tous les appareils** > dans la zone de recherche, placez le nom de l’appareil entre {} pour rechercher un correspondance exacte. Par exemple, **{Appareil12345}** .
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
@@ -341,7 +341,7 @@ Des nouveaux messages d’erreur d’installation d’une application ont été 
 Dans Intune, sélectionnez **Applications clientes** > **Applications** > « Nom de l’application » > **État de l’installation de l’appareil**. Les nouveaux messages d’erreur sont disponibles dans la colonne **Détails du statut**.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Nouvel écran Catégories d’application dans l’application Portail d’entreprise pour Windows 10<!-- 3834780  -->
-Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)**, **Éducation** et **Productivité**. Ce changement apparaît dans la version 10.3.3451.0 et les versions ultérieures du portail d’entreprise. Pour afficher le nouvel écran, consultez [Nouveautés de l’interface utilisateur des applications](whats-new-app-ui.md). Pour plus d’informations sur les applications dans le portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
+Un nouvel écran appelé **Catégories d’application** a été ajouté pour améliorer l’expérience de navigation et de sélection des applications dans le portail d’entreprise pour Windows 10. Les applications des utilisateurs s’affichent désormais triées dans des catégories telles que **Proposée(s)** , **Éducation** et **Productivité**. Ce changement apparaît dans la version 10.3.3451.0 et les versions ultérieures du portail d’entreprise. Pour afficher le nouvel écran, consultez [Nouveautés de l’interface utilisateur des applications](whats-new-app-ui.md). Pour plus d’informations sur les applications dans le portail d’entreprise, consultez [Installer et partager des applications sur votre appareil](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Application Conformité de Power BI<!-- 1455231 doc-work-item -->
 Accédez à votre entrepôt de données Intune dans Power BI à l’aide de l’application [Conformité Intune (Entrepôt de données)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Avec cette application Power BI, vous pouvez désormais accéder à des rapports précréés et les partager sans aucune configuration supplémentaire et sans quitter votre navigateur web. Pour plus d’informations, consultez [Journal des changements - Application Conformité de Power BI](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -420,8 +420,8 @@ Android Entreprise
 #### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui---3640850-3803313-----"></a>Les paramètres Safari et Retardement de la visibilité des mises à jour logicielles par l’utilisateur pour les appareils iOS sont déplacés dans l’interface utilisateur Intune<!-- 3640850, 3803313   -->
 Pour les appareils iOS, vous pouvez définir des paramètres Safari et configurer les mises à jour logicielles. Dans cette mise à jour, ces paramètres sont déplacés dans différentes parties de l’interface utilisateur Intune :
 
-- Les paramètres Safari sont passés de **Safari** (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour la plateforme > **Restrictions sur l’appareil** pour le type de profil) à **[Applications intégrées](../configuration/device-restrictions-ios.md#built-in-apps)**.
-- Le paramètre **Retardement de la visibilité des mises à jour logicielles par l’utilisateur pour les appareils iOS supervisés** (**Mises à jour logicielles** > **Mettre à jour les stratégies pour iOS**) est déplacé dans **Restrictions sur l’appareil** > **[Général](../configuration/device-restrictions-ios.md#general)**.  Pour plus d’informations sur l’impact sur les stratégies existantes, consultez [Mises à jour logicielles iOS](../protect/software-updates-ios.md#configure-the-policy).
+- Les paramètres Safari sont passés de **Safari** (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour la plateforme > **Restrictions sur l’appareil** pour le type de profil) à **[Applications intégrées](../configuration/device-restrictions-ios.md#built-in-apps)** .
+- Le paramètre **Retardement de la visibilité des mises à jour logicielles par l’utilisateur pour les appareils iOS supervisés** (**Mises à jour logicielles** > **Mettre à jour les stratégies pour iOS**) est déplacé dans **Restrictions sur l’appareil** >  **[Général](../configuration/device-restrictions-ios.md#general)** .  Pour plus d’informations sur l’impact sur les stratégies existantes, consultez [Mises à jour logicielles iOS](../protect/software-updates-ios.md#configure-the-policy).
 
 Pour obtenir la liste des paramètres, consultez :
 
@@ -433,7 +433,7 @@ Cette fonctionnalité s’applique à :
 - iOS
 
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices---3699164-----"></a>L’option Activation des restrictions dans les paramètres de l’appareil est renommée en Heure de l’écran sur les appareils iOS<!-- 3699164   -->
-Vous pouvez configurer **Activation des restrictions dans les paramètres de l’appareil** sur les appareils iOS supervisés (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour plateforme > **Restrictions de l’appareil** pour le type de profil > **Général**). Dans cette mise à jour, ce paramètre est renommé en **Heure de l’écran (mode supervisé uniquement)**.
+Vous pouvez configurer **Activation des restrictions dans les paramètres de l’appareil** sur les appareils iOS supervisés (**Configuration de l’appareil** > **Profils** > **Nouveau profil** > **iOS** pour plateforme > **Restrictions de l’appareil** pour le type de profil > **Général**). Dans cette mise à jour, ce paramètre est renommé en **Heure de l’écran (mode supervisé uniquement)** .
 
 Le comportement reste le même. Plus précisément :
 
@@ -587,7 +587,7 @@ Lors de la création d’un profil de configuration pour des appareils iOS, vous
 La page [Paramètres d’affichage des messages sur l’écran de verrouillage](../configuration/ios-device-features-settings.md#lock-screen-message) liste les paramètres.
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Nouveaux paramètres de restriction d’appareil App Store, affichage de document, jeux ajoutés aux appareils iOS<!-- 2827760-->
-Dans **configuration** de l’appareil > **profils** > **créer un profil** > **iOS** pour la plateforme > des **restrictions d’appareil** pour le type de profil > le **magasin d’applications, l’affichage des documents, les jeux**, les paramètres suivants sont ajoutés : autoriser les applications gérées à écrire des contacts dans les comptes de contacts non gérés autoriser les applications non gérées à lire à partir de comptes gérés pour voir ces paramètres, accédez aux [restrictions de périphériques iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
+Dans **configuration de l’appareil** > **les profils de**  > **créer un profil** > **iOS** pour la plate-forme > **restrictions de l’appareil** pour le type de profil > **magasin d’applications, l’affichage des documents et les**de jeux, les paramètres suivants sont ajoutés : autoriser les applications gérées à écrire des contacts dans des comptes non gérés , accédez à [restrictions des appareils iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices---3201839-3201843---"></a>Nouveaux paramètres de notification, d’indicateurs et de keyguard pour les appareils des propriétaires d’appareils Android Entreprise<!-- 3201839 3201843 -->
 Cette mise à jour comporte de nouvelles fonctionnalités pour les propriétaires d’appareils Android pour les entreprises. Pour pouvoir les utiliser, accédez à **Configuration de l’appareil** > **Profils** > **Créer un profil** > dans **Plateforme**, choisissez **Android pour les entreprises** > dans **Type de profil**, choisissez **Propriétaire de l’appareil uniquement** > **Restrictions de l’appareil**.
@@ -956,7 +956,7 @@ Cette mise à jour comprend les améliorations suivantes du profil de configurat
 S’applique à : Windows 10 et versions ultérieures
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device----2637704----"></a>Invite PIN lorsque vous modifiez des empreintes digitales ou Face ID sur un appareil iOS <!-- 2637704  -->
-Les utilisateurs sont maintenant invités à entrer un code PIN après avoir apporté des modifications biométriques sur leur appareil iOS. Cela inclut les changements apportés aux empreintes digitales ou au Face ID. Le délai de la demande dépend de la configuration du délai d’attente *Revérifier les conditions d’accès requises après (minutes)*.  Si aucun code PIN n’est défini, l’utilisateur est invité à en configurer un. 
+Les utilisateurs sont maintenant invités à entrer un code PIN après avoir apporté des modifications biométriques sur leur appareil iOS. Cela inclut les changements apportés aux empreintes digitales ou au Face ID. Le délai de la demande dépend de la configuration du délai d’attente *Revérifier les conditions d’accès requises après (minutes)* .  Si aucun code PIN n’est défini, l’utilisateur est invité à en configurer un. 
  
 Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS 9.0.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être ajouté aux applications ciblées. Cette intégration se produit en continu et repose sur les équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer.
 
@@ -1321,7 +1321,7 @@ Dans cette mise à jour, une API Java permet l’intégration d’autorités de 
 Actuellement, Intune prend en charge les [demandes SCEP avec les services de certificats Active Directory](../protect/certificates-scep-configure.md).
 
 #### <a name="toggle-to-show-or-not-show-the-end-session-button-on-a-kiosk-browser---2455253---"></a>Basculer pour afficher ou masquer le bouton Terminer la session sur un navigateur kiosque<!-- 2455253 -->
-Vous pouvez maintenant configurer les navigateurs Kiosque pour afficher ou non le bouton Terminer la session. Vous pourrez voir la commande dans **Configuration de l’appareil** > **Kiosque (préversion)** > **Navigateur web kiosque**. Si elle est activée, quand un utilisateur clique sur le bouton, l’application demande une confirmation pour terminer la session. Lorsque vous confirmez, le navigateur efface toutes les données de navigation et retourne à l’URL par défaut.
+Vous pouvez maintenant configurer les navigateurs Kiosque pour afficher ou non le bouton Terminer la session. Vous pourrez voir la commande dans **Configuration de l’appareil** > **Kiosque (préversion)**  > **Navigateur web kiosque**. Si elle est activée, quand un utilisateur clique sur le bouton, l’application demande une confirmation pour terminer la session. Lorsque vous confirmez, le navigateur efface toutes les données de navigation et retourne à l’URL par défaut.
 
 #### <a name="create-an-esim-cellular-configuration-profile---2564077---"></a>Créer un profil de configuration mobile eSIM<!-- 2564077 -->
 Dans **Configuration de l’appareil**, vous pouvez créer un profil mobile eSIM. Vous pouvez importer un fichier qui contient les codes d’activation mobiles fournis par votre opérateur mobile. Vous pouvez ensuite déployer ces profils sur vos appareils Windows 10 eSIM LTE, tels que Surface Pro LTE et autres appareils compatibles eSIM.
@@ -1435,7 +1435,7 @@ Avec cette mise à jour, vous pouvez choisir Palo Alto Networks GlobalProtect co
 Vous pouvez désormais configurer des paramètres Options de sécurité locales de l’appareil supplémentaires pour les appareils Windows 10. Des paramètres supplémentaires sont disponibles dans les domaines Client réseau Microsoft, Serveur réseau Microsoft, Accès et sécurité réseau, ainsi qu’Ouverture de session interactive. Recherchez ces paramètres dans la catégorie Endpoint Protection quand vous créez une stratégie de configuration d’appareil Windows 10.
 
 #### <a name="enable-kiosk-mode-on-windows-10-devices---1560072----"></a>Activer le mode plein écran sur les appareils Windows 10<!-- 1560072 ! -->
-Sur les appareils Windows 10, vous pouvez créer un profil de configuration et activer le mode kiosque (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** > **Restrictions de l’appareil** > **Kiosque**). Dans cette mise à jour, le paramètre **Kiosque (préversion)** est renommé **Kiosque (obsolète)**. **Kiosque (obsolète)** n’est plus recommandé, mais continuera à fonctionner jusqu’à la mise à jour de juillet. **Kiosque (obsolète)** est remplacé par le nouveau type de profil **Kiosque** (**Créer un profil** > **Windows 10** > **Kiosque (préversion)**), qui contiendra les paramètres permettant de configurer des kiosques sur Windows 10 RS4 et ultérieur.
+Sur les appareils Windows 10, vous pouvez créer un profil de configuration et activer le mode kiosque (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **Windows 10** > **Restrictions de l’appareil** > **Kiosque**). Dans cette mise à jour, le paramètre **Kiosque (préversion)** est renommé **Kiosque (obsolète)** . **Kiosque (obsolète)** n’est plus recommandé, mais continuera à fonctionner jusqu’à la mise à jour de juillet. **Kiosque (obsolète)** est remplacé par le nouveau type de profil **Kiosque** (**Créer un profil** > **Windows 10** > **Kiosque (préversion)** ), qui contiendra les paramètres permettant de configurer des kiosques sur Windows 10 RS4 et ultérieur.
 
 S’applique à Windows 10 et versions ultérieures.
 
@@ -1492,7 +1492,7 @@ Avec un connecteur Exchange local Intune, vous pouvez gérer l’accès de l’a
 L’information CCID (Chip Card Interface Device) est désormais incluse pour chaque appareil. Pour la voir, choisissez **Appareils** > **Tous les appareils** > choisissez un appareil > **Matériel** > vérifiez sous **Détails du réseau**>
 
 #### <a name="assign-all-users-and-all-devices-as-scope-groups---2196803---"></a>Attribuer tous les utilisateurs et tous les appareils en tant que groupes d’étendue<!-- 2196803 -->
-Vous pouvez désormais affecter tous les utilisateurs, tous les appareils, ainsi que tous les utilisateurs et appareils dans des groupes d’étendue. Pour ce faire, choisissez **Rôles Intune** > **Tous les rôles** > **Gestionnaire de stratégie et de profils** > **Affectations** > choisissez une affectation > **Étendue (Groupes)**.
+Vous pouvez désormais affecter tous les utilisateurs, tous les appareils, ainsi que tous les utilisateurs et appareils dans des groupes d’étendue. Pour ce faire, choisissez **Rôles Intune** > **Tous les rôles** > **Gestionnaire de stratégie et de profils** > **Affectations** > choisissez une affectation > **Étendue (Groupes)** .
 
 #### <a name="udid-information-now-included-for-ios-and-macos-devices---2219806---"></a>Informations UDID désormais incluses pour les appareils iOS et macOS<!-- 2219806 -->
 Pour voir l’identificateur unique de l’appareil (UDID) pour les appareils iOS et macOS, accédez à **Appareils** > **Tous les appareils** > choisissez un appareil > **Matériel**. L’UDID est disponible uniquement pour les appareils d’entreprise (tel que défini sous **Appareils** > **Tous les appareils** > choisissez un appareil > **Propriétés** > **Propriété de l’appareil**).
@@ -2176,7 +2176,7 @@ Vous pouvez maintenant arrêter les appareils supervisés iOS 10.3. Cette action
 
 #### <a name="disallow-datetime-changes-to-samsung-knox-devices---1468103---"></a>Interdire les changements de date/heure sur les appareils Samsung Knox<!-- 1468103 -->
 
-Nous avons ajouté une nouvelle fonctionnalité qui vous permet d’empêcher les changements de date et d’heure sur les appareils Samsung Knox. Vous la trouverez dans **Profils de configuration d’appareil** > **Restrictions d’appareil (Android)** > **Général**.
+Nous avons ajouté une nouvelle fonctionnalité qui vous permet d’empêcher les changements de date et d’heure sur les appareils Samsung Knox. Vous la trouverez dans **Profils de configuration d’appareil** > **Restrictions d’appareil (Android)**  > **Général**.
 
 #### <a name="surface-hub-resource-account-supported---1566442----"></a>Compte de ressource Surface Hub pris en charge<!-- 1566442  -->
 
@@ -2882,7 +2882,7 @@ Nous avons procédé à quelques mises à jour sur l’interface utilisateur du 
 
 - __Modifications de la navigation__ : les éléments de la barre de navigation sont déplacés dans le menu hamburger situé en haut à gauche. La page Catégories est supprimée. Les utilisateurs peuvent désormais filtrer le contenu par catégorie lors de l’exploration.
 
-- __Mises à jour des applications proposées __ : nous avons ajouté une page dédiée sur le site où les utilisateurs peuvent rechercher les applications que vous avez choisi de proposer, et nous avons apporté quelques ajustements à l’interface utilisateur de la section correspondante sur la page d’accueil.
+- __Mises à jour des applications proposées__  : nous avons ajouté une page dédiée sur le site où les utilisateurs peuvent rechercher les applications que vous avez choisi de proposer, et nous avons apporté quelques ajustements à l’interface utilisateur de la section correspondante sur la page d’accueil.
 
 ### <a name="ibooks-support-for-the-company-portal-website--1231841--"></a>Prise en charge des iBooks par le site web Portail d’entreprise<!--1231841-->
 Nous avons ajouté une page dédiée au site web Portail d'entreprise qui permet aux utilisateurs de parcourir et de télécharger des iBooks. 
