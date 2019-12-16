@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50dbbb19cca9b5c46f0ba8b9d4e16c499534b536
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: db04b93deffd2476a97b952fd1c6942fa79e1f05
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503113"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955386"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Exiger l’authentification multifacteur pour l’inscription d’appareils dans Intune
 
@@ -50,18 +50,17 @@ Pour exiger l’authentification multifacteur à l’inscription d’un appareil
 >[!Important]
 >Ne configurez pas les **règles d’accès basées sur les appareils** pour l’inscription à Microsoft Intune.
 
-1. Connectez-vous à votre [portail Microsoft Azure](https://portal.azure.com) avec vos informations d’identification.
-2. Dans le portail, accédez à **Intune** et choisissez **Accès conditionnel**. Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.
-4. Choisissez **Nouvelle stratégie**.
-5. Dans **Nouvelle** stratégie, tapez un nom descriptif pour la stratégie.
-6. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**. 
-7. Dans **Utilisateurs et groupes**, choisissez **Sélectionner les utilisateurs ou les groupes** et cochez **Utilisateurs et groupes**. Sélectionnez ensuite les utilisateurs et/ou les groupes auxquels attribuer cette stratégie, puis choisissez **Terminé**.
-8. Dans la section **Affectations**, choisissez **Applications cloud**.
-9. Sous l’onglet **Inclure** des **Applications cloud**, choisissez **Sélectionner les applications**, puis **Sélectionner** > **Inscription à Microsoft Intune**, puis choisissez **OK**. En choisissant **l’inscription Microsoft Intune**, l’authentification multifacteur avec l’accès conditionnel est appliquée uniquement à l’inscription de l’appareil (invite d’authentification multifacteur à usage unique).
-10. Dans la section **Affectations**, pour **Conditions**, vous n’avez pas besoin de configurer des paramètres MFA.
-11. Dans la section **Contrôles d’accès**, choisissez **Accorder**.
-12. Dans **Accorder**, choisissez **Accorder l’accès**, puis sélectionnez **Exiger l’authentification multifacteur**. Ne sélectionnez pas **Exiger que l’appareil soit marqué comme conforme**, car la conformité d’un appareil ne peut pas être évaluée tant que celui-ci n’est pas inscrit. Choisissez ensuite **Sélectionner**.
-13. Dans **Nouvelle stratégie**, choisissez **Activer la stratégie** > **Activée**, puis choisissez **Créer**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Accès conditionnel**. Le nœud d’accès conditionnel accessible à partir d’*Intune* est le même nœud que celui accessible à partir d’*Azure AD*.
+2. Choisissez **Nouvelle stratégie**.
+3. Dans **Nouvelle** stratégie, tapez un nom descriptif pour la stratégie.
+4. Dans la section **Affectations**, choisissez **Utilisateurs et groupes**. 
+5. Dans **Utilisateurs et groupes**, choisissez **Sélectionner les utilisateurs ou les groupes** et cochez **Utilisateurs et groupes**. Sélectionnez ensuite les utilisateurs et/ou les groupes auxquels attribuer cette stratégie, puis choisissez **Terminé**.
+6. Dans la section **Affectations**, choisissez **Applications cloud**.
+7. Sous l’onglet **Inclure** des **Applications cloud**, choisissez **Sélectionner les applications**, puis **Sélectionner** > **Inscription à Microsoft Intune**, puis choisissez **OK**. En choisissant **l’inscription Microsoft Intune**, l’authentification multifacteur avec l’accès conditionnel est appliquée uniquement à l’inscription de l’appareil (invite d’authentification multifacteur à usage unique).
+8. Dans la section **Affectations**, pour **Conditions**, vous n’avez pas besoin de configurer des paramètres MFA.
+9. Dans la section **Contrôles d’accès**, choisissez **Accorder**.
+10. Dans **Accorder**, choisissez **Accorder l’accès**, puis sélectionnez **Exiger l’authentification multifacteur**. Ne sélectionnez pas **Exiger que l’appareil soit marqué comme conforme**, car la conformité d’un appareil ne peut pas être évaluée tant que celui-ci n’est pas inscrit. Choisissez ensuite **Sélectionner**.
+11. Dans **Nouvelle stratégie**, choisissez **Activer la stratégie** > **Activée**, puis choisissez **Créer**.
 
 
 

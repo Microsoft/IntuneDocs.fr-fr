@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712195"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991773"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -47,6 +47,8 @@ L’action **Réinitialiser** rétablit les paramètres d’usine d’un apparei
 
 L’option **Conserver le compte d’utilisateur et l’état d’inscription** est disponible uniquement pour Windows 10 version 1709 ou ultérieure.
 
+L’option **Effectuer une réinitialisation protégée** permet de s’assurer que l’action de réinitialisation ne peut pas être contournée en éteignant l’appareil. Une réinitialisation protégée continuera d’essayer de réinitialiser l’appareil jusqu’à ce que cela réussisse. Dans certaines configurations, cette action peut empêcher l’appareil de redémarrer.
+
 Les stratégies MDM seront réappliquées lors de la prochaine connexion de l’appareil à Intune.
 
 Une réinitialisation est utile pour réinitialiser un appareil avant de le donner à un nouvel utilisateur, ou en cas de perte ou de vol de l’appareil. Soyez prudent quand vous sélectionnez **Réinitialiser**. Les données sur l’appareil ne peuvent pas être récupérées.
@@ -57,7 +59,7 @@ Une réinitialisation est utile pour réinitialiser un appareil avant de le donn
 3. Sélectionnez **Appareils** > **Tous les appareils**.
 4. Sélectionnez le nom de l’appareil à réinitialiser.
 5. Dans le volet qui montre le nom de l’appareil, sélectionnez **Réinitialiser**.
-6. Pour Windows 10 version 1709 ou ultérieure, vous avez également l’option **Conserver le compte d’utilisateur et l’état d’inscription**. 
+6. Pour Windows 10 version 1709 ou ultérieure, vous avez également l’option **Réinitialiser l’appareil, mais conserver l’état d’inscription et le compte d’utilisateur associé**. 
     
     |Éléments conservés lors d’une réinitialisation |Éléments non conservés|
     | -------------|------------|

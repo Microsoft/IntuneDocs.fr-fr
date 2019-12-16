@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18cf8e3aec0c7ed7d8869c0f5b13b6e39df23d77
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: b7b77c4f0127c9ee16b255d0e0e28622b85c323b
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713419"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907251"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Redémarrer à distance des appareils avec Intune
 
@@ -46,7 +46,7 @@ L’action d’appareil **Redémarrer** entraîne le redémarrage de l’apparei
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Sélectionnez **Appareils** > **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, sélectionnez un appareil, sélectionnez **Plus**, puis l’action à distance **Redémarrer**.
+4. Dans la liste des appareils que vous gérez, sélectionnez un appareil > **Redémarrer** > **Oui**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

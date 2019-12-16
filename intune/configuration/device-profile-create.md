@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 71f2bc855673b6b189ed7581b979527485e86083
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390865"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860381"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Créer un profil d’appareil dans Microsoft Intune
 
@@ -93,7 +93,7 @@ Cet article :
 
 ## <a name="scope-tags"></a>Balises d'étendue
 
-Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue au profil. Les balises d’étendue affectent et filtrent les stratégies à des groupes spécifiques, tels que les ressources humaines ou tous les employés US-NC.
+Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue au profil. Les balises d’étendue filtrent les profils dans des groupes informatiques spécifiques, tels que `US-NC IT Team` et `JohnGlenn_ITDepartment`.
 
 Pour plus d’informations sur les balises d’étendue, et sur ce que vous pouvez faire, consultez [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Utiliser RBAC et les balises d’étendue pour l’informatique distribuée).
 
@@ -185,6 +185,8 @@ Lorsque vous créez des profils, tenez compte des recommandations suivantes :
   L’illustration suivante montre un exemple de paramètre qui peut s’appliquer aux utilisateurs et/ou aux appareils :
 
   ![Modèle d’administration Intune qui s’applique aux utilisateurs et aux appareils](./media/device-profile-create/setting-applies-to-user-and-device.png)
+
+- Chaque fois que vous créez une stratégie restrictive, communiquez cette modification à vos utilisateurs. Par exemple, si vous modifiez l’exigence de code secret de 4 à 6 caractères, informez-en vos utilisateurs avant d’attribuer la stratégie.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

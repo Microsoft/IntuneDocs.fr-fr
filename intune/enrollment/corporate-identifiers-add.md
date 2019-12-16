@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3d98a0e3c5bd2a5c11c9aa72d791306dfbe6578
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503305"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955471"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifier les appareils comme appartenant à l’entreprise
 
@@ -85,9 +85,7 @@ Dans un éditeur de texte, ce fichier .csv s'affiche comme suit :
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Charger une liste .csv d’identificateurs d’entreprise
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), choisissez **Inscription des appareils** > **Identificateurs d’appareils d’entreprise** > **Ajouter** > **Charger un fichier CSV**.
-
-   ![Espace de travail des identificateurs d’appareils d’entreprise avec le bouton Ajouter mis en surbrillance](./media/corporate-identifiers-add/add-corp-id.png)
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Identificateurs d’appareil d’entreprise** > **Ajouter** > **Charger un fichier CSV**.
 
 2. Dans le panneau **Ajouter des identificateurs**, spécifiez le type d’identificateur : **IMEI** ou **Série**.
 
@@ -97,7 +95,7 @@ Dans un éditeur de texte, ce fichier .csv s'affiche comme suit :
 
 ## <a name="manually-enter-corporate-identifiers"></a>Entrer manuellement les identificateurs d’entreprise
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), choisissez **Inscription des appareils** > **Identificateurs d’appareils d’entreprise** > **Ajouter** > **Entrer manuellement**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Identificateurs d’appareil d’entreprise** > **Ajouter** > **Entrer manuellement**.
 
 2. Dans le panneau **Ajouter des identificateurs**, spécifiez le type d’identificateur : **IMEI** ou **Série**.
 
@@ -111,7 +109,7 @@ Les appareils importés ne sont pas nécessairement inscrits. Les appareils peuv
 
 ## <a name="delete-corporate-identifiers"></a>Supprimer des identificateurs d’entreprise
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), choisissez **Inscription des appareils** > **Identificateurs d’appareils d’entreprise**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Identificateurs d’appareil d’entreprise**.
 2. Sélectionnez les identificateurs d’appareil que vous voulez supprimer, puis choisissez **Supprimer**.
 3. Confirmez la suppression.
 
@@ -125,7 +123,7 @@ Pour obtenir des spécifications détaillées sur les IMEI (International Mobile
 Les propriétés des appareils affichent **Propriété** pour chaque enregistrement d’appareil dans Intune. En tant qu’administrateur, vous pouvez spécifier des appareils comme étant **Personnel** ou d’**Entreprise**. Lorsque le type de propriété d’un appareil passe de Personnel à Entreprise, Intune supprime toutes les informations d’application précédemment collectées à partir de cet appareil dans les 7 jours. Le cas échéant, Intune supprime également le numéro de téléphone enregistré. 
 
 **Pour changer la propriété d’un appareil :**
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), accédez à **Appareils**, puis choisissez l’appareil.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Tous les appareils** > choisissez l’appareil.
 2. Choisissez **Propriétés**.
 3. Spécifiez pour **Propriété de l’appareil** l’option **Personnel** ou **Entreprise**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0718fae09228b9359b073901f3a344a09a6176e7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3fb5818609763753878fec7a84fd8c19eb154f88
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509252"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955437"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Conditions générales de l’accès utilisateur
 
@@ -46,31 +46,30 @@ Pour savoir quelle est la méthode qui vous convient le mieux, consultez le bill
 ## <a name="create-terms-and-conditions"></a>Créer des conditions générales
 Effectuez ces étapes pour créer les conditions générales. Le nom d’affichage et la description sont destinés à un usage administratif, tandis que les propriétés des conditions générales sont présentées aux utilisateurs du portail d’entreprise.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le volet **Intune**, choisissez **Inscription de l’appareil** > **Conditions générales**.
-3. Choisissez **Créer**.
-4. Dans la page **Informations de base**, spécifiez les informations suivantes :
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Administration de locataire** > **Conditions générales**.
+2. Choisissez **Créer**.
+3. Dans la page **Informations de base**, spécifiez les informations suivantes :
 
    - **Nom** : Nom donné aux conditions générales dans le portail Azure. Les utilisateurs ne voient pas ce nom.
    - **Description** : Informations facultatives qui vous aident à identifier cet ensemble de conditions générales dans le portail Azure.
 
     ![Capture d’écran du portail Azure montrant la page Informations de base des conditions générales](./media/terms-and-conditions-create/terms-basics-page.png)
 
-5. Choisissez **Suivant** pour accéder à la page **Conditions** et fournir les informations suivantes :
+4. Choisissez **Suivant** pour accéder à la page **Conditions** et fournir les informations suivantes :
 
    - **Titre** : Nom de vos conditions générales que les utilisateurs voient dans le portail d’entreprise, au-dessus du **résumé**.
    - **Conditions générales** : Conditions générales que les utilisateurs voient et doivent accepter ou refuser.
    - **Résumé des conditions** : Texte qui explique la signification de l’acceptation des conditions générales par les utilisateurs. Par exemple, « En inscrivant votre appareil, vous acceptez les conditions d’utilisation définies par Contoso. Lisez les termes du contrat avec soin avant de continuer. ».
 
-6. Choisissez **Suivant** pour accéder à la page **Balises d'étendue**.
+5. Choisissez **Suivant** pour accéder à la page **Balises d'étendue**.
 
-7. Cliquez sur **Sélectionner des balises d’étendue**, choisissez les balises d’étendue que vous souhaitez affecter à ces conditions générales, puis cliquez sur **Sélectionner**. 
+6. Cliquez sur **Sélectionner des balises d’étendue**, choisissez les balises d’étendue que vous souhaitez affecter à ces conditions générales, puis cliquez sur **Sélectionner**. 
 
-8. Choisissez **Suivant** pour accéder à la page **Attributions**, puis sélectionnez une des options suivantes pour **Attribuer à** :
+7. Choisissez **Suivant** pour accéder à la page **Attributions**, puis sélectionnez une des options suivantes pour **Attribuer à** :
     - **Tous les utilisateurs** : Choisissez cette option pour attribuer ces conditions générales à tous les utilisateurs.
     - **Sélectionner des groupes** : Choisissez cette option pour attribuer ces conditions générales à tous les membres des groupes que vous identifiez en choisissant **Sélectionner les groupes à inclure**.
 
-9. Choisissez **Suivant** > **Créer**.
+8. Choisissez **Suivant** > **Créer**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Découvrez comment vos utilisateurs voient les conditions générales
 L’exemple suivant montre le **titre** et le **résumé des conditions** dans la console d’administration et le portail d’entreprise.
@@ -84,8 +83,7 @@ L’exemple suivant montre les conditions générales dans la console d’admini
 
 ## <a name="monitor-terms-and-conditions"></a>Surveiller des conditions générales
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
-1. Dans le volet Intune, choisissez **Inscription de l’appareil** > **Conditions générales**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Administration de locataire** > **Conditions générales**.
 2. Dans la liste des conditions générales, choisissez les conditions dont vous souhaitez voir l’acceptation > **Rapport d’acceptation**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Utiliser plusieurs versions des conditions générales
@@ -95,12 +93,10 @@ Vous pouvez modifier vos conditions générales et gérer leurs versions. Chaque
 
 Conserver le numéro de version actuel si, par exemple, vous corrigez des fautes de frappe ou modifiez la mise en forme.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Administration de locataire** > **Conditions générales** > choisissez les conditions générales à modifier > **Propriétés**.
 
-2. Dans le volet Intune, choisissez **Inscription de l’appareil** > **Conditions générales** > choisissez les conditions générales à modifier > **Propriétés**.
+2. Dans le volet **Propriétés**, choisissez **Conditions générales**, puis modifiez le **Titre**, le **Résumé des conditions** et les **Conditions générales** selon les besoins. Si vos changements imposent aux utilisateurs d’accepter les nouvelles conditions générales, choisissez **Demandez aux utilisateurs de réaccepter les conditions et passez au numéro de version**
 
-4. Dans le volet **Propriétés**, choisissez **Conditions générales**, puis modifiez le **Titre**, le **Résumé des conditions** et les **Conditions générales** selon les besoins. Si vos changements imposent aux utilisateurs d’accepter les nouvelles conditions générales, choisissez **Demandez aux utilisateurs de réaccepter les conditions et passez au numéro de version**
-
-4. Choisissez **OK** > **Enregistrer**.
+3. Choisissez **OK** > **Enregistrer**.
 
 Il suffit aux utilisateurs d’accepter une seule fois les conditions générales mises à jour. Les utilisateurs de plusieurs appareils n’ont pas besoin d’accepter les conditions générales sur chaque appareil.

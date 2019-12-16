@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 7373ca24c1ae1f439096d9bedcb8e81979c95586
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74549407"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74828921"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune.
 
@@ -119,8 +119,8 @@ L’administrateur d’appareil Android (parfois appelé gestion Android « hé
 
 #### <a name="how-does-this-affect-me"></a>Comment cela m’affecte-t-il ?
 En raison de ces modifications apportées par Google, les utilisateurs Intune seront affectés des manières suivantes :  
-- Intune pourra uniquement assurer le support des appareils Android gérés par l’administrateur d’appareil exécutant Android 10 et versions ultérieures (également appelé Android Q) jusqu’à l’été 2020. Il s’agit de la date à laquelle la prochaine version principale d’Android est censée être publiée.   
-- Les appareils gérés par l’administrateur d’appareil qui exécutent Android 10 ou une version ultérieure après l’été 2020 ne peuvent plus être entièrement gérés.       
+- Intune pourra uniquement assurer le support complet des appareils Android gérés par l’administrateur d’appareil exécutant Android 10 ou version ultérieure jusqu’au 2e trimestre 2020. Les appareils gérés par l’administrateur d’appareil qui exécutent Android 10 ou une version ultérieure après cette échéance ne pourront plus être entièrement gérés. En particulier, les appareils impactés ne recevront pas de nouvelles exigences en matière de mot de passe.
+    - Les appareils Samsung Knox ne seront pas affectés dans ce laps de temps, car le support étendu est assuré via l’intégration d’Intune avec la plateforme Knox. Vous avez ainsi plus de temps pour planifier la transition de la gestion de l’administration des appareils.    
 - Les appareils Android gérés par l’administrateur d’appareil qui restent sur les versions Android inférieures à Android 10 ne sont pas affectés et peuvent continuer à être entièrement gérés avec l’administrateur d’appareil.    
 - Pour tous les appareils exécutant Android 10 et versions ultérieures, Google a limité la possibilité pour les agents de gestion des administrateurs d’appareil, notamment le Portail d’entreprise, d’accéder aux informations d’identification de l’appareil. Cette restriction a un impact sur les fonctionnalités Intune suivantes après la mise à jour d’un appareil vers Android 10 ou version ultérieure :  
     - Le contrôle d’accès réseau pour VPN ne fonctionnera plus.   
@@ -130,7 +130,7 @@ En raison de ces modifications apportées par Google, les utilisateurs Intune se
         > Cela affecte uniquement les appareils gérés par l’administrateur d’appareil sur Android 10 et versions ultérieures et n’affecte pas les appareils gérés comme Android Enterprise. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que dois-je faire pour me préparer à cette modification ?
-Pour éviter la réduction des fonctionnalités de l’été 2020, nous vous recommandons d’effectuer les opérations suivantes :
+Pour éviter la réduction des fonctionnalités prévues pour le 3e trimestre 2020, nous vous recommandons les points suivants :
 - N’intégrez pas de nouveaux appareils dans la gestion des administrateurs d’appareil.
 - Si un appareil est censé recevoir une mise à jour d’Android 10, migrez-le de la gestion de l’administrateur d’appareil vers la gestion Android Enterprise et/ou des stratégies de protection d’application.
 

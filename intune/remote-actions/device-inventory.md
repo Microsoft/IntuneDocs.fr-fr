@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564380"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819778"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -77,7 +77,7 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |MEID|MEID (Mobile Equipment Identifier) de l’appareil|Windows, iOS, Android|
 |Fabricant|Fabricant de l’appareil|Windows, iOS, Android|
 |Modèle|Modèle de l’appareil|Windows, iOS, Android|
-|Numéro de téléphone|Numéro de téléphone attribué à l’appareil.|Windows, iOS, Android|
+|Numéro de téléphone|Numéro de téléphone attribué à l’appareil.|Windows, iOS, Android*|
 |Opérateur de l’abonné|Opérateur sans fil de l’appareil|Windows, iOS, Android|
 |Technologie mobile|Système radio utilisé par l’appareil|Windows, iOS, Android|
 |Adresse MAC du réseau Wi-Fi|Adresse MAC de l’appareil|Windows, iOS, Android|
@@ -93,7 +93,7 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |Supervisé|Si l’option **Oui** est sélectionnée, les administrateurs ont un meilleur contrôle sur l’appareil.|Windows, iOS, Android|
 |Chiffré|Si l’option **Oui** est sélectionnée, les données stockées sur l’appareil sont chiffrées.|Windows, iOS, Android|
 
-
+\* Non disponible dans Android avec le Gestionnaire de stratégies Google, comme les appareils entièrement gérés et dédiés
 
 ## <a name="next-steps"></a>Étapes suivantes
 Consultez ce que vous pouvez faire d’autre pour [gérer vos appareils](device-management.md) avec Intune.

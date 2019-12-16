@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f41caddc7ab9cc09c8d5403f67b6112d58c3ffd
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 697e950c881a0c4233358d8363aa6cc7ec0006b2
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713555"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832676"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
 
@@ -61,7 +61,7 @@ Le portail Apple permet de créer un jeton et d’affecter des appareils à Intu
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Étape 1. Télécharger le certificat de clé publique Intune nécessaire à la création du jeton
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > **Ajouter**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > **Ajouter**.
 
     ![Récupérez un jeton du programme d’inscription.](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -103,7 +103,7 @@ Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisiss
 
 Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription**.
 2. Sélectionnez un jeton et choisissez **Profils**, puis **Créer un profil**.
 
     ![Capture d’écran de création d’un profil.](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -165,7 +165,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchroniser Intune avec Apple pour voir vos appareils gérés dans le portail Azure d’Intune.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Capture d’écran du nœud Appareils du programme d’inscription sélectionné, avec choix du lien Synchroniser.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Capture d’écran du nœud Appareils du programme d’inscription sélectionné, avec choix du lien Synchroniser.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Pour être conforme aux conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
    - Une synchronisation complète ne peut pas s’exécuter plus d’une fois tous les sept jours. Pendant une synchronisation complète, Intune extrait toute la liste actualisée des numéros de série attribués au serveur MDM Apple connecté à Intune. Si vous supprimez un appareil faisant partie du Programme d’inscription dans le portail Intune sans l’avoir désinscrit du serveur MDM Apple dans le portail DEP, il ne sera pas réimporté dans Intune tant que la synchronisation ne sera pas terminée.   
@@ -175,7 +175,7 @@ Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchr
 
 Vous devez affecter un profil de programme d’inscription aux appareils pour pouvoir les inscrire.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Appareils** > choisissez des appareils dans la liste > **Attribuer un profil**.
 3. Sous **Attribuer un profil**, choisissez un profil pour les appareils > **Attribuer**.
 
@@ -183,7 +183,7 @@ Vous devez affecter un profil de programme d’inscription aux appareils pour po
 
 Vous pouvez choisir un profil macOS et iOS à appliquer par défaut à tous les appareils qui s’inscrivent avec un jeton spécifique. 
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Inscription Apple** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
 ## <a name="distribute-devices"></a>Distribuer des appareils

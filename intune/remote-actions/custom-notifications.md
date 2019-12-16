@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713243"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907285"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
@@ -69,7 +69,7 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 
 ## <a name="send-a-custom-notification-to-groups"></a>Envoyer une notification personnalisée à des groupes  
 
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec un compte disposant des autorisations nécessaires pour créer et envoyer des notifications, puis accédez à **Appareils** > **Envoyer des notifications personnalisées**.  
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec un compte disposant des autorisations nécessaires pour créer et envoyer des notifications, puis accédez à **Administration de locataire** > **Notifications personnalisées**.  
 
 2. Dans l’onglet De base, spécifiez les éléments suivants, puis sélectionnez **Suivant** pour continuer.  
    - **Titre** : Spécifiez un titre pour cette notification. Les titres sont limités à 50 caractères.  
@@ -93,7 +93,7 @@ Intune ne fait pas le suivi des notifications personnalisées que vous envoyez, 
 
 2. Sélectionnez l’appareil auquel vous souhaitez envoyer une notification.  
 
-3. Sur la page  **Vue d’ensemble** des appareils, sélectionnez l’option **...Plus** en haut à gauche de la page.  
+3. Dans la page **Vue d’ensemble** des appareils, sélectionnez l’option **...** (points de suspension) en haut à droite de la page.  
 
 4. Sélectionner l’action d’appareil **Envoyer une notification personnalisée** pour ouvrir le volet *Envoyer une notification personnalisée* où vous spécifiez les détails suivants du message :  
 

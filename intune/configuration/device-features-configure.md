@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f02188e6dd6cea6048731d119f8f307224810dd9
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059948"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992923"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune inclut de nombreuses fonctionnalités et paramètres qui aident les administrateurs à contrôler des appareils iOS et macOS. Par exemple, les administrateurs peuvent faire ce qui suit :
 
@@ -113,7 +111,7 @@ S’applique à :
 
 ## <a name="login-items"></a>Éléments de connexion
 
-Utilisez cette fonctionnalité pour choisir les applications, les applications personnalisées, les fichiers et les dossiers qui s’ouvrent quand les utilisateurs se connectent aux appareils. 
+Utilisez cette fonctionnalité pour choisir les applications, les applications personnalisées, les fichiers et les dossiers qui s’ouvrent quand les utilisateurs se connectent aux appareils.
 
 Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Éléments de connexion sur macOS](macos-device-features-settings.md#login-items).
 
@@ -153,22 +151,29 @@ S’applique à :
 
 Ces paramètres configurent une extension d’application qui active l’authentification unique (SSO) pour vos appareils iOS, iPadOS et macOS. La plupart des applications métier et sites web d’organisation nécessitent un certain niveau de sécurité d’authentification des utilisateurs. Dans de nombreux cas, le processus d’authentification oblige les utilisateurs à entrer les mêmes informations d’identification à plusieurs reprises. L’authentification unique permet aux utilisateurs d’accéder aux applications et aux sites web après avoir entré leurs informations d’identification une seule fois. Une fois qu’ils se connectent, les utilisateurs peuvent accéder aux applications et aux sites web automatiquement, ou utiliser un Face ID, un Touch ID ou le code secret Apple pour y accéder.
 
-Dans Intune, utilisez ces paramètres pour configurer l’extension Kerberos intégrée à Apple, ou pour configurer une extension d’application d’authentification unique créée par votre organisation. L’extension d’application d’authentification unique gère l’authentification pour vos utilisateurs. Ces paramètres configurent les extensions d’application d’authentification de type informations d’identification, qui sont conçues pour les flux d’authentification avec mécanisme de challenge et de réponse. Vous pouvez choisir entre une extension d’informations d’identification spécifique à Kerberos fournie par Apple et une extension d’informations d’identification générique.
+Dans Intune, utilisez ces paramètres pour configurer une extension d’application d’authentification unique créée par votre organisation, un fournisseur d’identité ou Apple. L’extension d’application d’authentification unique gère l’authentification pour vos utilisateurs. Ces paramètres configurent les extensions d’application SSO de type de redirection et de type d’informations d’identification.
+
+- Le type de redirection est conçu pour les protocoles d’authentification modernes, tels qu’OAuth et SAML2.
+- Le type d’informations d’identification est conçu pour les flux d’authentification de type challenge et réponse. Vous pouvez choisir entre une extension d’informations d’identification spécifique à Kerberos fournie par Apple et une extension d’informations d’identification générique.
 
 Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Extension d’application SSO iOS](ios-device-features-settings.md#single-sign-on-app-extension) et [Extension d’application SSO macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
-Pour plus d’informations sur le développement d’une extension d’application SSO, consultez [Authentification unique d'entreprise extensible](https://developer.apple.com/videos/play/tech-talks/301) sur le site web d’Apple.
+Pour plus d’informations sur le développement d’une extension d’application SSO, consultez [Authentification unique d'entreprise extensible](https://developer.apple.com/videos/play/tech-talks/301) sur le site web d’Apple. Pour lire la description d’Apple de la fonctionnalité, consultez [Réglages des données utiles Extensions pour l’authentification unique](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > La fonctionnalité **Extension de l’application d’authentification unique** est différente de la fonctionnalité **Authentification unique** :
 >
-> - Les paramètres de **l’extension d’application d’authentification unique** s’appliquent à iPadOS 13.0 (et versions ultérieures) et à iOS 13.0 (et versions ultérieures). Les paramètres de **l’authentification unique** s’appliquent à iPadOS 13.0 (et versions ultérieures) et à iOS 7.0 et versions ultérieures.
-> - Une **extension d’application d’authentification unique** gère l’authentification auprès du système d’exploitation. Dans **Authentification unique**, une application spécifique gère l’authentification.
-> - Lors de l’utilisation de **l’extension d’application d’authentification unique**, les utilisateurs se connectent à des applications et des sites web en mode silencieux, ou à l’aide d’un Face ID, d’un Touch ID ou du code secret ou mot de passe Apple. Lors de l’utilisation de **l’authentification unique**, les utilisateurs se connectent aux applications et aux sites web à l’aide d’une autre application.
+> - Les paramètres **Extension d’application d’authentification unique** s’appliquent à iPadOS 13.0 (et versions ultérieures), à iOS 13.0 (et versions ultérieures) et à macOS 10.15 (et versions ultérieures). Les paramètres de **l’authentification unique** s’appliquent à iPadOS 13.0 (et versions ultérieures) et à iOS 7.0 et versions ultérieures.
 >
->    **L’extension d’application d’authentification unique** utilise le système d’exploitation Apple pour l’authentification. Elle peut donc offrir une meilleure expérience utilisateur.
+> - Les paramètres **Extension d’application d’authentification unique** définissent les extensions pouvant être utilisées par des fournisseurs d’identité ou des organisations pour offrir une expérience d’authentification d’entreprise transparente. Les paramètres d’**authentification unique** définissent des informations de compte Kerberos pour les cas où les utilisateurs accèdent aux serveurs ou aux applications.
 >
-> - Du point de vue du développement, **l’extension d’application d’authentification unique** peut utiliser n’importe quel type d’informations d’identification pour l’authentification unique. Avec **l’authentification unique**, vous pouvez uniquement utiliser l’authentification unique Kerberos.  
+> - **L’extension d’application d’authentification unique** utilise le système d’exploitation Apple pour l’authentification. Par conséquent, elle peut offrir à l’utilisateur final une meilleure expérience que celle de l’**authentification unique**.
+>
+> - Du point de vue du développement, avec l’**extension d’application d’authentification unique**, vous pouvez utiliser n’importe quel type d’authentification unique par redirection ou informations d’identification. Avec **l’authentification unique**, vous pouvez uniquement utiliser l’authentification unique Kerberos.
+>
+> - L’**extension d’application d’authentification unique** Kerberos a été développée par Apple et est intégrée aux plateformes iOS 13.0+ et macOS 10.15+. L’extension Kerberos intégrée peut être utilisée pour connecter les utilisateurs aux applications natives et sites web qui prennent en charge l’authentification Kerberos. L’**authentification unique** n’est pas une implémentation Apple de Kerberos.
+>
+> - L’**extension d’application d’authentification unique** Kerberos intégrée gère les défis Kerberos pour les applications et les pages web tout comme l’**authentification unique**. Toutefois, l’extension Kerberos intégrée prend en charge les modifications de mot de passe et se comporte mieux dans les réseaux d’entreprise. Lorsque vous choisissez entre l’**extension d’application d’authentification unique** Kerberos et l’**authentification unique**, nous vous recommandons d’utiliser l’extension en raison des performances et des fonctionnalités améliorées.
 
 S’applique à :
 

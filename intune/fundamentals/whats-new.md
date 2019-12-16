@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad5c26770537ce6a285989f8ca3804277616419
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 77cf4745262346ec2f8bfb5d4d7e67e1ee5c5e07
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540785"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000378"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -54,12 +54,42 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-december-9-2019"></a>Semaine du 9 décembre 2019
+
+#### <a name="migrating-to-microsoft-edge-for-managed-browsing-scenarios---5173762---"></a>Migration vers Microsoft Edge pour les scénarios de navigation gérés<!-- 5173762 -->
+
+Nous nous rapprochons du retrait d’Intune Managed Browser et nous avons apporté des modifications aux stratégies de protection des applications pour simplifier les étapes nécessaires à la transition de vos utilisateurs vers Edge. Nous avons mis à jour les options du paramètre de stratégie de protection des applications **Restreindre le transfert de contenu web à d’autres applications** pour qu’elles correspondent à :
+
+- N’importe quelle application
+- Intune Managed Browser
+- Microsoft Edge
+- Navigateur non géré 
+
+Lorsque vous sélectionnez **Microsoft Edge**, des messages d’accès conditionnel avertissent vos utilisateurs finaux que Microsoft Edge est requis pour les scénarios de navigation gérés. Ils sont invités à télécharger Microsoft Edge et à s’y connecter avec leurs comptes AAD, s’ils ne l’ont pas encore fait.  Cela revient à avoir ciblé vos applications prenant en charge la gestion MAM avec le paramètre de configuration d’application `com.microsoft.intune.useEdge` défini sur **True**. Les stratégies de protection des applications existantes qui utilisaient le paramètre **Navigateurs gérés par stratégie** ont maintenant le paramètre **Intune Managed Browser** sélectionné, et vous ne verrez aucun changement de comportement. Cela signifie que vos utilisateurs verront des messages les incitant à utiliser Microsoft Edge si vous avez défini le paramètre de configuration d’application **useEdge** sur **True**. Nous encourageons tous les clients qui tirent parti des scénarios de navigation gérés à mettre à jour leurs stratégies de protection des applications avec **Restreindre le transfert de contenu web à d’autres applications** pour s’assurer que les utilisateurs voient les recommandations appropriées de transition vers Microsoft Edge, quelle que soit l’application avec laquelle ils lancent des liens. 
+
+<!-- ########################## -->
+## <a name="week-of-december-2-2019"></a>Semaine du 2 décembre 2019
+
+#### <a name="new-microsoft-endpoint-configuration-manager-co-management-licensing--5027281--"></a>Nouvelle licence de cogestion de Microsoft Endpoint Configuration Manager<!--5027281-->
+Une nouvelle licence permet désormais aux clients Configuration Manager avec Software Assurance d’obtenir la cogestion Intune pour les PC Windows 10 sans avoir à acheter de licence Intune supplémentaire pour la cogestion. Les clients n’ont plus besoin d’attribuer des licences Intune/EMS individuelles à leurs utilisateurs finaux pour la cogestion de Windows 10.
+- Les appareils gérés par Configuration Manager et inscrits pour la cogestion ont quasiment les mêmes droits que les PC gérés par MDM de manière autonome dans Intune. Toutefois, après réinitialisation, ils ne peuvent pas être reprovisionnés en utilisant Autopilot.
+- Les appareils Windows 10 inscrits dans Intune par d’autres moyens demandent des licences Intune complètes.
+- Les appareils sur d’autres plateformes nécessitent toujours des licences Intune complètes.
+
+Pour plus d’informations, consultez [Termes des contrats de licence](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
+
+
+<!-- ########################## -->
 ## <a name="week-of-november-18-2019-1911-service-release"></a>Semaine du 18 novembre 2019 (version 1911)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Gestion d'applications
 
 #### <a name="smime-support-with-microsoft-outlook-for-ios---2669398-idready---"></a>Prise en charge de S/MIME avec Microsoft Outlook pour iOS<!-- 2669398 idready -->
+
+   > [!NOTE]
+   > Cette fonctionnalité a été retardée, mais sera bientôt disponible.
+
 Intune prend en charge la remise de certificats de chiffrement et de signature S/MIME qui peuvent être utilisés avec Outlook pour iOS sur des appareils iOS. Pour plus d'informations, consultez [Configurer S/MIME pour Outlook pour iOS](~/apps/app-configuration-policies-outlook-smime.md).
 
 #### <a name="ui-update-when-selectively-wiping-app-data---4102028---"></a>Mise à jour de l’interface utilisateur lors du nettoyage sélectif des données d’application<!-- 4102028 -->

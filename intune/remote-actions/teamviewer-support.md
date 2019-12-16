@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d03859d5775193e6bbc482c06b28942a1a5bce2f
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 0372c9629e111c460b095d8c0236305866da42e3
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712157"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907200"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Utiliser TeamViewer pour administrer à distance des appareils Intune
 
@@ -48,7 +48,7 @@ En utilisant TeamViewer, vous autorisez le connecteur TeamViewer pour Intune à 
 Pour fournir une assistance à distance sur des appareils, configurez le connecteur TeamViewer Intune à l’aide des étapes suivantes :
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Sélectionnez **Appareils** > **Connecteur TeamViewer**.
+2. Sélectionnez **Administration de locataire** > **Connecteurs et jetons** > **Connecteur TeamViewer**.
 3. Sélectionnez **Connexion**, puis acceptez le contrat de licence.
 4. Sélectionnez **Se connecter à TeamViewer pour autoriser**.
 5. Une page web s’ouvre sur le site TeamViewer. Entrez les informations d’identification de votre licence TeamViewer, puis cliquez sur **Connexion**.
@@ -59,7 +59,7 @@ Après avoir configuré le connecteur, vous êtes prêt à administrer à distan
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Appareils**, puis **Tous les appareils**.
-3. Dans la liste, sélectionnez l’appareil à administrer à distance. Dans les propriétés de l’appareil, sélectionnez **Nouvelle session d’assistance à distance**.
+3. Dans la liste, sélectionnez l’appareil à administrer à distance > **...**  > **Nouvelle session d’assistance à distance**.
 4. Une fois Intune connecté au service TeamViewer, des informations sur l’appareil s’affichent. **Connectez-vous** pour démarrer la session à distance.
 
 ![Utiliser TeamViewer pour administrer à distance un appareil Android (exemple)](./media/teamviewer-support/android-teamviewer.png)

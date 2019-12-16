@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346960d8d1d79afc4494064570d1a03e83b8a302
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d7b8d96ae1582b5cb434c80d44ef55a31c4781b
+ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510149"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882292"
 ---
 # <a name="microsoft-intune-licensing"></a>Gestion des licences Microsoft Intune
 Microsoft Intune est disponible pour différents besoins des clients et diverses tailles d’organisation, qu’il s’agisse d’une expérience de gestion simple à utiliser pour les écoles et les petites entreprises ou de fonctionnalités plus avancées requises par les clients d’entreprise. La plupart des licences qui incluent Microsoft Intune accordent également des droits d’utilisation de System Center Configuration Manager, à condition que l’abonnement reste actif. 
@@ -35,8 +35,8 @@ Le logiciel Microsoft Intune est inclus dans les licences suivantes :
 - Enterprise Mobility + Security E3
 - Microsoft 365 Business
 - Microsoft 365 F1
-
-
+- Microsoft 365 pour entités publiques G5
+- Microsoft 365 pour entités publiques G3
 
 ## <a name="microsoft-intune-for-education"></a>Microsoft Intune Éducation
 Le logiciel Microsoft Intune Éducation est inclus dans les licences suivantes :
@@ -46,7 +46,7 @@ Le logiciel Microsoft Intune Éducation est inclus dans les licences suivantes :
 
 ## <a name="additional-information"></a>Informations supplémentaires
 - Les abonnements Microsoft Intune par utilisateur et par appareil sont disponibles de manière autonome, en plus des offres groupées répertoriées ci-dessus.
-- Les abonnements Intune par appareil uniquement sont proposés pour les scénarios de type kiosque si aucune fonctionnalité d’affinité utilisateur est utilisée.
+- Un abonnement Microsoft Intune par appareil est disponible pour gérer les kiosques, les appareils dédiés, les appareils de salle de téléphone, IoT et d’autres appareils à usage unique qui ne nécessitent pas de fonctionnalités de gestion et de sécurité basées sur l’utilisateur.
 - La licence Microsoft Intune appropriée est nécessaire si un utilisateur ou un appareil tire parti, directement ou indirectement, du service Microsoft Intune, y compris de l’accès au service Microsoft Intune via une [API Microsoft](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use).
 - Le logiciel Microsoft Intune n’est pas proposé avec les licences qui ne sont pas dans les tableaux précédents.
 

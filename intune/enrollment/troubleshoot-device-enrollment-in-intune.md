@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713494"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832720"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -64,7 +64,7 @@ Ces problèmes peuvent se produire sur toutes les plateformes.
 
 Vérifiez si le nombre d’appareils affectés à l’utilisateur n’est pas supérieur au nombre maximal. Pour cela, effectuez les étapes suivantes :
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Inscription des appareils** > **Restrictions d’inscription** > **Restrictions Nombre limite d’appareils**. Notez la valeur dans la colonne **Limite d’appareils**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Restrictions d’inscription** > **Restrictions de limite d’appareils**. Notez la valeur dans la colonne **Limite d’appareils**.
 
 2. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Utilisateurs** > **Tous les utilisateurs** > sélectionnez l’utilisateur > **Appareils**. Notez le nombre d’appareils.
 
@@ -374,7 +374,7 @@ Ce problème peut se produire dans les cas suivants :
 4. Indiquer à l’utilisateur de redémarrer le processus d’inscription
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Déterminer s’il existe un problème avec le jeton VPP
-1. Accédez à **Intune** > **Inscription des appareils** > **Inscription Apple** > **Jeton du programme d’inscription** > nom du jeton > **Profils** > nom du profil > **Gérer** > **Propriétés**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > nom de jeton > **Profils** > nom de profil > **Gérer** > **Propriétés**.
 2. Passez en revue les propriétés pour déterminer s’il existe des erreurs similaires à ce qui suit :
     - Ce jeton a expiré.
     - Ce jeton ne fait pas partie des licences du Portail d’entreprise.
@@ -384,13 +384,13 @@ Ce problème peut se produire dans les cas suivants :
 3. Corrigez les problèmes liés au jeton.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identifier les appareils bloqués par le jeton VPP
-1. Accédez à **Intune** > **Inscription des appareils** > **Inscription Apple** > **Jeton du programme d’inscription** > nom du jeton > **Appareils**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS**k > **Inscription iOS** > **Jetons du programme d’inscription** > nom de jeton > **Appareils**.
 2. Filtrez la colonne **État du profil** en fonction de la valeur **Bloqué**.
 3. Notez les numéros de série de tous les appareils **bloqués**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Réinitialiser à distance les appareils bloqués
 Une fois que vous avez résolu les problèmes liés au jeton VPP, vous devez réinitialiser les appareils bloqués.
-1. Accédez à **Intune** > **Appareils** > **Tous les appareils** > **Colonnes** > **Numéro de série** > **Appliquer**. 
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Tous les appareils** > **Colonnes** > **Numéro de série** > **Appliquer**. 
 2. Choisissez chaque appareil bloqué dans la liste **Tous les appareils**, puis choisissez **Réinitialiser** > **Oui**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Indiquer aux utilisateurs de redémarrer le processus d’inscription
@@ -414,8 +414,8 @@ Une fois que vous avez réinitialisé les appareils bloqués, vous pouvez demand
 - Si votre organisation a activé des restrictions d’inscription qui bloquent les appareils macOS personnels, vous devez manuellement [ajouter le numéro de série de l’appareil personnel](corporate-identifiers-add.md#manually-enter-corporate-identifiers) dans Intune.  
 - Si l’appareil est encore attribué à un autre utilisateur dans Intune, son propriétaire précédent n’a pas utilisé l’application Portail d’entreprise pour supprimer ou réinitialiser l’appareil. Pour supprimer l’entrée d’appareil obsolète dans Intune :  
 
-    1. Accédez à [Intune dans le portail Azure](https://portal.manage.microsoft.com) et connectez-vous à l’aide de vos informations d’identification d’administration.
-    2. Accédez à Intune > **Appareils** > **Tous les appareils**.  
+    1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), connectez-vous avec vos informations d’identification d’administration.
+    2. Choisissez **Appareils** > **Tous les appareils**.  
     3. Recherchez l’appareil qui rencontre le problème d’inscription. Recherchez l’appareil par son nom ou son adresse MAC/HW pour limiter les résultats.
     4. Sélectionnez l’appareil > **Supprimer**. Supprimez toutes les autres entrées associées à l’appareil.  
 

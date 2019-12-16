@@ -1,11 +1,11 @@
 ---
 title: Stratégies de conformité des appareils dans Microsoft Intune - Azure | Microsoft Docs
-description: Prise en main de l’utilisation de stratégies de conformité, la vue d’ensemble des niveaux d’état et de gravité, l’utilisation de l’état InGracePeriod, l’utilisation de l’accès conditionnel, la gestion des appareils sans stratégie attribuée, et les différences de conformité dans le portail Azure et dans le portail Azure Classic au sein de Microsoft Intune
+description: Découvrez comment bien démarrer avec les stratégies de conformité des appareils, la vue d’ensemble des niveaux d’état et de gravité, l’utilisation de l’état InGracePeriod, l’utilisation de l’accès conditionnel, la gestion des appareils sans stratégie attribuée.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749171"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860293"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
 
@@ -130,21 +130,6 @@ Le tableau suivant décrit la gestion des paramètres non conformes quand une st
 
 - Si une stratégie d’accès conditionnel s’applique à l’utilisateur, l’appareil est bloqué.
 - L’application du portail d’entreprise Intune informe l’utilisateur de tout problème de conformité.
-
-## <a name="azure-classic-portal-vs-azure-portal"></a>Portail Azure Classic et Portail Azure
-
-Principale différence au moment de l’utilisation de stratégies de conformité dans le portail Azure :
-
-- Dans le portail Azure, les stratégies de conformité sont créées séparément pour chaque plateforme prise en charge
-- Dans le portail Azure Classic, une stratégie de conformité des appareils est commune à toutes les plateformes prises en charge
-
-<!--- - In the Azure portal, you have the ability to specify actions and notifications that are initiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
-
-- In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
-
-Les stratégies de conformité des appareils créées dans le [portail classique](https://manage.microsoft.com) n’apparaissent pas dans le [portail Azure](https://portal.azure.com). Toutefois, elles continuent de cibler des utilisateurs et peuvent être gérées à l’aide du portail classique.
-
-Pour utiliser les fonctionnalités liées à la conformité des appareils dans le portail Azure, vous devez créer des stratégies de conformité d’appareil dans le portail Azure. Si, dans le portail Azure, vous affectez une stratégie de conformité des appareils à un utilisateur auquel est déjà associée une stratégie de ce type dans le portail classique, les stratégies du portail Azure sont prioritaires par rapport aux stratégies qui sont créées dans le portail classique.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

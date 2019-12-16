@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275b3961e87f0d0eda8299337fe3fb7ac89ef03b
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 651b02dc276ca2aa2003955e6aa7b0dfa6724a40
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261684"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860313"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -61,7 +61,7 @@ Si le bouton **Évaluer** est grisé, vérifiez que le profil est attribué à u
 
 Lorsque vous créez ou mettez à jour un profil, vous pouvez également ajouter des balises d’étendue et des règles d’applicabilité au profil.
 
-Les **balises d’étendue** permettent d’attribuer et de filtrer les profils à des groupes spécifiques, tels que les ressources humaines ou tous les employés US-NC. [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Utiliser RBAC et des balises d’étendue pour l’informatique distribuée) fournit plus d’informations.
+Les **balises d’étendue** sont un excellent moyen de filtrer des profils dans des groupes spécifiques, tels que `US-NC IT Team` et `JohnGlenn_ITDepartment`. [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Utiliser RBAC et des balises d’étendue pour l’informatique distribuée) fournit plus d’informations.
 
 Sur les appareils Windows 10, vous pouvez ajouter des **règles d'applicabilité** afin que le profil ne s'applique qu'à une version spécifique du système d'exploitation ou à une édition Windows spécifique. Consultez [Règles de mise en application](device-profile-create.md#applicability-rules) pour plus d’informations.
 

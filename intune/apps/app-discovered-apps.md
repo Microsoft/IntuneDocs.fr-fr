@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564241"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899406"
 ---
 # <a name="intune-discovered-apps"></a>Applications découvertes par Intune
 
@@ -60,12 +60,13 @@ La liste suivante fournit le type de plate-forme d’application, les applicatio
 | Windows Phone 8 | Uniquement les applications gérées | Uniquement les applications gérées | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Windows RT | Uniquement les applications gérées | Uniquement les applications gérées | Tous les 7 jours à partir de l’inscription de l’appareil |
 | iOS | Uniquement les applications gérées | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
-| macOS | Toutes les applications installées sur l’appareil | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
+| macOS | Uniquement les applications gérées | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Android | Uniquement les applications gérées | Toutes les applications installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Android Entreprise | Uniquement les applications gérées | Uniquement les applications installées dans le profil professionnel | Tous les 7 jours à partir de l’inscription de l’appareil |
 
 > [!NOTE]
-> Les appareils Windows 10 avec une jonction Azure AD Hybride, comme affichés dans la charge de travail de gestion des applications dans Configuration Manager, ne collectent pas l’inventaire des applications via Intune Management Extension (IME) en suivant la planification ci-dessus. Pour résoudre ce problème, la charge de travail de gestion des applications dans Configuration Manager doit être basculée sur Intune pour pouvoir installer IME sur l’appareil (IME est nécessaire pour l'inventaire Win32 et le déploiement PowerShell). Notez que toutes les modifications ou mises à jour de ce comportement sont annoncées dans [En développement](../fundamentals/in-development.md) et/ou [Nouveautés](../fundamentals/whats-new.md).
+> - Les appareils Windows 10 avec une jonction Azure AD Hybride, comme affichés dans la charge de travail de gestion des applications dans Configuration Manager, ne collectent pas l’inventaire des applications via Intune Management Extension (IME) en suivant la planification ci-dessus. Pour résoudre ce problème, la charge de travail de gestion des applications dans Configuration Manager doit être basculée sur Intune pour pouvoir installer IME sur l’appareil (IME est nécessaire pour l'inventaire Win32 et le déploiement PowerShell). Notez que toutes les modifications ou mises à jour de ce comportement sont annoncées dans [En développement](../fundamentals/in-development.md) et/ou [Nouveautés](../fundamentals/whats-new.md).
+> - Les appareils macOS personnels inscrits avant novembre 2019 peuvent continuer à afficher toutes les applications installées sur l’appareil jusqu’à ce que les appareils soient de nouveau inscrits.
 
 Il peut arriver que le nombre d’applications découvertes ne corresponde pas au nombre d’états d’installation d’applications. Voici quelques sources d’incohérences :
 

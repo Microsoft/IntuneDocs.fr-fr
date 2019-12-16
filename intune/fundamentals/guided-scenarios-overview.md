@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: ebb17324355fff9631ef74a76388ef0ab797d437
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635363"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899141"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Vue d’ensemble des scénarios guidés Intune 
 
@@ -33,7 +33,7 @@ Les scénarios guidés ne représentent pas un espace de gestion différent des 
 
 ## <a name="types-of-guided-scenarios"></a>Types de scénarios guidés 
 
-Par souci de simplicité, tous les scénarios guidés omettent les fonctionnalités d’étendue complexes, comme les balises d’étendue <link>, les groupes d’exclusion et les affectations de groupes virtuels <link>. Toutes les ressources créées par un scénario guidé héritent de chaque balise d’étendue de l’administrateur qui effectue le scénario. Certains scénarios offrent un certain niveau de personnalisation pour les paramètres courants, ceci afin de couvrir les scénarios étroitement liés. Ces scénarios prennent en charge l’affectation de groupe pour les groupes d’inclusion uniquement. Les autres scénarios guidés garantissent une expérience cohérente en n’offrant aucune personnalisation et génèrent automatiquement un nouveau groupe pour accueillir l’ensemble des affectations. Une fois le scénario guidé terminé, vous êtes libre d’utiliser d’autres affectations plus sophistiquées directement à partir des charges de travail de stratégie, d’application et de profil existantes.  
+Par souci de simplicité, tous les scénarios guidés omettent les fonctionnalités d’étendue complexes, comme les balises d’étendue, les groupes d’exclusion et les affectations de groupes virtuels. Toutes les ressources créées par un scénario guidé héritent de chaque balise d’étendue de l’administrateur qui effectue le scénario. Certains scénarios offrent un certain niveau de personnalisation pour les paramètres courants, ceci afin de couvrir les scénarios étroitement liés. Ces scénarios prennent en charge l’affectation de groupe pour les groupes d’inclusion uniquement. Les autres scénarios guidés garantissent une expérience cohérente en n’offrant aucune personnalisation et génèrent automatiquement un nouveau groupe pour accueillir l’ensemble des affectations. Une fois le scénario guidé terminé, vous êtes libre d’utiliser d’autres affectations plus sophistiquées directement à partir des charges de travail de stratégie, d’application et de profil existantes.  
 
 Voici les différents scénarios guidés : 
 - Déployer Microsoft Edge pour mobile 

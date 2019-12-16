@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31bb0e2ff4379c55829afc65fb99b768c9099a47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498953"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899428"
 ---
 # <a name="app-protection-policies-overview"></a>Vue d’ensemble des stratégies de protection des applications
 
@@ -177,7 +177,7 @@ Les exigences supplémentaires pour utiliser [les applications mobiles Word, Exc
   > Les applications mobiles Office prennent actuellement en charge uniquement SharePoint Online et SharePoint on-premises.
 
 ### <a name="managed-location-needed-for-office"></a>Emplacement géré requis pour Office
-Un emplacement géré (p. ex., OneDrive) est nécessaire pour Office. Intune marque toutes les données de l’application en tant que données « d’entreprise » ou « personnelles ». Les données sont considérées comme « d’entreprise » lorsqu’elles proviennent d’un emplacement de l’entreprise. Pour les applications Office, Intune considère les sites d’entreprise suivants : e-mail (Exchange) ou stockage cloud (application OneDrive avec un compte OneDrive Entreprise).
+Un emplacement géré (p. ex., OneDrive) est nécessaire pour Office. Intune marque toutes les données de l’application en tant que données « d’entreprise » ou « personnelles ». Les données sont considérées comme « d’entreprise » lorsqu’elles proviennent d’un emplacement de l’entreprise. Pour les applications Office, Intune considère les sites d’entreprise suivants : e-mail (Exchange) ou stockage cloud (application OneDrive avec un compte OneDrive Entreprise).
 
 ### <a name="skype-for-business"></a>Skype pour Entreprises
 Il existe des exigences supplémentaires pour utiliser Skype Entreprise. Voir les conditions requises pour les licences de [Skype Entreprise](https://products.office.com/skype-for-business/it-pros). Pour les configurations Skype Entreprise hybrides et locales, consultez l’article annonçant que [l’authentification moderne hybride pour Skype Entreprise et Exchange passe en disponibilité générale](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) et [Authentification moderne pour Skype Entreprise local avec AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), respectivement.
@@ -215,12 +215,12 @@ Le PIN (numéro d’identification personnel) est un code secret utilisé pour v
 **Invite à entrer le code PIN**<br>
 Intune n’invite l’utilisateur à saisir le code PIN de l’application que s’il est sur le point d’accéder à des données « d’entreprise ». Dans les applications multi-identité telles que Word, Excel ou PowerPoint, l’utilisateur est invité à entrer son code PIN lorsqu’il tente d’ouvrir un fichier ou un document « d’entreprise ». Dans les applications à identité unique, par exemple, les applications métier gérées avec [l’outil de création de packages d’applications Intune](../developer/apps-prepare-mobile-application-management.md), le code PIN est demandé au lancement, car le [Kit de développement logiciel (SDK) d’applications Intune](../developer/app-sdk.md) sait que l’expérience utilisateur dans l’application est toujours de type « entreprise ».
 
-**Fréquence de l’invite de code PIN**<br>
-L’administrateur informatique peut définir le paramètre de stratégie de protection des applications Intune **Revérifier les exigences d’accès après (minutes)** dans la console d’administration Intune. Ce paramètre spécifie le délai avant que les conditions d’accès ne soient vérifiées sur l’appareil et que l’écran du code PIN de l’application ne réapparaisse. Voici cependant des informations importantes sur le code PIN qui affectent la fréquence à laquelle il est demandé à l’utilisateur :
+**Fréquence des invites à entrer le code confidentiel ou les informations d’identification d’entreprise**<br>
+L’administrateur informatique peut définir le paramètre de stratégie de protection des applications Intune **Revérifier les exigences d’accès après (minutes)** dans la console d’administration Intune. Ce paramètre spécifie le délai avant que les conditions d’accès ne soient vérifiées sur l’appareil et que l’écran du code PIN de l’application ou l’invite de demande d’informations d’identification d’entreprise ne réapparaisse. Voici cependant des informations importantes sur le code PIN qui affectent la fréquence à laquelle il est demandé à l’utilisateur :
 
-- **Le code PIN est partagé entre les applications du même éditeur pour améliorer la facilité d’utilisation :**<br> Sur iOS, un code PIN d’application est partagé entre toutes les applications **du même éditeur d’application**. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
-  - **Le comportement *Revérifier les exigences d’accès après (minutes)* , après un redémarrage de l’appareil :**<br> Un « minuteur de code PIN » suit le nombre de minutes d’inactivité déterminant quand le code PIN d’application Intune suivant doit être affiché. Sur iOS, le minuteur de code PIN n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune. Sur Android, le minuteur de code PIN est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune vont probablement demander le code PIN d’une application, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
-  - **La nature cyclique du minuteur associé au code PIN :**<br> une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur du code PIN est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
+- **Le code PIN est partagé entre les applications du même éditeur pour améliorer la facilité d’utilisation :**<br> Sur iOS, un code PIN d’application est partagé entre toutes les applications **du même éditeur d’application**. Par exemple, toutes les applications Microsoft partagent le même code PIN. Sur Android, un même code PIN d’application est partagé entre toutes les applications.
+- **Le comportement *Revérifier les exigences d’accès après (minutes)* , après un redémarrage de l’appareil :**<br> Un minuteur suit le nombre de minutes d’inactivité déterminant quand afficher à nouveau l’invite du code PIN d’application Intune ou l’invite de demande d’informations d’identification d’entreprise. Sur iOS, ce minuteur n’est pas affecté par le redémarrage de l’appareil. Ainsi, le redémarrage de l’appareil n’a pas d’effet sur le nombre de minutes d’inactivité de l’utilisateur pour une application iOS avec la stratégie de code PIN Intune (ou d’informations d’identification d’entreprise) ciblée. Sur Android, le minuteur est réinitialisé au redémarrage de l’appareil. Ainsi, les applications Android avec la stratégie de code PIN Intune (ou d’informations d’identification d’entreprise) vont probablement demander le code PIN d’une application ou les informations d’identification d’entreprise, quelle que soit la valeur du paramètre « Revérifier les exigences d’accès après (minutes) » **après un redémarrage de l’appareil**.  
+- **La nature cyclique du minuteur associé au code PIN :**<br> Une fois qu’un code PIN est entré pour accéder à une application (l’application A) et que l’application quitte le premier plan (le focus d’entrée principal) sur l’appareil, le minuteur est réinitialisé pour ce code PIN. Une application (l’application B) partageant ce code PIN ne demande pas à l’utilisateur d’entrer ce code parce que la minuterie a été réinitialisée. L’invite réapparaît une fois que la valeur de « Revérifier les exigences d’accès après (minutes) » est à nouveau atteinte.
 
 Pour les appareils iOS, même si le code PIN est partagé entre les applications de différents éditeurs, l’invite s’affiche à nouveau quand la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est à nouveau atteinte pour l’application qui n’a pas le focus d’entrée principal. Par exemple, un utilisateur a application _A_ de l’éditeur _X_ et l’application _B_ de l’éditeur _Y_, et ces deux applications partagent le même code PIN. L’utilisateur travaille avec l’application _A_ (au premier plan) et l’application _B_ est réduite. Une fois que la valeur de **Revérifier les spécifications requises pour l’accès après (minutes)** est atteinte et que l’utilisateur passe à l’application _B_, celui-ci doit entrer le code PIN.
 
@@ -262,7 +262,6 @@ Seules les données marquées comme « d’entreprise » sont chiffrées en fonc
 Dans le cas des applications métier gérées par [l’outil de création de packages d’applications Intune](../developer/apps-prepare-mobile-application-management.md), toutes les données sont considérées comme étant de type « entreprise ».
 
 **Réinitialiser les données à distance**<br>
-
 Intune peut réinitialiser les données d’application de trois façons différentes : 
 - Réinitialisation complète de l’appareil
 - Réinitialisation sélective pour la gestion des appareils mobiles 

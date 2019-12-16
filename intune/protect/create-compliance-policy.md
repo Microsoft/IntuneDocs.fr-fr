@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188259"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860228"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Créer une stratégie de conformité dans Microsoft Intune
 
@@ -100,7 +100,7 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
      Par exemple, vous utilisez la fonctionnalité Emplacements et ajoutez un emplacement à une stratégie de conformité. L’action par défaut en cas de non-conformité s’applique quand vous sélectionnez au moins un emplacement. Si l’appareil n’est pas connecté aux emplacements sélectionnés, il est immédiatement considéré comme non conforme. Vous pouvez accorder aux utilisateurs une période de grâce, par exemple un jour.
 
-   - **Étendue (balises)**  : Les balises d’étendue permettent d’attribuer et de filtrer les stratégies à des groupes spécifiques, tels que les ventes, les ressources humaines, tous les employés US-NC, etc. Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue à vos stratégies de conformité. La section [Utiliser des balises d’étendue pour filtrer les stratégies](../fundamentals/scope-tags.md) est une ressource utile.
+   - **Étendue (balises)**  : Les balises d’étendue sont un excellent moyen de filtrer des stratégies dans des groupes spécifiques, tels que `US-NC IT Team` et `JohnGlenn_ITDepartment`. Après avoir ajouté les paramètres, vous pouvez également ajouter une balise d’étendue à vos stratégies de conformité. La section [Utiliser des balises d’étendue pour filtrer les stratégies](../fundamentals/scope-tags.md) est une ressource utile.
 
 4. Une fois que vous avez fini, sélectionnez **OK** >  **Créer** pour enregistrer vos changements. La stratégie est créée et apparaît dans la liste. Ensuite, attribuez la stratégie à vos groupes.
 

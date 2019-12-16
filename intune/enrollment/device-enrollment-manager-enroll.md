@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
-ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
+ms.openlocfilehash: 30191aea892e8409bb6165034256a99f6f32a502
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74239220"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955403"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrire des appareils dans Intune avec un compte de gestionnaire d’inscription d’appareil
 
@@ -46,7 +46,7 @@ Les comptes d’utilisateur DEM et les appareils inscrits avec un compte d’uti
 
 ## <a name="add-a-device-enrollment-manager"></a>Ajouter un gestionnaire d’inscription d’appareil
 
-1. Dans le [portail Azure d’Intune](https://aka.ms/intuneportal), choisissez **Inscription d’appareil** > **Gestionnaires d’inscription d’appareil**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Gestionnaires d’inscription d’appareil**.
 
 2. Sélectionnez **Ajouter**.
 
@@ -67,6 +67,6 @@ La suppression d’un gestionnaire d’inscription d’appareil n’affecte pas 
 
 **Pour supprimer un gestionnaire d’inscription d’appareil**
 
-1. Dans le [portail Azure](https://aka.ms/intuneportal), choisissez **Inscription des appareils**, puis choisissez **Gestionnaires d’inscription des appareils**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Gestionnaires d’inscription d’appareil**.
 2. Dans le panneau **Gestionnaires d’inscription d’appareil**, sélectionnez l’utilisateur gestionnaire d’inscription d’appareil, puis sélectionnez **Supprimer**.
 

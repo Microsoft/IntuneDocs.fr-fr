@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
-ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
+ms.openlocfilehash: 78f79a734d0a7b4901b2248b20abd9d304926dd2
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587950"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955505"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -59,15 +59,12 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
 
 ## <a name="create-a-device-type-restriction"></a>Créer une restriction de type d’appareil
 
-1. Connectez-vous au portail Azure.
-2. Sélectionnez **Autres services**, recherchez **Intune**, puis choisissez **Intune**.
-3. Sélectionnez **Inscription d’appareil** > **Restrictions de l’inscription** > **Créer une restriction** > **Restriction du type d’appareil**.
-    ![Capture d’écran de la création d’une restriction du type d’appareil](./media/enrollment-restrictions-set/create-device-type-restriction.png)
-4. Sur la page **Informations de base**, donnez un **Nom** à la restriction, ainsi qu’une **Description** facultative.
-5. Choisissez **Suivant** pour atteindre la page **Paramètres de la plateforme**.
-6. Sous **Plateforme**, choisissez **Autoriser** pour les plateformes qui doivent autoriser cette restriction.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) > **Appareils** > **Restrictions d’inscription** > **Créer une restriction** > **Restriction du type d’appareil**.
+2. Sur la page **Informations de base**, donnez un **Nom** à la restriction, ainsi qu’une **Description** facultative.
+3. Choisissez **Suivant** pour atteindre la page **Paramètres de la plateforme**.
+4. Sous **Plateforme**, choisissez **Autoriser** pour les plateformes qui doivent autoriser cette restriction.
     ![Capture d’écran du choix des paramètres de plateforme](./media/enrollment-restrictions-set/choose-platform-settings.png)
-7. Sous **Versions**, sélectionnez les versions minimale et maximale que vous souhaitez que les plateformes autorisées prennent en charge. Les restrictions de version s’appliquent uniquement aux appareils inscrits avec le Portail d’entreprise.
+5. Sous **Versions**, sélectionnez les versions minimale et maximale que vous souhaitez que les plateformes autorisées prennent en charge. Les restrictions de version s’appliquent uniquement aux appareils inscrits avec le Portail d’entreprise.
      Les formats de version pris en charge sont notamment :
     - L’administrateur d’appareil Android et le profil professionnel Android Entreprise prennent en charge major.minor.rev.build.
     - iOS prend en charge major.minor.rev. Les versions du système d’exploitation ne s’appliquent pas aux appareils Apple inscrits par le biais du Programme d’inscription des appareils, d’Apple School Manager ou de l’application Apple Configurator.
@@ -84,31 +81,28 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
    > [!Note]
    > Windows 10 ne fournit pas le numéro de rev au cours de l’inscription. Par conséquent, si vous entrez par exemple 10.0.17134.100 et que l’appareil correspond à 10.0.17134.174, il est bloqué lors de l’inscription.
 
-8. Sous **Appareils personnels**, choisissez **Autoriser** pour les plateformes que vous souhaitez autoriser comme appareils personnels.
-9. Choisissez **Suivant** pour accéder à la page **Attributions**.
-10. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
+6. Sous **Appareils personnels**, choisissez **Autoriser** pour les plateformes que vous souhaitez autoriser comme appareils personnels.
+7. Choisissez **Suivant** pour accéder à la page **Attributions**.
+8. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
     ![Capture d’écran du choix des paramètres de plateforme](./media/enrollment-restrictions-set/select-groups.png)
-11. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
-12. Sélectionnez **Créer** pour créer la restriction.
-13. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
+9. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
+10. Sélectionnez **Créer** pour créer la restriction.
+11. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Créer une restriction de limite d’appareils
 
-1. Connectez-vous au portail Azure.
-2. Sélectionnez **Autres services**, recherchez **Intune**, puis choisissez **Intune**.
-3. Sélectionnez **Inscription d’appareil** > **Restrictions de l’inscription** > **Créer une restriction** > **Restriction de limite d’appareils**.
-    ![Capture d’écran de la création d’une restriction de limite d’appareils](./media/enrollment-restrictions-set/create-device-limit-restriction.png)
-4. Sur la page **Informations de base**, donnez un **Nom** à la restriction, ainsi qu’une **Description** facultative.
-5. Choisissez **Suivant** pour accéder à la page **Limite d’appareils**.
-6. Sélectionnez le nombre maximal d’appareils qu’un utilisateur peut inscrire sous **Limite d’appareils**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) > **Appareils** > **Restrictions d’inscription** > **Créer une restriction** > **Restriction du nombre limite d’appareils**.
+2. Sur la page **Informations de base**, donnez un **Nom** à la restriction, ainsi qu’une **Description** facultative.
+3. Choisissez **Suivant** pour accéder à la page **Limite d’appareils**.
+4. Sélectionnez le nombre maximal d’appareils qu’un utilisateur peut inscrire sous **Limite d’appareils**.
     ![Capture d’écran du choix de la limite d’appareils](./media/enrollment-restrictions-set/choose-device-limit.png)
-7. Choisissez **Suivant** pour accéder à la page **Attributions**.
-8. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
+5. Choisissez **Suivant** pour accéder à la page **Attributions**.
+6. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
     ![Capture d’écran de la sélection des groupes](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-11. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
-12. Sélectionnez **Créer** pour créer la restriction.
-13. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
+7. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
+8. Sélectionnez **Créer** pour créer la restriction.
+9. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
 
 Durant des inscriptions BYOD, les utilisateurs reçoivent une notification qui les informe qu’ils ont atteint le nombre limite d’appareils inscrits. Par exemple, sur iOS :
 
@@ -131,11 +125,9 @@ Durant des inscriptions BYOD, les utilisateurs reçoivent une notification qui l
 
 Pour changer les paramètres d’une restriction d’inscription, effectuez les étapes ci-dessous. Ces restrictions n’ont pas d’effet sur les appareils qui ont déjà été inscrits. Les appareils inscrits avec [l’agent de PC Intune](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) ne peuvent pas être bloqués avec cette fonctionnalité.
 
-1. Connectez-vous au portail Azure.
-2. Sélectionnez **Autres services**, recherchez **Intune**, puis choisissez **Intune**.
-3. Sélectionnez **Inscription d’appareil** > **Restrictions d’inscription** > choisissez la restriction à modifier > **Propriétés**.
-4. Choisissez **Modifier** en regard des paramètres que vous souhaitez modifier.
-5. Sur la page **Modifier**, apportez les modifications souhaitées et passez à la page **Vérifier + enregistrer**, puis choisissez **Enregistrer**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) > **Appareils** > **Restrictions d’inscription** > choisissez la restriction à modifier > **Propriétés**.
+2. Choisissez **Modifier** en regard des paramètres que vous souhaitez modifier.
+3. Sur la page **Modifier**, apportez les modifications souhaitées et passez à la page **Vérifier + enregistrer**, puis choisissez **Enregistrer**.
 
 
 ## <a name="blocking-personal-android-devices"></a>Blocage des appareils Android personnels

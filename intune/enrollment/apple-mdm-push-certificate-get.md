@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d15fd73a608c799745c92c4b07df4b9705d00106
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490317"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955454"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Obtenir un certificat Push MDM Apple
 
@@ -41,7 +41,7 @@ Lors de l’expiration d’un certificat push, vous devez le renouveler. Lors du
 
 
 ## <a name="steps-to-get-your-certificate"></a>Procédure pour obtenir le certificat
-Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), choisissez **Inscription d’appareil** > **Inscription Apple** > **Certificat Push MDM Apple**, puis suivez les étapes ci-après dans [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Inscription Apple** > **Certificat Push MDM Apple**, puis procédez comme suit.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Étape 1. Autoriser Microsoft à envoyer des informations d’utilisateur et d’appareil à Apple
 Sélectionnez **J’accepte.** pour autoriser Microsoft à envoyer des données à Apple.
@@ -68,7 +68,7 @@ Le certificat Push MDM Apple est valide pendant un an et doit être renouvelé t
 
 Le certificat est associé à l’identifiant Apple utilisé pour le créer. Renouvelez le certificat Push MDM avec le même identifiant Apple utilisé pour le créer.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), choisissez **Inscription des appareils** > **Inscription Apple**, puis choisissez la mosaïque **Certificat de transmission de type push GPM Apple**.
+1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Inscrire des appareils** > **Inscription Apple** > **Certificat Push MDM Apple**.
 2. Choisissez **Télécharger votre CSR** pour télécharger et enregistrer le fichier de demande en local. Le fichier est utilisé pour demander un certificat de relation d’approbation à partir du portail Apple Push Certificates.
 3. Sélectionnez **Créer votre certificat Push MDM** pour accéder au portail Apple Push Certificates. Recherchez le certificat que vous souhaitez renouveler et sélectionnez **Renouveler**.
 4. Dans l’écran **Renouveler le certificat Push**, ajoutez une note qui vous permettra d’identifier le certificat par la suite, sélectionnez **Choisir un fichier** pour accéder au nouveau fichier de demande que vous avez téléchargé, puis choisissez **Charger**.

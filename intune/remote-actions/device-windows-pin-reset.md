@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2390462376c88129435de30eb98020563f3878
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713104"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907217"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Réinitialiser le code secret sur des appareils Windows à l’aide d’Intune
 
@@ -66,7 +66,7 @@ Affectez à ce fournisseur de services de configuration la valeur **True**.
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Sélectionnez **Appareils**, puis **Tous les appareils**.
-3. Sélectionnez l’appareil dont vous souhaitez réinitialiser le code secret. Dans les propriétés de l’appareil, sélectionnez **Nouveau code secret**.
+3. Sélectionnez l’appareil dont vous souhaitez réinitialiser le code secret. Dans les propriétés de l’appareil, sélectionnez **Réinitialiser le code secret**.
 4. Cliquez sur **Oui** pour confirmer la suppression. Le code secret est généré et affiché dans le portail pendant les sept prochains jours.
 
 ## <a name="next-step"></a>Étape suivante
