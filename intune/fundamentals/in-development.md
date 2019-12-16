@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74540734"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>En développement pour Microsoft Intune - Décembre 2019
@@ -138,19 +138,19 @@ S’applique à :
 Vous pouvez spécifier une liste de claviers approuvés pour une utilisation dans les applications Android gérées. À partir de l’application gérée, l’utilisateur est invité à basculer vers l’un des claviers approuvés déjà installés sur son appareil ou, si nécessaire, il est dirigé vers le Google Play Store pour télécharger et configurer l’un des claviers approuvés. L’utilisateur pourra uniquement modifier les champs de texte dans une application gérée si son clavier actif est l’un des claviers approuvés.
 
 ### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Utiliser des certificats PKCS avec des profils Wi-Fi sur les appareils Windows 10 et versions ultérieures<!-- 3246388  -->
-Actuellement, vous pouvez authentifier les profils Wi-Fi Windows avec des certificats SCEP (configuration de l'**appareil** > **profils** > **créer un profil** > **Windows 10 et versions ultérieures** pour la plateforme > **Wi-Fi** pour type de profil > **Enterprise** > **type EAP**). Vous pouvez utiliser des certificats PKCS avec vos profils Wi-Fi Windows. Cette fonctionnalité permet aux utilisateurs d’authentifier des profils Wi-Fi à l’aide de profils de certificat PKCS nouveaux ou existants dans votre locataire. 
+Actuellement, vous pouvez authentifier les profils Wi-Fi Windows avec des certificats SCEP (configuration de l'**appareil** > **profils** > **créer un profil** > **Windows 10 et versions ultérieures** pour la plateforme > **Wi-Fi pour le** type de profil > **Enterprise** > **EAP type**). Vous pouvez utiliser des certificats PKCS avec vos profils Wi-Fi Windows. Cette fonctionnalité permet aux utilisateurs d’authentifier des profils Wi-Fi à l’aide de profils de certificat PKCS nouveaux ou existants dans votre locataire. 
 
 Pour plus d’informations sur les profils Wi-Fi, consultez [Ajouter des paramètres Wi-Fi pour les appareils Windows 10 et versions ultérieures dans Intune](../configuration/wi-fi-settings-windows.md).
 
 S’applique à :
 - Windows 10 et versions ultérieures
 
-### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nouveaux paramètres ExchangeActiveSync lors de la création d’un profil de configuration de périphérique de messagerie sur des appareils iOS<!-- 4892824  --> 
-Sur les appareils iOS/iPados, vous pouvez configurer la connectivité de messagerie dans un profil de configuration d’appareil (configuration de l'**appareil** > **profils** > **créer un profil** > **iOS/iPad** pour la plateforme > la **messagerie** pour le type de profil). 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nouveaux paramètres ExchangeActiveSync lors de la création d’un profil de configuration d’appareil de messagerie sur les appareils iOS<!-- 4892824  --> 
+Sur les appareils iOS/iPadOS, vous pouvez configurer la connectivité de la messagerie dans un profil de configuration d’appareil (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS/iPadOS** pour la plateforme > **E-mail** pour le type de profil). 
 
 De nouveaux paramètres ExchangeActiveSync sont disponibles, notamment :
 - Choisissez les services à synchroniser (ou bloquer la synchronisation), tels que la messagerie, le calendrier et les contacts.
-- Autoriser (ou bloquer) les utilisateurs à modifier les paramètres de synchronisation de ces services sur leurs appareils. 
+- Choisissez d’autoriser ou non les utilisateurs à modifier les paramètres de synchronisation de ces services sur leurs appareils. 
 
 Pour afficher les paramètres actuels, accédez à la page [paramètres de profil de messagerie pour les appareils iOS dans Intune](../configuration/email-settings-ios.md).
 
@@ -158,8 +158,8 @@ S’applique à :
 - iOS 13.0 et ultérieur
 - iPadOS 13.0 et ultérieur
 
-### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Empêcher les utilisateurs d’ajouter des comptes Google personnels au propriétaire des appareils Android Enterprise et à des appareils dédiés<!-- 5353228  -->
-Vous pouvez empêcher les utilisateurs de créer des comptes Google personnels sur Android Enterprise Device owner et dédiés (**configuration** des appareils > **profils** > **créer un profil** > **Android Enterprise** pour la plateforme > propriétaire de l' **appareil uniquement > des restrictions d’appareil** pour le type de profil > **paramètres utilisateurs et comptes**).
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Empêcher les utilisateurs d’ajouter des comptes Google personnels aux appareils de propriétaires Android Enterprise et dédiés<!-- 5353228  -->
+Vous pourrez empêcher les utilisateurs de créer des comptes Google personnels sur des appareils de propriétaires Android Enterprise et dédiés ( **Configuration de l’appareil** > **Profils** > **Créer un profil** > **Android Enterprise** pour la plate-forme > **Propriétaire de l’appareil uniquement > Restrictions d’appareil** pour le type de profil > **Paramètres des utilisateurs et des comptes**).
 
 Pour voir les paramètres actuels que vous pouvez configurer, accédez à [Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -167,8 +167,8 @@ S’applique à :
 - Propriétaire d’appareil Android Entreprise
 - Appareils dédiés Android Entreprise
 
-### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>La journalisation côté serveur pour les commandes Siri est supprimée dans le profil de restrictions d’appareil iOS<!-- 5468501  -->
-Sur les appareils iOS, vous pouvez créer des profils de restriction d’appareil qui configurent la journalisation côté serveur pour les commandes Siri (configuration de l'**appareil** > **profils** > **créer un profil** > **iOS/iPad** pour la plateforme > **Restrictions d’appareil** pour le type de profil > les **applications intégrées**). Le paramètre **de journalisation côté serveur pour les commandes Siri** sera supprimé.
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>La journalisation côté serveur pour les commandes de Siri est supprimée dans le profil de restrictions des appareils iOS<!-- 5468501  -->
+Sur les appareils iOS, vous pouvez créer des profils de restriction d’appareil qui configurent la journalisation côté serveur pour les commandes Siri (configuration de l'**appareil** > **profils** > **créer un profil** > **iOS/iPad** pour les **restrictions d’appareil** de plate-forme > pour le type de profil > les **applications intégrées**). Le paramètre **de journalisation côté serveur pour les commandes Siri** sera supprimé.
 
 Ce paramètre sera supprimé de la console d’administration Intune. Ce paramètre n’a aucun effet sur l’appareil, même si les stratégies existantes pour lesquelles ce paramètre est configuré continuent à afficher le paramètre. Si vous souhaitez supprimer le paramètre des stratégies existantes, accédez à la stratégie, apportez une modification mineure, enregistrez-la et la stratégie sera mise à jour.
 

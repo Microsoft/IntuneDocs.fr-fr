@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058428"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Paramètres Windows 10 (et versions ultérieures) pour protéger les appareils à l’aide d’Intune
@@ -36,7 +36,7 @@ Pour configurer l’antivirus Microsoft Defender, consultez [Restrictions relati
 
 Pour plus d’informations sur les fournisseurs de services de configuration (CSP), consultez [Référence du fournisseur de services de configuration](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
 
-## <a name="microsoft-defender-application-guard"></a>Microsoft Defender application Guard  
+## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
 Lors de l’utilisation de Microsoft Edge, Windows Defender Application Guard protège votre environnement des sites qui ne sont pas approuvés par votre organisation. Quand des utilisateurs visitent des sites qui ne figurent pas dans la liste des limites de votre réseau isolé, les sites s’ouvrent dans une session de navigation virtuelle Hyper-V. Les sites approuvés, qui sont configurés dans Configuration de l’appareil, sont définis par une limite réseau.  
 
@@ -44,7 +44,7 @@ Application Guard est uniquement disponible pour les appareils Windows 10 (64 bi
 
 - **Application Guard**  
   **Par défaut** : Non configuré  
-   CSP application Guard : [paramètres/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Application Guard CSP : [Paramètres/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Activer pour Edge** : active cette fonctionnalité pour ouvrir des sites non approuvés dans un conteneur de navigation virtualisé Hyper-V.  
   - **Non configuré** : tout site (approuvé et non approuvé) peut être ouvert sur l’appareil.  
@@ -495,28 +495,28 @@ Les paramètres de base correspondent aux paramètres BitLocker universels pour 
     **Par défaut**: XTS-AES 128 bits  
    
     choisissez la méthode de chiffrement pour les lecteurs de système d’exploitation. Nous vous recommandons d’utiliser l’algorithme AES-XTS.  
-    - **AES-CBC 128-bit**  
-    - **AES-CBC 256-bit**  
-    - **XTS-AES 128 bits**  
-    - **XTS-AES 256 bits**  
+    - **AES-CBC 128 bits**  
+    - **AES-CBC 256 bits**  
+    - **XTS-AES 128 bits**  
+    - **XTS-AES 256 bits**  
 
   - **Chiffrement pour les lecteurs de données fixes**  
     **Valeur par défaut**: AES-CBC 128-bit  
    
     choisissez la méthode de chiffrement pour les lecteurs de données fixes (intégrés). Nous vous recommandons d’utiliser l’algorithme AES-XTS.  
-    - **AES-CBC 128-bit**  
-    - **AES-CBC 256-bit**  
-    - **XTS-AES 128 bits**  
-    - **XTS-AES 256 bits**  
+    - **AES-CBC 128 bits**  
+    - **AES-CBC 256 bits**  
+    - **XTS-AES 128 bits**  
+    - **XTS-AES 256 bits**  
 
   - **Chiffrement pour les lecteurs de données amovibles**  
     **Valeur par défaut**: AES-CBC 128-bit  
 
     choisissez la méthode de chiffrement pour les lecteurs de données amovibles. Si le lecteur amovible est utilisé avec des appareils qui n’exécutent pas Windows 10, nous vous recommandons d’utiliser l’algorithme AES-CBC.  
-    - **AES-CBC 128-bit**  
-    - **AES-CBC 256-bit**  
-    - **XTS-AES 128 bits**  
-    - **XTS-AES 256 bits**  
+    - **AES-CBC 128 bits**  
+    - **AES-CBC 256 bits**  
+    - **XTS-AES 128 bits**  
+    - **XTS-AES 256 bits**  
 
 ### <a name="bitlocker-os-drive-settings"></a>Paramètres de lecteur du système d’exploitation BitLocker  
 
@@ -636,7 +636,7 @@ Ces paramètres s’appliquent spécifiquement aux lecteurs de données de syst�
     - **Sauvegarder les mots de passe et les jeux de clés de récupération**  
     - **Sauvegarder les mots de passe de récupération uniquement**  
 
-  - **Rotation du mot de passe de récupération pilotée par le client**  
+  - **Rotation du mot de passe de récupération déclenchée par le client**  
     **Valeur par défaut**: la rotation des clés est activée pour les appareils joints à Azure ad  
     CSP BitLocker : [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -733,7 +733,7 @@ Ces paramètres s’appliquent spécifiquement aux lecteurs de données fixes.
     - **Sauvegarder les mots de passe et les jeux de clés de récupération**  
     - **Sauvegarder les mots de passe de récupération uniquement**  
 
-  - **Rotation du mot de passe de récupération pilotée par le client**  
+  - **Rotation du mot de passe de récupération déclenchée par le client**  
     **Valeur par défaut**: la rotation des clés est activée pour les appareils joints à Azure ad  
     CSP BitLocker : [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -771,7 +771,7 @@ Ces paramètres s’appliquent spécifiquement aux lecteurs de données amovible
     - **Bloquer** : autoriser l’accès en écriture pour les appareils configurés dans une autre organisation.  
     - **Non configuré** -refuser l’accès en écriture.  
  
-## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender exploit Guard  
+## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
 Utilisez la [protection contre](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) les attaques pour gérer et réduire la surface d’attaque des applications utilisées par vos employés.  
 

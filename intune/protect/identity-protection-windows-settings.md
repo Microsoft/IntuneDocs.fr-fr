@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: f49ea9e1e59fadcb90a773e362ec3ef41e25ab63
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502228"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Paramètres des appareils Windows 10 permettant d’activer Windows Hello Entreprise dans Intune
@@ -129,7 +129,7 @@ Pour en savoir plus sur les profils Windows Hello Entreprise dans Intune, consul
 
   **Par défaut** : Non configuré
 
-- **Utiliser des clés de sécurité pour la connexion**  
+- **Utilisez des clés de sécurité pour la connexion**  
   Ce paramètre est disponible pour les appareils qui exécutent Windows 10 version 1903 ou ultérieure. Utilisez-le pour gérer la prise en charge de l’utilisation des clés de sécurité Windows Hello pour la connexion.  
 
   - **Activé** : les utilisateurs peuvent utiliser une clé de sécurité Windows Hello comme informations d’identification d’ouverture de session pour les PC ciblés avec cette stratégie. 

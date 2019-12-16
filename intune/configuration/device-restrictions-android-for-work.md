@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 904c3d2267decdfa3929bf29376c05a995c77eb8
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390921"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946649"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -31,6 +31,8 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 [Créez un profil de configuration d’appareil](device-restrictions-configure.md).
 
 ## <a name="device-owner-only"></a>Propriétaire de l’appareil uniquement
+
+Ces paramètres s’appliquent aux types d’inscription d’entreprise Android où Intune contrôle la totalité de l’appareil, comme les appareils Android Enterprise entièrement gérés ou dédiés.
 
 ### <a name="general-settings"></a>Paramètres généraux :
 
@@ -229,7 +231,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   Choisissez **Non configuré** pour désactiver en permanence la fonctionnalité VPN Always On pour tous les clients VPN.
 
   > [!IMPORTANT]
-  > Veillez à ne déployer qu’une seule stratégie VPN Always On sur un seul appareil. Le déploiement de plusieurs stratégies VPN Always On sur un seul appareil n’est pas pris en charge.
+  > Veillez à ne déployer qu’une seule stratégie VPN AlwaysOn sur un seul appareil. Le déploiement de plusieurs stratégies VPN AlwaysOn sur un seul appareil n’est pas pris en charge.
 
 - **Client VPN** : choisissez un client VPN qui prend en charge Always On. Les options disponibles sont les suivantes :
   - Cisco AnyConnect
@@ -242,6 +244,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   > [!IMPORTANT]
   > - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
   > - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
+  > - Vous devez toujours configurer le client VPN avec un [Profil VPN](vpn-settings-android-enterprise.md), ou via un [profil de configuration d’application](../apps/app-configuration-policies-use-android.md).
   > - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
 
 - **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
@@ -264,6 +267,8 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
     Pour plus d’informations sur les fichiers PAC, consultez [fichier de configuration automatique de proxy (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (ouvre un site non-Microsoft).
 
 ## <a name="work-profile-only"></a>Profil professionnel uniquement
+
+Ces paramètres s’appliquent aux types d’inscription d’entreprise Android où Intune contrôle uniquement le profil professionnel, tel que l’inscription de profil professionnel Android Enterprise sur un appareil personnel ou BYOD.
 
 ### <a name="work-profile-settings"></a>Paramètres de profil professionnel
 

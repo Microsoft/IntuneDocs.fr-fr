@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592021"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899402"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Prise en main du Kit de développement logiciel (SDK) d’applications Microsoft Intune
 
@@ -63,7 +63,7 @@ Nous utilisons les adresses e-mail répertoriées dans les réponses du question
 Si le lien ciblé de votre application vient à changer, vous devrez réinscrire votre application.
 
 > [!NOTE]
-> Veillez à nous prévenir si vous mettez à jour votre application avec une nouvelle version du SDK d’application Intune.
+> Vous devez nous prévenir si vous mettez à jour votre application avec une nouvelle version du SDK d’application Intune.
 
 ## <a name="download-the-sdk-files"></a>Télécharger les fichiers du SDK
 
@@ -72,7 +72,7 @@ Les SDK d’application Intune pour iOS et Android natifs sont hébergés sur un
 * [SDK d’application Intune pour iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [SDK d’application Intune pour Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-Si votre application est une application Xamarin, utilisez cette variante du SDK :
+Si votre application est une application Xamarin, utilisez cette variante du SDK :
 
 * [Liaisons Xamarin du SDK d’application Intune](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 
@@ -164,7 +164,7 @@ Après avoir terminé les étapes nécessaires pour intégrer votre application 
 
   * Si vous testez votre application sur un appareil mobile à l’aide d’un compte d’utilisateur final, vérifiez que vous avez affecté à ce compte une licence Intune dans le site web du centre d’administration Microsoft 365 après vous être connecté à un compte Administrateur. Pour plus d’informations, consultez [Affecter une licence Microsoft Intune](../fundamentals/licenses-assign.md).
 
-* **Stratégies de protection des applications Intune**: pour tester votre application avec toutes les stratégies de protection des applications Intune, vous devez connaître le comportement attendu pour chaque paramètre de la stratégie. Consultez les descriptions des [stratégies de protection des applications iOS](../apps/app-protection-policy-settings-ios.md) et des [stratégies de protection des applications Android](../apps/app-protection-policy-settings-android.md). Si votre application a intégré le kit de développement logiciel (SDK) Intune, mais qu’il ne figure pas encore dans le portail Azure en tant qu’application ciblée, vous pouvez le cibler avec une stratégie en sélectionnant l’option « + Plus d’applications » et en fournissant l’ID de l’offre groupée (iOS) ou le nom du package (Android) dans la zone de texte.
+* **Stratégies de protection des applications Intune**: pour tester votre application avec toutes les stratégies de protection des applications Intune, vous devez connaître le comportement attendu pour chaque paramètre de la stratégie. Consultez les descriptions des [stratégies de protection des applications iOS](../apps/app-protection-policy-settings-ios.md) et des [stratégies de protection des applications Android](../apps/app-protection-policy-settings-android.md). Si votre application a intégré le kit de développement logiciel (SDK) Intune, mais qu’elle n’est pas répertoriée dans la liste des applications pouvant être ciblées, vous pouvez spécifier l’ID d’ensemble de l’application (iOS) ou le nom du package (Android) dans la zone de texte lors de la sélection des « applications personnalisées ». 
 
 * **Dépannage** : si vous rencontrez des problèmes pendant les tests manuels de l’expérience utilisateur lors de l’installation de votre application, consultez [Résoudre les problèmes d’installation d’applications](../apps/troubleshoot-app-install.md). 
 

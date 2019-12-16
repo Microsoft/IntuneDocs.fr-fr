@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73713471"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
@@ -44,7 +44,7 @@ Avant d’exécuter l’outil de création de package de restrictions d’applic
 
   * Le fichier de l'application d’entrée doit avoir l’extension **.ipa** ou **.app**.
 
-  * L’application d’entrée doit être compilée pour iOS 11 ou version ultérieure.
+  * L’application d’entrée doit être compilée pour iOS 11 ou version ultérieure.
 
   * L’application d’entrée ne peut pas être chiffrée.
 
@@ -303,7 +303,7 @@ Procédez comme suit pour obtenir des journaux pour vos applications encapsulée
 
 ### <a name="collecting-crash-logs-from-the-system"></a>Collecte des journaux d’incidents du système
 
-Il se peut que votre application journalise des informations utiles sur la console de l’appareil client iOS. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application. Pour récupérer ces informations, procédez comme suit :
+Il se peut que votre application journalise des informations utiles sur la console de l’appareil client iOS. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application ou à l’application même. Pour récupérer ces informations, procédez comme suit :
 
 1. Reproduisez le problème en exécutant l'application.
 

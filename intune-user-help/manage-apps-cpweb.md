@@ -20,16 +20,16 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: edc45fb3ddab43ef77a3f072c5a1a31f8f88c957
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506113"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Gérer des applications à partir du site web du portail d’entreprise 
 Visitez le [site web portail d’entreprise](https://portal.manage.microsoft.com) pour afficher et gérer les applications de votre organisation. 
 
-## <a name="view-all-apps"></a>Afficher toutes les applications  
+## <a name="view-all-apps"></a>Passer en revue toutes les applications  
 Dans le menu, sélectionnez **applications** pour afficher toutes les applications mises à la disposition de votre organisation. 
 
    ![Capture d’écran de Portail d’entreprise site Web, page applications, avec des options affinées.](./media/intune-view-apps-1907.png)  

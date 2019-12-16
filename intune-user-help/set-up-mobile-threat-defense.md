@@ -1,6 +1,6 @@
 ---
 title: Installer Mobile Threat Defense sur votre appareil mobile
-description: Découvrez comment installer mobile Threat Defense sur votre appareil mobile.
+description: Découvrez comment installer Mobile Threat Defense sur votre appareil mobile.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7f395a9cedc72a8184cfe3e29d6fcd3117a1473d
-ms.sourcegitcommit: 259462591835f3607392aa6b179882dbac830a89
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72980356"
 ---
 # <a name="install-mobile-threat-defense"></a>Installer Mobile Threat Defense   
@@ -43,7 +43,7 @@ Votre organisation ne peut pas voir les données, telles que les textes, les e-m
 * Ensemble d’applications et taille dynamique de l’application : quantité d’espace utilisé par une application sur votre appareil. 
 
 
-## <a name="install-app"></a>Installer l’application    
+## <a name="install-app"></a>Installer une application    
 Quand vous vous connectez à une application protégée, vous êtes automatiquement invité à installer une application MTD. Suivez les étapes à l’écran pour terminer l’installation. Utilisez les étapes de cette section pour obtenir de l’aide supplémentaire.  
  
 Vous pouvez également être invité à inscrire votre appareil. L’inscription est nécessaire pour confirmer votre identité et connecter votre compte scolaire ou professionnel à votre appareil. Si vous n’êtes pas inscrit, vous serez automatiquement guidé dans le programme d’installation avant d’installer l’application MTD. Lorsque vous accédez à l’écran accéder à l' **accès** , vous pouvez démarrer les étapes d’installation.  

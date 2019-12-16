@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e59a4ba7a929df448eddaf36038c2d6deaa0a7a
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 96a89301bda738f57920b8d4e233663678e3fc91
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547929"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860276"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Paramètres Windows 10 et ultérieur pour gérer les appareils partagés à l’aide d’Intune
 
@@ -40,6 +40,8 @@ Pour plus d’informations sur cette fonctionnalité dans Intune, consultez [Con
 
 ## <a name="shared-multi-user-device-settings"></a>Paramètres d’appareils partagés multi-utilisateurs
 
+Ces paramètres utilisent le [CSP SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+
 - **Mode PC partagé** : choisissez **Activer** pour activer le mode PC partagé. Dans ce mode, un seul utilisateur à la fois se connecte à l’appareil. Aucun autre utilisateur ne peut se connecter tant que le premier ne s’est pas déconnecté. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
 - **Compte invité** : choisissez cette option pour créer une option Invité sur l’écran de connexion. Les comptes invités ne nécessitent aucune information d’identification de l’utilisateur ou authentification. Ce paramètre crée un compte local chaque fois qu’il est utilisé. Les options disponibles sont les suivantes :
   - **Invité** : crée un compte invité localement sur l’appareil.
@@ -54,12 +56,16 @@ Pour plus d’informations sur cette fonctionnalité dans Intune, consultez [Con
 
 - **Stockage local** : choisissez **Activé** pour empêcher les utilisateurs d’enregistrer et d’afficher des fichiers sur le disque dur de l’appareil. Choisissez **Désactivé** pour permettre aux utilisateurs d’afficher et d’enregistrer les fichiers localement à l’aide de l’Explorateur de fichiers. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
 - **Stratégies d’alimentation** : lorsque cette option a la valeur **Activé**, les utilisateurs ne peuvent pas désactiver la veille prolongée, remplacer toutes les actions de mise en veille (par exemple la fermeture du capot) et modifier les paramètres d’alimentation. Quand elle a la valeur **Désactivé**, les utilisateurs peuvent mettre l’appareil en veille prolongée, fermer le capot pour mettre l’appareil en veille et changer les paramètres d’alimentation. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
-- **Délai d’attente avant la veille (en secondes)**  : entrez le nombre de secondes inactives (0-100) avant que l’appareil bascule en mode veille. Si vous ne définissez pas de délai, l’appareil se met en veille après 60 minutes.
+- **Délai d’attente avant la veille (en secondes)**  : entrez le nombre de secondes inactives (0-18000) avant que l’appareil bascule en mode veille. `0` signifie que l’appareil ne se met jamais en veille. Si vous ne définissez pas de délai, l’appareil se met en veille après 3 600 secondes (60 minutes).
 - **Se connecter lorsque le PC sort du mode veille** : affectez la valeur **Activé** pour exiger que les utilisateurs se connectent avec un mot de passe lorsque l’appareil sort du mode veille. Choisissez **Désactivé** pour que les utilisateurs n’aient pas à entrer leur nom d’utilisateur et leur mot de passe. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
 - **Heure de début de la maintenance (en minutes après minuit)**  : entrez l’heure en minutes (0-1440) à laquelle s’exécutent les tâches de maintenance automatique, telles que Windows Update. L’heure de début par défaut est minuit, soit zéro (`0`) minute. Pour la changer, entrez une heure de début en minutes à partir de minuit. Par exemple, si vous souhaitez que la maintenance commence à 2 heures du matin, entrez `120`. Si vous souhaitez que la maintenance commence à 20h00, entrez `1200`.
 - **Stratégie d’éducation** : choisissez **Activé** afin d’utiliser les paramètres recommandés pour les appareils des établissements scolaires, qui sont plus restrictifs. Choisissez **Désactivé** pour ne pas utiliser les stratégies d’éducation par défaut et recommandées. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
 
   Pour plus d’informations sur ce que font les stratégies d’éducation, consultez [Recommandations de configuration de Windows 10 pour les clients de l’enseignement](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+
+- **Première connexion rapide**: choisissez **activé** pour que les utilisateurs bénéficient d’une expérience de connexion rapide. Lorsqu’il est **activé**, l’appareil connecte automatiquement les nouveaux comptes de Azure ad non-administrateur aux comptes locaux préconfigurés candidats. Choisissez **désactivé** pour empêcher la première expérience de connexion rapide. **Non configuré** (par défaut) laisse ce paramètre non géré par Intune et n’envoie pas de stratégie pour contrôler ce paramètre sur un appareil.
+
+  [Authentification/CSP EnableFastFirstSignIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Configurer un PC partagé ou invité](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (ouvre un autre site web Docs) est une ressource très intéressante de cette fonctionnalité Windows 10, qui comprend des concepts et des stratégies de groupe qui peuvent être définies en mode partagé.

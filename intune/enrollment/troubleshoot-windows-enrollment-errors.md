@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348768be4a42667f579df0ccb500434425258db0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 46012b11cdb458243658e858b53c2dfb1a69dc88
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712860"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991800"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Résolution des problèmes d’inscription d’appareils Windows dans Microsoft Intune
 
@@ -60,8 +60,8 @@ Erreur 80180003 : « Un problème s’est produit. L’inscription de cet util
 Il existe plusieurs solutions possibles à ce problème :
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Supprimer les appareils qui ont été inscrits
-1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
-2. Accédez à **utilisateurs**  > **tous les utilisateurs**.    
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).    
+2. Accédez à **utilisateurs** > **tous les utilisateurs**.    
 3. Sélectionnez le compte d’utilisateur affecté, puis cliquez sur **périphériques**.    
 4. Sélectionnez les appareils inutilisés ou indésirables, puis cliquez sur **supprimer**. 
 
@@ -70,13 +70,13 @@ Il existe plusieurs solutions possibles à ce problème :
 > [!NOTE]
 > Cette méthode augmente la limite d’inscription d’appareils pour tous les utilisateurs, pas seulement pour l’utilisateur affecté.
 
-1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Accédez à **inscription d’appareil**  > **restrictions d’inscription**, puis sélectionnez restrictions de **limite d’appareils**.    
-3. Augmentez la valeur de la limite de l' **appareil**. 
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Accédez à **appareils** > **restrictions d’inscription** > **par défaut** (sous **restrictions de limite d’appareils**) > **Propriétés** > **modifier** (en regard de **limite d’appareils**) > augmenter la limite de l' **appareil** (15 au maximum) > **consulter + enregistrer**.    
+ 
 
 ##### <a name="check-device-type-restrictions"></a>Vérifier les restrictions de type d’appareil
 1. Connectez-vous au [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) à l’aide d’un compte d’administrateur général.
-2. Accédez à **inscription d’appareil**  > **restrictions d’inscription**, puis sélectionnez la restriction **par défaut** sous restrictions de **type d’appareil**.    
+2. Accédez à **appareils** > **restrictions d’inscription**, puis sélectionnez la restriction **par défaut** sous **restrictions de type d’appareil**.    
 3. Sélectionnez **plateformes**, puis sélectionnez **autoriser** pour **Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -97,7 +97,7 @@ Erreur 0x801c0003 : «cet utilisateur n’est pas autorisé à s’inscrire. Vo
 
 #### <a name="resolution"></a>Résolution
 1. Connectez-vous au [portail Azure](https://portal.azure.com/) en tant qu’administrateur.    
-2. Accédez à **Azure Active Directory**  > **appareils**  > **paramètres**de l’appareil.    
+2. Accédez à **Azure Active Directory** > **appareils** > **paramètres**de l’appareil.    
 3. Définissez **Les utilisateurs peuvent joindre des appareils à Azure AD** sur **Tous**.    
 4. Réinscrivez l’appareil.   
 
@@ -106,8 +106,8 @@ Erreur 0x801c0003 : «cet utilisateur n’est pas autorisé à s’inscrire. Vo
 Erreur 8018000a : «un problème est survenu. L’appareil est déjà inscrit.  Vous pouvez contacter votre administrateur système avec le code d’erreur 8018000a.
 
 **Cause :** si une des conditions suivantes est vraie :
-- Un autre utilisateur a déjà inscrit l’appareil dans Intune ou a rejoint l’appareil pour Azure AD. Pour déterminer si c’est le cas, accédez à **paramètres**  > **comptes**  > **accès professionnel**. Recherchez un message semblable à ce qui suit : «un autre utilisateur sur le système est déjà connecté à une entreprise ou un établissement scolaire. Veuillez supprimer cette connexion professionnelle ou scolaire, puis réessayez.»    
-- L’agent du client Configuration Manager est installé sur l’ordinateur.    
+- Un autre utilisateur a déjà inscrit l’appareil dans Intune ou a rejoint l’appareil pour Azure AD. Pour déterminer si c’est le cas, accédez à **paramètres** > **comptes** > **accès professionnel**. Recherchez un message semblable à ce qui suit : «un autre utilisateur sur le système est déjà connecté à une entreprise ou un établissement scolaire. Veuillez supprimer cette connexion professionnelle ou scolaire, puis réessayez.»    
+- L’agent client Configuration Manager est installé sur l’ordinateur.    
 
 #### <a name="resolution"></a>Résolution
 
@@ -115,7 +115,7 @@ Recourez à l'une des méthodes suivantes pour résoudre cette erreur :
 
 ##### <a name="remove-the-other-work-or-school-account"></a>Supprimer l’autre compte professionnel ou scolaire
 1. Déconnectez-vous de Windows, puis connectez-vous à l’aide de l’autre compte ayant inscrit ou joint l’appareil.    
-2. Accédez à **paramètres**  > **comptes**  > **accès professionnel**, puis supprimez le compte professionnel ou scolaire.
+2. Accédez à **paramètres** > **comptes** > **accès professionnel**, puis supprimez le compte professionnel ou scolaire.
 3. Déconnectez-vous de Windows, puis connectez-vous à l’aide de votre compte.    
 4. Inscrivez l’appareil dans Intune ou joignez l’appareil à Azure AD. 
 
@@ -167,7 +167,7 @@ Recourez à l'une des méthodes suivantes pour résoudre cette erreur :
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Désactivez l’inscription automatique MDM dans Azure.
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).    
-2. Accédez à **Azure Active Directory**  > **Mobility (MDM et gam)**  > **Microsoft Intune**.    
+2. Accédez à **Azure Active Directory** > **Mobility (MDM et gam)**  > **Microsoft Intune**.    
 3. Définissez **étendue de l’utilisateur MDM** sur **aucun**, puis cliquez sur **Enregistrer**.    
      
 ##### <a name="uninstall"></a>Désinstaller
@@ -181,7 +181,7 @@ Erreur : « le logiciel ne peut pas être installé, 0x80cf4017. »
 
 #### <a name="resolution"></a>Résolution
 1. Connectez-vous à [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Accédez à **Admin**  > **Téléchargement du logiciel client**, puis cliquez sur **Télécharger le logiciel client**.    
+2. Accédez à **Admin** > **Téléchargement du logiciel client**, puis cliquez sur **Télécharger le logiciel client**.    
 3. Enregistrez le package d’installation, puis installez le logiciel client. 
 
 
@@ -193,7 +193,7 @@ Erreur : « Le certificat du compte n’est pas valide et peut avoir expiré, 
 
 #### <a name="resolution"></a>Résolution
 1. Connectez-vous à [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Accédez à **Admin**  > **Téléchargement du logiciel client**, puis cliquez sur **Télécharger le logiciel client**.    
+2. Accédez à **Admin** > **Téléchargement du logiciel client**, puis cliquez sur **Télécharger le logiciel client**.    
 3. Enregistrez le package d’installation, puis installez le logiciel client.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Votre organisation ne prend pas en charge cette version de Windows. 
@@ -205,16 +205,15 @@ Erreur : «un problème est survenu. Votre organisation ne prend pas en charge 
 #### <a name="resolution"></a>Résolution
 Pour résoudre ce problème dans un environnement Intune autonome, procédez comme suit : 
  
-1. Connectez-vous au [portail Azure](https://portal.azure.com/) en tant qu’administrateur.    
-2. Sélectionnez **Intune** sur la gauche, puis accédez à **inscription d’appareil**  >  restrictions d'**inscription**.    
-3. Dans **restrictions de type d’appareil**, cliquez sur **plateformes**, puis sélectionnez **autoriser** pour **Windows (MDM)** .    
-4. Cliquez sur **Save**.    
+1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisit **appareils** > **restrictions d’inscription** > choisir une restriction de type d’appareil.    
+2. Choisissez **propriétés** > **modifier** (en regard de **paramètres de plateforme**) > **autoriser** pour **Windows (MDM)** .    
+3. Cliquez sur **Review + Save**.    
  
 Pour résoudre ce problème dans le MDM hybride avec Intune et Configuration Manager, procédez comme suit : 
 1. Ouvrez la console Configuration Manager.    
 2. Sélectionnez **administration**, puis **services Cloud**.    
 3. Cliquez avec le bouton droit sur **Microsoft Intune abonnement**, puis sélectionnez **configurer des plateformes > Windows**.    
-4. Cochez la case **activer l’inscription Windows**  > **appliquer**  > **OK**.  
+4. Cochez la case **activer l’inscription Windows** > **appliquer** > **OK**.  
 
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Une erreur d’installation s’est produite lors de l’inscription en bloc.
@@ -236,7 +235,7 @@ Pour plus d’informations sur l’application configurer les PC scolaires, cons
 ### <a name="auto-mdm-enroll-failed"></a>Inscription MDM automatique : échec 
 
 Lorsque vous essayez d’inscrire un appareil Windows 10 automatiquement à l’aide de stratégie de groupe, vous rencontrez les problèmes suivants : 
-- Dans Planificateur de tâches, sous **Microsoft**  > **Windows**  > **EnterpriseMgmt**, le résultat de la dernière exécution de la **planification créée par le client d’inscription pour s’inscrire automatiquement dans MDM à partir de** la tâche AAD est le suivant : **événement 76 Inscription MDM automatique : échec (code d’erreur Win32 inconnu : 0x8018002b)**       
+- Dans Planificateur de tâches, sous **Microsoft** > **Windows** > **EnterpriseMgmt**, le résultat de la dernière exécution de la **planification créée par le client d’inscription pour s’inscrire automatiquement dans MDM à partir** de la tâche AAD est le suivant : **événement 76 inscription MDM automatique : échec (code d’erreur Win32 inconnu : 0x8018002b)**       
 - Dans observateur d’événements, l’événement suivant est enregistré sous **journaux des applications et des services/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
@@ -336,7 +335,7 @@ Ce problème se produit généralement avant le redémarrage de l’appareil dan
 
 #### <a name="resolution"></a>Résolution
 
-1. Accédez à **Intune**  >  **inscription d’appareils**  > **inscription Windows**  > **appareils**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez > **appareils** > **Windows** > **appareils Windows**.
 2. Sélectionnez l’appareil qui rencontre le problème > cliquez sur les points de suspension (...) du côté le plus à droite.
 3. Sélectionnez **Annuler l’affectation** de l’utilisateur et attendez la fin du processus.
 4. Vérifiez que le profil AutoPilot Azure AD Hybride est affecté avant de retenter l’installation de OOBE.
@@ -376,18 +375,18 @@ Ce problème est généralement lié à la délégation incorrecte des autorisat
 3. Dans l’Assistant **Délégation de contrôle**, sélectionnez **Suivant** > **Ajouter** > **Types d’objets**.
 4. Dans le volet **Types d’objets**, cochez la case **Ordinateurs**, puis sélectionnez **OK**.
 5. Dans le volet **Sélectionner des utilisateurs**, des **ordinateurs** ou des **groupes**, dans la zone **Entrez les noms des objets à sélectionner**, entrez le nom de l’ordinateur où le connecteur est installé.
-6. Sélectionnez **vérifier les noms** pour valider votre entrée > **OK**  > **suivant**.
+6. Sélectionnez **vérifier les noms** pour valider votre entrée > **OK** > **suivant**.
 7. Sélectionnez **Créer une tâche personnalisée à déléguer** > **Suivant**.
 8. Cochez la case **Seulement des objets suivants dans le dossier**, puis cochez les cases **Objets ordinateur**, **Créer les objets sélectionnés dans ce dossier** et **Supprimer les objets sélectionnés dans ce dossier**.
 9. Sélectionnez **Suivant**.
 10. Sous **Autorisations**, cochez la case **Contrôle total**. Cette action sélectionne toutes les autres options.
-11. Sélectionnez **suivant**  > **Terminer**.
+11. Sélectionnez **suivant** > **Terminer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Résoudre les problèmes d’inscription d’appareils dans Intune](../troubleshoot-device-enrollment-in-intune.md)
 - [Posez une question sur le forum Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
-- [Consultez le blog de l’équipe de support Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Consultez le blog Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
+- [Lire le blog de l’équipe de support Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
+- [Lire le blog Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Obtenir un support pour Microsoft Intune](../fundamentals/get-support.md)
 - [Rechercher les erreurs d’inscription à la cogestion](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e1e1de0c8ec80a390f76f5e8de3965d4f800a9
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: 78daf56f7e1d22b88d7134ac6cea86f1d999f0c6
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188153"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860245"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -42,11 +42,11 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 - **App Store** (mobile uniquement) : **Non configuré** (valeur par défaut) permet aux utilisateurs finaux d’accéder à l’App Store sur des appareils mobiles. **Bloquer** empêche l’utilisation de l’App Store.
 - **Mettre à jour automatiquement les applications du Windows store** : **Non configuré** (valeur par défaut) permet aux applications installées à partir du Microsoft Store d’être automatiquement mises à jour. **Bloquer** empêche l’installation automatique des mises à jour.
 - **Installation d’applications approuvées** : choisissez si les applications non-Microsoft Store peuvent être installées (procédure également appelée « chargement indépendant »). Le chargement indépendant consiste à installer puis à exécuter ou tester une application qui n’est pas certifiée par le Microsoft Store (par exemple une application qui est interne à votre entreprise uniquement.) Les options disponibles sont les suivantes :
-  - **Non configuré** (valeur par défaut) : utilise la valeur par défaut du système d’exploitation.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
   - **Bloquer** : empêche le chargement indépendant. Les applications non-Microsoft Store ne peuvent pas être installées.
   - **Autoriser** : autorise le chargement de indépendant. Les applications non-Microsoft Store peuvent être installées.
 - **Déverrouillage de développement** : autorise les paramètres de développement Windows, par exemple pour autoriser les utilisateurs à modifier des applications qui ont été chargées indépendamment. Les options disponibles sont les suivantes :
-  - **Non configuré** (valeur par défaut) : utilise la valeur par défaut du système d’exploitation.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
   - **Bloquer** : interdit les applications en mode développeur et le chargement indépendant.
   - **Autoriser** : autorise les applications en mode développeur et le chargement indépendant.
 
@@ -87,7 +87,7 @@ Ces paramètres utilisent les fournisseurs de service de configuration [Connecti
 - [Fournisseur de service de configuration Wi-Fi Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)
 
 - **Canal de données mobiles** : choisissez si les utilisateurs finaux peuvent utiliser des données, par exemple naviguer sur le web, quand ils sont connectés à un réseau cellulaire. Les options disponibles sont les suivantes :
-  - **Non configuré** (valeur par défaut) : utilise la valeur par défaut du système d’exploitation, qui peut autoriser le canal de données mobiles. Les utilisateurs finaux peuvent la désactiver.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre. Les utilisateurs finaux peuvent la désactiver.
   - **Bloquer** : ne pas autoriser le canal de données mobiles. Les utilisateurs finaux ne peuvent pas l’activer.
   - **Autoriser (non modifiable)**  : autorise l’utilisation du canal de données mobiles. Les utilisateurs finaux ne peuvent pas la désactiver.
 
@@ -139,24 +139,24 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Ent
 ## <a name="control-panel-and-settings"></a>Panneau de configuration et paramètres
 
 - **Application Paramètres**: **Bloquer** empêche les utilisateurs finaux d’accéder à l’application Paramètres de Windows. **Non configuré** (valeur par défaut) autorise les utilisateurs à ouvrir l’application Paramètres sur l’appareil.
-  - **Système** : **Bloquer** empêche l’accès à la zone Système de l’application Paramètres. **Non configuré** (valeur par défaut) autorise l’accès.
+  - **Système** : **Bloquer** empêche l’accès à la zone Système de l’application Paramètres. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
     - **Modification des paramètres d’alimentation et de veille (poste de travail uniquement)**  : **Bloquer** empêche l’utilisateur final de modifier les paramètres d’alimentation et de veille sur l’appareil. **Non configuré** (valeur par défaut) permet aux utilisateurs de modifier les paramètres d’alimentation et de veille.
-  - **Appareils** : **Bloquer** empêche l’accès à la zone Appareils de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Réseau et Internet** : **Bloquer** empêche l’accès à la zone Réseau et Internet de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Personnalisation** : **Bloquer** empêche l’accès à la zone Personnalisation de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Applications** : **Bloquer** empêche l’accès à la zone Applications de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Comptes** : **Bloquer** empêche l’accès à la zone Comptes de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Heure et langue** : **Bloquer** empêche l’accès à la zone Heure et langue de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-    - **Modification de l’heure système** : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres de date et d’heure sur l’appareil. L’option **Non configuré** permet aux utilisateurs de modifier ces paramètres.
-    - **Modification des paramètres régionaux (poste de travail uniquement)**  : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres régionaux sur l’appareil. L’option **Non configuré** permet aux utilisateurs de modifier ces paramètres.
-    - **Modification des paramètres de langue (poste de travail uniquement)**  : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres de langue sur l’appareil. L’option **Non configuré** permet aux utilisateurs de modifier ces paramètres.
+  - **Appareils** : **Bloquer** empêche l’accès à la zone Appareils de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Réseau et Internet** : **Bloquer** empêche l’accès à la zone Réseau et Internet de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Personnalisation** : **Bloquer** empêche l’accès à la zone Personnalisation de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Applications** : **Bloquer** empêche l’accès à la zone Applications de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Comptes** : **Bloquer** empêche l’accès à la zone Comptes de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Heure et langue** : **Bloquer** empêche l’accès à la zone Heure et langue de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+    - **Modification de l’heure système** : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres de date et d’heure sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Les utilisateurs peuvent modifier ces paramètres.
+    - **Modification des paramètres régionaux (poste de travail uniquement)**  : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres régionaux sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Les utilisateurs peuvent modifier ces paramètres.
+    - **Modification des paramètres de langue (poste de travail uniquement)**  : **Bloquer** empêche les utilisateurs finaux de modifier les paramètres de langue sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Les utilisateurs peuvent modifier ces paramètres.
 
       [Fournisseur de service de configuration Policy Settings](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
-  - **Jeux** : **Bloquer** empêche l’accès à la zone Jeux de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Options d’ergonomie** : **Bloquer** empêche l’accès à la zone Options d’ergonomie de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Confidentialité** : **Bloquer** empêche l’accès à la zone Confidentialité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
-  - **Mise à jour et sécurité** : **Bloquer** empêche l’accès à la zone Mise à jour et sécurité de l’application Paramètres sur l’appareil. **Non configuré** (valeur par défaut) autorise l’accès.
+  - **Jeux** : **Bloquer** empêche l’accès à la zone Jeux de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Options d’ergonomie** : **Bloquer** empêche l’accès à la zone Options d’ergonomie de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Confidentialité** : **Bloquer** empêche l’accès à la zone Confidentialité de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Mise à jour et sécurité** : **Bloquer** empêche l’accès à la zone Mise à jour et sécurité de l’application Paramètres sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 
 ## <a name="display"></a>Afficher
 
@@ -178,28 +178,31 @@ Vous pouvez également **importer** un fichier .csv avec la liste des applicatio
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), qui liste également les éditions de Windows prises en charge. 
 
-- **Capture d’écran** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux d’effectuer des captures d’écran sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Copier et Coller (mobile uniquement)**  : **Bloquer** empêche les utilisateurs finaux d’utiliser la fonctionnalité copier-coller entre applications sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Désinscription manuelle** : **Bloquer** empêche les utilisateurs finaux de supprimer le compte d’espace de travail à l’aide du Panneau d’espace de travail sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
+- **Capture d’écran** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux d’effectuer des captures d’écran sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Copier et Coller (mobile uniquement)**  : **Bloquer** empêche les utilisateurs finaux d’utiliser la fonctionnalité copier-coller entre applications sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Désinscription manuelle** : **Bloquer** empêche les utilisateurs finaux de supprimer le compte d’espace de travail à l’aide du Panneau d’espace de travail sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 
   Ce paramètre de stratégie ne s’applique pas si l’ordinateur est joint à Azure AD et que l’inscription automatique est activée.
 
-- **Installation manuelle du certificat racine (mobile uniquement)**  : **Bloquer** empêche les utilisateurs finaux d’installer manuellement des certificats racines et des certificats CAP intermédiaires. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Appareil photo** : **Bloquer** empêche les utilisateurs finaux d’utiliser l’appareil photo sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Synchronisation des fichiers OneDrive** : **Bloquer** empêche les utilisateurs finaux de synchroniser des fichiers sur OneDrive à partir de l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Stockage amovible** : **Bloquer** empêche les utilisateurs finaux d’utiliser des dispositifs de stockage externe, tels que des cartes SD, avec l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Géolocalisation** : **Bloquer** empêche les utilisateurs finaux d’activer les services de localisation sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Partage Internet** : **Bloquer** empêche le partage de connexion Internet sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Réinitialisation du téléphone** : **Bloquer** empêche les utilisateurs finaux de rétablir les paramètres d’usine de l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Connexion USB** : **Bloquer** empêche l’accès aux dispositifs de stockage externe via une connexion USB sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité. Le chargement USB n’est pas affecté par ce paramètre.
-- **Mode antivol** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux de sélectionner la préférence du mode antivol sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
+- **Installation manuelle du certificat racine (mobile uniquement)**  : **Bloquer** empêche les utilisateurs finaux d’installer manuellement des certificats racines et des certificats CAP intermédiaires. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Appareil photo** : **Bloquer** empêche les utilisateurs finaux d’utiliser l’appareil photo sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+
+  [CSP de l’appareil photo](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+
+- **Synchronisation des fichiers OneDrive** : **Bloquer** empêche les utilisateurs finaux de synchroniser des fichiers sur OneDrive à partir de l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Stockage amovible** : **Bloquer** empêche les utilisateurs finaux d’utiliser des dispositifs de stockage externe, tels que des cartes SD, avec l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Géolocalisation** : **Bloquer** empêche les utilisateurs finaux d’activer les services de localisation sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Partage Internet** : **Bloquer** empêche le partage de connexion Internet sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Réinitialisation du téléphone** : **Bloquer** empêche les utilisateurs finaux de rétablir les paramètres d’usine de l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Connexion USB** : **Bloquer** empêche l’accès aux dispositifs de stockage externe via une connexion USB sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Le chargement USB n’est pas affecté par ce paramètre.
+- **Mode antivol** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux de sélectionner la préférence du mode antivol sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 - **Cortana** : **Bloquer** désactive l’assistant vocal Cortana sur l’appareil. Quand Cortana est désactivé, les utilisateurs peuvent toujours rechercher des éléments sur l’appareil. **Non configuré** (valeur par défaut) autorise l’utilisation de Cortana.
 - **Enregistrement vocal** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux d’utiliser l’enregistreur vocal sur l’appareil. **Non configuré** (valeur par défaut) autorise l’enregistrement vocal pour les applications.
-- **Modification du nom d’appareil** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux de modifier le nom de l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Ajouter des packages de configuration** : **Bloquer** empêche l’utilisation de l’agent de configuration du runtime qui installe les packages de configuration sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Supprimer des packages de configuration** : **Bloquer** empêche l’utilisation de l’agent de configuration du runtime qui supprime les packages de configuration de l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Découverte d’appareil** : **Bloquer** empêche l’appareil d’être détecté par d’autres appareils. **Non configuré** (par défaut) autorise cette fonctionnalité.
-- **Sélecteur de tâches (mobile uniquement)** : **Bloquer** empêche le changement de tâche sur l’appareil. **Non configuré** (par défaut) autorise cette fonctionnalité.
+- **Modification du nom d’appareil** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux de modifier le nom de l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Ajouter des packages de configuration** : **Bloquer** empêche l’utilisation de l’agent de configuration du runtime qui installe les packages de configuration sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Supprimer des packages de configuration** : **Bloquer** empêche l’utilisation de l’agent de configuration du runtime qui supprime les packages de configuration de l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Découverte d’appareil** : **Bloquer** empêche l’appareil d’être détecté par d’autres appareils. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Sélecteur de tâches (mobile uniquement)** : **Bloquer** empêche le changement de tâche sur l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 - **Boîte de dialogue d’erreur de carte SIM (mobile uniquement)**  : **Bloquer** empêche que des messages d’erreur s’affichent sur l’appareil si aucune carte SIM n’est détectée. **Non configuré** (par défaut) affiche les messages d’erreur.
 - **Espace de travail Ink** : choisissez si et comment l’utilisateur accède à l’espace de travail Ink. Les options disponibles sont les suivantes :
   - **Non configuré** (valeur par défaut) : l’espace de travail Ink est activé et l’utilisateur est autorisé à l’utiliser au-dessus de l’écran de verrouillage.
@@ -417,21 +420,21 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Dev
   - **Empêcher la réutilisation des mots de passe précédents** : entrez le nombre de mots de passe précédents qui ne peuvent pas être réutilisés (de 1 à 24). Par exemple, entrez `5` pour que les utilisateurs ne puissent pas définir comme nouveau mot de passe leur mot de passe actuel ni l’un de leurs quatre mots de passe précédents.
   - **Exiger un mot de passe quand l’appareil sort d’un état d’inactivité** (Mobile et Holographique) : choisissez **Exiger** pour que l’utilisateur doive entrer un mot de passe afin de déverrouiller l’appareil après une période d’inactivité. **Non configuré** (valeur par défaut) ne nécessite pas de code PIN ou de mot de passe quand l’appareil quitte un état d’inactivité.
   - **Mots de passe simples** : choisissez **Bloquer** pour que les utilisateurs ne puissent pas créer de mots de passe simples, par exemple `1234` ou `1111`. Choisissez **Non configuré** (valeur par défaut) pour permettre aux utilisateurs de créer des mots de passe tels que `1234` ou `1111`. Ce paramètre autorise ou bloque également l’utilisation des mots de passe d’image Windows.
-- **Chiffrement automatique durant AADJ** : **Bloquer** empêche le chiffrement automatique de l’appareil BitLocker quand l’appareil est préparé pour une première utilisation, quand l’appareil est joint à Azure AD. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, ce qui peut activer le chiffrement. Vous trouverez plus d’informations sur [Chiffrement d’appareil BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Chiffrement automatique durant AADJ** : **Bloquer** empêche le chiffrement automatique de l’appareil BitLocker quand l’appareil est préparé pour une première utilisation, quand l’appareil est joint à Azure AD. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Vous trouverez plus d’informations sur [Chiffrement d’appareil BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [Fournisseur de services de configuration Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Stratégie FIPS (Federal Information Processing Standard)**  : **Autoriser** utilise la stratégie FIPS, qui est une norme de l’administration américaine pour le chiffrement, le hachage et la signature. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, qui est de ne pas utiliser FIPS.
+- **Stratégie FIPS (Federal Information Processing Standard)**  : **Autoriser** utilise la stratégie FIPS, qui est une norme de l’administration américaine pour le chiffrement, le hachage et la signature. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation ne peut pas utiliser FIPS.
 
   [Fournisseur de services de configuration Cryptography/AllowFipsAlgorithmPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Authentification des appareils Windows Hello** : **Autoriser** les utilisateurs à utiliser un appareil mobile Windows Hello, comme un téléphone, un appareil de suivi d’activité physique ou un appareil IoT, pour se connecter à un ordinateur Windows 10. **Non configuré** (par défaut) utilise la valeur par défaut du système d’exploitation, ce qui peut empêcher les appareils mobiles Windows Hello de s’authentifier auprès de Windows.
+- **Authentification des appareils Windows Hello** : **Autoriser** les utilisateurs à utiliser un appareil mobile Windows Hello, comme un téléphone, un appareil de suivi d’activité physique ou un appareil IoT, pour se connecter à un ordinateur Windows 10. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation peut empêcher les appareils Windows Hello Companion de s’authentifier auprès de Windows.
 
   [Fournisseur de services de configuration Authentication/AllowSecondaryAuthenticationDevice](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
 - **Connexion web** : active la prise en charge de la connexion Windows pour les fournisseurs fédérés non-ADFS (Active Directory Federation Services), comme SAML (Security Assertion Markup Language). SAML utilise des jetons sécurisés qui fournissent une expérience d’authentification unique aux navigateurs web. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut) : utilise la valeur par défaut du système d’exploitation sur l’appareil.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
   - **Activé** : le fournisseur d’informations d’identification web est activé pour la connexion.
   - **Désactivé** : le fournisseur d’informations d’identification web est désactivé pour la connexion.
 
@@ -488,7 +491,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Pri
 - **Personnalisation des entrées** : **Bloquer** empêche l’utilisation de la voix pour la dictée et pour communiquer avec Cortana et d’autres applications qui utilisent la reconnaissance vocale basée sur le cloud Microsoft. Elle est désactivée et les utilisateurs ne peuvent pas activer la reconnaissance vocale en ligne à l’aide des paramètres. **Non configuré** (valeur par défaut) permet aux utilisateurs de choisir. Si vous autorisez ces services, Microsoft peut collecter des données vocales pour améliorer le service.
 - **Acceptation automatique des invites de consentement de l’utilisateur pour le couplage et la confidentialité** : choisissez **Autoriser** pour que Windows puisse accepter automatiquement les messages de consentement de couplage et de confidentialité lors de l’exécution des applications. **Non configuré** (valeur par défaut) empêche l’acceptation automatique de la fenêtre de consentement de l’utilisateur relative au couplage et à la confidentialité lors de l’ouverture des applications.
 - **Publier les activités de l’utilisateur** : **Bloquer** empêche les expériences partagées et la découverte des ressources récemment utilisées dans le flux d’activités. **Non configuré** (valeur par défaut) active cette fonctionnalité afin que les applications puissent publier les activités des utilisateurs finaux.
-- **Activités locales uniquement** : sélectionnez **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches en fonction uniquement de l’activité locale. **Non configuré** (valeur par défaut) active cette fonctionnalité.
+- **Activités locales uniquement** : sélectionnez **Bloquer** pour empêcher les expériences partagées et la découverte des ressources récemment utilisées dans le sélecteur de tâches en fonction uniquement de l’activité locale. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 
 Vous pouvez configurer les informations auxquelles toutes les applications sur l’appareil peuvent accéder. Définissez également des exceptions pour chaque application à l’aide de l’option **Exceptions de confidentialité par application**.
 
@@ -533,7 +536,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Wir
   [Fournisseur de services de configuration System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Envoyer les données de navigation Microsoft Edge à Microsoft 365 Analytics** : pour utiliser cette fonctionnalité, définissez les paramètres **Partager des données d’utilisation** sur **Étendu** ou **Complet**. Cette fonctionnalité contrôle les données que Microsoft Edge envoie à Microsoft 365 Analytics pour les appareils d’entreprise avec un ID commercial configuré. Les options disponibles sont les suivantes :
-  - **Non configuré** : utilise la valeur par défaut du système d’exploitation, ce qui peut n’envoyer aucune donnée de l’historique de navigation
+  - **Non configuré**: Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation ne peut pas envoyer de données d’historique de navigation.
   - **Envoyer uniquement les données intranet** : permet à l’administrateur d’envoyer l’historique des données intranet
   - **Envoyer uniquement les données Internet** : permet à l’administrateur d’envoyer l’historique des données Internet
   - **Envoyer les données intranet et Internet** : permet à l’administrateur d’envoyer l’historique des données intranet et Internet
@@ -588,11 +591,11 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Sta
 - **Vignette de l’utilisateur** : **Bloquer** masque la vignette de l’utilisateur dans le menu Démarrer. **Non configuré** (valeur par défaut) affiche la vignette de l’utilisateur et définit également les paramètres suivants :
   - **Verrouiller** : **Bloquer** masque l’option **Verrouiller** dans la vignette de l’utilisateur du menu Démarrer. **Non configuré** (valeur par défaut) affiche l’option **Verrouiller**.
   - **Déconnexion** : **Bloquer** masque l’option **Déconnexion** dans la vignette de l’utilisateur du menu Démarrer. **Non configuré** (par défaut) affiche le bouton **Déconnexion**.
-- **Arrêter** : **Bloquer** masque les options **Mettre à jour et arrêter** et **Arrêter** sur le bouton d’alimentation dans le menu Démarrer. **Non configuré** (valeur par défaut) affiche ces options.
-- **Mettre en veille** : **Bloquer** masque l’option **Mettre en veille** sur le bouton d’alimentation du menu Démarrer. **Non configuré** (valeur par défaut) affiche cette option.
-- **Mettre en veille prolongée** : **Bloquer** masque l’option **Mettre en veille prolongée** sur le bouton d’alimentation du menu Démarrer. **Non configuré** (valeur par défaut) affiche cette option.
-- **Changer de compte** : **Bloquer** masque l’option **Changer de compte** sur la vignette de l’utilisateur du menu Démarrer. **Non configuré** (valeur par défaut) affiche cette option.
-- **Options de redémarrage** : **Bloquer** masque les options **Mettre à jour et redémarrer** et **Redémarrer** sur le bouton d’alimentation dans le menu Démarrer. **Non configuré** (valeur par défaut) affiche ces options.
+- **Arrêter** : **Bloquer** masque les options **Mettre à jour et arrêter** et **Arrêter** sur le bouton d’alimentation dans le menu Démarrer. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Mettre en veille** : **Bloquer** masque l’option **Mettre en veille** sur le bouton d’alimentation du menu Démarrer. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Mettre en veille prolongée** : **Bloquer** masque l’option **Mettre en veille prolongée** sur le bouton d’alimentation du menu Démarrer. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Changer de compte** : **Bloquer** masque l’option **Changer de compte** sur la vignette de l’utilisateur du menu Démarrer. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+- **Options de redémarrage** : **Bloquer** masque les options **Mettre à jour et redémarrer** et **Redémarrer** sur le bouton d’alimentation dans le menu Démarrer. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
 - **Documents sur Démarrer** : masquer ou afficher le dossier Documents dans le menu Démarrer de Windows. Les options disponibles sont les suivantes :
   - **Non configuré** (valeur par défaut) : aucun paramètre n’est forcé. Les utilisateurs choisissent d’afficher ou de masquer le raccourci.
   - **Masquer** : le raccourci est masqué et le paramètre est désactivé dans l’application Paramètres.
@@ -656,9 +659,9 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 - **Windows à la une** : **Bloquer** désactive Windows à la une sur l’écran de verrouillage : Conseils Windows, les fonctionnalités Microsoft grand public et d’autres fonctionnalités associées. Si votre objectif est de réduire le trafic réseau à partir des appareils, affectez la valeur **Bloquer**. **Non configuré** (valeur par défaut) autorise les fonctionnalités Windows à la une et peut être contrôlé par les utilisateurs finaux. Quand cette option est activée, vous pouvez également autoriser ou bloquer les paramètres suivants :
 
-  - **Windows à la une sur l’écran de verrouillage** : **Bloquer** empêche Windows à la une d’afficher des informations sur l’écran de verrouillage de l’appareil. **Non configuré** (valeur par défaut) active cette fonctionnalité.
+  - **Windows à la une sur l’écran de verrouillage** : **Bloquer** empêche Windows à la une d’afficher des informations sur l’écran de verrouillage de l’appareil. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
   - **Suggestions de tiers dans Windows à la une** : **Bloquer** empêche Windows à la une de suggérer du contenu qui n’est pas publié par Microsoft. **Non configuré** (valeur par défaut) autorise les suggestions d’applications et de contenu provenant d’éditeurs de logiciels partenaires dans les fonctionnalités de Windows à la une, comme la une sur l’écran de verrouillage, les applications suggérées dans le menu Démarrer et les conseils Windows.
-  - **Fonctionnalités grand public** : **Bloquer** désactive les fonctionnalités destinées au grand public uniquement, comme les suggestions du démarrage, les notifications d’appartenance, l’installation d’application post-OOBE et les vignettes de redirection. L’option (par défaut)**Non configuré** autorise ces fonctionnalités.
+  - **Fonctionnalités grand public** : **Bloquer** désactive les fonctionnalités destinées au grand public uniquement, comme les suggestions du démarrage, les notifications d’appartenance, l’installation d’application post-OOBE et les vignettes de redirection. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
   - **Conseils Windows** : **Bloquer** désactive les info-bulles de conseils Windows. **Non configuré** (valeur par défaut) autorise l’affichage des conseils Windows.
   - **Windows à la une dans le centre de notifications** : **Bloquer** empêche l’affichage des notifications de Windows à la une dans le centre de notifications. **Non configuré** (valeur par défaut) peut afficher des notifications dans le centre de notifications qui suggèrent des applications ou des fonctionnalités pour aider les utilisateurs à être plus productifs sur Windows.
   - **Personnalisation de Windows à la une** : **Bloquer** empêche Windows d’utiliser des données de diagnostic pour fournir des expériences personnalisées à l’utilisateur. **Non configuré** (valeur par défaut) permet à Microsoft d’utiliser des données de diagnostic pour fournir des recommandations personnalisées, des conseils et des offres afin d’adapter Windows aux besoins de l’utilisateur.
@@ -670,7 +673,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyse en temps réel** : **Activer** active la recherche en temps réel des logiciels malveillants, logiciels espions et autres logiciels indésirables. Les utilisateurs ne peuvent pas la désactiver. 
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -678,7 +681,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyse du comportement** : **Activer** active l’analyse du comportement et vérifie certains modèles connus d’activité suspecte sur les appareils. Les utilisateurs ne peuvent pas désactiver l’analyse du comportement. 
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active l’analyse du comportement et permet aux utilisateurs de le modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active l’analyse du comportement et permet aux utilisateurs de le modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -688,7 +691,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
   **Activer** active la protection réseau et le blocage réseau. Les utilisateurs ne peuvent pas la désactiver. Lorsqu’il est activé, les utilisateurs ne peuvent pas se connecter aux vulnérabilités connues.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active NIS et permet aux utilisateurs de le modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active NIS et permet aux utilisateurs de le modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -696,7 +699,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser tous les téléchargements**: **activer** active ce paramètre et Defender analyse tous les fichiers téléchargés à partir d’Internet. Les utilisateurs ne peuvent pas désactiver ce paramètre. 
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -704,7 +707,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser les scripts chargés dans les navigateurs web Microsoft** : **Activer** permet à Defender d’analyser les scripts utilisés dans Internet Explorer. Les utilisateurs ne peuvent pas désactiver ce paramètre. 
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active ce paramètre et permet aux utilisateurs de le modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -712,7 +715,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Accès de l’utilisateur final à Defender** : **Bloquer** masque l’interface utilisateur de Microsoft Defender aux utilisateurs finaux. Toutes les notifications de Microsoft Defender sont également supprimées.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous bloquez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à l’utilisateur d’accéder à l’interface utilisateur de Microsoft Defender et permet aux utilisateurs de le modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous bloquez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à l’utilisateur d’accéder à l’interface utilisateur de Microsoft Defender et permet aux utilisateurs de le modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -722,7 +725,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Intervalle de mise à jour de sécurité (en heures)** : entrez l’intervalle pendant lequel Defender vérifie les nouvelles informations de sécurité, à partir de 0-24. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (valeur par défaut) : Rechercher les mises à jour toutes les 8 heures.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation peut rechercher des mises à jour toutes les 8 heures.
   - **Ne pas vérifier**: Defender ne recherche pas les nouvelles mises à jour de la sécurité.
   - **1-24** : `1` vérifie toutes les heures, `2` vérifie toutes les deux heures, `24` vérifie tous les jours, et ainsi de suite.
   
@@ -730,7 +733,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
   
 - **Surveiller l’activité des fichiers et des programmes** : autorise Defender à surveiller l’activité des fichiers et des programmes sur des appareils. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut) : analyse tous les fichiers
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation peut surveiller tous les fichiers.
   - **Analyse désactivée**
   - **Surveiller tous les fichiers**
   - **Surveiller les fichiers entrants uniquement**
@@ -745,7 +748,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 - **Limite de l'utilisation du processeur pendant une analyse** : limitez la quantité de ressources du processeur que les analyses sont autorisées à utiliser, de `0` à `100`.
 - **Analyser les fichiers d’archive**: **active** active Defender afin qu’il analyse les fichiers d’archive, tels que les fichiers zip ou CAB. Les utilisateurs ne peuvent pas désactiver ce paramètre.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette analyse et permet aux utilisateurs de la modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette analyse et permet aux utilisateurs de la modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -753,7 +756,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser les e-mails entrants** : **Activer** permet à Defender d’analyser les e-mails quand ils arrivent sur l’appareil. Lorsqu’il est activé, le moteur analyse les fichiers de messagerie et de boîte aux lettres pour analyser le corps et les pièces jointes du courrier. Vous pouvez analyser les formats. pst (Outlook),. dbx,. mbx, MIME (Outlook Express) et BinHex (Mac).
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation désactive cette analyse et permet aux utilisateurs de la modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation désactive cette analyse et permet aux utilisateurs de la modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -761,7 +764,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser les lecteurs amovibles lors d’une analyse complète**: **active** active les analyses de lecteur amovibles Defender pendant une analyse complète. Les utilisateurs ne peuvent pas désactiver ce paramètre.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à Defender d’analyser les lecteurs amovibles, tels que les clés USB, et permet aux utilisateurs de modifier ce paramètre.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet à Defender d’analyser les lecteurs amovibles, tels que les clés USB, et permet aux utilisateurs de modifier ce paramètre.
 
   Pendant une analyse rapide, les lecteurs amovibles peuvent toujours être analysés.
 
@@ -771,7 +774,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser les lecteurs réseau mappés lors d’une analyse complète** : **Activer** amène Defender à analyser les fichiers sur des lecteurs réseau mappés. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers. Les utilisateurs ne peuvent pas désactiver ce paramètre.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation active cette fonctionnalité et permet aux utilisateurs de la modifier.
 
   Pendant une analyse rapide, les lecteurs réseau mappés peuvent toujours être analysés.
 
@@ -781,7 +784,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Analyser les fichiers ouverts à partir de dossiers réseau**: l' **activation permet** à Defender d’analyser les fichiers ouverts à partir de dossiers réseau ou de lecteurs réseau partagés, tels que les fichiers auxquels vous accédez à partir d’un chemin UNC. Les utilisateurs ne peuvent pas désactiver ce paramètre. Si les fichiers sur le lecteur sont en lecture seule, Defender ne peut pas supprimer les logiciels malveillants détectés dans ces fichiers.
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation analyse les fichiers ouverts à partir de dossiers réseau et permet aux utilisateurs de les modifier.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation analyse les fichiers ouverts à partir de dossiers réseau et permet aux utilisateurs de les modifier.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -789,7 +792,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Protection du cloud** : **Activer** active Microsoft Active Protection Service pour recevoir des informations sur l’activité des logiciels malveillants en provenance des appareils que vous gérez. Les utilisateurs ne peuvent pas modifier ce paramètre. 
 
-  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne touche pas ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet au Microsoft Active Protection Service de recevoir des informations et permet aux utilisateurs de modifier ce paramètre.
+  Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre. Si vous activez le paramètre, puis le modifiez à nouveau en **non configuré**, Intune laisse le paramètre dans son état précédemment configuré. Par défaut, le système d’exploitation permet au Microsoft Active Protection Service de recevoir des informations et permet aux utilisateurs de modifier ce paramètre.
 
   Intune ne désactive pas cette fonctionnalité. Pour le désactiver, utilisez un URI personnalisé.
 
@@ -797,7 +800,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Demander confirmation aux utilisateurs avant l’envoi d’un échantillon** : contrôle si les fichiers potentiellement malveillants susceptibles de nécessiter une analyse plus approfondie sont envoyés automatiquement à Microsoft. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut) : envoyer automatiquement des échantillons sécurisés.
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre. La valeur par défaut du système d’exploitation peut envoyer automatiquement des échantillons sécurisés.
   - **Toujours demander**
   - **Demander confirmation avant d’envoyer des données personnelles**
   - **Ne jamais envoyer de données**
@@ -861,6 +864,88 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 - **Fichiers et dossiers à exclure des analyses et de la protection en temps réel** : ajoute un ou plusieurs fichiers et dossiers comme **C:\Chemin** ou **%ProgramFiles%\Chemin\NomFichier.exe** à la liste des exclusions. Ces fichiers et dossiers ne sont pas inclus dans les analyses en temps réel ou planifiées.
 - **Extensions de fichier à exclure des analyses et de la protection en temps réel** : ajoute une ou plusieurs extensions de fichier comme **jpg** ou **txt** à la liste des exclusions. Tous les fichiers avec ces extensions ne sont pas inclus dans les analyses en temps réel ou planifiées.
 - **Processus à exclure des analyses et de la protection en temps réel** : ajoute un ou plusieurs processus de type **.exe**, **.com** ou **.scr** à la liste des exclusions. Ces processus ne sont pas inclus dans les analyses en temps réel ou planifiées.
+
+## <a name="power-settings"></a>Paramètres d’alimentation
+
+### <a name="battery"></a>Batterie
+
+- **Niveau de batterie pour activer l’économiseur d’énergie**: quand l’appareil utilise de la batterie, entrez le niveau de charge de la batterie pour activer l’économiseur d’énergie à partir de 0-100. Entrez une valeur de pourcentage qui indique le niveau de charge de la batterie. La valeur par défaut est 70 %. Lorsque la valeur est définie sur 70%, l’économiseur d’énergie est activé lorsque la charge de la batterie est inférieure ou égale à 70%.
+
+  [CSP Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
+
+- **Fermeture du capot (mobile uniquement)** : quand l’appareil utilise de la batterie, choisissez ce qui se produit lorsque le capot est fermé. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé et continue à utiliser la batterie.
+  - Mise en **veille**: l’appareil passe en mode veille et utilise une petite quantité de charge de batterie. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+
+  [CSP Power/SelectLidCloseActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
+
+- **Bouton d’alimentation**: quand l’appareil utilise de la batterie, choisissez ce qui se passe lorsque le bouton d’alimentation est sélectionné. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé et continue à utiliser la batterie.
+  - Mise en **veille**: l’appareil passe en mode veille et utilise une petite quantité de charge de batterie. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+
+  [CSP Power/SelectPowerButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
+
+- **Bouton veille**: lorsque l’appareil utilise de la batterie, choisissez ce qui se passe lorsque le bouton de mise en veille est sélectionné. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé et continue à utiliser la batterie.
+  - Mise en **veille**: l’appareil passe en mode veille et utilise une petite quantité de charge de batterie. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+
+  [CSP Power/SelectSleepButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+
+- Mise en **veille hybride**: quand l’appareil utilise de la batterie, **Désactiver** empêche l’appareil de passer en mode veille hybride. En mode veille hybride, les applications et fichiers ouverts sont stockés en mémoire vive (RAM) et sur le disque dur. Il utilise une petite quantité de charge de batterie. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+
+  [CSP Power/TurnOffHybridSleepOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
+
+### <a name="pluggedin"></a>Sur secteur
+
+- **Niveau de batterie pour activer l’économiseur d’énergie**: quand l’appareil est branché, entrez le niveau de charge de la batterie pour activer l’économiseur d’énergie à partir de 0-100. Entrez une valeur de pourcentage qui indique le niveau de charge de la batterie. La valeur par défaut est 70 %. Lorsque la valeur est définie sur 70%, l’économiseur d’énergie est activé lorsque la charge de la batterie est inférieure ou égale à 70%.
+
+  [CSP Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
+
+- **Fermeture du capot (mobile uniquement)** : quand l’appareil est branché, choisissez ce qui se produit lorsque le capot est fermé. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé.
+  - **Veille**: l’appareil passe en mode veille. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+  
+    [CSP Power/SelectLidCloseActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
+  
+- **Bouton d’alimentation**: quand l’appareil est branché, choisissez ce qui se passe lorsque le bouton d’alimentation est sélectionné. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé.
+  - **Veille**: l’appareil passe en mode veille. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+
+  [CSP Power/SelectPowerButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
+
+- **Bouton veille**: lorsque l’appareil est branché, choisissez ce qui se passe lorsque le bouton de mise en veille est sélectionné. Les options disponibles sont les suivantes :
+
+  - **Non configuré** (par défaut) : Intune ne change pas ou ne met pas à jour ce paramètre.
+  - **Aucune action**: l’appareil reste allumé.
+  - **Veille**: l’appareil passe en mode veille. L’ordinateur est toujours allumé, et les applications et fichiers ouverts sont stockés dans la mémoire vive (RAM).
+  - **Mise en veille prolongée**: l’appareil passe en mode veille prolongée. Les applications et les fichiers ouverts sont stockés sur le disque dur, et l’appareil s’éteint.
+  - **Shutdown**: l’appareil s’arrête. Les applications et les fichiers ouverts sont fermés sans enregistrement.
+
+  [CSP Power/SelectSleepButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
+
+- Mise en **veille hybride**: quand l’appareil est branché, **Désactiver** empêche l’appareil de passer en mode veille hybride. En mode veille hybride, les applications et fichiers ouverts sont stockés en mémoire vive (RAM) et sur le disque dur. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas ou ne met pas à jour ce paramètre.
+
+  [CSP Power/TurnOffHybridSleepPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

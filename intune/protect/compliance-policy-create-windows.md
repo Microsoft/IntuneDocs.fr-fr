@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3c6c029a5c5864eda46a68832b2f9f655553846
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889539"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946654"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Windows de 10 et ultérieur pour marquer les appareils comme étant conformes ou non conformes avec Intune
 
@@ -161,6 +161,7 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
 ### <a name="encryption"></a>Chiffrement
 
 - **Chiffrement du stockage de données sur un appareil** :  
+  Ce paramètre s’applique à tous les lecteurs sur un appareil.
   - **Non configuré** (*par défaut*)
   - **Exiger** : utilisez *Exiger* pour chiffrer le stockage de données sur vos appareils.
 
@@ -196,9 +197,9 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
 
 *Les paramètres de compatibilité suivants sont pris en charge avec Windows 10 Desktop.*
 
-- **Logiciel anti-programme malveillant de Microsoft Defender**:  
+- **Logiciel anti-programme malveillant Microsoft Defender** :  
   - **Non configuré** (*par défaut*) : Intune ne contrôle pas le service et ne modifie pas les paramètres existants.
-  - **Exiger** : activez le service anti-programme malveillant de Microsoft Defender et empêchez les utilisateurs de le désactiver. 
+  - **Exiger** : activez le service anti-programme malveillant de Microsoft Defender et empêchez les utilisateurs de le désactiver.
 
 - **Version minimale de Microsoft Defender anti-programme malveillant**:  
   Entrez la version minimale autorisée du service Microsoft Defender anti-malware. Par exemple, entrez `4.11.0.0`. Si ce champ n’est pas renseigné, vous pouvez utiliser n’importe quelle version du service anti-programme malveillant de Microsoft Defender.  
@@ -206,10 +207,12 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
   *Par défaut, aucune version n’est configurée*.
 
 - **Intelligence de sécurité anti-programme malveillant de Microsoft Defender à jour**:  
-  Contrôle les mises à jour de la protection contre les virus et les menaces de sécurité Windows sur les appareils.  
+  Contrôle les mises à jour de la protection contre les virus et les menaces de sécurité Windows sur les appareils.
   - **Non configuré** (*par défaut*)-Intune n’impose aucune exigence.
-  - **Require** -force la mise à jour de l’intelligence de sécurité de Microsoft Defender. 
+  - **Require** -force la mise à jour de l’intelligence de sécurité de Microsoft Defender.
 
+  [CSP Defender/Health/SignatureOutOfDate](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  
   Pour plus d’informations, consultez [mises à jour de sécurité pour l’antivirus Microsoft Defender et d’autres logiciels anti-programme malveillant de Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 - **Protection en temps réel** :  
