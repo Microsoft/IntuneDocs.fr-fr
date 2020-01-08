@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85ba34cfec8ebe78d2574034967bd7ed76f3304e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 25983117864f44b8131fdc49e60b7d24048da9fe
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059547"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206650"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Suivre les profils d’appareil dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Intune inclut certaines fonctionnalités pour faciliter la supervision et la gestion de vos profils de configuration d’appareil. Vous pouvez, par exemple, vérifier l’état d’un profil, consulter les appareils attribués et mettre à jour les propriétés d’un profil.
 
@@ -97,7 +97,7 @@ Avec les paramètres de votre profil DFCI, vous pouvez voir les états suivants�
   - UEFI n’autorise pas l’interface DFCI à désactiver la fonctionnalité, et le paramètre de profil est **Activé**.
   - L’appareil n’a pas le matériel permettant de désactiver la fonctionnalité, et le paramètre de profil est **Activé**.
 
-- **Non applicable** : Cet état indique que la valeur d’un paramètre dans le profil est **Activé** et que le paramètre correspondant sur l’appareil est introuvable. Cet état peut se produire si le matériel de l’appareil n’a pas la fonctionnalité.
+- **Non applicable** : Cet état indique que la valeur d’un paramètre dans le profil est **Activé** et que le paramètre correspondant sur l’appareil est introuvable. Cet état peut se produire si le matériel de l’appareil n’a pas la fonctionnalité.
 
 - **Non conforme** : Cet état indique que la valeur du paramètre dans le profil ne correspond pas au paramètre sur l’appareil. Cet état peut se produire dans les scénarios suivants :
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf872387d6e6f4f91af9f074f54695b081b79119
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 63ebbc22c5452c99439d34813509b5652daef1f0
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74549107"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548088"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Utilisez les paramètres Canal de mise à jour et Version cible pour mettre à jour Office 365 avec les modèles d'administration Microsoft Intune
 
@@ -75,7 +75,7 @@ Une fois que vous avez affecté la stratégie et que l’appareil se synchronise
     ![Exemple de clé de Registre L_Updatebranch de modèle d’administration](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Gérer Office 365 ProPlus avec Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) répertorie les valeurs et leur signification. Les valeurs de Registre sont basées sur le canal de distribution sélectionné :
+    > [Gérer Office 365 ProPlus avec Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) répertorie les valeurs et leur signification. Les valeurs de Registre sont basées sur le canal de distribution sélectionné :
     >
     >- Canal mensuel                - value="Current"
     >- Canal mensuel (ciblé)                - value="Current"
@@ -95,7 +95,7 @@ Une fois que vous avez affecté la stratégie et que l’appareil se synchronise
     - `UpdateChannel` : Clé dynamique qui change selon les paramètres configurés.
     - `CDNBaseUrl` : Définissez le moment où Office 365 s’installe sur l’appareil.
 
-3. Examinez la valeur `UpdateChannel`. La valeur indique la fréquence à laquelle Office est mis à jour. [Gérer Office 365 ProPlus avec Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) répertorie les valeurs telles qu’elles sont définies.
+3. Examinez la valeur `UpdateChannel`. La valeur indique la fréquence à laquelle Office est mis à jour. [Gérer Office 365 ProPlus avec Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) répertorie les valeurs telles qu’elles sont définies.
 
     Si vous observez l’exemple suivant, `UpdateChannel` est défini sur `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, à savoir **mensuel**  :
 
@@ -134,7 +134,7 @@ Pour tester votre stratégie, vous pouvez forcer les paramètres de stratégie s
 
 Si vous souhaitez en faire plus, vous pouvez forcer Office à obtenir la dernière mise à jour. Les étapes suivantes doivent être effectuées uniquement à titre de confirmation, ou si vous avez besoin que les appareils obtiennent rapidement la dernière mise à jour de ce canal. Dans le cas contraire, laissez Office effectuer son travail et se mettre à jour automatiquement.
 
-### <a name="step-1-force-the-office-version-to-update"></a>Étape 1 : Forcer la mise à jour de la version d’Office
+### <a name="step-1-force-the-office-version-to-update"></a>Étape 1 : Forcer la mise à jour de la version d’Office
 
 1. Vérifiez que la version d’Office prend en charge le canal de mise à jour que vous avez choisi. [L’historique des mises à jour pour Office 365 ProPlus](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) répertorie les numéros de version qui prennent en charge les différents canaux de mise à jour.
 
@@ -150,7 +150,7 @@ Si vous souhaitez en faire plus, vous pouvez forcer Office à obtenir la derniè
 > - Si vous modifiez une stratégie existante, vos modifications affectent tous les utilisateurs affectés.
 > - Si vous testez cette fonctionnalité, il est recommandé de créer une stratégie de test et de l’affecter à un groupe d’utilisateurs de test.
 
-### <a name="step-2-check-the-office-version"></a>Étape 2 : Vérifier la version d’Office
+### <a name="step-2-check-the-office-version"></a>Étape 2 : Vérifier la version d’Office
 
 Envisagez d’utiliser ces étapes pour tester votre stratégie avant de la déployer pour tous les utilisateurs.
 
@@ -173,7 +173,7 @@ Envisagez d’utiliser ces étapes pour tester votre stratégie avant de la dép
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Valeurs de canal de mise à jour pour les clients Office 365](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)
+[Valeurs de canal de mise à jour pour les clients Office 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Vue d’ensemble du service de stratégie de cloud d’Office pour Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 340659adfa3bbd40f98ccec9d8d44e952f7ec9b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9c97a3ad329ce0e431c6dc8ef318306e4e002f36
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059938"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207109"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configurer un service de gestion des dépenses en télécommunications dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Avec Intune, vous pouvez gérer les dépenses de télécommunications à partir de l’utilisation des données sur les appareils mobiles appartenant à l’organisation. Intune s’intègre à la [gestion des dépenses en télécommunications Datalert](http://datalert.biz/get-started) de Saaswedo. Datalert est une solution de gestion des dépenses de télécommunications en temps réel qui gère l’utilisation des données de télécommunications. Il peut vous aider à éviter les surcoûts de données et d’itinérance sur vos appareils gérés par Intune.
 
@@ -54,7 +54,7 @@ Pour utiliser le service Datalert avec Intune, il existe des paramètres de conf
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Un abonnement à Microsoft Intune et l’accès au [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431)
+- Un abonnement à Microsoft Intune et à l’accès au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431)
 - Un abonnement à [Datalert](http://www.datalert.biz/) (ouvre le site web de Datalert)
 
 ## <a name="telecom-expense-management-providers"></a>Fournisseurs de gestion des dépenses en télécommunications
@@ -65,7 +65,7 @@ Intune s’intègre avec le fournisseur de gestion de frais de télécommunicati
 
 ## <a name="deploy-the-intune-and-datalert-solution"></a>Déployer la solution Intune et Datalert
 
-### <a name="step-1-connect-the-datalert-service-to-intune"></a>Étape 1 : Connecter le service Datalert à Intune
+### <a name="step-1-connect-the-datalert-service-to-intune"></a>Étape 1 : Connecter le service Datalert à Intune
 
 1. Connectez-vous à la console de gestion Datalert avec vos informations d’identification d’administrateur.
 
@@ -105,7 +105,7 @@ Intune s’intègre avec le fournisseur de gestion de frais de télécommunicati
 
    ![Page Datalert présentant une connexion établie](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
-### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>Étape 2 : Confirmer que la gestion des dépenses en télécommunications est active dans Intune
+### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>Étape 2 : Confirmer que la gestion des dépenses en télécommunications est active dans Intune
 
 Une fois l’étape 1 terminée, votre connexion est automatiquement activée. Dans Intune, l’état de la connexion affiche **Active**. Pour confirmer que l’État est actif, procédez comme suit :
 
@@ -115,7 +115,7 @@ Une fois l’étape 1 terminée, votre connexion est automatiquement activée. D
 
    ![Page Intune affichant l’état de connexion Actif de Datalert](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
-### <a name="step-3-deploy-the-datalert-app-to-devices"></a>Étape 3 : Déployer l’application Datalert sur des appareils
+### <a name="step-3-deploy-the-datalert-app-to-devices"></a>Étape 3 : Déployer l’application Datalert sur des appareils
 
 Pour vérifier que seules les données d’utilisation de lignes appartenant à l’organisation sont collectées, veillez à :
 
@@ -138,7 +138,7 @@ Ces catégories sont présentées aux utilisateurs lors de l’inscription ([ins
 
 Les étapes suivantes ajoutent l’application Datalert. Pour cet exemple, iOS est utilisé. [Ajouter des applications](../apps/apps-add.md) et [Utiliser des balises d’étendue](../fundamentals/scope-tags.md) contiennent des informations plus spécifiques sur ces étapes.
 
-1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 
 2. Sélectionnez votre **Type d’application**. Par exemple, pour iOS, sélectionnez **Application Store - iOS**.
 
@@ -183,7 +183,7 @@ Pour l’expérience utilisateur final, les articles suivants peuvent vous aider
 
 ## <a name="turn-off-the-datalert-service"></a>Désactivation du service Datalert
 
-1. Dans le [Centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Administration client** > **Connecteurs et jetons** > **Gestion des dépenses de télécommunications**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Administration client** > **Connecteurs et jetons** > **Gestion des dépenses de télécommunications**.
 2. Définissez **Activer la gestion des dépenses en télécommunications et bloquer les données cellulaires ou itinérantes sur les appareils qui dépassent les quotas d’utilisation que vous configurez** sur **Désactiver**.
 3. **Enregistrez** les changements apportés.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 060c3c00a228794d3f237a6362b048bf23e1a933
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819717"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547712"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Méthodes d’inscription dans Intune pour les appareils Windows
 
@@ -49,7 +49,7 @@ Si un administrateur a configuré l’inscription automatique (disponible avec l
 Les administrateurs peuvent configurer les méthodes d’inscription suivantes qui ne nécessitent aucune interaction utilisateur :
 
 - La [jonction Azure AD Hybride](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) permet aux administrateurs de configurer la stratégie de groupe Active Directory pour inscrire automatiquement les appareils qui sont joints à Azure AD Hybride. 
-- La [cogestion Configuration Manager](https://docs.microsoft.com/sccm/comanage/overview) permet aux administrateurs d’inscrire leurs appareils existants gérés par Configuration Manager dans Intune afin de bénéficier à la fois des avantages offerts par Intune et par Configuration Manager. 
+- La [cogestion Configuration Manager](https://docs.microsoft.com/configmgr/comanage/overview) permet aux administrateurs d’inscrire leurs appareils existants gérés par Configuration Manager dans Intune afin de bénéficier à la fois des avantages offerts par Intune et par Configuration Manager. 
 - Le [Gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md) (DEM) est un compte de service spécial. Les comptes DEM disposent d’autorisations qui permettent aux utilisateurs autorisés d’inscrire et de gérer plusieurs appareils d’entreprise. Ces types d’appareils sont adaptés par exemple aux applications utilitaires ou de point de vente, mais ne conviennent pas pour les utilisateurs qui doivent accéder à la messagerie ou à des ressources de l’entreprise. Cette méthode n’autorise pas l’utilisation de fonctionnalités telles que l’accès conditionnel. 
 - L’[inscription en bloc](../windows-bulk-enroll.md) permet à un utilisateur autorisé de joindre un grand nombre de nouveaux appareils d’entreprise à Azure Active Directory et Intune. Vous créez un package de provisionnement avec l’application WCD (Windows Configuration Designer). Ensuite, à l’aide d’un support USB pendant l’expérience OOBE Windows initiale ou à partir d’un PC Windows existant, vous installez le package de provisionnement pour inscrire automatiquement les appareils dans Intune. Cette méthode n’autorise pas l’utilisation de l’accès conditionnel. 
 - [L’inscription des appareils Windows IoT Core](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) s’effectue en utilisant le tableau de bord Windows IoT Core pour préparer l’appareil, puis en utilisant Windows Configuration Designer pour créer un package d’approvisionnement. Ensuite, à l’aide de la carte SD comme support lors du démarrage initial, il installe le package d’approvisionnement pour inscrire automatiquement les appareils dans Intune.

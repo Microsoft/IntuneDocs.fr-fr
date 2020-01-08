@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 1fb628d68f50ce1862b3cce51f9fd08804d042a6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992923"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206718"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur l’impression, consultez [À propos d’AirPrint
 S’applique à :
 
 - iOS 7.0 et versions ultérieures
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 - macOS 10.10 et ultérieur
 
 ## <a name="app-notifications"></a>Notifications d’applications
@@ -63,7 +63,7 @@ Pour plus d’informations sur cette fonctionnalité, consultez [Notifications](
 S’applique à :
 
 - iOS 9.3 et versions ultérieures
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 
 ## <a name="associated-domains"></a>Domaines associés
 
@@ -94,7 +94,7 @@ Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, co
 S’applique à :
 
 - iOS 9.3 et versions ultérieures
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 
 ## <a name="lock-screen-message"></a>Message d’écran de verrouillage
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur le message de l’écran de verrouillage, consult
 S’applique à :
 
 - iOS 9.3 et versions ultérieures
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 
 ## <a name="login-items"></a>Éléments de connexion
 
@@ -178,7 +178,7 @@ Pour plus d’informations sur le développement d’une extension d’applicati
 S’applique à :
 
 - iOS 13.0 et ultérieur
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 - macOS 10.15 et ultérieur
 
 ## <a name="wallpaper"></a>Papier peint
@@ -190,7 +190,7 @@ Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, co
 S’applique à :
 
 - iOS
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 
 ## <a name="web-content-filter"></a>Filtrage de contenu web
 
@@ -201,7 +201,7 @@ Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, co
 S’applique à :
 
 - iOS 7.0 et versions ultérieures
-- iPadOS 13.0 et versions ultérieures
+- iPadOS 13.0 et ultérieur
 
 ## <a name="create-a-device-profile"></a>Créer un profil d’appareil
 
@@ -209,7 +209,7 @@ S’applique à :
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **macOS : Configure l’écran de connexion**.
+    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **macOS : Configure l’écran de connexion**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :  
         - **iOS/iPadOS**

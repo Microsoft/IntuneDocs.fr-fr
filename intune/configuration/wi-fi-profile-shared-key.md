@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02d1311be0943d93f80f2f5a1c3f421d476af1e5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5a65000d46941876b95e0b110d21f2dfb900ca33
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059827"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206225"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Utiliser un profil d’appareil personnalisé pour créer un profil Wi-Fi avec une clé prépartagée dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Les clés prépartagées (PSK) servent généralement à authentifier les utilisateurs sur les réseaux Wi-Fi ou réseaux locaux sans fil. Avec Intune, vous pouvez créer un profil Wi-Fi à l’aide d’une clé prépartagée. Pour créer le profil, utilisez la fonctionnalité **Profils d’appareil personnalisés** dans Intune. Cet article contient également quelques exemples indiquant comment créer un profil Wi-Fi basé sur EAP.
 
@@ -53,14 +53,14 @@ Cette fonctionnalité prend en charge :
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Paramètres du profil Wi-Fi OMA-URI personnalisés pour les appareils Android** est un bon nom de stratégie.
+    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Paramètres du profil Wi-Fi OMA-URI personnalisés pour les appareils Android** est un bon nom de stratégie.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez votre plateforme.
     - **Type de profil** : Sélectionnez **Personnalisé**.
 
 4. Dans **Paramètres**, sélectionnez **Ajouter**. Ajoutez un nouveau paramètre OMA-URI avec les propriétés suivantes :
 
-    1. **Nom** : Donnez un nom au paramètre OMA-URI.
+    1. **Nom** : Donnez un nom au paramètre OMA-URI.
     2. **Description** : Entrez une description du paramètre OMA-URI. Ce paramètre est facultatif, mais recommandé.
     3. **OMA-URI** : Entrez l’une des options suivantes :
 
@@ -74,7 +74,7 @@ Cette fonctionnalité prend en charge :
 
     4. **Type de données** : Sélectionnez **chaîne**.
 
-    5. **Valeur** : Collez votre code XML. Voir les [exemples](#android-or-windows-wi-fi-profile-example) de cet article. Mettez à jour chaque valeur pour correspondre à vos paramètres réseau. La section Commentaires du code inclut certains pointeurs.
+    5. **Valeur** : Collez votre code XML. Voir les [exemples](#android-or-windows-wi-fi-profile-example) de cet article. Mettez à jour chaque valeur pour correspondre à vos paramètres réseau. La section Commentaires du code inclut certains pointeurs.
 
 5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 

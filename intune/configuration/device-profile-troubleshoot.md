@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d445b86359b2c5cde7b56a52a0cc6ee72a34c0ea
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 95186e4d1e54737ffeaa5e4c9728d188c2f867d6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832615"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206633"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questions, problèmes et solutions concernant les stratégies et les profils d’appareil dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Obtenez des réponses aux questions courantes lorsque vous utilisez des profils et des stratégies d’appareil dans Intune. Cet article répertorie également les intervalles d’archivage, fournit plus de détails sur les conflits, et bien plus encore.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb9aa6349a88f226c063703d6cb035b3c89636fd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: feee58d926a25e9132204798ba93d10a7c90f41e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503257"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547836"
 ---
 # <a name="what-is-device-enrollment"></a>Qu’est-ce que l’inscription d’appareils ?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,7 +35,7 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 
 ## <a name="ios-enrollment-methods"></a>Méthodes d’inscription iOS
 
-| **Méthode** | **Réinitialisation requise** | [**Affinité utilisateur**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Verrouillé** | **Détails** |
+| **Méthode** | **Réinitialisation requise** | [**Affinité utilisateur**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Locked** | **Détails** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Les appareils sont réinitialisés lors de l’inscription. | Associe chaque appareil à un utilisateur.| Dans ce cas, les utilisateurs ne peuvent pas désinscrire les appareils. | |
 |**[BYOD](#bring-your-own-device)** | Non| Oui | Non | [Plus d’informations](apple-mdm-push-certificate-get.md)|
@@ -60,7 +60,7 @@ Par défaut, les appareils de toutes les plateformes peuvent être inscrits dans
 |**Inscription automatique** | Non |Oui |Non | [Plus d’informations](windows-enroll.md#enable-windows-10-automatic-enrollment)|
 |**Autopilot** |Oui |Oui |Non | [Plus d’informations](enrollment-autopilot.md)
 |**Inscription en bloc** |Non |Non |Non | [Plus d’informations](windows-bulk-enroll.md) |
-|**Cogestion** |Non |Oui |Non | [Plus d’informations](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**Cogestion** |Non |Oui |Non | [Plus d’informations](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
 |**GPO** |Non |Oui |Non | [Plus d’informations](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Méthodes d’inscription d’Android
@@ -86,8 +86,8 @@ Les appareils BYOD incluent les téléphones, les tablettes et les PC personnels
 ## <a name="corporate-owned-device"></a>Appareil d’entreprise
 Les [appareils de l’entreprise](corporate-identifiers-add.md) incluent les téléphones, les tablettes et les PC appartenant à l’organisation et distribués aux employés. L’inscription des appareils d’entreprise prend en charge des scénarios comme l’inscription automatique, les appareils partagés ou les exigences d’inscription pré-autorisée. Une méthode courante pour inscrire des appareils d’entreprise est l’utilisation du gestionnaire de l’inscription d’appareil par un administrateur ou un responsable. Vous pouvez inscrire des appareils iOS directement via les outils du Programme d’inscription des appareils fournis par Apple. Les appareils avec un numéro IMEI peuvent également être identifiés et référencés comme appartenant à l’entreprise.
 
-### <a name="device-enrollment-manager"></a>Gestionnaire d'inscription d'appareils
-Le gestionnaire d’inscription d’appareil est un compte d’utilisateur spécial permettant d’inscrire et de gérer plusieurs appareils d’entreprise. Les responsables peuvent installer le Portail d’entreprise et inscrire de nombreux appareils sans utilisateur. Ces types d’appareils sont adaptés par exemple aux applications utilitaires ou de point de vente, mais ne conviennent pas pour les utilisateurs qui doivent accéder à la messagerie ou à des ressources de l’entreprise. En savoir plus sur le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
+### <a name="device-enrollment-manager"></a>Gestionnaire d’inscription d’appareil
+Le gestionnaire d’inscription d’appareil est un compte d’utilisateur spécial permettant d’inscrire et de gérer plusieurs appareils d’entreprise. Les responsables peuvent installer l’application Portail d’entreprise et inscrire de nombreux appareils sans utilisateur. Ces types d’appareils sont adaptés par exemple aux applications utilitaires ou de point de vente, mais ne conviennent pas pour les utilisateurs qui doivent accéder à la messagerie ou à des ressources de l’entreprise. En savoir plus sur le [gestionnaire d’inscription d’appareil](device-enrollment-manager-enroll.md).
 
 ### <a name="apple-device-enrollment-program"></a>Programme d'inscription d'appareils Apple
 Le programme d’inscription d’appareils Apple (ou DEP) vous permet de créer et déployer une stratégie « à distance » sur des appareils iOSet macOS achetés et gérés avec DEP. L’appareil est inscrit quand l’utilisateur le démarre pour la première fois et exécute l’Assistant d’installation. Cette méthode prend en charge le mode iOS supervisé, qui permet la configuration d’un appareil avec des fonctionnalités spécifiques.

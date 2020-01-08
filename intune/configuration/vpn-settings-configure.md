@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fab50e0aefd926b4dc7a2b3559576642d5d6b79
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b11cbd3427b3b8e0a43a6e6e2af5fa80da45e16a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059305"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206276"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Créer des profils VPN pour se connecter à des serveurs VPN dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Les réseaux privés virtuels (ou VPN) donnent à vos utilisateurs un accès distant sécurisé à votre réseau d’entreprise. Les appareils utilisent un profil de connexion VPN pour établir une connexion avec le serveur VPN. Les **profils VPN** dans Microsoft Intune attribuent des paramètres VPN aux utilisateurs et appareils de votre organisation, afin qu’ils puissent se connecter à votre réseau d’entreprise facilement et en toute sécurité.
 
@@ -35,9 +35,9 @@ Par exemple, supposons que vous souhaitiez configurer tous les appareils iOS en 
 >
 > * Android 4 et versions ultérieures
 > * Appareils inscrits qui exécutent Windows 8.1 et versions ultérieures
-> * Windows Phone 8.1 et versions ultérieures
+> * Windows Phone 8.1 et versions ultérieures
 > * Appareils inscrits qui exécutent Windows 10 Desktop
-> * Windows 10 Mobile
+> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>Types de connexions VPN
@@ -46,7 +46,7 @@ Vous pouvez créer des profils VPN à l’aide des types de connexions suivants 
 
 |Type de connexion|Plate-forme|
 |-|-|
-|Automatique|Windows 10|
+|Automatique|Windows 10|
 |Check Point Capsule VPN|- Android<br/>- Profils professionnels Android Entreprise<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |Cisco AnyConnect|- Android<br/>- Profils professionnels Android Entreprise<br/>- Propriétaire d’appareil Android Entreprise (complètement managé)<br/>- iOS<br/>- macOS|
 |Cisco (IPSec)|iOS|
@@ -54,9 +54,9 @@ Vous pouvez créer des profils VPN à l’aide des types de connexions suivants 
 |VPN personnalisé|- iOS<br/>- macOS|
 |Accès F5|- Android<br/>- Profils professionnels Android Entreprise<br/>- Propriétaire d’appareil Android Entreprise (complètement managé)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |IKEv2| - iOS<br/>- Windows 10|
-|L2TP|Windows 10|
+|L2TP|Windows 10|
 |Palo Alto Networks GlobalProtect|- Profils professionnels Android Entreprise : Utilisez la [stratégie de configuration d’applications](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
-|PPTP|Windows 10|
+|PPTP|Windows 10|
 |Pulse Secure|- Android<br/>- Profils professionnels Android Entreprise<br/>- Propriétaire d’appareil Android Entreprise (complètement managé)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |SonicWall Mobile Connect|- Android<br/>- Profils professionnels Android Entreprise<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |Zscaler|- Profils professionnels Android Entreprise : Utilisez la [stratégie de configuration d’applications](../apps/app-configuration-policies-use-android.md)<br/>- iOS|
@@ -72,7 +72,7 @@ Découvrez comment créer des profils VPN personnalisés à l’aide des paramè
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil VPN pour toute l’entreprise**.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil VPN pour toute l’entreprise**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0cd3dd71a5999b69e3f5c34ef4cc73fb3d6a938
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.openlocfilehash: 1c9f6dbfb8d6ee4b766abef04595ffca7df4c9dc
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781156"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206378"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Configurer un VPN par application pour les appareils iOS dans Intune
 
@@ -72,7 +72,7 @@ Importez le certificat racine du serveur VPN émis par l’Autorité de certific
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Profil VPN de certificat approuvé iOS pour toute l’entreprise** est un bon nom de profil.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Profil VPN de certificat approuvé iOS pour toute l’entreprise** est un bon nom de profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : sélectionnez **iOS**.
     - **Type de profil** : sélectionnez **Certificat approuvé**.
@@ -100,7 +100,7 @@ Le profil VPN contient le certificat SCEP ou PKCS avec les informations d’iden
 
 1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 2. Entrez les propriétés suivantes :
-    - **Nom** : Donnez un nom explicite au profil personnalisé. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Profil VPN par application iOS pour toute l’entreprise** est un bon nom de profil.
+    - **Nom** : Donnez un nom explicite au profil personnalisé. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, **Profil VPN par application iOS pour toute l’entreprise** est un bon nom de profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : sélectionnez **iOS**.
     - **Type de profil** : sélectionnez **VPN**.

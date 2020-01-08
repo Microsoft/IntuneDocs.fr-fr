@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3595e75a73868378c9c366de6c751c21a9151ae3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 13fca4de8e36b1bdeb9026985e2eabd21e56e924
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059515"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206939"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Mettre à niveau les éditions Windows 10 ou désactiver le mode S sur des appareils avec Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Dans le cadre de votre solution de gestion des appareils mobiles (MDM), vous pouvez chercher à mettre à niveau vos appareils Windows 10, par exemple, de Windows 10 Professionnel vers Windows 10 Entreprise. Ou, vous voulez que l'appareil sorte du mode S.
 
@@ -61,18 +61,18 @@ Le tableau suivant indique les chemins de mise à niveau pris en charge pour le 
 
 | Mise à niveau à partir de | Mise à niveau vers |
 |---|---|
-| Windows 10 Professionnel | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation |
+| Windows 10 Professionnel | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation |
 | Windows 10 Professionnel N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Pro Éducation N | 
 | Windows 10 Pro Éducation | Windows 10 Éducation | 
 | Windows 10 Pro Éducation N | Windows 10 Éducation N |
-| Windows 10 Cloud | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Professionnel <br/>Windows 10 Pro Éducation | 
+| Windows 10 Cloud | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Professionnel <br/>Windows 10 Pro Éducation | 
 | Windows 10 Cloud N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Professionnel N <br/>Windows 10 Pro Éducation N | 
-| Windows 10 Entreprise | Windows 10 Éducation | 
+| Windows 10 Entreprise | Windows 10 Éducation | 
 | Windows 10 Édition Entreprise N | Windows 10 Éducation N | 
-| Windows 10 Core | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation | 
+| Windows 10 Core | Windows 10 Éducation <br/>Windows 10 Entreprise <br/>Windows 10 Pro Éducation | 
 | Windows 10 Core N | Windows 10 Éducation N <br/>Windows 10 Édition Entreprise N <br/>Windows 10 Pro Éducation N | 
 | Windows 10 Holographique | Windows 10 Holographique pour entreprises |
-| Windows 10 Mobile | Windows 10 Mobile Entreprise |
+| Windows 10 Mobile | Windows 10 Mobile Entreprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 
@@ -100,7 +100,7 @@ Le tableau suivant indique les chemins de mise à niveau pris en charge pour le 
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom descriptif pour le nouveau profil. Par exemple, entrez quelque chose comme `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode`.
+    - **Nom** : Entrez un nom descriptif pour le nouveau profil. Par exemple, entrez quelque chose comme `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode`.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Sélectionnez **Windows 10 et ultérieur**.
     - **Type de profil** : sélectionnez **Mise à niveau d’édition**.

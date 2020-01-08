@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
+ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562404"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75324863"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Actions et options Intune prises en charge par l’inscription des utilisateurs d’Apple
 
@@ -38,7 +38,7 @@ Sur les appareils avec inscription des utilisateurs, si vous configurez un param
 
 Par exemple, vous configurez le paramètre **Expiration du mot de passe** et envoyez cette stratégie aux appareils avec inscription des utilisateurs. Sur les appareils, les événements suivants se produisent :
 - Le paramètre **Expiration du mot de passe** est ignoré.
-- Les mots de passe simples comme `1111` ou `1234` ne sont pas autorisés.
+- Les mots de passe simples comme `111111` ou `123456` ne sont pas autorisés.
 - Un code PIN à 6 chiffres est appliqué.
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Actions et options de l'administrateur des appareils distants
@@ -46,7 +46,7 @@ Les administrateurs peuvent effectuer les actions et options suivantes sur les a
 - Mettre hors service
 - Supprimer
 - Verrouillage à distance
-- Synchronisation
+- Synchroniser
 
 Toutes les autres actions ne sont pas prises en charge.
 

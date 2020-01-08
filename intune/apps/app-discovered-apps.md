@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 1e96f46dc0e79de3fc78739c246abdc0b9e52702
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205528"
 ---
 # <a name="intune-discovered-apps"></a>Applications découvertes par Intune
 
@@ -54,7 +54,7 @@ La liste suivante fournit le type de plate-forme d’application, les applicatio
 
 | Plate-forme | Pour les appareils personnels | Pour les appareils d’entreprise | Cycle d’actualisation |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Applications Win32) - REMARQUE : [Nécessite l’extension de gestion Intune](intune-management-extension.md) sur l’appareil | Non applicable | Toutes les applications Win32 trouvées dans la liste Ajouter ou supprimer des programmes | Toutes les 24 heures à partir de l’inscription de l’appareil |
+| Windows 10 (Applications Win32) - REMARQUE : [Nécessite l’extension de gestion Intune](intune-management-extension.md) sur l’appareil | Non applicable | Uniquement les applications gérées | Toutes les 24 heures à partir de l’inscription de l’appareil |
 | Windows 10 (Applications modernes) | Seulement les applications modernes gérées | Toutes les applications modernes installées sur l’appareil | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Windows 8.1 | Uniquement les applications gérées | Uniquement les applications gérées | Tous les 7 jours à partir de l’inscription de l’appareil |
 | Windows Phone 8 | Uniquement les applications gérées | Uniquement les applications gérées | Tous les 7 jours à partir de l’inscription de l’appareil |

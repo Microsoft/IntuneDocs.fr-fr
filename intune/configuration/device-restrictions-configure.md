@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 704da2ee4f0f2e6dce222c89704c83a35368c02c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8c86252030a4baf957077cd889386bb8016554f1
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059533"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206565"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurer des paramètres de restriction d’appareils dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Intune inclut des stratégies de restriction d’appareil qui aident les administrateurs à contrôler les appareils Android, iOS, macOS et Windows. Ces restrictions vous permettent de contrôler un large éventail de paramètres et de fonctionnalités pour protéger les ressources de votre entreprise. Par exemple, les administrateurs peuvent faire ce qui suit :
 
@@ -44,7 +44,7 @@ Cet article vous explique comment créer un profil de restrictions d’appareil.
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **iOS : Bloquer l’appareil photo sur les appareils**.
+    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **iOS : Bloquer l’appareil photo sur les appareils**.
     - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :  
 

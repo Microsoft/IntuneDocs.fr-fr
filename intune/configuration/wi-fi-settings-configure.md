@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fe0bed94c66a1b82ed26bdbd43f68073223101e
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 47eae4d2e662be85de2831666f944e57ba674417
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540678"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206106"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Ajoutez et utilisez des paramètres Wi-Fi sur vos appareils dans Microsoft Intune
 
@@ -35,7 +35,7 @@ Par exemple, vous installez un nouveau réseau Wi-Fi nommé Contoso Wi-Fi. Ensui
 
 Cet article répertorie les étapes pour créer un profil Wi-Fi. Il inclut également des liens qui décrivent les différents paramètres pour chaque plateforme.
 
-## <a name="supported-device-platforms"></a>Plateformes d’appareil prises en charge
+## <a name="supported-device-platforms"></a>Plateformes d’appareils prises en charge
 
 Les profils Wi-Fi prennent en charge les plateformes suivantes :
 
@@ -54,7 +54,7 @@ Les profils Wi-Fi prennent en charge les plateformes suivantes :
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil WiFi pour toute l’entreprise**.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil approprié est **Profil WiFi pour toute l’entreprise**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
 

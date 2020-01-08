@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: b566dd58b01a411126ffabb46d526e4480c2ba0a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563675"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205970"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Ajouter des applications Office 365 à des appareils Windows 10 avec Microsoft Intune
 
@@ -83,7 +83,7 @@ Dans cette étape, indiquez des informations sur la suite d’applications. Ces 
     - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs des catégories d’applications intégrées ou sélectionnez une catégorie que vous avez créée. Ce paramètre permet de faciliter la recherche de la suite d’applications pour les utilisateurs qui naviguent dans le portail d’entreprise.
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : sélectionnez cette option pour afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
     - **Développeur** : Microsoft apparaît comme développeur.
     - **Propriétaire** : Microsoft apparaît comme propriétaire.
     - **Remarques** : entrez les remarques à associer à cette application.
@@ -197,7 +197,7 @@ Une fois que vous pouvez conclure qu’Intune et l’infrastructure réseau fonc
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>Erreurs durant l’installation de la suite d’applications
 
-Consultez [Comment activer la journalisation d’Office 365 ProPlus ULS](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) pour plus d’informations sur la façon d’afficher les journaux d’installation détaillée.
+Consultez [Comment activer la journalisation d’Office 365 ProPlus ULS](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) pour plus d’informations sur la façon d’afficher les journaux d’installation détaillée.
 
 Les tableaux suivants répertorient les codes d’erreur fréquemment rencontrés et leur signification.
 

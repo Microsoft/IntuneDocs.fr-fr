@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be6cc64c3a65af72fd74bc58ed7c06a214797510
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b3485a87120cbf565a275cefb38cfe3549ee31d5
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059465"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206446"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Utiliser l’application Examen sur des appareils Windows 10 dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Les profils Éducation d’Intune sont conçus pour permettre aux étudiants de passer un test ou un examen sur des appareils. Cette fonctionnalité inclut l’application **Examen** et des paramètres servant à ajouter une URL de test, à choisir le mode de connexion des utilisateurs finaux et plus encore. Elle est compatible avec la plateforme suivante :
 
@@ -42,7 +42,7 @@ Cet article liste les étapes à suivre pour créer un profil de configuration d
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
     - **Profil** : choisissez **Profil Éducation**.
