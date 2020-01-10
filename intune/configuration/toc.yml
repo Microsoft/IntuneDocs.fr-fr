@@ -5,10 +5,14 @@
   items:
     - name: Vue d’ensemble de la configuration des appareils
       href: device-profiles.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   items:
     - name: Créer un profil d’appareil de messagerie
       href: quickstart-email-profile.md
+- name: Didacticiels
+  items:
+    - name: Créer un modèle d'administration
+      href: tutorial-walkthrough-administrative-templates.md
 - name: Guides pratiques
   items:
     - name: Créer un profil
@@ -27,7 +31,7 @@
     - name: Paramètres BIOS sur Windows
       href: device-firmware-configuration-interface-windows.md
       displayName: 'DFCI, firmware'
-    - name: Updates
+    - name: Mises à jour
       href: delivery-optimization-windows.md
       displayName: delivery optimization; updates
     - name: Mettre à niveau les éditions et le mode S
@@ -145,8 +149,6 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Réseau câblé
-              href: wired-network-settings-macos.md
             - name: Personnalisé
               href: custom-settings-macos.md
         - name: "Windows\_10 et versions ultérieures"
