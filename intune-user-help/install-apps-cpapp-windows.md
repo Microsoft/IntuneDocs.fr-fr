@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80fd2d54a99bc3f4ab47f48f94eb14aa1a7f630c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 11037da11e6400f157aea6aa86c0c293c9818d31
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74126201"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855008"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installer et partager des applications sur votre appareil
 
@@ -37,11 +37,11 @@ Installez des applications sur votre appareil à partir de l’application Porta
     ![Page d’accueil de l’application Portail d’entreprise pour Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Recherchez et installez des applications à partir de l’une des sections suivantes de l’application Portail d’entreprise :  
 
-    * **Page d’accueil**  : sélectionnez une application parmi la liste des applications proposées par votre organisation.  
-    * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
-    * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (à savoir celles déjà installées et celles proposées). Afficher, trier et filtrer les applications. Les résultats de la recherche sont automatiquement triés selon la pertinence.  
+    * **Accueil** : sélectionnez une application dans la liste des Applications à la une de votre organisation.  
+    * **Afficher tout** : dans la section **Page d’accueil** > **Applications**, cliquez sur **Afficher tout** pour voir toutes les applications disponibles.  
+    * **Toutes les applications** : sélectionnez cette page dans le volet de navigation pour voir toutes les applications disponibles (notamment celles qui sont installées et proposées). Afficher, trier et filtrer les applications. Les résultats de la recherche sont automatiquement triés selon la pertinence.  
     * **Catégories d’applications**: sélectionnez cette page dans le volet de navigation pour choisir les applications en fonction du type ou de la fonction. Les applications sont triées dans des catégories telles que les **fonctionnalités proposées**, d' **éducation**et de **productivité**.  
-    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application. Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
+    * **Rechercher des applications** : utilisez la barre de recherche statique qui se trouve dans le volet de navigation de l’application. Pour trouver les applications disponibles, effectuez une recherche par nom ou éditeur.  
 
 3. Sélectionnez une application.   
 4. Dans la page Détails de l’application, cliquez sur **Installer**. Une fois son installation terminée, l’application présente l’état **Installé**.  
@@ -86,7 +86,7 @@ Si vous avez besoin d’une application qui ne figure pas dans le Portail d’en
 ## <a name="view-installed-apps"></a>Afficher les applications installées  
 Affichez la liste de toutes les applications installées sur votre appareil. La page **applications installées** répertorie les informations suivantes sur chaque application :
 
-* Nom : le nom de l’application. Les applications facultatives incluent un lien vers la page Détails de l' **application** .
+* Nom : Nom de l’application. Les applications facultatives incluent un lien vers la page Détails de l' **application** .
 * Type d’affectation : la manière dont l’application est affectée et mise à votre disposition. 
 * Serveur de publication : nom du développeur ou de la société qui a distribué l’application. Un serveur de publication est généralement un éditeur de logiciels ou votre organisation.  
 * Date de publication : date à laquelle l’application a été mise à disposition pour téléchargement. La date de publication peut afficher la version initiale d’une application ou la mise à jour la plus récente d’une application.

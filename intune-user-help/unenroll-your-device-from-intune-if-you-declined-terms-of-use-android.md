@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 169007541bccfc3e26184ac71197265931afbfdd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f54f0d9453e93ad54a1d2a96ff25051f3d8bd3a1
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508106"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857671"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Supprimer votre appareil de la gestion si vous avez refusé les conditions d’utilisation
 
@@ -38,7 +38,7 @@ Avant de pouvoir désinstaller l’application Portail d’entreprise, vous deve
 
 Pour supprimer votre appareil d’Intune et désinstaller l’application Portail d’entreprise :
 
-1. Accédez à **Paramètres** &gt; **Sécurité &amp;Verrouillage d’écran** &gt; **Administrateurs de l’appareil**.
+1. Accédez à **paramètres** &gt; **sécurité &amp; verrouillage** de l’écran &gt; administrateurs de l' **appareil**.
 
     Cette étape désinscrit immédiatement votre appareil.
 

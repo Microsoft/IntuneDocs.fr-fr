@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 2f075aed1c9cc00963c89a9e76122484d1a430b1
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781207"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857637"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Utiliser des applications gérées sur votre appareil Android
 Les applications gérées sont configurées pour répondre aux exigences de sécurité de votre organisation et protéger les données professionnelles et scolaires. Vous pouvez installer ou utiliser ces applications automatiquement sur votre appareil. 

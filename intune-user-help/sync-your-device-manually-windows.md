@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 289d99603314be7c1097d54d59d4a0e90cae0bed
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 81a284b686ebfddcc89336e4a98060fb63666390
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508336"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857910"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synchroniser votre appareil Windows manuellement
 
@@ -110,7 +110,7 @@ Effectuez ces étapes pour synchroniser manuellement vos appareils Microsoft Hol
     ![Choix du bouton Synchroniser](./media/win10pc-sync-5-tap-sync.png)  
 
 
-### <a name="windows-10-mobile"></a>Windows 10 Mobile
+### <a name="windows-10-mobile"></a>Windows 10 Mobile
 
    1. Sur votre appareil, accédez à **Toutes les applications** > **Paramètres** > **Comptes**.
 

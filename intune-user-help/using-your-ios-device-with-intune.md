@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3f1996052e31a70ca44c40c277a7c5ff93819a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 774c67b67094782d98e8ca325f092f8a5760dd2f
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508000"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858928"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Utilisation de votre appareil iOS avec le Portail d’entreprise Intune
 Cet article répertorie les tâches et les informations relatives au Portail d’entreprise pour iOS. Il peut vous aider à gérer et dépanner votre appareil iOS. Cliquez sur un lien pour consulter des informations détaillées, des étapes et des captures d’écran supplémentaires.

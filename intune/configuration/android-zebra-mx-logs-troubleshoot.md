@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7ed93c86d3fbe7ed7a6ac5d4b1a3494fb55f2bc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2319fb0d1198289398912793e52482bf66d87173
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506991"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206837"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Dépannez et consultez les problèmes potentiels sur les appareils Android rayures dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Dans Microsoft Intune, vous pouvez utiliser [rayures Mobility extensions (MX) pour gérer les appareils Android rayures](android-zebra-mx-overview.md). Lorsque vous utilisez des appareils rayures, vous créez des profils dans StageNow pour gérer les paramètres et les télécharger dans Intune. Intune utilise l’application StageNow pour appliquer les paramètres sur les appareils. L’application StageNow crée également un fichier journal détaillé sur l’appareil utilisé pour la résolution des problèmes.
 
