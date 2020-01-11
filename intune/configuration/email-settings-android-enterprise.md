@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d81e383a9964aaecbdd151397879236ffcb726
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: dc86e82f189377d63422cc3306b8554637164b0f
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72493563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206429"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Paramètres des appareils Android Enterprise permettant de configurer les e-mails, l’authentification et la synchronisation dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Cet article liste et décrit les différents paramètres de messagerie que vous pouvez contrôler sur les appareils Android Entreprise. Dans votre solution de gestion des appareils mobiles, définissez ces paramètres pour configurer un serveur de messagerie, utiliser SSL pour chiffrer les e-mails et bien plus encore.
 
@@ -39,25 +39,25 @@ Créez un [profil de configuration d’appareil](email-settings-configure.md#cre
 
 ## <a name="android-enterprise"></a>Android Entreprise
 
-- **Application de messagerie** : sélectionnez **Gmail** ou **Nine Work**
-- **Serveur de messagerie** : le nom d’hôte de votre serveur Exchange. Par exemple, entrez `outlook.office365.com`.
+- **Application de messagerie** : sélectionnez **Gmail** ou **Nine Work**
+- **Serveur de messagerie** : nom d’hôte de votre serveur Exchange. Par exemple, entrez `outlook.office365.com`.
 - **Attribut de nom d’utilisateur d’AAD** : ce nom est l’attribut obtenu par Intune auprès d’Azure Active Directory (Azure AD). Intune génère dynamiquement le nom d’utilisateur qui est utilisé par ce profil. Les options disponibles sont les suivantes :
 
-  - **Nom d’utilisateur principal** : obtient le nom, comme `user1` ou `user1@contoso.com`
-  - **Nom d’utilisateur** : Obtient seulement le nom, comme `user1`
+  - **Nom principal de l’utilisateur** : Obtient le nom, par exemple `user1` ou `user1@contoso.com`
+  - **Nom d’utilisateur** : obtient seulement le nom, par exemple `user1`
 
-- **Attribut d’adresse e-mail d’AAD** : ce nom est l’attribut d’e-mail obtenu par Intune auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
-  - **Nom d’utilisateur principal** : utilise le nom principal complet (par exemple, `user1@contoso.com` ou `user1`) comme adresse e-mail.
+- **Attribut d’adresse e-mail d’AAD** : Ce nom est l’attribut de messagerie obtenu par Intune auprès d’Azure AD. Intune génère dynamiquement l’adresse e-mail utilisée par ce profil. Les options disponibles sont les suivantes :
+  - **Nom d’utilisateur principal** :  utilise le nom principal complet (par exemple, `user1@contoso.com` ou `user1`) comme adresse e-mail.
   - **Adresse SMTP principale** : utilise l’adresse SMTP principale (par exemple, `user1@contoso.com`) pour la connexion à Exchange.
 
-- **Méthode d’authentification** : sélectionnez **Nom d’utilisateur et mot de passe** ou **Certificats** en tant que méthode d’authentification utilisée par le profil de messagerie.
+- **Méthode d’authentification** : sélectionnez **Nom d’utilisateur et mot de passe** ou **Certificats** comme méthode d’authentification utilisée par le profil de messagerie.
   - Si vous avez sélectionné **Certificats**, sélectionnez un profil de certificat SCEP ou PKCS client que vous avez préalablement créé pour authentifier la connexion Exchange.
-- **Protocole SSL** : choisissez **Activer** pour utiliser une communication SSL (Secure Sockets Layer) afin d’envoyer et de recevoir des e-mails, et de communiquer avec le serveur Exchange.
-- **Nombre d’e-mails à synchroniser** : sélectionnez la période d’e-mails à synchroniser. Vous pouvez aussi sélectionner **Illimité** pour synchroniser tous les e-mails disponibles.
-- **Type de contenu à synchroniser** (Nine Work uniquement) : choisissez les données que vous souhaitez synchroniser sur les appareils. Les options disponibles sont les suivantes :
-  - **Contacts** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser les contacts sur leurs appareils.
-  - **Calendrier** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser leur calendrier sur leurs appareils.
-  - **Tâches** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser les tâches sur leurs appareils.
+- **SSL** : choisissez **Activer** pour utiliser une communication SSL (Secure Sockets Layer) afin d’envoyer et de recevoir des e-mails, et de communiquer avec le serveur Exchange.
+- **Nombre d’e-mails à synchroniser** : choisissez la quantité d’e-mails à synchroniser. Vous pouvez aussi sélectionner **Illimité** pour synchroniser tous les e-mails disponibles.
+- **Type de contenu à synchroniser** (Nine Work uniquement) : choisissez les données à synchroniser sur les appareils. Les options disponibles sont les suivantes :
+  - **Contacts** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser les contacts sur leurs appareils.
+  - **Calendrier** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser l’agenda sur leurs appareils.
+  - **Tâches** : choisissez **Activer** pour autoriser les utilisateurs finaux à synchroniser les tâches sur leurs appareils.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

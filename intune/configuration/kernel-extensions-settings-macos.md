@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 89f54111258b5e628d9f83c381fde146bf996216
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506696"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206327"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>paramètres de l’appareil macOS pour configurer et utiliser des extensions de noyau dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Cet article répertorie et décrit les différents paramètres d’extension de noyau que vous pouvez contrôler sur les appareils macOS. Dans le cadre de votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour ajouter et gérer des extensions de noyau sur vos appareils.
 
