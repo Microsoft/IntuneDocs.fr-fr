@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585707"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691817"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénario guidé – Applications mobiles Microsoft Office sécurisées 
 
@@ -46,7 +46,7 @@ Les applications mobiles Office, à l’instar de Microsoft Edge pour mobile, pr
 Les [stratégies de protection des applications Intune](~/apps/app-protection-policy.md) vous aident à protéger vos fichiers de travail sur les appareils inscrits dans Intune. Vous pouvez également utiliser des stratégies de protection des applications sur les appareils détenus par l’employé qui ne sont pas inscrits pour la gestion dans Intune. Dans ce cas, même si votre entreprise ne gère pas l’appareil, vous devez quand même veiller à que les fichiers de travail et les ressources soient protégés.
 
 Vous pouvez utiliser des stratégies de protection des applications pour empêcher les utilisateurs d’enregistrer les fichiers de travail à des emplacements non protégés. Vous pouvez également limiter le déplacement de données vers d’autres applications qui ne sont pas protégées par des stratégies de protection des applications. Les paramètres de stratégie de protection d’application comprennent :
-- Des stratégies de réadressage des données comme Interdire « Enregistrer sous » et Restreindre les opérations couper, copier et coller.
+- Des stratégies de réadressage des données comme **Enregistrer des copies de données d’organisation** et **Restreindre les opérations de couper, copier et coller**.
 - Des paramètres de stratégie d’accès pour exiger un code PIN simple pour l’accès et bloquer l’exécution des applications gérées sur les appareils jailbreakés ou rootés.
 
 L’accès conditionnel basé sur l’application et la gestion d’applications clientes ajoutent une couche de sécurité en vous assurant que seules les applications clientes qui prennent en charge les stratégies de protection des applications Intune peuvent accéder aux services Exchange en ligne et autres services d’Office 365.

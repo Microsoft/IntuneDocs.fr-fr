@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 89b4516017d7ac8bf1e27134db6a67a0a86b17cb
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992983"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206072"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Surveiller les stratégies de conformité d’appareils Intune
 
@@ -36,9 +36,9 @@ Les rapports de conformité vous permettent d’examiner la conformité des appa
 
 Ouvrez le **Tableau de bord de conformité des appareils Intune** :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Sélectionnez **Conformité de l’appareil** > **Vue d’ensemble**. Le **tableau de bord de conformité des appareils** s’ouvre.
+2. Sélectionnez l’onglet**Appareils** > **Vue d’ensemble** > **État de conformité**.
 
 > [!IMPORTANT]
 > Les appareils doivent être inscrits dans Intune pour recevoir des stratégies de conformité d’appareils.
@@ -85,9 +85,9 @@ Descriptions des différents états des stratégies de conformité des appareils
 
 - **Appareil non synchronisé** : l’appareil n’a pas pu signaler l’état de sa stratégie de conformité d’appareil pour l’une des raisons suivantes :
 
-  - **Inconnu** : l’appareil est hors connexion ou n’a pas pu communiquer avec Intune ou Azure AD pour d’autres raisons.
+  - **Inconnu** : l’appareil est hors connexion ou n’a pas pu communiquer avec Intune ou Azure AD pour d’autres raisons.
 
-  - **Erreur** : l’appareil n’a pas pu communiquer avec Intune et Azure AD, et a reçu un message d’erreur avec la raison.
+  - **Erreur** : l’appareil n’a pas pu communiquer avec Intune et Azure AD, et a reçu un message d’erreur avec la raison.
 
 > [!IMPORTANT]
 > Les appareils inscrits dans Intune, mais non ciblés par des stratégies de conformité des appareils, sont inclus dans ce rapport sous le compartiment **Conforme**.
@@ -151,7 +151,7 @@ Le graphique **Conformité des paramètres** montre tous les paramètres de stra
 
 ## <a name="view-compliance-reports"></a>Afficher les rapports de conformité
 
-En plus d’utiliser les graphiques sur l’*État de conformité*, vous pouvez afficher les rapports de compatibilité à partir de la page *Surveiller* du centre d’administration.
+En plus d’utiliser les graphiques sur *État de conformité*, vous pouvez accéder à **Rapports** > **Conformité des appareils**.
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -177,7 +177,7 @@ Cette fonctionnalité est incluse dans le rapport d’état des appareils :
 2. Sélectionnez une stratégie, puis choisissez **Vue d’ensemble**. Dans cette vue, l’affectation de stratégie inclut les états suivants :
 
     - **Réussite** : la stratégie est appliquée
-    - **Erreur** : impossible d’appliquer la stratégie. Ce message s’affiche généralement avec un code d’erreur qui établit un lien vers une explication.
+    - **Erreur** : impossible d’appliquer la stratégie. Ce message s’affiche généralement avec un code d’erreur qui établit un lien vers une explication.
     - **Conflit** : deux paramètres sont appliqués au même appareil et Intune ne peut pas résoudre le conflit. Un administrateur doit examiner le problème.
     - **En attente** : l’appareil n’est pas encore enregistré dans Intune pour recevoir la stratégie.
     - **Non applicable** : l’appareil ne peut pas recevoir la stratégie. Par exemple, la stratégie met à jour un paramètre spécifique à iOS 11.1, mais l’appareil utilise iOS 10.
@@ -191,3 +191,7 @@ Des conflits de stratégie peuvent se produire quand plusieurs stratégies Intun
 - Si les paramètres en conflit proviennent d’une stratégie de configuration Intune et d’une stratégie de conformité, les paramètres de la stratégie de conformité sont prioritaires sur ceux de la stratégie de configuration. Cela est valable même si les paramètres de la stratégie de configuration sont plus sécurisés.
 
 - Si vous avez déployé plusieurs stratégies de conformité, Intune utilise la plus sécurisée d’entre elles.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Vue d’ensemble des stratégies de conformité](device-compliance-get-started.md)

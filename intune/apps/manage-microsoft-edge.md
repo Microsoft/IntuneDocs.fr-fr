@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563899"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548003"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -159,12 +159,12 @@ Voici quelques exemples de scénarios possibles avec la fonctionnalité Proxy d�
 > [!NOTE]
 > La mise à jour des données de redirection du proxy d’application dans Managed Browser et Microsoft Edge peut prendre jusqu’à 24 heures.
 
-#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>Étape 1 : Activer la redirection automatique vers Microsoft Edge à partir d’Outlook
+#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>Étape 1 : Activer la redirection automatique vers Microsoft Edge à partir d’Outlook
 Configurez Outlook avec une stratégie de protection des applications qui active le paramètre **Partager du contenu web avec des navigateurs managés par une stratégie**.
 
 ![Capture d’écran de Stratégie de protection des applications : partager du contenu web avec des navigateurs managés par une stratégie](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
 
-#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>Étape 2 : Définir le paramètre de configuration d’application pour activer le proxy d’application
+#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>Étape 2 : Définir le paramètre de configuration d’application pour activer le proxy d’application
 Ciblez Microsoft Edge avec la paire clé-valeur suivante pour activer le Proxy d’application pour Microsoft Edge :
 
 |    Clé    |    Valeur    |
@@ -198,6 +198,14 @@ Ensuite, utilisez les paires clé/valeur suivantes pour extraire le branding de 
 |--------------------------------------------------------------------|------------|
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    True    |
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    True    |
+
+## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Afficher les actualités pertinentes du secteur sur les nouvelles pages d’onglets
+
+Vous pouvez configurer l’expérience de la nouvelle page d’onglets dans Microsoft Edge mobile pour afficher les actualités du secteur qui sont pertinentes pour votre organisation. Lorsque vous activez cette fonctionnalité, Microsoft Edge mobile utilise le nom de domaine de votre organisation pour regrouper les actualités du Web sur votre organisation, le secteur de l’organisation et les concurrents, afin que vos utilisateurs puissent trouver les actualités externes pertinentes dans les nouvelles pages d’onglets centra;isées dans Microsoft Edge. L’actualité du secteur est désactivée par défaut et vous pouvez l’utiliser pour vous les appliquer à votre organisation. 
+
+|    Clé    |    Valeur    |
+|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|    'com.microsoft.intune.SohwIndustryNews'    |    **True** affichera les actualités du secteur sur la nouvelle page d’onglets de Microsoft Edge mobile.<p>**False** (par défaut) masque les actualités du secteur dans la nouvelle page d’onglets.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Configurer des signets managés pour Microsoft Edge
 
@@ -237,7 +245,7 @@ Vous pouvez utiliser les paires clé-valeur suivantes pour configurer une liste 
 Vous pouvez utiliser divers formats d’URL pour créer vos listes de sites autorisés/bloqués. Ces modèles autorisés sont détaillés dans le tableau ci-dessous. Quelques remarques avant de commencer : 
 - Veillez à faire précéder toutes les URL du préfixe **http** ou **https** quand vous les entrez dans la liste.
 - Vous pouvez utiliser le caractère générique (\*) en fonction des règles de la liste des modèles autorisés, ci-dessous.
-- Un caractère générique peut uniquement correspondre à un composant entier d’un nom d’hôte (séparés par des points) ou à des portions entières d’un chemin (séparées par des barres obliques). Par exemple, `http://*contoso.com` **n’est pas** pris en charge.
+- Un caractère générique peut uniquement correspondre à un composant entier d’un nom d’hôte (séparés par des points) ou à des portions entières d’un chemin (séparées par des barres obliques). Par exemple, `http://*contoso.com`**n’est pas** pris en charge.
 - Vous pouvez spécifier des numéros de port dans l'adresse. Si vous ne spécifiez pas un numéro de port, les valeurs suivantes sont utilisées :
   - Port 80 pour http
   - Port 443 pour https
@@ -268,7 +276,7 @@ Vous pouvez utiliser divers formats d’URL pour créer vos listes de sites auto
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Définir le comportement quand des utilisateurs essaient d’accéder à un site bloqué
+## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Transfert les utilisateurs vers leur contexte personnel lors de la tentative d’accès à un site bloqué
 
 Avec le modèle à double identité intégré à Microsoft Edge, vous pouvez rendre l’expérience plus flexible pour vos utilisateurs finaux, ce qui n’était pas possible avec Intune Managed Browser. Lorsque les utilisateurs atteignent un site bloqué dans Microsoft Edge, vous pouvez les inviter à ouvrir le lien dans leur contexte personnel plutôt que dans leur contexte professionnel. Cela leur permet de rester protégés, tout en conservant les ressources d’entreprise sécurisées. Par exemple, si un lien vers un article d’actualité est envoyé à un utilisateur via Outlook, ils peuvent ouvrir le lien dans leur contexte personnel ou dans un onglet InPrivate. Leur contexte professionnel n’autorise pas de sites web d’actualité. Par défaut, ces transitions sont autorisées.
 
@@ -276,7 +284,16 @@ Utilisez la paire clé-valeur ci-dessous pour configurer l’autorisation de ces
 
 |    Clé    |    Valeur    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock'    |    **True** entraîne l’ouverture directe des liens restreints dans la navigation InPrivate.<p>**False** (par défaut) permet aux utilisateurs de choisir d’ouvrir un lien restreint avec la navigation InPrivate ou avec leur compte personnel (MSA).    |
+
+## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Ouvrir des liens restreints directement dans les pages d’onglets InPrivate
+
+Vous pouvez configurer si les liens restreints doivent s’ouvrir directement dans la navigation InPrivate, ce qui offre aux utilisateurs une expérience de navigation plus transparente. Cela permettrait aux utilisateurs d’éviter d’effectuer une transition vers leur contexte personnel pour afficher un site. La navigation InPrivate est considérée comme non managée, de sorte que les utilisateurs ne seront pas en mesure d’y accéder lors de l’utilisation du mode de navigation InPrivate. 
+
+|    Clé    |    Valeur    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** autorise Microsoft Edge à effectuer une transition vers le contexte personnel des utilisateurs pour qu’ils puissent ouvrir des sites bloqués.<p>**Bloc** empêche la transition des utilisateurs par Microsoft Edge. Les utilisateurs reçoivent simplement un message indiquant que le site auquel ils tentent d’accéder est bloqué.    |
+
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Utiliser Microsoft Edge sur iOS pour accéder aux journaux des applications managées 
 

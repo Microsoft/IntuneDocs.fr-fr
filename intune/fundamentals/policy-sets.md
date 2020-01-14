@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e539f44fc9c9b4e7382368c0f3ad9f79bb1c98b1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585655"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206123"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Utiliser des ensembles de stratégies pour regrouper des objets de gestion
 
@@ -56,8 +56,8 @@ Quand vous créez un ensemble de stratégies, vous créez une unité d’affecta
 
 ## <a name="how-to-create-a-policy-set"></a>Comment créer un ensemble de stratégies
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Dans le panneau **Intune**, choisissez **Ensembles de stratégies** > **Ensembles de stratégies** > **Créer**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Ensembles de stratégies** > **Ensembles de stratégies** > **Créer**.
 3. Dans la page **De base**, ajoutez les valeurs suivantes :
     - **Nom de l’ensemble de stratégies** – Attribuez un nom à cet ensemble de stratégies.
     - **Description** – Décrivez l’ensemble de stratégies (facultatif).
