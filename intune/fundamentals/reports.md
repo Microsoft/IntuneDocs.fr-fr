@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05258c5363b43398dee1815bb91c50878803e426
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 3ae06ae3f9f76d86a792721d45f8319bfe6491fd
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74391940"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654224"
 ---
 # <a name="intune-reports"></a>Rapports Intune
 Les rapports Microsoft Intune vous permettent de surveiller de manière plus efficace et proactive l’intégrité et l’activité des points de terminaison au sein de votre organisation, et fournissent également d’autres données de rapport dans Intune. Par exemple, vous serez en mesure d’afficher des rapports sur la conformité, l’intégrité et les tendances des appareils. En outre, vous pouvez créer des rapports personnalisés pour obtenir des données plus spécifiques. 
@@ -53,16 +53,19 @@ Les appareils non conformes indiquent les données généralement utilisées par
 
 Vous pouvez afficher le rapport **Appareils non conformes** en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Conformité des appareils** > **Appareils non conformes**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Surveiller** > **Appareils non conformes**.
 
     ![Rapport d’appareil non conforme](./media/intune-reports/intune-reports-02.png)
+
+    > [!TIP]
+    > Si vous utilisiez déjà Intune dans le Portail Azure, vous trouviez les détails ci-dessus dans le Portail Azure en vous connectant à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et en sélectionnant **Conformité de l’appareil** > **Appareils non conformes**.
 
 ## <a name="device-compliance-report-organizational"></a>Rapport de conformité des appareils (organisationnel)
 Les rapports de conformité des appareils sont conçus pour être exhaustifs et fournissent une vue de rapport plus classique des données pour identifier les métriques agrégées. Ce rapport est conçu pour fonctionner avec des jeux de données volumineux afin d’obtenir une vue complète de la conformité des appareils. Par exemple, le rapport de conformité des appareils pour la conformité des appareils affiche tous les états de conformité des appareils pour fournir une vue plus large des données, quelle que soit la taille du jeu de données. Ce rapport affiche la répartition complète des enregistrements, en plus d’une visualisation pratique des métriques agrégées. Ce rapport peut être généré en appliquant des filtres et en sélectionnant le bouton « Générer le rapport ». Cette opération actualise les données pour afficher l’état le plus récent avec la possibilité d’afficher les enregistrements individuels qui composent les données agrégées. Comme la plupart des rapports dans la nouvelle infrastructure, ces enregistrements peuvent être triés et parcourus pour se concentrer sur les informations dont vous avez besoin. 
 
 Pour afficher un rapport d’état des appareils généré, vous pouvez utiliser les étapes suivantes :
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Rapports** pour afficher le résumé des rapports.
 3. Sélectionnez **Conformité de l’appareil**.
 4. Sélectionnez les filtres **État de conformité**, **Système d’exploitation** et **Propriété** pour affiner votre rapport.
@@ -79,7 +82,7 @@ Pour les informations liées, consultez [Appliquer la conformité pour Microsoft
 
 Le rapport de conformité des appareils est disponible sous forme de rapport de synthèse dans la charge de travail **Rapports**. Pour afficher le rapport de conformité des appareils, procédez comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Rapports** pour afficher le résumé des rapports.
 
     ![Résumé des rapports Intune](./media/intune-reports/intune-reports-01.png)
@@ -91,7 +94,7 @@ Un rapport de tendance sur la conformité des appareils pour les tendances de co
 
 Vous pouvez afficher le rapport **Tendances** en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Rapports** > **Tendances** pour afficher la conformité des appareils sur une tendance de 60 jours.
 
     ![Rapport de tendance Intune](./media/intune-reports/intune-reports-03.png)
@@ -106,7 +109,7 @@ Un exemple de rapport spécialisé associe des données de propriétés d’appa
 
 Vous pouvez créer et afficher des rapports personnalisés en procédant comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Rapports** > **Paramètres de diagnostic**, puis ajoutez un [Paramètre de diagnostic](reports.md#diagnostic-settings).
 
     ![Résumé des rapports Intune](./media/intune-reports/intune-reports-04.png)
@@ -143,7 +146,7 @@ Log Analytics est le principal outil dans le portail Azure pour l’écriture de
 ### <a name="workbooks"></a>Classeurs
 Les classeurs regroupent du texte, des requêtes Analytics, les métriques Azure et des paramètres sous la forme de rapports interactifs riches en contenu. Les classeurs sont modifiables par tous les membres de l’équipe ayant accès aux mêmes ressources Azure. Pour plus d’informations sur les classeurs, consultez [Classeurs Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). En outre, vous pouvez utiliser les modèles de classeur et y contribuer. Pour plus d’informations, consultez [Modèles de classeur Azure Monitor](https://go.microsoft.com/fwlink/?linkid=867045).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes 
 
 Découvrez plus en détail les technologies suivantes :
 - [Blog - Infrastructure de rapports de Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)

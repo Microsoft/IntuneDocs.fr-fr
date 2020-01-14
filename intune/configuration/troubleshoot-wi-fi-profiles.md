@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f5787509438ec3280f29be8449d78979806042
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542661"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547979"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Dépannage des profils de configuration d’appareil Wi-Fi dans Microsoft Intune
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Confirmez que le profil Wi-Fi est affecté au groupe approprié :
 
-    1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Profils de configuration**.
+    1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Profils de configuration**.
     2. Sélectionnez votre profil > **Attributions**. Vérifiez que les groupes sélectionnés sont corrects.
     3. Dans Endpoint Manager, sélectionnez **Dépannage + support**. Passez en revue les informations sur les **Affectations**.
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Vérifiez que tous les certificats requis dans la chaîne de certificats complète se trouvent sur l’appareil Android. Dans le cas contraire, le profil Wi-Fi ne peut pas être installé sur l’appareil. Pour plus d’informations, consultez [Autorité de certification intermédiaire manquante](https://developer.android.com/training/articles/security-ssl#MissingCa) (ouvre le site web d’Android).
   - Filtrez Omadmlog avec des mots-clés pour rechercher des informations, comme le certificat utilisé dans le profil Wi-Fi, et si le profil a été appliqué avec succès.
 
-    Par exemple, utilisez [CMTrace](https://docs.microsoft.com/sccm/core/support/cmtrace) pour lire les journaux. Utilisez la chaîne de recherche pour filtrer « wifimgr » :
+    Par exemple, utilisez [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) pour lire les journaux. Utilisez la chaîne de recherche pour filtrer « wifimgr » :
 
     > [!div class="mx-imgBorder"]
     > ![Filtrer CMTrace pour rechercher les profils de configuration WiFiMgr sur les appareils Android](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

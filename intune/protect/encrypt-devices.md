@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390338"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654258"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune
 
@@ -86,6 +86,10 @@ Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer
 Une fois qu’Intune a chiffré un appareil macOS avec FileVault, vous pouvez voir et gérer les clés de récupération FileVault quand vous consultez le [rapport de chiffrement](encryption-monitor.md) d’Intune.
 
 Une fois qu’Intune a chiffré un appareil macOS avec FileVault, vous pouvez afficher la clé de récupération personnelle de l’appareil à partir du portail d’entreprise web sur n’importe quel appareil. Une fois que vous êtes dans le portail d’entreprise web, choisissez l’appareil macOS chiffré, puis sélectionnez « Obtenir la clé de récupération » comme action d’appareil à distance.
+
+### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Récupérer une clé de récupération personnelle à partir d’appareils macOS chiffrés par MEM
+
+Les utilisateurs finaux seront en mesure de récupérer leur clé de récupération personnelle (clé FileVault) à l’aide de l’application Portail d’entreprise iOS. L’appareil qui a la clé de récupération personnelle doit être inscrit auprès d’Intune et chiffré avec FileVault via Intune. À l’aide de l’application Portail d’entreprise iOS, l’utilisateur final peut ouvrir une page Web qui comprend la clé de récupération personnelle FileVault. Vous pouvez également récupérer la clé de récupération d’Intune en sélectionnant **Appareils** > *l’appareil macOS chiffré et inscrit* > **Obtenir une clé de récupération**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Chiffrement BitLocker pour Windows 10
 

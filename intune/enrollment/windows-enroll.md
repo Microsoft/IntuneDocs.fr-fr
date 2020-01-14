@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b84cd52dfe2eb6332ddbc89bc00a17ec3361b79
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: add92c038e33ba1b5873eb0e9588242f8f3d0f57
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000429"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207432"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurer l’inscription d’appareils Windows
 
@@ -37,7 +37,7 @@ En tant qu’administrateur Intune, vous pouvez simplifier l’inscription de pl
 - [Inscription CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Activer l’inscription en bloc](../windows-bulk-enroll.md) (Azure AD Premium et le Concepteur de configuration Windows sont nécessaires)
 
-Deux facteurs déterminent la manière dont vous pouvez simplifier l’inscription des appareils Windows :
+Deux facteurs déterminent la façon dont vous pouvez simplifier l’inscription des appareils Windows :
 
 - **Utilisez-vous Azure Active Directory Premium ?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) est inclus avec Enterprise Mobility + Security et d’autres plans de licence.
 - **Quelles versions des clients Windows les utilisateurs vont-ils inscrire ?** <br>Les appareils Windows 10 peuvent s’inscrire automatiquement quand vous ajoutez un compte professionnel ou scolaire. L’inscription des versions antérieures doit s’effectuer à l’aide de l’application Portail d’entreprise.
@@ -70,7 +70,7 @@ Pour simplifier l’inscription, créez un alias DNS (serveur de noms de domaine
 **Étape 1 : Créer des enregistrements CNAME** (facultatif)<br>
 Créez des enregistrements de ressources CNAME DNS pour le domaine de votre entreprise. Par exemple, si le site web de votre entreprise est contoso.com, vous devez créer un enregistrement CNAME DNS qui redirige EnterpriseEnrollment.contoso.com vers EnterpriseEnrollment-s.manage.microsoft.com.
 
-Bien que la création d’entrées DNS CNAME soit facultative, les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur MDM (enrollment.manage.microsoft.com).
+La création d’entrées CNAME dans DNS est facultative, mais les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur de gestion des appareils mobiles (enrollment.manage.microsoft.com).
 
 |Type|Nom de l'hôte|Pointe vers|TTL|
 |----------|---------------|---------------|---|
@@ -128,7 +128,10 @@ Azure Active Directory a un CNAME (enregistrement de nom canonique) différent, 
 Pour plus d’informations sur l’inscription des appareils, consultez [Gérer les identités des appareils à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Inscription d’appareil et inscription automatique Windows 10
-Bien que la création d’entrées DNS CNAME soit facultative, les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur MDM (enrollment.manage.microsoft.us).
+
+Cette section s’applique aux clients du cloud US Government.
+
+La création d’entrées CNAME dans DNS est facultative, mais les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur MDM (enrollment.manage.microsoft.us).
 
 | Type | Nom de l'hôte | Pointe vers | TTL |
 | --- | --- | --- | --- |

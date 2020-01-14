@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4f5d3a232cab25c60189132732a0ea3f347c74a
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188253"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683797"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Utiliser Windows Hello Entreprise sur des appareils Windows 10 avec Microsoft Intune
 
@@ -33,7 +33,7 @@ Windows Hello Entreprise est une méthode de connexion aux appareils Windows qui
 Cette fonctionnalité s’applique aux appareils qui exécutent :
 
 - Windows 10 et versions ultérieures
-- Windows 10 Mobile
+- Windows 10 Mobile
 - Windows Holographic for Business
 
 Intune utilise des « profils de configuration » pour créer et personnaliser ces paramètres selon les besoins de votre organisation. Après avoir ajouté ces fonctionnalités à un profil, envoyez (push) ou déployez ces paramètres auprès des différents groupes d’utilisateurs et d’appareils de votre organisation.
@@ -48,7 +48,7 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
 
 3. Entrez les propriétés suivantes :
 
-   - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+   - **Nom** : Entrez un nom descriptif pour le nouveau profil.
    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
    - **Plateforme** : Sélectionnez **Windows 10 et ultérieur**. Windows Hello entreprise est uniquement pris en charge sur les appareils qui exécutent Windows 10 et versions ultérieures.
    - **Type de profil** : sélectionnez **Protection des identités**.
@@ -59,7 +59,7 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
 
      - **Non configuré** (par défaut) : [approvisionne Windows Hello Entreprise](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) sur l’appareil. Lorsque vous affectez des profils Identity Protection uniquement à des utilisateurs, le contexte d’appareil est défini par défaut sur **Non configuré**
 
-     - **Désactivé** : si vous ne souhaitez pas utiliser Windows Hello Entreprise, sélectionnez cette option. Elle désactive Windows Hello Entreprise pour tous les utilisateurs.
+     - **Disabled** : si vous ne souhaitez pas utiliser Windows Hello Entreprise, sélectionnez cette option. Elle désactive Windows Hello Entreprise pour tous les utilisateurs.
 
      - **Activé** : choisissez cette option pour [approvisionner](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) et configurer les paramètres Windows Hello Entreprise dans Intune. Entrez les paramètres à configurer. Pour connaître la liste de tous les paramètres ainsi que leur rôle, consultez [Paramètres des appareils Windows 10 permettant d’activer Windows Hello Entreprise](identity-protection-windows-settings.md).
 
@@ -71,6 +71,9 @@ Cet article explique comment créer un profil de configuration d’appareil. Pou
 5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications.
 
 Le profil est créé et apparaît dans la liste des profils. Ensuite, [affectez](../configuration/device-profile-assign.md) ce profil à des groupes d’utilisateurs et d’appareils pour répondre à vos besoins.
+
+> [!IMPORTANT]
+> Pour permettre à plusieurs utilisateurs d’être approvisionnés sur un appareil, spécifiez que la stratégie Windows Hello entreprise doit être appliquée aux appareils. Si la stratégie est appliquée uniquement aux utilisateurs, un seul utilisateur peut être approvisionné sur un appareil.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

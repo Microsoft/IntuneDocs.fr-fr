@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261569"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303076"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Ajouter des groupes pour organiser des utilisateurs et des appareils
 
@@ -47,7 +47,7 @@ Utilisez les étapes ci-après pour créer un groupe.
 
 3. Dans **Type de groupe**, choisissez l'une des options suivantes :
 
-    - **Sécurité** : Les groupes de sécurité définissent qui peut accéder aux ressources, et sont recommandés pour vos groupes dans Intune. Par exemple, vous pouvez créer des groupes pour les utilisateurs, comme **Tous les employés de Charlotte** ou **Toutes les femmes chez Contoso**. Vous pouvez aussi créer des groupes pour les appareils, comme **Tous les appareils iOS** ou **Tous les appareils d’élèves Windows 10**.
+    - **Sécurité** : Les groupes de sécurité définissent qui peut accéder aux ressources, et sont recommandés pour vos groupes dans Intune. Par exemple, vous pouvez créer des groupes pour les utilisateurs, comme **Tous les employés de Charlotte** ou **Travailleurs distants**. Vous pouvez aussi créer des groupes pour les appareils, comme **Tous les appareils iOS** ou **Tous les appareils d’élèves Windows 10**.
 
         > [!TIP]
         > Les utilisateurs et groupes créés peuvent également être consultés dans le [Centre d’administration Microsoft 365](https://admin.microsoft.com), le centre d’administration Azure Active Directory et [Microsoft Intune dans le portail Azure](https://go.microsoft.com/fwlink/?linkid=2090973). Dans le locataire de votre organisation, vous pouvez créer et gérer des groupes dans toutes ces zones.

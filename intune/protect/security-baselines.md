@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409996"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548147"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -113,7 +113,7 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
 4. Dans l'onglet **Notions de base**, spécifiez les propriétés suivantes :
 
-   - **Nom** : Entrez un nom pour votre profil de base de référence de sécurité. Par exemple, entrez *Profil standard pour Defender ATP*.
+   - **Nom** : Entrez un nom pour votre profil de base de référence de sécurité. Par exemple, entrez *Profil standard pour Defender ATP*.
 
    - **Description** : Entrez du texte qui décrit ce que fait cette base de référence. La description vous permet d’entrer n’importe quel texte. Elle est facultative mais recommandée.
 
@@ -192,9 +192,9 @@ Parmi les autres processus susceptibles de modifier ultérieurement les paramèt
 
 ## <a name="co-managed-devices"></a>Appareils cogérés
 
-Les bases de référence de sécurité sur les appareils managés par Intune sont similaires aux appareils comanagés avec Configuration Manager. Les appareils comanagés utilisent System Center Configuration Manager et Microsoft Intune pour gérer les appareils Windows 10 simultanément. Cela vous permet de joindre via le cloud votre investissement dans Configuration Manager existant aux avantages d’Intune. [Vue d’ensemble de la cogestion](https://docs.microsoft.com/sccm/comanage/overview) est une excellente ressource si vous utilisez Configuration Manager et souhaitez également bénéficier des avantages du cloud.
+Les bases de référence de sécurité sur les appareils managés par Intune sont similaires aux appareils comanagés avec Configuration Manager. Les appareils co-gérés utilisent Configuration Manager et Microsoft Intune pour gérer les appareils Windows 10 simultanément. Cela vous permet de joindre via le cloud votre investissement dans Configuration Manager existant aux avantages d’Intune. [Vue d’ensemble de la cogestion](https://docs.microsoft.com/configmgr/comanage/overview) est une excellente ressource si vous utilisez Configuration Manager et souhaitez également bénéficier des avantages du cloud.
 
-Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de travail **Configuration de l’appareil** (ses paramètres) vers Intune. Vous trouverez des informations supplémentaires dans [Charges de travail de configuration d’appareil](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).
+Lorsque vous utilisez des appareils comanagés, vous devez basculer la charge de travail **Configuration de l’appareil** (ses paramètres) vers Intune. Vous trouverez des informations supplémentaires dans [Charges de travail de configuration d’appareil](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration).
 
 ## <a name="q--a"></a>Questions et réponses
 

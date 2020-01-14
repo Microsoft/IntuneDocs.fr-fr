@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
+ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410120"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556400"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et les profils dans Microsoft Intune
 
@@ -42,11 +42,15 @@ Le volet **Vue d’ensemble** propose deux méthodes pour superviser l’état 
 - **Vue de l’appareil** : synthèse du nombre d’appareils figurant dans chaque catégorie d’état pour la base de référence.
 - **Par catégorie** : vue qui montre chaque catégorie dans la base de référence et inclut le pourcentage d’appareils pour chaque groupe d’état pour chaque catégorie de base de référence.
 
-Chaque appareil est représenté par l’un des états suivants, qui sont utilisés à la fois dans la vue *appareil* et dans les vues *par catégorie* :
+Chaque appareil est représenté par l’un des états suivants (utilisés à la fois dans la vue *appareil* et dans les vues *par catégorie*) :
 
 - **Correspond à la base de référence** : tous les paramètres de la base de référence correspondent aux paramètres recommandés.
-- **Ne correspond pas à la base de référence** : au moins un paramètre de la base de référence ne correspond pas aux paramètres recommandés.
-- **Mal configuré** : au moins un paramètre n’est pas correctement configuré. Cet état signifie que le paramètre se trouve dans un état de conflit, d’erreur ou d’attente.
+- **Ne correspond pas à la ligne de base** : au moins un paramètre de la ligne de base ne correspond pas aux paramètres recommandés.
+
+  > [!NOTE]
+  > Lorsque vous créez ou modifiez un profil de ligne de base, toute modification apportée à une valeur ou à un paramètre de configuration par défaut entraîne l’apparition d’un État « ne correspond pas à la ligne de base ». Pour obtenir de l’aide afin de déterminer les paramètres qui ont été modifiés, contactez le Support Microsoft. 
+
+- **Misconfigured** : au moins un paramètre n’est pas correctement configuré. Cet état signifie que le paramètre se trouve dans un état de conflit, d’erreur ou d’attente.
 - **Non applicable** : au moins un paramètre n’est pas applicable et n’est pas appliqué.
 
 ### <a name="device-view"></a>Vue de l’appareil

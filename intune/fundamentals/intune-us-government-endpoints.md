@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d876c0268f38a09ea3729a7e19ee00b321ae897a
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: 02c1508dd3eb9c8a8932c1504c6f4d0a53c5a0d5
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000395"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207381"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Points de terminaison du gouvernement américain pour Microsoft Intune
 
@@ -37,6 +37,8 @@ Pour gérer les appareils qui se trouvent derrière des pare-feu et des serveurs
 Vous pouvez modifier les paramètres du serveur proxy sur des ordinateurs clients. Vous pouvez également utiliser des paramètres de stratégie de groupe pour modifier les paramètres pour tous les ordinateurs clients situés derrière un serveur proxy spécifié.
 
 Les appareils gérés nécessitent des configurations qui permettent à **Tous les utilisateurs** d’accéder à des services à travers des pare-feu.
+
+Pour plus d’informations sur l’accord de mise en œuvre automatique et l’inscription de périphériques Windows 10 pour les clients US Government, consultez [Configurer l’accord de mise en œuvre pour les périphériques Windows](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration).
 
 Les tableaux suivants répertorient les ports et services auxquels le client Intune accède :
 
@@ -78,4 +80,3 @@ Pour plus d'informations, voir :
 ## <a name="next-steps"></a>Étapes suivantes
 [Points de terminaison réseau pour Microsoft Intune](intune-endpoints.md)
 
-[Inscription d’appareil et inscription automatique Windows 10](../enrollment/windows-enroll.md#registration-and-enrollment-cnames)

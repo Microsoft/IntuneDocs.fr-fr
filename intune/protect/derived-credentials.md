@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4d0772f9a0afce0607d0193bfb82ea6bd22709d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445315"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207199"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Utiliser des informations d’identification dérivées dans Microsoft Intune
 
@@ -160,28 +160,30 @@ Créez de nouvelles stratégies ou modifiez des stratégies existantes pour util
 
 Avant de créer des stratégies qui nécessitent l’utilisation d’informations d’identification dérivées, configurez un émetteur d’informations d’identification dans la console Intune. Un émetteur d’informations d’identification dérivées est un paramètre à l’échelle du locataire. Les locataires prennent en charge un seul émetteur à la fois.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et accédez à **Configuration de l’appareil** > **Informations d’identification dérivées**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Administration abonné** > **Connecteurs et jetons** > **Informations de connexion dérivées**.
 
-   ![Configurer les informations d’identification dérivées dans la console](./media/derived-credentials/configure-provider.png)
+    > [!div class="mx-imgBorder"]
+    > ![Configurer les informations de connexion dans la console](./media/derived-credentials/configure-provider.png)
 
-2. Spécifiez un **nom complet** convivial pour la stratégie d’émetteur d’informations d’identification dérivées.  Ce nom n’est pas indiqué à vos utilisateurs d’appareils.
+3. Spécifiez un **nom complet** convivial pour la stratégie d’émetteur d’informations d’identification dérivées.  Ce nom n’est pas indiqué à vos utilisateurs d’appareils.
 
-3. Pour **Émetteur des informations d’identification dérivées**, sélectionnez l’émetteur d’informations d’identification dérivées que vous avez choisi pour votre locataire :
+4. Pour **Émetteur des informations d’identification dérivées**, sélectionnez l’émetteur d’informations d’identification dérivées que vous avez choisi pour votre locataire :
    - DISA Purebred
    - Entrust Datacard
    - Intercede  
 
-4. Spécifiez une **URL d’aide sur les informations d’identification dérivées** pour fournir un lien vers un emplacement contenant des instructions personnalisées qui aideront les utilisateurs à obtenir des informations d’identification dérivées pour votre organisation. Ces instructions doivent être spécifiques à votre organisation et au workflow nécessaire pour obtenir des informations d’identification auprès de l’émetteur que vous avez choisi. Le lien est fourni dans l’application Portail d’entreprise et doit être accessible depuis l’appareil.
+5. Spécifiez une **URL d’aide sur les informations d’identification dérivées** pour fournir un lien vers un emplacement contenant des instructions personnalisées qui aideront les utilisateurs à obtenir des informations d’identification dérivées pour votre organisation. Ces instructions doivent être spécifiques à votre organisation et au workflow nécessaire pour obtenir des informations d’identification auprès de l’émetteur que vous avez choisi. Le lien est fourni dans l’application Portail d’entreprise et doit être accessible depuis l’appareil.
 
    Si vous ne spécifiez pas votre propre URL, Intune fournit un lien vers des détails génériques qui ne peuvent pas couvrir tous les scénarios. Ces instructions générales risquent de ne pas être exactes pour votre environnement.
 
-5. Sélectionnez une ou plusieurs options pour **Type de notification**. Les types de notification sont les méthodes que vous utilisez pour informer les utilisateurs au sujet des scénarios suivants :
+6. Sélectionnez une ou plusieurs options pour **Type de notification**. Les types de notification sont les méthodes que vous utilisez pour informer les utilisateurs au sujet des scénarios suivants :
 
    - Inscrire un appareil auprès d’un émetteur pour obtenir de nouvelles informations d’identification dérivées.
    - Obtenir de nouvelles informations d’identification dérivées lorsque les informations d’identification actuelles sont sur le point d’expirer.
    - Utiliser des informations d’identification dérivées avec une stratégie pour l’authentification auprès des applications, du Wi-Fi, des réseaux VPN et de la messagerie, ainsi que pour la signature et le chiffrement S/MIME.
 
-6. Quand vous êtes prêt, sélectionnez **Enregistrer** pour terminer la configuration de l’émetteur d’informations d’identification dérivées.
+7. Quand vous êtes prêt, sélectionnez **Enregistrer** pour terminer la configuration de l’émetteur d’informations d’identification dérivées.
 
 Une fois la configuration enregistrée, vous pouvez apporter des modifications dans tous les champs, à l’exception de *Émetteur des informations d’identification dérivées*.  Pour changer d’émetteur, consultez [Changer d’émetteur d’informations d’identification dérivées](#change-the-derived-credential-issuer).
 
@@ -216,19 +218,20 @@ Vous pouvez spécifier des **informations d’identification dérivées** pour l
 
 ### <a name="use-derived-credentials-for-app-authentication"></a>Utiliser des informations d’identification dérivées pour l’authentification auprès des applications
 
-Utilisez des informations d’identification dérivées pour bénéficier d’une authentification basée sur un certificat auprès des applications et des sites web. Pour fournir des informations d’identification dérivées pour une authentification auprès des applications, procédez comme suit dans la console Intune :  
+Utilisez des informations d’identification dérivées pour bénéficier d’une authentification basée sur un certificat auprès des applications et des sites web. Pour fournir des informations de connexion pour l’authentification de l’application :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), accédez à **Configuration de l’appareil** > **Profils**et sélectionnez **Créer un profil**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
+3. Saisissez les paramètres suivants :
 
-2. Entrez un nom convivial pour le profil, sous **Nom**.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **Informations de connexion dérivées pour les profil des appareils iOS**.
+    - **Description** : entrez une description qui présente le paramètre et tout autre détail important.
+    - **Plateforme** : Sélectionnez **iOS/iPadOS**.
+    - **Type de profil** : Sélectionnez **Informations de connexion dérivées**.
 
-3. Pour l’option **Plateforme**, sélectionnez **iOS**.
-
-4. Pour **Type de profil**, sélectionnez **Informations d’identification dérivées**.
-
-5. Sélectionnez **OK**, puis cliquez sur **Créer**.
-
-6. Sélectionnez **Affectations** pour choisir les groupes qui doivent recevoir la stratégie.
+4. Cliquez sur **OK** pour enregistrer vos modifications.
+5. Une fois terminé, sélectionnez **OK** > **Créer** pour créer le profil Intune. Quand vous avez terminé, votre profil apparaît dans la liste **Profils des appareils - de configuration**.
+6. Sélectionnez votre nouveau profil > **Affectation**. Sélectionnez les groupes qui recevront la stratégie.
  
 Les utilisateurs reçoivent l’application ou une notification par e-mail selon les paramètres que vous avez spécifiés quand vous avez configuré l’émetteur d’informations d’identification dérivées. La notification informe l’utilisateur qu’il doit lancer l’application Portail d’entreprise pour que les stratégies d’informations d’identification dérivées puissent être traitées.
 
@@ -252,11 +255,10 @@ Après avoir changé d’émetteur, les utilisateurs sont invités à obtenir de
 > [!IMPORTANT]  
 > Si vous supprimez un émetteur et reconfigurez immédiatement le même émetteur, vous devez encore mettre à jour les profils et les appareils pour utiliser les informations d’identification dérivées de cet émetteur. Les informations d’identification dérivées obtenues avant la suppression de l’émetteur ne sont plus valides.
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) et accédez à **Configuration de l’appareil** > **Informations d’identification dérivées**.
-
-2. Sélectionnez **Supprimer** pour supprimer l’émetteur d’informations d’identification dérivées actuel.
-
-3. Configurez un nouvel émetteur.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Administration abonné** > **Connecteurs et jetons** > **Informations de connexion dérivées**.
+3. Sélectionnez **Supprimer** pour supprimer l’émetteur d’informations d’identification dérivées actuel.
+4. Configurez un nouvel émetteur.
 
 ### <a name="update-profiles-that-use-derived-credentials"></a>Mettre à jour les profils qui utilisent des informations d’identification dérivées
 
@@ -268,4 +270,4 @@ Après avoir supprimé un émetteur, puis en avoir ajouté un nouveau, les utili
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Créer des profils de configuration d’appareil](../configuration/device-profile-create.md)
+[Créer des profils de configuration d’appareil](../configuration/device-profile-create.md).

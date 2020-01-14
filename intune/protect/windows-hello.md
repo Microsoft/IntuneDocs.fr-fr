@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7ce6def40c6c0fff3a28f884c458220283979234
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 001e68fdbab7074abb4e1bbefc697d3e34c47762
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465770"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683780"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Intégrer Windows Hello Entreprise à Microsoft Intune  
 
@@ -53,9 +53,9 @@ Utilisez cet article pour créer une stratégie Windows Hello Entreprise par dé
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Créer une stratégie Windows Hello Entreprise
 
-1. Connectez-vous au [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Accédez à **Appareils** > inscription** > **Inscrire des appareils** > **Inscription Windows** > **Windows Hello Entreprise**. Le volet Windows Hello Entreprise s’ouvre.
+2. Accédez à **Appareils** >  **Accord de mise en œuvre** > **Inscrire des appareils** > **Accord de mise en œuvre** > **Windows Hello Entreprise**. Le volet Windows Hello Entreprise s’ouvre.
 
 3. Sélectionnez l'une des options suivantes pour **Configurer Windows Hello Entreprise** :
 
@@ -90,7 +90,7 @@ Utilisez cet article pour créer une stratégie Windows Hello Entreprise par dé
 
    - **Expiration du code PIN (en jours)**  :
 
-     Nous vous conseillons de spécifier une période d’expiration pour un code confidentiel, après laquelle les utilisateurs finaux doivent le modifier. La valeur par défaut est 41 jours.
+     Nous vous conseillons de spécifier une période d’expiration pour un code confidentiel, après laquelle les utilisateurs finaux doivent le modifier. La valeur par défaut est 41 jours.
 
    - **Conserver l’historique des codes PIN** :
 

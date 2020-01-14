@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832720"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547805"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Résoudre les problèmes d’inscription d’appareils dans Microsoft Intune
 
@@ -113,7 +113,7 @@ Pour éviter d’atteindre le nombre maximal d’appareils, supprimez les enregi
 
     4. Réactivez DirSync et vérifiez que l’utilisateur est à présent correctement synchronisé.
 
-3. Dans le cas où vous utilisez System Center Configuration Manager avec Intune, vérifiez que l’utilisateur dispose d’un identifiant utilisateur Cloud valide :
+3. Dans le cas où vous utilisez Configuration Manager avec Intune, vérifiez que l’utilisateur dispose d’un identifiant utilisateur cloud valide :
 
     1. Ouvrez SQL Management Studio.
 
@@ -332,7 +332,7 @@ Pour plus d’informations, consultez [Meilleures pratiques pour la sécurisatio
 
 5. Vérifiez que Safari pour iOS est le navigateur par défaut et que les cookies sont activés.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>L’appareil iOS inscrit n’apparaît pas dans la console lors de l’utilisation de System Center Configuration Manager avec Intune
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>L’appareil iOS inscrit n’apparaît pas dans la console lors de l’utilisation de Configuration Manager avec Intune
 **Problème :** L’utilisateur inscrit l’appareil iOS, mais celui-ci n’apparaît pas dans la console d’administration de Configuration Manager. L’appareil n’indique pas qu’il a été inscrit. Causes possibles :
 
 - Le connecteur Microsoft Intune sur votre site Configuration Manager ne communique pas avec le service Intune.
@@ -419,7 +419,7 @@ Une fois que vous avez réinitialisé les appareils bloqués, vous pouvez demand
     3. Recherchez l’appareil qui rencontre le problème d’inscription. Recherchez l’appareil par son nom ou son adresse MAC/HW pour limiter les résultats.
     4. Sélectionnez l’appareil > **Supprimer**. Supprimez toutes les autres entrées associées à l’appareil.  
 
-## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problèmes quand vous utilisez System Center Configuration Manager avec Intune
+## <a name="issues-when-using-configuration-manager-with-intune"></a>Problèmes quand vous utilisez Configuration Manager avec Intune
 
 ### <a name="mobile-devices-disappear"></a>Les appareils mobiles disparaissent
 
@@ -433,7 +433,7 @@ Pour identifier le processus ou le compte d’utilisateur qui a supprimé l’ap
 
 #### <a name="check-how-device-was-removed"></a>Vérifier comment l’appareil a été supprimé
 
-1. Dans la console d’administration Configuration Manager, sélectionnez **Analyse** &gt; **État du système** &gt; **Requêtes sur les messages d’état**.
+1. Dans la console d’administration Configuration Manager, sélectionnez **Analyse** &gt; **État du système** &gt; **Requêtes pour message d’état**.
 
 2. Cliquez avec le bouton droit sur **Ressources du membre pour un regroupement supprimées manuellement**, puis sélectionnez **Afficher les messages**.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 88b7411095aee1b1d3a892ce4845812ceb1a9ac9
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390303"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547075"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Créer et attribuer des profils de certificat SCEP dans Intune
 
@@ -58,7 +58,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
    
 7. Sélectionnez **Paramètres**, puis effectuez les configurations suivantes :
 
-   - **Type de certificat** :
+   - **Type de certificat** :
 
      *(S’applique à :  Android, Android Entreprise, iOS, macOS, Windows 8.1 et versions ultérieures, et Windows 10 et versions ultérieures.)*
 
@@ -69,7 +69,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
        Utilisez **Appareil** dans les scénarios de type appareils sans utilisateur (kiosques) ou pour les appareils Windows. Sur les appareils Windows, le certificat est placé dans le magasin de certificats de l’ordinateur local.
 
-   - **Format du nom de l'objet** :
+   - **Format du nom de l’objet** :
 
      sélectionnez la manière dont Intune crée automatiquement le nom de l'objet dans la demande de certificat. Les options de format du nom de l’objet dépendent du type de certificat que vous sélectionnez, **Utilisateur** ou **Appareil**.
 
@@ -131,7 +131,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
         > - Les propriétés de l’appareil utilisées dans l’*objet* ou le *SAN* d’un certificat d’appareil, par exemple, **IMEI**, **SerialNumber** et **FullyQualifiedDomainName**, sont des propriétés qui peuvent être usurpées par quiconque a accès à l’appareil.
         > - Un appareil doit prendre en charge toutes les variables spécifiées dans un profil de certificat pour que ce profil s’installe sur cet appareil.  Par exemple, si **{{IMEI}}** est utilisé dans le nom d’objet d’un profil SCEP et correspond à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.
 
-   - **Autre nom de l'objet** : Sélectionnez la manière dont Intune crée automatiquement l’autre nom de l’objet (SAN) dans la demande de certificat. Les options de SAN dépendent du type de certificat que vous sélectionnez, **Utilisateur** ou **Appareil**.
+   - **Autre nom de l’objet** : Sélectionnez la manière dont Intune crée automatiquement l’autre nom de l’objet (SAN) dans la demande de certificat. Les options de SAN dépendent du type de certificat que vous sélectionnez, **Utilisateur** ou **Appareil**.
 
       - **Type de certificat Utilisateur**
 
@@ -173,7 +173,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
         > - Les propriétés de l’appareil utilisées dans l’*objet* ou le *SAN* d’un certificat d’appareil, par exemple, **IMEI**, **SerialNumber** et **FullyQualifiedDomainName**, sont des propriétés qui peuvent être usurpées par quiconque a accès à l’appareil.
         > - Un appareil doit prendre en charge toutes les variables spécifiées dans un profil de certificat pour que ce profil s’installe sur cet appareil.  Par exemple, si **{{IMEI}}** est utilisé dans le SAN d’un profil SCEP et correspond à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.
 
-   - **Période de validité du certificat** :
+   - **Période de validité du certificat** :
 
      Vous pouvez entrer une valeur inférieure à la période de validité du modèle de certificat, mais pas une valeur supérieure. Si vous avez configuré le modèle de certificat pour [prendre en charge une valeur personnalisée pouvant être définie dans la console Intune](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), utilisez ce paramètre pour spécifier la durée restante avant expiration du certificat.
 
@@ -190,14 +190,14 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
      - **Inscrire auprès de Passport, sinon mettre en échec (Windows 10 et versions ultérieures)**
      - **Inscrire auprès du fournisseur de stockage de clés du logiciel**
 
-   - **Utilisation de la clé** :
+   - **Utilisation de la clé** :
 
      Spécifiez les options d’utilisation de la clé pour le certificat :
 
-     - **Signature numérique** : Autorisez l’échange de clé uniquement quand une signature numérique protège la clé.
-     - **Chiffrement de la clé** : Autorisez l’échange de clé uniquement quand la clé est chiffrée.
+     - **Signature numérique** : Autorisez l’échange de clé uniquement quand une signature numérique protège la clé.
+     - **Chiffrage de clés** : Autorisez l’échange de clé uniquement quand la clé est chiffrée.
 
-   - **Taille de la clé (bits)** :
+   - **Taille de clé (bits)**  :
 
      Sélectionnez le nombre de bits contenus dans la clé.
 
@@ -211,11 +211,11 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
      Sélectionnez le *profil de certificat approuvé* que vous avez précédemment configuré et attribué aux utilisateurs et appareils applicables pour ce profil de certificat SCEP. Le profil de certificat approuvé est utilisé pour provisionner le certificat d’autorité de certification racine de confiance pour des utilisateurs et des appareils. Pour plus d’informations sur le profil de certificat approuvé, consultez [Exporter votre certificat d’autorité de certification racine de confiance](certificates-configure.md#export-the-trusted-root-ca-certificate) et [Créer des profils de certificat approuvés](certificates-configure.md#create-trusted-certificate-profiles) dans *Utiliser des certificats pour l’authentification dans Intune*. Si vous avez une autorité de certification racine et une autorité de certification émettrice, sélectionnez le profil Certificat racine approuvé associé à l’autorité de certification émettrice.
 
-   - **Utilisation avancée de la clé** :
+   - **Utilisation améliorée de la clé** :
 
      Ajoutez des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une *authentification client* pour que l’utilisateur ou l’appareil puisse être authentifié sur un serveur. Vous pouvez ajouter des utilisations de clé supplémentaires selon les besoins.
 
-   - **Seuil de renouvellement (%)** :
+   - **Seuil de renouvellement (%)**  :
 
      entrez le pourcentage de durée de vie restante du certificat avant que l'appareil ne demande le renouvellement du certificat. Par exemple, si vous entrez la valeur 20, le renouvellement du certificat est tenté quand le certificat arrive à 80 % d’expiration. Les tentatives de renouvellement se poursuivent jusqu’à ce que le renouvellement réussisse. Le renouvellement génère un nouveau certificat, lui-même entraînant la création d’une nouvelle paire de clés publique/privée.
 
@@ -275,7 +275,7 @@ Attribuez des profils de certificat SCEP de la même façon que vous [déployez 
 
 - Pour publier un certificat sur un appareil rapidement après l’inscription de l’appareil, affectez le profil de certificat à un groupe d’utilisateurs plutôt qu’à un groupe d’appareils. Si vous l’affectez à un groupe d’appareils, une inscription complète des appareils est préalablement nécessaire pour qu’ils puissent recevoir des stratégies.
 
-- Si vous utilisez la cogestion pour Intune et Configuration Manager, dans Configuration Manager [mettez le curseur de la charge de travail](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pour la stratégie d’accès aux ressources sur **Intune** ou sur **Pilote Intune**. Ces paramètres permettent aux clients Windows 10 de démarrer le processus de demande de certificat.
+- Si vous utilisez la cogestion pour Intune et Configuration Manager, dans Configuration Manager [définissez le curseur de la charge de travail](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) pour la stratégie d’accès aux ressources sur **Intune** ou sur **Pilote Intune**. Ces paramètres permettent aux clients Windows 10 de démarrer le processus de demande de certificat.
 
 - Même si vous créez et attribuez le profil de certificat approuvé et le profil de certificat SCEP séparément, les deux doivent être attribués. Si les deux ne sont pas installés sur un appareil, la stratégie de certificat SCEP échoue. Veillez à ce que tous les profils de certificat racine approuvé soient également déployés sur les mêmes groupes que le profil SCEP.
 

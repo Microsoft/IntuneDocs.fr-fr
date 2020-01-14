@@ -1,6 +1,6 @@
 ---
 title: Fonctionnalités et paramètres d’appareil dans Microsoft Intune - Azure | Microsoft Docs
-description: Vue d’ensemble des différents profils d’appareil Microsoft Intune. Obtenez des informations sur les profils de fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, Éducation, certificats, mise à niveau Windows 10, BitLocker et Microsoft Defender, Protection des informations Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le Portail Azure. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
+description: Vue d’ensemble des différents profils d’appareil Microsoft Intune. Obtenez des informations sur les fonctionnalités, restrictions, e-mail, Wi-Fi, VPN, éducation certificats, mise à niveau Windows 10, BitLocker et Microsoft Defender, Information Protection Windows, modèles d’administration et paramètres de configuration d’appareil personnalisés dans le centre d’administration Microsoft Endpoint Manager. Utilisez ces profils pour gérer et protéger les données et les appareils de votre entreprise.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
-ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
+ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74694945"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206616"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Microsoft Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS, Android et Windows. Ensuite, utilisez Intune pour appliquer ou « attribuer » le profil aux appareils.
 

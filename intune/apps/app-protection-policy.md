@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: f11ccb51e08e96595dfcb9118c1f479f1b0fc3de
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899428"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692119"
 ---
 # <a name="app-protection-policies-overview"></a>Vue d’ensemble des stratégies de protection des applications
 
@@ -95,7 +95,7 @@ Lorsque les applications sont utilisées sans aucune restriction, les données d
 ### <a name="data-protection-with-app-protection-policies-app"></a>Protection des données avec stratégies de protection des applications (APP)
 
 Vous pouvez utiliser des stratégies de protection des applications pour empêcher l’enregistrement des données de l’entreprise sur le stockage local de l’appareil (voir l’image ci-dessous). Vous pouvez également limiter le déplacement de données vers d’autres applications qui ne sont pas protégées par des stratégies de protection des applications. Les paramètres de stratégie de protection d’application comprennent :
-- Des stratégies de réadressage des données comme **Empêcher Enregistrer sous** et **Restreindre les opérations Couper, Copier et Coller**.
+- Des stratégies de mutation des données comme **Enregistrer des copies de données d’organisation** et **Restreindre les opérations de couper, copier et coller**.
 - Des paramètres de stratégie d’accès comme **Demander un code confidentiel simple pour l’accès** et **Bloquer l’exécution des applications gérées sur les appareils jailbreakés ou rootés**.
 
 ![Image conceptuelle montrant des données d’entreprise protégées par des stratégies](./media/app-protection-policy/apps-with-protection-policies.png)
@@ -169,7 +169,7 @@ Les exigences supplémentaires pour utiliser [les applications mobiles Word, Exc
 
 - L’utilisateur final doit disposer d’une licence pour [Office 365 Business ou Entreprise](https://products.office.com/business/compare-more-office-365-for-business-plans), associée à son compte Azure Active Directory. L’abonnement doit inclure les applications Office sur des appareils mobiles et peut inclure un compte de stockage cloud avec [OneDrive Entreprise](https://onedrive.live.com/about/business/). Des licences Office 365 peuvent être attribuées dans le [centre d’administration Microsoft 365](https://admin.microsoft.com) en tenant compte des [instructions suivantes](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- L’utilisateur final doit avoir configuré un emplacement géré à l’aide de la fonctionnalité granulaire Enregistrer sous, qui se trouve sous le paramètre de stratégie de protection des applications « Empêcher Enregistrer sous ». Si, par exemple, l’emplacement géré est OneDrive, l’application [OneDrive](https://onedrive.live.com/about/) doit être configurée dans l’application Word, Excel ou PowerPoint de l’utilisateur final.
+- L’utilisateur final doit avoir configuré un emplacement géré à l’aide de la fonctionnalité granulaire Enregistrer sous, qui se trouve sous le paramètre de stratégie de protection des applications « Enregistrer des copies des données de l’organisation ». Si, par exemple, l’emplacement géré est OneDrive, l’application [OneDrive](https://onedrive.live.com/about/) doit être configurée dans l’application Word, Excel ou PowerPoint de l’utilisateur final.
 
 - Si l’emplacement géré est OneDrive, l’application doit être ciblée par la stratégie de protection des applications déployée pour l’utilisateur final.
 

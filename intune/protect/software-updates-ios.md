@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bb146fdee7a1d7d770575334eeed84f73cda8894
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73984199"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207483"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Ajouter des stratégies de mise à jour de logiciel iOS dans Intune
 
@@ -32,8 +32,8 @@ L’appareil effectue une vérification auprès d’Intune toutes les huit heur
 
 ## <a name="configure-the-policy"></a>Configurer la stratégie
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Mises à jour logicielles** > **Mettre à jour les stratégies pour iOS** > **Créer**.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Appareils** > **Mettre à jour les stratégies pour iOS** > **Créer**.
 3. Sous l’onglet **De base**, spécifiez un nom pour cette stratégie, spécifiez une description (facultatif), puis sélectionnez **Suivant**.
 
    ![Onglet De base](./media/software-updates-ios/basics-tab.png) 
@@ -77,7 +77,7 @@ Pour obtenir des conseils de la part de l’équipe du support technique Intune,
 ## <a name="edit-a-policy"></a>Modifier une stratégie
 Vous pouvez modifier une stratégie existante, notamment en changeant les heures restreintes :
 
-1. Dans **Mises à jour logicielles**, sélectionnez **Mettre à jour les stratégies pour iOS**, puis sélectionnez la stratégie que vous souhaitez modifier.
+1. Sélectionnez **Appareils** > **Mettre à jour les stratégies pour iOS**. Sélectionnez la stratégie à modifier.
 
 2. Lorsque vous voyez les **propriétés** des stratégies, sélectionnez **Modifier** pour la page de stratégie que vous souhaitez modifier.  
    ![Modifier une stratégie](./media/software-updates-ios/edit-policy.png)   

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8c756ad2df00a97df7289491daf830e584c0045
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 2fa80697f24167e2a9634bd506e9548ca654129f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410209"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547096"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune
 
@@ -108,9 +108,7 @@ Il n’est nécessaire d’activer Defender – PACM qu’une seule fois par loc
 
 Une fois que vous avez établi la connexion de service à service entre Intune et Microsoft Defender ATP, vous intégrez vos appareils gérés par Intune à ATP afin que les données relatives à leur niveau de risque puissent être collectées et utilisées. Utilisez un profil de configuration d’appareil pour intégrer des périphériques avec Microsoft Defender ATP.
 
-Lorsque vous avez établi la connexion à Microsoft Defender ATP, Intune a reçu un package de configuration d’intégration Microsoft Defender ATP de Microsoft Defender ATP. Ce package est déployé sur des périphériques avec le profil de configuration de l’appareil. Le package de configuration configure des périphériques qui communiquent avec les [services Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) pour analyser les fichiers, détecter les menaces et signaler le niveau de risque à Microsoft Defender ATP.
-
-Si vous avez intégré un appareil à l’aide du package de configuration, vous n’avez pas besoin de le refaire. Vous pouvez également intégrer les appareils [à l’aide d’une stratégie de groupe ou de SCCM (System Center Configuration Manager)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Lorsque vous avez établi la connexion à Microsoft Defender ATP, Intune a reçu un package de configuration d’intégration Microsoft Defender ATP de Microsoft Defender ATP. Ce package est déployé sur des périphériques avec le profil de configuration de l’appareil. Le package de configuration configure des périphériques qui communiquent avec les [services Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) pour analyser les fichiers, détecter les menaces et signaler le niveau de risque à Microsoft Defender ATP. Si vous avez intégré un appareil à l’aide du package de configuration, vous n’avez pas besoin de le refaire. Vous pouvez également intégrer les appareils à l’aide d’une [stratégie de groupe ou de Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile"></a>Créer un profil de configuration d’appareil
 
@@ -129,7 +127,7 @@ Si vous avez intégré un appareil à l’aide du package de configuration, vous
    - **Partage d’exemples pour tous les fichiers** : Si ce paramètre est **activé**, permet de collecter des exemples et de les partager avec Microsoft Defender ATP. Par exemple, si vous constatez la présence d’un fichier suspect, vous pouvez le soumettre à Microsoft Defender ATP pour effectuer une analyse approfondie. **Non configuré** ne partage pas les exemples avec Microsoft Defender ATP.
    - **Augmenter la fréquence des rapports de télémétrie** : si vous avez des appareils à haut risque, **activez** ce paramètre pour qu’ils envoient des données de télémétrie au service Microsoft Defender ATP plus fréquemment.
 
-     [Intégrer des ordinateurs Windows 10 à l’aide de System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) offre plus de détails sur ces paramètres Microsoft Defender ATP.
+     [Intégrer des ordinateurs Windows 10 à l’aide de Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) offre plus de détails sur ces paramètres Microsoft Defender ATP.
 
 7. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer le profil.
 8. [Utilisez un profil de configuration d’appareil](../configuration/device-profile-assign.md) pour des périphériques que vous souhaitez évaluer avec Microsoft Defender ATP.
@@ -151,8 +149,8 @@ La stratégie de conformité détermine le niveau de risque que vous considérez
 
    - **Sans risque** : ce niveau est le plus sûr. Si l’appareil fait l’objet de menaces, il ne peut pas accéder aux ressources de l’entreprise. Si des menaces sont détectées, l’appareil est évalué comme non conforme. (Microsoft Defender ATP utilise la valeur *Sécurisé*.)
    - **Faible** : l’appareil est conforme uniquement si les menaces détectées sont de niveau faible. Les appareils avec des niveaux de menace moyen ou élevé ne sont pas conformes.
-   - **Moyen** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
-   - **Élevé** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
+   - **Moyenne** : l’appareil est conforme si les menaces détectées sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées, l’appareil est considéré comme non conforme.
+   - **Élevée** : ce niveau est le moins sûr et permet tous les niveaux de menace. Les appareils dont le niveau de menace est élevé, moyen ou faible sont donc considérés comme conformes.
 
 7. Sélectionnez **OK**, puis **Créer** pour enregistrer vos changements et créer la stratégie.
 8. [Attribuez la stratégie de conformité de l’appareil](create-compliance-policy.md#assign-the-policy) aux groupes applicables.

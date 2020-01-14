@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b2083a493fd723c649bdfe2b709dbaa4c0ec663
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: baeece091358a7cd05f0d1f8db7c0032870fc262
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810276"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207092"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
 Intune s’intègre avec les partenaires de contrôle d’accès réseau pour aider les organisations à sécuriser les données d’entreprise quand des appareils tentent d’accéder à des ressources locales.
+
+>[!IMPORTANT]
+> Le NAC n’est actuellement pas pris en charge pour les appareils Android Enterprise complètement managés ou dédiés.
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Comment les solutions de contrôle d’accès réseau et Intune aident-ils à protéger les ressources de votre organisation ?
 
@@ -34,7 +37,7 @@ Les solutions de contrôle d’accès réseau vérifient l’état de conformit�
 
 ### <a name="example"></a>Exemple
 
-Si l’appareil est inscrit et conforme avec Intune, la solution de contrôle d’accès réseau doit autoriser l’accès aux ressources d’entreprise à l’appareil. Par exemple, l’accès peut être accordé ou refusé aux utilisateurs quand ils tentent d’accéder aux ressources d’entreprise par Wi-Fi ou VPN.
+Si l’appareil est inscrit et conforme avec Intune, la solution de contrôle d’accès réseau doit autoriser l’accès aux ressources d’entreprise à l’appareil. Par exemple, l’accès peut être accordé ou refusé aux utilisateurs quand ils tentent d’accéder aux ressourcesd’entreprise par Wi-Fi ou VPN.
 
 ## <a name="feature-behaviors"></a>Comportements des fonctionnalités
 

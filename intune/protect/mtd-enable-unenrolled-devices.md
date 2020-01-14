@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84f82cf2fde7d400e5531bac219b6cbb4877032f
-ms.sourcegitcommit: 960ffb2214c35d75ad219fa2571a999529a0abd4
+ms.openlocfilehash: 9571f7d0ae10f33007d5ae50b403580232c2e870
+ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74478931"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545926"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Activer le connecteur Mobile Threat Defense dans Intune pour les appareils non inscrits
 
@@ -62,11 +62,11 @@ Pour afficher les stratégies d’accès conditionnel classiques, dans [Azure](h
 
     <!-- ![MTD setup in Intune](PLACEHOLDER, need a new screenshot of this page) -->
 
-5. Modifiez les options en fonction des besoins de votre organisation. Les options visibles dépendent du partenaire MTD.
+5. Activez les options nécessaires en fonction des besoins de votre entreprise. Les options visibles dépendent du partenaire MTD.
 
 ## <a name="mobile-threat-defense-toggle-options"></a>Options de Mobile Threat Defense
 
-Vous pouvez décider des options de MTD à activer en fonction des besoins de votre organisation. Voici plus de détails :
+Vous pouvez décider des options MTD que vous devez activer en fonction des besoins de votre entreprise. Voici des informations détaillées concernant ces options :
 
 **Paramètres de stratégie de protection des applications**
 

@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38f02d694f1935e4732805f3ae7c66fd9718057a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1d07066bcd599dc0cdbaf8fcf90ac1ee76be45fa
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059609"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206684"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Utiliser les profils d’interface de configuration du microprogramme des appareils Windows dans Microsoft Intune (préversion publique)
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer les paramètres UEFI (BIOS) une fois qu’ils sont inscrits, à l’aide de l’interface DFCI (interface de configuration du microprogramme de l’appareil). Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de l’interface DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -54,7 +54,7 @@ Cette fonctionnalité s’applique à :
 
 ## <a name="create-your-azure-ad-security-groups"></a>Créer vos groupes de sécurité Azure AD
 
-Les profils de déploiement Autopilot sont attribués aux groupes de sécurité Azure AD. Veillez à créer des groupes qui incluent vos appareils pris en charge par DFCI. Pour les appareils DFCI, la plupart des organisations peuvent créer des groupes d’appareils à la place de groupes d’utilisateurs. Imaginons les scénarios suivants :
+Les profils de déploiement Autopilot sont attribués aux groupes de sécurité Azure AD. Veillez à créer des groupes qui incluent vos appareils pris en charge par DFCI. Pour les appareils DFCI, la plupart des organisations peuvent créer des groupes d’appareils à la place de groupes d’utilisateurs. Tenez compte des scénarios suivants :
 
 - Le département des ressources humaines (RH) possède différents appareils Windows. Pour des raisons de sécurité, vous voulez qu’aucun utilisateur de ce groupe n’utilise l’appareil photo sur ces appareils. Dans ce scénario, vous pouvez créer un groupe d’utilisateurs de sécurité RH afin que la stratégie s’applique aux utilisateurs du groupe RH, quel que soit le type d’appareil.
 - Dans l’atelier de fabrication, vous avez 10 appareils. Vous voulez empêcher le démarrage de tous ces appareils à partir d’un périphérique USB. Dans ce scénario, vous pouvez créer un groupe d’appareils de sécurité et ajouter les 10 appareils dans ce groupe.
@@ -81,7 +81,7 @@ Ce profil inclut les paramètres DFCI que vous configurez.
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **Windows : Configurer les paramètres DFCI sur les appareils Windows**.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **Windows : Configurer les paramètres DFCI sur les appareils Windows**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez **Windows 10 et ultérieur**.
     - **Type de profil** : Sélectionnez **Interface de configuration du microprogramme d’appareil**.
@@ -99,15 +99,15 @@ Ce profil inclut les paramètres DFCI que vous configurez.
     - **Appareils photo** : Les options disponibles sont les suivantes :
         - **Non configuré** : Intune ne touche pas cette fonctionnalité et conserve les paramètres en l’état.
         - **Activé** : Tous les appareils photo intégrés gérés directement par UEFI (BIOS) sont activés. Les périphériques, tels que les appareils photo USB, ne sont pas affectés.
-        - **Désactivé** : Tous les appareils photo intégrés gérés directement par UEFI (BIOS) sont désactivés. Les périphériques, tels que les appareils photo USB, ne sont pas affectés.
+        - **Disabled** : Tous les appareils photo intégrés gérés directement par UEFI (BIOS) sont désactivés. Les périphériques, tels que les appareils photo USB, ne sont pas affectés.
     - **Microphone et haut-parleurs** :  Les options disponibles sont les suivantes :
         - **Non configuré** : Intune ne touche pas cette fonctionnalité et conserve les paramètres en l’état.
         - **Activé** : Tous les microphones et haut-parleurs intégrés gérés directement par UEFI (BIOS) sont activés. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
-        - **Désactivé** : Tous les microphones et haut-parleurs intégrés gérés directement par UEFI (BIOS) sont désactivés. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
+        - **Disabled** : Tous les microphones et haut-parleurs intégrés gérés directement par UEFI (BIOS) sont désactivés. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
     - **Radios (Bluetooth, Wi-Fi, NFC, etc.)**  : Les options disponibles sont les suivantes :
         - **Non configuré** : Intune ne touche pas cette fonctionnalité et conserve les paramètres en l’état.
         - **Activé** : Toutes les radios intégrées gérées directement par UEFI (BIOS) sont activées. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
-        - **Désactivé** : Toutes les radios intégrées gérées directement par UEFI (BIOS) sont désactivées. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
+        - **Disabled** : Toutes les radios intégrées gérées directement par UEFI (BIOS) sont désactivées. Les périphériques, tels que les périphériques USB, ne sont pas affectés.
 
         > [!WARNING]
         > Si vous désactivez le paramètre **Radios**, l’appareil requiert une connexion réseau câblée. Dans le cas contraire, l’appareil peut ne pas être gérable.
@@ -115,11 +115,11 @@ Ce profil inclut les paramètres DFCI que vous configurez.
     - **Démarrer à partir d’un média externe (USB, SD)**  : Les options disponibles sont les suivantes :
         - **Non configuré** : Intune ne touche pas cette fonctionnalité et conserve les paramètres en l’état.
         - **Activé** : UEFI (BIOS) permet le démarrage à partir d’un stockage autre que sur disque dur.
-        - **Désactivé** : UEFI (BIOS) ne permet pas le démarrage à partir d’un stockage autre que sur disque dur.
+        - **Disabled** : UEFI (BIOS) ne permet pas le démarrage à partir d’un stockage autre que sur disque dur.
     - **Démarrer à partir de cartes réseau** :  Les options disponibles sont les suivantes :
         - **Non configuré** : Intune ne touche pas cette fonctionnalité et conserve les paramètres en l’état.
         - **Activé** : UEFI (BIOS) permet le démarrage à partir d’interfaces réseau intégrées.
-        - **Désactivé** : UEFI (BIOS) ne permet pas le démarrage à partir d’interfaces réseau intégrées.
+        - **Disabled** : UEFI (BIOS) ne permet pas le démarrage à partir d’interfaces réseau intégrées.
 
 5. Lorsque vous avez terminé, sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil est créé et apparaît dans la liste.
 

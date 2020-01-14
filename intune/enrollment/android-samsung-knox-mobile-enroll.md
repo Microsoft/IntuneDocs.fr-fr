@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f290370dd6ec05677a7073d9ca3edd854c9aa5e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ecb043300578e5eba0613b6fa5f0fb249b1e515c
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505573"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692160"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Inscrire automatiquement des appareils Android à l’aide de Knox Mobile Enrollment de Samsung
 
@@ -75,7 +75,7 @@ Une fois votre entreprise correctement inscrite, vous pouvez créer votre profil
 
 ### <a name="for-android"></a>Pour Android
 
-Pour obtenir des instructions pas à pas, consultez l’[Assistant Configuration de profil Samsung Knox](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm).
+Pour obtenir des instructions pas à pas, consultez les instructions sur [Création du profil Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm).
 
 | Champs de profil de gestion des appareils mobiles| Nécessaire ? | Valeurs |
 |-------------------|-----------|-------|
@@ -114,7 +114,7 @@ Pour les appareils inscrits à Intune via KME pour Android, vous pouvez configur
 >Pour les appareils Android Enterprise entièrement gérés, même si l'association avec utilisateurs est définie, elle ne sera pas transmise à l'appareil et ne liera pas l'appareil à l'utilisateur.
 >
 
-## <a name="distribute-devices"></a>Distribuer des appareils
+## <a name="distribute-devices"></a>Distribuer les appareils
 
 Après avoir créé et affecté un profil de gestion des appareils mobiles, associé un nom d’utilisateur et identifié les appareils comme appartenant à l’entreprise dans Intune, vous pouvez distribuer les appareils aux utilisateurs.
 

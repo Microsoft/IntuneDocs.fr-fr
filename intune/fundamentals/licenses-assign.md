@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,30 +16,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcdc2b69de52ea3bf23f4e3c5d11399b62bc8daa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a62cc6ef2f1b3bd6f305fe6fa23a24f95d3dd37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414091"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207352"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Affecter des licences aux utilisateurs pour qu’ils puissent inscrire des appareils dans Intune
 
 Que vous ajoutiez des utilisateurs manuellement, ou procédiez à une synchronisation depuis un annuaire Active Directory local, vous devez d’abord affecter une licence Intune à chaque utilisateur et ce, avant qu’il n’inscrive ses appareils dans Intune. Pour obtenir la liste des licences, consultez [Licences incluant Intune](../licenses.md).
 
-## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Attribuer une licence Intune dans le Centre d’administration Microsoft 365
+> [!NOTE]
+> Les utilisateurs ayant attribué la stratégie de protection des applications Intune et n’inscrivant pas leurs appareils dans Microsoft Intune auront également besoin d’une licence Intune pour recevoir la stratégie. 
 
-Vous pouvez utiliser le [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) pour ajouter manuellement des utilisateurs basés sur le cloud et attribuer des licences aux comptes d’utilisateur basés sur le cloud et aux comptes synchronisés depuis votre annuaire Active Directory local vers Azure AD.
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Attribuer une licence Intune du centre d’administration Microsoft Endpoint Manager
 
-1. Connectez-vous au [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) à l’aide de vos informations d’identification d’administrateur du locataire, puis sélectionnez **Utilisateurs** > **Utilisateurs actifs**.
+Vous pouvez utiliser le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) pour ajouter manuellement des utilisateurs basés sur le cloud et attribuer des licences aux comptes d’utilisateur basés sur le cloud et aux comptes synchronisés depuis votre Active Directory local vers Azure AD.
 
-2. Sélectionnez le compte d’utilisateur auquel vous souhaitez affecter une licence d’utilisateur Intune, puis choisissez **Licences du produit** > **Modifier**.
+1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Utilisateurs** > **Tous les utilisateurs** > choisissez un utilisateur > **Licences** > **Affectations**.
 
-3. Activez la fonction **Intune** ou **Enterprise Mobility + Security** en la définissant sur **Activé**, puis choisissez **Enregistrer**.
+2. Choisissez la boîte **Intune** > **Enregistrer**.
 
-   ![Capture d’écran de la section Licences de produits du Centre d’administration Microsoft 365.](./media/licenses-assign/office-assign-license.png)
+   ![Capture d’écran de la section Licences de produits du Centre d’administration Microsoft 365.](./media/licenses-assign/mem-assign-license.png)
 
-4. Maintenant, le compte d’utilisateur dispose des autorisations permettant d’utiliser le service et d’inscrire des appareils dans la fonction de gestion.
+3. Maintenant, le compte d’utilisateur dispose des autorisations permettant d’utiliser le service et d’inscrire des appareils dans la fonction de gestion.
 
 > [!NOTE]
 > Les utilisateurs s’affichent dans le portail Intune classique uniquement après avoir inscrit un appareil à l’aide du client Intune PC. En outre, vous pouvez sélectionner un groupe d’utilisateurs afin de les modifier tous en même temps, en sélectionnant l’ajout ou le remplacement d’une licence pour tous les utilisateurs sélectionnés.

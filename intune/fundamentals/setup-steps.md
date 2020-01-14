@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a45160fc0e728b4c53590455a2bd0b5d904ddb1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2a300070e06725e165316172bf10ca079861f56f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504902"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547564"
 ---
 # <a name="set-up-intune"></a>Configurer Intune
 
@@ -30,7 +30,7 @@ Ces étapes de configuration vous permettent d’activer la gestion des appareil
 
 Certaines étapes, comme la configuration d’un abonnement Intune et la définition de l’autorité de gestion des appareils mobiles, sont nécessaires dans la plupart des scénarios. D’autres étapes, comme la configuration d’un domaine personnalisé ou l’ajout d’applications, sont facultatives selon les besoins de votre entreprise.
 
-Si vous utilisez actuellement Microsoft System Center Configuration Manager pour gérer vos ordinateurs et serveurs, vous pouvez [attacher Configuration Manager au cloud grâce à la cogestion](https://docs.microsoft.com/sccm/comanage/overview).
+Si vous utilisez actuellement Microsoft Endpoint Configuration Manager pour gérer vos ordinateurs et serveurs, vous pouvez [attacher Configuration Manager au cloud grâce à la cogestion](https://docs.microsoft.com/configmgr/comanage/overview).
 
 >[!TIP]
 >Si vous achetez au moins 150 licences pour Intune dans le cadre d’un plan éligible, vous pouvez utiliser *l’offre du Centre FastTrack*. Avec ce service, les spécialistes Microsoft vous accompagnent dans la préparation de votre environnement pour Intune. Consultez la section [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).

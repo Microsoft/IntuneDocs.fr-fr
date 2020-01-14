@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 4669d02f149e7f815ff94b4daa85c4c539c26c96
+ms.sourcegitcommit: 90369aef160945171435b03d82bae395609c7a62
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74284103"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75500197"
 ---
 
 
@@ -24,7 +24,7 @@ ms.locfileid: "74284103"
 
   Pour plus d’informations sur la gestion des appareils exécutant Windows 10 2019 LTSC, consultez [Nouveautés de Windows 10 Entreprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
-- Windows 10 Mobile
+- Windows 10 Mobile
 - Windows 10 IoT Entreprise (x86, x64)
 - Windows 10 IoT Mobile Entreprise
 - Windows Holographic for Business
@@ -34,7 +34,7 @@ ms.locfileid: "74284103"
 - Windows 10 Teams (Surface Hub)
 
    Pour plus d’informations sur la gestion des appareils exécutant Windows 10 Teams, consultez [Gérer Surface Hub avec MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)
-- Windows Phone 8.1, Windows 8.1 RT, PC exécutant Windows 8.1 (mode survie)
+- Windows 10 1709 (RS3) et ultérieure, Windows Phone 8.1, Windows 8.1 RT, PC exécutant Windows 8.1 (mode de maintien)
 
 > [!NOTE]
 > Toutes les éditions de Windows ne prennent pas en charge toutes les fonctionnalités de système d’exploitation disponibles configurées via MDM. Consultez la [documentation de référence du fournisseur de services de configuration Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Chaque CSP indique clairement les éditions de Windows prises en charge.

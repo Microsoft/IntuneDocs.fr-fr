@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 01c95e1961871f33a3d8ed8c0b6c22502faca3a9
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563825"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654020"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -95,12 +95,12 @@ Avant de commencer, vous devez obtenir un jeton VPP auprès d’Apple et l’imp
         > Si vous changez de pays/région, les métadonnées des applications et l’URL du Store sont mises à jour lors de la prochaine synchronisation avec le service Apple pour les applications créées avec ce jeton. L’application n’est pas mise à jour si elle n’existe pas dans le Store du nouveau pays/région.
 
     - **Type de compte VPP** : choisissez **Entreprise** ou **Éducation**.
-    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre. Les mises à jour d’applications automatiques pour les applications Apple VPP mettent automatiquement à jour uniquement les applications déployées avec l’intention d’installation **Obligatoire**. Pour les applications déployées avec l’intention d’installation **Disponible**, la mise à jour automatique génère un message d’état pour l’administrateur informatique l’informant qu’une nouvelle version de l’application est disponible. Ce message d’état peut être consulté en sélectionnant l’application, en sélectionnant État de l’installation de l’appareil et en vérifiant les détails du statut. En outre, l’utilisateur verra que l’application n’est pas installée sur le portail d’entreprise, même si une version antérieure de l’application est installée. Dans ce cas, l’utilisateur peut réinstaller l’application en cliquant sur **Installer** sur l’écran de détails de l’application dans l’application Portail d’entreprise pour installer la version la plus récente de l’application.
+    - **Application automatique des mises à jour** : choisissez **Activé** ou **Désactivé** pour activer les mises à jour automatiques. Quand elle est activée, Intune détecte les mises à jour des applications VPP dans l’App Store et les envoie automatiquement à l’appareil quand ce dernier s’enregistre. Les mises à jour d’applications automatiques pour les applications Apple VPP mettent automatiquement à jour uniquement les applications déployées avec l’intention d’installation **Obligatoire**. Pour les applications déployées avec l’intention d’installation **disponible**, l’utilisateur constatera que l’application n’est pas installée sur le Portail d'entreprise, même si une version antérieure de l’application est installée. Dans ce cas, l’utilisateur peut réinstaller l’application en cliquant sur **Installer** sur l’écran de détails de l’application dans l’application Portail d’entreprise pour installer la version la plus récente de l’application. Notez que pour les appareils iOS inscrits par l’utilisateur, les utilisateurs finaux continuent de voir toutes les applications VPP sous licence utilisateur au sein du Portail d’entreprise. 
 
         > [!NOTE]
         > Les mises à jour automatiques des applications fonctionnent pour les applications sous licence d’appareil et d’utilisateur pour iOS version 11.0 et ultérieure, et macOS version 10.12 et ultérieure.
 
-    - **J’autorise Microsoft à envoyer des informations sur l’utilisateur et l’appareil à Apple.** : vous devez sélectionner **J’accepte** pour continuer. Pour vérifier les données que Microsoft envoie à Apple, voir [Données envoyées par Intune à Apple](~/protect/data-intune-sends-to-apple.md).
+    - **J’autorise Microsoft à envoyer des informations sur l’utilisateur et l’appareil à Apple.** : vous devez sélectionner **J’accepte** pour continuer. Pour vérifier les données que Microsoft envoie à Apple, consultez [Données envoyées par Intune à Apple](~/protect/data-intune-sends-to-apple.md).
 
 6. Quand vous avez terminé, sélectionnez **Créer**.
 

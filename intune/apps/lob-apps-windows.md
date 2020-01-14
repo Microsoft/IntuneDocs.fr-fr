@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4c7b5e3cca06a3ec10ea1b3dfc5e45546c841f
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 0d7a166e97cb9161df7c6d024e200adec0974715
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563904"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75204967"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -34,13 +34,13 @@ Une application métier est une application que vous ajoutez à partir d’un fi
 > [!IMPORTANT]
 > Lorsque vous déployez des applications Win32 à l’aide d’un fichier d’installation avec l’extension *.msi*, envisagez d’utiliser l’[extension de gestion Intune](../apps/intune-management-extension.md). Si vous combinez l’installation des applications Win32 et des applications métier au cours de l’accord de mise en œuvre AutoPilot, l’installation de l’application peut échouer.  
 
-## <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
+## <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 3. Dans le volet **Ajouter une application**, sélectionnez **Application métier** comme **Type d’application**.
 
-## <a name="step-2-configure-the-app-package-file"></a>Étape 2 : Configurer le fichier de package d’application
+## <a name="step-2-configure-the-app-package-file"></a>Étape 2 : Configurer le fichier de package d’application
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Fichier de package d’application**.
 2. Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Sélectionnez ensuite un fichier d’installation Windows ayant l’extension **.msi**, **.appx** ou **.appxbundle**.
@@ -51,18 +51,18 @@ Une application métier est une application que vous ajoutez à partir d’un fi
 1. Une fois que vous avez fini, sélectionnez **OK**.
 
 
-## <a name="step-3-configure-app-information"></a>Étape 3 : Configurer les informations de l’application
+## <a name="step-3-configure-app-information"></a>Étape 3 : Configurer les informations de l’application
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Informations sur l’application**.
 2. Dans le volet **Informations sur l’application**, configurez les informations suivantes. Certaines valeurs de ce volet sont éventuellement renseignées automatiquement.
-    - **Nom** : Entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Assurez-vous que tous les noms d'application que vous utilisez sont uniques. Si le même nom d’application existe deux fois, une seule des applications apparaît dans le portail d’entreprise.
+    - **Nom** : Entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Assurez-vous que tous les noms d'application que vous utilisez sont uniques. Si le même nom d’application existe deux fois, une seule des applications apparaît dans le portail d’entreprise.
     - **Description** : Entrez une description de l'application. La description s’affiche dans le portail d’entreprise.
     - **Éditeur** : Entrez le nom de l'éditeur de l'application.
     - **Ignorer la version de l’application** : choisissez **Oui** si le développeur de l’application met celle-ci automatiquement à jour. Cette option s’applique aux applications mobiles .msi uniquement.
     - **Catégorie** : sélectionnez une ou plusieurs catégories d’application intégrées, ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver l’application plus facilement quand ils parcourent le portail d’entreprise.
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : entrez éventuellement l’URL d’un site web qui contient des informations sur l’application. L’URL s’affiche dans le portail d’entreprise.
-    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
+    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
     - **Arguments de ligne de commande** : si vous le souhaitez, entrez les arguments de ligne de commande à appliquer au fichier .msi durant son exécution.  Exemple : **/q**. N’incluez pas la commande msiexec ou des arguments, tel que **/i** ou **/x**, car ils sont automatiquement utilisés. Pour plus d’informations, consultez [Options de ligne de commande](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Si le fichier .MSI nécessite des options de ligne de commande supplémentaires, vous pouvez utiliser la [gestion des applications Win32](app-management.md).
     - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application. Exemple : **Service des ressources humaines**.
@@ -97,3 +97,5 @@ Cette fonctionnalité est utile pour éviter d’introduire une condition de con
 - Découvrez plus d’informations sur les façons dont vous pouvez surveiller les propriétés et l’affectation de votre application. Consultez [Guide pratique pour surveiller les affectations et les informations d’applications](apps-monitor.md).
 
 - Découvrez plus d’informations sur le contexte de votre application dans Intune. Consultez [Vue d’ensemble du cycle de vie des applications dans Microsoft Intune](app-lifecycle.md).
+
+- En savoir plus sur les applications Win32. Consultez [gestion des applications Win32](~/apps/apps-win32-app-management.md).

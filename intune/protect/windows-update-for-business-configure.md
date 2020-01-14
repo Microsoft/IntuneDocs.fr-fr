@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691767"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207449"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -49,7 +49,7 @@ Les conditions préalables suivantes doivent être remplies pour utiliser des mi
   - **Mise à jour de fonctionnalités Windows 10** : version 1703 ou ultérieure
 
 - Windows Update prend en charge les éditions de Windows 10 suivantes :
-  - Windows 10
+  - Windows 10
   - Windows 10 Collaboration-pour appareils Surface Hub (ne prend pas en charge les *mises à jour de fonctionnalités Windows 10*)
   - Windows Holographic for Business
 
@@ -60,7 +60,7 @@ Les conditions préalables suivantes doivent être remplies pour utiliser des mi
 
   > [!NOTE]
   > **Versions et éditions non prises en charge** :
-  > - Windows 10 Mobile  
+  > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) ne prend actuellement pas en charge les versions *Long Term Service Channel (LTSC)* . Prévoyez d'utiliser d'autres méthodes de mise à jour, notamment WSUS ou Configuration Manager.
 
 - Sur les appareils Windows, le paramètre **Commentaires et diagnostics** > **Données de diagnostic et d’utilisation** doit être défini sur **De base**, **Amélioré** ou **Complet**.  
@@ -68,9 +68,6 @@ Les conditions préalables suivantes doivent être remplies pour utiliser des mi
   Vous pouvez configurer manuellement le paramètre *Données de diagnostic et d’utilisation* pour les appareils Windows 10, ou utiliser un profil de restriction d’appareils Intune pour Windows 10 et versions ultérieures. Si vous utilisez un profil de restriction d’appareils, définissez la valeur de [restriction d’appareils](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) du paramètre **Partager les données d'utilisation** sur au moins **De base**. Ce paramètre se trouve dans la catégorie **Création de rapports et les données de télémétrie** lorsque vous configurez une stratégie de restriction d’appareils pour Windows 10 ou version ultérieure.
 
   Pour plus d’informations sur les profils d’appareils, consultez [Configurer des paramètres de restriction d’appareils](../configuration/device-restrictions-configure.md).
-
-- Si vous utilisez le portail Azure Classic, [migrez vos paramètres vers le portail Azure](#migrate-update-settings-to-the-azure-portal).
-
 
 ## <a name="windows-10-update-rings"></a>Anneaux des mise à jour Windows 10
 
@@ -124,7 +121,7 @@ La suppression d’un anneau d’Intune ne modifie pas les paramètres sur les a
 
 #### <a name="pause"></a>Suspendre
 
-Sélectionnez **Suspendre** pour empêcher les appareils attribués de recevoir des mises à jour de fonctionnalité ou de qualité pendant une période jusqu’à 35 jours à partir du moment où vous suspendez l’anneau. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité mise en pause expire automatiquement et l’appareil recherche les mises à jour applicables dans Windows Update. Suite à cette analyse, vous pouvez suspendre à nouveau les mises à jour.
+Sélectionnez **Suspendre** pour empêcher les appareils attribués de recevoir des mises à jour de fonctionnalité ou de qualité pendant une période jusqu’à 35 jours à partir du moment où vous suspendez l’anneau. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité mise en pause expire automatiquement et l’appareil recherche les mises à jour applicables dans Windows Update. Suite à cette analyse, vous pouvez à nouveau suspendre les mises à jour.
 Si vous reprenez un anneau de mise à jour suspendu et que vous le suspendez à nouveau, la période de suspension est réinitialisée sur 35 jours.
 
 ##### <a name="to-pause-a-ring"></a>Pour suspendre un anneau
@@ -227,7 +224,7 @@ Quand un appareil reçoit une stratégie de mise à jour des fonctionnalités de
 
 3. Sous **De base**, spécifiez un nom, une description (facultatif) et, pour **Mise à jour de fonctionnalité à déployer**, sélectionnez la version de Windows avec l’ensemble de fonctionnalités souhaité, puis sélectionnez **suivant**.
 
-4. Sous **Affectations**, choisissez **+ Sélectionner les groupes à inclure**, puis affectez l’anneau de mise à jour à un ou plusieurs groupes. Sélectionnez **Suivant** pour continuer.
+4. Sous **Affectations**, choisissez **+ Sélectionner les groupes à inclure**, puis attribuez le déploiement de mise à jour des fonctionnalités à un ou plusieurs groupes. Sélectionnez **Suivant** pour continuer.
 
 5. Sous **Vérifier + créer**, vérifiez les paramètres et sélectionnez **Créer** quand vous êtes prêt à enregistrer la stratégie des mises à jour des fonctionnalités de Windows 10.  
 
@@ -240,17 +237,6 @@ Dans ce volet, vous pouvez :
 - Sélectionnez **supprimer** pour supprimer la stratégie d’Intune et des appareils.
 - Sélectionnez **Propriétés** pour modifier le déploiement.  Dans le volet *Propriétés*, sélectionnez **Modifier** pour ouvrir les *paramètres de déploiement ou les affectations*, où vous pouvez ensuite modifier le déploiement.
 - Sélectionnez **État des mises à jour de l’utilisateur final** pour afficher des informations sur la stratégie.
-
-## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrer les paramètres de mise à jour vers le portail Azure
-
-Le portail Azure Classic comporte également un nombre limité d’autres paramètres relatifs aux mises à jour Windows 10 dans le profil de configuration des appareils. Si ces paramètres sont configurés durant la migration vers le portail Azure, nous vous recommandons vivement d’effectuer les actions suivantes :
-
-1. Créez des anneaux de mise à jour Windows 10 dans le portail Azure avec les paramètres dont vous avez besoin. Le paramètre **Autoriser les fonctionnalités en version préliminaire** n’est pas pris en charge dans le portail Azure, car il n’est plus applicable aux dernières builds Windows 10. Lorsque vous créez des anneaux de mise à jour, vous pouvez configurer les trois autres paramètres et d’autres paramètres de mise à jour Windows 10.
-
-   > [!NOTE]
-   > Les paramètres de mises à jour Windows 10 créés dans le portail classique ne sont pas affichés dans le portail Azure après la migration. Toutefois, ces paramètres sont appliqués. Si vous effectuez la migration de l’un de ces paramètres et si vous modifiez la stratégie migrée à partir du portail Azure, ces paramètres sont supprimés de la stratégie.
-
-2. Supprimez les paramètres de mise à jour dans le portail classique. Une fois que vous avez effectué la migration vers le portail Azure, et que vous avez ajouté les mêmes paramètres à un anneau de mise à jour, vous devez supprimer les paramètres du portail Azure Classic pour éviter d’éventuels conflits de stratégies. Par exemple, quand le même paramètre est configuré avec des valeurs différentes, un conflit se produit. Cela n’est pas facile à identifier, car le paramètre configuré dans le portail Azure Classic ne s’affiche pas dans le portail Azure.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

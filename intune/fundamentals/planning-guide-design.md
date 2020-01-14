@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24f15cb179dfc2b12b642f5f196d04dce58d4377
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505201"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547553"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -84,7 +84,7 @@ Votre environnement actuel peut influencer les décisions en matière de concept
 
   - Comment gérez-vous votre environnement PC et serveur ?
 
-  - Utilisez-vous System Center Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
+  - Utilisez-vous Microsoft Endpoint Configuration Manager ? Utilisez-vous une plate-forme de gestion système tierce ?
 
 - **Solution VPN**
 
@@ -101,7 +101,7 @@ Veillez à noter tous les projets ou tous les autres plans mis en place suscepti
 | **SharePoint** | SharePoint sur site | Aucun plan pour migrer vers SharePoint en ligne |  
 | **Gestion des appareils mobiles actuelle** | Exchange ActiveSync |  |
 | **Solution de certificat** | Microsoft Server 2012 R2, services de certificats AD | Utiliser uniquement une PKI pour les serveurs de sites Web |
-| **System Management** | System Center Configuration Manager CB 1606 | Souhaiterait étudier une solution Intune hybride |
+| **System Management** | Configuration Manager CB 1606 | Souhaiterait étudier une solution Intune hybride |
 | **Solution VPN** | Cisco AnyConnect |  |
 
 
@@ -109,7 +109,7 @@ Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.tech
 
 ## <a name="choose-an-intune-deployment-option"></a>Choisissez une option de déploiement Intune
 
-Intune propose deux options de déploiement : autonome et hybride. Autonome fait référence au service Intune en cours d’exécution dans le cloud, hybride fait référence à l’intégration d’Intune avec System Center Configuration Manager. Ce guide couvre principalement l’option autonome. [Choisissez l’option qui répond aux besoins de votre entreprise](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune propose deux options de déploiement : autonome et hybride. Le terme autonome fait référence au service Intune en cours d’exécution dans le cloud, le terme hybride fait référence à l’intégration d’Intune à Configuration Manager. Ce guide couvre principalement l’option autonome. [Choisissez l’option qui répond aux besoins de votre entreprise](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
 >L’intégration des nouveaux clients MDM hybrides est dépréciée. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
@@ -132,7 +132,7 @@ Si votre organisation est présente dans plusieurs pays/régions, tenez compte d
 
 Les dépendances externes sont des services et des produits distincts d'Intune, mais elles constituent une condition requise pour Intune ou peuvent s'intégrer à Intune. Il est important d’identifier les exigences de toutes les dépendances externes et la façon dont elles sont configurées. Voici quelques exemples de dépendances externes courantes :
 
-- Fournisseur
+- Identité
 
 - Groupes d’utilisateurs et d’appareils
 
@@ -140,7 +140,7 @@ Les dépendances externes sont des services et des produits distincts d'Intune, 
 
 Nous allons examiner les dépendances externes courantes plus en détail.
 
-### <a name="identity"></a>Fournisseur
+### <a name="identity"></a>Identité
 
 L’identité est la façon dont nous identifions les utilisateurs qui appartiennent à votre organisation et inscrivent un appareil. Intune nécessite Azure Active Directory (Azure AD) comme fournisseur d’identité d'utilisateur. Si vous employez déjà ce service, vous pouvez utiliser votre identité déjà présente dans le cloud. En outre, Azure AD Connect est l’outil recommandé pour synchroniser les identités de vos utilisateurs locaux avec les services de cloud Microsoft. Si votre organisation utilise déjà Office 365, il est important qu’Intune utilise le même environnement Azure AD.
 
@@ -184,7 +184,7 @@ Informations supplémentaires :
 
 Examinez de plus près les aspects suivants de vos appareils pour comprendre comment les gérer correctement.
 
-- Plateformes d’appareil prises en charge
+- Plateformes d’appareils prises en charge
 
 - Appareils
 

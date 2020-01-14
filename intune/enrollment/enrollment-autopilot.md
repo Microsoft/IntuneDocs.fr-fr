@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce0e96ecdd4cf254273e26564b8cb132a6d2080
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: fd320dddeb7717461188bdb701044bf060e7d75e
+ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563856"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75324880"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -49,11 +49,11 @@ Pour plus d’informations, consultez la compréhension du cmdlet PowerShell.
 
 Vous pouvez ajouter des appareils Windows Autopilot en important un fichier CSV contenant leurs informations.
 
-1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Windows** > **Appareils** (sous **Programme de déploiement Windows Autopilot** > **Importer**.
+1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Appareils** > **Windows** > **Inscription Windows** > **Appareils** (sous **Programme de déploiement Windows Autopilot** > **Importer**).
 
     ![Capture d’écran d’appareils Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
-2. Sous **Ajouter des appareils Windows AutoPilot**, accédez au fichier CSV répertoriant les appareils que vous souhaitez ajouter. Le fichier CSV doit lister les numéros de série, les ID de produit Windows, les hachages matériels, les étiquettes de groupe facultatives et l’utilisateur attribué facultatif. Vous pouvez avoir jusqu’à 500 lignes dans la liste. Utilisez le format d’en-tête et de ligne ci-dessous :
+2. Sous **Ajouter des appareils Windows AutoPilot**, accédez au fichier CSV répertoriant les appareils que vous souhaitez ajouter. Le fichier CSV doit lister les numéros de série, les ID de produit Windows, les hachages matériels, les étiquettes de groupe facultatives et l’utilisateur attribué facultatif. Vous pouvez avoir jusqu’à 500 lignes dans la liste. Pour plus d’informations sur l’obtention d’informations sur les appareils, consultez [Ajout d’appareils à Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/add-devices#device-identification). Utilisez le format d’en-tête et de ligne ci-dessous :
 
     `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 371800b39e04695eadc906465fdb013488836df9
+ms.sourcegitcommit: 3189c3a82cfd1ff3a58153dfec2e12fae7b9bdc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564021"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75622517"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -73,7 +73,7 @@ Si vous exécutez `IntuneWinAppUtil.exe` à partir de la fenêtre de commandes s
 |    `-o <output_folder>`     |    Dossier de sortie du fichier *.intunewin* généré.    |
 |    `-q`       |    Mode silencieux    |
 
-### <a name="example-commands"></a>Exemples de commandes
+### <a name="example-commands"></a>Exemple de commandes
 
 |    **Exemple de commande**    |    **Description**    |
 |:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -99,7 +99,7 @@ Tout comme une application métier, vous pouvez ajouter une application Win32 à
 
 Les étapes suivantes fournissent des conseils pour ajouter une application Windows à Intune.
 
-### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
+### <a name="step-1-specify-the-software-setup-file"></a>Étape 1 : Spécifier le fichier d'installation de logiciel
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
@@ -107,7 +107,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
     ![Capture d’écran du volet Ajouter une application - Liste déroulante Ajouter un type](./media/apps-win32-app-management/apps-win32-app-01.png)
 
-### <a name="step-2-upload-the-app-package-file"></a>Étape 2 : Charger le fichier de package d’application
+### <a name="step-2-upload-the-app-package-file"></a>Étape 2 : Charger le fichier de package d’application
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Fichier de package d’application** pour sélectionner un fichier. Le volet Fichier de package d’application s’affiche.
 
@@ -120,17 +120,17 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 3. Une fois que vous avez fini, sélectionnez **OK**.
 
-### <a name="step-3-configure-app-information"></a>Étape 3 : Configurer les informations de l’application
+### <a name="step-3-configure-app-information"></a>Étape 3 : Configurer les informations de l’application
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Informations sur l’application** pour configurer l’application.
 2. Dans le volet **Informations sur l’application**, configurez les informations suivantes. Certaines valeurs de ce volet sont éventuellement renseignées automatiquement.
-    - **Nom** : Entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Si le nom d’application existe deux fois, chaque application s’affiche dans le portail d’entreprise.
+    - **Nom** : Entrez le nom de l’application, tel qu’il apparaît dans le portail d’entreprise. Si le nom d’application existe deux fois, chaque application s’affiche dans le portail d’entreprise.
     - **Description** : Entrez une description de l'application. La description s’affiche dans le portail d’entreprise.
     - **Éditeur** : Entrez le nom de l'éditeur de l'application.
     - **Catégorie** : sélectionnez une ou plusieurs catégories d’application intégrées, ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver l’application plus facilement quand ils parcourent le portail d’entreprise.
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : entrez éventuellement l’URL d’un site web qui contient des informations sur l’application. L’URL s’affiche dans le portail d’entreprise.
-    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
+    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur l’application. L’URL s’affiche dans le portail d’entreprise.
     - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application. Exemple : **Service des ressources humaines**.
     - **Remarques** : entrez les remarques à associer à cette application.
@@ -328,6 +328,9 @@ Chaque dépendance adopte la logique de nouvelle tentative de l’application Wi
 
 Les clients Windows 10 1709 et versions ultérieures téléchargent du contenu d’applications Win32 Intune à l’aide d’un composant d’optimisation de la distribution sur le client Windows 10. L’optimisation de la distribution fournit la fonctionnalité pair à pair qui est activée par défaut. Elle peut être configurée par la stratégie de groupe et par le biais de la configuration de l’appareil Intune. Pour plus d’informations, voir [Optimisation de la distribution pour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
+> [!NOTE]
+> Vous pouvez également installer un serveur de cache connecté à Microsoft sur vos points de distribution Configuration Manager pour mettre en cache le contenu de l’application Win32 Intune. Pour plus d’informations, consultez [Cache connecté à Microsoft dans Configuration Manager - Support pour les applications Intune Win32](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+
 ## <a name="install-required-and-available-apps-on-devices"></a>Installer des applications obligatoires et disponibles sur les appareils
 
 L’utilisateur final voit des notifications toast Windows pour l’installation des applications obligatoires et disponibles. L’image suivante montre un exemple de notification toast où l’installation de l’application n’est pas terminée tant que l’appareil n’est pas redémarré. 
@@ -353,7 +356,7 @@ Définissez la disponibilité de l’application en fonction de la date et de l�
 
     > [!NOTE]
     > Ces options de **type d’attribution** sont les suivantes :<br>
-    > - **Requis** : Vous pouvez choisir de **rendre cette application obligatoire pour tous les utilisateurs** et/ou **rendre cette application obligatoire sur tous les appareils**.<br>
+    > - **Obligatoire** : Vous pouvez choisir de **rendre cette application obligatoire pour tous les utilisateurs** et/ou **rendre cette application obligatoire sur tous les appareils**.<br>
     > - **Disponible pour les appareils inscrits** : Vous pouvez choisir de **rendre cette application accessible à tous les utilisateurs avec des appareils inscrits**.<br>
     > - **Désinstaller** : Vous pouvez choisir de ***désinstaller cette application pour tous les utilisateurs** et/ou de **désinstaller cette application pour tous les appareils**.
 
@@ -375,7 +378,7 @@ Si nécessaire, vous pouvez supprimer l’affichage des notifications toast à l
 > Les applications Win32 installées par l’extension de gestion Intune ne sont pas désinstallées sur les appareils non inscrits. Les administrateurs peuvent exploiter l’exclusion des affectations pour ne pas offrir les applications Win32 aux appareils BYOD.
 
 ## <a name="troubleshoot-win32-app-issues"></a>Résoudre les problèmes d’application Win32
-Les journaux de l’agent sur l’ordinateur client sont souvent dans `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Vous pouvez utiliser `CMTrace.exe` pour voir ces fichiers journaux. Vous pouvez télécharger *CMTrace.exe* à partir des [Outils du client Configuration Manager](https://docs.microsoft.com/sccm/core/support/tools). 
+Les journaux de l’agent sur l’ordinateur client sont souvent dans `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Vous pouvez utiliser `CMTrace.exe` pour voir ces fichiers journaux. Pour plus d’informations, consultez [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace).
 
 ![Capture d’écran des journaux de l’agent sur l’ordinateur client](./media/apps-win32-app-management/apps-win32-app-10.png)    
 

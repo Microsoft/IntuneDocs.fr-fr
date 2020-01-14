@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9795ca8a585fd926cc269d493760b37aa7666eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74051972"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547056"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -52,10 +52,10 @@ Vous configurez les stratégies d’accès conditionnel basées sur l’appareil
 
 > [!NOTE]
 > Sur les appareils Android, quand vous activez l’accès basé sur l’appareil pour SharePoint Online ou l’accès basé sur le navigateur à Exchange Online, les utilisateurs doivent activer l’option **Activer l’accès au navigateur** sur l’appareil inscrit, en effectuant les opérations suivantes :
-> 1. Lancer l’**application Portail d’entreprise**.
+> 1. Lancez **l’application Portail d’entreprise**.
 > 2. Accédez à la page **Paramètres** via les trois points (...) ou le bouton de menu matériel.
 > 3. Appuyez sur le bouton **Activer l’accès du navigateur** . 
-> 4. Dans le navigateur Chrome, se déconnecter d’Office 365 et redémarrer Chrome.
+> 4. Dans le navigateur Chrome, déconnectez-vous d’Office 365 et redémarrez Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Accès conditionnel basé sur le contrôle d’accès réseau
 
@@ -83,11 +83,11 @@ L’accès conditionnel pour PC offre des fonctionnalités similaires à celles 
 
 #### <a name="corporate-owned"></a>Appartenant à l’entreprise
 
-- **Jonction à un domaine Active Directory local** : Cette option est généralement utilisée par les organisations qui sont déjà habituées à gérer leurs PC avec des stratégies de groupe AD ou System Center Configuration Manager.
+- **Jonction à un domaine Active Directory local** : Cette option est généralement utilisée par les organisations qui sont déjà habituées à gérer leurs PC avec des stratégies de groupe AD ou Configuration Manager.
 
 - **Jonction à un domaine Azure AD et gestion Intune** : Ce scénario est destiné aux organisations qui souhaitent donner la priorité au cloud (c’est-à-dire, utiliser principalement des services cloud, avec l’objectif de réduire l’utilisation d’une infrastructure locale) ou utiliser uniquement le cloud (aucune infrastructure locale). La jonction Azure AD fonctionne bien dans un environnement hybride, ce qui permet d’accéder à des ressources et des applications cloud et locales. L’appareil est joint à Azure AD et est inscrit auprès d’Intune, qui peut être utilisé comme critère d’accès conditionnel lors de l’accès aux ressources de l’entreprise.
 
-- **Joint au domaine AD et System Center Configuration Manager** : À partir de Current Branch, System Center Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
+- **Domaine AD joint et Configuration Manager :** En tant que branche actuelle, Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
 
   - Le PC est-il chiffré ?
 

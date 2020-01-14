@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 3da8e89679f974c7d91cf19ae37365f75217d153
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563459"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548025"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utiliser des scripts PowerShell sur des appareils Windows 10 dans Intune
 
@@ -64,9 +64,9 @@ L’extension de gestion Intune est soumise aux prérequis suivants : Une fois 
 
   - Appareils cogérés qui utilisent Configuration Manager et Intune. Vérifiez que la charge de travail des **applications** est définie sur **Piloter Intune**  ou sur **Intune**. Consultez les articles suivants pour obtenir des conseils : 
   
-    - [Qu’est-ce que la cogestion ?](https://docs.microsoft.com/sccm/comanage/overview) 
-    - [Charge de travail des applications clientes](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
-    - [Basculer les charges de travail de Configuration Manager sur Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+    - [Qu’est-ce que la cogestion ?](https://docs.microsoft.com/configmgr/comanage/overview) 
+    - [Charge de travail des applications clientes](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
+    - [Comment basculer les charges de travail de Configuration Manager vers Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
 > [!TIP]
 > Vérifiez que les appareils sont [joints](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) à Azure AD. Les appareils qui sont uniquement [inscrits](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) dans Azure AD ne recevront pas vos scripts.
@@ -79,7 +79,7 @@ L’extension de gestion Intune est soumise aux prérequis suivants : Une fois 
     ![Ajouter et utiliser des scripts PowerShell dans Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 
 3. Dans **Informations de base**, entrez les propriétés suivantes, puis sélectionnez **Suivant** :
-    - **Nom** : Entrez un nom pour le script PowerShell. 
+    - **Nom** : Entrez un nom pour le script PowerShell. 
     - **Description** : Entrez une description pour le script PowerShell. Ce paramètre est facultatif, mais recommandé.
 4. Dans **Paramètres du script**, entrez les propriétés suivantes, puis sélectionnez **Suivant** :
     - **Emplacement du script** : Accédez au script PowerShell. La taille du script doit être inférieure à 200 Ko (ASCII).
@@ -134,7 +134,7 @@ Dans **Scripts PowerShell**, sélectionnez le script à surveiller, choisissez *
 
 ## <a name="intune-management-extension-logs"></a>Journaux de l’extension de gestion Intune
 
-Les journaux de l’agent sur l’ordinateur client se trouvent généralement dans `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Vous pouvez utiliser [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools) pour afficher ces fichiers journaux. 
+Les journaux de l’agent sur l’ordinateur client se trouvent généralement dans `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Vous pouvez utiliser [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) pour afficher ces fichiers journaux.
 
 ![Capture d’écran ou exemples de journaux de l’agent cmtrace dans Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19d02694ab5e53dc43e0861c6a427a044bf50648
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a01b6643de2dd75c41aec0806b97df6154d99a7a
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502639"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547771"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Définir l’autorité de gestion des appareils mobiles
 
@@ -34,7 +34,7 @@ Les configurations possibles sont les suivantes :
 
 - **Intune autonome** : gestion cloud uniquement, que vous configurez à l’aide du portail Azure. Inclut l’ensemble complet de fonctionnalités d’Intune. [Configurez l’autorité MDM dans la console Intune](#set-mdm-authority-to-intune).
 
-- **Cogestion Intune** : intégration de la solution cloud Intune à System Center Configuration Manager pour les appareils Windows 10. Vous configurez Intune à l’aide de la console Configuration Manager. [Configurez l’inscription automatique des appareils dans Intune](https://docs.microsoft.com/sccm/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
+- **Cogestion Intune** : intégration de la solution cloud Intune à Configuration Manager pour les appareils Windows 10. Vous configurez Intune à l’aide de la console Configuration Manager. [Configurer l’inscription automatique des appareils à Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
     > [!Important]
     >L’intégration des nouveaux clients MDM hybrides est dépréciée. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
@@ -45,12 +45,12 @@ Les configurations possibles sont les suivantes :
 
 ## <a name="set-mdm-authority-to-intune"></a>Définir l'autorité MDM sur Intune
 
-Si vous n’avez pas encore défini l’autorité MDM, suivez les étapes ci-dessous. Pour remplacer SCCM, consultez [Faire migrer des utilisateurs et appareils MDM hybrides vers la version autonome d’Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Si vous n’avez pas encore défini l’autorité MDM, suivez les étapes ci-dessous. Pour remplacer SCCM, consultez [Faire migrer des utilisateurs et appareils MDM hybrides vers la version autonome d’Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-1. Dans [Intune dans le portail Azure](https://aka.ms/intuneportal), sélectionnez la bannière orange pour ouvrir le paramètre **Autorité de gestion des appareils mobiles**. La bannière orange s’affiche seulement si vous n’avez pas encore défini l’autorité MDM.
+1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez la bannière orange pour ouvrir le paramètre **Autorité de gestion des périphériques mobiles**. La bannière orange s’affiche seulement si vous n’avez pas encore défini l’autorité MDM.
 2. Sous **Autorité de gestion des appareils mobiles**, choisissez votre autorité de gestion des appareils mobiles parmi les options suivantes :
    - **Autorité MDM Intune**
-   - **Aucune.**
+   - **Aucun**
 
    ![Capture de l’écran Intune Définir l’autorité de gestion des appareils mobiles](./media/mdm-authority-set/set-mdm-auth.png)
 
@@ -101,7 +101,7 @@ L’autorité MDM ne peut pas être rétablie à Inconnu. L’autorité MDM est 
 
 - Les utilisateurs peuvent rapidement basculer vers la nouvelle autorité MDM en lançant manuellement un enregistrement de l’appareil vers le service. Les utilisateurs peuvent facilement effectuer cette modification à l’aide de l’application du portail d’entreprise, en lançant une vérification de conformité d’appareil.
 - Pour confirmer que tout fonctionne correctement une fois les appareils enregistrés et synchronisés avec le service après le changement d’autorité MDM, recherchez les appareils dans la console Configuration Manager. Les appareils précédemment gérés par Intune apparaissent désormais en tant qu’appareils gérés dans la console Configuration Manager.    
-- Il existe une période temporaire pendant laquelle un appareil est hors ligne lors du changement d’autorité MDM et lorsque cet appareil s’enregistre auprès du service. Pour que l’appareil reste protégé et opérationnel pendant cet intervalle, les profils suivants y sont conservés pendant sept jours maximum (ou jusqu’à ce que l’appareil se connecte à la nouvelle autorité MDM et reçoive les nouveaux paramètres qui remplacent les paramètres existants) :
+- Il existe une période temporaire pendant laquelle un appareil est hors ligne lors du changement d’autorité MDM et lorsque cet appareil s’enregistre auprès du service. Pour que l’appareil reste protégé et opérationnel pendant cet intervalle, les profils suivants restent dessus pendant sept jours maximum (ou jusqu’à ce que l’appareil se connecte à la nouvelle autorité MDM et reçoive les nouveaux paramètres qui remplacent les paramètres existants) :
   - Profil de messagerie
   - Profil VPN
   - Profil de certificat

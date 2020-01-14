@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e17972a3a87bd9c42db54753d4da3bb81703377
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4b2a6019a0af33cd227d88444bb5ddda5bc22715
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563623"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75204899"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Activer les applications Win32 sur les appareils en mode S
 
@@ -57,11 +57,11 @@ Les étapes permettant d’autoriser les applications Win32 à s’exécuter sur
 
 Pour créer une stratégie supplémentaire en mode S Windows 10, procédez comme suit :
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Applications** > **Stratégies supplémentaires en mode S** > **Créer une stratégie**.
 3. Avant d’ajouter le **fichier de stratégie**, vous devez le créer et le signer. Pour plus d'informations, voir :
     - [Créer une stratégie WDAC à l’aide des outils PowerShell et la convertir au format binaire](https://go.microsoft.com/fwlink/?linkid=2095387)
-    - [Signer à l’aide du service de Device Guard Signing Service](https://go.microsoft.com/fwlink/?linkid=2095629) **(recommandé)**
+    - [Signer à l’aide du service de signature Device Guard](https://go.microsoft.com/fwlink/?linkid=2095629) **(recommandé)**
 
 4. Dans la page **De base**, ajoutez les valeurs suivantes :
 
@@ -91,7 +91,7 @@ La stratégie supplémentaire en mode S, qui est appliquée au niveau de l’app
 
 Valeurs de reporting affichées dans la console Intune pour les stratégies de reporting en mode S :
 - **Opération réussie** : La stratégie supplémentaire en mode S est en vigueur.
-- **Inconnu** : L’état de la stratégie supplémentaire en mode S n’est pas connu.
+- **Inconnu** : L’état de la stratégie supplémentaire en mode S n’est pas connu.
 - **TokenError** : la stratégie supplémentaire en mode S est structurellement correcte, mais il existe une erreur avec l’autorisation du jeton.
 - **NotAuthorizedByToken** : le jeton n’autorise pas cette stratégie supplémentaire en mode S.
 - **PolicyNotFound** : la stratégie supplémentaire en mode S est introuvable.

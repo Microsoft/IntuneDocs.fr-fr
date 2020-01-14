@@ -1,11 +1,11 @@
 ---
 title: Affecter des profils d’appareil dans Microsoft Intune - Azure | Microsoft Docs
-description: Utilisez le portail Azure pour affecter des stratégies et des profils d’appareils à des utilisateurs et des appareils. Découvrez comment exclure des groupes d’une affectation de profil dans Microsoft Intune.
+description: Utilisez le centre d’administration Microsoft Endpoint Manager pour attribuer des stratégies et des profils d’appareil aux utilisateurs et aux appareils. Découvrez comment exclure des groupes d’une affectation de profil dans Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 651b02dc276ca2aa2003955e6aa7b0dfa6724a40
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: 252af3c7447b59ee6aaeb4cb05bed0579ae8af4c
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860313"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206701"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -83,7 +83,7 @@ Par exemple :
 
 Pour résumer, utilisez des groupes d’appareils lorsque vous ne vous souciez pas de la personne qui est connectée à l’appareil ou de si quelqu’un est connecté. Vous souhaitez que vos paramètres se trouvent toujours sur l’appareil.
 
-### <a name="user-groups"></a>Groupes d'utilisateurs
+### <a name="user-groups"></a>Groupes d’utilisateurs
 
 Les paramètres de profil appliqués aux groupes d’utilisateurs sont toujours associés à l’utilisateur et s’appliquent lorsqu’il se connecte à ses nombreux appareils. Il est normal que les utilisateurs disposent de nombreux appareils, par exemple un Surface Pro pour le travail et un appareil iOS personnel. Et il est normal qu’une personne accède à la messagerie et aux autres ressources de l’organisation à partir de ces appareils.
 

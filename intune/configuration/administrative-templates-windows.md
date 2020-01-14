@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 442432e7638c69083dcad5abc571c00e4051553d
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547985"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731522"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utiliser des modèles Windows 10 pour configurer les paramètres de stratégie de groupe dans Microsoft Intune
 
@@ -47,29 +47,31 @@ Cet article présente les étapes de la création d’un modèle pour les appare
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Entrez un nom pour le profil.
+    - **Nom** : Entrez un nom pour le profil.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Sélectionnez **Windows 10 et ultérieur**.
     - **Type de profil** : Sélectionnez **Modèles d’administration**.
 
-4. Sélectionnez **Créer**. Dans la nouvelle fenêtre, sélectionnez **Paramètres**. Vous pouvez voir tous les paramètres listés, et afficher davantage de paramètres à l’aide des flèches Précédent et Suivant :
+4. Sélectionnez **Créer**. Dans la nouvelle fenêtre, sélectionnez la liste déroulante et sélectionnez **Tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Edge version 77 ou ultérieure** :
 
-    ![Voir un exemple de liste de paramètres et utiliser les boutons Précédent et Suivant](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-    > [!TIP]
-    > Les paramètres Windows dans Intune sont mis en corrélation avec le chemin d’accès à la stratégie de groupe locale que vous voyez dans l’éditeur de stratégie de groupe local (`gpedit`).
-
-5. Dans la liste déroulante, sélectionnez **Tous les produits**. Dans la liste, vous pouvez également filtrer les paramètres pour afficher uniquement les paramètres **Windows**, les paramètres **Office** ou les paramètres **Edge version 77 ou ultérieure** :
-
-    ![Filtrer la liste pour afficher tous les paramètres Windows ou Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+    > [!div class="mx-imgBorder"]
+    > ![Filtrer la liste pour afficher tous les paramètres Windows ou Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Les paramètres Microsoft Edge s’appliquent à :
     >
-    > - Microsoft Edge version 77 ou ultérieure. Pour configurer Microsoft Edge version 45 et les versions antérieures, consultez [Paramètres de restriction d’appareil du navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Microsoft Edge version 77 et ultérieure. Pour configurer Microsoft Edge version 45 et les versions antérieures, consultez [Paramètres de restriction d’appareil du navigateur Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
     > - Windows 10 RS4 et versions ultérieures avec la mise à jour [KB 4512509](https://support.microsoft.com/kb/4512509) installée
     > - Windows 10 RS5 et versions ultérieures avec la mise à jour [KB 4512534](https://support.microsoft.com/kb/4512534) installée
     > - Windows 10 19H1 et versions ultérieures avec la mise à jour [KB 4512941](https://support.microsoft.com/kb/4512941) installée
+
+5. Vous pouvez voir tous les paramètres listés, et afficher davantage de paramètres à l’aide des flèches Précédent et Suivant :
+
+    > [!div class="mx-imgBorder"]
+    > ![Consulter un exemple de liste de paramètres et utiliser les boutons Précédent et Suivant](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+    > [!TIP]
+    > Les paramètres Windows dans Intune sont mis en corrélation avec le chemin d’accès à la stratégie de groupe locale que vous voyez dans l’éditeur de stratégie de groupe local (`gpedit`).
 
 6. Sélectionnez l’un des paramètres. Par exemple, filtrez sur **Office**, puis sélectionnez **Activer la navigation restreinte**. Une description détaillée du paramètre s’affiche. Choisissez **Activé** ou **Désactivé**, ou laissez le paramètre défini sur **Non configuré** (valeur par défaut). La description détaillée explique également ce qui se produit quand vous choisissez l’option **Activé**, **Désactivé** ou **Non configuré**.
 7. Cliquez sur **OK** pour enregistrer vos modifications.
@@ -88,13 +90,15 @@ Continuez à parcourir la liste des paramètres et configurez les paramètres so
 
 Les modèles contiennent des centaines de paramètres. Pour trouver plus facilement des paramètres spécifiques, utilisez les fonctionnalités intégrées disponibles :
 
-- Dans votre modèle, sélectionnez la colonne **Paramètres**, **État**, **Type de paramètre** ou **Chemin** sur laquelle vous voulez trier la liste de paramètres. Par exemple, sélectionnez la colonne **Chemin** pour afficher tous les paramètres situés dans le chemin `Microsoft Excel` :
+- Dans votre modèle, sélectionnez la colonne **Paramètres**, **État**, **Type de paramètre** ou **Chemin** sur laquelle vous voulez trier la liste de paramètres. Par exemple, sélectionnez la colonne **Chemin d’accès** et utilisez la flèche suivante pour afficher les paramètres situés sur le chemin d’accès `Microsoft Excel` :
 
-  ![Cliquez sur chemin d’accès pour afficher tous les paramètres regroupés par stratégie de groupe ou chemin d’accès ADMX dans modèles d’administration dans Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
+  > [!div class="mx-imgBorder"]
+  > ![Cliquez sur le chemin d’accès pour afficher tous les paramètres regroupés par stratégie de groupe ou chemin d’accès ADMX dans des modèles d’administration dans Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-- Dans votre modèle, utilisez la zone **Rechercher** pour trouver des paramètres spécifiques. Vous pouvez effectuer une recherche en définissant le titre ou le chemin d’accès. Par exemple, recherchez `copy`. Tous les paramètres avec `copy` sont affichés :
+- Dans votre modèle, utilisez la zone **Rechercher** pour trouver des paramètres spécifiques. Vous pouvez effectuer une recherche par paramètre ou par chemin d’accès. Par exemple, recherchez `copy`. Tous les paramètres avec `copy` sont affichés :
 
-  ![Rechercher une copie pour afficher tous les paramètres Windows et Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+  > [!div class="mx-imgBorder"]
+  > ![Rechercher une copie pour afficher tous les paramètres Windows et Office dans les modèles d’administration dans Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   En guide d’autre exemple, recherchez `microsoft word`. Vous voyez alors tous les paramètres que vous pouvez définir pour le programme Microsoft Word. Recherchez `explorer` pour voir tous les paramètres Internet Explorer que vous pouvez ajouter à votre modèle.
 
@@ -103,3 +107,5 @@ Les modèles contiennent des centaines de paramètres. Pour trouver plus facilem
 Le modèle est créé, mais il ne fait rien pour le moment. Vous devez à présent [affecter le modèle (également appelé profil)](device-profile-assign.md) et [superviser son état](device-profile-monitor.md).
 
 [Mettre à jour Office 365 à l’aide de modèles d’administration](administrative-templates-update-office.md).
+
+[Tutoriel : Utilisez le cloud pour configurer une stratégie de groupe sur des appareils Windows 10 avec des modèles ADMX et Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

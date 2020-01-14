@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe2377bfd353dc00ddfdf53a6d091c486644194
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d0ef42e301efe2c323ea98265272ba71596a8083
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059375"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206395"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurer des profils de téléphonie mobile eSIM dans Intune - préversion publique
 
@@ -66,7 +66,7 @@ Les appareils suivants ont été annoncés comme compatibles avec eSIM, ou sont 
 - HP Spectre Folio 13
 - Lenovo Yoga C630
 
-## <a name="step-1-add-cellular-activation-codes"></a>Étape 1 : Ajouter des codes d’activation de téléphonie mobile
+## <a name="step-1-add-cellular-activation-codes"></a>Étape 1 : Ajouter des codes d’activation de téléphonie mobile
 
 Les codes d’activation de téléphonie mobile sont fournis par votre opérateur mobile dans un fichier de valeurs séparées par des virgules (csv). Une fois en possession de ce fichier, ajoutez-le à Intune en effectuant les étapes suivantes :
 
@@ -91,15 +91,15 @@ Lors de l’utilisation du fichier csv contenant les codes d’activation, veill
 2. La deuxième ligne et toutes les suivantes correspondent à des codes d’activation à usage unique qui incluent deux valeurs :
 
     1. La première colonne correspond à l’ICCID unique (l’identificateur de la puce SIM)
-    2. La deuxième colonne correspond à l’ID de mise en correspondance, avec uniquement une virgule de séparation (pas de virgule à la fin) Consultez l'exemple suivant :
+    2. La deuxième colonne correspond à l’ID de mise en correspondance, avec uniquement une virgule de séparation (pas de virgule à la fin) Consultez l’exemple suivant :
 
         ![Exemple de fichier csv de code d’activation d’opérateur mobile](./media/esim-device-configuration/url-activation-code-examples.png)
 
-3. Le nom du fichier csv devient le nom du pool d’abonnements cellulaires dans le portail Azure. Dans l’image précédente, le nom de fichier est `UnlimitedDataSkynet.csv`. Par conséquent, Intune nomme le pool d’abonnements `UnlimitedDataSkynet.csv` :
+3. Le nom du fichier csv devient le nom du pool d’abonnements cellulaires dans le centre d’administration Endpoint Manager. Dans l’image précédente, le nom de fichier est `UnlimitedDataSkynet.csv`. Par conséquent, Intune nomme le pool d’abonnements `UnlimitedDataSkynet.csv` :
 
     ![Le pool d’abonnements cellulaires porte le nom de l’exemple de fichier csv de code d’activation](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
 
-## <a name="step-2-create-an-azure-ad-device-group"></a>Étape 2 : Créer un groupe d’appareils Azure AD
+## <a name="step-2-create-an-azure-ad-device-group"></a>Étape 2 : Créer un groupe d’appareils Azure AD
 
 Créez un groupe d’appareils qui comprend les appareils compatibles avec eSIM. [Ajouter des groupes](../fundamentals/groups-add.md) répertorie les étapes.
 
@@ -107,7 +107,7 @@ Créez un groupe d’appareils qui comprend les appareils compatibles avec eSIM.
 > - Seuls les appareils sont ciblés ; les utilisateurs ne sont pas ciblés.
 > - Nous vous recommandons de créer un groupe d’appareils Azure AD statique qui comprend vos appareils eSIM. L’utilisation d’un groupe permet de confirmer que vous ciblez uniquement des appareils eSIM.
 
-## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Étape 3 : Affecter des codes d’activation eSIM aux appareils
+## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Étape 3 : Affecter des codes d’activation eSIM aux appareils
 
 Affectez le profil au groupe Azure AD qui comprend vos appareils eSIM.
 
