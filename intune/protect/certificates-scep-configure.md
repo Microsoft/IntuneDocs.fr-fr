@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86640c831e8836a72ad5a0a7d5023ff7d836a43a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801583"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886009"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurer l’infrastructure pour prendre en charge SCEP avec Intune
 
@@ -300,7 +300,7 @@ Les procédures suivantes peuvent vous aider à configurer le service d’inscri
 
    1. Dans le Gestionnaire IIS, sélectionnez **Site web par défaut** > **Filtrage des demandes** > **Modifier les paramètres de la fonctionnalité** pour ouvrir la page **Modifier les paramètres de filtrage des demandes**.
 
-   2. Configurez les paramètres suivants :
+   2. Configurez les paramètres suivants :
 
       - **Longueur maximale des URL (octets)** = 65534
       - **Longueur maximale des chaînes de requête (octets)** = 65534
@@ -373,8 +373,7 @@ Microsoft Intune Certificate Connector s’installe sur le serveur qui exécute 
 
    2. Exécutez le programme d’installation (**NDESConnectorSetup.exe**). Le programme d’installation installe également le module de stratégie pour NDES et le service web Point d’enregistrement de certificat (CRP). Le service web CRP, *CertificateRegistrationSvc*, s’exécute comme une application dans IIS.
 
-      - Quand vous installez NDES pour la version autonome d’Intune, le service CRP est installé automatiquement avec Certificate Connector.
-      - Quand vous utilisez Intune avec Configuration Manager, vous installez le Point d’enregistrement de certificat comme un rôle de système de site Configuration Manager.
+      Quand vous installez NDES pour la version autonome d’Intune, le service CRP est installé automatiquement avec Certificate Connector.
 
 5. Quand vous êtes invité à entrer le certificat client pour Certificate Connector, choisissez **Sélectionner**, puis sélectionnez le certificat d’**authentification client** que vous avez installé sur votre serveur NDES à l’étape 3 de la procédure [Installer et lier des certificats sur le serveur qui héberge NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes), plus haut dans cet article.
 

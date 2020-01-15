@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 309860fb5ddf6fa9488ecaf395534bf869234176
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: ebeb5830136ad6dae19babbc8ecf45c1d6e5c36c
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547858"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885970"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscription de l’administrateur d’appareil Android
 
@@ -36,10 +36,6 @@ Pour les mêmes raisons, nous vous recommandons également de migrer les apparei
 Pour plus d’informations sur le support d’Intune pour le support d’un administrateur d’appareil Android, consultez la [section Remarques](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Si vous décidez quand même que les utilisateurs inscrivent leurs appareils Android auprès de la gestion des administrateurs d’appareil, passez à la section suivante.  
-
-
-> [!Note]  
-> Android 10 et versions ultérieures ne seront pas pris en charge dans la gestion hybride des périphériques mobiles (GPM hybride ; Intune managé avec la console Configuration Manager), car la GPM hybride est hors service le 1er septembre 2019. Si vous utilisez toujours la GPM hybride, vous devez migrer vers la version autonome d’Intune dès que possible. Contactez le support technique si vous avez besoin d’aide pour la migration. Pour plus d’informations, consultez [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
 
 Pour plus d’informations sur les fonctionnalités d’Android Enterprise de Google, consultez les articles suivants :
 - [Aide de Google pour la migration de l’administrateur d’appareil vers Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)

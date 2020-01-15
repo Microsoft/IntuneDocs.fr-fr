@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a23409b03047cac8edb0a50ad5188e006d35049a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 23b7264f2b7c9be0805ae30afca5c8cb15b83482
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505150"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956247"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Ressources supplémentaires pour la planification de votre déploiement Intune
 
@@ -46,11 +46,11 @@ Voici une liste des modèles de table pour chaque section.
 | | Stratégie de conformité | |
 | | Stratégie d’accès conditionnel|-|
 
-## <a name="further-reading"></a>Informations supplémentaires
+## <a name="further-reading"></a>Articles complémentaires
 
 Consultez ces ressources pour obtenir des informations qui peuvent se révéler utiles lors du processus de planification, de consultez et d’implémentation du déploiement Intune.
 
-- [Documentation Microsoft Intune](http://docs.microsoft.com/intune/) : l’ensemble complet de documentation pour Intune.
+- [Documentation Microsoft Intune](https://docs.microsoft.com/intune/) : l’ensemble complet de documentation pour Intune.
 
 - [Centre de gestion de la confidentialité Microsoft](https://www.microsoft.com/TrustCenter) : découvrez l’approche de Microsoft pour la sécurité, la confidentialité, la conformité et la transparence dans tous ses services et produits cloud.
 

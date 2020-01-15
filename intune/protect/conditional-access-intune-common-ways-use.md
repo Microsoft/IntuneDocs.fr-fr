@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 92e6aa1a66429c6407556444e903c158aff9dfa0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547056"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885993"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quelles sont les utilisations courantes de l’accès conditionnel avec Intune ?
 
@@ -86,14 +86,6 @@ L’accès conditionnel pour PC offre des fonctionnalités similaires à celles 
 - **Jonction à un domaine Active Directory local** : Cette option est généralement utilisée par les organisations qui sont déjà habituées à gérer leurs PC avec des stratégies de groupe AD ou Configuration Manager.
 
 - **Jonction à un domaine Azure AD et gestion Intune** : Ce scénario est destiné aux organisations qui souhaitent donner la priorité au cloud (c’est-à-dire, utiliser principalement des services cloud, avec l’objectif de réduire l’utilisation d’une infrastructure locale) ou utiliser uniquement le cloud (aucune infrastructure locale). La jonction Azure AD fonctionne bien dans un environnement hybride, ce qui permet d’accéder à des ressources et des applications cloud et locales. L’appareil est joint à Azure AD et est inscrit auprès d’Intune, qui peut être utilisé comme critère d’accès conditionnel lors de l’accès aux ressources de l’entreprise.
-
-- **Domaine AD joint et Configuration Manager :** En tant que branche actuelle, Configuration Manager fournit des fonctionnalités d’accès conditionnel qui peuvent évaluer des critères de compatibilité spécifiques, en plus d’être un PC joint au domaine :
-
-  - Le PC est-il chiffré ?
-
-  - Une protection contre les programmes malveillants est-elle installée ? Est-il à jour ?
-
-  - L’appareil est-il jailbreaké ou rooté ?
 
 #### <a name="bring-your-own-device-byod"></a>Apportez votre propre appareil (BYOD)
 

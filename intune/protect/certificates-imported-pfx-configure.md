@@ -2,27 +2,27 @@
 title: Utiliser des certificats PFX importés dans Microsoft Intune - Azure | Microsoft Docs
 description: Utilisez des certificats PKCS (Public Key Cryptography Standards) importés avec Microsoft Intune, notamment l’importation de certificats, la configuration du modèle de certificat, l’installation du connecteur Intune Imported PFX Certificate Connector et la création d’un profil Imported PKCS Certificate.
 keywords: ''
-author: ralms
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: lacranda
+ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d54c58523fdb44080b6c4210d639f9ad0ce476e2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801550"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886017"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS importés avec Intune
 
@@ -46,14 +46,17 @@ Pour utiliser des certificats PKCS importés avec Intune, vous devez disposer de
 
   Pour plus d’informations sur tous les points de terminaison réseau auxquels le connecteur accède, consultez [Configuration requise pour le réseau Intune et bande passante](../fundamentals/network-bandwidth-use.md).
 
-- **Windows Server** :  
+- **Windows Server** :
+
   Vous utilisez un serveur Windows Server pour héberger PFX Certificate Connector pour Microsoft Intune.  Le connecteur permet de traiter les demandes de certificats importés dans Intune.
 
   Intune prend en charge l’installation de *Microsoft Intune Certificate Connector* sur le même réseau que celui où est installé *PFX Certificate Connector pour Microsoft Intune*.
 
   Pour prendre en charge le connecteur, le serveur doit exécuter .NET 4.6 Framework ou une version ultérieure. Si .NET 4.6 Framework n’est pas installé lorsque vous démarrez l’installation du connecteur, celle-ci l’installe automatiquement.
 
-- **Visual Studio 2015 ou version ultérieure** (facultatif) : Vous utilisez Visual Studio pour générer le module d’assistance PowerShell avec des cmdlets pour l’importation de certificats PFX dans Microsoft Intune. Pour obtenir les cmdlets PowerShell d’assistance, consultez [Projet PowerShell PFXImport dans GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+- **Visual Studio 2015 ou version ultérieure** (facultatif) :
+
+  Vous utilisez Visual Studio pour générer le module d’assistance PowerShell avec des cmdlets pour l’importation de certificats PFX dans Microsoft Intune. Pour obtenir les cmdlets PowerShell d’assistance, consultez [Projet PowerShell PFXImport dans GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## <a name="how-it-works"></a>Fonctionnement
 
@@ -143,15 +146,14 @@ Vous pouvez utiliser un module de sécurité matériel (HSM) pour générer et s
 
 Le processus suivant utilise les cmdlets PowerShell comme exemple d’importation des certificats PFX. Vous pouvez choisir différentes options en fonction de vos besoins.
 
-Les options sont les suivantes :  
-- Objectif prévu (regroupe les certificats en fonction d’une balise) :  
+Les options sont les suivantes :
+
+- Objectif prévu (regroupe les certificats en fonction d’une balise) :
   - non attribué
   - smimeEncryption
   - smimeSigning
 
-- Schéma de remplissage :  
-  - pkcs1
-  - oaepSha1
+- Schéma de remplissage :
   - oaepSha256
   - oaepSha384
   - oaepSha512
@@ -204,7 +206,7 @@ Après avoir importé les certificats dans Intune, créez un profil **Certificat
 4. Sélectionnez **Paramètres**, puis entrez les propriétés suivantes :
 
    - **Rôle prévu** : Indiquez la finalité des certificats qui sont importés pour ce profil. Les administrateurs peuvent importer des certificats avec différents rôles (par exemple, la signature S/MIME ou le chiffrement S/MIME). La finalité sélectionnée dans le profil de certificat correspond au profil de certificat comprenant les certificats importés associés. Le rôle prévu est une balise permettant de regrouper les certificats importés et ne garantit pas que les certificats importés avec cette balise seront conformes au rôle prévu.  
-   - **Période de validité du certificat** : À moins que la période de validité n’ait été modifiée dans le modèle de certificat, cette option est définie par défaut sur un an.
+   - **Période de validité du certificat** : À moins que la période de validité n’ait été modifiée dans le modèle de certificat, cette option est définie par défaut sur un an.
    - **Fournisseur de stockage de clés (KSP)**  : pour Windows, sélectionnez l’emplacement où stocker les clés sur l’appareil.
 
 5. Sélectionnez **OK** > **Créer** pour enregistrer votre profil.

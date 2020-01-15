@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebb17324355fff9631ef74a76388ef0ab797d437
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
+ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899141"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75839131"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Vue d’ensemble des scénarios guidés Intune 
 
@@ -64,7 +64,7 @@ Si une erreur se produit pendant le déploiement du scénario, toutes les modifi
 
 Les scénarios guidés ne permettent pas de modifier les ressources existantes. Une fois créés, les groupes, les ressources et les affectations doivent être modifiés en utilisant les charges de travail existantes.
 
-### <a name="monitoring"></a>Surveillance 
+### <a name="monitoring"></a>Analyse 
 
 Les scénarios guidés ne permettent pas de superviser les ressources existantes en dehors du processus de création initial. Une fois créés, les groupes, les ressources et les affectations doivent être supervisés en utilisant les charges de travail existantes. 
 

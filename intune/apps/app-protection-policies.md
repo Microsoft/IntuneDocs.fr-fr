@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563720"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885759"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -93,9 +93,6 @@ Lorsque vous créez une stratégie de protection d’applications pour les appli
 
 9. Cliquez sur **Suivant** pour afficher la page **Affectations**.<br>
    La page **Attributions** vous permet d’attribuer la stratégie de protection des applications à des groupes d’utilisateurs.
-   
-    >[!IMPORTANT]
-    > Si vous utilisez Intune avec Configuration Manager pour gérer vos appareils, la stratégie est appliquée uniquement aux utilisateurs du groupe que vous avez sélectionné. Les membres des groupes enfants imbriqués dans le groupe que vous avez sélectionné ne sont pas affectés.
 
 10. Cliquez sur **Suivant : Vérifier + créer** pour vérifier les valeurs et les paramètres que vous avez entrés pour cette stratégie de protection des applications.
 
