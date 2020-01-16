@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cc2f84ad73c86a823984e6caa11dad5d4aec8a8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f056b44301c1d0f94dde2dbb6202ed7c78e90fbf
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72507830"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857357"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Résoudre une menace détectée par Lookout for Work  
 
@@ -52,7 +52,7 @@ Récupérez l’accès aux ressources de votre entreprise quand l’application 
 
 Si vous installez une application que Lookout for Work identifie comme une menace, vous recevez un message similaire à celui figurant dans la capture d’écran ci-dessous.  
 
-![Capture d’écran montrant un message d’alerte de virus dans l’interface d’application Lookout for Work. Montre trois boutons : « Fermer, » « Plus d’informations » et « Désinstaller ».](./media/lookout-virus-alert-android.png)  
+![Capture d’écran montrant un message d’alerte de virus dans l’interface d’application Lookout for Work. Affiche trois boutons : « Fermer, » « Plus d’informations » et « Désinstaller ».](./media/lookout-virus-alert-android.png)  
 
 Pour récupérer l’accès à la messagerie et aux données d’entreprise, désinstallez l’application douteuse. Tant que l’application se trouve sur votre appareil, vous ne pourrez pas accéder aux ressources de l’entreprise.    
 

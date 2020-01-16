@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b92dca399afeb035bf58d998efdd469318de389
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e1f81d26227bb206aa55ca495f4a4ee5e8ae9907
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504942"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548129"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée
 
@@ -39,14 +39,15 @@ Par exemple, supposons que l’administrateur d’un bureau régional de Seattle
 ## <a name="default-scope-tag"></a>Balise d’étendue par défaut
 La balise d’étendue par défaut est automatiquement ajoutée à tous les objets non balisés qui prennent en charge les balises d’étendue.
 
-La fonctionnalité de balise d’étendue par défaut sont similaires à la fonctionnalité des étendues de sécurité de System Center Configuration Manager. 
+La fonctionnalité de balise d’étendue par défaut est similaire à la fonctionnalité d’étendues de sécurité de Microsoft Endpoint Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Pour créer une étiquette de délimitation
 
-1. Dans Intune, Choisissez **Rôles** > **Étendue (balises)**  > **Créer**.
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **administration du locataire** > **rôles** > **étendue (balises)**  > **créer**.
 
     ![Capture d’écran de la création d’une balise d’étendue](./media/scope-tags/create-scope-tag.png)
 
+2. Indiquez un **nom** et éventuellement une **description**.
 3. Si vous souhaitez que tous les appareils se trouvent dans des groupes spécifiques, choisissez **attribuer une étiquette d’étendue à tous les appareils dans les groupes sélectionnés**.
     1. Dans la page **Sélectionner les groupes à inclure** , choisissez les groupes contenant les appareils auxquels vous souhaitez affecter cette balise d’étendue.
     2. Choisissez **Sélectionner**.
@@ -54,10 +55,7 @@ La fonctionnalité de balise d’étendue par défaut sont similaires à la fonc
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Pour affecter une étiquette de délimitation à un rôle
 
-1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > choisissez un rôle > **Affectations** > **Affecter**.
-
-    ![Capture d’écran de l’affectation d’une étendue à un rôle.](./media/scope-tags/assign-scope-to-role.png)
-
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **administration du locataire** > **rôles** > **tous les rôles** > choisissez un rôle > **affectations** > **attribuer**.
 2. Spécifiez un **Nom de l’affectation** et une **Description**.
 3. Choisissez **Membres (Groupes)**  > **Ajouter** > choisissez les groupes dont vous souhaitez qu’ils fassent partie de cette affectation > **Sélectionner** >  **OK**. Les utilisateurs de ce groupe sont autorisés à gérer des utilisateurs/appareils dans l’étendue (groupes).
 
@@ -81,9 +79,7 @@ La fonctionnalité de balise d’étendue par défaut sont similaires à la fonc
 
 Pour les objets qui prennent en charge les balises d’étendue, les balises d’étendue apparaissent généralement sous **Propriétés**. Par exemple, pour affecter une étiquette d’étendue à un profil de configuration, procédez comme suit :
 
-1. Dans Intune, choisissez **Configuration de l’appareil** > **Profils** > choisissez un profil.
-
-    ![Capture d’écran de la sélection d’un profil.](./media/scope-tags/choose-profile.png)
+1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **appareils** > **profils de configuration** > Choisissez un profil.
 
 2. Choisissez **Propriétés** > **Étendue (balises)**  > **Ajouter**.
 

@@ -18,22 +18,22 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser; intune-azure
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64612aa8a1d427284778a9aa43b966b05cb0a15f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: dc36e2d53282b8f40f0250f40cb2f01ec920d936
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502114"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858210"
 ---
-# <a name="reset-device-from-the-company-portal-app"></a>Réinitialiser l’appareil à partir de l’application Portail d’entreprise  
+# <a name="reset-device-from-the-company-portal-app"></a>Réinitialiser un appareil à partir de l’application Portail d’entreprise  
 
 Réinitialisez les paramètres d’usine d’un appareil perdu, volé ou précédemment utilisé, à partir de l’application Portail d’entreprise.  
 
 Une fois que vous avez réinitialisé un appareil, celui-ci n’apparaît plus dans Portail d’entreprise. Ses applications et fichiers existants seront effacés et seront restaurés dans les paramètres prédéfinis.  
 
 
-1. Ouvrez Portail d’entreprise.  
+1. Ouvrez le Portail d’entreprise.  
 2. Dans **Mes appareils**, sélectionnez l’appareil que vous voulez réinitialiser.   
 
     ![Exemple de capture d’écran de Portail d’entreprise application, écran d’accueil, mise en surbrillance de la section mes appareils.](./media/1802-cp-app-windows-home.png)  

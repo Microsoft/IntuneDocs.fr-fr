@@ -1,12 +1,12 @@
 ---
-title: Paramètres de restriction d’appareil Microsoft Intune pour les appareils exécutant Windows 8.1
+title: Paramètres de restriction d’appareils Windows 8.1 dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
 description: Découvrez les paramètres Intune qui vous permettent de contrôler les paramètres et les fonctionnalités des appareils exécutant Windows 8.1.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,19 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0df55e79dbc54926c0507889620f2667d7b8bd7b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 82eaf1bc2c0737e1cc54751ff6fb5751227d180c
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489832"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302966"
 ---
-# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Paramètres de restriction d’appareil Windows 8.1 et ultérieur dans Microsoft Intune
+# <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Paramètres de restriction d’appareil Windows 8.1 Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-Cet article décrit les paramètres de restriction d’appareil de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 8.1 et ultérieur.
-
+Cet article décrit les paramètres de restriction d’appareils de Microsoft Intune que vous pouvez configurer pour les appareils exécutant Windows 8.1.
 
 ## <a name="general"></a>Général
 
@@ -48,8 +45,6 @@ Cet article décrit les paramètres de restriction d’appareil de Microsoft Int
 Si vous activez ce paramètre pour les appareils Windows 8.1, tous les utilisateurs de l’appareil doivent disposer d’un compte Microsoft.
 Pour que le chiffrement fonctionne, l'appareil doit répondre aux conditions de certification matérielle de la spécification [InstantGo](https://blogs.windows.com/windowsexperience/2014/06/19/instantgo-a-better-way-to-sleep/#IBHULcTfI4PokO8X.97) de Microsoft.
 Quand vous appliquez le chiffrement à un appareil, vous pouvez uniquement obtenir la clé de récupération à partir du compte Microsoft de l’utilisateur, accessible à partir de son compte OneDrive. Vous ne pouvez pas récupérer cette clé au nom d'un utilisateur. 
-
-
 
 ## <a name="browser"></a>Navigateur
 - **Remplissage automatique** - Permet aux utilisateurs de modifier les paramètres de saisie semi-automatique dans le navigateur.
@@ -75,3 +70,7 @@ Si vous sélectionnez ce paramètre, vous pouvez également spécifier un **Empl
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 - **URL des dossiers de travail** - Ce paramètre définit l’URL du dossier de travail pour autoriser la synchronisation des documents entre les appareils.
 - **Accéder à l'application Windows Mail sans compte Microsoft** - Autorise l’accès à l’application Windows Mail sans compte Microsoft.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Créez un profil de restrictions d’appareil sur [Windows 10 et versions ultérieures](device-restrictions-windows-10.md).

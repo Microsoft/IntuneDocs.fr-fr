@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 962e66a9fdf6d8abcf6855f645775026ee4db850
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d3d9473b68f0420670130203409abf477355d93f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508848"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885531"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Résoudre les problèmes liés au connecteur Intune Exchange
 
@@ -40,7 +40,7 @@ Avant de commencer à résoudre les problèmes liés à un connecteur Exchange d
   - Configurez-vous le connecteur pour la première fois ? 
   - Le connecteur fonctionne-t-il correctement, puis échoue-t-il ?
   - Si elle fonctionnait, quelles modifications se sont produites dans l’environnement Intune, dans l’environnement Exchange ou sur l’ordinateur qui exécute le logiciel connecteur ?
-- Qu’est-ce que l’autorité MDM ? Si c’est System Center Configuration Manager, quelle version de Configuration Manager utilisez-vous ?
+- Qu’est-ce que l’autorité MDM ?
 - Quelle version d’Exchange utilisez-vous ?
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Utiliser PowerShell pour obtenir plus de données sur les problèmes liés au connecteur Exchange
@@ -65,10 +65,10 @@ Passez en revue la [Configuration requise pour le connecteur Exchange local](exc
 
 ### <a name="common-issues-for-connector-configurations"></a>Problèmes courants pour les configurations de connecteur
 
-- **Autorisations de compte** : dans la boîte de dialogue Connecteur Microsoft Intune Exchange, vérifiez que vous avez spécifié un compte d’utilisateur qui dispose des autorisations appropriées pour exécuter les [applets de commande Windows PowerShell Exchange nécessaires](exchange-connector-install.md#exchange-cmdlet-requirements).
+- **Autorisations du compte** : Dans la boîte de dialogue Connecteur Microsoft Intune Exchange, vérifiez que vous avez spécifié un compte d’utilisateur qui dispose des autorisations appropriées pour exécuter les [applets de commande Windows PowerShell Exchange nécessaires](exchange-connector-install.md#exchange-cmdlet-requirements).
 - **E-mails de notification**: activez les notifications et spécifiez un compte de notification.
 - **Synchronisation du serveur d’accès au client**: lors de la configuration du connecteur Exchange, spécifiez une autorité de certification qui a la plus faible latence réseau possible pour le serveur hébergeant le connecteur Exchange. La latence de communication entre le serveur d’accès au client et le connecteur Exchange peut entraîner des retards dans la découverte des appareils, en particulier lors de l’utilisation d’Exchange Online dédié.
-- **Calendrier des synchronisations** : l’accès d’un utilisateur avec un appareil nouvellement inscrit peut être retardé jusqu’au moment où le connecteur Exchange se synchronise avec le serveur d’accès au client Exchange. Une synchronisation complète est effectuée une fois par jour et une synchronisation (rapide) delta se produit plusieurs fois par jour. Vous pouvez [forcer manuellement une synchronisation rapide ou complète](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) pour minimiser les délais.
+- **Calendrier des synchronisations** : L’accès d’un utilisateur avec un appareil nouvellement inscrit peut être retardé jusqu’au moment où le connecteur Exchange se synchronise avec le serveur d’accès au client Exchange. Une synchronisation complète est effectuée une fois par jour et une synchronisation (rapide) delta se produit plusieurs fois par jour. Vous pouvez [forcer manuellement une synchronisation rapide ou complète](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) pour minimiser les délais.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Les articles suivants peuvent vous aider à résoudre des problèmes courants et des erreurs spécifiques :

@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 12/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: e04950a67938d883b0762c03efa371fcb74d0731
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098140"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855474"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Inscrire votre appareil macOS à l’aide de l’application Portail d’entreprise  
 
@@ -56,7 +56,7 @@ Procédez comme suit pour inscrire votre appareil macOS auprès de votre organis
 2. Le fichier Portail d’entreprise installer. pkg sera téléchargé. Ouvrez le programme d’installation et suivez les étapes. 
 3. Acceptez le contrat de licence de logiciel. 
 4. Entrez le mot de passe de votre appareil ou votre empreinte digitale pour installer le logiciel.  
-5. Ouvrez Portail d’entreprise. 
+5. Ouvrez le Portail d’entreprise. 
 
 > [!IMPORTANT]
 > Microsoft AutoUpdate peut s’ouvrir pour mettre à jour vos logiciels Microsoft. Une fois toutes les mises à jour installées, ouvrez l’application Portail d’entreprise. Pour une meilleure expérience d’installation, installez les dernières versions de Microsoft AutoUpdate et Portail d’entreprise.  
@@ -67,18 +67,17 @@ Procédez comme suit pour inscrire votre appareil macOS auprès de votre organis
 
 1. Connectez-vous à l’application Portail d’entreprise avec votre compte professionnel ou scolaire.  
 2. Lorsque l’application s’ouvre, sélectionnez **Démarrer**.  
-3. Examinez [ce que votre organisation peut et ne peut pas voir](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) sur votre appareil inscrit. Ensuite, sélectionnez **Continuer**.  
-4. Dans l’écran **installer le profil de gestion** , sélectionnez Télécharger le **Profil**.   
+3. Examinez ce que votre organisation peut et ne peut pas voir sur votre appareil inscrit. Ensuite, sélectionnez **Continuer**.
+4.  Si vous y êtes invité, entrez le mot de passe de votre appareil dans l’écran **installer le profil de gestion** .
 
-    ![Exemple de capture d’écran de Portail d’entreprise, installer l’écran de profil de gestion, en mettant en surbrillance le bouton « Télécharger le profil ».](./media/install-mgmt-profile-mac-1911.PNG)   
-5. Les préférences système de votre appareil s’ouvrent. Sélectionnez **installer** , puis cliquez à nouveau sur **installer** . Si vous y êtes invité, entrez le mot de passe de votre appareil.  
+    ![Exemple de capture d’écran de Portail d’entreprise, installer l’écran de gestion du profil, mise en surbrillance invite de mot de passe.](./media/install-management-profile-macos-1912.PNG)   
+5. Dans l’écran **confirmer la gestion** de l’appareil, sélectionnez Ouvrir les **Préférences système**.  
 
-    ![Exemple de capture d’écran des préférences système macOS, invite d’installation, mise en surbrillance du bouton « installer ».](./media/system-preference-install-1911.PNG)  
-6. Une fois le profil installé, il s’affiche dans la liste des profils sous le **profil de gestion.**  
-
-   ![Exemple de capture d’écran des préférences système macOS, écran profils et mise en surbrillance du profil de gestion installé.](./media/system-preference-verify-1911.PNG)   
-7. Revenez à Portail d’entreprise.   
-8. Votre organisation peut vous demander de mettre à jour les paramètres de votre appareil. Lorsque vous avez terminé la mise à jour des paramètres, sélectionnez **vérifier les paramètres**.  
+    ![Exemple de capture d’écran de l’écran confirmer la gestion des appareils, en mettant en surbrillance le bouton « ouvrir les préférences système ».](./media/confirm-device-management-macos-1912.PNG)  
+6. Les préférences système de votre appareil s’ouvrent. Sélectionnez **profil de gestion** dans la liste profils d’appareil, puis sélectionnez **approuver** > **approuver**.  
+    ![exemple de capture d’écran des préférences système, écran de profil de gestion, en mettant en surbrillance le bouton « approuver ».](./media/management-profile-approve-macos-1912.PNG)   
+1. Revenez à Portail d’entreprise et sélectionnez **Continuer**.    
+2. Votre organisation peut vous demander de mettre à jour les paramètres de votre appareil. Lorsque vous avez terminé la mise à jour des paramètres, sélectionnez **vérifier les paramètres**.  
 
     ![Exemple de capture d’écran de Portail d’entreprise, mettre à jour l’écran Paramètres de l’appareil, en mettant en surbrillance le bouton « vérifier les paramètres »](./media/update-settings-mac-1911.PNG)  
 9. Une fois l’installation terminée, sélectionnez **terminé**.  
@@ -88,7 +87,7 @@ Procédez comme suit pour inscrire votre appareil macOS auprès de votre organis
 
 Si vous rencontrez des problèmes lors de l’inscription, accédez à **aide** > **Envoyer un rapport de diagnostic** pour signaler le problème aux développeurs d’applications Microsoft. Ces informations sont utilisées pour aider à améliorer l’application. Ils utiliseront également ces informations pour aider à résoudre le problème si votre personne du support technique y accède pour obtenir de l’aide.  
 
-Une fois que vous avez signalé le problème à Microsoft, vous pouvez envoyer les détails de votre expérience à votre personne du support technique. Sélectionnez les détails de l' **e-mail**. Tapez ce que vous avez rencontré dans le corps de l’e-mail. Pour Rechercher l’adresse de messagerie de votre personne de support, accédez à l’application Portail d’entreprise > **contact**. Ou consultez le [site web portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Une fois que vous avez signalé le problème à Microsoft, vous pouvez envoyer les détails de votre expérience à votre personne du support technique. Sélectionnez les détails de l' **e-mail**. Tapez ce que vous avez rencontré dans le corps de l’e-mail. Pour Rechercher l’adresse de messagerie de votre personne de support, accédez à l’application Portail d’entreprise > **contact**. Ou consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  
  
 
 En outre, les Microsoft Intune Portail d’entreprise équipe aimeraient recevoir vos commentaires. Accédez à **aide** > **Envoyer des commentaires** pour partager vos pensées et vos idées.  

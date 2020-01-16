@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5665ae7d8093decc8ef2ea4ab1911b27e20e25dd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: edea807b8c71f519c28f19b0343fa8ea0977712a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505779"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855144"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Guide pratique pour configurer le délai de verrouillage de l’écran des appareils Android
 
@@ -34,15 +34,15 @@ Pour vous reconnecter à votre travail, vous devez définir le délai d’expira
 
 1. Dans **Paramètres** sur votre appareil, appuyez sur **Sécurité** &gt; **Verrouiller automatiquement** (sur certains appareils, l’option est **Verrouiller le téléphone au bout de**).
 
-    Si **Verrouiller automatiquement** (**Verrouiller le téléphone au bout de** sur certains appareils) n’apparaît pas, assurez-vous que vous avez défini un mot de passe valide sous **Paramètres** &gt; **Verrouillage d’écran** &gt; **Mot de passe**.
+    Si **Verrouiller automatiquement** (**Verrouiller le téléphone au bout de** sur certains appareils) n'apparaît pas, assurez-vous que vous avez défini un mot de passe sous **Paramètres**  &gt; **Verrouillage d’écran** &gt; **Mot de passe**.
 
 2. Sélectionnez la valeur du délai d’expiration du mot de passe.
 
 ## <a name="samsung-knox-device"></a>Appareil Samsung Knox
 
-1. Sur votre appareil, dans **Paramètres**, appuyez sur **Écran de verrouillage et sécurité** &gt; **Verrouiller automatiquement**.
+1. Sur votre appareil, dans **Paramètres**, appuyez sur **Écran de verrouillage et sécurité**&gt;**Verrouiller automatiquement**.
 
-    Si **Verrouiller automatiquement** (**Verrouiller le téléphone au bout de** sur certains appareils) n’apparaît pas, vérifiez que vous avez défini un mot de passe valide sous **Paramètres** &gt; **Verrouillage d’écran** &gt; **Mot de passe**.
+    Si **Verrouiller automatiquement** (**Verrouiller le téléphone au bout de** sur certains appareils) n'apparaît pas, assurez-vous que vous avez défini un mot de passe sous **Paramètres**  &gt; **Verrouillage d’écran** &gt; **Mot de passe**.
 
 2. Sélectionnez une valeur pour le délai d’expiration de mot de passe.
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b46cd4a407df686e094198c588371ed4a01bb6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9bca046302b221b934d0802c0bf637aced2cec3f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832571"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885916"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Résoudre des problèmes liés à l’accord de mise en œuvre de périphériques iOS dans Microsoft Intune
 
@@ -40,10 +40,10 @@ Collectez les informations suivantes sur le problème :
 - Quelle plateforme (Android, iOS, Windows) rencontre le problème ?
 - Combien d’utilisateurs sont affectés ? Tous les utilisateurs sont-ils affectés ou juste quelques-uns ?
 - Combien d’appareils sont affectés ? Tous les appareils sont-ils affectés ou simplement certains ?
-- Qu’est-ce que l’autorité MDM ? Si c’est System Center Configuration Manager, quelle version de Configuration Manager utilisez-vous ?
+- Qu’est-ce que l’autorité MDM ?
 - Comment l’inscription est-elle effectuée ? S’agit-il d’un BYOD (Bring Your Own Device) ou d’Apple Programme d’inscription des appareils (DEP) avec des profils d’inscription ?
 
-## <a name="error-messages"></a>Messages d'erreur
+## <a name="error-messages"></a>Messages d’erreur
 
 ### <a name="profile-installation-failed-a-network-error-has-occurred"></a>Échec de l’installation du profil. Une erreur réseau s'est produite.
 
@@ -72,7 +72,7 @@ Collectez les informations suivantes sur le problème :
 #### <a name="resolution"></a>Résolution
 Créez des enregistrements de ressources CNAME DNS pour le domaine de votre entreprise. Par exemple, si le domaine de votre entreprise est contoso.com, créez un enregistrement CNAME dans DNS, qui redirige EnterpriseEnrollment.contoso.com vers EnterpriseEnrollment-s.manage.microsoft.com.
 
-Bien que la création d’entrées DNS CNAME soit facultative, les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur MDM (enrollment.manage.microsoft.com).
+La création d’entrées CNAME dans DNS est facultative, mais les enregistrements CNAME facilitent l’inscription pour les utilisateurs. Si aucun enregistrement CNAME d’inscription n’est trouvé, les utilisateurs sont invités à taper le nom du serveur de gestion des appareils mobiles (enrollment.manage.microsoft.com).
 
 S'il existe plusieurs domaines vérifiés, créez un enregistrement CNAME pour chaque domaine. Ces enregistrements doivent contenir les informations suivantes :
 
@@ -186,7 +186,7 @@ Si votre entreprise utilise plusieurs domaines pour les informations d’identif
 **Cause :** Le certificat Apple Push Notification Service (APNs) est manquant, non valide ou a expiré.
 
 #### <a name="resolution"></a>Résolution
-Vérifiez qu’un certificat APNs valide est ajouté à Intune. Pour plus d’informations, consultez [Configurer la gestion des périphériques iOS et Mac](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune). 
+Vérifiez qu’un certificat APNs valide est ajouté à Intune. Pour plus d’informations, consultez [configurer l’inscription iOS](ios-enroll.md).
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
@@ -199,7 +199,6 @@ Renouvelez le certificat APNs, puis réinscrivez l’appareil.
 > Veillez à renouveler le certificat APNs. Ne remplacez pas le certificat APNs. Si vous remplacez le certificat, vous devez réinscrire tous les appareils iOS dans Intune. 
 
 - Pour renouveler le certificat APNs dans Intune autonome, consultez [renouveler le certificat Push MDM Apple](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Pour renouveler le certificat APNs dans Intune Hybrid avec Configuration Manager, consultez [configurer la gestion des appareils hybrides iOS avec System Center Configuration Manager et Microsoft Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac).
 - Pour renouveler le certificat APNs dans Office 365, consultez [créer un certificat APNs pour les appareils iOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>Connexion XPC_TYPE_ERROR non valide
@@ -230,7 +229,7 @@ Lorsque vous activez un appareil géré par DEP auquel est affecté un profil d�
 #### <a name="resolution"></a>Résolution
 
 1. Modifiez le profil d’inscription. Vous pouvez apporter des modifications au profil. L’objectif est de mettre à jour l’heure de modification du profil.
-2. Synchroniser des appareils gérés par le programme DEP : dans le [Centre d’administration du Gestionnaire de points de terminaison](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton > **Synchroniser maintenant**. Une demande de synchronisation est envoyée à Apple.
+2. Synchroniser les appareils gérés par le programme DEP : dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton > **Synchroniser maintenant**. Une demande de synchronisation est envoyée à Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>L’inscription DEP est bloquée au moment de la connexion de l’utilisateur
 Lorsque vous activez un appareil géré par DEP auquel est affecté un profil d’inscription, le programme d’installation initial s’inscrit après que vous avez entré les informations d’identification.

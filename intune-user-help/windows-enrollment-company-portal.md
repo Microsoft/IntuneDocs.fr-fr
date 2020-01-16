@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86aeb2b54d45f111864d71e65b8c90fce7205868
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 86c158f73d820fa2e719fe92b884c77f315fcb94
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508026"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858809"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inscription d’un appareil Windows dans le portail d’entreprise Intune  
 
@@ -62,8 +62,8 @@ Les étapes d’inscription diffèrent selon les différentes versions des appar
 
 4. Si votre version est  
 
-    * __1607 ou ultérieure__ : inscrivez votre appareil via [**Paramètres** > **Compte** > **Accès professionnel ou scolaire**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 ou antérieure__ : inscrivez votre appareil via [**Paramètres** > **Compte** > **Vos comptes**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 ou version ultérieure__ : inscrivez votre appareil via [**Paramètres** > **Compte** > **Accès professionnel ou scolaire**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou version antérieure__ : inscrivez votre appareil via [**Paramètres** > **Compte** > **Vos comptes**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Appareils Windows 10 Mobile
 
@@ -72,8 +72,8 @@ Les étapes d’inscription diffèrent selon les différentes versions des appar
 3. Sous __Informations sur l’appareil__, recherchez la __Version__.  
 4. Si votre version est  
 
-    * __1607 ou ultérieure__ : inscrivez votre appareil via [**Paramètres** > **Accès professionnel ou scolaire**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 ou antérieure__ : inscrivez votre appareil via [**Paramètres** > **Comptes**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 ou version ultérieure__ : inscrivez votre appareil via [**Paramètres** > **Accès professionnel ou scolaire**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou version antérieure__ : inscrivez votre appareil via [**Paramètres** > **Comptes**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Inscrire des appareils non-Windows 10  
 Utilisez les articles suivants pour inscrire d’autres appareils Windows pris en charge via le site web Portail d’entreprise :   

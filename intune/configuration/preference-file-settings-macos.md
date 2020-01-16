@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 01/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ed04c1bf135793da9cece9debc2c7cdd481601a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d226a5b8ee448b7b168a03fe6b8a1c63bc1be432
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74691689"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827783"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Ajouter un fichier de liste de propriétés aux appareils macOS à l’aide de Microsoft Intune
 
@@ -53,6 +53,16 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Nom de domaine de préférence**: les fichiers de liste de propriétés sont généralement utilisés pour les navigateurs Web (Microsoft Edge), [Microsoft Defender-protection avancée contre les menaces](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)et les applications personnalisées. Lorsque vous créez un domaine de préférence, un ID de Bundle est également créé. Entrez l’ID de Bundle, par exemple `com.company.application`. Par exemple, entrez `com.Contoso.applicationName`, `com.Microsoft.Edge` ou `com.microsoft.wdav`.
 - **Fichier de liste de propriétés**: sélectionnez le fichier de liste de propriétés associé à votre application. Assurez-vous qu’il s’agit d’un fichier `.plist` ou `.xml`. Par exemple, téléchargez un fichier `YourApp-Manifest.plist` ou `YourApp-Manifest.xml`.
 - **Contenu du fichier**: les informations de clé du fichier de liste de propriétés sont affichées. Si vous avez besoin de modifier les informations de clé, ouvrez le fichier de liste dans un autre éditeur, puis rechargez le fichier dans Intune.
+
+Vérifiez que votre fichier est correctement mis en forme. Le fichier ne doit contenir que des paires clé/valeur et ne doit pas être encapsulé dans des balises `<dict>`, `<plist>`ou `<xml>`. Par exemple, votre fichier de liste de propriétés doit être similaire au fichier suivant :
+
+```xml
+<key>SomeKey</key>
+<string>someString</string>
+<key>AnotherKey</key>
+<false/>
+...
+```
 
 Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil est créé et affiché dans la liste des profils.
 

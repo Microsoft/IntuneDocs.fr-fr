@@ -17,13 +17,13 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc50f48afbd527f3c6d82cc0c71a166b0356ab9e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 24601ef5c7a6451e2abfa64da37b21912d3cbace
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801476"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858792"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quelles informations mon organisation peut-elle voir quand j’inscris mon appareil ?
 
@@ -46,14 +46,14 @@ Votre organisation ne peut pas voir vos informations personnelles quand vous ins
 - Système d’exploitation et sa version, par exemple iOS 12.0.1
 - Inventaire des applications et noms des applications, comme Microsoft Word. sur les appareils personnels, votre organisation peut uniquement voir la liste de vos applications gérées. Sur les appareils de l’entreprise, elle peut voir la liste de toutes vos applications.
 - Propriétaire de l’appareil
-- Nom de l'appareil
+- Nom de l’appareil
 - Numéro de série de l’appareil
 - IMEI
 
 **Ce que votre organisation est susceptible de voir :**
 
-- Numéro de téléphone : pour les appareils appartenant à l’entreprise, votre numéro de téléphone complet peut être vu. Pour les appareils personnels, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles par votre organisation. Vous pouvez voir le type de propriété pour chaque appareil individuel sur la page Détails de l' **appareil** .
-- Espace de stockage sur l’appareil : si vous ne réussissez pas à installer une application obligatoire, votre organisation peut regarder si l’espace de stockage disponible sur votre appareil est insuffisant.  
-- Localisation : votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
-- Détails de l’inventaire des applications : si votre organisation utilise Mobile Threat Defense, elle peut voir les détails concernant les applications installées sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Si vous utilisez un appareil personnel, votre organisation peut uniquement voir la liste de vos applications gérées. Si vous utilisez un appareil appartenant à l’entreprise, elle peut voir la liste de toutes vos applications.
-- Informations sur le réseau : certaines informations sur les connexions réseau des appareils Android peuvent être visibles par l’équipe de support de votre organisation. Par exemple, si votre organisation exige que les appareils restent dans un bâtiment spécifique, votre appareil identifie le réseau auquel il est connecté. 
+- Numéro de téléphone : pour les appareils appartenant à l’entreprise, votre numéro de téléphone complet peut être vu. Pour les appareils personnels, seuls les quatre derniers chiffres de votre numéro de téléphone sont visibles par votre organisation. Vous pouvez voir le type de propriété pour chaque appareil individuel sur la page Détails de l' **appareil** .
+- Espace de stockage sur l’appareil : si vous ne réussissez pas à installer une application obligatoire, votre organisation peut regarder si l’espace de stockage disponible sur votre appareil est insuffisant.  
+- Emplacement : Votre organisation ne peut pas localiser votre appareil, à moins que vous ayez besoin de récupérer un appareil iOS perdu et supervisé. Consultez la [documentation pour Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) pour en savoir plus sur les appareils supervisés.  
+- Détails de l’inventaire des applications : si votre organisation utilise Mobile Threat Defense, elle peut voir plus de détails sur les applications installées sur votre appareil iOS. Découvrez plus d’informations sur [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Si vous utilisez un appareil personnel, votre organisation peut uniquement voir la liste de vos applications gérées. Si vous utilisez un appareil appartenant à l’entreprise, elle peut voir la liste de toutes vos applications.
+- Informations sur les réseaux : Certaines informations sur les connexions réseau des appareils Android peuvent être visibles par l’équipe de support de votre organisation. Par exemple, si votre organisation exige que les appareils restent dans un bâtiment spécifique, votre appareil identifie le réseau auquel il est connecté. 

@@ -18,21 +18,21 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 499eb015f38134a8b1ff1c41dd22d26cdd4f7324
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 0ceee371ea4324c31a173344dfe252a6e7f52610
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508154"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857853"
 ---
 # <a name="unable-to-get-macos-device-managed"></a>Gestion de l’appareil macOS impossible
 
 Si vous recevez l’un des messages suivants quand vous essayez d’inscrire votre appareil macOS pour qu’il soit géré, contactez le support de votre entreprise.
 
-**Message 1 :** *Votre appareil ne peut pas être géré. Ce problème peut avoir l’une des causes suivantes : vous utilisez une machine virtuelle, votre appareil a un numéro de série restreint ou l’appareil est déjà attribué à une autre personne. Découvrez comment résoudre ces problèmes ou contactez le support de votre entreprise.*
+**Message 1** : *Votre appareil ne peut pas être géré. Ce problème peut avoir l’une des causes suivantes : vous utilisez une machine virtuelle, votre appareil a un numéro de série restreint ou l’appareil est déjà attribué à une autre personne. Découvrez comment résoudre ces problèmes ou contactez le support de votre entreprise.*
 
-**Message 2 :** *Vous semblez utiliser une machine virtuelle. Veillez à effectuer une configuration complète de votre machine virtuelle en spécifiant notamment le numéro de série et le modèle de matériel. S’il ne s’agit pas d’une machine virtuelle, contactez le support.*  
+**Message 2** : *Vous semblez utiliser une machine virtuelle. Veillez à effectuer une configuration complète de votre machine virtuelle en spécifiant notamment le numéro de série et le modèle de matériel. S’il ne s’agit pas d’une machine virtuelle, contactez le support.*  
 
 La gestion de votre appareil n’est peut-être pas possible pour l’une des raisons suivantes : 
 

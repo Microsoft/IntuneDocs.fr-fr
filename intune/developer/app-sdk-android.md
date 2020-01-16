@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2e4c96cefef9f535d68ed8da20dfcaeb0deffbe1
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503496"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653918"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guide du Kit SDK de l’application Microsoft Intune pour les développeurs Android
 
@@ -37,14 +37,14 @@ Le Kit de développement logiciel SDK (SDK) d’application Microsoft Intune po
 Le SDK d’application Intune se compose des fichiers suivants :
 
 * **Microsoft.Intune.MAM.SDK.aar** : composants du SDK, à l’exception des fichiers JAR de la bibliothèque de prise en charge.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v4 Android.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v7 Android.
-* **Microsoft.Intune.MAM.SDK.Support.v17.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent la bibliothèque de prise en charge v17 Android. 
+* **Microsoft.Intune.MAM.SDK.Suppou det.v4.jar**: classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v4.
+* **Microsoft.Intune.MAM.SDK.Suppou det.v7.jar**: classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v7.
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui tirent parti de la bibliothèque de prise en charge Android v17. 
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar** : classes nécessaires pour prendre en charge la gestion des applications mobiles dans les applications qui utilisent les classes de la bibliothèque de prise en charge Android dans le package `android.support.text`.
-* **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar** : ce fichier AAR contient des stubs pour les classes système Android qui sont présentes uniquement sur les appareils récents, mais qui sont référencées par des méthodes dans `MAMActivity`. Les appareils récents ignorent ces classes stub. Ce fichier AAR n’est nécessaire que si votre application effectue une réflexion sur des classes dérivant de `MAMActivity`. La plupart des applications n’ont pas besoin de l’inclure. Le AAR contient des règles ProGuard pour exclure toutes ses classes.
-* **com.Microsoft.Intune.mam.Build.jar** : plug-in Gradle qui [contribue à l’intégration du SDK](#build-tooling).
+* **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar** : ce fichier AAR contient des stubs pour les classes système Android qui sont présentes uniquement sur les appareils récents, mais qui sont référencées par des méthodes dans `MAMActivity`. Les appareils récents ignorent ces classes stub. Ce fichier AAR n’est nécessaire que si votre application effectue une réflexion sur des classes dérivant de `MAMActivity`. La plupart des applications n’ont pas besoin de l’inclure. Le AAR contient des règles ProGuard pour exclure toutes ses classes.
+* **com.microsoft.intune.mam.build.jar** : plug-in Gradle qui [contribue à l’intégration du SDK](#build-tooling).
 * **CHANGELOG.txt** : contient un historique des modifications apportées dans chaque version du SDK.
-* **THIRDPARTYNOTICES.TXT** : avis d’attribution qui reconnaît que le code tiers et/ou OSS sera compilé dans votre application.
+* **THIRDPARTYNOTICES. TXT** :  avis d’attribution qui reconnaît le code tiers et/ou OSS qui sera compilé dans votre application.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -155,7 +155,7 @@ Les effets seraient les suivants :
 * `:product:FooLib` n’est pas réécrit, car il est inclus dans `excludeProjects`
 * `:product:foo-project` est réécrit, à l’exception de `com.contoso.SplashActivity` qui est ignoré, car il se trouve dans `excludeClasses`
 * `bar.jar` est réécrit, car il est inclus dans `includeExternalLibraries`
-* `zap.jar` **n’est pas** réécrit, car ce n’est pas un projet et il n’est pas inclus dans `includeExternalLibraries`
+* `zap.jar`**n’est pas** réécrit, car ce n’est pas un projet et il n’est pas inclus dans `includeExternalLibraries`
 * `com.contoso.foo:zap-artifact:1.0.0` est réécrit, car il est inclus dans `includeExternalLibraries`
 * `com.microsoft.bar:baz:1.0.0` est réécrit, car il est inclus dans `includeExternalLibraries` par le biais d’un caractère générique (`com.microsoft.*`).
 * `com.microsoft.qux:foo:2.0` n’est pas réécrit même s’il correspond au même caractère générique que l’élément précédent, car il est explicitement exclu par le biais d’un modèle de négation.
@@ -247,8 +247,8 @@ Les effets seraient les suivants :
 
 * Le répertoire `product-foo-project` est réécrit en `mam-build\product-foo-project`
 * `bar.jar` est réécrit en `mam-build\libs\bar.jar`
-* `zap.jar` **n’est pas** réécrit, car il n’est répertorié que dans `--classpath`
-* La classe `com.contoso.SplashActivity` **n’est pas** réécrite, même si elle se trouve dans `--input`
+* `zap.jar`**n’est pas** réécrit, car il n’est répertorié que dans `--classpath`
+* La classe `com.contoso.SplashActivity`**n’est pas** réécrite, même si elle se trouve dans `--input`
 
 > [!NOTE] 
 > L’outil de génération ne prend pas en charge les fichiers aar. Si votre système de génération n’extrait pas déjà `classes.jar` au moment du traitement des fichiers aar, vous devez le faire avant d’appeler l’outil de génération.
@@ -539,7 +539,7 @@ String toString();
 > [!NOTE]
 > `MAMPolicyManager.getPolicy` retourne toujours une stratégie d’application non null, même si l’appareil ou l’application n’est pas placé sous une stratégie de gestion Intune.
 
-### <a name="example-determine-if-pin-is-required-for-the-app"></a>Exemple : Déterminer si le code PIN est nécessaire pour l’application
+### <a name="example-determine-if-pin-is-required-for-the-app"></a>Exemple : Déterminer si le code PIN est nécessaire pour l’application
 
 Si l’application a sa propre expérience utilisateur de code PIN, vous souhaiterez peut-être la désactiver si l’administrateur informatique a configuré le SDK pour demander un code PIN d’application. Pour déterminer si l’administrateur informatique a déployé la stratégie de code PIN d’application sur cette application, pour l’utilisateur final actuel, appelez la méthode suivante :
 
@@ -675,17 +675,17 @@ Les notifications suivantes sont envoyées à l’application et certaines d’e
 
 * **WIPE_USER_DATA** : cette notification est envoyée dans une classe `MAMUserNotification`. Quand cette notification est reçue, l’application *doit* supprimer toutes les données associées à l’identité gérée (à partir de `MAMUserNotification.getUserIdentity()`). La notification peut se produire pour diverses raisons, notamment lorsque votre application appelle `unregisterAccountForMAM`, lorsqu’un administrateur informatique lance une réinitialisation, ou lorsque les stratégies d’accès conditionnel requises par l’administrateur ne sont pas satisfaites. Si votre application n’est pas inscrite pour cette notification, le comportement de réinitialisation par défaut sera effectué. Le comportement par défaut permet de supprimer tous les fichiers d’une application à identité unique ou tous les fichiers marqués avec l’identité gérée pour une application à plusieurs identités. Cette notification ne sera jamais envoyée sur le thread d’interface utilisateur.
 
-* **WIPE_USER_AUXILIARY_DATA** : les applications peuvent s’inscrire à cette notification si elles souhaitent que le SDK d’application Intune adopte le comportement de réinitialisation sélective par défaut, tout en ayant la possibilité de supprimer des données auxiliaires au moment de la réinitialisation. Cette notification n’est pas disponible pour les applications à identité unique : elle est envoyée seulement aux applications à plusieurs identités. Cette notification ne sera jamais envoyée sur le thread d’interface utilisateur.
+* **WIPE_USER_AUXILIARY_DATA** : les applications peuvent s’inscrire à cette notification si elles souhaitent que le SDK de l’application Intune adopte le comportement de réinitialisation sélective par défaut, tout en ayant la possibilité de supprimer des données auxiliaires au moment de la réinitialisation. Cette notification n’est pas disponible pour les applications à identité unique : elle est envoyée seulement aux applications à plusieurs identités. Cette notification ne sera jamais envoyée sur le thread d’interface utilisateur.
 
 * **REFRESH_POLICY** : cette notification est envoyée dans un `MAMUserNotification`. Quand cette notification est reçue, toute décision de stratégie Intune mise en cache par votre application doit être invalidée et mise à jour. Si votre application ne stocke pas d’hypothèses de stratégie, elle n’a pas besoin de s’inscrire à cette notification. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
 
 * **REFRESH_APP_CONFIG** : cette notification est envoyée dans un `MAMUserNotification`. Quand cette notification est reçue, toutes les données de configuration d’application mises en cache doivent être invalidées et mises à jour. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
 
-* **MANAGEMENT_REMOVED** : cette notification est envoyée dans un `MAMUserNotification` et signale à l’application qu’elle est sur le point de devenir non gérée. Une fois non gérée, elle ne pourra plus lire les fichiers chiffrés, lire des données chiffrées avec MAMDataProtectionManager, interagir avec le Presse-papiers chiffré, ni participer à l’écosystème d’applications gérées. Voir ci-après pour plus de détails. Cette notification ne sera jamais envoyée sur le thread d’interface utilisateur.
+* **MANAGEMENT_REMOVED** : cette notification est envoyée dans un `MAMUserNotification` et signale à l’application qu’elle est sur le point de devenir non managée. Une fois non gérée, elle ne pourra plus lire les fichiers chiffrés, lire des données chiffrées avec MAMDataProtectionManager, interagir avec le Presse-papiers chiffré, ni participer à l’écosystème d’applications gérées. Voir ci-après pour plus de détails. Cette notification ne sera jamais envoyée sur le thread d’interface utilisateur.
 
-* **MAM_ENROLLMENT_RESULT** : cette notification est envoyée dans un `MAMEnrollmentNotification` pour informer l’application qu’une tentative d’inscription APP-WE a abouti et pour fournir l’état de cette tentative. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
+* **MAM_ENROLLMENT_RESULT** : cette notification est envoyée dans un `MAMEnrollmentNotification` pour informer l’application qu’une tentative d’inscription APP-WE a abouti et pour fournir l’état de cette tentative. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
 
-* **COMPLIANCE_STATUS** : cette notification est envoyée dans un `MAMComplianceNotification` pour informer l’application du résultat d’une tentative de correction de la conformité. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
+* **COMPLIANCE_STATUS** : cette notification est envoyée dans un `MAMComplianceNotification` pour informer l’application du résultat d’une tentative de correction de la conformité. Aucune garantie n’est établie quant au thread sur lequel cette notification sera envoyée.
 
 > [!NOTE]
 > Une application ne doit jamais s’inscrire à la fois pour les notifications `WIPE_USER_DATA` et `WIPE_USER_AUXILIARY_DATA`.
@@ -789,7 +789,7 @@ L’accès conditionnel est une [fonctionnalité](https://docs.microsoft.com/azu
 5. Une fois que votre application a intégré le SDK d’application Intune, contactez msintuneappsdk@microsoft.com pour la faire ajouter à la liste des applications approuvées pour [l’accès conditionnel basé sur l’application](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
 6. Une fois que votre application a été ajoutée à la liste approuvée, validez en [configurant l’accès conditionnel basé sur l’application](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) et en vérifiant que la connexion à votre application s’effectue correctement.
 
-## <a name="app-protection-policy-without-device-enrollment"></a>Stratégie de protection des applications sans inscription des appareils
+## <a name="app-protection-policy-without-device-enrollment"></a>Stratégie de protection des applications sans inscription d’appareil
 
 ### <a name="overview"></a>Vue d’ensemble
 La stratégie de protection des applications Intune sans inscription d’appareil, également appelée APP-WE ou MAM-WE, permet aux applications d’être gérées par Intune sans nécessiter l’inscription de l’appareil auprès de la gestion des appareils mobiles (MDM) Intune. APP-WE fonctionne avec ou sans inscription d’appareil. Le portail d’entreprise doit toujours être installé sur l’appareil, mais l’utilisateur n’a pas besoin de se connecter au portail d’entreprise et d’inscrire l’appareil.
@@ -1146,7 +1146,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
 
 4. Ensuite, vous _**devez**_ copier tout ce que vous mettez dans `android:fullBackupContent` dans une balise de métadonnées nommée `com.microsoft.intune.mam.FullBackupContent` dans le manifeste.
 
-    **Exemple 1** : Si vous souhaitez que votre application ait des sauvegardes complètes sans exclusions, affectez la valeur **true** à l’attribut `android:fullBackupContent` et à la balise de métadonnées `com.microsoft.intune.mam.FullBackupContent` :
+    **Exemple 1** : si vous souhaitez que votre application ait des sauvegardes complètes sans exclusions, affectez la valeur **true** à l’attribut `android:fullBackupContent` et à l’étiquette de métadonnées `com.microsoft.intune.mam.FullBackupContent` :
 
     ```xml
     android:fullBackupContent="true"
@@ -1154,7 +1154,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="true" />  
     ```
 
-    **Exemple 2** : Si vous souhaitez que votre application utilise son BackupAgent personnalisé et ne participe pas aux sauvegardes automatiques complètes et conformes aux stratégies Intune, vous devez affecter la valeur **false** à l’attribut et à la balise de métadonnées :
+    **Exemple 2 :** si vous souhaitez que votre application utilise son BackupAgent personnalisé et ne participe pas aux sauvegardes automatiques complètes et conformes aux stratégies Intune, vous devez affecter la valeur **false** à l’attribut et à l’étiquette de métadonnées :
 
     ```xml
     android:fullBackupContent="false"
@@ -1162,7 +1162,7 @@ Intune vous permet d’utiliser toutes les [fonctionnalités de sauvegarde autom
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="false" />  
     ```
 
-    **Exemple 3** : Si vous souhaitez que votre application ait des sauvegardes complètes conformément à vos règles personnalisées définies dans un fichier XML, affectez à l’attribut et à la balise de métadonnées la même ressource XML :
+    **Exemple 3** : si vous souhaitez que votre application ait des sauvegardes complètes conformément aux règles personnalisées définies dans un fichier XML, affectez à l’attribut et à la balise de métadonnées la même ressource XML :
 
     ```xml
     android:fullBackupContent="@xml/my_scheme"
@@ -1352,7 +1352,7 @@ Outre la possibilité pour l’application de définir l’identité, l’identi
 
     En outre, l’interaction utilisateur avec une activité peut entraîner un changement d’identité implicite.
 
-    **Exemple :** Si un utilisateur annule une invite d’autorisation pendant `Resume`, un changement implicite en faveur d’une identité vide a lieu.
+    **Exemple :** si un utilisateur annule une invite d’autorisation pendant `Resume`, un changement implicite en faveur d’une identité vide a lieu.
 
     L’application peut être informée de ces modifications et, si elle le doit, elle peut les interdire. `MAMService` et `MAMContentProvider` exposent la méthode suivante, que les sous-classes peuvent substituer :
 
@@ -1655,7 +1655,7 @@ Si l’application fournit des données d’entreprise autres qu’un `ParcelFil
 Si vous n’héritez pas `MAMContentProvider` explicitement et, à la place, autorisez les outils de génération à effectuer cette modification, vous pouvez appeler une version statique de la même méthode : `MAMContentProvider.isProvideContentAllowed(provider,
 contentIdentity)`.
 
-### <a name="selective-wipe"></a>Réinitialisation sélective
+### <a name="selective-wipe"></a>réinitialisation sélective
 Si une application à plusieurs identités a été inscrite à la notification `WIPE_USER_DATA`, elle est responsable de la suppression de toutes les données de l’utilisateur qui est réinitialisé, notamment tous les fichiers qui ont été étiquetés avec l’identité comme appartenant à cet utilisateur. Si l’application supprime les données utilisateur d’un fichier mais que les autres données doivent être conservées dans le fichier, elle *doit* changer l’identité du fichier (via `MAMFileProtectionManager.protect` pour un utilisateur personnel ou pour l’identité vide). Si une stratégie de chiffrement est utilisée, tous les fichiers restants appartenant à l’utilisateur à réinitialiser ne sont pas déchiffrés et deviennent inaccessibles par l’application après la réinitialisation.
 
 Une application s’inscrivant à la notification `WIPE_USER_DATA` ne bénéficie plus du comportement de réinitialisation sélective par défaut du SDK. Pour les applications prenant en charge plusieurs identités, cette perte peut être d’autant plus importante, car la réinitialisation sélective GAM par défaut réinitialise uniquement les fichiers dont l’identité est ciblée par une réinitialisation. Si une application prenant en charge plusieurs identités souhaite que la réinitialisation sélective GAM par défaut soit effectuée _**et**_ souhaite effectuer ses propres actions de réinitialisation, elle doit s’inscrire pour les notifications `WIPE_USER_AUXILIARY_DATA`. Cette notification sera envoyée par le SDK juste avant d’effectuer la réinitialisation sélective par défaut GAM. Une application ne doit jamais s’inscrire à la fois à `WIPE_USER_DATA` et à `WIPE_USER_AUXILIARY_DATA`.

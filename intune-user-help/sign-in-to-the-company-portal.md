@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 12/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a44027c14e0a52d72fc032a6ab42413fa8df96
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f82549cfbdd3c987b2f51f4d90b9c18cce8c25be
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508306"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857801"
 ---
 # <a name="sign-in-to-company-portal"></a>Connectez-vous à Portail d’entreprise  
 
@@ -56,6 +56,7 @@ Les étapes suivantes affichent des captures d’écran de l’Portail d’entre
    ![Une fois le processus d’authentification terminé, l’application Portail d’entreprise procède à la connexion et affiche une barre de chargement.](/intune-user-help/media/cp_ios_aad_signin_after_1804_004.png)
 
 ## <a name="sign-in-with-certificate-based-authentication"></a>Connexion avec une authentification basée sur les certificats
+Vous ne verrez cette option de connexion que si votre organisation autorise l’authentification basée sur les certificats et que vous disposez d’un certificat à utiliser.  
 
 1. Ouvrez l'application Portail d'entreprise sur votre appareil.  
 
@@ -73,7 +74,7 @@ Si votre entreprise utilise des cartes à puce pour accéder à vos ordinateurs,
 
 1. Sélectionnez **Connexion à partir d’un autre appareil**.  
 
-   ![La page de connexion du portail d’entreprise invite l’utilisateur à entrer son e-mail.  Dessous se trouvent le bouton « Suivant » et un lien vers « Se connecter à partir d’un autre appareil ». Il y a aussi un lien « Vous n’arrivez pas à accéder à votre compte ? » Un lien situé au bas de la page permet d’accéder aux informations Confidentialité et cookies de Microsoft.](/intune-user-help/media/cp_ios_aad_signin_after_1804_005.png)
+   ![La page de connexion du Portail d’entreprise invite l’utilisateur à entrer son e-mail.  Dessous se trouvent le bouton « Suivant » et un lien vers « Se connecter à partir d’un autre appareil ». Il y a aussi un lien « Vous n’arrivez pas à accéder à votre compte ? » Un lien situé au bas de la page permet d’accéder aux informations Confidentialité et cookies de Microsoft.](/intune-user-help/media/cp_ios_aad_signin_after_1804_005.png)
 
 2. Vous recevez un code à usage unique pour vous connecter au portail d’entreprise. Copiez le code.
 

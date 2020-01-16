@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01b03e986cd2540c364f2b6d8d3e20412fd5b82e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 20228277e496ca6f594859d40836e50609d05a8a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506149"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855439"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Inscrire un appareil Windows Phone 8.1 dans Intune  
 
@@ -73,7 +73,7 @@ Inscrivez votre appareil :
 
     ![Écran de paramètres du poste de travail](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-7. Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription. Votre compte d’espace de travail doit à présent être répertorié dans la page **Paramètres** &gt; **Espace de travail**.  
+7. Entrez les informations supplémentaires demandées, puis appuyez sur **Se connecter** pour terminer l’inscription. Votre compte Espace de travail doit à présent être répertorié dans la page **Paramètres** &gt; **Espace de travail**.  
 
 
     ![Écran de compte ajouté](./media/WP81-enroll-4-account-added.png)  

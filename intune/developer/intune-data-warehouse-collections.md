@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42d07f02e76669c735d09b5d7843a4102dd0f835
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 7ceaf5c62f34cc248813a064de9e8e3710797779
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899243"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547918"
 ---
 # <a name="intune-data-warehouse-collections"></a>Collections Intune Data Warehouse
 
@@ -85,7 +85,7 @@ Le tableau suivant récapitule l’état d’affectation des stratégies de conf
 | DateKey       | Clé de date de la création du récapitulatif pour la stratégie de conformité.                                                                                                                   | 20161204 |
 | Unknown       | Nombre d’appareils hors connexion ou n’ayant pas pu communiquer avec Intune ou Azure AD pour d’autres raisons.                                                                           | 5        |
 | NotApplicable | Nombre d’appareils pour lesquels des stratégies de conformité ciblées par l’administrateur ne sont pas applicables.                                                                                     | 201      |
-| Conforme     | Nombre d’appareils qui ont appliqué une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur.                                                                        | 4083     |
+| conformité     | Nombre d’appareils qui ont appliqué une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur.                                                                        | 4083     |
 | InGracePeriod | Nombre d’appareils qui ne sont pas conformes, mais se trouvent dans la période de grâce définie par l’administrateur.                                                                                  | 57       |
 | NonCompliant  | Nombre d’appareils qui n’ont pas pu appliquer une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur, ou dont l’utilisateur n’a pas respecté les stratégies ciblées par l’administrateur. | 43       |
 |    Erreur      |    Nombre d’appareils qui n’ont pas pu communiquer avec Intune ou Azure AD et ont retourné un message d’erreur.                                                                          |    3     |
@@ -100,7 +100,7 @@ Le tableau suivant récapitule l’état d’affectation des stratégies de conf
 | PolicyPlatformKey | Clé du type de plateforme de la stratégie de conformité pour laquelle le récapitulatif a été créé.                                                                                            | 5        |
 | Unknown           | Nombre d’appareils hors connexion ou n’ayant pas pu communiquer avec Intune ou Azure AD pour d’autres raisons.                                                                           | 13       |
 | NotApplicable     | Nombre d’appareils pour lesquels des stratégies de conformité ciblées par l’administrateur ne sont pas applicables.                                                                                     | 3        |
-| Conforme         | Nombre d’appareils qui ont appliqué une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur.                                                                        | 45       |
+| conformité         | Nombre d’appareils qui ont appliqué une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur.                                                                        | 45       |
 | InGracePeriod     | Nombre d’appareils qui ne sont pas conformes, mais se trouvent dans la période de grâce définie par l’administrateur.                                                                                  | 3        |
 | NonCompliant      | Nombre d’appareils qui n’ont pas pu appliquer une ou plusieurs stratégies de conformité d’appareil ciblées par l’administrateur, ou dont l’utilisateur n’a pas respecté les stratégies ciblées par l’administrateur. | 7        |
 | Erreur             | Nombre d’appareils qui n’ont pas pu communiquer avec Intune ou Azure AD et ont retourné un message d’erreur.                                                                             | 3        |
@@ -117,7 +117,7 @@ Le tableau suivant récapitule l’état d’affectation des stratégies de conf
 |  complianceStatus  |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 |    Unknown         |    Inconnu.                                                                        |
-|    Conforme       |    Conforme.                                                                      |
+|    conformité       |    Conforme.                                                                      |
 |    Non conforme    |       L’appareil n’est pas conforme et est bloqué par les ressources d’entreprise.             |
 |    Conflit        |    Conflit avec d'autres règles.                                                      |
 |    Erreur           |       Erreur.                                                                       |
@@ -163,7 +163,7 @@ L’entité **DeviceConfigurationProfileDeviceActivity** répertorie le nombre d
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
 | DateKey   | Clé de date qui indique quand l’enregistrement du profil de configuration de l’appareil a été enregistré dans l’entrepôt de données. | 20160703 |
 | Pending   | Nombre d’appareils uniques en état d’attente.                                                    | 123      |
-| Réussi | Nombre d’appareils uniques en état de réussite.                                                    | 12       |
+| Succès | Nombre d’appareils uniques en état de réussite.                                                    | 12       |
 | Erreur     | Nombre d’appareils uniques en état d’erreur.                                                      | 10       |
 | Failed    | Nombre d’appareils uniques en état d’échec.                                                     | 2        |
 
@@ -174,7 +174,7 @@ L’entité **DeviceConfigurationProfileUserActivity** répertorie le nombre d�
 |------------|----------------------------------------------------------------------------------------------|-----------|
 | DateKey  | Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil est enregistré dans l’entrepôt de données.  | 20160703  |
 | Pending  | Nombre d’utilisateurs uniques en état d’attente.  | 123  |
-| Réussi  | Nombre d’utilisateurs uniques en état de réussite.  | 12  |
+| Succès  | Nombre d’utilisateurs uniques en état de réussite.  | 12  |
 | Erreur  | Nombre d’utilisateurs uniques en état d’erreur.  | 10  |
 | Failed  | Nombre d’utilisateurs uniques en état d’échec.  | 2  |
 
@@ -203,14 +203,14 @@ L’entité **DeviceRegistrationState** représente le type d’inscription réf
 | deviceRegistrationStateName | État d’inscription                                                                  |
 |    NotRegistered                     |    Non inscrit                                                                                                                                                                  |
 |    Inscrit                        |       Inscrit                                                                                                                                                                   |
-|    Revoked                           |       Cet état signifie que l’administrateur informatique a bloqué le client et que ce dernier peut être débloqué. Un appareil peut également être dans l’état Révoqué après une réinitialisation ou une mise hors service.        |
+|    Révoqué                           |       Cet état signifie que l’administrateur informatique a bloqué le client et que ce dernier peut être débloqué. Un appareil peut également être dans l’état Révoqué après une réinitialisation ou une mise hors service.        |
 |    KeyConflict                       |    Conflit de clé                                                                                                                                                                    |
 |    ApprovalPending                   |    Approbation en attente                                                                                                                                                                |
 |    CertificateReset                  |    Réinitialiser le certificat                                                                                                                                                               |
 |    NotRegisteredPendingEnrollment    |    Non inscrit, inscription en attente                                                                                                                                               |
 |    Unknown                           |    État inconnu                                                                                                                                                                   |
 
-## <a name="devices"></a>périphériques
+## <a name="devices"></a>appareils
 L’entité **device** répertorie tous les appareils inscrits à la gestion et leurs propriétés correspondantes.
 
 |          Propriété          |                                                                                       Description                                                                                      |
@@ -525,7 +525,7 @@ L’entité **ManagementAgentTypes** représente les agents utilisés pour gére
 | 3                     | EasMdm                            | L’appareil est géré à la fois par Exchange Active Sync et par un agent GPM.        |
 | 4                     | IntuneClient                      | L’appareil est géré par l’agent Intune PC.                               |
 | 5                     | EasIntuneClient                   | L’appareil est géré à la fois par Exchange Active Sync et par l’agent Intune PC. |
-| 8                     | ConfigManagerClient               | L’appareil est géré par l’agent System Center Configuration Manager.     |
+| 8                     | ConfigManagerClient               | L’appareil est géré par l’agent Configuration Manager     |
 | 10                    | ConfigurationManagerClientMdm     | L’appareil est géré par Configuration Manager et par GPM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | L’appareil est géré par Configuration Manager, MDM et Exchange Active Sync.               |
 | 16                    | Unknown                           | Type d’agent de gestion inconnu                                              |
@@ -586,7 +586,7 @@ L’entité **ownerType** indique si un appareil est un appareil d’entreprise,
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Identificateur unique du type de propriétaire.                                                                                                                                               |                            |
 | ownerTypeKey  | Identificateur unique du type de propriétaire dans l’entrepôt de données (clé de substitution).                                                                                                       |                            |
-| ownerTypeName | Représente le type de propriétaire des appareils : Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Personnel d’entreprise inconnu |
+| ownerTypeName | Représente le type de propriétaire des appareils :  Entreprise : l’appareil appartient à l’entreprise.  Personnel : il s’agit d’un appareil personnel (BYOD).   Inconnu : aucune information sur cet appareil n’est disponible. | Personnel d’entreprise inconnu |
 
 > [!Note]  
 > Pour le filtre `ownerTypeName` dans Azure AD lors de la création de groupes dynamiques pour les appareils, vous devez définir la valeur de `deviceOwnership` sur `Company`. Pour plus d’informations, consultez [Règles pour les appareils](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -612,7 +612,7 @@ Le tableau suivant répertorie le nombre d’appareils, par jour, dans un état 
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
 | DateKey   | Clé de date qui indique quand l’enregistrement du profil de configuration d’appareil a été enregistré dans l’entrepôt de données. | 20160703              |
 | Pending   | Nombre d’appareils uniques en état d’attente.                                                    | 123                   |
-| Réussi | Nombre d’appareils uniques en état de réussite.                                                    | 12                    |
+| Succès | Nombre d’appareils uniques en état de réussite.                                                    | 12                    |
 | PolicyKey | Clé de stratégie pouvant être jointe à la stratégie pour obtenir le nom de l’entité policyName.                                  | Ligne de base Windows 10 |
 | Erreur     | Nombre d’appareils uniques en état d’erreur.                                                      | 10                    |
 | Failed    | Nombre d’appareils uniques en état d’échec.                                                     | 2                     |
@@ -634,7 +634,7 @@ L’entité **PolicyTypeActivity** répertorie le nombre cumulé d’appareils d
 | PolicyKey     | Clé de stratégie pouvant être jointe à la stratégie pour obtenir le nom de l’entité policyName.                                | Ligne de base Windows 10         |
 | PolicyTypeKey | Type de clé de stratégie pouvant être joint au type de stratégie pour obtenir le nom du type de la stratégie.             | Stratégie de conformité Windows 10 |
 | Pending       | Nombre d’appareils uniques en état d’attente.                                                    | 123                         |
-| Réussi     | Nombre d’appareils uniques en état de réussite.                                                    | 12                          |
+| Succès     | Nombre d’appareils uniques en état de réussite.                                                    | 12                          |
 | Erreur         | Nombre d’appareils uniques en état d’erreur.                                                      | 10                          |
 | Failed        | Nombre d’appareils uniques en état d’échec.                                                     | 2                           |
 
@@ -654,7 +654,7 @@ Le tableau suivant répertorie le nombre d’utilisateurs, par jour, dans un ét
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
 | DateKey   | Clé de date qui indique quand l’enregistrement du profil de configuration de l’appareil a été enregistré dans l’entrepôt de données. | 20160703            |
 | Pending   | Nombre d’appareils uniques en état d’attente.                                                    | 123                 |
-| Réussi | Nombre d’appareils uniques en état de réussite.                                                    | 12                  |
+| Succès | Nombre d’appareils uniques en état de réussite.                                                    | 12                  |
 | PolicyKey | Clé de stratégie pouvant être jointe à la stratégie pour obtenir le nom de l’entité policyName.                                | Ligne de base Windows 10 |
 | Erreur     | Nombre d’appareils uniques en état d’erreur.                                                      | 10                  |
 

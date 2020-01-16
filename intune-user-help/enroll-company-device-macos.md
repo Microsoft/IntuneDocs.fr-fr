@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 961c081b17d380bd00965708b6acd57b8059b2e0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: fbe2c7933d0d012a7c85df4e9c5b6e8e94fc9805
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506310"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856800"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrire l’appareil macOS fourni par votre organisation dans la gestion
 
@@ -52,11 +52,11 @@ Effectuez les étapes suivantes pour inscrire votre appareil macOS dans la gesti
 4. Sélectionnez votre réseau Wi-Fi. Vous devez disposer d’une connexion Internet pour continuer l’installation. Si vous ne voyez pas votre réseau, ou si vous avez besoin de vous connecter via un réseau câblé, cliquez sur **Autres options réseau**. Quand vous avez terminé, cliquez sur **Continuer**.  
 
    ![Capture de l’écran de sélection de votre réseau Wi-Fi de l’Assistant Configuration d’un appareil macOS, affichant la liste des réseaux disponibles dans laquelle effectuer la sélection. Montre également un bouton Autres options réseau, un bouton Précédent et un bouton Continuer.](./media/macos-dep-wifi-1808.png)  
-5. Une fois que vous êtes connecté au réseau Wi-Fi, l’écran **Gestion à distance** s’affiche. L’option Gestion à distance permet à l’administrateur de votre organisation de configurer à distance votre appareil avec les comptes, les paramètres, les applications et les réseaux exigés par l’entreprise. Lisez les explications sur la gestion à distance pour mieux comprendre de quelle manière votre appareil est géré. Puis, cliquez sur **Continuer**.  
+5. Une fois que vous êtes connecté au réseau Wi-Fi, l’écran **Gestion à distance** s’affiche. L’option Gestion à distance permet à l’administrateur de votre organisation de configurer à distance votre appareil avec les comptes, les paramètres, les applications et les réseaux exigés par l’entreprise. Lisez les explications sur la gestion à distance pour mieux comprendre de quelle manière votre appareil est géré. Cliquez ensuite sur **Continuer**.  
 
    ![Capture de l’écran de gestion à distance de l’Assistant Configuration d’un appareil macOS, avec du texte expliquant la gestion à distance et présentant un lien vers de la documentation pour obtenir plus d’informations. Montre également un bouton Précédent et un bouton Continuer.](./media/macos-dep-remote-management-1-1808.png)  
 6. Quand vous y êtes invité, connectez-vous avec votre compte professionnel ou scolaire. Une fois que vous êtes authentifié, votre appareil installe un profil de gestion. Le profil configure et active votre accès aux ressources de votre organisation.  
-7. Renseignez-vous sur l’icône de données et de confidentialité d’Apple afin de pouvoir identifier par la suite le moment où des informations personnelles sont collectées. Puis, cliquez sur **Continuer**.  
+7. Renseignez-vous sur l’icône de données et de confidentialité d’Apple afin de pouvoir identifier par la suite le moment où des informations personnelles sont collectées. Cliquez ensuite sur **Continuer**.  
 
    ![Capture de l’écran de données et de confidentialité de l’Assistant Configuration d’un appareil macOS, affichant une illustration de deux personnes en train de se serrer la main et décrivant l’utilisation des données personnelles d’Apple. Montre également un bouton Précédent et un bouton Continuer.](./media/macos-dep-apple-data-privacy-1808.png)  
 8. Une fois votre appareil inscrit, vous pouvez avoir à exécuter des étapes supplémentaires. Les étapes qui s’affichent dépendent de la façon dont votre organisation a personnalisé l’expérience de configuration. Vous pouvez être tenu d’effectuer les opérations suivantes :

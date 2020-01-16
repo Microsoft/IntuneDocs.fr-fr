@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81c842eb27b1b9131c164ced5aeed86a78a37353
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 02aab98bf74664cbdb8c7d7dccbfadba701b59f6
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506298"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856783"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Inscrire votre appareil d’entreprise avec l’application Microsoft Intune
 
@@ -45,16 +45,16 @@ Effectuez ces étapes pour configurer et inscrire votre appareil.
 
 1. Allumez votre nouvel appareil ou votre appareil réinitialisé aux paramètres d’usine.  
 2. Sur l’écran de **Bienvenue**, sélectionnez votre langue.   Si vous avez été invité à vous inscrire avec un code QR ou avec NFC, suivez la procédure ci-dessous qui correspond à la méthode.  
-     * NFC : Placez votre appareil pris en charge par NFC à côté d’un appareil programmeur pour vous connecter au réseau de votre organisation. Suivez les invites à l’écran. Quand vous atteignez l’écran pour les conditions d’utilisation du service de Chrome, passez à l’étape 5.  
+     * NFC : placez votre appareil pris en charge par NFC à côté d’un appareil programmeur pour vous connecter au réseau de votre organisation. Suivez les invites à l’écran. Quand vous atteignez l’écran pour les conditions d’utilisation du service de Chrome, passez à l’étape 5.  
 
-     * Code QR : suivez les étapes de [Inscription avec un code QR](#qr-code-enrollment).  
+     * Code QR : suivez les étapes dans [Inscription avec un code QR](#qr-code-enrollment).  
 
      S’il vous a été demandé d’utiliser une autre méthode, passez à l’étape 3.    
 
 3. Connectez-vous au Wi-Fi, puis appuyez sur **SUIVANT**. Suivez l’étape qui correspond à votre méthode d’inscription. 
 
-    * Jeton : Quand vous accédez à l’écran de connexion de Google, suivez les étapes de [Inscription avec un jeton](#token-enrollment).  
-    * Google Zero Touch : Une fois que vous êtes connecté au Wi-Fi, votre appareil est reconnu par votre organisation. Passez à l’étape 4 et suivez les invites à l’écran jusqu’à ce que la configuration soit terminée.    
+    * Jeton : quand vous accédez à l’écran de connexion de Google, suivez les étapes dans [Inscription avec un jeton](#token-enrollment).  
+    * Google Zero Touch : une fois que vous êtes connecté au Wi-Fi, votre appareil est reconnu par votre organisation. Passez à l’étape 4 et suivez les invites à l’écran jusqu’à ce que la configuration soit terminée.    
  
        ![Exemple d’image de l’écran des conditions d’utilisation de Google que vous voyez si vous utilisez Google Zero Touch, mettant en évidence le bouton Accepter et continuer.](./media/google-zero-touch-intune-app-01.png)   
    

@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 829d8f6b2691f91c14029e4f29e2ef11b070e596
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 83048061cc7b3e1aaeb09ff54dec819720f2571f
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059623"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206820"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Utiliser et gérer des appareils Zebra avec des Extensions de mobilité Zebra dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Intune comprend un jeu complet de fonctionnalités, dont la gestion d’applications et la configuration des paramètres d’appareils. Ces fonctionnalités et paramètres intégrés gèrent des appareils Android fabriqués par Zebra Technologies, aussi appelé « appareils Zebra ».
 
@@ -53,7 +53,7 @@ Votre entreprise peut utiliser des appareils Zebra pour la vente, dans ses ateli
 - Consultez [Matrice de fonctionnalités complète MX Zebra](http://techdocs.zebra.com/mx/compatibility) (dirige sur le site web de Zebra) afin de confirmer que les profils créés sont compatibles avec la version MX, la version du système d’exploitation et le modèle de l’appareil.
 - Certaines appareils comme les TC20/25 ne prennent pas en charge toutes les fonctionnalités MX disponibles dans StageNow. Consultez la [matrice de fonctionnalités Zebra](http://techdocs.zebra.com/mx/tc2x/) (dirige sur le site web de Zebra) pour les dernières informations de prise en charge.
 
-## <a name="step-1-install-the-latest-company-portal-app"></a>Étape 1 : installer la dernière application de portail d’entreprise
+## <a name="step-1-install-the-latest-company-portal-app"></a>Étape 1 : installer la version la plus récente de l’application Portail d’entreprise
 
 Sur l’appareil, ouvrez le magasin de Google Play. Téléchargez et installez l’application Portail d’entreprise Intune à partir de Microsoft. Lorsqu’elle est installée depuis Google Play, l’application de portail d'entreprise effectue les mises à jour et correctifs automatiquement.
 
@@ -79,7 +79,7 @@ Continuez à publier le profil, puis consommez-le avec l’application StageNow 
 > [!TIP]
 > Pour plus d’informations sur StageNow et son utilité, consultez [Processus d’un appareil Android StageNow](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (ouvre le site web de Zebra).
 
-## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Étape 2 : vérifier que l’application Portail d’entreprise dispose du rôle Administrateur d’appareil
+## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Étape 2 : vérifier que l’application Portail d’entreprise dispose du rôle Administrateur d’appareil
 
 L’application Portail d’entreprise nécessite un administrateur d’appareil pour gérer des appareils Android. Pour activer le rôle Administrateur d’appareil, certains appareils Zebra incluent une interface utilisateur sur l’appareil. Si l’appareil inclut une interface utilisateur, l’application Portail d'entreprise invite l’utilisateur final à accorder le rôle Administrateur d’appareil lors de l’[inscription](#step-3-enroll-the-device-in-to-intune) (dans cet article).
 
@@ -96,13 +96,13 @@ L’article [Définir le mode d’échange de batterie en tant qu’administrate
 
 Continuez à publier le profil, puis consommez-le avec l’application StageNow sur l’appareil. L’application Portail d’entreprise dispose du rôle Administrateur d’appareil.
 
-## <a name="step-3-enroll-the-device-in-to-intune"></a>Étape 3 : inscrire l’appareil dans Intune
+## <a name="step-3-enroll-the-device-in-to-intune"></a>Étape 3 : inscrire l’appareil dans Intune
 
 Après avoir effectué les deux premières étapes, l’application Portail d’entreprise est installée sur l’appareil. L’appareil est prêt à être inscrit dans Intune.
 
 [Inscrire des appareils Android](../enrollment/android-enroll.md) répertorie les étapes. Si vous disposez de nombreux appareils Zebra, utilisez plutôt un [compte de gestionnaire d’inscription d’appareil (DEM)](../enrollment/device-enrollment-manager-enroll.md). L’utilisation d’un compte DEM supprime également l’option de désinscription depuis l’application Portail d'entreprise, de sorte que les utilisateurs ne puissent pas désinscrire l’appareil aussi facilement.
 
-## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>Étape 4 : créer un profil de gestion des appareils dans StageNow
+## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>Étape 4 : créer un profil de gestion des appareils dans StageNow
 
 Utilisez StageNow pour créer un profil qui configure les paramètres que vous souhaitez gérer sur l’appareil. Pour plus d’informations spécifiques, consultez la documentation sur Zebra. L’article [Profils](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (ouvre le site web de Zebra) peut constituer une bonne ressource.
 
@@ -137,10 +137,10 @@ Dans Intune, créez un profil de configuration d’appareil :
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : attribuez un nom descriptif au nouveau profil.
-    - **Description :** entrez une description pour le profil. Ce paramètre est facultatif, mais recommandé.
-    - **Plateforme** : sélectionnez **Android**.
-    - **Type de profil** : sélectionnez **Profil MX (Zebra uniquement)** .
+    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
+    - **Plateforme** : Sélectionnez **Android**.
+    - **Type de profil** : sélectionnez **Profil MX (Zebra uniquement)**.
 
 4. Dans **Profil MX au format .xml**, ajoutez le fichier de profil XML [que vous avez exporté à partir de StageNow](#step-4-create-a-device-management-profile-in-stagenow) (dans cet article).
 5. Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. La stratégie est créée et apparaît dans la liste.

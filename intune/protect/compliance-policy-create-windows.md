@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 0ca5d475f92cbe3298689273dcdf0da1644078b2
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946654"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547030"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Windows de 10 et ultérieur pour marquer les appareils comme étant conformes ou non conformes avec Intune
 
@@ -44,7 +44,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Règles d’évaluation du service d’attestation d’intégrité Windows
 
 - **Exiger BitLocker** :  
-   Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le Module de plateforme sécurisée (TPM) (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il contribue également à prévenir la falsification d’un ordinateur, même si celui-ci est laissé sans assistance, perdu ou volé. Si l’ordinateur est équipé d’un module de plateforme sécurisée compatible, BitLocker utilise ce module pour verrouiller les clés de chiffrement qui protègent les données. Par conséquent, les clés sont inaccessibles tant que le TPM n’a pas vérifié l’état de l’ordinateur.  
+   Le Chiffrement de lecteur BitLocker Windows chiffre toutes les données stockées sur le volume de système d’exploitation Windows. BitLocker utilise le Module de plateforme sécurisée (TPM) (TPM) pour protéger le système d’exploitation Windows et les données utilisateur. Il contribue également à prévenir la falsification d’un ordinateur, même si celui-ci est laissé sans assistance, perdu ou volé. Si l’ordinateur est équipé d’un TPM compatible, BitLocker utilise celui-ci pour verrouiller les clés de chiffrement qui protègent les données. Par conséquent, les clés sont inaccessibles tant que le TPM n’a pas vérifié l’état de l’ordinateur.  
 
    - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
    - **Exiger** : l’appareil peut protéger les données stockées sur le lecteur contre tout accès non autorisé quand le système est à l’arrêt ou en veille prolongée.  
@@ -65,7 +65,7 @@ En tant qu’administrateur Intune, utilisez ces paramètres de conformité pour
 Autres ressources :
 
 - Pour plus d’informations sur le fonctionnement du service d’attestation d’intégrité, consultez [CSP attestation d’intégrité](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
-- [Info de prise en charge : utilisation des paramètres d'attestation d’intégrité de l'appareil dans le cadre de votre stratégie de conformité Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Info de prise en charge : utilisation des paramètres d’attestation d’intégrité de l’appareil dans le cadre de votre stratégie de conformité Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Propriétés de l’appareil
 
@@ -102,9 +102,9 @@ Autres ressources :
 
 S’applique uniquement aux appareils cogérés exécutant Windows 10 et versions ultérieures. Les appareils Intune uniquement retournent un état non disponible.
 
-- **Exiger la conformité des appareils dans System Center Configuration Manager** :  
+- **Exiger la conformité des appareils à partir de Configuration Manager**:  
   - **Non configuré** (*par défaut*) : Intune ne vérifie la conformité d’aucun paramètre de Configuration Manager.
-  - **Exiger** : obliger tous les paramètres (éléments de configuration) dans System Center Configuration Manager à être conformes.  
+  - **Exiger** : obliger tous les paramètres (éléments de configuration) dans Configuration Manager à être conformes.  
 
     Par exemple, vous voulez que toutes les mises à jour logicielles soient installées sur les appareils. Dans Configuration Manager, cette exigence présente l’état « Installé ». Si les programmes de l’appareil sont dans un état inconnu, l’appareil est non conforme dans Intune.
 
@@ -168,7 +168,7 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
   > [!NOTE]
   > Le paramètre **Chiffrement du stockage de données sur l’appareil** vérifie de manière générique la présence du chiffrement sur l’appareil. Pour renforcer le chiffrement, utilisez l’option **Exiger BitLocker**, qui tire parti de l’Attestation d’intégrité de l’appareil Windows pour valider l’état de BitLocker au niveau du TPM.
 
-### <a name="device-security"></a>Sécurité du périphérique  
+### <a name="device-security"></a>Sécurité des appareils  
 
 - **Pare-feu** :  
   - **Non configuré** (*par défaut*) : Intune ne contrôle pas le pare-feu Microsoft Defender et ne modifie pas les paramètres existants.
@@ -229,7 +229,7 @@ S’applique uniquement aux appareils cogérés exécutant Windows 10 et versio
   Utilisez ce paramètre pour prendre comme condition de conformité l’évaluation des risques effectuée par vos services de protection contre les menaces. Choisissez le niveau de menace maximal autorisé :
   - **Non configuré** (*par défaut*)  
   - **Sans risque** : cette option est la plus sécurisée, puisque l’appareil ne peut présenter aucune menace. Si des menaces d’un autre niveau sont détectées sur l’appareil, celui-ci est évalué comme non conforme.
-  - **Faible** : l’appareil est évalué comme conforme uniquement si les menaces détectées sont de niveau faible. La présence de menaces de niveau supérieur rend l’appareil non conforme.
+  - **Faible** : l’appareil est évalué comme conforme uniquement si les menaces détectées sont de niveau faible. Toute menace d’un niveau supérieur place l’appareil dans un état de non-conformité.
   - **Moyen** : l’appareil est jugé conforme si les menaces présentes sur celui-ci sont de niveau faible ou moyen. Si des menaces de niveau élevé sont détectées sur l’appareil, celui-ci est considéré comme non conforme.
   - **Élevé** : cette option est la moins sécurisée, elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
   

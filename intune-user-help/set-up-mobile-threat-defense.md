@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f395a9cedc72a8184cfe3e29d6fcd3117a1473d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 6b75712cf05626999c09e8d74fd28252666313c4
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72980356"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857872"
 ---
 # <a name="install-mobile-threat-defense"></a>Installer Mobile Threat Defense   
 
@@ -38,8 +38,8 @@ Plusieurs applications de fournisseurs MTD peuvent être installées. votre orga
 Votre organisation ne peut pas voir les données, telles que les textes, les e-mails et les images, dans vos applications personnelles. L’application MTD signale des informations sur vos applications, telles que le nom et la version, à votre organisation. Les informations réelles indiquées dépendent du fournisseur MTD utilisé par votre entreprise. Votre organisation peut voir :   
 
 * Nom de l’application  
-* ID d’application : nom unique qui identifie l’application dans Google Play.  
-* Version de l’application et numéro de version abrégé : numéros de version spécifiques d’une application.  
+* ID d’application : nom unique qui identifie l’application dans Google Play.  
+* Version de l’application et numéro de version abrégée : numéros de version spécifiques d’une application.  
 * Ensemble d’applications et taille dynamique de l’application : quantité d’espace utilisé par une application sur votre appareil. 
 
 

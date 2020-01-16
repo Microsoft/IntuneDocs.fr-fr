@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 647e8869caf24638f6809479274dbf7a7b967b9e
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: a0c11be374e36ec32feb9540f6cfd4f1bc794e9c
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946629"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206310"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Paramètres d’appareil Android Enterprise pour configurer un VPN dans Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Cet article liste et décrit les différents paramètres de messagerie que vous pouvez contrôler sur les appareils Android. Dans le cadre de votre solution de gestion des appareils mobiles (MDM), utilisez ces paramètres pour créer une connexion VPN, choisir la manière dont le VPN s’authentifie, sélectionner un type de serveur VPN, et bien plus encore.
 
@@ -42,14 +42,14 @@ Pour en savoir plus sur les profils VPN dans Intune, consultez [profils VPN](vpn
 ## <a name="device-owner-only"></a>Propriétaire de l’appareil uniquement
 
 - **Nom de connexion** : entrez un nom pour cette connexion. Les utilisateurs finaux voient ce nom quand ils recherchent dans leur appareil les connexions VPN disponibles. Par exemple, entrez `Contoso VPN`.
-- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
+- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
 
-  - **Méthode d’authentification** : choisissez comment les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
+  - **Méthode d’authentification** : choisissez la manière dont les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
   
     - **Certificats** : sélectionnez un profil de certificat SCEP ou PKCS existant pour authentifier la connexion. [Configurer des certificats](../protect/certificates-configure.md) répertorie les étapes permettant de créer un profil de certificat.
-    - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer leur nom d’utilisateur et leur mot de passe.
+    - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer un nom d’utilisateur et un mot de passe.
 
-- **Type de connexion** : sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
+- **Type de connexion** : Sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
 
   - **Cisco AnyConnect**
   - **Accès F5**
@@ -58,14 +58,14 @@ Pour en savoir plus sur les profils VPN dans Intune, consultez [profils VPN](vpn
 ## <a name="work-profile-only"></a>Profil professionnel uniquement
 
 - **Nom de connexion** : entrez un nom pour cette connexion. Les utilisateurs finaux voient ce nom quand ils recherchent dans leur appareil les connexions VPN disponibles. Par exemple, entrez `Contoso VPN`.
-- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
+- **Adresse IP ou nom de domaine complet** : entrez l’adresse IP ou le nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez **192.168.1.1** ou **vpn.contoso.com**.
 
-  - **Méthode d’authentification** : choisissez comment les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
+  - **Méthode d’authentification** : choisissez la manière dont les appareils s’authentifient auprès du serveur VPN. Les options disponibles sont les suivantes :
   
     - **Certificats** : sélectionnez un profil de certificat SCEP ou PKCS existant pour authentifier la connexion. [Configurer des certificats](../protect/certificates-configure.md) répertorie les étapes permettant de créer un profil de certificat.
-    - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer leur nom d’utilisateur et leur mot de passe.
+    - **Nom d’utilisateur et mot de passe** : lors de la connexion au serveur VPN, les utilisateurs finaux sont invités à entrer un nom d’utilisateur et un mot de passe.
 
-- **Type de connexion** : sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
+- **Type de connexion** : Sélectionnez le type de connexion VPN. Les options disponibles sont les suivantes :
 
   - **Cisco AnyConnect**
   - **Accès F5**

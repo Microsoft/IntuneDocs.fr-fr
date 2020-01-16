@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2056d37b00f5e2ae7b36c6e1c02f20dc244eb290
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 0cf9b886733c117df0fca38bc94a601d1e9dd8fb
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502125"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858131"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Guide pratique pour réinitialiser le code secret de votre appareil à partir du site web du portail d’entreprise
 
@@ -42,7 +42,7 @@ La réinitialisation du code secret n’est pas disponible pour les appareils ex
 
     ![Capture d’écran de la page Appareils, avec deux vignettes montrant des appareils non identifiés, portant un nom générique. Sous les appareils, une bannière grise invite l’utilisateur à identifier l’appareil qu’il utilise ou à en ajouter un nouveau.](./media/rename-reset-device-step2-1808.png) 
 
-3. Sélectionnez **Réinitialiser le code secret**. Si cette option n’est pas visible en haut de la page, sélectionnez **Plus (...)**  > **Réinitialiser le code secret**.   
+3. Sélectionnez **Réinitialiser le code secret**. Si cette option n’est pas visible en haut de la page, sélectionnez **Plus (...)** > **Réinitialiser le code secret**.   
 
    ![Page de détails de l’appareil pour un appareil sélectionné sur le site web du portail d’entreprise, avec une liste de liens en haut montrant Renommer, Supprimer, Réinitialiser l’appareil, Réinitialiser le code secret et Verrouillage à distance. ](./media/rename-reset-device-1808.png)   
 
@@ -76,10 +76,10 @@ Cette section décrit le comportement relatif à la réinitialisation du code se
 
 **Android** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres.
 
-**iOS** : supprime le code secret existant et ne crée pas de code secret temporaire. Si vous utilisez Touch ID pour ouvrir votre appareil ou effectuer des achats, vous devez le reconfigurer.  
+**iOS** : supprime le code secret existant et ne crée pas de code secret temporaire. Si vous utilisez Touch ID pour ouvrir votre appareil ou effectuer des achats, vous devez le reconfigurer.  
 
-**Windows 10 Mobile** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres. Si la reconnaissance faciale Windows Hello est configurée, elle continuera à fonctionner avec l’appareil.
+**Windows 10 Mobile** : supprime le code secret existant et crée un code secret temporaire composé de lettres et de chiffres. Si la reconnaissance faciale Windows Hello est configurée, elle continuera à fonctionner avec l’appareil.
 
-**Windows Phone 8.1** : supprime le code secret existant et crée un code secret temporaire composé de chiffres.  
+**Windows Phone 8.1** : supprime le code secret existant et crée un code secret temporaire composé de chiffres.  
 
 Encore besoin d’aide ? Contactez le support technique de votre entreprise. Pour obtenir ses coordonnées, consultez le [site web du Portail d’entreprise](https://go.microsoft.com/fwlink/?linkid=2010980).  

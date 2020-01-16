@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 075e7a99f72de30e83447a2869154859e33356b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e514c10ea61bb12ef3c4626b077aa105b66866f1
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390841"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206871"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utiliser et gérer des appareils Android Enterprise avec OEMConfig dans Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Dans Microsoft Intune, vous pouvez utiliser OEMConfig pour ajouter, créer et personnaliser des paramètres spécifiques aux OEM pour les appareils Android Enterprise. OEMConfig est généralement utilisé pour configurer les paramètres qui ne sont pas intégrés à Intune. Différents fabricants d’ordinateurs OEM (Original Equipment Manufacturers) incluent des paramètres différents. Les paramètres disponibles dépendent de ce que le fabricant d’ordinateurs OEM comprend dans leur application OEMConfig.
 
@@ -84,8 +84,8 @@ Assurez-vous que l’appareil prend en charge OEMConfig, que l’application OEM
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : attribuez un nom descriptif au nouveau profil.
-    - **Description :** entrez une description pour le profil. Ce paramètre est facultatif, mais recommandé.
+    - **Nom** : Entrez un nom descriptif pour le nouveau profil.
+    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : sélectionnez **Android Entreprise**.
     - **Type de profil**: sélectionnez **OEMConfig**.
 
