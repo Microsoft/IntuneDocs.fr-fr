@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9eb7ee99d69fd56707bd9dfe5453ffe0bb107bad
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781139"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885654"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Ajouter les paramètres VPN sur les appareils iOS dans Microsoft Intune
 
@@ -38,18 +38,18 @@ Microsoft Intune inclut de nombreux paramètres VPN que vous pouvez déployer su
 Sélectionnez le type de connexion VPN dans la liste de fournisseurs suivante :
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect** : applicable à la version 4.0.5x de l’application [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) et aux versions antérieures
-- **Cisco AnyConnect** : applicable à la version 4.0.7x de l’application [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) et aux versions ultérieures.
+- **Cisco Legacy AnyConnect** : applicable à la version 4.0.5x de l’application [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) et aux versions antérieures.
+- **Cisco AnyConnect** : Applicable à la version [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) 4.0.7x et aux versions ultérieures.
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy** : applicable à la version 2.1 de l’application F5 Access Legacy et aux versions antérieures.
-- **F5 Access** : applicable à la version 3.0 de l’application F5 Access et aux versions ultérieures.
+- **F5 Access** : applicable à la version 3.0 de l’application F5 Access et aux versions antérieures.
 - **Palo Alto Networks GlobalProtect (hérité)** : applicable à la version 4.1 de Palo Alto Networks GlobalProtect et aux versions antérieures.
 - **Palo Alto Networks GlobalProtect** : applicable à la version 5.0 de Palo Alto Networks GlobalProtect et aux versions ultérieures.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN** (VPN Citrix)
 - **Citrix SSO**
-- **Zscaler** : pour utiliser l’accès conditionnel ou autoriser les utilisateurs à contourner l’écran de connexion de Zscaler, vous devez intégrer Zscaler Private Access (ZPA) à votre compte Azure AD. Pour des instructions détaillées, consultez la [documentation Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **Zscaler** : pour utiliser l’accès conditionnel ou autoriser les utilisateurs à contourner l’écran de connexion de Zscaler, vous devez intégrer Zscaler Private Access (ZPA) à votre compte Azure AD. Pour des instructions détaillées, consultez la [documentation Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
 - **IKEv2**: les [paramètres IKEv2](#ikev2-settings) (dans cet article) décrivent les propriétés.
 - **VPN personnalisé**
 
@@ -60,13 +60,13 @@ Sélectionnez le type de connexion VPN dans la liste de fournisseurs suivante :
 
 Les paramètres affichés dans la liste suivante sont déterminés par le type de connexion VPN que vous choisissez.  
 
-- **Nom de la connexion** : les utilisateurs finaux voient ce nom quand ils recherchent sur leur appareil une liste de connexions VPN disponibles.
+- **Nom de connexion** : Les utilisateurs finaux voient ce nom quand ils recherchent dans leur appareil une liste de connexions VPN disponibles.
 - **Nom de domaine personnalisé** (Zscaler uniquement) : vous pouvez préremplir le champ de connexion à l’application Zscaler avec le domaine auquel appartiennent vos utilisateurs. Par exemple, si le nom d’utilisateur est `Joe@contoso.net`, le domaine `contoso.net` s’affiche de manière statique dans le champ à l’ouverture de l’application. Si vous n’entrez pas de nom de domaine, la partie domaine de l’UPN dans Azure AD (Active Directory) est utilisée.
-- **Adresse IP ou nom de domaine complet** : adresse IP ou nom de domaine complet (FQDN) du serveur VPN auquel les appareils se connectent. Par exemple, entrez `192.168.1.1` ou `vpn.contoso.com`.
+- **Adresse IP ou nom de domaine complet** : Adresse IP ou le nom de domaine complet (FQDN) du serveur VPN avec lequel les appareils se connectent. Par exemple, entrez `192.168.1.1` ou `vpn.contoso.com`.
 - **Nom du cloud de l’organisation** (Zscaler uniquement) : entrez le nom du cloud où votre organisation est provisionnée. Ce nom se trouve dans l’URL que vous utilisez pour vous connecter à Zscaler.  
-- **Méthode d’authentification** : choisissez comment les appareils s’authentifient auprès du serveur VPN. 
+- **Méthode d’authentification** : choisissez la manière dont les appareils s’authentifient auprès du serveur VPN. 
   - **Certificats** : sous **Certificat d’authentification**, sélectionnez un profil de certificat SCEP ou PKCS existant pour authentifier la connexion. [Configurer les certificats](../protect/certificates-configure.md) fournit quelques conseils sur les profils de certificat.
-  - **Nom d’utilisateur et mot de passe** : les utilisateurs finaux doivent entrer un nom d’utilisateur et un mot de passe pour se connecter au serveur VPN.  
+  - **Nom d’utilisateur et mot de passe** : les utilisateurs finaux doivent entrer un nom d’utilisateur et un mot de passe pour se connecter au serveur VPN.  
 
     > [!NOTE]
     > Si le nom d’utilisateur et le mot de passe sont utilisés comme méthode d’authentification pour les VPN IPsec Cisco, ils doivent fournir le SharedSecret par le biais d’un profil Apple Configurator personnalisé.
@@ -75,17 +75,17 @@ Les paramètres affichés dans la liste suivante sont déterminés par le type d
 
 - **URL exclues** (Zscaler uniquement) : lorsque vous êtes connecté au VPN Zscaler, les URL répertoriées sont accessibles en dehors du cloud Zscaler. 
 
-- **Fractionner le tunneling** : vous pouvez **Activer** ou **Désactiver** cette option pour laisser les appareils décider quelle connexion utiliser en fonction du trafic. Par exemple, un utilisateur dans un hôtel utilise la connexion VPN pour accéder à ses fichiers de travail, mais utilise le réseau standard de l’hôtel pour surfer sur Internet.
+- **Fractionner le tunneling** : vous pouvez **Activer** ou **Désactiver** cette option pour laisser les appareils décider quelle connexion utiliser en fonction du trafic. Par exemple, un utilisateur dans un hôtel utilise la connexion VPN pour accéder à ses fichiers de travail, mais utilise le réseau standard de l’hôtel pour surfer sur Internet.
 
-- **Identificateur VPN** (VPN personnalisé, Zscaler et Citrix) : identificateur pour l’application VPN que vous utilisez, qui est fourni par votre fournisseur VPN.
-  - **Entrer les paires clé-valeur pour les attributs du VPN personnalisé de votre organisation** : ajoutez ou importez des **Clés** et des **Valeurs** pour personnaliser votre connexion VPN. N’oubliez pas que ces valeurs sont généralement indiquées par votre fournisseur VPN.
+- **Identificateur VPN** (Custom VPN, Zscaler et Citrix) : identificateur pour l’application VPN que vous utilisez, qui est fourni par votre fournisseur VPN.
+  - **Entrez les paires clé-valeur pour les attributs VPN personnalisés de votre organisation** : ajoutez ou importez des **Clés** et **Valeurs** pour personnaliser votre connexion VPN. N’oubliez pas que ces valeurs sont généralement indiquées par votre fournisseur VPN.
 
-- **Activer le contrôle d’accès réseau (NAC)** (Citrix SSO, Accès F5) : lorsque vous choisissez **J’accepte**, l’ID d’appareil est inclus dans le profil VPN. Cet ID peut être utilisé pour l’authentification sur le VPN pour autoriser ou empêcher l’accès au réseau.
+- **Activer le contrôle d’accès réseau**  (Citrix SSO, F5 Access) : Quand vous choisissez **J’accepte**, cet ID d’appareil est inclus dans le profil VPN. Cet ID peut être utilisé pour l’authentification sur le VPN pour autoriser ou empêcher l’accès au réseau.
 
   **Lorsque vous utilisez l’accès F5**, veillez à :
 
   - confirmer que vous utilisez F5 BIG-IP 13.1.1.5. BIG-IP 14 n’est pas pris en charge.
-  - Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Consultez le guide F5 [Présentation : configuration APM pour vérifications de posture d’appareils avec systèmes de gestion de point de terminaison](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+  - Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Consultez le guide F5 [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
   - Activer le contrôle d’accès réseau dans le profil VPN.
 
   **Lorsque vous utilisez Citrix SSO avec Gateway**, veillez à :
@@ -138,6 +138,10 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
 
 - **Plage de versions TLS minimale**: entrez la version TLS minimale à utiliser. Entrez `1.0`, `1.1`ou `1.2`. Si le champ n’est pas renseigné, la valeur par défaut de `1.0` est utilisée.
 - **Plage de versions TLS maximale**: entrez la version maximale de TLS à utiliser. Entrez `1.0`, `1.1`ou `1.2`. Si le champ n’est pas renseigné, la valeur par défaut de `1.2` est utilisée.
+
+> [!NOTE]
+> La plage de versions TLS minimale et maximale doit être définie lors de l’utilisation de l’authentification utilisateur et des certificats.
+
 - **Confidentialité de transfert parfaite**: sélectionnez **activer** pour activer le secret de transfert parfait (PFS). PFS est une fonctionnalité de sécurité IP qui réduit l’impact si une clé de session est compromise. **Désactiver** (valeur par défaut) n’utilise pas PFS.
 - **Vérification de la révocation des certificats**: sélectionnez **activer** pour vous assurer que les certificats ne sont pas révoqués avant d’autoriser la connexion VPN. Ce contrôle est le meilleur effort. Si le serveur VPN expire avant de déterminer si le certificat est révoqué, l’accès est accordé. **Désactiver** (valeur par défaut) ne vérifie pas les certificats révoqués.
 
@@ -179,19 +183,19 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
 
 ## <a name="automatic-vpn-settings"></a>Paramètres VPN automatiques
 
-- **VPN par application** : active le VPN par application. Permet à la connexion VPN de se déclencher automatiquement quand certaines applications sont ouvertes. Associez également les applications à ce profil VPN. Le VPN par application n’est pas pris en charge sur IKEv2. Pour plus d’informations, consultez les [instructions de configuration du VPN par application pour iOS](vpn-setting-configure-per-app.md). 
-  - **Type de fournisseur** : uniquement disponible pour Pulse Secure et VPN personnalisé.
+- **VPN par application** : active le VPN par application. Permet à la connexion VPN de se déclencher automatiquement quand certaines applications sont ouvertes. Associez également les applications à ce profil VPN. Le VPN par application n’est pas pris en charge sur IKEv2. Pour plus d’informations, consultez les [instructions de configuration du VPN par application pour iOS](vpn-setting-configure-per-app.md). 
+  - **Type de fournisseur** : uniquement disponible pour Pulse Secure et VPN personnalisé.
   - Quand vous utilisez des profils **VPN par application** iOS avec Pulse Secure ou un VPN personnalisé, choisissez entre le tunneling de couche application (app-proxy) ou le tunneling de couche paquet (packet-tunnel). Affectez à **ProviderType** la valeur **app-proxy** pour le tunneling de couche application, ou la valeur **packet-tunnel** pour le tunneling de couche paquet. Si vous ne savez pas quelle valeur utiliser, consultez la documentation de votre fournisseur VPN.
-  - **URL Safari qui déclenchent ce VPN** : ajoutez une ou plusieurs URL de site web. Quand ces URL sont consultées sur l’appareil à l’aide du navigateur Safari, la connexion VPN est établie automatiquement.
+  - **URL Safari qui déclenchent ce VPN** : ajoutez une ou plusieurs URL de site web. Quand ces URL sont consultées sur l’appareil à l’aide du navigateur Safari, la connexion VPN est établie automatiquement.
 
-- **VPN à la demande** : configurez des règles conditionnelles qui contrôlent le démarrage de la connexion VPN. Par exemple, créez une condition dans laquelle la connexion VPN est utilisée uniquement quand un appareil n’est pas connecté au réseau Wi-Fi d’une entreprise. Sinon, créez une condition. Par exemple, la connexion VPN n’est pas lancée si un appareil ne peut pas accéder au domaine de recherche DNS que vous entrez.
+- **VPN à la demande** : configurez des règles conditionnelles qui contrôlent le démarrage de la connexion VPN. Par exemple, créez une condition dans laquelle la connexion VPN est utilisée uniquement quand un appareil n’est pas connecté au réseau Wi-Fi d’une entreprise. Sinon, créez une condition. Par exemple, la connexion VPN n’est pas lancée si un appareil ne peut pas accéder au domaine de recherche DNS que vous entrez.
 
   - **Domaines de recherche DNS ou SSID** : indiquez si cette condition utilise les **SSID** de réseau sans fil ou les **domaines de recherche DNS**. Cliquez sur **Ajouter** pour configurer un ou plusieurs SSID ou domaines de recherche.
-  - **Sonde de chaîne d’URL** : facultatif. Entrez une URL que la règle utilise comme test. Si l’appareil accède à cette URL sans redirection, la connexion VPN est lancée. Et l’appareil se connecte à l’URL cible. L’utilisateur ne voit pas le site de la sonde de chaîne d’URL.
+  - **Sonde de chaîne d’URL** : Facultatif. Entrez une URL que la règle utilise comme test. Si l’appareil accède à cette URL sans redirection, la connexion VPN est lancée. Et l’appareil se connecte à l’URL cible. L’utilisateur ne voit pas le site de la sonde de chaîne d’URL.
 
     Par exemple, une sonde de chaîne d’URL est l’URL d’un serveur web d’audit qui vérifie la compatibilité de l’appareil avant la connexion du VPN. Ou, l’URL teste la capacité du VPN à se connecter à un site avant de connecter l’appareil à l’URL cible via le VPN.
 .
-  - **Action du domaine** : choisissez l’un des éléments suivants :
+  - **Action de domaine** : choisissez l’un des éléments suivants :
     - Se connecter si nécessaire
     - Ne jamais se connecter
   - **Action** : choisissez l’un des éléments suivants :
@@ -204,9 +208,9 @@ Ces paramètres s’appliquent lorsque vous choisissez le **type de connexion** 
 
 Si vous utilisez un proxy, configurez les paramètres suivants. Les paramètres de proxy ne sont pas disponibles pour les connexions VPN Zscaler.  
 
-- **Script de configuration automatique** : utilisez un fichier de configuration pour configurer le serveur proxy. Entrez l’**URL du serveur proxy** (par exemple `http://proxy.contoso.com`) qui inclut le fichier config.
-- **Adresse** : entrez l’adresse IP du nom d’hôte complet du serveur proxy.
-- **Numéro de port** : entrez le numéro de port associé au serveur proxy.
+- **Script de configuration automatique** : utilisez un fichier pour configurer le serveur proxy. Entrez l’**URL du serveur proxy** (par exemple `http://proxy.contoso.com`) qui inclut le fichier config.
+- **Adresse** : entrez l’adresse IP du nom d’hôte complet du serveur proxy.
+- **Numéro de port** : entrez le numéro de port associé au serveur proxy.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
