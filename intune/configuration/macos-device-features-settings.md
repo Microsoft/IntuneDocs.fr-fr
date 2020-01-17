@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5519bdc405e725556db18d36fa98289c4edb5090
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992901"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206344"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
@@ -44,8 +44,8 @@ Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il l
 
 - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez effectuer un test ping dans l’application Terminal pour obtenir l’adresse IP de l’imprimante. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
 - **Chemin d’accès** : entrez le chemin de l’imprimante. Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-- **Port** (iOS 11.0 et supérieure) : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut.
-- **Protocole TLS** (iOS 11.0 et supérieure) : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security).
+- **Port**(iOS 11.0 et versions ultérieures) : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut.
+- **TLS**(iOS 11.0 et versions ultérieures) : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security).
 
 - **Ajoutez** le serveur AirPrint. Vous pouvez ajouter plusieurs serveurs AirPrint.
 
@@ -87,34 +87,34 @@ Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l�
 
 #### <a name="window-layout"></a>Disposition de la fenêtre
 
-- **Afficher des informations supplémentaires dans la barre de menus** : lorsque la zone d’heure de la barre de menus est sélectionnée, **Autoriser** affiche le nom de l’hôte et la version macOS. **Non configuré** (par défaut) n’affiche pas ces informations dans la barre de menus.
+- **Afficher des informations supplémentaires dans la barre de menus** : lorsque la zone d’heure de la barre de menus est sélectionnée, **Autoriser** affiche le nom de l’hôte et la version macOS. **Non configuré** (par défaut) n’affiche pas ces informations dans la barre de menus.
 - **Bannière** : entrez un message à afficher à l’écran de connexion de l’appareil. Par exemple, entrez les informations de votre organisation, un message d’accueil, les informations sur les objets perdus et retrouvés, etc.
-- **Choisir le format de connexion** : choisissez la façon dont les utilisateurs se connectent à l’appareil. Les options disponibles sont les suivantes :
-  - **Demander le nom d’utilisateur et le mot de passe** (par défaut) : demande aux utilisateurs de saisir un nom d'utilisateur et un mot de passe.
-  - **Répertorier tous les utilisateurs, demander mot de passe** : demande aux utilisateurs de sélectionner leur nom d'utilisateur depuis une liste d’utilisateurs avant de saisir leur mot de passe. Configurez également :
+- **Choisir le format de connexion** : Choisissez la façon dont les utilisateurs se connectent à l’appareil. Les options disponibles sont les suivantes :
+  - **Demander le nom d’utilisateur et le mot de passe** (par défaut) : requiert un nom d'utilisateur et un mot de passe.
+  - **Répertorier tous les utilisateurs, demander mot de passe** : demande aux utilisateurs de sélectionner leur nom d’utilisateur depuis une liste d’utilisateurs avant de saisir leur mot de passe. Configurez également :
 
-    - **Utilisateurs locaux** : **Masquer** pour masquer les comptes utilisateurs locaux dans la liste des utilisateurs, ce qui peut inclure les comptes administrateurs et standards. Seuls les comptes d'utilisateur système et réseau sont affichés. **Non configuré** (par défaut) affiche les comptes d'utilisateur locaux dans la liste des utilisateurs.
-    - **Comptes mobiles** : **Masquer** pour masquer les comptes mobiles dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes mobiles dans la liste des utilisateurs. Certains comptes mobiles peuvent apparaître comme utilisateurs réseau.
-    - **Utilisateurs réseau** : sélectionnez **Afficher** pour afficher les utilisateurs réseau dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’utilisateurs réseau dans la liste des utilisateurs.
-    - **Utilisateurs administrateurs** : **Masquer** pour masquer les comptes d’utilisateurs administrateurs dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes d’utilisateurs réseau dans la liste des utilisateurs.
-    - **Autres utilisateurs** : sélectionnez **Afficher** pour afficher les **Autres...** utilisateurs dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’autres utilisateurs dans la liste des utilisateurs.
+    - **Utilisateurs locaux** : **Masquer** pour masquer les comptes utilisateurs locaux dans la liste des utilisateurs, ce qui peut inclure les comptes administrateurs et standards. Seuls les comptes d'utilisateur système et réseau sont affichés. **Non configuré** (par défaut) affiche les comptes d'utilisateur locaux dans la liste des utilisateurs.
+    - **Comptes mobiles** : **Masquer** pour masquer les comptes mobiles dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes mobiles dans la liste des utilisateurs. Certains comptes mobiles peuvent apparaître comme utilisateurs réseau.
+    - **Utilisateurs réseau** : sélectionnez **Afficher** pour afficher les utilisateurs réseau dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’utilisateurs réseau dans la liste des utilisateurs.
+    - **Utilisateurs administrateurs** : **Masquer** pour masquer les comptes d’utilisateurs administrateurs dans la liste des utilisateurs. **Non configuré** (par défaut) affiche les comptes d’utilisateurs réseau dans la liste des utilisateurs.
+    - **Autres utilisateurs** : sélectionnez **Afficher** pour afficher les **Autres...** utilisateurs dans la liste des utilisateurs. **Non configuré** (par défaut) masque les comptes d’autres utilisateurs dans la liste des utilisateurs.
 
 #### <a name="login-screen-power-settings"></a>Paramètres d’alimentation de l’écran de connexion
 
-- **Bouton Arrêt** : **Masquer** pour masquer le bouton d’arrêt sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton d’arrêt.
-- **Bouton Redémarrer** : **Masquer** pour masquer le bouton de redémarrage sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de redémarrage.
-- **Bouton Veille** : **Masquer** pour masquer le bouton de mise en veille sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de mise en veille.
+- **Bouton Arrêter** : **Masquer** pour masquer le bouton d’arrêt sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton d’arrêt.
+- **Bouton Redémarrer** : **Masquer** pour masquer le bouton de redémarrage sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de redémarrage.
+- **Bouton de veille** : **Masquer** pour masquer le bouton de veille sur l’écran de connexion. **Non configuré** (par défaut) affiche le bouton de mise en veille.
 
 #### <a name="other"></a>Autre
 
-- **Désactiver la connexion utilisateur à partir de la console** : **Désactiver** masque la ligne de commande macOS utilisée pour se connecter. Pour des utilisateurs normaux, **désactivez** ce paramètre. **Non configuré** (par défaut) permet à des utilisateurs avancés de se connecter à l’aide de la ligne de commande macOS. Pour passer en mode console, les utilisateurs doivent saisir `>console` dans le champ Nom d'utilisateur puis s’authentifier dans la fenêtre de la console.
+- **Désactiver la connexion utilisateur à partir de la console** : **Désactiver** masque la ligne de commande macOS utilisée pour se connecter. Pour des utilisateurs normaux, **désactivez** ce paramètre. **Non configuré** (par défaut) permet à des utilisateurs avancés de se connecter à l’aide de la ligne de commande macOS. Pour passer en mode console, les utilisateurs doivent saisir `>console` dans le champ Nom d'utilisateur puis s’authentifier dans la fenêtre de la console.
 
 #### <a name="apple-menu"></a>Menu Apple
 
 Une fois que les utilisateurs se sont connectés à leurs appareils, les paramètres suivants affectent ce qu’ils peuvent faire.
 
-- **Désactiver l’arrêt** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Arrêt** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Arrêt** sur l’appareil.
-- **Désactiver le redémarrage** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Redémarrage** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Redémarrage** sur l’appareil.
+- **Désactiver l’arrêt** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Arrêt** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Arrêt** sur l’appareil.
+- **Désactiver le redémarrage** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Redémarrage** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Redémarrage** sur l’appareil.
 - **Désactiver la mise hors tension** : **Désactiver** empêche les utilisateurs de sélectionner l’option **Mise hors tension** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Mise hors tension** sur l’appareil.
 - **Désactiver la déconnexion** (macOS 10.13 et versions ultérieures) : **Désactiver** empêche les utilisateurs de sélectionner l’option **Déconnexion** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Déconnexion** sur l’appareil.
 - **Désactiver le verrouillage d’écran** (macOS 10.13 et versions ultérieures) : **Désactiver** empêche les utilisateurs de sélectionner l’option **Verrouillage de l’écran** après leur connexion. **Non configuré** (par défaut) permet aux utilisateurs de sélectionner l’élément de menu **Verrouillage de l’écran** sur l’appareil.
@@ -183,7 +183,7 @@ Cette fonctionnalité s’applique à :
 - **Limite de réutilisation du mot de passe** (Kerberos uniquement) : entrez le nombre de nouveaux mots de passe, à partir de 1-24, qui doivent être utilisés jusqu’à ce qu’un mot de passe précédent puisse être réutilisé sur le domaine. **Non configuré** (par défaut) n’impose pas de limite de réutilisation du mot de passe.
 - **Durée de vie minimale du mot de passe** (Kerberos uniquement) : entrez le nombre de jours pendant lesquels un mot de passe doit être utilisé sur le domaine pour qu’un utilisateur puisse le changer. **Non configuré** (par défaut) n’impose pas une ancienneté minimale des mots de passe avant de pouvoir les modifier.
 - **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe expirera. **Non configuré** (par défaut) utilise `15` jours.
-- **Expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil. **Non configuré** (valeur par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
+- **Expiration du mot de passe (Kerberos uniquement)** : entrez le nombre de jours après lesquels l’utilisateur doit changer le mot de passe de l’appareil. **Non configuré** (valeur par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
 - **URL de modification du mot de passe** (Kerberos uniquement) : entrez l’URL qui est lancée lorsque l’utilisateur lance une modification de mot de passe Kerberos.
 - **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` le nom de domaine.
 
@@ -219,13 +219,13 @@ Cette fonctionnalité s’applique à :
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domaine**: entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple `webcredentials:www.contoso.com`.
+- **Domaine**: entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple `webcredentials: www.contoso.com`.
 
   Vous pouvez faire correspondre tous les sous-domaines d’un domaine associé en entrant `*.` (caractère générique astérisque et point) avant le début du domaine. La période est requise. Les domaines exacts ont une priorité plus élevée que les domaines génériques. Par conséquent, les modèles des domaines parents sont mis en correspondance *si* aucune correspondance n’est trouvée dans le sous-domaine complet.
 
   Le type de service peut être :
 
-  - **authsrv** : extension d’application d’authentification unique
+  - **authsrv** : Extension d’application d’authentification unique
   - **applink**: lien universel
   - **informations d’identification**: remplissage automatique du mot de passe
 
