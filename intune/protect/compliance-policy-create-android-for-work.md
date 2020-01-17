@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 01/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be1fbb72821b61566da84d6f98094c9a2f6ffef2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 60244bb268f7becadc427c397d7c2d1562bcf6b5
+ms.sourcegitcommit: ea81ad5f33f18d9fe43254e27e02de5eaef74a05
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810265"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722604"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Android Entreprise pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
@@ -54,17 +54,11 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
   - **Élevé** : cette option est la moins sécurisée, car elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
   
 > [!NOTE] 
-> Les fournisseurs de défense contre les menaces mobiles suivants prennent en charge les déploiements de propriétaires d’appareils Android Enterprise à l’aide de la configuration d’application :
-> - Better Mobile 
-> - Pradeo
-> - Sophos Mobile
-> - Zimperium 
->  
->  Vérifiez avec votre fournisseur MTD la configuration exacte nécessaire pour prendre en charge les plateformes propriétaires d’appareils Android Enterprise sur Intune. Cette liste est mise à jour, car les parties MTD prennent en charge les scénarios de propriétaire d’appareils Android Enterprise. 
+> Tous les fournisseurs de protection contre les menaces mobiles (MTD) sont pris en charge sur les déploiements de propriétaires d’appareils Android Enterprise à l’aide de la configuration d’application. Vérifiez avec votre fournisseur MTD la configuration exacte nécessaire pour prendre en charge les plateformes propriétaires d’appareils Android Enterprise sur Intune.
 
 #### <a name="google-play-protect"></a>Google Play Protect
 
-- **Attestation d’appareil SafetyNet** : entrez le niveau d’[attestation SafetyNet](https://developer.android.com/training/safetynet/attestation.html) à respecter. Les options disponibles sont les suivantes :
+- **Attestation d’appareil SafetyNet** : entrez le niveau d’[attestation SafetyNet](https://developer.android.com/training/safetynet/attestation.html) à respecter. Les options disponibles sont les suivantes :
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Vérifier l’intégrité de base**
   - **Vérifier l’intégrité de base et les appareils certifiés**
@@ -73,15 +67,15 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 #### <a name="operating-system-version"></a>Version du système d'exploitation
 
-- **Version minimale du système d’exploitation** : quand un appareil ne répond pas aux exigences minimales relatives à la version du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut mettre à niveau son appareil, puis accéder aux ressources de l’organisation.
+- **Version minimale du système d’exploitation** : Quand un appareil ne répond pas à la condition de version minimale du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut mettre à niveau son appareil, puis accéder aux ressources de l’organisation.
 
   *Par défaut, aucune version n’est configurée*.
 
-- **Version maximale du système d’exploitation** : quand un appareil utilise une version du système d’exploitation postérieure à la version présente dans la règle, l’accès aux ressources de l’organisation est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant qu’une règle autorisant la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’organisation.
+- **Version maximale du système d’exploitation** : Quand un appareil utilise une version du système d’exploitation postérieure à la version entrée dans la règle, l’accès aux ressources de l’organisation est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant qu’une règle autorisant la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’organisation.
 
   *Par défaut, aucune version n’est configurée*.
 
-- **Niveau minimal du correctif de sécurité** : sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format AAAA-MM-JJ.
+- **Niveau minimal du correctif de sécurité** :  sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format AAAA-MM-JJ.
 
   *Par défaut, aucune date n’est configurée*.
 
@@ -94,38 +88,38 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
   Ce paramètre s’applique au niveau de l’appareil. Si vous avez besoin d’exiger un mot de passe uniquement au niveau du profil de travail, utilisez une stratégie de configuration. Consultez [Paramètres de configuration d’appareil Android Entreprise](../configuration/device-restrictions-android-for-work.md).
 
-  - **Type de mot de passe obligatoire** : choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
+  - **Type de mot de passe requis** : Choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
     - **Valeur par défaut** de l’appareil : pour évaluer la conformité du mot de passe, veillez à sélectionner une force de mot de passe autre que l' **appareil par défaut**.  
     - **Mot de passe requis, sans restriction**
     - **Biométrie faible** - [Biométrie forte et faible](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (dirige sur le site web d’Android)
-    - **Numérique** (*par défaut*) : le mot de passe ne doit comporter que des nombres, par exemple `123456789`. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+    - **Numérique** (*par défaut*) : le mot de passe ne doit comporter que des nombres, par exemple `123456789`. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
     - **Chiffres complexes** : les chiffres répétés ou consécutifs (comme « 1111 » ou « 1234 ») ne sont pas autorisés. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
     - **Alphabétique** : des lettres de l’alphabet sont nécessaires. Les nombres et symboles ne sont pas nécessaires. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
     - **Alphanumériques** : inclut des lettres majuscules, minuscules et des caractères numériques. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
     - **Alphanumérique avec symboles** : inclut des lettres majuscules, minuscules, des caractères numériques, des signes de ponctuation et des symboles. Entrez également :
     
     Selon le type de *mot de passe* que vous sélectionnez, les paramètres suivants sont disponibles :  
-    - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères).  
+    - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères).  
 
-    - **Nombre de caractères requis** : entrez le nombre de caractères du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères obligatoires** : entrez le nombre de caractères du mot de passe (entre 0 et 16 caractères).
 
-    - **Nombre de caractères minuscules** : entrez le nombre de caractères minuscules du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères minuscules obligatoires** : entrez le nombre de caractères en minuscules du mot de passe (entre 0 et 16 caractères).
 
-    - **Nombre de caractères majuscules** : entrez le nombre de caractères majuscules du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères majuscules obligatoires** : entrez le nombre de caractères en majuscules du mot de passe (entre 0 et 16 caractères).
 
-    - **Nombre de caractères non lettres requis** : entrez le nombre de caractères non lettres (tout caractère hors lettres de l’alphabet) du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères obligatoires autres que des lettres** : entrez le nombre de caractères non lettres (tout caractère hors lettres de l’alphabet) du mot de passe (entre 0 et 16 caractères).
 
-    - **Nombre de caractères numériques requis** : entrez le nombre de caractères numériques (`1`, `2`, `3`, etc.) du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de caractères numériques obligatoires** : entrez le nombre de caractères numériques (`1`, `2`, `3`, etc.) du mot de passe (entre 0 et 16 caractères).
     
-    - **Nombre de symboles requis** : entrez le nombre de symboles (`&`, `#`, `%`, etc.) du mot de passe (entre 0 et 16 caractères).
+    - **Nombre de symboles obligatoires** : entrez le nombre de symboles (`&`, `#`, `%`, etc.) du mot de passe (entre 0 et 16 caractères).
  
-- **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
+- **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
 
-- **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil (entre 1 et 365). Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
+- **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours (entre 1 et 365) après lesquels l’utilisateur doit changer le mot de passe de l’appareil. Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
 
    *Par défaut, aucune valeur n’est configurée*.
 
-- **Nombre de mots de passe requis avant que l’utilisateur puisse réutiliser un mot de passe** : entrez le nombre de mots de passe récents ne pouvant être réutilisés (entre 1 et 24). Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.  
+- **Nombre de mots de passe obligatoires avant que l’utilisateur puisse en réutiliser un** : entrez le nombre de mots de passe récents qui ne peuvent pas être réutilisés, entre 1 et 24. Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.  
 
     *Par défaut, aucune version n’est configurée*.
 
@@ -163,7 +157,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Exiger** : un fournisseur de sécurité à jour doit être en mesure de protéger un appareil contre les vulnérabilités connues. 
   
-- **Attestation d’appareil SafetyNet** : entrez le niveau d’[attestation SafetyNet](https://developer.android.com/training/safetynet/attestation.html) à respecter. Les options disponibles sont les suivantes :
+- **Attestation d’appareil SafetyNet** : entrez le niveau d’[attestation SafetyNet](https://developer.android.com/training/safetynet/attestation.html) à respecter. Les options disponibles sont les suivantes :
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Vérifier l’intégrité de base**
   - **Vérifier l’intégrité de base et les appareils certifiés**
@@ -175,11 +169,11 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 #### <a name="operating-system-version"></a>Version du système d'exploitation
 
-- **Version minimale du système d’exploitation** : quand un appareil ne répond pas aux exigences minimales relatives à la version du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut mettre à niveau son appareil, puis accéder aux ressources de l’organisation.
+- **Version minimale du système d’exploitation** : Quand un appareil ne répond pas à la condition de version minimale du système d’exploitation, il est signalé comme non conforme. Un lien avec des informations sur la mise à niveau s’affiche. L’utilisateur final peut mettre à niveau son appareil, puis accéder aux ressources de l’organisation.
 
   *Par défaut, aucune version n’est configurée*.
 
-- **Version maximale du système d’exploitation** : quand un appareil utilise une version du système d’exploitation postérieure à la version présente dans la règle, l’accès aux ressources de l’organisation est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant qu’une règle autorisant la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’organisation.
+- **Version maximale du système d’exploitation** : Quand un appareil utilise une version du système d’exploitation postérieure à la version entrée dans la règle, l’accès aux ressources de l’organisation est bloqué. L’utilisateur est invité à contacter son administrateur informatique. Tant qu’une règle autorisant la version du système d’exploitation reste inchangée, cet appareil ne peut pas accéder aux ressources de l’organisation.
 
   *Par défaut, aucune version n’est configurée*.
 
@@ -191,23 +185,23 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
   Ce paramètre s’applique au niveau de l’appareil. Si vous avez besoin d’exiger un mot de passe uniquement au niveau du profil de travail, utilisez une stratégie de configuration. Consultez [Paramètres de configuration d’appareil Android Entreprise](../configuration/device-restrictions-android-for-work.md).
 
-- **Type de mot de passe obligatoire** : choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
+- **Type de mot de passe requis** : Choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
   - **Paramètre par défaut de l’appareil**
   - **Sécurité biométrique faible**
-  - **Au moins numérique** (*par défaut*) : entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
-  - **Chiffres complexes** : entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
-  - **Au moins alphabétique** : entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
-  - **Au moins alphanumérique** : entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
-  - **Au moins alphanumérique avec des symboles** : entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Au moins numérique** (*par défaut*) : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Chiffres complexes** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Au moins alphabétique** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Au moins alphanumérique** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
+  - **Au moins alphanumérique avec des symboles** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
 
   Selon le type de *mot de passe* que vous sélectionnez, les paramètres suivants sont disponibles :  
-  - **Nombre maximal de minutes d’inactivité avant demande du mot de passe** : entrez la durée d’inactivité après laquelle l’utilisateur doit rentrer son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
+  - **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
 
-  - **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil (entre 1 et 365). Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
+  - **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours (entre 1 et 365) après lesquels l’utilisateur doit changer le mot de passe de l’appareil. Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
 
-  - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères). 
+  - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères). 
   
-  - **Nombre de mots de passe précédents avant d’autoriser leur réutilisation** : entrez le nombre de mots de passe récents qui ne peuvent pas être réutilisés. Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.
+  - **Nombre de mots de passe précédents pour empêcher la réutilisation** : Entrez le nombre de mots de passe récents qui ne peuvent pas être réutilisés. Utilisez ce paramètre pour empêcher l’utilisateur de créer des mots de passe déjà utilisés.
 
 #### <a name="encryption"></a>Chiffrement
 
@@ -217,7 +211,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
   Vous n’avez pas besoin de configurer ce paramètre, car les appareils Android Entreprise appliquent le chiffrement.
 
-#### <a name="device-security"></a>Sécurité du périphérique
+#### <a name="device-security"></a>Sécurité des appareils
 
 - **Bloquer les applications provenant de sources inconnues** : 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
@@ -244,7 +238,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
   Vous n’avez pas besoin de configurer ce paramètre, car le débogage USB est déjà désactivé sur les appareils Android Entreprise.
 
-- **Niveau minimal du correctif de sécurité** : sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format AAAA-MM-JJ.
+- **Niveau minimal du correctif de sécurité** :  sélectionnez le niveau le plus ancien possible pour le correctif de sécurité d’un appareil. Les appareils qui ne sont pas au moins à ce niveau de correctif sont non conformes. Vous devez entrer la date au format AAAA-MM-JJ.
 
   *Par défaut, aucune date n’est configurée*.
 
