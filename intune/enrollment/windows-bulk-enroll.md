@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9cbdd99dfb7b42677048b4f214e7de537db0edda
+ms.sourcegitcommit: 5db0769274d788a1218dca3ad90d8649927becb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585277"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75925820"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscription en bloc des appareils Windows
 
@@ -65,7 +65,7 @@ Les utilisateurs d’Azure AD utilisent ces appareils en tant qu’utilisateurs
 
 9. Si vous le souhaitez, vous pouvez **ajouter des applications** et **ajouter des certificats**. Ces applications et certificats sont approvisionnés sur l’appareil.
 
-10. Si vous le souhaitez, vous pouvez protéger votre package d’approvisionnement par un mot de passe.  Cliquez sur **Create (Créer)** .
+10. Si vous le souhaitez, vous pouvez protéger votre package d’approvisionnement par un mot de passe.  Cliquez sur **Créer**.
     ![Capture d’écran de la protection de package dans l’application Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Approvisionner des appareils
@@ -95,7 +95,7 @@ Vous pouvez vérifier la réussite ou l’échec des paramètres de votre packag
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Inscription en bloc avec le Wi-Fi 
 
-Les appareils inscrits en bloc ne peuvent pas utiliser les certificats orientés utilisateur et le déploiement en Wi-Fi. Vous devez utiliser des [certificats au niveau appareil](../protect/certificates-configure.md) pour gérer ces connexions. 
+Si vous n’utilisez pas de réseau ouvert, vous devez utiliser des [certificats au niveau de l’appareil](../protect/certificates-configure.md) pour établir des connexions. Les appareils inscrits en bloc ne peuvent pas utiliser de certificats orientés utilisateur pour accéder au réseau. 
 
 ### <a name="conditional-access"></a>Accès conditionnel
 L’accès conditionnel n’est pas disponible pour les appareils Windows inscrits à l’aide de l’inscription en bloc.

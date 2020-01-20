@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c447c67e631365e831f033c2811c36d936f2e85
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547993"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885770"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -182,7 +182,7 @@ Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont
 
 1. Dans Intune, ajoutez l’application Portail d’entreprise Intune si nécessaire, en accédant à **Intune** > **Applications** > **Toutes les applications** > **Ajouter**.
 2. Accédez à **Applications** > **Stratégie de configuration des applications**, pour créer une stratégie de configuration des applications pour l’application Portail d’entreprise.
-3. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Vous trouverez plus d’informations sur la création d’une stratégie de configuration des applications et la saisie de données XML dans [Ajouter des stratégies de configuration des applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md) ou, pour le MDM hybride, [Appliquer des paramètres aux applications iOS avec des stratégies de configuration des applications dans Configuration Manager](https://docs.microsoft.com/configmgr/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+3. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Pour plus d’informations sur la création d’une stratégie de configuration d’application et l’entrée de données XML, consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS managés](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>

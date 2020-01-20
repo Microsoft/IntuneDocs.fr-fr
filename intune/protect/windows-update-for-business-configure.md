@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207449"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956284"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -63,7 +63,7 @@ Les conditions préalables suivantes doivent être remplies pour utiliser des mi
   > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) ne prend actuellement pas en charge les versions *Long Term Service Channel (LTSC)* . Prévoyez d'utiliser d'autres méthodes de mise à jour, notamment WSUS ou Configuration Manager.
 
-- Sur les appareils Windows, le paramètre **Commentaires et diagnostics** > **Données de diagnostic et d’utilisation** doit être défini sur **De base**, **Amélioré** ou **Complet**.  
+- Sur les appareils Windows, le paramètre **Commentaires et diagnostics** > **Données de diagnostic et d’utilisation** doit être défini sur **De base**, **Amélioré** ou **Complet**.
 
   Vous pouvez configurer manuellement le paramètre *Données de diagnostic et d’utilisation* pour les appareils Windows 10, ou utiliser un profil de restriction d’appareils Intune pour Windows 10 et versions ultérieures. Si vous utilisez un profil de restriction d’appareils, définissez la valeur de [restriction d’appareils](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) du paramètre **Partager les données d'utilisation** sur au moins **De base**. Ce paramètre se trouve dans la catégorie **Création de rapports et les données de télémétrie** lorsque vous configurez une stratégie de restriction d’appareils pour Windows 10 ou version ultérieure.
 
@@ -215,6 +215,10 @@ Quand un appareil reçoit une stratégie de mise à jour des fonctionnalités de
 
   Cette limitation est examinée pour déterminer si elle peut être prise en charge à l’avenir.
 
+> [!IMPORTANT]
+> Pour utiliser la stratégie de mise à jour des fonctionnalités avec Intune, les appareils doivent avoir la télémétrie activée, avec un paramètre minimal [*de base*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). La télémétrie est configurée sous *Création de rapports et télémétrie* dans le cadre d’une [stratégie de restriction des appareils](../configuration/device-restrictions-configure.md).
+>
+> Les appareils qui reçoivent une stratégie de mise à jour des fonctionnalités et dont la télémétrie est définie comme *Non configurée*, donc désactivée, peuvent installer une version de Windows plus récente que celle définie dans la stratégie de mise à jour des fonctionnalités. La condition préalable requise pour exiger la télémétrie est en cours d’examen, car cette fonctionnalité évolue vers une disponibilité générale.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Créer et attribuer des mises à jour de fonctionnalités Windows 10
 
@@ -245,4 +249,3 @@ Dans ce volet, vous pouvez :
 [Rapports de conformité Intune pour les mises à jour](../windows-update-compliance-reports.md)
 
 [Résolution des problèmes liés aux anneaux de mise à jour Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 479d88c09f48acbbfaedf1f4c69546b7f52dfbf1
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692187"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885806"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
@@ -93,7 +93,7 @@ Vous pouvez valider la stratégie de configuration des applications à l’aide 
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>Configuration iOS sur les appareils non gérés
 
-Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils non gérés pour la configuration des apps gérées.
+Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils non gérés pour la configuration des apps gérées. Outre les étapes ci-dessous, vous pouvez accéder aux journaux des applications managées à l’aide de Microsoft Edge. Pour plus d’informations, consultez [Utiliser Microsoft Edge sur iOS pour accéder aux journaux des applications managées](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Si ce n'est pas déjà fait, téléchargez et installez l’app **Intune Managed Browser** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
 2. Lancez **Intune Managed Browser** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
@@ -162,7 +162,7 @@ Pour collecter les journaux à partir d'un appareil Android, vous ou l'utilisate
     
 ## <a name="graph-api-support-for-app-configuration"></a>Prise en charge de l’API Graph pour la configuration d’application
 
-Vous pouvez utiliser l’API Graph pour accomplir des tâches de configuration d’application. Pour plus d’informations, consultez [Configuration ciblée de gestion des applications mobiles de référence pour API Graph](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
+Vous pouvez utiliser l’API Graph pour accomplir des tâches de configuration d’application. Pour plus d’informations, consultez [Configuration ciblée de gestion des applications mobiles de référence pour API Graph](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Pour en savoir plus sur Intune et sur Graph, consultez [Utilisation d’Intune dans Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

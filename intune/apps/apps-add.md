@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
-ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
+ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74784236"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956209"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 
@@ -37,7 +37,7 @@ Les utilisateurs des applications et des appareils de votre entreprise (le perso
 
 Intune prend en charge un large éventail de types d’applications. Les options disponibles diffèrent pour chaque type d’application. Intune vous permet d’ajouter et d’affecter les types d’applications suivants :
 
-| Types d’applications | Installation | Updates |
+| Types d’applications | Installation | Mises à jour |
 |---|---|---|
 | Applications du magasin (applications Store) | Intune installe l’application sur l’appareil.  | Les mises à jour de l’application sont automatiques. |
 | Applications écrites en interne (cœur de métier) | Intune installe l’application sur l’appareil (vous fournissez le fichier d’installation). | Vous devez mettre à jour l’application. |
@@ -164,7 +164,7 @@ Lorsque vous ajoutez une application à Intune, vous avez la possibilité de sé
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Sélectionnez **Apps** > **Catégories d’applications**.  
     Le volet **Catégories d’applications** affiche la liste des catégories actuelles. 
-5. Effectuez l'une des opérations suivantes :
+5. Effectuez l’une des opérations suivantes :
     - Pour ajouter une catégorie, dans le volet **Créer une catégorie**, sélectionnez **Ajouter**, puis entrez un nom de catégorie.  
     Les noms ne peuvent être entrés que dans une seule langue et ne sont pas traduits par Intune.
     - Pour modifier une catégorie, sélectionnez les points de suspension ( **...** ) à côté de la catégorie, puis **Épingler au tableau de bord** ou **Supprimer**.
@@ -189,7 +189,7 @@ Intune réinstalle, met à jour ou supprime automatiquement une application obli
 
 ## <a name="app-installation-errors"></a>Erreurs d’installation des applications
 
-Pour plus d’informations sur les erreurs d’installation des applications Intune, voir [Erreurs d’installation des applications](troubleshoot-app-install.md#app-installation-errors).
+Pour plus d’informations sur les erreurs d’installation des applications Intune, voir [Erreurs d’installation des applications](troubleshoot-app-install.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -211,4 +211,4 @@ Pour savoir comment ajouter des applications pour chaque plateforme à Intune, c
 - [Microsoft Edge pour macOS](apps-edge-macos.md)
 - [Applications intégrées](apps-add-built-in.md)
 - [Application système Android Enterprise](apps-ae-system.md)
-- [Applications Win32](app-management.md)
+- [Applications Win32](~/apps/apps-win32-app-management.md)

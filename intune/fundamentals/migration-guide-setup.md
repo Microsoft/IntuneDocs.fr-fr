@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ca0983b7b637b7e85bef97cd77e6c870c4e43eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c705e8863ef4e01906a773d528f9ae2f40461c71
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510017"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885857"
 ---
 # <a name="basic-setup"></a>Configuration de base
 
@@ -29,7 +29,7 @@ Une fois que vous avez évalué votre environnement, vous devez configurer Micro
 
 ## <a name="external-dependencies-for-an-intune-deployment"></a>Dépendances externes d’un déploiement Intune
 
-### <a name="identity"></a>Fournisseur
+### <a name="identity"></a>Identité
 
 Intune requiert l’utilisation d’Azure Active Directory (Azure AD) en tant que fournisseur de groupes d’utilisateurs et d’identités. Informations supplémentaires :
 
@@ -74,9 +74,9 @@ Avant de pouvoir migrer vers Intune, vous devez créer un abonnement Intune.
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Tâche 3 : Définir votre autorité MDM sur Intune
 
-Vous pouvez gérer Intune via le portail Azure ou la console Configuration Manager Current Branch. Nous vous recommandons de gérer Intune via le [portail Azure](https://portal.azure.com), sauf si vous avez besoin d’intégrer Intune dans un déploiement Configuration Manager Current Branch.
+Nous vous recommandons de gérer Intune à l’aide du [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Définissez l’autorité MDM sur **Intune** pour activer le portail Intune Azure. En utilisant une autre autorité MDM, Intune peut transférer la gestion MDM à d’autres consoles de gestion Microsoft. Cependant, ces cas sont rares.
+Définir votre autorité MDM sur **Intune**. En utilisant une autre autorité MDM, Intune peut transférer la gestion MDM à d’autres consoles de gestion Microsoft. Cependant, ces cas sont rares.
 
 > [!IMPORTANT]
 > Si vous transférez la fonction d’administration des appareils mobiles à Intune pour la première fois, vous devez définir l’autorité MDM sur Intune.

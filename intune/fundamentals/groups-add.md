@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
-ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
+ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303076"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956260"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Ajouter des groupes pour organiser des utilisateurs et des appareils
 
@@ -54,7 +54,7 @@ Utilisez les étapes ci-après pour créer un groupe.
         >
         > Si votre rôle principal est la gestion des appareils, nous vous recommandons d’utiliser le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365** : Ces groupes sont conçus pour contrôler l’accès et partager les ressources Office 365. Par exemple, vous pouvez créer un groupe Office 365 pour partager une boîte de réception ou un calendrier Outlook. Pour plus d’informations, consultez [En savoir plus sur les groupes Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Office 365** : offre des opportunités de collaboration en permettant aux membres d’accéder à une boîte aux lettres partagée, à un calendrier, à des fichiers, à un site SharePoint, etc. Cette option vous permet également de permettre à des personnes extérieures à votre organisation d’accéder au groupe. Pour plus d’informations, consultez [En savoir plus sur les groupes Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Renseignez les champs **Nom du groupe** et **Description du groupe** pour le nouveau groupe. Soyez spécifique et incluez des informations afin que d’autres personnes sachent à quoi sert le groupe.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547553"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885780"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -101,19 +101,11 @@ Veillez à noter tous les projets ou tous les autres plans mis en place suscepti
 | **SharePoint** | SharePoint sur site | Aucun plan pour migrer vers SharePoint en ligne |  
 | **Gestion des appareils mobiles actuelle** | Exchange ActiveSync |  |
 | **Solution de certificat** | Microsoft Server 2012 R2, services de certificats AD | Utiliser uniquement une PKI pour les serveurs de sites Web |
-| **System Management** | Configuration Manager CB 1606 | Souhaiterait étudier une solution Intune hybride |
+| **System Management** | Branche actuelle de Configuration Manager | Souhaiterait étudier une solution de cogestion |
 | **Solution VPN** | Cisco AnyConnect |  |
 
 
 Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour développer un plan de conception Intune.
-
-## <a name="choose-an-intune-deployment-option"></a>Choisissez une option de déploiement Intune
-
-Intune propose deux options de déploiement : autonome et hybride. Le terme autonome fait référence au service Intune en cours d’exécution dans le cloud, le terme hybride fait référence à l’intégration d’Intune à Configuration Manager. Ce guide couvre principalement l’option autonome. [Choisissez l’option qui répond aux besoins de votre entreprise](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
-
-> [!Important]
->L’intégration des nouveaux clients MDM hybrides est dépréciée. Pour plus d’informations, lisez le billet de blog [Passer de la gestion hybride des appareils mobiles à Intune sur Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
-
 
 ## <a name="intune-tenant-location"></a>Emplacement du client Intune
 

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654258"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756006"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune
 
@@ -38,6 +38,8 @@ Intune fournit également un [rapport de chiffrement](encryption-monitor.md) int
 ## <a name="filevault-encryption-for-macos"></a>Chiffrement FileVault pour macOS
 
 Utilisez Intune pour configurer le chiffrement de disque FileVault sur les appareils qui exécutent macOS. Ensuite, utilisez le rapport de chiffrement Intune pour voir les détails du chiffrement de ces appareils et pour gérer les clés de récupération des appareils chiffrés avec FileVault.
+
+Notez que l’inscription d’appareils approuvés par l’utilisateur est requise pour que FileVault fonctionne sur l’appareil. L’utilisateur doit approuver manuellement le profil de gestion à partir de préférences système pour que l’inscription soit considérée comme approuvée par l’utilisateur. 
 
 FileVault est un programme de chiffrement de disque complet inclus avec macOS. Utilisez Intune pour configurer le FileVault sur les appareils qui exécutent **macOS 10.13 ou ultérieur**.
 
@@ -72,14 +74,7 @@ Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer
 
 7. Configurez les [paramètres FileVault](endpoint-protection-macos.md#filevault) selon vos besoins métier, puis sélectionnez **OK**.
 
-   > [!IMPORTANT]
-   > Il existe un problème connu lorsque le paramètre **Désactiver l’invite à la déconnexion** est défini sur *Activer*. Lorsque cette option est définie sur *Activer*, le paramètre **Nombre d’autorisations de contournement** doit être défini sur une valeur, et non sur *Non configuré*. Si la valeur est *Non configuré*, le profil échoue sur l’appareil. Dans ce scénario, l’appareil signale son **résumé de l’état du profil** comme étant une **Erreur**, sans fournir d’informations supplémentaires.
-   >
-   > Lorsque l’option **Désactiver l’invite à la déconnexion** a la valeur *Non configuré*, la zone **Nombre d’autorisations de contournement** peut avoir la valeur *Non configuré* ou avoir une valeur.
-   >
-   > Ce problème sera résolu dans une mise à jour ultérieure.
-
-8. Procédez à la configuration des autres paramètres, puis enregistrez le profil.  
+  8. Procédez à la configuration des autres paramètres, puis enregistrez le profil.  
 
 ### <a name="manage-filevault"></a>Gérer FileVault
 

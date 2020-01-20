@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 7cc67ce304dba500095c130e035a0b29322c84ef
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955471"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956299"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifier les appareils comme appartenant à l’entreprise
 
@@ -120,7 +120,7 @@ Pour obtenir des spécifications détaillées sur les IMEI (International Mobile
 
 ## <a name="change-device-ownership"></a>Changer la propriété des appareils
 
-Les propriétés des appareils affichent **Propriété** pour chaque enregistrement d’appareil dans Intune. En tant qu’administrateur, vous pouvez spécifier des appareils comme étant **Personnel** ou d’**Entreprise**. Lorsque le type de propriété d’un appareil passe de Personnel à Entreprise, Intune supprime toutes les informations d’application précédemment collectées à partir de cet appareil dans les 7 jours. Le cas échéant, Intune supprime également le numéro de téléphone enregistré. 
+Les propriétés des appareils affichent **Propriété** pour chaque enregistrement d’appareil dans Intune. En tant qu’administrateur, vous pouvez spécifier des appareils comme étant **Personnel** ou d’**Entreprise**. Lorsque le type de propriété d’un appareil passe d’Entreprise à Personnel, Intune supprime toutes les informations d’applications préalablement collectées à partir de cet appareil dans les 7 jours. Le cas échéant, Intune supprime également le numéro de téléphone enregistré. 
 
 **Pour changer la propriété d’un appareil :**
 1. Connectez-vous au [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Tous les appareils** > choisissez l’appareil.

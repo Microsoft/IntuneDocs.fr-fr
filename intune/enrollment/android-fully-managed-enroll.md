@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5cd8c1a1d17ca38c42b6ed6821d20367b147ad6
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: d8397dea1dca97122aac6716ee3d51295b913538
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562381"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885939"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurer l’inscription Intune des appareils Android Entreprise entièrement gérés 
 
@@ -36,7 +36,7 @@ Intune vous permet de déployer des applications et des paramètres sur des appa
 
 ## <a name="technical-requirements"></a>Spécifications techniques
 
-Vous devez disposer d’un locataire autonome Intune pour gérer des appareils Android Entreprise entièrement gérés. La gestion d’appareils entièrement gérés n’est pas disponible en mode hybride (avec connexion à Configuration Manager) ni dans la console de gestion Silverlight héritée.
+Vous devez disposer d’un locataire autonome Intune pour gérer des appareils Android Entreprise entièrement gérés. La gestion d’appareils complètement managés n’est pas disponible dans la console de gestion Silverlight héritée.
 
 Les appareils doivent respecter les exigences suivantes pour pouvoir être gérés en tant qu’appareils Android Entreprise entièrement gérés :
 

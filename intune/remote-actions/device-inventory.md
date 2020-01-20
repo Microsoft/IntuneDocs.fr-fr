@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819778"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756023"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -67,7 +67,7 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |Appareil partagé|Si l’option **Oui** est sélectionnée, l’appareil est partagé par plusieurs utilisateurs.|Windows, iOS|
 |Inscription approuvée par l’utilisateur|Si l’option **Oui** est sélectionnée, l’appareil dispose d’une inscription approuvée par l’utilisateur, qui permet aux administrateurs de gérer certains paramètres de sécurité.|Windows, iOS|
 |Système d'exploitation|Système d’exploitation utilisé sur l’appareil.|Windows, iOS|
-|Version du système d'exploitation|Version du système d’exploitation de l’appareil.|Windows, iOS|
+|Version du système d'exploitation|La version du système d’exploitation de l’appareil.|Windows, iOS|
 |Langue du système d’exploitation|Langue définie dans le système d’exploitation de l’appareil|Windows, iOS|
 |Numéro de version|Le numéro de build du système d’exploitation.|Android|
 |Niveau du correctif de sécurité|Le niveau du correctif de sécurité pour l’appareil.|Android|
@@ -94,6 +94,9 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |Chiffré|Si l’option **Oui** est sélectionnée, les données stockées sur l’appareil sont chiffrées.|Windows, iOS, Android|
 
 \* Non disponible dans Android avec le Gestionnaire de stratégies Google, comme les appareils entièrement gérés et dédiés
+
+> [!Note]  
+> Le numéro de téléphone n’est pas inventorié sur les appareils Android Entreprise dédiés ou complètement managés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Consultez ce que vous pouvez faire d’autre pour [gérer vos appareils](device-management.md) avec Intune.

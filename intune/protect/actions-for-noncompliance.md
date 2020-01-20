@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e3867bfc2de29c059766e134bd0d2c8801e1c70
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 50478ecb615cf39bba0a205cb06f83e47728e366
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712906"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827834"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatiser l’envoi d’un e-mail et ajouter des actions pour les appareils non conformes dans Intune
 
@@ -91,7 +91,7 @@ Pour envoyer un e-mail à vos utilisateurs, créez un modèle de message de noti
 
 Quand vous créez une stratégie de conformité des appareils, Intune crée automatiquement une action en cas de non-conformité. Si un appareil ne répond pas à votre stratégie de conformité, cette action marque l’appareil comme non conforme. Vous pouvez personnaliser la durée pendant laquelle l’appareil est marqué comme non conforme. Cette action ne peut pas être supprimée.
 
-Vous pouvez également ajouter une autre action quand vous créez une stratégie de conformité ou mettez à jour une stratégie existante.
+En plus de l’action par défaut pour marquer les appareils comme non conformes, vous pouvez ajouter des actions facultatives lorsque vous créez une stratégie de conformité ou mettez à jour une stratégie existante.
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
