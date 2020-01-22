@@ -1,35 +1,35 @@
 ---
-ms.openlocfilehash: 6f5b0c8df86cf5bf1206c1cccb879e37c7944a21
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 748141dc494e28f25a09039a7a500411af76ace7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71912727"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76037609"
 ---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Activer l’inscription automatique Windows 10
 
-L’inscription automatique permet aux utilisateurs d’inscrire leurs appareils Windows 10 dans Intune. Pour s’inscrire, les utilisateurs ajoutent leur compte professionnel à leurs appareils personnels ou joignent des appareils d’entreprise à Azure Active Directory. En arrière-plan, l’appareil est inscrit et joint à Azure Active Directory. Une fois inscrit, l’appareil est géré par Intune.
+L’inscription automatique permet aux utilisateurs d’inscrire leurs appareils Windows 10 dans Intune. Pour s’inscrire, les utilisateurs ajoutent leur compte professionnel à leurs appareils personnels ou joignent des appareils d’entreprise à Azure Active Directory. En arrière-plan, l’appareil est inscrit et joint à Azure Active Directory. Une fois inscrit, l’appareil est géré avec Intune.
 
-**Prérequis**
+**Conditions préalables**
 
-- Abonnement Premium à Azure Active Directory ([abonnement d’évaluation](http://go.microsoft.com/fwlink/?LinkID=816845))
+- Abonnement Premium à Azure Active Directory ([abonnement d’évaluation](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Abonnement Microsoft Intune
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Configurer l’inscription automatique de MDM
 
 1. Connectez-vous au [Portail Azure](https://portal.azure.com), puis sélectionnez **Azure Active Directory**.
 
-   ![Capture d’écran du portail Azure](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
+   ![Capture d’écran montrant le portail Azure](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
 
-2. Sélectionnez **Mobilité (MDM et GAM)** .
+2. Sélectionnez **Mobilité (gestion des données de référence et gestion des applications mobiles)** .
 
-   ![Capture d’écran du portail Azure](../enrollment/media/windows-enroll/auto-enroll-mdm.png)
+   ![Capture d’écran montrant le portail Azure](../enrollment/media/windows-enroll/auto-enroll-mdm.png)
 
 3. Sélectionnez **Microsoft Intune**.
 
-   ![Capture d’écran du portail Azure](../enrollment/media/windows-enroll/auto-enroll-intune.png)
+   ![Capture d’écran montrant le portail Azure](../enrollment/media/windows-enroll/auto-enroll-intune.png)
 
-4. Configurez **Portée des utilisateurs MDM**. Spécifiez les appareils des utilisateurs qui doivent être gérés par Microsoft Intune. Ces appareils Windows 10 peuvent s’inscrire automatiquement pour la gestion avec Microsoft Intune.
+4. Configurez **Portée de l’utilisateur Gestion des données de référence**. Spécifiez les appareils des utilisateurs qui doivent être gérés par Microsoft Intune. Ces appareils Windows 10 peuvent s’inscrire automatiquement pour la gestion avec Microsoft Intune.
 
    - **Aucun** - Inscription automatique MDM désactivée
    - **Quelques-uns** : sélectionnez les **groupes** qui peuvent inscrire automatiquement leurs appareils Windows 10
@@ -43,13 +43,13 @@ L’inscription automatique permet aux utilisateurs d’inscrire leurs appareils
    > [!NOTE]
    > La portée des utilisateurs MDM doit être définie sur un groupe Azure AD contenant des objets utilisateur.
 
-   ![Capture d’écran du portail Azure](../enrollment/media/windows-enroll/auto-enroll-scope.png)
+   ![Capture d’écran montrant le portail Azure](../enrollment/media/windows-enroll/auto-enroll-scope.png)
 
 5. Utilisez les valeurs par défaut pour les URL suivantes :
-    - **URL des conditions d'utilisation de MDM**
-    - **URL de détection de MDM**
+    - **URL des conditions d’utilisation de la gestion des données de référence**
+    - **URL de détection MDM**
     - **URL de conformité GAM**
 
 6. Sélectionnez **Enregistrer**.
 
-Par défaut, l'authentification à deux facteurs n'est pas activée pour le service. Toutefois, l’authentification à deux facteurs est recommandée au moment de l’inscription d’un appareil. Pour activer l’authentification à deux facteurs, configurez un fournisseur d’authentification à deux facteurs dans Azure AD et configurez vos comptes d’utilisateur pour l’authentification multifacteur. Consultez [Bien démarrer avec le serveur Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Par défaut, l’authentification à deux facteurs n’est pas activée pour le service. Toutefois, l’authentification à deux facteurs est recommandée au moment de l’inscription d’un appareil. Pour activer l’authentification à deux facteurs, configurez un fournisseur d’authentification à deux facteurs dans Azure AD et configurez vos comptes d’utilisateur pour l’authentification multifacteur. Consultez [Bien démarrer avec le serveur Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

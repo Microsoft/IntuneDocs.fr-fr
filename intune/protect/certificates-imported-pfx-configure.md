@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 1bad86e561c8695d58296c8f473815a203ef210a
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886017"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258492"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS importés avec Intune
 
@@ -134,7 +134,7 @@ Le module PowerShell fournit des méthodes pour créer une clé à l’aide du c
    > [!TIP]
    > Le fournisseur que vous utilisez doit être sélectionné à nouveau lorsque vous importez des certificats PFX. Vous pouvez utiliser le **fournisseur de stockage de clés logicielles Microsoft**, bien qu’il soit possible d’utiliser un autre fournisseur. Le nom de la clé est également fourni à titre d’exemple et vous pouvez utiliser un autre nom de clé de votre choix.
 
-   Si vous prévoyez d’importer le certificat à partir de votre station de travail, vous pouvez exporter cette clé vers un fichier à l’aide de la commande suivante :  `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path to write to>"`
+   Si vous prévoyez d’importer le certificat à partir de votre station de travail, vous pouvez exporter cette clé vers un fichier à l’aide de la commande suivante :  `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    La clé privée doit être importée sur le serveur qui héberge PFX Certificate Connector pour Microsoft Intune afin que les certificats PFX importés puissent être traités correctement.
 
