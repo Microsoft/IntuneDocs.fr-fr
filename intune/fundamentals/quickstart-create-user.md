@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75a875fc3ff11eb1e3befad425c16a710544f781
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdd97e69c97df5a266e147381d94b3d4419bab34
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509879"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036569"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Démarrage rapide : Créer un utilisateur dans Intune et lui attribuer une licence
 
@@ -50,11 +50,11 @@ Les utilisateurs qui souhaitent s’inscrire à la gestion des appareils Intune 
 
 ## <a name="assign-a-license-to-the-user"></a>Affecter une licence à l’utilisateur
 
-Après avoir créé un utilisateur, vous devez utiliser le [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pour lui attribuer une licence Intune. Si vous n’attribuez pas de licence à l’utilisateur, il ne peut pas inscrire son appareil dans Intune. 
+Après avoir créé un utilisateur, vous devez utiliser le [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) pour lui attribuer une licence Intune. Si vous n’attribuez pas de licence à l’utilisateur, il ne peut pas inscrire son appareil dans Intune. 
 
 Pour attribuer une licence Intune à un compte d’utilisateur :
 
-1. Connectez-vous au [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) avec les mêmes informations d’identification que celles utilisées pour vous connecter à Intune.
+1. Connectez-vous au [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) avec les mêmes informations d’identification que celles utilisées pour vous connecter à Intune.
 2. Choisissez **Utilisateurs** > **Utilisateurs actifs** > et choisissez l’utilisateur que vous venez de créer.
 3. En regard de **Licences des produits**, sélectionnez **Modifier**.
 4. Sous **Emplacement**, choisissez un emplacement pour l’utilisateur.
@@ -68,7 +68,7 @@ Le nouvel utilisateur Intune actif apparaît à présent comme utilisant une lic
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
-Si vous n’avez plus besoin de cet utilisateur, vous pouvez le supprimer. Pour ce faire, accédez au [Centre d’administration Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), choisissez **Utilisateurs** > **Utilisateurs actifs** > *choisissez l’utilisateur dans la liste* > **Supprimer l’utilisateur** > **Supprimer l’utilisateur** > **Confirmer les changements** > **Fermer**.
+Si vous n’avez plus besoin de cet utilisateur, vous pouvez le supprimer. Pour ce faire, accédez au [Centre d’administration Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854), choisissez **Utilisateurs** > **Utilisateurs actifs** > *choisissez l’utilisateur dans la liste* > **Supprimer l’utilisateur** > **Supprimer l’utilisateur** > **Confirmer les changements** > **Fermer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

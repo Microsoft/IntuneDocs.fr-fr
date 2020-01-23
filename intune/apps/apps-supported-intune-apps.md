@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67ff4f0cbe11c24c03b504968735e0a68d54f12d
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: c199964409a91aa6f5b75ae067968e37c1b1a189
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692173"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125331"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Applications protégées par Microsoft Intune  
 
@@ -45,6 +45,7 @@ Les tableaux suivants fournissent des détails sur les applications Microsoft et
 
 | Titre d’application | Description de l’application et informations | Liens App Store pour les plateformes prises en charge |
 |-------------------------------------------------|-------------------------|---------------------------------------------|
+| **Service après-vente mobile**<p><img alt="Microsoft app - Field Service Mobile icon" src="./media/apps-supported-intune-apps/icon-m-field-service-mobile.png" width="100"> | Dynamics 365 for Field Service fournit l’application de service après-vente mobile pour plateformes et appareil multiples, spécifiquement conçue pour les besoins des collaborateurs du service après-vente mobile. Les fonctionnalités hors connexion robustes permettent aux collaborateurs du service après-vente mobile de continuer à accéder aux données dont ils ont besoin lorsqu’ils se rendent à des endroits éloignés sans connectivité Internet et à interagir avec elles. Les collaborateurs du service après-vente peuvent informer le back-office du travail effectué sur le terrain en synchronisant périodiquement les données sur le serveur, ce qui permet de prendre les bonnes mesures ou de les optimiser de manière appropriée. L’application mobile est entièrement personnalisable et extensible, ce qui permet à n’importe quelle organisation de personnaliser l’application comme un propriétaire, de définir les types de données auxquelles les collaborateurs du service après-vente peuvent accéder, et bien plus encore. | [Lien Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile), [lien vers l’App Store (iOS)](https://apps.apple.com/us/app/field-service-mobile/id1414669075) |
 | **Visionneuse Microsoft Azure Information Protection**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Collaborez en toute sécurité avec d’autres utilisateurs à l’aide de l’application Visionneuse AIP. Affichez les fichiers protégés (e-mails, fichiers PDF, images, fichiers texte protégés par des droits) qu’une personne a partagés avec vous. | [Lien Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer), [lien vers l’App Store (iOS)](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) |
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings est une application de planification de rendez-vous qui vous permet d’effectuer le suivi des réservations, de votre équipe et de vos clients. Vous ne manquerez jamais un rendez-vous et diminuerez le nombre d’oublis.<p>Avec l’application Bookings, vous pouvez :<br><ul><li>Voir et gérer votre calendrier</li><li>Effectuer des réservations ou modifier celles que vous avez déjà prises pendant vos déplacements</li><li>Voir la disponibilité en temps réel des membres de votre équipe</li><li>Répondre rapidement et facilement aux clients</li><li>Obtenir rapidement des renseignements sur le lieu de votre réservation suivante</li><li>Gérer la liste de vos clients</li></ul> | [Lien Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[Lien vers App Store (iOS)](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Restez informé de façon rapide, simple et ludique sur votre vie personnelle et votre vie professionnelle avec votre assistant personnel Cortana. Mettez votre assistant numérique intelligent sur votre téléphone pour aider à suivre les choses importantes où que vous soyez sur vos appareils. | [Lien Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[Lien vers App Store (iOS)](https://apps.apple.com/us/app/cortana/id1054501703)

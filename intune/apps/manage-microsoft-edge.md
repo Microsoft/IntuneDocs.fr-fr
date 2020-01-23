@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: e64741a92804ec4149b654480166720ff3092e35
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548003"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258500"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -205,7 +205,7 @@ Vous pouvez configurer l’expérience de la nouvelle page d’onglets dans Micr
 
 |    Clé    |    Valeur    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    'com.microsoft.intune.SohwIndustryNews'    |    **True** affichera les actualités du secteur sur la nouvelle page d’onglets de Microsoft Edge mobile.<p>**False** (par défaut) masque les actualités du secteur dans la nouvelle page d’onglets.    |
+|    com.microsoft.intune.ShowIndustryNews    |    **True** affichera les actualités du secteur sur la nouvelle page d’onglets de Microsoft Edge mobile.<p>**False** (par défaut) masque les actualités du secteur dans la nouvelle page d’onglets.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Configurer des signets managés pour Microsoft Edge
 
@@ -217,6 +217,7 @@ Voici plus de détails :
 - Ces signets ne peuvent pas être supprimés ni modifiés par les utilisateurs.
 - Ces signets s’affichent en haut de la liste. Tous les signets créés par les utilisateurs sont affichés sous ces signets.
 - Si vous avez activé la redirection du Proxy d’application, vous pouvez ajouter des applications web du Proxy d’application en utilisant leur URL interne ou externe.
+- Veillez à faire précéder toutes les URL du préfixe **http://** ou **https://** quand vous les entrez dans la liste.
 
 Pour configurer des signets managés, utilisez la paire clé-valeur suivante :
 
@@ -243,7 +244,7 @@ Vous pouvez utiliser les paires clé-valeur suivantes pour configurer une liste 
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Format des URL dans les listes de sites autorisés et bloqués 
 Vous pouvez utiliser divers formats d’URL pour créer vos listes de sites autorisés/bloqués. Ces modèles autorisés sont détaillés dans le tableau ci-dessous. Quelques remarques avant de commencer : 
-- Veillez à faire précéder toutes les URL du préfixe **http** ou **https** quand vous les entrez dans la liste.
+- Veillez à faire précéder toutes les URL du préfixe **http://** ou **https://** quand vous les entrez dans la liste.
 - Vous pouvez utiliser le caractère générique (\*) en fonction des règles de la liste des modèles autorisés, ci-dessous.
 - Un caractère générique peut uniquement correspondre à un composant entier d’un nom d’hôte (séparés par des points) ou à des portions entières d’un chemin (séparées par des barres obliques). Par exemple, `http://*contoso.com`**n’est pas** pris en charge.
 - Vous pouvez spécifier des numéros de port dans l'adresse. Si vous ne spécifiez pas un numéro de port, les valeurs suivantes sont utilisées :

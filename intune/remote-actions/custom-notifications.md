@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907285"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036613"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
@@ -38,7 +38,7 @@ Les messages de notification personnalisés incluent un titre court et un corps 
 
 ## <a name="considerations-for-using-custom-notifications"></a>Considérations relatives à l’utilisation des notifications personnalisées
 
-**Configuration des appareils** 
+**Configuration de l’appareil** 
 
 - L’application Portail d’entreprise ou l’application Microsoft Intune doit être installée sur les appareils avant que les utilisateurs puissent recevoir des notifications personnalisées. Ils doivent également avoir des autorisations configurées pour permettre à l’application Portail d’entreprise ou à l’application Microsoft Intune d’envoyer des notifications Push. Si nécessaire, l’application Portail d’entreprise et l’application Microsoft Intune peuvent inviter les utilisateurs à autoriser les notifications.  
 - Sur Android, Google Play Services est une dépendance obligatoire.  
@@ -89,13 +89,13 @@ Intune ne fait pas le suivi des notifications personnalisées que vous envoyez, 
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Envoyer une notification personnalisée à un seul appareil  
 
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec un compte disposant des autorisations nécessaires pour créer et envoyer des notifications, puis accédez à **Appareils** > **Tous les appareils**.  
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec un compte disposant des autorisations nécessaires pour créer et envoyer des notifications, puis accédez à **Appareils** > **Tous les appareils**.
 
-2. Sélectionnez l’appareil auquel vous souhaitez envoyer une notification.  
+2. Double-cliquez sur le nom de l’appareil géré auquel vous souhaitez envoyer une notification pour ouvrir la page *Présentation*.
 
-3. Dans la page **Vue d’ensemble** des appareils, sélectionnez l’option **...** (points de suspension) en haut à droite de la page.  
+3. Dans la page **Présentation**, sélectionnez l’action d’appareil **Envoyer une notification personnalisée** pour ouvrir le volet *Envoyer une notification personnalisée*. Si cette option n’est pas disponible, sélectionnez l’option **...** (ellipses) en haut à droite de la page, puis sélectionnez **Envoyer une notification personnalisée**.
 
-4. Sélectionner l’action d’appareil **Envoyer une notification personnalisée** pour ouvrir le volet *Envoyer une notification personnalisée* où vous spécifiez les détails suivants du message :  
+4. Dans le volet **Envoyer une notification personnalisée**, spécifiez les détails du message suivants :  
 
    - **Titre** : Spécifiez un titre pour cette notification. Les titres sont limités à 50 caractères.  
    - **Corps** : Spécifiez le message. Les messages sont limités à 500 caractères.  
