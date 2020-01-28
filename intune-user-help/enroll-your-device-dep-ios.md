@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 039ec17b1a56a7339f2159d7af6ad1bd9280bf63
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 6c1b6417489d1443596113a18476b9cbc8f3832e
+ms.sourcegitcommit: 8cc3eca2bce847b0c2b40d8531698e21df848878
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855508"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951457"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Inscrire l’appareil iOS fourni par votre organisation dans la gestion
 
@@ -44,11 +44,7 @@ Si vous utilisez votre propre appareil iOS, plutôt qu’un appareil d’entrepr
 
 1. Allumez votre appareil iOS.
 2. Après avoir sélectionné votre langue (**Language**), connectez votre appareil en Wi-Fi.
-3. Dans l’écran **Configurer l’appareil iOS**, indiquez ce que vous voulez faire :
-   - **Configurer en tant que nouvel appareil**
-   - **Restaurer à partir d’une sauvegarde iCloud**
-   - **Restaurer à partir d’une sauvegarde iTunes**
-
+3. Dans l’écran **Configurer l’appareil iOS**, choisissez **Configurer en tant que nouvel appareil**.  
 4. Une fois que vous êtes connecté en Wi-Fi, l’écran **Configuration** s’affiche. Vous pouvez y lire que **[Votre entreprise] configurera automatiquement votre appareil.**
 
    **La configuration permet à [Votre entreprise] de gérer cet appareil à distance. Un administrateur peut vous aider à configurer des comptes e-mail et réseau, à installer et configurer des applications, et à gérer les paramètres à distance. Un administrateur peut désactiver des fonctionnalités, installer et supprimer des applications, surveiller et limiter le trafic Internet, et effacer à distance cet appareil.**

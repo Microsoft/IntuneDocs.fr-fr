@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5e5d3e645410b876a5d3d0be0eafed9c790780
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 831a22dfb6eebfe74b9886a1c83560f68a11c04e
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502657"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036594"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Gérer les contrats de licence des logiciels de PC Windows dans Microsoft Intune
 
@@ -51,7 +51,7 @@ De plus, vous pouvez générer des rapports qui indiquent le nombre d’installa
 > L’espace de travail **Licences** ne s’affiche pas dans la console d’administration tant que vous ne gérez pas au moins un PC Windows avec le client PC Windows.
 
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Ajouter des contrats de licence en volume Microsoft
-Les contrats de licence en volume Intune fournissent des informations de licence pour les logiciels achetés par le biais de contrats de licence en volume Microsoft. Vous pouvez ajouter des contrats de licence en volume Microsoft à Intune en fournissant des paires de numéros de contrats associées. Les numéros de contrat ou d'autorisation doivent correspondre aux numéros de licence ou d'inscription corrects. Les paires de numéros de contrats sont obtenues lorsque vous achetez vos contrats de licence depuis le [Centre de gestion des licences en volume Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
+Les contrats de licence en volume Intune fournissent des informations de licence pour les logiciels achetés par le biais de contrats de licence en volume Microsoft. Vous pouvez ajouter des contrats de licence en volume Microsoft à Intune en fournissant des paires de numéros de contrats associées. Les numéros de contrat ou d'autorisation doivent correspondre aux numéros de licence ou d'inscription corrects. Les paires de numéros de contrats sont obtenues lorsque vous achetez vos contrats de licence depuis le [Centre de gestion des licences en volume Microsoft (VLSC)](https://go.microsoft.com/fwlink/?LinkID=223842).
 
 1. Dans la [console d’administration Microsoft Intune](https://admin.manage.microsoft.com/), choisissez **Licences**.
 
@@ -81,7 +81,7 @@ Les contrats de licence en volume Intune fournissent des informations de licence
 
         - **Clients Open :** *Numéro d’autorisation*, *numéro de licence correspondant*, *nom du contrat*
 
-        - **Client Select et Entreprise :** *Numéro de contrat*, *numéro d’inscription correspondant*, *nom du contrat*
+        - **Clients Select et Enterprise :** *Numéro de contrat*, *numéro d’inscription correspondant*, *nom du contrat*
 
         Le formulaire **Ajouter des contrats** vous invite à rechercher ce fichier quand vous ajoutez un nouveau contrat.
 
@@ -93,7 +93,7 @@ Les contrats de licence en volume Intune fournissent des informations de licence
 
         - **Nom du contrat** : spécifiez un nom unique pour le contrat.
 
-            Le nom du contrat peut comprendre 256 caractères au maximum et ne peut pas contenir les caractères suivants : **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Les espaces sont autorisés dans le nom.
+            Le nom du contrat peut comporter 256 caractères au maximum et ne peut pas contenir les caractères suivants : **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Les espaces sont autorisés dans le nom.
 
         - **Numéro de contrat/d’autorisation** : entrez le numéro de contrat/d’autorisation de la paire de licence.
 
@@ -116,7 +116,7 @@ Les contrats de licence en volume Intune fournissent des informations de licence
 
 L’affichage **Tous les contrats** apparaît, puis Intune se connecte au Centre de gestion des licences en volume Microsoft pour valider les paires de numéros de contrats que vous avez fournies.
 
-Pour mettre à jour les informations de licence en volume après avoir ajouté des contrats de licence dans Intune, dans la page **Vue d’ensemble des licences**, choisissez **Actualiser maintenant**. Cette action récupère les informations de licence en cours depuis le [Centre de gestion des licences en volume Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
+Pour mettre à jour les informations de licence en volume après avoir ajouté des contrats de licence dans Intune, dans la page **Vue d’ensemble des licences**, choisissez **Actualiser maintenant**. Cette action récupère les informations de licence en cours depuis le [Centre de gestion des licences en volume Microsoft (VLSC)](https://go.microsoft.com/fwlink/?LinkId=223842).
 
 > [!IMPORTANT]
 > Jusqu'à l'actualisation des informations de licence en volume, vous pouvez voir différentes informations dans la liste des contrats ainsi que les informations des droits sur la page **Vue d'ensemble des contrats** .
@@ -146,7 +146,7 @@ Vous pouvez aussi ajouter d’autres types de contrats de licence à Intune en p
 
 4. Dans la zone **Ajouter des détails de contrat** , spécifiez les éléments suivants :
 
-    - **Agreement name** (obligatoire). Le nom du contrat peut comprendre 256 caractères au maximum et ne peut pas contenir les caractères suivants : **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Les espaces sont autorisés dans le nom.
+    - **Agreement name** (obligatoire). Le nom du contrat peut comporter 256 caractères au maximum et ne peut pas contenir les caractères suivants : **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Les espaces sont autorisés dans le nom.
 
     - **Éditeur** (obligatoire). Lorsque vous commencez à saisir un nom d'éditeur, le service récupère tous les noms d'éditeurs contenant les lettres que vous tapez. Par exemple, si vous tapez « soft », le service récupère tous les noms des éditeurs contenant « soft », tels que « Microsoft » et « Microsoft Research ». Les noms d'éditeurs sont extraits du catalogue de logiciels. Avant de saisir le nom de produit, vous devez sélectionner l'éditeur.
 
@@ -182,7 +182,7 @@ Des contrats de licence logicielle peuvent être ajoutés à des groupes de lice
 |                            |                                                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |            Tâche            |                                                                                                                                                                                 Détails                                                                                                                                                                                  |
-|   Créer un groupe de licences   |                                                            Dans la page <strong>Vue d’ensemble</strong> de l’espace de travail <strong>Licences</strong>, choisissez <strong>Créer un groupe de licences</strong> dans le menu <strong>Tâches</strong>. <strong>Remarque :</strong> Vous pouvez créer un nombre maximal de 500 groupes de licences.                                                             |
+|   Créer un groupe de licences   |                                                            Dans la page <strong>Vue d’ensemble</strong> de l’espace de travail <strong>Licences</strong>, choisissez <strong>Créer un groupe de licences</strong> dans le menu <strong>Tâches</strong>. <strong>Remarque :</strong> Vous pouvez créer un nombre maximal de 500 groupes de licences.                                                             |
 |   Renommer un groupe de licences   |                                                                                                      Dans l’espace de travail <strong>Licences</strong>, choisissez un groupe de licences, puis choisissez <strong>Modifier le groupe de licences</strong> dans le menu <strong>Tâches</strong>.                                                                                                       |
 |   Supprimer un groupe de licences   |                                 Dans l’espace de travail <strong>Licences</strong>, choisissez un groupe de licences, puis choisissez <strong>Supprimer le groupe de licences</strong> dans le menu <strong>Tâches</strong>. <strong>Conseil :</strong> Les licences qui résidaient dans le groupe supprimé sont déplacées vers le groupe de licences <strong>Contrats non attribués</strong>.                                 |
 | Supprimer un contrat de licence | Dans l’espace de travail <strong>Licences</strong>, choisissez un contrat, puis cliquez sur <strong>Supprimer</strong>. <strong>Conseil :</strong> Après avoir supprimé les contrats de licence en volume, pour mettre à jour les informations de licence, choisissez <strong>Actualiser maintenant</strong> dans la page <strong>Vue d’ensemble des licences</strong> ou sous l’onglet <strong>Général</strong> pour un groupe de licences spécifique. |
