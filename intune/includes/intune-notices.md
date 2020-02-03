@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
-ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
+ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75760962"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912628"
 ---
 Ces remarques fournissent des informations importantes qui peuvent vous aider à préparer de futures modifications et fonctionnalités Intune.
 
@@ -21,8 +21,8 @@ Dans la mise à jour du service Intune de janvier, nous prévoyons de mettre en 
  
 #### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
 Aujourd’hui, il existe trois rôles disponibles dans Azure AD pour vos professionnels de la sécurité :
-- Le rôle Lecteur de sécurité dans Azure AD qui donne un accès en lecture seule à Intune.
-- Le rôle Opérateur de sécurité dans Azure AD qui donne un accès en lecture seule à Intune.
+- Le rôle Lecteur de sécurité dans Azure AD, qui donne un accès en lecture seule à Intune.
+- Le rôle Opérateur de sécurité dans Azure AD, qui donne un accès en lecture seule à Intune.
 - Administrateur de la sécurité dans Azure AD. Quand Intune envoie la mise à jour de janvier, ainsi que des autorisations en lecture seule à Intune, les nouvelles autorisations fournies par le rôle gestionnaire de sécurité des points de terminaison sont les suivantes :
     - Lire, créer, mettre à jour, supprimer et attribuer des stratégies de conformité des appareils
     - Lire, supprimer et mettre à jour des appareils gérés
@@ -51,7 +51,7 @@ https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 Le support standard de Microsoft pour Windows Phone 8.1 s’est terminé en juillet 2017, et le support étendu s’est terminé en juin 2019. L’application Portail d’entreprise pour Windows Phone 8.1 est en mode soutenu depuis octobre 2017. La prise en charge de Microsoft Intune se terminera le 20 février 2020 pour Windows Phone 8.1.
 
 #### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
-Après le 20 février 2020, ces appareils ne recevront aucune mise à jour de sécurité et vous ne pourrez pas inscrire de nouveaux appareils. Les appareils Windows Phone 8.1 existants resteront inscrits (stratégie, applications, création de rapports). Toutefois, notez que le dépannage d’une inscription existante ne sera pas pris en charge après cette date, car de nombreux composants, tels que les certificats tiers, ont déjà terminé la prise en charge de la plateforme. Intune arrêtera les tests de compatibilité avec Intune et Windows Phone 8.1.
+Après le 20 février 2020, ces appareils ne recevront aucune mise à jour de sécurité et vous ne pourrez pas inscrire de nouveaux appareils. Les appareils Windows Phone 8.1 existants resteront inscrits (stratégie, applications, rapports), mais notez que le dépannage d’une inscription existante ne sera plus pris en charge après cette date, car de nombreux composants, tels que les certificats tiers, n’ont déjà plus de support pour la plateforme. Intune arrêtera les tests de compatibilité avec Intune et Windows Phone 8.1.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que faire pour se préparer à ce changement ?
 Vous pouvez vérifier vos rapports Intune pour voir quels appareils ou utilisateurs sont concernés. Accédez à Appareils > Tous les appareils, puis filtrez par système d’exploitation. Vous pouvez ajouter des colonnes supplémentaires pour aider à identifier les membres de votre organisation disposant d’appareils exécutant Windows Phone 8.1. Demandez aux utilisateurs finaux de mettre à niveau leurs appareils avec une version de système d’exploitation prise en charge.
@@ -77,20 +77,6 @@ La prise en charge des clips web sur iOS et Android sera bientôt disponible. Un
 #### <a name="additional-information"></a>Informations supplémentaires
 Pour plus d’informations, consultez notre documentation sur [l’utilisation de Microsoft Edge avec les stratégies de protection des applications](../apps/manage-microsoft-edge.md), ou notre [billet de blog de support](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Modification planifiée : Expérience mise à jour pour l’inscription des appareils Android Entreprise dédiés dans Intune<!--5198878-->
-Avec la version de novembre ou 1911 de Intune, nous ajoutons la prise en charge du déploiement de certificat d’appareil SCEP aux appareils Android Enterprise dédiés pour activer l’accès par certificat aux profils Wi-Fi. Cette modification implique également des modifications mineures du workflow lors de l’inscription des appareils Android Enterprise dédiés.
-
-#### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
-Si vous gérez des appareils Android Enterprise dédiés dans votre environnement, vous commencerez à voir les modifications apportées en novembre.
-
-- Pour les nouvelles inscriptions d’appareil dédié Android Entreprise : les utilisateurs finaux voient un autre ensemble d’étapes sur les appareils lors de l’inscription. L’inscription continuera de démarrer comme elle le fait aujourd’hui (avec QR, NFC, Zero Touch ou l’identificateur de périphérique), mais après la publication de service de novembre, une étape d’installation d’application obligatoire s’affichera.
-- Pour les appareils Android existants inscrits en tant qu’appareils dédiés : Intune commencera à installer automatiquement l’application Microsoft Intune sur les appareils à partir du début du mois de novembre. Aucune action de votre part n’est nécessaire. L’application est téléchargée et installée automatiquement sur les appareils. 
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que faire pour me préparer à ce changement ?
-Vous devez envisager de mettre à jour les conseils à l’utilisateur final et d’informer votre support technique de cette modification. Pour plus d’informations et de captures d’écran, cliquez sur Informations supplémentaires. Nous mettrons à jour la page de nouveautés une fois ce changement déployé.
-
-#### <a name="additional-information"></a>Informations supplémentaires
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Fin du support pour la gestion des PC hérités
 
@@ -106,7 +92,7 @@ En raison de ces modifications apportées par Google, les utilisateurs Intune se
 - Intune pourra uniquement assurer le support complet des appareils Android gérés par l’administrateur d’appareil exécutant Android 10 ou version ultérieure jusqu’au 2e trimestre 2020. Les appareils gérés par l’administrateur d’appareil qui exécutent Android 10 ou une version ultérieure après cette échéance ne pourront plus être entièrement gérés. En particulier, les appareils impactés ne recevront pas de nouvelles exigences en matière de mot de passe.
     - Les appareils Samsung Knox ne seront pas affectés dans ce laps de temps, car le support étendu est assuré via l’intégration d’Intune avec la plateforme Knox. Vous avez ainsi plus de temps pour planifier la transition de la gestion de l’administration des appareils.    
 - Les appareils Android gérés par l’administrateur d’appareil qui restent sur les versions Android inférieures à Android 10 ne sont pas affectés et peuvent continuer à être entièrement gérés avec l’administrateur d’appareil.    
-- Pour tous les appareils exécutant Android 10 et versions ultérieures, Google a limité la possibilité pour les agents de gestion des administrateurs d’appareil, notamment le Portail d’entreprise, d’accéder aux informations d’identification de l’appareil. Cette restriction a un impact sur les fonctionnalités Intune suivantes après la mise à jour d’un appareil vers Android 10 ou version ultérieure :  
+- Pour tous les appareils exécutant Android 10 et versions ultérieures, Google a limité la possibilité pour les agents de gestion des administrateurs d’appareil, notamment le Portail d’entreprise, d’accéder aux informations d’identification de l’appareil. Cette restriction a un impact sur les fonctionnalités Intune suivantes après la mise à jour d’un appareil vers Android 10 ou ultérieur :  
     - Le contrôle d’accès réseau pour VPN ne fonctionnera plus.   
     - L’identification des appareils comme appartenant à l’entreprise avec le numéro IMEI ou le numéro de série ne marque pas automatiquement les appareils comme appartenant à l’entreprise.  
     - Le numéro IMEI et le numéro de série ne seront plus visibles pour les administrateurs informatiques dans Intune. 
@@ -156,7 +142,7 @@ Nous encourageons votre entreprise à mettre en œuvre immédiatement ce plan d'
 - Planifiez et mettez à niveau le parc de PC Windows 7 vers Windows 10 avant le 14 janvier 2020.
 - Explorez la [prise en charge du déploiement Windows 10](https://docs.microsoft.com/windows/deployment/) pour en savoir plus sur la façon de mettre à niveau votre parc existant de PC Windows 7 vers Windows 10.
 - Examinez l'offre [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) proposée par le biais de Fast Track, qui vous aidera à garantir la compatibilité des applications Microsoft.
-- Faites évoluer vos anciens appareils gérés par le client logiciel Intune vers la solution recommandée par Microsoft pour gérer Windows 10 à l'aide de MDM. Inscrivez tous les nouveaux PC Windows 10 en utilisant la gestion MDM pour Intune dans le portail Azure.
+- Faites évoluer vos actuels appareils gérés par le client logiciel Intune vers la solution recommandée par Microsoft pour gérer Windows 10 avec la gestion MDM. Inscrivez tous les nouveaux PC Windows 10 en utilisant la gestion MDM pour Intune dans le portail Azure.
 
 Pour plus d’informations, consultez le [billet de blog ici](https://aka.ms/Windows7_Intune).
 

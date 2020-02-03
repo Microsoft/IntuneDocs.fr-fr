@@ -6,13 +6,13 @@
     - name: Vue d’ensemble de la protection des appareils
       href: device-protect.md
       displayName: compliant; noncompliant; mfa
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   items:
     - name: Créer une stratégie de conformité des appareils
       href: quickstart-set-password-length-android.md
     - name: Envoyer des notifications aux appareils non conformes
       href: quickstart-send-notification.md
-- name: Didacticiels
+- name: Tutoriels
   items:
     - name: Protéger la messagerie sur les appareils managés
       href: tutorial-protect-email-on-enrolled-devices.md
@@ -225,6 +225,20 @@
           href: troubleshoot-conditional-access.md
         - name: Résoudre les problèmes liés à du connecteur de certificats
           href: troubleshoot-certificate-connector-events.md
+        - name: Résoudre les problèmes des profils de certificat SCEP
+          items:
+            - name: Résoudre les problèmes des profils de certificat SCEP
+              href: troubleshoot-scep-certificate-profiles.md
+            - name: Déploiement des profils sur les appareils
+              href: troubleshoot-scep-certificate-profile-deployment.md
+            - name: Communication appareil-à-NDES
+              href: troubleshoot-scep-certificate-device-to-ndes.md
+            - name: Opérations NDES
+              href: troubleshoot-scep-certificate-ndes-policy-module.md
+            - name: Remise de certificat aux appareils
+              href: troubleshoot-scep-certificate-delivery.md
+            - name: Rapports pour le déploiement de certificat
+              href: troubleshoot-scep-certificate-reporting.md
         - name: "Résoudre les problèmes du connecteur\_Exchange"
           items:
             - name: "Résoudre les problèmes du connecteur\_Exchange"
