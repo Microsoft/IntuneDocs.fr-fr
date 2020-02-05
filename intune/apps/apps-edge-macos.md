@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6ebcb81cd0f186a3fd23e0701d12ea871eab129a
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563581"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912568"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Ajouter Microsoft Edge sur les appareils macOS à l’aide de Microsoft Intune
 
@@ -49,13 +49,13 @@ Dans cette étape, vous fournissez des informations sur le déploiement de cette
 
 1. Cliquez sur **Informations sur l’application** pour afficher le volet **Informations sur l’application**.
 2. Dans le volet **Informations sur l’application**, vous fournissez des informations sur le déploiement de cette application. Ces informations vous permettent d’identifier l’application dans Intune et aux utilisateurs de trouver l’application dans le portail d’entreprise.
-    - **Nom** : Entrez le nom de l'application tel qu'il s'affichera dans le portail d'entreprise. Assurez-vous que tous les noms sont uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
+    - **Nom** : Entrez le nom de l'application tel qu'il s'affichera dans le portail d'entreprise. Assurez-vous que tous les noms sont uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description** : Entrez une description de l'application. Par exemple, vous pouvez lister les utilisateurs ciblés dans la description.
     - **Éditeur** : Microsoft apparaît comme éditeur.
     - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs des catégories d’applications intégrées ou sélectionnez une catégorie que vous avez créée. Ce paramètre facilite la recherche de l’application pour les utilisateurs qui parcourent le portail d’entreprise.
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : sélectionnez cette option pour afficher l’application en premier sur la page principale du portail d’entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
     - **Développeur** : Microsoft apparaît comme développeur.
     - **Propriétaire** : Microsoft apparaît comme propriétaire.
     - **Remarques** : entrez les éventuelles remarques à associer à cette application.
@@ -65,11 +65,15 @@ Dans cette étape, vous fournissez des informations sur le déploiement de cette
 Dans cette étape, configurez les options d’installation de l’application.
 
 1. Dans le volet **Ajouter une application**, sélectionnez **Paramètres de l’application**.
-2. Dans le volet **Paramètres de l’application**, le canal **Bêta** est automatiquement sélectionné et ne peut pas être modifié.
-    - Le canal **Bêta** correspond à l’expérience de préversion la plus stable de Microsoft Edge et au meilleur choix pour un pilote complet au sein de votre organisation. Avec des mises à jour majeures toutes les six semaines.
+2. Dans le volet **Paramètres de l’application**, sélectionnez **Stable**, **Bêta** ou **Dev** dans la liste **Canal** pour déterminer le canal Edge à partir duquel vous allez déployer l’application.
+
+    - Le canal **Stable** est le canal recommandé pour le déploiement à grande échelle dans des environnements d’entreprise. Il est mis à jour toutes les six semaines, chaque version intégrant des améliorations du canal bêta.
+    - Le canal **Bêta** correspond à l’expérience de préversion la plus stable de Microsoft Edge et au meilleur choix pour un pilote complet au sein de votre organisation. Avec des mises à jour majeures toutes les six semaines, chaque version intègre les connaissances et les améliorations du canal Dev.
+    - Le canal **Dev** est prêt pour les commentaires d’entreprise sur Windows, Windows Server et macOS. Il est mis à jour chaque semaine et contient les dernières améliorations et les derniers correctifs.
 
     > [!NOTE]
     > Le logo du navigateur Microsoft Edge est affiché avec l’application quand les utilisateurs parcourent le portail d’entreprise.
+
 3.  Sélectionnez **OK**.
 
 ## <a name="select-scope-tags-optional"></a>Sélectionner les balises d’étendue (facultatif)
