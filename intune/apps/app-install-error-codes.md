@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ade7676cb8f6265dd63eb1ba7847c50f526a9a
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
-ms.translationtype: HT
+ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76541859"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812438"
 ---
 # <a name="intune-app-installation-error-reference"></a>Informations de référence sur les erreurs d’installation de l’application Intune
 
@@ -57,7 +57,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 
 | Code d’erreur (hexadécimal) | Code d’erreur (décimal) | Message/Code d’erreur | Description/conseils de dépannage |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0x87D12906 | -2016335610 | Erreur de l’agent Apple MDM : la commande d’installation de l’application a échoué sans raison spécifiée. Relancez l’installation de l’application. | L’agent MDM d’Apple signale que la commande d’installation a échoué. |
+| 0x87D12906 | -2016335610 | Erreur de l’agent MDM Apple : La commande d’installation de l’application a échoué sans raison spécifiée. Relancez l’installation de l’application. | L’agent MDM d’Apple signale que la commande d’installation a échoué. |
 | 0x87D1313C | -2016333508 | La connexion réseau sur le client a été perdue ou interrompue. Les tentatives ultérieures doivent être effectuées dans un meilleur environnement réseau. | La connexion réseau a été perdue pendant l’envoi de l’URL mise à jour du service de téléchargement vers l’appareil. Pour être plus précis, le serveur avec le nom d’hôte spécifié n’a pas été trouvé. |
 | 0x87D11388 | -2016341112 | L’appareil iOS est actuellement occupé.  | L’appareil iOS était occupé, ce qui a entraîné une erreur. L’appareil a été verrouillé. L’utilisateur doit déverrouiller l’appareil pour installer l’application. |
 | 0x87D13B64 | -2016330908 | L’installation de l’application a échoué.  | L’installation de l’application a échoué. Les journaux de la console iOS sont nécessaires pour résoudre cette erreur. |
@@ -78,7 +78,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 | 0x87D13B9A | -2016330854 | Problème inconnu. Recommencez. | L’installation de l’application a échoué pour une raison inconnue. Réessayez plus tard. |
 | 0x87D13B9B | -2016330853 | L’installation de l’application a échoué. Intune retentera l’installation lors de la prochaine synchronisation de l’appareil. | L’installation de l’application a rencontré une erreur d’appareil. Synchronisez l’appareil pour retenter l’installation de l’application. |
 | 0x87d13b7e | -2016330882 | L’affectation de licence a échoué. Erreur Apple : « Il ne reste plus aucune licence VPP »  | Il s’agit d’un comportement normal. Pour remédier à cela, achetez des licences VPP supplémentaires ou récupérez des licences auprès d’utilisateurs qui ne sont plus ciblés. |
-| 0x87d13b6e | -2016330898 | Échec de l’installation de l’application 12024 : cause inconnue.  | Apple n’a pas fourni d’informations suffisantes pour déterminer la raison de l’échec de l’installation.   Rien à signaler. |
+| 0x87d13b6e | -2016330898 | Échec d’installation d’application 12024 : Cause inconnue.  | Apple n’a pas fourni d’informations suffisantes pour déterminer la raison de l’échec de l’installation.   Rien à signaler. |
 | 0x87d13b7f | -2016330881 | La stratégie de configuration d’application requise n’est pas présente. Assurez-vous que la stratégie est ciblée vers les mêmes groupes.  | L’application requiert la configuration de l’application, mais aucune configuration d’application n’est ciblée. L’administrateur doit s’assurer que les groupes auxquels l’application est ciblée disposent également de la configuration d’application requise pour les groupes. |
 | 0x87d13b69 | -2016330903 | Les licences VPP d’appareil sont applicables uniquement aux appareils iOS 9.0+.  | Mettre à niveau les appareils iOS affectés vers iOS 9.0+. |
 | 0x87d13b8f | -2016330865 | L’application est installée sur l’appareil, mais n’est pas gérée.  | Cette erreur se produit uniquement pour les applications métier. L’application a été installée en dehors d’Intune. Pour résoudre cette erreur, désinstallez l’application de l’appareil. La prochaine fois que la synchronisation de l’appareil se produit, l’appareil doit installer l’application à partir d’Intune. |
@@ -90,9 +90,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 | 0x87D13B72 | -2016330894 | Vous avez perdu la connexion à Internet.  | Échec de validation du manifeste de l’application en raison d’une connectivité réseau (perte de connexion) |
 | 0x87D13B73 | -2016330893 | Vous avez perdu la connexion à Internet.  | Échec de validation du manifeste de l’application en raison d’une connectivité réseau (pas de connexion à Internet) |
 | 0x87D13B77 | -2016330889 | La connexion sécurisée a échoué.  | Échec de validation du manifeste de l’application en raison d’une connectivité réseau (échec de la connexion sécurisée) |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | Échec de l’installation de l’application en raison d’un échec de connexion à ITunes Store |
-| 0x87D13B6E | -2016330898 |   | Échec de validation du manifeste de l’application en raison d’une connectivité réseau (problème inconnu) |
 | 0x87D13B9F  | -2016330849 | Une mise à jour est disponible pour l’application VPP | Ce code est renvoyé lorsqu’une application VPP est installée, mais qu’une version plus récente est disponible. |
 
 ## <a name="other-installation-errors"></a>Autres erreurs d’installation

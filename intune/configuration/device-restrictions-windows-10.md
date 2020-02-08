@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
-ms.translationtype: HT
+ms.openlocfilehash: 0dd1ecb5666b8bbb8b26a001be56372d86839f31
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517556"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812328"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Windows 10 (et versions ultérieures) pour autoriser ou restreindre les fonctionnalités dans Intune
 
@@ -39,8 +39,11 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 Ces paramètres utilisent le [fournisseur de service de configuration Policy ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), qui liste également les éditions de Windows prises en charge.
 
-- **App Store (mobile uniquement)**  : **Non configuré** (valeur par défaut) permet aux utilisateurs finaux d’accéder à l’App Store sur des appareils mobiles. **Bloquer** empêche l’utilisation de l’App Store.
-- **Mettre à jour automatiquement les applications du Store** : **Non configuré** (valeur par défaut) permet aux applications installées à partir du Microsoft Store d’être automatiquement mises à jour. **Bloquer** empêche l’installation automatique des mises à jour.
+- **App Store** (mobile uniquement) : **Bloquer** empêche les utilisateurs finaux d’accéder à l’App Store sur les appareils mobiles. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser les utilisateurs finaux à accéder à l’App Store.
+- **Mettre à jour automatiquement les applications du Windows Store** : **Bloquer** empêche l’installation automatique des mises à jour à partir du Microsoft Store. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser les applications installées à partir du Microsoft Store à être automatiquement mises à jour.
+
+  [Fournisseur de services de configuration ApplicationManagement/AllowAppStoreAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+
 - **Installation d’applications approuvées** : choisissez si les applications non-Microsoft Store peuvent être installées (procédure également appelée « chargement indépendant »). Le chargement indépendant consiste à installer puis à exécuter ou tester une application qui n’est pas certifiée par le Microsoft Store (par exemple une application qui est interne à votre entreprise uniquement.) Les options disponibles sont les suivantes :
   - **Non configuré** (par défaut) : Intune ne change pas ni ne met à jour ce paramètre.
   - **Bloquer** : empêche le chargement indépendant. Les applications non-Microsoft Store ne peuvent pas être installées.
@@ -51,16 +54,36 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
   - **Autoriser** : autorise les applications en mode développeur et le chargement indépendant.
 
   L’article [Activer votre appareil pour le développement](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) contient plus d’informations sur cette fonctionnalité.
+  
+  [Fournisseur de services de configuration ApplicationManagement/AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Données d’application utilisateur partagées** : choisissez **Autoriser** pour partager les données d’application entre différents utilisateurs sur le même appareil et avec d’autres instances de cette application. **Non configuré** (valeur par défaut) empêche le partage de données avec d’autres utilisateurs et d’autres instances de la même application.
-- **Utiliser uniquement un magasin privé** : **Autoriser** autorise uniquement le téléchargement des applications à partir d’un magasin privé, et non un magasin public, y compris un catalogue de vente au détail. **Non configuré** (valeur par défaut) autorise le téléchargement des applications à partir d’un magasin privé et d’un magasin public.
-- **Lancement des applications du Windows Store** : l’option **Bloquer** désactive toutes les applications qui ont été préinstallées sur l’appareil ou téléchargées à partir du Microsoft Store. **Non configuré** (valeur par défaut) autorise l’ouverture de ces applications.
-- **Installer les données d’application sur le volume système :** l’option **Bloquer** empêche les applications de stocker des données sur le volume système de l’appareil. **Non configuré** (valeur par défaut) autorise les applications à stocker des données sur le volume de disque du système.
-- **Installer les applications sur le lecteur système** : **Bloquer** empêche l’installation des applications sur le lecteur système de l’appareil. **Non configuré** (valeur par défaut) autorise l’installation des applications sur le lecteur système.
-- **Jeux DVR (poste de travail uniquement)**  : **Bloquer** désactive l’enregistrement et la diffusion des jeux Windows. **Non configuré** (valeur par défaut) autorise l’enregistrement et la diffusion des jeux.
+- **Données d’application utilisateur partagées** : choisissez **Autoriser** pour partager les données d’application entre différents utilisateurs sur le même appareil et avec d’autres instances de cette application. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut empêcher le partage de données avec d’autres utilisateurs et d’autres instances de la même application.
+
+  [Fournisseur de services de configuration ApplicationManagement/AllowSharedUserAppData](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+
+- **Utiliser uniquement un magasin privé** : **Autoriser** autorise uniquement le téléchargement des applications à partir d’un magasin privé, et non un magasin public, y compris un catalogue de vente au détail. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser le téléchargement d’applications à partir d’un store privé et d’un store public.
+
+  [Fournisseur de services de configuration ApplicationManagement/RequirePrivateStoreOnly](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+- **Lancement des applications du Windows Store** : l’option **Bloquer** désactive toutes les applications qui ont été préinstallées sur l’appareil ou téléchargées à partir du Microsoft Store. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser ces applications à s’ouvrir.
+
+  [Fournisseur de services de configuration ApplicationManagement/DisableStoreOriginatedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+
+- **Installer les données d’application sur le volume système :** l’option **Bloquer** empêche les applications de stocker des données sur le volume système de l’appareil. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser les applications à stocker des données sur le volume du disque système.
+
+  [Fournisseur de services de configuration ApplicationManagement/RestrictAppDataToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+
+- **Installer les applications sur le lecteur système** : **Bloquer** empêche l’installation des applications sur le lecteur système de l’appareil. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser l’installation d’applications sur le lecteur système.
+
+  [Fournisseur de services de configuration ApplicationManagement/RestrictAppToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+
+- **Jeux DVR (poste de travail uniquement)**  : **Bloquer** désactive l’enregistrement et la diffusion des jeux Windows. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut autoriser l’enregistrement et la diffusion de jeux.
+
+  [Fournisseur de services de configuration ApplicationManagement/AllowGameDVR](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+
 - **Applications de Store uniquement** : Ce paramètre détermine l’expérience utilisateur quand les utilisateurs installent des applications à partir d’emplacements autres que le Microsoft Store. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut) : Autorise les utilisateurs finaux à installer des applications à partir d’emplacements autres que le Microsoft Store, dont des applications définies dans d’autres paramètres de stratégie.  
+  - **Non configuré** (par défaut) : Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système d’exploitation peut permettre aux utilisateurs finaux d’installer des applications à partir d’emplacements autres que le Microsoft Store, notamment des applications définies dans d’autres paramètres de stratégie.  
   - **Partout** : Désactive les recommandations d’applications et autorise les utilisateurs à installer des applications à partir de n’importe quel emplacement.  
   - **Store uniquement** : Oblige les utilisateurs finaux à installer uniquement des applications à partir du Microsoft Store.
   - **Recommandations** : Quand les utilisateurs installent une application à partir du web qui est disponible dans le Microsoft Store, un message leur recommande de la télécharger à partir du Store.  
@@ -68,11 +91,11 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy App
 
   [CSP SmartScreen/EnableAppInstallControl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **Contrôle utilisateur sur les installations** : lorsque la valeur **Non configuré** (valeur par défaut) est sélectionnée, Windows Installer empêcher les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, comme l’entrée dans le répertoire pour installer les fichiers. **Bloquer** permet aux utilisateurs de modifier ces options d’installation, et certaines des fonctionnalités de sécurité de Windows Installer sont ignorées.
+- **Contrôle utilisateur sur les installations** : **Bloquer** empêche les utilisateurs de modifier les options d’installation généralement réservées aux administrateurs système, comme spécifier le répertoire pour l’installation des fichiers. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, Windows Installer peut empêcher les utilisateurs de modifier ces options d’installation : certaines des fonctionnalités de sécurité de Windows Installer sont alors ignorées.
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Installer des applications avec des privilèges élevés** : lorsque la valeur **Non configuré** (valeur par défaut) est sélectionnée, le système applique les autorisations de l’utilisateur actif lors de l’installation de programmes qu’un administrateur système ne déploie ou n’offre pas. **Bloquer** indique à Windows Installer d’utiliser des autorisations élevées quand il installe un programme sur le système. Ces privilèges sont étendus à tous les programmes.
+- **Installer des applications avec des privilèges élevés** : **Bloquer** indique à Windows Installer d’utiliser des autorisations élevées lors de l’installation d’un programme sur le système. Ces privilèges sont étendus à tous les programmes. Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Par défaut, le système peut appliquer les autorisations de l’utilisateur actuel lors de l’installation de programmes qu’un administrateur système ne déploie pas ou n’offre pas. 
 
   [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -232,7 +255,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Exp
 
 - **URL de l’image de l’écran verrouillé (poste de travail uniquement)**  : Entrez l’URL d’une image au format JPG, JPEG ou PNG qui est utilisée comme papier peint de l’écran de verrouillage Windows. Par exemple, entrez `https://contoso.com/image.png`. Ce paramètre verrouille l’image et ne peut pas être modifié par la suite.
 
-  [CSP Personalization/LockScreenImageUrl](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+  [CSP Personalization/LockScreenImageUrl](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
 - **Délai d’expiration de l’écran configurable par l’utilisateur (mobile uniquement)**  : **Autoriser** permet aux utilisateurs de configurer un délai d’expiration. **Non configuré** (valeur par défaut) n’offre pas cette possibilité aux utilisateurs.
 
@@ -851,7 +874,7 @@ Ces paramètres utilisent le [fournisseur de service de configuration Policy Def
 
 - **Consentement concernant l’envoi d’exemples** : Actuellement, ce paramètre n’a aucun effet. N’utilisez pas ce paramètre, qui est susceptible d’être supprimé dans une version ultérieure.
 
-- **Protection de l’accès** : **Bloquer** empêche l’analyse des fichiers consultés ou téléchargés. Les utilisateurs ne peuvent pas l’activer.
+- **Protection de l’accès** : **Bloquer** empêche l’analyse des fichiers qui ont été consultés ou téléchargés. Les utilisateurs ne peuvent pas l’activer.
 
   Quand **Non configuré** (valeur par défaut) est défini, Intune ne change pas ni ne met à jour ce paramètre. Si vous bloquez le paramètre, puis le redéfinissez sur **Non configuré**, Intune laisse le paramètre dans son état précédemment configuré par le système d’exploitation. Par défaut, le système d’exploitation active cette fonctionnalité et autorise les utilisateurs à la changer.
 

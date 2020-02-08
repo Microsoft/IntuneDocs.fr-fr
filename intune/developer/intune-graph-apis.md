@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5381d139247424d976b6b510d62681f623203a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ac63ef1f35e7b4730e275c6c9e566c53463c72ce
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490508"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754794"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Guide pratique pour utiliser Azure AD afin d’accéder aux API Intune dans Microsoft Graph
 
@@ -68,7 +68,7 @@ Pour inscrire une application pour qu’elle utilise l’API Microsoft Graph :
     - Le compte d’administrateur du client.
     - Un compte d’utilisateur du client avec le paramètre **Les utilisateurs peuvent inscrire des applications** activé.
 
-2. Dans le menu, choisissez **Azure Active Directory** &gt; **Inscriptions d’applications**.
+2. Dans le menu, choisissez **Azure Active Directory**&gt;**Inscriptions d’applications**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ Pour inscrire une application pour qu’elle utilise l’API Microsoft Graph :
 
     1. Notez la valeur **ID d’application**.
 
-    2. Choisissez **Paramètres** &gt; **Accès aux API** &gt; **Autorisations requises**.
+    2. Choisissez **Paramètres** &gt; **Accès d’API** &gt; **Autorisations nécessaires**.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. À partir du panneau **Autorisations requises**, choisissez **Ajouter** &gt; **Ajouter l’accès aux API** &gt; **Sélectionner une API**.
+6. Dans le panneau **Autorisations nécessaires**, choisissez **Ajouter** &gt; **Ajouter un accès d’API** &gt; **Sélectionner une API**.
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. À partir du panneau **Sélectionner une API**, choisissez **Microsoft Graph** &gt; **Sélectionner**.  Le panneau **Activer l’accès** s’ouvre et répertorie les étendues d’autorisation disponibles pour votre application.
+7. Dans le panneau **Sélectionner une API**, choisissez **Microsoft Graph** &gt; **Sélectionner**.  Le panneau **Activer l’accès** s’ouvre et répertorie les étendues d’autorisation disponibles pour votre application.
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -140,7 +140,7 @@ Pour en savoir plus :
 - [Authentification Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Étendues d’autorisation d’application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Quand vous accordez des autorisations à Microsoft Graph, vous pouvez spécifier les étendues suivantes pour contrôler l’accès aux fonctionnalités d’Intune : le tableau suivant récapitule les étendues d’autorisation de l’API Intune.  La première colonne affiche le nom de la fonctionnalité telle qu’il apparaît dans le portail Azure, et la deuxième colonne fournit le nom de l’étendue d’autorisation.
+Quand vous accordez des autorisations à Microsoft Graph, vous pouvez spécifier les étendues suivantes pour contrôler l’accès aux fonctionnalités d’Intune : Le tableau suivant récapitule les étendues des autorisations de l’API Intune.  La première colonne affiche le nom de la fonctionnalité telle qu’il apparaît dans le portail Azure, et la deuxième colonne fournit le nom de l’étendue d’autorisation.
 
 Paramètre _Activer l’accès_ | Nom de l’étendue
 :--|:--
@@ -162,7 +162,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- Paramètre **Activer l’accès** : __Lire des applications Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire des applications Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
   - Applications clientes
@@ -172,7 +172,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- Paramètre **Activer l’accès** : __Lire et écrire dans des applications Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire et écrire dans des applications Microsoft Intune__
 
 - Autorise les mêmes opérations que __DeviceManagementApps.Read.All__
 
@@ -185,7 +185,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Paramètre **Activer l’accès** : __Lire la configuration et les stratégies d’appareil Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire les stratégies et la configuration d’appareil Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
   - Configuration des appareils
@@ -194,7 +194,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Paramètre **Activer l’accès** : __Lire et écrire la configuration et les stratégies d’appareil Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire et écrire les stratégies et la configuration de l’appareil Microsoft Intune__
 
 - Autorise les mêmes opérations que __DeviceManagementConfiguration.Read.All__
 
@@ -205,7 +205,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- Paramètre **Activer l’accès** : __Effectuer des actions à distance affectant les utilisateurs sur les appareils Microsoft Intune__
+- Paramètre **Activer l’accès** : __Effectuer des actions à distance affectant les utilisateurs sur les appareils Microsoft Intune__
 
 - Permet les actions à distance suivantes sur un appareil géré :
   - Mettre hors service
@@ -219,7 +219,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- Paramètre **Activer l’accès** : __Lire des appareils Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire des appareils Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
   - Appareil géré
@@ -230,7 +230,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- Paramètre **Activer l’accès** : __Lire et écrire sur des appareils Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire et écrire sur des appareils Microsoft Intune__
 
 - Autorise les mêmes opérations que __DeviceManagementManagedDevices.Read.All__
 
@@ -240,12 +240,12 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 - Les actions à distance suivantes sont également autorisées :
   - Localiser des appareils
-  - Contourner le verrou d’activation
+  - Désactiver le verrou d’activation
   - Demander l'assistance à distance
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- Paramètre **Activer l’accès** : __Lire des paramètres Microsoft Intune RBAC__
+- Paramètre **Activer l’accès** : __Lire des paramètres Microsoft Intune RBAC__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
   - Attributions de rôles
@@ -254,7 +254,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- Paramètre **Activer l’accès** : __Lire et écrire des paramètres Microsoft Intune RBAC__
+- Paramètre **Activer l’accès** : __Lire et écrire des paramètres Microsoft Intune RBAC__
 
 - Autorise les mêmes opérations que __DeviceManagementRBAC.Read.All__
 
@@ -264,7 +264,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- Paramètre **Activer l’accès** : __Lire la configuration Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire la configuration Microsoft Intune__
 
 - Autorise l’accès en lecture aux propriétés suivantes de l’entité et à son état :
   - Inscription d’appareil
@@ -280,7 +280,7 @@ Le tableau liste les paramètres dans leur ordre d’apparition dans le portail 
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- Paramètre **Activer l’accès** : __Lire et écrire la configuration Microsoft Intune__
+- Paramètre **Activer l’accès** : __Lire et écrire la configuration Microsoft Intune__
 
 - Autorise les mêmes opérations que DeviceManagementServiceConfig.Read.All_
 

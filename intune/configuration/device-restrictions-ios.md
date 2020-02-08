@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39978043428f6ad912832007f60628815d6549a6
-ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
+ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75920072"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754573"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -41,7 +41,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="general"></a>Général
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Partager les données d’utilisation** : choisissez **Bloquer** pour empêcher l’appareil d’envoyer des données de diagnostic et d’utilisation à Apple. L’option (par défaut) **Non configuré** autorise l’envoi de ces données.
 
@@ -93,7 +93,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 - **Modifications du profil de configuration** : choisissez **Bloquer** pour empêcher l’utilisateur de modifier le profil de configuration de l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisateur à installer des profils de configuration.
 - **Verrou d'activation** : choisissez **Autoriser** pour activer le verrou d’activation sur les appareils iOS supervisés. Le verrouillage d'activation rend plus difficile la réactivation d'un appareil perdu ou volé.
 - **Bloquer la suppression des applications** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des applications. L’option (par défaut) **Non configuré** autorise les utilisateurs à supprimer des applications de l’appareil.
-- **Autoriser les accessoires USB quand l’appareil est verrouillé** : **Autoriser** permet aux accessoires USB d’échanger des données avec un appareil qui a été verrouillé pendant plus d’une heure. **Non configuré** (par défaut) ne met pas à jour le mode restreint USB sur l’appareil et les accessoires USB ne peuvent pas transférer les données de l’appareil s’ils sont verrouillés pendant plus d’une heure.
+- **Autoriser les accessoires USB quand l'appareil est verrouillé** : **Autoriser** permet aux accessoires USB d’échanger des données avec un appareil qui a été verrouillé pendant plus d’une heure. **Non configuré** (par défaut) ne met pas à jour le mode restreint USB sur l’appareil et les accessoires USB ne peuvent pas transférer les données de l’appareil s’ils sont verrouillés pendant plus d’une heure.
 - **Forcer la définition automatique de la date et de l’heure** : choisissez l’option **Exiger** pour forcer les appareils supervisés à définir automatiquement la date et l’heure. Le fuseau horaire de l’appareil est mis à jour quand l’appareil se connecte à des réseaux cellulaires ou si les services de localisation ont été activés en mode Wi-Fi.
 - **Exiger que les élèves demandent une autorisation pour quitter un cours Classroom** : choisissez l’option **Exiger** pour obliger les étudiants inscrits à un cours non géré dans l’application Classroom à demander à l’enseignant l’autorisation de quitter le cours. L’option (par défaut) **Non configuré** dispense les étudiants de demander une autorisation.
 
@@ -129,7 +129,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="password"></a>Mot de passe
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Mot de passe** : **Demande** à l’utilisateur final de saisir un mot de passe pour pouvoir accéder à l’appareil. L’option **Non configuré** (par défaut) autorise les utilisateurs à accéder à l’appareil sans entrer un mot de passe.
 
@@ -167,22 +167,22 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
   **Options iOS** :  
 
-  - **Non configuré** (par défaut) : Intune ne modifie pas ce paramètre.
-  - **Immédiatement** : verrouillage de l’écran après 30 secondes d’inactivité.
-  - **1** : verrouillage de l’écran après 1 minute d’inactivité.
-  - **2** : verrouillage de l’écran après 2 minutes d’inactivité.
-  - **3** : verrouillage de l’écran après 3 minutes d’inactivité.
-  - **4** : verrouillage de l’écran après 4 minutes d’inactivité.
-  - **5** : verrouillage de l’écran après 5 minutes d’inactivité.
+  - **Non configuré** (par défaut) : Intune ne touche pas à ce paramètre.
+  - **Immédiatement** : Verrouillage de l’écran après 30 secondes d’inactivité.
+  - **1** : Verrouillage de l’écran après 1 minute d’inactivité.
+  - **2** : Verrouillage de l’écran après 2 minutes d’inactivité.
+  - **3** : Verrouillage de l’écran après 3 minutes d’inactivité.
+  - **4** : Verrouillage de l’écran après 4 minutes d’inactivité.
+  - **5** : Verrouillage de l’écran après 5 minutes d’inactivité.
     
   **Options iPadOS** :  
 
-  - **Non configuré** (par défaut) : Intune ne modifie pas ce paramètre.
-  - **Immédiatement** : verrouillage de l’écran après 2 minutes d’inactivité.
-  - **2** : verrouillage de l’écran après 2 minutes d’inactivité.
-  - **5** : verrouillage de l’écran après 5 minutes d’inactivité.
-  - **10** : verrouillage de l’écran après 10 minutes d’inactivité.
-  - **15** : verrouillage de l’écran après 15 minutes d’inactivité.
+  - **Non configuré** (par défaut) : Intune ne touche pas à ce paramètre.
+  - **Immédiatement** : Verrouillage de l’écran après 2 minutes d’inactivité.
+  - **2** : Verrouillage de l’écran après 2 minutes d’inactivité.
+  - **5** : Verrouillage de l’écran après 5 minutes d’inactivité.
+  - **10** : Verrouillage de l’écran après 10 minutes d’inactivité.
+  - **15** : Verrouillage de l’écran après 15 minutes d’inactivité.
 
   Si une valeur ne s’applique pas à iOS ni iPadOS, Apple utilise la valeur *la plus faible* la plus proche. Par exemple, si vous entrez `4` minutes, les appareils iPadOS utilisent `2` minutes. Si vous entrez `10` minutes, les appareils iOS utilisent `5` minutes. Il s’agit d’une limitation d’Apple.
   
@@ -191,7 +191,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 - **Expiration du mot de passe (en jours)** : entrez le nombre de jours après lesquels l’utilisateur doit changer le mot de passe de l’appareil.
 - **Empêcher la réutilisation des mots de passe précédents** : entrez le nombre de nouveaux mots de passe devant être utilisés avant de pouvoir réutiliser un ancien mot de passe.
-- **Déverrouillage de Touch ID et Face ID** : choisissez **Bloquer** pour empêcher l’utilisation d’une empreinte digitale ou d’un visage pour déverrouiller l’appareil. L’option **Non configuré** autorise l’utilisateur à déverrouiller l’appareil à l’aide de ces méthodes.
+- **Déverrouillage de Touch ID et Face ID** : Choisissez l’option **Bloquer** pour empêcher l’utilisateur de déverrouiller l’appareil avec une empreinte digitale ou son visage. L’option **Non configuré** autorise l’utilisateur à déverrouiller l’appareil à l’aide de ces méthodes.
 
   Le blocage de ce paramètre empêche également l’utilisation de l’authentification FaceID pour déverrouiller l’appareil.
 
@@ -202,7 +202,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 - **Modification du code secret** : choisissez l’option **Bloquer** pour empêcher la modification, l’ajout ou la suppression du code secret. Les modifications apportées aux restrictions du code secret sont ignorées sur les appareils supervisés après le blocage de cette fonctionnalité. L’option (par défaut) **Non configuré** permet d’ajouter, modifier ou supprimer des codes secrets.
 
-  - **Modification de Touch ID et Face ID** : **Bloquer** empêche l’utilisateur de modifier, d’ajouter ou de supprimer des empreintes digitales Touch ID et des visages Face ID. L’option **Non configuré** (par défaut) autorise l’utilisateur à mettre à jour les empreintes digitales Touch ID et Face ID sur l’appareil.
+  - **Modification de Touch ID et Face ID** : Choisissez l’option **Bloquer** pour empêcher la modification, l’ajout ou la suppression par l’utilisateur des empreintes digitales Touch ID et de Face ID. L’option **Non configuré** (par défaut) autorise l’utilisateur à mettre à jour les empreintes digitales Touch ID et Face ID sur l’appareil.
 
     Le blocage de ce paramètre empêche également l’utilisateur de modifier, d’ajouter ou de supprimer l’authentification FaceID.
 
@@ -223,11 +223,11 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
   
-<sup>1</sup> Lorsque vous configurez les paramètres **Nombre maximal de minutes d'inactivité avant le verrouillage de l'appareil** et **Nombre maximal de minutes entre le verrouillage de l'écran et la demande du mot de passe**, ceux-ci sont appliqués de manière séquentielle. Par exemple, si vous affectez aux deux paramètres une valeur de **5** minutes, l’écran s’éteint automatiquement après 5 minutes, et l’appareil se verrouille après 5 minutes de plus. Toutefois, si l'utilisateur désactive manuellement l'écran, le second paramètre est immédiatement appliqué. Dans le même exemple, une fois que l’utilisateur a désactivé l’écran, l’appareil se verrouille 5 minutes plus tard.
+<sup>1</sup> Quand vous configurez les paramètres **Nombre maximal de minutes d’inactivité avant le verrouillage de l’appareil** et **Nombre maximal de minutes entre le verrouillage de l’écran et la demande du mot de passe**, ceux-ci sont appliqués en séquence. Par exemple, si vous affectez aux deux paramètres une valeur de **5** minutes, l’écran s’éteint automatiquement après 5 minutes, et l’appareil se verrouille après 5 minutes de plus. Toutefois, si l'utilisateur désactive manuellement l'écran, le second paramètre est immédiatement appliqué. Dans le même exemple, une fois que l’utilisateur a désactivé l’écran, l’appareil se verrouille 5 minutes plus tard.
 
 ## <a name="locked-screen-experience"></a>Expérience d’écran verrouillé
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Accès au centre de contrôle quand l’appareil est verrouillé** : choisissez l’option **Bloquer** pour empêcher l’utilisateur d’accéder à l’application du centre de contrôle quand l’appareil est verrouillé. L’option **Non configuré** (par défaut) autorise les utilisateurs à accéder à l’application du centre de contrôle lorsque l’appareil est verrouillé.
 - **Notifications quand l’appareil est verrouillé** : choisissez l’option **Bloquer** pour empêcher l’accès aux notifications quand l’appareil est verrouillé. L’option **Non configuré** (par défaut) autorise l’utilisateur à accéder aux notifications sans déverrouiller l’appareil.
@@ -239,7 +239,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, affichage de document, jeux
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Affichage des documents d’entreprise dans les applications non gérées** : choisissez l’option **Bloquer** pour empêcher l’affichage de documents d’entreprise dans les applications non gérées. L’option **Non configuré** (par défaut) autorise l’affichage de documents d’entreprise depuis toute application. Par exemple, vous voulez empêcher les utilisateurs d’enregistrer des fichiers de OneDrive dans Dropbox. Attribuez la valeur **Bloquer** à ce paramètre. Une fois que l’appareil a reçu la stratégie (par exemple, après un redémarrage), il cesse d’autoriser l’enregistrement.
 
@@ -247,7 +247,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   > [!NOTE]
   > Quand ce paramètre est bloqué, les claviers tiers installés à partir de l’App Store sont également bloqués.
 
-  - **Autoriser les applications non gérées à lire à partir de comptes de contacts gérés** : lorsque la valeur est **Autoriser**, les applications non managées, telles que l’application de contacts iOS intégrée, peuvent lire les informations de contact et y accéder à partir d’applications managées, dont l’application mobile Outlook. L’option **Non configuré** (par défaut) empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.  
+  - **Autoriser les applications non gérées à lire à partir de comptes de contacts gérés** : Quand la valeur est **Autoriser**, les applications non managées, comme l’application de contacts iOS intégrée, peuvent lire les informations de contact et y accéder à partir d’applications managées, notamment l’application mobile Outlook. L’option **Non configuré** (par défaut) empêche la lecture, y compris la suppression des doublons, dans l’application Contacts intégrée sur l’appareil.  
   
     Ce paramètre autorise ou empêche la lecture des informations de contact. Il ne contrôle pas la synchronisation des contacts entre les applications.
   
@@ -262,10 +262,10 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription des appareils, Inscription automatique des appareils (supervisée)
 
-- **Exiger le mot de passe de l’iTunes Store pour tous les achats** : l’option **Exiger** demande à l’utilisateur d’entrer le mot de passe ID Apple pour chaque achat iTunes ou dans l’application. **Non configuré** (par défaut) autorise les achats sans demander chaque fois un mot de passe.
+- **Exiger le mot de passe de l’iTunes Store pour tous les achats** : L’option **Exiger** demande à l’utilisateur d’entrer le mot de passe de l’ID Apple pour chaque achat iTunes ou dans l’application. **Non configuré** (par défaut) autorise les achats sans demander chaque fois un mot de passe.
 - **Achats dans l’application** : choisissez l’option **Bloquer** pour empêcher les achats dans l’application sur l’App Store. L’option **Non configuré** (par défaut) autorise les achats au sein d’une application en cours d’exécution.
 - **Télécharger du contenu de l’iBooks Store indiqué comme étant de la « Littérature érotique » (mode supervisé uniquement)**  : choisissez l’option **Bloquer** pour empêcher les utilisateurs de télécharger du contenu de l’iBooks Store indiqué comme étant de la littérature érotique. L’option **Non configuré** (par défaut) autorise l’utilisateur à télécharger des livres de la catégorie « Littérature érotique ».
-- **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés** : lorsque la valeur est **Autoriser**, les applications managées, telles que l’application mobile Outlook, peuvent enregistrer ou synchroniser les informations de contact, dont les contacts professionnels et d’entreprise, dans l’application de contacts iOS intégrée. Lorsque la valeur est **Non configuré** (par défaut), les applications managées ne peuvent pas enregistrer ni synchroniser les informations de contact dans l’application de contacts iOS intégrée sur l’appareil.
+- **Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés** : Quand la valeur est **Autoriser**, les applications managées, comme l’application mobile Outlook, peuvent enregistrer ou synchroniser les informations de contact, dont les contacts professionnels et d’entreprise, dans l’application de contacts iOS intégrée. Lorsque la valeur est **Non configuré** (par défaut), les applications managées ne peuvent pas enregistrer ni synchroniser les informations de contact dans l’application de contacts iOS intégrée sur l’appareil.
   
   Pour utiliser ce paramètre, définissez le paramètre **Affichage des documents d’entreprise dans les applications non gérées**  sur **Bloquer**.
 
@@ -289,18 +289,18 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   À compter d’iOS 13.0, ce paramètre nécessite des appareils supervisés.
 
 - **Game Center** : choisissez **Bloquer** pour empêcher l’utilisation de l’application Game Center. L’option **Non configuré** (par défaut) autorise l’utilisation de l’application Game Center sur l’appareil.
-- **Jeux multijoueurs** : choisissez **Bloquer** pour empêcher les jeux multijoueurs. L’option **Non configuré** (par défaut) autorise l’utilisateur à jouer à des jeux multijoueur sur l’appareil.
+- **Jeux multijoueurs** : choisissez l’option **Bloquer** pour empêcher les jeux multijoueurs. L’option **Non configuré** (par défaut) autorise l’utilisateur à jouer à des jeux multijoueur sur l’appareil.
 
   À compter d’iOS 13.0, ce paramètre nécessite des appareils supervisés.
 
-- **Accès à un lecteur réseau dans l’application Fichiers** : à l’aide du protocole SMB (Server Message Block), les appareils peuvent accéder à des fichiers ou à d’autres ressources sur un serveur réseau. **Désactiver** empêche l’accès aux fichiers sur un lecteur SMB réseau. **Non configuré** (valeur par défaut) autorise l’accès.
+- **Accès à un lecteur réseau dans l’application Fichiers** : En utilisant le protocole SMB (Server Message Block), les appareils peuvent accéder à des fichiers ou à d’autres ressources sur un serveur réseau. **Désactiver** empêche l’accès aux fichiers sur un lecteur SMB réseau. **Non configuré** (valeur par défaut) autorise l’accès.
 
   Cette fonctionnalité s’applique à :  
   - iOS et iPadOS 13.0 et ultérieur
 
 ## <a name="built-in-apps"></a>Applications intégrées
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Siri** : choisissez l’option **Bloquer** pour empêcher l’accès à Siri. L’option **Non configuré** (par défaut) autorise l’utilisation de l’assistant vocal Siri sur l’appareil.
   - **Siri quand l’appareil est verrouillé** : choisissez l’option **Bloquer** pour empêcher l’accès à Siri quand l’appareil est verrouillé. L’option **Non configuré** (par défaut) autorise l’utilisation de l’assistant vocal Siri sur l’appareil verrouillé.
@@ -350,12 +350,12 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
   Cette fonctionnalité s’applique à :  
   - iOS 4.0 et versions ultérieures
 
-- **Localiser mon iPhone**  : **Non configuré** (par défaut) permet d’utiliser cette fonctionnalité de l’application de localisation pour obtenir l’emplacement approximatif de l’appareil. **Bloquer** empêche d’utiliser cette fonctionnalité de l’application de localisation. 
+- **Localiser mon iPhone** : **Non configuré** (par défaut) permet d’utiliser cette fonctionnalité de l’application de localisation pour obtenir l’emplacement approximatif de l’appareil. **Bloquer** empêche d’utiliser cette fonctionnalité de l’application de localisation. 
 
   Cette fonctionnalité s’applique à :  
   - iOS 13.0 et iPadOS 13.0, et versions ultérieures
 
-- **Localiser mes amis**  : **Non configuré** (par défaut) permet d’utiliser cette fonctionnalité de l’application de localisation pour rechercher famille et amis sur un appareil Apple ou iCloud.com. **Bloquer** empêche d’utiliser cette fonctionnalité de l’application de localisation.
+- **Localiser mes amis** : **Non configuré** (par défaut) permet d’utiliser cette fonctionnalité de l’application de localisation pour rechercher famille et amis sur un appareil Apple ou sur iCloud.com. **Bloquer** empêche d’utiliser cette fonctionnalité de l’application de localisation.
 
   Cette fonctionnalité s’applique à :  
   - iOS 13.0 et iPadOS 13.0, et versions ultérieures
@@ -378,9 +378,9 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription des appareils, Inscription automatique des appareils (supervisée)
 
-- **Type de liste d’applications restreintes** : créez une liste d’applications que les utilisateurs ne sont pas autorisés à installer ni utiliser. Les options disponibles sont les suivantes :
+- **Type de liste d’applications restreintes** : Créez une liste d’applications que les utilisateurs ne sont pas autorisés à installer ou à utiliser. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (par défaut) : il n’existe aucune restriction d’Intune. Les utilisateurs ont accès aux applications que vous attribuez et aux applications intégrées.
+  - **Non configuré** (par défaut) : Il n’existe aucune restriction d’Intune. Les utilisateurs ont accès aux applications que vous attribuez et aux applications intégrées.
   - **Applications interdites** : applications non managées par Intune dont vous souhaitez empêcher l’installation sur l’appareil. Rien n’empêche les utilisateurs d’installer une application interdite. Toutefois, si un utilisateur installe une application de cette liste, cela est signalé dans Intune.
   - **Applications approuvées** : applications que les utilisateurs sont autorisés à installer. Les utilisateurs ne doivent pas installer d’applications qui ne sont pas répertoriées. Les applications qui sont gérées par Intune sont autorisées automatiquement. Rien n’empêche les utilisateurs d’installer une application qui ne figure pas dans la liste approuvée. Toutefois, s’ils le font, cela est signalé dans Intune.
 
@@ -403,7 +403,7 @@ S’applique aux appareils exécutant iOS 9.3 ou une version plus récente.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription automatique des appareils (supervisée)
 
-- **Type de liste d’applications** : créez une liste d’applications à afficher ou à masquer. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094). Les options disponibles sont les suivantes :
+- **Type de liste d’appareils** : Créez une liste d’applications à montrer ou à masquer. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094). Les options disponibles sont les suivantes :
 
   - **Applications masquées** : listez les applications que vous souhaitez masquer aux utilisateurs. Les utilisateurs ne peuvent ni afficher ni ouvrir ces applications.
   
@@ -411,7 +411,7 @@ S’applique aux appareils exécutant iOS 9.3 ou une version plus récente.
   
   - **Applications visibles** : listez les applications que les utilisateurs sont autorisés à afficher et lancer. Aucune autre application ne peut être affichée ou lancée.
 
-- **URL de l’application** : entrez l’URL d’application de Store de l’application que vous souhaitez afficher ou masquer. Par exemple :
+- **URL de l’application** : Entrez l’URL d’application de Store de l’application que vous voulez montrer ou masquer. Par exemple :
 
   - Pour ajouter l’application Dossiers de travail Microsoft, entrez `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`ou `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
@@ -429,14 +429,14 @@ S’applique aux appareils exécutant iOS 9.3 ou une version plus récente.
 
 Pour ajouter des applications, vous pouvez :
 
-- **Ajouter** : sélectionnez cette option pour créer votre liste d’applications.
+- **Ajouter** : Sélectionnez cette option pour créer votre liste d’applications.
 - **Importez** un fichier CSV comportant des détails sur l’application, notamment l’URL. Utilisez le format `<app url>, <app name>, <app publisher>`. Sinon, sélectionnez **Exporter** pour créer une liste des applications restreintes que vous avez ajoutées, au même format.
 
 ## <a name="wireless"></a>Sans fil
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription des appareils, Inscription automatique des appareils (supervisée)
 
-Remarque nécessaire pour l’itinérance de données (conseil ou remarque importante pour éviter toute confusion pour le client) : ce paramètre n’apparaît pas dans le profil de gestion de l’appareil ciblé. Cela est dû au fait que ce paramètre est traité comme une action d’appareil à distance et qu’il est de nouveau bloqué par le service Intune chaque fois que l’état de l’itinérance de données change sur l’appareil. Même s’il ne se trouve pas dans le profil de gestion, il fonctionne s’il apparaît comme réussite dans les rapports de la console d’administration. 
+Remarque nécessaire pour l’itinérance des données (Conseil ou remarque importante pour éviter la confusion des clients) : Ce paramètre n’apparaît pas dans le profil de gestion de l’appareil ciblé. Cela est dû au fait que ce paramètre est traité comme une action d’appareil à distance et qu’il est de nouveau bloqué par le service Intune chaque fois que l’état de l’itinérance de données change sur l’appareil. Même s’il ne se trouve pas dans le profil de gestion, il fonctionne s’il apparaît comme réussite dans les rapports de la console d’administration. 
 - **Itinérance de données** : choisissez **Bloquer** pour empêcher l’itinérance de données sur le réseau cellulaire. L’option (par défaut) **Non configuré** autorise l’itinérance de données quand l’appareil se trouve sur un réseau cellulaire.
 
   > [!IMPORTANT]
@@ -462,7 +462,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
-- **Modification par l’utilisateur du point d’accès personnel** : lorsque la valeur est **Bloquer**, l’utilisateur ne peut pas modifier le paramètre de point d’accès personnel. **Non configuré** (par défaut) permet aux utilisateurs finaux d’activer ou de désactiver leur point d’accès personnel.
+- **Modification par l’utilisateur du point d’accès personnel** : Quand la valeur est **Bloquer**, l’utilisateur ne peut pas changer le paramètre de point d’accès personnel. **Non configuré** (par défaut) permet aux utilisateurs finaux d’activer ou de désactiver leur point d’accès personnel.
 
   Si vous bloquez ce paramètre et que vous bloquez le paramètre **Point d’accès personnel**, le point d’accès personnel est désactivé.
 
@@ -475,7 +475,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
   
   S’il ne peut pas se connecter, désinscrivez l’appareil et réinscrivez-le avec un profil Wi-Fi. Ensuite, affectez à ce paramètre la valeur **Exiger** dans un profil de restrictions d’appareil et attribuez le profil à l’appareil.
 
-- **Wi-Fi toujours activé** : lorsque la valeur est **Exiger**, le Wi-Fi reste activé dans l’application Paramètres. Il ne peut pas être désactivé dans Paramètres ni dans le centre de contrôle, même lorsque l’appareil est en mode avion. **Non configuré** (par défaut) permet à l’utilisateur de contrôler l’activation ou la désactivation du Wi-Fi.
+- **Wi-Fi toujours activé** : Quand la valeur est **Exiger**, le Wi-Fi reste activé dans l’application Paramètres. Il ne peut pas être désactivé dans Paramètres ni dans le centre de contrôle, même lorsque l’appareil est en mode avion. **Non configuré** (par défaut) permet à l’utilisateur de contrôler l’activation ou la désactivation du Wi-Fi.
 
   La configuration de ce paramètre n’empêche pas les utilisateurs de sélectionner un réseau Wi-Fi.
 
@@ -484,7 +484,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
 
 ## <a name="connected-devices"></a>Appareils connectés
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Détection du poignet pour une Apple Watch appairée** : choisissez l’option **Exiger** pour forcer l’Apple Watch appairée à utiliser la fonctionnalité de détection du poignet. Si cette option est activée, l’Apple Watch n’affiche pas de notification si elle n’est pas portée. 
 
@@ -495,7 +495,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription automatique des appareils (supervisée)
 
 - **AirDrop** : choisissez l’option **Bloquer** pour empêcher l’utilisation d’AirDrop sur l’appareil. L’option (par défaut)**Non configuré** autorise l’utilisation de la fonctionnalité AirDrop pour échanger du contenu avec des appareils situés à proximité.
-- **Appairage avec une Apple Watch** : **Bloquer** empêche l’appairage avec une Apple Watch. L’option (par défaut) **Non configuré** autorise l’appairage avec une Apple Watch.
+- **Jumelage de l’Apple Watch** : choisissez l’option **Bloquer** pour empêcher l’appairage avec une Apple Watch. L’option (par défaut) **Non configuré** autorise l’appairage avec une Apple Watch.
 - **Modification Bluetooth** : choisissez l’option **Bloquer** pour empêcher l’utilisateur de modifier les paramètres Bluetooth sur l’appareil. L’option (par défaut) **Non configuré** permet à l’utilisateur de modifier ces paramètres.
 - **Jumelage d’hôtes pour contrôler les appareils avec lesquels un appareil iOS peut être jumelé** : l’option **Non configuré** (par défaut) autorise l’appairage d’hôte pour laisser l’administrateur contrôler les appareils avec lesquels un appareil iOS peut être appairé. L’option **Bloquer** empêche l’appairage d’hôtes.
 - **Bloquer AirPrint** : choisissez l’option **Bloquer** pour empêcher l’utilisation de la fonctionnalité AirPrint sur l’appareil. L’option (par défaut) **Non configuré** autorise l’utilisation d’AirPrint.
@@ -507,7 +507,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
   Cette fonctionnalité s’applique à :  
   - iOS 11.0 et versions ultérieures
 
-- **Accès aux fichiers sur un lecteur USB** : les appareils peuvent se connecter et ouvrir des fichiers sur un lecteur USB. **Désactiver** empêche l’accès de l’appareil au lecteur USB dans l’application Fichiers quand un lecteur USB est connecté à l’appareil. La désactivation de cette fonctionnalité empêche également les utilisateurs finaux de transférer des fichiers sur un lecteur USB connecté à un iPad. **Non configuré** (par défaut) autorise l’accès à un lecteur USB dans l’application Fichiers.
+- **Accès aux fichiers sur un lecteur USB** : Les appareils peuvent se connecter et ouvrir des fichiers sur un lecteur USB. **Désactiver** empêche l’accès de l’appareil au lecteur USB dans l’application Fichiers quand un lecteur USB est connecté à l’appareil. La désactivation de cette fonctionnalité empêche également les utilisateurs finaux de transférer des fichiers sur un lecteur USB connecté à un iPad. **Non configuré** (par défaut) autorise l’accès à un lecteur USB dans l’application Fichiers.
 
   Cette fonctionnalité s’applique à :  
   - iOS et iPadOS 13.0 et ultérieur
@@ -519,17 +519,17 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
 - **Recherche de définition de mot** : choisissez l’option **Bloquer** pour empêcher l’utilisateur de mettre en surbrillance un mot, puis d’en consulter la définition sur l’appareil. L’option (par défaut) **Non configuré** autorise l’accès à la fonctionnalité de recherche de définition.
 - **Claviers prédictifs** : l’option **Non configuré** (par défaut) autorise l’utilisation de claviers prédictifs pour suggérer des mots que l’utilisateur pourrait vouloir utiliser. L’option **Bloquer** empêche cette fonctionnalité.
 - **Correction automatique** : l’option **Non configuré** (par défaut) autorise l’appareil à corriger automatiquement les mots mal orthographiés. Choisissez **Bloquer** pour désactiver la correction automatique.
-- **Vérification orthographique du clavier** : **Non configuré** (par défaut) autorise l’utilisation du vérificateur d’orthographe sur l’appareil. Choisissez **Bloquer** pour désactiver le vérificateur d’orthographe.
-- **Raccourcis clavier** : **Non configuré** (par défaut) permet l’utilisation de raccourcis clavier sur l’appareil. Choisissez **Bloquer** pour empêcher l’utilisation des raccourcis clavier.
+- **Vérification orthographique du clavier** : **Non configuré** (par défaut) autorise l’utilisation du vérificateur orthographique sur l’appareil. Choisissez **Bloquer** pour désactiver le vérificateur d’orthographe.
+- **Raccourcis clavier** : **Non configuré** (par défaut) autorise l’utilisation des raccourcis clavier sur l’appareil. Choisissez **Bloquer** pour empêcher l’utilisation des raccourcis clavier.
 - **Dictée** : choisissez l’option **Bloquer** pour empêcher l’utilisateur d’entrer du texte par dictée vocale. L’option **Non configuré** autorise l’utilisation de la dictée.
-- **QuickPath** : **Non configuré** (par défaut) autorise les utilisateurs à utiliser QuickPath, ce qui permet une entrée continue sur le clavier de l’appareil. Les utilisateurs peuvent taper en effectuant un mouvement de balayage sur les touches pour créer des mots. **Bloquer** empêche les utilisateurs d’utiliser QuickPath. 
+- **QuickPath** : **Non configuré** (par défaut) autorise les utilisateurs à utiliser QuickPath, qui permet une entrée continue sur le clavier de l’appareil. Les utilisateurs peuvent taper en effectuant un mouvement de balayage sur les touches pour créer des mots. **Bloquer** empêche les utilisateurs d’utiliser QuickPath. 
 
   Cette fonctionnalité s’applique à :  
   - iOS 13.0 et iPadOS 13.0, et versions ultérieures
 
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscriptions
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
 - **Sauvegarde chiffrée** : choisissez l’option **Exiger** pour rendre obligatoire le chiffrement des sauvegardes sur l’appareil.
 - **Applications gérées synchronisées avec le cloud** : choisissez l’option **Non configuré** (par défaut) pour autoriser les applications managées par Intune à synchroniser les données dans le compte iCloud de l’utilisateur. Choisissez **Bloquer** pour empêcher cette synchronisation des données sur iCloud.
@@ -541,7 +541,7 @@ Remarque nécessaire pour l’itinérance de données (conseil ou remarque impor
 - **Synchronisation du flux de photos sur iCloud** : l’option **Non configuré** (par défaut) autorise les utilisateurs à activer **Mon flux de photos** sur leur appareil afin de synchroniser les photos sur iCloud et de les publier sur tous les appareils des utilisateurs. Choisissez **Bloquer** pour empêcher la synchronisation du flux de photos sur iCloud. Le blocage de cette fonctionnalité peut entraîner une perte de données. 
 - **Photothèque iCloud** : choisissez l’option **Bloquer** pour empêcher le stockage de photos et vidéos dans le cloud à partir de la photothèque iCloud. Toutes les photos qui ne sont pas entièrement téléchargées de la Photothèque iCloud sur l’appareil sont supprimées de l’appareil. L’option **Non configuré** (par défaut) autorise l’utilisation de la photothèque iCloud.
 - **Flux de photos partagé** : choisissez l’option **Bloquer** pour désactiver le **partage de photos iCloud** sur l’appareil. L’option **Non configuré** (par défaut) autorise la diffusion en continu des photos partagées.
-- **Handoff** : **Non configuré** (par défaut) permet aux utilisateurs de commencer à travailler sur un appareil iOS, puis de poursuivre le travail qu’ils ont démarré sur un autre appareil iOS ou macOS. Choisissez **Bloquer** pour désactiver cette fonctionnalité.
+- **Handoff** : **Non configuré** (par défaut) permet aux utilisateurs de commencer à travailler sur un appareil iOS, puis de poursuivre le travail qu’ils ont commencé sur un autre appareil iOS ou macOS. Choisissez **Bloquer** pour désactiver cette fonctionnalité.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription automatique des appareils (supervisée)
 
@@ -565,7 +565,7 @@ Utilisez ces paramètres pour configurer les appareils iOS pour qu’ils exécut
 
 - **Nom de l’application** : entrez le nom de l’application de votre choix.
 - **ID de l'ensemble d'applications** : Entrez l’[ID d’ensemble](bundle-ids-built-in-ios-apps.md) de l’application de votre choix.
-- **Ajouter** : sélectionnez cette option pour créer votre liste d’applications.
+- **Ajouter** : Sélectionnez cette option pour créer votre liste d’applications.
 
 Vous pouvez également **importer** un fichier CSV contenant la liste des noms d’application et leur ID d’ensemble. Ou, **exporter** une liste existante incluant les applications.
 
@@ -582,7 +582,7 @@ Vous pouvez également **importer** un fichier CSV contenant la liste des noms d
 - **Assistance tactile** : choisissez l’option **Exiger** pour forcer l’activation du paramètre d’accessibilité Assistance tactile sur l’appareil. Cette fonctionnalité aide les utilisateurs à effectuer des gestes à l’écran qui peuvent être difficiles à réaliser pour eux. L’option **Non configuré** n’exécute ou n’active pas cette fonctionnalité en mode plein écran.
 - **Inverser les couleurs** : choisissez l’option **Exiger** pour forcer l’activation de ce paramètre d’accessibilité qui permet aux utilisateurs ayant des troubles visuels de régler l’affichage. L’option **Non configuré** n’exécute ou n’active pas cette fonctionnalité en mode plein écran.
 - **Audio mono** : choisissez l’option **Exiger** pour forcer l’activation de ce paramètre d’accessibilité sur l’appareil. L’option **Non configuré** n’exécute ou n’active pas cette fonctionnalité en mode plein écran.
-- **Contrôle vocal** : l’option **Exiger** active le contrôle vocal sur l’appareil et permet aux utilisateurs de contrôler entièrement le système d’exploitation à l’aide des commandes Siri. **Non configuré** désactive le contrôle vocal sur l’appareil.
+- **Contrôle vocal** : **Exiger** active le contrôle vocal sur l’appareil et permet aux utilisateurs de contrôler entièrement le système d’exploitation à l’aide des commandes Siri. **Non configuré** désactive le contrôle vocal sur l’appareil.
 
   Ce paramètre s’applique à :  
   - iOS 13.0 et ultérieur
@@ -602,7 +602,7 @@ Vous pouvez également **importer** un fichier CSV contenant la liste des noms d
 - **Commande d’assistance tactile** : choisissez l’option **Autoriser** pour permettre l’utilisation de la fonction d’assistance tactile. L’option **Non configuré** désactive cette fonctionnalité.
 - **Inverser le contrôle des couleurs** : choisissez l’option **Autoriser** pour permettre les réglages de couleurs inversées afin que les utilisateurs puissent ajuster la fonction de couleurs inversées. L’option **Non configuré** désactive cette fonctionnalité.
 - **Lire le texte sélectionné** : choisissez l’option **Autoriser** pour permettre l’activation des paramètres d’accessibilité de sélection de la reconnaissance vocale sur l’appareil. Cette fonctionnalité lit à voix haute le texte que l’utilisateur sélectionne. L’option **Non configuré** désactive cette fonctionnalité.
-- **Modification du contrôle vocal** : l’option **Autoriser** permet aux utilisateurs de changer l’état du contrôle vocal sur leurs appareils. **Non configuré** empêche les utilisateurs de changer l’état du contrôle vocal sur leurs appareils.
+- **Modification du contrôle vocal** : **Autoriser** permet aux utilisateurs de changer l’état du contrôle vocal sur leurs appareils. **Non configuré** empêche les utilisateurs de changer l’état du contrôle vocal sur leurs appareils.
 
   Ce paramètre s’applique à :  
   - iOS 13.0 et ultérieur
@@ -636,7 +636,7 @@ Vous pouvez activer le mode supervisé iOS seulement pendant l’installation in
 
 - Verrouillage d’application (Mode Application unique) 
 - Proxy HTTP global 
-- Ignorer le verrouillage d’activation 
+- Désactiver le verrou d’activation 
 - Mode Application unique autonome 
 - Filtrage de contenu web 
 - Définition de l’écran d’arrière-plan et de verrouillage 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8b5b323c4bb80cd15bf9c6c8f0f7a8be577d6bf
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653935"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912673"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -41,7 +41,6 @@ Pour plus d’informations sur l’outil de création de package de restrictions
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Raisons d’utiliser l’outil de création de package de restrictions d’application
 
 * Votre application n’a pas de fonctionnalités de protection des données intégrées
-* Votre application est simple
 * Votre application est déployée en interne
 * Vous n’avez pas accès au code source de l’application
 * Vous n’avez pas développé l’application
@@ -63,7 +62,6 @@ Pour en savoir plus sur le SDK, consultez sa [présentation](app-sdk.md). Pour c
 ### <a name="reasons-to-use-the-sdk"></a>Raisons d’utiliser le SDK
 
 * Votre application n’a pas de fonctionnalités de protection des données intégrées
-* Votre application est complexe et comprend de nombreuses expériences
 * Votre application est déployée dans un App Store public tel que Google Play ou l’App Store d’Apple
 * Vous êtes développeur d’applications et avez les compétences techniques pour utiliser le SDK
 * Votre application présente d’autres intégrations de SDK
@@ -76,13 +74,13 @@ Pour en savoir plus sur le SDK, consultez sa [présentation](app-sdk.md). Pour c
 |**iOS**|Oui : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Non|
 |**Android**| Oui : utilisez les [liaisons Xamarin du SDK d’application Intune](app-sdk-xamarin.md).|Non|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Vous n’utilisez pas une plateforme de développement d’applications listée ci-dessus ?
+## <a name="not-using-an-app-development-platform-listed-above"></a>Vous n’utilisez pas une plateforme de développement d’applications listée ci-dessus ?
 
 L’équipe de développement SDK Intune teste et maintient activement la prise en charge des applications générées avec les plateformes Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms et Cordova natives. Bien que certains clients aient réussi l’intégration du SDK Intune avec d’autres plateformes comme React Native et NativeScript, nous ne fournissons pas de conseils explicites ou de plug-ins pour les développeurs d’applications utilisant d’autres plateformes que celles que nous prenons en charge. 
 
 ## <a name="feature-comparison"></a>Comparaison des fonctionnalités
 
-Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK et pour l’outil de création de package de restrictions d’application.
+Ce tableau liste les paramètres qui sont activés si une application utilise App SDK ou App Wrapping Tool. Certaines fonctionnalités nécessitent que les développeurs d’applications appliquent une logique en dehors de l’intégration de base avec le SDK Intune : elles ne sont donc pas activées si l’application utilise App Wrapping Tool. 
 
 |Composant|Kit SDK d’application|Outil de création de package de restrictions d’application|
 |-----------|---------------------|-----------|
@@ -103,11 +101,11 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 |Revérifier les spécifications requises pour l’accès après un nombre de minutes spécifié|X|X|
 |Spécifier la période de grâce hors connexion|X|X|
 |Bloquer la capture d’écran (Android uniquement)|X|X|
-|Prise en charge de GAM sans inscription de l’appareil|X|X|
+|Prise en charge de MAM sans inscription de l’appareil|X|X|
 |Réinitialisation complète de données d’applications|X|X|
 |Réinitialisation sélective des données professionnelles et scolaires dans des scénarios multi-identités <br><br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
 |Empêcher « Enregistrer sous »|X||
-|Configuration de l’application ciblée (ou configuration de l’application via le « canal GAM »)|X||
+|Configuration d’application ciblée (ou configuration d’application via le « canal MAM »)|X|X|
 |Prise en charge des identités multiples|X||
 |Style personnalisable |X|||
 |Connexions VPN d’application à la demande avec Citrix mVPN|X|X| 
@@ -119,6 +117,11 @@ Ce tableau répertorie les paramètres que vous pouvez utiliser pour le Kit SDK 
 |Exiger une version minimale du SDK Intune pour iOS (iOS uniquement)|X|X|
 |Attestation d’appareil SafetyNet (Android uniquement)|X|X|
 |Analyse des menaces sur les applications (Android uniquement)|X|X|
+|Exiger le niveau de risque Mobile Threat Defense maximal de l’appareil du fournisseur|X||
+|Configurer le contenu de la notification d’application pour les comptes d’organisation|X|X|
+|Exiger l’utilisation de claviers approuvés (Android uniquement)|X|X|
+|Exiger une stratégie de protection des applications (accès conditionnel)|X||
+|Exiger une application cliente approuvée (accès conditionnel)|X||
 
 ## <a name="next-steps"></a>Étapes suivantes
 
