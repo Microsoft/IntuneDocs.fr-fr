@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 471eb35cb7b96166aaacfbe1ce0ee36cfa06e9c0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c18b6bcc8ec6e8d78862c0368c920fd3d79ce2b5
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502371"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755576"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Protéger des appareils avec Microsoft Intune
 
 Microsoft Intune vous permet de protéger les appareils que vous gérez et les données stockées sur ces appareils.
 
-## <a name="device-configuration"></a>Configuration des appareils
+## <a name="device-configuration"></a>Configuration de l’appareil
 Les [stratégies de configuration](../configuration/device-profiles.md) Intune vous permettent de protéger et de configurer des appareils en contrôlant une multitude de paramètres et de fonctionnalités. Par exemple :
 
 - Vous pouvez limiter l’utilisation des fonctionnalités matérielles sur l’appareil, comme l’appareil photo ou le Bluetooth.
@@ -59,8 +59,8 @@ L’[authentification multifacteur (MFA)](../enrollment/multi-factor-authenticat
 ## <a name="control-windows-hello-for-business-settings-on-windows-devices"></a>Contrôler les paramètres Windows Hello Entreprise sur des appareils Windows
 Intune vous permet d’intégrer [Windows Hello Entreprise](windows-hello.md) et de disposer ainsi d’une autre méthode de connexion pour Windows 10 et ultérieur utilisant Active Directory ou un compte Azure Active Directory pour remplacer un mot de passe, une carte à puce ou une carte à puce virtuelle.
 
-## <a name="bypass-activation-lock-on-ios-devices"></a>Contourner le verrou d’activation sur les appareils iOS
-Le verrou d’activation est une fonctionnalité qui permet de protéger les appareils. Cette fonctionnalité demande aux utilisateurs d’entrer leur identifiant et leur mot de passe Apple avant d’effacer ou de réactiver l’appareil. Toutefois, elle peut engendrer des problèmes, par exemple, si l’utilisateur quitte l’entreprise sans supprimer le verrou. [Le contournement du verrou d’activation iOS](../remote-actions/device-activation-lock-bypass.md) peut vous aider en supprimant le verrou des appareils iOS supervisés pour vous permettre de les réaffecter ou de les effacer.
+## <a name="disable-activation-lock-on-ios-devices"></a>Désactiver le verrouillage d’activation sur les appareils iOS
+Le verrou d’activation est une fonctionnalité qui permet de protéger les appareils. Cette fonctionnalité demande aux utilisateurs d’entrer leur identifiant et leur mot de passe Apple avant d’effacer ou de réactiver l’appareil. Toutefois, elle peut engendrer des problèmes, par exemple, si l’utilisateur quitte l’entreprise sans supprimer le verrou. [Désactiver le verrouillage d’activation iOS](../remote-actions/device-activation-lock-disable.md) peut vous aider en supprimant le verrouillage des appareils iOS supervisés pour vous permettre de les réaffecter ou de les effacer.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

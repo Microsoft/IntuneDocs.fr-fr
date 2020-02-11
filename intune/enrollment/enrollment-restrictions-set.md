@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4246dab0cf22053d76fdd50f99de53e827332a23
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 0dac0607fcaa92ebe65a7ddacc3cd91c63bf246e
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547816"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971873"
 ---
 # <a name="set-enrollment-restrictions"></a>Définir des restrictions d’inscription
 
@@ -82,12 +82,13 @@ Les restrictions par défaut sont automatiquement fournies pour les restrictions
    > Windows 10 ne fournit pas le numéro de rev au cours de l’inscription. Par conséquent, si vous entrez par exemple 10.0.17134.100 et que l’appareil correspond à 10.0.17134.174, il est bloqué lors de l’inscription.
 
 6. Sous **Appareils personnels**, choisissez **Autoriser** pour les plateformes que vous souhaitez autoriser comme appareils personnels.
-7. Choisissez **Suivant** pour accéder à la page **Attributions**.
-8. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
+7. Sous **Fabricant de l'appareil**, entrez une liste séparée par des virgules des fabricants que vous voulez bloquer.
+8. Choisissez **Suivant** pour accéder à la page **Attributions**.
+9. Choisissez **Sélectionner les groupes à inclure**, puis utilisez la zone de recherche pour rechercher les groupes que vous souhaitez inclure dans cette restriction. La restriction s’applique uniquement aux groupes auxquels elle est affectée. Si vous n’affectez pas une restriction à au moins un groupe, elle n’a aucun effet. Choisissez ensuite **Sélectionner**. 
     ![Capture d’écran du choix des paramètres de plateforme](./media/enrollment-restrictions-set/select-groups.png)
-9. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
-10. Sélectionnez **Créer** pour créer la restriction.
-11. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
+10. Sélectionnez **Suivant** pour accéder à la page **Vérifier + créer**.
+11. Sélectionnez **Créer** pour créer la restriction.
+12. La nouvelle restriction est créée avec une priorité juste au-dessus de la valeur par défaut. Vous pouvez [changer la priorité](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Créer une restriction de limite d’appareils

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860293"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812167"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
 
@@ -92,6 +92,10 @@ Intune inclut également un ensemble de paramètres de stratégie de conformité
   - **Non conforme** : fonctionnalité de sécurité activée
 
   Si un appareil n’a pas de stratégie de conformité attribuée, il est considéré comme conforme par défaut. Si vous utilisez l’accès conditionnel avec des stratégies de conformité, nous vous recommandons de modifier le paramètre par défaut en **Non conforme**. Si un utilisateur final n’est pas conforme en raison d’un défaut d’attribution de stratégie, [l’application du portail d’entreprise Intune](../apps/company-portal-app.md) indique `No compliance policies have been assigned`.
+
+
+> [!NOTE]
+> La détection de jailbreak améliorée pour les appareils iOS a été temporairement désactivée dans Intune.
 
 - **Détection de jailbreak améliorée** : Quand ce paramètre est activé, les appareils iOS sont enregistrés dans Intune plus fréquemment. L’activation de cette propriété utilise les services de localisation de l’appareil et a un impact sur l’utilisation de la batterie. Les données de localisation de l’utilisateur ne sont pas stockées par Intune.
 

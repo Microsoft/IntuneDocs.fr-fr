@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93570bc9dab20801ea6681f6a142de62990a1c57
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712957"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755032"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune
 
@@ -56,7 +56,7 @@ Pour gérer des appareils et installer des applications, vos utilisateurs peuven
     Vous devez effectuer cette opération pour les architectures x86, x64 et ARM :<br> 
     *Il existe 9 packages de framework requis lorsque vous sélectionnez 1507 comme version minimale du système d'exploitation, 12 packages lorsque vous sélectionnez la version 1511, et 15 packages lorsque vous sélectionnez la version 1607.*
 
-8. Dans Microsoft Intune, dans le portail Azure, chargez l’application Portail d’entreprise comme nouvelle application. Vous ajoutez l’application en sélectionnant Application métier comme **Type d’application** dans le panneau **Ajouter une application**. Sélectionnez ensuite le fichier de package d’application (extension .AppxBundle).
+8. Dans Microsoft Intune, dans le portail Azure, chargez l’application Portail d’entreprise comme nouvelle application. Vous ajoutez l’application en sélectionnant Application métier comme **Type d’application** dans le volet **Sélectionner un type d’application**. Sélectionnez ensuite le fichier de package d’application (extension .AppxBundle).
 
 9. Sous **Sélectionner des fichiers d'application de dépendance**, choisissez toutes les dépendances que vous avez téléchargées à l'étape 7 en utilisant Maj+clic, puis vérifiez que la colonne **Ajouté** affiche **Oui** pour les architectures dont vous avez besoin.
 

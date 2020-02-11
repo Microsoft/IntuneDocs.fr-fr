@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 40337b3c45885dacf486173814044a27b7f3f6cc
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563411"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755066"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Démarrage rapide : ajouter et attribuer une application cliente
 
@@ -45,20 +45,18 @@ Vous pouvez ajouter une application pour permettre à Intune d’en gérer certa
 
 Effectuez les étapes suivantes pour ajouter une application dans Intune :
 1. Dans [Intune](https://aka.ms/intuneportal), sélectionnez **Applications** > **Toutes les applications** > **Ajouter**. 
-2. Sélectionnez **Windows 10** dans la section **Suite Office 365** de la zone de liste déroulante **Type d’application**.
-3. Sélectionnez **Configurer la suite d’applications** pour sélectionner les applications Office à attribuer à l’utilisateur Intune.
-4. Cliquez sur **OK** pour accepter les applications sélectionnées par défaut.
-5. Sélectionnez **Informations sur la suite d’applications**.
-6. Entrez **Suite d’applications Microsoft Office 365** dans **Nom de la suite**.
-7. Entrez **Suite d’applications Microsoft Office 365** comme **Description de la suite**.
-8. Cliquez sur **Oui** à côté de **Afficher en tant qu’application proposée dans le portail d’entreprise**.
-9. Cliquez sur **OK**.
-
-    ![Capture d’écran de l’ajout d’informations sur la suite d’applications](./media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
-
-10. Sélectionnez **Paramètres de la suite d’applications**.
-11. Dans la zone de liste déroulante **Canal de mise à jour**, sélectionnez **Mensuel**.
-12. Cliquez sur **OK** > **Ajouter**.
+2. Sélectionnez **Windows 10** dans la section **Suite Office 365** du volet **Sélectionner le type d’application**.
+3. Cliquez sur **Sélectionner**. Les étapes **Ajouter une application** sont affichées.
+4. Confirmez les détails par défaut dans la page **Informations sur la suite d'applications**.
+5. Cliquez sur **Suivant** pour afficher la page **Configurer la suite d'applications**.
+6. En regard de **Canal de mise à jour**, sélectionnez **Mois** dans la liste déroulante.
+7. Confirmez les autres détails par défaut dans la page ***Configurer la suite d'applications**.
+8. Cliquez sur **Suivant** pour afficher la page **Balises d’étendue**.
+9. Cliquez sur **Sélectionner des balises d’étendue** pour ajouter éventuellement des balises d’étendue pour l'application. Pour plus d’informations, consultez [Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée](~/fundamentals/scope-tags.md).
+10. Cliquez sur **Suivant** pour afficher la page **Affectations**.
+11. Sélectionnez les affectations de groupe pour l'application. Pour plus d’informations, voir [Ajouter des groupes pour organiser les utilisateurs et les appareils](~/fundamentals/groups-add.md). 
+12. Cliquez sur **Suivant** pour afficher la page **Vérifier + créer**. Vérifiez les valeurs et les paramètres que vous avez saisis pour l'application.
+13. Lorsque vous avez terminé, cliquez sur **Créer** pour ajouter l'application à Intune.
 
 ## <a name="assign-the-app-to-a-group"></a>Attribuer l’application à un groupe
 
@@ -93,7 +91,7 @@ Vous devez installer et utiliser l’application Portail d’entreprise pour ins
     > [!NOTE]
     > Si vous n’avez pas réussi à attribuer d’application à l’utilisateur Intune, vous voyez le message suivant : *Votre administrateur informatique n’a mis aucune application à votre disposition.*
 
-5. Cliquez sur **Installer**.
+5. Cliquez sur **Suivant**.
 
 Si votre entreprise l’exige, vous pouvez attribuer manuellement l’application Portail d’entreprise Windows 10 à votre personnel, directement à partir d’Intune. Pour plus d’informations, consultez [Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune](../company-portal-app.md).
 

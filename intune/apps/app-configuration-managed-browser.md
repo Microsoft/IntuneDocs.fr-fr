@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f907b8762322684ec9e21910745a197c3dbe4e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: babe556d6810ad027a1b0b3cae6364c99bc9a07c
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564310"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812518"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gérer l’accès web de l’entreprise à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
@@ -36,6 +36,9 @@ En utilisant un navigateur protégé par une stratégie Intune (Microsoft Edge o
 - Authentification unique
 - Paramètres de configuration d’application
 - Intégration du proxy d’application Azure
+
+> [!IMPORTANT]
+> Intune Managed Browser va être mis hors service. Utilisez Microsoft Edge pour votre expérience Protected Intune Browser. 
 
 ## <a name="microsoft-edge-support"></a>Prise en charge de Microsoft Edge
 
@@ -200,10 +203,10 @@ Microsoft Edge, Intune Managed Browser et le [Proxy d’application Azure AD]( h
     > La mise à jour des données de redirection du proxy d’application dans Managed Browser et Microsoft Edge peut prendre jusqu’à 24 heures.
 
 
-#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Étape 1 : Activer la redirection automatique vers un navigateur protégé à partir d’Outlook
+#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Étape 1 : Activer la redirection automatique vers un navigateur protégé à partir d’Outlook
 Outlook doit être configuré avec une stratégie de protection des applications qui active le paramètre **Restreindre le contenu web à afficher dans Managed Browser**.
 
-#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Étape 2 : Attribuer une stratégie de configuration d’application affectée pour le navigateur protégé
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Étape 2 : Attribuer une stratégie de configuration d’application affectée pour le navigateur protégé
 Cette procédure configure l’application Managed Browser ou Microsoft Edge de façon à utiliser la redirection de proxy d’application. 
 
 Ouvrez l’onglet **Edge** dans les paramètres de configuration de la stratégie et sélectionnez **Activer** pour la valeur de redirection du proxy d’application. L’activation de ce paramètre permet aux utilisateurs d’accéder aux liens d’entreprise et aux applications web locales publiées via le proxy d’application Azure.

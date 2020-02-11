@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956209"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755270"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 
@@ -74,10 +74,10 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 
 <sup>1</sup> Pour plus d'informations sur Android Enterprise et les profils professionnels Android, voir la section [Présentation des applications sous licence](apps-add.md#understanding-licensed-apps).
 
-Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications** > **Toutes les applications** > **Ajouter**. Le panneau **Ajouter une application** s’affiche et vous permet de sélectionner le **type d’application**. 
+Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications** > **Toutes les applications** > **Ajouter**. Le panneau **Sélectionner le type d’application** s’affiche et vous permet de sélectionner le **type d’application**. 
 
 >[!TIP]
-> Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. Par exemple, pour installer une application métier iOS, ajoutez l’application en sélectionnant **Application métier** comme **Type d’application** dans le panneau **Ajouter une application**. Sélectionnez ensuite le fichier de package d’application (extension .ipa). Ces types d’applications sont généralement écrites en interne.
+> Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. Par exemple, pour installer une application métier iOS, ajoutez l’application en sélectionnant **Application métier** comme **Type d’application** dans le panneau **Sélectionner le type d’application**. Sélectionnez ensuite le fichier de package d’application (extension .ipa). Ces types d’applications sont généralement écrites en interne.
 
 ## <a name="assess-app-requirements"></a>Évaluer les exigences relatives aux applications
 En tant qu’administrateur informatique, vous devez déterminer non seulement les applications que votre groupe doit utiliser, mais aussi les fonctionnalités nécessaires pour chaque groupe et sous-groupe. Pour chaque application, déterminez les plateformes nécessaires, les groupes d’utilisateurs qui ont besoin de l’application, les stratégies de configuration à appliquer à ces groupes et les stratégies de protection à appliquer.  

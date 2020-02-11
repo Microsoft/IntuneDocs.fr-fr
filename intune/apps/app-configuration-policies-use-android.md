@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205002"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755460"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils Android Entreprise gérés
 
@@ -34,21 +34,43 @@ Les stratégies de configuration des applications dans Microsoft Intune fourniss
 > [!NOTE]  
 > Toutes les applications ne prennent pas en charge la configuration d’application. Vérifiez auprès du développeur d’application si son application prend en charge les stratégies de configuration des applications.
 
-1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Applications** > **Stratégies de configuration des applications** >  **Ajouter** > **Appareils gérés**.
-2. Ajouter les propriétés suivantes :
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter** > **Applications gérées**. Notez que vous avez le choix entre deux options : **Appareils gérés** et **Applications gérées**. Pour plus d’informations, consultez [Applications qui prennent en charge la configuration d’application](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Dans la page **De base**, définissez les informations suivantes :
+    - **Nom** : nom du profil qui s’affiche dans le portail Azure.
+    - **Description** : description du profil qui s’affiche dans le portail Azure.
+    - **Type d’inscription de l’appareil** : le paramètre est défini sur **Appareils gérés**.
+4. Sélectionnez **Android Enterprise** comme **plateforme**.
+5. Cliquez sur **Sélectionner l’application** en regard de **Application ciblée**. Le volet **Application associée** s’affiche. 
+6. Dans le volet **Application associée**, choisissez l'application gérée à associer à la stratégie de configuration, puis cliquez sur **OK**.
+7. Cliquez sur **Suivant** pour afficher la page **Paramètres**.
+8. Cliquez sur **Ajouter** pour afficher le volet **Ajouter des autorisations**.
+9. Cliquez sur les autorisations que vous souhaitez remplacer. Les autorisations accordées remplacent la stratégie « Autorisations des applications par défaut » pour les applications sélectionnées.
+10. Définissez l’**état d’autorisation** pour chaque autorisation. Vous pouvez choisir entre les options **Demander**, **Accorder automatiquement** ou **Refuser automatiquement**. Pour plus d’informations sur les autorisations, consultez [Paramètres Android Entreprise pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune](~/protect/compliance-policy-create-android-for-work.md).
+11. Dans le menu déroulant, sélectionnez le **format des paramètres de configuration**. Sélectionnez l’une des méthodes suivantes pour ajouter des informations de configuration :
+    - **Utiliser le concepteur de configuration**
+    - **Entrer des données JSON**<br><br>
+    Pour plus d’informations sur l’utilisation du concepteur de configuration, consultez [Utiliser le concepteur de configuration](#use-the-configuration-designer). Pour plus d’informations sur l’entrée de données XML, consultez [Entrer des données JSON](#enter-json-data). 
+12. Cliquez sur **Suivant** pour afficher la page **Affectations**.
+13. Dans la liste déroulante en regard de **Affecter à**, sélectionnez soit **Groupes sélectionnés**, **Tous les utilisateurs**, **Tous les appareils**, ou **Tous les utilisateurs et tous les appareils** pour leur affecter la stratégie de configuration de l'application.
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Stratégie de l’application Android Enterprise Nine Work pour toute l’entreprise**.
-    - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
-    - **Type d’inscription de l’appareil** : Ce paramètre est défini sur **Appareils gérés**.
-    - **Plateforme** : Sélectionnez **Android**.
+    ![Capture d’écran de l’onglet Inclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-3. Sélectionnez **Application associée**. Choisissez l’application Android à laquelle la stratégie de configuration est associée. Sélectionnez dans la liste [d’applications Google Play gérées que vous avez approuvées et synchronisées avec Intune](~/apps/apps-add-android-for-work.md).
-4. Sélectionnez **Autorisations**. Vous pouvez définir des configurations à l’aide de :
+14. Sélectionnez **Tous les utilisateurs** dans la liste déroulante.
 
-    - [Concepteur de configuration](#use-the-configuration-designer)
-    - [Éditeur JSON](#enter-the-json-editor)
+    ![Capture d’écran de l’option de liste déroulante Tous les utilisateurs des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-5. Sélectionnez **OK** > **Ajouter**.
+15. Cliquez sur **Sélectionner des groupes à exclure** pour afficher le volet correspondant.
+
+    ![Capture d’écran du volet Sélectionner les groupes à exclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
+16. Choisissez les groupes à exclure, puis cliquez sur **Sélectionner**.
+
+    >[!NOTE]
+    >Quand vous ajoutez un groupe, si un autre groupe a déjà été inclus pour un type d’affectation donnée, il est présélectionné et ne peut pas être affecté à un autre type d’affectation d’inclusion. Par conséquent, ce groupe déjà utilisé ne peut pas être sélectionné comme groupe à exclure.
+
+17. Cliquez sur **Suivant** pour afficher la page **Vérifier + créer**.
+18. Cliquez sur **Créer** pour ajouter la stratégie de configuration de l'application à Intune.
 
 ## <a name="use-the-configuration-designer"></a>Utiliser le concepteur de configuration
 
@@ -92,7 +114,7 @@ Pour les appareils Android, utilisez les paires clé/valeur suivantes :
    > Vous devez utiliser Outlook pour Android 2.2.222 et versions ultérieures, Word, Excel, PowerPoint pour Android 16.0.9327.1000 et versions ultérieures ou OneDrive pour Android 5.28 et versions ultérieures en autorisant uniquement les comptes d’organisation configurés avec la prise en charge plusieurs identités.<p></p>
    > En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés.<p></p>
 
-## <a name="enter-the-json-editor"></a>Utiliser l’éditeur JSON
+## <a name="enter-json-data"></a>Entrer des données JSON
 
 Certains paramètres de configuration des applications (comme celles avec des types Bundle) ne peuvent pas être configurés avec le concepteur de configuration. Utilisez l’éditeur JSON pour ces valeurs. Les paramètres sont automatiquement fournis aux applications lors de leur installation.
 

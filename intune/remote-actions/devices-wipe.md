@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991773"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812456"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -88,7 +88,7 @@ Les tableaux suivants décrivent quelles données sont supprimées et l’effet 
 
 |Type de données|iOS|
 |-------------|-------|
-|Applications d’entreprise et données associées installées par Intune|**Applications installées à l’aide du Portail d’entreprise :** Pour les applications épinglées au profil de gestion, toutes les applications et données de ces applications sont supprimées. Ces applications comprennent les applications installées à l’origine à partir de l’App Store et gérées par la suite comme applications d’entreprise. <br /><br /> **Applications Microsoft qui utilisent la gestion des applications mobiles et ont été installées à partir de l’App Store :** Pour les applications qui ne sont pas gérées par le Portail d’entreprise, les données d’entreprise protégées par le chiffrement de la gestion des applications mobiles (MAM) dans le stockage local des applications sont supprimées. Les données protégées par le chiffrement MAM extérieures à l’application restent chiffrées et inutilisables, mais ne sont pas supprimées. Les données d’application personnelles et les applications ne sont pas supprimées.|
+|Applications d’entreprise et données associées installées par Intune|**Applications installées à l’aide du Portail d’entreprise :** Pour les applications épinglées au profil de gestion, toutes les applications et données de ces applications sont supprimées. Ces applications incluent les applications installées à l'origine depuis l'App Store et gérées ultérieurement comme des applications d'entreprise, sauf si l'application est configurée pour ne pas être désinstallée lors du retrait de l’appareil. <br /><br /> **Applications Microsoft qui utilisent la gestion des applications mobiles et ont été installées à partir de l’App Store :** Pour les applications qui ne sont pas gérées par le Portail d’entreprise, les données d’entreprise protégées par le chiffrement de la gestion des applications mobiles (MAM) dans le stockage local des applications sont supprimées. Les données protégées par le chiffrement MAM extérieures à l’application restent chiffrées et inutilisables, mais ne sont pas supprimées. Les données d’application personnelles et les applications ne sont pas supprimées.|
 |Paramètres|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|
 |Paramètres de profil Wi-Fi et VPN|Supprimé.|
 |Paramètres de profil de certificat|Les certificats sont supprimés et révoqués.|
@@ -134,7 +134,7 @@ Vous pouvez réinitialiser seulement des appareils en mode kiosque. Vous ne pouv
 
 ### <a name="windows"></a>Windows
 
-|Type de données|Windows 8.1 (MDM) et Windows RT 8.1|Windows RT|Windows Phone 8.1 et Windows Phone 8|Windows 10|
+|Type de données|Windows 8.1 (MDM) et Windows RT 8.1|Windows RT|Windows Phone 8.1 et Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Applications d’entreprise et données associées installées par Intune|Les clés sont révoquées pour les fichiers protégées par EFS. L’utilisateur ne peut pas ouvrir les fichiers.|Les applications d’entreprise ne sont pas supprimées.|Les applications installées à l’origine par le biais du portail d’entreprise sont désinstallées. Les données des applications de l'entreprise sont supprimées.|Les applications sont désinstallées. Les clés de chargement indépendant (sideloading) sont supprimées.<br>Pour Windows 10 versions 1703 (Creator Update) et ultérieures, les applications Office 365 ProPlus ne sont pas supprimées. Les applications Win32 installées par l’extension de gestion Intune ne sont pas désinstallées sur les appareils non inscrits. Les administrateurs peuvent exploiter l’exclusion des affectations pour ne pas offrir les applications Win32 aux appareils BYOD.|
 |Paramètres|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|Les configurations qui ont été définies par la stratégie Intune ne sont plus appliquées. Les utilisateurs peuvent modifier les paramètres.|

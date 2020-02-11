@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885770"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755763"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
 
@@ -51,34 +51,39 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 ## <a name="create-an-app-configuration-policy"></a>Créer une stratégie de configuration des applications
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter** > **Applications gérées**.
-3. Définissez les détails suivants :
+2. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter** > **Applications gérées**. Notez que vous avez le choix entre deux options : **Appareils gérés** et **Applications gérées**. Pour plus d’informations, consultez [Applications qui prennent en charge la configuration d’application](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Dans la page **De base**, définissez les informations suivantes :
     - **Nom** : nom du profil qui s’affiche dans le portail Azure.
     - **Description** : description du profil qui s’affiche dans le portail Azure.
     - **Type d’inscription de l’appareil** : le paramètre est défini sur **Appareils gérés**.
-4. Sélectionnez **iOS** comme **Plateforme**.
-5. Choisissez **Application associée**. Ensuite, dans le volet **Application associée**, choisissez l’application gérée à laquelle vous souhaitez appliquer la configuration, puis sélectionnez **OK**.
-6. Cliquez sur **Paramètres de configuration** pour afficher le volet **Paramètres de configuration**.
-7. Sélectionnez **Format des paramètres de configuration**. Sélectionnez l’une des méthodes suivantes pour ajouter des informations de configuration :
+4. Sélectionnez **iOS/iPadOS** comme **Plateforme**.
+5. Cliquez sur **Sélectionner l’application** en regard de **Application ciblée**. Le volet **Application associée** s’affiche. 
+6. Dans le volet **Application ciblée**, choisissez l'application gérée à associer à la stratégie de configuration, puis cliquez sur **OK**.
+7. Cliquez sur **Suivant** pour afficher la page **Paramètres**.
+8. Dans le menu déroulant, sélectionnez le **format des paramètres de configuration**. Sélectionnez l’une des méthodes suivantes pour ajouter des informations de configuration :
     - **Utiliser le concepteur de configuration**
     - **Entrer des données XML**<br><br>
     Pour plus d’informations sur l’utilisation du concepteur de configuration, consultez [Utiliser le concepteur de configuration](#use-configuration-designer). Pour plus d’informations sur l’entrée de données XML, consultez [Entrer des données XML](#enter-xml-data). 
-8. Après avoir ajouté vos informations de configuration, choisissez **OK**, puis **Ajouter** pour ajouter la stratégie de configuration. Le volet de vue d’ensemble de la stratégie de configuration s’affiche.
-9. Sélectionnez **Affectations** pour afficher les options d’inclusion et d’exclusion. 
+9. Cliquez sur **Suivant** pour afficher la page **Affectations**.
+10. Dans la liste déroulante en regard de **Affecter à**, sélectionnez soit **Groupes sélectionnés**, **Tous les utilisateurs**, **Tous les appareils**, ou **Tous les utilisateurs et tous les appareils** pour leur affecter la stratégie de configuration de l'application.
 
     ![Capture d’écran de l’onglet Inclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-10. Sélectionnez **Tous les utilisateurs** sous l’onglet **Inclure**.
+
+11. Sélectionnez **Tous les utilisateurs** dans la liste déroulante.
 
     ![Capture d’écran de l’option de liste déroulante Tous les utilisateurs des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-11. Sélectionnez l’onglet **Exclure**. 
+
 12. Cliquez sur **Sélectionner des groupes à exclure** pour afficher le volet correspondant.
 
     ![Capture d’écran du volet Sélectionner les groupes à exclure des affectations de stratégies](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
 13. Choisissez les groupes à exclure, puis cliquez sur **Sélectionner**.
 
     >[!NOTE]
     >Quand vous ajoutez un groupe, si un autre groupe a déjà été inclus pour un type d’affectation donnée, il est présélectionné et ne peut pas être affecté à un autre type d’affectation d’inclusion. Par conséquent, ce groupe déjà utilisé ne peut pas être sélectionné comme groupe à exclure.
-14. Cliquez sur **Save**.
+
+14. Cliquez sur **Suivant** pour afficher la page **Vérifier + créer**.
+15. Cliquez sur **Créer** pour ajouter la stratégie de configuration de l'application à Intune.
 
 ## <a name="use-configuration-designer"></a>Utiliser le concepteur de configuration
 

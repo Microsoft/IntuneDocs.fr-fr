@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252af3c7447b59ee6aaeb4cb05bed0579ae8af4c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206701"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812367"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Affecter des profils d’utilisateur et d’appareil dans Microsoft Intune
 
@@ -31,7 +31,11 @@ Vous créez un profil, et il inclut tous les paramètres que vous avez entrés. 
 Cet article vous montre comment attribuer un profil et inclut des informations sur l’utilisation de balises d’étendue sur vos profils.
 
 > [!NOTE]  
-> Lorsqu’un profil est supprimé ou n’est plus affecté à un appareil, le paramètre peut conserver la valeur existante. Le paramètre ne reprend pas une valeur par défaut. Pour modifier le paramètre sur une autre valeur, créez un nouveau profil et affectez-le.
+> Lorsqu'un profil est supprimé ou n'est plus attribué à un appareil, différents événements peuvent se produire, en fonction des paramètres du profil. Les paramètres sont basés sur des fournisseurs de services de configuration (CSP), et chaque CSP peut gérer différemment la suppression du profil. Par exemple, un paramètre peut conserver la valeur existante, et ne pas revenir à une valeur par défaut. Le comportement est contrôlé par chaque CSP dans le système d'exploitation. Pour obtenir une liste des fournisseurs de services de configuration (CSP) Windows, consultez la référence [Fournisseur de services de configuration (CSP) ](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+>
+> Pour attribuer à un paramètre une valeur différente, créez un nouveau profil, définissez le paramètre sur **Non configuré**, puis attribuez le profil. Une fois ce paramètre appliqué à l'appareil, l'utilisateur pourra attribuer au paramètre la valeur de son choix.
+>
+> Lors de la configuration de ces paramètres, nous suggérons de les déployer sur un groupe pilote. Pour plus de conseils sur le déploiement d'Intune, consultez [Créer un plan de déploiement](../fundamentals/planning-guide-rollout-plan.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 

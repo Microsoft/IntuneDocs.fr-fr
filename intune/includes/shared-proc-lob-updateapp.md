@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 66abce3b3dd2adc645695c9aab5fe6729713bbdc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 40462763aa010ccd788223690ec285eb02d1d11c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71301792"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755122"
 ---
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).  
-2. Sélectionnez **Tous les services** > **Intune**. Intune se trouve dans la section **Surveillance + Gestion**.  
-3. Sélectionnez **Applications clientes** > **Applications**.
-4. Recherchez et sélectionnez votre application dans la liste des applications.  
-5. Dans le panneau **Vue d’ensemble**, sélectionnez **Propriétés**.  
-6. Sélectionnez **Fichier de package d’application**.  
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications**.
+3. Recherchez et sélectionnez votre application dans la liste des applications.  
+4. Sélectionnez **Propriétés** sous **Gérer** dans le volet de l’application.
+5. Sélectionnez **Modifier** en regard de **Informations sur l’application**.  
+6. Cliquez sur le fichier affiché en regard de **Sélectionnez le fichier à mettre à jour**. Le volet **Fichier de package d’application** s’affiche.
 7. Sélectionnez l’icône de dossier et accédez à l’emplacement de votre fichier d’application mis à jour. Sélectionnez **Ouvrir**. Les informations de l’application sont mises à jour avec les informations du package.  
-8. Vérifiez que la **Version de l’application** reflète le package d’application mis à jour.  
+8. Vérifiez que la **Version de l’application** reflète le package d’application mis à jour.

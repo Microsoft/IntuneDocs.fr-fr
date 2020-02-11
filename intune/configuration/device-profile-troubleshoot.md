@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 01/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95186e4d1e54737ffeaa5e4c9728d188c2f867d6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206633"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812360"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questions, problèmes et solutions concernant les stratégies et les profils d’appareil dans Microsoft Intune
-
-
 
 Obtenez des réponses aux questions courantes lorsque vous utilisez des profils et des stratégies d’appareil dans Intune. Cet article répertorie également les intervalles d’archivage, fournit plus de détails sur les conflits, et bien plus encore.
 
@@ -83,6 +81,8 @@ Il existe différentes actions qui déclenchent une notification, par exemple lo
 Les appareils s’enregistrent auprès d’Intune lorsqu’ils reçoivent une notification d’enregistrement ou pendant leur enregistrement planifié. Lorsque vous ciblez un appareil ou un utilisateur avec une action telle que verrouillage, réinitialisation de code secret, attribution d’application, de profil ou de stratégie, Intune notifie immédiatement l’appareil qu’il doit s’enregistrer pour recevoir ces mises à jour.
 
 D’autres modifications, comme la modification des coordonnées dans l’application Portail d’entreprise, ne déclenchent pas l’envoi immédiat d’une notification aux appareils.
+
+Les paramètres de la stratégie ou du profil sont appliqués à chaque check-in. Le [billet de blog sur l’actualisation de la stratégie Windows 10 MDM](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) peut constituer une bonne ressource.
 
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Si plusieurs stratégies sont affectées au même utilisateur ou appareil, quels sont les paramètres appliqués ?
 

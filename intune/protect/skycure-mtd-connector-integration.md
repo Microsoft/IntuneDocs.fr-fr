@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6c28b222307ee20e3198033ef6aa4af3d756e7e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 19c1bb959212ebeaea40f7089cba5533b6efeb71
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72681314"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912605"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Configurer l’intégration de Symantec Endpoint Protection Mobile avec Intune
 
@@ -40,7 +40,7 @@ Effectuez les étapes suivantes pour intégrer la solution Symantec Endpoint Pro
 - Le compte Azure AD doit être un compte d’administrateur général pour effectuer l’intégration.
 ### <a name="network-setup"></a>Configuration du réseau
 
-Vous pouvez vous assurer que votre réseau est correctement configuré pour l’intégration avec SEP Mobile en faisant référence à l’article Symantec [Définition de votre configuration réseau](https://portal.skycure.com/articles/Documentation/Setting-up-your-network-configuration-26-8-2016).
+Vous pouvez vous assurer que votre réseau est correctement configuré pour l’intégration avec SEP Mobile en faisant référence à l’article [Configuration de SEP Manager après installation](https://support.symantec.com/us/en/article.HOWTO80819.html).
 
 ### <a name="full-integration-vs-read-only"></a>Intégration complète et Lecture seule
 

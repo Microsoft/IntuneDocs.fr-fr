@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c82805bf70259d43d738644e5663b93533bcb56a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 780a248f16a8a5028875c9c2401921ea23d0af24
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207160"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76540926"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Attribuer un rôle à un utilisateur d’Intune
 
@@ -32,7 +32,7 @@ Pour créer, modifier ou affecter des rôles, votre compte doit posséder l'une 
 - **Administrateur général**
 - **Administrateur du service Intune**
 
-1. Dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Rôles** > **Tous les rôles**.
+1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Administration de locataire** > **Rôles** > **Tous les rôles**.
 
 2. Dans le panneau **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous souhaitez affecter.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956284"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886800"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -205,20 +205,22 @@ Quand un appareil reçoit une stratégie de mise à jour des fonctionnalités de
 
 - Contrairement à l’utilisation de *Suspendre* avec un anneau de mise à jour, qui expire au bout de 35 jours, la stratégie de mise à jour des fonctionnalités de Windows 10 reste en vigueur. Tant que vous ne modifiez pas ou ne supprimez pas la stratégie de mise à jour des fonctionnalités de Windows 10, les appareils n’installent pas une nouvelle version de Windows. Si vous modifiez la stratégie pour spécifier une version plus récente, les appareils peuvent alors installer les fonctionnalités à partir de cette version de Windows.
 
+### <a name="prerequisites-for-windows-10-feature-updates"></a>Conditions préalables pour les mises à jour des fonctionnalités Windows 10
+
+Les conditions préalables suivantes doivent être remplies pour utiliser les mises à jour des fonctionnalités Windows 10 dans Intune.
+
+- Les appareils doivent être inscrits dans Intune MDM et Azure AD joint ou Azure AD enregistré.
+- Pour utiliser la stratégie de mise à jour des fonctionnalités avec Intune, les appareils doivent avoir la télémétrie activée, avec un paramètre minimal [*de base*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). La télémétrie est configurée sous *Création de rapports et télémétrie* dans le cadre d’une [stratégie de restriction des appareils](../configuration/device-restrictions-configure.md).
+  
+  Les appareils qui reçoivent une stratégie de mise à jour des fonctionnalités et dont la télémétrie est définie comme *Non configurée*, donc désactivée, peuvent installer une version de Windows plus récente que celle définie dans la stratégie de mise à jour des fonctionnalités. La condition préalable requise pour exiger la télémétrie est en cours d’examen, car cette fonctionnalité évolue vers une disponibilité générale.
+
 ### <a name="limitations-for-windows-10-feature-updates"></a>Limitations pour les mises à jour des fonctionnalités de Windows 10
 
 - Lorsque vous déployez une *mise à jour de fonctionnalité Windows 10* sur un appareil qui reçoit également une stratégie d’ *anneau de mise à jour Windows10*, passez en revue les configurations suivantes de l’anneau de mise à jour :
   - La **période de report des mises à jour des fonctionnalités (jours)** doit être définie sur **0**.
   - Les mises à jour des fonctionnalités de l’anneau de mise à jour doivent être *en cours d’exécution*. Elles ne doivent pas être suspendues.
 
-- Les stratégies de mise à jour des fonctionnalités Windows 10 ne peuvent pas être appliquées au cours de l’expérience OOBE (out of box experience) et s’appliquent uniquement à la première analyse de Windows Update une fois que l’appareil a été provisionné (généralement un jour après). Par ailleurs, les appareils qui ont été provisionnés avec AutoPilot ne reçoivent pas la stratégie.
-
-  Cette limitation est examinée pour déterminer si elle peut être prise en charge à l’avenir.
-
-> [!IMPORTANT]
-> Pour utiliser la stratégie de mise à jour des fonctionnalités avec Intune, les appareils doivent avoir la télémétrie activée, avec un paramètre minimal [*de base*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). La télémétrie est configurée sous *Création de rapports et télémétrie* dans le cadre d’une [stratégie de restriction des appareils](../configuration/device-restrictions-configure.md).
->
-> Les appareils qui reçoivent une stratégie de mise à jour des fonctionnalités et dont la télémétrie est définie comme *Non configurée*, donc désactivée, peuvent installer une version de Windows plus récente que celle définie dans la stratégie de mise à jour des fonctionnalités. La condition préalable requise pour exiger la télémétrie est en cours d’examen, car cette fonctionnalité évolue vers une disponibilité générale.
+- Les stratégies de mise à jour des fonctionnalités Windows 10 ne peuvent pas être appliquées au cours de l’expérience OOBE (out of box experience) AutoPilot et s’appliquent uniquement à la première analyse de Windows Update une fois que l’appareil a été provisionné (généralement un jour après).
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Créer et attribuer des mises à jour de fonctionnalités Windows 10
 
@@ -242,10 +244,12 @@ Dans ce volet, vous pouvez :
 - Sélectionnez **Propriétés** pour modifier le déploiement.  Dans le volet *Propriétés*, sélectionnez **Modifier** pour ouvrir les *paramètres de déploiement ou les affectations*, où vous pouvez ensuite modifier le déploiement.
 - Sélectionnez **État des mises à jour de l’utilisateur final** pour afficher des informations sur la stratégie.
 
+## <a name="validation-and-reporting-for-windows-10-updates"></a>Validation et création de rapports pour les mises à jour Windows 10
+
+Pour les anneaux de mise à jour Windows 10 et les mises à jour des fonctionnalités Windows 10, utilisez les [rapports de conformité Intune pour les mises à jour](../windows-update-compliance-reports.md) afin de surveiller l'état de mise à jour des appareils. Cette solution utilise l’option [Conformité des mises à jour](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) avec votre abonnement Azure.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Paramètres de Windows Update pris en charge par Intune](../windows-update-settings.md)
-
-[Rapports de conformité Intune pour les mises à jour](../windows-update-compliance-reports.md)
 
 [Résolution des problèmes liés aux anneaux de mise à jour Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

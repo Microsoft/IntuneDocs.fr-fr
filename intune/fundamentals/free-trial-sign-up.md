@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 01/16/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35dd017eaa2dd3cd6c17dc611aaa9d457b18aca2
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: e1baf0b4273a9074ac7172c08240a8e3c3a9d7fa
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839255"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76541113"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Démarrage rapide : Essayer gratuitement Microsoft Intune
 
 Microsoft Intune vous aide à protéger les données d’entreprise de vos équipes en vous permettant de gérer les appareils et les applications. Dans ce guide de démarrage rapide, vous allez créer un abonnement gratuit pour essayer Intune dans un environnement de test.
 
-Intune fournit une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles) à partir d’un service cloud sécurisé, administré via le Portail Microsoft Azure. À l’aide d’Intune, vous pouvez vérifier que les ressources d’entreprise de vos équipes (données, appareils et applications) sont correctement configurées, accessibles et mises à jour, en fonction des critères et stratégies de conformité de votre entreprise.
+Intune fournit une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles) à partir d’un service cloud sécurisé, administré via le centre d’administration du gestionnaire de points de terminaison Microsoft. À l’aide d’Intune, vous pouvez vérifier que les ressources d’entreprise de vos équipes (données, appareils et applications) sont correctement configurées, accessibles et mises à jour, en fonction des critères et stratégies de conformité de votre entreprise.
 
 ## <a name="prerequisites"></a>Prérequis
 Avant de configurer Microsoft Intune, passez en revue les exigences suivantes :
@@ -60,27 +60,31 @@ L’essai d’Intune est gratuit pendant 30 jours. Si vous disposez déjà d’
 
     ![Image de vos informations de compte](./media/free-trial-sign-up/intune-end-of-sign-up-process.png) 
 
-## <a name="sign-in-to-the-azure-portal"></a>Se connecter au Portail Azure
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Connectez-vous à Intune au Gestionnaire de points de terminaison Microsoft
 
-1. Ouvrez une nouvelle fenêtre de navigateur, et entrez **https://portal.azure.com** dans la barre d’adresses. 
-2. Utilisez les informations d’identification qui vous ont été données au cours des étapes ci-dessus pour vous connecter.
+Si vous n'êtes pas encore connecté au portail, procédez comme suit :
 
-    ![Image de la page de connexion au Portail Azure](./media/free-trial-sign-up/azure-portal-signin.png)
+1. Ouvrez une nouvelle fenêtre de navigateur, et entrez **https://devicemanagement.microsoft.com** dans la barre d’adresses. 
+2. Utilisez l'identifiant utilisateur qui vous a été donné dans les étapes ci-dessus pour vous connecter ( *yourID@yourdomain* .onmicrosoft.com).
 
-3. Pour afficher Microsoft Intune dans le portail Azure, sélectionnez **Tous les services** dans la barre latérale à gauche de la page.
-4. Recherchez **Microsoft Intune** dans la zone de filtre, puis sélectionnez cette valeur.
-5. Sélectionnez l’**étoile** pour ajouter Intune au bas de la liste de vos services favoris, puis ouvrez le tableau de bord Intune.
+    ![Image de la page de connexion au portail](./media/free-trial-sign-up/azure-portal-signin.png)
 
 Quand vous vous inscrivez à une version d’essai, vous recevez également un e-mail contenant les informations de votre compte à l’adresse e-mail que vous avez fournie durant la procédure d’inscription. Cet e-mail confirme que votre version d’évaluation est active.
 
 > [!TIP]
-> Quand vous utilisez le portail Azure, vous pouvez obtenir de meilleurs résultats avec un navigateur en mode normal, plutôt qu’en mode privé.
+> Quand vous utilisez le Gestionnaire de points de terminaison Microsoft, vous pouvez obtenir de meilleurs résultats avec un navigateur en mode normal, plutôt qu’en mode privé.
 
-## <a name="set-the-mdm-authority-to-intune"></a>Définir Intune en tant qu’autorité MDM
+## <a name="confirm-the-mdm-authority-in-intune"></a>Confirmer l'autorité MDM dans Intune
 
-Une fois que vous vous êtes connecté au portail Azure et que vous avez sélectionné Intune, vous pouvez voir une bannière orange indiquant que vous n’avez pas encore défini l’autorité MDM. Le paramètre d’autorité de gestion des appareils mobiles (MDM) détermine la façon dont vous gérez vos appareils. L’autorité MDM doit être définie avant que les utilisateurs puissent inscrire des appareils pour la gestion.
+Par défaut, l'autorité MDM est définie lorsque vous créez votre essai gratuit. Pour vérifier que l’autorité MDM est définie, procédez comme suit :
 
-Pour définir Intune en tant qu’autorité MDM, effectuez les étapes suivantes.
+1. Si vous n'êtes pas encore connecté, connectez-vous au Gestionnaire de points de terminaison Microsoft.
+2. Cliquez sur **Administration de locataire**.
+3. Affichez les détails du locataire. L’**autorité MDM** devrait afficher la valeur **Microsoft Intune**.
+
+Si, après vous être connecté au Gestionnaire de points de terminaison Microsoft, vous voyez une bannière orange indiquant que vous n'avez pas encore défini l'autorité MDM, vous pouvez l'activer à ce stade. Le paramètre d’autorité de gestion des appareils mobiles (MDM) détermine la façon dont vous gérez vos appareils. L’autorité MDM doit être définie avant que les utilisateurs puissent inscrire des appareils pour la gestion.
+
+### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>Pour définir Intune en tant qu’autorité MDM, effectuez les étapes suivantes :
 
 1. Ouvrez une nouvelle fenêtre de navigateur, et entrez **https://portal.azure.com** dans la barre d’adresses. 
 2. Choisissez **Tous les services** > **Microsoft Intune**.
@@ -121,9 +125,9 @@ Comme indiqué ci-dessus, si votre organisation a son propre domaine personnalis
 
 ## <a name="admin-experiences"></a>Expériences d’administration
 
-Vous pouvez utiliser deux portails :
-- Le tableau de bord Intune dans Azure ([portal.azure.com](https://portal.azure.com)) vous permet d’explorer les [fonctionnalités d’Intune](what-is-intune.md). Normalement, vous effectuez votre travail dans le tableau de bord Intune.
-- Dans le Centre d’administration Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)), vous pouvez ajouter et gérer des utilisateurs si vous n’utilisez pas Azure Active Directory à cette fin. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
+Vous utiliserez principalement deux portails :
+- Le centre d'administration du Gestionnaire de points de terminaison Microsoft ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) est l'endroit où vous pouvez explorer les [capacités d'Intune](what-is-intune.md). C'est là qu'un administrateur utilisera Intune.
+- Dans le Centre d’administration Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)), vous pouvez ajouter et gérer des utilisateurs si vous n’utilisez pas Azure Active Directory à cette fin. Vous pouvez également gérer d’autres aspects de votre compte, y compris la facturation et le support.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

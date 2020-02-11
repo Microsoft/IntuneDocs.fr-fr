@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756023"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754199"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -84,7 +84,7 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |ICCID|Identifiant ICCID, qui correspond au numéro d’identification unique d’une carte SIM|Windows, iOS, Android|
 |Date d’inscription|Date et heure de l’inscription de l’appareil dans Intune|Windows, iOS, Android|
 |Dernier contact|Date et heure de dernière connexion de l’appareil à Intune|Windows, iOS, Android|
-|Code de contournement du verrou d’activation|Code qui peut être utilisé pour contourner le verrou d’activation|iOS|
+|Code de contournement du verrou d’activation|Code qui peut être utilisé pour désactiver le verrouillage d’activation.|iOS|
 |Inscrit à AAD|Si l’option **Oui** est sélectionnée, l’appareil est inscrit auprès d’Azure Active Directory.|Windows, iOS, Android|
 |Inscrit dans Intune|Si l’option **Oui** est sélectionnée, l’appareil est inscrit dans Intune|Windows, iOS, Android|
 |Compatibilité|État de conformité de l’appareil.|Windows, iOS, Android|
@@ -92,8 +92,6 @@ En fonction de l’opérateur utilisé par les appareils, tous les détails peuv
 |ID d’activation EAS|Identificateur Exchange ActiveSync de l’appareil|Windows, iOS, Android|
 |Supervisé|Si l’option **Oui** est sélectionnée, les administrateurs ont un meilleur contrôle sur l’appareil.|Windows, iOS, Android|
 |Chiffré|Si l’option **Oui** est sélectionnée, les données stockées sur l’appareil sont chiffrées.|Windows, iOS, Android|
-
-\* Non disponible dans Android avec le Gestionnaire de stratégies Google, comme les appareils entièrement gérés et dédiés
 
 > [!Note]  
 > Le numéro de téléphone n’est pas inventorié sur les appareils Android Entreprise dédiés ou complètement managés.

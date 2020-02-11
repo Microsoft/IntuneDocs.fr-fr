@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a03366037f9b0eced70f0375b3f4b39401e3141
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8441a93a34af68a680aec2f48b3a5375fa74558c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509812"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754301"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Contrôle d’accès en fonction du rôle (RBAC) avec Microsoft Intune
 
@@ -52,6 +52,7 @@ Vous pouvez attribuer des rôles intégrés aux groupes sans configuration suppl
 - **Gestionnaire d’applications** : Gère les applications mobiles et gérées, peut lire les informations de l’appareil et peut afficher les profils de configuration de l’appareil.
 - **Administrateur de rôles Intune** : Gère les rôles Intune personnalisés et ajoute des affectations pour les rôles Intune intégrés. C’est le seul rôle Intune qui peut affecter des autorisations aux administrateurs.
 - **Administrateur scolaire** : Gère les appareils Windows 10 dans [Intune pour l’Éducation](../introduction-intune-education.md).
+- **Gestionnaire de sécurité des points de terminaison** : Gère les fonctionnalités de sécurité et de conformité, notamment les bases de référence de sécurité, la conformité des appareils, l'accès conditionnel et Microsoft Defender ATP.
 
 ### <a name="custom-roles"></a>Rôles personnalisés
 Vous pouvez créer vos propres rôles avec des autorisations personnalisées. Pour plus d’informations sur les rôles personnalisés, consultez [Créer un rôle personnalisé](create-custom-role.md).
@@ -62,7 +63,7 @@ Vous pouvez créer vos propres rôles avec des autorisations personnalisées. Po
 | Administrateur général | Lecture/écriture | Lecture/écriture |
 | Administrateur du service Intune | Lecture/écriture | Lecture/écriture |
 | Administrateur de l’accès conditionnel | Aucune | Aucune |
-| Administrateur de sécurité | Lecture seule | Lecture seule |
+| Administrateur de sécurité | Lecture seule (autorisations administratives complètes pour le nœud Sécurité du point de terminaison) | Lecture seule |
 | Opérateur de sécurité | Lecture seule | Lecture seule |
 | Lecteur Sécurité | Lecture seule | Lecture seule |
 | Administrateur de conformité | Aucune | Lecture seule |

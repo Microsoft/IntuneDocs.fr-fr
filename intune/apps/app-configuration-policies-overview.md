@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885806"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812475"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
@@ -95,8 +95,8 @@ Vous pouvez valider la stratégie de configuration des applications à l’aide 
 
 Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils non gérés pour la configuration des apps gérées. Outre les étapes ci-dessous, vous pouvez accéder aux journaux des applications managées à l’aide de Microsoft Edge. Pour plus d’informations, consultez [Utiliser Microsoft Edge sur iOS pour accéder aux journaux des applications managées](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
-1. Si ce n'est pas déjà fait, téléchargez et installez l’app **Intune Managed Browser** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
-2. Lancez **Intune Managed Browser** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
+1. Si ce n'est pas déjà fait, téléchargez et installez **Microsoft Edge** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
+2. Lancez **Microsoft Edge** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
 3. Cliquez sur **Mise en route**.
 4. Cliquez sur **Partager les journaux**.
 5. Utilisez l'application de messagerie de votre choix pour vous envoyer le journal et l’afficher sur votre PC. 
@@ -139,8 +139,8 @@ Les détails de configuration de votre application doivent correspondre aux stra
 
 Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils gérés pour la configuration des apps gérées.
 
-1. Si ce n'est pas déjà fait, téléchargez et installez l’app **Intune Managed Browser** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
-2. Lancez **Intune Managed Browser** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
+1. Si ce n'est pas déjà fait, téléchargez et installez **Microsoft Edge** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
+2. Lancez **Microsoft Edge** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
 3. Cliquez sur **Mise en route**.
 4. Cliquez sur **Partager les journaux**.
 5. Utilisez l'application de messagerie de votre choix pour vous envoyer le journal et l’afficher sur votre PC. 

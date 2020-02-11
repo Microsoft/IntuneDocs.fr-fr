@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92699ccce4f0b2590e526b3442cd45bfda6407c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563600"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755372"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Ajouter des applications intégrées à Microsoft Intune
 
@@ -39,32 +39,43 @@ Dans les versions antérieures de la console Intune, Intune fournissait plusieur
 Pour ajouter une application intégrée à vos applications disponibles dans Microsoft Intune, suivez les instructions ci-dessous :
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
-3. Dans le volet **Ajouter une application**, dans la liste **Type d’application**, sélectionnez **Application intégrée**.
-4. Sélectionnez **Sélectionner une application**.
-5. Dans le volet **Application intégrée**, sélectionnez les applications à inclure.
-6. Dans le volet **Ajouter une application**, sélectionnez **Ajouter**.
+3. Dans le volet **Sélectionner le type d’application**, sous les types **Application du Store** disponibles, sélectionnez **Application intégrée**.
+4. Cliquez sur **Sélectionner**. Les étapes **Ajouter une application** sont affichées.
+5. Dans la page **Sélectionner les applications intégrées**, cliquez sur **Sélectionner une application** pour sélectionner les applications que vous souhaitez inclure.
+6. Sélectionnez les apps intégrées que vous souhaitez inclure. 
+7. Une fois que vous avez sélectionné les applications, cliquez sur **Sélectionner** dans le volet **Sélectionner les applications intégrées**.
+8. Cliquez sur **Suivant** pour afficher la page **Balises d’étendue**.
+9. Cliquez sur **Sélectionner des balises d’étendue** pour ajouter éventuellement des balises d’étendue pour l'application. Pour plus d’informations, consultez [Utiliser le contrôle d’accès en fonction du rôle (RBAC) et les balises d’étendue pour l’informatique distribuée](~/fundamentals/scope-tags.md).
+10. Cliquez sur **Suivant** pour afficher la page **Affectations**.
+11. Sélectionnez les affectations de groupe pour l'application. Pour plus d’informations, voir [Ajouter des groupes pour organiser les utilisateurs et les appareils](~/fundamentals/groups-add.md). 
+12. Cliquez sur **Suivant** pour afficher la page **Vérifier + créer**. Vérifiez les valeurs et les paramètres que vous avez saisis pour l'application.
+13. Lorsque vous avez terminé, cliquez sur **Créer** pour ajouter l'application à Intune.
 
+    Le volet **Vue d’ensemble** de l'application que vous avez créée s'affiche.
 
 ## <a name="configure-app-information"></a>Configurer les informations de l’application
 
 Vous pouvez modifier les informations de l’application intégrée. Ces informations vous aident à identifier l’application dans Intune. Elles permettent également aux utilisateurs de trouver l’application dans le portail d’entreprise.
 1. Sélectionnez **Applications** > **Toutes les applications**, puis choisissez l’application intégrée à modifier.  
    Un volet s’affiche pour l’application intégrée.
-2. Sélectionnez **Propriétés** > **Configurer**.
+2. Sélectionnez **Propriétés**.
+3. Sélectionnez **Modifier** en regard de **Informations sur l’application**.
 4. Dans le volet **Informations sur l’application**, vous pouvez modifier les informations suivantes :
-    - **Nom** : entrez le nom de l’application intégrée, tel qu’il est affiché dans le portail d’entreprise. Tous les noms que vous utilisez doivent être uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
+    - **Nom** : entrez le nom de l’application intégrée, tel qu’il est affiché dans le portail d’entreprise. Tous les noms que vous utilisez doivent être uniques. Si le même nom d’application existe deux fois, une seule application est proposée aux utilisateurs du portail d’entreprise.
     - **Description** : Entrez une description de l'application. 
     - **Éditeur** : Entrez le nom de l'éditeur de l'application.
     - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs catégories d’application intégrée. La définition de cette option facilite la recherche de l’application pour les utilisateurs qui naviguent dans le portail d’entreprise.
     - **Afficher en tant qu’application proposée dans le portail d’entreprise** : Afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
     - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
+    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
     - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
     - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple, *Ressources humaines*).
     - **Remarques** : entrez les remarques à associer à cette application.
     - **Charger l’icône** : chargez une icône qui s’affiche avec l’application quand les utilisateurs parcourent le portail d’entreprise.
-4. Sélectionnez **OK**.
-5. Dans le volet **Propriétés**, sélectionnez **Enregistrer**.
+5. Cliquez sur **Vérifier + enregistrer** pour afficher la page **Vérifier + créer**. Vérifiez les valeurs et les paramètres que vous avez saisis pour l'application.
+13. Lorsque vous avez terminé, cliquez sur **Enregistrer** pour mettre à jour l’application dans Intune.
+
+    Le volet **Vue d’ensemble** de l'application que vous avez créée s'affiche.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563995"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912656"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -63,7 +63,7 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 6. Pour l’application spécifique, sélectionnez un **type d’affectation** :
    - **Disponible pour les appareils inscrits** : attribuez l’application à des groupes d’utilisateurs qui peuvent installer l’application à partir de l’application ou du site web Portail d’entreprise.
    - **Disponible avec ou sans inscription** : attribuez cette application à des groupes d’utilisateurs dont les appareils ne sont pas inscrits avec Intune. Les utilisateurs doivent disposer d’une licence Intune, consultez [Licences Intune](../fundamentals/licenses.md).
-   - **Requis** : l’application est installée sur les appareils dans les groupes sélectionnés. Certaines plateformes peuvent avoir des invites supplémentaires dont l’utilisateur final doit accuser réception avant le démarrage de l’installation.
+   - **Obligatoire** : l’application est installée sur les appareils dans les groupes sélectionnés. Certaines plateformes peuvent avoir des invites supplémentaires dont l’utilisateur final doit accuser réception avant le démarrage de l’installation.
    - **Désinstaller** : L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution « disponible pour les appareils inscrits » ou « Requis » en utilisant le même déploiement. Les liens Web ne peuvent pas être supprimés après le déploiement.
 
      > [!NOTE]
@@ -132,7 +132,7 @@ Si vous disposez d’appareils Android dans un scénario de déploiement APP-WE 
 Lorsqu’une réinitialisation sélective de la stratégie de protection des applications est effectuée dans la console Intune, le compte professionnel est automatiquement supprimé de l’application Play Store et l’utilisateur final ne peut plus voir ses applications professionnelles dans le catalogue d’applications Play Store. Lorsque le compte professionnel est supprimé d’un appareil, les applications installées à partir du Play Store restent installées sur l’appareil et ne se désinstallent pas. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Paramètre de désinstallation des applications pour les applications gérées iOS
-Pour les appareils iOS, vous pouvez choisir ce qu’il advient des applications gérées lors de la désinscription de l’appareil d’Intune ou la suppression du profil de gestion à l’aide du paramètre **Désinstaller lors de la suppression de l’appareil**. Ce paramètre s’applique uniquement aux applications une fois que l’appareil est inscrit et que les applications sont installées comme gérées. Le paramètre ne peut pas être configuré pour des applications web ou des liens web. 
+Pour les appareils iOS, vous pouvez choisir ce qu’il advient des applications gérées lors de la désinscription de l’appareil d’Intune ou la suppression du profil de gestion à l’aide du paramètre **Désinstaller lors de la suppression de l’appareil**. Ce paramètre s’applique uniquement aux applications une fois que l’appareil est inscrit et que les applications sont installées comme gérées. Le paramètre ne peut pas être configuré pour des applications web ou des liens web. Seules les données protégées par la Gestion des applications mobiles (Mobile Application Management ou MAM) sont supprimées après une mise hors service par une réinitialisation sélective des applications.
 
 Les valeurs par défaut du paramètre sont préremplies pour les nouvelles attributions, comme suit :
 

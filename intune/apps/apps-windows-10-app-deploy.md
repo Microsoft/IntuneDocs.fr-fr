@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563941"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912554"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -39,6 +39,26 @@ Les applications métier et Microsoft Store pour Entreprises sont les types d’
 > Seul le système Windows 10 1803 (et ses versions ultérieures) prend en charge l’installation d’applications lorsqu’aucun utilisateur principal n’est associé.
 >
 > Le déploiement d'applications métier n'est pas pris en charge sur les appareils exécutant les éditions Windows 10 Famille.
+
+## <a name="supported-windows-10-app-types"></a>Types d'applications Windows 10 pris en charge
+
+Des types d'applications spécifiques sont pris en charge en fonction de la version de Windows 10 que vos utilisateurs exécutent. Le tableau suivant indique le type d'application et sa compatibilité avec Windows 10.
+
+| Type d’application | Accueil | Pro | Entreprises | Enterprise | Éducation | S-Mode | Hololense | SurfaceHub | WCOS | Mobile |
+|----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
+|  .MSI | Non | Oui | Oui | Oui | Oui | Non | Non | Non | Non | Non |
+| .IntuneWin | Non | Oui | Oui | Oui | Oui | 19H2+ | Non | Non | Non | Non |
+| Office C2R | Non | Oui | Oui | Oui | Oui | Non | Non | Non | Non | Non |
+| Application métier : APPX/MSIX | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
+| MSFB Offline | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
+| MSFB Online | Oui | Oui | Oui | Oui | Oui | Oui | RS4+ | Oui | Oui | Oui |
+| Applications web | Oui | Oui | Oui | Oui | Oui | Oui | Oui<sup>1 | Oui<sup>1 | Oui | Oui |
+| Lien vers le Store | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
+
+<sup>1</sup> Lancer à partir du portail d'entreprise uniquement.
+
+> [!NOTE]
+> Tous les types d'applications Windows nécessitent une inscription.
 
 ## <a name="windows-10-lob-apps"></a>Applications métier Windows 10
 
@@ -69,13 +89,19 @@ En fonction du type d’application, l’application peut être installée sur u
 > [!NOTE]
 > Pour les applications Win32 générées en Mode double, l’administrateur doit choisir si l’application fonctionnera comme une application en Mode utilisateur ou en Mode machine pour toutes les attributions associées à cette instance. Le contexte de déploiement ne peut pas être changé par attribution.  
 
-Quand une application est déployée dans le contexte d’appareil, l’installation réussit uniquement quand elle cible un appareil qui prend en charge le contexte d’appareil. En outre, le déploiement dans le contexte d’appareil prend en charge les conditions suivantes :
-- Si une application est déployée dans le contexte de l’appareil et ciblée pour un utilisateur, l’installation échoue. L’état et l’erreur suivants s’affichent dans la console d’administration :
+Les applications ne peuvent être installées dans le contexte de l’appareil que si elles sont prises en charge par l’appareil et le type d'application Intune. Vous pouvez installer les types d'applications suivants dans le contexte de l’appareil et les affecter à un groupe d’appareils :
+
+- Applications Win32
+- Microsoft Store sous licence en mode hors connexion pour les applications métier
+- Applications métier (MSI, APPX et MSIX)
+- Office 365 ProPlus
+
+Les applications métier Windows (en particulier APPX et MSIX) et les applications Microsoft Store for Business (applications hors connexion) que vous avez choisi d'installer dans le contexte d'un appareil doivent être affectées à un groupe d’appareils. L'installation échoue si l'une de ces applications est déployée dans le contexte de l'utilisateur. L’état et l’erreur suivants s’affichent dans la console d’administration :
   - État : Échec.
   - Erreur : Un utilisateur ne peut pas être ciblé par une installation de contexte d’appareil.
-- Si une application est déployée dans un contexte d’appareil mais qu’elle est destinée à un appareil qui ne prend pas en charge le contexte d’appareil, l’installation échoue. L’état et l’erreur suivants s’affichent dans la console d’administration :
-  - État : Échec.
-  - Erreur : Cette plateforme ne prend pas en charge les installations dans le contexte d’appareil. 
+
+> [!IMPORTANT]
+> Lorsqu'une application est utilisée en combinaison avec un scénario de provisionnement AutoPilot de type « White Glove », les applications métier et les applications Microsoft Store pour Entreprises déployées dans le contexte d'un appareil n’ont pas besoin de cibler un groupe d'appareils. Pour plus d’informations, consultez [Déploiement « White Glove » AutoPilot sous Windows](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > Une fois que vous enregistrez une affectation d’application avec un déploiement spécifique, vous ne pouvez pas modifier le contexte de cette affectation, à l’exception des applications modernes. Pour les applications modernes, vous pouvez modifier le contexte en passant du contexte utilisateur au contexte d’appareil. 

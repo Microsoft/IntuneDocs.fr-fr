@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036613"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517486"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envoyer des notifications personnalisées dans Intune  
 
 Utilisez Microsoft Intune pour envoyer des notifications personnalisées aux utilisateurs d’appareils iOS et Android gérés. Ces messages apparaissent sous la forme de notifications Push standard provenant de l’application Portail d’entreprise et de l’application Microsoft Intune sur l’appareil d’un utilisateur, tout comme les notifications d’autres applications apparaissent sur l’appareil. Les notifications personnalisées d’Intune ne sont pas prises en charge par les appareils macOS et Windows.   
 
-Les messages de notification personnalisés incluent un titre court et un corps de message de 500 caractères au maximum. Ces messages peuvent être personnalisés à des fins de communication générale.
+Les messages de notification personnalisés incluent un titre court et un corps de message de 500 caractères ou moins. Ces messages peuvent être personnalisés à des fins de communication générale.
+
+### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Apparence de la notification sur un appareil iOS
+
+Si l’application Portail d’entreprise est ouverte sur un appareil iOS, la notification ressemble à la capture d’écran suivante :
+
+> [!div class="mx-imgBorder"]
+> ![Notification de test sur le portail d’entreprise iOS](./media/custom-notifications/105046-1.png)
+
+Si l’appareil est verrouillé, la notification ressemble à la capture d’écran suivante :
+
+> [!div class="mx-imgBorder"]
+> ![Notification de test iOS sur l’appareil verrouillé](./media/custom-notifications/105046-2.png)
+
+### <a name="what-the-notification-looks-like-on-an-android-device"></a>Apparence de la notification sur un appareil Android
+
+Si l’application Portail d’entreprise est ouverte sur un appareil Android, la notification ressemble à la capture d’écran suivante :
+
+> [!div class="mx-imgBorder"]
+> ![Notification de test Android](./media/custom-notifications/105046-3.png)
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Scénarios courants pour l’envoi de notifications personnalisées  
 

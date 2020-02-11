@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,16 +16,16 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4a4c6d40dc729fb72210c455c7819baaf89de3b
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 03b8f050dc6232b87d1149aff0a93cd7b06839cd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691839"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755406"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signer des applications métier afin de pouvoir les déployer sur des appareils Windows avec Intune
 
-En tant qu’administrateur Intune, vous pouvez déployer des applications métier sur des appareils Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, notamment l’application Portail d’entreprise. Pour déployer des applications .appx sur Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, vous pouvez utiliser un certificat de signature de code d’une autorité de certification publique déjà approuvée par votre propre autorité de certificat.
+En tant qu’administrateur Intune, vous pouvez déployer des applications métier sur des appareils Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, notamment l’application Portail d’entreprise. Pour déployer des applications *.appx* sur Windows 8.1 Desktop ou Windows 10 Desktop et sur des appareils mobiles, vous pouvez utiliser un certificat de signature de code d’une autorité de certification publique déjà approuvée par votre propre autorité de certificat.
 
  > [!NOTE]
  > Windows 8.1 Desktop requiert une stratégie d’entreprise pour activer le chargement indépendant ou l’utilisation de clés de chargement indépendant (activé automatiquement pour les appareils joints à un domaine). Pour plus d’informations, consultez [Chargement indépendant sur Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
@@ -52,10 +52,11 @@ Si vous déployez l’application en fonction des besoins des utilisateurs ou de
 
 Si votre appareil Windows 10 n’approuve pas encore l’autorité de certification, après avoir signé votre package appx et l’avoir téléchargé vers le service Intune, vous devez télécharger le certificat de signature de code dans le portail Intune :
 
-1. Cliquez sur Applications clientes
-2. Cliquez sur Certificats d’entreprise Windows
-3. Sélectionnez « Sélectionner un fichier » dans le certificat de signature de code
-4. Sélectionnez votre fichier .cer, puis cliquez sur Télécharger
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Cliquez sur **Administration de locataire** > **Connecteurs et jetons** > **Certificats d’entreprise Windows**.
+3. Sélectionnez un fichier sous **Fichier de certificat de code de signature**.
+4. Sélectionnez votre fichier *.cer*, puis cliquez sur **Ouvrir**.
+5. Cliquez sur **Télécharger** pour ajouter votre fichier de certificat à Intune.
 
 À présent, tous les appareils Windows 10 Desktop & mobiles avec un déploiement appx par le service Intune téléchargent automatiquement le certificat d’entreprise correspondant, et le lancement de l’application après son installation est autorisé.
 
@@ -94,7 +95,7 @@ Si vous ne voulez pas donner accès au Microsoft Store, vous pouvez déployer ma
       ![Image du dossier Dépendances enregistré avec le fichier APPXBUN](./media/app-sideload-windows/Win10CP-Dependencies-save.png)
    2. Placez les neuf packages de dépendances dans le dossier Dépendances.  
       Si les dépendances ne sont pas placées dans ce format, Intune ne peut pas les reconnaître ni les charger et le chargement du package échoue avec l’erreur suivante.  
-      ![Message d’erreur - la dépendance d’application Windows doit être fournie.](./media/app-sideload-windows/Win10CP-error-message.png)
+      <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Revenez à Intune, puis chargez l’application Portail d’entreprise en tant que nouvelle application. Déployez-la en tant qu’application requise pour l’ensemble souhaité d’utilisateurs cibles.  
 
 Pour plus d’informations sur la façon dont Intune gère les dépendances pour les applications universelles, consultez [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Déploiement d’un appxbundle avec dépendances via Microsoft Intune MDM).  
