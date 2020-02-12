@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7ffe5a8c20aa7edd67853ff86ef9e28cf2d175
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
+ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76915822"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034241"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Vue d’ensemble de la résolution des problèmes liés aux profils de certificat SCEP avec Microsoft Intune
 
@@ -115,11 +115,11 @@ La liste suivante comprend les journaux ou consoles référencés dans les proch
 
 ### <a name="logs-for-android-devices"></a>Journaux pour appareils Android
 
-Pour les appareils qui exécutent Android, utilisez le fichier journal de l'application **Android Company Portal**, **OMADM.log**. Avant de collecter et de consulter les journaux, assurez-vous que l'option [Journalisation détaillée](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) est activée, puis reproduisez le problème.
+Pour les appareils qui exécutent Android, utilisez le fichier journal de l'application **Android Company Portal**, **OMADM.log**. Avant de collecter et de consulter les journaux, assurez-vous que l'option [Journalisation détaillée](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) est activée, puis reproduisez le problème.
 
-Pour collecter les fichiers OMADM.logs à partir d'un appareil, voir [Upload and email logs using a USB cable](/intune-user-help/send-logs-to-your-it-admin-using-cable-android.md) (Charger et envoyer par e-mail des journaux à l'aide d'un câble USB).
+Pour collecter les fichiers OMADM.logs à partir d'un appareil, voir [Upload and email logs using a USB cable](/intune-user-help/send-logs-to-your-it-admin-using-cable-android) (Charger et envoyer par e-mail des journaux à l'aide d'un câble USB).
 
-Vous pouvez également [Charger et envoyer par e-mail des journaux](/intune-user-help/send-logs-to-your-it-admin-by-email-android.md#upload-and-email-logs-from-microsoft-intune-app) au support.
+Vous pouvez également [Charger et envoyer par e-mail des journaux](/intune-user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) au support.
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Journaux pour appareils iOS et iPadOS
 

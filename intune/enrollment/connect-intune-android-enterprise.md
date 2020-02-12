@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2c6463ddce7d04168e1929414faf441ae415837
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 581d88e49391bc874625e9c84318c039706b0c1b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563839"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124824"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Lier votre compte Intune à votre compte Google Play géré
 
@@ -48,14 +48,14 @@ Pour vous aider à configurer et à utiliser les fonctions de gestion d’applic
 
 3. Choisissez **J’accepte** pour autoriser Microsoft à [envoyer des informations d’utilisateur et d’appareil à Google](../protect/data-intune-sends-to-google.md). 
    
-4. Choisissez **Lancez Google pour vous connecter maintenant** pour ouvrir le site web Google Play géré. Le site web s’ouvre dans un nouvel onglet dans votre navigateur.
+4. Choisissez **Lancez Google pour vous connecter maintenant** pour ouvrir le site web Google Play géré. Le site web s’ouvre dans un nouvel onglet de votre navigateur.
   
 5. Dans la page de connexion de Google, entrez le compte Google à associer à toutes les tâches de gestion d’Android Entreprise pour ce locataire. Il s’agit du compte Google partagé par les administrateurs informatiques de votre organisation pour gérer et publier des applications dans la console Google Play. Vous pouvez utiliser un compte Google existant ou en créer un. Le compte que vous choisissez ne doit pas être associé à un domaine G Suite.
     
     > [!Note]
     > Si vous utilisez le navigateur Microsoft Edge, cliquez sur **Se connecter** en haut à droite pour vous connecter à votre compte Google.
 
-6. Fournissez le nom de votre société comme **Nom d’organisation**. Pour **Enterprise mobility management (EMM) provider** (Fournisseur de gestion de la mobilité d’entreprise), **Microsoft Intune** doit être affiché.
+6. Dans **Nom de l’organisation**, entrez le nom de votre entreprise. Pour **Enterprise mobility management (EMM) provider** (Fournisseur de gestion de la mobilité d’entreprise), **Microsoft Intune** doit être affiché.
 
 7. Acceptez le contrat Android, puis choisissez **Confirmer**. Votre demande va être traitée.
 
@@ -69,4 +69,4 @@ Vous pouvez désactiver l’inscription et la gestion d’Android Entreprise. Po
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois connecté au compte Google Play géré, vous pouvez [configurer des appareils avec profil professionnel Android Enterprise](android-work-profile-enroll.md), [configurer des appareils dédiés Android Enterprise](android-kiosk-enroll.md), puis [configurer des appareils Android Enterprise entièrement gérés](android-kiosk-enroll.md)
+Une fois connecté au compte Google Play géré, vous pouvez [configurer des appareils avec profil professionnel Android Enterprise](android-work-profile-enroll.md), [configurer des appareils dédiés Android Enterprise](android-kiosk-enroll.md), puis [configurer des appareils Android Enterprise entièrement gérés](android-fully-managed-enroll.md)
