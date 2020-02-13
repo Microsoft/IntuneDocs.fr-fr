@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6afd80517df3496e0c1402fc0c76f3fc24969fa
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 122f0b0194a96b844e274ab39a73224eb23cc6b3
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206599"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051590"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils Android Entreprise pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -32,7 +32,7 @@ Cet article liste et décrit les différents paramètres que vous pouvez contrô
 
 ## <a name="device-owner-only"></a>Propriétaire de l’appareil uniquement
 
-Ces paramètres s’appliquent aux types d’inscription d’entreprise Android où Intune contrôle la totalité de l’appareil, comme les appareils Android Enterprise entièrement gérés ou dédiés.
+Ces paramètres s’appliquent aux types d’inscription d’Android Enterprise où Intune contrôle la totalité de l’appareil, comme les appareils Android Enterprise complètement managés ou dédiés.
 
 ### <a name="general-settings"></a>Paramètres généraux :
 
@@ -44,7 +44,7 @@ Ces paramètres s’appliquent aux types d’inscription d’entreprise Android 
   - **Accorder automatiquement** : les autorisations sont automatiquement accordées.
   - **Refuser automatiquement** : les autorisations sont automatiquement refusées.
 - **Changements de date et d’heure** : choisissez **Bloquer** pour empêcher les utilisateurs de régler manuellement la date et l’heure. L’option **Non configuré** autorise les utilisateurs à régler la date et l’heure sur l’appareil.
-- **Volume changes**: **blocage** empêche les utilisateurs de modifier le volume de l’appareil et le volume maître est également muet. L’option **Non configuré** autorise l’utilisation des paramètres de volume sur l’appareil.
+- **Changements du volume** : **Bloquer** empêche les utilisateurs de modifier le volume de l’appareil et désactive le son du volume maître. L’option **Non configuré** autorise l’utilisation des paramètres de volume sur l’appareil.
 - **Réinitialisation aux paramètres d’usine** : choisissez **Bloquer** pour empêcher les utilisateurs de réinitialiser l’appareil aux paramètres d’usine. L’option **Non configuré** permet aux utilisateurs d’utiliser ce paramètre sur l’appareil.
 - **Démarrage sans échec** : choisissez **Bloquer** pour empêcher les utilisateurs de redémarrer l’appareil en mode sans échec. L’option **Non configuré** autorise les utilisateurs à redémarrer l’appareil en mode sans échec.
 - **Barre d’état** : choisissez **Bloquer** pour empêcher les utilisateurs d’accéder à la barre d’état, notamment aux notifications et aux paramètres rapides. L’option **Non configuré** autorise les utilisateurs à accéder à la barre d’état.
@@ -59,7 +59,7 @@ Ces paramètres s’appliquent aux types d’inscription d’entreprise Android 
 - **Transmettre des données à l’aide de NFC** : choisissez **Bloquer** afin d’empêcher l’utilisation de la technologie Near Field Communication (NFC) pour transmettre des données à partir d’applications. L’option **Non configuré** autorise l’utilisation de NFC pour partager des données entre les appareils.
 - **Fonctionnalités de débogage** : choisissez **Autoriser** pour permettre l’utilisation des fonctionnalités de débogage sur l’appareil. L’option **Non configuré** empêche l’utilisation des fonctionnalités de débogage sur l’appareil.
 - **Réglage du microphone** : choisissez **Bloquer** pour empêcher les utilisateurs d’activer le microphone et d’en régler le volume. L’option **Non configuré** permet l’utilisation du microphone et le réglage de son volume sur l’appareil.
-- **E-mails de protection contre la réinitialisation aux paramètres d’usine** : choisissez **Adresses e-mail du compte Google**. Entrez les adresses e-mail des administrateurs de l’appareil autorisés à déverrouiller l’appareil réinitialisé. Veillez à séparer les adresses e-mail par un point-virgule, par exemple `admin1@gmail.com;admin2@gmail.com`. Si aucune adresse e-mail n’est spécifiée, quiconque peut déverrouiller un appareil réinitialisé aux paramètres d’usine. Ces courriers électroniques s’appliquent uniquement lorsqu’une réinitialisation de la fabrique non-utilisateur est exécutée, comme l’exécution d’une réinitialisation aux paramètres d’usine via le menu récupération.
+- **E-mails de protection contre la réinitialisation aux paramètres d’usine** : choisissez **Adresses e-mail du compte Google**. Entrez les adresses e-mail des administrateurs de l’appareil autorisés à déverrouiller l’appareil réinitialisé. Veillez à séparer les adresses e-mail par un point-virgule, par exemple `admin1@gmail.com;admin2@gmail.com`. Si aucune adresse e-mail n’est spécifiée, quiconque peut déverrouiller un appareil réinitialisé aux paramètres d’usine. Ces e-mails s’appliquent seulement quand une réinitialisation aux paramètres d’usine non demandée par l’utilisateur est exécutée, comme l’exécution d’une réinitialisation aux paramètres d’usine via le menu de récupération.
 - **Trappe de secours du réseau** : choisissez **Activer** pour autoriser les utilisateurs à activer la fonctionnalité de trappe de secours du réseau. Si aucune connexion réseau n’est établie au démarrage de l’appareil, la trappe de secours vous demande de vous connecter temporairement à un réseau et d’actualiser la stratégie de l’appareil. Une fois la stratégie appliquée, le réseau temporaire est oublié et l’appareil continue de démarrer. Cette fonctionnalité connecte les appareils à un réseau si :
   - La dernière stratégie ne contient aucun réseau approprié.
   - L’appareil démarre dans une application en mode de verrouillage de tâche.
@@ -74,7 +74,7 @@ Ces paramètres s’appliquent aux types d’inscription d’entreprise Android 
   - **Fenêtre de maintenance** : permet d’installer les mises à jour automatiquement durant une fenêtre de maintenance quotidienne définie dans Intune. L’installation est tentée quotidiennement pendant 30 jours, et cette opération peut échouer en raison d’un espace ou d’un niveau de batterie insuffisant. Après 30 jours, Android invite l’utilisateur à procéder à l’installation. Cette fenêtre est également utilisée pour installer les mises à jour des applications Play. Utilisez cette option pour les appareils dédiés, par exemple les bornes, car les applications de premier plan d’appareils mono-application dédiés peuvent être mises à jour.
 
 - **Fenêtres de notification** : quand cette option a la valeur **Désactiver**, les notifications, notamment les toasts, les appels entrants, les appels sortants, les alertes système et les erreurs système, ne sont pas affichées sur l’appareil. quand elle a la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage des notifications).
-- **Ignorer les indicateurs de première utilisation**: **activer** masque ou ignore les suggestions des applications qui parcourent des didacticiels ou des conseils au démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
+- **Ignorer les premiers conseils d’utilisation** : **Activer** masque ou ignore les suggestions des applications qui dirigent vers des tutoriels, ou les conseils au démarrage de l’application. Quand vous affectez la valeur **Non configuré**, les paramètres par défaut du système d’exploitation sont utilisés (ce qui peut entraîner l’affichage de ces suggestions au démarrage de l’application).
 
 ### <a name="system-security-settings"></a>Paramètres de sécurité système
 
@@ -93,7 +93,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
     Si la liste ne contient aucune application, [ajoutez des applications Android](../apps/apps-add-android-for-work.md) à l’appareil. Veillez à [attribuer l’application au groupe d’appareils créé pour vos appareils dédiés](../apps/apps-deploy.md).
 
   > [!IMPORTANT]
-  > Lors de l’utilisation d’un mode plein écran, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
+  > Lors de l’utilisation du mode kiosque mono-application, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
   
 - **Multi-application** : les utilisateurs peuvent accéder à un ensemble limité d’applications sur l’appareil. Lors du démarrage de l’appareil, seules les applications que vous ajoutez s’exécutent. Vous pouvez également ajouter des liens web que les utilisateurs peuvent ouvrir. Quand la stratégie est appliquée, les utilisateurs voient des icônes pour les applications autorisées dans l’écran d’accueil.
 
@@ -104,27 +104,27 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   >
   > L’application **Managed Home Screen** ne doit pas nécessairement figurer dans le profil de configuration, mais elle doit être ajoutée comme une application cliente. Lorsque l’application **Managed Home Screen** est ajoutée comme application cliente, toutes les autres applications que vous ajoutez au profil de configuration apparaissent sous forme d’icônes dans l’application **Managed Home Screen**.
   >
-  > Lorsque vous utilisez le mode plein écran à plusieurs applications, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
+  > Quand vous utilisez le mode kiosque multi-application, les applications de numéroteur/téléphone peuvent ne pas fonctionner correctement. 
 
-  - **Ajouter**: sélectionnez vos applications dans la liste.
+  - **Ajouter** : sélectionnez vos applications dans la liste.
 
     Si l’application **Managed Home Screen** n’est pas répertoriée, [ajoutez-la à partir de Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Veillez à [attribuer l’application](../apps/apps-deploy.md) au groupe d’appareils créé pour vos appareils dédiés.
 
     Vous pouvez également ajouter à l’appareil d’autres [applications Android](../apps/apps-add-android-for-work.md) et [applications web](../apps/web-app.md) créées par votre organisation. Veillez à [attribuer l’application au groupe d’appareils créé pour vos appareils dédiés](../apps/apps-deploy.md).
 
-  - **Bouton Accueil virtuel**: bouton de touche programmable qui renvoie les utilisateurs à l’écran d’accueil géré afin que les utilisateurs puissent basculer entre les applications. Les options disponibles sont les suivantes :
+  - **Bouton Accueil virtuel** : bouton de touche programmable qui renvoie les utilisateurs à Managed Home Screen, qui leur permet de basculer entre les applications. Les options disponibles sont les suivantes :
 
-    - **Non configuré** (par défaut) : un bouton de démarrage n’est pas affiché. Les utilisateurs doivent utiliser le bouton précédent pour basculer entre les applications.
-    - **Balayer vers le haut**: un bouton d’installation s’affiche lorsqu’un utilisateur passe sur l’appareil.
-    - **Floating**: affiche un bouton d’hébergement permanent et flottant sur l’appareil.
+    - **Non configuré** (par défaut) : il n’est pas montré de bouton d’accueil. Les utilisateurs doivent utiliser le bouton Précédent pour basculer entre les applications.
+    - **Balayer vers le haut** : un bouton d’accueil apparaît quand un utilisateur effectue un balayage vers le haut sur l’appareil.
+    - **Flottant** : affiche un bouton d’accueil permanent et flottant sur l’appareil.
 
   - **Quitter le mode kiosque** : choisissez **Activer** pour autoriser les administrateurs à quitter temporairement le mode kiosque pour mettre à jour l’appareil. Pour utiliser cette fonctionnalité, l’administrateur :
   
     1. continue à sélectionner le bouton de retour jusqu’à ce que le bouton **Quitter le kiosque** s’affiche ; 
     2. sélectionne le bouton **Quitter le kiosque** et entre le code confidentiel **Quitter le code de mode kiosque**.
-    3. Lorsque vous avez terminé, sélectionnez l’application **gérée** de l’écran d’accueil. Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application.
+    3. Quand vous avez terminé, sélectionnez l’application **Managed Home Screen**. Cette étape verrouille à nouveau l’appareil en mode kiosque multi-application.
 
-      Si la valeur **n’est pas configurée**, les administrateurs ne peuvent pas suspendre le mode plein écran. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton **Quitter le kiosque**, un message indique qu’un code secret est requis.
+      Si la valeur est **Non configuré**, les administrateurs ne peuvent pas suspendre le mode kiosque. Si l’administrateur continue de cliquer sur le bouton Précédent et sélectionne le bouton **Quitter le kiosque**, un message indique qu’un code secret est requis.
 
     - **Code permettant de quitter le mode kiosque**  : entrez un code PIN numérique de 4 à 6 chiffres. L’administrateur utilise ce code PIN pour interrompre temporairement le mode kiosque.
 
@@ -140,19 +140,19 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
     >
     > Les écrans modernes affichent une densité supérieure de pixels et peuvent obtenir une définition d’image 2K/4K.
 
-  - **Configuration Wi-Fi**: **activer** affiche le contrôle Wi-Fi sur l’écran d’accueil géré et permet aux utilisateurs finaux de connecter l’appareil à différents réseaux WiFi. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) n’affiche pas le contrôle Wi-Fi sur l’écran d’accueil géré. Il empêche les utilisateurs de se connecter aux réseaux Wi-Fi tout en utilisant l’écran d’accueil géré.
+  - **Configuration Wi-Fi** : **Activer** montre le contrôle Wi-Fi sur Managed Home Screen et permet aux utilisateurs finaux de connecter l’appareil à différents réseaux Wi-Fi. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) n’affiche pas le contrôle Wi-Fi sur Managed Home Screen. Il empêche les utilisateurs de se connecter aux réseaux Wi-Fi pendant l’utilisation de Managed Home Screen.
 
-  - **Configuration Bluetooth**: **activer** affiche le contrôle Bluetooth sur l’écran d’accueil géré et permet aux utilisateurs finaux de coupler des appareils sur Bluetooth. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) n’affiche pas le contrôle Bluetooth sur l’écran d’accueil géré. Il empêche les utilisateurs de configurer Bluetooth et d’apparier les appareils tout en utilisant l’écran d’accueil géré.
+  - **Configuration Bluetooth** : **Activer** montre le contrôle Bluetooth sur Managed Home Screen et permet aux utilisateurs finaux d’appairer des appareils sur Bluetooth. L’activation de cette fonctionnalité active également l’emplacement de l’appareil. **Non configuré** (par défaut) ne montre pas le contrôle Bluetooth sur Managed Home Screen. Il empêche les utilisateurs de configurer Bluetooth et d’appairer des appareils pendant l’utilisation de Managed Home Screen.
 
-  - **Accès torche**: **activer** affiche le contrôle torche sur l’écran d’accueil géré et permet aux utilisateurs finaux d’activer ou de désactiver le flash. **Non configuré** (par défaut) n’affiche pas le contrôle torche sur l’écran d’accueil géré. Il empêche les utilisateurs d’utiliser la torche lors de l’utilisation de l’écran d’accueil géré.
+  - **Accès à la lampe torche** : **Activer** montre le contrôle de torche sur Managed Home Screen et permet aux utilisateurs finaux d’activer ou de désactiver la torche. **Non configuré** (par défaut) ne montre pas le contrôle de torche sur Managed Home Screen. Il empêche les utilisateurs d’utiliser la torche pendant l’utilisation de Managed Home Screen.
 
-  - **Media Volume Control**: **Enable** affiche le contrôle du volume de média sur l’écran d’accueil géré et permet aux utilisateurs finaux d’ajuster le volume multimédia de l’appareil à l’aide d’un curseur. **Non configuré** (par défaut) n’affiche pas le contrôle du volume de média sur l’écran d’accueil géré. Il empêche les utilisateurs d’ajuster le volume de média de l’appareil lors de l’utilisation de l’écran d’accueil géré, sauf si leurs boutons matériels le prennent en charge. 
+  - **Contrôle du volume du média** : **Activer** montre le contrôle du volume du média sur Managed Home Screen et permet aux utilisateurs finaux d’ajuster le volume du média de l’appareil à l’aide d’un curseur. **Non configuré** (par défaut) ne montre pas la commande du volume multimédia sur Managed Home Screen. Il empêche les utilisateurs de régler le volume multimédia de l’appareil pendant l’utilisation de Managed Home Screen, sauf si ses boutons physiques le permettent. 
 
-  - **Mode d’économiseur d’écran**: **activer** affiche un économiseur d’écran sur l’écran d’accueil géré lorsque l’appareil est verrouillé ou expire. **Non configuré** (par défaut) n’affiche pas un économiseur d’écran sur l’écran d’accueil géré.
+  - **Mode écran de veille** : **Activer** montre un écran de veille sur Managed Home Screen quand l’appareil est verrouillé ou dépasse le délai d’expiration. **Non configuré** (par défaut) ne montre pas d’écran de veille sur Managed Home Screen.
 
-    Lorsque cette option est activée, configurez également :
+    Quand cette option est activée, configurez également :
 
-    - **Définir l’image de l’écran de veille personnalisée**: entrez l’URL d’un fichier PNG, jpg, JPEG, GIF, BMP, WebP ou ICOimage personnalisé. Par exemple, entrez :
+    - **Définir une image d’écran de veille personnalisée** : entrez l’URL d’un fichier PNG, JPG, JPEG, GIF, BMP, WebP ou ICOimage personnalisé. Par exemple, entrez :
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
@@ -163,9 +163,9 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
       > [!TIP]
       > Toute URL de ressource de fichier qui peut être transformée en bitmap est prise en charge.
 
-    - **Nombre de secondes pendant lesquelles l’appareil affiche l’économiseur d’écran avant**de désactiver l’écran : choisissez la durée pendant laquelle l’appareil affiche l’écran de veille. Entrez une valeur comprise entre 0 et 9999999 secondes. La valeur par défaut est de `0` secondes. Lorsqu’il est laissé vide, ou défini à zéro (`0`), l’économiseur d’écran est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
-    - **Nombre de secondes d’inactivité de l’appareil avant l’affichage de l’écran de veille**: choisissez la durée d’inactivité de l’appareil avant d’en montrer l’écran de veille. Entrez une valeur comprise entre 1 et 9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
-    - **Détecter le support avant de démarrer l’économiseur d’écran**: **activer** (par défaut) n’affiche pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** affiche l’écran de veille, même si l’audio ou la vidéo est en train de fonctionner.
+    - **Durée en secondes pendant laquelle l’appareil affiche l’écran de veille avant d’éteindre l’écran** : choisissez la durée pendant laquelle l’appareil montre l’écran de veille. Entrez une valeur comprise entre 0 et 9999999 secondes. La valeur par défaut est de `0` secondes. Quand il est laissé vide ou défini sur zéro (`0`), l’économiseur d’écran est actif jusqu’à ce qu’un utilisateur interagisse avec l’appareil.
+    - **Durée d’inactivité en secondes de l’appareil avant l’affichage de l’écran de veille** : choisissez la durée d’inactivité de l’appareil avant de montrer l’écran de veille. Entrez une valeur comprise entre 1 et 9999999 secondes. La valeur par défaut est de `30` secondes. Vous devez entrer un nombre supérieur à zéro (`0`).
+    - **Détecter la présence d’un média avant de démarrer l’écran de veille** : **Activer** (par défaut) ne montre pas l’écran de veille si l’audio ou la vidéo est en cours de lecture sur l’appareil. **Non configuré** montre l’écran de veille, même si l’audio ou la vidéo est en cours de lecture.
 
 ### <a name="device-password-settings"></a>Paramètres de mot de passe des appareils
 
@@ -198,7 +198,7 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
 ### <a name="power-settings"></a>Paramètres d’alimentation
 
-- **Écran de verrouillage**: entrez la durée maximale pendant laquelle un utilisateur peut définir jusqu’à ce que l’appareil soit verrouillé. Par exemple, si vous définissez ce paramètre sur **10 minutes**, les utilisateurs peuvent définir une durée de 15 secondes jusqu’à 10 minutes. Si la valeur **n’est pas configurée** (valeur par défaut), Intune ne change pas et ne contrôle pas ce paramètre.
+- **Délai avant verrouillage de l’écran** : entrez la durée maximale qu’un utilisateur peut définir pour le délai avant que l’appareil soit verrouillé. Par exemple, si vous définissez ce paramètre sur **10 minutes**, les utilisateurs peuvent définir une durée allant de 15 secondes à 10 minutes. Quand il est défini sur **Non configuré** (par défaut), Intune ne change pas ou ne contrôle pas ce paramètre.
 
 - **Écran actif quand l’appareil est branché** : choisissez quelles sources d’alimentation permettent de maintenir l’écran actif lorsque l’appareil est branché.
 
@@ -206,13 +206,13 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
 
 - **Ajouter de nouveaux utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs d’ajouter de nouveaux utilisateurs. Chaque utilisateur dispose d’un espace personnel sur l’appareil, regroupant les écrans d’accueil personnalisés ainsi que les comptes, applications et paramètres. L’option **Non configuré** (par défaut) autorise les utilisateurs à ajouter d’autres utilisateurs à l’appareil.
 - **Suppression d’utilisateurs** : choisissez **Bloquer** pour empêcher les utilisateurs de supprimer des utilisateurs. L’option **Non configuré** (par défaut) autorise les utilisateurs à supprimer d’autres utilisateurs de l’appareil.
-- **Modifications de compte** (appareils dédiés uniquement) : choisissez **bloquer** pour empêcher les utilisateurs de modifier des comptes. L’option **Non configuré** (par défaut) autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
+- **Modifications du compte** (appareils dédiés uniquement) : choisissez **Bloquer** pour empêcher les utilisateurs de modifier les comptes. L’option **Non configuré** (par défaut) autorise les utilisateurs à mettre à jour les comptes d’utilisateurs sur l’appareil.
 
   > [!NOTE]
-  > Ce paramètre n’est pas respecté sur les appareils du propriétaire de l’appareil (entièrement géré). Si vous configurez ce paramètre, le paramètre est ignoré et n’a aucun impact.
+  > Ce paramètre n’est pas respecté sur les appareils (complètement managés) du propriétaire de l’appareil. Si vous configurez ce paramètre, le paramètre est ignoré et n’a aucun impact.
 
-- L' **utilisateur peut configurer les informations d’identification**: le **blocage** empêche les utilisateurs de configurer des certificats attribués à des appareils, même des appareils qui ne sont pas associés à un compte d’utilisateur. **Non configurée** peut permettre aux utilisateurs de configurer ou de modifier leurs informations d’identification lorsqu’ils y accèdent dans le magasin de clés. 
-- **Comptes Google personnels**: **bloquer** empêche les utilisateurs d’ajouter leur compte Google personnel à l’appareil. **Non configuré** (par défaut) permet aux utilisateurs d’ajouter leur compte Google personnel.
+- **L’utilisateur peut configurer les informations d’identification** : **Bloquer** empêche les utilisateurs de configurer des certificats affectés à des appareils, même des appareils qui ne sont pas associés à un compte d’utilisateur. **Non configuré** peut permettre aux utilisateurs de configurer ou de changer leurs informations d’identification quand ils y accèdent dans le magasin de clés. 
+- **Comptes Google personnels** : **Bloquer** empêche les utilisateurs d’ajouter leur compte Google personnel à l’appareil. **Non configuré** (par défaut) permet aux utilisateurs d’ajouter leur compte Google personnel.
 
 ### <a name="applications"></a>Applications
 
@@ -245,31 +245,31 @@ Utilisez ces paramètres pour configurer une expérience plein écran sur vos ap
   > [!IMPORTANT]
   > - Le client VPN que vous choisissez doit être installé sur l’appareil et doit prendre en charge le VPN par application dans les profils professionnels. Sinon, une erreur se produit. 
   > - Vous devez approuver l’application cliente VPN dans le **Google Play Store géré**, la synchroniser avec Intune et la déployer sur l’appareil. Une fois l’opération effectuée, l’application est installée dans le profil professionnel de l’utilisateur.
-  > - Vous devez toujours configurer le client VPN avec un [Profil VPN](vpn-settings-android-enterprise.md), ou via un [profil de configuration d’application](../apps/app-configuration-policies-use-android.md).
+  > - Vous devez néanmoins toujours configurer le client VPN avec un [profil VPN](vpn-settings-android-enterprise.md) ou via un [profil de configuration d’application](../apps/app-configuration-policies-use-android.md).
   > - Il peut exister des problèmes connus liés à l’utilisation du VPN par application avec un accès F5 pour Android 3.0.4. Pour plus d’informations, consultez [Release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) sur le site F5.
 
 - **Mode de verrouillage** : choisissez **Activer** pour forcer l’ensemble du trafic réseau à utiliser le tunnel VPN. Si aucune connexion au VPN n’est établie, l’appareil n’a pas d’accès réseau.
 
   Choisissez **Non configuré** pour permettre au trafic de passer par le tunnel VPN ou le réseau mobile.
 
-- **Proxy global recommandé**: choisissez **activer** pour ajouter un proxy global aux appareils. En cas d’activation, le trafic HTTP et HTTPs, y compris certaines applications sur l’appareil, utilisez le proxy que vous entrez. Ce proxy n’est qu’une recommandation. Il est possible que certaines applications n’utilisent pas le proxy. **Non configuré** (par défaut) n’ajoute pas de proxy global recommandé.
+- **Proxy global recommandé** : choisissez **Activer** pour ajouter un proxy global aux appareils. Quand ce paramètre est activé, le trafic HTTP et HTTPS, y compris certaines applications sur l’appareil, utilisent le proxy que vous entrez. Ce proxy est seulement une recommandation. Il est possible que certaines applications n’utilisent pas le proxy. **Non configuré** (par défaut) n’ajoute pas de proxy global recommandé.
 
   Pour plus d’informations sur cette fonctionnalité, consultez [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (ouvre un site Android).
 
-  Lorsque cette option est activée, entrez également le **type** de proxy. Les options disponibles sont les suivantes :
+  Quand ce paramètre est activé, entrez également le **Type** de proxy. Les options disponibles sont les suivantes :
 
-  - **Direct**: choisissez cette option pour entrer manuellement les détails du serveur proxy, notamment :
-    - **Hôte**: entrez le nom d’hôte ou l’adresse IP de votre serveur proxy. Par exemple, entrez `proxy.contoso.com` ou `127.0.0.1`.
+  - **Direct** : choisissez cette option pour entrer manuellement les détails du serveur proxy, notamment :
+    - **Hôte** : entrez le nom d’hôte ou l’adresse IP de votre serveur proxy. Par exemple, entrez `proxy.contoso.com` ou `127.0.0.1`.
     - **Numéro de port** : entrez le numéro de port TCP utilisé par votre serveur proxy. Par exemple, entrez `8080`.
-    - **Hôtes exclus**: entrez une liste de noms d’hôtes ou d’adresses IP qui n’utiliseront pas le proxy. Cette liste peut inclure un caractère générique astérisque (`*`) et plusieurs hôtes séparés par des points-virgules (`;`) sans espace. Par exemple, entrez `127.0.0.1;web.contoso.com;*.microsoft.com`.
+    - **Hôtes exclus** : entrez une liste de noms d’hôtes ou d’adresses IP qui n’utiliseront pas le proxy. Cette liste peut inclure un caractère générique astérisque (`*`) et plusieurs hôtes séparés par des points-virgules (`;`) sans espace. Par exemple, entrez `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
-  - **Configuration automatique de proxy**: entrez l' **URL PAC** vers un script de configuration automatique de proxy. Par exemple, entrez `https://proxy.contoso.com/proxy.pac`.
+  - **Configuration automatique du proxy** : entrez l’**URL PAC** vers un script de configuration automatique de proxy. Par exemple, entrez `https://proxy.contoso.com/proxy.pac`.
 
-    Pour plus d’informations sur les fichiers PAC, consultez [fichier de configuration automatique de proxy (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (ouvre un site non-Microsoft).
+    Pour plus d’informations sur les fichiers PAC, consultez [Fichier de configuration automatique de proxy (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (ouvre un site non-Microsoft).
 
 ## <a name="work-profile-only"></a>Profil professionnel uniquement
 
-Ces paramètres s’appliquent aux types d’inscription d’entreprise Android où Intune contrôle uniquement le profil professionnel, tel que l’inscription de profil professionnel Android Enterprise sur un appareil personnel ou BYOD.
+Ces paramètres s’appliquent aux types d’inscription d’Android Enterprise où Intune contrôle seulement le profil professionnel, comme l’inscription de profil professionnel Android Enterprise sur un appareil personnel ou BYOD.
 
 ### <a name="work-profile-settings"></a>Paramètres de profil professionnel
 
@@ -279,8 +279,8 @@ Ces paramètres s’appliquent aux types d’inscription d’entreprise Android 
 - **Partage de données entre profils professionnels et personnels** : choisissez cette option pour autoriser les applications du profil professionnel à partager des données avec les applications du profil personnel. Par exemple, vous pouvez contrôler les actions de partage dans les applications, notamment l’option **Partager** dans l’application de navigateur Chrome. Ce paramètre ne s’applique pas au comportement du Presse-papiers pour les opérations de type copier/coller. Voici vos options de partage :
   - **Paramètre par défaut de l’appareil** : comportement de partage par défaut de l’appareil, qui varie en fonction de la version d’Android. Par défaut, le partage du profil personnel vers le profil professionnel est autorisé. Le partage du le profil professionnel vers le profil personnel est aussi bloqué par défaut. Ce paramètre empêche les partages de données du profil professionnel vers le profil personnel. Sur les appareils exécutant les versions 6.0 et ultérieures, Google ne bloque pas le partage du profil personnel vers le profil professionnel.
   - **Les applications du profil professionnel peuvent gérer une demande de partage venant d’un profil personnel** : active la fonctionnalité intégrée Android qui autorise le partage des données entre le profil personnel et le profil professionnel. Lorsque cette option est activée, une demande de partage à partir d’une application du profil personnel peut partager avec les applications associées au profil professionnel. Ce paramètre est le comportement par défaut des appareils Android exécutant des versions antérieures à 6.0.
-  - **Empêcher le partage entre les limites**: empêche le partage entre les profils professionnels et personnels.
-  - **Aucune restriction sur le partage**: active le partage sur la limite des profils professionnels dans les deux directions. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
+  - **Empêcher tout partage en dehors des limites** : empêche le partage entre les profils professionnels et personnels.
+  - **Aucune restriction sur le partage** : permet le partage dans les deux sens au-delà de la limite du profil professionnel. Lorsque vous sélectionnez ce paramètre, les applications du profil de travail peuvent partager des données avec des applications sans badge du profil personnel. Ce paramètre autorise le partage des applications gérées du profil professionnel avec les applications situées du côté non géré de l’appareil. Vous devez donc utiliser ce paramètre avec précaution.
 
 - **Notifications du profil professionnel quand l’appareil est verrouillé** : permet de déterminer si les applications du profil professionnel peuvent afficher des données dans des notifications quand l’appareil est verrouillé. L’option **Bloquer** n’affiche pas les données. L’option **Non configuré** affiche les données.
 - **Autorisations des applications par défaut** : Définit la stratégie d’autorisation par défaut pour toutes les applications dans le profil professionnel. À compter d’Android 6, l’utilisateur est invité à accorder certaines autorisations requises par les applications lorsque l’application est lancée. Ce paramètre de stratégie vous permet de décider si les utilisateurs sont invités à accorder des autorisations pour toutes les applications du profil professionnel. Par exemple, vous pouvez affecter au profil professionnel une application qui nécessite un accès à l’emplacement. Normalement, cette application invite l’utilisateur à approuver ou refuser l’accès à l’emplacement pour l’application. Utilisez cette stratégie pour accorder automatiquement les autorisations sans invite, refuser automatiquement les autorisations sans invite, ou laisser l’utilisateur final décider. Choisissez parmi :
@@ -306,9 +306,9 @@ Ces paramètres s’appliquent aux types d’inscription d’entreprise Android 
 
 - **Appareil photo** : choisissez **Bloquer** pour empêcher l’accès à l’appareil photo de l’appareil dans le profil professionnel. L’appareil photo dans le profil personnel n’est pas affectée par ce paramètre. L’option **Non requis** autorise l’accès à l’appareil photo dans le profil professionnel.
 
-- **Autoriser les widgets à partir des applications de profil de travail**: **activer** permet aux utilisateurs finaux de placer les widgets exposés par les applications sur l’écran d’accueil. **Non configuré** (valeur par défaut) désactive cette fonctionnalité.
+- **Autoriser les widgets dans les applications du profil professionnel** : **Activer** permet aux utilisateurs finaux de placer les widgets exposés par des applications sur l’écran d’accueil. **Non configuré** (valeur par défaut) désactive cette fonctionnalité.
 
-  Par exemple, Outlook est installé sur les profils professionnels de vos utilisateurs. Lorsque cette valeur est définie sur **activer**, les utilisateurs peuvent placer le widget Agenda sur l’écran d’accueil de l’appareil.
+  Par exemple, Outlook est installé sur les profils professionnels de vos utilisateurs. Quand ce paramètre est défini sur **Activer**, les utilisateurs peuvent placer le widget Agenda sur l’écran d’accueil de l’appareil.
 
 #### <a name="work-profile-password"></a>Mot de passe de profil professionnel
 
@@ -336,8 +336,8 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
 
 - **Longueur minimale du mot de passe** : entrez le nombre minimal de caractères du mot de passe de l’utilisateur (**4**-**14**).
 - **Nombre maximal de minutes d’inactivité avant le verrouillage de l’appareil** : sélectionnez le délai autorisé avant le verrouillage automatique d’un appareil inactif
-- **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre de saisies possibles d’un mot de passe incorrect avant que toutes les données ne soient supprimées de l’appareil.
-- **Expiration du mot de passe (jours)**  : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil (**1**-**255**).
+- **Nombre d’échecs de connexion avant réinitialisation de l’appareil** : entrez le nombre de saisies possibles d’un mot de passe incorrect avant que le profil professionnel ne soit réinitialisé.
+- **Expiration du mot de passe (en jours)** : entrez le nombre de jours avant que l’utilisateur ne doive modifier le mot de passe de l’appareil (**1**-**255**).
 - **Type de mot de passe requis** : sélectionnez le type de mot de passe qui doit être défini sur l’appareil. Choisissez parmi :
   - **Paramètre par défaut de l’appareil**
   - **Sécurité biométrique faible**
@@ -358,12 +358,12 @@ Ces paramètres de mot de passe s’appliquent aux profils personnels des appare
    > [!Note]
    > Ce paramètre ne fonctionne que pour les appareils Android 8 (Oreo) et versions supérieures.
 
-- **Empêcher les installations d’applications provenant de sources inconnues dans le profil personnel**: par défaut, les appareils Android Enterprise Work Profile ne peuvent pas installer d’applications à partir de sources autres que le Play Store. Par nature, les appareils de profil professionnel sont conçus pour être à double profil :
+- **Empêcher les installations d’applications à partir de sources inconnues dans le profil personnel** : par défaut, les appareils de profil professionnel Android Enterprise ne peuvent pas installer d’applications à partir de sources autres que le Play Store. Par nature, les appareils de profil professionnel sont conçus pour être à double profil :
 
-  - Un profil professionnel géré à l’aide de MDM.
-  - Profil personnel isolé de la gestion MDM.
+  - Un profil professionnel géré avec MDM.
+  - Un profil personnel qui est isolé de la gestion MDM.
 
-  Ce paramètre permet aux administrateurs de contrôler davantage les installations d’applications provenant de sources inconnues. **Non configuré** (par défaut) autorise les installations d’applications provenant de sources inconnues dans le profil personnel. **Bloquer** empêche les installations d’applications à partir de sources autres que les Play Store dans le profil personnel.
+  Ce paramètre permet aux administrateurs de contrôler davantage les installations d’applications provenant de sources inconnues. **Non configuré** (par défaut) autorise les installations d’applications provenant de sources inconnues dans le profil personnel. **Bloquer** empêche les installations d’applications à partir de sources autres que le Play Store dans le profil personnel.
 
 ### <a name="connectivity"></a>Connectivité
 

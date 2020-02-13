@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: HT
+ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754573"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051607"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils iOS et iPadOS pour autoriser ou restreindre les fonctionnalités avec Intune
 
@@ -420,8 +420,6 @@ S’applique aux appareils exécutant iOS 9.3 ou une version plus récente.
   Pour trouver l’URL d’une application, ouvrez iTunes ou l’App Store et recherchez l’application. Par exemple, recherchez `Microsoft Remote Desktop` ou `Microsoft Word`. Sélectionnez l’application et copiez l’URL.
 
   Vous pouvez également utiliser iTunes pour rechercher l’application, puis la tâche **Copier le lien** pour obtenir l’URL de l’application.
-  
-  Pour plus d’informations sur la localisation d’un ID de bundle, consultez [Guide pratique pour trouver l’ID de bundle pour une application iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
 - **ID de l'ensemble d'applications** : entrez l’[ID d’ensemble d’applications](bundle-ids-built-in-ios-apps.md) pour l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094).
 - **Nom de l’application** : entrez le nom de l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094).
@@ -559,7 +557,9 @@ Remarque nécessaire pour l’itinérance des données (Conseil ou remarque impo
 
 ## <a name="autonomous-single-app-mode"></a>Mode Application unique autonome
 
-Utilisez ces paramètres pour configurer les appareils iOS pour qu’ils exécutent des applications spécifiques en mode Application unique autonome. Quand ce mode est configuré et que l’application est exécutée, l’appareil est verrouillé. Il peut uniquement exécuter cette application. Par exemple, ajoutez une application qui permet aux utilisateurs d’effectuer un test sur l’appareil. Une fois les actions de l’application terminées, ou si vous supprimez cette stratégie, l’appareil retourne à son état normal.
+Utilisez ces paramètres pour configurer les appareils iOS/iPadOS pour qu’ils exécutent des applications spécifiques en mode Application unique autonome. Quand ce mode est configuré et que l’utilisateur démarre une des applications configurées, l’appareil est verrouillé sur cette application. Le basculement d’application/tâche est désactivé jusqu’à ce que l’utilisateur quitte l’application autorisée.
+
+Par exemple, dans un environnement scolaire ou universitaire, ajoutez une application qui permet aux utilisateurs d’effectuer un test sur l’appareil. Vous pouvez aussi verrouiller l’appareil dans l’application Portail d’entreprise jusqu’à ce que l’utilisateur final s’authentifie. Une fois les actions de l’application effectuées par l’utilisateur, ou si vous supprimez cette stratégie, l’appareil retourne à son état normal.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Les paramètres s’appliquent à : Inscription automatique des appareils (supervisée)
 
