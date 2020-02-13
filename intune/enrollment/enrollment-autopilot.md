@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: 4f97c4c56073044e79b5251dc83c54decb5c9c55
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977799"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124841"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscrire des appareils Windows dans Intune avec Windows Autopilot  
 Windows Autopilot simplifie l’inscription des appareils dans Intune. La création et la maintenance des images de système d’exploitation personnalisées demandent beaucoup de temps. L’application de ces images de système d’exploitation personnalisées à de nouveaux appareils en vue de les préparer pour vos utilisateurs finaux peut être tout aussi longue. Avec Microsoft Intune et Autopilot, vous pouvez donner de nouveaux appareils à vos utilisateurs finaux sans devoir créer, gérer et appliquer des images de système d’exploitation personnalisées sur les appareils. Quand vous utilisez Intune pour gérer des appareils Autopilot, vous pouvez gérer des stratégies, des profils, des applications, etc., une fois les appareils inscrits. Pour une vue d’ensemble des avantages, des scénarios et des prérequis, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -100,6 +100,9 @@ Les profils de déploiement Autopilot sont utilisés pour configurer les apparei
     - **Auto-déploiement (préversion)**  : (nécessite Windows 10, version 1809 ou ultérieure) les appareils avec ce profil ne sont pas associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur ne sont pas obligatoires pour l’inscription de l’appareil. Quand aucun utilisateur n’est associé à un appareil, les stratégies de conformité basées sur l’utilisateur ne s’appliquent pas à ce dernier. Lorsque vous utilisez le mode de déploiement automatique, seules les stratégies de conformité ciblant l’appareil sont appliquées.
 
     ![Capture d’écran de la page OOBE](./media/enrollment-autopilot/create-profile-outofbox.png)
+
+   > [!NOTE]
+   > Les options qui apparaissent grisées ne sont pas prises en charge actuellement par le mode de déploiement sélectionné.
 
 6. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
 7. Configurez les options suivantes :

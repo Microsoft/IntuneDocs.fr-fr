@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e64741a92804ec4149b654480166720ff3092e35
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 3ae5a7508f27dbf15a58ba3386e744bb63bf102b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258500"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125011"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gérer l’accès web à l’aide de Microsoft Edge avec Microsoft Intune
 
@@ -285,16 +285,27 @@ Utilisez la paire clé-valeur ci-dessous pour configurer l’autorisation de ces
 
 |    Clé    |    Valeur    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock'    |    **True** entraîne l’ouverture directe des liens restreints dans la navigation InPrivate.<p>**False** (par défaut) permet aux utilisateurs de choisir d’ouvrir un lien restreint avec la navigation InPrivate ou avec leur compte personnel (MSA).    |
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (valeur par défaut) autorise Microsoft Edge à migrer les utilisateurs vers leur contexte personnel pour qu’ils puissent ouvrir des sites bloqués.<p>**False** empêche Microsoft Edge de migrer les utilisateurs. Les utilisateurs reçoivent simplement un message indiquant que le site auquel ils tentent d’accéder est bloqué.    |
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Ouvrir des liens restreints directement dans les pages d’onglets InPrivate
 
-Vous pouvez configurer si les liens restreints doivent s’ouvrir directement dans la navigation InPrivate, ce qui offre aux utilisateurs une expérience de navigation plus transparente. Cela permettrait aux utilisateurs d’éviter d’effectuer une transition vers leur contexte personnel pour afficher un site. La navigation InPrivate est considérée comme non managée, de sorte que les utilisateurs ne seront pas en mesure d’y accéder lors de l’utilisation du mode de navigation InPrivate. 
+Vous pouvez configurer si les liens restreints doivent s’ouvrir directement dans la navigation InPrivate, ce qui offre aux utilisateurs une expérience de navigation plus transparente. Cela permettrait aux utilisateurs d’éviter d’effectuer une transition vers leur contexte personnel pour afficher un site. La navigation InPrivate est considérée comme non managée, de sorte que les utilisateurs ne seront pas en mesure d’y accéder lors de l’utilisation du mode de navigation InPrivate.
 
 |    Clé    |    Valeur    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** autorise Microsoft Edge à effectuer une transition vers le contexte personnel des utilisateurs pour qu’ils puissent ouvrir des sites bloqués.<p>**Bloc** empêche la transition des utilisateurs par Microsoft Edge. Les utilisateurs reçoivent simplement un message indiquant que le site auquel ils tentent d’accéder est bloqué.    |
 
+## <a name="disable-microsoft-edge-prompt-to-save-passwords"></a>Désactiver l’invite Microsoft Edge demandant l’enregistrement des mots de passe
+
+|    Clé    |    Valeur    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** entraîne l’ouverture directe des liens restreints dans la navigation InPrivate.<p>**False** (par défaut) permet aux utilisateurs de choisir d’ouvrir un lien restreint avec la navigation InPrivate ou avec leur compte personnel (MSA).    |
+
+Par défaut, Microsoft Edge sur iOS propose d’enregistrer les mots de passe des utilisateurs dans le trousseau. Si vous voulez désactiver cette invite dans votre organisation, configurez le paramètre suivant :
+
+|    Clé    |    Valeur    |
+|-----------|-------------|
+|     'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    **password** désactive l’invite d’enregistrement des mots de passe.    |
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Utiliser Microsoft Edge sur iOS pour accéder aux journaux des applications managées 
 

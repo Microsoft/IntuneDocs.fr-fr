@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa0156d059513a2586eb7d8866d23508be0af10c
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: 8d5082376c42ff3b92e3979a53b6deac3e59c88e
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886683"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075805"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune
 
 Pour pouvoir déployer, configurer, superviser ou protéger des applications, vous devez les ajouter au préalable à Intune. L’un des [types d’application](~/apps/apps-add.md#app-types-in-microsoft-intune) disponibles est Microsoft Edge *version 77 ou ultérieure*. En sélectionnant ce type d’application dans Intune, vous pouvez affecter et installer Microsoft Edge *version 77 ou ultérieure* sur des appareils Windows 10 que vous gérez.
 
 > [!IMPORTANT]
-> Ce type d’application est en **préversion publique** et offre des canaux stables, bêta et de développement pour Windows 10. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). Intune détecte les éventuelles installations Microsoft Edge préexistantes. S’il est installé dans le contexte utilisateur, l’installation du système le remplace. S’il est installé dans le contexte système, l’installation est signalée comme réussie. Par ailleurs, les mises à jour automatiques de Microsoft Edge sont définies sur **Activé** par défaut, et il n’est pas possible de désinstaller Microsoft Edge.
+> Ce type d’application est en **préversion publique** et offre des canaux stables, bêta et de développement pour Windows 10. Le déploiement s’effectue en anglais (EN) uniquement, mais les utilisateurs finaux peuvent changer la langue d’affichage dans le navigateur sous **Paramètres** > **Langues**. Microsoft Edge est une application Win32 installée dans le contexte du système et sur des architectures similaires (application x86 sur un système d’exploitation x86 et application x64 sur un système d’exploitation x64). Intune détecte les éventuelles installations Microsoft Edge préexistantes. S’il est installé dans le contexte utilisateur, l’installation du système le remplace. S’il est installé dans le contexte système, l’installation est signalée comme réussie. Par ailleurs, les mises à jour automatiques de Microsoft Edge sont **activées** par défaut.
 
 > [!NOTE]
 > Microsoft Edge *version 77 ou ultérieure* est également disponible pour macOS.
@@ -92,6 +92,28 @@ L’application créée s’affiche dans la liste des applications, où vous pou
 
 > [!NOTE]
 > Actuellement, si vous annulez l’affectation du déploiement de Microsoft Edge, il reste sur l’appareil.
+
+## <a name="uninstall-the-app"></a>Désinstaller l’application
+
+Quand vous devez désinstaller Microsoft Edge des appareils de l’utilisateur, effectuez les étapes suivantes.
+
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Applications** > **Toutes les applications** > *Application Microsoft Edge* > **Attributions** > **Ajouter un groupe**.
+3. Dans le volet **Ajouter un groupe**, sélectionnez **Désinstaller**.
+
+    > [!NOTE]
+    > L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution **Disponible pour les appareils inscrits** ou **Obligatoire** en utilisant le même déploiement.
+4. Sélectionnez **Groupes inclus** pour choisir les groupes d’utilisateurs concernés par cette attribution d’application.
+5. Sélectionnez les groupes auxquels vous voulez appliquer l’attribution de désinstallation.
+6. Cliquez sur **Sélectionner** dans le volet **Sélectionner des groupes**.
+7. Cliquez sur **OK** dans le volet **Attribuer** pour définir l’attribution.
+8. Cliquez sur **Exclure des groupes** si vous voulez exclure des groupes d’utilisateurs d’un impact par cette attribution d’applications.
+9. Si vous avez choisi d’exclure des groupes, dans **Sélectionner des groupes**, choisissez **Sélectionner**.
+10. Sélectionnez **OK** dans le volet **Ajouter un groupe**.
+11. Sélectionnez **Enregistrer** dans le volet **Attributions** de l’application.
+
+> [!IMPORTANT]
+> Pour désinstaller correctement l’application, supprimez les membres ou l’attribution de groupe pour l’installation avant de les attribuer à la désinstallation. Si un groupe est attribué à la fois à l’installation d’une application et à sa désinstallation, l’application est conservée et n’est pas supprimée.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 **Microsoft Edge version 77 ou ultérieure pour Windows 10 :**<br>

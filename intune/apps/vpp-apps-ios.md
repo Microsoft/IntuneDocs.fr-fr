@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bc511669ec8a88523581b3afbcca161d5208934
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956193"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051624"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -130,6 +130,11 @@ Vous pouvez synchroniser les noms des applications, les métadonnées et les inf
 
 >[!NOTE]
 >L’intention de déploiement disponible n’est pas prise en charge pour les groupes d’appareils, seuls les groupes d’utilisateurs sont pris en charge. La liste des applications affichées est associée à un jeton. Si vous avez une application qui est associée à plusieurs jetons VPP, la même application est affichée plusieurs fois (une fois pour chaque jeton).
+
+> [!NOTE]  
+> Intune (ou toute autre gestion des appareils mobiles) n’installe pas réellement les applications VPP. Au lieu de cela, Intune se connecte à votre compte VPP et indique à Apple les licences d’application à attribuer aux appareils. À partir de là, toutes les installations réelles sont gérées entre Apple et l’appareil.
+> 
+> [Informations de référence sur le protocole MDM Apple, page 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>Invites de l’utilisateur final concernant le programme VPP
 

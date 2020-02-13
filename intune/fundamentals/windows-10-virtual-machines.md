@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9afaf2c8a63bfaed1fdb593baf42c8fa258d7893
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 486ca7eae1b1e8b016f44c735ec04a23145421a8
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263115"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124977"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Utilisation de machines virtuelles Windows 10 avec Intune
 
@@ -33,7 +33,7 @@ Lorsque vous gérez des machines virtuelles Windows 10 avec Intune, gardez les p
 
 ## <a name="enrollment"></a>Inscription
 - Nous vous déconseillons de gérer des machines virtuelles hôtes de session et à la demande avec Intune. Chaque machine virtuelle doit être inscrite au moment de sa création. En outre, la suppression régulière de machines virtuelles laissera des enregistrements d’appareil orphelins dans Intune jusqu’à ce qu’ils soient [nettoyés](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
-- Le mode de déploiement automatique de Windows Autopilot n’est pas pris en charge, car il requiert un module de plateforme sécurisée (TPM). 
+- Les types de déploiement Windows Autopilot autodéployé et White Glove ne sont pas pris en charge, car ils nécessitent un module de plateforme sécurisée (TPM) physique. 
 - L’inscription OOBE (Out-of-Box Experience) n’est pas prise en charge sur les machines virtuelles qui ne sont accessibles qu’à l’aide du protocole RDP (comme les machines virtuelles hébergées sur Azure). Cette restriction signifie ce qui suit :
     - Windows Autopilot et les OOBE commerciales ne sont pas pris en charge.
     - Les options de page d’état d’inscription pour les stratégies de contexte d’appareil ne sont pas prises en charge.

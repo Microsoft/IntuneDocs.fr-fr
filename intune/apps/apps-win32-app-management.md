@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c120fab1da43230888866cba9d818d7b433b711e
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dbefd797fead7113045ee7e7655b715a0b4961fd
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755287"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075822"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonome - Gestion des applications Win32
 
@@ -108,11 +108,11 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 4. Cliquez sur **Sélectionner**. Les étapes **Ajouter une application** sont affichées.
 
-## <a name="step-1---app-information"></a>Étape 1 - Informations sur l’application
+## <a name="step-1---app-information"></a>Étape 1 - Informations de l’application
 
 ### <a name="select-the-app-package-file"></a>Sélectionner le fichier de package d’application
 
-1. Dans le volet **Ajouter une application**, cliquez sur **Sélectionner un fichier de package d'application**. 
+1. Dans le volet **Ajouter une application**, cliquez sur **Sélectionner un fichier de package d’application**. 
 2. Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Ensuite, sélectionnez un fichier d’installation Windows avec l’extension *.intunewin*.
    Les détails de l'application s’affichent.
 3. Lorsque vous avez terminé, sélectionnez **OK** dans le volet **Fichier de package d'application**.
@@ -204,7 +204,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
         2. Après avoir défini la configuration requise, sélectionnez **OK**.
 2. Cliquez sur **Suivant** pour afficher la page **Règles de détection**.   
 
-### <a name="step-4-detection-rules"></a>Étape 4 : Règles de détection
+## <a name="step-4-detection-rules"></a>Étape 4 : Règles de détection
 
 1. Dans la page **Règles de détection**, configurez les règles permettant de détecter la présence de l’application :
     
@@ -268,7 +268,7 @@ Les étapes suivantes fournissent des conseils pour ajouter une application Wind
 
 2. Après avoir ajouté votre/vos règle(s), sélectionnez **Suivant** pour afficher la page **Dépendances**.
 
-### <a name="step-5-dependencies"></a>Étape 5 : Dépendances
+## <a name="step-5-dependencies"></a>Étape 5 : Dépendances
 
 Les dépendances d’application sont des applications que vous devez installer avant votre application Win32. Vous pouvez exiger que d’autres applications soient installées en tant que dépendances. Plus précisément, l’appareil doit installer la ou les applications dépendantes avant d’installer l’application Win32. Le nombre maximal de dépendances s’élève à 100. Il inclut les dépendances de toutes les dépendances incluses, ainsi que l’application elle-même. Vous pouvez ajouter des dépendances d’application Win32 uniquement une fois que votre application Win32 a été ajoutée et chargée dans Intune. Une fois que votre application Win32 a été ajoutée, l’option **Dépendances** apparaît dans le volet de votre application Win32. 
 

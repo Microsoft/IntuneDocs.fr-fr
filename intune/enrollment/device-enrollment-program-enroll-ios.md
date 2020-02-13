@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/07/2019
+ms.date: 02/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,31 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39775f3acf1a1c3da7c836afe1699958560d509a
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: b3fe6d1e2a0dcdeafad56d3facccb96f5d0721e4
+ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691847"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074663"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple
 
-Vous pouvez configurer Intune de façon à inscrire des appareils iOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple. DEP vous permet d’inscrire un grand nombre d’appareils sans jamais les toucher. Des appareils tels que des iPhone et des iPad peuvent être envoyés directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion.
+Vous pouvez configurer Intune de façon à inscrire des appareils iOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple. DEP vous permet d’inscrire un grand nombre d’appareils sans jamais les toucher. Des appareils comme les iPhones, les iPads et les MacBooks peuvent être envoyés directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration, qui comprend l’expérience OOBE type des produits Apple, s’exécute avec des paramètres préconfigurés et l’appareil s’inscrit à la gestion.
 
-Pour activer l’inscription DEP, vous utilisez à la fois le portail Intune et le portail DEP Apple. Une liste de numéros de série ou un numéro de bon de commande est nécessaire pour que vous puissiez affecter des appareils à Intune à des fins de gestion. Vous créez des profils d’inscription DEP contenant les paramètres appliqués aux appareils lors de l’inscription. Notez que l’inscription DEP ne peut pas être utilisée avec un compte de [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
+Pour activer l’inscription DEP, vous utilisez à la fois les portails Intune et Apple Business Manager (ABM) ou Apple School Manager (ASM). Une liste de numéros de série ou un numéro de bon de commande sont nécessaires afin de pouvoir attribuer des appareils à Intune pour la gestion dans ABM/ASM. Vous créez des profils d’inscription DEP dans Intune qui contiennent les paramètres à appliquer aux appareils pendant l’inscription. Notez que l’inscription DEP ne peut pas être utilisée avec un compte de [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
-> DEP définit les configurations d’appareils qui ne peuvent pas être supprimées par l'utilisateur final. Par conséquent, avant la [migration vers DEP](../fundamentals/migration-guide-considerations.md), l’appareil doit être effacé pour être remis dans un état prêt à l'emploi (neuf).
+> DEP définit les configurations d’appareil qui ne peuvent pas être supprimées par l’utilisateur final. Par conséquent, avant la [migration vers DEP](../fundamentals/migration-guide-considerations.md), l’appareil doit être effacé pour être remis dans un état prêt à l'emploi (neuf).
 
 ## <a name="dep-and-the-company-portal"></a>DEP et le Portail d'entreprise
 
-Les inscriptions DEP ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Vous pouvez autoriser les utilisateurs à accéder à l’application Portail d’entreprise sur un appareil DEP. Pour leur permettre l’accès, envoyez l’application à l’appareil à l’aide de **Installer le Portail d’entreprise avec VPP** (programme d’achat en volume) dans le profil DEP. Pour en savoir plus, voir [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Les inscriptions DEP ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Vous pouvez autoriser les utilisateurs à accéder à l’application Portail d’entreprise sur un appareil DEP. Vous pouvez fournir cet accès afin de permettre aux utilisateurs de choisir les applications d’entreprise à utiliser sur leur appareil ou afin d’utiliser l’authentification moderne pour effectuer le processus d’inscription. 
 
- Vous pouvez installer l’application Portail d’entreprise sur des appareils déjà inscrits avec DEP. Pour ce faire, déployez l’application Portail d’entreprise via Intune avec une [stratégie de configuration d’application](../apps/app-configuration-policies-use-ios.md) appliquée.
+Pour permettre une authentification moderne pendant l’inscription, poussez l’application sur l’appareil à l’aide de **Installer le portail d’entreprise avec VPP** (programme d’achat en volume) dans le profil DEP. Pour en savoir plus, voir [Inscrire automatiquement des appareils iOS avec le Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+Pour activer la mise à jour automatique du portail d’entreprise et fournir l’application Portail d’entreprise sur les appareils déjà inscrits avec DEP, déployez l’application Portail d’entreprise à travers Intune comme une application VPP (programme d’achat en volume) obligatoire avec une [stratégie de configuration d’application](../apps/app-configuration-policies-use-ios.md) appliquée.
 
 ## <a name="what-is-supervised-mode"></a>Qu’est-ce que le mode supervisé ?
 
-Apple a introduit le mode supervisé dans iOS 5. Un appareil iOS en mode supervisé peut être géré avec plus de contrôles. Il est donc particulièrement utile pour les appareils d’entreprise. Intune prend en charge la configuration des appareils pour le mode supervisé dans le cadre du Programme d’inscription des appareils Apple.
+Apple a introduit le mode supervisé dans iOS 5. Un appareil iOS en mode supervisé peut être géré avec davantage de contrôles, comme le blocage de capture d’écran et le blocage d’installation d’applications de l’App Store. Il est donc particulièrement utile pour les appareils d’entreprise. Intune prend en charge la configuration des appareils pour le mode supervisé dans le cadre du Programme d’inscription des appareils Apple.
 
 La prise en charge d’appareils DEP non supervisés a été dépréciée dans iOS 11. Dans iOS 11 et versions ultérieures, les appareils DEP configurés doivent toujours être supervisés. L’indicateur DEP is_supervised sera ignoré dans une version ultérieure d’iOS.
 
@@ -63,7 +65,7 @@ La prise en charge d’appareils DEP non supervisés a été dépréciée dans i
 
 Avant de pouvoir inscrire des appareils iOS à l’aide du programme DEP, vous devez obtenir un fichier de jeton (.p7m) DEP auprès d’Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils DEP appartenant à votre entreprise. Il permet également à Intune de charger des profils d’inscription sur Apple et d’attribuer des appareils à ces profils.
 
-Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez également le portail DEP pour affecter des appareils à Intune à des fins de gestion.
+Vous utilisez le portail Apple Business Manager ou Apple School Manager pour créer un jeton. Vous utilisez aussi le portail ABM/ASM pour attribuer des appareils à Intune pour la gestion.
 
 > [!NOTE]
 > Si vous supprimez le jeton du portail classique Intune avant de migrer vers Azure, Intune risque de restaurer le jeton Apple DEP supprimé. Vous pouvez supprimer à nouveau le jeton DEP du portail Azure.
@@ -91,7 +93,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
 5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Sélectionnez **Choisir un fichier...** pour charger le fichier .pem, puis choisissez **Suivant**.
 
-6. Accédez à **Programme de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Gérer les appareils**.
+6. Accédez à **Programmes de déploiement** &gt; **Programme d’inscription des appareils** &gt; **Gérer les appareils**.
 7. Sous **Choisir les appareils par**, spécifiez comment les appareils sont identifiés :
     - **Numéro de série**
     - **Numéro de commande**
@@ -101,7 +103,7 @@ Vous utilisez le portail DEP Apple pour créer un jeton DEP. Vous utilisez égal
 
 8. Pour **Choisir une action**, choisissez **Affecter au serveur**, le &lt;nom_serveur&gt; spécifié pour Microsoft Intune, puis **OK**. Le portail Apple affecte les appareils spécifiés au serveur Intune pour la gestion, puis affiche **Affectation terminée**.
 
-   Dans le portail Apple, accédez à **Programmes de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Afficher l’historique d’affectation** pour afficher la liste des appareils et leur affectation aux serveurs MDM.
+   Dans le portail Apple, accédez à **Programmes de déploiement** &gt; **Programme d’inscription des appareils** &gt; **Afficher l’historique d’affectation** pour afficher la liste des appareils et leur affectation aux serveurs MDM.
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Étape 3. Enregistrez l’ID Apple utilisé pour créer le jeton.
 
@@ -137,7 +139,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 4. Sélectionnez **Suivant : paramètres de gestion des appareils**.
 
 5. Pour **Affinité utilisateur**, indiquez si les appareils possédant ce profil doivent être inscrits avec ou sans utilisateur attribué.
-    - **Inscrire avec affinité utilisateur** : choisissez cette option pour les appareils qui appartiennent à des utilisateurs et qui veulent utiliser le Portail d’entreprise pour des services comme l’installation d’applications. En cas d’utilisation d’ADFS et si le profil d’inscription a l’option **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration** définie sur **Non**, [Point de terminaison mixte/Nom d’utilisateur WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints) [En savoir plus](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) est requis.
+    - **Inscrire avec affinité utilisateur** : choisissez cette option pour les appareils qui appartiennent à des utilisateurs et qui veulent utiliser le Portail d’entreprise pour des services comme l’installation d’applications. En cas d’utilisation d’ADFS et si le profil d’inscription a l’option **S’authentifier avec le portail d’entreprise au lieu de l’Assistant Configuration** définie sur **Non**, [Point de terminaison mixte/Nom d’utilisateur WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints)[En savoir plus](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) est nécessaire.
 
     - **Inscrire sans affinité utilisateur** : choisissez cette option pour les appareils non affiliés à un seul utilisateur, Utilisez cette option pour les appareils qui n’accèdent pas aux données utilisateur locales. Les applications telles que l’application Portail d’entreprise ne fonctionnent pas.
 
@@ -241,7 +243,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 ## <a name="sync-managed-devices"></a>Synchroniser des appareils gérés
 Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchroniser Intune avec Apple pour voir vos appareils gérés dans le portail Azure d’Intune.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Captures d’écran du nœud d’appareils du programme d'inscription et lien de synchronisation.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Captures d’écran du nœud d’appareils du programme d'inscription et lien de synchronisation.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Pour respecter les conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
    - Une synchronisation complète ne peut pas s’exécuter plus d’une fois tous les sept jours. Pendant une synchronisation complète, Intune extrait toute la liste actualisée des numéros de série attribués au serveur MDM Apple connecté à Intune. Si un appareil DEP est supprimé du portail Intune, son affectation au serveur Apple MDM dans le portail DEP doit être supprimée. Si ce n’est pas le cas, il ne sera pas réimporté dans Intune tant que la synchronisation complète n’aura pas été exécutée.   
@@ -265,7 +267,7 @@ Vous pouvez choisir un profil à appliquer par défaut à tous les appareils qui
 1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
-## <a name="distribute-devices"></a>Distribuer des appareils
+## <a name="distribute-devices"></a>Distribuer les appareils
 Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil pour permettre d’inscrire vos appareils DEP. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
 
 Consultez [Inscrire un appareil iOS dans Intune avec le Programme d’inscription des appareils](/intune-user-help/enroll-your-device-dep-ios).
