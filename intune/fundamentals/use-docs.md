@@ -1,7 +1,7 @@
 ---
 title: Utilisation de la documentation Intune
 titleSuffix: Microsoft Intune
-description: Découvrez comment effectuer des recherches dans les documents Intune, fournir des commentaires sur les documents et contribuer à la documentation.
+description: Découvrez comment effectuer des recherches dans la documentation Intune, fournir des commentaires sur la documentation et y contribuer.
 ms.date: 09/15/2019
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -11,18 +11,18 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 607e1136fd3ab5661a2b054410d6fc7fce94994d
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504816"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155341"
 ---
 # <a name="using-the-intune-docs"></a>Utilisation de la documentation Intune
 
-Cet article fournit des informations pour vous aider à rechercher des informations dans les documents Microsoft Intune, à fournir des commentaires pour les documents Intune et vous montre comment contribuer rapidement et facilement aux documents.
+Cet article fournit des informations pour vous aider à rechercher des informations dans les documents Microsoft Intune, à fournir des commentaires pour les documents Intune et vous montre comment contribuer rapidement et facilement à la documentation.
 
-Pour obtenir une aide et une assistance générales sur Intune, consultez [obtenir un support technique pour Intune](../get-support.md).
+Pour obtenir une aide et une assistance générales sur Intune, consultez [Obtenir un support pour Intune](../get-support.md).
 
 ## <a name="search-the-docs"></a>Rechercher dans la documentation
 
@@ -30,7 +30,7 @@ Pour obtenir une aide et une assistance générales sur Intune, consultez [obten
 
 - Quand vous utilisez votre moteur de recherche favori pour rechercher du contenu relatif à Microsoft Intune, ajoutez `Intune` à vos mots clés de recherche.  
 
-  - Recherchez les résultats de docs.microsoft.com. Les résultats provenant de technet.microsoft.com ou msdn.microsoft.com concernent des versions de produits plus anciennes.  
+  - Recherchez les résultats à partir de docs.microsoft.com. Les résultats provenant de technet.microsoft.com ou msdn.microsoft.com concernent des versions de produits plus anciennes.  
 
   - Pour concentrer davantage les résultats de la recherche sur la bibliothèque de contenu actuelle, ajoutez `site:docs.microsoft.com` afin de définir l’étendue à couvrir par le moteur de recherche.  
 
@@ -42,31 +42,31 @@ Pour obtenir une aide et une assistance générales sur Intune, consultez [obten
 
   - **Rechercher** en haut à droite. Pour effectuer une recherche dans tous les articles, entrez des termes dans ce champ. La recherche comprend automatiquement l’étendue de recherche Intune.
 
-  - **Filtrer par titre** au-dessus de la table des matières de gauche. Pour effectuer une recherche dans la table des matières, entrez des termes dans ce champ. Ce champ permet de rechercher uniquement les termes qui apparaissent dans les titres d’articles du nœud actuel. Le dernier élément dans les résultats de la recherche vous donne la possibilité de rechercher les termes dans la documentation Intune.
+  - **Filtrer par titre** au-dessus de la table des matières de gauche. Pour effectuer une recherche dans la table des matières, entrez des termes dans ce champ. Ce champ permet de rechercher uniquement les termes qui apparaissent dans les titres d’articles du nœud actuel. Le dernier élément des résultats de la recherche vous donne la possibilité de rechercher les termes dans la documentation Intune.
 
 - Vous n’arrivez pas à trouver quelque chose ? [Soumettez des commentaires !](#provide-doc-feedback) Quand vous soumettez un problème, indiquez le moteur de recherche utilisé, les mots clés essayés et l’article cible. Ces commentaires aident Microsoft à optimiser le contenu pour une meilleure recherche.  
 
-## <a name="provide-doc-feedback"></a>Fournir des commentaires sur doc
+## <a name="provide-doc-feedback"></a>Fournir des commentaires sur la documentation
 
-La section commentaires figure en bas de chaque article. Cliquez sur le lien **Commentaires** dans le coin supérieur droit d’un article pour accéder à cette section. Les commentaires sont intégrés aux problèmes GitHub. Pour plus d’informations sur l’intégration aux problèmes GitHub, consultez le [billet de blog consacré à la plateforme de documentation](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+La section Commentaires figure en bas de chaque article. Cliquez sur le lien **Commentaires** dans le coin supérieur droit d’un article pour accéder à cette section. Les commentaires sont intégrés aux problèmes GitHub. Pour plus d’informations sur l’intégration aux problèmes GitHub, consultez le [billet de blog consacré à la plateforme de documentation](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
 
-Pour partager des commentaires sur le service Intune (et non sur docs), cliquez sur Commentaires sur le **produit**.
+Pour partager des commentaires sur le service Intune (et non sur la documentation), cliquez sur **Commentaires sur le produit**.
 
 Si vous souhaitez fournir des commentaires sur la documentation, la possession d’un [compte GitHub](https://github.com/join) est un prérequis. Une fois que vous vous êtes connecté, vous disposez d’une autorisation à usage unique pour l’accès à MicrosoftDocs. Ensuite, lorsque vous cliquez sur **Commentaires sur les ressources**, entrez un titre et un commentaire, puis sélectionnez **Envoyer des commentaires**. Cette action permet de soumettre un nouveau problème relatif à l’article cible dans le [dépôt Intune GitHub](https://github.com/MicrosoftDocs/intunedocs/issues).
 
-Vous verrez également des problèmes existants en cours d’ouverture ou de fermeture pour l’article cible. S’il en existe, passez-les en revue avant de soumettre un nouveau problème. Si vous trouvez un problème connexe, cliquez sur l’émoticône pour ajouter une réaction, ou développez l’entrée correspondante pour ajouter un commentaire.
+Vous verrez également les problèmes résolus ou non résolus existants pour l’article cible. S’il en existe, passez-les en revue avant de soumettre un nouveau problème. Si vous trouvez un problème connexe, cliquez sur l’émoticône pour ajouter une réaction, ou développez l’entrée correspondante pour ajouter un commentaire.
 
 ### <a name="types-of-feedback"></a>Types de commentaire
 
 Utilisez la fonctionnalité Problèmes GitHub pour soumettre les types de commentaire suivants :
 
-- Bogue de la documentation : le contenu est obsolète, vague, confus ou fragmenté.
-- Amélioration de la documentation : suggestion d’amélioration de l’article.
-- Question sur la documentation : vous avez besoin d’aide pour trouver de la documentation existante.
-- Idée de documentation : suggestion d’un nouvel article. Utilisez cette méthode à la place de UserVoice pour les commentaires relatifs à la documentation.
-- Félicitations : commentaires positifs sur un article utile ou instructif !
-- Localisation : commentaires sur la traduction du contenu.
-- SEO (optimisation du référencement d’un site auprès d’un moteur de recherche) : commentaires sur les problèmes de recherche de contenu. Incluez le moteur de recherche, les mots clés et l’article cible dans les commentaires.
+- Bogue de documentation : le contenu est obsolète, vague, confus ou fragmenté.
+- Amélioration de la documentation : suggestion d’amélioration de l’article.
+- Question sur la documentation : vous avez besoin d’aide pour trouver de la documentation existante.
+- Idée de documentation : suggestion d’un nouvel article. Utilisez cette méthode à la place de UserVoice pour les commentaires relatifs à la documentation.
+- Félicitations : commentaires positifs sur un article utile ou instructif !
+- Localisation : commentaires sur la traduction du contenu.
+- Optimisation du référencement d’un site auprès d’un moteur de recherche (SEO) : commentaires sur les problèmes de recherche de contenu. Incluez le moteur de recherche, les mots clés et l’article cible dans les commentaires.
 
 Si des problèmes sont soumis pour des rubriques non liées à la documentation, par exemple des [commentaires sur le produit](https://microsoftintune.uservoice.com/forums/291681-ideas), des [questions sur le produit](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod) ou des [demandes de support](../get-support.md), ces problèmes sont fermés et les utilisateurs redirigés vers le canal de commentaires approprié.
 
@@ -74,7 +74,7 @@ Pour partager vos commentaires sur la plateforme docs.microsoft.com, accédez au
 
 ## <a name="contribute-to-docs"></a>Contribuer à la documentation
 
-Les documents Intune, comme la plupart des contenus sur docs.microsoft.com, sont Open-source sur GitHub. Cette bibliothèque accepte et encourage les contributions de la communauté. Pour plus d’informations sur la procédure à suivre, consultez le [Guide du contributeur](https://docs.microsoft.com/contribute). La création d’un compte [GitHub](https://github.com/join) est le seul prérequis.
+Les documents Intune, comme la plupart du contenu sur docs.microsoft.com, sont en open-source sur GitHub. Cette bibliothèque accepte et encourage les contributions de la communauté. Pour plus d’informations sur la procédure à suivre, consultez le [Guide du contributeur](https://docs.microsoft.com/contribute). La création d’un compte [GitHub](https://github.com/join) est le seul prérequis.
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Étapes de base pour contribuer à la documentation
 
@@ -82,13 +82,13 @@ Les documents Intune, comme la plupart des contenus sur docs.microsoft.com, sont
 
 2. Pour modifier le fichier source, cliquez sur l’icône de crayon.  
 
-3. Apportez vos changements à la source Markdown. Pour plus d’informations, consultez [Guide pratique pour utiliser Markdown et rédiger de la documentation](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Apportez vos changements à la source Markdown. Pour plus d’informations, consultez [Guide pratique pour utiliser Markdown et rédiger de la documentation](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
 
 4. Dans la section Propose file change (Proposer le changement d’un fichier), entrez un commentaire de validation publique décrivant *ce que* vous avez changé. Cliquez ensuite sur **Propose file change** (Proposer le changement d’un fichier).  
 
 5. Faites défiler vers le bas et vérifiez les changements apportés. Cliquez sur **Create pull request** (Créer une demande de tirage (pull request)) pour ouvrir le formulaire. Indiquez *pourquoi* vous avez effectué ce changement. Cliquez sur **Create pull request** (Créer une demande de tirage).
 
-L’équipe d’écriture recevra votre demande de tirage (pull request), affectera l’élément au writer approprié, examinera le texte et effectuera une modification rapide, puis approuvez et fusionnez les modifications ou contactez-vous pour obtenir plus d’informations sur la mise à jour.  
+L’équipe d’écriture recevra votre demande de tirage (pull request), affectera l’élément à l’enregistreur approprié, examinera le texte et effectuera une modification rapide, puis approuvera et fusionnera les modifications ou vous contactera pour obtenir plus d’informations sur la mise à jour.  
 
 ### <a name="what-to-contribute"></a>Type de contribution
 
@@ -105,7 +105,7 @@ Si vous souhaitez apporter votre contribution mais que vous ne savez pas par où
 
 ### <a name="tips"></a>Conseils
 
-Suivez ces instructions générales pour contribuer aux documents Intune :
+Suivez ces instructions générales pour contribuer à la documentation Intune :
 
 - Ne nous prenez pas au dépourvu avec des demandes de tirage (pull requests) volumineuses. À la place, [signalez un problème](#provide-doc-feedback) et lancez une discussion. Nous pouvons ensuite nous mettre d’accord sur la voie à suivre avant que vous n’investissiez une grande partie de votre temps.  
 
