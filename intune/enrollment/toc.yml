@@ -10,7 +10,7 @@
       href: device-management-capabilities.md
     - name: Options d’inscription
       href: enrollment-options.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   items:
     - name: Configurer l’inscription automatique
       href: quickstart-setup-auto-enrollment.md
@@ -20,7 +20,7 @@
   items:
     - name: Utiliser AutoPilot pour inscrire les appareils Windows
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Utiliser le programme DEP pour inscrire les appareils iOS
+    - name: Utiliser le programme DEP pour inscrire les appareils iOS/iPadOS
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Concepts
   items:
@@ -36,7 +36,7 @@
     - name: Authentification multifacteur
       href: multi-factor-authentication.md
       displayName: mfa; multifactor
-    - name: Gestionnaire d'inscription d'appareils
+    - name: Gestionnaire d’inscription d’appareil
       href: device-enrollment-manager-enroll.md
     - name: Mapper des appareils à des groupes
       href: device-group-mapping.md
@@ -84,12 +84,12 @@
         - name: Inscription Samsung Knox Mobile
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
-    - name: Configurer l’inscription iOS
+    - name: Configurer l’accord de mise en œuvre iOS/iPadOS
       href: ios-enroll.md
       items:
         - name: Programme d’inscription d’appareils
           href: device-enrollment-program-enroll-ios.md
-        - name: Configurer l’inscription des utilisateurs iOS et iPadOS
+        - name: Configurer l’accord de mise en œuvre des utilisateurs iOS et iPadOS
           href: ios-user-enrollment.md
         - name: Actions et options prises en charge par l'inscription des utilisateurs
           href: ios-user-enrollment-supported-actions.md
@@ -109,7 +109,7 @@
         - name: Résoudre les problèmes d’inscription d’appareils
           href: troubleshoot-device-enrollment-in-intune.md
           displayName: sso
-        - name: Résoudre les problèmes d’inscription des appareils iOS
+        - name: Détecter un problème d’accord de mise en œuvre des appareils iOS/iPadOS
           href: troubleshoot-ios-enrollment-errors.md
         - name: Résoudre les problèmes d’inscription des appareils Windows
           href: troubleshoot-windows-enrollment-errors.md
