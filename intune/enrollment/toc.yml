@@ -100,7 +100,7 @@
     - name: Configurer l’inscription macOS
       href: macos-enroll.md
       items:
-        - name: Programme d’inscription des appareils ou Apple School Manager
+        - name: Inscription automatisée des appareils
           href: device-enrollment-program-enroll-macos.md
     - name: Rapport d’inscription incomplet
       href: enrollment-report-company-portal-abandon.md

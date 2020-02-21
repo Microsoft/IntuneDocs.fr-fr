@@ -11,13 +11,13 @@ metadata:
   ms.collection: collection
   author: dougeby
   ms.author: dougeby
-  ms.date: 09/16/2019
-  ms.openlocfilehash: afd555e5f245ee9bc28bd21268ae64ae69afbad3
-  ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+  ms.date: 02/18/2020
+  ms.openlocfilehash: d6404a4c77507374b5e8759ba2078e541cde35d8
+  ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/16/2019
-  ms.locfileid: "72492542"
+  ms.lasthandoff: 02/20/2020
+  ms.locfileid: "77511049"
 landingContent:
 - title: Appliquer les fonctionnalités et les paramètres aux appareils
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: device-profiles.md
   - linkListType: quickstart
     links:
-    - text: Créer un profil d’appareil de messagerie pour iOS
+    - text: Créer un profil d’appareil de messagerie pour iOS/iPadOS
       url: quickstart-email-profile.md
   - linkListType: how-to-guide
     links:
@@ -69,11 +69,11 @@ landingContent:
       url: wi-fi-settings-configure.md
     - text: Contrôler l’accès, les comptes et les fonctionnalités d’alimentation sur des PC partagés ou des appareils multi-utilisateurs
       url: shared-user-device-settings.md
-- title: Paramètres pour iOS
+- title: Paramètres pour iOS/iPadOS
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Ajouter des paramètres de fonctionnalité d’appareil iOS
+    - text: Ajouter des paramètres de fonctionnalité d’appareil iOS/iPadOS
       url: device-features-configure.md
     - text: Configurer les paramètres de restriction d’appareil
       url: device-restrictions-configure.md
@@ -81,7 +81,7 @@ landingContent:
       url: email-settings-configure.md
     - text: Créer des profils VPN pour se connecter à des serveurs VPN
       url: vpn-settings-configure.md
-    - text: Créer des profils VPN par application pour les appareils iOS
+    - text: Créer des profils VPN par application pour les appareils iOS/iPadOS
       url: vpn-setting-configure-per-app.md
     - text: Ajouter et utiliser des paramètres Wi-Fi sur vos appareils
       url: wi-fi-settings-configure.md
@@ -89,7 +89,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Ajouter des paramètres de fonctionnalité d’appareil iOS
+    - text: Ajouter des paramètres de fonctionnalité d’appareil iOS/iPadOS
       url: device-features-configure.md
     - text: Configurer les paramètres de restriction d’appareil
       url: device-restrictions-configure.md
@@ -137,7 +137,7 @@ landingContent:
       url: device-restrictions-android.md
     - text: Android Entreprise
       url: device-restrictions-android-for-work.md
-    - text: iOS
+    - text: iOS/iPadOS
       url: ios-device-features-settings.md
     - text: macOS
       url: macos-device-features-settings.md
