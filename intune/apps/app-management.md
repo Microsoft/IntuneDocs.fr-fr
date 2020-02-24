@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564366"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414704"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Qu’est-ce que la gestion des applications Microsoft Intune ?
 
@@ -51,7 +51,7 @@ La MAM Intune prend en charge deux configurations :
 
 Intune propose toute une gamme de fonctionnalités qui vous permettent de gérer les applications dont vous avez besoin sur les appareils de votre choix. Le tableau suivant fournit un récapitulatif des fonctionnalités de gestion des applications.
 
-|  | Android/Android Enterprise | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Ajouter et affecter des applications à des appareils et à des utilisateurs | Oui | Oui | Oui | Oui | Oui |
 | Affecter des applications à des appareils non inscrits auprès d’Intune | Oui | Oui | Non | Non | Non |
@@ -98,7 +98,7 @@ Les quatre prochaines sections décrivent les options disponibles dans le volet 
   - [Stratégies de protection des applications](app-protection-policies.md).
 - **Réinitialisation sélective des applications** : sélectionnez cette option pour supprimer uniquement les données d’entreprise de l’appareil d’un utilisateur spécifique. Pour plus d'informations, voir :
   - [Réinitialisation sélective des applications](apps-selective-wipe.md).
-- **Profils de provisionnement d’application iOS** : les applications iOS incluent un profil de provisionnement et un code signé par un certificat. Lors de l’expiration du certificat, l’application ne peut plus être exécutée. Intune vous fournit les outils nécessaires pour affecter de manière proactive une nouvelle stratégie de profil de provisionnement aux appareils dont les applications arrivent à expiration. Pour plus d'informations, voir :
+- **Profils de provisionnement d’application iOS** : les applications iOS/iPadOS comportent un profil de provisionnement et un code signé par un certificat. Lors de l’expiration du certificat, l’application ne peut plus être exécutée. Intune vous fournit les outils nécessaires pour affecter de manière proactive une nouvelle stratégie de profil de provisionnement aux appareils dont les applications arrivent à expiration. Pour plus d'informations, voir :
   - [Profils de provisionnement d’applications iOS](app-provisioning-profile-ios.md).
 
 Pour plus d’informations sur cette section, consultez [Gérer des applications](app-management.md).
@@ -115,7 +115,7 @@ Pour plus d’informations sur cette section, consultez [Gérer des applications
 Pour plus d’informations sur cette section, consultez [Surveiller les applications](apps-monitor.md).
 
 ### <a name="set-up"></a>Configurer
-- **Jetons VPP iOS** : appliquez et affichez vos licences du programme VPP (programme d’achat en volume) iOS. Pour plus d'informations, voir :
+- **Jetons VPP iOS** : appliquez et affichez vos licences VPP (Programme d’achat en volume) iOS/iPadOS. Pour plus d'informations, voir :
   - [Applications iOS achetées en volume](vpp-apps-ios.md)
 - **Certificat d’entreprise Windows** : appliquez ou affichez l’état d’un certificat de signature de code permettant de distribuer des applications métier sur vos appareils Windows gérés.
 - **Certificat Symantec Windows** : appliquez ou affichez l’état d’un certificat de signature de code Symantec permettant de distribuer des fichiers appx XAP et WP8.x sur des appareils Windows 10 Mobile.

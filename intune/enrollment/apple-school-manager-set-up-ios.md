@@ -1,7 +1,7 @@
 ---
-title: Inscription au programme Apple School Manager pour les appareils iOS
+title: Inscription au programme Apple School Manager pour les appareils iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Découvrez comment configurer l’inscription au programme Apple School Manager pour les appareils iOS d’entreprise avec Intune.
+description: Découvrez comment configurer l’inscription au programme Apple School Manager pour les appareils iOS/iPadOS détenus par l’entreprise avec Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 3336ed09c414538e2879a7c50d1e3a0111f58b11
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691819"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415375"
 ---
-# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Configurer l’inscription des appareils iOS avec Apple School Manager
+# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configuration de l’inscription des appareils iOS/iPadOS avec Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Vous pouvez configurer Intune pour inscrire des appareils iOS achetés dans le cadre du programme [Apple School Manager](https://school.apple.com/). En utilisant Intune avec Apple School Manager, vous pouvez inscrire de grandes quantités d’appareils iOS sans jamais les avoir en main. Quand un étudiant ou un enseignant active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion.
+Vous pouvez configurer Intune de façon à inscrire les appareils iOS/iPadOS achetés dans le cadre du programme [Apple School Manager](https://school.apple.com/). Intune avec Apple School Manager permet d’inscrire un grand nombre d’appareils iOS/iPadOS sans aucune manipulation. Quand un étudiant ou un enseignant active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion.
 
 Pour activer l’inscription Apple School Manager, vous utilisez à la fois les portails Intune et Apple School Manager. Une liste de numéros de série ou un numéro de bon de commande est nécessaire pour que vous puissiez affecter des appareils à Intune à des fins de gestion. Vous créez des profils d’inscription DEP contenant les paramètres appliqués aux appareils lors de l’inscription.
 
 L’inscription à Apple School Manager n’est pas compatible avec le [Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md) ni avec le [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
 
-**Prérequis**
+**Conditions préalables**
 - [Certificat push Apple Mobile Device Management (MDM)](apple-mdm-push-certificate-get.md)
 - [Autorité MDM](../fundamentals/mdm-authority-set.md)
 - [Certificat Push MDM Apple](apple-mdm-push-certificate-get.md)
@@ -44,7 +44,7 @@ L’inscription à Apple School Manager n’est pas compatible avec le [Programm
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Obtenir un jeton Apple et affecter des appareils
 
-Avant de pouvoir inscrire des appareils iOS d’entreprise avec Apple School Manager, vous devez obtenir un fichier de jeton (.p7m) auprès d’Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils participant à Apple School Manager. Il permet également à Intune d'effectuer des chargements de profil d'inscription vers Apple et d'attribuer des appareils à ces profils. Lorsque vous vous trouvez dans le portail Apple, vous pouvez également affecter des numéros de série d’appareil à gérer.
+Pour pouvoir inscrire des appareils iOS/iPadOS détenus par l’entreprise avec Apple School Manager, il vous faut obtenir un fichier de jeton (.p7m) auprès d’Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils participant à Apple School Manager. Il permet également à Intune d'effectuer des chargements de profil d'inscription vers Apple et d'attribuer des appareils à ces profils. Lorsque vous vous trouvez dans le portail Apple, vous pouvez également affecter des numéros de série d’appareil à gérer.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Étape 1. Télécharger le certificat de clé publique Intune nécessaire à la création d’un jeton Apple
 
@@ -76,7 +76,7 @@ Dans le [Centre d’administration du Gestionnaire de points de terminaison Micr
 ![Capture d’écran : spécification de l’ID Apple utilisé pour créer le jeton du programme d’inscription et accès à ce jeton.](./media/apple-school-manager-set-up-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>Étape 4. Charger le jeton
-Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisissez **Ouvrir**, puis **Créer**. Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS en envoyant la stratégie aux appareils mobiles inscrits. Intune synchronise automatiquement les appareils Apple School Manager auprès d’Apple.
+Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem), choisissez **Ouvrir**, puis **Créer**. Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS/iPadOS en envoyant la stratégie aux appareils mobiles inscrits. Intune synchronise automatiquement les appareils Apple School Manager auprès d’Apple.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
 Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils Apple School. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
@@ -106,7 +106,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
     > Ces fonctionnalités ne sont pas prises en charge lors de l’authentification avec l’Assistant Configuration Apple.
 
 6. Choisissez **Paramètres de gestion des appareils** et indiquez si vous souhaitez que les appareils utilisant ce profil soient supervisés ou non.
-    Les appareils **supervisés** offrent plus d’options de gestion ; le Verrouillage d’activation est par défaut désactivé. Microsoft recommande l’utilisation du Programme d’inscription des appareils comme mécanisme d’activation du mode supervisé, en particulier pour les organisations qui déploient un grand nombre d’appareils iOS.
+    Les appareils **supervisés** offrent plus d’options de gestion ; le Verrouillage d’activation est par défaut désactivé. Microsoft recommande d’utiliser le Programme DEP comme mécanisme d’activation du mode supervisé, en particulier pour les organisations qui déploient un grand nombre d’appareils iOS/iPadOS.
 
     Les utilisateurs sont informés du fait que leurs appareils sont supervisés de deux manières :
 
@@ -114,9 +114,9 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
    - L’écran **Paramètres** > **Général** > **À propos de** indique : « Cet iPhone est supervisé. Contoso peut surveiller votre trafic Internet et localiser cet appareil. »
 
      > [!NOTE]
-     > Seul Apple Configurator permet de rétablir la supervision sur un appareil inscrit sans supervision. Pour cela, l’appareil iOS doit être relié à un Mac par câble USB. Découvrez plus d’informations sur ceci dans la [documentation d’Apple Configurator](http://help.apple.com/configurator/mac/2.3).
+     > Seul Apple Configurator permet de rétablir la supervision sur un appareil inscrit sans supervision. Pour cela, l’appareil iOS/iPadOS doit être relié à un Mac par câble USB. Découvrez plus d’informations sur ceci dans la [documentation d’Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Choisissez si vous souhaitez que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Une fois l’appareil inscrit, vous ne pouvez plus modifier ce paramètre sans réinitialiser l’appareil. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
+7. Choisissez si vous souhaitez que l’inscription soit verrouillée pour les appareils possédant ce profil. **L’inscription verrouillée** désactive les paramètres iOS/iPadOS qui permettent de supprimer le profil de gestion du menu **Paramètres**. Une fois l’appareil inscrit, vous ne pouvez plus modifier ce paramètre sans réinitialiser l’appareil. Pour ces appareils, le Mode d’administration **Supervisé** doit avoir la valeur *Oui*. 
 
 8. Vous pouvez autoriser plusieurs utilisateurs à se connecter à des iPad inscrits en utilisant un ID Apple géré. Pour cela, choisissez **Oui** sous  **iPad partagé** (cette option nécessite de définir **Inscription sans affinité utilisateur** et le mode **Supervisé** sur **Oui**). Les ID Apple gérés sont créés dans le portail Apple School Manager. En savoir plus sur l’option [iPad partagé](../fundamentals/education-settings-configure-ios-shared.md) et les [spécifications pour iPad partagé d’Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
@@ -128,14 +128,14 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 12. Choisissez **OK**.
 
-13. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration.](./media/apple-school-manager-set-up-ios/setupassistantcustom.png)
+13. Choisissez **Paramètres de l’Assistant Configuration** pour configurer les paramètres de profil suivants : ![Personnalisation de l’Assistant Configuration](./media/apple-school-manager-set-up-ios/setupassistantcustom.png)
 
 
     |                 Paramètre                  |                                                                                               Description                                                                                               |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |     <strong>Nom du service</strong>     |                                                             S’affiche quand l’utilisateur appuie sur <strong>À propos de la configuration</strong> pendant l’activation.                                                              |
     |    <strong>Numéro de téléphone du service</strong>     |                                                          S’affiche quand l’utilisateur clique sur le bouton <strong>Besoin d’aide</strong> pendant l’activation.                                                          |
-    | <strong>Options de l’Assistant Configuration</strong> |                                                     Les paramètres facultatifs suivants pourront être configurés plus tard dans le menu <strong>Paramètres</strong> d’iOS.                                                      |
+    | <strong>Options de l’Assistant Configuration</strong> |                                                     Les paramètres facultatifs suivants pourront être configurés plus tard dans le menu <strong>Paramètres</strong> d’iOS/iPadOS.                                                      |
     |        <strong>Code secret</strong>         | Invite à saisir un code secret pendant l’activation. Exige toujours un code secret pour les appareils non sécurisés, sauf si l’accès est contrôlé d’une autre façon (par ex. en mode plein écran, qui limite l’appareil à une seule application). |
     |    <strong>Services d’emplacement</strong>    |                                                                 Si cette option est activée, l’Assistant Configuration invite à spécifier le service pendant l’activation.                                                                  |
     |         <strong>Restauration</strong>         |                                                                Si cette option est activée, l’Assistant Configuration invite à spécifier la sauvegarde iCloud pendant l’activation.                                                                 |
@@ -184,4 +184,4 @@ Un profil d’inscription doit être affecté aux appareils Apple School Manager
 
 ## <a name="distribute-devices-to-users"></a>Distribuer des appareils aux utilisateurs
 
-Vous avez activé la gestion et la synchronisation entre Apple et Intune, et attribué un profil permettant aux appareils Apple School de s’inscrire. Vous pouvez désormais distribuer les appareils aux utilisateurs. Quand un appareil Apple School Manager iOS est activé, il est inscrit pour être géré par Intune. Les profils ne peuvent pas être appliqués aux appareils activés en cours d'utilisation tant que l'appareil n'a pas été effacé.
+Vous avez activé la gestion et la synchronisation entre Apple et Intune, et attribué un profil permettant aux appareils Apple School de s’inscrire. Vous pouvez désormais distribuer les appareils aux utilisateurs. Quand un appareil Apple School Manager iOS/iPadOS est allumé, il est inscrit pour être géré par Intune. Les profils ne peuvent pas être appliqués aux appareils activés en cours d'utilisation tant que l'appareil n'a pas été effacé.

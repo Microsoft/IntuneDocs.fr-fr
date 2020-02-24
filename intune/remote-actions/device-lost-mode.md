@@ -1,6 +1,6 @@
 ---
-title: Activer le mode Perdu iOS avec Microsoft Intune - Azure | Microsoft Docs
-description: Activez ou démarrez le mode Perdu pour personnaliser un message qui s’affiche sur l’écran de verrouillage d’un appareil iOS perdu ou volé à l’aide de Microsoft Intune. Obtenez également plus d’informations sur la sécurité et les informations de confidentialité lors de l’utilisation de l’action mode Perdu.
+title: Activation du mode Perdu iOS/iPadOS avec Microsoft Intune – Azure | Microsoft Docs
+description: Activez ou démarrez le mode Perdu pour personnaliser un message qui s’affichera sur l’écran de verrouillage d’un appareil iOS/iPadOS perdu ou volé avec Microsoft Intune. Obtenez également plus d’informations sur la sécurité et les informations de confidentialité lors de l’utilisation de l’action mode Perdu.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2956be9e32587c3bf86ce009a6927269c11ffced
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a4103c819c0d4bd377b9c6ab2359cb7465cdd9c
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712241"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415603"
 ---
-# <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Activer le mode Perdu sur des appareils iOS avec Intune
+# <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Activation du mode Perdu sur les appareils iOS/iPadOS avec Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-L’action d’appareil **Mode Perdu** vous permet d’activer le mode Perdu sur les appareils iOS perdus ou volés. Ce mode vous permet d’entrer un message et un numéro de téléphone qui s’affichent sur l’écran de verrouillage de l’appareil. Pour utiliser le mode Perdu, l’appareil doit être un appareil iOS en mode supervisé.
+L’action d’appareil **Mode Perdu** permet d’activer le mode Perdu sur les appareils iOS/iPadOS perdus ou volés. Ce mode vous permet d’entrer un message et un numéro de téléphone qui s’affichent sur l’écran de verrouillage de l’appareil. Le mode Perdu ne peut être utilisé que sur un appareil iOS/iPadOS détenu par l’entreprise en mode supervisé.
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
-- iOS 9.3 et version ultérieure
+- Version 9.3 et versions ultérieures d’iOS/iPadOS
 
 Cette fonctionnalité n’est pas prise en charge pour : 
 - Windows
@@ -43,7 +43,7 @@ Cette fonctionnalité n’est pas prise en charge pour :
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Sélectionnez **Appareils**, puis **Tous les appareils**.
-4. Dans la liste des appareils que vous gérez, choisissez un appareil iOS, puis choisissez l’action **Mode perdu (supervisé uniquement)** .
+4. Dans la liste des appareils que vous gérez, choisissez un appareil iOS/iPadOS, puis sélectionnez **Mode perdu (supervisé uniquement)** .
 5. Sous **Mode perdu**, sélectionnez **Activer**.
 6. Dans **Message à afficher sur l’écran de verrouillage**, tapez un message à afficher sur l’écran de verrouillage de l’appareil.
 7. Si vous le souhaitez, entrez un numéro de téléphone dans la zone **Numéro de téléphone à afficher**.

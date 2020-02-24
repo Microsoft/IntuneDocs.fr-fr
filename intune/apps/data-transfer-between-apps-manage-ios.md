@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ae9b3b1ab274e236ad43c52569574718d3eec4
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: ef9810f9414af4d1f57fa71189a6960b491800c0
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839305"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414884"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Comment gérer les transferts de données entre applications iOS dans Microsoft Intune
 
@@ -45,7 +45,7 @@ Utilisez des stratégies de protection des applications avec la fonctionnalité 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurer le paramètre UPN d’utilisateur pour Microsoft Intune ou une solution de gestion de la mobilité d’entreprise tierce
 Le paramètre UPN d’utilisateur est **requis** pour les appareils gérés par Intune ou par une solution de gestion de la mobilité d’entreprise tierce pour identifier le compte d'utilisateur inscrit. La configuration de l’UPN fonctionne avec les stratégies de protection des applications que vous déployez depuis Intune. La procédure suivante est un flux général indiquant comment configurer le paramètre UPN et l’expérience utilisateur qui en résulte :
 
-1. Dans le [portail Azure](https://portal.azure.com), [créez et attribuez une stratégie de protection des applications](app-protection-policies.md) pour iOS. Configurez les paramètres de stratégie selon les besoins de votre entreprise et sélectionnez les applications iOS qui doivent disposer de cette stratégie.
+1. Sur le [Portail Azure](https://portal.azure.com), [créez et attribuez une stratégie de protection d’applications](app-protection-policies.md) pour iOS/iPadOS. Configurez les paramètres de stratégie selon les besoins de votre entreprise et sélectionnez les applications iOS qui doivent disposer de cette stratégie.
 
 2. Déployez les applications et le profil de messagerie que vous souhaitez gérer par le biais d’Intune ou de votre solution MDM tierce en suivant les étapes généralisées suivantes. Cette expérience est également abordée dans l’*Exemple 1*.
 

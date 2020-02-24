@@ -1,7 +1,7 @@
 ---
-title: 'Tutoriel : Utiliser Apple Business Manager ou le Programme d’inscription des appareils pour inscrire des appareils iOS dans Intune'
+title: 'Tutoriel : Inscription des appareils iOS/iPadOS dans Intune avec Apple Business Manager ou le Programme d’inscription des appareils'
 titleSuffix: Microsoft Intune
-description: Dans ce tutoriel, vous allez configurer les fonctionnalités d’inscription des appareils d’entreprise d’Apple en utilisant ABM pour inscrire des appareils iOS dans Intune.
+description: Dans ce tutoriel, vous allez configurer les fonctionnalités d’inscription des appareils d’entreprise d’Apple avec ABM pour inscrire des appareils iOS/iPadOS dans Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,14 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
-ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
+ms.openlocfilehash: 9aab0233c05416fc50413a7889435cb221179730
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971776"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415144"
 ---
-# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Tutoriel : Utiliser les fonctionnalités d’inscription des appareils d’entreprise d’Apple dans Apple Business Manager (ABM) pour inscrire des appareils iOS dans Intune
+# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutoriel : Inscription des appareils iOS/iPadOS dans Intune avec les fonctionnalités d’inscription des appareils d’entreprise d’Apple dans Apple Business Manager (ABM)
 Les fonctionnalités d’inscription des appareils dans Apple Business Manager simplifient l’inscription des appareils. Intune prend également en charge l’ancien portail du Programme d’inscription des appareils (DEP) d’Apple, mais nous vous encourageons à utiliser Apple Business Manager. Avec Microsoft Intune et l’inscription des appareils d’entreprise d’Apple, les appareils sont inscrits de façon automatique et sécurisée la première fois que l’utilisateur allume l’appareil. Vous pouvez par conséquent livrer des appareils à de nombreux utilisateurs sans avoir à configurer chaque appareil individuellement. 
 
 Dans ce tutoriel, vous apprendrez à :
@@ -40,7 +40,7 @@ Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’ess
 - Obtenir un [certificat Push MDM Apple](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-device-enrollment-token"></a>Obtenir un jeton d’inscription des appareils Apple
-Avant d’inscrire des appareils iOS avec les fonctionnalités d’inscription des appareils d’entreprise d’Apple, vous avez besoin d’un fichier de jeton (.pem) d’inscription des appareils Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils Apple appartenant à votre entreprise. Il permet également à Intune de charger des profils d’inscription sur Apple et d’attribuer des appareils à ces profils.
+Avant d’inscrire des appareils iOS/iPadOS avec les fonctionnalités d’inscription des appareils d’entreprise d’Apple, il vous faut un fichier de jeton (.pem) d’inscription des appareils Apple. Ce jeton permet à Intune de synchroniser les informations sur les appareils Apple appartenant à votre entreprise. Il permet également à Intune de charger des profils d’inscription sur Apple et d’attribuer des appareils à ces profils.
 
 Vous utilisez le portail ABM ou DEP pour créer un jeton d’inscription d’appareil. Vous utilisez également les portails pour affecter des appareils à Intune en vue de les gérer.
 
@@ -78,13 +78,13 @@ Vous utilisez le portail ABM ou DEP pour créer un jeton d’inscription d’app
 11. Si vous souhaitez appliquer des balises d’étendue pour limiter les administrateurs qui ont accès à ce jeton, sélectionnez les étendues.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Créer un profil d’inscription Apple
-Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils iOS appartenant à l’entreprise. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
+Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d’inscription pour les appareils iOS/iPadOS détenus par l’entreprise. Un profil d'inscription d'appareil définit les paramètres appliqués à un groupe d'appareils lors de l’inscription.
 
 1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription**.
 
 2. Sélectionnez le jeton que vous venez d’installer et choisissez **Profils** > **Créer un profil**.
 
-3. Sous **Créer un profil**, entrez *TestDEPProfile* pour **Nom** et *Testing DEP for iOS devices* pour **Description** . Les utilisateurs ne voient pas ces détails.
+3. Sous **Créer un profil**, entrez *TestDEPProfile* comme **Nom** et *Tester le Programme DEP pour les appareils iOS/iPadOS* comme **Description**. Les utilisateurs ne voient pas ces détails.
 
 4. Choisissez **iOS** sous **Plateforme**.
 
@@ -96,11 +96,11 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 8. Si vous avez choisi d’inscrire avec l’affinité utilisateur, de vous authentifier avec le Portail d’entreprise et d’installer le Portail d’entreprise avec VPP, décidez si vous souhaitez exécuter le Portail d’entreprise en mode mono-application jusqu’à l’authentification. Ce paramètre vous permet de vous assurer que l’utilisateur n’a pas accès à d’autres applications tant qu’il n’a pas terminé l’inscription d’entreprise. Si vous souhaitez limiter l’utilisateur à ce flux tant que l’inscription n’est pas terminée, choisissez **Oui** sous **Exécuter le Portail d’entreprise en mode mono-application jusqu’à l’authentification**. 
 
-9. Choisissez **Paramètres de gestion des appareils** et choisissez **Oui** sous **Supervisé**. Les appareils supervisés vous donnent la plupart des options de gestion pour vos appareils iOS d’entreprise.
+9. Choisissez **Paramètres de gestion des appareils** et choisissez **Oui** sous **Supervisé**. Les appareils supervisés sont ceux qui offrent le plus d’options de gestion pour les appareils iOS/iPadOS d’entreprise.
 
 10. Choisissez **Oui** sous **Inscription verrouillée** pour être sûr que vos utilisateurs ne peuvent pas supprimer la gestion de l’appareil d’entreprise. 
 
-11. Choisissez une option sous **Synchroniser avec des ordinateurs** pour déterminer si les appareils iOS peuvent être synchronisés avec les ordinateurs.
+11. Choisissez une option sous **Synchroniser avec des ordinateurs** pour déterminer si les appareils iOS/iPadOS peuvent se synchroniser avec des ordinateurs.
 
 12. Par défaut, Apple nomme l’appareil avec le type d’appareil (par exemple, iPad). Si vous souhaitez fournir un modèle de nom différent, choisissez **Oui** sous **Appliquer le modèle de nom d’appareil**. Entrez le nom que vous souhaitez appliquer aux appareils, où les chaînes *{{SERIAL}}* et *{{DEVICETYPE}}* sont remplacées par le numéro de série et le type de chaque appareil. Sinon, choisissez **Non** sous **Appliquer le modèle de nom d’appareil**.
 
@@ -118,9 +118,9 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 Après avoir configuré un jeton du programme d’inscription avec le portail DEP ABM ou ASM et affecté des appareils sur le serveur MDM, vous pouvez attendre que ces appareils soient synchronisés avec le service Intune ou lancer manuellement une synchronisation. Sans synchronisation manuelle, les appareils peuvent prendre jusqu’à 24 heures pour apparaître dans le portail Azure.
 
-1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**.
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**.
 
-## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Affecter un profil d’inscription à des appareils iOS
+## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Affectation d’un profil d’inscription à des appareils iOS/iPadOS
 
 Vous devez affecter un profil de programme d’inscription aux appareils pour pouvoir les inscrire. Ces appareils sont synchronisés avec Intune à partir d’Apple et doivent se voir affectés le bon jeton de serveur MDM dans le portail ABM, ASM ou DEP.
 
@@ -134,12 +134,12 @@ Vous avez configuré la gestion et la synchronisation entre Apple et Intune, et 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous trouverez plus d’informations sur les autres options disponibles pour l’inscription des appareils iOS.
+Vous trouverez plus d’informations sur les autres options disponibles pour l’inscription des appareils iOS/iPadOS.
 
 > [!div class="nextstepaction"]
-> [Article détaillé sur l’inscription DEP iOS](device-enrollment-program-enroll-ios.md)
+> [Article détaillé sur l’inscription des appareils iOS/iPadOS au Programme DEP](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources
-<!--If you don't want to use iOS corporate enrolled devices anymore, you can delete them.>
+<!--If you don't want to use iOS/iPadOS corporate enrolled devices anymore, you can delete them.>
 <!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>

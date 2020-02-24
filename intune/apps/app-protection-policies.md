@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885759"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437900"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -65,7 +65,7 @@ Lorsque vous créez une stratégie de protection d’applications pour les appli
     | Valeur/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Cibler sur les applications figurant sur tous les types d’appareils | Utilisez cette option pour cibler votre stratégie sur les applications figurant sur des appareils présentant un état de gestion quelconque. Choisissez **Non** pour cibler des applications sur des types d’appareils spécifiques. Pour plus d’informations, consultez [Cibler les stratégies de protection d’application en fonction de l’état de la gestion des appareils](#target-app-protection-policies-based-on-device-management-state). |
-    |     Types d’appareils | Utilisez cette option pour indiquer si cette stratégie s’applique aux appareils gérés par MDM ou aux appareils non gérés. Pour les stratégies de protection des applications iOS, sélectionnez **Appareils non gérés** ou **Appareils gérés**. Pour les stratégies de protection des applications Android, sélectionnez **Appareils non gérés**, **Administrateur d’appareil Android** et **Android Entreprise**.  |
+    |     Types d’appareils | Utilisez cette option pour indiquer si cette stratégie s’applique aux appareils gérés par MDM ou aux appareils non gérés. Dans le cas des stratégies de protection d’applications iOS/iPadOS, sélectionnez **Appareils non gérés** ou **Appareils gérés**. Pour les stratégies de protection des applications Android, sélectionnez **Appareils non gérés**, **Administrateur d’appareil Android** et **Android Entreprise**.  |
     | Applications publiques | Cliquez sur **Sélectionner des applications publiques** pour choisir les applications à cibler. |
     | Applications personnalisées | Cliquez sur **Sélectionner des applications personnalisées** pour sélectionner les applications personnalisées à cibler en fonction d’un ID d’offre groupée. |
     
@@ -103,7 +103,7 @@ Lorsque vous créez une stratégie de protection d’applications pour les appli
 
 Les utilisateurs finaux peuvent télécharger les applications à partir de l’App Store ou de Google Play. Pour plus d'informations, voir :
 * [Ce qui se passe quand votre application Android est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-android.md)
-* [Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-ios.md)
+* [Ce qui se passe quand l’application iOS/iPadOS est gérée par des stratégies de protection d’applications](../fundamentals/end-user-mam-apps-ios.md)
 
 ## <a name="change-existing-policies"></a>Modifier des stratégies existantes
 Vous pouvez modifier une stratégie existante et l’appliquer aux utilisateurs ciblés. Toutefois, quand vous changez des stratégies existantes, les utilisateurs déjà connectés aux applications ne voient pas ces changements pendant une période de huit heures.
@@ -123,7 +123,7 @@ Pour voir immédiatement l’effet des changements, l’utilisateur final doit s
     | Valeur/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Cibler sur les applications figurant sur tous les types d’appareils | Utilisez cette option pour cibler votre stratégie sur les applications figurant sur des appareils présentant un état de gestion quelconque. Choisissez **Non** pour cibler des applications sur des types d’appareils spécifiques. Pour plus d’informations, consultez [Cibler les stratégies de protection d’application en fonction de l’état de la gestion des appareils](#target-app-protection-policies-based-on-device-management-state). |
-    |     Types d’appareils | Utilisez cette option pour indiquer si cette stratégie s’applique aux appareils gérés par MDM ou aux appareils non gérés. Pour les stratégies de protection des applications iOS, sélectionnez **Appareils non gérés** ou **Appareils gérés**. Pour les stratégies de protection des applications Android, sélectionnez **Appareils non gérés**, **Administrateur d’appareil Android** et **Android Entreprise**.  |
+    |     Types d’appareils | Utilisez cette option pour indiquer si cette stratégie s’applique aux appareils gérés par MDM ou aux appareils non gérés. Dans le cas des stratégies de protection d’applications iOS/iPadOS, sélectionnez **Appareils non gérés** ou **Appareils gérés**. Pour les stratégies de protection des applications Android, sélectionnez **Appareils non gérés**, **Administrateur d’appareil Android** et **Android Entreprise**.  |
     | Applications publiques | Cliquez sur **Sélectionner des applications publiques** pour choisir les applications à cibler. |
     | Applications personnalisées | Cliquez sur **Sélectionner des applications personnalisées** pour sélectionner les applications personnalisées à cibler en fonction d’un ID d’offre groupée. |
 
@@ -166,7 +166,7 @@ Pour voir immédiatement l’effet des changements, l’utilisateur final doit s
 ## <a name="target-app-protection-policies-based-on-device-management-state"></a>Cibler les stratégies de protection d’application en fonction de l’état de la gestion des appareils
 Dans de nombreuses organisations, il est courant d’autoriser les utilisateurs finaux à se servir à la fois d’appareils gérés par Intune MDM (Mobile Device Management), par exemple les appareils d’entreprise, et d’appareils non gérés, protégés uniquement à l’aide des stratégies de protection des applications Intune. Les appareils non gérés sont souvent appelés appareils BYOD (Apportez votre propre appareil).
 
-Dans la mesure où les stratégies de protection des applications Intune ciblent l’identité d’un utilisateur, les paramètres de protection d’un utilisateur peuvent s’appliquer à la fois aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non gérés par MDM). Ainsi, vous pouvez cibler une stratégie de protection des applications Intune sur des appareils iOS et Android inscrits ou non inscrits auprès d’Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. Pour plus d’informations sur le fonctionnement de cette stratégie sur les appareils personnels Android Entreprise, consultez [Stratégies de protection des applications et profils professionnels](android-deployment-scenarios-app-protection-work-profiles.md).
+Dans la mesure où les stratégies de protection des applications Intune ciblent l’identité d’un utilisateur, les paramètres de protection d’un utilisateur peuvent s’appliquer à la fois aux appareils inscrits (gérés par MDM) et aux appareils non inscrits (non gérés par MDM). Ainsi, vous pouvez cibler une stratégie Intune App Protection sur des appareils iOS/iPadOS et Android inscrits ou non auprès d’Intune. Vous pouvez avoir une stratégie de protection pour les appareils non gérés dans laquelle des contrôles de protection contre la perte de données (DLP) stricts sont en place, et une stratégie de protection distincte pour les appareils gérés par MDM, où les contrôles DLP peuvent être un peu plus souples. Pour plus d’informations sur le fonctionnement de cette stratégie sur les appareils personnels Android Entreprise, consultez [Stratégies de protection des applications et profils professionnels](android-deployment-scenarios-app-protection-work-profiles.md).
 
 Pour créer ces stratégies, accédez à **Applications** > **Stratégies de protection des applications** dans la console Intune, puis sélectionnez **Créer une stratégie**. Vous pouvez également modifier une stratégie de protection d’application existante. Pour que la stratégie de protection des applications s’applique aux appareils gérés et non gérés, accédez à la page **Applications** et vérifiez que l’option **Cibler les applications de tous les types d’appareil** a la valeur par défaut **Oui**. Si vous souhaitez effectuer une affectation précise en fonction de l’état de gestion, affectez à l’option **Cibler les applications de tous les types d’appareil** la valeur **Non**. 
 
@@ -182,15 +182,15 @@ Pour créer ces stratégies, accédez à **Applications** > **Stratégies de pro
 
 Pour iOS, des paramètres de configuration d’application supplémentaires sont nécessaires pour cibler les paramètres de stratégie de protection d’application (APP) sur des applications se trouvant sur des appareils inscrits auprès d’Intune :
 
-- **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS dans Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** doit être configuré pour toutes les applications gérées MDM tierces et métier. Le paramètre **IntuneMAMDeviceID** doit être configuré avec, comme valeur, le jeton d’ID d’appareil. Par exemple, `key=IntuneMAMDeviceID, value={{deviceID}}`. Pour plus d’informations, consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md).
+- **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS/iPadOS dans Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- **IntuneMAMDeviceID** doit être configuré pour toutes les applications gérées MDM tierces et métier. Le paramètre **IntuneMAMDeviceID** doit être configuré avec, comme valeur, le jeton d’ID d’appareil. Par exemple, `key=IntuneMAMDeviceID, value={{deviceID}}`. Pour plus d’informations, consultez [Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés](app-configuration-policies-use-ios.md).
 - Si seul le paramètre **IntuneMAMDeviceID** est configuré, l’application Intune considère l’appareil comme non géré.
 
 > [!NOTE]
-> Pour plus d’informations sur la prise en charge iOS des stratégies de protection d’application basées sur l’état de la gestion des appareils, consultez [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state) (Ciblage des stratégies de protection MAM en fonction de l’état de la gestion).
+> Pour plus d’informations sur la prise en charge iOS/iPadOS des stratégies de protection d’applications en fonction de l’état de la gestion des appareils, consultez [Stratégies de protection MAM ciblées en fonction de l’état de la gestion](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
 
 ## <a name="policy-settings"></a>Paramètres de stratégie
-Pour afficher la liste complète des paramètres de stratégie pour iOS et Android, sélectionnez l’un des liens suivants :
+Pour afficher la liste complète des paramètres de stratégie pour iOS/iPadOS et Android, sélectionnez l’un des liens suivants :
 
 - [Stratégies iOS](app-protection-policy-settings-ios.md)
 - [Stratégies Android](app-protection-policy-settings-android.md)
@@ -200,4 +200,4 @@ Pour afficher la liste complète des paramètres de stratégie pour iOS et Andro
 
 ## <a name="see-also"></a>Voir aussi
 * [Ce qui se passe quand votre application Android est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-android.md)
-* [Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-ios.md)
+* [Ce qui se passe quand l’application iOS/iPadOS est gérée par des stratégies de protection d’applications](../fundamentals/end-user-mam-apps-ios.md)

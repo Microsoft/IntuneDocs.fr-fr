@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a5629e6a318836e23c6a2f7fceb59363a0ed72
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812492"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415542"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -35,8 +35,8 @@ Ce document décrit à la fois la réinitialisation du code secret au niveau de 
 | ---- | ---- |
 | Appareils Android version 6.x ou antérieure | Oui |
 | Appareils Android Entreprise inscrits comme Propriétaire d'appareil | Oui |
-| Appareils iOS | Oui |
-| Appareils iOS inscrits avec l’inscription utilisateur | Non |
+| Appareils iOS/iPadOS | Oui |
+| Appareils iOS/iPadOS inscrits avec l’inscription des utilisateurs | Non |
 | Appareils Android inscrits avec un profil professionnel | Non |
 | Appareils Android version 7.0 ou supérieure | Non |
 | macOS | Non |
@@ -68,9 +68,9 @@ Les appareils Android Entreprise pris en charge et inscrits avec un profil profe
 Pour les appareils Android Entreprise exécutant la version 8.x ou ultérieure, et inscrits avec un profil professionnel, les utilisateurs finaux reçoivent une notification les invitant à activer leur code secret de réinitialisation une fois l’inscription effectuée. La notification s’affiche si un mot de passe de profil professionnel est imposé et défini. Une fois le code secret entré, la notification disparaît.
 
 
-## <a name="remove-ios-passcodes"></a>Supprimer les codes secrets iOS
+## <a name="remove-iosipados-passcodes"></a>Suppression des codes secrets iOS/iPadOS
 
-Au lieu d’être réinitialisés, les codes secrets sont supprimés des appareils iOS. Si une stratégie de conformité relative au code secret est définie, l’appareil invite l’utilisateur à définir un nouveau mot de passe dans les paramètres.
+Au lieu d’être réinitialisés, les codes secrets sont supprimés des appareils iOS/iPadOS. Si une stratégie de conformité relative au code secret est définie, l’appareil invite l’utilisateur à définir un nouveau mot de passe dans les paramètres.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

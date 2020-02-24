@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206905"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415481"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutoriel : Configurer Slack afin d’utiliser Intune pour l’EMM et la configuration d’applications
 
@@ -69,7 +69,7 @@ Ajouter Slack pour l’EMM en tant qu’application iOS managée dans Intune et 
 10. Cliquez sur **Save**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Ajouter une stratégie de configuration des applications pour Slack pour l’EMM
-Ajouter une stratégie de configuration des applications pour Slack pour l’EMM iOS. Les stratégies de configuration pour les appareils gérés étant spécifiques à la plateforme, vous devez ajouter une stratégie distincte pour vos utilisateurs Slack sur des appareils Android.
+Ajoutez une stratégie de configuration des applications pour Slack pour la gestion EMM iOS/iPadOS. Les stratégies de configuration pour les appareils gérés étant spécifiques à la plateforme, vous devez ajouter une stratégie distincte pour vos utilisateurs Slack sur des appareils Android.
 1. Dans le Centre d’administration, sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter** > **Appareils gérés**.
 2. Dans Nom, entrez « Test de la stratégie de configuration de l’application Slack ».
 3. Sous le type d’inscription de l’appareil, confirmez que **Appareils gérés** est bien défini.

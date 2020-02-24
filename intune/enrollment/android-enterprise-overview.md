@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5c980b3f9ababaf94aa7b279e533679ed74b0e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6941b3b79dd690c9861c8efead7f525e56e2b350
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503361"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415415"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Gérer les appareils avec profil professionnel Android avec Intune
 
@@ -55,7 +55,7 @@ Android Entreprise fournit une infrastructure pour le déploiement de valeurs de
 
 ## <a name="email-configuration"></a>Configuration de la messagerie
 
-Android Entreprise ne fournit pas d’application de messagerie par défaut ou de profil de messagerie natif, contrairement à iOS. Par contre, vous pouvez définir les configurations de messagerie en appliquant les paramètres de configuration d’application aux applications de messagerie qui les prennent en charge. Gmail et Nine Work sont deux applications clientes Exchange ActiveSync (EAS) du Play Store, qui prennent en charge la configuration avec la configuration d’applications Android Entreprise.
+Android Entreprise ne fournit pas d’application de messagerie par défaut ou de profil de messagerie natif, contrairement à iOS/iPadOS. Par contre, vous pouvez définir les configurations de messagerie en appliquant les paramètres de configuration d’application aux applications de messagerie qui les prennent en charge. Gmail et Nine Work sont deux applications clientes Exchange ActiveSync (EAS) du Play Store, qui prennent en charge la configuration avec la configuration d’applications Android Entreprise.
 
 Intune fournit des modèles de configuration pour les applications Gmail et Nine Work gérées en tant qu’applications de travail. Les autres applications de messagerie qui prennent en charge les profils de configuration d’application peuvent être configurées avec des stratégies de configuration d’application mobile.
 

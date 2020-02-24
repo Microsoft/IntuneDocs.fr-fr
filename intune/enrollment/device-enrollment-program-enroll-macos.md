@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 697e950c881a0c4233358d8363aa6cc7ec0006b2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d55139a106599664f801a6bf73b0e0e8db24b57a
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832676"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414487"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
 
@@ -80,7 +80,7 @@ Le portail Apple permet de créer un jeton et d’affecter des appareils à Intu
 
 5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.
 
-6. Accédez à **Programme de déploiement** &gt; **Programme d’inscription d’appareils** &gt; **Gérer les appareils**.
+6. Accédez à **Programmes de déploiement** &gt; **Programme d’inscription des appareils** &gt; **Gérer les appareils**.
 7. Sous **Choisir les appareils par**, spécifiez comment les appareils sont identifiés :
     - **Numéro de série**
     - **Numéro de commande**
@@ -165,7 +165,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchroniser Intune avec Apple pour voir vos appareils gérés dans le portail Azure d’Intune.
 
-1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Capture d’écran du nœud Appareils du programme d’inscription sélectionné, avec choix du lien Synchroniser.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du Programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Capture d’écran du nœud Appareils du programme d’inscription sélectionné, avec choix du lien Synchroniser.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Pour être conforme aux conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
    - Une synchronisation complète ne peut pas s’exécuter plus d’une fois tous les sept jours. Pendant une synchronisation complète, Intune extrait toute la liste actualisée des numéros de série attribués au serveur MDM Apple connecté à Intune. Si vous supprimez un appareil faisant partie du Programme d’inscription dans le portail Intune sans l’avoir désinscrit du serveur MDM Apple dans le portail DEP, il ne sera pas réimporté dans Intune tant que la synchronisation ne sera pas terminée.   
@@ -181,12 +181,12 @@ Vous devez affecter un profil de programme d’inscription aux appareils pour po
 
 ### <a name="assign-a-default-profile"></a>Attribuer un profil par défaut
 
-Vous pouvez choisir un profil macOS et iOS à appliquer par défaut à tous les appareils qui s’inscrivent avec un jeton spécifique. 
+Vous pouvez choisir un profil macOS et iOS/iPadOS à appliquer par défaut à tous les appareils qui s’inscrivent avec un jeton spécifique. 
 
 1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **macOS** > **Inscription macOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste.
 2. Sélectionnez **Définir un profil par défaut**, choisissez un profil dans la liste déroulante, puis sélectionnez **Enregistrer**. Ce profil s’appliquera à tous les appareils qui s’inscriront avec ce jeton.
 
-## <a name="distribute-devices"></a>Distribuer des appareils
+## <a name="distribute-devices"></a>Distribuer les appareils
 
 Vous avez activé la gestion et la synchronisation entre Apple et Intune, et affecté un profil permettant d’inscrire les appareils. Vous pouvez désormais distribuer les appareils aux utilisateurs. Pour les appareils avec affinité utilisateur, chaque utilisateur doit se voir attribuer une licence Intune. Les appareils sans affinité utilisateur nécessitent une licence d’appareil. Un appareil activé ne peut pas appliquer un profil d’inscription tant qu’il n’est pas réinitialisé.
 

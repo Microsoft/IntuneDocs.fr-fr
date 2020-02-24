@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 96cd4997029c15396db91e9866bbb387c20f1044
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755372"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414444"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Ajouter des applications intégrées à Microsoft Intune
 
-Le type d’application *Intégré* vous permet d’attribuer facilement des applications gérées organisées, comme les applications Office 365, à des appareils iOS et Android. Vous pouvez affecter des applications spécifiques à ce type d’application, comme Excel, OneDrive, Outlook, Skype et d’autres. Une fois que vous avez ajouté une application, elle s’affiche avec le type *Application iOS intégrée* ou *Application Android intégrée*. En utilisant le type application intégrée, vous pouvez choisir les applications à publier pour les utilisateurs d’appareils.
+Le type d’application *intégrée* permet d’attribuer facilement des applications gérées organisées, comme les applications Office 365, à des appareils iOS/iPadOS et Android. Vous pouvez affecter des applications spécifiques à ce type d’application, comme Excel, OneDrive, Outlook, Skype et d’autres. Une fois que vous avez ajouté une application, elle s’affiche avec le type *Application iOS intégrée* ou *Application Android intégrée*. En utilisant le type application intégrée, vous pouvez choisir les applications à publier pour les utilisateurs d’appareils.
 
 Dans les versions antérieures de la console Intune, Intune fournissait plusieurs applications Office 365 gérées par défaut, par exemple Outlook et OneDrive. Les types de ces applications gérées étaient *Application de l’App Store iOS gérée* ou *Application Android gérée*. Au lieu d’utiliser ces types d’application, nous vous recommandons d’utiliser le type application intégrée. En utilisant le type application intégrée, vous disposez d’une flexibilité supplémentaire pour modifier et supprimer des applications Office 365.
 

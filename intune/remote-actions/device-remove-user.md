@@ -1,7 +1,7 @@
 ---
-title: Supprimer un utilisateur d’un appareil iOS avec Microsoft Intune
+title: Suppression d’un utilisateur d’un appareil iOS/iPadOS avec Microsoft Intune
 titleSuffix: ''
-description: Découvrez comment supprimer un utilisateur d’un appareil iOS partagé avec Intune.
+description: Découvrez comment supprimer un utilisateur d’un appareil iOS/iPadOS partagé avec Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 772cdbe203b0489a9b2312a1cc10ea1b3182b35d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8b6b2b3492b9edece6b69e4b302741c0443c0a3e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713161"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415570"
 ---
-# <a name="remove-a-user-from-a-shared-ios-device"></a>Supprimer un utilisateur d’un appareil iOS partagé
+# <a name="remove-a-user-from-a-shared-iosipados-device"></a>Suppression d’un utilisateur d’un appareil iOS/iPadOS partagé
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-L’action **Supprimer l’utilisateur** supprime un utilisateur que vous sélectionnez dans le cache local sur un iPad partagé. L’iPad doit être configuré pour gérer l’application iOS Classroom à l’aide d’un [profil Éducation iOS](../fundamentals/education-settings-configure-ios.md). 
+L’action **Supprimer l’utilisateur** supprime un utilisateur que vous sélectionnez dans le cache local sur un iPad partagé. L’iPad doit être configuré de façon à gérer l’application iOS/iPadOS Classroom avec un [profil Enseignement iOS/iPadOS](../fundamentals/education-settings-configure-ios.md). 
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
 - Windows - Non prise en charge
 - Windows Phone - Non prise en charge
-- iOS - Prise en charge d’iOS 9.3 et ultérieur (appareils iPad partagés uniquement)
+- iOS/iPadOS – Prise en charge sur la version 9.3 et les versions ultérieures d’iOS/iPadOS (appareils iPad partagés uniquement)
 - macOS - Non prise en charge
 - Android - Non prise en charge
 
@@ -43,7 +43,7 @@ L’action **Supprimer l’utilisateur** supprime un utilisateur que vous sélec
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Appareils** > **Tous les appareils**.
-3. Dans la liste des appareils que vous gérez, sélectionnez un appareil iOS.
+3. Dans la liste des appareils que vous gérez, sélectionnez un appareil iOS/iPadOS.
 4. Dans le volet de l’appareil, sélectionnez **Utilisateurs**.
 5. Dans la liste, cliquez avec le bouton droit sur l’utilisateur que vous souhaitez supprimer, puis sélectionnez **Supprimer l’utilisateur**.
 

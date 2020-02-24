@@ -16,12 +16,12 @@ ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8c502bd42d3290bd03c0ce954d55de3073c3f2d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7c1ff18a7923d7502e12a9bdb33931089fada6e3
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503216"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414239"
 ---
 # <a name="enrollment-options-for-devices-managed-by-intune"></a>Options d’inscription pour les appareils gérés par Intune
 
@@ -42,7 +42,7 @@ En savoir plus sur les [restrictions d’inscription](enrollment-restrictions-se
 
 ## <a name="enable-apple-device-enrollment"></a>Autoriser l’inscription des appareils Apple
 
-L’inscription des appareils iOS et macOS nécessite un certificat Push MDM. En savoir plus sur les [certificats Push MDM](apple-mdm-push-certificate-get.md).
+Un certificat Push MDM est nécessaire pour l’inscription des appareils iOS/iPadOS et macOS. En savoir plus sur les [certificats Push MDM](apple-mdm-push-certificate-get.md).
 
 ## <a name="corporate-identifiers"></a>Identificateurs d’entreprise
 
@@ -51,7 +51,7 @@ Vous pouvez recenser les numéros IMEI (International Mobile Equipment Identifie
 
 Vous pouvez demander aux utilisateurs d’utiliser une méthode de vérification supplémentaire, comme un téléphone, un code PIN ou des données biométriques, quand ils inscrivent un appareil. Découvrez plus d’informations sur [l’authentification multifacteur](multi-factor-authentication.md).
 
-## <a name="device-enrollment-manager"></a>Gestionnaire d'inscription d'appareils
+## <a name="device-enrollment-manager"></a>Gestionnaire d’inscription d’appareil
 Vous pouvez attribuer le rôle de gestionnaire d’inscription d’appareils à des utilisateurs.  Ceux-ci peuvent alors inscrire un grand nombre d’appareils mobiles avec un même compte d’utilisateur. Un compte de gestionnaire d’inscription d’appareils permet d’inscrire jusqu’à 1 000 appareils. En savoir plus sur les [gestionnaires d’inscription d’appareils](device-enrollment-manager-enroll.md).
 
 ## <a name="device-categories"></a>Catégories d’appareils

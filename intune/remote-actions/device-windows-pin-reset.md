@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: c4b3313d5ec7fe81944431276a63bfafb7a1b3dc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907217"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413630"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Réinitialiser le code secret sur des appareils Windows à l’aide d’Intune
 
@@ -60,7 +60,7 @@ Remplacez *ID de locataire* par l’ID de votre annuaire Azure AD, qui est répe
 Affectez à ce fournisseur de services de configuration la valeur **True**.
 
 > [!TIP]
-> Après avoir créé la stratégie, vous l’affectez (ou la déployez) à un groupe. La stratégie peut être affectée à des groupes d’utilisateurs ou à des groupes d’appareils. Si vous l’affectez à un groupe d’utilisateurs, celui-ci peut comprendre des utilisateurs qui ont d’autres appareils, par exemple des appareils IOS. Techniquement, la stratégie ne s’applique pas, mais ces appareils sont quand même inclus dans les détails d’état.
+> Après avoir créé la stratégie, vous l’affectez (ou la déployez) à un groupe. La stratégie peut être affectée à des groupes d’utilisateurs ou à des groupes d’appareils. Si vous l’affectez à un groupe d’utilisateurs, celui-ci peut comprendre des utilisateurs disposant d’autres appareils, par exemple des appareils iOS/iPadOS. Techniquement, la stratégie ne s’applique pas, mais ces appareils sont quand même inclus dans les détails d’état.
 
 ## <a name="reset-the-passcode"></a>Réinitialiser le code secret
 

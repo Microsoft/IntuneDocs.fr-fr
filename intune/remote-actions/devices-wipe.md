@@ -1,6 +1,6 @@
 ---
 title: Mettre hors service ou réinitialiser des appareils avec Microsoft Intune - Azure | Microsoft Docs
-description: Mettez hors service ou réinitialisez un appareil sur un appareil Android, Profil professionnel Android, iOS, macOS ou Windows avec Microsoft Intune. Découvrez également comment supprimer un appareil d’Azure Active Directory.
+description: Mettez hors service ou réinitialisez un appareil Android, Profil professionnel Android, iOS/iPadOS, macOS ou Windows avec Microsoft Intune. Découvrez également comment supprimer un appareil d’Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812456"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415516"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -43,7 +43,7 @@ L’action **Réinitialiser** rétablit les paramètres d’usine d’un apparei
 
 
 > [!NOTE]
-> L'action Effacer n'est pas disponible pour les appareils iOS inscrits avec l'inscription utilisateur.
+> L’action Réinitialiser n’est pas disponible sur les appareils iOS/iPadOS inscrits avec l’inscription des utilisateurs.
 
 L’option **Conserver le compte d’utilisateur et l’état d’inscription** est disponible uniquement pour Windows 10 version 1709 ou ultérieure.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc2e77db1aa322eb70c64d82ddca238f49b39fb2
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: 7018e2ab4290219c752f44b4b391822438461e8e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125028"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415090"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -55,7 +55,11 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
-## <a name="week-of-february-03-2020"></a>Semaine du 03 février 2020
+## <a name="week-of-february-10-2020"></a>Semaine du 10 février 2020
+
+### <a name="windows-7-ends-extended-support---3042987--"></a>Fin du support étendu Windows 7 <!--3042987-->
+Windows 7 a atteint la fin du support étendu le 14 janvier 2020. Intune déconseille depuis cette date la prise en charge des appareils Windows 7. L’assistance technique et les mises à jour automatiques qui vous permettent de protéger votre PC ne sont plus disponibles. Nous vous recommandons de passer à Windows 10. Pour plus d’informations, consultez le [billet de blog Calendrier des modifications](https://aka.ms/Windows7_Intune).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Gestion des applications
@@ -63,11 +67,11 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 #### <a name="microsoft-edge-version-77-and-later-on-windows-10-devices---5843584---"></a>Microsoft Edge version 77 et ultérieures sur des appareils Windows 10<!-- 5843584 -->
 Intune prend désormais en charge la désinstallation de Microsoft Edge version 77 et ultérieures sur les appareils Windows 10. Pour plus d’informations, consultez [Ajouter Microsoft Edge pour Windows 10 à Microsoft Intune](~/apps/apps-windows-edge.md).
 
-#### <a name="company-portal-app-improved-performance---6178652---"></a>Amélioration des performances de l’application Portail d’entreprise<!-- 6178652 -->
-L’application Portail d’entreprise a été mise à jour pour prendre en charge les performances améliorées des appareils qui utilisent des processeurs ARM64, notamment Surface Pro X. Auparavant, Portail d’entreprise fonctionnait dans un mode ARM32 émulé. À présent, l’application Portail d’entreprise est compilée en mode natif pour ARM64. Pour plus d’informations sur l’application Portail d’entreprise, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).
-
 #### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>Écran supprimé du portail d’entreprise, inscription de profil professionnel Android<!--6103987 -->
 L’écran **Quelle est la prochaine étape**  a été supprimé du flux d’inscription de profil professionnel Android dans le portail d’entreprise, afin de faciliter l’expérience utilisateur. Accédez à [Inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) pour voir la mise à jour du flux d’inscription de profil professionnel Android.  
+
+#### <a name="company-portal-app-improved-performance---6178652---"></a>Amélioration des performances de l’application Portail d’entreprise<!-- 6178652 -->
+L’application Portail d’entreprise a été mise à jour pour prendre en charge les performances améliorées des appareils qui utilisent des processeurs ARM64, notamment Surface Pro X. Auparavant, Portail d’entreprise fonctionnait dans un mode ARM32 émulé. À présent, dans la version 10.4.7080.0 et les versions ultérieures, l’application Portail d’entreprise est compilée en mode natif pour ARM64. Pour plus d’informations sur l’application Portail d’entreprise, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).
 
 <!-- ########################## -->
 ## <a name="week-of-january-27-2020"></a>Semaine du 27 janvier 2020

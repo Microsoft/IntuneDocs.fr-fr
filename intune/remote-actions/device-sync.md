@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1001a7a3fde9c203fdad3d146ace57736ae7128d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 21167b226556100e7e9920f31f859d6d6ce2a7bb
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713445"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415531"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchroniser des appareils pour obtenir les stratégies et les actions les plus récentes avec Intune
 
@@ -49,7 +49,7 @@ Vous pouvez trouver les fréquences d’archivage standard des stratégies Intun
 
 ## <a name="retryable-error-codes"></a>Codes d’erreur renouvelable
 
-Quand un administrateur exécute l’action d’appareil **Synchroniser**, les applications iOS et Android qui ont rencontré un échec et généré un code d’erreur renouvelable sont toujours disponibles sur l’appareil. Cependant, les applications qui ont généré un code d’erreur non renouvelable doivent attendre sept jours avant d’être à nouveau disponibles sur l’appareil.
+Quand un administrateur exécute l’action d’appareil **Synchroniser**, les applications iOS/iPadOS et Android qui ont rencontré un échec et généré un code d’erreur avec nouvelle tentative possible sont toujours disponibles sur l’appareil. Cependant, les applications qui ont généré un code d’erreur non renouvelable doivent attendre sept jours avant d’être à nouveau disponibles sur l’appareil.
 
 
 | Code d'erreur  | Description suggérée | Renouvelable |

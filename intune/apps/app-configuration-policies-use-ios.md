@@ -1,7 +1,7 @@
 ---
-title: Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
+title: Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés
 titleSuffix: Microsoft Intune
-description: Apprenez à utiliser les stratégies de configuration d’applications pour fournir des données de configuration à une application iOS quand elle est exécutée.
+description: Découvrez comment utiliser les stratégies de configuration des applications pour fournir des données de configuration à une application iOS/iPadOS quand elle s’exécute.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755763"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77438002"
 ---
-# <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés | Microsoft Docs
+# <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration personnalisés pour une application iOS. Ces paramètres de configuration permettent la personnalisation d’une application en fonction des indications des fournisseurs de l’application. Vous devez obtenir ces paramètres de configuration (les clés et les valeurs) auprès du fournisseur de l’application. Pour configurer l’application, vous spécifiez les paramètres sous forme de clés et de valeurs, ou en tant que fichier XML contenant les clés et les valeurs.
+Utilisez des stratégies de configuration des applications dans Microsoft Intune afin de fournir des paramètres de configuration personnalisés pour une application iOS/iPadOS. Ces paramètres de configuration permettent la personnalisation d’une application en fonction des indications des fournisseurs de l’application. Vous devez obtenir ces paramètres de configuration (les clés et les valeurs) auprès du fournisseur de l’application. Pour configurer l’application, vous spécifiez les paramètres sous forme de clés et de valeurs, ou en tant que fichier XML contenant les clés et les valeurs.
 
 En tant qu’administrateur Microsoft Intune, vous pouvez contrôler les comptes d’utilisateur qui sont ajoutés aux applications Microsoft Office sur les appareils managés. Vous pouvez limiter l’accès uniquement aux comptes d’utilisateur professionnels autorisés, et bloquer les comptes personnels sur les appareils inscrits. Les applications connexes traitent la configuration d’application, suppriment et bloquent les comptes non approuvés. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général lors de sa première exécution.
 
@@ -41,7 +41,7 @@ Dès que vous ajoutez une stratégie de configuration d’application, vous pouv
 Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de configuration d’application, vous pouvez aussi choisir les groupes spécifiques à exclure. Pour plus d’informations, consultez [Inclure et exclure des affectations d’applications dans Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
-> Ce type de stratégie est disponible uniquement pour les appareils exécutant iOS 8.0 ou version ultérieure. Elle prend en charge les types d’installation d’application suivants :
+> Ce type de stratégie n’est disponible à l’heure actuelle que pour les appareils possédant la version 8.0 ou une version ultérieure d’iOS/iPadOS. Elle prend en charge les types d’installation d’application suivants :
 >
 > - **Application iOS gérée à partir de l’App Store**
 > - **Package d'application pour iOS**
@@ -106,7 +106,7 @@ Les caractères \{\{ et \}\} sont utilisés uniquement par les types de jetons. 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Autoriser uniquement les comptes d’organisation configurés dans les applications avec plusieurs identités 
 
-Pour les appareils iOS, utilisez les paires clé/valeur suivantes :
+Pour les appareils iOS/iPadOS, utilisez les paires clé/valeur suivantes :
 
 | **Key** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -177,17 +177,17 @@ De plus, Intune prend en charge les types de jetons suivants dans la liste de pr
 - \{\{deviceid\}\} : par exemple, **b9841cd9-9843-405f-be28-b2265c59ef97**
 - \{\{userid\}\} : par exemple, **3ec2c00f-b125-4519-acf0-302ac3761822**
 - \{\{username\}\} : par exemple, **John Doe**
-- \{\{serialnumber\}\} : par exemple, **F4KN99ZUG5V2** (pour les appareils iOS)
-- \{\{serialnumberlast4digits\}\} : par exemple, **G5V2** (pour les appareils iOS)
+- \{\{serialnumber\}\} : par exemple, **F4KN99ZUG5V2** (pour les appareils iOS/iPadOS)
+- \{\{serialnumberlast4digits\}\} : par exemple, **G5V2** (pour les appareils iOS/iPadOS)
 - \{\{aaddeviceid\}\} : par exemple **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Configuration de l’application Portail d’entreprise pour la prise en charge des appareils DEP iOS
 
-Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Toutefois, vous pouvez configurer l’application Portail d’entreprise pour prendre en charge les appareils DEP iOS en procédant comme suit.
+Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Toutefois, vous pouvez configurer l’application Portail d’entreprise de façon à prendre en charge les appareils DEP iOS/iPadOS suivant les étapes ci-dessous.
 
 1. Dans Intune, ajoutez l’application Portail d’entreprise Intune si nécessaire, en accédant à **Intune** > **Applications** > **Toutes les applications** > **Ajouter**.
 2. Accédez à **Applications** > **Stratégie de configuration des applications**, pour créer une stratégie de configuration des applications pour l’application Portail d’entreprise.
-3. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Pour plus d’informations sur la création d’une stratégie de configuration d’application et l’entrée de données XML, consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS managés](app-configuration-policies-use-ios.md).
+3. Créez une stratégie de configuration des applications avec le code XML ci-dessous. Pour plus d’informations sur la création d’une stratégie de configuration des applications et la saisie de données XML, consultez [Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>
@@ -205,11 +205,11 @@ Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont
 4. Dites aux utilisateurs finaux de se connecter à l’application Portail d’entreprise lorsqu’elle est automatiquement installée.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Suivre l’état de configuration d’applications iOS par appareil 
-Une fois qu’une stratégie de configuration a été affectée, vous pouvez suivre l’état de configuration d’applications iOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le volet correspondant. Dans le volet de l’appareil, sélectionnez **Configuration de l’application**.  
+Une fois une stratégie de configuration affectée, vous pouvez suivre l’état de configuration des applications iOS/iPadOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le volet correspondant. Dans le volet de l’appareil, sélectionnez **Configuration de l’application**.  
 
 ## <a name="additional-information"></a>Informations supplémentaires
 
-- [Déploiement des paramètres de configuration de l’application Outlook pour iOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Déploiement des paramètres de configuration des applications Outlook pour iOS/iPadOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

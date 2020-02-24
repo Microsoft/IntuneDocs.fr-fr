@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/2/2019
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
-ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
+ms.openlocfilehash: 9c6fb7da3a791d369fc3005367ee7670af8bc63e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2019
-ms.locfileid: "75324863"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414144"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Actions et options Intune prises en charge par l’inscription des utilisateurs d’Apple
 
 L'inscription des utilisateurs prend en charge un sous-ensemble d'options de gestion des appareils. Si un profil de configuration préexistant est appliqué à un appareil avec inscription des utilisateurs, seuls les paramètres pris en charge par l'inscription des utilisateurs seront appliqués à cet appareil.
 
 > [!NOTE]
-> La prise en charge de l'inscription des utilisateurs d’Apple dans Intune est actuellement en préversion.
+> La prise en charge de l’inscription des utilisateurs d’Apple dans Intune est actuellement en préversion pour iOS et iPadOS.
 
 ## <a name="password-settings"></a>Paramètres de mot de passe
 
@@ -107,19 +107,15 @@ Les options suivantes ne sont pas prises en charge sur les appareils inscrits av
 - Les stratégies de protection des applications s'appliqueront toujours à ces applications. Cependant, vous ne pourrez pas prendre en charge la gestion ou déployer une version gérée de ces applications, à moins que l'utilisateur ne les supprime de son appareil.
 - Actions, configurations, paramètres et commandes nécessitant une supervision. 
 
-## <a name="options-not-supported-in-preview"></a>Options non prises en charge dans la préversion
-- Restrictions de type d’appareil d’inscription pour autoriser/bloquer des appareils personnels 
 
 ## <a name="known-issues-in-preview"></a>Problèmes connus dans la préversion
 - Révocation de licence VPP : aucune notification indiquant que la licence a été révoquée n’apparaît. Le comportement actuel est que la révocation a réussi, mais que l’utilisateur final n’est pas notifié. 
 - Reporting sur les applications VPP : Dans le rapport situé dans Applications clientes > Applications > [Nom de l’application] > État de l’installation de l’appareil, les applications VPP déployées sur des appareils inscrits par l’utilisateur sont signalées comme « en échec », même lorsque l’application est correctement déployée sur l’appareil. 
 - Reporting sur les applications : pour les types d’applications non pris en charge avec l’inscription de l’utilisateur, les rapports peuvent fournir des messages d’erreur non pertinents. 
 - Expérience de l’application Portail d’entreprise : les utilisateurs voient toutes les applications qui leur sont destinées, que ces types d’applications soient pris en charge ou non pour les appareils inscrits par l’utilisateur. 
-- Expérience de l’application Portail d’entreprise : Les utilisateurs voient le même texte indiquant ce que les organisations peuvent et ne peuvent pas voir pour l’inscription des utilisateurs et des appareils.
-- Si un utilisateur sélectionne « Mon organisation possède cet appareil » lors de l’inscription, l’appareil est toujours identifié comme personnel dans Intune, sauf s’il a été modifié dans la console d’administration ou via Graph. 
-- Ciblage de l’inscription : iPadOS n’est pas listé dans le sélecteur de plateforme. iPadOS est pris en charge en préversion, mais n’est pas explicitement indiqué dans la console d’administration. 
+- Expérience de l’application Portail d’entreprise : Les utilisateurs voient le même texte indiquant ce que les organisations peuvent consulter pour l’inscription des utilisateurs et des appareils si l’administrateur a personnalisé le texte mentionnant les informations inaccessibles aux organisations.
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer l’inscription des utilisateurs iOS et iPadOS](ios-user-enrollment.md)
+[Configuration de l’inscription des utilisateurs iOS/iPadOS et iPadOS](ios-user-enrollment.md)

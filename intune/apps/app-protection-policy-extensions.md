@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ff4fcd7d1b2115c4fbe0bc00759ef3d60482904
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: e568bb5520b4f8cc242cb58a1ee48e8729f4e387
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692100"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414591"
 ---
 # <a name="protecting-application-extensions"></a>Protection des extensions d'applications
 
@@ -31,7 +31,7 @@ Cet article décrit les stratégies de protection des applications pour les exte
 
 ## <a name="add-ins-for-outlook-app"></a>Compléments d’application Outlook
 
-Les compléments Outlook vous permettent d’intégrer des applications populaires au client de messagerie. Les compléments pour Outlook sont disponibles sur les versions web, Windows, Mac et Outlook pour Android et iOS. Le kit de développement logiciel (SDK) APP Intune et les stratégies de protection d’application Intune n’incluent pas la prise en charge de la gestion des compléments pour Outlook, mais il existe d’autres façons de limiter leur utilisation. Étant donné que les compléments sont gérés par Microsoft Exchange, vous pourrez partager des données et des messages entre Outlook et les applications complémentaires non gérées, sauf si les compléments sont désactivés pour l’utilisateur par Exchange.
+Les compléments Outlook vous permettent d’intégrer des applications populaires au client de messagerie. Les compléments pour Outlook sont disponibles sur les versions web, Windows, Mac et Outlook pour Android et iOS/iPadOS. Le kit de développement logiciel (SDK) APP Intune et les stratégies de protection d’application Intune n’incluent pas la prise en charge de la gestion des compléments pour Outlook, mais il existe d’autres façons de limiter leur utilisation. Étant donné que les compléments sont gérés par Microsoft Exchange, vous pourrez partager des données et des messages entre Outlook et les applications complémentaires non gérées, sauf si les compléments sont désactivés pour l’utilisateur par Exchange.
 
 Si vous décidez d’empêcher vos utilisateurs d’accéder à et d’installer des compléments Outlook (cela affecte tous les clients Outlook), assurez-vous que les modifications suivantes sont apportées aux rôles dans le centre d’administration Exchange :
 

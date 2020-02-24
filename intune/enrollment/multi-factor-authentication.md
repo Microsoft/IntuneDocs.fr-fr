@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db04b93deffd2476a97b952fd1c6942fa79e1f05
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 14347d12888ff5ef61d4543409a08fbdeb371c89
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955386"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415215"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Exiger l’authentification multifacteur pour l’inscription d’appareils dans Intune
 
@@ -36,7 +36,7 @@ Elle nécessite au moins deux des méthodes de vérification suivantes :
 - Quelque chose que vous possédez (un appareil de confiance difficilement copiable, comme un téléphone).
 - Quelque chose qui vous représente (biométrie, comme une empreinte digitale).
 
-L’authentification multifacteur est prise en charge sur les appareils iOS, Android, Windows 8.1 ou ultérieur, Windows Phone 8.1 ou Windows 10 Mobile ou ultérieur.
+L’authentification MFA est prise en charge sur les appareils iOS/iPadOS, Android, Windows 8.1 et versions ultérieures, Windows Phone 8.1 et Windows 10 Mobile et versions ultérieures.
 
 Quand vous activez MFA, les utilisateurs finaux doivent fournir deux formes d’informations d’identification pour inscrire un appareil.
 

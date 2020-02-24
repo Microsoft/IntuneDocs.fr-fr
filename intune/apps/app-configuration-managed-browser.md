@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: babe556d6810ad027a1b0b3cae6364c99bc9a07c
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c7c47a829f8f609528f45b30d0dd9bf56d9d8eb9
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812518"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414905"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gérer l’accès web de l’entreprise à l’aide d’un navigateur protégé par une stratégie Microsoft Intune
 
@@ -42,7 +42,7 @@ En utilisant un navigateur protégé par une stratégie Intune (Microsoft Edge o
 
 ## <a name="microsoft-edge-support"></a>Prise en charge de Microsoft Edge
 
-Vous pouvez utiliser Microsoft Edge pour des scénarios d’entreprise sur des appareils iOS et Android. Microsoft Edge prend en charge les mêmes scénarios de gestion que la fonction Intune Managed Browser, avec en plus des améliorations apportées à l’expérience de l’utilisateur final. Les fonctionnalités d’entreprise Microsoft Edge suivantes activées par les stratégies Intune incluent :
+Vous pouvez utiliser Microsoft Edge pour des scénarios d’entreprise sur des appareils iOS/iPadOS et Android. Microsoft Edge prend en charge les mêmes scénarios de gestion que la fonction Intune Managed Browser, avec en plus des améliorations apportées à l’expérience de l’utilisateur final. Les fonctionnalités d’entreprise Microsoft Edge suivantes activées par les stratégies Intune incluent :
 
 - **Double identité** : les utilisateurs peuvent ajouter à la fois un compte professionnel, mais aussi un compte personnel, pour la navigation. Il existe une séparation complète entre les deux identités, ce qui est similaire à l’architecture et à l’expérience proposées dans Microsoft Office 365 et Outlook. Les administrateurs Intune pourront définir les stratégies souhaitées pour une expérience de navigation protégée au sein du compte professionnel. 
 - **Intégration de la stratégie de protection des applications Intune** : les administrateurs peuvent maintenant cibler des stratégies de protection des applications sur Microsoft Edge, y compris le contrôle des fonctions Couper, Copier et Coller, la prévention des captures d’écran et la vérification que les liens sélectionnés par l’utilisateur s’ouvrent uniquement dans d’autres applications managées.
@@ -57,9 +57,9 @@ Microsoft Edge et Intune Managed Browser sont des applications de navigation web
 
 Configuration requise du système d’exploitation pour les stratégies de navigateur :
 - Android 4 et ultérieur ou
-- iOS 8.0 et ultérieur.
+- Version 8.0 et versions ultérieures d’iOS/iPadOS.
 
-Les versions antérieures d’Android et d’iOS pourront encore utiliser Managed Browser, mais elles ne pourront pas installer les nouvelles versions de l’application et n’auront peut-être pas accès à toutes les fonctionnalités. Nous vous encourageons à mettre à jour le système d’exploitation de ces appareils avec une version prise en charge.
+Les versions antérieures d’Android et d’iOS/iPadOS pourront encore utiliser Managed Browser, mais elles ne pourront pas installer les nouvelles versions de l’application et n’auront peut-être pas accès à toutes ses fonctionnalités. Nous vous encourageons à mettre à jour le système d’exploitation de ces appareils avec une version prise en charge.
 
 >[!NOTE]
 >Managed Browser ne prend pas en charge le protocole de chiffrement SSLv3 (Secure Sockets Layer version 3).
@@ -123,9 +123,9 @@ Managed Browser ne prend pas en charge les stratégies d’accès conditionnel c
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Authentification unique auprès des applications web connectées à Azure AD dans les navigateurs protégés par une stratégie
 
-Microsoft Edge et Intune Managed Browser sur iOS et Android peuvent tirer parti de la fonctionnalité SSO (authentification unique) auprès de toutes les applications web (SaaS et locales) connectées à Azure AD. Quand l’application Microsoft Authenticator est présente sur iOS ou l’application Portail d’entreprise Intune sur Android, les utilisateurs d’un navigateur protégé par une stratégie peuvent accéder aux applications web connectées à Azure AD sans avoir à entrer de nouveau leurs informations d’identification.
+Microsoft Edge et Intune Managed Browser sur iOS/iPadOS et Android peuvent tirer parti de l’authentification SSO auprès de toutes les applications web (SaaS et locales) connectées à Azure AD. Quand l’application Microsoft Authenticator est présente sur iOS/iPadOS ou l’application Portail d’entreprise Intune sur Android, les utilisateurs d’un navigateur protégé par une stratégie peuvent accéder aux applications web connectées à Azure AD sans avoir à entrer de nouveau leurs informations d’identification.
 
-Pour permettre l’utilisation de SSO, votre appareil doit être inscrit par l’application Microsoft Authenticator sur iOS ou le Portail d’entreprise Intune sur Android. Les utilisateurs disposant de l’application Authenticator ou Portail d’entreprise Intune sont invités à inscrire leur appareil quand ils accèdent à une application web connectée à Azure AD dans un navigateur protégé par une stratégie, si ce dernier n’est pas déjà inscrit par une autre application. Une fois que l’appareil est inscrit avec le compte géré par Intune, l’authentification unique est activée dans ce compte pour les applications web connectées à Azure AD. 
+Pour permettre l’utilisation de l’authentification SSO, votre appareil doit être inscrit par l’application Microsoft Authenticator sur iOS/iPadOS ou le Portail d’entreprise Intune sur Android. Les utilisateurs disposant de l’application Authenticator ou Portail d’entreprise Intune sont invités à inscrire leur appareil quand ils accèdent à une application web connectée à Azure AD dans un navigateur protégé par une stratégie, si ce dernier n’est pas déjà inscrit par une autre application. Une fois que l’appareil est inscrit avec le compte géré par Intune, l’authentification unique est activée dans ce compte pour les applications web connectées à Azure AD. 
 
 > [!NOTE]
 > L’inscription d’un appareil est un simple enregistrement auprès du service Azure AD. Elle ne nécessite pas une inscription complète et ne donne aucun autre privilège supplémentaire sur l’appareil.
@@ -138,7 +138,7 @@ Pour permettre l’utilisation de SSO, votre appareil doit être inscrit par l�
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter** > **Applications gérées**.
 3. Dans la page **Concepts de base** du volet **Créer une stratégie de configuration d’application**, entrez un **Nom** et une **Description facultative** pour les paramètres de configuration de l’application.
-4. Choisissez **Sélectionner l’application publique**, puis **Managed Browser** et/ou **Edge** pour iOS, pour Android, ou les deux.
+4. Choisissez **Sélectionner l’application publique**, puis **Managed Browser** ou **Edge** pour iOS/iPadOS, Android ou les deux.
 5. Cliquez sur **Sélectionner** pour revenir au volet **Créer une stratégie de configuration d'application**.
 6. Cliquez sur **Suivant** pour afficher la page **Paramètres**.
 7. Dans la page **Paramètres**, vous définissez des paires clé / valeur afin de fournir des configurations pour l’application. Consultez les sections plus bas dans cet article pour en savoir plus sur les différentes paires clé/valeur que vous pouvez définir.
@@ -186,7 +186,7 @@ Utilisation de la procédure ci-dessus pour créer une configuration d’applica
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Configurer des paramètres de proxy d’application pour les navigateurs protégés
 
-Microsoft Edge, Intune Managed Browser et le [Proxy d’application Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) peuvent être utilisés ensemble afin de prendre en charge les scénarios suivants pour les utilisateurs d’appareils iOS et Android :
+Microsoft Edge, Intune Managed Browser et le [Proxy d’application Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) peuvent être utilisés ensemble afin de prendre en charge les scénarios suivants pour les utilisateurs d’appareils iOS/iPadOS et Android :
 
 - Un utilisateur télécharge l’application Microsoft Outlook et s’y connecte. Les stratégies de protection des applications Intune sont automatiquement appliquées. Elles chiffrent les données enregistrées et empêchent l’utilisateur de transférer des fichiers d’entreprise vers des applications non gérées ou des emplacements sur l’appareil. Quand l’utilisateur clique alors sur un lien vers un site intranet dans Outlook, vous pouvez spécifier que ce lien s’ouvre dans l’application de navigateur protégé plutôt que dans un autre navigateur. Le navigateur protégé reconnaît que ce site intranet a été exposé à l’utilisateur via le proxy d’application. L’utilisateur est automatiquement routé par le biais du proxy d’application, pour s’authentifier avec n’importe quelle authentification multifacteur applicable et l’accès conditionnel avant d’atteindre le site intranet. Ce site, introuvable quand l’utilisateur était distant, est désormais accessible et le lien dans Outlook fonctionne comme prévu.
 - Un utilisateur distant ouvre l’application de navigateur protégé et accède à un site intranet avec l’URL interne. Le navigateur protégé reconnaît que ce site intranet a été exposé à l’utilisateur via le proxy d’application. L’utilisateur est automatiquement routé par le biais du proxy d’application, pour s’authentifier avec n’importe quelle authentification multifacteur applicable et l’accès conditionnel avant d’atteindre le site intranet. Ce site, introuvable quand l’utilisateur était distant, est désormais accessible.
@@ -316,9 +316,9 @@ Suivant la procédure de création d’une configuration d’application Managed
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Guide pratique pour accéder aux journaux d’applications gérées à l’aide de Managed Browser sur iOS
 
-Les utilisateurs finaux ayant installé Managed Browser sur leurs appareils iOS peuvent afficher l’état de gestion de toutes les applications Microsoft publiées. Ils peuvent envoyer des journaux afin de dépanner leurs applications iOS gérées.
+Les utilisateurs finaux ayant installé Managed Browser sur leurs appareils iOS/iPadOS peuvent afficher l’état de gestion de toutes les applications Microsoft publiées. Ils ont la possibilité d’envoyer des journaux afin de dépanner leurs applications iOS/iPadOS gérées.
 
-1. Ouvrez **Paramètres iOS**.
+1. Ouvrez les **Paramètres** iOS/iPadOS.
 2. Sélectionnez les paramètres de l’application **Managed Browser**.
 3. Cliquez sur **Activer les diagnostics Intune** pour configurer le navigateur en mode dépannage.
 4. Ouvrez **Managed Browser**. Cliquez sur **Afficher l’état de l’application Intune** pour passer en revue les différents paramètres de stratégie d’application.
@@ -345,7 +345,7 @@ Vous trouverez la liste des paramètres stockés dans les journaux d’applicati
 ### <a name="turn-off-usage-data"></a>Désactiver les données d’utilisation
 Microsoft recueille automatiquement des données anonymes sur les performances et l’utilisation de Managed Browser pour améliorer les produits et services Microsoft. Les utilisateurs peuvent désactiver la collecte de données à l’aide du paramètre **Données d’utilisation** de leurs appareils. Vous n’avez aucun contrôle sur la collecte de ces données.
 
-- Sur les appareils iOS, les utilisateurs ne peuvent pas ouvrir les sites web possédant un certificat qui a expiré ou qui n’est pas approuvé.
+- Sur les appareils iOS/iPadOS, les utilisateurs ne peuvent pas ouvrir les sites web dont le certificat a expiré ou n’est pas approuvé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

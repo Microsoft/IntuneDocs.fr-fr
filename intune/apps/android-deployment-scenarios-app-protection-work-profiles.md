@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d0b4f8d5124924d013e7ac131dafc947a95c7b65
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 99738de7efc473c7886762534c6e377b4dba8397
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059795"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415105"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Stratégies de protection des applications et profils professionnels sur des appareils Android Entreprise dans Intune
 
@@ -106,7 +106,7 @@ Les applications Office, telles qu’Outlook et OneDrive, ont un comportement «
 
 Lorsque vous utilisez des profils professionnels, vous pouvez vouloir désactiver ce comportement multi-identité. Lorsque vous le désactivez, les instances badgées de l’application dans le profil professionnel peuvent être configurées uniquement avec une identité de l’organisation. Utilisez le paramètre de configuration d’application Comptes autorisés pour prendre en charge les applications Office Android.
 
-Pour plus d’informations, consultez [déployer Outlook pour iOS et les paramètres de configuration d’applications Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Pour plus d’informations, consultez [Déploiement des paramètres de configuration des applications Outlook pour iOS/iPadOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="when-to-use-intune-app"></a>Quand utiliser la stratégie de protection des applications Intune
 

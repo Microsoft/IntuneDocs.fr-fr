@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae3c2380aa27096be2490d2404858179ea9d222e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b7861d26650aaf74ea9c58608c33e72495244575
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503179"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414223"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Rapport Inscriptions d’utilisateur incomplètes
 
@@ -44,7 +44,7 @@ Si un utilisateur arrête l’inscription et la redémarre plusieurs fois, cela 
 
 ## <a name="what-does-the-report-show"></a>Informations affichées par le rapport
 
-Les rapports incluent des données relatives aux appareils iOS et Android.
+Les rapports comportent des données relatives aux appareils iOS/iPadOS et Android.
 
 Les données des rapports couvrent les deux dernières semaines, mais vous pouvez filtrer le rapport pour afficher une période de 30 jours dans le passé.
 
@@ -86,10 +86,10 @@ Les tableaux suivants présentent la liste des actions de l’utilisateur géné
 
 | Nom d’action | Écran ou flux | Plate-forme | Action |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Invite d’affichage d’un profil de configuration | iOS | **Ignorer** |
-| iOSProfileLaunch | Écran d’installation de profil | iOS | **Annuler** |
-| iOSProfileLaunch | Invite d’approbation de la source du profil pour inscrire l’appareil | iOS | **Annuler** |
-| iOSProfileLaunch | Écran Installer un profil jusqu’à ce que le profil soit installé | iOS | A duré plus de 30 minutes |
+| iOSProfileLaunch | Invite d’affichage d’un profil de configuration | iOS/iPadOS | **Ignorer** |
+| iOSProfileLaunch | Écran d’installation de profil | iOS/iPadOS | **Annuler** |
+| iOSProfileLaunch | Invite d’approbation de la source du profil pour inscrire l’appareil | iOS/iPadOS | **Annuler** |
+| iOSProfileLaunch | Écran Installer un profil jusqu’à ce que le profil soit installé | iOS/iPadOS | A duré plus de 30 minutes |
 | AndroidPermissions | Écran d’activation de l’administrateur d’appareils | Android | **Annuler** |
 | AndroidPermissions | Depuis l’invite d’approbation pour passer et gérer les appels téléphoniques jusqu’à l’**activation** de l’administrateur d’appareils | Android | A duré plus de 30 minutes |
 | KnoxActivation | Activation de l’agent KLMS (Samsung uniquement) | Android| **Annuler** |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 64faf797c69302e2a5cdbdde090330ab99fcc2e4
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564134"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437883"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Réinitialisation sélective des données à l’aide d’actions de lancement conditionnel de la stratégie de protection des applications dans Intune
 
@@ -49,7 +49,7 @@ Vous pouvez choisir explicitement de réinitialiser les données d’entreprise 
 Le tableau de paramètres de stratégie de protection des applications a des colonnes pour **Paramètre**, **Valeur** et **Action**.
 
 ### <a name="ios-policy-settings"></a>Paramètres de stratégie iOS
-Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l’aide de la liste déroulante **Paramètre** :
+Pour iOS/iPadOS, vous pouvez configurer les actions des paramètres suivants dans la liste déroulante **Paramètre** :
 - Nombre max. de tentatives de code PIN
 - Période de grâce hors connexion
 - Appareils jailbreakés/rootés
@@ -59,7 +59,7 @@ Pour iOS, vous pouvez configurer des actions pour les paramètres suivants à l�
 - Modèle(s) d’appareil
 - Niveau de menace maximal autorisé pour l’appareil
 
-Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS séparés par des points-virgules. Ces valeurs ne respectent pas la casse. En plus des rapports Intune pour l’entrée « Modèle(s) d’appareil », vous trouverez un identificateur de modèle iOS sous la colonne Type d’appareil dans [Documentation de support de HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) ou ce [référentiel GitHub tiers](https://gist.github.com/adamawolf/3048717).<br>
+Pour utiliser le paramètre **Modèle(s) d’appareil**, entrez une liste d’identificateurs de modèle iOS/iPadOS séparés par des points-virgules. Ces valeurs ne respectent pas la casse. En plus des rapports Intune pour l’entrée « Modèle(s) d’appareil », vous trouverez un identificateur de modèle iOS/iPadOS sous la colonne Type d’appareil dans [Documentation de support de HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) ou ce [référentiel GitHub tiers](https://gist.github.com/adamawolf/3048717).<br>
 Exemple d’entrée : *iPhone5,2;iPhone5,3*
 
 Sur les appareils de l’utilisateur final, le client Intune effectuerait une action sur la base d’une mise en correspondance simple des chaînes de modèle d’appareil spécifiées dans Intune pour les stratégies de protection d’application. La mise en correspondance dépend entièrement de ce que signale l’appareil. En tant qu’administrateur informatique, vous êtes encouragé à vérifier que le comportement souhaité se produit. Pour cela, testez ce paramètre sur une variété de modèles et de fabricants d’appareils en ciblant un petit groupe d’utilisateurs. La valeur par défaut est **Non configuré**.<br>
@@ -67,8 +67,8 @@ Effectuez l’une des actions suivantes :
 - Autoriser spécifié (bloquer non spécifié)
 - Autoriser spécifié (réinitialiser non spécifié)
 
-**Que se passe-t-il si l’administrateur informatique entre une liste différente d’identificateurs de modèles iOS dans des stratégies ciblant les mêmes applications d’un même utilisateur Intune ?**<br>
-Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application cible en cours d’ouverture par l’utilisateur Intune ciblé est donc une intersection des identificateurs de modèles iOS répertoriés dans la *stratégie A* et la *stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « iPhone5,2;iPhone5,3 » et si la *stratégie B* spécifie « iPhone5,3 », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « iPhone5,3 ». 
+**Que se passe-t-il si l’administrateur informatique entre une liste différente d’identificateurs de modèles iOS/iPadOS dans des stratégies ciblant les mêmes applications d’un même utilisateur Intune ?**<br>
+Quand des conflits surviennent entre deux stratégies de protection d’applications au niveau des valeurs configurées, Intune choisit généralement l’approche la plus restrictive. La stratégie résultante envoyée à l’application ciblée ouverte par l’utilisateur Intune ciblé est donc l’intersection entre les identificateurs de modèles iOS/iPadOS qui figurent dans la *Stratégie A* et la *Stratégie B* ciblant la même combinaison application/utilisateur. Par exemple, si la *stratégie A* spécifie « iPhone5,2;iPhone5,3 » et si la *stratégie B* spécifie « iPhone5,3 », la stratégie résultante appliquée à l’utilisateur Intune ciblé par la *stratégie A* et la *stratégie B* est « iPhone5,3 ». 
 
 ### <a name="android-policy-settings"></a>Paramètres de stratégie Android
 

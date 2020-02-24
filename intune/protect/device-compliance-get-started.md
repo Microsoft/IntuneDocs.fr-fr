@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812167"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413648"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
 
@@ -104,7 +104,9 @@ Intune inclut également un ensemble de paramètres de stratégie de conformité
   - autorisent le portail d’entreprise à utiliser les services de localisation.
   - Évaluent et signalent leur état jailbreak à Intune au moins une fois toutes les 72 heures. Sinon, l’appareil est marqué comme non conforme. L’évaluation est déclenchée soit par l’ouverture de l’application Portail d’entreprise Intune, soit lorsque vous éloignez physiquement l’appareil d’au moins 500 mètres. Si l’appareil ne se déplace pas de 500 mètres dans les 72 heures, l’utilisateur doit ouvrir l’application Portail d’entreprise pour une évaluation de jailbreak améliorée.
 
-- **Période de validité de l’état de conformité (jours)**  : Entrez la période pendant laquelle les appareils signalent l’état de toutes les stratégies de conformité reçues. Les appareils qui ne retournent pas l’état au cours de cette période sont considérés comme non conformes. La valeur par défaut est de 30 jours.
+- **Période de validité de l’état de conformité (jours)**  : Entrez la période pendant laquelle les appareils signalent l’état de toutes les stratégies de conformité reçues. Les appareils qui ne retournent pas l’état au cours de cette période sont considérés comme non conformes. La valeur par défaut est de 30 jours. La valeur minimale est de 1 jour.
+
+  Ce paramètre se présente comme la stratégie de conformité par défaut **Est active** (**Appareils** > **Monitoring** > **Définition de la conformité**). La tâche en arrière-plan de cette stratégie s’exécute une fois par jour.
 
 Vous pouvez utiliser ces stratégies intégrées pour surveiller ces paramètres. De plus, Intune [actualise ou vérifie les mises à jour](create-compliance-policy.md#refresh-cycle-times) à des intervalles différents, selon la plateforme de l’appareil. La section [Problèmes courants avec les profils d’appareil dans Microsoft Intune et résolutions](../configuration/device-profile-troubleshoot.md) constitue une bonne ressource.
 

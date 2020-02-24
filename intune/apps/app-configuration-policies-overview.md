@@ -1,7 +1,7 @@
 ---
 title: Stratégies de configuration des applications pour Microsoft Intune
 titleSuffix: ''
-description: Découvrez comment utiliser des stratégies de configuration des applications sur un appareil iOS ou Android dans Microsoft Intune.
+description: Découvrez comment utiliser des stratégies de configuration des applications sur un appareil iOS/iPadOS ou Android dans Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: a2cf53b26c1617ca7fc493c837e57823c23781bc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812475"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414859"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
 Les stratégies de configuration des applications peuvent vous aider à éliminer les problèmes d’installation des applications en vous permettant d’affecter des paramètres de configuration à une stratégie, à son tour attribuée aux utilisateurs finaux avant qu’ils n’exécutent l’application. Les paramètres sont ensuite fournis automatiquement quand l’application est configurée sur l’appareil des utilisateurs finaux, lesquels n’ont aucune action à effectuer. Les paramètres de configuration sont uniques pour chaque application. 
 
-Vous pouvez créer et utiliser des stratégies de configuration des applications afin de fournir des paramètres de configuration pour des applications iOS ou Android. Ces paramètres de configuration permettent de personnaliser une application en utilisant la gestion et la configuration des applications. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général à la première exécution. 
+Vous pouvez créer et utiliser les stratégies de configuration des applications afin de fournir des paramètres de configuration pour des applications iOS/iPadOS ou Android. Ces paramètres de configuration permettent de personnaliser une application en utilisant la gestion et la configuration des applications. Les paramètres de stratégie de configuration sont utilisés quand l’application les recherche, en général à la première exécution. 
 
 Un paramètre de configuration d’application, par exemple, peut vous obliger à spécifier les détails suivants :
 
@@ -71,7 +71,7 @@ Le **type d’inscription d’appareil** **Applications gérées** référence e
 ![Type d’inscription de l’appareil](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Pour les applications qui ont plusieurs identités, comme Microsoft Outlook, les préférences utilisateur peuvent être prises en compte. La boîte de réception Prioritaire, par exemple, respecte le paramètre utilisateur et ne change pas la configuration. D’autres paramètres vous permettent de contrôler si un utilisateur peut ou ne peut pas changer le paramètre. Pour plus d’informations, consultez [Déploiement des paramètres de configuration de l’application Outlook pour iOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Pour les applications qui ont plusieurs identités, comme Microsoft Outlook, les préférences utilisateur peuvent être prises en compte. La boîte de réception Prioritaire, par exemple, respecte le paramètre utilisateur et ne change pas la configuration. D’autres paramètres vous permettent de contrôler si un utilisateur peut ou ne peut pas changer le paramètre. Pour plus d’informations, consultez [Déploiement des paramètres de configuration des applications Outlook pour iOS/iPadOS et Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Valider la stratégie de configuration d’applications appliquée
 
@@ -93,7 +93,7 @@ Vous pouvez valider la stratégie de configuration des applications à l’aide 
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>Configuration iOS sur les appareils non gérés
 
-Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils non gérés pour la configuration des apps gérées. Outre les étapes ci-dessous, vous pouvez accéder aux journaux des applications managées à l’aide de Microsoft Edge. Pour plus d’informations, consultez [Utiliser Microsoft Edge sur iOS pour accéder aux journaux des applications managées](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Vous pouvez valider une configuration iOS/iPadOS avec le **journal de diagnostic Intune** sur les appareils non gérés pour la configuration des applications gérées. Outre les étapes ci-dessous, vous pouvez accéder aux journaux des applications managées à l’aide de Microsoft Edge. Pour plus d’informations, consultez [Accès aux journaux des applications gérées avec Microsoft Edge sur iOS/iPadOS](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Si ce n'est pas déjà fait, téléchargez et installez **Microsoft Edge** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
 2. Lancez **Microsoft Edge** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
@@ -137,7 +137,7 @@ Les détails de configuration de votre application doivent correspondre aux stra
 
 ### <a name="ios-configuration-on-managed-devices"></a>Configuration iOS sur les appareils gérés
 
-Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils gérés pour la configuration des apps gérées.
+Vous pouvez valider une configuration iOS/iPadOS avec le **journal de diagnostic Intune** sur les appareils gérés pour la configuration des applications gérées.
 
 1. Si ce n'est pas déjà fait, téléchargez et installez **Microsoft Edge** depuis l'App Store. Pour plus d’informations, consultez [Applications protégées par Microsoft Intune](apps-supported-intune-apps.md).
 2. Lancez **Microsoft Edge** et sélectionnez **à propos de** > **intunehelp** dans la barre de navigation.
@@ -149,7 +149,7 @@ Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune
 
 ### <a name="android-configuration-on-managed-devices"></a>Configuration Android sur les appareils gérés
 
-Vous pouvez valider une configuration iOS avec **le journal de diagnostic Intune** sur les appareils gérés pour la configuration des apps gérées.
+Vous pouvez valider une configuration iOS/iPadOS avec le **journal de diagnostic Intune** sur les appareils gérés pour la configuration des applications gérées.
 
 Pour collecter les journaux à partir d'un appareil Android, vous ou l'utilisateur final devez télécharger les journaux à partir de l'appareil via une connexion USB (ou l’**explorateur de fichiers** équivalent disponible sur l'appareil). Voici la procédure à suivre :
 
@@ -173,7 +173,7 @@ Quand les journaux montrent un paramètre de configuration qui est effectivement
 
 ### <a name="managed-devices"></a>Appareils gérés
 
-- Découvrez comment utiliser la configuration d’application avec vos appareils iOS.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils iOS gérés](app-configuration-policies-use-ios.md).
+- Découvrez comment utiliser la configuration des applications avec vos appareils iOS/iPadOS.  Consultez [Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés](app-configuration-policies-use-ios.md).
 - Découvrez comment utiliser la configuration d’application avec vos appareils Android.  Consultez [Ajouter des stratégies de configuration d’applications pour les appareils Android gérés](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Applications gérées

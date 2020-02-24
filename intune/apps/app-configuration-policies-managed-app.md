@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06c1119b474d82c4d00db3276179b962ff5b5a44
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 4301afca471d0aa56fa1a0826ad7f88bcdf23de2
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755559"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414867"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Ajouter des stratégies de configuration pour les applications gérées sans inscription d’appareil
 
@@ -41,7 +41,7 @@ Vous pouvez utiliser des stratégies de configuration d’applications avec des 
 5. Cliquez sur **Suivant** pour afficher la page **Paramètres**.
 6. Pour chaque paramètre de configuration pris en charge par l’application, tapez le **Nom**, puis la **Valeur**. 
 
-   Les applications compatibles avec le SDK d’application Intune prennent en charge les configurations de paires clé-valeur. Pour savoir quelles sont les configurations clé-valeur prises en charge, consultez la documentation de chaque application. Sachez que vous pouvez utiliser des jetons qui seront remplis dynamiquement avec les données générées par l’application. Pour plus d’informations, consultez [Valeurs de configuration pour l’utilisation de jetons](~/apps/app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Pour plus d’informations sur les paramètres de stratégie de configuration de l’application Outlook pour iOS, consultez la section [Gérer Outlook pour la configuration d’applications iOS avec Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+   Les applications compatibles avec le SDK d’application Intune prennent en charge les configurations de paires clé-valeur. Pour savoir quelles sont les configurations clé-valeur prises en charge, consultez la documentation de chaque application. Sachez que vous pouvez utiliser des jetons qui seront remplis dynamiquement avec les données générées par l’application. Pour plus d’informations, consultez [Valeurs de configuration pour l’utilisation de jetons](~/apps/app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Pour plus d’informations sur les paramètres de stratégie de configuration des applications Outlook pour iOS/iPadOS, consultez [Gestion de la configuration des applications Outlook pour iOS/iPadOS avec Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
 
     Pour supprimer une configuration, choisissez les points de suspension ( **...** ), puis sélectionnez **Supprimer**.  
 

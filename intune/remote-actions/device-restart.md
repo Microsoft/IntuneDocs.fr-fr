@@ -1,6 +1,6 @@
 ---
 title: Redémarrer des appareils avec Microsoft Intune - Azure | Microsoft Docs
-description: Redémarrez des appareils iOS et Windows à l’aide de Microsoft Intune dans le portail Azure à l’aide de l’action de redémarrage à distance.
+description: Redémarrez des appareils Windows et iOS/iPadOS avec Microsoft Intune sur le Portail Azure à l’aide de l’action Redémarrer à distance.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82ebf35d0eb435f2df4e6cf55274808e6fa690f4
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 54fa0f796e96a2487793197cbbbe548fd8490856
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517539"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415612"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Redémarrer à distance des appareils avec Intune
 
@@ -35,10 +35,10 @@ L’action d’appareil **Redémarrer** entraîne le redémarrage de l’apparei
 - Windows - Prise en charge de Windows 8.1 et ultérieur
 - Windows Phone - Prise en charge de Windows Phone 8.1 et ultérieur
 - Appareils kiosque Android - Prise en charge sur Android 7.0 et ultérieur
-- iOS - Prise en charge
+- iOS/iPadOS – Prise en charge
 
     > [!Note]  
-    > Cette commande nécessite un appareil supervisé et le droit d’accès **Verrouillage de l’appareil**. L’appareil redémarre immédiatement. Les appareils iOS verrouillés avec un code secret ne rejoignent pas de réseau Wi-Fi après un redémarrage. Après le redémarrage, l’appareil risque de ne pas pouvoir communiquer avec le serveur.
+    > Cette commande nécessite un appareil supervisé et le droit d’accès **Verrouillage de l’appareil**. L’appareil redémarre immédiatement. Les appareils iOS/iPadOS verrouillés par un code secret ne rejoignent pas de réseau Wi-Fi après redémarrage. Après le redémarrage, l’appareil risque de ne pas pouvoir communiquer avec le serveur.
 - macOS - Non prise en charge
 - Appareils Android et profils professionnels Android - Pas de prise en charge
 
