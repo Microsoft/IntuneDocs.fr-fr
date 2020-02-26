@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 946ce31c613ddb3c7dd2bf4dfde7561dd56e4ca0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a7aa439fcf60173cac71f0fc71ebac481660c785
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414057"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514691"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Ce qui se passe quand votre application Android est gérée par des stratégies de protection d'application
 
@@ -53,7 +53,7 @@ Quand une application contient un compte géré :
 
 Lisez l’exemple de scénario suivant pour mieux comprendre le comportement quand il existe plusieurs comptes d’utilisateur.
 
-L’utilisateur A travaille pour deux sociétés : **Société X** et **Société Y**. L’utilisateur A a un compte professionnel pour chaque société, et tous deux utilisent Intune pour déployer des stratégies de protection d'application. **Société X** déploie des stratégies de protection d'application **avant** **Société Y**. Le compte associé à **Société X** obtient la stratégie de protection d’application, contrairement au compte associé à Société Y. Si vous souhaitez que le compte d’utilisateur associé à Société Y soit géré par les stratégies de protection d’application, vous devez supprimer le compte d’utilisateur associé à Société X et ajouter le compte associé à Société Y.
+L’utilisateur A travaille pour deux sociétés : **Société X** et **Société Y**. L’utilisateur A a un compte professionnel pour chaque société, et tous deux utilisent Intune pour déployer des stratégies de protection d'application. La **Société X** déploie des stratégies de protection d'application **avant** la  **Société Y**. Le compte associé à **Société X** obtient la stratégie de protection d’application, contrairement au compte associé à Société Y. Si vous souhaitez que le compte d’utilisateur associé à Société Y soit géré par les stratégies de protection d’application, vous devez supprimer le compte d’utilisateur associé à Société X et ajouter le compte associé à Société Y.
 
 ### <a name="add-a-second-account"></a>Ajouter un deuxième compte
 
@@ -81,4 +81,4 @@ Les types de fichiers suivants sont pris en charge :
 |Pfile est un format « wrapper » générique pour les fichiers protégés qui encapsulent du contenu chiffré ainsi que des licences Azure Information Protection. Il peut être utilisé pour protéger tout type de fichier.|
 
 ## <a name="next-steps"></a>Étapes suivantes
-[Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application](end-user-mam-apps-ios.md)
+[Ce qui se passe quand l’application iOS/iPadOS est gérée par des stratégies de protection d’applications](end-user-mam-apps-ios.md)

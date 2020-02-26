@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c72cf963822284702f6b924ca506f8ec1157e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a03a92f715496b3c647a12bb99457d151ead54a3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505143"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514929"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Déterminer les exigences du scénario d’utilisation
 
@@ -35,13 +35,13 @@ Vous utilisez peut-être également des groupes organisationnels pour le scénar
 
 Voici quelques exemples d'exigences de cas d'utilisation d'une organisation, illustrant différents ensembles d'exigences pour chaque scénario de cas d'utilisation et de cas d'utilisation secondaire, groupe organisationnel et plateforme d'appareils mobiles. Vous pouvez également utiliser le tableau suivant pour entrer les exigences de cas d’utilisation de votre organisation :
 
-| **Scénarios d'utilisation** | **Cas d'utilisation secondaires** | **Groupes** | **Plateformes d'appareils** | **Configuration requise** |
+| **Scénarios d'utilisation** | **Cas d'utilisation secondaires** | **Groupes** | **Plateformes d'appareils** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
-| Entreprise | Travailleur de l'information | Ressources humaines, finances | iOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                          
-| Entreprise | Cadres | Ressources humaines, finances | iOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                         
+| Entreprise | Travailleur de l'information | Ressources humaines, finances | iOS/iPadOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                          
+| Entreprise | Cadres | Ressources humaines, finances | iOS/iPadOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                         
 | Entreprise | Kiosk | Commerce | Android | Paramètres des appareils, profils, applications |
-| BYOD | Travailleur de l'information | Marketing, Ventes | iOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                         
-| BYOD | Cadres | Marketing, Ventes | iOS | Messagerie sécurisée, paramètres des appareils, profils, applications |
+| BYOD | Travailleur de l'information | Marketing, Ventes | iOS/iPadOS | Messagerie sécurisée, paramètres des appareils, profils, applications |                                                         
+| BYOD | Cadres | Marketing, Ventes | iOS/iPadOS | Messagerie sécurisée, paramètres des appareils, profils, applications |
 
 Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour saisir les exigences de cas d’utilisation et de cas d'utilisation secondaires de votre organisation.
 
