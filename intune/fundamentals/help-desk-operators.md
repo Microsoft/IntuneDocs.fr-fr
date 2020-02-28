@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0094cdd12b2594cb60260d768daec8c5bed04c9c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3812d19122cf4dd85edf00a6fa12d9f2b89529aa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510256"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514589"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utiliser le portail de résolution des problèmes pour aider les utilisateurs dans votre entreprise
 
@@ -59,7 +59,7 @@ Dans le volet de dépannage, choisissez **Sélectionner un utilisateur** pour af
 
 Vous pouvez utiliser le volet **Dépanner** pour consulter les informations de l’utilisateur.
 
-![Tableau de bord de dépannage, avec les zones numérotées décrites dans le tableau suivant](./media/help-desk-operators/troubleshooting-dash.png)
+![Dépannage du tableau de bord, avec les zones numérotées décrites dans le tableau suivant](./media/help-desk-operators/troubleshooting-dash.png)
 
 | Domaine | Nom | Description |
 | ---  | ---  | ---         |
@@ -67,7 +67,7 @@ Vous pouvez utiliser le volet **Dépanner** pour consulter les informations de l
 | 2.   | Sélection de l'utilisateur  | Nom de l’utilisateur actuellement sélectionné. Cliquez sur **Changer d’utilisateur** pour choisir un autre utilisateur.       |
 | 3.   | État de l’utilisateur  | Affiche pour cet utilisateur l’état de la licence Intune, le nombre d’appareils, la conformité de chaque appareil, le nombre d’applications et la conformité des applications.       |
 | 4.   | Informations sur l'utilisateur  | Utilisez la liste pour sélectionner les détails à consulter dans le volet. <br>Vous pouvez sélectionner : <ul><li>Applications clientes<li>Stratégies de conformité<li> Stratégies de configuration<li>Stratégies de protection des applications <li>Restrictions d’inscription</ul>      |
-| 5.   | Appartenance aux groupes  | Affiche les groupes dont l’utilisateur sélectionné est membre.       |
+| 5.   | Appartenance au groupe  | Affiche les groupes dont l’utilisateur sélectionné est membre.       |
 
 <!-- this section needs to be updated
 
@@ -269,7 +269,7 @@ Quand vous choisissez une ligne d’échec, des détails supplémentaires sont f
 
 | Erreur | Détails |
 |-------------|----------|
-| Délai d’expiration ou échec d’iOS | Expiration du délai d’attente entre l’appareil et Intune en raison de la lenteur de l’utilisateur à effectuer l’inscription. |
+| Délai d’expiration ou échec d’iOS/iPadOS | Expiration du délai d’attente entre l’appareil et Intune en raison de la lenteur de l’utilisateur à effectuer l’inscription. |
 | Utilisateur introuvable ou avec licence | Il manque une licence à l’utilisateur, ou celle-ci a été supprimée du service. |
 | Appareil déjà inscrit | Une personne a tenté d’inscrire un appareil à l’aide du Portail d’entreprise sur un appareil encore inscrit par un autre utilisateur. |
 | Non intégré à Intune | Une inscription a été tentée alors que l’autorité MDM (Gestion des appareils mobiles) Intune n’était pas configurée. |
@@ -286,14 +286,14 @@ Quand vous choisissez une ligne d’échec, des détails supplémentaires sont f
 | Méthode d’inscription Autopilot inattendue | L’appareil a tenté de s’inscrire à l’aide d’une méthode non autorisée. |
 | Appareil Autopilot supprimé | L’appareil tentant de s’inscrire a été supprimé d’Autopilot pour ce compte. |
 | Plafond d’appareils atteint | Cette inscription a été bloquée en raison d’une restriction du nombre limite d’appareils, configurée par un administrateur. |
-| Intégration d’Apple | L’inscription de tous les appareils iOS a été bloquée pour le moment en raison de l’absence ou de l’expiration d’un certificat Push MDM Apple dans Intune. |
+| Intégration d’Apple | L’inscription de tous les appareils iOS/iPadOS a été bloquée pour le moment en raison de l’absence ou de l’expiration d’un certificat Push MDM Apple dans Intune. |
 | Appareil non préinscrit | L’appareil n’a pas été préinscrit en tant qu’appareil de société, et toutes les inscriptions personnelles ont été bloquées par un administrateur. |
 | Fonctionnalité non prise en charge | L’utilisateur a probablement tenté de s’inscrire via une méthode non compatible avec votre configuration d’Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Collecter les données disponibles à partir d’un appareil mobile
 
 Utilisez les ressources suivantes pour collecter les données d’un appareil lors de la résolution des problèmes de l’appareil de l’utilisateur :
-- [Envoyer les erreurs d’inscription iOS à votre administrateur informatique](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Envoyer les erreurs d’inscription iOS/iPadOS à votre administrateur informatique](/intune-user-help/send-errors-to-your-it-admin-ios)
 - [Aider le support technique de votre entreprise à résoudre les problèmes de l’appareil grâce à la journalisation détaillée](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
 - [Envoyer des journaux Android au support technique de votre entreprise via un câble USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Envoyer les journaux de données de diagnostic Android à votre administrateur informatique par e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android)

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
-ms.translationtype: MTE75
+ms.openlocfilehash: ef20d378740eae73c41521d8dfc7f8fdd853fdb9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812438"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513895"
 ---
 # <a name="intune-app-installation-error-reference"></a>Informations de référence sur les erreurs d’installation de l’application Intune
 
@@ -51,17 +51,17 @@ Cette section mentionne à la fois l’inscription de l’administrateur de l’
 | 0xC7D14FB1  | -942583887 | L’utilisateur final a annulé l’installation de l’application. | L’utilisateur a explicitement désinstallé l’application. Cette erreur est retournée lorsque l’installation du système d’exploitation Android a été annulée par l’utilisateur. L’utilisateur a appuyé sur le bouton Annuler dans l’invite d’installation du système d’exploitation ou a cliqué en dehors de l’invite. Cette erreur est retournée uniquement dans les scénarios AD. Dans les scénarios Knox, l’utilisateur n’est pas invité à installer l’application, puisque celle-ci peut être installée sans assistance. Intune affiche une notification proposant à l’utilisateur de cliquer pour réessayer. Si l’application est disponible, vous pouvez ignorer la notification. Toutefois, si l’application est obligatoire, elle ne peut pas être ignorée. Demandez à l’utilisateur de ne pas annuler l’installation. |
 | 0xC7D14FB9 | -942583879 | L’utilisateur final a annulé l’installation de l’application. (À l’invite d’acceptation) | Indiquez à l’utilisateur d’accepter l’application Intune déployée et d’installer l’application quand il y est invité. |
 
-## <a name="ios-app-installation-errors"></a>Erreurs d’installation de l’application iOS
+## <a name="ios-and-ipados-app-installation-errors"></a>Erreurs d’installation de l’application iOS et iPadOS
 
-Les messages d’erreur et les descriptions ci-dessous fournissent des informations sur les erreurs d’installation de l’application iOS. 
+Les messages d’erreur et les descriptions ci-dessous fournissent des informations sur les erreurs d’installation de l’application iOS/iPadOS. 
 
 | Code d’erreur (hexadécimal) | Code d’erreur (décimal) | Message/Code d’erreur | Description/conseils de dépannage |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Erreur de l’agent MDM Apple : La commande d’installation de l’application a échoué sans raison spécifiée. Relancez l’installation de l’application. | L’agent MDM d’Apple signale que la commande d’installation a échoué. |
 | 0x87D1313C | -2016333508 | La connexion réseau sur le client a été perdue ou interrompue. Les tentatives ultérieures doivent être effectuées dans un meilleur environnement réseau. | La connexion réseau a été perdue pendant l’envoi de l’URL mise à jour du service de téléchargement vers l’appareil. Pour être plus précis, le serveur avec le nom d’hôte spécifié n’a pas été trouvé. |
-| 0x87D11388 | -2016341112 | L’appareil iOS est actuellement occupé.  | L’appareil iOS était occupé, ce qui a entraîné une erreur. L’appareil a été verrouillé. L’utilisateur doit déverrouiller l’appareil pour installer l’application. |
-| 0x87D13B64 | -2016330908 | L’installation de l’application a échoué.  | L’installation de l’application a échoué. Les journaux de la console iOS sont nécessaires pour résoudre cette erreur. |
-| 0x87D13B66 | -2016330906 | L’application est managée, mais elle a expiré ou a été supprimée par l’utilisateur.  | Soit l’utilisateur a désinstallé l’application de manière explicite, soit l’application a expiré mais n’a pas pu être téléchargée, soit la détection d’application ne correspond pas à la réponse de l’appareil.   En outre, cette erreur peut se produire en raison d’un bogue de la plateforme iOS 9.2.2. |
+| 0x87D11388 | -2016341112 | L’appareil iOS/iPadOS est actuellement occupé.  | L’appareil iOS/iPadOS était occupé, ce qui a entraîné une erreur. L’appareil a été verrouillé. L’utilisateur doit déverrouiller l’appareil pour installer l’application. |
+| 0x87D13B64 | -2016330908 | L’installation de l’application a échoué.  | L’installation de l’application a échoué. Les journaux de la console iOS/iPadOS sont nécessaires pour résoudre cette erreur. |
+| 0x87D13B66 | -2016330906 | L’application est managée, mais elle a expiré ou a été supprimée par l’utilisateur.  | Soit l’utilisateur a désinstallé l’application de manière explicite, soit l’application a expiré mais n’a pas pu être téléchargée, soit la détection d’application ne correspond pas à la réponse de l’appareil.   En outre, cette erreur peut se produire en raison d’un bogue de la plateforme iOS/iPadOS 9.2.2. |
 | 0x87D13B60 | -2016330912 | L’installation de l’application est planifiée, mais un code d’échange est nécessaire pour effectuer la transaction.  | Cette erreur se produit généralement avec les applications payantes du Store iOS. |
 | 0x87D1041C | -2016345060 | L’application n’a pas été détectée une fois l’installation terminée.  | L’application détectée ne correspond pas à la réponse de l’appareil. |
 | 0x87D13B62 | -2016330910 | L’utilisateur a refusé l’installation de l’application.  | Lors de la première installation de l’application, l’utilisateur a cliqué sur Annuler. Demandez à l’utilisateur d’accepter la demande d’installation la prochaine fois. |
@@ -70,7 +70,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 | 0x87D13B93 | -2016330861 | Peut installer uniquement les applications VPP sur un iPad partagé. | Vous devez passer par le programme d’achat en volume (VPP) Apple pour obtenir les applications si vous voulez les installer sur un iPad partagé. |
 | 0x87D13B94 | -2016330860 | Impossible d’installer des applications quand l’App Store est désactivé. | L’App Store doit être activé pour que l’utilisateur puisse installer l’application. |
 | 0x87D13B95 | -2016330859 | Impossible de trouver la licence VPP pour l’application. | Essayez de révoquer, puis de réaffecter la licence de l’application. |
-| 0x87D13B96 | -2016330858 | Impossible d’installer des applications système avec votre fournisseur MDM. | Le scénario d’installation des applications préinstallées par le système d’exploitation iOS n’est pas pris en charge. |
+| 0x87D13B96 | -2016330858 | Impossible d’installer des applications système avec votre fournisseur MDM. | Le scénario d’installation des applications préinstallées par le système d’exploitation iOS/iPadOS n’est pas pris en charge. |
 | 0x87D13B97 | -2016330857 | Impossible d’installer des applications quand l’appareil est en mode Perdu. | En mode Perdu, vous bloquez toute utilisation de l’appareil. Désactivez le mode Perdu pour pouvoir installer des applications. |
 | 0x87D13B98 | -2016330856 | Impossible d’installer des applications quand l’appareil est en mode Kiosque. | Pour installer des applications, essayez d’ajouter cet appareil à un groupe d’exclusion de la stratégie de configuration du mode Kiosque. |
 | 0x87D13B9C | -2016330852 | Impossible d’installer des applications 32 bits sur cet appareil. | L’appareil ne prend pas en charge l’installation des applications 32 bits. Essayez de déployer la version 64 bits de l’application. |
@@ -80,7 +80,7 @@ Les messages d’erreur et les descriptions ci-dessous fournissent des informati
 | 0x87d13b7e | -2016330882 | L’affectation de licence a échoué. Erreur Apple : « Il ne reste plus aucune licence VPP »  | Il s’agit d’un comportement normal. Pour remédier à cela, achetez des licences VPP supplémentaires ou récupérez des licences auprès d’utilisateurs qui ne sont plus ciblés. |
 | 0x87d13b6e | -2016330898 | Échec d’installation d’application 12024 : Cause inconnue.  | Apple n’a pas fourni d’informations suffisantes pour déterminer la raison de l’échec de l’installation.   Rien à signaler. |
 | 0x87d13b7f | -2016330881 | La stratégie de configuration d’application requise n’est pas présente. Assurez-vous que la stratégie est ciblée vers les mêmes groupes.  | L’application requiert la configuration de l’application, mais aucune configuration d’application n’est ciblée. L’administrateur doit s’assurer que les groupes auxquels l’application est ciblée disposent également de la configuration d’application requise pour les groupes. |
-| 0x87d13b69 | -2016330903 | Les licences VPP d’appareil sont applicables uniquement aux appareils iOS 9.0+.  | Mettre à niveau les appareils iOS affectés vers iOS 9.0+. |
+| 0x87d13b69 | -2016330903 | Les licences VPP d’appareil sont applicables uniquement aux appareils iOS/iPadOS 9.0+.  | Mettre à niveau les appareils iOS/iPadOS affectés vers iOS/iPadOS 9.0+. |
 | 0x87d13b8f | -2016330865 | L’application est installée sur l’appareil, mais n’est pas gérée.  | Cette erreur se produit uniquement pour les applications métier. L’application a été installée en dehors d’Intune. Pour résoudre cette erreur, désinstallez l’application de l’appareil. La prochaine fois que la synchronisation de l’appareil se produit, l’appareil doit installer l’application à partir d’Intune. |
 | 0x87d13b68 | -2016330904 | L’utilisateur a refusé la gestion des applications  | Demandez à l’utilisateur d’accepter la gestion des applications. |
 | 0x87d1279d | -2016335971 | Erreur inconnue.  | Cette erreur se produit pour les applications de l’App Store iOS, mais le scénario d’erreur est inconnu. |

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
-ms.translationtype: MTE75
+ms.openlocfilehash: 7113552e09a7c7fa145a452e56575bfaf5297c3e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977748"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514560"
 ---
 # <a name="in-development-for-microsoft-intune---february-2020"></a>En développement pour Microsoft Intune - Février 2020
 
@@ -65,8 +65,8 @@ Nous allons mettre à jour l’application Portail d’entreprise sur les appare
 L’application Portail d’entreprise montrera des messages d’état d’installation d’application supplémentaires aux utilisateurs finaux. Les conditions suivantes s’appliquent aux nouvelles fonctionnalités de dépendance Win32 :
 - Échec d’installation de l’application. Les dépendances définies par l’administrateur n’ont pas été satisfaites.
 
-### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Recibler les clips web vers Microsoft Edge sur les appareils iOS<!-- 5455276 -->
-Les clips web, qui agissent comme des applications web épinglées sur des appareils iOS, devront être mis à jour. Les clips web nouvellement déployés s’ouvrent dans Microsoft Edge au lieu d’Intune Managed Browser s’ils doivent s’ouvrir dans un navigateur protégé. Vous devez recibler des clips web préexistants pour faire en sorte qu’ils s’ouvrent dans Microsoft Edge au lieu de Managed Browser.
+### <a name="retarget-web-clips-to-microsoft-edge-on-iosipados-devices---5455276---"></a>Recibler les clips web vers Microsoft Edge sur les appareils iOS/iPadOS<!-- 5455276 -->
+Les clips web, qui agissent comme des applications web épinglées sur des appareils iOS/iPadOS, devront être mis à jour. Les clips web nouvellement déployés s’ouvrent dans Microsoft Edge au lieu d’Intune Managed Browser s’ils doivent s’ouvrir dans un navigateur protégé. Vous devez recibler des clips web préexistants pour faire en sorte qu’ils s’ouvrent dans Microsoft Edge au lieu de Managed Browser.
 
 ### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>améliorations de l’expérience utilisateur du Portail d’entreprise macOS<!-- 5568987 -->
 Nous apportons des améliorations à l’expérience d’inscription des appareils macOS et à l’application Portail d’entreprise pour Mac. Voici ce à quoi vous pouvez vous attendre :
@@ -92,22 +92,22 @@ Un nouveau profil de configuration d’appareil macOS sera disponible pour confi
 S’applique à :
 - macOS
 
-### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-ios-devices----1947932-idready---"></a>Les profils VPN avec des connexions VPN IKEv2 peuvent utiliser Always On avec les appareils iOS <!-- 1947932 idready -->
-Sur les appareils iOS, vous pouvez créer un profil VPN qui utilise une connexion IKEv2 (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS/iPad** pour la plateforme > **VPN** pour le type de profil). Dans une prochaine mise à jour, vous pourrez configurer Always On avec IKEv2. Une fois configurés, les profils VPN IKEv2 se connectent automatiquement et restent connectés (ou se reconnectent rapidement) au VPN. Ils restent connectés même quand vous passez d’un réseau à l’autre ou que vous redémarrez les appareils.
+### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices----1947932-idready---"></a>Les profils VPN avec des connexions VPN IKEv2 peuvent utiliser Always On avec les appareils iOS/iPadOS <!-- 1947932 idready -->
+Sur les appareils iOS/iPadOS, vous pouvez créer un profil VPN qui utilise une connexion IKEv2 (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS/iPad** pour la plateforme > **VPN** pour le type de profil). Dans une prochaine mise à jour, vous pourrez configurer Always On avec IKEv2. Une fois configurés, les profils VPN IKEv2 se connectent automatiquement et restent connectés (ou se reconnectent rapidement) au VPN. Ils restent connectés même quand vous passez d’un réseau à l’autre ou que vous redémarrez les appareils.
 
-Sur iOS, le VPN Always On est limité aux profils IKEv2.
+Sur iOS/iPadOS, le VPN Always On est limité aux profils IKEv2.
 
-Pour afficher les paramètres IKEv2 actuels que vous pouvez configurer, consultez [Ajouter des paramètres VPN sur les appareils iOS dans Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+Pour afficher les paramètres IKEv2 actuels que vous pouvez configurer, consultez [Ajouter des paramètres VPN sur les appareils iOS/iPadOS dans Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
 S’applique à :
 - iOS
 
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-ios-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Amélioration de l’expérience de l’interface utilisateur lors de la création de profils de configuration sur des appareils iOS et macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
-Quand vous créez un profil pour des appareils iOS ou macOS, l’expérience dans le Centre d’administration de gestion des points de terminaison est mise à jour. Cette modification a un impact sur les profils de configuration d’appareil suivants (**Appareils** > **Profils de configuration** > **Créer un profil** > **iOS** ou **macOS** pour la plateforme) :
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Amélioration de l’expérience de l’interface utilisateur lors de la création de profils de configuration sur des appareils iOS/iPadOS et macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
+Quand vous créez un profil pour des appareils iOS/iPadOS ou macOS, l’expérience dans le Centre d’administration de gestion des points de terminaison est mise à jour. Cette modification a un impact sur les profils de configuration d’appareil suivants (**Appareils** > **Profils de configuration** > **Créer un profil** > **iOS** ou **macOS** pour la plateforme) :
 
-- Personnalisé : iOS, macOS
-- Fonctionnalités de l’appareil : iOS, macOS
-- Limites des appareils : iOS, macOS
+- Personnalisé : iOS/iPados, macOS
+- Fonctionnalités de l’appareil : iOS/iPadOS, macOS
+- Restrictions de l’appareil : iOS/iPadOS, macOS
 - Endpoint Protection : macOS
 - Extensions : macOS
 - Fichier de préférences : macOS

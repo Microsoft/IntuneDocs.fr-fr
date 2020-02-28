@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be66f99006b06dce9f9bfe21eafa9f2be302e7b9
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
-ms.translationtype: MTE75
+ms.openlocfilehash: 13aea23f58c69d5c7e38f77ae7dfa19bd12edd35
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540977"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511649"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Résoudre les problèmes d’installation d’applications
 
@@ -50,7 +50,7 @@ Intune fournit des informations de résolution des problèmes d’une applicatio
     > La même application peut être attribuée à plusieurs groupes, mais avec différentes actions prévues (intentions) pour l’application. Par exemple, une intention résolue pour une application affichera **exclue** si l’application est exclue pour un utilisateur lors de l’attribution de l’application. Pour plus d’informations, consultez [Résolution des conflits entre les intentions d’application](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > Si un problème se produit lors de l’installation d’une application obligatoire, le support technique ou vous-même pouvez synchroniser l’appareil et retenter l’installation de l’application.
 
-Les détails de l’erreur d’installation de l’application indiquent le problème. Vous pouvez utiliser ces informations pour déterminer la meilleure action à prendre pour résoudre le problème. Pour plus d’informations sur la résolution des problèmes d’installation de l’application, consultez [Erreurs d’installation de l’application Android](app-install-error-codes.md#android-app-installation-errors) et [Erreurs d’installation de l’application iOS](app-install-error-codes.md#ios-app-installation-errors).
+Les détails de l’erreur d’installation de l’application indiquent le problème. Vous pouvez utiliser ces informations pour déterminer la meilleure action à prendre pour résoudre le problème. Pour plus d’informations sur la résolution des problèmes d’installation de l’application, consultez [Erreurs d’installation de l’application Android](app-install-error-codes.md#android-app-installation-errors) et [Erreurs d’installation de l’application iOS](app-install-error-codes.md#ios-and-ipados-app-installation-errors).
 
 > [!Note]  
 > Vous pouvez également accéder au volet **Dépannage** en pointant votre navigateur sur [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -65,7 +65,7 @@ Essayez les actions suivantes si vous rencontrez des problèmes lors de l’inst
   3. Accédez à [Utilisateurs Azure Active Directory](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Sélectionnez l’utilisateur concerné, puis cliquez sur **Appareils**.
   5. Si l’utilisateur dépasse la limite définie, supprimez tous les enregistrements obsolètes qui ne sont plus nécessaires.
-- Pour les appareils DEP iOS, assurez-vous que l’utilisateur apparaît dans la liste **Inscription effectuée par l’utilisateur** dans le volet Vue d’ensemble des appareils Intune. Si vous voyez « NA », déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [Configurer l’application Portail d’entreprise](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- Pour les appareils DEP iOS/iPadOS, assurez-vous que l’utilisateur apparaît dans la liste **Inscription effectuée par l’utilisateur** dans le volet Vue d’ensemble des appareils Intune. Si vous voyez « NA », déployez une stratégie de configuration pour le Portail d’entreprise Intune. Pour plus d’informations, consultez [Configurer l’application Portail d’entreprise](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Résolution des problèmes liés à l’installation des applications Win32
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bee04eabb7036d9a28ac628175b27f763d0ccb
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 47be57dece7867109565622ec2a1380e9a9d57d7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207058"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512498"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Paramètres des appareils Windows 10 et Windows Holographic permettant d’ajouter des connexions VPN en utilisant Intune
 
@@ -74,7 +74,7 @@ Selon les paramètres que vous choisissez, toutes les valeurs ne sont pas néces
     - À la réactivation de l’écran de l’appareil 
 
   - **Méthode d’authentification** : sélectionnez le mode d’authentification des utilisateurs auprès du serveur VPN. L’utilisation de **certificats** offre des fonctionnalités améliorées, comme l’expérience sans intervention, VPN à la demande et VPN par application.
-  - **Mémoriser les informations d’identification à chaque ouverture de session ** : choisissez de mettre en cache les informations d’identification d’authentification.
+  - **Mémoriser les informations d’identification à chaque ouverture de session**  : choisissez de mettre en cache les informations d’identification d’authentification.
   - **XML personnalisé** : entrez des commandes XML personnalisées qui configurent la connexion VPN.
   - **Code XML EAP** : entrez des commandes XML EAP qui configurent la connexion VPN.
 
@@ -143,7 +143,7 @@ Pour plus d’informations sur la création de code XML EAP personnalisé, consu
 
   ![Sélectionner les trois points et cliquer-déplacer pour déplacer le suffixe dns](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Règles de la table de stratégie de résolution de noms (NRPT)** : les règles de table de stratégie de résolution de noms définissent la façon dont DNS résout les noms lorsqu’ils sont connectés au VPN. Une fois que la connexion VPN est établie, choisissez les serveurs DNS qu’utilise la connexion VPN.
+- **Règles de la table de stratégie de résolution des noms (NRPT)**  : les règles de table de stratégie de résolution de noms définissent la façon dont DNS résout les noms lorsqu’ils sont connectés au VPN. Une fois que la connexion VPN est établie, choisissez les serveurs DNS qu’utilise la connexion VPN.
 
   Vous pouvez ajouter des règles à la table, qui incluent le domaine, le serveur DNS, le proxy et autres détails, pour résoudre le domaine que vous entrez. La connexion VPN utilise ces règles quand les utilisateurs se connectent aux domaines que vous entrez.
 
@@ -165,7 +165,7 @@ Pour plus d’informations sur la création de code XML EAP personnalisé, consu
 ## <a name="split-tunneling"></a>Tunneling fractionné
 
 - **Fractionner le tunneling** : vous pouvez **Activer** ou **Désactiver** cette option pour laisser les appareils décider quelle connexion utiliser en fonction du trafic. Par exemple, un utilisateur dans un hôtel utilise la connexion VPN pour accéder à ses fichiers de travail, mais utilise le réseau standard de l’hôtel pour surfer sur Internet.
-- **Fractionner les routages de tunneling pour cette connexion VPN ** : ajoutez des routes facultatives pour les fournisseurs VPN tiers. Entrez un préfixe de destination et une taille de préfixe pour chaque connexion.
+- **Fractionner les routages de tunneling pour cette connexion VPN**  : ajoutez des routes facultatives pour les fournisseurs VPN tiers. Entrez un préfixe de destination et une taille de préfixe pour chaque connexion.
 
 ## <a name="trusted-network-detection"></a>Détection de réseaux approuvés
 
@@ -185,4 +185,4 @@ Par exemple, si l’utilisateur est déjà connecté à un suffixe DNS approuvé
 
 Le profil est créé, mais il ne fait rien pour le moment. À présent, [affectez le profil](device-profile-assign.md), puis [supervisez son état](device-profile-monitor.md).
 
-Configurez les paramètres VPN sur les appareils [Android](vpn-settings-android.md), [iOS](vpn-settings-ios.md) et [macOS](vpn-settings-macos.md).
+Configurez les paramètres VPN sur les appareils [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md) et [macOS](vpn-settings-macos.md).

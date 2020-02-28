@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d4517d89e3b7365834e904c815b30a362540906
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: MTE75
+ms.openlocfilehash: 545f287e8b7ee82e2008f239171b22e01714b8c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755593"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514742"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Résoudre les problèmes liés aux actions d’appareil dans Intune
 
@@ -34,7 +34,7 @@ Microsoft Intune propose de nombreuses actions qui facilitent la gestion des app
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>J’ai cliqué sur l’action « Désactiver le verrou d’activation » dans le portail, mais cela n’a eu aucun effet sur l’appareil.
 Ce comportement est attendu. Après le démarrage de l’action Désactiver le verrou d’activation, Apple demande un code mis à jour au service Intune. Vous devez taper ce code dans le champ du code secret une fois que votre appareil apparaît dans l’écran Verrou d’activation. Ce code est valide pendant 15 jours seulement. Vous devez cliquer sur l’action et copier le code avant de lancer la réinitialisation.
 
-### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Je ne vois pas le code Désactiver le verrou d’activation dans le panneau Vue d’ensemble sur mon appareil iOS ? Pourquoi ?
+### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Je ne vois pas le code Désactiver le verrou d’activation dans le panneau Vue d’ensemble sur mon appareil iOS/iPadOS ? Pourquoi ?
 Les raisons les plus probables sont les suivantes :
 - Le code a expiré et a été effacé du service.
 - L’appareil n’est pas supervisé avec la stratégie de restriction d’appareil pour autoriser le verrou d’activation.
@@ -43,7 +43,7 @@ Vous pouvez vérifier le code dans l’afficheur Graph à l’aide de la requêt
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-ios-device"></a>Pourquoi l’action Désactiver le verrou d’activation est-elle grisée sur mon appareil iOS ?
+### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-iosipados-device"></a>Pourquoi l’action Désactiver le verrou d’activation est-elle grisée sur mon appareil iOS/iPadOS ?
 Les raisons les plus probables sont les suivantes : 
 - Le code a expiré et a été effacé du service.
 - L’appareil n’est pas supervisé avec la stratégie de restriction d’appareil pour autoriser le verrou d’activation.
@@ -90,8 +90,22 @@ Ce message s’affiche quand le jeton de réinitialisation n’a pas été activ
 3. L’utilisateur final doit accepter la deuxième invite pour autoriser la réinitialisation du code secret.
 Une fois ces étapes terminées, vous ne devriez plus recevoir ce message.
 
-### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-ios-device-when-i-issue-the-remove-passcode-action"></a>Pourquoi suis-je invité à définir un nouveau code secret sur mon appareil iOS quand je lance l’action Supprimer le code secret ?
+### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-iosipados-device-when-i-issue-the-remove-passcode-action"></a>Pourquoi suis-je invité à définir un nouveau code secret sur mon appareil iOS/iPadOS quand je lance l’action Supprimer le code secret ?
 Cette invite s’affiche si l’une de vos stratégies de conformité exige la définition d’un code secret.
+
+
+## <a name="wipe-action"></a>Action Réinitialiser
+
+### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Impossible de redémarrer un appareil Windows 10 après utilisation de l’action Réinitialiser
+Cela peut se produire si vous choisissez l’option **Réinitialiser l’appareil et poursuivez la réinitialisation même si l'appareil s'éteint. Si vous sélectionnez cette option, sachez qu'elle peut empêcher certains appareils Windows 10 de redémarrer.** sur un appareil Windows 10.
+
+Cela peut se produire lorsque l’installation de Windows présente des dommages majeurs empêchant la réinstallation du système d’exploitation. Dans ce cas, le processus échoue et le système reste dans l’[environnement de récupération Windows]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+
+### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Impossible de redémarrer un appareil chiffré BitLocker après avoir utilisé l’action Réinitialiser
+Cela peut se produire si vous choisissez l’option **Réinitialiser l’appareil et poursuivez la réinitialisation même si l'appareil s'éteint. Si vous sélectionnez cette option, sachez qu'elle peut empêcher certains appareils Windows 10 de redémarrer.** sur un appareil chiffré avec BitLocker.
+
+Pour résoudre ce problème, utilisez un média de démarrage pour réinstaller Windows 10 sur l’appareil.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

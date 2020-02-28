@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb67cf2cb17b78c4034c3b73e229e160723d975e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: a4fdbf7ca252af9eb8513d437e3275692a1f8d13
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414391"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415235"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Gérer des PC Windows en tant qu’ordinateurs via le logiciel client Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "73414391"
 > [!WARNING]
 > Microsoft a annoncé que le [support de Windows 7 prendra fin le 14 janvier 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). À cette date, Intune cessera également de prendre en charge les appareils exécutant Windows 7. Microsoft vous recommande vivement de passer à Windows 10 pour éviter toute interruption de service ou de support.
 > 
-> Pour plus d’informations, consultez [Calendrier des modifications Intune : le support pour Windows 7 touche à sa fin](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7).
+> Pour plus d’informations, consultez le [billet de blog Calendrier des modifications](https://aka.ms/Windows7_Intune).
 
 > [!NOTE]
 > Vous pouvez utiliser Microsoft Intune pour gérer les PC Windows comme [appareils mobiles avec la gestion des appareils mobiles (MDM)](../enrollment/windows-enroll.md) ou comme ordinateurs avec le logiciel client Intune, comme décrit ci-dessous. Cependant, Microsoft recommande aux clients [d’utiliser la solution de gestion MDM](../enrollment/windows-enroll.md) quand c’est possible. Pour plus d’informations, consultez [Comparer la gestion des PC Windows en tant qu’ordinateurs ou appareils mobiles](pc-management-comparison.md) 
@@ -46,7 +46,7 @@ Intune prend en charge la gestion de 7 000 PC Windows au maximum en tant qu’
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Configuration requise pour la gestion du client Intune PC
 
-**Matériel**:  
+**Matériel** :  
 Voici la configuration matérielle minimale requise pour l’installation du logiciel client Intune :
 
 |Condition requise|Plus d’informations|
@@ -55,14 +55,14 @@ Voici la configuration matérielle minimale requise pour l’installation du log
 |Processeur et mémoire|Reportez-vous à la configuration requise du processeur et de la RAM pour le système d’exploitation du PC.|
 |Espace disque|200 Mo d'espace disponible sur le disque avant l'installation du logiciel client.|
 
-**Logiciels**:  
+**Logiciels** :  
 Voici la configuration logicielle requise pour l’installation du logiciel client :
 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Système d'exploitation | Appareil Windows sous Windows 7 SP1 et Windows 8.1 ou une version ultérieure. </br></br>**Les éditions familiales ne sont pas prises en charge.**|
 |Autorisations administratives|Le compte qui installe le logiciel client doit disposer des autorisations d’administrateur local sur cet ordinateur.|
-|Windows Installer 3.1|Le PC doit disposer de Windows Installer 3.1 au minimum.<br /><br />Pour afficher la version de Windows Installer sur un PC :<br /><br />  Sur le PC, cliquez avec le bouton droit sur **%windir%\System32\msiexec.exe**, puis cliquez sur **Propriétés**.<br /><br />Vous pouvez télécharger la dernière version de Windows Installer à partir de [Windows Installer Redistributables](https://go.microsoft.com/fwlink/?LinkID=234258) sur le site web Microsoft Developer Network.|
+|Windows Installer 3.1.|Le PC doit disposer de Windows Installer 3.1 au minimum.<br /><br />Pour afficher la version de Windows Installer sur un PC :<br /><br />  Sur le PC, cliquez avec le bouton droit sur **%windir%\System32\msiexec.exe**, puis cliquez sur **Propriétés**.<br /><br />Vous pouvez télécharger la dernière version de Windows Installer à partir de [Windows Installer Redistributables](https://go.microsoft.com/fwlink/?LinkID=234258) sur le site web Microsoft Developer Network.|
 |Supprimer les logiciels clients incompatibles|Avant d’installer le logiciel client Intune, désinstallez tous les logiciels clients Configuration Manager, Operations Manager et Service Manager du PC.|
 
 ## <a name="deploying-the-intune-software-client"></a>Déploiement du logiciel client Intune

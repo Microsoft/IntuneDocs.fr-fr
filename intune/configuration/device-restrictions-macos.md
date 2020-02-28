@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 3d26c4c6cd05a411555f7824ad21b72431eb569c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206548"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511170"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Paramètres des appareils macOS pour autoriser ou restreindre les fonctionnalités à l’aide d’Intune
 
@@ -36,11 +36,11 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 [Créez un profil de configuration pour les restrictions appliquées aux appareils](../device-restrictions-configure.md).
 
 > [!NOTE]
-> Ces paramètres s’appliquent à différents types d’inscription. Pour plus d’informations sur les différents types d’inscription, consultez [inscription MacOS](../macos-enroll.md).
+> Ces paramètres s’appliquent à différents types d’inscription. Pour plus d’informations sur les différents types d’inscriptions, consultez [Inscription macOS](../macos-enroll.md).
 
 ## <a name="general"></a>Général
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 - **Rechercher la définition** : choisissez l’option **Bloquer** pour empêcher l’utilisateur de mettre en surbrillance un mot, puis d’en consulter la définition sur l’appareil. L’option (par défaut) **Non configuré** autorise l’accès à la fonctionnalité de recherche de définition.
 - **Dictée** : choisissez l’option **Bloquer** pour empêcher l’utilisateur d’entrer du texte par dictée vocale. L’option **Non configuré** autorise l’utilisation de la dictée.
@@ -62,29 +62,29 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
     Cette fonctionnalité s’applique à :  
     - macOS 10.13.4 et versions ultérieures
 
-- **Captures d’écran**: l’appareil doit être inscrit dans le cadre de l’inscription automatique des appareils (DEP) d’Apple. Quand la valeur est **Block**, les utilisateurs ne peuvent pas enregistrer une capture d’écran de l’affichage. Il empêche également l’application Classroom d’observer les écrans à distance. **Non configuré** (par défaut) permet aux utilisateurs de capturer des captures d’écran et permet à l’application Classroom d’afficher les écrans à distance.
+- **Captures d’écran** : l’appareil doit être inscrit dans le cadre de l’inscription automatique des appareils (DEP) Apple. Quand la valeur est **Bloquer**, les utilisateurs ne peuvent pas enregistrer de capture d’écran. Elle empêche également l’application Classroom d’observer les écrans à distance. **Non configuré** (par défaut) permet aux utilisateurs de faire des captures d’écran et permet à l’application Classroom d’afficher les écrans à distance.
 
-### <a name="settings-apply-to-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription automatique des appareils
+### <a name="settings-apply-to-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription automatique des appareils
 
-- **Observation de l’écran distant par le biais de l’application Classroom**: **Désactiver** empêche les enseignants d’utiliser l’application Classroom pour voir les écrans des étudiants. **Non configuré** (par défaut) permet aux enseignants de voir les écrans des étudiants.
+- **Observation des écrans à distance avec l'application Classroom** : **Désactiver** empêche les enseignants d’utiliser l’application Classroom pour voir les écrans des étudiants. **Non configuré** (par défaut) permet aux enseignants de voir les écrans des étudiants.
 
-  Pour utiliser ce paramètre, définissez le paramètre **captures d’écran** sur **non configuré** (les captures d’écran sont autorisées).
+  Pour utiliser ce paramètre, définissez le paramètre **Captures d’écran** sur **Non configuré** (les captures d’écran sont autorisées).
 
-- **Observation de l’écran non demandée par l’application Classroom**: **autoriser** permet aux enseignants de voir les écrans de leurs élèves sans que l’étudiant n’ait besoin de leur accord. **Non configuré** (par défaut) requiert que l’étudiant accepte pour que l’enseignant puisse voir les écrans.
+- **Observation des écrans sans invite par l'application Classroom** : **Autoriser** permet aux enseignants de voir les écrans de leurs élèves sans leur accord. **Non configuré** (par défaut) exige l’accord de l’étudiant pour que l’enseignant puisse voir les écrans.
 
-  Pour utiliser ce paramètre, définissez le paramètre **captures d’écran** sur **non configuré** (les captures d’écran sont autorisées).
+  Pour utiliser ce paramètre, définissez le paramètre **Captures d’écran** sur **Non configuré** (les captures d’écran sont autorisées).
 
-- **Les élèves doivent demander l’autorisation de conserver la classe de classe** **: obliger** les élèves inscrits dans un cours non géré à obtenir l’approbation d’un enseignant pour la sortie du cours. **Non configuré** (par défaut) permet aux élèves de conserver le cours chaque fois que l’étudiant le choisit.
+- **Les étudiants doivent demander l'autorisation de quitter un cours Classroom** : **Exiger** oblige les élèves inscrits dans un cours non géré à obtenir l’approbation d’un enseignant avant de quitter le cours. **Non configuré** (par défaut) permet aux élèves de quitter le cours lorsqu’il le souhaite.
 
-- **Les enseignants peuvent verrouiller automatiquement des appareils ou des applications dans l’application Classroom**: **autoriser** permet aux enseignants de verrouiller l’appareil ou l’application d’un étudiant sans l’approbation de l’étudiant. **Non configuré** (par défaut) requiert que l’étudiant accepte avant de verrouiller l’appareil ou l’application.
+- **Les enseignants peuvent automatiquement verrouiller des appareils ou des applications dans l'application Classroom** : **Autoriser** permet aux enseignants de verrouiller l’appareil ou l’application d’un étudiant sans son accord. **Non configuré** (par défaut) exige l’accord de l’étudiant pour que l’enseignant puisse verrouiller l’appareil ou l’application.
 
-- **Les étudiants peuvent rejoindre automatiquement la classe classe**: **autoriser** permet aux élèves de joindre une classe sans inviter l’enseignant. **Non configuré** (par défaut) requiert l’approbation d’un enseignant pour rejoindre une classe.
+- **Les étudiants peuvent automatiquement rejoindre un cours Classroom** : **Autoriser** permet aux élèves de participer à un cours sans que l’enseignant ait à fournir son approbation. **Non configuré** (par défaut) nécessite l’approbation d’un enseignant pour participer à un cours.
 
 ## <a name="password"></a>Mot de passe
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
-- **Mot de passe** : **Demande** à l’utilisateur final de saisir un mot de passe pour pouvoir accéder à l’appareil. **Non configuré** (par défaut) ne requiert pas de mot de passe. Elle n’impose pas non plus de restrictions, telles que le blocage de mots de passe simples ou la définition d’une longueur minimale.
+- **Mot de passe** : **Demande** à l’utilisateur final de saisir un mot de passe pour pouvoir accéder à l’appareil. **Non configuré** (par défaut) ne requiert pas de mot de passe. Par ailleurs, elle ne force aucune restriction, comme le blocage des mots de passe simples ou la configuration d’une longueur minimale.
   - **Type de mot de passe requis** : Indique si le mot de passe peut être uniquement de nature numérique ou s’il doit être alphanumérique (c’est-à-dire, contenir des lettres et des chiffres).
 
     Cette fonctionnalité s’applique à :  
@@ -114,7 +114,7 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="built-in-apps"></a>Applications intégrées
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 - **Bloquer le remplissage automatique de Safari** : choisissez l’option **Bloquer** pour désactiver la fonctionnalité de remplissage automatique dans Safari sur l’appareil. L’option (par défaut) **Non configuré** autorise les utilisateurs à modifier les paramètres de saisie semi-automatique dans le navigateur web.
 - **Bloquer l’appareil photo** : choisissez **Bloquer** pour empêcher l’accès à l’appareil photo de l’appareil. L’option (par défaut)**Non configuré** autorise l’accès à l’appareil photo de l’appareil.
@@ -127,32 +127,32 @@ Ces paramètres sont ajoutés à un profil de configuration d’appareil dans In
 
 ## <a name="restricted-apps"></a>Applications restreintes
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
-- **Type de liste d’applications restreintes**: créez une liste d’applications que les utilisateurs ne sont pas autorisés à installer ou utiliser. Les options disponibles sont les suivantes :
+- **Type de liste d’applications restreintes** : Créez une liste d’applications que les utilisateurs ne sont pas autorisés à installer ou à utiliser. Les options disponibles sont les suivantes :
 
-  - **Non configuré** (valeur par défaut) : il n’existe aucune restriction d’Intune. Les utilisateurs ont accès aux applications que vous attribuez et aux applications intégrées.
-  - **Applications interdites** : applications non managées par Intune dont vous souhaitez empêcher l’installation sur l’appareil. Les utilisateurs ne sont pas autorisés à installer une application interdite. Toutefois, si un utilisateur installe une application à partir de cette liste, il est signalé dans Intune.
-  - **Applications approuvées** : applications que les utilisateurs sont autorisés à installer. Les utilisateurs ne doivent pas installer d’applications qui ne sont pas répertoriées. Les applications qui sont gérées par Intune sont autorisées automatiquement. Rien n’empêche les utilisateurs d’installer une application qui ne figure pas dans la liste approuvée. Mais dans le cas contraire, elle est signalée dans Intune.
-- **ID de l'ensemble d'applications** : entrez l’[ID d’ensemble d’applications](bundle-ids-built-in-ios-apps.md) pour l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site Web d’Apple contient une liste d' [applications Apple intégrées](https://support.apple.com/HT208094).
-- **Nom de l’application** : entrez le nom de l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site Web d’Apple contient une liste d' [applications Apple intégrées](https://support.apple.com/HT208094).
+  - **Non configuré** (par défaut) : Il n’existe aucune restriction d’Intune. Les utilisateurs ont accès aux applications que vous attribuez et aux applications intégrées.
+  - **Applications interdites** : applications non managées par Intune dont vous souhaitez empêcher l’installation sur l’appareil. Rien n’empêche les utilisateurs d’installer une application interdite. Toutefois, si un utilisateur installe une application de cette liste, cela est signalé dans Intune.
+  - **Applications approuvées** : applications que les utilisateurs sont autorisés à installer. Les utilisateurs ne doivent pas installer d’applications qui ne sont pas répertoriées. Les applications qui sont gérées par Intune sont autorisées automatiquement. Rien n’empêche les utilisateurs d’installer une application qui ne figure pas dans la liste approuvée. Toutefois, s’ils le font, cela est signalé dans Intune.
+- **ID de l'ensemble d'applications** : entrez l’[ID d’ensemble d’applications](bundle-ids-built-in-ios-apps.md) pour l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094).
+- **Nom de l’application** : entrez le nom de l’application. Vous pouvez afficher ou masquer les applications intégrées et les applications métier. Le site web d’Apple contient une liste d’[applications Apple intégrées](https://support.apple.com/HT208094).
 - **Éditeur** : entrez l’éditeur de l’application souhaitée.
 
 Pour ajouter des applications à ces listes, vous pouvez :
 
-- **Ajouter**: sélectionnez cette option pour créer votre liste d’applications.
-- **Importez** un fichier CSV comportant des détails sur l’application, notamment l’URL. Utilisez le format `<app bundle ID>, <app name>, <app publisher>`. Ou **Exporter** pour créer une liste d’applications que vous avez ajoutées, au même format.
+- **Ajouter** : Sélectionnez cette option pour créer votre liste d’applications.
+- **Importez** un fichier CSV comportant des détails sur l’application, notamment l’URL. Utilisez le format `<app bundle ID>, <app name>, <app publisher>`. Sinon, sélectionnez **Exporter** pour créer une liste des applications que vous avez ajoutées, au même format.
 
 ## <a name="connected-devices"></a>Appareils connectés
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 - **Bloquer AirDrop** : choisissez l’option **Bloquer** pour empêcher l’utilisation d’AirDrop sur l’appareil. L’option (par défaut)**Non configuré** autorise l’utilisation de la fonctionnalité AirDrop pour échanger du contenu avec des appareils situés à proximité.
 - **Bloquer le déverrouillage automatique avec Apple Watch** : l’option **Bloquer** empêche les utilisateurs de déverrouiller leur appareil macOS avec leur Apple Watch. **Non configuré** (par défaut) permet aux utilisateurs de déverrouiller leur appareil macOS avec leur Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Cloud et stockage
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 - **Bloquer la synchronisation du trousseau iCloud** : choisissez l’option **Bloquer** pour désactiver la synchronisation des identifiants stockés dans le trousseau sur iCloud. L’option (par défaut) **Non configuré** autorise les utilisateurs à synchroniser ces identifiants.
 - **Bloquer la synchronisation des documents iCloud** : Choisissez **Bloquer** pour empêcher iCloud de synchroniser les documents et des données. L’option (par défaut) **Non configuré** autorise la synchronisation des documents et des pairs clé-valeur dans votre espace de stockage iCloud.
@@ -162,15 +162,15 @@ Pour ajouter des applications à ces listes, vous pouvez :
 - **Bloquer la sauvegarde de rappels iCloud** : l’option **Bloquer** empêche la synchronisation entre iCloud et l’application Rappels macOS. **Non configuré** (par défaut) autorise la synchronisation des rappels avec iCloud.
 - **Bloquer la sauvegarde de signets iCloud** : l’option **Bloquer** empêche la synchronisation entre iCloud et les signets des appareils. **Non configuré** (par défaut) autorise la synchronisation des signets avec iCloud.
 - **Bloquer la sauvegarde de notes iCloud** : l’option **Bloquer** empêche la synchronisation entre iCloud et les notes des appareils. **Non configuré** (par défaut) autorise la synchronisation des notes avec iCloud.
-- **Bloquer icloud Photo Library**: **bloquer** désactive la bibliothèque de photos icloud et empêche icloud de synchroniser les photos des appareils. Toutes les photos qui ne sont pas entièrement téléchargées de la Photothèque iCloud sont supprimées du stockage local de l’appareil. **Non configuré** (par défaut) permet la synchronisation des photos entre l’appareil et la bibliothèque de photos iCloud.
-- **Remise**: **non configuré** (par défaut) permet aux utilisateurs de commencer à travailler sur un appareil MacOS, puis de poursuivre le travail qu’ils ont démarré sur un autre appareil iOS ou MacOS. **Bloquer** empêche la fonctionnalité de remise sur l’appareil. 
+- **Bloquer la photothèque iCloud** : **Bloquer** désactive la photothèque iCloud et empêche iCloud de synchroniser les photos des appareils. Toutes les photos qui ne sont pas entièrement téléchargées de la Photothèque iCloud sont supprimées du stockage local de l’appareil. **Non configuré** (par défaut) autorise la synchronisation des photos entre l’appareil et la photothèque iCloud.
+- **Handoff** : **Non configuré** (valeur par défaut) permet aux utilisateurs de commencer à travailler sur un appareil macOS, puis de poursuivre le travail qu’ils ont commencé sur un autre appareil iOS/iPadOS ou macOS. **Bloquer** empêche la fonctionnalité Handoff sur l’appareil. 
 
   Cette fonctionnalité s’applique à :  
   - macOS 10.15 et ultérieur
 
 ## <a name="domains"></a>Domaines
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 - **URL de domaine d'e-mail** : **ajoutez** une ou plusieurs URL à la liste. Quand les utilisateurs reçoivent un e-mail provenant d’un domaine autre que ceux que vous avez configurés, l’e-mail est marqué comme non approuvé dans l’application macOS Mail.
 
@@ -178,4 +178,4 @@ Pour ajouter des applications à ces listes, vous pouvez :
 
 [Attribuer le profil](../device-profile-assign.md) et [suivre son état](../device-profile-monitor.md).
 
-Vous pouvez également appliquer des restrictions sur les fonctionnalités ou les paramètres des appareils [iOS](../device-restrictions-ios.md).
+Vous pouvez également appliquer des restrictions sur les fonctionnalités ou les paramètres des appareils [iOS/iPadOS](../device-restrictions-ios.md).

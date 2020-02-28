@@ -1,7 +1,7 @@
 ---
-title: Paramètres Intune pour l’application iOS Classroom
+title: Paramètres Intune pour l’application iOS/iPadOS Classroom
 titleSuffix: Microsoft Intune
-description: Découvrez les paramètres Intune qui vous permettent de contrôler les paramètres pour l’application Classroom sur les appareils iOS.
+description: Découvrez les paramètres Intune qui vous permettent de contrôler les paramètres pour l’application Classroom sur les appareils iOS/iPadOS.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6814b4d98b8512ce95119b05cc299964e486ac64
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 74b9e6818de2853ae22a1fa1bb580b32075dcf19
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784219"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514419"
 ---
-# <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Guide pratique pour configurer des paramètres Intune pour l’application iOS Classroom
+# <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Guide pratique pour configurer des paramètres Intune pour l’application iOS/iPadOS Classroom
 
 > [!NOTE]
-> Intune ne prend pas actuellement en charge la configuration de l’application Classroom. Cet article s’applique uniquement aux utilisateurs ayant des profils iOS Éducation existants dans Intune.  
+> Intune ne prend actuellement pas en charge la configuration de l’application Classroom. Cet article s’applique uniquement aux utilisateurs ayant des profils iOS/iPadOS Éducation existants dans Intune.  
 
 ## <a name="introduction"></a>Introduction
 [Classroom](https://itunes.apple.com/app/id1085319084) est une application qui permet aux enseignants d’orienter l’apprentissage et de contrôler les appareils des étudiants dans la salle de classe. Par exemple, l’application permet aux enseignants d’effectuer les tâches suivantes :
@@ -39,7 +39,7 @@ ms.locfileid: "74784219"
 - diriger les iPad des étudiants vers un signet ou le chapitre d’un livre ;
 - afficher l’écran de l’iPad d’un étudiant sur Apple TV.
 
-Pour configurer Classroom sur votre appareil, vous devez créer et configurer un profil d’appareil Éducation iOS Intune.
+Pour configurer Classroom sur votre appareil, vous devez créer et configurer un profil d’appareil Éducation iOS/iPadOS Intune.
 
 ## <a name="before-you-start"></a>Avant de commencer
 
@@ -47,9 +47,9 @@ Tenez compte des éléments suivants avant de commencer à configurer ces param�
 
 - Les iPad des enseignants et des étudiants doivent être inscrits auprès d’Intune.
 - Vérifiez que vous avez installé l’application [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) sur l’appareil de l’enseignant. Vous pouvez installer l’application manuellement ou utiliser la [gestion des applications Intune](../apps/app-management.md).
-- Vous devez configurer des certificats pour authentifier les connexions entre les appareils des enseignants et des étudiants (consultez l’Étape 2 : Créer et affecter un profil Éducation iOS dans Intune).
+- Vous devez configurer des certificats pour authentifier les connexions entre les appareils des enseignants et des étudiants (consultez l’Étape 2 : Créer et affecter un profil Éducation iOS/iPadOS dans Intune).
 - Les iPad des enseignants et des étudiants doivent être situés sur le même réseau Wi-Fi. De plus, Bluetooth doit également être activé sur ces appareils.
-- L’application Classroom fonctionne sur des iPad supervisés exécutant iOS 9.3 ou une version ultérieure.
+- L’application Classroom fonctionne sur des iPad supervisés exécutant iOS/iPadOS 9.3 ou une version ultérieure.
 - Dans cette version, Intune prend en charge la gestion d’un scénario 1 :1 où chaque étudiant a son iPad dédié.
 
 
@@ -72,15 +72,15 @@ Vous pouvez importer des informations dans SDS en appliquant l’une des méthod
 - [En savoir plus sur School Data Sync de Microsoft](https://sds.microsoft.com/)
 - [En savoir plus sur les licences dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Étape 2 : Créer et affecter un profil Éducation iOS dans Intune
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Étape 2 : Créer et affecter un profil Éducation iOS/iPadOS dans Intune
 
 ### <a name="configure-general-settings"></a>Configurer les paramètres généraux
 
 1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Dans le volet **Intune**, choisissez **Configuration de l’appareil**.
 2. Dans le volet **Configuration de l’appareil**, sous la section **Gérer**, choisissez **Profils**.
-5. Dans le volet de profils, choisissez **Créer un profil**.
-6. Dans le volet **Créer un profil**, entrez un **Nom** et une **Description** pour le profil Éducation iOS.
+5. Dans le volet Profils, choisissez **Créer un profil**.
+6. Dans le volet **Créer un profil**, entrez un **Nom** et une **Description** pour le profil Éducation iOS/iPadOS.
 7. Dans la liste déroulante **Plateforme**, choisissez **iOS**.
 8. Dans la liste déroulante **Type de profil**, choisissez **Education**.
 9. Choisissez **Paramètres** > **Configurer**.

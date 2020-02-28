@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61b703837598ddbe2c0c44874928b4444466c811
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: f3b32268d0b04dee84a737b9a1c768bc4fab7202
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886787"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556497"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Résoudre les problèmes de stratégies BitLocker dans Microsoft Intune
 
@@ -35,11 +35,13 @@ Avec Microsoft Intune, vous disposez des méthodes suivantes pour gérer BitLock
 
 - **Stratégies de configuration des appareils** : certaines options de stratégie intégrées sont proposées dans Intune quand vous créez un profil de configuration d’appareil pour gérer les paramètres Endpoint Protection. Pour utiliser ces options, [créez un profil d’appareil pour Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), sélectionnez **Windows 10 et ultérieur** comme *Plateforme*, puis sélectionnez la catégorie **Chiffrement Windows** dans *Paramètres*. 
 
-   Pour en savoir plus sur les options et fonctionnalités disponibles, consultez [Chiffrement Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Vous trouverez ici plus d’informations sur les options et fonctionnalités disponibles : [Chiffrement Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Bases de référence de sécurité** - Les [bases de référence de sécurité](security-baselines.md) représentent des groupes connus de paramètres et de valeurs par défaut qui sont recommandés par l’équipe de sécurité appropriée pour mieux sécuriser les appareils Windows. Différentes sources de référence, comme la *base de référence de la sécurité MDM* ou la *base de référence de Microsoft Defender ATP*, peuvent gérer les mêmes paramètres ainsi que des paramètres qui leur sont propres. Elles peuvent également gérer les mêmes paramètres que ceux que vous gérez à l’aide de stratégies de configuration des appareils. 
 
-En plus d’Intune, il est possible que les paramètres BitLocker soient gérés par d’autres moyens comme une stratégie de groupe ou qu’ils soient définis manuellement par un utilisateur de l’appareil.
+En plus d’Intune, pour le matériel compatible avec Modern Standby et HSTI, lorsque vous utilisez l’une de ces fonctionnalités, le chiffrement de l’appareil BitLocker est automatiquement activé chaque fois que l’utilisateur joint un appareil à Azure AD. Azure AD fournit un portail dans lequel les clés de récupération sont également sauvegardées, afin que les utilisateurs puissent récupérer leur propre clé de récupération en libre-service, si nécessaire.
+
+Il est également possible que les paramètres BitLocker soient gérés par d’autres moyens comme une stratégie de groupe ou qu’ils soient définis manuellement par un utilisateur de l’appareil.
 
 Quelle que soit la méthode utilisée pour appliquer les paramètres sur un appareil, les stratégies BitLocker ont toujours recours au [fournisseur de services de chiffrement BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) pour configurer le chiffrement sur l’appareil. Le fournisseur de services de chiffrement BitLocker est intégré à Windows. Quand Intune déploie une stratégie BitLocker sur un appareil attribué, c’est ce fournisseur de services de chiffrement sur l’appareil qui écrit les valeurs appropriées dans le Registre Windows afin que les paramètres de la stratégie soient ensuite appliqués.
 
@@ -103,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Vérifier la configuration de la clé de Registre des appareils
 
-Une fois que la stratégie BitLocker a été correctement déployée sur un appareil, affichez la clé de Registre suivante sur l’appareil, puis vérifiez la configuration des paramètres de BitLocker : *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Voici un exemple :
+Une fois que la stratégie BitLocker a été correctement déployée sur un appareil, affichez la clé de Registre suivante sur l’appareil, puis vérifiez la configuration des paramètres de BitLocker :  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Voici un exemple :
 
 ![Clé de Registre BitLocker](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -164,6 +166,15 @@ Vous devez maintenant savoir à peu près comment vérifier que la stratégie Bi
 
   2. **BitLocker n’est pas pris en charge sur tous les types de matériel**.
      Même si vous disposez de la bonne version de Windows, il est possible que le matériel sous-jacent de l’appareil ne remplisse pas les conditions requises pour le chiffrement BitLocker. Vous trouverez la [configuration système requise pour BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) dans la documentation Windows, mais sachez que les points principaux à vérifier sont que l’appareil soit équipé d’une puce TPM compatible (version 1.2 ou ultérieure) et d’un microprogramme BIOS ou UEFI conforme aux normes TCG (Trusted Computing Group).
+     
+Le **chiffrement BitLocker n’est pas exécuté en mode silencieux** : vous avez configuré une stratégie Endpoint Protection avec le paramètre « Avertissement pour tout autre chiffrement de disque » défini sur Bloquer et l’Assistant de chiffrement s’affiche toujours :
+
+- **Vérifiez que la version de Windows prend en charge le chiffrement silencieux** Cela nécessite au minimum la version 1803. Si l’utilisateur n’est pas un administrateur sur l’appareil, une version minimale 1809 est requise. La version 1809 ajoutée ne prend pas en charge la mise Modern Standby
+
+L' **appareil chiffré avec BitLocker s’affiche comme non conforme pour les stratégies de conformité Intune** : le problème se produit lorsque le chiffrement BitLocker n’est pas terminé. En fonction de facteurs tels que la taille du disque, le nombre de fichiers et les paramètres BitLocker, le chiffrement BitLocker peut prendre beaucoup de temps. Une fois le chiffrement terminé, l’appareil s’affiche comme étant conforme. Les appareils peuvent également devenir temporairement non conformes immédiatement après une installation récente de mises à jour Windows.
+
+**Les appareils sont chiffrés à l’aide d’un algorithme 128 bits alors que la stratégie spécifie 256 bits** : par défaut, Windows 10 chiffre un lecteur avec le chiffrement XTS-AES 128 bits. Consultez ce guide pour [définir le chiffrement 256 bits pour BitLocker pendant AutoPilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+
 
 **Exemple d’examen**
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,36 +16,36 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: df5b53be159fd082090e61fd736e4c9329644c85
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206344"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512736"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités d’appareil macOS dans Intune
 
-Intune inclut certains paramètres intégrés afin de personnaliser les fonctionnalités de vos appareils macOS. Par exemple, les administrateurs peuvent ajouter des imprimantes, choisir la manière dont les utilisateurs se connectent, configurer les contrôles de l’alimentation, utiliser l’authentification unique et bien plus encore.
+Intune inclut certains paramètres intégrés afin de personnaliser les fonctionnalités de vos appareils macOS. Par exemple, les administrateurs peuvent ajouter des imprimantes AirPrint, choisir la manière dont les utilisateurs se connectent, configurer les contrôles de l’alimentation, utiliser l’authentification unique, et bien plus encore.
 
 Utilisez ces fonctionnalités pour contrôler vos appareils macOS dans le cadre de votre solution de gestion des appareils mobiles.
 
-Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il liste également les étapes à suivre pour obtenir l’adresse IP, le chemin et le port des imprimantes AirPrint à l’aide de l’application Terminal (émulateur). Pour plus d’informations sur les fonctionnalités de l’appareil, consultez [Ajouter des paramètres de fonctionnalités d’appareils iOS ou MacOS](device-features-configure.md).
+Cet article liste ces paramètres et décrit le rôle de chaque paramètre. Il liste également les étapes à suivre pour obtenir l’adresse IP, le chemin et le port des imprimantes AirPrint à l’aide de l’application Terminal (émulateur). Pour plus d’informations sur les fonctionnalités de l’appareil, consultez [Ajouter des paramètres de fonctionnalités d’appareils iOS/iPadOS ou macOS](device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
 [Créez un profil de configuration d’appareil macOS](device-features-configure.md).
 
 > [!NOTE]
-> Ces paramètres s’appliquent à différents types d’inscription, avec certains paramètres s’appliquant à toutes les options d’inscription. Pour plus d’informations sur les différents types d’inscription, consultez [inscription MacOS](../enrollment/macos-enroll.md).
+> Ces paramètres s’appliquent à différents types d’inscriptions, certains d’entre eux s’appliquant à toutes les options d’inscription. Pour plus d’informations sur les différents types d’inscriptions, consultez [Inscription macOS](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils 
 
 - **Adresse IP** : entrez l’adresse IPv4 ou IPv6 de l’imprimante. Si vous utilisez des noms d’hôte pour identifier les imprimantes, vous pouvez effectuer un test ping dans l’application Terminal pour obtenir l’adresse IP de l’imprimante. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
 - **Chemin d’accès** : entrez le chemin de l’imprimante. Le chemin est généralement `ipp/print` pour les imprimantes de votre réseau. Pour plus de détails, consultez [Obtenir l’adresse IP et le chemin](#get-the-ip-address-and-path) dans cet article.
-- **Port**(iOS 11.0 et versions ultérieures) : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut.
-- **TLS**(iOS 11.0 et versions ultérieures) : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security).
+- **Port** (iOS 11.0+, iPadOS 13.0+) : entrez le port d’écoute de la destination AirPrint. Si vous ne renseignez pas cette propriété, AirPrint utilise le port par défaut.
+- **TLS** (iOS 11.0+, iPadOS 13.0+) : choisissez **Activer** pour sécuriser les connexions AirPrint à l’aide du protocole TLS (Transport Layer Security).
 
 - **Ajoutez** le serveur AirPrint. Vous pouvez ajouter plusieurs serveurs AirPrint.
 
@@ -68,22 +68,22 @@ Pour ajouter des serveurs AirPrinter, vous avez besoin de l’adresse IP de l�
 
 ## <a name="login-items"></a>Éléments de connexion
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
-- **Fichiers, dossiers et applications personnalisées**: **Ajoutez** le chemin d’accès d’un fichier, d’un dossier, d’une application personnalisée ou d’une application système que vous souhaitez ouvrir lorsqu’un utilisateur se connecte à l’appareil. Les applications système ou les applications générées ou personnalisées pour votre organisation se trouvent généralement dans le dossier `Applications`, avec un chemin d’accès similaire à `/Applications/AppName.app`. 
+- **Fichiers, dossiers et applications personnalisées** : **ajoutez** le chemin d’accès d’un fichier, d’un dossier, d’une application personnalisée ou d’une application système que vous souhaitez ouvrir lorsqu’un utilisateur se connecte à l’appareil. Les applications système, ou les applications créées ou personnalisées pour votre organisation, se trouvent généralement dans le dossier `Applications`, avec un chemin d’accès similaire à `/Applications/AppName.app`. 
 
-  Vous pouvez ajouter de nombreux fichiers, dossiers et applications. Par exemple, entrez :  
+  Vous pouvez ajouter de multiples fichiers, dossiers et applications. Par exemple, entrez :  
   
   - `/Applications/Calculator.app`
   - `/Applications`
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Lors de l’ajout d’une application, d’un dossier ou d’un fichier, veillez à entrer le chemin d’accès correct. Tous les éléments ne se trouvent pas dans le dossier `Applications`. Si un utilisateur déplace un élément d’un emplacement à un autre, alors le chemin d’accès change. Cet élément déplacé ne s’ouvre pas lorsque l’utilisateur se connecte.
+  Lors de l’ajout d’une application, d’un dossier ou d’un fichier, veillez à entrer le chemin d’accès correct. Tous les éléments ne se trouvent pas dans le dossier `Applications`. Si un utilisateur déplace un élément d’un emplacement à un autre, le chemin d’accès change. Cet élément déplacé ne s’ouvre pas lorsque l’utilisateur se connecte.
 
 ## <a name="login-window"></a>Fenêtre de connexion
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : inscription des appareils et inscription automatique des appareils
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Les paramètres s’appliquent à : Inscription d’appareil et inscription automatique d’appareils
 
 #### <a name="window-layout"></a>Disposition de la fenêtre
 
@@ -125,117 +125,117 @@ Cette fonctionnalité s’applique à :
 
 - macOS 10.15 et ultérieur
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription 
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription 
 
-- **Type d’extension d’application SSO**: choisissez le type d’extension d’application SSO d’informations d’identification. Les options disponibles sont les suivantes :
+- **Type d’extension d’application SSO** : choisissez le type d’extension d’application SSO des informations d’identification. Les options disponibles sont les suivantes :
 
-  - **Non configuré**: les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application, basculez le type d’extension d’application SSO sur **non configuré**.
-  - **Redirection**: utilisez une extension d’application de redirection générique et personnalisable pour effectuer une authentification unique avec des flux d’authentification modernes. Veillez à connaître l’extension et l’ID d’équipe pour l’extension d’application de votre organisation.
-  - **Informations d’identification**: utilisez une extension d’application d’informations d’identification générique et personnalisable pour exécuter l’authentification unique avec des flux d’authentification de stimulation/réponse. Vérifiez que vous connaissez l’ID d’extension et l’ID d’équipe pour l’extension de l’application SSO de votre organisation.  
-  - **Kerberos**: utilisez l’extension Kerberos intégrée d’Apple, qui est incluse sur macOS Catalina 10,15 et versions ultérieures. Cette option est une version spécifique à Kerberos de l’extension **d’application d’informations d’identification** .
+  - **Non configuré** : les extensions d’application ne sont pas utilisées. Pour désactiver une extension d’application, basculez le type d’extension d’application SSO sur **Non configuré**.
+  - **Redirection** : utilisez une extension d’application de redirection générique et personnalisable pour effectuer une authentification unique avec des flux d’authentification modernes. Veillez à connaître les ID d’extension et d’équipe de l’extension d’application de votre organisation.
+  - **Informations d’identification** : utilisez une extension d’application d’informations d’identification générique et personnalisable pour exécuter l’authentification unique avec des flux d’authentification de type challenge et réponse. Veillez à connaître l’ID d’extension et l’ID d’équipe de l’extension d’application SSO de votre organisation.  
+  - **Kerberos** : utilisez l’extension Kerberos intégrée d’Apple, qui est incluse dans macOS Catalina 10.15 et versions ultérieures. Cette option est une version spécifique à Kerberos de l’extension d’application **Informations d’identification**.
 
   > [!TIP]
-  > Avec les types de **redirection** et **d’informations d’identification** , vous ajoutez vos propres valeurs de configuration pour transmettre l’extension. Si vous utilisez des **informations d’identification**, envisagez d’utiliser les paramètres de configuration intégrés fournis par Apple dans le type **Kerberos** .
+  > Avec les types de **redirection** et **d’informations d’identification** , vous ajoutez vos propres valeurs de configuration pour transmettre l’extension. Si vous utilisez **Informations d’identification**, envisagez d’utiliser les paramètres de configuration intégrés fournis par Apple dans le type **Kerberos**.
 
-- **ID d’extension** (redirection et informations d’identification) : entrez l’identificateur de bundle qui identifie votre extension d’application SSO, par exemple `com.apple.ssoexample`.
-- **ID d’équipe** (redirection et informations d’identification) : entrez l’identificateur d’équipe de votre extension d’application SSO. Un identificateur d’équipe est une chaîne de 10 caractères alphanumériques (nombres et lettres) générée par Apple, par exemple `ABCDE12345`. 
+- **ID d’extension** (Redirection et Informations d’identification) : entrez l’identificateur de bundle qui identifie votre extension d’application SSO, par exemple `com.apple.ssoexample`.
+- **ID d’équipe** (Redirection et Informations d’identification) : entrez l’identificateur d’équipe de votre extension d’application SSO. Un identificateur d’équipe est une chaîne de 10 caractères alphanumériques (nombres et lettres) générée par Apple, par exemple `ABCDE12345`. 
 
-  Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (qui ouvre le site Web d’Apple).
+  Pour plus d’informations, consultez [Rechercher votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (qui ouvre le site web d’Apple).
 
-- **Domaine** (informations d’identification et Kerberos) : entrez le nom de votre domaine d’authentification. Le nom de domaine doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre domaine est le même que votre nom de domaine DNS, mais en majuscules.
+- **Zone** (Informations d’identification et Kerberos) : entrez le nom de votre zone d’authentification. Le nom de zone doit être en majuscules, par exemple `CONTOSO.COM`. En règle générale, le nom de votre zone est le même que votre nom de domaine DNS, mais en majuscules.
 
-- **Domaines** (informations d’identification et Kerberos) : entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site Web est `mysite.contoso.com`, `mysite` est le nom d’hôte et `contoso.com` le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère la demande d’authentification. Cette authentification permet aux utilisateurs d’utiliser l’ID de face, Touch ID ou Apple pincode/code d’accès pour se connecter.
+- **Domaines** (Informations d’identification et Kerberos) : entrez les noms de domaine ou d’hôte des sites qui peuvent s’authentifier par le biais de l’authentification unique. Par exemple, si votre site web est `mysite.contoso.com`, alors `mysite` est le nom d’hôte et `contoso.com` est le nom de domaine. Lorsque les utilisateurs se connectent à l’un de ces sites, l’extension d’application gère le challenge d’authentification. Cette authentification permet aux utilisateurs d’utiliser Face ID, Touch ID ou le code PIN/code d’accès Apple pour se connecter.
 
-  - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans n’importe quel profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.
+  - Tous les domaines de vos profils Intune d’extension d’application d’authentification unique doivent être uniques. Vous ne pouvez pas répéter un domaine dans un profil d’extension d’application de connexion, même si vous utilisez différents types d’extensions d’application SSO.
   - Ces domaines ne respectent pas la casse.
 
-- **URL** (redirection uniquement) : entrez les préfixes d’URL de vos fournisseurs d’identité au nom desquels l’extension d’application de redirection effectue l’authentification unique. Lorsqu’un utilisateur est redirigé vers ces URL, l’extension de l’application SSO est en intervention et invite l’authentification unique.
+- **URL** (Redirection uniquement) : entrez les préfixes d’URL de vos fournisseurs d’identité au nom desquels l’extension d’application de redirection effectue l’authentification unique. Lorsqu’un utilisateur est redirigé vers ces URL, l’extension de l’application SSO intervient et invite à effectuer l’authentification unique.
 
   - Toutes les URL dans vos profils d’extension d’application d’authentification unique Intune doivent être uniques. Vous ne pouvez pas répéter un domaine dans un profil d’extension d’application SSO, même si vous utilisez différents types d’extensions d’application SSO.
-  - Les URL doivent commencer par http://ou https://.
+  - Les URL doivent commencer par http:// ou https://.
 
-- **Configuration supplémentaire** (redirection et informations d’identification) : entrez les données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
-  - **Clé**: entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
-  - **Type**: entrez le type de données. Les options disponibles sont les suivantes :
+- **Configuration supplémentaire** (Redirection et Informations d’identification) : entrez les données supplémentaires spécifiques à l’extension à passer à l’extension de l’application SSO :
+  - **Clé** : entrez le nom de l’élément que vous souhaitez ajouter, par exemple `user name`.
+  - **Type** : entrez le type de données. Les options disponibles sont les suivantes :
 
     - Chaîne
-    - Booléen : dans **valeur de configuration**, entrez `True` ou `False`.
-    - Entier : dans **valeur de configuration**, entrez un nombre.
+    - Booléen : dans **Valeur de configuration**, entrez `True` ou `False`.
+    - Entier : dans **Valeur de configuration**, entrez un nombre.
     
-  - **Valeur**: entrez les données.
+  - **Valeur** : entrez les données.
   
-  - **Ajouter**: sélectionnez cette option pour ajouter vos clés de configuration.
+  - **Ajouter** : sélectionnez cette option pour ajouter vos clés de configuration.
 
-- **Utilisation de trousseau** (Kerberos uniquement) : choisissez **bloquer** pour empêcher l’enregistrement et le stockage des mots de passe dans le trousseau. **Non configuré** (valeur par défaut) permet d’enregistrer et de stocker les mots de passe dans le trousseau.  
-- **ID de face, Touch ID ou code secret** (Kerberos uniquement) : **exiger** oblige les utilisateurs à entrer leur ID de face, Touch ID ou code secret Apple pour se connecter aux domaines que vous avez ajoutés. **Non configuré** (par défaut) n’oblige pas les utilisateurs à utiliser la biométrie ou le code secret pour se connecter.
-- **Domaine par défaut** (Kerberos uniquement) : choisissez **activer** pour définir la valeur de **domaine** que vous avez entrée comme domaine par défaut. **Non configuré** (par défaut) ne définit pas de domaine par défaut.
+- **Utilisation de trousseau** (Kerberos uniquement) : choisissez **Bloquer** pour empêcher l’enregistrement et le stockage des mots de passe dans le trousseau. **Non configuré** (valeur par défaut) permet d’enregistrer et de stocker les mots de passe dans le trousseau.  
+- **Face ID, Touch ID ou code d’accès** (Kerberos uniquement) : l’option **Exiger** oblige les utilisateurs à entrer leur code d’accès Face ID, Touch ID ou Apple pour se connecter aux domaines que vous avez ajoutés. **Non configuré** (valeur par défaut) n’oblige pas les utilisateurs à utiliser la biométrie ou le code d’accès pour se connecter.
+- **Zone par défaut** (Kerberos uniquement) : choisissez **Activer** pour définir la valeur **Zone** que vous avez entrée comme zone par défaut. **Non configuré** (valeur par défaut) ne définit pas de zone par défaut.
 
   > [!TIP]
   > - **Activez** ce paramètre si vous configurez plusieurs extensions d’application SSO Kerberos dans votre organisation.
-  > - **Activez** ce paramètre si vous utilisez plusieurs domaines. Il définit la valeur de **domaine** que vous avez entrée comme domaine par défaut.
-  > - Si vous n’avez qu’un seul domaine, laissez-le **non configuré** (par défaut).
+  > - **Activez** ce paramètre si vous utilisez plusieurs zones. Il définit la valeur **Zone** que vous avez entrée comme zone par défaut.
+  > - Si vous n’avez qu’une seule zone, conservez l’option **Non configuré** (valeur par défaut).
 
-- **Découverte** automatique (Kerberos uniquement) : lorsqu’elle est définie sur **bloquer**, l’extension Kerberos n’utilise pas automatiquement LDAP et DNS pour déterminer son nom de site Active Directory. **Non configuré** (valeur par défaut) permet à l’extension de rechercher automatiquement le nom du site Active Directory.
-- **Modification du mot de passe** (Kerberos uniquement **) : empêche** les utilisateurs de modifier les mots de passe qu’ils utilisent pour se connecter aux domaines que vous avez entrés. **Non configuré** (valeur par défaut) permet de modifier le mot de passe.  
-- **Synchronisation de mot de passe** (Kerberos uniquement) : choisissez **activer** pour synchroniser les mots de passe locaux de vos utilisateurs sur Azure ad. **Non configuré** (par défaut) désactive la synchronisation de mot de passe pour Azure ad. Utilisez ce paramètre comme alternative ou sauvegarde pour l’authentification unique. Ce paramètre ne fonctionne pas si les utilisateurs sont connectés avec un compte mobile Apple.
-- **Windows Server Active Directory la complexité du mot de passe** (Kerberos uniquement) : choisissez **exiger** pour forcer les mots de passe utilisateur à répondre aux exigences de complexité du mot de passe de Active Directory. Pour plus d’informations, consultez le [mot de passe doit respecter des exigences de complexité](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) . **Non configuré** (par défaut) n’oblige pas les utilisateurs à respecter les exigences de mot de passe de Active Directory.
-- **Longueur minimale du mot de passe** (Kerberos uniquement) : entrez le nombre minimal de caractères pouvant commettre le mot de passe d’un utilisateur. **Non configuré** (par défaut) n’impose pas une longueur minimale de mot de passe aux utilisateurs.
-- **Limite de réutilisation du mot de passe** (Kerberos uniquement) : entrez le nombre de nouveaux mots de passe, à partir de 1-24, qui doivent être utilisés jusqu’à ce qu’un mot de passe précédent puisse être réutilisé sur le domaine. **Non configuré** (par défaut) n’impose pas de limite de réutilisation du mot de passe.
-- **Durée de vie minimale du mot de passe** (Kerberos uniquement) : entrez le nombre de jours pendant lesquels un mot de passe doit être utilisé sur le domaine pour qu’un utilisateur puisse le changer. **Non configuré** (par défaut) n’impose pas une ancienneté minimale des mots de passe avant de pouvoir les modifier.
-- **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe expirera. **Non configuré** (par défaut) utilise `15` jours.
-- **Expiration du mot de passe (Kerberos uniquement)** : entrez le nombre de jours après lesquels l’utilisateur doit changer le mot de passe de l’appareil. **Non configuré** (valeur par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
-- **URL de modification du mot de passe** (Kerberos uniquement) : entrez l’URL qui est lancée lorsque l’utilisateur lance une modification de mot de passe Kerberos.
-- **Nom principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de domaine. Par exemple, dans `user@contoso.com`, `user` est le nom principal et `contoso.com` le nom de domaine.
+- **Découverte automatique** (Kerberos uniquement) : lorsqu’elle est définie sur **Bloquer**, l’extension Kerberos n’utilise pas automatiquement LDAP et DNS pour déterminer son nom de site Active Directory. **Non configuré** (par défaut) permet à l’extension de rechercher automatiquement le nom du site Active Directory.
+- **Changements de mot de passe** (Kerberos uniquement) : l’option **Bloquer** empêche les utilisateurs de modifier les mots de passe qu’ils utilisent pour se connecter aux domaines que vous avez entrés. **Non configuré** (par défaut) autorise ces changements de mots de passe.  
+- **Synchronisation de mot de passe** (Kerberos uniquement) : choisissez **Activer** pour synchroniser les mots de passe locaux de vos utilisateurs sur Azure AD. **Non configuré** (par défaut) désactive la synchronisation de mot de passe pour Azure AD. Utilisez ce paramètre comme alternative ou sauvegarde sur SSO. Ce paramètre ne s’applique pas si les utilisateurs sont connectés avec un compte mobile Apple.
+- **Complexité du mot de passe Windows Server Active Directory** (Kerberos uniquement) : choisissez **Exiger** pour forcer les mots de passe utilisateur à répondre aux exigences de complexité du mot de passe Active Directory. Voir [Le mot de passe doit répondre aux exigences de complexité](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) pour plus d’informations. **Non configuré** (par défaut) n’oblige pas les utilisateurs à respecter les exigences du mot de passe Active Directory.
+- **Longueur minimale du mot de passe** (Kerberos uniquement) : entrez le nombre minimal de caractères qui peuvent composer le mot de passe d’un utilisateur. **Non configuré** (par défaut) n’impose pas une longueur minimale de mot de passe aux utilisateurs.
+- **Limite de réutilisation des mots de passe** (Kerberos uniquement) : entrez le nombre de nouveaux mots de passe, de 1 à 24, qui doivent être utilisés jusqu’à ce qu’un mot de passe précédent puisse être réutilisé sur le domaine. **Non configuré** (par défaut) n’impose pas de limite de réutilisation des mots de passe.
+- **Durée de vie minimale du mot de passe** (Kerberos uniquement) : entrez le nombre de jours pendant lesquels un mot de passe doit être utilisé sur le domaine avant qu’un utilisateur puisse le modifier. **Non configuré** (par défaut) n’impose aucune durée de vie minimale des mots de passe avant de pouvoir les modifier.
+- **Notification d’expiration du mot de passe** (Kerberos uniquement) : entrez le nombre de jours avant l’expiration d’un mot de passe, afin que les utilisateurs soient avertis que leur mot de passe va expirer. **Non configuré** (par défaut) utilise `15` jours.
+- **Expiration du mot de passe (Kerberos uniquement)** : entrez le nombre de jours après lesquels l’utilisateur doit changer le mot de passe de l’appareil. **Non configuré** (par défaut) signifie que les mots de passe des utilisateurs n’expirent jamais.
+- **URL de modification du mot de passe** (Kerberos uniquement) : entrez l’URL affichée lorsque l’utilisateur lance une modification de mot de passe Kerberos.
+- **Nom du principal** (Kerberos uniquement) : entrez le nom d’utilisateur du principal Kerberos. Vous n’avez pas besoin d’inclure le nom de zone. Par exemple, dans `user@contoso.com`, `user` est le nom du principal et `contoso.com` le nom de zone.
 
   > [!TIP]
   > - Vous pouvez également utiliser des variables dans le nom du principal en entrant des accolades `{{ }}`. Par exemple, pour afficher le nom d’utilisateur, entrez `Username: {{username}}`. 
   > - Toutefois, soyez vigilant avec la substitution de variable, car les variables ne sont pas validées dans l’interface utilisateur et sont sensibles à la casse. Veillez à entrer les informations correctes.
   
-- **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’avez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
-- **Nom du cache** (Kerberos uniquement) : entrez le nom du service de sécurité générique (GSS) du cache Kerberos. Vous n’avez probablement pas besoin de définir cette valeur.  
-- **Message** sur les exigences de mot de passe (Kerberos uniquement) : entrez une version textuelle des exigences de mot de passe de votre organisation, qui est présentée aux utilisateurs. Le message s’affiche si vous n’avez pas besoin de Active Directory exigences de complexité du mot de passe ou si vous n’entrez pas une longueur minimale pour le mot de passe.  
-- **ID d’ensemble d’applications** (Kerberos uniquement) : **Ajoutez** les identificateurs de bundle d’applications qui doivent utiliser l’authentification unique sur vos appareils. Ces applications sont autorisées à accéder au ticket d’accord de ticket Kerberos, au ticket d’authentification et à authentifier les utilisateurs auprès des services auxquels ils sont autorisés à accéder.
-- **Mappage** de domaine Kerberos (Kerberos uniquement) : **Ajoutez** les suffixes DNS de domaine qui doivent être mappés à votre domaine. Utilisez ce paramètre lorsque les noms DNS des hôtes ne correspondent pas au nom de domaine. Vous n’avez probablement pas besoin de créer ce mappage de domaine à domaine personnalisé.
-- **Certificat PKINIT** (Kerberos uniquement) : **Sélectionnez** le certificat chiffrement à clé publique pour l’authentification initiale (PKINIT) qui peut être utilisé pour l’authentification Kerberos. Vous pouvez choisir parmi les certificats [PKCS](../protect/certficates-pfx-configure.md) ou [SCEP](../protect/certificates-scep-configure.md) que vous avez ajoutés dans Intune. Pour plus d’informations sur les certificats, consultez [utiliser des certificats pour l’authentification dans Microsoft Intune](../protect/certificates-configure.md).
+- **Code de site Active Directory** (Kerberos uniquement) : entrez le nom du site Active Directory que l’extension Kerberos doit utiliser. Vous n’aurez peut-être pas besoin de modifier cette valeur, car l’extension Kerberos peut trouver automatiquement le code de site Active Directory.
+- **Nom du cache** (Kerberos uniquement) : entrez le nom des services de sécurité générique (GSS) du cache Kerberos. Vous n’avez probablement pas besoin de définir cette valeur.  
+- **Message relatif aux exigences de mot de passe** (Kerberos uniquement) : entrez une version texte des exigences de mot de passe de votre organisation, qui est présentée aux utilisateurs. Le message s’affiche si les exigences de complexité de mot de passe Active Directory ne sont pas requises, ou si aucune longueur minimale de mot de passe n’est requise.  
+- **ID de bundle d’applications** (Kerberos uniquement) : **ajoutez** les identificateurs de bundle d’applications qui doivent utiliser l’authentification unique sur vos appareils. Ces applications sont autorisées à accéder à Kerberos Ticket Granting Ticket, le ticket d’authentification, et à authentifier les utilisateurs auprès des services auxquels ils sont autorisés à accéder.
+- **Mappage de zone de domaine** (Kerberos uniquement) : **ajoutez** les suffixes DNS de domaine qui doivent être mappés à votre zone. Utilisez ce paramètre lorsque les noms DNS des hôtes ne correspondent pas au nom de zone. Vous n’avez probablement pas besoin de créer ce mappage domaine-zone personnalisé.
+- **Certificat PKINIT** (Kerberos uniquement) : **sélectionnez** le certificat PKINIT (chiffrement de clé publique pour l’authentification initiale) qui peut être utilisé pour l’authentification Kerberos. Vous pouvez choisir parmi les certificats [PKCS](../protect/certficates-pfx-configure.md) ou [SCEP](../protect/certificates-scep-configure.md) que vous avez ajoutés dans Intune. Pour plus d’informations sur les certificats, consultez [Utiliser des certificats pour l’authentification dans Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="associated-domains"></a>Domaines associés
 
 Dans Intune, vous pouvez :
 
-- Ajoutez de nombreuses associations application-à-domaine.
-- Associer de nombreux domaines à la même application.
+- Ajouter plusieurs associations application-domaine.
+- Associer plusieurs domaines à la même application.
 
 Cette fonctionnalité s’applique à :
 
 - macOS 10.15 et ultérieur
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : tous les types d’inscription
+### <a name="settings-apply-to-all-enrollment-types"></a>Les paramètres s’appliquent à : Tous les types d’inscription
 
-- **ID**de l’application : entrez l’identificateur d’application de l’application à associer à un site Web. L’identificateur d’application comprend l’ID d’équipe et un ID de Bundle : `TeamID.BundleID`.
+- **ID de l’application** : entrez l’identificateur d’application de l’application à associer à un site Web. L’identificateur d’application comprend l’ID d’équipe et un ID de bundle : `TeamID.BundleID`.
 
-  L’ID d’équipe est une chaîne de 10 caractères alphanumériques (lettres et chiffres) générée par Apple pour les développeurs d’applications, comme `ABCDE12345`. Pour plus d’informations, [recherchez votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c) (ouvre le site Web d’Apple).
+  L’ID d’équipe est une chaîne de 10 caractères alphanumériques (lettres et chiffres) générée par Apple pour les développeurs d’applications, par exemple `ABCDE12345`. Pour plus d’informations, consultez [Rechercher votre ID d’équipe](https://help.apple.com/developer-account/#/dev55c3c710c)  (qui ouvre le site web d’Apple).
 
-  L’ID de Bundle identifie de façon unique l’application, et est généralement mis en forme dans la notation de nom de domaine inverse. Par exemple, l’ID de Bundle du Finder est `com.apple.finder`. Pour trouver l’ID de Bundle, utilisez l’AppleScript dans le terminal :
+  L’ID de bundle identifie de façon unique l’application, et il est généralement mis en forme dans la notation de nom de domaine inverse. Par exemple, l’ID de bundle du Finder est `com.apple.finder`. Pour trouver l’ID de bundle, utilisez l’AppleScript dans Terminal :
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domaine**: entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple `webcredentials: www.contoso.com`.
+- **Domaine** : entrez le domaine de site Web à associer à une application. Le domaine comprend un type de service et un nom d’hôte complet, par exemple `webcredentials:www.contoso.com`.
 
-  Vous pouvez faire correspondre tous les sous-domaines d’un domaine associé en entrant `*.` (caractère générique astérisque et point) avant le début du domaine. La période est requise. Les domaines exacts ont une priorité plus élevée que les domaines génériques. Par conséquent, les modèles des domaines parents sont mis en correspondance *si* aucune correspondance n’est trouvée dans le sous-domaine complet.
+  Vous pouvez faire correspondre tous les sous-domaines d’un domaine associé en entrant `*.` (caractère générique astérisque et point) avant le début du domaine. Le point est requis. Les domaines exacts ont une priorité plus élevée que les domaines génériques. Ainsi, les modèles provenant de domaines parents sont mis en correspondance *si* aucune correspondance n’est trouvée dans le sous-domaine complet.
 
   Le type de service peut être :
 
   - **authsrv** : Extension d’application d’authentification unique
-  - **applink**: lien universel
-  - **informations d’identification**: remplissage automatique du mot de passe
+  - **applink** : lien universel
+  - **webcredentials** : remplissage automatique du mot de passe
 
-- **Ajouter**: sélectionnez cette option pour ajouter vos applications et les domaines associés.
+- **Ajouter** : sélectionnez cette option pour ajouter vos applications et les domaines associés.
 
 > [!TIP]
-> Pour résoudre le problèmes, sur votre appareil macOS, ouvrez **Préférences système** > **profils**. Confirmez que le profil que vous avez créé figure dans la liste des profils d’appareil. S’il est listé, vérifiez que la **Configuration des domaines associés** se trouve dans le profil et qu’elle comprend l’ID d’application et les domaines appropriés.
+> Pour résoudre le problème, sur votre appareil macOS, ouvrez **Préférences système** > **Profils**. Vérifiez que le profil que vous avez créé figure dans la liste des profils d’appareil. S’il y figure, vérifiez que la **configuration des domaines associés** se trouve dans le profil et qu’elle comprend l’ID d’application et les domaines appropriés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
-Vous pouvez également configurer des fonctionnalités d’appareil sur [iOS](ios-device-features-settings.md).
+Vous pouvez également configurer des fonctionnalités d’appareil sur [iOS/iPadOS](ios-device-features-settings.md).
