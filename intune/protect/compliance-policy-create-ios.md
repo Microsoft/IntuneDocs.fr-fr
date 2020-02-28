@@ -1,6 +1,6 @@
 ---
-title: Paramètres de conformité des appareils iOS dans Microsoft Intune - Azure | Microsoft Docs
-description: Découvrez la liste de tous les paramètres que vous pouvez utiliser lorsque vous configurez la conformité de vos appareils iOS dans Microsoft Intune. Exigez une adresse e-mail, vérifiez les appareils jailbreakés ou rootés, définissez les versions minimale et maximale autorisées pour le système d’exploitation, définissez des restrictions de mot de passe (concernant notamment sa longueur et la durée d’inactivité de l’appareil), définissez des restrictions d’applications, etc.
+title: Paramètres de conformité des appareils iOS/iPadOS dans Microsoft Intune - Azure | Microsoft Docs
+description: Découvrez la liste de tous les paramètres que vous pouvez utiliser lorsque vous configurez la conformité de vos appareils iOS/iPadOS dans Microsoft Intune. Exigez une adresse e-mail, vérifiez les appareils jailbreakés ou rootés, définissez les versions minimale et maximale autorisées pour le système d’exploitation, définissez des restrictions de mot de passe (concernant notamment sa longueur et la durée d’inactivité de l’appareil), définissez des restrictions d’applications, etc.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
-ms.translationtype: MTE75
+ms.openlocfilehash: 437673878335b04b76c53b13f18acac32213720a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074629"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514028"
 ---
-# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres iOS pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
+# <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres iOS/iPadOS pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
-Cet article liste et décrit les différents paramètres de conformité que vous pouvez configurer sur les appareils iOS dans Intune. Dans le cadre de votre solution de gestion des appareils mobiles (MDM), vous pouvez utiliser ces paramètres pour exiger une adresse e-mail, marquer les appareils rootés (jailbreakés) comme étant non conformes, définir le niveau de menace autorisé, définir l’expiration des mots de passe, etc.
+Cet article répertorie et décrit les différents paramètres de conformité que vous pouvez configurer sur les appareils iOS/iPadOS dans Intune. Dans le cadre de votre solution de gestion des appareils mobiles (MDM), vous pouvez utiliser ces paramètres pour exiger une adresse e-mail, marquer les appareils rootés (jailbreakés) comme étant non conformes, définir le niveau de menace autorisé, définir l’expiration des mots de passe, etc.
 
 Cette fonctionnalité s’applique à :
 
@@ -86,11 +86,11 @@ Pour plus d’informations sur les profils de messagerie, consultez [Configurer 
 ### <a name="password"></a>Mot de passe
 
 > [!NOTE]
-> Une fois qu’une stratégie de conformité ou de configuration est appliquée à un appareil iOS, les utilisateurs sont invités à définir un code secret toutes les 15 minutes. Tant que les utilisateurs n’ont pas défini de code secret, ils sont invités à le faire. Quand un code secret est défini pour l’appareil iOS, le processus de chiffrement démarre automatiquement. L’appareil reste chiffré jusqu’à ce que le code secret soit désactivé.
+> Une fois qu’une stratégie de conformité ou de configuration est appliquée à un appareil iOS/iPadOS, les utilisateurs sont invités à définir un code d’accès toutes les 15 minutes. Tant que les utilisateurs n’ont pas défini de code secret, ils sont invités à le faire. Quand un code d’accès est défini pour l’appareil iOS/iPadOS, le processus de chiffrement démarre automatiquement. L’appareil reste chiffré jusqu’à ce que le code secret soit désactivé.
 
 - **Exiger un mot de passe pour déverrouiller les appareils mobiles** :  
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.  
-  - **Exiger** : les utilisateurs doivent entrer un mot de passe pour pouvoir accéder à leur appareil. Les appareils iOS utilisant un mot de passe sont chiffrés.
+  - **Exiger** : les utilisateurs doivent entrer un mot de passe pour pouvoir accéder à leur appareil. Les appareils iOS/iPadOS utilisant un mot de passe sont chiffrés.
 
 - **Mots de passe simples** :  
   - **Non configuré** (*par défaut*) : les utilisateurs peuvent créer des mots de passe simples comme **1234** ou **1111**.
@@ -125,7 +125,7 @@ Pour plus d’informations sur les profils de messagerie, consultez [Configurer 
   Vous pouvez restreindre les applications en ajoutant leurs ID de bundle à la stratégie. Si l’application est installée sur l’appareil, celui-ci est marqué comme non conforme.
 
   - **Nom de l’application** : entrez un nom convivial pour faciliter l’identification de l’ID de bundle.
-  - **ID d’ensemble d’applications** : entrez l’identificateur unique du bundle affecté par le fournisseur de l’application. Pour trouver l’ID de bundle, consultez [Guide pratique pour trouver l’ID de bundle pour une application iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (ouvre un autre site web Microsoft).  
+  - **ID d’ensemble d’applications** : entrez l’identificateur unique du bundle affecté par le fournisseur de l’application. Pour trouver l’ID de bundle, consultez [Guide pratique pour trouver l’ID de bundle pour une application iOS/iPadOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (ouvre un autre site web Microsoft).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

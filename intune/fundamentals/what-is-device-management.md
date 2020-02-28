@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3a15bf0bd8ed0a46f330b159e45d0a5d5a4c7059
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058529"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510382"
 ---
 # <a name="device-management-overview"></a>Vue d’ensemble de la gestion des appareils
 
@@ -33,7 +33,7 @@ La gestion des périphériques permet aux organisations de protéger et de sécu
 
 La réponse est : [Microsoft Intune](what-is-intune.md). Intune offre une solution MDM (gestion des appareils mobiles) et une solution GAM (gestion des applications mobiles). Voici certaines tâches clés d’une solution MDM ou GAM :
 
-- Prendre en charge un environnement mobile varié et gérer des appareils iOS, Android, Windows et macOS de manière sécurisée
+- Prendre en charge un environnement mobile varié et gérer des appareils iOS/iPadOS, Android, Windows et macOS de manière sécurisée
 - Vérifier que les appareils et les applications sont conformes aux exigences de sécurité de l’organisation
 - Créer des stratégies qui contribuent à protéger les données de votre organisation sur les appareils personnels et ceux de l’entreprise
 - Utiliser une seule solution mobile unifiée pour appliquer ces stratégies et faciliter la gestion des appareils, des applications, des utilisateurs et des groupes
@@ -47,7 +47,7 @@ De nombreuses organisations, telles que Microsoft, utilisent Intune pour sécuri
 
 Il est courant pour de nombreuses personnes d’utiliser plusieurs appareils basés sur différentes plateformes. Par exemple, un employé peut utiliser Surface Pro pour son travail, et un appareil mobile Android dans sa vie personnelle. De plus, il est courant qu’une personne accède aux ressources d’une organisation, par exemple Microsoft Outlook et SharePoint, à partir de ces multiples appareils.
 
-Avec Intune, vous pouvez gérer plusieurs appareils par personne, ainsi que les différentes plateformes qui s’exécutent sur chaque appareil, notamment iOS, macOS, Android et Windows. Intune sépare les stratégies et les paramètres selon la plateforme de l’appareil. Ainsi, vous pouvez facilement gérer et voir les appareils d’une plateforme donnée.
+Avec Intune, vous pouvez gérer plusieurs appareils par personne, ainsi que les différentes plateformes qui s’exécutent sur chaque appareil, notamment iOS/iPadOS, macOS, Android et Windows. Intune sépare les stratégies et les paramètres selon la plateforme de l’appareil. Ainsi, vous pouvez facilement gérer et voir les appareils d’une plateforme donnée.
 
 La rubrique **[Scénarios courants](common-scenarios.md)** est une excellente ressource pour savoir comment Intune répond aux questions courantes liées à l’utilisation des appareils mobiles. Vous y trouverez des scénarios sur les sujets suivants :  
 
@@ -55,7 +55,7 @@ La rubrique **[Scénarios courants](common-scenarios.md)** est une excellente re
 - Accès à Office 365 de manière sécurisée
 - Utilisation d’appareils personnels pour accéder aux ressources de l’organisation
 
-Pour plus d’informations sur Intune, consultez [qu’est-ce qu’Intune](what-is-intune.md).
+Pour plus d’informations sur Intune, consultez [Qu’est-ce qu’Intune ?](what-is-intune.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Intégration avec des services de sécurisation et de protection
 
@@ -63,7 +63,7 @@ L’une des tâches clés de toute solution de gestion des appareils consiste à
 
 - **Microsoft 365** est un composant clé pour la simplification des tâches informatiques courantes. Dans le centre d’administration Microsoft 365, vous pouvez créer des utilisateurs et gérer des groupes. Vous pouvez également accéder à d’autres services, comme Intune, Azure AD et bien plus encore.
 
-  Par exemple, vous pouvez créer un groupe d’appareils iOS dans Microsoft 365. Vous pouvez ensuite utiliser Intune pour envoyer (push) au groupe d’appareils iOS des stratégies qui se concentrent sur des fonctionnalités iOS, par exemple l’accès à l’App Store, l’utilisation d’AirDrop, la sauvegarde sur iCloud, l’utilisation du filtre web d’Apple, etc.
+  Par exemple, vous pouvez créer un groupe d’appareils iOS/iPadOS dans Microsoft 365. Vous pouvez ensuite utiliser Intune pour envoyer (push) au groupe d’appareils iOS/iPadOS des stratégies qui se concentrent sur des fonctionnalités iOS/iPadOS, par exemple l’accès à l’App Store, l’utilisation d’AirDrop, la sauvegarde sur iCloud, l’utilisation du filtre web d’Apple, etc.
 
 - **Windows Defender** inclut de nombreuses fonctionnalités de sécurité qui permettent de protéger les appareils Windows 10. Par exemple, en utilisant Intune conjointement avec Windows Defender, vous pouvez :
 
@@ -97,7 +97,7 @@ Dans le centre d’administration de la gestion des appareils, vous pouvez :
 - [Gérer les rôles](role-based-access-control.md)  
 - Gérer les mises à jour logicielles
   - [Gérer les mises à jour Windows 10](../protect/windows-update-for-business-configure.md)  
-  - [Gérer les mises à jour iOS](../protect/software-updates-ios.md)  
+  - [Gérer les mises à jour iOS/iPadOS](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Gérer les utilisateurs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Gérer les groupes et les membres](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)

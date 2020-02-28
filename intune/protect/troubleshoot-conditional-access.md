@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c662de98ffa497c5fbc89ac1b78ed8537ff0d80c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71732696"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514198"
 ---
 # <a name="troubleshoot-conditional-access"></a>Résoudre les problèmes d’accès conditionnel
 Cet article décrit que faire quand vos utilisateurs ne parviennent pas à accéder aux ressources protégées avec l’accès conditionnel, ou quand des utilisateurs peuvent accéder aux ressources protégées alors qu’ils devraient être bloqués.
 
 Avec Intune et l’accès conditionnel, vous pouvez protéger l’accès aux services comme :
-- Services Office 365 comme Exchange Online, SharePoint Online et Skype entreprise Online
+- Services Office 365 comme Exchange Online, SharePoint Online et Skype Entreprise Online
 - Exchange sur site
 - Divers autres services
 
@@ -48,7 +48,7 @@ Les conditions suivantes doivent être remplies pour que l’accès conditionnel
 
 - Pour Exchange sur site, votre connecteur Exchange Intune doit être correctement configuré. Pour plus d’informations, consultez [Résolution des problèmes liés au connecteur Exchange dans Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- Pour Skype sur site, vous devez configurer l’authentification hybride moderne. Consultez [vue d’ensemble de l’authentification moderne hybride](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Pour Skype sur site, vous devez configurer l’authentification hybride moderne. Consultez [Vue d’ensemble de l’authentification hybride moderne](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
 Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure et dans le rapport d’inventaire des appareils.
 
@@ -60,9 +60,9 @@ Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure e
 
 - Quand un appareil est inscrit pour la première fois, l’inscription des informations de conformité de l’appareil peut demander un certain temps. Attendez quelques minutes et réessayez.
 
-- Pour les périphériques iOS, un profil de messagerie existant peut bloquer le déploiement d’un profil de messagerie créé par un administrateur Intune et affecté à cet utilisateur, rendant ainsi le périphérique non conforme. Dans ce scénario, l’application Portail d’entreprise signale à l’utilisateur qu’il n’est pas conforme en raison de son profil de messagerie configuré manuellement et elle l’invite à supprimer ce profil. Une fois que l’utilisateur a supprimé le profil de messagerie existant, le profil de messagerie Intune est déployé avec succès. Pour éviter ce problème, demandez à vos utilisateurs de supprimer les profils de messagerie existants sur leur appareil avant de s’inscrire.
+- Pour les appareils iOS/iPadOS, un profil de messagerie existant peut bloquer le déploiement d’un profil de messagerie créé par un administrateur Intune et affecté à cet utilisateur, rendant ainsi l’appareil non conforme. Dans ce scénario, l’application Portail d’entreprise signale à l’utilisateur qu’il n’est pas conforme en raison de son profil de messagerie configuré manuellement et elle l’invite à supprimer ce profil. Une fois que l’utilisateur a supprimé le profil de messagerie existant, le profil de messagerie Intune est déployé avec succès. Pour éviter ce problème, demandez à vos utilisateurs de supprimer les profils de messagerie existants sur leur appareil avant de s’inscrire.
 
-- Un périphérique peut rester bloqué dans un état de vérification de conformité, ce qui empêche l’utilisateur de démarrer une autre vérification. Si vous avez un appareil dans cet État :
+- Un périphérique peut rester bloqué dans un état de vérification de conformité, ce qui empêche l’utilisateur de démarrer une autre vérification. Si vous avez un appareil dans cet état :
   - Vérifiez que l’appareil utilise la dernière version de l’application Portail d’entreprise.
   - Redémarrez l’appareil.
   - Vérifiez si le problème persiste sur différents réseaux (par exemple, cellulaire, Wi-Fi, et ainsi de suite).
@@ -76,11 +76,11 @@ Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure e
 
 - Un périphérique Android inscrit et conforme peut quand même être bloqué et recevoir une notification de mise en quarantaine quand vous tentez d’accéder pour la première fois à des ressources d’entreprise. Si cela se produit, vérifiez que l’application Portail d’entreprise n’est pas en cours d’exécution, sélectionnez le lien **Démarrer maintenant** dans l’e-mail de mise en quarantaine pour déclencher l’évaluation. Cette opération ne doit en principe être nécessaire que lors de l’activation initiale de l’accès conditionnel.
 
-- Un appareil Android inscrit peut demander à l’utilisateur « aucun certificat trouvé » et ne pas être autorisé à accéder aux ressources O365. L’utilisateur doit activer l’option *Activer l’accès du navigateur* sur l’appareil inscrit comme suit :
+- Un appareil Android inscrit peut indiquer à l’utilisateur « Aucun certificat trouvé » et ne pas être autorisé à accéder aux ressources O365. L’utilisateur doit activer l’option *Activer l’accès du navigateur* sur l’appareil inscrit comme suit :
   1. Ouvrez l'application Portail d'entreprise.
   2. Accéder à la page Paramètres à partir des trois points (...) ou du bouton de menu matériel.
   3. Sélectionnez le bouton *Activer l’accès du navigateur*.
-  4. Dans le navigateur Chrome, se déconnecter d’Office 365 et redémarrer Chrome.  
+  4. Dans le navigateur Chrome, déconnectez-vous d’Office 365 et redémarrez Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Les appareils sont bloqués et aucun e-mail de mise en quarantaine n’est reçu
@@ -97,7 +97,7 @@ Vous pouvez consulter ces conditions sur chaque appareil dans le portail Azure e
 
 - Si l’appareil est réinitialisé de manière sélective ou supprimé d’Intune, il peut continuer à avoir accès pendant plusieurs heures après la mise hors service. En effet, Exchange met en cache les droits d’accès pendant 6 heures. Envisagez d’autres moyens de protéger les données sur les appareils mis hors service dans ce scénario.
 
-- Surface Hub, les appareils Windows inscrits en bloc et DEM peuvent prendre en charge l’accès conditionnel lorsqu’un utilisateur auquel est attribuée une licence Intune est connecté. Toutefois, vous devez déployer la stratégie de conformité sur les groupes d’appareils (et non sur les groupes d’utilisateurs) pour une évaluation correcte.
+- Surface Hub, les appareils Windows inscrits en bloc et inscrits à DEM peuvent prendre en charge l’accès conditionnel lorsqu’un utilisateur auquel est attribuée une licence Intune est connecté. Toutefois, vous devez déployer la stratégie de conformité sur les groupes d’appareils (et non sur les groupes d’utilisateurs) pour une évaluation correcte.
 
 - Vérifiez les affectations de vos stratégies de conformité et de vos stratégies d’accès conditionnel. Si un utilisateur n’est pas dans le groupe auquel sont affectées les stratégies, ou s’il appartient à un groupe exclu, l’utilisateur n’est pas bloqué. La conformité est vérifiée uniquement pour les appareils des utilisateurs appartenant à un groupe attribué.
 
@@ -110,7 +110,7 @@ Si un appareil n’est pas conforme mais continue d’y accéder, effectuez les 
 - Assurez-vous que l’appareil est en cours de découverte. Le connecteur Exchange pointe-t-il sur la sécurité d’accès du code Exchange 2010 quand l’utilisateur est sur un serveur Exchange 2013 ? Dans ce cas, si la règle d’Exchange par défaut est Autoriser, même si l’utilisateur est dans le groupe cible, Intune ne peut pas savoir si l’appareil est connecté à Exchange.
 
 - Vérifiez l’état Existence/accès de l’appareil dans Exchange :
-  - Utilisez cette cmdlet PowerShell pour obtenir une liste de tous les appareils mobiles pour une boîte aux lettres : 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. Si l’appareil n’est pas répertorié, cela signifie qu’il n’accède pas à Exchange.
+  - Utilisez cette applet de commande PowerShell pour obtenir la liste de tous les appareils mobiles d’une boîte aux lettres : 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. Si l’appareil n’est pas répertorié, cela signifie qu’il n’accède pas à Exchange.
   
   - Si le périphérique se trouve dans la liste, utilisez la cmdlet Get-CASmailbox -identity:’upn’ | fl' pour obtenir des informations détaillées sur son état d’accès que vous fournirez au Support Microsoft.
 

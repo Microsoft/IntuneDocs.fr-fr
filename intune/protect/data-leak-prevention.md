@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3affffdf69445ced667d718587303a5409423bf
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502397"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514436"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Éviter les fuites de données sur les appareils non gérés à l’aide de Microsoft Intune
 
@@ -47,7 +47,7 @@ Le plan d’action suivant peut être utilisé quand les conditions suivantes so
 
 ## <a name="action-plan"></a>Plan d’action
 
-Pour les appareils iOS et Android :
+Pour les appareils iOS/iPadOS et Android :
 
 1. Découvrez le fonctionnement des [stratégies de protection des applications](../apps/app-protection-policy.md).
 2. Découvrez comment [créer et déployer des stratégies de protection des applications](../apps/app-protection-policies.md) pour les applications mobiles Office.
@@ -63,7 +63,7 @@ Pour les appareils Windows 10 :
 
 Si nécessaire, partagez les liens suivants pour fournir des informations supplémentaires :
 
-* [Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-ios.md)
+* [Ce qui se passe quand l’application iOS/iPadOS est gérée par des stratégies de protection d’applications](../fundamentals/end-user-mam-apps-ios.md)
 * [Ce qui se passe quand votre application Android est gérée par des stratégies de protection d'application](../fundamentals/end-user-mam-apps-android.md)
 
 ## <a name="next-steps"></a>Étapes suivantes

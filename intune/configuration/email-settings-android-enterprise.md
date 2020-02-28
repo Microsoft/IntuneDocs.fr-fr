@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/07/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc86e82f189377d63422cc3306b8554637164b0f
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 978ddf279dc221a56fddaf99da4dbb2377a93c24
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206429"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511151"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Paramètres des appareils Android Enterprise permettant de configurer les e-mails, l’authentification et la synchronisation dans Intune
 
@@ -63,4 +63,4 @@ Créez un [profil de configuration d’appareil](email-settings-configure.md#cre
 
 [Attribuer le profil](device-profile-assign.md) et [suivre son état](device-profile-monitor.md).
 
-Vous pouvez également créer des profils de messagerie pour des appareils [Android Samsung Knox](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 et ultérieur](email-settings-windows-10.md) et [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+Vous pouvez également créer des profils de messagerie pour des appareils [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 et ultérieur](email-settings-windows-10.md) et [Windows Phone 8.1](email-settings-windows-phone-8-1.md).

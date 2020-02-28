@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c24c120b033a4db0162e985ef185932dd931eda
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 492c90bc1d032b32ebc3a4b8465163085674f245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506920"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511444"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Utiliser des paramètres personnalisés pour les appareils macOS dans Microsoft Intune
 
@@ -34,7 +34,7 @@ Quand vous utilisez des appareils macOS, il existe deux façons d’obtenir des 
 
 Vous pouvez utiliser ces outils pour exporter les paramètres dans un profil de configuration. Dans Intune, importez ce fichier, puis attribuez le profil à vos utilisateurs et appareils macOS. Une fois attribués, les paramètres sont distribués. Ils créent également une ligne de base ou une norme pour macOS dans votre organisation.
 
-Cet article fournit des conseils sur l’utilisation d’Apple Configurator et du gestionnaire de profils Apple, et décrit les propriétés que vous pouvez configurer.
+Cet article fournit des conseils sur l’utilisation d’Apple Configurator et du Gestionnaire de profils Apple, et décrit les propriétés que vous pouvez configurer.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -48,7 +48,7 @@ Cet article fournit des conseils sur l’utilisation d’Apple Configurator et d
 
   - Activez la [gestion des appareils mobiles](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) dans le Gestionnaire de profils.
   - Ajoutez des [appareils macOS](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) dans le Gestionnaire de profils.
-  - Une fois que vous avez ajouté un appareil dans le Gestionnaire de profils, accédez à **Sous la bibliothèque**  > **Appareils** > sélectionnez votre appareil > **Réglages**. Entrez les paramètres généraux, de sécurité, de confidentialité, d’annuaire et de certificat pour l’appareil.
+  - Une fois que vous avez ajouté un appareil dans le Gestionnaire de profils, accédez à **Sous la bibliothèque** > **Appareils** > sélectionnez votre appareil > **Réglages**. Entrez les paramètres généraux, de sécurité, de confidentialité, d’annuaire et de certificat pour l’appareil.
 
     Téléchargez et enregistrez ce fichier. Vous intégrerez ce fichier au profil Intune. 
 
@@ -56,10 +56,10 @@ Cet article fournit des conseils sur l’utilisation d’Apple Configurator et d
 
 ## <a name="custom-configuration-profile-settings"></a>Paramètres du profil de configuration personnalisé
 
-- **Nom du profil de configuration personnalisé** : entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
-- **Fichier du profil de configuration** : accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
+- **Nom du profil de configuration personnalisé** : Entrez un nom pour la stratégie. Ce nom est affiché sur l’appareil et dans l’état Intune.
+- **Fichier du profil de configuration** : Accédez au profil de configuration que vous avez créé à l’aide de l’outil Apple Configurator ou du Gestionnaire de profils Apple. Le fichier importé s’affiche dans la zone **Contenu du fichier**.
 
-  Vous pouvez également ajouter des jetons d’appareil à vos fichiers `.mobileconfig`. Les jetons de périphérique sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte présente un aspect similaire à `123456789ABC`, qui est propre à chaque périphérique. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
+  Vous pouvez également ajouter des jetons d’appareil à vos fichiers `.mobileconfig`. Les jetons d’appareil sont utilisés pour ajouter des informations spécifiques à l’appareil. Par exemple, pour afficher le numéro de série, entrez `{{serialnumber}}`. Sur l’appareil, le texte présente un aspect similaire à `123456789ABC`, qui est propre à chaque appareil. Quand vous entrez les variables, veillez à utiliser des accolades `{{ }}`. [Jetons de configuration d’application](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) inclut une liste de variables qui peuvent être utilisées. Vous pouvez également utiliser `deviceid` ou toute autre valeur propre à l’appareil.
 
   > [!NOTE]
   > Les variables ne sont pas validées dans l’interface utilisateur et respectent la casse. Par conséquent, vous pouvez voir des profils enregistrés avec une entrée incorrecte. Par exemple, si vous entrez `{{DeviceID}}` au lieu de `{{deviceid}}`, la chaîne littérale s’affiche à la place de l’ID unique de l’appareil. Veillez à entrer les informations correctes.
@@ -70,4 +70,4 @@ Sélectionnez **OK** > **Créer** pour enregistrer vos modifications. Le profil 
 
 Le profil est créé, mais il ne fait rien pour le moment. À présent, [affectez le profil](device-profile-assign.md).
 
-Découvrez comment [créer le profil sur des appareils iOS](../custom-settings-ios.md).
+Découvrez comment [créer le profil sur des appareils iOS/iPadOS](../custom-settings-ios.md).
