@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 7251a2db0c36db9d01e51ca8fc62bd4e072d80e6
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912554"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609223"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Déploiement d’applications Windows 10 à l’aide de Microsoft Intune 
 
@@ -44,18 +44,19 @@ Les applications métier et Microsoft Store pour Entreprises sont les types d’
 
 Des types d'applications spécifiques sont pris en charge en fonction de la version de Windows 10 que vos utilisateurs exécutent. Le tableau suivant indique le type d'application et sa compatibilité avec Windows 10.
 
-| Type d’application | Accueil | Pro | Entreprises | Enterprise | Éducation | S-Mode | Hololense | SurfaceHub | WCOS | Mobile |
+| Type d’application | Accueil | Pro | Entreprises | Enterprise | Éducation | S-Mode | HoloLens<sup>1 | Surface Hub | WCOS | Mobile |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  .MSI | Non | Oui | Oui | Oui | Oui | Non | Non | Non | Non | Non |
 | .IntuneWin | Non | Oui | Oui | Oui | Oui | 19H2+ | Non | Non | Non | Non |
-| Office C2R | Non | Oui | Oui | Oui | Oui | Non | Non | Non | Non | Non |
+| Office C2R | Non | Oui | Oui | Oui | Oui | RS4+ | Non | Non | Non | Non |
 | Application métier : APPX/MSIX | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
 | MSFB Offline | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
-| MSFB Online | Oui | Oui | Oui | Oui | Oui | Oui | RS4+ | Oui | Oui | Oui |
-| Applications web | Oui | Oui | Oui | Oui | Oui | Oui | Oui<sup>1 | Oui<sup>1 | Oui | Oui |
+| MSFB Online | Oui | Oui | Oui | Oui | Oui | Oui | RS4+ | Non | Oui | Oui |
+| Applications web | Oui | Oui | Oui | Oui | Oui | Oui | Oui<sup>2 | Oui<sup>2 | Oui | Oui<sup>2 |
 | Lien vers le Store | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
 
-<sup>1</sup> Lancer à partir du portail d'entreprise uniquement.
+<sup>1</sup> Pour déverrouiller la gestion des applications, mettez à niveau votre appareil HoloLens vers [Holographic for Business](../fundamentals/windows-holographic-for-business.md).<br />
+<sup>2</sup> Lancer à partir du portail d’entreprise uniquement.
 
 > [!NOTE]
 > Tous les types d'applications Windows nécessitent une inscription.

@@ -1,11 +1,11 @@
 ---
 title: Utiliser des paramètres d’appareil personnalisés dans Microsoft Intune - Azure | Microsoft Docs
-description: Ajouter ou créer un profil afin d’utiliser des paramètres personnalisés pour des appareils Windows Phone, Windows 8.1, Windows 10 et ultérieur, Android, Android Entreprise, macOS et iOS à l’aide de Microsoft Intune
+description: Ajouter ou créer un profil afin d’utiliser des paramètres personnalisés pour des appareils Windows Phone, Windows 8.1, Windows 10 et ultérieur, Android, Android Entreprise, macOS et iOS/iPadOS à l’aide de Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c815a2c911dba6d17fc864b446122931fa88e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d2ca5a120e50819208743564279a5d16c6b4aa2f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73755384"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511512"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Créer un profil avec des paramètres personnalisés dans Intune
 
 ## <a name="what-are-custom-profiles"></a>Présentation des profils personnalisés
 
-Microsoft Intune comprend de nombreux paramètres intégrés pour contrôler différentes fonctionnalités sur un appareil. Vous pouvez également créer des profils personnalisés. Les profils personnalisés sont idéaux pour utiliser des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune. Ces profils comprennent des fonctionnalités et des paramètres que vous pouvez contrôler sur les appareils de votre organisation. Par exemple, vous pouvez créer un profil personnalisé qui définit la même fonctionnalité pour tous les appareils iOS.
+Microsoft Intune comprend de nombreux paramètres intégrés pour contrôler différentes fonctionnalités sur un appareil. Vous pouvez également créer des profils personnalisés. Les profils personnalisés sont idéaux pour utiliser des paramètres et des fonctionnalités d’appareil qui ne sont pas intégrés à Intune. Ces profils comprennent des fonctionnalités et des paramètres que vous pouvez contrôler sur les appareils de votre organisation. Par exemple, vous pouvez créer un profil personnalisé qui définit la même fonctionnalité pour tous les appareils iOS/iPadOS.
 
 Pour plus d’informations sur les profils de configuration, consultez [Que sont les profils d’appareil Microsoft Intune ?](device-profiles.md). 
 
-Cet article inclut des liens permettant de créer des profils personnalisés pour Android, Android Entreprise, iOS, macOS et Windows.
+Cet article contient des liens permettant de créer des profils personnalisés pour Android, Android Entreprise, iOS/iPadOS, macOS et Windows.
 
 ## <a name="available-platforms"></a>Plateformes disponibles
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa93bb758447c872d172ded7706fd7507a42f11
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: d7edf84ada3c84b7ad31748909ef81a877237fd5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966281"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514470"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Points de terminaison du gouvernement américain pour Microsoft Intune
 
@@ -31,7 +31,7 @@ Cette page liste les points de terminaison du gouvernement américain nécessair
 
 Pour gérer les appareils qui se trouvent derrière des pare-feu et des serveurs proxy, vous devez activer la communication pour Intune.
 
-- Le serveur proxy doit prendre en charge les protocoles **HTTP (80)** et **HTTPS (443)** , car les clients Intune utilisent ces deux protocoles
+- Le serveur proxy doit prendre en charge les protocoles **HTTP (80)** et **HTTPS (443)**, car les clients Intune utilisent ces deux protocoles
 - Pour certaines tâches (telles que le téléchargement des mises à jour logicielles), Intune nécessite un accès de serveur proxy non authentifié à manage.microsoft.com
 
 Vous pouvez modifier les paramètres du serveur proxy sur des ordinateurs clients. Vous pouvez également utiliser des paramètres de stratégie de groupe pour modifier les paramètres pour tous les ordinateurs clients situés derrière un serveur proxy spécifié.
@@ -74,8 +74,8 @@ Sur les appareils gérés par Intune à l’aide de la gestion des appareils mob
 Pour plus d'informations, voir :
 
 - [Ports TCP et UDP utilisés par les produits logiciels Apple](https://support.apple.com/HT202944)
-- [À propos des connexions de macOS, iOS et iTunes aux serveurs hôtes et des processus exécutés en arrière-plan par iTunes](https://support.apple.com/HT201999)
-- [Si vos clients macOS et iOS ne reçoivent pas les notifications Push Apple](https://support.apple.com/HT203609)
+- [À propos des connexions de macOS, iOS/iPadOS et iTunes aux serveurs hôtes et des processus exécutés en arrière-plan par iTunes](https://support.apple.com/HT201999)
+- [Si vos clients macOS et iOS/iPadOS ne reçoivent pas les notifications Push d’Apple](https://support.apple.com/HT203609)
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Points de terminaison réseau pour Microsoft Intune](intune-endpoints.md)

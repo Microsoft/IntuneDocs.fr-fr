@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f1be7a2457cca7da62883370c9e273168c6a29
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c550fba45e5e6b16e49e7103fde40de1e08ba55
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502432"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576477"
 ---
 # <a name="data-intune-sends-to-apple"></a>Données envoyées par Intune à Apple
 
@@ -59,13 +59,13 @@ Le tableau suivant répertorie les données que Microsoft Intune envoie depuis u
 | ASM/DEP | profile_status | État de l’installation du profil. Valeurs possibles : **empty**, **assigned**, **pushed** ou **removed**. |
 | ASM/DEP | profile_uuid | ID unique du profil affecté. |
 | ASM/DEP | device_assigned_by | Adresse e-mail de la personne qui a affecté l’appareil. |
-| ASM/DEP | os | Système d’exploitation de l’appareil : iOS, OSX ou tvOS. Cette clé est valide dans le protocole X-Server version 2 et ultérieure. |
+| ASM/DEP | os | Système d’exploitation de l’appareil : iOS/iPadOS, OSX ou tvOS. Cette clé est valide dans le protocole X-Server version 2 et ultérieure. |
 | ASM/DEP | device_family | Famille de produits Apple de l’appareil : iPad, iPhone, iPod, Mac ou AppleTV. Cette clé est valide dans le protocole X-Server version 2 et ultérieure. |
 | ASM/DEP | profile_name | Chaîne. Nom explicite pour le profil. |
 | ASM/DEP | support_phone_number | Facultatif. Chaîne. Numéro de téléphone du support pour l’organisation. |
 | ASM/DEP | support_email_address | Facultatif. Chaîne. Adresse e-mail du support pour l’organisation. Cette clé est valide dans le protocole X-Server version 2 et ultérieure. |
-| ASM/DEP | du service | Facultatif. Chaîne. Nom du département ou de l’emplacement défini par l’utilisateur. |
-| ASM/DEP | périphériques | Tableau de chaînes contenant les numéros de série des appareils. (Peut être vide.) |
+| ASM/DEP | department | Facultatif. Chaîne. Nom du département ou de l’emplacement défini par l’utilisateur. |
+| ASM/DEP | appareils | Tableau de chaînes contenant les numéros de série des appareils. (Peut être vide.) |
 | VPP | GUID de l’ID utilisateur Intune | GUID généré par Intune. |
 | VPP | UPN de l’ID Apple géré | ID Apple qui a été spécifié par l’administrateur lors de la configuration de la connexion de jeton VPP auprès d’Apple. |
 | VPP | Numéro de série | Numéro de série de l’appareil géré. |

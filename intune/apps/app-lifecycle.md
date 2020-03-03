@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569906cea8467d568d302f4e44b26c3394213b62
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 670e5033ddf2a04cd5bd87040d85eef764dca519
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414965"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512294"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Vue d’ensemble du cycle de vie des applications dans Microsoft Intune
 
@@ -42,7 +42,7 @@ Une fois que vous avez ajouté l’application à Intune, vous pouvez [l’affec
 
 Dans le cadre du cycle de vie des applications, des nouvelles versions des applications sont publiées régulièrement. Intune propose des outils permettant de facilement [mettre à jour les applications](apps-add.md) que vous avez déployées vers une version plus récente. En outre, vous pouvez configurer des fonctionnalités supplémentaires pour certaines applications, comme par exemple :
 
-- Les [stratégies de configuration des applications iOS](app-configuration-policies-use-ios.md) permettent de définir des paramètres pour les applications iOS/iPadOS compatibles, utilisables à l’exécution des applications. Par exemple, une application peut nécessiter des paramètres de marque spécifiques ou le nom d’un serveur auquel elle doit se connecter.
+- Les [stratégies de configuration des applications iOS/iPadOS](app-configuration-policies-use-ios.md) permettent de définir des paramètres pour les applications iOS/iPadOS compatibles, utilisables à l’exécution des applications. Par exemple, une application peut nécessiter des paramètres de marque spécifiques ou le nom d’un serveur auquel elle doit se connecter.
 - Les [stratégies Managed Browser](app-configuration-managed-browser.md) vous aident à configurer les paramètres de [Microsoft Edge](~/apps/apps-supported-intune-apps.md#microsoft-apps), qui remplace le navigateur par défaut de l’appareil et vous permet de limiter les sites web auxquels vos utilisateurs peuvent accéder.
 
 ## <a name="protect"></a>Protéger

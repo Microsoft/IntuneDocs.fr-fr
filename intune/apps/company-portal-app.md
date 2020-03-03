@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4c938aba7fde84536af2452f13f6ed030fa1d823
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563635"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576420"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune
 
@@ -37,9 +37,9 @@ Le portail d’entreprise Microsoft Intune permet aux utilisateurs d’accéder 
 > [!Tip]
 > Quand vous personnalisez le Portail d’entreprise, les configurations s’appliquent au site web du Portail d’entreprise et aux applications du Portail d’entreprise. Notez que les utilisateurs doivent disposer d’une licence Intune pour accéder au site web Portail d’entreprise.
 
-La personnalisation du Portail d’entreprise Intune permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour ce faire, dans le portail Intune, sélectionnez **Applications** > **Branding et personnalisation**, puis configurez les paramètres requis.
+La personnalisation du Portail d’entreprise Intune permet de fournir une expérience familière et utile à vos utilisateurs finaux. Pour ce faire, accédez au [centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), sélectionnez **Administration de locataire** > **Branding et personnalisation**, puis configurez les paramètres nécessaires.
 
-Lorsqu’un utilisateur installe une application iOS à partir du portail d’entreprise, il reçoit une invite. Cela se produit lorsque l’application iOS est liée à l’App Store, à un programme d’achat en volume (VPP) ou à une application métier. L’invite permet aux utilisateurs d’accepter l’action ou d’autoriser la gestion de l’application. L’invite affiche le nom de votre société, ou, lorsque le nom de votre société n’est pas disponible, le **Portail d’entreprise**. 
+Quand un utilisateur installe une application iOS/iPadOS à partir du portail d’entreprise, il reçoit une invite. Cela se produit quand l’application iOS/iPadOS est liée à l’App Store, à un programme d’achat en volume (VPP) ou à une application métier. L’invite permet aux utilisateurs d’accepter l’action ou d’autoriser la gestion de l’application. L’invite affiche le nom de votre société, ou, lorsque le nom de votre société n’est pas disponible, le **Portail d’entreprise**. 
 
 > [!Note]
 > Si vous utilisez Azure Government, l’utilisateur final dispose de journaux des applications pour décider du mode de partage des informations, quand il lance le processus d’obtention d’aide sur un problème. Toutefois, si vous n’utilisez pas Azure Government, le Portail d’entreprise pour Windows 10 envoie les journaux des applications directement à Microsoft, quand l’utilisateur lance le processus d’obtention d’aide sur un problème. L’envoi des journaux des applications à Microsoft facilite l’analyse et la résolution des problèmes. 
@@ -92,11 +92,11 @@ Choisissez un logo qui ressort bien sur un arrière-plan blanc ou clair.
 
 ### <a name="brand-image-for-company-portal"></a>Image de marque pour le Portail d’entreprise
 
-Affichez une image de marque qui reflète la marque de votre société. Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du volet pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de marque que sur un appareil iOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail Web Intune. 
+Affichez une image de marque qui reflète la marque de votre société. Après avoir enregistré vos modifications, vous pouvez choisir **Afficher un aperçu de vos paramètres** dans le portail web Intune en haut du volet pour voir à quoi ressemblent vos configurations. Notez que vous ne pouvez afficher un aperçu de l’image de la marque que sur un appareil iOS/iPadOS ; la fonctionnalité d’aperçu n’est pas disponible sur le portail web d’Intune. 
 
 |Nom du champ|Plus d’informations|
 |---|---|
-|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image de marque. Sur la page de profil de l’utilisateur du portail d’entreprise Intune iOS, elle s’affiche comme une image d’arrière-plan.<p><ul><li>Largeur recommandée pour l’image : Supérieure à 1125 px (doit être d’au moins 650 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
+|**Charger l’image de votre marque**| Cette option vous permet d’afficher une image de marque. Dans le portail d’entreprise iOS/iPadOS, elle apparaît sous la forme d’une image d’arrière-plan sur la page de profil de l’utilisateur.<p><ul><li>Largeur recommandée pour l’image : Supérieure à 1125 px (doit être d’au moins 650 px)</li><li>Taille maximale de l’image : 1,3 Mo</li><li>Type de fichier : PNG, JPG ou JPEG</li></ul>|
 
 Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-vis du Portail d’entreprise en présentant votre société de manière affirmée. Voici quelques conseils que vous pouvez suivre pour acquérir, choisir et optimiser l’image dans le Portail d’entreprise. 
 
@@ -108,7 +108,7 @@ Une bonne image de marque peut renforcer la confiance de l’utilisateur vis-à-
 
 - Supprimez les métadonnées inutiles. Le fichier image peut être accompagné de métadonnées telles que le profil de l’appareil photo, l’emplacement géographique, le titre ou la légende. Utilisez un outil d’optimisation d’image pour éliminer ces informations afin de conserver la qualité tout en respectant la limite de taille de fichier. 
 
-Lorsqu’une image de marque est ajoutée ou modifiée dans Intune, l’utilisateur final peut ne pas voir la modification sur les appareils iOS jusqu'à ce que le Portail d’entreprise ait reconnu la modification au démarrage, puis a été redémarré pour afficher l’image de marque. 
+Quand une image de marque est ajoutée ou modifiée dans Intune, l’utilisateur final peut ne pas voir la modification sur les appareils iOS/iPadOS jusqu’à ce que le portail d’entreprise ait reconnu la modification au démarrage, puis qu’il ait été redémarré pour afficher l’image de marque. 
 
 ### <a name="brand-image-examples"></a>Exemples d’image de marque
 
@@ -122,20 +122,20 @@ L’image suivante représente un exemple de personnalisation d’image iPhone :
 
 ## <a name="privacy-statement-customization"></a>Personnalisation de la déclaration de confidentialité
 
-Vous pouvez personnaliser la déclaration de confidentialité qui s’affiche pour votre organisation sur les appareils iOS gérés. Ce message répertorie la liste des éléments que votre organisation ne peut pas voir ou exécuter sur les appareils iOS gérés.
+Vous pouvez personnaliser la déclaration de confidentialité qui s’affiche pour votre organisation sur les appareils iOS/iPadOS gérés. Ce message liste les éléments que votre organisation ne peut pas voir ou effectuer sur les appareils iOS/iPadOS gérés.
 
 Sous **Personnalisation du portail d'entreprise** > **Message de gestion et de confidentialité des appareils**, vous pouvez :
 
 - Accepter la valeur **Par défaut** pour utiliser la liste comme indiqué, ou
-- Choisir **Personnalisé** pour personnaliser la liste des éléments que votre organisation ne peut pas voir ou exécuter sur les appareils iOS gérés. Vous pouvez utiliser du [Markdown](https://daringfireball.net/projects/markdown/) pour ajouter des puces, des caractères gras ou en italique et des liens.
+- Choisir **Personnalisé** pour personnaliser la liste des éléments que votre organisation ne peut pas voir ou effectuer sur les appareils iOS/iPadOS gérés. Vous pouvez utiliser du [Markdown](https://daringfireball.net/projects/markdown/) pour ajouter des puces, des caractères gras ou en italique et des liens.
 
 ## <a name="company-portal-derived-credentials-for-ios-devices"></a>Informations d’identification dérivées du portail d’entreprise pour les appareils iOS
-Intune prend en charge les informations d’identification dérivées de vérification de l’identité personnelle (PIV) et de carte d’accès commun (CAC) en partenariat avec les fournisseurs d’informations d’identification DISA Purebred, Entrust Datacard et Intercede. Les utilisateurs finaux passent par des étapes supplémentaires après l’inscription de leur appareil iOS pour vérifier leur identité dans l’application Portail d’entreprise. L’activation des informations d’identification dérivées pour les utilisateurs s’effectuera en configurant au préalable un fournisseur d’informations d’identification pour votre locataire, puis en ciblant des utilisateurs ou des appareils avec un profil qui utilise les informations d’identification dérivées.
+Intune prend en charge les informations d’identification dérivées de vérification de l’identité personnelle (PIV) et de carte d’accès commun (CAC) en partenariat avec les fournisseurs d’informations d’identification DISA Purebred, Entrust Datacard et Intercede. Les utilisateurs finaux passent par des étapes supplémentaires après l’inscription de leur appareil iOS/iPadOS pour vérifier leur identité dans l’application Portail d’entreprise. L’activation des informations d’identification dérivées pour les utilisateurs s’effectuera en configurant au préalable un fournisseur d’informations d’identification pour votre locataire, puis en ciblant des utilisateurs ou des appareils avec un profil qui utilise les informations d’identification dérivées.
 
 > [!NOTE]
 > L’utilisateur verra des instructions sur les informations d’identification dérivées basées sur le lien que vous avez spécifié via Intune.
 
-Pour plus d’informations sur les informations d’identification dérivées pour les appareils iOS, consultez [Utiliser des informations d’identification dérivées dans Microsoft Intune](~/protect/derived-credentials.md).
+Pour plus d’informations sur les informations d’identification dérivées pour les appareils iOS/iPadOS, consultez [Utiliser des informations d’identification dérivées dans Microsoft Intune](~/protect/derived-credentials.md).
 
 ## <a name="dark-mode-for-ios-company-portal"></a>Mode sombre pour le Portail d’entreprise iOS
 
@@ -174,11 +174,11 @@ Les utilisateurs finaux pourront également voir les raccourcis disponibles dans
 Les utilisateurs peuvent effectuer des actions sur leurs appareils locaux ou distants via l’application ou le site web du portail d’entreprise. Les actions qu’un utilisateur peut effectuer varient en fonction de la configuration et de la plateforme de l’appareil. Dans tous les cas, les actions de l’appareil à distance ne peuvent être effectuées que par l’utilisateur principal de l’appareil.
 - **Mettre hors service** : supprime l'appareil de la gestion Intune. Sur le site web et l’application du portail d’entreprise, il s’agit de **Supprimer**.
 - **Réinitialiser** : cette action lance une réinitialisation de l’appareil. Sur le site web du portail d’entreprise, il s’agit de **Réinitialiser**, ou **Réinitialisation des paramètres d’usine** dans l’application iOS du portail d’entreprise.
-- **Renommer**  : cette action modifie le nom de l’appareil que l’utilisateur peut voir dans le portail d’entreprise. Elle ne modifie pas le nom de l’appareil local, mais uniquement le nom répertorié dans le portail d’entreprise.
+- **Renommer ** : cette action modifie le nom de l’appareil que l’utilisateur peut voir dans le portail d’entreprise. Elle ne modifie pas le nom de l’appareil local, mais uniquement le nom répertorié dans le portail d’entreprise.
 - **Synchroniser** : cette action lance un archivage de l’appareil avec le service Intune. Il s’agit de **Vérifier l'état** dans le portail d’entreprise.
 - **Verrouillage à distance** : cette opération verrouille l’appareil, qui nécessite alors un code confidentiel pour être déverrouillé.
-- **Réinitialiser le code secret**  : cette action permet de réinitialiser le code secret de l’appareil. Sur les appareils iOS, le code secret est supprimé et l’utilisateur final est invité à entrer un nouveau code dans les paramètres. Sur les appareils Android pris en charge, un nouveau code secret est généré par Intune et s’affiche temporairement dans le portail d’entreprise.
-- **Récupération de clé**  : cette action permet de récupérer une clé de récupération personnelle pour les appareils macOS chiffrés à partir du site web du portail d’entreprise. 
+- **Réinitialiser le code secret ** : cette action permet de réinitialiser le code secret de l’appareil. Sur les appareils iOS/iPadOS, le code secret est supprimé et l’utilisateur final est invité à entrer un nouveau code dans les paramètres. Sur les appareils Android pris en charge, un nouveau code secret est généré par Intune et s’affiche temporairement dans le portail d’entreprise.
+- **Récupération de clé ** : cette action permet de récupérer une clé de récupération personnelle pour les appareils macOS chiffrés à partir du site web du portail d’entreprise. 
 
 ### <a name="self-service-actions"></a>Actions en libre-service
 
@@ -189,18 +189,18 @@ Certaines plateformes et configurations n’autorisent pas les actions d’appar
 | Mettre hors service | Disponible <sup>(1)</sup> | Disponible | Disponible | Disponible <sup>(7)</sup> |
 | Réinitialisation | Disponible | Disponible<sup>(5)</sup> | NA | Disponible <sup>(7)</sup> |
 | Renommer <sup>(4)</sup> | Disponible | Disponible | Disponible | Disponible |
-| Synchronisation | Disponible | Disponible | Disponible | Disponible |
+| Synchroniser | Disponible | Disponible | Disponible | Disponible |
 | Verrouillage à distance | Uniquement Windows Phone | Disponible | Disponible | Disponible |
 | Réinitialiser le code secret | Uniquement Windows Phone | Disponible<sup>(8)</sup> | NA | Disponible <sup>(6)</sup> |
 | Récupération de clé | NA | NA | Disponible <sup>(2)</sup> | NA |
 
-<sup>(1)</sup> La **mise hors service** est toujours bloquée sur les appareils Windows rattachés à Azure AD.<br>
-<sup>(2)</sup> La **récupération de clé** pour MacOS est disponible uniquement via le portail web.<br>
+<sup>(1)</sup> **Retirer** est toujours bloqué sur les appareils Windows joints à Azure AD.<br>
+<sup>(2)</sup> **Récupération de clé** pour MacOS est disponible seulement via le portail web.<br>
 <sup>(3)</sup> Toutes les actions à distance sont désactivées si vous utilisez une inscription du gestionnaire d’inscription d’appareil.<br>
-<sup>(4)</sup> **Renommer** modifie le nom de l’appareil sur l’application du Portail d’entreprise ou le portail web, et non sur l’appareil lui-même.<br>
+<sup>(4)</sup> **Renommer** change le nom de l’appareil seulement sur l’application Portail d’entreprise ou Portail web, et non pas sur l’appareil lui-même.<br>
 <sup>(5)</sup> **Réinitialiser** n’est pas disponible sur les appareils iOS inscrits par l’utilisateur.<br>
-<sup>(6)</sup> La **réinitialisation du code d’accès** n’est pas prise en charge sur certaines configurations Android et Android Entreprise. Pour plus d’informations, consultez [Réinitialiser ou supprimer un code secret de l’appareil dans Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> La **mise hors service** et la **réinitialisation** ne sont pas disponibles dans les scénarios de propriétaire d’appareils Android Entreprise (COPE, COBO, COSU).<br> 
+<sup>(6)</sup> **Réinitialiser le code secret** n’est pas pris en charge sur certaines configurations Android et Android Entreprise. Pour plus d’informations, consultez [Réinitialiser ou supprimer un code secret de l’appareil dans Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(7)</sup> **Retirer** et la **Réinitialiser** ne sont pas disponibles dans les scénarios de propriétaire d’appareils Android Entreprise (COPE, COBO, COSU).<br> 
 <sup>(8)</sup> **Réinitialiser le code secret** n’est pas pris en charge sur les appareils iOS inscrits par l’utilisateur.
 
 ## <a name="next-steps"></a>Étapes suivantes

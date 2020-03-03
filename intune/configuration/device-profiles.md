@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 951d3df8b842f1a0e76f875ea9fc7921c413494f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206616"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513065"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Appliquer des fonctionnalités et des paramètres sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune
 
 
 
-Microsoft Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS, Android et Windows. Ensuite, utilisez Intune pour appliquer ou « attribuer » le profil aux appareils.
+Microsoft Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS/iPadOS, Android et Windows. Ensuite, utilisez Intune pour appliquer ou « attribuer » le profil aux appareils.
 
 Dans le cadre de votre solution de gestion des périphériques mobiles (GPM), utilisez ces profils de configuration pour effectuer différentes tâches. Exemples de profil :
 
 - Sur les appareils Windows 10, utilisez un modèle de profil qui bloque les contrôles ActiveX dans Internet Explorer.
-- Sur les appareils iOS et macOS, autorisez les utilisateurs à utiliser les imprimantes AirPrint de votre organisation.
+- Sur les appareils iOS/iPadOS et macOS, autorisez les utilisateurs à se servir des imprimantes AirPrint de votre organisation.
 - Autorisez ou empêchez l’accès à Bluetooth sur l’appareil.
 - Créez un profil Wi-Fi ou VPN permettant à différents appareils d’accéder à votre réseau d’entreprise.
 - Gérez les mises à jour logicielles, notamment le moment de leur installation.
@@ -67,7 +67,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="custom-profile"></a>Profil personnalisé
 
-Les [paramètres personnalisés](custom-settings-configure.md) permettent aux administrateurs d’attribuer des paramètres d’appareil qui ne sont pas intégrés à Intune. Sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator.
+Les [paramètres personnalisés](custom-settings-configure.md) permettent aux administrateurs d’attribuer des paramètres d’appareil qui ne sont pas intégrés à Intune. Sur les appareils Android, vous pouvez entrer des valeurs OMA-URI. Pour les appareils iOS/iPadOS, vous pouvez importer un fichier de configuration que vous avez créé dans l’outil Apple Configurator.
 
 Cette fonctionnalité prend en charge :
 
@@ -89,7 +89,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="device-features"></a>Fonctionnalités de l’appareil
 
-Le profil [Fonctionnalités de l’appareil](device-features-configure.md) contrôle les fonctionnalités des appareils iOS et macOS, par exemple AirPrint, les notifications et les messages d’écran de verrouillage.
+[Fonctionnalités de l’appareil](device-features-configure.md) contrôle les fonctionnalités des appareils iOS/iPadOS et macOS, par exemple AirPrint, les notifications et les messages de l’écran de verrouillage.
 
 Cette fonctionnalité prend en charge :
 
@@ -106,7 +106,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="device-restrictions"></a>Restrictions d’appareil
 
-Le profil [Restrictions d’appareil](device-restrictions-configure.md) contrôle la sécurité, le matériel, le partage de données et d’autres paramètres sur les appareils. Par exemple, vous créez un profil de restriction d’appareil qui empêche les utilisateurs d’appareils iOS d’utiliser l’appareil photo. 
+Le profil [Restrictions d’appareil](device-restrictions-configure.md) contrôle la sécurité, le matériel, le partage de données et d’autres paramètres sur les appareils. Par exemple, créez un profil de restriction d’appareil qui empêche les utilisateurs d’appareils iOS/iPadOS d’utiliser l’appareil photo. 
 
 Cette fonctionnalité prend en charge :
 
@@ -129,7 +129,7 @@ Cette fonctionnalité prend en charge :
 
 Le profil [Paramètres d’éducation - Windows 10](education-settings-configure.md) configure les options pour [l’application Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). Lorsque vous configurez ces options, aucune autre application ne peut s’exécuter sur l’appareil tant que le test n’est pas terminé.
 
-Le profil [Paramètres d’éducation - iOS](../fundamentals/education-settings-configure-ios-shared.md) utilise l’application iOS Classroom pour orienter l’apprentissage et contrôler les appareils des étudiants dans la salle de classe. Vous pouvez configurer des appareils iPad pour permettre à plusieurs étudiants de partager un seul appareil.
+[Paramètres pour la version « Éducation » - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) utilise l’application iOS/iPadOS Classroom pour guider le cours et contrôler les appareils des étudiants dans la salle de classe. Vous pouvez configurer des appareils iPad pour permettre à plusieurs étudiants de partager un seul appareil.
 
 ## <a name="email"></a>E-mail
 
@@ -186,7 +186,7 @@ Cette fonctionnalité prend en charge :
 
 - Windows 10 et versions ultérieures
 
-Les paramètres Kiosk sont également disponible en tant que restrictions d’appareil pour [Android](device-restrictions-android.md#kiosk), [Android Entreprise](device-restrictions-android-for-work.md#dedicated-device-settings) et [ios](device-restrictions-ios.md#kiosk).
+Les paramètres Kiosque sont également disponibles en tant que restrictions d’appareil pour [Android](device-restrictions-android.md#kiosk), [Android Entreprise](device-restrictions-android-for-work.md#dedicated-device-settings) et [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -219,7 +219,7 @@ Cette fonctionnalité prend en charge :
 
 ## <a name="update-policies"></a>Stratégies de mise à jour
 
-L’article [Stratégies de mise à jour iOS](../protect/software-updates-ios.md) vous montre comment créer et affecter des stratégies iOS pour installer des mises à jour logicielles sur vos appareils iOS. Vous pouvez également consulter l’état de l’installation.
+[Stratégies de mise à jour d’iOS/iPadOS](../protect/software-updates-ios.md) vous montre comment créer et affecter des stratégies iOS/iPadOS pour installer des mises à jour logicielles sur vos appareils iOS/iPadOS. Vous pouvez également consulter l’état de l’installation.
 
 Pour plus d’informations sur les stratégies de mise à jour des appareils Windows, consultez [Optimisation de la distribution](delivery-optimization-windows.md). 
 

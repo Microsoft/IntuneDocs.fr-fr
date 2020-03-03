@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b67e3b14fd94376fb6dacad88fa58ddc460a6bc5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f056f665ebee0d1e2315129a4fe739b2c490ca98
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73057582"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514844"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Intégration de la protection contre les menaces mobiles avec Intune
 
@@ -50,7 +50,7 @@ Si cette option est activée, Intune collecte les informations de l’inventaire
 Ce service est basé sur un abonnement : aucune information d’inventaire des applications n’est partagée par défaut. Un administrateur Intune doit activer la **synchronisation des applications pour les appareils iOS** dans les paramètres du connecteur Mobile Threat Defense avant que des informations d’inventaire des applications soient partagées.
 
 **Inventaire des applications**  
-Si vous activez la synchronisation des applications pour les appareils iOS, les inventaires à partir des appareils iOS personnels et d’entreprise sont envoyés à votre fournisseur de service de détection des menaces mobiles(MDT). Les données de l’inventaire des applications comprennent les informations suivantes :
+Si vous activez la synchronisation des applications pour les appareils iOS/iPadOS, les inventaires des appareils iOS/iPadOS personnels et d’entreprise sont envoyés à votre fournisseur de service de détection des menaces mobiles(MTD). Les données de l’inventaire des applications comprennent les informations suivantes :
 
 - ID de l’application
 - Version de l’application
@@ -63,20 +63,20 @@ Si vous activez la synchronisation des applications pour les appareils iOS, les 
 
 ## <a name="sample-scenarios-for-enrolled-devices-using-device-compliance-policies"></a>Exemples de scénarios pour les appareils inscrits utilisant des stratégies de conformité des appareils
 
-Quand un appareil est considéré comme infecté par la solution de protection contre les menaces mobiles :
+La solution de protection contre les menaces mobiles considère un appareil comme infecté :
 
 ![Image illustrant un appareil infecté par Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-1.png)
 
-L’accès est autorisé une fois que le problème lié à l’appareil a été résolu :
+L’accès est accordé lorsque la menace est supprimée sur l’appareil :
 
 ![Image illustrant un accès accordé à Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-2.png)
 
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Exemples de scénarios pour les appareils non inscrits utilisant des stratégies de protection d’applications Intune
 
-Quand un appareil est considéré comme infecté par la solution de protection contre les menaces mobiles :<br>
+La solution de protection contre les menaces mobiles considère un appareil comme infecté :<br>
 ![Image illustrant un appareil infecté par Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-3.png)
 
-L’accès est autorisé une fois que le problème lié à l’appareil a été résolu :<br>
+L’accès est accordé lorsque la menace est supprimée sur l’appareil :<br>
 ![Image illustrant un accès accordé à Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
@@ -84,7 +84,7 @@ L’accès est autorisé une fois que le problème lié à l’appareil a été 
 
 ## <a name="mobile-threat-defense-partners"></a>Partenaires de protection contre les menaces mobiles
 
-Découvrez comment protéger l’accès aux ressources d’entreprise en fonction du risque évalué pour l’appareil, le réseau et l’application avec :
+Découvrez comment protéger l’accès aux ressources d’entreprise en fonction des risques liés aux applications, aux réseaux et aux appareils avec :
 
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)

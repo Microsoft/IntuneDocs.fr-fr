@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191be009f8d9e6fc448126834ef48f0bc6e2edc4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c8e4671790b72583219f1df64a0ef3491d707ea7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505347"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515031"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Configurer des stratégies de gestion des applications et de conformité lors de la migration vers Microsoft Intune
 
@@ -44,7 +44,7 @@ Chaque plate-forme d’appareil peut proposer des paramètres différents, mais 
 
 ## <a name="task-list-for-device-compliance-policies"></a>Liste de tâches relatives aux stratégies de conformité des appareils
 
-### <a name="task-1-add-device-groups-optional"></a>Tâche 1 : Ajouter des groupes d’appareils (facultatif)
+### <a name="task-1-add-device-groups-optional"></a>Tâche 1 : Ajouter des groupes d’appareils (facultatif)
 
 Vous pouvez créer des groupes d’appareils quand vous devez exécuter des tâches d’administration en fonction de l’identité de l’appareil, et non de l’utilisateur.
 
@@ -60,11 +60,11 @@ Les profils d’accès aux ressources fournissent des certificats et des configu
 
 Vous devez créer un profil de configuration d’appareil pour appliquer des paramètres au niveau de ce dernier, par exemple la désactivation de l’appareil photo et de l’App Store, la configuration du mode d’application unique et de l’écran d’accueil, etc. Découvrez-en davantage sur [profils d’appareil](../configuration/device-profiles.md).
 
-#### <a name="directly-import-ios-configuration-profiles-optional"></a>Importer directement des profils de configuration iOS (facultatif)
+#### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Importer directement des profils de configuration iOS/iPadOS (facultatif)
 
 - **Profils iOS Apple Configurator (iOS 7.1 et versions ultérieures) :** si votre solution MDM utilise des profils Apple Configurator (fichiers .mobileconfig), Intune peut les importer directement comme stratégies de configuration personnalisées.
 
-- **Stratégies de configuration des applications mobiles iOS :** si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS, Intune peut les importer directement, à condition que les listes de propriétés présentent le format XML spécifié par Apple.
+- **Stratégies de configuration des applications mobiles iOS :** Si votre solution MDM utilise des stratégies de configuration des applications mobiles iOS/iPadOS, Intune peut les importer directement, à condition que les listes de propriétés soient au format XML spécifié par Apple.
 
 - Découvrez comment ajouter une stratégie personnalisée pour [iOS](../configuration/custom-settings-ios.md).
 

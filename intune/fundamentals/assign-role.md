@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 780a248f16a8a5028875c9c2401921ea23d0af24
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.openlocfilehash: 19fff092f7eccfc6de2a027c7834c52698176cbf
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540926"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569164"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Attribuer un rôle à un utilisateur d’Intune
 
@@ -34,23 +34,20 @@ Pour créer, modifier ou affecter des rôles, votre compte doit posséder l'une 
 
 1. Dans le [centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Administration de locataire** > **Rôles** > **Tous les rôles**.
 
-2. Dans le panneau **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous souhaitez affecter.
+2. Dans le panneau **Rôles Intune - Tous les rôles**, choisissez le rôle intégré que vous voulez affecter > **Attributions** > **Attribuer**.
 
-3. Dans le panneau <*Nom de rôle*> - **Vue d’ensemble**, choisissez **Gérer** > **Affectations**.
+5. Dans la page **De base**, entrez un **Nom de l’attribution** et éventuellement une **Description de l’attribution**, puis choisissez **Suivant**.
 
-4. Sur le panneau de rôle personnalisé, choisissez **Affecter**.
+6. Dans la page **Groupes d’administrateurs**, sélectionnez le groupe qui contient l’utilisateur auquel vous voulez accorder les autorisations. Sélectionnez **Suivant**
 
-5. Dans le panneau **Attributions de rôles**, entrez un **Nom d’affectation** et, éventuellement, une **Description d’affectation** pour l’affectation.
+7. Dans la page **Étendue (groupes)**, choisissez un groupe contenant les utilisateurs/appareils que le membre ci-dessus sera autorisé à gérer. Choisissez **Suivant**.
 
-6. Pour **Membres (groupes)** , choisissez un groupe qui contient l’utilisateur auquel vous souhaitez accorder les autorisations.
+8. Dans la page **Étendue (balises)**, choisissez des balises où cette attribution de rôle s’appliquera. Choisissez **Suivant**.
 
-7. Pour **Étendue (groupes)** , choisissez un groupe contenant les utilisateurs/appareils que le membre ci-dessus sera autorisé à gérer.
-
-8. Pour **Étendue (balises)** , choisissez des balises où cette attribution de rôle s’appliquera.
-
-9. Quand vous avez terminé, choisissez **OK**. La nouvelle affectation s’affiche dans la liste des affectations.
-
+9. Dans la page **Vérifier + créer**, quand vous avez terminé, choisissez **Créer**. La nouvelle affectation s’affiche dans la liste des affectations.
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [En savoir plus sur le contrôle d’accès en fonction du rôle dans Intune](role-based-access-control.md)
 - [Créer un rôle personnalisé](create-custom-role.md)
+
+

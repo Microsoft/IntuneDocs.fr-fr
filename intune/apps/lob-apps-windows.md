@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3deb9f3c96a4c2c2de72b7016aca855f679bbd7
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: ceb4d2354ca073cf05f526df7638aebf8f16d5b7
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755123"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569487"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Ajouter une application métier Windows à Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "76755123"
 Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. En règle générale, ce genre d’application est écrite en interne. Les étapes suivantes fournissent des conseils pour vous aider à ajouter une application métier Windows à Microsoft Intune.
 
 > [!IMPORTANT]
-> Lorsque vous déployez des applications Win32 à l’aide d’un fichier d’installation avec l’extension *.msi*, envisagez d’utiliser l’[extension de gestion Intune](../apps/intune-management-extension.md). Si vous combinez l’installation des applications Win32 et des applications métier au cours de l’accord de mise en œuvre AutoPilot, l’installation de l’application peut échouer.  
+> Quand vous déployez des applications Win32 à l’aide d’un fichier d’installation avec l’extension .msi (packagé dans un fichier .intunewin avec l’outil de préparation de contenu), envisagez d’utiliser l’[extension de gestion Intune](../apps/intune-management-extension.md). Si vous combinez l’installation des applications Win32 et des applications métier au cours de l’accord de mise en œuvre AutoPilot, l’installation de l’application peut échouer.  
 
 ## <a name="select-the-app-type"></a>Sélectionner le type d’application
 
@@ -41,11 +41,11 @@ Une application métier est une application que vous ajoutez à partir d’un fi
 3. Dans le volet **Sélectionner le type d’application**, sous les types d’application **Autre**, sélectionnez **Application métier**.
 4. Cliquez sur **Sélectionner**. Les étapes **Ajouter une application** sont affichées.
 
-## <a name="step-1---app-information"></a>Étape 1 - Informations sur l’application
+## <a name="step-1---app-information"></a>Étape 1 - Informations de l’application
 
 ### <a name="select-the-app-package-file"></a>Sélectionner le fichier de package d’application
 
-1. Dans le volet **Ajouter une application**, cliquez sur **Sélectionner un fichier de package d'application**. 
+1. Dans le volet **Ajouter une application**, cliquez sur **Sélectionner un fichier de package d’application**. 
 2. Dans le volet **Fichier de package d’application**, sélectionnez le bouton Parcourir. Sélectionnez ensuite un fichier d’installation Windows ayant l’extension **.msi**, **.appx** ou **.appxbundle**.
    Les détails de l'application s’affichent.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 91442d262adb1d85217cb73f2f415766b89267af
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207199"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510518"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Utiliser des informations d’identification dérivées dans Microsoft Intune
 
@@ -37,7 +37,7 @@ Les informations d’identification dérivées sont une implémentation des reco
 
 - L’administrateur Intune spécifie **Informations d’identification dérivées** en tant que *méthode d’authentification* pour les objets suivants :
 
-  - Types de profils courants, comme pour le Wi-Fi, les réseaux VPN et la messagerie, qui incluent l’application de messagerie native iOS
+  - Types de profils courants, comme Wi-Fi, VPN et E-mail, qui incluent l’application de messagerie native iOS/iPadOS
 
   - Authentification des applications
 
@@ -76,7 +76,7 @@ Pour connaître les informations importantes à savoir sur les différents émet
 
 Planifiez le déploiement de l’application Portail d’entreprise Intune sur les appareils qui s’inscriront pour obtenir des informations d’identification dérivées. Les utilisateurs d’appareils utilisent l’application Portail d’entreprise pour démarrer le processus d’inscription pour obtenir des informations d’identification.
 
-Pour les appareils iOS, consultez [Ajouter des applications de l’App Store iOS dans Microsoft Intune](../apps/store-apps-ios.md).
+Pour les appareils iOS/iPadOS, consultez [Ajouter des applications de l’App Store iOS/iPadOS à Microsoft Intune](../apps/store-apps-ios.md).
 
 ## <a name="plan-for-derived-credentials"></a>Planifier l’obtention d’informations d’identification dérivées
 
@@ -198,7 +198,7 @@ Outre le déploiement de l’application avec Intune, configurez un VPN par appl
 **Réalisez les tâches suivantes** :
   
 1. Téléchargez l’[application DISA Purebred](https://cyber.mil/pki-pke/purebred/).
-2. Déployez l’application DISA Purebred dans Intune.  Consultez [Ajouter une application métier iOS à Microsoft Intune](../apps/lob-apps-ios.md).
+2. Déployez l’application DISA Purebred dans Intune.  Consultez [Ajouter une application métier iOS/iPadOS à Microsoft Intune](../apps/lob-apps-ios.md).
 3. [Créez un VPN par application](../configuration/vpn-settings-configure.md) pour l’application DISA Purebred.
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>Utiliser des informations d’identification dérivées pour l’authentification, ainsi que pour le chiffrement et la signature S/MIME
@@ -224,7 +224,7 @@ Utilisez des informations d’identification dérivées pour bénéficier d’un
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Saisissez les paramètres suivants :
 
-    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de profil correct est **Informations de connexion dérivées pour les profil des appareils iOS**.
+    - **Nom** : Entrez un nom descriptif pour le profil. Nommez vos profils afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de profil est **Informations d’identification dérivées pour le profil des appareils iOS/iPadOS**.
     - **Description** : entrez une description qui présente le paramètre et tout autre détail important.
     - **Plateforme** : Sélectionnez **iOS/iPadOS**.
     - **Type de profil** : Sélectionnez **Informations de connexion dérivées**.

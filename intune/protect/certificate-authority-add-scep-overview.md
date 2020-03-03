@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d05e33dbc28707bc6f929be72ba4a77c2e0641c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 85aac54a81d81dc138dd12612db183aae839b72b
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206055"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575983"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Ajouter l’autorité de certification partenaire dans Intune à l’aide de SCEP
 
-Utilisez des autorités de certification (AC) tierces avec Intune. Les autorités de certification tierces peuvent configurer des appareils mobiles avec des certificats nouveaux ou renouvelés à l’aide du protocole SCEP (Simple Certificate Enrollment Protocol) et peuvent prendre en charge les appareils Windows, iOS, Android et macOS.
+Utilisez des autorités de certification (AC) tierces avec Intune. Les autorités de certification tierces peuvent configurer des appareils mobiles avec des certificats nouveaux ou renouvelés à l’aide du protocole SCEP (Simple Certificate Enrollment Protocol), et peuvent prendre en charge les appareils Windows, iOS/iPadOS, Android et macOS.
 
 Il existe deux façons d’utiliser cette fonctionnalité : l’API open source et les tâches d’administrateur Intune.
 
@@ -89,7 +89,7 @@ Vérifiez que vous disposez des autorisations requises pour inscrire une applica
    > [!IMPORTANT]  
    > Avant de quitter cette page, copiez la valeur de la clé secrète client et enregistrez-la pour une utilisation ultérieure avec votre implémentation d’autorité de certification tierce. Cette valeur ne s’affiche plus. Veillez à consulter les instructions de configuration souhaitées par votre autorité de certification tierce pour l’ID d’application, la clé d’authentification et l’ID de locataire.  
 
-6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com* , votre ID de locataire est **name.onmicrosoft.com**.  
+6. Enregistrer votre **ID de locataire**. L’ID de locataire est le texte de domaine après le signe @ dans votre compte. Par exemple, si votre compte est *admin@name.onmicrosoft.com*, votre ID de locataire est **name.onmicrosoft.com**.  
 
 7. Dans le volet de navigation de l’application, accédez à **Autorisations d’API** sous **Gérer**, puis sélectionnez **Ajouter une autorisation**.  
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
-ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
+ms.openlocfilehash: 4496a5bbc6d5ee5134dc4e6a795494710ea6865d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034241"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515218"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Vue d’ensemble de la résolution des problèmes liés aux profils de certificat SCEP avec Microsoft Intune
 
@@ -123,9 +123,9 @@ Vous pouvez également [Charger et envoyer par e-mail des journaux](/intune-user
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Journaux pour appareils iOS et iPadOS
 
-Pour les appareils qui exécutent iOS ou iPadOS, vous utilisez les journaux de débogage et **Xcode** sur un ordinateur Mac :
+Pour les appareils qui exécutent iOS/iPadOS, vous utilisez les journaux de débogage et **Xcode** sur un ordinateur Mac :
 
-1. Connectez l’appareil iOS au Mac, puis accédez à **Applications** > **Utilitaires** pour ouvrir l'application Console. 
+1. Connectez l’appareil iOS/iPadOS au Mac, puis accédez à **Applications** > **Utilitaires** pour ouvrir l’application Console. 
 
 2. Sous **Action**, sélectionnez **Inclure les messages d’information** et **Inclure les messages de débogage**.
 

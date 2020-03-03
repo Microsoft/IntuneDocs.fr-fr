@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 43e104d9f32f6b6204ffc3bd461bb06764543e3c
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548147"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569266"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utiliser les bases de référence de la sécurité pour configurer des appareils Windows 10 dans Intune
 
@@ -75,7 +75,7 @@ Les instances de bases de référence de sécurité suivantes sont disponibles p
   - [Préversion : Base de référence de la sécurité MDM pour octobre 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
 - **Base de référence Microsoft Defender ATP**
-   *(pour utiliser cette base, votre environnement doit répondre aux conditions préalables à l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+   *(pour utiliser cette base, votre environnement doit répondre aux conditions préalables à l’utilisation de [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))*.
   - [Base de référence Microsoft Defender ATP](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
@@ -142,7 +142,7 @@ Les tâches courantes lorsque vous travaillez avec des bases de référence de s
 
    ![Réviser la base de référence](./media/security-baselines/review.png)
 
-9. Après avoir créé un profil, modifiez-le en accédant à **Sécurité des appareils** > **Bases de référence de la sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**. Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.
+9. Après avoir créé un profil, modifiez-le en accédant à **Sécurité du points de terminaison** > **Bases de référence de sécurité**, sélectionnez le type de base de référence que vous avez configuré, puis sélectionnez **Profils**. Sélectionnez le profil dans la liste des profils disponibles, puis choisissez **Propriétés**. Vous pouvez modifier les paramètres de tous les onglets de configuration disponibles, puis sélectionnez **Réviser + enregistrer** pour valider vos modifications.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Modifier la version de base de référence pour un profil
 
@@ -214,7 +214,7 @@ La même équipe de sécurité Microsoft a choisi et organisé les paramètres p
 
 - Microsoft continue de publier des bases de référence de sécurité pour les stratégies de groupe (GPO) et la [Boîte à outils de conformité de la sécurité](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), comme depuis de nombreuses années. Ces bases de référence sont utilisées par de nombreuses organisations. Les recommandations contenues dans ces bases de référence sont issues de l’engagement de l’équipe de sécurité Microsoft avec des clients d’entreprise et des agences externes, notamment le DOD (Department of Defense), le NIST (National Institute of Standards et Technology) et bien plus encore. Nous partageons nos recommandations et bases de référence avec ces organisations. Ces organisations ont également leurs propres recommandations qui reflètent celles de Microsoft. Alors que la gestion des appareils mobiles continue de croître dans le cloud, Microsoft a créé des recommandations de gestion des appareils mobiles équivalentes à ces bases de référence de la stratégie de groupe. Ces bases de référence supplémentaires sont intégrées à Microsoft Intune et incluent des rapports de conformité sur les utilisateurs, groupes et appareils qui respectent (ou pas) la base de référence.
 
-- De nombreux clients utilisent les recommandations de référence de base d’Intune comme point de départ, puis la personnalisent pour répondre à leur besoins informatiques et de sécurité. La **MDM Security Baseline** (Base de référence de sécurité MDM) Windows 10 RS5 de Microsoft est la première base de référence à être publiée. Cette base de référence est conçue sous la forme d’une infrastructure générique qui permet aux clients d’importer les autres bases de référence de sécurité basées sur CIS, NIST et autres normes. Actuellement, elle est disponible pour Windows et bientôt pour iOS et Android.
+- De nombreux clients utilisent les recommandations de référence de base d’Intune comme point de départ, puis la personnalisent pour répondre à leur besoins informatiques et de sécurité. La **MDM Security Baseline** (Base de référence de sécurité MDM) Windows 10 RS5 de Microsoft est la première base de référence à être publiée. Cette base de référence est conçue sous la forme d’une infrastructure générique qui permet aux clients d’importer les autres bases de référence de sécurité basées sur CIS, NIST et autres normes. Actuellement, elle est disponible pour Windows, et bientôt pour iOS/iPadOS et Android.
 
 - La migration à partir de stratégies de groupe Active Directory locales vers une solution cloud pure à l’aide d’Azure Active Directory (AD) avec Microsoft Intune est un parcours. Des modèles de politiques de groupe sont inclus dans la boîte à outils [Conformité de la sécurité](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) et peuvent vous aider à gérer les appareils hybrides joints à AD et Azure AD. Ces appareils peuvent obtenir les paramètres de gestion des appareils mobiles à partir du cloud (Intune) et les paramètres de stratégie de groupe à partir de contrôleurs de domaine locaux.
 

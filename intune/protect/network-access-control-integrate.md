@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baeece091358a7cd05f0d1f8db7c0032870fc262
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 472b23581cddad16a1b7eaf37ddf99e7e37e70f5
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207092"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569232"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Intégration du contrôle d’accès réseau avec Intune
 
@@ -67,31 +67,34 @@ La liste suivante présente le fonctionnement du contrôle d’accès réseau qu
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Utiliser le contrôle d’accès réseau pour un VPN sur vos appareils iOS  
 
-- Le contrôle d’accès réseau est disponible sur les réseaux privés virtuels suivants sans activer le contrôle d’accès réseau dans le profil VPN :
+Le contrôle d’accès réseau est disponible sur les réseaux privés virtuels suivants sans activer le contrôle d’accès réseau dans le profil VPN :
 
   - NAC for Cisco Legacy AnyConnect
   - F5 Access Legacy
   - Citrix VPN
 
-- Le contrôle d’accès réseau est également disponible pour Citrix SSO et F5 Access. Pour activer le contrôle d’accès réseau pour Citrix SSO :
+Le contrôle d’accès réseau est également pris en charge pour l’accès à Cisco AnyConnect, Citrix SSO et F5. 
+
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Pour activer le contrôle d’accès réseau pour Cisco AnyConnect pour iOS :
+
+  - Intégrez ISE à Intune pour le contrôle d’accès réseau comme décrit dans le lien ci-dessous.
+  - Définissez le paramètre **Activer le contrôle d’accès réseau (NAC)** dans le profil VPN sur **Oui**.
+
+### <a name="to-enable-nac-for-citrix-sso"></a>Pour activer le contrôle d’accès réseau pour Citrix SSO :
 
   - Utilisez Citrix Gateway 12.0.59 ou une version ultérieure.  
   - Les utilisateurs doivent avoir Citrix SSO 1.1.6 ou version ultérieure.
   - [Intégrez NetScaler avec Intune pour le contrôle d’accès réseau](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) comme décrit dans la documentation de produit Citrix.
   - Dans le profil VPN, sélectionnez **Paramètres de Base** > **Activer le contrôle d’accès réseau (NAC)** > **J’accepte**.
 
-  La connexion VPN est déconnectée toutes les 24 heures pour des raisons de sécurité. Le VPN peut être immédiatement reconnecté.
 
-- Pour activer le contrôle d’accès réseau pour F5 Access :
+### <a name="to-enable-nac-for-f5-access"></a>Pour activer le contrôle d’accès réseau pour F5 Access :
 
   - Utilisez F5 BIG-IP 13.1.1.5. BIG-IP 14 n’est pas pris en charge.
   - Intégrez BIG-IP avec Intune pour le contrôle d’accès réseau. Le guide F5 [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) dresse la liste des étapes.
   - Dans le profil VPN, sélectionnez **Paramètres de Base** > **Activer le contrôle d’accès réseau (NAC)** > **J’accepte**.
 
   La connexion VPN est déconnectée toutes les 24 heures pour des raisons de sécurité. Le VPN peut être immédiatement reconnecté.
-
-- Le contrôle d’accès réseau n’est pas pris en charge pour les clients VPN suivants sur iOS :
-  - Cisco AnyConnect
 
 Nous travaillons avec nos partenaires à la publication d’une solution de contrôle d’accès réseau pour ces clients plus récents. Quand des solutions seront prêtes, cet article sera mis à jour avec des informations supplémentaires.
 

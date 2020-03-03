@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 9c2083d6f259b62b2856e08fec5ebcb696cbc0df
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755032"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576446"
 ---
-# <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune
+# <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ajouter manuellement l’application Portail d’entreprise Windows 10 à l’aide de Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Pour gérer des appareils et installer des applications, vos utilisateurs peuvent installer eux-mêmes l’application Portail d’entreprise à partir du Microsoft Store. Toutefois, si votre entreprise l’exige, vous pouvez affecter manuellement à vos utilisateurs l’application Portail d’entreprise Windows 10 directement à partir d’Intune. Cette opération est possible même si vous n’avez pas intégré Intune au Microsoft Store pour Entreprises.
+Pour gérer des appareils et installer des applications, vos utilisateurs peuvent installer eux-mêmes l’application Portail d’entreprise à partir du Microsoft Store. Toutefois, si vos besoins métier le nécessitent, vous pouvez affecter à vos utilisateurs l’application Portail d’entreprise Windows 10 directement à partir d’Intune. Cette opération est possible même si vous n’avez pas intégré Intune au Microsoft Store pour Entreprises.
 
- > [!NOTE]
- > L’option décrite dans cet article vous oblige à affecter des mises à jour manuelles chaque fois qu’une mise à jour d’application est publiée.
+ > [!IMPORTANT]
+ > Si vous téléchargez l’application Portail d’entreprise, l’option décrite dans cet article vous oblige à affecter des mises à jour manuelles chaque fois qu’une mise à jour de l’application est publiée. Pour déployer l’application Portail d’entreprise pour les appareils provisionnés Windows 10 AutoPilot, consultez [Ajouter l’application Portail d’entreprise Windows 10 à des appareils AutoPilot](~/apps/store-apps-company-portal-autopilot.md).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Configurer les paramètres permettant d’afficher les applications hors connexion
 1. Connectez-vous au [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) avec votre compte d’administrateur.

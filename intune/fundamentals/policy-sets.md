@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 48bfe727615f5165fc70ed2e08f98f01203dc895
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206123"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514827"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Utiliser des ensembles de stratégies pour regrouper des objets de gestion
 
@@ -52,7 +52,7 @@ Voici les objets de gestion que vous pouvez inclure dans un ensemble de stratég
 Quand vous créez un ensemble de stratégies, vous créez une unité d’affectation et gérez les associations entre les différents objets. Un ensemble de stratégies est une référence à des objets externes. Toute modification apportée aux objets inclus se répercute aussi à l’ensemble de stratégies. Après avoir créé un ensemble de stratégies, vous pouvez afficher et modifier à plusieurs reprises les objets et affectations qu’il contient. 
 
 > [!NOTE]
-> Les ensembles de stratégies prennent en charge les paramètres Windows, Android, macOS et iOS et peuvent être affectés à plusieurs plateformes.
+> Les ensembles de stratégies prennent en charge les paramètres Windows, Android, macOS et iOS/iPadOS, et ils peuvent être affectés à plusieurs plateformes.
 
 ## <a name="how-to-create-a-policy-set"></a>Comment créer un ensemble de stratégies
 
@@ -82,15 +82,15 @@ Les ensembles de stratégies, nouveauté de la mise à jour 1910, présentent le
 - Si un administrateur inclus dans l’étendue tente de créer un ensemble de stratégies sans avoir sélectionné de balises d’étendue, la validation échoue et une erreur s’affiche dans la barre d’état au moment d’accéder à la page **Vérifier + créer**. L’administrateur doit alors basculer vers une autre page du processus, puis revenir à la page **Vérifier + créer**. Cela a pour effet d’activer l’option **Créer**.  
  
 - Voici les types d’application actuellement pris en charge par les ensembles de stratégies :
-    - Application de l’App Store iOS
-    - Application métier iOS
-    - Application métier iOS gérée
+    - Application du Store iOS/iPadOS
+    - Application métier iOS/iPadOS
+    - Application métier iOS/iPadOS gérée
     - Application de l’Android Store
     - Application métier Android
     - Application métier Android gérée
     - Suite Office 365 ProPlus (Windows 10)
     - Lien web
-    - Application iOS intégrée
+    - Application iOS/iPadOS intégrée
     - Application Android intégrée
 
 - Il n’est pas possible de définir une affectation d’ensemble de stratégies de **Tous les utilisateurs** sur **Profil Autopilot**.
@@ -103,18 +103,18 @@ Les ensembles de stratégies, nouveauté de la mise à jour 1910, présentent le
 
 - Les types de stratégie MAM qui prennent en charge les ensembles de stratégies sont les suivants : 
     - Protection des applications gérées ciblées MAM WIP( Windows) MDM 
-    - Protection des applications gérées ciblées MAM iOS
+    - Protection des applications gérées ciblées MAM iOS/iPadOS
     - Protection des applications gérées ciblées par Android
-    - Configuration des applications gérées ciblées MAM iOS
+    - Configuration des applications gérées ciblées MAM iOS/iPadOS
     - Configuration des applications gérées ciblées MAM Android
 
 - Les types de stratégie MAM qui prennent pas en charge les ensembles de stratégies sont les suivants : 
     - Protection des applications gérées ciblées MAM WIP (Windows)
 
 - MAM traite les affectations d’ensembles de stratégies en tant qu’affectations directes pour les types de stratégie suivants :
-    - Protection des applications gérées ciblées MAM iOS
+    - Protection des applications gérées ciblées MAM iOS/iPadOS
     - Protection des applications gérées ciblées par Android
-    - Configuration des applications gérées ciblées MAM iOS
+    - Configuration des applications gérées ciblées MAM iOS/iPadOS
     - Configuration des applications gérées ciblées MAM Android
 
     Si une stratégie est ajoutée à un ensemble de stratégies déployé dans un groupe, celui-ci est indiqué comme étant directement affecté dans la charge de travail, et non « affecté via l’ensemble de stratégies ». Par conséquent, MAM ne traite pas les suppressions d’affectations de groupes provenant d’ensembles de stratégies.

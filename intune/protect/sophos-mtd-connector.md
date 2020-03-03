@@ -15,19 +15,19 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f41d5d1ec3e302a277fe5e6ff6af9d33a7e89517
-ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
+ms.openlocfilehash: 7d17749353bc3904a3d99210a5d56531d9af9c28
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75564915"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514810"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Connecteur Sophos Mobile Threat Defense avec Intune
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise grâce à l’accès conditionnel basé sur une analyse des risques menée par Sophos Mobile, une solution de défense contre les menaces mobiles qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies sur les appareils exécutant l’application Sophos Mobile.
 Vous pouvez configurer des stratégies d’accès conditionnel qui s’appuient sur l’analyse des risques de Sophos Mobile par le biais de stratégies de conformité des appareils Intune, et les utiliser pour autoriser les appareils non conformes à accéder aux ressources de l’entreprise ou les en empêcher en fonction des menaces détectées.
 
 ## <a name="how-do-intune-and-sophos-mobile-help-protect-your-company-resources"></a>Comment Intune et Sophos Mobile aident-ils à protéger les ressources de votre entreprise ?
-L’application Sophos Mobile pour Android et iOS capture le système de fichiers, la pile réseau, l’appareil et les données de télémétrie des applications quand elles sont disponibles, puis les envoie au service cloud Sophos Mobile pour évaluer les risques de l’appareil face aux menaces mobiles.
+L’application Sophos Mobile pour Android et iOS/iPadOS capture le système de fichiers, la pile réseau, l’appareil et les données de télémétrie des applications quand elles sont disponibles, puis les envoie au service cloud Sophos Mobile pour évaluer les risques de l’appareil face aux menaces mobiles.
 La stratégie de conformité des appareils Intune comporte une règle pour Sophos Mobile Threat Defense, qui s’appuie sur l’analyse des risques de Sophos Mobile. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée. Si l’appareil est détecté comme non conforme, les utilisateurs ne peuvent pas accéder aux ressources de l’entreprise comme Exchange Online et SharePoint Online. Les utilisateurs reçoivent aussi des conseils de l’application Sophos Mobile installée sur leurs appareils pour résoudre le problème et rétablir l’accès aux ressources de l’entreprise.  
 
 ## <a name="sample-scenarios"></a>Exemples de scénarios

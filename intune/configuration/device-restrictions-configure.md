@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c86252030a4baf957077cd889386bb8016554f1
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 53985a9af523ecf60efda5c5c651161c132e326c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206565"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511219"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurer des paramètres de restriction d’appareils dans Microsoft Intune
 
 
 
-Intune inclut des stratégies de restriction d’appareil qui aident les administrateurs à contrôler les appareils Android, iOS, macOS et Windows. Ces restrictions vous permettent de contrôler un large éventail de paramètres et de fonctionnalités pour protéger les ressources de votre entreprise. Par exemple, les administrateurs peuvent faire ce qui suit :
+Intune inclut des stratégies de restriction d’appareil qui aident les administrateurs à contrôler les appareils Android, iOS/iPadOS, macOS et Windows. Ces restrictions vous permettent de contrôler un large éventail de paramètres et de fonctionnalités pour protéger les ressources de votre entreprise. Par exemple, les administrateurs peuvent faire ce qui suit :
 
 - Autoriser ou bloquer l'appareil photo
 - Contrôler l'accès à Google Play, aux magasins d'applications, à la consultation de documents, et aux jeux
@@ -44,7 +44,7 @@ Cet article vous explique comment créer un profil de restrictions d’appareil.
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie correct est **iOS : Bloquer l’appareil photo sur les appareils**.
+    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **iOS/iPadOS : Bloquer l’appareil photo sur les appareils**.
     - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :  
 
@@ -58,7 +58,7 @@ Cet article vous explique comment créer un profil de restrictions d’appareil.
 
     - **Type de profil** : Sélectionnez **Restrictions de l’appareil**.
 
-        Si vous souhaitez créer un profil de restrictions pour des appareils Windows 10 Collaboration, par exemple Surface Hub, choisissez **Restrictions des appareils (Windows 10 Collaboration)** .
+        Si vous souhaitez créer un profil de restrictions pour des appareils Windows 10 Collaboration, par exemple Surface Hub, choisissez **Restrictions des appareils (Windows 10 Collaboration)**.
 
 4. Selon la plateforme que vous choisissez, les paramètres que vous pouvez configurer diffèrent. Choisissez votre plateforme pour connaître les paramètres détaillés :
 

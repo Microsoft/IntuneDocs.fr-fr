@@ -14,15 +14,15 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 681b4f690d03cd21c5a430e02cb0f3584d2e680e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ec7d4b8d83935b961d05e2e6fd22dd2d3f7e4086
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510123"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514521"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Gérer les versions de système d’exploitation avec Intune
-Sur les plateformes mobiles et de bureau modernes, le rythme de publication des mises à jour importantes, des correctifs et des nouvelles versions est soutenu. Vous disposez d’outils pour gérer entièrement les mises à jour et les correctifs sur Windows, mais d’autres plateformes telles qu’iOS et Android exigent la participation de vos utilisateurs finaux.  Microsoft Intune offre des fonctionnalités qui vous permettent de structurer la gestion des versions de vos systèmes d’exploitation sur différentes plateformes.
+Sur les plateformes mobiles et de bureau modernes, le rythme de publication des mises à jour importantes, des correctifs et des nouvelles versions est soutenu. Vous disposez de contrôles pour gérer entièrement les mises à jour et les correctifs sur Windows, mais d’autres plateformes, comme iOS/iPadOS et Android nécessitent la participation de vos utilisateurs finaux au processus.  Microsoft Intune offre des fonctionnalités qui vous permettent de structurer la gestion des versions de vos systèmes d’exploitation sur différentes plateformes.
 
 Intune peut ainsi vous aider à gérer ces scénarios courants : 
 - Déterminer les versions de système d’exploitation présentes sur les appareils des utilisateurs finaux
@@ -78,7 +78,7 @@ Pour plus d’informations, consultez [Guide pratique pour créer et affecter de
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Gestion du lancement d’une nouvelle version de système d’exploitation
 Vous pouvez utiliser les fonctionnalités Intune décrites dans cet article pour migrer le système d’exploitation de votre organisation vers une nouvelle version selon la chronologie de votre choix. Les étapes suivantes fournissent un exemple de modèle de déploiement pour migrer vos utilisateurs du système d’exploitation v1 vers le système d’exploitation v2 en sept jours.
-- **Étape 1** : Utilisez des restrictions d’inscription pour exiger le système d’exploitation v2 comme version minimale lors de l’inscription de l’appareil. De cette façon, vous êtes certain que les nouveaux appareils des utilisateurs finaux sont conformes au moment de l’inscription.
+- **Étape 1** : Utilisez des restrictions d’inscription pour exiger le système d’exploitation v2 comme version minimale lors de l’inscription de l’appareil. De cette façon, vous êtes certain que les nouveaux appareils des utilisateurs finaux sont conformes au moment de l’inscription.
 - **Étape 2a** : Utilisez des stratégies de protection des applications Intune pour avertir les utilisateurs de l’obligation d’utiliser le système d’exploitation v2 au moment de l’ouverture ou de la reprise de l’application.
 - **Étape 2b** : Utilisez des stratégies de conformité d’appareil pour exiger le système d’exploitation v2 comme version minimale d’un appareil conforme. Utilisez des **Actions** en cas de non-conformité pour autoriser une période de grâce de sept jours et envoyer aux utilisateurs finaux une notification par e-mail avec votre chronologie et vos exigences.
   - Les utilisateurs finaux sont ainsi informés par e-mail de la nécessité de mettre à jour les appareils existants par le biais du portail d’entreprise Intune et au moment de l’ouverture de l’application si elle est associée à une stratégie de protection des applications.

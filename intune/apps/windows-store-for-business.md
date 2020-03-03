@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562491"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609163"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications achetées en volume dans le Microsoft Store pour Entreprises avec Microsoft Intune
 
@@ -48,7 +48,7 @@ Passez en revue les informations suivantes avant de commencer la synchronisation
 - Les applications sous licence en ligne et hors connexion que vous avez achetées auprès de Microsoft Store pour Entreprises sont synchronisées dans le portail Intune. Vous pouvez alors déployer ces applications sur des groupes d’utilisateurs ou d’appareils. 
 - Les installations d’applications en ligne sont gérées par le Store.
 - Les applications hors connexion qui sont gratuites peuvent aussi être synchronisées avec Intune. Ces applications sont installées par Intune et non pas par le Store.
-- Les appareils doivent être joints aux services de domaine Active Directory ou à un espace de travail pour pouvoir utiliser cette fonctionnalité.
+- Pour pouvoir utiliser cette fonctionnalité, les appareils doivent être joints à Active Directory Domain Services, à Azure AD ou à un espace de travail.
 - Les appareils inscrits doivent utiliser la version 1511 de Windows 10 ou version ultérieure.
 
 En outre, les ensembles liés et les applications en mode hors connexion sous licence synchronisées provenant de Microsoft Store pour Entreprises sont désormais consolidés dans une même entrée d’application dans l’interface utilisateur. Les détails du déploiement des packages individuels seront migrés vers cette même entrée. Pour afficher les ensembles liés dans le portail Azure, sélectionnez **Licences d’application** dans le volet **Applications**.

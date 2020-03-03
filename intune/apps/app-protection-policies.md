@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 7d1a55f758be50c342a5c8851106f0c37e6aec50
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437900"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513722"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Guide pratique de gestion et affectation des stratégies de protection des applications
 
@@ -74,21 +74,21 @@ Lorsque vous créez une stratégie de protection d’applications pour les appli
     Cette page fournit des paramètres pour les contrôles de protection contre la perte de données (DLP), dont notamment les restrictions d’opérations Couper, Copier, Coller et Enregistrer sous. Ces paramètres déterminent la manière dont les utilisateurs interagissent avec les données dans les applications auxquelles cette stratégie de protection d’applications s’applique.
 
     **Paramètres de protection des données** :<br>
-    - **Protection des données iOS/iPadOS** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications iOS - Protection des données](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **Protection des données iOS/iPadOS** - Pour plus d’informations, consultez [Paramètres de stratégie de protection des applications iOS/iPadOS - Protection des données](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Protection des données Android** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications Android - Protection des données](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Cliquez sur **Suivant** pour afficher la page **Conditions d’accès**.<br>
     Cette page fournit des paramètres qui vous permettent de configurer les exigences en matière de code confidentiel et d’informations d’identification que les utilisateurs doivent remplir pour accéder aux applications dans un contexte professionnel. 
  
     **Paramètres des conditions d’accès** :<br>
-    - **Conditions d’accès iOS/iPadOS** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications iOS - Conditions d’accès](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **Conditions d’accès iOS/iPadOS** - Pour plus d’informations, consultez [Paramètres de stratégie de protection des applications iOS/iPadOS - Conditions d’accès](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Conditions d’accès Android** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications Android - Conditions d’accès](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Cliquez sur **Suivant** pour afficher la page **Lancement conditionnel**.<br>
     Cette page fournit des paramètres permettant de définir les exigences de sécurité de connexion pour votre stratégie de protection d’applications. Sélectionnez un **Paramètre** et entrez la **Valeur** que les utilisateurs doivent satisfaire pour se connecter à votre application d’entreprise. Ensuite, sélectionnez l’**action** à effectuer si les utilisateurs ne satisfont pas vos exigences. Dans certains cas, vous pouvez configurer plusieurs actions pour un même paramètre.
 
     **Paramètres de lancement conditionnel** :<br>
-    - **Lancement conditionnel iOS/iPadOS** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications iOS - Lancement conditionnel](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **Lancement conditionnel iOS/iPadOS** - Pour plus d’informations, consultez [Paramètres de stratégie de protection des applications iOS/iPadOS - Lancement conditionnel](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Lancement conditionnel Android** - Pour obtenir des informations, consultez [Paramètres de stratégie de protection des applications Android - Lancement conditionnel](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Cliquez sur **Suivant** pour afficher la page **Affectations**.<br>
@@ -180,7 +180,7 @@ Pour créer ces stratégies, accédez à **Applications** > **Stratégies de pro
 > [!NOTE]
 > Les appareils Android vous demandent d’installer l’application Portail d’entreprise Intune, quel que soit le type d’appareil choisi. Par exemple, si vous sélectionnez « Android Enterprise », les utilisateurs avec des appareils Android non gérés reçoivent toujours une invite.
 
-Pour iOS, des paramètres de configuration d’application supplémentaires sont nécessaires pour cibler les paramètres de stratégie de protection d’application (APP) sur des applications se trouvant sur des appareils inscrits auprès d’Intune :
+Pour iOS/iPadOS, des paramètres de configuration d’application supplémentaires sont nécessaires pour cibler les paramètres de stratégie de protection d’application (APP) sur les applications se trouvant sur des appareils inscrits auprès d’Intune :
 
 - **IntuneMAMUPN** doit être configuré pour toutes les applications managées de gestion des appareils mobiles. Pour plus d’informations, consultez [Guide pratique pour gérer le transfert de données entre applications iOS/iPadOS dans Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** doit être configuré pour toutes les applications gérées MDM tierces et métier. Le paramètre **IntuneMAMDeviceID** doit être configuré avec, comme valeur, le jeton d’ID d’appareil. Par exemple, `key=IntuneMAMDeviceID, value={{deviceID}}`. Pour plus d’informations, consultez [Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés](app-configuration-policies-use-ios.md).
@@ -192,7 +192,7 @@ Pour iOS, des paramètres de configuration d’application supplémentaires sont
 ## <a name="policy-settings"></a>Paramètres de stratégie
 Pour afficher la liste complète des paramètres de stratégie pour iOS/iPadOS et Android, sélectionnez l’un des liens suivants :
 
-- [Stratégies iOS](app-protection-policy-settings-ios.md)
+- [Stratégies iOS/iPadOS](app-protection-policy-settings-ios.md)
 - [Stratégies Android](app-protection-policy-settings-android.md)
 
 ## <a name="next-steps"></a>Étapes suivantes

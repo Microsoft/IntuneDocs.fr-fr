@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e93e69b5cce2c54ae07410309b33870dd828f563
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bd204271b9ae3e57e15a101647444913749f4109
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509086"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514232"
 ---
 # <a name="data-collection-in-intune"></a>Collecte des données dans Intune
 
@@ -50,7 +50,7 @@ Les données identifiées collectées par Intune peuvent inclure notamment, mais
   - Nom principal ou adresse e-mail de l’utilisateur
   - Identificateur d’utilisateur tiers (comme l’ID Apple)
 - Informations sur l’inventaire matériel
-  - Nom de l'appareil
+  - Nom de l’appareil
   - Fabricant
   - Système d'exploitation
   - Numéro de série
@@ -112,7 +112,7 @@ Les données pseudonymes collectées par Intune peuvent inclure notamment, mais 
   - ID de compte
   - ID d’appareil EAS
   - ID spécifique à la plateforme
-  - ID Apple pour appareils iOS
+  - ID Apple pour les appareils iOS/iPadOS
   - Adresse MAC pour appareils Mac
   - ID Windows pour appareils Windows
 - Informations d’application managée

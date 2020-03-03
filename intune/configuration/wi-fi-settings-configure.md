@@ -1,11 +1,11 @@
 ---
 title: Créer un profil Wi-Fi pour les appareils iOS dans Microsoft Intune - Azure | Microsoft Docs
-description: Suivez les étapes pour créer un profil de configuration d’appareil dans Microsoft Intune. Créez des profils pour Android, Android Entreprise, Android Kiosk, iOS, macOS, Windows 10 et versions ultérieures et Windows Holographic for Business. Utilisez ces profils pour créer une connexion Wi-Fi afin d’utiliser des certificats, choisissez un type EAP, sélectionnez une méthode d’authentification, activez un proxy et bien plus encore.
+description: Suivez les étapes pour créer un profil de configuration d’appareil dans Microsoft Intune. Créez des profils pour Android, Android Entreprise, Android Kiosk, iOS, iPadOS, macOS, Windows 10 et ultérieur, et Windows Holographic for Business. Utilisez ces profils pour créer une connexion Wi-Fi afin d’utiliser des certificats, choisissez un type EAP, sélectionnez une méthode d’authentification, activez un proxy et bien plus encore.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47eae4d2e662be85de2831666f944e57ba674417
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3110998970eeaf654ab57397ec827090a4103f34
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206106"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512328"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Ajoutez et utilisez des paramètres Wi-Fi sur vos appareils dans Microsoft Intune
 
 Wi-Fi est un réseau sans fil qui est utilisé par de nombreux appareils mobiles pour obtenir un accès réseau. Microsoft Intune inclut des paramètres Wi-Fi intégrés qui peuvent être déployés pour les utilisateurs et appareils de votre organisation. Ce groupe de paramètres est appelé « profil » et peut être attribué à différents utilisateurs et groupes. Une fois le profil attribué, vos utilisateurs peuvent accéder au réseau Wi-Fi de votre organisation sans le configurer eux-mêmes.
 
-Par exemple, vous installez un nouveau réseau Wi-Fi nommé Contoso Wi-Fi. Ensuite, vous souhaitez configurer tous les appareils iOS pour vous connecter à ce réseau. Voici le processus :
+Par exemple, vous installez un nouveau réseau Wi-Fi nommé Contoso Wi-Fi. Vous voulez ensuite configurer tous les appareils iOS/iPadOS pour vous connecter à ce réseau. Voici le processus :
 
 1. Créez un profil Wi-Fi incluant les paramètres pour se connecter au réseau sans fil Contoso Wi-Fi.
-2. Attribuez le profil à un groupe contenant tous les utilisateurs d’appareils iOS.
+2. Affectez le profil à un groupe contenant tous les utilisateurs d’appareils iOS/iPadOS.
 3. Les utilisateurs recherchent le nouveau réseau Wi-Fi Contoso dans la liste des réseaux sans fil sur leur appareil. Ils peuvent alors se connecter au réseau, à l’aide de la méthode d’authentification de votre choix.
 
 Cet article répertorie les étapes pour créer un profil Wi-Fi. Il inclut également des liens qui décrivent les différents paramètres pour chaque plateforme.
@@ -39,11 +39,12 @@ Cet article répertorie les étapes pour créer un profil Wi-Fi. Il inclut égal
 
 Les profils Wi-Fi prennent en charge les plateformes suivantes :
 
-- Android 4 et versions ultérieures
+- Android 4 et ultérieur
 - Android Enterprise et Kiosk
-- iOS 8.0 et versions ultérieures
+- iOS 8.0 et ultérieur
+- iPadOS 13.0 et ultérieur
 - macOS X 10.11 et versions plus récentes
-- Windows 10 et versions ultérieures, Windows 10 Mobile et Windows Holographic for Business
+- Windows 10 et ultérieur, Windows 10 Mobile et Windows Holographic for Business
 
 > [!NOTE]
 > Pour les appareils exécutant Windows 8.1, vous pouvez importer une configuration Wi-Fi précédemment exportée à partir d’un autre appareil.

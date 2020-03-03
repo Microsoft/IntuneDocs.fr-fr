@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413648"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515167"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
 
@@ -95,9 +95,9 @@ Intune inclut également un ensemble de paramètres de stratégie de conformité
 
 
 > [!NOTE]
-> La détection de jailbreak améliorée pour les appareils iOS a été temporairement désactivée dans Intune.
+> La détection améliorée des jailbreaks pour les appareils iOS/iPadOS a été temporairement désactivée dans Intune.
 
-- **Détection de jailbreak améliorée** : Quand ce paramètre est activé, les appareils iOS sont enregistrés dans Intune plus fréquemment. L’activation de cette propriété utilise les services de localisation de l’appareil et a un impact sur l’utilisation de la batterie. Les données de localisation de l’utilisateur ne sont pas stockées par Intune.
+- **Détection de jailbreak améliorée** : Quand ce paramètre est activé, les appareils iOS/iPadOS effectuent un check-in dans Intune plus fréquemment. L’activation de cette propriété utilise les services de localisation de l’appareil et a un impact sur l’utilisation de la batterie. Les données de localisation de l’utilisateur ne sont pas stockées par Intune.
 
   L’activation de ce paramètre nécessite que les appareils :
   - activent les services de localisation au niveau du système d’exploitation ;

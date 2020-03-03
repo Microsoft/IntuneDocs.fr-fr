@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ebae46fd4935c3070319f16d35d5b53888e94c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3f432ab20170dc702d2014bbac68ced06e51082e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505175"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514895"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifier les scénarios d'utilisation de la gestion des périphériques mobiles
 
@@ -79,15 +79,15 @@ Vous devez maintenant identifier les groupes organisationnels associés à chaqu
 
 À ce stade, l’objectif est d’identifier les plateformes d'appareils mobiles associées à chaque scénario d’utilisation. Il peut y en avoir plusieurs.
 
-Par exemple, votre scénario d’utilisation professionnelle prend peut-être en charge les plateformes d’appareils iOS et Android Samsung Knox. Il est possible que votre stratégie BYOD inclue la prise en charge de plateformes d’appareils mobiles supplémentaires comme Android (hors Samsung Knox) et Windows 10 Mobile. À partir des exemples précédents, nous avons associé les plateformes d’appareils mobiles à chaque scénario d’utilisation.
+Par exemple, votre scénario d’utilisation professionnelle peut prendre en charge les plateformes d’appareils iOS/iPadOS et Android Samsung Knox. Il est possible que votre stratégie BYOD inclue la prise en charge de plateformes d’appareils mobiles supplémentaires comme Android (hors Samsung Knox) et Windows 10 Mobile. À partir des exemples précédents, nous avons associé les plateformes d’appareils mobiles à chaque scénario d’utilisation.
 
 | **Scénarios d'utilisation** | **Cas d'utilisation secondaires** | **Groupes** | **Plateformes d'appareils** |   
 |:---:|:---:|:---:|:---:|
-| Entreprise | Travailleur de l'information | Ressources humaines, finances | iOS |                                                           
-| Entreprise | Cadres | Ressources humaines, finances | iOS |                                                           
+| Entreprise | Travailleur de l'information | Ressources humaines, finances | iOS/iPadOS |                                                           
+| Entreprise | Cadres | Ressources humaines, finances | iOS/iPadOS |                                                           
 | Entreprise | Kiosk | Commerce | Android |
-| BYOD | Travailleur de l'information | Marketing, Ventes | iOS |                                                           
-| BYOD | Cadres | Marketing, Ventes | iOS |
+| BYOD | Travailleur de l'information | Marketing, Ventes | iOS/iPadOS |                                                           
+| BYOD | Cadres | Marketing, Ventes | iOS/iPadOS |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

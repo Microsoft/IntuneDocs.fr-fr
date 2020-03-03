@@ -1,5 +1,5 @@
 ---
-title: Profils de provisionnement d’applications iOS dans Microsoft Intune
+title: Profils de provisionnement d’applications iOS/iPadOS dans Microsoft Intune
 titleSuffix: ''
 description: Intune vous fournit les outils nécessaires pour affecter de manière proactive un nouveau profil de provisionnement aux appareils dont les applications arrivent à expiration.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31bad59c33a34d0b92d93979b20b58f70fd042ef
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: f40b6f458a95a466874a2d1ce44fcafa37249d46
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564095"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513620"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Utiliser les profils de provisionnement d’application iOS pour empêcher l’expiration de vos applications
 
@@ -31,16 +31,16 @@ ms.locfileid: "74564095"
 
 ## <a name="introduction"></a>Introduction
 
-Les applications métier Apple iOS affectées aux iPhone et iPad intègrent un profil de provisionnement et du code signé avec un certificat. Lorsque l’application iOS s’exécute, iOS confirme son intégrité et applique les stratégies définies par le profil de configuration. Les validations suivantes se produisent :
+Les applications métier Apple iOS/iPadOS affectées à des iPhones et des iPads intègrent un profil de provisionnement et du code signé avec un certificat. Quand l’application s’exécute, iOS/iPadOS vérifie son intégrité et applique les stratégies définies par le profil de configuration. Les validations suivantes se produisent :
 
-- **Intégrité du fichier d’installation** : iOS compare les détails des applications avec la clé publique du certificat de signature d’entreprise. Si ces éléments diffèrent, le contenu de l’application est susceptible d’avoir changé. L’application n’est pas autorisée à s’exécuter.
-- **Mise en œuvre des fonctionnalités** : iOS tente d’appliquer les fonctionnalités de l’application à partir du profil de configuration d’entreprise (il ne s’agit pas de profils de configuration de développeurs) inclus dans le fichier d’installation de l’application (.ipa).
+- **Intégrité du fichier d’installation** : iOS/iPadOS compare les informations détaillées de l’application avec la clé publique du certificat de signature de l’entreprise. Si ces éléments diffèrent, le contenu de l’application est susceptible d’avoir changé. L’application n’est pas autorisée à s’exécuter.
+- **Mise en œuvre des fonctionnalités** : iOS/iPadOS tente d’appliquer les fonctionnalités de l’application à partir du profil de configuration d’entreprise (pas les profils de configuration de développeurs) inclus dans le fichier d’installation de l’application (.ipa).
 
 
 Le certificat de signature d’entreprise que vous utilisez pour signer des applications dure généralement trois ans. Toutefois, le profil de configuration expire au bout d’1 an. Tant que le certificat est toujours valide, Intune vous offre les outils pour affecter de façon proactive un nouveau profil de configuration aux appareils qui disposent d’applications arrivant prochainement à expiration.
 Après l’expiration du certificat, vous devez à nouveau signer l’application avec un nouveau certificat et incorporer un nouveau profil de configuration avec la clé du nouveau certificat.
 
-En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécurité pour affecter une configuration de provisionnement d’application iOS. Par exemple, vous pouvez affecter une configuration de provisionnement d’application iOS à tous les utilisateurs, et exclure un groupe composé de cadres de direction.
+En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécurité pour affecter une configuration de provisionnement d’application iOS/iPadOS. Par exemple, vous pouvez affecter une configuration de provisionnement d’application iOS/iPadOS à tous les utilisateurs mais exclure un groupe composé de cadres de direction.
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Comment créer un profil de configuration d’application mobile iOS
 
@@ -56,12 +56,12 @@ En tant qu’administrateur, vous pouvez inclure et exclure des groupes de sécu
    <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Cliquez sur **Suivant : Balises d’étendue**.<br>
-   Dans la page **Balises d’étendue**, vous pouvez éventuellement configurer des balises d’étendue pour déterminer qui peut voir le profil de provisionnement d’application iOS dans Intune. Pour plus d’informations sur les balises d’étendue, voir [Utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour l’informatique distribuée](../fundamentals/scope-tags.md).
+   Dans la page **Balises d’étendue**, vous pouvez éventuellement configurer des balises d’étendue pour déterminer qui peut voir le profil de provisionnement d’application iOS/iPadOS dans Intune. Pour plus d’informations sur les balises d’étendue, voir [Utiliser le contrôle d’accès en fonction du rôle et les balises d’étendue pour l’informatique distribuée](../fundamentals/scope-tags.md).
 5. Cliquez sur **Suivant : Affectations**.<br>
    La page **Affectations** vous permet d’affecter le profil aux utilisateurs et appareils. Il est important de noter que vous pouvez affecter un profil à un appareil, que celui-ci soit ou non géré par Intune.
 6. Cliquez sur **Suivant : Vérifier + créer** pour examiner les valeurs que vous avez entrées pour le profil.
-7. Après avoir terminé, cliquez sur **Créer** pour créer le profil de provisionnement d’application iOS dans Intune. 
+7. Quand vous avez terminé, cliquez sur **Créer** pour créer le profil de provisionnement d’application iOS/iPadOS dans Intune. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Affectez le profil aux appareils iOS requis. Pour plus d’informations, suivez les étapes de [Guide pratique pour attribuer des profils d’appareil](../device-profile-assign.md).
+Affectez le profil aux appareils iOS/iPadOS requis. Pour plus d’informations, suivez les étapes de [Guide pratique pour attribuer des profils d’appareil](../device-profile-assign.md).

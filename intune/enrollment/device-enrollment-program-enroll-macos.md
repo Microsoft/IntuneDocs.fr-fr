@@ -1,7 +1,7 @@
 ---
-title: Inscrire les appareils macOS – Programme d’inscription des appareils ou Apple School Manager
+title: Inscrire des appareils macOS - Apple Business Manager ou Apple School Manager
 titleSuffix: ''
-description: Découvrez comment inscrire des appareils macOS d’entreprise à l’aide du Programme d’inscription des appareils.
+description: Découvrez comment inscrire des appareils macOS d’entreprise.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d55139a106599664f801a6bf73b0e0e8db24b57a
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6ef08ea65a4976bcf77154108e415634dbae8e05
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414487"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514334"
 ---
-# <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Inscrire automatiquement les appareils macOS avec le Programme d’inscription des appareils ou Apple School Manager
+# <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Inscrire automatiquement des appareils macOS avec Apple Business Manager ou Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Vous pouvez configurer l’inscription Intune des appareils macOS achetés dans le cadre du [Programme d’inscription des appareils (DEP)](https://deploy.apple.com) d’Apple ou d’[Apple School Manager](https://school.apple.com/). Vous pouvez utiliser ces deux types d’inscriptions pour un grand nombre d’appareils sans jamais avoir à les manipuler. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
+Vous pouvez configurer l’inscription Intune des appareils macOS achetés via [Apple Business Manager](https://business.apple.com/) ou [Apple School Manager](https://school.apple.com/). Vous pouvez utiliser ces deux types d’inscriptions pour un grand nombre d’appareils sans jamais avoir à les manipuler. Vous pouvez expédier les appareils macOS directement aux utilisateurs. Quand l’utilisateur active l’appareil, l’Assistant Configuration s’exécute avec les paramètres préconfigurés et l’appareil s’inscrit à la gestion Intune.
 
-Pour configurer l’inscription, on utilise à la fois le portail Intune et le portail DEP Apple. Des profils d’inscription contenant les paramètres appliqués aux appareils lors de l’inscription sont créés.
+Pour configurer l’inscription, vous utilisez à la fois le portail Intune et le portail Apple. Des profils d’inscription contenant les paramètres appliqués aux appareils lors de l’inscription sont créés.
 
-Ni l’inscription DEP ni Apple School Manager ne fonctionnent avec le [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
+Ni l’inscription Apple Business Manager ni Apple School Manager ne fonctionnent avec le [gestionnaire d’inscription des appareils](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -75,7 +75,7 @@ Le portail Apple permet de créer un jeton et d’affecter des appareils à Intu
 
 1. Choisissez **Créer un jeton pour le Programme d’inscription des appareils d’Apple** ou **Créer un jeton avec Apple School Manager** pour ouvrir le portail Apple correspondant, et connectez-vous avec votre ID Apple d’entreprise. Vous pouvez utiliser cet ID Apple pour renouveler votre jeton.
 2. Côté programme DEP, choisissez **Bien démarrer** pour **Programme d’inscription des appareils** > **Gérer les serveurs** > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
-3. Pour Apple School Manager, choisissez **Serveurs de gestion des appareils mobiles (MDM)**  > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
+3. Pour Apple School Manager, choisissez **Serveurs de gestion des appareils mobiles (MDM)** > **Ajouter un serveur de gestion des appareils mobiles (MDM)** sur le portail Apple.
 4. Entrez le **Nom du serveur MDM**, puis choisissez **Suivant**. Le nom du serveur vous permet d’identifier le serveur de gestion des appareils mobiles (MDM) uniquement. Il ne s’agit pas du nom ou de l’URL du serveur Microsoft Intune.
 
 5. La boîte de dialogue **Ajouter &lt;nom_serveur&gt;** s’ouvre avec le message **Charger votre clé publique**. Choisissez **Choisir un fichier** pour charger le fichier .pem, puis choisissez **Suivant**.

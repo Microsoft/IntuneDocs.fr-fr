@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 563b117583f8b8c1f4da08d5d4e3399d5939bf97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fd2f03edeb1e402401911ab2c80fa0d699e2628c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504375"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514878"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Connecteur Pradeo Mobile Threat Defense avec Intune
 
@@ -30,11 +30,11 @@ Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’�
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Comment Intune et Pradeo aident-ils à protéger les ressources de votre entreprise ?
 
-L’application Pradeo pour Android et iOS capture le système de fichiers, la pile réseau, l’appareil et les données de télémétrie des applications quand elles sont disponibles, puis les envoie au service cloud Pradeo pour évaluer les risques de l’appareil face aux menaces mobiles.
+L’application Pradeo pour Android et iOS/iPadOS capture le système de fichiers, la pile réseau, l’appareil et les données de télémétrie des applications quand elles sont disponibles, puis les envoie au service cloud Pradeo pour évaluer les risques de l’appareil face aux menaces mobiles.
 
 La stratégie de conformité des appareils Intune inclut une règle pour Pradeo Mobile Threat Defense, basée sur l’évaluation des risques Pradeo. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée. Si l’appareil est détecté comme non conforme, les utilisateurs ne peuvent pas accéder aux ressources de l’entreprise comme Exchange Online et SharePoint Online. Les utilisateurs reçoivent aussi des conseils de l’application Pradeo installée sur leurs appareils pour résoudre le problème et rétablir l’accès aux ressources de l’entreprise.
 
-## <a name="sample-scenarios"></a>Exemples de scénario
+## <a name="sample-scenarios"></a>Exemples de scénarios
 
 Voici quelques scénarios courants.
 
@@ -58,7 +58,7 @@ Quand des applications malveillantes telles que des programmes malveillants sont
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)** , et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
+Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)**, et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 

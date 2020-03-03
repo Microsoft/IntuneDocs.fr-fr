@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad363785888a92d1e8be4f2d28690278a2efaae9
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 3cd153a4c602ba49a5b5135d1d6cb32a61f2668d
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966298"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576515"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Créer et attribuer des profils de certificat SCEP dans Intune
 
@@ -60,7 +60,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
    - **Type de certificat** :
 
-     *(S’applique à :  Android, Android Entreprise, iOS, macOS, Windows 8.1 et versions ultérieures, et Windows 10 et versions ultérieures.)*
+     *(S’applique à :  Android, Android Entreprise, iOS/iPadOS, macOS, Windows 8.1 et ultérieur, et Windows 10 et ultérieur.)*
 
      Sélectionnez un type en fonction de votre utilisation du profil de certificat :
 
@@ -90,19 +90,19 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
        - **Nom commun comme adresse e-mail**
        - **IMEI (International Mobile Equipment Identity)**
        - **Numéro de série**
-       - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Un format personnalisé prend en charge deux variables : **Nom commun (CN)** et **E-mail (E)** . **Nom courant (cn)** peut être défini sur une des variables suivantes :
+       - **Personnalisé** : quand vous sélectionnez cette option, une zone de texte **Personnalisé** s’affiche également. Utilisez ce champ pour entrer un format de nom d’objet personnalisé, avec notamment des variables. Un format personnalisé prend en charge deux variables : **Nom commun (CN)** et **E-mail (E)**. **Nom courant (cn)** peut être défini sur une des variables suivantes :
 
-         - **CN={{UserName}}** : Le nom d’utilisateur principal, par exemple, janedoe@contoso.com.
-         - **CN={{AAD_Device_ID}}** : ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
+         - **CN={{UserName}}**: Le nom d’utilisateur principal, par exemple, janedoe@contoso.com.
+         - **CN={{AAD_Device_ID}}**: ID attribué quand vous inscrivez un appareil dans Azure Active Directory (AD). Cet ID est généralement utilisé pour l’authentification auprès d’Azure AD.
          - **CN={{SERIALNUMBER}}** : Numéro de série unique (SN) généralement utilisé par le fabricant pour identifier un appareil.
          - **CN={{IMEINumber}}** : Numéro IMEI (International Mobile Equipment Identity) unique utilisé pour identifier un téléphone mobile.
          - **CN={{OnPrem_Distinguished_Name}}** : Séquence de noms uniques relatifs séparés par une virgule, par exemple, *CN=Jane Doe,OU=UserAccounts,DC=Corp,DC=contoso,DC=com*.
 
-           Pour utiliser la variable *{{OnPrem_Distinguished_Name}}* , synchronisez l’attribut utilisateur *onpremisesdistinguishedname* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
+           Pour utiliser la variable *{{OnPrem_Distinguished_Name}}*, synchronisez l’attribut utilisateur *onpremisesdistinguishedname* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
 
          - **CN={{onPremisesSamAccountName}}** : Les administrateurs peuvent synchroniser l’attribut samAccountName d’Active Directory sur Azure AD à l’aide d’Azure AD Connect dans un attribut appelé *onPremisesSamAccountName*. Intune peut remplacer cette variable dans le cadre d’une demande d’émission de certificat dans l’objet d’un certificat. L’attribut samAccountName est le nom de connexion de l’utilisateur utilisé pour prendre en charge les clients et serveurs avec une version antérieure de Windows (antérieure à Windows 2000). Le format du nom de connexion de l’utilisateur est : *DomainName\testUser* ou simplement *testUser*.
 
-            Pour utiliser la variable *{{onPremisesSamAccountName}}* , synchronisez l’attribut utilisateur *onPremisesSamAccountName* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
+            Pour utiliser la variable *{{onPremisesSamAccountName}}*, synchronisez l’attribut utilisateur *onPremisesSamAccountName* à l’aide d’[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) sur votre Azure AD.
 
          En combinant une ou plusieurs de ces variables et chaînes statiques, vous pouvez créer un format de nom d’objet personnalisé tel que :  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
@@ -121,7 +121,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{DeviceName}}**
-        - **{{FullyQualifiedDomainName}}** *(Applicable uniquement aux appareils Windows et joints à un domaine)*
+        - **{{FullyQualifiedDomainName}}***(Applicable uniquement aux appareils Windows et joints à un domaine)*
         - **{{MEID}}**
 
         Vous pouvez spécifier ces variables, suivies du texte de la variable, dans la zone de texte. Par exemple, le nom commun d’un appareil nommé *Device1* peut être ajouté sous la forme **CN={{DeviceName}}Device1**.
@@ -169,7 +169,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
         > [!IMPORTANT]
         > - Quand vous utilisez une variable de certificat d’appareil, placez le nom de la variable entre accolades { }.
-        > - N’utilisez pas d’accolades **{ }** , de symboles de barre verticale **|** ni de points-virgules **;** dans le texte qui suit la variable.
+        > - N’utilisez pas d’accolades **{ }**, de symboles de barre verticale **|** ni de points-virgules **;** dans le texte qui suit la variable.
         > - Les propriétés de l’appareil utilisées dans l’*objet* ou le *SAN* d’un certificat d’appareil, par exemple, **IMEI**, **SerialNumber** et **FullyQualifiedDomainName**, sont des propriétés qui peuvent être usurpées par quiconque a accès à l’appareil.
         > - Un appareil doit prendre en charge toutes les variables spécifiées dans un profil de certificat pour que ce profil s’installe sur cet appareil.  Par exemple, si **{{IMEI}}** est utilisé dans le SAN d’un profil SCEP et correspond à un appareil qui n’a pas de numéro IMEI, l’installation du profil échoue.
 
@@ -221,7 +221,7 @@ Dès que vous avez [configuré votre infrastructure](certificates-scep-configure
 
    - **URL du serveur SCEP** :
 
-     entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP. Par exemple, entrez une URL de type *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Vous pouvez ajouter des URL SCEP supplémentaires pour l’équilibrage de charge selon vos besoins, car les URL sont envoyées de manière aléatoire à l’appareil avec le profil. Si l’un des serveurs SCEP n’est pas disponible, la demande SCEP échoue et la demande de certificat peut être effectuée sur le même serveur non disponible lors d’enregistrements ultérieurs de l’appareil.
+     entrez une ou plusieurs URL pour les serveurs NDES qui délivrent les certificats par le biais de SCEP. Par exemple, entrez une URL de type *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. Vous pouvez ajouter des URL SCEP supplémentaires pour l’équilibrage de charge selon vos besoins, car les URL sont envoyées de manière aléatoire à l’appareil avec le profil. Si l’un des serveurs SCEP n’est pas disponible, la demande SCEP échoue et la demande de certificat peut être effectuée sur le même serveur non disponible lors d’enregistrements ultérieurs de l’appareil.
 
 8. Sélectionnez **OK**, puis **Créer**. Le profil est créé et apparaît dans la liste *Configuration de l’appareil - Profils*.
 
@@ -240,9 +240,9 @@ Lorsque le nom de votre objet contient un des caractères spéciaux, utilisez l�
 - Encapsulez la valeur CN qui contient le caractère spécial avec des guillemets.  
 - Supprimez le caractère spécial de la valeur CN.
 
-**Par exemple**, vous avez un nom d’objet qui apparaît en tant qu’*utilisateur de test (TestCompany, LLC)* .  Un CSR qui inclut un CN avec une virgule entre *TestCompany* et *LLC* présente un problème.  Le problème peut être évité en plaçant des guillemets autour de la totalité du CN ou en supprimant la virgule entre *TestCompany* et *LLC* :
+**Par exemple**, vous avez un nom d’objet qui apparaît en tant qu’*utilisateur de test (TestCompany, LLC)*.  Un CSR qui inclut un CN avec une virgule entre *TestCompany* et *LLC* présente un problème.  Le problème peut être évité en plaçant des guillemets autour de la totalité du CN ou en supprimant la virgule entre *TestCompany* et *LLC* :
 
-- **Ajouter des guillemets** : *CN =* « Utilisateur de test (TestCompany, LLC) » OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Ajouter des guillemets** : *CN =*« Utilisateur de test (TestCompany, LLC) » OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Supprimez la virgule** : *CN =Utilisateur de test (TestCompany, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  Toutefois, toute tentative d’échappement de la virgule à l’aide d’un caractère de barre oblique inverse échoue et génère une erreur dans les journaux CRP :
@@ -280,7 +280,7 @@ Attribuez des profils de certificat SCEP de la même façon que vous [déployez 
 - Même si vous créez et attribuez le profil de certificat approuvé et le profil de certificat SCEP séparément, les deux doivent être attribués. Si les deux ne sont pas installés sur un appareil, la stratégie de certificat SCEP échoue. Veillez à ce que tous les profils de certificat racine approuvé soient également déployés sur les mêmes groupes que le profil SCEP.
 
 > [!NOTE]
-> Sur les appareils iOS, quand un profil de certificat SCEP est associé à un profil supplémentaire, comme un profil Wi-Fi ou VPN, l’appareil reçoit un certificat pour chacun de ces profils supplémentaires. De cette façon, l’appareil iOS reçoit plusieurs certificats émis par la requête de certificat SCEP.  Si vous voulez un seul certificat, vous devez utiliser des certificats PKCS au lieu de certificats SCEP.  La différence entre les certificats PKCS et SCEP réside dans la façon dont ils sont distribués aux appareils.
+> Sur les appareils iOS/iPadOS, quand un profil de certificat SCEP est associé à un profil supplémentaire, comme un profil Wi-Fi ou VPN, l’appareil reçoit un certificat pour chacun de ces profils supplémentaires. De cette façon, l’appareil iOS/iPadOS reçoit plusieurs certificats délivrés par la requête de certificat SCEP.  Si vous voulez un seul certificat, vous devez utiliser des certificats PKCS au lieu de certificats SCEP.  La différence entre les certificats PKCS et SCEP réside dans la façon dont ils sont distribués aux appareils.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

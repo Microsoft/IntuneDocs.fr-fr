@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: f2baf60fed2c6010e5ae0784cda166ac4fabfd57
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754998"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511733"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Ajouter des applications de l’App Store iOS dans Microsoft Intune
 
@@ -32,11 +32,11 @@ ms.locfileid: "76754998"
 Aidez-vous des informations contenues dans cet article pour ajouter des applications de l’App Store iOS à Microsoft Intune. Les applications de l’App Store iOS sont des applications installées par Intune sur les appareils de vos utilisateurs. Un utilisateur fait partie du personnel de votre entreprise. Les applications de l’App Store iOS sont automatiquement mises à jour.
 
 >[!NOTE]
->Bien que les utilisateurs d’appareils iOS puissent supprimer certaines applications iOS intégrées, telles que Bourse et Plans, vous ne pouvez pas vous servir d’Intune pour redéployer ces applications. Si les utilisateurs suppriment ces applications, ils doivent se rendre sur l’App Store et les réinstaller manuellement.
+>Bien que les utilisateurs d’appareils iOS/iPadOS puissent supprimer certaines applications iOS/iPadOS intégrées, comme Bourse et Plans, vous ne pouvez pas utiliser Intune pour redéployer ces applications. Si les utilisateurs suppriment ces applications, ils doivent se rendre sur l’App Store et les réinstaller manuellement.
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-Vous pouvez affecter des applications à l’aide de cette méthode uniquement si elles sont gratuites dans l’App Store. Si vous souhaitez affecter des applications payantes à l’aide d’Intune, utilisez le [programme d’achat en volume (VPP) iOS](vpp-apps-ios.md).
+Vous pouvez affecter des applications à l’aide de cette méthode uniquement si elles sont gratuites dans l’App Store. Si vous voulez affecter des applications payantes avec Intune, utilisez le [programme d’achat en volume (VPP) iOS/iPadOS](vpp-apps-ios.md).
 
 >[!NOTE]
 >Avec Microsoft Intune, nous vous recommandons d’utiliser le navigateur Microsoft Edge ou Google Chrome.

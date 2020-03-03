@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: cee415174d68f3e6c9e72f0f0e06aa0d5d80ad91
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912656"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511852"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -49,7 +49,7 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
 | Les utilisateurs finaux installent les applications disponibles à partir du Portail d’entreprise web | Oui | Oui |
 
 > [!NOTE]
-> Actuellement, vous pouvez attribuer des applications iOS et Android (applications métier ou achetées dans un Store) pour les appareils qui ne sont pas inscrits avec Intune.
+> Actuellement, vous pouvez affecter des applications iOS/iPadOS et Android (applications métier ou achetées auprès d’un store) pour les appareils qui ne sont pas inscrits auprès d’Intune.
 >
 > Pour recevoir des mises à jour d’applications sur des appareils qui ne sont pas inscrits auprès d’Intune, les utilisateurs des appareils doivent accéder à leur Portail d’entreprise et installer manuellement les mises à jour des applications.
 
@@ -67,9 +67,9 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
    - **Désinstaller** : L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution « disponible pour les appareils inscrits » ou « Requis » en utilisant le même déploiement. Les liens Web ne peuvent pas être supprimés après le déploiement.
 
      > [!NOTE]
-     > **Pour les applications iOS uniquement**  :
-     > - Pour configurer ce qui arrive sur les applications gérées lorsque les appareils ne sont plus gérés, vous pouvez sélectionner le paramètre prévu sous **Désinstaller lors de la suppression de l’appareil**. Pour plus d’informations, consultez [Paramètre de désinstallation des applications pour les applications gérées iOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
-     > - si vous avez créé un profil VPN iOS qui contient des paramètres VPN par application, vous pouvez le sélectionner sous **VPN**. Quand l’application est exécutée, la connexion VPN est ouverte. Pour plus d’informations, consultez [Paramètres VPN pour les appareils iOS](../vpn-settings-ios.md).
+     > **Pour les applications iOS/iPadOS uniquement ** :
+     > - Pour configurer ce qui arrive sur les applications gérées lorsque les appareils ne sont plus gérés, vous pouvez sélectionner le paramètre prévu sous **Désinstaller lors de la suppression de l’appareil**. Pour plus d’informations, consultez [Paramètre de désinstallation des applications pour les applications gérées iOS/iPadOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
+     > - Si vous avez créé un profil VPN iOS/iPadOS qui contient des paramètres VPN par application, vous pouvez le sélectionner sous **VPN**. Quand l’application est exécutée, la connexion VPN est ouverte. Pour plus d’informations, consultez [Paramètres VPN pour les appareils iOS/iPadOS](../vpn-settings-ios.md).
      >
      > **Pour les applications Android uniquement** : si vous déployez une application Android comme **Disponible avec ou sans inscription**, vous pourrez en connaître l’état uniquement sur les appareils inscrits.
      >
@@ -114,7 +114,7 @@ Les informations contenues dans le tableau suivant peuvent vous aider à compren
 
 > [!NOTE]
 > En ce qui concerne les applications du magasin iOS managées uniquement, une fois ajoutées à Microsoft Intune et assignées comme **Obligatoire**, elles sont automatiquement créées avec les intentions **Obligatoire** et **Disponible**.<br><br>
-> Les applications iOS de l’App Store (et non les applications VPP iOS) qui sont ciblées intentionnellement sont appliquées sur l’appareil au moment où l’appareil s’enregistre et s’affichent également dans l’application Portail d’entreprise.<br><br>
+> Les applications iOS de l’App Store (pas les applications VPP iOS/iPadOS) qui sont ciblées intentionnellement sont appliquées sur l’appareil au moment du check-in de l’appareil et elles apparaissent aussi dans l’application Portail d’entreprise.<br><br>
 > Lorsque des conflits se produisent dans le paramètre **Désinstaller lors de la suppression de l’appareil**, l’application n’est pas supprimée de l’appareil lorsque l’appareil n’est plus géré.
 
 ## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Déploiement de l’application Google Play managée sur des appareils non gérés
@@ -132,7 +132,7 @@ Si vous disposez d’appareils Android dans un scénario de déploiement APP-WE 
 Lorsqu’une réinitialisation sélective de la stratégie de protection des applications est effectuée dans la console Intune, le compte professionnel est automatiquement supprimé de l’application Play Store et l’utilisateur final ne peut plus voir ses applications professionnelles dans le catalogue d’applications Play Store. Lorsque le compte professionnel est supprimé d’un appareil, les applications installées à partir du Play Store restent installées sur l’appareil et ne se désinstallent pas. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Paramètre de désinstallation des applications pour les applications gérées iOS
-Pour les appareils iOS, vous pouvez choisir ce qu’il advient des applications gérées lors de la désinscription de l’appareil d’Intune ou la suppression du profil de gestion à l’aide du paramètre **Désinstaller lors de la suppression de l’appareil**. Ce paramètre s’applique uniquement aux applications une fois que l’appareil est inscrit et que les applications sont installées comme gérées. Le paramètre ne peut pas être configuré pour des applications web ou des liens web. Seules les données protégées par la Gestion des applications mobiles (Mobile Application Management ou MAM) sont supprimées après une mise hors service par une réinitialisation sélective des applications.
+Pour les appareils iOS/iPadOS, vous pouvez choisir ce qu’il advient des applications gérées lors de la désinscription de l’appareil d’Intune ou lors la suppression du profil de gestion avec le paramètre **Désinstaller lors de la suppression de l’appareil**. Ce paramètre s’applique uniquement aux applications une fois que l’appareil est inscrit et que les applications sont installées comme gérées. Le paramètre ne peut pas être configuré pour des applications web ou des liens web. Seules les données protégées par la Gestion des applications mobiles (Mobile Application Management ou MAM) sont supprimées après une mise hors service par une réinitialisation sélective des applications.
 
 Les valeurs par défaut du paramètre sont préremplies pour les nouvelles attributions, comme suit :
 

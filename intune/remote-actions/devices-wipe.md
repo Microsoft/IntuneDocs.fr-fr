@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 41a46bd400c5901f0352709f6057bddac262ff9e
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415516"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609382"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Supprimer des appareils avec la réinitialisation, la mise hors service ou la désinscription manuelle de l’appareil
 
@@ -47,7 +47,7 @@ L’action **Réinitialiser** rétablit les paramètres d’usine d’un apparei
 
 L’option **Conserver le compte d’utilisateur et l’état d’inscription** est disponible uniquement pour Windows 10 version 1709 ou ultérieure.
 
-L’option **Effectuer une réinitialisation protégée** permet de s’assurer que l’action de réinitialisation ne peut pas être contournée en éteignant l’appareil. Une réinitialisation protégée continuera d’essayer de réinitialiser l’appareil jusqu’à ce que cela réussisse. Dans certaines configurations, cette action peut empêcher l’appareil de redémarrer.
+L’option **Effectuer une réinitialisation protégée** permet de s’assurer que l’action de réinitialisation ne peut pas être contournée en éteignant l’appareil. Une réinitialisation protégée continuera d’essayer de réinitialiser l’appareil jusqu’à ce que cela réussisse. Dans certaines configurations, cette action peut laisser l’appareil [incapable de redémarrer](troubleshoot-device-actions.md#wipe-action).
 
 Les stratégies MDM seront réappliquées lors de la prochaine connexion de l’appareil à Intune.
 
@@ -196,6 +196,9 @@ Si vous souhaitez supprimer complètement un appareil Apple DEP pour qu’il ne 
 5. Choisissez **Reassign** (Réaffecter).
 
     ![Capture d’écran de réaffectation Apple](./media/devices-wipe/apple-reassign.png)
+
+## <a name="device-states"></a>États des appareils
+Pour une description des états des appareils, consultez la [collection managementStates](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
 
 ## <a name="fresh-start"></a>Nouvelle version
 

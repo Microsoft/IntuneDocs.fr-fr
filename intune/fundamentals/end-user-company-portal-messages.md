@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbc4e1cc8cf7bd578690bf3e34353a60ec67cdab
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414071"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514725"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Aider les utilisateurs finaux à comprendre les messages de l’application Portail d’entreprise
 
@@ -117,7 +117,7 @@ Envoyez à vos utilisateurs la procédure [Envoyer des journaux à votre adminis
 
 ### <a name="where-it-appears"></a>Emplacement
 
-Si vous n’avez pas ajouté l’application Portail d’entreprise à la liste **Applications autorisées** ou **Applications exemptes**, et qu’un utilisateur tente de se connecter, la connexion échoue. Le message suivant s’affiche :
+Si vous n’avez pas ajouté l’application Portail d’entreprise à la liste **Applications autorisées** ou **Applications exemptes**, et qu’un utilisateur tente de se connecter, la connexion échoue. Le message suivant s’affiche :
 
 > **Le support technique de votre entreprise a besoin de vous donner accès aux ressources d’entreprise**  
 > Votre entreprise utilise des stratégies Protection des informations Windows pour protéger votre appareil. Le support technique de votre entreprise doit vérifier que ces stratégies permettent au Portail d’entreprise d’accéder à ces ressources.
@@ -126,7 +126,7 @@ Si vous n’avez pas ajouté l’application Portail d’entreprise à la liste 
 
 Ajoutez l’application Portail d’entreprise à la liste **Applications autorisées** ou **Applications exemptes** dans la stratégie de protection des applications Windows Information Protection. Pour plus d’informations, consultez [Créer et déployer une stratégie de protection d’application Protection des informations Windows (WIP) avec Intune](../apps/windows-information-protection-policy-create.md).
 
-## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Approuver une application d’entreprise iOS (application métier) sur votre appareil iOS 
+## <a name="approve-a-iosipados-company-app-line-of-business-app-on-your-iosipados-device"></a>Approuver une application d’entreprise iOS/iPadOS (application métier) sur votre appareil iOS/iPadOS 
 
 ### <a name="where-it-appears"></a>Emplacement
 
@@ -136,7 +136,7 @@ Les applications iOS développées par votre organisation qui ne sont pas dispon
 
 ### <a name="what-it-means"></a>Signification
 
-Ce message signifie que vous devez modifier les paramètres de votre appareil iOS afin d’approuver et d’installer une application développée par votre société sur votre appareil iOS.
+Ce message signifie que vous devez modifier les paramètres de votre appareil iOS/iPadOS afin d’approuver et d’installer une application développée par votre entreprise sur votre appareil iOS/iPadOS.
 
 Lorsque vous installez ces applications à l’aide du Portail d’entreprise et que vous lancez l’application, procédez comme suit pour approuver l’application après l’avoir téléchargée :
 
@@ -148,7 +148,7 @@ Lorsque vous installez ces applications à l’aide du Portail d’entreprise et
 
 3. Sélectionnez **Profil de gestion** > **Application d’entreprise**.
 4. Sélectionnez le nom du développeur.
-5. Appuyez sur **Faire confiance à _nom du développeur_** .
+5. Appuyez sur **Faire confiance à _nom du développeur_**.
 6. Confirmez l’application en sélectionnant **Faire confiance** dans le message contextuel d’installation d’application.
 
    ![IU d’appareil iOS - Message d’application de confiance](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)

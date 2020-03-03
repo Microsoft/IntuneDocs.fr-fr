@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0bb0bd1f0df3aeb4185542d424bd3ffffe42cd
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 257b15879f6df5763c407904a2c2b46319d64fb7
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036539"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473734"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutoriel : utiliser Autopilot pour inscrire des appareils Windows dans Intune
 
@@ -91,10 +91,10 @@ Ensuite, vous allez créer un groupe d’appareils et placer dedans les appareil
 Après avoir créé un groupe d’appareils, vous devez créer un profil de déploiement afin de pouvoir configurer les appareils Autopilot.
 
 1. Dans le [Centre d’administration de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **Windows** > **Inscription Windows** > **Profils de déploiement** > **Créer un profil**.
-2. Sur la page **Notions de base** page, **Nom** tor, entrez *Profil Autopilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
+2. Dans la page **De base**, pour **Nom**, entrez *Profil AutoPilot*. Pour **Description**, entrez *Profil de test pour les appareils Autopilot*.
 3. Définissez **Convertir tous les appareils ciblés vers Autopilot** sur **Oui**. Ce paramètre permet de s’assurer que tous les appareils dans la liste sont inscrits auprès du service de déploiement Autopilot. Le traitement de l’enregistrement prend 48 heures.
 4. Sélectionnez **Suivant**.
-5. Sur la page **Mode out-of-box experience (OOBE)** , pour **Mode de déploiement**, choisissez **Géré par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
+5. Sur la page **Mode out-of-box experience (OOBE)**, pour **Mode de déploiement**, choisissez **Géré par l’utilisateur**. Les appareils avec ce profil sont associés à l’utilisateur qui inscrit l’appareil. Les informations d’identification de l’utilisateur sont obligatoires pour l’inscription de l’appareil.
 6. Dans la zone **Joindre à Azure AD en tant que**, sélectionnez **Joint à Azure AD**.
 7. Configurez les options suivantes et laissez les autres sur la valeur par défaut :
     - **Contrat de Licence Utilisateur Final (CLUF)**  : **Masquer**

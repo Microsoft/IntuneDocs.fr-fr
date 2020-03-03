@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fa80697f24167e2a9634bd506e9548ca654129f
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: bd1aaa545f11f7eaaa591f2057f4a6c8946fac4a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547096"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514164"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Appliquer la conformité pour Microsoft Defender ATP avec accès conditionnel dans Intune
 
@@ -62,7 +62,7 @@ Pour utiliser Microsoft Defender ATP avec Intune, les éléments suivants doiven
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) et accès au Centre de sécurité Microsoft Defender (portail ATP)
 
 > [!NOTE]
-> Microsoft Defender ATP n’est pas pris en charge avec les stratégies de protection d’applications iOS et Android Intune.
+> Microsoft Defender ATP n’est pas pris en charge avec les stratégies de protection d’applications Intune iOS/iPadOS et Android.
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Activer Microsoft Defender ATP dans Intune
 
@@ -116,7 +116,7 @@ Lorsque vous avez établi la connexion à Microsoft Defender ATP, Intune a reçu
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez un **Nom** et une **Description**.
 4. Pour **Plateforme**, sélectionnez **Windows 10 et ultérieur**.
-5. Pour **Type de profil**, sélectionnez **Microsoft Defender ATP (Windows 10 Desktop)** .
+5. Pour **Type de profil**, sélectionnez **Microsoft Defender ATP (Windows 10 Desktop)**.
 6. Configurez les paramètres :
 
    - **Type de package de configuration des clients Microsoft Defender ATP** : Sélectionnez **Intégrer** pour ajouter le package de configuration au profil. Sélectionnez **Désintégrer** pour supprimer le package de configuration du profil.

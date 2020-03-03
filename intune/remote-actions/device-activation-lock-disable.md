@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f67a08ef3cbfae4a801333e5f8ffb5469e723ed
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 65a13c2690f08c2244f31854556a88b6301c6ac5
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438053"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576014"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Désactivation du verrouillage d’activation sur les appareils iOS/iPadOS supervisés avec Intune
 
@@ -63,7 +63,7 @@ Intune peut demander l’état du verrouillage d’activation des appareils supe
 Avant de pouvoir désactiver le verrouillage d’activation sur les appareils, vous devez d’abord l’activer en suivant ces instructions :
 
 1. Configurez un profil de restriction d’appareil Intune pour iOS/iPadOS suivant les informations du [Guide de configuration des paramètres de restriction d’appareil](/intune-azure/configure-devices/how-to-configure-device-restrictions).
-2. Dans les [paramètres de restriction d’appareil pour iOS](../configuration/device-restrictions-ios.md), sous les paramètres **Général**, activez l’option **Verrouillage d’activation**.
+2. Dans les [paramètres de restriction d’appareil pour iOS/iPadOS](../configuration/device-restrictions-ios.md), sous les paramètres **Général**, activez l’option **Verrouillage d’activation**.
 3. Enregistrez le profil, puis [affectez-le](../configuration/device-profile-assign.md) aux appareils sur lesquels vous souhaitez gérer la désactivation du verrouillage d’activation.
 
 

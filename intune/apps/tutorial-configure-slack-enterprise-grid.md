@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: f5045e78eaca19e5a78468c7c4b6698e4e1a5019
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415481"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511546"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutoriel : Configurer Slack afin d’utiliser Intune pour l’EMM et la configuration d’applications
 
@@ -32,8 +32,8 @@ Slack est une application de collaboration que vous pouvez utiliser avec Microso
 Dans ce tutoriel, vous allez :
 > [!div class="checklist"]
 > - Définir Intune comme le fournisseur de gestion de mobilité d’entreprise (EMM) sur votre outil Slack Enterprise Grid. Vous serez en mesure de limiter l’accès aux espaces de travail de votre plan Grid aux appareils gérés par Intune.
-> - Créer des stratégies de configuration des applications afin de gérer l’application Slack pour l’EMM sur iOS et l’application Slack pour les appareils avec profil professionnel Android.
-> - Créer des stratégies de conformité d’appareil Intune pour définir les conditions que des appareils Android et iOS doivent remplir pour être considérés comme conformes.
+> - Créer des stratégies de configuration d’applications afin de gérer l’application Slack pour l’EMM sur iOS/iPadOS, et l’application Slack pour les appareils avec profil professionnel Android.
+> - Créer des stratégies de conformité d’appareil Intune pour définir les conditions que des appareils Android et iOS/iPadOS doivent remplir pour être considérés comme conformes.
 
 Si vous n’avez pas d’abonnement Intune, [inscrivez-vous à un compte d’essai gratuit](../fundamentals/free-trial-sign-up.md).
 
@@ -51,10 +51,10 @@ Activer la gestion de la mobilité d’entreprise pour votre plan Slack Enterpri
 Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) comme Administrateur général ou Administrateur de service Intune. Si vous avez créé un abonnement d’essai Intune, le compte utilisé à cette fin est l’administrateur général.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Configurer Slack pour l’EMM sur des appareils iOS
-Ajoutez l’application Slack iOS pour l’EMM à votre locataire et créez une stratégie de configuration des applications pour permettre aux utilisateurs iOS de votre organisation d’accéder à Slack avec Intune en tant que fournisseur d’EMM.
+Ajoutez l’application Slack iOS/iPadOS pour l’EMM à votre locataire et créez une stratégie de configuration des applications pour permettre aux utilisateurs iOS/iPadOS de votre organisation d’accéder à Slack avec Intune en tant que fournisseur EMM.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Ajouter Slack à Intune pour l’EMM
-Ajouter Slack pour l’EMM en tant qu’application iOS managée dans Intune et affecter vos utilisateurs Slack. Les applications étant spécifiques à la plateforme, vous devez ajouter une application Intune distincte pour vos utilisateurs Slack sur des appareils Android.
+Ajouter Slack pour l’EMM en tant qu’application iOS/iPadOS gérée dans Intune et affecter vos utilisateurs Slack. Les applications étant spécifiques à la plateforme, vous devez ajouter une application Intune distincte pour vos utilisateurs Slack sur des appareils Android.
 1. Dans le centre d’administration, sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 2. Sous **Type d’application**, sélectionnez l’application Store **iOS**.
 3. Sélectionnez **Rechercher dans l’App Store**. Entrez le terme de recherche « Slack pour l’EMM » et sélectionnez l’application. Cliquez sur **sélectionnez** dans le volet **Rechercher dans l’App Store**.
@@ -84,7 +84,7 @@ Ajoutez une stratégie de configuration des applications pour Slack pour la gest
 12. Cliquez sur **Save**.
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(Facultatif) Créer une stratégie de conformité des appareils iOS
-Configurez une stratégie de conformité d’appareil Intune pour définir les conditions qu’un appareil doit respecter pour être considéré comme conforme. Pour ce tutoriel, nous allons créer une stratégie de conformité pour des appareils iOS. Les stratégies de conformité étant spécifiques à la plateforme, vous devez créer une stratégie distincte pour vos utilisateurs Slack sur des appareils Android.
+Configurez une stratégie de conformité d’appareil Intune pour définir les conditions qu’un appareil doit respecter pour être considéré comme conforme. Pour ce tutoriel, nous allons créer une stratégie de conformité pour les appareils iOS/iPadOS. Les stratégies de conformité étant spécifiques à la plateforme, vous devez créer une stratégie distincte pour vos utilisateurs Slack sur des appareils Android.
 1. Dans le centre d’administration, sélectionnez **Conformité des appareils** > **Stratégies** > **Créer une stratégie**.
 2. Dans le champ Nom, entrez « Test de stratégie de conformité iOS ».
 3. Dans le champ Description, entrez « Test de stratégie de conformité iOS ».
@@ -105,7 +105,7 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 Ajoutez l’application Google Play managée Slack à votre locataire et créez une stratégie de configuration des applications pour permettre aux utilisateurs Android de votre organisation d’accéder à Slack avec Intune en tant que fournisseur d’EMM.
 
 ### <a name="add-slack-to-intune"></a>Ajouter Slack à Intune
-Ajouter Slack en tant qu’application Google Play managée dans Intune et affecter vos utilisateurs Slack. Les applications étant spécifiques à la plateforme, vous devez ajouter une application Intune distincte pour vos utilisateurs Slack sur des appareils iOS.
+Ajouter Slack en tant qu’application Google Play managée dans Intune et affecter vos utilisateurs Slack. Les applications étant spécifiques à la plateforme, vous devez ajouter une application Intune distincte pour vos utilisateurs Slack sur les appareils iOS/iPadOS.
 1. Dans Intune, sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
 2. Sous Type d’application, sélectionnez **application Store - Google Play managée**.
 3. Sélectionnez **Google Play managée - Approuver**. Entrez le terme de recherche « Slack pour l’EMM » et sélectionnez l’application.
@@ -120,7 +120,7 @@ Ajouter Slack en tant qu’application Google Play managée dans Intune et affec
 10. Cliquez sur **Save**.
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Ajouter une stratégie de configuration des applications pour Slack
-Ajouter une stratégie de configuration des applications pour Slack. Les stratégies de configuration pour les appareils gérés étant spécifiques à la plateforme, vous devez ajouter une stratégie distincte pour vos utilisateurs Slack sur des appareils iOS.
+Ajouter une stratégie de configuration des applications pour Slack. Les stratégies de configuration pour les appareils gérés étant spécifiques à la plateforme, vous devez ajouter une stratégie distincte pour vos utilisateurs Slack sur les appareils iOS/iPadOS.
 1. Dans Intune, sélectionnez **Applications** > **Stratégies de configuration des applications** > **Ajouter**.
 2. Dans le champ Nom, entrez Test de la stratégie de configuration de l’application Slack.
 3. Sous le type d’inscription de l’appareil, sélectionnez **Appareils gérés**.
@@ -136,7 +136,7 @@ Ajouter une stratégie de configuration des applications pour Slack. Les straté
 12. Cliquez sur **Save**.
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>(Facultatif) Créer une stratégie de conformité des appareils Android
-Configurez une stratégie de conformité d’appareil Intune pour définir les conditions qu’un appareil doit respecter pour être considéré comme conforme. Pour ce tutoriel, nous allons créer une stratégie de conformité pour des appareils Android. Les stratégies de conformité étant spécifiques à la plateforme, vous devez créer une stratégie distincte pour vos utilisateurs Slack sur des appareils iOS.
+Configurez une stratégie de conformité d’appareil Intune pour définir les conditions qu’un appareil doit respecter pour être considéré comme conforme. Pour ce tutoriel, nous allons créer une stratégie de conformité pour des appareils Android. Les stratégies de conformité étant spécifiques à la plateforme, vous devez créer une stratégie distincte pour vos utilisateurs Slack sur les appareils iOS/iPadOS.
 1. Dans Intune, sélectionnez **Conformité des appareils** > **Stratégies** > **Créer une stratégie**.
 2. Dans le champ Nom, entrez « Test de stratégie de conformité Android ».
 3. Dans le champ Description, entrez « Test de stratégie de conformité Android ».
@@ -155,13 +155,13 @@ Configurez une stratégie de conformité d’appareil Intune pour définir les c
 
 ## <a name="launch-slack"></a>Lancez Slack
 
-Avec les stratégies que vous venez de créer, tout appareil iOS ou Android à profil professionnel qui tentera de se connecter à l’un de vos espaces de travail devra être inscrit à Intune. Pour tester ce scénario, essayez de lancer Slack pour l’EMM sur un appareil iOS ou sur un appareil à profil professionnel Android inscrits à Intune. 
+Avec les stratégies que vous venez de créer, tout appareil iOS/iPadOS ou avec profil professionnel Android qui tente de se connecter à un de vos espaces de travail doit être inscrit à Intune. Pour tester ce scénario, essayez de lancer Slack pour l’EMM sur un appareil iOS ou sur un appareil avec profil professionnel Android inscrit à Intune. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Dans ce tutoriel :
 - Vous avez défini Intune comme le fournisseur de gestion de mobilité d’entreprise (EMM) sur votre outil Slack Enterprise Grid. 
-- Vous avez créé des stratégies de configuration des applications afin de gérer l’application Slack pour l’EMM sur iOS et l’application Slack pour les appareils avec profil professionnel Android.
-- Vous avez créé des stratégies de conformité d’appareil Intune pour définir les conditions que des appareils Android et iOS doivent remplir pour être considérés comme conformes.
+- Vous avez créé des stratégies de configuration d’application afin de gérer l’application Slack pour l’EMM sur iOS/iPadOS et l’application Slack pour les appareils avec profil professionnel Android.
+- Vous avez créé des stratégies de conformité d’appareil Intune pour définir les conditions que des appareils Android et iOS/iPadOS doivent remplir pour être considérés comme conformes.
 
 Pour en savoir plus sur les stratégies de configuration d’applications, consultez [Stratégies de configuration d’applications pour Microsoft Intune](app-configuration-policies-overview.md). Pour en savoir plus sur les stratégies de conformité des appareils, consultez [Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune](../protect/device-compliance-get-started.md).

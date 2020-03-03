@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
-ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
+ms.openlocfilehash: 3d8ee4ec6a5bcb29a51b68cff7b840823b678636
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556400"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569283"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Superviser la base de référence de la sécurité et les profils dans Microsoft Intune
 
@@ -106,6 +106,18 @@ La supervision du profil permet d’obtenir un aperçu de l’état du déploiem
 
    ![Voir les différentes options de supervision disponibles pour un profil de base de référence de la sécurité](./media/security-baselines-monitor/monitor-status-options.png)
 
+## <a name="view-endpoint-security-configurations-per-device"></a>Voir les configurations de la sécurité du point de terminaison par appareil
+
+Consultez les détails sur les configurations de sécurité qui s’appliquent à un appareil individuel, ce qui peut vous aider à isoler les paramètres qui sont mal configurés.
+
+1. Connectez-vous au [centre d’administration du gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Accédez à **Appareils** > **Tous les appareils**, puis sélectionnez l’appareil que vous voulez voir.
+
+3. Dans la catégorie *Superviser*, sélectionnez **Configuration de la sécurité du point de terminaison** pour voir la liste des configurations de sécurité qui s’appliquent à cet appareil.
+
+4. Vous pouvez sélectionner une configuration de sécurité de point de terminaison pour explorer et consulter des détails supplémentaires sur l’évaluation de cette configuration de sécurité sur l’appareil.
+
 ## <a name="troubleshoot-using-per-setting-status"></a>Résoudre les problèmes à l’aide de l’état par paramètre
 
 Vous avez déployé une base de référence de la sécurité, mais l’état du déploiement indique une erreur. Les étapes suivantes vous guident dans la résolution de l’erreur.
@@ -135,6 +147,7 @@ Sur les appareils Windows 10, il existe un rapport d’informations de diagnost
 [Diagnostiquer les échecs de gestion des appareils mobiles dans Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) fournit plus d’informations sur ce rapport intégré.
 
 > [!TIP]
+>
 > - Certains paramètres listent également le GUID. Vous pouvez rechercher ce GUID dans le Registre local (regedit) pour toutes les valeurs définies.
 > - Les journaux de l’observateur d’événements peuvent également inclure des informations d’erreur sur le paramètre qui pose problème (**Observateur d’événements** > **Journaux des applications et des services** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 

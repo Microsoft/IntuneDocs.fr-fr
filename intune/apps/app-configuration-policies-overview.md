@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2cf53b26c1617ca7fc493c837e57823c23781bc
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 334cadfb7e668febad95a512eb34f62a73667ec6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414859"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513994"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Stratégies de configuration des applications pour Microsoft Intune
 
@@ -66,7 +66,7 @@ Vous pouvez utiliser des stratégies de configuration des applications pour les 
 ### <a name="managed-apps"></a>Applications gérées
 Vous pouvez préparer votre application métier en incorporant le [SDK d’application Intune](../developer/app-sdk.md) dans l’application ou en wrappant l’application une fois qu’elle a été développée à l’aide de l’[outil de wrapping d’application Intune](../developer/apps-prepare-mobile-application-management.md). Le SDK d’application Intune s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Pour plus d’informations, consultez [Vue d’ensemble du SDK d’application Intune](../developer/app-sdk.md). Pour voir la différence entre le SDK d’application Intune et l’outil de wrapping d’application Intune, consultez [Préparer des applications métier pour les stratégies de protection des applications](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
-Le **type d’inscription d’appareil** **Applications gérées** référence en particulier les applications configurées par des stratégies de configuration Intune sur les appareils qui ne sont pas inscrits dans la gestion des appareils, alors que le type **Appareils gérés** s’applique aux applications déployées sur le canal MDM et donc gérées par Intune. Sélectionnez le choix approprié en fonction de ces descriptions. 
+Le **type d’inscription d’appareil****Applications gérées** référence en particulier les applications configurées par des stratégies de configuration Intune sur les appareils qui ne sont pas inscrits dans la gestion des appareils, alors que le type **Appareils gérés** s’applique aux applications déployées sur le canal MDM et donc gérées par Intune. Sélectionnez le choix approprié en fonction de ces descriptions. 
 
 ![Type d’inscription de l’appareil](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
@@ -91,7 +91,7 @@ Vous pouvez valider la stratégie de configuration des applications à l’aide 
 
 ## <a name="diagnostic-logs"></a>Journaux de diagnostic
 
-### <a name="ios-configuration-on-unmanaged-devices"></a>Configuration iOS sur les appareils non gérés
+### <a name="iosipados-configuration-on-unmanaged-devices"></a>Configuration iOS/iPadOS sur les appareils non gérés
 
 Vous pouvez valider une configuration iOS/iPadOS avec le **journal de diagnostic Intune** sur les appareils non gérés pour la configuration des applications gérées. Outre les étapes ci-dessous, vous pouvez accéder aux journaux des applications managées à l’aide de Microsoft Edge. Pour plus d’informations, consultez [Accès aux journaux des applications gérées avec Microsoft Edge sur iOS/iPadOS](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
@@ -135,7 +135,7 @@ Les détails de configuration de votre application doivent correspondre aux stra
 
 ![Configuration d’application ciblée](./media/app-configuration-policies-overview/targeted-app-configuration-3.png)
 
-### <a name="ios-configuration-on-managed-devices"></a>Configuration iOS sur les appareils gérés
+### <a name="iosipados-configuration-on-managed-devices"></a>Configuration iOS/iPadOS sur les appareils gérés
 
 Vous pouvez valider une configuration iOS/iPadOS avec le **journal de diagnostic Intune** sur les appareils gérés pour la configuration des applications gérées.
 

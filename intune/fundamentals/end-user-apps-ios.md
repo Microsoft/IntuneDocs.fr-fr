@@ -1,6 +1,6 @@
 ---
-title: Comment vos utilisateurs iOS obtiennent leurs applications
-description: Méthodes de mise à disposition des applications iOS pour les utilisateurs finaux
+title: Comment vos utilisateurs iOS/iPadOS obtiennent leurs applications
+description: Méthodes de mise à disposition des applications iOS/iPadOS pour les utilisateurs finaux
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 344c2e3f3ed53852aa6b749c9ebf6d451dd313ff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73413991"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514385"
 ---
-# <a name="how-your-ios-users-get-their-apps"></a>Comment vos utilisateurs iOS obtiennent leurs applications
+# <a name="how-your-iosipados-users-get-their-apps"></a>Comment vos utilisateurs iOS/iPadOS obtiennent leurs applications
 
 Utilisez ces informations pour comprendre comment et où vos utilisateurs finaux obtiennent les applications que vous distribuez via Microsoft Intune.
 
@@ -34,9 +34,9 @@ Utilisez ces informations pour comprendre comment et où vos utilisateurs finaux
 
 **Applications gérées** : applications pouvant être gérées avec des stratégies et qui ont été « enveloppées » par Intune, ou qui ont été créées à l’aide du kit SDK d’application Intune. Ces applications peuvent être gérées par Intune et faire l’objet de stratégies de protection des applications.
 
-**Applications non gérées** : applications que les utilisateurs peuvent télécharger dans l’App Store iOS et qui ne sont pas intégrées dans le kit de développement logiciel (SDK) Intune. Intune n’a aucun contrôle sur la distribution, la gestion ou la réinitialisation sélective de ces applications.  
+**Applications non gérées** : applications que les utilisateurs peuvent télécharger depuis l’App Store iOS/iPadOS et qui ne sont pas intégrées au SDK Intune. Intune n’a aucun contrôle sur la distribution, la gestion ou la réinitialisation sélective de ces applications.  
 
-Les restrictions d’Apple n’autorisent pas l’affichage des applications métier et gérées de l’App Store dans l’application Portail d’entreprise. Pour contourner ce problème, les vignettes dans l’application Portail d’entreprise pour iOS dirigent les utilisateurs vers différentes vues dans un emplacement unique (à savoir le site web du Portail d’entreprise) pour toutes leurs applications.
+Les restrictions d’Apple n’autorisent pas l’affichage des applications métier et gérées de l’App Store dans l’application Portail d’entreprise. Pour contourner ce problème, les vignettes dans l’application Portail d’entreprise pour iOS/iPadOS dirigent les utilisateurs vers différentes vues à un même emplacement (le site web Portail d’entreprise) pour toutes leurs applications.
 
 Les utilisateurs inscrits obtiennent leurs applications en appuyant sur les vignettes suivantes dans l’écran Applications de l’application Portail d’entreprise :
 

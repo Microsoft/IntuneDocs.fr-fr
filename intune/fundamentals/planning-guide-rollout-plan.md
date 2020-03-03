@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777267f10edac5bbdbe23ceb3068d4366a8df7b7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d5a51d82551795ed8ad5c740d5fb852ff292e1b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509951"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514912"
 ---
 # <a name="develop-a-rollout-plan"></a>Développer un plan de déploiement
 
@@ -58,7 +58,7 @@ Après la réussite d’un pilote, vous êtes prêt à commencer un déploiement
 
 - **Géographie** <br/>Dans cette approche, vous déployez sur tous les utilisateurs d’une zone géographique spécifique, qu’il s’agisse des mêmes continent, pays/région ou bâtiment de la société. Ce type de déploiement par phases vous permet de vous concentrer sur l’emplacement spécifique des utilisateurs. Il favorise également une meilleure approche de type [gant blanc](#user-assisted-enrollment) car le nombre d’emplacements de déploiement Intune simultanés est réduit. Étant donné qu’il est probable que différents services ou cas d’utilisation se trouvent au même endroit, différents cas d’utilisation peuvent être déployés en même temps.
 
-- **Plateforme** <br/>Ce type de déploiement consiste à déployer simultanément des plateformes similaires. Exemple : tous les appareils iOS le premier mois, puis les appareils Android, suivis des appareils Windows. Ce type de déploiement échelonné simplifie la prise en charge du support technique, car le support technique n’a à prendre en charge qu’une seule plateforme à la fois.
+- **Plateforme** <br/>Ce type de déploiement consiste à déployer simultanément des plateformes similaires. Un exemple serait : tous les appareils iOS/iPadOS le premier mois, puis les appareils Android, suivis des appareils Windows. Ce type de déploiement échelonné simplifie la prise en charge du support technique, car le support technique n’a à prendre en charge qu’une seule plateforme à la fois.
 
 Voici un exemple de plan de déploiement Intune incluant des groupes et des délais ciblés :
 

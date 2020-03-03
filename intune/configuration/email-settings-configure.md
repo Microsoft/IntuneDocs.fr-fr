@@ -1,12 +1,12 @@
 ---
 title: Configurer les paramètres e-mail dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Créez un profil de messagerie dans Microsoft Intune et déployez-le sur des appareils Android Entreprise, iOS et Windows. Utilisez un profil de messagerie pour configurer les paramètres e-mail courants, notamment un serveur de messagerie et une méthode d’authentification pour permettre la connexion à l’e-mail d’entreprise sur les appareils que vous gérez.
+description: Créez un profil de messagerie dans Microsoft Intune et déployez-le sur des appareils Android Entreprise, iOS, iPadOS et Windows. Utilisez un profil de messagerie pour configurer les paramètres e-mail courants, notamment un serveur de messagerie et une méthode d’authentification pour permettre la connexion à l’e-mail d’entreprise sur les appareils que vous gérez.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 110db564dce5ad68d3c2a26b85e60ecbe99e7335
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 908a20098917540e6f823d94c6643d15f13ecf68
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059430"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511083"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Ajouter des paramètres e-mail à des appareils à l’aide d’Intune
 
@@ -29,10 +29,11 @@ Microsoft Intune inclut différents paramètres e-mail que vous pouvez déployer
 
 Vous pouvez utiliser des profils de messagerie afin de configurer les paramètres e-mail intégrés pour les appareils suivants :
 
-- Android Samsung Knox Standard 4.0 et versions ultérieures
+- Android Samsung Knox Standard 4.0 et ultérieur
 - Android Entreprise
-- iOS 8.0 et versions ultérieures
-- Windows Phone 8.1 et versions ultérieures
+- iOS 8.0 et ultérieur
+- iPadOS 13.0 et ultérieur
+- Windows Phone 8.1 et ultérieur
 - Windows 10 Desktop et Windows 10 Mobile
 
 Cet article vous montre comment créer un profil de messagerie dans Microsoft Intune. Il inclut également des liens vers les différentes plateformes, pour lesquelles existent des paramètres plus spécifiques.
@@ -43,7 +44,7 @@ Cet article vous montre comment créer un profil de messagerie dans Microsoft In
 2. Sélectionnez **Appareils** > **Profils de configuration** > **Créer un profil**.
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Paramètres de messagerie pour tous les appareils Windows**.
+    - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un bon nom de stratégie est **Paramètres de messagerie pour tous les appareils Windows**.
     - **Description** : Entrez la description du profil. Ce paramètre est facultatif, mais recommandé.
     - **Plateforme** : Choisissez la plateforme de vos appareils. Les options disponibles sont les suivantes :
 
@@ -89,7 +90,7 @@ Vous pouvez aider à sécuriser les profils de messagerie à l’aide des option
 
 Si l’utilisateur a déjà configuré un compte e-mail, le profil de messagerie est attribué différemment, selon la plateforme.
 
-- **iOS** : Un profil de messagerie en double existant est détecté en fonction du nom d’hôte et de l’adresse e-mail. Le profil de messagerie en doublon bloque l’affectation d’un profil Intune. Dans ce cas, l’application Portail d’entreprise signale à l’utilisateur final qu’il n’est pas conforme et l’invite à supprimer manuellement le profil configuré. Pour éviter ce scénario, demandez à vos utilisateurs finaux de s’inscrire *avant* d’installer un profil de messagerie, ce qui permet à Intune de configurer le profil.
+- **iOS/iPadOS** : Un profil de messagerie en double existant est détecté en fonction du nom d’hôte et de l’adresse e-mail. Le profil de messagerie en doublon bloque l’affectation d’un profil Intune. Dans ce cas, l’application Portail d’entreprise signale à l’utilisateur final qu’il n’est pas conforme et l’invite à supprimer manuellement le profil configuré. Pour éviter ce scénario, demandez à vos utilisateurs finaux de s’inscrire *avant* d’installer un profil de messagerie, ce qui permet à Intune de configurer le profil.
 
 - **Windows :** Un profil de messagerie en double existant est détecté en fonction du nom d’hôte et de l’adresse e-mail. Intune remplace le profil de messagerie existant créé par l’utilisateur final.
 

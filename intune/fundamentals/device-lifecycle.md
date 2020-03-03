@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46a23ca18e385fa085afb59a654290702465a0ce
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 57a1e1c9c8a03fae67f2a4a25b6b4f16a20a8ec7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414030"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514453"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Vue d’ensemble du cycle de vie de la gestion des appareils mobiles dans Microsoft Intune
 
@@ -30,7 +30,7 @@ Tous les appareils que vous gérez ont un *cycle de vie*. Intune peut vous aider
 
 ## <a name="enroll"></a>Inscription
 
-De nos jours, les stratégies de gestion des appareils mobiles traitent une large gamme de téléphones, de tablettes et de PC (iOS, Android, Windows et Mac OS X). Si vous devez gérer un appareil, ce qui est généralement le cas pour les appareils d’entreprise, la première étape consiste à [configurer l’inscription de cet appareil](../enrollment/device-enrollment.md). Vous pouvez également gérer les PC Windows en les inscrivant dans Intune (gestion des appareils mobiles) ou en [installant le logiciel client Intune](../manage-windows-pcs-with-microsoft-intune.md).
+De nos jours, les stratégies de gestion des appareils mobiles (MDM) s’appliquent à une large gamme de téléphones, de tablettes et de PC (iOS/iPadOS, Android, Windows et Mac OS X). Si vous devez gérer un appareil, ce qui est généralement le cas pour les appareils d’entreprise, la première étape consiste à [configurer l’inscription de cet appareil](../enrollment/device-enrollment.md). Vous pouvez également gérer les PC Windows en les inscrivant dans Intune (gestion des appareils mobiles) ou en [installant le logiciel client Intune](../manage-windows-pcs-with-microsoft-intune.md).
 
 ## <a name="configure"></a>Configurer
 
@@ -38,7 +38,7 @@ L’inscription de vos appareils n’est que la première étape. Pour tirer par
 
 - [**Configuration des appareils**](../configuration/device-profiles.md). Ces stratégies vous permettent de configurer les fonctionnalités des appareils que vous gérez. Par exemple, vous pouvez exiger l’utilisation d’un mot de passe sur un Windows Phone, ou désactiver l’utilisation de la caméra sur un iPhone.
 - [**Accès aux ressources de l’entreprise**](../configuration/device-profiles.md). Le fait d’autoriser vos utilisateurs à accéder à leurs ressources de travail sur leur appareil personnel peut représenter un réel défi. Par exemple, comment vous assurez-vous que tous les appareils qui doivent accéder à la messagerie d’entreprise sont configurés correctement ? Comment faire en sorte que les utilisateurs puissent accéder au réseau de l’entreprise par le biais d’une connexion VPN sans avoir à connaître les paramètres complexes associés ? Intune peut réduire ce fardeau en configurant automatiquement les appareils que vous gérez de manière à ce qu’ils puissent accéder aux ressources d’entreprise les plus couramment utilisées.
-- [**Stratégies de gestion des PC Windows (avec le logiciel client Intune)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). L’inscription des PC Windows auprès d’Intune permet de tirer le meilleur parti des fonctionnalités de gestion des appareils. Toutefois, Intune continue à prendre en charge la gestion des PC Windows avec le logiciel client Intune. Si vous avez besoin d’informations sur certaines des tâches que vous pouvez effectuer sur des PC, lisez ce qui suit.
+- [**Stratégies de gestion des PC Windows (avec le logiciel client Intune)**](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). L’inscription des PC Windows auprès d’Intune permet de tirer le meilleur parti des fonctionnalités de gestion des appareils. Toutefois, Intune continue à prendre en charge la gestion des PC Windows avec le logiciel client Intune. Si vous avez besoin d’informations sur certaines des tâches que vous pouvez effectuer sur des PC, lisez ce qui suit.
 
 ## <a name="protect"></a>Protéger
 
@@ -46,7 +46,7 @@ Dans le monde informatique moderne, la protection des appareils contre tout acc�
 
 - [**Authentification multifacteur**](../enrollment/multi-factor-authentication.md). L’ajout d’une couche supplémentaire d’authentification pour les connexions utilisateur peut renforcer davantage la sécurité des appareils. De nombreux appareils prennent en charge l’authentification multifacteur qui nécessite un second niveau d’authentification, tels qu’un appel téléphonique ou un SMS avant que les utilisateurs puissent disposer d’un accès.
 - [**Paramètres Windows Hello Entreprise**](../protect/windows-hello.md). Windows Hello Entreprise est une autre méthode d’authentification qui permet aux utilisateurs d’utiliser un *geste* (par exemple, la reconnaissance des empreintes digitales ou Windows Hello) pour se connecter sans avoir besoin d’un mot de passe.
-- [**Stratégies permettant de protéger les PC Windows (avec le logiciel client Intune)** ](../policies-to-protect-windows-pcs-in-microsoft-intune.md). Quand vous gérez des ordinateurs Windows à l’aide du logiciel client Intune, vous pouvez utiliser des stratégies qui permettent de contrôler les paramètres pour Endpoint Protection, les mises à jour logicielles et le pare-feu Windows sur les ordinateurs que vous gérez.
+- [**Stratégies permettant de protéger les PC Windows (avec le logiciel client Intune)**](../policies-to-protect-windows-pcs-in-microsoft-intune.md). Quand vous gérez des ordinateurs Windows à l’aide du logiciel client Intune, vous pouvez utiliser des stratégies qui permettent de contrôler les paramètres pour Endpoint Protection, les mises à jour logicielles et le pare-feu Windows sur les ordinateurs que vous gérez.
 
 ## <a name="retire"></a>Mettre hors service
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be8fbb0bd96891eb3af3157deddfc325ebc5f2b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508926"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515269"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Connecteur Symantec Endpoint Protection Mobile
 
@@ -41,7 +41,7 @@ Vous pouvez activer l’évaluation des risques par SEP Mobile via les stratégi
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Comment Intune et SEP Mobile aident-ils à protéger les ressources de votre entreprise ?
 
-L’application SEP Mobile pour Android ou iOS capture le système de fichiers, la pile réseau, les appareils et les données de télémétrie de l’application lorsqu’elles sont disponibles, puis les envoie au service cloud Symantec pour évaluer les risques de l’appareil face aux menaces mobiles.
+L’application SEP Mobile pour Android ou iOS/iPadOS capture le système de fichiers, la pile réseau, les appareils et les données de télémétrie de l’application quand elles sont disponibles, puis les envoie au service cloud Symantec pour évaluer les risques de l’appareil face aux menaces mobiles.
 
 La stratégie de conformité d’appareil Intune inclut une règle pour SEP Mobile, basée sur l’évaluation des risques SEP Mobile. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée.
 
@@ -53,7 +53,7 @@ Intune prend en charge deux modes d’intégration avec SEP Mobile :
 
 - **Intégration complète** : permet à SEP Mobile de transmettre à Intune des informations sur les incidents de sécurité et les risques de l’appareil.
 
-## <a name="sample-scenarios"></a>Exemples de scénario
+## <a name="sample-scenarios"></a>Exemples de scénarios
 
 Voici quelques scénarios courants :
 
@@ -121,7 +121,7 @@ Voici les étapes que vous devez effectuer pour intégrer Intune à SEP Mobile 
 
 - [Configurez l’intégration de SEP Mobile à Intune](skycure-mtd-connector-integration.md)
 
-- [Ajoutez et affectez des applications SEP Mobile, Microsoft Authenticator et une stratégie de configuration d’application iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Ajoutez et affectez des applications SEP Mobile, Microsoft Authenticator et une stratégie de configuration d’application iOS/iPadOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
 - [Créez une stratégie de conformité des appareils SEP Mobile avec Intune](mtd-device-compliance-policy-create.md)
 

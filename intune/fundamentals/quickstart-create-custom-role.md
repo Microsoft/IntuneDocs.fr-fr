@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c61449e17b96151d2717365e5193fd6c4bdaae3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5b38df90e47e709e02f12a6ccdab68714d04ca93
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509900"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575863"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Démarrage rapide : Créer et affecter un rôle personnalisé
 
@@ -58,10 +58,10 @@ Pour permettre à votre opérateur de sécurité d’utiliser les nouvelles auto
 1. Dans Intune, choisissez **Rôles** > **Tous les rôles** > **Opérations de sécurité**.
 2. Sous **Rôles Intune**, choisissez **Affectations** > **Attribuer**.
 3. Dans la zone **Nom de l’attribution**, entrez *Opérateurs de sécurité*.
-4. Choisissez **Membre (groupes)**  > **Ajouter**.
+4. Choisissez **Membre (groupes)** > **Ajouter**.
 5. Choisissez le groupe **Testeurs Contoso**.
 6. Choisissez **Sélectionner** > **OK**.
-7. Choisissez **Étendue (Groupes)**  > **Sélectionnez les groupes à inclure** > **Testeurs Contoso**.
+7. Choisissez **Étendue (Groupes)** > **Sélectionnez les groupes à inclure** > **Testeurs Contoso**.
 8. Choisissez **Sélectionner** > **OK** > **OK**.
 
 Désormais, tous les membres du groupe sont membres du rôle *Opérations de sécurité* et peuvent consulter les informations suivantes relatives à un appareil : identificateurs d’appareil d’entreprise, stratégies de conformité d’appareil, configurations d’appareil et informations sur l’organisation.
@@ -77,4 +77,4 @@ Dans ce guide de démarrage rapide, vous avez créé un rôle d’opérations de
 Pour continuer cette série de guides de démarrage rapide Intune, passez au suivant.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS](../configuration/quickstart-email-profile.md)
+> [Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS/iPadOS](../configuration/quickstart-email-profile.md)

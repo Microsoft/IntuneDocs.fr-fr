@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9197d4f96eae1041b00b07110ef421a12a4fe338
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 203d243df3e8ae496e7ff78f20222fd361417c3d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712993"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514045"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutoriel : Présentation détaillée de Microsoft Intune dans le portail Azure
 
@@ -67,7 +67,7 @@ Suivez les étapes ci-dessous pour mieux comprendre Intune dans le portail Azure
     
     Intune vous permet de gérer les appareils et les applications de votre personnel, notamment la façon dont il accède aux données de votre entreprise. Pour utiliser ce service de gestion des appareils mobiles (MDM), les appareils doivent d’abord être inscrits auprès d’Intune. Quand un appareil est inscrit, il reçoit un certificat MDM. Ce certificat est utilisé pour communiquer avec le service Intune. 
 
-    Plusieurs méthodes permettent d’inscrire les appareils de votre personnel dans Intune. Chaque méthode dépend de la propriété de l’appareil (personnel ou d’entreprise), du type d’appareil (iOS, Windows, Android) et des exigences de gestion (réinitialisations, affinité, verrouillage). Toutefois, avant de pouvoir activer l’inscription des appareils, vous devez configurer votre infrastructure Intune. Pour inscrire des appareils, vous devez notamment [définir votre autorité de gestion des appareils mobiles](mdm-authority-set.md). Pour plus d’informations sur la préparation de votre environnement (locataire) Intune, consultez [Configurer Intune](setup-steps.md). Une fois que votre locataire Intune est prêt, vous pouvez inscrire des appareils. Pour plus d’informations sur l’inscription des appareils, consultez [Qu’est-ce que l’inscription d’appareils ?](../enrollment/device-enrollment.md)
+    Plusieurs méthodes permettent d’inscrire les appareils de votre personnel dans Intune. Chaque méthode dépend de la propriété de l’appareil (personnel ou d’entreprise), du type d’appareil (iOS/iPadOS, Windows, Android) et des exigences de gestion (réinitialisations, affinité, verrouillage). Toutefois, avant de pouvoir activer l’inscription des appareils, vous devez configurer votre infrastructure Intune. Pour inscrire des appareils, vous devez notamment [définir votre autorité de gestion des appareils mobiles](mdm-authority-set.md). Pour plus d’informations sur la préparation de votre environnement (locataire) Intune, consultez [Configurer Intune](setup-steps.md). Une fois que votre locataire Intune est prêt, vous pouvez inscrire des appareils. Pour plus d’informations sur l’inscription des appareils, consultez [Qu’est-ce que l’inscription d’appareils ?](../enrollment/device-enrollment.md)
 
 3. À partir d’[Intune](https://aka.ms/intuneportal), sélectionnez **Conformité de l’appareil** pour afficher les détails sur la conformité des appareils gérés par Intune. Des informations semblables à l’image suivante s’affichent.
 
@@ -85,7 +85,7 @@ Suivez les étapes ci-dessous pour mieux comprendre Intune dans le portail Azure
 
     ![Capture d’écran du volet de configuration des appareils](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
     
-    Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS, Android et Windows. Ensuite, vous pouvez utiliser Intune pour appliquer le profil aux appareils de votre organisation.   
+    Intune inclut des paramètres et des fonctionnalités que vous pouvez activer ou désactiver sur différents appareils de votre organisation. Ces paramètres et fonctionnalités sont ajoutés aux « profils de configuration ». Vous pouvez créer des profils pour différents appareils et différentes plateformes, notamment iOS/iPadOS, Android et Windows. Ensuite, vous pouvez utiliser Intune pour appliquer le profil aux appareils de votre organisation.   
 
     Pour plus d’informations sur la configuration des appareils, consultez [Appliquer des paramètres de fonctionnalités sur vos appareils à l’aide des profils d’appareil dans Microsoft Intune](../configuration/device-profiles.md).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: a5c844377dcd69b6caf5ef9f72fcb8dbb4ef8bd0
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756006"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609304"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utiliser le chiffrement d’appareil avec Intune
 
@@ -39,17 +39,30 @@ Intune fournit également un [rapport de chiffrement](encryption-monitor.md) int
 
 Utilisez Intune pour configurer le chiffrement de disque FileVault sur les appareils qui exécutent macOS. Ensuite, utilisez le rapport de chiffrement Intune pour voir les détails du chiffrement de ces appareils et pour gérer les clés de récupération des appareils chiffrés avec FileVault.
 
-Notez que l’inscription d’appareils approuvés par l’utilisateur est requise pour que FileVault fonctionne sur l’appareil. L’utilisateur doit approuver manuellement le profil de gestion à partir de préférences système pour que l’inscription soit considérée comme approuvée par l’utilisateur. 
+L’inscription d’appareils approuvés par l’utilisateur est nécessaire pour que FileVault fonctionne sur l’appareil. L’utilisateur doit approuver manuellement le profil de gestion à partir des préférences système pour que l’inscription soit considérée comme approuvée par l’utilisateur.
 
 FileVault est un programme de chiffrement de disque complet inclus avec macOS. Utilisez Intune pour configurer le FileVault sur les appareils qui exécutent **macOS 10.13 ou ultérieur**.
 
 Pour configurer FileVault, créez un [profil de configuration d’appareil](../configuration/device-profile-create.md) pour la protection de point de terminaison pour la plateforme macOS. Les paramètres de FileVault sont une des catégories de paramètres disponibles pour la protection de point de terminaison macOS.
 
-Une fois que vous avez créé une stratégie pour chiffrer des appareils avec FileVault, la stratégie est appliquée aux appareils en deux étapes. D’abord, l’appareil est préparé pour permettre à Intune de récupérer et de sauvegarder la clé de récupération. Ceci est désigné sous le nom de « mise en dépôt ». Une fois la clé mise en dépôt, le chiffrement de disque peut démarrer.
+Une fois que vous avez créé une stratégie pour chiffrer des appareils avec FileVault, la stratégie est appliquée aux appareils en deux étapes. D’abord, l’appareil est préparé pour permettre à Intune de récupérer et de sauvegarder la clé de récupération. Cette action est désignée sous le nom de « mise en dépôt ». Une fois la clé mise en dépôt, le chiffrement de disque peut démarrer.
 
 ![Paramètres de FileVault](./media/encrypt-devices/filevault-settings.png)
 
 Pour plus d’informations sur le paramètre de FileVault que vous pouvez gérer avec Intune, consultez [FileVault](endpoint-protection-macos.md#filevault) dans l’article sur Intune pour les paramètres de protection de point de terminaison macOS.
+
+### <a name="permissions-to-manage-filevault"></a>Autorisations pour gérer FileVault
+
+Pour gérer FileVault dans Intune, votre compte doit disposer des autorisations de [contrôle d’accès en fonction du rôle (RBAC)](../fundamentals/role-based-access-control.md) Intune applicables.
+
+Vous trouverez ci-dessous les autorisations FileVault, qui font partie de la catégorie **Tâches à distance**, ainsi que les rôles RBAC intégrés qui accordent l’autorisation :
+ 
+- **Obtenir la clé FileVault** :
+  - Opérateur du support technique
+  - Gestionnaire de sécurité des points de terminaison
+
+- **Permuter la clé FileVault**
+  - Opérateur du support technique
 
 ### <a name="how-to-configure-macos-filevault"></a>Comment configurer macOS FileVault
 
@@ -84,7 +97,7 @@ Une fois qu’Intune a chiffré un appareil macOS avec FileVault, vous pouvez af
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Récupérer une clé de récupération personnelle à partir d’appareils macOS chiffrés par MEM
 
-Les utilisateurs finaux seront en mesure de récupérer leur clé de récupération personnelle (clé FileVault) à l’aide de l’application Portail d’entreprise iOS. L’appareil qui a la clé de récupération personnelle doit être inscrit auprès d’Intune et chiffré avec FileVault via Intune. À l’aide de l’application Portail d’entreprise iOS, l’utilisateur final peut ouvrir une page Web qui comprend la clé de récupération personnelle FileVault. Vous pouvez également récupérer la clé de récupération d’Intune en sélectionnant **Appareils** > *l’appareil macOS chiffré et inscrit* > **Obtenir une clé de récupération**. 
+Les utilisateurs finaux récupèrent leur clé de récupération personnelle (clé FileVault) à l’aide de l’application Portail d’entreprise iOS. L’appareil qui a la clé de récupération personnelle doit être inscrit auprès d’Intune et chiffré avec FileVault via Intune. À l’aide de l’application Portail d’entreprise iOS, l’utilisateur final peut ouvrir une page Web qui comprend la clé de récupération personnelle FileVault. Vous pouvez également récupérer la clé de récupération d’Intune en sélectionnant **Appareils** > *l’appareil macOS chiffré et inscrit* > **Obtenir une clé de récupération**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Chiffrement BitLocker pour Windows 10
 
@@ -131,7 +144,7 @@ Les appareils doivent remplir les conditions préalables suivantes pour prendre 
 
   - **Rotation du mot de passe de récupération déclenchée par le client**
 
-  Ce paramètre se trouve sous *Chiffrement Windows* dans le cadre d’une stratégie de configuration d’appareil pour Windows 10 Endpoint Protection.
+  Ce paramètre se trouve sous *Chiffrement Windows* dans le cadre d’une stratégie de configuration d’appareil pour Windows 10 Endpoint Protection.
   
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Faire pivoter la clé de récupération BitLocker
 

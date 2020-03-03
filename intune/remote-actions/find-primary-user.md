@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbafca746c43dada6281ffbfe1e34f01afa8ab91
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 7ff03682ab406b92e3ea7f1e416188119913cc87
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413671"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569453"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Rechercher l’utilisateur principal d’un appareil Intune
 
-L’utilisateur principal, également appelé affinité entre utilisateur et périphérique, est une propriété de chaque appareil Intune. Un appareil Intune peut avoir zéro ou un utilisateur principal qui lui est assigné. Lorsqu’aucun utilisateur principal n’est attribué, l’appareil est appelé « appareil partagé ».
+L’utilisateur principal, également appelé « Affinité entre utilisateur et appareil », est une propriété de chaque appareil Intune. Un appareil Intune peut avoir zéro ou un utilisateur principal qui lui est assigné. Quand aucun utilisateur principal n’est affecté, l’appareil est appelé « appareil partagé ».
 
-## <a name="how-to-find-a-devices-primary-user"></a>Comment trouver l’utilisateur principal d’un appareil
+## <a name="find-a-devices-primary-user"></a>Trouver l’utilisateur principal d’un appareil
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choisissez **appareils** > choisir un appareil.
@@ -38,7 +38,7 @@ L’utilisateur principal, également appelé affinité entre utilisateur et pé
 La propriété d’utilisateur principal est utilisée pour mapper un utilisateur Intune sous licence à ses appareils dans :
 - l'application Portail d’entreprise
 - le site web de l’utilisateur final
-- les expériences des professionnels de l’informatique, telles que les pages de résolution des problèmes dans le portail Azure. Ces pages mappent les comptes d’utilisateurs à des appareils à l’aide de l’utilisateur principal.    
+- les expériences des professionnels de l’informatique, telles que les pages de résolution des problèmes dans le portail Azure. Ces pages mappent les comptes d’utilisateurs à des appareils à l’aide de l’utilisateur principal. 
 
 ### <a name="company-portal-app"></a>Application Portail d’entreprise
 L’application Portail d’entreprise s’attend à ce que le compte d’utilisateur connecté au portail d’entreprise soit l’utilisateur principal de cet appareil. Si un autre utilisateur a été attribué en tant qu’utilisateur principal, le portail d’entreprise affiche un avertissement :

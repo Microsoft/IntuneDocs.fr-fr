@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 21497716f17ced83bdcc1952cb952151f993bb7b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812360"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511325"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questions, problèmes et solutions concernant les stratégies et les profils d’appareil dans Microsoft Intune
 
@@ -36,11 +36,11 @@ Pour résoudre ce problème, configurez un Wi-Fi invité. Si le Wi-Fi d’entrep
 
 Recommandations supplémentaires :  
 
-- Si le réseau Wi-Fi auquel vous vous connectez utilise un mot de passe ou une phrase secrète, vérifiez que vous pouvez vous connecter directement au routeur Wi-Fi. Vous pouvez faire le test avec un appareil iOS.
+- Si le réseau Wi-Fi auquel vous vous connectez utilise un mot de passe ou une phrase secrète, vérifiez que vous pouvez vous connecter directement au routeur Wi-Fi. Vous pouvez faire le test avec un appareil iOS/iPadOS.
 - Une fois que vous êtes connecté au point de terminaison Wi-Fi (routeur Wi-Fi), notez le SSID et les informations d’identification utilisées (il s’agit du mot de passe ou de la phrase secrète).
 - Entrez le SSID et les informations d’identification (mot de passe ou phrase secrète) dans le champ Clé prépartagée. 
 - Effectuez le déploiement sur un groupe de test avec un nombre d’utilisateurs limité, de préférence uniquement l’équipe informatique. 
-- Synchronisez votre appareil iOS avec Intune. Procédez à l’inscription si ce n’est déjà fait. 
+- Synchronisez votre appareil iOS/iPadOS avec Intune. Procédez à l’inscription si ce n’est déjà fait. 
 - Testez à nouveau la connexion au même point de terminaison Wi-Fi (comme indiqué à la première étape).
 - Déployez sur des groupes plus volumineux, puis finalement sur tous les utilisateurs attendus dans votre organisation. 
 
@@ -54,7 +54,7 @@ Fréquences **estimées** :
 
 | Plate-forme | Cycle d’actualisation|
 | --- | --- |
-| iOS | Environ toutes les 8 heures |
+| iOS/iPadOS | Environ toutes les 8 heures |
 | macOS | Environ toutes les 8 heures |
 | Android | Environ toutes les 8 heures |
 | PC Windows 10 inscrits en tant qu’appareils | Environ toutes les 8 heures |
@@ -65,7 +65,7 @@ Si l’appareil vient d’être inscrit, la vérification de la conformité et d
 
 | Plate-forme | Fréquence |
 | --- | --- |
-| iOS | Toutes les 15 minutes pendant 1 heures, puis environ toutes les 8 heures |  
+| iOS/iPadOS | Toutes les 15 minutes pendant 1 heures, puis environ toutes les 8 heures |  
 | macOS | Toutes les 15 minutes pendant 1 heures, puis environ toutes les 8 heures | 
 | Android | Toutes les 3 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
 | PC Windows 10 inscrits en tant qu’appareils | Toutes les 3 minutes pendant 15 minutes, puis toutes les 15 minutes pendant 2 heures, puis environ toutes les 8 heures | 
@@ -102,7 +102,7 @@ Des conflits se produisent lorsque deux paramètres de profil sont identiques. P
 
 Une stratégie est déployée sur l’application et entre en vigueur. Une deuxième stratégie est déployée. Dans ce scénario, la première stratégie est prioritaire et reste appliquée. La deuxième stratégie est signalée comme conflictuelle. Si les deux sont appliquées en même temps, ce qui signifie qu’aucune d’elles n’est prioritaire, elles sont toutes les deux en conflit. Tous les paramètres en conflit sont définis sur les valeurs les plus restrictives.
 
-## <a name="what-happens-when-ios-custom-policies-conflict"></a>Que se passe-t-il quand les stratégies personnalisées iOS entrent en conflit ?
+## <a name="what-happens-when-iosipados-custom-policies-conflict"></a>Que se passe-t-il quand des stratégies personnalisées iOS/iPadOS sont en conflit ?
 
 Intune n’évalue pas la charge utile des fichiers de configuration Apple ni la stratégie OMA-URI personnalisée. Son rôle se limite simplement au mécanisme de livraison.
 
@@ -144,7 +144,7 @@ Lorsque vous supprimez un profil ou retirez un appareil d’un groupe qui a le p
     - Autoriser NFC
     - Autoriser le Wi-Fi
 
-  - **iOS** : tous les paramètres sont supprimés, sauf :
+  - **iOS/iPadOS** : tous les paramètres sont supprimés, sauf :
   
     - Autoriser l'itinérance vocale
     - Autoriser l'itinérance des données
@@ -156,7 +156,7 @@ Une fois définis, les appareils Windows Phone n’autorisent pas l’assoupliss
 
 Pour attribuer au profil une valeur moins sûre, réinitialisez les stratégies de sécurité. Par exemple, dans Windows 8.1, sur le Bureau, balayez à partir de la droite > sélectionnez **Paramètres** > **Panneau de configuration**. Sélectionnez l’applet **Comptes d’utilisateurs**. En bas du menu de navigation de gauche figure le lien **Réinitialiser les stratégies de sécurité**. Sélectionnez-le, puis choisissez **Réinitialiser les stratégies**.
 
-Pour pouvoir appliquer un profil moins restrictif sur les autres appareils GPM (Android, Windows Phone 8.1 et ultérieur, iOS et Windows 10), vous devrez peut-être les retirer, puis les réinscrire à Intune.
+Pour appliquer un profil moins restrictif sur d’autres appareils MDM, comme Android, Windows Phone 8.1 et ultérieur, iOS/iPadOS et Windows 10, il peut être nécessaire de les retirer, puis de les réinscrire dans Intune.
 
 ## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Certains paramètres dans un profil Windows 10 retournent « Non Applicable »
 

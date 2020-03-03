@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 02fa3acdaf0dc450afee97dfaaf5870166013356
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258128"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569521"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurer et utiliser des certificats PKCS importés avec Intune
 
@@ -31,6 +31,17 @@ Microsoft Intune prend en charge l’utilisation de certificats de paire de clé
 Le chiffrement S/MIME est difficile, car le courrier électronique est chiffré avec un certificat spécifique. Vous devez disposer de la clé privée du certificat qui a chiffré le courrier électronique sur l’appareil sur lequel vous lisez le courrier afin de pouvoir le déchiffrer. Les certificats de chiffrement sont régulièrement renouvelés, ce qui signifie que vous aurez peut-être besoin de votre historique de chiffrement sur tous vos appareils pour vous assurer de pouvoir lire les e-mails plus anciens.  Étant donné que le même certificat doit être utilisé sur les appareils, il n’est pas possible d’utiliser des profils de certificat [SCEP](certificates-scep-configure.md) ou [PKCS](certficates-pfx-configure.md) à cet effet, car ces mécanismes de remise de certificat offrent des certificats uniques par appareil.
 
 Pour plus d’informations sur l’utilisation de S/MIME avec Intune, consultez [Utiliser S/MIME pour chiffrer les e-mails](certificates-s-mime-encryption-sign.md).
+
+## <a name="supported-platforms"></a>Plateformes prises en charge
+
+Intune prend en charge l’importation de certificats PFX pour les plateformes suivantes :
+
+- Android - Administrateur d’appareil
+- Android Entreprise - Complètement géré
+- Android Entreprise - Profil de travail
+- iOS
+- Mac
+- Windows 10
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -49,6 +60,8 @@ Pour utiliser des certificats PKCS importés avec Intune, vous devez disposer de
 - **Windows Server** :
 
   Vous utilisez un serveur Windows Server pour héberger PFX Certificate Connector pour Microsoft Intune.  Le connecteur permet de traiter les demandes de certificats importés dans Intune.
+  
+  Le connecteur nécessite un accès aux mêmes ports que ceux des appareils gérés, comme indiqué dans notre [contenu du point de terminaison d’appareil](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune prend en charge l’installation de *Microsoft Intune Certificate Connector* sur le même réseau que celui où est installé *PFX Certificate Connector pour Microsoft Intune*.
 

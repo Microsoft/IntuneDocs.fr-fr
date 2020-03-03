@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 138bf192f5244eb6e44a6be96af3cc15c47bdc76
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755389"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609185"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Ajouter des applications de Google Play géré à des appareils d’entreprise Android avec Intune
 
@@ -80,20 +80,6 @@ Il existe deux façons de parcourir et d’approuver des applications Google Pla
 9. Cliquez sur **Sélectionner** pour sélectionner l'application.
 10. Cliquez sur **Synchroniser** en haut du volet pour synchroniser l’application avec le service Google Play géré.
 11. Cliquez sur **Actualiser** pour mettre à jour la liste des applications et afficher la nouvelle application ajoutée.
-
-### <a name="add-additional-app-settings-to-a-managed-google-play-store-app"></a>Ajouter des paramètres d'application supplémentaires à une application du store Google Play géré
-1. Si vous avez besoin d'ajouter des détails supplémentaires, sélectionnez l'application dans la liste des applications.
-2. Cliquez sur **Propriétés** > **Modifier** en regard des **informations sur l’application**. La page **Informations sur l’application** apparaît.
-3. Dans la page **Informations sur l'application**, ajoutez les détails de l'application :
-    - **Catégorie** : si vous le souhaitez, sélectionnez une ou plusieurs des catégories d’applications intégrées ou sélectionnez une catégorie que vous avez créée. Les catégories permettent aux utilisateurs de trouver facilement l’application quand ils parcourent le portail d’entreprise.
-    - **Afficher en tant qu’application proposée dans le portail d’entreprise** : sélectionnez cette option pour afficher l'application en premier sur la page principale du portail d'entreprise lorsque les utilisateurs parcourent des applications.
-    - **URL d'information** : Entrez éventuellement l’URL d’un site web qui contient des informations sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **URL de la déclaration de confidentialité** : Entrez éventuellement l’URL d’un site web qui contient des informations de confidentialité sur cette application. Cette URL est présentée aux utilisateurs du portail d’entreprise.
-    - **Développeur** : si vous le souhaitez, entrez le nom du développeur de l’application.
-    - **Propriétaire** : si vous le souhaitez, entrez le nom du propriétaire de cette application (par exemple, *Ressources humaines*).
-    - **Remarques** : entrez les éventuelles remarques à associer à cette application.
-4. Cliquez sur **Vérifier + enregistrer** pour afficher la page **Vérifier + enregistrer**. 
-5. Lorsque vous avez terminé, cliquez sur **Enregistrer** pour mettre à jour l’application dans Intune.
 
 ### <a name="add-a-managed-google-play-store-app-in-the-managed-google-play-console-alternative"></a>Ajouter une application Google Play Store gérée dans la console Google Play gérée (alternative)
 Si vous préférez synchroniser une application Google Play géré avec Intune, au lieu de l’ajouter directement à l’aide d’Intune, effectuez les étapes ci-après.
@@ -153,7 +139,7 @@ Pour plus d’informations sur les applications Google Play gérées privées, a
 1. Connectez-vous à [Google Play Developer Console](https://play.google.com/apps/publish) avec le compte que vous avez utilisé pour configurer la connexion entre Intune et Android Entreprise.  
     Si vous vous connectez pour la première fois, vous devez vous inscrire et payer des frais pour devenir membre du programme de développement Google.
 2. Dans la console, sélectionnez **Ajouter une nouvelle application**.
-3. Vous chargez votre application et fournissez des informations la concernant de la même manière que vous publiez une application sur le Google Play Store. Toutefois, vous devez sélectionner **Mettre cette application à la disposition de mon organisation uniquement (<*nom de l’organisation*>)** .
+3. Vous chargez votre application et fournissez des informations la concernant de la même manière que vous publiez une application sur le Google Play Store. Toutefois, vous devez sélectionner **Mettre cette application à la disposition de mon organisation uniquement (<*nom de l’organisation*>)**.
 
     ![Mettre l’application à la disposition de votre organisation uniquement](./media/apps-add-android-for-work/restrict.png)
 
@@ -238,6 +224,9 @@ Pour les applications Google Play gérées qui sont déployées sur des appareil
 
 ## <a name="delete-managed-google-play-apps"></a>Supprimer des applications Google Play géré
 Si besoin, vous pouvez supprimer des applications Google Play géré à partir de Microsoft Intune. Pour supprimer une application Google Play géré, ouvrez Microsoft Intune dans le portail Azure et sélectionnez **Applications** > **Toutes les applications**. À partir de la liste des applications, sélectionnez les points de suspension (...) à droite de l’application Google Play géré, puis sélectionnez **Supprimer** dans la liste affichée. Lorsque vous supprimez une application Google Play gérée à partir de la liste des applications, l’application Google Play gérée devient automatiquement non approuvée.
+
+> [!NOTE]
+> Si une application n’est pas approuvée ou supprimée du Google Play Store géré, elle ne sera pas supprimée de la liste des applications clientes Intune. Ceci vous permet de toujours cibler une stratégie de désinstallation pour les utilisateurs, même si l’application n’est pas approuvée.
 
 ## <a name="android-enterprise-system-apps"></a>Applications système Android Entreprise
 

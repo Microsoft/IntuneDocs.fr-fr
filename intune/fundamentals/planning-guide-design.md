@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: f676a0e39bb5dae32d3032d1703dbb44f6b2e54a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886727"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514963"
 ---
 # <a name="create-a-design"></a>Créer un design
 
@@ -188,7 +188,7 @@ Examinons ces domaines plus en détail.
 
 ### <a name="determine-supported-device-platforms"></a>Déterminer les plateformes d'appareils prises en charge
 
-Vous devez identifier les appareils qui seront utilisés dans l’environnement et vérifier s'ils sont pris en charge ou non par Intune lors de la création de votre conception. Intune prend en charge les plateformes iOS, Android et Windows.
+Vous devez identifier les appareils qui seront utilisés dans l’environnement et vérifier s'ils sont pris en charge ou non par Intune lors de la création de votre conception. Intune prend en charge les plateformes iOS/iPadOS, Android et Windows.
 
 [Liste complète des appareils pris en charge par Intune](supported-devices-browsers.md).
 
@@ -296,8 +296,8 @@ Voici un exemple montrant comment documenter les certificats lors de la concepti
 
 | **Type** | **Nom du profil** | **Plate-forme d'appareil** | **Scénarios d'utilisation** |   
 |:---:|:---:|:---:|:---:|
-| Autorité de certification racine | Autorité de certification racine d’entreprise | Android, iOS, Windows mobile | Entreprise, BYOD  |                                                           
-| SCEP | Certificat d'utilisateur | Android, iOS, Windows mobile | Entreprise, BYOD |                                                           
+| Autorité de certification racine | Autorité de certification racine d’entreprise | Android, iOS/iPadOS, Windows Mobile. | Entreprise, BYOD  |                                                           
+| SCEP | Certificat d'utilisateur | Android, iOS/iPadOS, Windows Mobile. | Entreprise, BYOD |                                                           
 
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de profil de certificat.
@@ -311,7 +311,7 @@ Voici un exemple de conception pour un profil Wi-Fi :
 | **Type** | **Nom du profil** | **Plate-forme d'appareil** | **Scénarios d'utilisation** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Profil Wi-Fi Asie | Android | Entreprise, BYOD - région Asie|
-| Wi-Fi | Profil Wi-Fi Amérique du Nord | Android, iOS, Windows 10 Mobile | Entreprise, BYOD - région Amérique du Nord |
+| Wi-Fi | Profil Wi-Fi Amérique du Nord | Android, iOS/iPadOS, Windows 10 Mobile. | Entreprise, BYOD - région Amérique du Nord |
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de profil Wi-Fi.
 
@@ -323,7 +323,7 @@ Voici un exemple de documentation de la conception d’un profil VPN.
 
 | **Type** | **Nom du profil** | **Plate-forme d'appareil** | **Scénarios d'utilisation** |
 |:---:|:---:|:---:|:---:|
-| VPN | Profil VPN Cisco AnyConnect | Android, iOS, Windows 10 Mobile | Entreprise, BYOD - Amérique du Nord et Allemagne|
+| VPN | Profil VPN Cisco AnyConnect | Android, iOS/iPadOS, Windows 10 Mobile. | Entreprise, BYOD - Amérique du Nord et Allemagne|
 | VPN | Pulse Secure | Android | Entreprise, BYOD - région Asie |
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de profil VPN.
@@ -374,7 +374,7 @@ Les stratégies de protection des applications limitent les perte de données en
 | **Application** | **Fonction** | **Plateformes** | **Scénario d'utilisation** | **Stratégie de protection d'application** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Disponible | iOS | Entreprise - Cadres | Ne peut pas être jailbreaké, chiffrement des fichiers |                                                         
-| Word | Disponible | iOS, Android - Samsung Knox, non-Knox, Windows 10 Mobile | Entreprise, BYOD | Ne peut pas être jailbreaké, chiffrement des fichiers |                                                         
+| Word | Disponible | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 Mobile | Entreprise, BYOD | Ne peut pas être jailbreaké, chiffrement des fichiers |                                                         
 
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie de protection des applications.
@@ -388,7 +388,7 @@ Voici un exemple de conception d’une stratégie de conformité :
 
 | **Nom de la stratégie** | **Plate-forme d'appareil** | **Paramètres** | **Groupe cible** |
 |:---:|:---:|:---:|:---:|
-| Stratégie de conformité | iOS, Android - Samsung Knox, non-Knox, Windows 10 Mobile | Code PIN - requis, ne peut pas être jailbreaké | Entreprise, BYOD |
+| Stratégie de conformité | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 Mobile | Code PIN - requis, ne peut pas être jailbreaké | Entreprise, BYOD |
 
 
 Vous pouvez [télécharger un modèle à partir du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie de conformité.
@@ -404,8 +404,8 @@ Voici un exemple montrant comment documenter des stratégies d’accès conditio
 
 | **Service** | **Plateformes pour l'authentification moderne** | **Authentification de base** | **Scénarios d'utilisation** |
 |:---:|:---:|:---:|:---:|
-| Exchange Online | iOS, Android | Bloquer les appareils non conformes sur les plateformes prises en charge par Intune | Entreprise, BYOD |
-| SharePoint Online | iOS, Android |  | Entreprise, BYOD |
+| Exchange Online | iOS/iPadOS, Android | Bloquer les appareils non conformes sur les plateformes prises en charge par Intune | Entreprise, BYOD |
+| SharePoint Online | iOS/iPadOS, Android |  | Entreprise, BYOD |
 
 Vous pouvez [télécharger un modèle du tableau ci-dessus](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) pour identifier vos besoins en matière de stratégie d’accès conditionnel.
 

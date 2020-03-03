@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18b6bcc8ec6e8d78862c0368c920fd3d79ce2b5
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 49c629039c08c892c7d6b19422d79c9eb1a8d760
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755576"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510467"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Protéger des appareils avec Microsoft Intune
 
@@ -43,7 +43,7 @@ Quand un appareil doit être [retiré de la gestion Intune](../remote-actions/de
 
 ## <a name="require-devices-to-be-compliant"></a>Exiger la conformité des appareils
 Intune comprend des [stratégies de conformité des appareils](device-compliance-get-started.md) qui vous permettent d’évaluer (et dans certains cas corriger) des appareils qui ne sont pas conformes aux règles que vous spécifiez. Par exemple, vous pouvez générer des rapports concernant :
-- Les appareils iOS jailbreakés
+- Les appareils iOS/iPadOS jailbreakés
 - Les appareils chiffrés ou non chiffrés
 - L’intégrité des appareils Windows 10 (tel que déterminé par le Service d’attestation d’intégrité)
 
@@ -60,7 +60,7 @@ L’[authentification multifacteur (MFA)](../enrollment/multi-factor-authenticat
 Intune vous permet d’intégrer [Windows Hello Entreprise](windows-hello.md) et de disposer ainsi d’une autre méthode de connexion pour Windows 10 et ultérieur utilisant Active Directory ou un compte Azure Active Directory pour remplacer un mot de passe, une carte à puce ou une carte à puce virtuelle.
 
 ## <a name="disable-activation-lock-on-ios-devices"></a>Désactiver le verrouillage d’activation sur les appareils iOS
-Le verrou d’activation est une fonctionnalité qui permet de protéger les appareils. Cette fonctionnalité demande aux utilisateurs d’entrer leur identifiant et leur mot de passe Apple avant d’effacer ou de réactiver l’appareil. Toutefois, elle peut engendrer des problèmes, par exemple, si l’utilisateur quitte l’entreprise sans supprimer le verrou. [Désactiver le verrouillage d’activation iOS](../remote-actions/device-activation-lock-disable.md) peut vous aider en supprimant le verrouillage des appareils iOS supervisés pour vous permettre de les réaffecter ou de les effacer.
+Le verrou d’activation est une fonctionnalité qui permet de protéger les appareils. Cette fonctionnalité demande aux utilisateurs d’entrer leur identifiant et leur mot de passe Apple avant d’effacer ou de réactiver l’appareil. Toutefois, elle peut engendrer des problèmes, par exemple, si l’utilisateur quitte l’entreprise sans supprimer le verrou. [Désactiver le verrouillage d’activation iOS/iPadOS](../remote-actions/device-activation-lock-disable.md) peut vous aider en supprimant le verrouillage des appareils iOS/iPadOS supervisés pour vous permettre de les réaffecter ou de les effacer.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: c880251d59810dc02446020ed02fd6049878262c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956235"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515014"
 ---
 # <a name="plan-communications"></a>Planifier les communications
 
@@ -34,9 +34,9 @@ Téléchargement :  [Kit d’adoption Intune](https://aka.ms/IntuneAdoptionKit)
 
 Nous vous recommandons le plan de communication par e-mail suivant. Vous pouvez modifier le texte afin de vous aligner sur le système d’exploitation et l’environnement de vos utilisateurs. Nous mettons à votre disposition des modèles que vous pouvez adapter en fonction de votre plan de communication :
 
-- **E-mail 1** : expliquez les avantages, les attentes et le programme. Profitez de l’occasion pour présenter tout nouveau service auquel les appareils gérés par Intune auront accès.
+- **E-mail 1 **: expliquez les avantages, les attentes et le programme. Profitez de l’occasion pour présenter tout nouveau service auquel les appareils gérés par Intune auront accès.
 
-- **E-mail 2** : annoncez que les services sont prêts pour un accès via Intune. Demandez aux utilisateurs d’inscrire leurs appareils à cette étape. communiquez la chronologie aux utilisateurs avant que leur accès soit affecté. Rappelez-leur les avantages et motifs stratégiques de la migration.
+- **E-mail 2 **: annoncez que les services sont prêts pour un accès via Intune. Demandez aux utilisateurs d’inscrire leurs appareils à cette étape. communiquez la chronologie aux utilisateurs avant que leur accès soit affecté. Rappelez-leur les avantages et motifs stratégiques de la migration.
 
 Après un certain laps de temps, vous pouvez commencer à appliquer la conformité via des stratégies d’accès conditionnel et les utiliser comme critères pour l’accès aux données d’entreprise, comme décrit dans [Encourager l’adoption par les utilisateurs finaux avec l’accès conditionnel](migration-guide-drive-adoption.md).
 
@@ -52,7 +52,7 @@ Nous avons créé de courtes vidéos de procédures pas à pas pour aider vos ut
 
 - [Inscrire votre appareil Android](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
 - [Inscrire votre appareil de profil professionnel Android](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
-- [Inscrire votre appareil iOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Inscrire votre appareil iOS/iPadOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Inscrire votre appareil macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Inscrire votre Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
@@ -61,5 +61,5 @@ Nous avons créé de courtes vidéos de procédures pas à pas pour aider vos ut
 Intune propose des ressources supplémentaires dont vous pouvez vous servir pour encourager vos utilisateurs à inscrire leurs appareils :
 
 - [Comment former vos utilisateurs finaux à Microsoft Intune](end-user-educate.md) détaille les étapes d’inscription par plateforme de système d’exploitation mobile.
-- [Inscription d’appareils Intune pour les administrateurs informatiques](../enrollment/device-enrollment.md) explique comment inscrire des appareils Android, iOS et Mac dans Intune.
-- Partagez l’application du portail d’entreprise avec vos utilisateurs Android, iOS et Windows.
+- [Inscription d’appareils Intune pour les administrateurs informatiques](../enrollment/device-enrollment.md) explique comment inscrire des appareils Android, iOS/iPadOS et Mac dans Intune.
+- Partagez l’application Portail d’entreprise avec vos utilisateurs Android, iOS/iPadOS et Windows.

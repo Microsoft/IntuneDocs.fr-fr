@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66acf4d8b88097c3262f44493ab72b3900781eed
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8a9c74281df61fbf81914461286353d49b89a4f9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504967"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510743"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envoyer les données de journal à des comptes de stockage, des hubs d’événements ou Log Analytics dans Intune (préversion)
 
 Microsoft Intune intègre des journaux qui fournissent des informations sur votre environnement :
 
-- Les **journaux d’audit** donnent des détails sur différents événements ou tâches qui se produisent dans Intune.
+- Les **journaux d’audit** montrent un enregistrement des activités qui génèrent une modification dans Intune, notamment les actions créer, mettre à jour (modifier), supprimer et attribuer, et les actions à distance.
 - Les **journaux des opérations (préversion)** donnent des détails sur les utilisateurs et les appareils dont l’inscription a réussi (ou échoué), ainsi que des détails sur les appareils non conformes.
 - Les **journaux organisationnels de conformité des appareils (préversion)** montrent un rapport organisationnel de conformité des appareils dans Intune, et des détails sur les appareils non conformes.
 
@@ -59,14 +59,15 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
 
 ## <a name="send-logs-to-azure-monitor"></a>Envoyer des journaux à Azure Monitor
 
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sous **Supervision**, sélectionnez **Paramètres de diagnostic**. Vous devez les activer la première fois que vous les utilisez. Sinon, ajoutez un paramètre.
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sélectionnez **Rapports** > **Paramètres de diagnostic**. Vous devez les activer la première fois que vous les utilisez. Sinon, ajoutez un paramètre.
 
-    ![Activer Paramètres de diagnostic dans Intune pour envoyer les journaux à Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
+    > [!div class="mx-imgBorder"]
+    > ![Activer Paramètres de diagnostic dans Intune pour envoyer les journaux à Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
 
 3. Entrez les propriétés suivantes :
 
-    - **Nom** : donnez un nom aux paramètres de diagnostic. Ce paramètre inclut toutes les propriétés que vous entrez. Par exemple, entrez `Route audit logs to storage account`.
+    - **Nom** : donnez un nom aux paramètres de diagnostic. Ce paramètre inclut toutes les propriétés que vous entrez. Par exemple, entrez `Route audit logs to storage account`.
     - **Archiver dans un compte de stockage** : enregistre les données de journal dans un compte de stockage Azure. Utilisez cette option pour enregistrer ou archiver les données.
 
         1. Sélectionnez cette option > **Configurer**. 
@@ -104,7 +105,8 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
 
     Quand vous avez terminé, vos paramètres ressemblent aux suivants : 
 
-    ![Exemple d’image qui envoie des journaux d’audit Intune à un compte de stockage Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
+    > [!div class="mx-imgBorder"]
+    > ![Exemple d’image qui envoie des journaux d’audit Intune à un compte de stockage Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
 4. **Enregistrez** les changements apportés. Votre paramètre est affiché dans la liste. Une fois le paramètre créé, vous pouvez le changer en sélectionnant **Modifier le paramètre** > **Enregistrer**.
 
@@ -112,14 +114,7 @@ Selon l’endroit où vous souhaitez acheminer les données du journal d’audit
 
 Vous pouvez également exporter les journaux d’audit dans d’autres parties d’Intune, notamment l’inscription, la conformité, la configuration, les appareils, les applications clientes et bien plus encore.
 
-Par exemple, pour exporter les journaux d’audit lors de l’utilisation de la conformité des appareils :
-
-1. Connectez-vous à [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Sélectionnez **Conformité de l’appareil** > **Surveiller** > **Journaux d’Audit** :
-
-    ![Choisir les journaux d’audit pour acheminer les données d’Intune vers l’analytique, les hubs d’événements ou le stockage Azure Monitor](./media/review-logs-using-azure-monitor/audit-logs-under-monitor-in-compliance.png)
-
-3. Sélectionnez **Exporter les paramètres de données**. Vous pouvez activer les **paramètres de diagnostic** s’ils ne le sont pas. Vous pouvez également choisir où envoyer les journaux, comme décrit dans [Envoyer des journaux à Azure Monitor](#send-logs-to-azure-monitor) (dans cet article).
+Pour plus d’informations, consultez [Utiliser les journaux d’audit pour suivre et surveiller les événements](monitor-audit-logs.md). Vous pouvez choisir où envoyer les journaux d’audit, comme décrit dans [Envoyer des journaux à Azure Monitor](#send-logs-to-azure-monitor) (dans cet article).
 
 ## <a name="cost-considerations"></a>Considérations relatives aux coûts
 

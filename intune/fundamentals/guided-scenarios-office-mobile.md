@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 0232855773626693d848f77e561c51d281739215
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691817"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514606"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénario guidé – Applications mobiles Microsoft Office sécurisées 
 
-En suivant ce scénario guidé du portail Gestion des appareils, vous pouvez activer la protection des applications Intune de base sur les appareils iOS et Android.
+En suivant ce scénario guidé du portail Gestion des appareils, vous pouvez activer la protection des applications Intune de base sur les appareils iOS/iPadOS et Android.
 
 La protection des applications que vous activez applique les actions suivantes : 
 - Chiffrer les fichiers de travail.
@@ -51,7 +51,7 @@ Vous pouvez utiliser des stratégies de protection des applications pour empêch
 
 L’accès conditionnel basé sur l’application et la gestion d’applications clientes ajoutent une couche de sécurité en vous assurant que seules les applications clientes qui prennent en charge les stratégies de protection des applications Intune peuvent accéder aux services Exchange en ligne et autres services d’Office 365.
 
-Vous pouvez bloquer les applications de messagerie intégrées sur iOS et Android quand vous autorisez seulement l’application Microsoft Outlook à accéder à Exchange Online. En outre, vous pouvez bloquer les applications qui n’ont pas de stratégies de protection des applications Intune appliquées lors de l’accès à SharePoint Online.
+Vous pouvez bloquer les applications de messagerie intégrées sur iOS/iPadOS et Android quand vous autorisez seulement l’application Microsoft Outlook à accéder à Exchange Online. En outre, vous pouvez bloquer les applications qui n’ont pas de stratégies de protection des applications Intune appliquées lors de l’accès à SharePoint Online.
 
 Dans cet exemple, l’administrateur a appliqué des stratégies de protection des applications à l’application Outlook suivies d’une règle d’accès conditionnel qui ajoute l’application Outlook à une liste approuvée d’applications qui peuvent être utilisées lors de l’accès aux e-mails d’entreprise.
 
@@ -69,7 +69,7 @@ Vous devez disposer des autorisations d’administration Intune suivantes :
 
 En suivant le scénario guidé **Intune App Protection**, vous empêcherez le partage ou la fuite de données en dehors de votre organisation. 
 
-Les utilisateurs iOS et Android affectés doivent entrer un code PIN chaque fois qu’ils ouvrent une application Office. Après cinq tentatives d’identification avortées, les utilisateurs doivent réinitialiser leur code PIN. Si vous exigez déjà un code PIN d’appareil, les utilisateurs ne seront pas impactés.
+Les utilisateurs iOS/iPadOS et Android affectés doivent entrer un code PIN chaque fois qu’ils ouvrent une application Office. Après cinq tentatives d’identification avortées, les utilisateurs doivent réinitialiser leur code PIN. Si vous exigez déjà un code PIN d’appareil, les utilisateurs ne seront pas impactés.
 
 ### <a name="what-you-will-need-to-continue"></a>Ce dont vous avez besoin pour continuer
 
@@ -86,7 +86,7 @@ Dans cette étape, vous devez entrer un**préfixe** et une **description** pour 
 
 ## <a name="step-3---apps"></a>Étape 3 – Applications
 
-Pour vous aider à démarrer, ce scénario guidé présélectionne les applications mobiles suivantes pour qu’elles soient protégées sur les appareils iOS et Android :
+Pour vous aider à démarrer, ce scénario guidé présélectionne les applications mobiles suivantes à protéger sur les appareils iOS/iPadOS et Android :
 - Microsoft Excel 
 - Microsoft Word 
 - Microsoft Teams 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6167c48dcfd6b29749dca8d0378ff31ca239b154
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415354"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473754"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Inscription automatique des appareils iOS/iPadOS avec le Programme d’inscription des appareils d’Apple
 
@@ -78,6 +78,9 @@ Vous utilisez le portail Apple Business Manager ou Apple School Manager pour cr�
 
 2. Autorisez Microsoft à envoyer des informations d’utilisateur et d’appareil à Apple en sélectionnant **J’accepte**.
 
+> [!NOTE]
+> Une fois que vous avez progressé au-delà de l’étape 2 pour télécharger le certificat de clé publique Intune, ne fermez pas l’Assistant ou ne quittez pas cette page. Si vous le faites néanmoins, cela invalidera le certificat que vous avez téléchargé et vous devrez répéter ce processus. Si vous rencontrez cette situation, vous remarquerez généralement que le bouton Créer de l’onglet Vérifier + créer est grisé et que vous ne pouvez pas terminer le processus.
+
    ![Capture d’écran du volet Jeton de programme d’inscription dans l’espace de travail Certificats Apple pour télécharger une clé publique.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Choisissez **Télécharger votre clé publique** pour télécharger et enregistrer le fichier de clé de chiffrement (.pem) en local. Le fichier .pem est utilisé pour demander un certificat de relation d'approbation à partir du portail du programme d'inscription d'appareils d'Apple.
@@ -114,7 +117,7 @@ Dans le [Centre d’administration du Gestionnaire de points de terminaison Micr
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Étape 4. Chargez votre jeton et choisissez des balises d’étendue.
 
 1. Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem) et choisissez **Ouvrir**.
-2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)** , puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
+2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)**, puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
 3. Choisissez **Créer**.
 
 Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS/iPadOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.

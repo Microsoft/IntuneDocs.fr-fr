@@ -1,7 +1,7 @@
 ---
 title: Gérer les applications Apple achetées en volume
 titleSuffix: Microsoft Intune
-description: Découvrez comment synchroniser les applications que vous avez achetées en volume sur les App Store iOS et macOS dans Microsoft Intune, puis comment gérer et suivre leur utilisation.
+description: Découvrez comment synchroniser les applications que vous avez achetées en volume sur les App Store iOS/iPadOS et macOS dans Microsoft Intune, puis comment gérer et suivre leur utilisation.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051624"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513399"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Apple vous permet d’acheter plusieurs licences pour une application que vous souhaitez utiliser dans votre organisation sur des appareils iOS et macOS à l’aide d’[Apple Business Manager](https://business.apple.com/) ou d’[Apple School Manager](https://school.apple.com/). Vous pouvez ensuite synchroniser vos informations d’achat en volume avec Intune et suivre votre utilisation des applications achetées en volume. L’achat de licences d’application vous aide à gérer efficacement les applications au sein de votre entreprise et à conserver la propriété et le contrôle des applications achetées. 
+Apple vous permet d’acheter plusieurs licences pour une application que vous voulez utiliser dans votre organisation sur des appareils iOS/iPadOS et macOS avec [Apple Business Manager](https://business.apple.com/) ou [Apple School Manager](https://school.apple.com/). Vous pouvez ensuite synchroniser vos informations d’achat en volume avec Intune et suivre votre utilisation des applications achetées en volume. L’achat de licences d’application vous aide à gérer efficacement les applications au sein de votre entreprise et à conserver la propriété et le contrôle des applications achetées. 
 
 Microsoft Intune vous permet de gérer les applications achetées par le biais de ce programme en :
 
@@ -38,13 +38,13 @@ Microsoft Intune vous permet de gérer les applications achetées par le biais d
 - suivant le nombre de licences disponibles et utilisées pour les applications achetées ;
 - vous aidant à installer des applications correspondant au nombre de licences maximal que vous possédez.
 
-Vous pouvez également synchroniser, gérer et affecter des livres que vous avez achetés dans Apple Business Manager avec Intune sur des appareils iOS. Pour plus d’informations, consultez [Guide pratique pour gérer les livres électroniques iOS que vous avez achetés par le biais d’un programme d’achat en volume](vpp-ebooks-ios.md).
+Vous pouvez également synchroniser, gérer et affecter des livres que vous avez achetés dans Apple Business Manager avec Intune sur des appareils iOS/iPadOS. Pour plus d’informations, consultez [Guide pratique pour gérer les livres électroniques iOS/iPadOS que vous avez achetés via un programme d’achat en volume](vpp-ebooks-ios.md).
 
 ## <a name="what-are-location-tokens"></a>Les jetons d’emplacement, qu’est-ce que c’est ?
 Les jetons d’emplacement sont également appelés jetons de programme d’achat en volume (VPP) Apple. Ces jetons sont utilisés pour attribuer et gérer les licences achetées à l’aide d’Apple Business Manager. Les gestionnaires de contenu peuvent acheter des licences et les associer à l’aide de jetons d’emplacement pour lesquels ils disposent d’autorisations dans Apple Business Manager. Ces jetons d’emplacement sont ensuite téléchargés à partir d’Apple Business Manager et chargés dans Microsoft Intune. Microsoft Intune prend en charge le chargement de plusieurs jetons d’emplacement par locataire. Chaque jeton est valide pendant un an.
 
 ## <a name="how-are-purchased-apps-licensed"></a>Comment des licences sont-elles octroyées à des applications achetées ?
-Les applications achetées peuvent être attribuées à des groupes à l’aide de deux types de licences proposés par Apple pour les appareils iOS et macOS.
+Les applications achetées peuvent être attribuées à des groupes avec deux types de licences proposés par Apple pour les appareils iOS/iPadOS et macOS.
 
 |   | Gestion des licences des appareils | Gestion des licences des utilisateurs |
 |-----|------------------|----------------|
@@ -87,7 +87,7 @@ Migrez le contenu et les jetons VPP achetés existants vers des applications et 
 1. Invitez les acheteurs VPP à rejoindre votre organisation et demandez à chaque utilisateur de sélectionner un emplacement unique. 
 2. Assurez-vous que tous les acheteurs VPP au sein de votre organisation ont terminé l’étape 1 avant de continuer.
 3. Vérifiez que toutes les applications et licences achetées ont été migrées vers des applications et des livres dans Apple Business Manager ou Apple School Manager.
-4. Téléchargez un nouveau jeton d’emplacement en accédant à **Apple Business (ou School)**  > **Paramètres** > **Applications et livres** > **Mes jetons de serveur**.
+4. Téléchargez un nouveau jeton d’emplacement en accédant à **Apple Business (ou School)** > **Paramètres** > **Applications et livres** > **Mes jetons de serveur**.
 5. Mettez à jour le jeton d’emplacement dans le centre d’administration Microsoft Endpoint Manager en accédant à **Administration des locataires** > **Connecteurs et jetons** > **Jetons Apple VPP** et synchronisez le jeton.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Chargez un jeton VPP Apple ou un jeton d’emplacement
@@ -156,9 +156,9 @@ L’utilisateur final reçoit des invites concernant l’installation d’applic
 
 ## <a name="revoking-app-licenses"></a>Révoquer des licences d’application
 
-Vous pouvez révoquer toutes les licences d’application VPP (programme d’achat en volume) iOS ou macOS associées, en fonction d’un appareil, d’un utilisateur ou d’une application donnés.  Toutefois, il existe des différences entre les plateformes iOS et macOS. 
+Vous pouvez révoquer toutes les licences d’application VPP (programme d’achat en volume) iOS/iPadOS ou macOS associées, en fonction d’un appareil, d’un utilisateur ou d’une application donnés.  Il y a cependant des différences entre les plateformes iOS/iPadOS et macOS. 
 
-|   | iOS | macOS |
+|   | iOS/iPadOS | macOS |
 |-----|------------------|----------------|
 | **Supprimer une affectation d’application** | Quand vous supprimez une application qui a été affectée à un utilisateur, Intune récupère la licence de l’utilisateur ou de l’appareil, et désinstalle l’application de l’appareil. | Quand vous supprimez une application qui a été affectée à un utilisateur, Intune récupère la licence de l’utilisateur ou de l’appareil. L’application n’est pas désinstallée de l’appareil. |
 | **Révoquer la licence de l'application** | La révocation d’une licence d’application récupère la licence de l’application auprès de l’utilisateur ou sur l’appareil. Vous devez définir l’affectation sur **Désinstaller** pour supprimer l’application de l’appareil. | La révocation d’une licence d’application récupère la licence de l’application auprès de l’utilisateur ou sur l’appareil. L’application macOS avec licence révoquée reste utilisable sur l’appareil, mais ne peut pas être mise à jour tant qu’une licence n’a pas été réaffectée à l’utilisateur ou à l’appareil. D’après Apple, ces applications sont supprimées après une période de grâce de 30 jours. Toutefois, Apple ne fournit pas de moyen à Intune pour supprimer l’application à l’aide d’une action d’affectation Désinstaller.
@@ -184,14 +184,14 @@ Vous pouvez renouveler un jeton Apple VPP en en téléchargeant un nouveau sur A
 
 ## <a name="deleting-a-vpp-app"></a>Suppression d’une application VPP
 
-Actuellement, vous ne pouvez pas supprimer une application VPP iOS à partir de Microsoft Intune.
+Actuellement, vous ne pouvez pas supprimer une application VPP iOS/iPadOS à partir de Microsoft Intune.
 
 ## <a name="assigning-custom-role-permissions-for-vpp"></a>Attribution d’autorisations de rôle personnalisées pour VPP
 
 L’accès aux jetons VPP Apple et aux applications VPP peut être contrôlé indépendamment à l’aide d’autorisations affectées à des rôles d’administrateur personnalisés dans Intune.
 
 * Pour permettre à un rôle personnalisé Intune de gérer des jetons VPP Apple sous **Applications** > **Jetons VPP Apple**, affectez des autorisations pour les **applications gérées**.
-* Pour permettre à un rôle personnalisé Intune de gérer des applications achetées avec des jetons VPP iOS sous **Applications** > **Toutes les applications**, affectez des autorisations pour les **applications mobiles**. 
+* Pour permettre à un rôle personnalisé Intune de gérer des applications achetées avec des jetons VPP iOS/iPadOS sous **Applications** > **Toutes les applications**, affectez des autorisations pour les **applications mobiles**. 
 
 ## <a name="additional-information"></a>Informations supplémentaires
 

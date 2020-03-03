@@ -1,11 +1,11 @@
 ---
-title: Créer un profil d’appareil iOS ou macOS avec Microsoft Intune - Azure | Microsoft Docs
-description: Ajoutez ou créez un profil d’appareil iOS ou macOS, puis configurez les paramètres pour AirPrint, disposition de l’écran d’accueil, notifications des applications, appareil partagé, authentification unique et paramètres de filtre de contenu web dans Microsoft Intune.
+title: Créer un profil d’appareil iOS/iPadOS ou macOS avec Microsoft Intune - Azure | Microsoft Docs
+description: 'Ajoutez ou créez un profil d’appareil iOS, iPadOS ou macOS, puis configurez des paramètres pour les éléments suivants : AirPrint, disposition de l’écran d’accueil, notifications des applications, appareil partagé, authentification unique et paramètres de filtre de contenu web dans Microsoft Intune.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fb628d68f50ce1862b3cce51f9fd08804d042a6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 52c31cc7d3949b42251d3e45075864762cda6930
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206718"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513144"
 ---
-# <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Paramètres des fonctionnalités de l’appareil iOS ou macOS dans Intune
+# <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Ajouter des paramètres de fonctionnalités des appareils iOS, iPadOS ou macOS dans Intune
 
-Intune inclut de nombreuses fonctionnalités et paramètres qui aident les administrateurs à contrôler des appareils iOS et macOS. Par exemple, les administrateurs peuvent faire ce qui suit :
+Intune inclut de nombreuses fonctionnalités et paramètres qui aident les administrateurs à contrôler des appareils iOS, iPadOS et macOS. Par exemple, les administrateurs peuvent faire ce qui suit :
 
 - Autoriser les utilisateurs à accéder à des imprimantes AirPrint sur votre réseau
 - Ajouter des applications et dossiers à l’écran d’accueil, notamment ajouter de nouvelles pages
@@ -34,15 +34,15 @@ Intune inclut de nombreuses fonctionnalités et paramètres qui aident les admin
 - Donner aux utilisateurs une expérience d’authentification unique sécurisée pour partager des informations d’identification entre les applications
 - Filtrer les sites web qui utilisent du langage réservé aux adultes et autoriser ou bloquer des sites web spécifiques
 
-Intune utilise des « profils de configuration » pour créer et personnaliser ces paramètres selon les besoins de votre organisation. Après avoir ajouté ces fonctionnalités dans un profil, vous les envoyez (push) ou déployez le profil aux appareils iOS et macOS dans votre organisation.
+Intune utilise des « profils de configuration » pour créer et personnaliser ces paramètres selon les besoins de votre organisation. Après avoir ajouté ces fonctionnalités dans un profil, vous envoyez ou vous déployez le profil sur les appareils iOS, iPadOS et macOS de votre organisation.
 
-Cet article décrit les différentes fonctionnalités que vous pouvez configurer, et vous montre comment créer un profil de configuration d’appareil. Vous pouvez également voir tous les paramètres disponibles pour les appareils [iOS](ios-device-features-settings.md) et [macOS](macos-device-features-settings.md).
+Cet article décrit les différentes fonctionnalités que vous pouvez configurer, et vous montre comment créer un profil de configuration d’appareil. Vous pouvez également voir tous les paramètres disponibles pour les appareils [iOS/iPadOS](ios-device-features-settings.md) et [macOS](macos-device-features-settings.md).
 
 ## <a name="airprint"></a>AirPrint
 
 AirPrint est une fonctionnalité Apple qui permet aux appareils d’imprimer dans des fichiers sur un réseau sans fil. Dans Intune, vous pouvez ajouter des informations AirPrint à des appareils.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [AirPrint sur iOS](ios-device-features-settings.md#airprint) et [AirPrint sur macOS](macos-device-features-settings.md#airprint).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [AirPrint sur iOS/iPadOS](ios-device-features-settings.md#airprint) et [AirPrint sur macOS](macos-device-features-settings.md#airprint).
 
 Pour plus d’informations sur l’impression, consultez [À propos d’AirPrint](https://support.apple.com/HT201311) sur le site web d’Apple.
 
@@ -54,9 +54,9 @@ S’applique à :
 
 ## <a name="app-notifications"></a>Notifications d’applications
 
-Choisissez la façon dont les applications sur vos appareils iOS et iPad reçoivent des notifications. Par exemple, à partir d’Intune, envoyez des notifications d’application afin qu’elles s’affichent dans le centre de notification ou sur l’écran de verrouillage, ou qu’elles émettent un son.
+Choisissez comment les applications sur vos appareils iOS et iPadOS reçoivent des notifications. Par exemple, à partir d’Intune, envoyez des notifications d’application afin qu’elles s’affichent dans le centre de notification ou sur l’écran de verrouillage, ou qu’elles émettent un son.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Notifications d’application sur iOS](ios-device-features-settings.md#app-notifications).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Notifications d’application sur iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
 Pour plus d’informations sur cette fonctionnalité, consultez [Notifications](https://developer.apple.com/notifications/) sur le site web d’Apple.
 
@@ -89,7 +89,7 @@ Ces paramètres configurent la disposition des applications et des dossiers sur 
 - Utilisez les paramètres **Dock** pour ajouter des applications ou des dossiers à l’écran. Par exemple, affichez Safari et l’application Mail sur l’espace d’ancrage de l’appareil.
 - Ajoutez les **Pages** que vous souhaitez afficher sur l’écran d’accueil et les applications à afficher dans chaque page. Par exemple, ajoutez une page **Contoso** et ajoutez l’application Paramètres sur cette page.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Disposition de l’écran d’accueil sur iOS](ios-device-features-settings.md#home-screen-layout).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Disposition de l’écran d’accueil sur iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 
 S’applique à :
 
@@ -100,7 +100,7 @@ S’applique à :
 
 Utilisez ces paramètres pour afficher un texte ou un message personnalisé sur l’écran de verrouillage et dans la fenêtre de connexion, Par exemple, vous pouvez entrer un message de type « En cas de perte, renvoyez à », et afficher des informations d’étiquette d’inventaire.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Paramètres de message de l’écran de verrouillage sur iOS](ios-device-features-settings.md#lock-screen-message).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Paramètres de message de l’écran de verrouillage sur iOS/iPadOS](ios-device-features-settings.md#lock-screen-message).
 
 Pour plus d’informations sur le message de l’écran de verrouillage, consultez [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) sur le site web d’Apple.
 
@@ -136,11 +136,11 @@ La plupart des applications métier nécessitent un certain niveau d’authentif
 L’authentification unique est possible si les conditions suivantes sont réunies :
 
 - Vous devez avoir une application codée qui recherche le magasin d’informations d’identification utilisateur dans l’authentification unique sur l’appareil.
-- Intune doit être configuré pour l’authentification unique des appareils iOS.
+- Intune doit être configuré pour l’authentification unique des appareils iOS/iPadOS.
 
 ![Volet Authentification unique](./media/device-features-configure/sso-blade.png)
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Authentification unique sur iOS](ios-device-features-settings.md#single-sign-on).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Authentification unique sur iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
 S’applique à :
 
@@ -156,7 +156,7 @@ Dans Intune, utilisez ces paramètres pour configurer une extension d’applicat
 - Le type de redirection est conçu pour les protocoles d’authentification modernes, tels qu’OAuth et SAML2.
 - Le type d’informations d’identification est conçu pour les flux d’authentification de type challenge et réponse. Vous pouvez choisir entre une extension d’informations d’identification spécifique à Kerberos fournie par Apple et une extension d’informations d’identification générique.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Extension d’application SSO iOS](ios-device-features-settings.md#single-sign-on-app-extension) et [Extension d’application SSO macOS](macos-device-features-settings.md#single-sign-on-app-extension).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Extension d’application SSO iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) et [Extension d’application SSO macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
 Pour plus d’informations sur le développement d’une extension d’application SSO, consultez [Authentification unique d'entreprise extensible](https://developer.apple.com/videos/play/tech-talks/301) sur le site web d’Apple. Pour lire la description d’Apple de la fonctionnalité, consultez [Réglages des données utiles Extensions pour l’authentification unique](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
@@ -171,7 +171,7 @@ Pour plus d’informations sur le développement d’une extension d’applicati
 >
 > - Du point de vue du développement, avec l’**extension d’application d’authentification unique**, vous pouvez utiliser n’importe quel type d’authentification unique par redirection ou informations d’identification. Avec **l’authentification unique**, vous pouvez uniquement utiliser l’authentification unique Kerberos.
 >
-> - L’**extension d’application d’authentification unique** Kerberos a été développée par Apple et est intégrée aux plateformes iOS 13.0+ et macOS 10.15+. L’extension Kerberos intégrée peut être utilisée pour connecter les utilisateurs aux applications natives et sites web qui prennent en charge l’authentification Kerberos. L’**authentification unique** n’est pas une implémentation Apple de Kerberos.
+> - L’**extension d’application d’authentification unique** Kerberos a été développée par Apple et est intégrée aux plateformes iOS/iPadOS 13.0+ et macOS 10.15+. L’extension Kerberos intégrée peut être utilisée pour connecter les utilisateurs aux applications natives et sites web qui prennent en charge l’authentification Kerberos. L’**authentification unique** n’est pas une implémentation Apple de Kerberos.
 >
 > - L’**extension d’application d’authentification unique** Kerberos intégrée gère les défis Kerberos pour les applications et les pages web tout comme l’**authentification unique**. Toutefois, l’extension Kerberos intégrée prend en charge les modifications de mot de passe et se comporte mieux dans les réseaux d’entreprise. Lorsque vous choisissez entre l’**extension d’application d’authentification unique** Kerberos et l’**authentification unique**, nous vous recommandons d’utiliser l’extension en raison des performances et des fonctionnalités améliorées.
 
@@ -183,9 +183,9 @@ S’applique à :
 
 ## <a name="wallpaper"></a>Papier peint
 
-Ajoutez une image .png, .jpg ou .jpeg personnalisée sur vos appareils iOS supervisés. Par exemple, utilisez Intune pour ajouter un logo de société à l’écran de verrouillage sur vos appareils.
+Ajoutez une image .png, .jpg ou .jpeg personnalisée à vos appareils iOS/iPadOS supervisés. Par exemple, utilisez Intune pour ajouter un logo de société à l’écran de verrouillage sur vos appareils.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Papier peint sur iOS](ios-device-features-settings.md#wallpaper).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Papier peint sur iOS/iPadOS](ios-device-features-settings.md#wallpaper).
 
 S’applique à :
 
@@ -196,7 +196,7 @@ S’applique à :
 
 Ces paramètres peuvent utiliser l’algorithme intégré de filtre automatique d’Apple pour évaluer les pages web et bloquer le contenu pour adultes et le langage réservé aux adultes. Vous pouvez également créer une liste de liens web autorisés et de liens web restreints. Par exemple, vous pouvez uniquement autoriser l’ouverture de sites web `contoso`.
 
-Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Filtre de contenu web sur iOS](ios-device-features-settings.md#web-content-filter).
+Pour obtenir la liste des paramètres que vous pouvez configurer dans Intune, consultez [Filtre de contenu web sur iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
 S’applique à :
 
@@ -229,4 +229,4 @@ Le profil est créé et affiché dans la liste des profils. [Affectez-le](device
 
 Une fois créé, le profil est prêt à être affecté. Vous devez à présent [affecter le profil](device-profile-assign.md) et [superviser son état](device-profile-monitor.md).
 
-Affichez tous les paramètres des fonctionnalités de l’appareil pour les appareils [iOS](ios-device-features-settings.md) et [macOS](macos-device-features-settings.md).
+Affichez tous les paramètres des fonctionnalités de l’appareil pour les appareils [iOS/iPadOS](ios-device-features-settings.md) et [macOS](macos-device-features-settings.md).

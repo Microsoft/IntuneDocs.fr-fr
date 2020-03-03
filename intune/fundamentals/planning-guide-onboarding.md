@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdc704d1971dfcc46ee2c3f5550e201d7a8e89fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1cdfc7d42d3bffe1abe21deddfe146af953b150a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505190"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514946"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implémenter votre plan Microsoft Intune
 
@@ -39,7 +39,7 @@ Les principaux éléments requis autonomes pour Intune sont les suivants :
 
 - Abonnement Office 365 (pour les applications Office et les applications gérées par la stratégie de protection des applications)
 
-- Certificat d'APN Apple (pour permettre la gestion de la plate-forme d'appareils iOS)
+- Certificat APNS Apple (pour permettre la gestion de la plateforme d’appareils iOS/iPadOS)
 
 - Azure AD Connect (pour la synchronisation d'annuaires)
 
@@ -88,7 +88,7 @@ Avant de commencer l’installation, la configuration, la gestion et l’inscrip
 
 ### <a name="task-6-enable-device-platforms"></a>Tâche 6 : Activer les plateformes d’appareils mobiles
 
-Par défaut, la plupart des plateformes d’appareils sont activées, à l’exception des appareils Apple (iOS et Mac). Avant de pouvoir inscrire et gérer les appareils iOS dans Intune, la plateforme d'appareils doit être activée. Pour ce faire, vous devez créer un certificat Push MDM et l’ajouter à Intune.
+Par défaut, la plupart des plateformes d’appareils sont activées, à l’exception des appareils Apple (iOS/iPadOS et Mac). Avant de pouvoir inscrire et gérer les appareils iOS/iPadOS dans Intune, la plateforme d’appareils doit être activée. Pour ce faire, vous devez créer un certificat Push MDM et l’ajouter à Intune.
 
 - En savoir plus sur l’[activation des appareils Apple pour l’inscription](../enrollment/apple-mdm-push-certificate-get.md).
 
@@ -130,7 +130,7 @@ Intune prend en charge l’accès conditionnel pour Exchange Online, Exchange su
 
 ### <a name="task-13-enroll-devices"></a>Tâche 13 : Inscrire des appareils
 
-Intune prend en charge les plateformes d’appareils iOS, Mac OS, Android, Windows Desktop et Windows Mobile. Inscrivez les plateformes d’appareils mobiles adéquates en fonction des cas d’utilisation et exigences de votre déploiement Intune.
+Intune prend en charge les plateformes d’appareils iOS/iPadOS, Mac OS, Android, Windows Desktop et Windows Mobile. Inscrivez les plateformes d’appareils mobiles adéquates en fonction des cas d’utilisation et exigences de votre déploiement Intune.
 
 - En savoir plus sur [comment inscrire des appareils](../enrollment/device-enrollment.md).
 

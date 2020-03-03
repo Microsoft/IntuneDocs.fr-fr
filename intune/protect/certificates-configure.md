@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5092fa37f0bf6bd1320fa06fa58ac5e36f55aa3c
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 63fa9f461fc9884d8c21e40cb4b5e3831f3b4b03
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410199"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576529"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utiliser des certificats pour l’authentification dans Microsoft Intune
 
@@ -38,7 +38,7 @@ Utilisez des certificats avec Intune pour authentifier vos utilisateurs dans les
 
 Pour déployer ces certificats, vous créez des profils de certificat et les attribuez à des appareils.
 
-Chaque profil de certificat que vous créez prend en charge une seule plateforme. Par exemple, si vous utilisez des certificats PKCS, vous créez un profil de certificat PKCS pour Android et un autre profil de certificat PKCS pour iOS. Si vous utilisez également des certificats SCEP pour ces deux plateformes, vous créez un profil de certificat SCEP pour Android et un autre pour iOS.
+Chaque profil de certificat que vous créez prend en charge une seule plateforme. Par exemple, si vous utilisez des certificats PKCS, vous créez un profil de certificat PKCS pour Android et un autre profil de certificat PKCS pour iOS/iPadOS. Si vous utilisez également des certificats SCEP pour ces deux plateformes, vous créez un profil de certificat SCEP pour Android et un autre pour iOS/iPadOS.
 
 ### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Considérations générales relatives à l’utilisation d’une autorité de certification Microsoft
 
@@ -83,10 +83,10 @@ Quand vous utilisez une autorité de certification tierce (hors Microsoft) :
 | Android Entreprise <br> - Entièrement géré (propriétaire de l’appareil)   | ![Pris en charge](./media/certificates-configure/green-check.png) |   | ![Pris en charge](./media/certificates-configure/green-check.png) |   |
 | Android Entreprise <br> - Dédié (propriétaire de l’appareil)   | ![Pris en charge](./media/certificates-configure/green-check.png)  |   | ![Pris en charge](./media/certificates-configure/green-check.png)  |   |
 | Android Entreprise <br> - Profil professionnel    | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
-| iOS                   | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Pris en charge](./media/certificates-configure/green-check.png) |  ![Pris en charge](./media/certificates-configure/green-check.png) |![Pris en charge](./media/certificates-configure/green-check.png)|![Pris en charge](./media/certificates-configure/green-check.png)|
 | Windows Phone 8.1     |![Pris en charge](./media/certificates-configure/green-check.png)  |  | ![Pris en charge](./media/certificates-configure/green-check.png)| ![Pris en charge](./media/certificates-configure/green-check.png) |
-| Windows 8.1 et versions ultérieures |![Pris en charge](./media/certificates-configure/green-check.png)  |  |![Pris en charge](./media/certificates-configure/green-check.png) |   |
+| Windows 8.1 et versions ultérieures |![Pris en charge](./media/certificates-configure/green-check.png)  |  |![Pris en charge](./media/certificates-configure/green-check.png) |   |
 | Windows 10 et versions ultérieures  | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) | ![Pris en charge](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exporter le certificat d’autorité de certification racine de confiance

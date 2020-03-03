@@ -1,7 +1,7 @@
 ---
 title: Supprimer des certificats SCEP ou PKCS dans Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Les administrateurs peuvent utiliser l’action de réinitialisation ou de mise hors service pour supprimer des certificats de Microsoft Intune. Il existe certains scénarios où les certificats sont automatiquement supprimés, tels que la désinscription d’un appareil ou la suppression d’une stratégie de conformité. Dans d’autres scénarios, les certificats restent automatiquement sur l’appareil, par exemple quand la licence Intune est perdue ou supprimée. Consultez les différentes procédures pour les appareils Android, Android Entreprise, iOS, macOS et Windows.
+description: Les administrateurs peuvent utiliser l’action de réinitialisation ou de mise hors service pour supprimer des certificats de Microsoft Intune. Il existe certains scénarios où les certificats sont automatiquement supprimés, tels que la désinscription d’un appareil ou la suppression d’une stratégie de conformité. Dans d’autres scénarios, les certificats restent automatiquement sur l’appareil, par exemple quand la licence Intune est perdue ou supprimée. Regardez les différentes façons de procéder pour les appareils Android, Android Entreprise, iOS/iPadOS, macOS et Windows.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: dbf6d95c8902a95993b972ff7639d4afb4324ac8
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: a77780c05b0f637a4ee5100f8c7a1a729c3ec674
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410173"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576250"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Supprimer des certificats SCEP et PKCS dans Microsoft Intune
 
@@ -93,7 +93,7 @@ Les certificats PKCS *restent* sur l’appareil (ils ne sont pas révoqués ni s
 - Un profil de certificat est supprimé de l’affectation de groupe.
 
 
-## <a name="ios-devices"></a>Périphériques iOS
+## <a name="ios-devices"></a>Appareils iOS
 
 ### <a name="scep-certificates"></a>Certificats SCEP
 

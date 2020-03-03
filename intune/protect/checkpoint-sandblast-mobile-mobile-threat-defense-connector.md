@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4cffafd4145ab536157ea55c732ac27bec29538
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1b740ed1e16f60b15991f1aa450e623cd20b62ea
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801608"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515133"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Connecteur de protection contre les menaces mobiles Check Point SandBlast Mobile avec Intune
 
@@ -33,7 +33,7 @@ Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’�
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Comment Intune et Check Point SandBlast Mobile vous aident-ils à protéger les ressources de votre entreprise ?
 
-L’application Check Point SandBlast Mobile pour Android et iOS capture le système de fichiers, la pile réseau, les données de télémétrie de l’appareil et des applications quand elles sont disponibles, puis les envoie au service cloud Check Point SandBlast pour évaluer les risques de l’appareil face aux menaces mobiles.
+L’application Check Point Sandblast Mobile pour Android et iOS/iPadOS capture le système de fichiers, la pile réseau, l’appareil et les données de télémétrie des applications quand elles sont disponibles, puis les envoie au service cloud Check Point SandBlast pour évaluer les risques de l’appareil face aux menaces mobiles.
 
 La stratégie de conformité des appareils Intune comprend une règle de protection contre les menaces mobiles Check Point SandBlast Mobile, qui est basée sur l’évaluation des risques Check Point SandBlast. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée. Si l’appareil est détecté comme non conforme, les utilisateurs ne peuvent pas accéder aux ressources de l’entreprise comme Exchange Online et SharePoint Online. Les utilisateurs reçoivent aussi des conseils de l’application mobile Check Point SandBlast installée sur leurs appareils pour résoudre le problème et rétablir l’accès aux ressources de l’entreprise.
 
