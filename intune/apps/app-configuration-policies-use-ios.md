@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: af3c4e05a47e015384716588a28a6074898e2f6a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438002"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513960"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Ajout de stratégies de configuration des applications pour les appareils iOS/iPadOS gérés
 
@@ -43,7 +43,7 @@ Une fois que vous avez sélectionné les groupes inclus pour votre stratégie de
 > [!TIP]
 > Ce type de stratégie n’est disponible à l’heure actuelle que pour les appareils possédant la version 8.0 ou une version ultérieure d’iOS/iPadOS. Elle prend en charge les types d’installation d’application suivants :
 >
-> - **Application iOS gérée à partir de l’App Store**
+> - **Application iOS/iPadOS gérée à partir de l’App Store**
 > - **Package d'application pour iOS**
 >
 > Pour plus d’informations sur les types d’installation d’application, consultez [Guide pratique pour ajouter une application à Microsoft Intune](apps-add.md). Pour plus d’informations sur l’intégration de la configuration de l’application dans votre package d’application .ipa pour les appareils gérés, consultez Configuration des applications gérées dans la [documentation pour les développeurs iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
@@ -108,9 +108,10 @@ Les caractères \{\{ et \}\} sont utilisés uniquement par les types de jetons. 
 
 Pour les appareils iOS/iPadOS, utilisez les paires clé/valeur suivantes :
 
-| **Key** | IntuneMAMAllowedAccountsOnly |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Valeurs** | <ul><li>**Activé** : le seul compte autorisé est le compte utilisateur managé défini par la clé [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Désactivé** (ou toute valeur qui n’est pas une correspondance ne respectant pas la casse de la valeur **Activé**) : n’importe quel compte est autorisé.</li></ul> |.
+| **Key** | **Valeurs** |
+|----|----|
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Activé** : le seul compte autorisé est le compte utilisateur managé défini par la clé [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Désactivé** (ou toute valeur qui n’est pas une correspondance ne respectant pas la casse de la valeur **Activé**) : n’importe quel compte est autorisé.</li></ul> |
+| IntuneMAMUPN | <ul><li>UPN du compte autorisé à se connecter à l’application.</li><li> Pour les appareils inscrits à Intune, le jeton <code>{{userprincipalname}}</code> peut être utilisé pour représenter le compte utilisateur inscrit.</li></ul>  |
 
    > [!NOTE]
    > Vous devez utiliser OneDrive pour iOS 10.34 ou version ultérieure, Outlook pour iOS 2.99.0 ou version ultérieure ou Edge pour iOS 44.8.7 ou version ultérieure et l’application doit être ciblée avec des [stratégies de protection des applications Intune](app-protection-policy.md) lorsque vous autorisez uniquement les comptes d’organisation configurés avec plusieurs identités.
@@ -181,7 +182,7 @@ De plus, Intune prend en charge les types de jetons suivants dans la liste de pr
 - \{\{serialnumberlast4digits\}\} : par exemple, **G5V2** (pour les appareils iOS/iPadOS)
 - \{\{aaddeviceid\}\} : par exemple **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
-## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Configuration de l’application Portail d’entreprise pour la prise en charge des appareils DEP iOS
+## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Configurer l’application Portail d’entreprise pour la prise en charge des appareils DEP iOS et iPadOS
 
 Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont pas compatibles avec la version de l’App Store de l’application Portail d’entreprise. Toutefois, vous pouvez configurer l’application Portail d’entreprise de façon à prendre en charge les appareils DEP iOS/iPadOS suivant les étapes ci-dessous.
 
@@ -204,7 +205,7 @@ Les inscriptions DEP (programme d’inscription des appareils d’Apple) ne sont
 3. Déployez le Portail d’entreprise sur les appareils avec la stratégie de configuration des applications ciblée sur les groupes désirés. Veillez à ne déployer la stratégie que sur des groupes d’appareils qui sont déjà inscrits au DEP.
 4. Dites aux utilisateurs finaux de se connecter à l’application Portail d’entreprise lorsqu’elle est automatiquement installée.
 
-## <a name="monitor-ios--app-configuration-status-per-device"></a>Suivre l’état de configuration d’applications iOS par appareil 
+## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Superviser l’état de la configuration des applications iOS/iPadOS par appareil 
 Une fois une stratégie de configuration affectée, vous pouvez suivre l’état de configuration des applications iOS/iPadOS pour chaque appareil géré. À partir de **Microsoft Intune** dans le portail Azure, sélectionnez **Appareils** > **Tous les appareils**. Dans la liste des appareils gérés, sélectionnez un appareil spécifique pour afficher le volet correspondant. Dans le volet de l’appareil, sélectionnez **Configuration de l’application**.  
 
 ## <a name="additional-information"></a>Informations supplémentaires

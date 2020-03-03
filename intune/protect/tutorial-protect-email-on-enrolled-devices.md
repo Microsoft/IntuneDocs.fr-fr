@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9deee0dca675d7fd95445131ed98ea195972c6ac
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: c134eb1fc413a32f2a27034d8c3a993f18f8a9c9
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409836"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576277"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutoriel : Protéger la messagerie Exchange Online sur les appareils gérés
 
@@ -45,7 +45,7 @@ Vous aurez besoin d’un locataire de test avec les abonnements suivants pour ce
 
 - Abonnement Office 365 Entreprise qui inclut Exchange ([essai gratuit](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : créer un profil d’appareil de messagerie pour iOS](../configuration/quickstart-email-profile.md).
+Avant de commencer, créez un profil d’appareil de test pour les appareils iOS en suivant les étapes décrites dans [Démarrage rapide : Créer un profil d’appareil de messagerie pour iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Se connecter à Intune
 
@@ -152,17 +152,17 @@ Nous allons maintenant créer une stratégie d’accès conditionnel qui requier
 
    5. Choisissez **Sélectionner**.
 
-   ![Sélectionner les contrôles](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+   ![Contrôles de sélection](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Sous **Activer la stratégie**, sélectionnez **Activé**.
 
-   ![Activer une stratégie](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+   ![Activer la stratégie](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Sélectionnez **Créer**.
 
-## <a name="try-it-out"></a>Faîtes un essai
+## <a name="try-it-out"></a>Faites un essai
 
-Avec les stratégies que vous avez créées, n’importe quel appareil iOS qui tente de se connecter à la messagerie Office 365 devra s’inscrire dans Intune et utiliser l’application mobile Outlook pour iOS. Pour tester ce scénario sur un appareil iOS, essayez de vous connecter à Exchange Online à l’aide des informations d’identification d’un utilisateur dans votre locataire de test. Vous serez invité à inscrire l’appareil et à installer l’application mobile Outlook.
+Avec les stratégies que vous avez créées, n’importe quel appareil iOS qui tente de se connecter à la messagerie Office 365 devra s’inscrire dans Intune et utiliser l’application mobile Outlook pour iOS/iPadOS. Pour tester ce scénario sur un appareil iOS, essayez de vous connecter à Exchange Online à l’aide des informations d’identification d’un utilisateur dans votre locataire de test. Vous serez invité à inscrire l’appareil et à installer l’application mobile Outlook.
 
 1. Pour tester sur un iPhone, accédez à **Paramètres** > **Mots de passe et comptes** > **Ajouter un compte** > **Exchange** .
 

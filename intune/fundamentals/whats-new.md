@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7018e2ab4290219c752f44b4b391822438461e8e
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: d2f984392983d81bc64edb7206469babdb806d63
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415090"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609282"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -55,11 +55,120 @@ Découvrez les nouveautés hebdomadaires dans Microsoft Intune. Vous pouvez ég
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-february-24-2020"></a>Semaine du 24 février 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestion des applications
+
+#### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>améliorations de l’expérience utilisateur du Portail d’entreprise macOS<!-- 5568987 -->
+Nous avons apporté des améliorations à l’expérience d’inscription des appareils macOS et à l’application Portail d’entreprise pour Mac. Voici ce que vous allez voir :
+- Une meilleure expérience de Microsoft **AutoUpdate** lors de l’inscription, afin de garantir que vos utilisateurs disposent de la dernière version du Portail d’entreprise.
+- Une étape de vérification de la conformité améliorée lors de l’inscription.
+- La prise en charge de la copie des ID d’incident, pour que vos utilisateurs puissent envoyer plus rapidement les erreurs de leurs appareils à l’équipe de support technique de votre entreprise.
+
+Pour plus d’informations sur l’inscription et l’application Portail d’entreprise pour Mac, consultez [Inscrire votre appareil macOS en utilisant l’application Portail d’entreprise](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+<!-- ########################## -->
+## <a name="week-of-february-17-2020-2002-service-release"></a>Semaine du 17 janvier 2020 (version du service 2002)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestion des applications
+
+#### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>Application Microsoft Defender Advanced Threat Protection pour macOS<!-- 5424618 -->
+Intune offre un moyen simple de déployer l’application Microsoft Defender Advanced Threat Protection pour macOS sur les appareils Mac gérés. Pour plus d’informations, consultez [Ajouter Microsoft Defender ATP à des appareils macOS avec Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) et [Microsoft Defender Advanced Threat Protection pour Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Configuration de l’appareil
+
+#### <a name="enable-network-access-control-nac-with-cisco-anyconnect-vpn-on-ios-devices---4860111----"></a>Activer le contrôle d’accès réseau (NAC) avec Cisco AnyConnect VPN sur les appareils iOS<!-- 4860111  -->
+Sur les appareils iOS, vous pouvez créer un profil VPN et utiliser différents types de connexion, notamment Cisco AnyConnect (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS** pour la plateforme > **VPN** pour le type de profil > **Cisco AnyConnect** pour le type de connexion). 
+
+Vous pouvez activer le contrôle d’accès réseau (NAC) avec Cisco AnyConnect. Pour utiliser cette fonctionnalité :
+
+1. Dans [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html), suivez les étapes décrites dans **Configuring Microsoft Intune as an MDM Server** pour configurer le moteur ISE (Identity Services Engine) Cisco dans Azure.
+2. Dans le profil de configuration d’appareil Intune, sélectionnez le paramètre **Activer le contrôle d’accès réseau (NAC)** .
+
+Pour voir tous les paramètres VPN disponibles, accédez à [Configurer les paramètres VPN sur les appareils iOS](../configuration/vpn-settings-ios.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Inscription des appareils
+
+#### <a name="serial-number-on-the-apple-mdm-push-certificate-page--5947765----"></a>Numéro de série sur la page Certificat Push MDM Apple<!--5947765  -->
+La page Certificat Push MDM Apple montre désormais le numéro de série. Le numéro de série est nécessaire pour accéder à nouveau au certificat Push MDM Apple si l’accès à l’ID Apple qui a créé le certificat est perdu. Pour voir le numéro de série, accédez à **Appareils** > **iOS** > **Inscription iOS** > **Certificat Push MDM Apple**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Gestion des périphériques
+
+#### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689----"></a>Nouvelles options de planification des mises à jour pour l’envoi des mises à jour du système d’exploitation aux appareils iOS/iPadOS inscrits<!--5879689  -->
+Vous pouvez choisir parmi les options suivantes lors de la planification des mises à jour du système d’exploitation pour les appareils iOS/iPadOS. Ceci s’applique aux appareils qui ont utilisé les types d’inscription Apple Business Manager ou Apple School Manager.
+- Mettre à jour lors du check-in suivant
+- Mettre à jour pendant l’intervalle planifié
+- Mettre à jour en dehors de l’intervalle planifié
+
+Pour les deux dernières options, vous pouvez créer plusieurs fenêtres de temps.
+
+Pour voir les nouvelles options, accédez à MEM > **Appareils** > **iOS** > **Mettre à jour les stratégies pour iOS/iPadOS** > **Créer un profil**.
+
+#### <a name="choose-which-iosipados-updates-to-push-to-enrolled-devices--5879689----"></a>Choisir les mises à jour iOS/iPadOS à envoyer aux appareils inscrits<!--5879689  -->
+Vous pouvez choisir une mise à jour iOS/iPadOS (excepté pour la mise à jour la plus récente) à envoyer aux appareils qui ont été inscrits avec Apple Business Manager ou Apple School Manager. Ces appareils doivent avoir une stratégie de configuration d’appareil définie pour retarder la visibilité des mises à jour logicielles pendant un certain nombre de jours. Pour voir cette fonctionnalité, accédez à MEM > **Appareils** > **iOS** > **Mettre à jour les stratégies pour iOS/iPadOS** > **Créer un profil**.
+
+### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Recherche, tri et filtrages améliorés dans la liste Tous les appareils<!--6179023-->
+Les performances, la recherche, le tri et le filtrage ont été améliorés dans la liste Tous les appareils.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Sécurité des appareils
+
+#### <a name="improved-intune-reporting-experience---3791418-----"></a>Amélioration de l’expérience de création de rapports Intune<!-- 3791418   -->
+Intune offre désormais une meilleure expérience de création de rapports, avec notamment de nouveaux types de rapports, une meilleure organisation des rapports, des vues plus ciblées, des fonctionnalités de rapport améliorées, ainsi que des données plus cohérentes et ponctuelles. L’expérience de création de rapports passe de la préversion à la disponibilité générale. En outre, la version en disponibilité générale fournit une prise en charge de la localisation, des correctifs de bogues, des améliorations de conception et des données de conformité d’appareil agrégées sur les vignettes dans le [Centre d’administration Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+
+Les nouveaux types de rapport se concentrent sur les éléments suivants :
+- **Opérationnel** : fournit des enregistrements actualisés en se concentrant sur les éléments d’intégrité négatifs. 
+- **Organisationnel** : fournit un résumé plus large de l’état global.
+- **Historique** : fournit les modèles et tendances sur une période donnée.
+- **Spécialiste** : vous permet d’utiliser des données brutes pour créer vos propres rapports personnalisés.
+
+Le premier ensemble de nouveaux rapports se concentre sur la conformité des appareils. Pour plus d’informations, consultez [Blog - Infrastructure de création de rapports Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) et [Rapports Intune](~/fundamentals/reports.md).
+
+#### <a name="consolidated-the-location-of-security-baselines-in-the-ui---6177074-----"></a>Consolidation de l’emplacement des bases de référence de sécurité dans l’interface utilisateur<!-- 6177074   -->
+Nous avons consolidé les chemins pour trouver des [bases de référence de sécurité](../protect/security-baselines.md) dans le centre d’administration du gestionnaire de points de terminaison Microsoft en supprimant *Bases de référence de sécurité* de plusieurs endroits de l’interface utilisateur. Pour trouver des base de référence de sécurité, vous utilisez maintenant le chemin suivant :  **Sécurité du point de terminaison** > **Bases de référence de sécurité**.
+
+#### <a name="expanded-support-for-imported-pkcs-certificates---6044197-wnready---"></a>Prise en charge étendue des certificats PKCS importés<!-- 6044197 WNReady -->
+Nous avons étendu la prise en charge de l’utilisation de [certificats PKCS importés](../protect/certificates-imported-pfx-configure.md#supported-platforms) pour prendre en charge les *Appareils Android Entreprise complètement gérés*. En règle générale, l’importation de certificats PFX est utilisée pour les scénarios de chiffrement S/MIME, où les certificats de chiffrement d’un utilisateur sont nécessaires sur tous ses appareils afin que le déchiffrement des e-mails puisse se faire.
+
+Les plateformes suivantes prennent en charge l’importation de certificats PFX :
+- Android - Administrateur d’appareil
+- Android Entreprise - Complètement géré
+- Android Entreprise - Profil de travail
+- iOS
+- Mac
+- Windows 10
+
+#### <a name="view-the-endpoint-security-configuration-for-devices---6206460----"></a>Afficher la configuration de la sécurité du point de terminaison pour les appareils<!-- 6206460  -->
+Nous avons mis à jour le nom de l’option dans le centre d’administration du gestionnaire de points de terminaison Microsoft permettant d’afficher les [configurations de sécurité de point de terminaison qui s’appliquent à un appareil spécifique](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). Cette option est renommée **Configuration de la sécurité du point de terminaison**, car elle montre les bases de référence de sécurité applicables et les stratégies supplémentaires créées en dehors des bases de référence de sécurité. Avant, cette option était nommée *Bases de référence de sécurité*. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Contrôle d'accès en fonction d'un rôle
+
+#### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Modifications à venir de l’interface utilisateur des rôles Intune<!--5801612   -->
+L’interface utilisateur du [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) > **Administration de locataire** > **Rôles** a été améliorée en faveur d’une conception plus conviviale et plus intuitive. Cette expérience fournit les mêmes paramètres et les mêmes informations détaillées que celles que vous utilisez maintenant, mais la nouvelle expérience utilise un processus de type Assistant.
+
+<!-- ########################## -->
+## <a name="week-of-february-17-2020"></a>Semaine du 17 février 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestion des applications
+
+#### <a name="microsofts-new-office-app---5859926---"></a>Nouvelle application Office de Microsoft<!-- 5859926 -->
+La nouvelle application Office de Microsoft est maintenant en disponibilité générale pour le téléchargement et l’utilisation. L’application Office est une expérience centralisée dans laquelle vos utilisateurs peuvent travailler sur Word, Excel et PowerPoint au sein d’une même application. Vous pouvez cibler l’application avec une stratégie de protection des applications pour garantir que les données auxquelles elles accèdent sont protégées.
+
+Pour plus d’informations, consultez [Comment activer des stratégies de protection des applications Intune avec l’application mobile Office en préversion](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
+
+<!-- ########################## -->
 ## <a name="week-of-february-10-2020"></a>Semaine du 10 février 2020
 
-### <a name="windows-7-ends-extended-support---3042987--"></a>Fin du support étendu Windows 7 <!--3042987-->
+### <a name="windows-7-ends-extended-support--3042987---"></a>Fin du support étendu Windows 7<!--3042987 -->
 Windows 7 a atteint la fin du support étendu le 14 janvier 2020. Intune déconseille depuis cette date la prise en charge des appareils Windows 7. L’assistance technique et les mises à jour automatiques qui vous permettent de protéger votre PC ne sont plus disponibles. Nous vous recommandons de passer à Windows 10. Pour plus d’informations, consultez le [billet de blog Calendrier des modifications](https://aka.ms/Windows7_Intune).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Gestion des applications
@@ -137,7 +246,6 @@ Les informations suivantes apparaissent maintenant sur la page **Vue d’ensembl
 - Capacité de stockage (quantité de stockage physique sur l’appareil) 
 - Architecture UC
 
-
 #### <a name="ios-bypass-activation-lock-remote-action-renamed-to-disable-activation-lock---5904591----"></a>Action à distance Contourner le verrou d’activation iOS renommée Désactiver le verrouillage d’activation <!--5904591  -->
 L’action à distance **Contourner le verrou d’activation** a été renommée **Désactiver le verrouillage d’activation**. Pour plus d’informations, consultez [Désactiver le verrouillage d’activation iOS avec Intune](../remote-actions/device-activation-lock-bypass.md).
 
@@ -145,7 +253,6 @@ L’action à distance **Contourner le verrou d’activation** a été renommée
 Intune prend désormais en charge le ciblage d’appareils AutoPilot inscrits à l’aide de [déploiements de mises à jour de fonctionnalités Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
 
 Les stratégies de mise à jour des fonctionnalités Windows 10 ne peuvent pas être appliquées au cours de l’expérience OOBE (out of box experience) AutoPilot et s’appliquent uniquement à la première analyse de Windows Update une fois que l’appareil a été provisionné (généralement un jour après).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>Surveiller et dépanner
@@ -295,13 +402,12 @@ Nous avons amélioré l’expérience sur un appareil partagé avec plusieurs ut
 - [Vue d’ensemble de la conformité des appareils Intune](../protect/device-compliance-get-started.md)
 
 #### <a name="use-pkcs-certificate-profiles-to-provision-devices-with-certificates---2317124-2317130-2317139-2340517-2340528-2340529----"></a>Utiliser des profils de certificat PKCS pour approvisionner des appareils avec des certificats<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
-Vous pouvez maintenant utiliser des profils de certificat PKCS pour émettre des certificats pour des *appareils* qui exécutent Android for Work, iOS et Windows, lorsqu’ils sont associés à des profils tels que des profils Wi-Fi et VPN. Auparavant, ces trois plateformes ne prenait en charge que les certificats basés sur l’utilisateur, avec une prise en charge basée sur les appareils limitée à macOS.
+Vous pouvez désormais utiliser des profils de certificat PKCS pour émettre des certificats pour des *appareils* qui exécutent Android for Work, iOS/iPadOS et Windows quand ils sont associés à des profils comme des profils pour Wi-Fi et VPN. Auparavant, ces trois plateformes ne prenait en charge que les certificats basés sur l’utilisateur, avec une prise en charge basée sur les appareils limitée à macOS.
 
 > [!NOTE]
 > Les profils de certificat PKCS ne sont pas pris en charge avec les profils Wi-Fi. Au lieu de cela, utilisez des profils de certificat SCEP quand vous utilisez un [type EAP](../configuration/wi-fi-settings-windows.md#enterprise-profile).
 
 Pour utiliser un certificat basé sur un appareil, pendant que [la création d’un profil de certificat PKCS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) pour les plateformes prises en charge, sélectionnez **Paramètres**. Vous voyez maintenant le paramètre pour **Type de certificat**, qui prend en charge les options pour Appareil ou Utilisateur.
-
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -313,7 +419,6 @@ Une nouvelle expérience de journal d’audit centralisée collecte désormais l
 #### <a name="scope-tag-information-included-in-audit-log-activity-details--5763534---"></a>Informations sur les balises d’étendue incluses dans les détails de l’activité du journal d’audit<!--5763534 -->
 Les détails de l’activité du journal d’audit incluent désormais des informations sur les balises d’étendue (pour les objets Intune prenant en charge les balises d’étendue). Pour plus d’informations sur les journaux d’audit, consultez [Utiliser les journaux d’audit pour suivre et surveiller les événements](monitor-audit-logs.md).
 
-
 <!-- ########################## -->
 ## <a name="week-of-december-2-2019"></a>Semaine du 2 décembre 2019
 
@@ -324,7 +429,6 @@ Les clients Configuration Manager avec Software Assurance peuvent obtenir la cog
 - Les appareils sur d’autres plateformes nécessitent toujours des licences Intune complètes.
 
 Pour plus d’informations, consultez [Termes des contrats de licence](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
-
 
 <!-- ########################## -->
 ## <a name="week-of-november-18-2019-1911-service-release"></a>Semaine du 18 novembre 2019 (version 1911)
@@ -452,7 +556,6 @@ Intune, prend désormais en charge le déploiement de certificats d’appareil S
 #### <a name="intune-audit-logs-for-business-to-business-collaboration--5670211---"></a>Journaux d’audit Intune pour la collaboration interentreprises<!--5670211 -->
 La collaboration B2B Azure AD vous permet de partager en toute sécurité les applications et services de votre entreprise avec des utilisateurs invités à partir de n’importe quelle autre organisation, tout en conservant le contrôle sur vos propres données d’entreprise. Intune prend désormais en charge les journaux d’audit pour les utilisateurs invités B2B. Par exemple, lorsque les utilisateurs invités apportent des modifications, Intune peut capturer ces données par le biais des journaux d’audit. Pour plus d’informations, consultez [Qu’est-ce que l’accès utilisateur invité dans Azure Active Directory B2B ?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
 
-
 <!-- ########################## -->
 ## <a name="week-of-november-11-2019"></a>Semaine du 11 novembre 2019  
 
@@ -469,7 +572,6 @@ L’expérience d’inscription pour l’application Portail d’entreprise macO
 
 #### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Lancement des applications web à partir de l’application Windows Portail d’entreprise<!-- 5030972 -->
 Les utilisateurs finaux peuvent désormais lancer des applications web directement à partir de l’application Windows Portail d’entreprise. Les utilisateurs finaux peuvent sélectionner l’application web, puis choisir l’option **Ouvrir dans le navigateur**. L’URL web publiée est ouverte directement dans un navigateur web. Cette fonctionnalité sera déployée au cours de la semaine prochaine. Pour plus d’informations sur les d’applications web, consultez [Ajouter des applications web à Microsoft Intune](~/apps/web-app.md).  
-
 
 #### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950----"></a>Nouvelle colonne de type d’attribution dans Portail d’entreprise pour Windows 10 <!-- 5459950  -->
 La colonne Portail d’entreprise > **Applications installées** > **Type d’affectation** a été renommée **Obligatoire par votre organisation**.  Dans cette colonne, les utilisateurs voient une valeur **Oui** ou **Non** pour indiquer qu’une application est obligatoire ou rendue facultative par leur organisation. Ces modifications ont été apportées suite à une confusion d’utilisateurs des appareils concernant le concept des applications disponibles. Vos utilisateurs peuvent trouver plus d’informations sur l’installation des applications de Portail d’entreprise dans [Installer et partager des applications sur votre appareil](/intune-user-help/install-apps-cpapp-windows). Pour plus d’informations sur la configuration de l’application Portail d’entreprise pour vos utilisateurs, consultez [Guide pratique pour configurer l’application Portail d’entreprise Microsoft Intune](~/apps/company-portal-app.md).  
@@ -490,3 +592,5 @@ Pour consulter les mois précédents, reportez-vous à l’[archive des nouveaut
 ## <a name="notices"></a>Remarques
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
+
+

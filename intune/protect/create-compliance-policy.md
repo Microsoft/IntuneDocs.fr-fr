@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: 68fcdb66591ec0e566aa702b3ca4d6c5c5448859
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860228"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514011"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Créer une stratégie de conformité dans Microsoft Intune
 
@@ -51,7 +51,7 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
   - Android Entreprise
   - iOS
   - macOS
-  - Windows 10
+  - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
@@ -67,7 +67,7 @@ Pour utiliser des stratégies de conformité des appareils, veillez à respecter
 
 3. Spécifiez les propriétés suivantes :
 
-   - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS comme non conformes**.
+   - **Nom** : Attribuez un nom descriptif à la stratégie. Nommez vos stratégies afin de pouvoir les identifier facilement ultérieurement. Par exemple, un nom de stratégie approprié est **Marquer les appareils jailbreakés iOS/iPadOS comme non conformes**.
 
    - **Description** : Entrez une description de la stratégie. Ce paramètre est facultatif, mais recommandé.
 
@@ -173,7 +173,7 @@ Si un appareil a plusieurs stratégies de conformité et qu’il a des états de
 |---------|---------|
 |Unknown     |1|
 |NotApplicable     |2|
-|Conforme|3|
+|conformité|3|
 |InGracePeriod|4|
 |NonCompliant|5|
 |Erreur|6|

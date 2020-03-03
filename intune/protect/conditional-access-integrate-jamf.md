@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: elocholi
+ms.reviewer: jinyoon
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01dae8f6c90155e649211ab226cf24eeade29b42
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 9dab1025e283ed1591c22b03ed4e3a61d40a20c3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946680"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515082"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Intégrer Jamf Pro à Intune pour des raisons de conformité
 
@@ -92,19 +92,17 @@ Pour connecter Intune à Jamf Pro :
 
 6. Sélectionnez **Autorisations d’API** sous **Gérer**. 
 
-7. Dans la page Autorisations d’API, sélectionnez **Ajouter une autorisation** pour ajouter une nouvelle autorisation. Sur la page **Demander des autorisations d’API**, sélectionnez **Intune**, puis sélectionnez **Autorisations d’application**. Sélectionnez uniquement la case à cocher pour **update_device_attributes**.
+7. Sur la page des autorisations d’API, supprimez toutes les autorisations de cette application en sélectionnant l’icône **...** en regard de chaque autorisation existante. Notez que ceci est obligatoire ; l’intégration échoue s’il existe des autorisations supplémentaires inattendues dans cette inscription d’application.
 
-8. Attendez quelques minutes pour que la nouvelle autorisation prenne effet. Ensuite, sélectionnez **Accorder le consentement administrateur pour _\<votre locataire>_** . Authentifiez votre compte dans la nouvelle fenêtre et accordez l’accès à l’application en suivant les invites.  
+8. Ensuite, nous ajouterons des autorisations pour mettre à jour les attributs de l’appareil. En haut à gauche de la page **Autorisations d’API**, sélectionnez **Ajouter une autorisation** pour ajouter une nouvelle autorisation. 
 
-9. Vous devrez peut-être patienter quelques minutes pour que le consentement administrateur prenne effet.
+9. Sur la page **Demander des autorisations d’API**, sélectionnez **Intune**, puis sélectionnez **Autorisations d’application**. Cochez seulement la case pour **update_device_attributes** et enregistrez la nouvelle autorisation.
 
-10. Actualisez la page en cliquant sur le bouton **Actualiser** en haut de la page. Vérifiez que le consentement administrateur a été accordé pour l’autorisation **update_device_attributes**. 
+10. Ensuite, accordez le consentement de l’administrateur pour cette application en sélectionnant **Accorder un consentement d’administrateur pour _\<votre locataire>_** en haut à gauche de la page **Autorisations d’API**. Il peut être nécessaire de réauthentifier votre compte dans la nouvelle fenêtre et d’accorder l’accès à l’application en suivant les invites.  
 
-11. Supprimez le consentement administrateur de l’autorisation **User.Read** en sélectionnant le menu **...** et en sélectionnant **Révoquer le consentement de l’administrateur**.
+11. Actualisez la page en cliquant sur le bouton **Actualiser** en haut de la page. Vérifiez que le consentement administrateur a été accordé pour l’autorisation **update_device_attributes**. 
 
-12. Vous devrez également supprimer l’autorisation **User.Read**. Sélectionnez le menu **...** , **User.Read**, puis sélectionnez **Supprimer l’autorisation**. 
-
-8. Une fois l’application correctement inscrite, les autorisations d’API doivent contenir une seule autorisation appelée **update_device_attributes** et doivent se présenter comme suit :
+12. Une fois l’application correctement inscrite, les autorisations d’API doivent contenir une seule autorisation appelée **update_device_attributes** et doivent se présenter comme suit :
 
    ![Autorisations réussies](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 

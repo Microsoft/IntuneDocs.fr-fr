@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dc262dc67c967ffd2c6525c4370df8e9fa0e4dff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755270"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511835"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Ajouter des applications à Microsoft Intune 
 
@@ -52,7 +52,7 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 | --- | --- | --- |
 | Applications de l’App Store Android  | Application de store  | Sélectionnez **Android** comme **type d’application**, puis entrez l’URL du Google Play Store de l’application. |
 | Applications Android Enterprise  | Application de store  | Sélectionnez **Android** comme **type d’application**, puis entrez l’URL du Google Play Store de l’application gérée. <sup>1</sup> |
-| Applications de l’App Store iOS  | Application de store  | Sélectionnez **iOS** comme **type d’application**, recherchez l’application, puis sélectionnez l’application dans Intune. |
+| Applications du Store iOS/iPadOS  | Application de store  | Sélectionnez **iOS** comme **type d’application**, recherchez l’application, puis sélectionnez l’application dans Intune. |
 | Application du Windows Phone 8.1 Store  | Application de store  | Sélectionnez **Windows Phone 8.1** comme **type d’application**, puis entrez l’URL du Microsoft Store de l’application. |
 | Applications Microsoft Store  | Application de store  | Sélectionnez **Windows** comme **type d’application**, puis entrez l’URL du Microsoft Store de l’application. |
 | Applications Google Play gérées | Application de store  | Sélectionnez **Google Play géré** comme **type d’application**, recherchez l’application, puis sélectionnez l’application dans Intune. |
@@ -61,10 +61,10 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 | Microsoft Edge version 77 ou ultérieure pour Windows 10 | Application de store | Sélectionnez **Windows 10** sous **Microsoft Edge, version 77 ou ultérieure** comme **type d’application**. |
 | Microsoft Edge, version 77 et ultérieures pour macOS | Application de store | Sélectionnez **macOS** sous **Microsoft Edge, version 77 ou ultérieure** comme **type d’application**. |
 | Applications métier Android | Application métier | Sélectionnez l’application **Métier** comme **type d’application**, sélectionnez le **fichier Package d’application**, puis entrez un fichier d’installation Android avec l’extension **.apk**.  |
-| Applications métier iOS | Application métier | Sélectionnez l’application **Métier** comme **type d’application**, sélectionnez le **fichier Package d’application**, puis entrez un fichier d’installation iOS avec l’extension **.ipa**.  |
+| Applications métier iOS/iPadOS | Application métier | Sélectionnez **Application métier** comme **Type d’application**, sélectionnez le **Fichier de package d’application**, puis entrez un fichier d’installation iOS/iPadOS avec l’extension **.ipa**.  |
 | Applications métier Windows Phone | Application métier | Sélectionnez l’application **Métier** comme **Type d’application**, sélectionnez le **fichier de package d’application**, puis entrez un fichier d’installation Windows Phone avec l’extension **.xap**.  |
 | Applications métier Windows | Application métier | Sélectionnez l’application **Métier** comme type d’application, sélectionnez le **fichier de package d’application**, puis entrez un fichier d’installation Windows avec l’extension **.msi**, **.appx**, **.appxbundle**, **.msix** ou **.msixbundle**. |
-| Application iOS intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
+| Application iOS/iPadOS intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
 | Application Android intégrée  | Application intégrée | Sélectionnez **Application intégrée** comme **type d’application**, puis sélectionnez l’application intégrée dans la liste des applications fournies.  |
 | Applications web  | Application web  | Sélectionnez **Lien web** comme **type d’application**, puis entrez une URL valide pointant vers l’application web.  |
 | Applications système Android Entreprise  | Application de store  | Sélectionnez **Application système Android Enterprise** comme **type d’application**, puis entrez le nom de l'application, l'éditeur et le fichier de package.  |
@@ -77,7 +77,7 @@ Le tableau suivant répertorie les types d’applications spécifiques et la fa�
 Vous pouvez ajouter une application dans Microsoft Intune en sélectionnant **Applications** > **Toutes les applications** > **Ajouter**. Le panneau **Sélectionner le type d’application** s’affiche et vous permet de sélectionner le **type d’application**. 
 
 >[!TIP]
-> Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. Par exemple, pour installer une application métier iOS, ajoutez l’application en sélectionnant **Application métier** comme **Type d’application** dans le panneau **Sélectionner le type d’application**. Sélectionnez ensuite le fichier de package d’application (extension .ipa). Ces types d’applications sont généralement écrites en interne.
+> Une application métier est une application que vous ajoutez à partir d’un fichier d’installation d’application. Par exemple, pour installer une application métier iOS/iPadOS, ajoutez l’application en sélectionnant **Application métier** comme **Type d’application** dans le volet **Sélectionner le type d’application**. Sélectionnez ensuite le fichier de package d’application (extension .ipa). Ces types d’applications sont généralement écrites en interne.
 
 ## <a name="assess-app-requirements"></a>Évaluer les exigences relatives aux applications
 En tant qu’administrateur informatique, vous devez déterminer non seulement les applications que votre groupe doit utiliser, mais aussi les fonctionnalités nécessaires pour chaque groupe et sous-groupe. Pour chaque application, déterminez les plateformes nécessaires, les groupes d’utilisateurs qui ont besoin de l’application, les stratégies de configuration à appliquer à ces groupes et les stratégies de protection à appliquer.  
@@ -109,8 +109,8 @@ Utilisez le [Guide de planification, de conception et d’implémentation du dé
 ### <a name="determine-the-type-of-app-for-your-solution"></a>Déterminer le type d’application pour votre solution
 
 Vous pouvez choisir parmi les types d’applications suivants :
-- **Applications du store** : il s’agit d’applications qui ont été chargées sur le store Microsoft, iOS ou Android. Le fournisseur d’une application de store gère et fournit les mises à jour sur l’application. Vous sélectionnez l’application dans la liste de stores et vous l’ajoutez à l’aide d’Intune comme application disponible pour vos utilisateurs.
-- **Applications écrites en interne (métier)** : les applications créées en interne sont des applications métier. Les fonctionnalités de ce type d’application ont été créées pour l’une des plates-formes Intune prises en charge, comme Windows, iOS, macOS ou Android. Votre organisation crée et vous fournit des mises à jour dans un fichier distinct. Vous fournissez des mises à jour de l’application aux utilisateurs en ajoutant et en déployant les mises à jour à l’aide d’Intune.
+- **Applications du store** : il s’agit d’applications qui ont été chargées sur le store Microsoft, iOS/iPadOS ou Android. Le fournisseur d’une application de store gère et fournit les mises à jour sur l’application. Vous sélectionnez l’application dans la liste de stores et vous l’ajoutez à l’aide d’Intune comme application disponible pour vos utilisateurs.
+- **Applications écrites en interne (métier)** : les applications créées en interne sont des applications métier. Les fonctionnalités de ce type d’application ont été créées pour une des plates-formes Intune prises en charge, comme Windows, iOS/iPadOS, macOS ou Android. Votre organisation crée et vous fournit des mises à jour dans un fichier distinct. Vous fournissez des mises à jour de l’application aux utilisateurs en ajoutant et en déployant les mises à jour à l’aide d’Intune.
 - **Applications sur le web** : les applications web sont des applications client-serveur. Le serveur fournit l’application web, qui englobe l’interface utilisateur, le contenu et les fonctionnalités. De plus, les plateformes d’hébergement web modernes offrent généralement, entre autres avantages, la sécurité et l’équilibrage de charge. Ce type d’application est géré séparément sur le web. Vous utilisez Intune pour pointer vers ce type d’application. Vous affectez également les groupes d’utilisateurs qui peuvent accéder à l’application. Notez qu’Android ne prend pas en charge les applications web.
 
 À mesure que vous déterminez les applications dont a besoin votre organisation, tenez compte de la façon dont les applications s’intègrent aux services cloud, des données auxquelles les applications accèdent, si les applications sont disponibles pour les utilisateurs BYOD et si les applications nécessitent un accès à Internet.
@@ -128,7 +128,7 @@ Les applications gérées par Intune peuvent également activer la protection de
 
 ### <a name="understanding-licensed-apps"></a>Présentation des applications sous licence
 En plus des applications Web, des applications de store et des applications métier, vous devez avoir connaissance de la destination des applications du programme d’achat en volume et des applications sous licence, notamment : 
-- **Programme d’achat en volume Apple pour les entreprises (iOS)** : l’App Store iOS vous permet d’acheter plusieurs licences pour une application que vous souhaitez exécuter dans votre entreprise. Le fait d’acheter plusieurs copies aide à gérer efficacement les applications de l’entreprise. Pour plus d’informations, consultez [Gérer les applications iOS achetées en volume](vpp-apps-ios.md).
+- **Programme d’achat en volume Apple pour les entreprises (iOS)** : l’App Store iOS/iPadOS vous permet d’acheter plusieurs licences pour une application que vous voulez exécuter dans votre entreprise. Le fait d’acheter plusieurs copies aide à gérer efficacement les applications de l’entreprise. Pour plus d’informations, consultez [Gérer les applications iOS/iPadOS achetées en volume](vpp-apps-ios.md).
 - **Profil professionnel Android** : La façon dont vous affectez des applications à des appareils avec profil professionnel Android diffère de celle dont vous les affectez à des appareils Android standard. Toutes les applications que vous installez pour des profils professionnels Android proviennent du Managed Google Play Store. Intune vous permet de rechercher les applications que vous souhaitez et de les approuver. L’application apparaît ensuite dans le nœud **Applications sous licence** du portail Azure, et vous pouvez gérer l’affectation de l’application de la même façon que pour toute autre application.
 - **Microsoft Store pour Entreprises (Windows 10)** : Le Microsoft Store pour Entreprises propose un emplacement dans lequel vous pouvez trouver et acheter des applications pour votre organisation, individuellement ou en volume. En connectant le store à Microsoft Intune, vous pouvez gérer les applications achetées en volume dans le portail Azure. Pour plus d’informations, consultez [Gérer des applications à partir du Microsoft Store pour Entreprises](windows-store-for-business.md).
 
@@ -139,7 +139,7 @@ En plus des applications Web, des applications de store et des applications mét
 Avant de commencer à ajouter et affecter des applications, tenez compte des points suivants :
 
 - Quand vous ajoutez et affectez une application à partir d’un store, vos utilisateurs doivent avoir un compte sur ce store pour pouvoir installer l’application.
-- Certaines applications ou certains éléments que vous affectez peuvent dépendre d’applications iOS intégrées. Par exemple, si vous affectez un livre dans le store iOS, l’application iBooks doit être présente sur l’appareil. Si vous avez supprimé l’application iBook intégrée, vous ne pouvez pas utiliser Intune pour la réactiver.
+- Certaines applications ou certains éléments que vous affectez peuvent dépendre d’applications iOS/iPadOS intégrées. Par exemple, si vous affectez un livre dans le store iOS/iPadOS, l’application iBooks doit être présente sur l’appareil. Si vous avez supprimé l’application iBook intégrée, vous ne pouvez pas utiliser Intune pour la réactiver.
 
 > [!IMPORTANT]
 > Si vous modifiez le nom de l’application sur le portail Intune Azure après l’avoir déployée et installée, vous ne pourrez plus la cibler à l’aide de commandes.
@@ -153,7 +153,7 @@ La configuration requise pour l’espace de stockage cloud est la suivante :
 - La taille maximale de chaque fichier que vous chargez s’élève à 8 Go.
 
   > [!NOTE]
-  > Les applications métier (LOB) Windows, notamment Win32, Windows Universal AppX, l’ensemble Windows Universal AppX, Windows Universal MSI X et l’ensemble Windows Universal MSI X, ont une taille maximale de 8 Go par application. Toutes les autres applications métier, notamment iOS, ont une limite de taille maximale de 2 Go par application.
+  > Les applications métier (LOB) Windows, notamment Win32, Windows Universal AppX, l’ensemble Windows Universal AppX, Windows Universal MSI X et l’ensemble Windows Universal MSI X, ont une taille maximale de 8 Go par application. Toutes les autres applications métier, notamment iOS/iPadOS, ont une limite de taille maximale de 2 Go par application.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Créer et modifier des catégories pour les applications
 

@@ -1,6 +1,6 @@
 ---
-title: Applications iOS avec stratégies de protection des applications
-description: Cet article décrit ce qui se produit lorsque votre application iOS est gérée par des stratégies de protection d’application.
+title: Applications iOS/iPadOS avec stratégies de protection des applications
+description: Cet article décrit ce qui se produit quand votre application iOS/iPadOS est gérée par des stratégies de protection d’application.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
-ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
+ms.openlocfilehash: c854811a9deb938613af872f3cf86244ab9121b3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606619"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514657"
 ---
-# <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Ce qui se passe quand votre application iOS est gérée par des stratégies de protection d'application
+# <a name="what-to-expect-when-your-iosipados-app-is-managed-by-app-protection-policies"></a>Ce qui se passe quand l’application iOS/iPadOS est gérée par des stratégies de protection d’application
 
 Les stratégies de protection des applications Intune s’appliquent aux applications utilisées à des fins professionnelles ou scolaires. Cela signifie que lorsque vos employés et élèves utilisent leurs applications dans un contexte personnel, ils ne remarquent aucune différence au sein de leur expérience. Dans le contexte professionnel ou scolaire, toutefois, ils peuvent recevoir des invitations à prendre des décisions de compte, à mettre à jour leurs paramètres ou à vous contacter pour obtenir de l’aide. Utilisez cet article pour découvrir les expériences de vos utilisateurs lorsqu’ils essaient d’accéder à des applications protégées par Intune et de les utiliser.  
 
@@ -34,7 +34,7 @@ Si l’appareil **n’est pas inscrit dans Intune**, l’utilisateur est invité
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
-<!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
+<!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
 Si l’appareil est **inscrit pour la gestion dans Intune**, l’utilisateur voit un message indiquant que son application est désormais gérée.
 

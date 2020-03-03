@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: c454ae6184f4d2a7c3c31f3c61d2cf4331ac187c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966383"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514096"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurer l’infrastructure pour prendre en charge SCEP avec Intune
 
@@ -148,7 +148,7 @@ Pour suivre les sections suivantes, vous devez connaître Windows Server 2012 R
        > [!IMPORTANT]
        > Ajoutez uniquement les stratégies d’application dont vous avez besoin. Confirmez vos choix avec vos administrateurs de sécurité.
 
-     - Pour les modèles de certificat iOS et macOS, modifiez aussi **Utilisation de la clé** et vérifiez que **Signature faisant preuve de l’origine** n’est pas sélectionnée.
+     - Pour les modèles de certificat iOS/iPadOS et macOS, modifiez aussi **Utilisation de la clé** et vérifiez que **Signature faisant preuve de l’origine** n’est pas sélectionné.
 
      ![Onglet Modèle, Extensions](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -217,7 +217,7 @@ Après avoir [créé le modèle de certificat SCEP](#create-the-scep-certificate
 Par défaut, Intune utilise la valeur configurée dans le modèle. Toutefois, vous pouvez configurer l’autorité de certification pour permettre au demandeur d’entrer une valeur différente, que vous pouvez alors définir à partir de la console d’administration Intune.
 
 > [!IMPORTANT]
-> Pour iOS et macOS, utilisez toujours une valeur définie dans le modèle.
+> Pour iOS/iPadOS et macOS, utilisez toujours une valeur définie dans le modèle.
 
 #### <a name="to-configure-a-value-that-can-be-set-from-within-the-intune-console"></a>Pour configurer une valeur qui peut être définie à partir de la console Intune
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: aab10058fe507a956bb793902e6f7b09d8579966
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125045"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576550"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Mises à jour de l’interface utilisateur pour les applications utilisateur final Intune
 
@@ -59,7 +59,7 @@ L’expérience d’inscription pour l’application Portail d’entreprise macO
 ## <a name="week-of-october-28-2019"></a>Semaine du 28 octobre 2019  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Conception de liste de contrôle améliorée dans l’application Portail d’entreprise pour Android <!-- 5550857 -->  
-La liste de contrôle de d’installation d’application Portail d’entreprise pour Android a été mise à jour avec un design épuré et de nouvelles icônes. Les modifications s’alignent sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS. Pour consulter les étapes d’inscription mises à jour, consultez [S’inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) et [Inscrire votre appareil Android](/intune-user-help/enroll-device-android-company-portal).  
+La liste de contrôle de d’installation d’application Portail d’entreprise pour Android a été mise à jour avec un design épuré et de nouvelles icônes. Les modifications s’alignent sur les mises à jour récentes apportées à l’application Portail d’entreprise pour iOS/iPadOS. Pour consulter les étapes d’inscription mises à jour, consultez [S’inscrire avec un profil professionnel Android](/intune-user-help/enroll-device-android-work-profile) et [Inscrire votre appareil Android](/intune-user-help/enroll-device-android-company-portal).  
 
 Les écrans suivants illustrent la liste de vérification mise à jour pour l’inscription de profil professionnel Android :
 
@@ -216,7 +216,7 @@ La [vue de navigation du système Fluent Design](https://docs.microsoft.com/wind
 ## <a name="week-of-april-2-2018"></a>Semaine du 2 avril 2018
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Mise à jour de l’expérience utilisateur de l’application Portail d’entreprise pour iOS <!-- 1412866 -->
-Nous avons publié une mise à jour majeure de l’expérience utilisateur de l’application Portail d’entreprise pour iOS. La mise à jour présente une toute nouvelle conception visuelle qui offre une apparence actualisée. Nous avons conservé les fonctionnalités de l’application, mais amélioré sa facilité d’utilisation et son accessibilité.  
+Nous avons publié une mise à jour majeure de l’expérience utilisateur de l’application Portail d’entreprise pour iOS/iPadOS. La mise à jour présente une toute nouvelle conception visuelle qui offre une apparence actualisée. Nous avons conservé les fonctionnalités de l’application, mais amélioré sa facilité d’utilisation et son accessibilité.  
 
 Vous verrez également :
 - Prise en charge de l’iPhone X.
@@ -267,7 +267,7 @@ Si vous avez activé le [mappage de groupe d’appareils](../enrollment/device-g
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Améliorations apportées au workflow de configuration des appareils sur le Portail d’entreprise pour iOS dans la version 2.9.0 <!-- 1417174 -->
 
-Nous avons amélioré le workflow de configuration d’appareils dans l’application Portail d’entreprise pour iOS. La langue est plus conviviale, et nous avons regroupé des écrans dans la mesure du possible. La langue est également plus adaptée à l’entreprise, car nous utilisons à chaque fois son nom dans le texte de configuration.
+Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour iOS/iPadOS. La langue est plus conviviale, et nous avons regroupé des écrans dans la mesure du possible. La langue est également plus adaptée à l’entreprise, car nous utilisons à chaque fois son nom dans le texte de configuration.
 
 > [!NOTE]
 > Nous utilisons le nom d’entreprise que vous avez défini dans le portail Azure sous **Microsoft Intune** > **Applications clientes** > **Personnalisation du portail d’entreprise** > **Nom de l’entreprise**. Si vous n’avez pas défini cette valeur, nous utiliserons le nom de locataire défini sous **Azure Active Directory** > **Propriétés** > **Nom**. Si vous n’avez pas défini de nom de société dans l’onglet Personnalisation du portail d’entreprise et si vous ne souhaitez pas que votre nom de locataire s’affiche, nous vous recommandons de définir le nom de la société dans ce même onglet. Si vous ne souhaitez pas que ce nom s’affiche dans l’en-tête du portail d’entreprise, vous pouvez décocher la case « Afficher le nom de la société à côté du logo ».
@@ -303,7 +303,7 @@ Nous continuons à optimiser la façon dont la pertinence est suivie : faites-no
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Améliorations de la recherche apportées au site web du portail d’entreprise <!-- 1331697 -->
 Nous améliorons nos fonctions de recherche d’application, en commençant par le [site web du portail d’entreprise](https://portal.manage.microsoft.com). Les recherches sont désormais effectuées sur les catégories d’applications, en plus des champs Nom et Description. Par défaut, les résultats sont triés par ordre décroissant de pertinence. 
 
-Les utilisateurs iOS bénéficient aussi de cette modification, car le site web est également utilisé dans le cadre de l’application Portail d’entreprise pour iOS. Les applications du portail d’entreprise pour Android et Windows bénéficieront de mises à jour similaires dans les prochains mois.
+Les utilisateurs iOS bénéficient aussi de cette modification, car le site web Portail d’entreprise est également utilisé dans le cadre de l’application Portail d’entreprise pour iOS/iPadOS. Les applications du portail d’entreprise pour Android et Windows bénéficieront de mises à jour similaires dans les prochains mois.
 
 Nous continuons à optimiser la façon dont la pertinence est suivie : faites-nous savoir comment elle fonctionne en utilisant le lien « Commentaires » au bas du site web du portail d’entreprise.
 
@@ -407,7 +407,7 @@ La page de détails des applications de l’application Portail d’entreprise p
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Amélioration de l’expérience de connexion sur l’ensemble des applications du Portail d’entreprise pour toutes les plateformes <!--User Story 1132123-->
 
-Dans les mois à venir, nous introduirons des changements visant à améliorer l’expérience de connexion aux applications Portail d’entreprise Intune pour Android, iOS et Windows. La nouvelle expérience utilisateur s’affiche automatiquement sur toutes les plates-formes utilisées pour l’application du portail d’entreprise lorsqu’Azure AD apporte cette modification. En outre, les utilisateurs peuvent désormais se connecter au portail d’entreprise à partir d’un autre appareil grâce à un code à usage unique automatiquement généré. Cette fonction se révèle particulièrement utile lorsque les utilisateurs doivent se connecter sans informations d’identification.  
+Dans les mois à venir, nous introduirons des changements visant à améliorer l’expérience de connexion aux applications Portail d’entreprise Intune pour Android, iOS/iPadOS et Windows. La nouvelle expérience utilisateur s’affiche automatiquement sur toutes les plates-formes utilisées pour l’application du portail d’entreprise lorsqu’Azure AD apporte cette modification. En outre, les utilisateurs peuvent désormais se connecter au portail d’entreprise à partir d’un autre appareil grâce à un code à usage unique automatiquement généré. Cette fonction se révèle particulièrement utile lorsque les utilisateurs doivent se connecter sans informations d’identification.  
 
 Vous trouverez ci-dessous des informations concernant l’expérience de connexion précédente, la nouvelle expérience de connexion avec informations d’identification, ainsi que la nouvelle expérience de connexion depuis un autre appareil.
 
