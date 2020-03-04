@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e86aeb3191c1cfdf2fc9dfab3a4474327b3fbb06
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4a9372a67dc0f45e256c3eba9b816db866e23998
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564209"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781801"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurer l’application Microsoft Managed Home Screen pour Android Entreprise
 
@@ -62,7 +62,7 @@ Le tableau suivant liste les clés de configuration Managed Home Screen disponib
 | Set Grid Size (Définir la taille du quadrillage) | string | Auto | Vous permet de définir la taille du quadrillage pour le positionnement des applications sur l’écran d’accueil géré. Vous pouvez définir le nombre de lignes et de colonnes de l’application pour définir la taille du quadrillage au format suivant `columns;rows`. Si vous définissez la taille du quadrillage, le nombre maximal d’applications qui sont affichées sur une ligne sur l’écran d’accueil correspond au nombre de lignes que vous définissez, et le nombre maximal d’applications qui sont affichées dans une colonne sur l’écran d’accueil correspond au nombre de colonnes que vous définissez. |
 | Enable notifications badge (Activer le badge de notification) | bool | FALSE | Active le badge de notification pour les icônes d’application, qui montre le nombre de nouvelles notifications sur l’application. Si vous activez ce paramètre, les utilisateurs finaux verront les badges de notification sur les applications qui ont des notifications non lues. Si vous laissez cette clé de configuration désactivée, l’utilisateur final ne verra aucun badge de notification pour les applications susceptibles d’avoir des notifications non lues. |
 | Lock Home Screen (Verrouiller l’écran d’accueil) | bool | TRUE | Supprime la capacité de l’utilisateur final à déplacer des icônes d’application sur l’écran d’accueil. Si vous activez cette clé de configuration, les icônes d’application sur l’écran d’accueil seront verrouillées et l’utilisateur final ne pourra pas les glisser-déplacer vers différentes positions du quadrillage de l’écran d’accueil. Si vous affectez la valeur `false`, les utilisateurs finaux pourront déplacer les icônes d’application et les liens web vers l’écran d’accueil géré.  |
-| Set device wall paper (Définir le papier-peint de l’appareil) | string | Par défaut | Vous permet de définir le papier peint de votre choix en entrant l’URL de l’image que vous souhaitez définir comme papier peint. |
+| Set device wall paper (Définir le papier-peint de l’appareil) | string | Valeur par défaut | Vous permet de définir le papier peint de votre choix en entrant l’URL de l’image que vous souhaitez définir comme papier peint. |
 | Set app icon size (Définir la taille de l’icône d’application) | integer | 2 | Vous permet de définir la taille d’icône pour les applications affichées sur l’écran d’accueil. Vous pouvez choisir parmi les valeurs suivantes dans cette configuration pour obtenir différentes tailles : 0 (la plus petite), 1 (petite), 2 (normale), 3 (grande) et 4 (la plus grande). |
 | Set app folder icon (Définir l’icône du dossier d’application) | integer | 0 | Vous permet de définir l’apparence des dossiers d’application sur l’écran d’accueil. Vous pouvez choisir l’apparence parmi les valeurs suivantes : Carré sombre (0), Cercle sombre (1), Carré clair (2), Cercle clair (3) |
 | Set screen orientation (Définir l’orientation de l’écran) | integer | 1 | Vous permet de définir l’orientation de l’écran d’accueil (en mode portrait ou paysage) ou d’autoriser la rotation automatique. Vous pouvez définir l’orientation en entrant les valeurs 1 (pour le mode portrait), 2 (pour le mode paysage) ou 3 (pour la rotation automatique). |

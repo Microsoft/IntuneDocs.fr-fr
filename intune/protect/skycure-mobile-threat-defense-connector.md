@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 60bad9299a3751474ef01220a7c18f16be329448
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515269"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782073"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Connecteur Symantec Endpoint Protection Mobile
 
@@ -38,6 +38,9 @@ Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’en
 - Défense contre les vulnérabilités
 
 Vous pouvez activer l’évaluation des risques par SEP Mobile via les stratégies de conformité d’appareil Intune, puis utiliser les stratégies d’accès conditionnel pour autoriser un appareil non conforme à accéder aux ressources de l’entreprise en fonction des menaces détectées, ou l’en empêcher.
+
+> [!NOTE]
+> Ce fournisseur Mobile Threat Defense n’est pas pris en charge pour les appareils non inscrits.
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Comment Intune et SEP Mobile aident-ils à protéger les ressources de votre entreprise ?
 

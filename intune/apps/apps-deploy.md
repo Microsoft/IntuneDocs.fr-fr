@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cee415174d68f3e6c9e72f0f0e06aa0d5d80ad91
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: b3d29dce9b12a18e5d0f77cd7f9ecac07b3aefee
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77511852"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781221"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Attribuer des applications à des groupes avec Microsoft Intune
 
@@ -67,7 +67,7 @@ Le tableau suivant répertorie les différentes options disponibles pour attribu
    - **Désinstaller** : L’application est désinstallée des appareils dans les groupes sélectionnés si Intune a installé l’application sur l’appareil via une attribution « disponible pour les appareils inscrits » ou « Requis » en utilisant le même déploiement. Les liens Web ne peuvent pas être supprimés après le déploiement.
 
      > [!NOTE]
-     > **Pour les applications iOS/iPadOS uniquement ** :
+     > **Pour les applications iOS/iPadOS uniquement**  :
      > - Pour configurer ce qui arrive sur les applications gérées lorsque les appareils ne sont plus gérés, vous pouvez sélectionner le paramètre prévu sous **Désinstaller lors de la suppression de l’appareil**. Pour plus d’informations, consultez [Paramètre de désinstallation des applications pour les applications gérées iOS/iPadOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - Si vous avez créé un profil VPN iOS/iPadOS qui contient des paramètres VPN par application, vous pouvez le sélectionner sous **VPN**. Quand l’application est exécutée, la connexion VPN est ouverte. Pour plus d’informations, consultez [Paramètres VPN pour les appareils iOS/iPadOS](../vpn-settings-ios.md).
      >

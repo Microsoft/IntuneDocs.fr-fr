@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 313d9f470e9467cc80bae9c2400d4cc64aacc7ea
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: c0cfe99f022a5e5448bdee453fb0210f6b7195fc
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886764"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181808"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nouveautés de la préversion de Microsoft Intune - mois précédents
 
@@ -187,7 +187,7 @@ L’inscription à Intune et le Portail d’entreprise Intune prennent maintenan
 Au moment de renommer un appareil Windows, vous devez suivre les nouvelles règles :
 - 15 caractères ou moins (doit être inférieur ou égal à 63 octets, à l’exclusion de la valeur NULL de fin)
 - Valeur non null ou chaîne vide
-- Caractères ASCII autorisés : lettres (a-z, A-Z), chiffres (0-9) et traits d’union
+- Caractères ASCII autorisés : Lettres (a-z, A-Z), chiffres (0-9) et traits d’union
 - Caractères Unicode autorisés : caractères >= 0x80, format UTF8 valide, mappage possible à un nom de domaine international (autrement dit, RtlIdnToNameprepUnicode convient ; voir la RFC 3492)
 - Les noms ne doivent pas contenir que des chiffres
 - Aucun espace dans le nom
@@ -407,7 +407,7 @@ S’applique à :
 ### <a name="device-enrollment"></a>Inscription des appareils
 
 #### <a name="new-tenants-will-default-away-from-android-device-administrator-management---4869790-----"></a>Par défaut, les nouveaux locataires sont éloignés de la gestion des administrateurs d’appareils Android<!-- 4869790   -->
-Les fonctionnalités d’administrateur d’appareils Android ont été remplacées par Android Entreprise. Par conséquent, nous vous recommandons d’utiliser Android Entreprise pour de nouvelles inscriptions à la place. Dans une prochaine mise à jour, les nouveaux locataires devront suivre les étapes prérequises suivantes de l’inscription Android pour utiliser la gestion des administrateurs d’appareils : accédez à **Intune** > **Inscription de l’appareil** > **Inscription Android** > **Appareils personnels et d’entreprise avec des privilèges d’administration** d’appareils > **Utiliser l’administrateur d’appareil pour gérer les appareils**.
+Les fonctionnalités d’administrateur d’appareils Android ont été remplacées par Android Entreprise. Par conséquent, nous vous recommandons d’utiliser Android Entreprise pour de nouvelles inscriptions à la place. Dans une prochaine mise à jour, les nouveaux locataires devront suivre les étapes préalables suivantes de l’inscription Android pour utiliser la gestion des administrateurs d’appareils : Accédez à **Intune** > **Inscription d’un appareil** > **Inscription Android** > **Appareils personnels et appartenant à l’entreprise avec privilèges d’administration d’appareils** > **Utiliser un administrateur d’appareils pour gérer les appareils**.
 
 Les environnements des locataires existants ne seront pas modifiés.
 
@@ -526,7 +526,7 @@ Dans Intune, vous pouvez contrôler les fonctionnalités et les paramètres dans
 Dans cette mise à jour, les fonctionnalités suivantes sont ajoutées :
 
 - **Périphériques dédiés** > **Multi-application** : Le **bouton d’accueil virtuel** peut être affiché en balayant sur l’appareil, ou en flottant sur l’écran pour que les utilisateurs puissent le déplacer.
-- **Appareils dédiés** > **Multi-application** : **Accès à la lampe torche** permet aux utilisateurs d’utiliser la lampe torche. 
+- **Périphériques dédiés** > **Multi-application** : **L’accès à la lampe torche** permet aux utilisateurs d’utiliser la lampe torche. 
 - **Périphériques dédiés** > **Multi-application** : Le **contrôle du volume du média** permet aux utilisateurs de contrôler le volume du média de l’appareil à l’aide d’un curseur. 
 - **Périphériques dédiés** > **Multi-application** :  **Activer un économiseur d’écran**, télécharger une image personnalisée et contrôler quand l’économiseur d’écran est affiché.
 
@@ -580,11 +580,11 @@ Vous pouvez créer des profils pour restreindre des paramètres sur les appareil
 
 - Sur **iOS** > **Restrictions sur les appareils**, il y a quelques modifications :
 
-  - **Applications intégrées** > **Localiser mon iPhone (mode supervisé uniquement)**  : nouveau paramètre qui bloque cette fonctionnalité dans l’application de localisation. 
-  - **Applications intégrées** > **Localiser mes amis (mode supervisé uniquement)**  : nouveau paramètre qui bloque cette fonctionnalité dans l’application de localisation. 
-  - **Sans fil** > **Modification de l’état du Wi-Fi (mode supervisé uniquement)**  : nouveau paramètre qui empêche les utilisateurs d’activer ou de désactiver le Wi-Fi sur l’appareil.
-  - **Clavier et dictionnaire** > **QuickPath (mode supervisé uniquement)**  : nouveau paramètre qui bloque la fonctionnalité QuickPath.
-  - **Cloud et stockage** : **Continuation de l’activité** est renommé en **Handoff**.
+  - **Applications intégrées** > **Localiser mon iPhone (mode supervisé uniquement)**  : Nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. 
+  - **Applications intégrées** > **Localiser mes amis (mode supervisé uniquement)**  : Nouveau paramètre qui bloque cette fonctionnalité dans la fonctionnalité Rechercher mon application. 
+  - **Sans fil** > **Modification de l’état Wi-Fi (mode supervisé uniquement)**  : Nouveau paramètre qui empêche les utilisateurs d’activer ou de désactiver le Wi-Fi sur l’appareil.
+  - **Clavier et dictionnaire** > **QuickPath (mode supervisé uniquement)**  : Nouveau paramètre qui bloque la fonctionnalité QuickPath.
+  - **Cloud et stockage** : **La continuation de l’activité** est renommée **Handoff**.
 
   Pour voir les paramètres actuels, accédez à [Paramètres des appareils iOS pour autoriser ou restreindre les fonctionnalités avec Intune](../configuration/device-restrictions-ios.md).
 
@@ -1002,7 +1002,7 @@ S’applique à : Windows 10 et versions ultérieures
 #### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices---4097904-----"></a>Empêcher les utilisateurs finaux de modifier leur point d’accès personnel et désactiver la journalisation de serveur Siri sur des appareils iOS<!-- 4097904   -->  
 Vous pouvez créer un profil de restrictions pour un appareil iOS (**Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS** pour la plateforme > **Restrictions de l’appareil** pour le type de profil). Cette mise à jour inclut de nouveaux paramètres, que vous pouvez configurer :
 
-- **Applications intégrées** : journalisation côté serveur pour les commandes Siri
+- **Applications intégrées** : Journalisation côté serveur pour les commandes de Siri
 - **Sans fil** : Modification par l’utilisateur du point d’accès personnel (mode supervisé uniquement)
 
 Pour afficher ces paramètres, accédez à [Paramètres d’application intégrée pour iOS](../configuration/device-restrictions-ios.md#built-in-apps) et [Paramètres sans fil pour iOS](../configuration/device-restrictions-ios.md#wireless).
@@ -1444,7 +1444,7 @@ Pour obtenir la liste de ces paramètres, consultez :
 
 - [Paramètres d’appareil Windows 10 et ultérieur pour une exécution en tant que kiosque ](../configuration/kiosk-settings-windows.md)
 - [Restrictions d’appareil pour le navigateur Microsoft Edge](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
-- [Restrictions d’appareils concernant les favoris et la recherche](../configuration/device-restrictions-windows-10.md##favorites-and-search)
+- [Restrictions d’appareils concernant les favoris et la recherche](../configuration/device-restrictions-windows-10.md#favorites-and-search)
 
 S’applique à : Windows 10 et versions ultérieures
 
@@ -1639,7 +1639,7 @@ Lors de la création d’un profil de configuration pour des appareils iOS, vous
 La page [Paramètres d’affichage des messages sur l’écran de verrouillage](../configuration/ios-device-features-settings.md#lock-screen-message) liste les paramètres.
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Nouveaux paramètres de restriction d’appareil App Store, affichage de document, jeux ajoutés aux appareils iOS<!-- 2827760-->
-Dans **Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS** pour la plateforme > **Restrictions d’appareil** pour le type de profil > **App Store, affichage de documents, jeux**, les paramètres suivants sont ajoutés : Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés, Autoriser les applications non gérées à lire à partir de comptes de contacts gérés. Pour voir ces paramètres, accédez à [Restrictions des appareils iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
+Dans **Configuration de l’appareil** > **Profils** > **Créer un profil** > **iOS** comme plateforme > **Restrictions d’appareil** comme type de profil > **App Store, affichage de document, jeux**, les paramètres suivants sont ajoutés : Autoriser les applications gérées à écrire des contacts dans des comptes de contacts non gérés et Autoriser les applications non gérées à lire à partir de comptes de contacts gérés. Pour voir ces paramètres, consultez [Restrictions d’appareil iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices---3201839-3201843---"></a>Nouveaux paramètres de notification, d’indicateurs et de keyguard pour les appareils des propriétaires d’appareils Android Entreprise<!-- 3201839 3201843 -->
 Cette mise à jour comporte de nouvelles fonctionnalités pour les propriétaires d’appareils Android pour les entreprises. Pour pouvoir les utiliser, accédez à **Configuration de l’appareil** > **Profils** > **Créer un profil** > dans **Plateforme**, choisissez **Android pour les entreprises** > dans **Type de profil**, choisissez **Propriétaire de l’appareil uniquement** > **Restrictions de l’appareil**.
@@ -1929,7 +1929,7 @@ Les utilisateurs finaux peuvent désormais utiliser le menu contextuel sur un ap
 Les utilisateurs finaux peuvent désormais déclencher des actions d’application et d’appareil dans le Portail d’entreprise Windows à l’aide de raccourcis clavier (accélérateurs).
 
 #### <a name="require-non-biometric-pin-after-a-specified-timeout---1506985---"></a>Demander un code PIN non biométrique après le délai spécifié<!-- 1506985 -->
-En demandant un code PIN non biométrique après un délai d’expiration spécifié par l’administrateur, Intune offre une sécurité renforcée pour les applications compatibles avec MAM (gestion des applications mobiles) en limitant l’utilisation de l’identification biométrique pour l’accès aux données d’entreprise. Les paramètres affectent les utilisateurs qui s’appuient sur Touch ID (iOS), Face ID (iOS), Android Biometric ou d’autres méthodes d’authentification biométriques à venir pour accéder à leurs applications compatibles APP/MAM. Ces paramètres permettent aux administrateurs Intune d’avoir un contrôle plus précis sur l’accès utilisateur, en supprimant les cas où un appareil avec plusieurs empreintes digitales ou d’autres méthodes d’accès biométriques peut révéler des données d’entreprise à un utilisateur inapproprié. Dans le portail Azure, ouvrez **Microsoft Intune**. Sélectionnez **Applications clientes** > **Stratégies de protection des applications** > **Ajouter une stratégie** > **Paramètres**. Recherchez la section **Accès** pour des paramètres spécifiques. Pour plus d’informations sur les paramètres d’accès, consultez [Paramètres iOS](../apps/app-protection-policy-settings-ios.md#access-requirements) et [Paramètres Android](../apps/app-protection-policy-settings-android.md#access-requirements).
+En demandant un code PIN non biométrique après un délai d’expiration spécifié par l’administrateur, Intune offre une sécurité renforcée pour les applications compatibles avec GAM (gestion des applications mobiles) en limitant l’utilisation de l’identification biométrique pour l’accès aux données d’entreprise. Les paramètres affectent les utilisateurs qui s’appuient sur Touch ID (iOS), Face ID (iOS), Android Biometric ou d’autres méthodes d’authentification biométriques à venir pour accéder à leurs applications compatibles APP/GAM. Ces paramètres permettent aux administrateurs Intune d’avoir un contrôle plus précis sur l’accès utilisateur, en supprimant les cas où un appareil avec plusieurs empreintes digitales ou d’autres méthodes d’accès biométriques peut révéler des données d’entreprise à un utilisateur inapproprié. Dans le portail Azure, ouvrez **Microsoft Intune**. Sélectionnez **Applications clientes** > **Stratégies de protection des applications** > **Ajouter une stratégie** > **Paramètres**. Recherchez la section **Accès** pour des paramètres spécifiques. Pour plus d’informations sur les paramètres d’accès, consultez [Paramètres iOS](../apps/app-protection-policy-settings-ios.md#access-requirements) et [Paramètres Android](../apps/app-protection-policy-settings-android.md#access-requirements).
 
 #### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices---2244713---"></a>Paramètres de transfert de données Intune APP sur des appareils inscrits dans la MDM iOS<!-- 2244713 -->
 Vous pouvez séparer le contrôle des paramètres de transfert de données d’Intune APP sur les appareils inscrits à la solution MDM pour iOS de la spécification de l’identité de l’utilisateur inscrit, également appelé UPN (nom d’utilisateur principal). Les administrateurs qui n’utilisent pas IntuneMAMUPN ne verront aucun changement de comportement. Lorsque cette fonctionnalité est disponible, les administrateurs qui utilisent IntuneMAMUPN pour contrôler le comportement du transfert de données sur les appareils inscrits doivent consulter les nouveaux paramètres et mettre à jour leurs paramètres APP si nécessaire.
@@ -3448,7 +3448,7 @@ La fonctionnalité d’audit se trouve sous le groupe **SURVEILLER**. Il existe 
 ### <a name="company-portal-app-for-macos-is-available--1541700--"></a>L’application Portail d’entreprise pour macOS est disponible<!--1541700-->
 Le Portail d’entreprise Intune sous macOS bénéficie d’une expérience mise à jour. Il a été optimisé pour afficher clairement toutes les informations et les avis de conformité dont vos utilisateurs ont besoin pour tous les appareils qu’ils ont inscrits. Une fois que le Portail d’entreprise Intune a été déployé sur un appareil, il bénéficie de la mise à jour automatique Microsoft (AutoUpdate) pour macOS. Vous pouvez télécharger le nouveau Portail d’entreprise Intune pour macOS en ouvrant une session sur le site web du Portail d’entreprise Intune sur un appareil macOS.
 
-### <a name="microsoft-planner-is-now-part-of-the-mobile-app-management-mam-list-of-approved-apps----1248473---"></a>Microsoft Planner fait maintenant partie de la liste des applications approuvées par la gestion des applications mobiles (MAM) <!-- 1248473 -->
+### <a name="microsoft-planner-is-now-part-of-the-mobile-app-management-mam-list-of-approved-apps----1248473---"></a>Microsoft Planner fait maintenant partie de la liste des applications approuvées par la gestion des applications mobiles (GAM) <!-- 1248473 -->
 L’application Microsoft Planner pour iOS et Android fait désormais partie des applications approuvées pour la gestion des applications mobiles (MAM). Elle est configurable par le biais du panneau Intune App Protection sur le Portail Azure de tous les clients.
 - Pour plus de détails, consultez la page [Liste MAM des applications approuvées](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
@@ -3768,7 +3768,7 @@ Vous verrez d’autres optimisations relatives aux nouveaux éléments d’inter
 
 Quand vous inscrivez un appareil Android for Work avec un profil professionnel, c’est l’application Portail d’entreprise dans le profil professionnel qui effectue les tâches de gestion sur l’appareil. 
 
-À moins que vous n’utilisiez une application MAM dans le profil personnel, l’application Portail d’entreprise pour Android n’a plus d’utilité. Pour améliorer l’expérience de profil professionnel, Intune masquera automatiquement l’application Portail d’entreprise personnelle après une inscription de profil professionnel réussie.
+À moins que vous n’utilisiez une application GAM dans le profil personnel, l’application Portail d’entreprise pour Android n’a plus d’utilité. Pour améliorer l’expérience de profil professionnel, Intune masquera automatiquement l’application Portail d’entreprise personnelle après une inscription de profil professionnel réussie.
 
 L’application Portail d’entreprise pour Android peut être activée à tout moment dans le profil personnel en recherchant [Portail d’entreprise dans le Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) et en appuyant sur **Activer**.
 
@@ -4078,7 +4078,7 @@ Intune peut maintenant utiliser le logiciel [TeamViewer](https://www.teamviewer.
 
 #### <a name="new-app-protection-policies-conditions-for-mam---679864---"></a>Nouvelles conditions de stratégies de protection des applications pour la gestion des applications mobiles<!-- 679864 -->
 
-Vous pouvez maintenant définir un ensemble de spécifications pour les utilisateurs sans inscription MAM qui applique les éléments suivants :
+Vous pouvez maintenant définir un ensemble de spécifications de GAM pour les utilisateurs sans inscription qui applique les éléments suivants :
 
 - Version minimale de l’application
 - Version minimale du système d’exploitation
@@ -4232,9 +4232,9 @@ Vous pouvez désormais créer une [stratégie de mise à niveau d’édition pou
 Vous pouvez désormais joindre un grand nombre d’appareils qui exécutent la mise à jour Windows 10 Creators pour Azure Active Directory et Intune à l’aide du Concepteur de configuration Windows (WCD). Pour activer [l’inscription MDM en bloc](../enrollment/windows-bulk-enroll.md) pour votre client Azure AD, créez un package de configuration qui joint les appareils à votre client Azure AD à l’aide du Concepteur de configuration Windows, puis appliquez le package aux appareils d’entreprise que vous souhaitez inscrire et gérer en bloc. Une fois le package appliqué à vos appareils, ceux-ci se connectent à Azure AD, s’inscrivent dans Intune et vos utilisateurs Azure AD peuvent s’y connecter.  Les utilisateurs d’Azure AD agissent sur ces appareils en tant qu’utilisateurs standard ; ils reçoivent les stratégies qui leur sont affectées ainsi que les applications dont ils ont besoin. Les scénarios de libre-service et de portail d’entreprise ne sont pas pris en charge actuellement.
 
 ### <a name="new-mam-settings-for-pin-and-managed-storage-locations---581122-736644---"></a>Nouveaux paramètres de gestion des applications mobiles pour les codes PIN et les emplacements de stockage géré<!-- 581122, 736644 -->
-Deux nouveaux paramètres d’application sont désormais disponibles pour vous aider dans les scénarios de gestion des applications mobiles (MAM, mobile application management) :
+Deux nouveaux paramètres d’application sont désormais disponibles pour vous aider dans les scénarios de gestion des applications mobiles (GAM) :
 
-- **Désactiver le code PIN de l’application quand le code PIN de l’appareil est géré** - Détecte si un code PIN d’appareil est présent sur l’appareil inscrit et, si c’est le cas, contourne le code PIN de l’application déclenché par les stratégies de protection des applications. Ce paramètre permet de réduire le nombre d’invites de code PIN pour les utilisateurs ouvrant une application MAM sur un appareil inscrit. Cette fonctionnalité est disponible pour iOS et Android.
+- **Désactiver le code PIN de l’application quand le code PIN de l’appareil est géré** - Détecte si un code PIN d’appareil est présent sur l’appareil inscrit et, si c’est le cas, contourne le code PIN de l’application déclenché par les stratégies de protection des applications. Ce paramètre permet de réduire le nombre d’invites de code PIN pour les utilisateurs ouvrant une application GAM sur un appareil inscrit. Cette fonctionnalité est disponible pour iOS et Android.
 
 - **Sélectionnez dans quels services de stockage les données d’entreprise peuvent être enregistrées** - Permet de spécifier les emplacements de stockage où enregistrer les données d’entreprise. Les utilisateurs peuvent enregistrer dans les services d’emplacement de stockage sélectionnés, ce qui signifie que tous les autres services d’emplacement de stockage non répertoriés seront bloqués.
 

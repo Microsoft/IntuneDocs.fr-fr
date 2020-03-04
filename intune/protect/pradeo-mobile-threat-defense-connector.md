@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,18 +15,21 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2f03edeb1e402401911ab2c80fa0d699e2628c
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 262d36817e86c8087c6ef4b642d1bd53b1511104
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514878"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782107"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Connecteur Pradeo Mobile Threat Defense avec Intune
 
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise à l’aide d’un accès conditionnel basé sur une évaluation des risques effectuée par Pradeo, une solution MTD qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies par les appareils exécutant l’application Pradeo.
 
 Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Pradeo par le biais des stratégies de conformité des appareils Intune, et les utiliser pour autoriser ou empêcher les appareils non conformes d’accéder aux ressources de l’entreprise en fonction des menaces détectées.
+
+> [!NOTE]
+> Ce fournisseur Mobile Threat Defense n’est pas pris en charge pour les appareils non inscrits.
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Comment Intune et Pradeo aident-ils à protéger les ressources de votre entreprise ?
 
@@ -58,7 +61,7 @@ Quand des applications malveillantes telles que des programmes malveillants sont
 
 ### <a name="control-access-based-on-threat-to-network"></a>Contrôler l’accès en fonction de la menace pour le réseau
 
-Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)**, et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
+Détectez les menaces pour votre réseau, comme les **attaques de l’intercepteur (« Man-in-the-middle »)** , et protégez l’accès aux réseaux Wi-Fi en fonction du risque évalué pour l’appareil.
 
 **Bloquer l’accès au réseau via le Wi-Fi :**
 

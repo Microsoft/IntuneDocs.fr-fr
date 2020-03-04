@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41c08d1912bf9c79507c2a6627205979504f340d
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 66cf454290903705d8500c2b1f9a07c9097351bf
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564239"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781753"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Préparer la configuration des stratégies de protection d’application pour Windows 10 
 
@@ -41,7 +41,7 @@ Activez la gestion des applications mobiles (GAM) pour Windows 10 en définissan
 6. Configurez les paramètres dans le groupe **Restaurer les URL Gestion des applications mobiles par défaut** du volet **Configurer**.
 
    **Portée de l'utilisateur Gestion des applications mobiles**  
-   Utilisez l’inscription automatique GAM pour gérer les données d’entreprise sur les périphériques Windows de vos employés. L’inscription automatique GAM sera configurée pour des scénarios BYOD (Apportez votre propre appareil).<ul><li>**Aucune.**<br>Sélectionnez cette option si aucun utilisateur ne peut être inscrit dans MAM.</li><li>**Quelques-uns**<br>Sélectionnez les groupes Azure AD qui contiennent les utilisateurs qui seront inscrits dans GAM.</li><li>**Tous**<br>Sélectionnez cette option si tous les utilisateurs peuvent être inscrits dans GAM.</li></ul>
+   Utilisez l’inscription automatique GAM pour gérer les données d’entreprise sur les périphériques Windows de vos employés. L’inscription automatique GAM sera configurée pour des scénarios BYOD (Apportez votre propre appareil).<ul><li>**Aucun**<br>Sélectionnez cette option si aucun utilisateur ne peut être inscrit dans MAM.</li><li>**Partiel**<br>Sélectionnez les groupes Azure AD qui contiennent les utilisateurs qui seront inscrits dans GAM.</li><li>**Tous**<br>Sélectionnez cette option si tous les utilisateurs peuvent être inscrits dans GAM.</li></ul>
 
    **URL des conditions d'utilisation de GAM**  
    L’URL des conditions d’utilisation MAM n’est pas prise en charge pour Microsoft Intune. Cette zone d’entrée doit être vide pour appliquer des stratégies de protection.

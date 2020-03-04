@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: c9245ca028bdb5589df8c76b10560d9130a1108c
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886800"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181719"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gérer les mises à jour logicielles de Windows 10 dans Intune
 
@@ -77,14 +77,14 @@ Les anneaux de mise à jour Windows 10 prennent en charge les [balises d’éten
 
 ### <a name="create-and-assign-update-rings"></a>Créer et affecter des anneaux de mise à jour
 
-1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Sélectionnez **Appareils** > **Windows** > **Anneaux de mise à jour Windows 10** > **Créer**.
 
 3. Sous *De base*, spécifiez un nom, une description (facultatif), puis sélectionnez **Suivant**.
-  ![Créer un anneau de mise à jour]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. Sous **Paramètres d’anneau de mise à jour**, configurez les paramètres conformément aux besoins de votre entreprise. Pour plus d’informations sur les paramètres disponibles, consultez les paramètres de mise à jour Windows. Après avoir configuré les paramètres *Mise à jour et Expérience utilisateur*, sélectionnez **Suivant**.
+  ![Créer un anneau de mise à jour](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. Sous **Paramètres d’anneau de mise à jour**, configurez les paramètres conformément aux besoins de votre entreprise. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres de Windows Update](../protect/windows-update-settings.md). Après avoir configuré les paramètres *Mise à jour et Expérience utilisateur*, sélectionnez **Suivant**.
 
 5. Sous **Balises d’étendue**, sélectionnez **+ Sélectionner des balises d’étendue** pour ouvrir le volet *Sélectionner des balises* si vous voulez appliquer des balises d’étendue à l’anneau de mise à jour. Choisissez une ou plusieurs balises, puis cliquez sur **Sélectionner** pour les ajouter à l’anneau de mise à jour et revenir au volet *Balises d’étendue*.
 

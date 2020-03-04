@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/17/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: e3efa4a354a71846a5add46794ed853696d04560
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77513399"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216093"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Guide pratique pour gérer les applications iOS et macOS achetées par le biais d’un programme d’achat en volume Apple avec Microsoft Intune
 
@@ -87,7 +87,7 @@ Migrez le contenu et les jetons VPP achetés existants vers des applications et 
 1. Invitez les acheteurs VPP à rejoindre votre organisation et demandez à chaque utilisateur de sélectionner un emplacement unique. 
 2. Assurez-vous que tous les acheteurs VPP au sein de votre organisation ont terminé l’étape 1 avant de continuer.
 3. Vérifiez que toutes les applications et licences achetées ont été migrées vers des applications et des livres dans Apple Business Manager ou Apple School Manager.
-4. Téléchargez un nouveau jeton d’emplacement en accédant à **Apple Business (ou School)** > **Paramètres** > **Applications et livres** > **Mes jetons de serveur**.
+4. Téléchargez un nouveau jeton d’emplacement en accédant à **Apple Business (ou School)**  > **Paramètres** > **Applications et livres** > **Mes jetons de serveur**.
 5. Mettez à jour le jeton d’emplacement dans le centre d’administration Microsoft Endpoint Manager en accédant à **Administration des locataires** > **Connecteurs et jetons** > **Jetons Apple VPP** et synchronisez le jeton.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Chargez un jeton VPP Apple ou un jeton d’emplacement

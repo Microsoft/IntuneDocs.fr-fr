@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 126ea5a1798252f29e988553edfea462eff2fd7e
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609185"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256456"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Ajouter des applications de Google Play géré à des appareils d’entreprise Android avec Intune
 
@@ -139,7 +139,7 @@ Pour plus d’informations sur les applications Google Play gérées privées, a
 1. Connectez-vous à [Google Play Developer Console](https://play.google.com/apps/publish) avec le compte que vous avez utilisé pour configurer la connexion entre Intune et Android Entreprise.  
     Si vous vous connectez pour la première fois, vous devez vous inscrire et payer des frais pour devenir membre du programme de développement Google.
 2. Dans la console, sélectionnez **Ajouter une nouvelle application**.
-3. Vous chargez votre application et fournissez des informations la concernant de la même manière que vous publiez une application sur le Google Play Store. Toutefois, vous devez sélectionner **Mettre cette application à la disposition de mon organisation uniquement (<*nom de l’organisation*>)**.
+3. Vous chargez votre application et fournissez des informations la concernant de la même manière que vous publiez une application sur le Google Play Store. Toutefois, vous devez sélectionner **Mettre cette application à la disposition de mon organisation uniquement (<*nom de l’organisation*>)** .
 
     ![Mettre l’application à la disposition de votre organisation uniquement](./media/apps-add-android-for-work/restrict.png)
 
@@ -155,9 +155,6 @@ Pour plus d’informations sur les applications Google Play gérées privées, a
 Les liens web Google Play gérés peuvent être installés et gérés comme les autres applications Android. Lorsqu’ils sont installés sur un appareil, ils s’affichent dans la liste des applications de l’utilisateur en même temps que les autres applications qu’ils ont installées. Lorsque les utilisateurs appuient dessus, ils s’ouvrent dans le navigateur de l’appareil.
 
 Les liens web s’ouvrent avec Microsoft Edge ou toute autre application de navigateur que vous choisissez de déployer. Veillez à déployer au moins une application de navigateur sur les appareils afin que les liens web puissent s’ouvrir correctement. Toutefois, toutes les options **Affichage** disponibles pour les liens web (plein écran, autonome et interface utilisateur minimale) ne fonctionnent qu’avec le navigateur Chrome. 
-
-> [!IMPORTANT]
-> En date de la publication de ce document, il existe un bogue de Google connu qui empêche les liens web de s’ouvrir sur des appareils avec des navigateurs autres que Chrome. Google s’est engagé à résoudre ce bogue.  Cet avis sera supprimé lorsque Microsoft aura confirmé que Google a publié son correctif.
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sélectionnez **Applications** > **Toutes les applications** > **Ajouter**.
