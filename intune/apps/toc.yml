@@ -161,6 +161,8 @@
             - name: Vue d’ensemble des stratégies de protection des applications
               href: app-protection-policy.md
               displayName: app; protection; policy
+            - name: Infrastructure de protection des données avec APP
+              href: app-protection-framework.md
             - name: Créer des stratégies de protection des applications
               items:
                 - name: "Paramètres généraux\_:"
