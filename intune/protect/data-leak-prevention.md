@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 7f7a6203fcf641c41192eec8aaa0835939376d54
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514436"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575940"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Éviter les fuites de données sur les appareils non gérés à l’aide de Microsoft Intune
 
@@ -31,7 +31,7 @@ Si vous autorisez l’accès aux données d’entreprise hébergées par Office 
 
 Les stratégies de protection des applications configurées avec Intune fonctionnent également sur des appareils gérés avec une solution de gestion d’appareils non-Microsoft. Les données personnelles stockées sur les appareils ne sont pas affectées ; seules les données d’entreprise sont gérées par le service informatique. 
 
-Vous pouvez définir des stratégies de protection des applications pour les applications mobiles Office sur les appareils exécutant Windows, iOS ou Android pour protéger les données d’entreprise. Ces stratégies vous permettent de définir des stratégies, telles que le code PIN basé sur une application ou le chiffrement des données d’entreprise, ou des paramètres plus avancés pour limiter la façon dont les options Couper, Copier, Coller et Enregistrer sous sont employées par les utilisateurs entre les applications gérées et non gérées. Vous pouvez également réinitialiser à distance les données d’entreprise sans obliger les utilisateurs à inscrire des appareils.
+Vous pouvez définir des stratégies de protection des applications pour les applications mobiles Office sur les appareils exécutant Windows, iOS/iPadOS ou Android pour protéger les données d’entreprise. Ces stratégies vous permettent de définir des stratégies, telles que le code PIN basé sur une application ou le chiffrement des données d’entreprise, ou des paramètres plus avancés pour limiter la façon dont les options Couper, Copier, Coller et Enregistrer sous sont employées par les utilisateurs entre les applications gérées et non gérées. Vous pouvez également réinitialiser à distance les données d’entreprise sans obliger les utilisateurs à inscrire des appareils.
 
 Les stratégies de protection des applications Intune sont indépendantes de la gestion des appareils. Les stratégies de protection des applications vous permettent de gérer les applications mobiles Office à la fois sur les appareils non gérés et gérés par Intune, ainsi que les appareils gérés par les solutions MDM non-Microsoft.
 
@@ -42,7 +42,7 @@ Le plan d’action suivant peut être utilisé quand les conditions suivantes so
 * Votre entreprise est prête à passer en toute sécurité au cloud.
 * Votre entreprise utilise Office 365 Exchange Online, SharePoint Online, OneDrive Entreprise ou Yammer.
 * Votre entreprise compte des licences pour Microsoft 365, EMS (Enterprise Mobility + Security) ou Azure Information Protection.
-* Votre entreprise permet aux utilisateurs d’accéder à ses données à partir d’appareils Android, iOS ou Windows de l’entreprise ou personnels.
+* Votre entreprise permet aux utilisateurs d’accéder à ses données à partir d’appareils Android, iOS/iPadOS ou Windows de l’entreprise ou personnels.
 * Votre entreprise ne souhaite pas exiger l’inscription des appareils personnels dans un service de gestion des appareils.
 
 ## <a name="action-plan"></a>Plan d’action

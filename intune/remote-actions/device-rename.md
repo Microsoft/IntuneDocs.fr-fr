@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11b339a3e94e60db43e8237d9f3d2c729b48a57d
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: b286e095613c56f2d6fdfa5a2cf2cd1398611f12
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413612"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781829"
 ---
 # <a name="rename-a-device-in-intune"></a>Renommer un appareil dans Intune
 
@@ -37,7 +37,7 @@ Cette fonctionnalité ne prend actuellement pas en charge le renommage des appar
 ## <a name="rename-a-device"></a>Renommer un appareil
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Choisissez **Appareils** > **Tous les appareils** > choisissez un appareil > **Plus** > **Renommer un appareil**.
+3. Choisissez **Appareils** > **Tous les appareils** > choisissez un appareil > **...**  > **Renommer l’appareil**.
 4. Dans le panneau **Renommer un appareil**, saisissez le nouveau nom dans la zone de texte. Vous pouvez utiliser des lettres, des chiffres et des traits d’union. Le nom doit contenir au moins une lettre ou un trait d’union.
 5. Si vous souhaitez redémarrer l’appareil après l’avoir renommé, choisissez **Oui** en regard de **Redémarrer après le renommage**.
 6. Choisissez **Renommer**.

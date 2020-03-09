@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10f3d4c54d9a8fcb797ae3359b1a833ac9080548
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: MTE75
+ms.openlocfilehash: 183cc5ed233de4a3285cf5cfd3290aead9c1de72
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912697"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181906"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Liaisons Xamarin du kit SDK d’application Microsoft Intune
 
@@ -83,7 +83,7 @@ Pour plus d’informations, consultez [Installation de packages signés](https:/
       using Microsoft.Intune.MAM;
       ```
 
-4. Pour commencer à recevoir des stratégies de protection d’application, votre application doit s’inscrire auprès du service MAM Intune. Si votre application n’utilise pas la [bibliothèque d’authentification Azure Active Directory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) ou la [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) pour authentifier les utilisateurs, et souhaitez que le SDK Intune gère l’authentification, votre application doit fournir l’UPN de l’utilisateur à la méthode LoginAndEnrollAccount d’IntuneMAMEnrollmentManager :
+4. Pour commencer à recevoir des stratégies de protection d’application, votre application doit s’inscrire auprès du service MAM d’Intune. Si votre application n’utilise pas la [bibliothèque d’authentification Azure Active Directory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) ou la [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) pour authentifier les utilisateurs, et souhaitez que le SDK Intune gère l’authentification, votre application doit fournir l’UPN de l’utilisateur à la méthode LoginAndEnrollAccount d’IntuneMAMEnrollmentManager :
 
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
@@ -108,7 +108,7 @@ Pour plus d’informations, consultez [Installation de packages signés](https:/
 Des exemples d’applications mettant en évidence les fonctionnalités MAM dans des applications Xamarin.iOS sont disponibles sur [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
 
 > [!NOTE] 
-> Il n’existe pas de remappeur pour iOS. L’intégration dans une application Xamarin.Forms doit être la même que pour un projet Xamarin.iOS normal. 
+> Il n’existe pas de remappeur pour iOS/iPadOS. L’intégration dans une application Xamarin.Forms doit être la même que pour un projet Xamarin.iOS normal. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Activation de stratégies de protection des applications Intune dans votre application mobile Android
 1. Ajoutez le paquet NuGet [Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android) à votre projet Xamarin.Android.
@@ -133,10 +133,10 @@ Pour exclure une classe de la transformation MAM par le remappeur, la propriét�
 > [!NOTE]
 > Le remappeur empêche actuellement le débogage dans les applications Xamarin.Android. L’intégration manuelle est recommandée pour déboguer votre application.
 
-#### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Méthodes renommées](app-sdk-android.md#renamed-methods)
+#### <a name="renamed-methods"></a>[Méthodes renommées](app-sdk-android.md#renamed-methods)
 Dans de nombreux cas, une méthode disponible dans la classe Android a été marquée comme finale dans la classe de remplacement MAM. Dans ce cas, la classe de remplacement MAM fournit une méthode portant un nom similaire (avec le suffixe `MAM`) que vous devez remplacer. Par exemple, quand vous dérivez de `MAMActivity` au lieu de remplacer `OnCreate()` et d’appeler `base.OnCreate()`, `Activity` doit remplacer `OnMAMCreate()` et appeler `base.OnMAMCreate()`.
 
-#### <a name="mam-applicationapp-sdk-androidmdmamapplication"></a>[Application MAM](app-sdk-android.md#mamapplication)
+#### <a name="mam-application"></a>[Application MAM](app-sdk-android.md#mamapplication)
 Votre application doit définir une classe `Android.App.Application`. Si vous intégrez manuellement MAM, elle doit hériter de `MAMApplication`. Vérifiez que votre sous-classe est correctement décorée avec l’attribut `[Application]` et qu’elle se substitue au constructeur `(IntPtr, JniHandleOwnership)`.
 
 ```csharp
@@ -150,7 +150,7 @@ Votre application doit définir une classe `Android.App.Application`. Si vous in
 > [!NOTE]
 > Un problème avec les liaisons Xamarin MAM peut entraîner le plantage de l’application lors d’un déploiement en mode de débogage. Une solution de contournement consiste à ajouter l’attribut `Debuggable=false` à la classe `Application` et à supprimer l’indicateur `android:debuggable="true"` dans le manifeste s’il a été défini manuellement.
 
-#### <a name="enable-features-that-require-app-participationapp-sdk-androidmdenable-features-that-require-app-participation"></a>[Activer les fonctionnalités qui nécessitent la participation de l’application](app-sdk-android.md#enable-features-that-require-app-participation)
+#### <a name="enable-features-that-require-app-participation"></a>[Activer les fonctionnalités qui nécessitent la participation de l’application](app-sdk-android.md#enable-features-that-require-app-participation)
 Exemple : Déterminer si le code PIN est nécessaire pour l’application
 
 ```csharp
@@ -170,7 +170,7 @@ Exemple : Déterminer si l’enregistrement sur l’appareil ou le stockage clo
 MAMPolicyManager.GetPolicy(currentActivity).GetIsSaveToLocationAllowed(SaveLocation service, String username);
 ```
 
-#### <a name="register-for-notifications-from-the-sdkapp-sdk-androidmdregister-for-notifications-from-the-sdk"></a>[S’inscrire aux notifications depuis le Kit de développement logiciel (SDK)](app-sdk-android.md#register-for-notifications-from-the-sdk)
+#### <a name="register-for-notifications-from-the-sdk"></a>[S’inscrire aux notifications depuis le Kit de développement logiciel (SDK)](app-sdk-android.md#register-for-notifications-from-the-sdk)
 Votre application doit s’inscrire aux notifications en provenance du kit de développement logiciel (SDK) en créant un `MAMNotificationReceiver` et en l’inscrivant auprès de `MAMNotificationReceiverRegistry`. Vous devez fournir le récepteur et le type de notification souhaité dans `App.OnMAMCreate`, comme l’illustre l’exemple ci-dessous :
 
 ```csharp
@@ -185,7 +185,7 @@ public override void OnMAMCreate()
     ...
 ```
 
-#### <a name="mam-enrollment-managerapp-sdk-androidmdmamenrollmentmanager"></a>[Gestionnaire d’inscription MAM](app-sdk-android.md#mamenrollmentmanager)
+#### <a name="mam-enrollment-manager"></a>[Gestionnaire d’inscription MAM](app-sdk-android.md#mamenrollmentmanager)
 
 ```csharp
 IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc568cbadb683f632ffd2365ab7023cd796f231
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc811bcac80f8321284ece8d3860efc7164a270
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886697"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256320"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utiliser et gérer des appareils Android Entreprise avec OEMConfig dans Microsoft Intune
 
@@ -115,7 +115,7 @@ Vérifiez que l’appareil prend en charge OEMConfig, que l’application OEMCon
 
       - Si vous créez un bundle vide (non configuré) dans le concepteur de configuration, il est supprimé quand vous passez à l’éditeur JSON.
 
-    - **Éditeur JSON**: quand vous sélectionnez cette option, un éditeur JSON s’ouvre avec un modèle pour le schéma de configuration complet incorporé dans l’application. Dans l’éditeur, personnalisez le modèle avec des valeurs pour les différents paramètres. Si vous utilisez le **Concepteur de configuration** pour modifier vos valeurs, l’éditeur JSON remplace le modèle par les valeurs provenant du concepteur de configuration.
+    - **Éditeur JSON** : quand vous sélectionnez cette option, un éditeur JSON s’ouvre avec un modèle pour le schéma de configuration complet incorporé dans l’application. Dans l’éditeur, personnalisez le modèle avec des valeurs pour les différents paramètres. Si vous utilisez le **Concepteur de configuration** pour modifier vos valeurs, l’éditeur JSON remplace le modèle par les valeurs provenant du concepteur de configuration.
 
       - Si vous mettez à jour un profil existant, l’éditeur JSON montre les paramètres qui ont été enregistrés en dernier avec le profil.
 
@@ -161,7 +161,8 @@ Par rapport aux applications standard, les applications OEMConfig étendent les 
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| HMD Global | com.hmdglobal.app.oemconfig.ironman |  |
+| Seuic | com.seuic.seuicoemconfig | |
+| Unitech Electronics | com.unitech.oemconfig | |
 
 -----------------
 
@@ -169,6 +170,8 @@ Si une application OEMConfig existe pour votre appareil, mais qu’elle ne figur
 
 > [!NOTE]
 > Les applications OEMConfig doivent être intégrées à Intune avant de pouvoir être configurées avec des profils OEMConfig. Une fois qu’une application est prise en charge, vous n’avez pas besoin de contacter Microsoft pour la configurer dans votre locataire. Suivez simplement les instructions de cette page.
+>
+> Si vous constatez qu’une application OEMConfig ne se comporte pas correctement, contactez ses développeurs. Intune n’est pas responsable des problèmes techniques liés aux applications OEMConfig individuelles.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

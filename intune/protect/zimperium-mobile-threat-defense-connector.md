@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d0fe5634e5af6ef4c6f19e067131f151733c0b5
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 32ace832e44f1cb6d334f69a0c1f03cb41515b2f
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515235"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782043"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Connecteur Zimperium Mobile Threat Defense avec Intune
 
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise à l’aide d’un accès conditionnel basé sur une évaluation des risques effectuée par Zimperium, une solution MTD qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies par les appareils exécutant l’application Zimperium.
 
-Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Zimperium, activée par le biais des stratégies de conformité Intune. Une stratégie d’évaluation des risques autorise ou bloque l’accès des appareils non conformes aux ressources d’entreprise en fonction des menaces détectées.
+Vous pouvez configurer des stratégies d’accès conditionnel basées sur l’évaluation des risques de Zimperium activée par le biais des stratégies de conformité des appareils Intune pour les appareils inscrits, et les utiliser pour autoriser ou bloquer l’accès des appareils non conformes aux ressources de l’entreprise en fonction des menaces détectées. Pour les appareils non inscrits, vous pouvez utiliser des stratégies de protection des applications pour mettre en œuvre un blocage ou une réinitialisation sélective en fonction des menaces détectées.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Comment Intune et Zimperium aident-ils à protéger les ressources de votre entreprise ?
 
@@ -108,3 +108,5 @@ Détectez les menaces, par exemple les interceptions (**Man-in-the-middle**), su
 - [Créer une stratégie de conformité des appareils Zimperium](mtd-device-compliance-policy-create.md)
 
 - [Activer le connecteur Zimperium MTD](mtd-connector-enable.md)
+
+- [Créer une stratégie de protection des applications MTD](../protect/mtd-app-protection-policy.md)

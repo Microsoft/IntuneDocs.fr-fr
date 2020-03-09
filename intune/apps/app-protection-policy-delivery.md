@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0ed343f652c4afe87273eeaa4a2e35b7669056d
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: d26721ff27f380917fec7f4d23c0c5524737a4a3
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839243"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216168"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Comprendre les délais de distribution des stratégies de protection des applications
 
@@ -38,6 +38,7 @@ La distribution des stratégies de protection des applications dépend de l’é
 |    Locataire non intégré    |    Attendez le prochain intervalle avant nouvelle tentative.  La protection des applications n’est pas active pour l’utilisateur.    |    24 heures    |    Se produit quand vous n’avez pas configuré votre locataire pour Intune.    |
 |    Utilisateur dépourvu de licence     |    Attendez le prochain intervalle avant nouvelle tentative.  La protection des applications n’est pas active pour l’utilisateur.     |    12 heures ; toutefois, sur les appareils Android, cet intervalle requiert le SDK d’application Intune version 5.6.0 ou ultérieure. Sinon, pour les appareils Android, l’intervalle est de 24 heures.   |    Se produit quand vous n’avez pas accordé de licence Intune à l’utilisateur.    |
 |    Utilisateur dépourvu de stratégies de protection des applications    |    Attendez le prochain intervalle avant nouvelle tentative.  La protection des applications n’est pas active pour l’utilisateur.    |    12 heures        |    Se produit quand vous n’avez pas attribué de paramètres de stratégie de protection des applications à l’utilisateur.    |
+|    Stratégies de protection des applications affectées par l’utilisateur, mais l’application n’est pas définie dans les stratégies de protection des applications   |    Attendez le prochain intervalle avant nouvelle tentative.  La protection des applications n’est pas active pour l’utilisateur.    |    12 heures        |    Se produit quand vous n’avez pas ajouté l’application à APP.    |
 |    Utilisateur inscrit avec succès pour MAM Intune    |    La protection des applications est appliquée en fonction des paramètres de stratégie.    Les mises à jour se produisent en fonction de l’intervalle avant nouvelle tentative    |    Service Intune défini en fonction de la charge utilisateur.    En règle générale, 30 minutes.     |    Se produit quand l’utilisateur a été correctement inscrit auprès du service Intune pour la configuration de la gestion des applications mobiles.    |
 
 > [!NOTE]

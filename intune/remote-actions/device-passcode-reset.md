@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 9481e25a3d9aa48e21c4e01194dfa7ee1ad1bd38
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415542"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782156"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Réinitialiser ou supprimer un code secret de l’appareil dans Intune
 
@@ -59,7 +59,7 @@ Pour créer un code secret de profil professionnel, utilisez l’action Réiniti
 
 1. Connectez-vous au [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) avec l’un des rôles suivants : administrateur général Azure Active Directory, administrateur du service Intune Azure Active Directory, support technique ou administrateur de rôle.
 2. Sélectionnez **Appareils**, puis **Tous les appareils**.
-3. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **... Plus**. Ensuite, choisissez l’action à distance **Supprimer le code secret**.
+3. Dans la liste des appareils que vous gérez, sélectionnez un appareil et choisissez **Supprimer le code secret**.
 
 ## <a name="reset-android-work-profile-passcodes"></a>Réinitialiser les codes secrets des profils professionnels Android
 

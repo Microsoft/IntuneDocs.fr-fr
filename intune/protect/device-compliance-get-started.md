@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 45bcabf8c7dc932c9415fbd309bf09f53499fbcc
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515167"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781935"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Définir des règles sur les appareils pour autoriser l’accès aux ressources de votre organisation à l’aide d’Intune
 
@@ -93,16 +93,13 @@ Intune inclut également un ensemble de paramètres de stratégie de conformité
 
   Si un appareil n’a pas de stratégie de conformité attribuée, il est considéré comme conforme par défaut. Si vous utilisez l’accès conditionnel avec des stratégies de conformité, nous vous recommandons de modifier le paramètre par défaut en **Non conforme**. Si un utilisateur final n’est pas conforme en raison d’un défaut d’attribution de stratégie, [l’application du portail d’entreprise Intune](../apps/company-portal-app.md) indique `No compliance policies have been assigned`.
 
-
-> [!NOTE]
-> La détection améliorée des jailbreaks pour les appareils iOS/iPadOS a été temporairement désactivée dans Intune.
-
-- **Détection de jailbreak améliorée** : Quand ce paramètre est activé, les appareils iOS/iPadOS effectuent un check-in dans Intune plus fréquemment. L’activation de cette propriété utilise les services de localisation de l’appareil et a un impact sur l’utilisation de la batterie. Les données de localisation de l’utilisateur ne sont pas stockées par Intune.
+- **Détection de jailbreak améliorée** : quand il est activé, ce paramètre permet à l’état Appareil jailbreaké de se produire plus fréquemment sur les appareils iOS/iPadOS. Ce paramètre affecte uniquement les appareils qui sont ciblés avec une stratégie de conformité bloquant les appareils jailbreakés. L’activation de cette propriété utilise les services de localisation de l’appareil et peut impacter l’utilisation de la batterie. Les données de localisation de l’utilisateur ne sont pas stockées par Intune et sont utilisées uniquement pour déclencher la détection de jailbreak plus fréquemment en arrière-plan. 
 
   L’activation de ce paramètre nécessite que les appareils :
   - activent les services de localisation au niveau du système d’exploitation ;
-  - autorisent le portail d’entreprise à utiliser les services de localisation.
-  - Évaluent et signalent leur état jailbreak à Intune au moins une fois toutes les 72 heures. Sinon, l’appareil est marqué comme non conforme. L’évaluation est déclenchée soit par l’ouverture de l’application Portail d’entreprise Intune, soit lorsque vous éloignez physiquement l’appareil d’au moins 500 mètres. Si l’appareil ne se déplace pas de 500 mètres dans les 72 heures, l’utilisateur doit ouvrir l’application Portail d’entreprise pour une évaluation de jailbreak améliorée.
+  - autorisent toujours le portail d’entreprise à utiliser les services de localisation.
+
+  Pour déclencher l’évaluation, ouvrez l’application Portail d’entreprise ou éloignez physiquement l’appareil d’une distance importante (environ 500 m). Sur iOS 13 et ultérieur, cette fonctionnalité oblige les utilisateurs à sélectionner Toujours autoriser chaque fois que l’appareil les invite à continuer à autoriser le portail d’entreprise à utiliser leur localisation en arrière-plan. Si les utilisateurs n’autorisent pas toujours l’accès à la localisation et ont une stratégie configurée avec ce paramètre, leur appareil est marqué comme non conforme. Notez qu’Intune ne peut pas garantir que chaque changement significatif de localisation déclenchera une vérification de la détection de jailbreak, car cela dépend de la connexion réseau de l’appareil à ce moment-là.
 
 - **Période de validité de l’état de conformité (jours)**  : Entrez la période pendant laquelle les appareils signalent l’état de toutes les stratégies de conformité reçues. Les appareils qui ne retournent pas l’état au cours de cette période sont considérés comme non conformes. La valeur par défaut est de 30 jours. La valeur minimale est de 1 jour.
 

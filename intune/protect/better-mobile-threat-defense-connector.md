@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,18 +15,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a52636a140778f6e78bfe081cda40b36ef2354f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbab3aae2e38e1ce7d3c8c526b706d70e0cf2b2a
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509640"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781204"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Connecteur Better Mobile Threat Defense avec Intune
 
 Vous pouvez contrôler l’accès des appareils mobiles aux ressources de l’entreprise grâce à l’accès conditionnel basé sur une analyse des risques menée par Better Mobile, une solution de défense contre les menaces mobiles qui s’intègre à Microsoft Intune. Le risque est évalué en fonction des données de télémétrie recueillies sur les appareils exécutant l’application Better Mobile.
 
-Vous pouvez configurer des stratégies d’accès conditionnel qui s’appuient sur l’analyse des risques de Better Mobile par le biais de stratégies de conformité des appareils Intune, et les utiliser pour autoriser les appareils non conformes à accéder aux ressources de l’entreprise ou les en empêcher en fonction des menaces détectées.
+Vous pouvez configurer des stratégies d’accès conditionnel qui s’appuient sur l’analyse des risques de Better Mobile par le biais de stratégies de conformité des appareils Intune pour les appareils inscrits, et les utiliser pour autoriser les appareils non conformes à accéder aux ressources de l’entreprise ou les en empêcher en fonction des menaces détectées. Pour les appareils non inscrits, vous pouvez utiliser des stratégies de protection des applications pour mettre en œuvre un blocage ou une réinitialisation sélective en fonction des menaces détectées.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Comment Intune et Better Mobile aident-ils à protéger les ressources de votre entreprise ?
 
@@ -34,7 +34,7 @@ L'application Better Mobile est installée et exécutée sur des appareils mobil
 
 La stratégie de conformité des appareils Intune comporte une règle pour la défense contre les menaces mobiles, qui s’appuie sur l’analyse des risques de Better Mobile. Quand cette règle est activée, Intune évalue si l’appareil est conforme à la stratégie activée. Si l’appareil est détecté comme non conforme, les utilisateurs ne peuvent pas accéder aux ressources de l’entreprise comme Exchange Online et SharePoint Online. Les utilisateurs reçoivent aussi des conseils de l’application Better Mobile installée sur leurs appareils pour résoudre le problème et rétablir l’accès aux ressources de l’entreprise.
 
-## <a name="sample-scenarios"></a>Exemples de scénario
+## <a name="sample-scenarios"></a>Exemples de scénarios
 
 Voici quelques scénarios courants.
 
@@ -105,3 +105,5 @@ Détectez les menaces pour votre réseau, comme les **attaques de l’intercepte
 - [Créer une stratégie de conformité des appareils Better Mobile](mtd-device-compliance-policy-create.md)
 
 - [Activer le connecteur Better Mobile MTD](mtd-connector-enable.md)
+
+- [Créer une stratégie de protection des applications MTD](mtd-app-protection-policy.md) 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 19ecbc632b924dda297b3692cabf5345b4724b30
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654071"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575772"
 ---
 # <a name="reference-for-devices-entities"></a>Référence pour les entités d’appareils
 
@@ -249,7 +249,7 @@ L’entité **devices** répertorie tous les appareils inscrits à la gestion et
 | rowLastModifiedDateTimeUTC | Date et heure UTC de la dernière modification de cet appareil dans l’entrepôt de données.                                                                                                       |
 | manufacturer               | Fabricant de l’appareil                                                                                                                                                             |
 | model                      | Modèle de l’appareil                                                                                                                                                                    |
-| operatingSystem            | Système d’exploitation de l’appareil. Windows, iOS,   etc.                                                                                                                                   |
+| operatingSystem            | Système d’exploitation de l’appareil. Windows, iOS/iPadOS, etc.                                                                                                                                   |
 | isDeleted                  | Binaire pour indiquer si l’appareil est supprimé ou non.                                                                                                                                 |
 | androidSecurityPatchLevel  | Niveau des correctifs de sécurité Android                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -262,7 +262,7 @@ L’entité **devices** répertorie tous les appareils inscrits à la gestion et
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | cellularTechnology         | Technologie cellulaire de l’appareil                                                                                                                                                    |
 | WiFiMacAddress             | Adresse MAC du réseau Wi-Fi                                                                                                                                                                              |
-| ICCD                       | Identificateur de carte de circuit intégré                                                                                                                                                     |
+| ICCD                       | Identificateur de carte à circuit intégré                                                                                                                                                     |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 

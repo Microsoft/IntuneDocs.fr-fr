@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
-ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
+ms.openlocfilehash: a1eca1f8911e9c6aae3b3725cf15f04d954c5f48
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473754"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260314"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Inscription automatique des appareils iOS/iPadOS avec le Programme d’inscription des appareils d’Apple
 
@@ -41,6 +41,8 @@ Les inscriptions DEP ne sont pas compatibles avec la version de l’App Store de
 Pour permettre une authentification moderne pendant l’inscription, poussez l’application sur l’appareil à l’aide de **Installer le portail d’entreprise avec VPP** (programme d’achat en volume) dans le profil DEP. Pour en savoir plus, consultez [Inscription automatique des appareils iOS/iPadOS avec le Programme d’inscription des appareils d’Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Pour activer la mise à jour automatique du portail d’entreprise et fournir l’application Portail d’entreprise sur les appareils déjà inscrits avec DEP, déployez l’application Portail d’entreprise à travers Intune comme une application VPP (programme d’achat en volume) obligatoire avec une [stratégie de configuration d’application](../apps/app-configuration-policies-use-ios.md) appliquée.
+
+Remarque : Durant l’inscription automatisée des appareils, le fait de cliquer sur le lien « En savoir plus » génère un message d’erreur si le portail d’entreprise est en mode Application unique. Une fois l’inscription terminée, vous pouvez voir plus d’informations dans le portail d’entreprise quand l’appareil n’est plus en mode Application unique. 
 
 ## <a name="what-is-supervised-mode"></a>Qu’est-ce que le mode supervisé ?
 
@@ -117,7 +119,7 @@ Dans le [Centre d’administration du Gestionnaire de points de terminaison Micr
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Étape 4. Chargez votre jeton et choisissez des balises d’étendue.
 
 1. Dans la zone **Jeton Apple**, accédez au fichier du certificat (.pem) et choisissez **Ouvrir**.
-2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)**, puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
+2. Pour appliquer des [balises d’étendue](../fundamentals/scope-tags.md) à ce jeton DEP, choisissez **Étendue (balises)** , puis sélectionnez les balises d’étendue souhaitées. Les balises d’étendue appliquées à un jeton seront héritées par les profils et les appareils ajoutés à ce jeton.
 3. Choisissez **Créer**.
 
 Avec le certificat Push, Intune peut inscrire et gérer des appareils iOS/iPadOS en envoyant la stratégie aux appareils mobiles inscrits. Intune se synchronise automatiquement avec Apple pour afficher votre compte de programme d’inscription.
@@ -169,7 +171,7 @@ Maintenant que vous avez installé votre jeton, vous pouvez créer un profil d�
 
 8. Si vous avez choisi un jeton pour **Installer le Portail d’entreprise avec VPP**, vous pouvez verrouiller l’appareil en mode Application unique (plus précisément l’application Portail d’entreprise) immédiatement après la fin de l’Assistant Configuration. Choisissez **Oui** pour **Exécuter le portail d’entreprise en mode Application unique jusqu’à l’authentification** pour définir cette option. Pour utiliser l’appareil, l’utilisateur doit d’abord s’authentifier en se connectant avec le portail d’entreprise.
 
-    L’authentification multifacteur n’est pas prise en charge sur un appareil unique verrouillé en mode Application unique. Cette limitation existe parce que l’appareil ne peut pas basculer vers une autre application pour effectuer le deuxième facteur d’authentification. Par conséquent, si vous souhaitez une authentification multifacteur sur un appareil en mode Application unique, le second facteur doit se trouver sur un autre appareil.
+    L’authentification multifacteur n’est pas prise en charge sur un appareil unique verrouillé en mode Application unique. Cette limitation existe parce que l’appareil ne peut pas basculer vers une autre application pour se soumettre au deuxième facteur d’authentification. Par conséquent, si vous souhaitez une authentification multifacteur sur un appareil en mode Application unique, le second facteur doit se trouver sur un autre appareil.
 
     Cette fonctionnalité n’est prise en charge que pour la version 11.3.1 et les versions ultérieures d’iOS/iPadOS.
 
@@ -248,7 +250,7 @@ Maintenant qu’Intune est autorisé à gérer vos appareils, vous pouvez synchr
 
 1. Dans le [Centre d’administration du Gestionnaire de points de terminaison Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), choisissez **Appareils** > **iOS** > **Inscription iOS** > **Jetons du programme d’inscription** > choisissez un jeton dans la liste > **Appareils** > **Synchroniser**. ![Captures d’écran du nœud d’appareils du programme d'inscription et lien de synchronisation.](./media/device-enrollment-program-enroll-ios/image06.png)
 
-   Pour respecter les conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
+   Pour respecter les conditions d’Apple relatives à un trafic de programme d’inscription acceptable, Intune impose les restrictions suivantes :
    - Une synchronisation complète ne peut pas s’exécuter plus d’une fois tous les sept jours. Pendant une synchronisation complète, Intune extrait toute la liste actualisée des numéros de série attribués au serveur MDM Apple connecté à Intune. Si un appareil DEP est supprimé du portail Intune, son affectation au serveur Apple MDM dans le portail DEP doit être supprimée. Si ce n’est pas le cas, il ne sera pas réimporté dans Intune tant que la synchronisation complète n’aura pas été exécutée.   
    - Une synchronisation est exécutée automatiquement toutes les 24 heures. Vous pouvez également synchroniser en cliquant sur le bouton **Synchroniser** (pas plus d’une fois toutes les 15 minutes). Toutes les demandes de synchronisation doivent se terminer en 15 minutes. Le bouton **Synchroniser** est désactivé tant que la synchronisation n’est pas terminée. Cette synchronisation actualise l’état existant de l’appareil et importe les nouveaux appareils affectés au serveur MDM Apple.   
 

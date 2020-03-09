@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ee300b7357132e6f9e18ef4528110dfc988dc3
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 11e757d22274a0e1cc327d9037a74e4ffac024dd
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653663"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576347"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Préparer des applications iOS pour les stratégies de protection des applications avec l’outil de création de package de restrictions d’application Intune
 
@@ -198,15 +198,15 @@ Vous pouvez utiliser les paramètres de ligne de commande suivants avec l’outi
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Affiche des informations détaillées sur l’utilisation des propriétés de ligne de commande disponibles pour l’outil de création de package de restrictions d’application. |
-|**-aa**|(Facultatif) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` c.-à-d. `login.windows.net/common` |
-|**-ac**|(Facultatif) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` il s’agit du GUID dans le champ ID client est issu de la liste de votre application dans le panneau inscription de l’application. |
-|**-ar**|(Facultatif) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` il s’agit de l’URI de redirection configuré dans l’inscription de votre application. En général, il s’agit du protocole d’URL de l’application que l’application Microsoft Authenticator retourne à après l’authentification répartie. |
+|**-aa**|(facultatif) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` c’est-à-dire `login.windows.net/common` |
+|**-ac**|(Facultatif) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Il s’agit du GUID figurant dans le champ ID client de la liste de votre application affichée dans le panneau Inscription d’application. |
+|**-ar**|(Facultatif) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Il s’agit de l’URI de redirection configuré dans l’inscription de votre application. En général, il s’agit du protocole d’URL de l’application vers lequel l’application Microsoft Authenticator retourne après l’authentification répartie. |
 |**-v**| (Facultatif) Affiche les messages détaillés sur la console. Il est recommandé d’utiliser cet indicateur pour déboguer les éventuelles erreurs. |
 |**-e**| (Facultatif) Utilisez cet indicateur pour que l’outil de création de package de restrictions d’application supprime les droits manquants pendant le traitement de l’application. Pour plus d’informations, consultez [Définition des droits de l’application](#setting-app-entitlements).|
 |**-xe**| (Facultatif) Imprime des informations sur les extensions iOS dans l’application et les droits qui sont nécessaires pour les utiliser. Pour plus d’informations, consultez [Définition des droits de l’application](#setting-app-entitlements). |
 |**-x**| (Facultatif) `<An array of paths to extension provisioning profiles>`. À utiliser si votre application a besoin d’extension des profils d’approvisionnement d’extension.|
 |**-b**|(Facultatif) Utilisez -b sans argument si vous voulez que l’application de sortie encapsulée ait la même version d’ensemble (bundle) que l’application d’entrée (non recommandé). <br/><br/> Utilisez `-b <custom bundle version>` si vous voulez que l’application encapsulée ait une valeur CFBundleVersion personnalisée. Si vous choisissez de spécifier une valeur CFBundleVersion personnalisée, pensez à incrémenter la valeur CFBundleVersion de l’application native sur le composant le moins significatif, par exemple, 1.0.0 -> 1.0.1. |
-|**-citrix**|Facultatif Incluez le kit de développement logiciel (SDK) d’application Citrix XenMobile (variante en réseau uniquement). Pour utiliser cette option, vous devez avoir installé la [boîte à outils Citrix MDX](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) . |
+|**-citrix**|(Facultatif) Incluez le SDK de l’application Citrix XenMobile (variante réseau uniquement). Pour utiliser cette option, [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) doit être installé. |
 |**-f**|(Facultatif) `<Path to a plist file specifying arguments.>` Utilisez cet indicateur devant le fichier [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) si vous choisissez d’utiliser le modèle plist pour spécifier le reste des propriétés IntuneMAMPackager telles que -i, -o et -p. Consultez Utiliser un fichier plist pour les arguments d’entrée. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Utiliser un fichier plist pour les arguments d’entrée
@@ -226,9 +226,9 @@ Dans le dossier IntuneMAMPackager/contenu/MacOS, ouvrez `Parameters.plist` (un m
 | URI de réponse ADAL |Chaîne|empty| Identique à -ar|
 | Mode détaillé activé |Booléen|false| Identique à -v|
 | Supprimer les droits manquants |Booléen|false| Identique à -c|
-| Empêcher la mise à jour de la build par défaut |Boolen|false| Équivaut à utiliser -b sans arguments|
+| Empêcher la mise à jour de la build par défaut |Booléen|false| Équivaut à utiliser -b sans arguments|
 | Générer le remplacement de chaîne |Chaîne|empty| Valeur CFBundleVersion personnalisée de l’application de sortie encapsulée|
-| Inclure le kit de développement logiciel (SDK) d’application Citrix XenMobile (variante en réseau uniquement)|Booléen|false| Identique à-Citrix|
+| Incluez le SDK de l’application Citrix XenMobile (variante réseau uniquement)|Booléen|false| Identique à -citrix|
 | Chemins des profils d’approvisionnement d’extension |Tableau de chaînes|empty| Tableau de profils d’approvisionnement d’extension pour l’application.
 
 Exécutez la commande IntuneMAMPackager avec le fichier plist comme unique argument :
@@ -255,7 +255,7 @@ Les principaux scénarios dans lesquels vous devez réencapsuler vos application
 * L’application elle-même a publié une nouvelle version. La version précédente de l’application a été empaquetée et chargée sur la console Intune.
 * L’outil de création de package de restrictions d’application Intune pour iOS a publié une nouvelle version qui intègre la correction de bogues importants ou des fonctionnalités des stratégies de protection d’application Intune nouvelles et spécifiques. Elle arrive après 6 à 8 semaines via un dépôt GitHub pour [l’outil de création de package de restrictions d’application Microsoft Intune pour iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-Pour iOS, alors qu’il est possible d’empaqueter avec un profil de provisionnement/certificat différent de celui d’origine utilisé pour signer l’application, si les droits spécifiés dans l’application ne sont pas dans le nouveau profil de provisionnement, la création de package de restrictions échoue. L’utilisation de l’option de ligne de commande « -e », qui supprime les droits manquants de l’application pour obliger la création de package de restrictions à ne pas échouer dans ce scénario, peut rompre les fonctionnalités dans l’application.
+Pour iOS/iPadOS, alors qu’il est possible de wrapper avec un profil de provisionnement/certificat différent de celui d’origine utilisé pour signer l’application, si les droits spécifiés dans l’application ne sont pas inclus dans le nouveau profil de provisionnement, le wrapping échoue. L’utilisation de l’option de ligne de commande « -e », qui supprime les droits manquants de l’application pour obliger la création de package de restrictions à ne pas échouer dans ce scénario, peut rompre les fonctionnalités dans l’application.
 
 Voici quelques bonnes pratiques de réencapsulation :
 
@@ -289,7 +289,7 @@ Si l’outil de création de package de restrictions d’application échoue, l�
 |L'application d'entrée spécifiée a déjà été encapsulée et est à la dernière version de modèle de stratégie.|L’outil de création de package de restrictions d’application ne peut pas ré-encapsuler une application encapsulée existante avec la dernière version du modèle de stratégie.|
 |WARNING : vous n’avez pas spécifié un hachage de certificat SHA1. Assurez-vous que votre application encapsulée est signée avant le déploiement.|Veillez à spécifier un hachage SHA1 valide à la suite de l’indicateur de ligne de commande –c. |
 
-### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Collecte des journaux pour vos applications encapsulées à partir de l’appareil
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Collecte des journaux pour vos applications wrappées à partir de l’appareil
 Procédez comme suit pour obtenir des journaux pour vos applications encapsulées pendant le dépannage.
 
 1. Accédez à l’app Réglages iOS sur votre appareil et sélectionnez votre application métier.
@@ -301,9 +301,9 @@ Procédez comme suit pour obtenir des journaux pour vos applications encapsulée
 > [!NOTE]
 > La fonctionnalité de journalisation est activée pour les applications qui ont été encapsulées avec Intune App Wrapping Tool version 7.1.13 ou ultérieure.
 
-### <a name="collecting-crash-logs-from-the-system"></a>Collecte des journaux d’incidents du système
+### <a name="collecting-crash-logs-from-the-system"></a>Collecte des journaux de plantages à partir du système
 
-Il se peut que votre application journalise des informations utiles sur la console de l’appareil client iOS. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application ou à l’application même. Pour récupérer ces informations, procédez comme suit :
+Il se peut que votre application journalise des informations utiles sur la console de l’appareil iOS client. Ces informations sont utiles quand vous rencontrez des problèmes avec l’application et que vous devez déterminer si le problème est lié à l’outil de création de package de restrictions d’application ou à l’application même. Pour récupérer ces informations, procédez comme suit :
 
 1. Reproduisez le problème en exécutant l'application.
 
@@ -419,7 +419,7 @@ Respectez les bonnes pratiques de sécurité et de confidentialité suivantes qu
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Intune App Wrapping Tool pour iOS avec mVPN Citrix MDX
 
-Cette fonctionnalité est une intégration avec le wrapper d’applications Citrix MDX pour iOS. Cette intégration consiste simplement en un indicateur de ligne de commande supplémentaire et facultatif, `-citrix`, ajouté à la version générale d’Intune App Wrapping Tools.
+Cette fonctionnalité est une intégration avec le wrapper d’application Citrix MDX pour iOS/iPadOS. Cette intégration consiste simplement en un indicateur de ligne de commande supplémentaire et facultatif, `-citrix`, ajouté à la version générale d’Intune App Wrapping Tools.
 
 ### <a name="requirements"></a>Configuration requise
 

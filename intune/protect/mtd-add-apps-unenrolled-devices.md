@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1cf0a3d8b30955be8413b376acd223a924be843
-ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
+ms.openlocfilehash: a0d1574599b9e514d4bb0289b88ad3c55cc24d15
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545925"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782241"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Ajouter les applications Mobile Threat Defense sur des appareils non inscrits
 
@@ -33,21 +33,27 @@ Les utilisateurs finaux ont besoin de Microsoft Authenticator (iOS) pour inscrir
 
 Si vous le souhaitez, vous pouvez utiliser Intune pour ajouter et déployer Microsoft Authenticator et les applications Mobile Threat Defense (MTD).
 
-> [!NOTE] 
-> Cet article s’applique à tous les partenaires Mobile Threat Defense qui prennent en charge des stratégies de protection d’applications : Better Mobile (Android), Zimperium (Android, iOS), Lookout for Work (Android/iOS).
-> 
-> Pour les appareils non inscrits, vous **n’avez pas besoin d’une stratégie de configuration des applications iOS** qui configure l’application Mobile Threat Defense pour iOS que vous utilisez avec Intune. Il s’agit d’une différence clé par rapport aux appareils inscrits dans Intune. 
+> [!NOTE]
+> Cet article s’applique à tous les partenaires Mobile Threat Defense qui prennent en charge des stratégies de protection d’applications :
+>
+> - Better Mobile (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+>
+> Pour les appareils non inscrits, vous **n’avez pas besoin d’une stratégie de configuration des applications iOS** qui configure l’application Mobile Threat Defense pour iOS que vous utilisez avec Intune. Il s’agit d’une différence clé par rapport aux appareils inscrits dans Intune.
 
 ## <a name="configure-microsoft-authenticator-for-ios-via-intune-optional"></a>Configurer Microsoft Authenticator pour iOS via Intune (facultatif)
+
 Quand vous utilisez des stratégies de protection d’applications Intune avec Mobile Threat Defense, Intune guide l’utilisateur final dans la procédure d’installation, de connexion et d’inscription de son appareil auprès de Microsoft Authenticator (iOS).
 
 Toutefois, si vous souhaitez mettre l’application à la disposition des utilisateurs finaux via le Portail d’entreprise Intune, consultez les instructions permettant d’[ajouter des applications de l’App Store iOS dans Microsoft Intune](../apps/store-apps-ios.md). Utilisez cette [URL de Microsoft Authenticator dans l’App Store iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) à la fin de la section **Configurer les informations sur l’application**. N’oubliez pas d’[attribuer l’application à des groupes avec Intune](../apps/apps-deploy.md) comme dernière étape.
 
-> [!NOTE] 
+> [!NOTE]
 > Pour les appareils iOS, vous avez besoin de [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) pour que l’identité des utilisateurs puisse être vérifiée par Azure AD. Le Portail d’entreprise Intune fonctionne en tant que service broker sur les appareils Android, pour que l’identité des utilisateurs puisse être vérifiée par Azure AD.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Proposer les applications Mobile Threat Defense via Intune (facultatif)
-Quand vous utilisez des stratégies de protection d’applications Intune avec Mobile Threat Defense, Intune guide l’utilisateur final dans la procédure d’installation et de connexion à l’application cliente Mobile Threat Defense requise. 
+
+Quand vous utilisez des stratégies de protection d’applications Intune avec Mobile Threat Defense, Intune guide l’utilisateur final dans la procédure d’installation et de connexion à l’application cliente Mobile Threat Defense requise.
 
 Toutefois, si vous souhaitez mettre l’application à la disposition des utilisateurs finaux via le Portail d’entreprise Intune, vous pouvez suivre les étapes ci-dessous dans le [Portail Azure](https://portal.azure.com/). Vérifiez que vous êtes familiarisé avec ce processus :
 
@@ -55,6 +61,7 @@ Toutefois, si vous souhaitez mettre l’application à la disposition des utilis
 - [Affectation d’une application avec Intune](../apps/apps-deploy.md).
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Mettre Lookout for Work à la disposition des utilisateurs finaux
+
 - **Android**  
   - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](../apps/store-apps-android.md). Utilisez cette [URL de Lookout for Work dans le Play Store](https://play.google.com/store/apps/details?id=com.lookout.enterprise) à la fin de la section **Configurer les informations sur l’application**.
 
@@ -76,11 +83,12 @@ Toutefois, si vous souhaitez mettre l’application à la disposition des utilis
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section. -->
 
 ### <a name="making-zimperium-available-to-end-users"></a>Mettre Zimperium à la disposition des utilisateurs finaux
+
 - **Android**
   - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](../apps/store-apps-android.md). Utilisez cette [URL Zimperium - Play Store](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) à la fin de la section **Configurer les informations sur l’application**.
 - **iOS**
   - Consultez les instructions relatives à [l’ajout d’applications de l’App Store iOS à Microsoft Intune](../apps/store-apps-ios.md). Utilisez cette [URL de Zimperium dans l’App Store](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) à la fin de la section **Configurer les informations sur l’application**.
- 
+
 <!-- ### Making Pradeo available to end users
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo - Play Store URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) when completing the **Configure app information** section.
@@ -88,9 +96,11 @@ Toutefois, si vous souhaitez mettre l’application à la disposition des utilis
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo - App Store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) when completing the **Configure app information** section. -->
 
-### <a name="making-better-mobile-available-to-end-users"></a>Mettre Better Mobile à la disposition des utilisateurs finaux 
+### <a name="making-better-mobile-available-to-end-users"></a>Mettre Better Mobile à la disposition des utilisateurs finaux
+
 - **Android**
   - Consultez les instructions relatives à [l’ajout d’applications de l’App Store Android à Microsoft Intune](../apps/store-apps-android.md). Utilisez cette [URL d’Active Shield dans le Play Store](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) à la fin de la section **Configurer les informations sur l’application**.
+
 <!-- - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->
 
@@ -108,7 +118,6 @@ Toutefois, si vous souhaitez mettre l’application à la disposition des utilis
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
 
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Activer le connecteur Mobile Threat Defense dans Intune pour les appareils non inscrits](~/protect/mtd-enable-unenrolled-devices.md)
-

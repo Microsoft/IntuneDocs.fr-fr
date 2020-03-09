@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: MTE75
+ms.openlocfilehash: e2075ed8328e6a33732e03fbf521d32b2edd6a35
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912673"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575824"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Préparer les applications métier aux stratégies de protection des applications
 
@@ -103,7 +103,7 @@ Ce tableau liste les paramètres qui sont activés si une application utilise Ap
 |Bloquer la capture d’écran (Android uniquement)|X|X|
 |Prise en charge de MAM sans inscription de l’appareil|X|X|
 |Réinitialisation complète de données d’applications|X|X|
-|Réinitialisation sélective des données professionnelles et scolaires dans des scénarios multi-identités <br><br>**Remarque :** pour iOS, quand le profil de gestion est supprimé, l’application est également supprimée.|X||
+|Réinitialisation sélective des données professionnelles et scolaires dans des scénarios multi-identités <br><br>**Remarque :** Pour iOS/iPadOS, quand le profil de gestion est supprimé, l’application l’est également.|X||
 |Empêcher « Enregistrer sous »|X||
 |Configuration d’application ciblée (ou configuration d’application via le « canal MAM »)|X|X|
 |Prise en charge des identités multiples|X||

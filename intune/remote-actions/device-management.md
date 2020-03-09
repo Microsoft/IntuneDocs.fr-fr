@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6f5d11cade1e22ca5d306dd1896e8136f9e7c1ed
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413785"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256388"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Qu’est-ce que la gestion des appareils Microsoft Intune ?
 
@@ -39,7 +39,7 @@ La charge de travail **Appareils** vous donne des informations sur les appareils
    - La **Vue d’ensemble** présente un aperçu visuel des appareils inscrits et indique également combien d’appareils utilisent les différentes plateformes, notamment Android et iOS/iPadOS.
    - **Tous les appareils** montre la liste des appareils inscrits que vous gérez.
 
-     Utilisez la fonctionnalité **Exporter** pour créer une liste .csv de tous les appareils, par incréments de 10 000 (Internet Explorer) ou 30 000 (Microsoft Edge, Chrome).
+     Utilisez la fonctionnalité **Exporter** pour créer une liste .zip de tous les appareils, par incréments de 10 000 (Internet Explorer) ou 30 000 (Microsoft Edge, Chrome).
 
      Sélectionnez un appareil pour [voir plus d’informations sur cet appareil](device-inventory.md), dont les détails sur le matériel, les applications installées et son état de stratégie de conformité.
 
@@ -61,7 +61,7 @@ Les actions disponibles varient selon la plateforme et la configuration de l’a
   - [Réinitialisation](devices-wipe.md#wipe)
   - [Verrouillage à distance](device-remote-lock.md)
   - [Réinitialiser le code secret](device-passcode-reset.md)
-  - [Désactiver le verrouillage d’activation](device-activation-lock-bypass.md) (iOS uniquement)
+  - [Désactiver le verrouillage d’activation](device-activation-lock-disable.md) (iOS uniquement)
   - [Redémarrage à zéro](device-fresh-start.md) (Windows uniquement)
   - [Mode Perdu](device-lost-mode.md) (iOS uniquement)
   - [Localiser l’appareil](device-locate.md) (iOS uniquement)

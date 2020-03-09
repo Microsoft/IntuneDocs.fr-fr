@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 07463f3bcac7d657659ece7fed2c40db53ee2122
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609163"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256371"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Guide pratique pour gérer les applications achetées en volume dans le Microsoft Store pour Entreprises avec Microsoft Intune
 
@@ -51,7 +51,8 @@ Passez en revue les informations suivantes avant de commencer la synchronisation
 - Pour pouvoir utiliser cette fonctionnalité, les appareils doivent être joints à Active Directory Domain Services, à Azure AD ou à un espace de travail.
 - Les appareils inscrits doivent utiliser la version 1511 de Windows 10 ou version ultérieure.
 
-En outre, les ensembles liés et les applications en mode hors connexion sous licence synchronisées provenant de Microsoft Store pour Entreprises sont désormais consolidés dans une même entrée d’application dans l’interface utilisateur. Les détails du déploiement des packages individuels seront migrés vers cette même entrée. Pour afficher les ensembles liés dans le portail Azure, sélectionnez **Licences d’application** dans le volet **Applications**.
+> [!NOTE]
+Si vous désactivez le Store sur les appareils gérés (manuellement, par le biais d’une stratégie ou par le biais d’une stratégie de groupe), l’installation des applications sous licence en ligne échoue.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Associer votre compte Microsoft Store pour Entreprises à Intune
 Avant d’activer la synchronisation dans la console Intune, vous devez configurer votre compte de Store pour utiliser Intune comme outil de gestion :

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60244bb268f7becadc427c397d7c2d1562bcf6b5
-ms.sourcegitcommit: ea81ad5f33f18d9fe43254e27e02de5eaef74a05
-ms.translationtype: MTE75
+ms.openlocfilehash: 163f5dd246fb17e7d67a8baffbae9926f2f4bc79
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75722604"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256439"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Paramètres Android Entreprise pour marquer les appareils comme étant conformes ou non conformes à l’aide d’Intune
 
@@ -35,7 +35,7 @@ Cette fonctionnalité s’applique à :
 En tant qu’administrateur de service Intune, utilisez ces paramètres de conformité pour protéger les ressources de votre organisation. Pour plus d’informations sur les stratégies de conformité et ce qu’elles permettent de faire, consultez [Bien démarrer avec la conformité des appareils](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> Les stratégies de conformité appliquent également des appareils Android dédiés à l’entreprise. Si une stratégie de conformité est affectée à un appareil dédié, l’appareil peut s’afficher comme étant **non conforme**. L’accès conditionnel et l’application de la conformité ne sont pas disponibles sur les appareils dédiés. Veillez à effectuer toutes les tâches ou actions pour obtenir des appareils dédiés conformes à vos stratégies attribuées.
+> Les stratégies de conformité s’appliquent également aux appareils dédiés Android Entreprise. Si une stratégie de conformité est affectée à un appareil dédié, l’appareil peut apparaître comme étant **Non conforme**. L’accès conditionnel et la mise en application de la conformité ne sont pas disponibles sur les appareils dédiés. Veillez à effectuer toutes les tâches ou actions pour obtenir des appareils dédiés conformes à vos stratégies attribuées.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -45,7 +45,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 ### <a name="device-health"></a>Intégrité de l’appareil
 
-- **Exiger que l’appareil soit au niveau des menaces de l’appareil ou en dessous**: sélectionnez le niveau de menace maximal de l’appareil autorisé évalué par votre [service mobile Threat Defense](mobile-threat-defense.md). Les appareils qui dépassent ce niveau de menace sont marqués comme non conformes. Pour utiliser ce paramètre, choisissez le niveau de menace autorisé :
+- **Exiger que l’appareil soit au niveau ou sous le niveau de défense contre les menaces mobiles** : Sélectionnez le niveau maximal de menace autorisé pour l’appareil selon l’évaluation réalisée par votre [service Mobile Threat Defense](mobile-threat-defense.md). Les appareils qui dépassent ce niveau de menace sont marqués comme non conformes. Pour utiliser ce paramètre, choisissez le niveau de menace autorisé :
 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Sécurisé** : cette option est la plus sécurisée. Elle signifie que l’appareil ne doit présenter aucune menace. Si le moindre niveau de menace est détecté sur l’appareil, celui-ci est considéré comme non conforme.
@@ -54,7 +54,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
   - **Élevé** : cette option est la moins sécurisée, car elle autorise tous les niveaux de menace. Elle peut s’avérer utile si vous utilisez cette solution uniquement à des fins de création de rapports.
   
 > [!NOTE] 
-> Tous les fournisseurs de protection contre les menaces mobiles (MTD) sont pris en charge sur les déploiements de propriétaires d’appareils Android Enterprise à l’aide de la configuration d’application. Vérifiez avec votre fournisseur MTD la configuration exacte nécessaire pour prendre en charge les plateformes propriétaires d’appareils Android Enterprise sur Intune.
+> Tous les fournisseurs MTD (Mobile Threat Defense) sont pris en charge sur les déploiements du propriétaire de l’appareil Android Entreprise à l’aide de la configuration de l’application. Demandez à votre fournisseur MTD la configuration exacte nécessaire pour prendre en charge les plateformes de propriétaire d’appareil Android Entreprise sur Intune.
 
 #### <a name="google-play-protect"></a>Google Play Protect
 
@@ -84,12 +84,9 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 - **Exiger un mot de passe pour déverrouiller les appareils mobiles** : 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
-  - **Exiger** : les utilisateurs doivent entrer un mot de passe pour pouvoir accéder à leur appareil. 
-
-  Ce paramètre s’applique au niveau de l’appareil. Si vous avez besoin d’exiger un mot de passe uniquement au niveau du profil de travail, utilisez une stratégie de configuration. Consultez [Paramètres de configuration d’appareil Android Entreprise](../configuration/device-restrictions-android-for-work.md).
-
+  - **Exiger** : les utilisateurs doivent entrer un mot de passe pour pouvoir accéder à leur appareil.
   - **Type de mot de passe requis** : Choisissez si un mot de passe doit inclure uniquement des caractères numériques, ou s’il doit comporter un mélange de caractères numériques et d’autres caractères. Les options disponibles sont les suivantes :
-    - **Valeur par défaut** de l’appareil : pour évaluer la conformité du mot de passe, veillez à sélectionner une force de mot de passe autre que l' **appareil par défaut**.  
+    - **Paramètres par défaut de l’appareil** : pour évaluer la conformité du mot de passe, veillez à sélectionner une force de mot de passe autre que **Paramètres par défaut de l’appareil**.  
     - **Mot de passe requis, sans restriction**
     - **Biométrie faible** - [Biométrie forte et faible](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (dirige sur le site web d’Android)
     - **Numérique** (*par défaut*) : le mot de passe ne doit comporter que des nombres, par exemple `123456789`. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
@@ -98,7 +95,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
     - **Alphanumériques** : inclut des lettres majuscules, minuscules et des caractères numériques. Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
     - **Alphanumérique avec symboles** : inclut des lettres majuscules, minuscules, des caractères numériques, des signes de ponctuation et des symboles. Entrez également :
     
-    Selon le type de *mot de passe* que vous sélectionnez, les paramètres suivants sont disponibles :  
+    Selon le *type de mot de passe*  que vous sélectionnez, les paramètres suivants sont disponibles :  
     - **Longueur minimale du mot de passe** : entrez la longueur minimale du mot de passe (entre 4 et 16 caractères).  
 
     - **Nombre de caractères obligatoires** : entrez le nombre de caractères du mot de passe (entre 0 et 16 caractères).
@@ -113,7 +110,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
     
     - **Nombre de symboles obligatoires** : entrez le nombre de symboles (`&`, `#`, `%`, etc.) du mot de passe (entre 0 et 16 caractères).
  
-- **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
+- **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options sont *Non configuré* (par défaut) et une valeur comprise entre *1 minute* et *8 heures*.
 
 - **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours (entre 1 et 365) après lesquels l’utilisateur doit changer le mot de passe de l’appareil. Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
 
@@ -127,7 +124,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 - **Chiffrement du stockage de données sur l’appareil** : 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
-  - **Exiger** -chiffrer le stockage des données sur vos appareils.  
+  - **Exiger** : chiffrez le stockage des données sur vos appareils.  
 
   Vous n’avez pas besoin de configurer ce paramètre, car les appareils Android Entreprise appliquent le chiffrement.
 
@@ -139,7 +136,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Bloquer** : marquer les appareils rootés (jailbreakés) comme étant non conformes.  
 
-- **Exiger que l’appareil soit au niveau des menaces de l’appareil ou en dessous**: sélectionnez le niveau de menace maximal de l’appareil autorisé évalué par votre [service mobile Threat Defense](mobile-threat-defense.md). Les appareils qui dépassent ce niveau de menace sont marqués comme non conformes. Pour utiliser ce paramètre, choisissez le niveau de menace autorisé :
+- **Exiger que l’appareil soit au niveau ou sous le niveau de défense contre les menaces mobiles** : Sélectionnez le niveau maximal de menace autorisé pour l’appareil selon l’évaluation réalisée par votre [service Mobile Threat Defense](mobile-threat-defense.md). Les appareils qui dépassent ce niveau de menace sont marqués comme non conformes. Pour utiliser ce paramètre, choisissez le niveau de menace autorisé :
 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
   - **Sécurisé** : cette option est la plus sécurisée. Elle signifie que l’appareil ne doit présenter aucune menace. Si le moindre niveau de menace est détecté sur l’appareil, celui-ci est considéré comme non conforme.
@@ -194,8 +191,8 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
   - **Au moins alphanumérique** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
   - **Au moins alphanumérique avec des symboles** : Entrez la **longueur minimale du mot de passe** qu’un utilisateur doit saisir (entre 4 et 16 caractères).
 
-  Selon le type de *mot de passe* que vous sélectionnez, les paramètres suivants sont disponibles :  
-  - **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options incluent la valeur par défaut *non configurée*et comprise entre *1 minute* et *8 heures*.
+  Selon le *type de mot de passe*  que vous sélectionnez, les paramètres suivants sont disponibles :  
+  - **Durée d’inactivité maximale en minutes avant demande du mot de passe** : entrez la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe. Les options sont *Non configuré* (par défaut) et une valeur comprise entre *1 minute* et *8 heures*.
 
   - **Nombre de jours avant expiration du mot de passe** : entrez le nombre de jours (entre 1 et 365) après lesquels l’utilisateur doit changer le mot de passe de l’appareil. Par exemple, pour modifier le mot de passe après 60 jours, entrez `60`. Lorsque le mot de passe arrive à expiration, les utilisateurs sont invités à créer un mot de passe.
 
@@ -207,7 +204,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 - **Chiffrement du stockage de données sur l’appareil** : 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
-  - **Exiger** -chiffrer le stockage des données sur vos appareils.  
+  - **Exiger** : chiffrez le stockage des données sur vos appareils.  
 
   Vous n’avez pas besoin de configurer ce paramètre, car les appareils Android Entreprise appliquent le chiffrement.
 
@@ -215,7 +212,7 @@ En tant qu’administrateur de service Intune, utilisez ces paramètres de confo
 
 - **Bloquer les applications provenant de sources inconnues** : 
   - **Non configuré** (*par défaut*) : ce paramètre n’est pas évalué pour la conformité ou la non-conformité.
-  - Bloquer **les appareils** avec **sécurité** > **sources inconnues** sources activées (*prises en charge sur Android 4,0 via Android 7. x. Non pris en charge par Android 8.0 et les versions ultérieures*).  
+  - **Bloquer** : bloquez les appareils sur lesquels **Sécurité** > **Sources inconnues** est activé (*pris en charge sur Android 4.0 à Android 7.x. Non pris en charge par Android 8.0 et ultérieur*).  
 
   Pour effectuer un chargement indépendant des applications, vous devez autoriser les sources inconnues. Si vous n’effectuez pas de chargement indépendant des applications Android, configurez la fonctionnalité sur **Bloquer** pour activer cette stratégie de conformité.
 

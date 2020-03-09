@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcb3a9f817b0e765fee79342bcd212f33509209a
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653544"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576317"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Présentation du Kit SDK d’application Microsoft Intune
 Le Kit de développement logiciel (SDK) d’application Intune, disponible pour iOS et Android, permet à votre application de prendre en charge des [stratégies de protection d’applications](../apps/app-protection-policy.md) Intune. Quand des stratégies de protection sont appliquées à votre application, elle peut être gérée par Intune et est reconnue par Intune comme application gérée. Le Kit de développement logiciel (SDK) s’efforce de minimiser la quantité de modifications du code pour les développeurs d’applications. Vous pouvez constater qu’il est possible d’activer la plupart des fonctionnalités du SDK sans changer le comportement de votre application. Pour une meilleure expérience de l’utilisateur final et de l’administrateur informatique, vous pouvez utiliser les API du Kit de développement logiciel (SDK) pour personnaliser le comportement de votre application et permettre la prise en charge des fonctionnalités nécessitant sa participation.
@@ -56,7 +56,7 @@ Les administrateurs informatiques peuvent obliger l’utilisateur final à entre
 Les administrateurs informatiques peuvent obliger les utilisateurs à se connecter avec leur compte professionnel ou scolaire pour accéder à l’application. Le SDK d’application Intune utilise Azure Active Directory pour fournir une expérience d’authentification unique, dans laquelle les informations d’identification, une fois entrées, sont réutilisées pour les connexions suivantes. Nous prenons également en charge l’authentification des solutions de gestion d’identité fédérées à l’aide d’Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Vérifier l’intégrité et la conformité des appareils
-Les administrateurs informatiques peuvent vérifier l’intégrité de l’appareil et sa conformité aux stratégies Intune avant que les utilisateurs finaux accèdent à l'application. Sur iOS, cette stratégie vérifie si l’appareil est jailbreakée. Sur Android, cette stratégie vérifie si l’appareil est rooté.
+Les administrateurs informatiques peuvent vérifier l’intégrité de l’appareil et sa conformité aux stratégies Intune avant que les utilisateurs finaux accèdent à l'application. Sur iOS/iPadOS, cette stratégie vérifie si l’appareil a été jailbreaké. Sur Android, cette stratégie vérifie si l’appareil est rooté.
 
 ### <a name="support-multi-identity"></a>Prendre en charge plusieurs identités
 La prise en charge de plusieurs identités est une fonctionnalité du Kit de développement logiciel (SDK) qui permet la coexistence de comptes gérés par stratégie (d’entreprise) et non gérés (personnels) dans une même application.

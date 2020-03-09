@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: df814abf9cdff3eb4d9fbac8183618461b590adb
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413743"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781927"
 ---
 # <a name="see-device-details-in-intune"></a>Consultez les détails de l’appareil dans Intune
 
@@ -39,11 +39,16 @@ Cet article vous explique comment afficher tous les appareils, ainsi que leurs p
    - **Vue d’ensemble** permet d’afficher le nom de l’appareil et de lister certaines de ses propriétés clés, notamment s’il s’agit d’un appareil BYOD (« Apportez votre propre appareil »), la date/heure de son enregistrement, etc. Vous pouvez effectuer les actions suivantes sur l’appareil :
       - [Mettre hors service](devices-wipe.md#retire)
       - [Réinitialisation](devices-wipe.md#wipe)
+      - [Supprimer](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Verrouillage à distance](device-remote-lock.md)
-      - [Synchroniser l’appareil](device-sync.md)
+      - [Synchroniser](device-sync.md)
       - [Réinitialiser le code secret](device-passcode-reset.md)
       - [Redémarrer](device-restart.md) (Windows uniquement)
       - [Redémarrage à zéro](device-fresh-start.md) (Windows uniquement)
+      - [Réinitialisation d’AutoPilot]() (Windows uniquement)
+      - [Analyse rapide](../configuration/device-restrictions-windows-10.md) (Windows 10 uniquement)
+      - [Analyse complète](../configuration/device-restrictions-windows-10.md) (Windows 10 uniquement)
+       - [Renommer un appareil](device-rename.md)
       - Démarrer une session d’assistance à distance
    - Utilisez **Propriétés** pour affecter une [catégorie d’appareil créée](../enrollment/device-group-mapping.md) et changer le type de propriété d’un appareil. Par exemple, remplacez un appareil personnel par un appareil d’entreprise.
    - **Matériel** contient de nombreux détails sur l’appareil, notamment l'ID de l’appareil, le système d'exploitation et la version, l'espace de stockage, entre autres détails.

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18815fb671e853bc0463fed750d40b80ccb285fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fbbffb187fc9e9537bf647bc33e3d98879369c3
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784270"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576048"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Créer un rapport Intune à partir du flux OData avec Power BI
 
-Cet article explique comment créer une visualisation TreeMap de vos données Intune à l’aide de Power BI Desktop que les utilisateurs ont un filtre interactif. Par exemple, votre directeur financier peut souhaiter savoir comment la distribution globale des appareils est comparée entre les appareils appartenant à l’entreprise et les appareils personnels. La visualisation treemap fournit des insights sur les différents types d’appareils. Vous pouvez ainsi voir le nombre d’appareils iOS, Android et Windows qui appartiennent à l’entreprise ou qui sont personnels.
+Cet article explique comment créer une visualisation treemap de vos données Intune à l’aide de Power BI Desktop qui utilise un filtre interactif. Imaginons que votre directeur financier souhaite connaître comment l’ensemble des appareils sont distribués entre les appareils appartenant à l’entreprise et les appareils personnels. La visualisation treemap fournit des insights sur les différents types d’appareils. Vous pouvez consulter le nombre d’appareils iOS/iPadOS, Android et Windows qui appartiennent à l’entreprise ou qui sont des appareils personnels.
 
 ## <a name="overview-of-creating-the-chart"></a>Vue d’ensemble de la création du graphique
 
@@ -43,11 +43,11 @@ Pour créer ce graphique, effectuez les étapes suivantes :
 
 Dans Power BI, vous travaillez avec des tables. Une table contient des champs de données. Chaque champ de données a un type de données. Le champ ne peut contenir que des données du type de données (nombre, texte, date, etc.). Quand vous chargez le modèle dans Power BI, les tables sont remplies avec les données d’historique récentes de votre locataire. Bien que les données spécifiques évoluent au fil du temps, la structure de la table ne change pas, sauf si le modèle de données sous-jacent est mis à jour.
 
-Les termes *entité* et *table* peuvent prêter à confusion. Le modèle de données est accessible par le biais d’un flux OData (Open Data Protocol). Dans l’univers OData, les conteneurs appelés tables dans Power BI sont appelés des entités. Ces termes font tous les deux référence au même conteneur de données. Pour plus d’informations sur OData, consultez la [vue d’ensemble d’OData](/odata/overview).
+Les termes *entité* et *table* peuvent prêter à confusion. Le modèle de données est accessible par le biais d’un flux OData (Open Data Protocol). Dans l’univers OData, les conteneurs appelés tables dans Power BI sont appelés des entités. Ces termes font tous les deux référence au même conteneur de données. Pour plus d’informations sur OData, consultez la [Vue d’ensemble d’OData](/odata/overview).
 
 ## <a name="install-power-bi-desktop"></a>Installer Power BI Desktop
 
-Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Installez la dernière version de Power BI Desktop. Power BI Desktop est disponible en téléchargement à l’emplacement suivant : [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Se connecter au flux OData pour l’entrepôt de données Intune de votre locataire
 
@@ -58,8 +58,8 @@ Installez la dernière version de Power BI Desktop. Power BI Desktop est dispo
 2. Ouvrez le volet **Intune Data Warehouse** en sélectionnant le lien Data Warehouse sous **Autres tâches** sur le côté droit du panneau **Microsoft Intune - Vue d’ensemble**.
 3. Copier l’URL du flux personnalisé. Par exemple : `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Ouvrez Power BI Desktop.
-5. Dans la barre de menus, sélectionnez **fichier** > **recevoir des données** > **flux OData**.
-6. Collez l’URL de flux personnalisée, que vous avez copiée à l’étape précédente, dans la zone URL de la fenêtre **flux OData** .
+5. Dans la barre de menus, sélectionnez **Fichier** > **Obtenir des données** > **Flux OData**.
+6. Collez l’URL du flux personnalisé, que vous avez copiée à l’étape précédente, dans la zone URL de la fenêtre **Flux OData**.
 7. Sélectionnez **De base**.
 
     ![Flux OData pour l’entrepôt de données Intune de votre abonné](./media/reports-proc-create-with-odata/reports-create-01-odatafeed.png)
@@ -88,14 +88,14 @@ La relation est présentée dans une colonne De et une colonne À. Dans cet ex
 
 ## <a name="create-a-treemap-visualization"></a>Créer une visualisation treemap
 
-Un graphique treemap affiche les données hiérarchiques sous forme de zones dans des zones. Chaque branche de la hiérarchie est une zone qui contient des zones plus petites correspondant à des sous-branches. Vous pouvez utiliser Power BI Desktop pour créer un TreeMap de vos données client Intune qui affichent des quantités relatives de types de fabricants de périphériques.
+Un graphique treemap affiche les données hiérarchiques sous forme de zones dans des zones. Chaque branche de la hiérarchie est une zone qui contient des zones plus petites correspondant à des sous-branches. Vous pouvez utiliser Power BI Desktop pour créer un treemap de vos données de locataire Intune qui affichent des quantités relatives de types de fabricants d’appareils.
 
 ![Visualisations treemap Power BI](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. Dans le volet **visualisations**, recherchez et sélectionnez **TreeMap**. Le **graphique de compartimentage** sera ajouté au canevas de rapport.
-2. Dans le volet **champs** , recherchez la table `devices`.
-3. Développez la table `devices` et sélectionnez le champ de données `manufacturer`.
-4. Faites glisser le champ de données `manufacturer` vers le canevas de rapport et déposez-le sur le graphique de **compartimentage** .
+2. Dans le volet **Champs**, recherchez la table `devices`.
+3. Développez la table `devices`, puis sélectionnez le champ de données `manufacturer`.
+4. Faites glisser le champ de données `manufacturer` dans le canevas de rapport, puis placez-le sur le graphique **Treemap**.
 5. Faites glisser `deviceKey` le champ de données `devices` de la table vers le volet **visualisations** et déposez-le sous la section **valeurs** de la zone intitulée **Ajouter des champs de données ici**.  
 
 Vous disposez maintenant d’un visuel qui montre la distribution des fabricants d’appareils dans votre organisation.
@@ -106,19 +106,19 @@ Vous disposez maintenant d’un visuel qui montre la distribution des fabricants
 
 Pour répondre à des questions supplémentaires à l’aide de votre application, vous pouvez ajouter un filtre à votre treemap.
 
-1. Pour ajouter un filtre, sélectionnez le canevas de rapport, puis l’**icône Segment** (![Treemap avec le modèle de données et les relations prises en charge](./media/reports-proc-create-with-odata/reports-create-slicer.png)) sous **Visualisations**. La visualisation de **segment** vide s’affiche sur le canevas.
-2. Dans le volet **champs** , recherchez la table `ownerTypes`.
-3. Développez la table `ownerTypes` et sélectionnez le champ de données `ownerTypeName`.
+1. Pour ajouter un filtre, sélectionnez le canevas de rapport, puis l’**icône Segment** (![Treemap avec le modèle de données et les relations prises en charge](./media/reports-proc-create-with-odata/reports-create-slicer.png)) sous **Visualisations**. La visualisation **Segment** vide apparaît sur le canevas.
+2. Dans le volet **Champs**, recherchez la table `ownerTypes`.
+3. Développez la table `ownerTypes`, puis sélectionnez le champ de données `ownerTypeName`.
 4. Faites glisser `onwerTypeName` le champ de données `ownerTypes` de la table vers le volet **Filtres** et déposez-le sous la section **Filtres sur cette page** de la zone intitulée **Ajouter des champs de données ici**.  
 
-   Dans la table `OwnerTypes`, un champ de données nommé `OwnerTypeKey`contient une donnée indiquant si un appareil est un appareil appartenant à l’entreprise ou personnel. Pour afficher des noms conviviaux dans ce filtre, recherchez la table `ownerTypes` et faites glisser le champ de données **ownerTypeName** vers le segment. Cet exemple montre comment le modèle de données prend en charge les relations entre les tables.
+   Sous la table `OwnerTypes` se trouve un champ appelé `OwnerTypeKey`. Il contient des données indiquant si un appareil appartient à l’entreprise ou s’il est personnel. Pour afficher des noms conviviaux dans ce filtre, recherchez la table `ownerTypes` et faites glisser le champ de données **ownerTypeName** vers le segment. Cet exemple montre comment le modèle de données prend en charge les relations entre les tables.
 
 ![TreeMap avec un filtre - prise en charge des relations entre les tables](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 
 Vous disposez maintenant d’un filtre interactif qui vous permet de basculer entre les appareils d’entreprise et les appareils personnels. Utilisez ce filtre pour voir comment la distribution change.
 
-1. Sélectionnez **société** dans le segment pour voir la distribution de l’appareil appartenant à l’entreprise.
-2. Sélectionnez **personnel** dans le segment pour voir les appareils personnels.
+1. Sélectionnez **Company** (Entreprise) pour voir la distribution des appareils appartenant à l’entreprise.
+2. Sélectionnez **Personal** (Personnel) dans le segment pour voir les appareils personnels.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

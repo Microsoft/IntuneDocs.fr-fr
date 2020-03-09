@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
-ms.translationtype: MTE75
+ms.openlocfilehash: a46532467f8de7caf8cc88fe60e7a5cbc10ba147
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075788"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256524"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Paramètres de base de référence de la sécurité GPM Windows pour Intune
 
@@ -97,7 +97,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   - *Si vous activez ce paramètre de stratégie*, les privilèges sont étendus à tous les programmes. En règle générale, ces privilèges sont réservés pour les programmes qui sont affectés à l’utilisateur (proposés sur le Bureau), affectés à l’ordinateur (installés automatiquement) ou disponibles dans Ajout/suppression de programmes dans le Panneau de configuration. Ce paramètre de profil permet aux utilisateurs d’installer des programmes qui nécessitent l’accès à des répertoires que l’utilisateur n’a pas l’autorisation d’afficher ou de modifier, y compris les répertoires sur les ordinateurs avec un haut niveau de restriction.
 
-  - *Si vous désactivez ou que vous ne configurez pas ce paramètre de stratégie*, le système applique les autorisations de l’utilisateur actif lors de l’installation de programmes qu’un administrateur système ne distribue pas ou n’offre pas. Remarque : Ce paramètre de stratégie apparaît à la fois dans les dossiers Configuration ordinateur et Configuration utilisateur. Pour que ce paramètre de stratégie soit effectif, vous devez l’activer dans les deux dossiers. Attention : les utilisateurs expérimentés peuvent tirer parti des autorisations accordées par ce paramètre de stratégie pour changer leurs privilèges et obtenir un accès permanent à des fichiers et des dossiers restreints. La sécurité de la version de Configuration utilisateur de ce paramètre de stratégie n’est pas garantie.  
+  - *Si vous désactivez ou que vous ne configurez pas ce paramètre de stratégie*, le système applique les autorisations de l’utilisateur actif lors de l’installation de programmes qu’un administrateur système ne distribue pas ou n’offre pas. Remarque : Ce paramètre de stratégie apparaît à la fois dans les dossiers Configuration ordinateur et Configuration utilisateur. Pour que ce paramètre de stratégie soit effectif, vous devez l’activer dans les deux dossiers. Attention : Les utilisateurs expérimentés peuvent tirer parti des autorisations accordées par ce paramètre de stratégie pour changer leurs privilèges et obtenir un accès permanent à des fichiers et des dossiers restreints. La sécurité de la version de Configuration utilisateur de ce paramètre de stratégie n’est pas garantie.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Par défaut** : Oui
@@ -231,7 +231,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Ce paramètre de stratégie configure un accès sécurisé aux chemins UNC. Si vous activez cette stratégie, Windows autorise l’accès aux chemins UNC spécifiés seulement une fois que les exigences de sécurité supplémentaires sont satisfaites.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067243)
 
-  **Par défaut** : Configurez Windows pour autoriser l’accès aux chemins UNC spécifiés seulement une fois que les exigences de sécurité supplémentaires sont satisfaites.
+  **Par défaut** : Configurer Windows pour autoriser l’accès aux chemins UNC spécifiés seulement une fois que les exigences de sécurité supplémentaires sont satisfaites.
 
   Quand *Configurer Windows pour autoriser l’accès aux chemins UNC spécifiés seulement une fois que les exigences de sécurité supplémentaires sont satisfaites* est sélectionné, vous pouvez configurer la *Liste des chemins UNC renforcés*.
 
@@ -364,7 +364,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Lorsque *Mot de passe requis* est défini sur *Oui*, les paramètres suivants sont disponibles.
 
   - **Nombre minimal de jeux de caractères du mot de passe** :  
-    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le code PIN applique le comportement suivant pour les postes de travail et les appareils mobiles : 1 : Chiffres uniquement 2 : Chiffres et lettres minuscules obligatoire 3 : Chiffres, lettres minuscules et lettres majuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail. La valeur par défaut est 1.  
+    Nombre de types d’éléments complexes (lettres majuscules et minuscules, chiffres et ponctuation) obligatoires pour un mot de passe ou un code PIN fort. Le code PIN applique le comportement suivant pour les postes de travail et les appareils mobiles : 1 : Chiffres uniquement 2 : Chiffres et lettres minuscules obligatoire 3 : Chiffres, lettres minuscules et lettres majuscules obligatoires. Non pris en charge dans les comptes Microsoft et les comptes de domaine des postes de travail. 4 : Chiffres, lettres minuscules, lettres majuscules et caractères spéciaux obligatoires. Non pris en charge sur les postes de travail.  
     [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067055)
 
     **Par défaut** : 3
@@ -722,7 +722,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
   Ce paramètre de stratégie vous permet de désactiver la prise en charge de TLS (Transport Layer Security) 1.0, TLS 1.1, TLS 1.2, SSL (Secure Sockets Layer) 2.0 ou SSL 3.0 dans le navigateur. TLS et SSL sont des protocoles qui permettent de protéger la communication entre le navigateur et le serveur cible. Quand le navigateur tente de configurer une communication protégée avec le serveur cible, le navigateur et le serveur négocient le protocole et la version à utiliser. Le navigateur et le serveur tentent de faire correspondre leur liste des protocoles et des versions pris en charge, et ils sélectionnent la correspondance préférée. Si vous activez ce paramètre de stratégie, le navigateur négocie ou non un tunnel de chiffrement en utilisant les méthodes de chiffrement que vous sélectionnez dans la liste déroulante. Si vous désactivez ou que vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut sélectionner la méthode de chiffrement prise en charge par le navigateur.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Par défaut** : 2 éléments : TLS v1.1 et TLS v1.2  
+  **Par défaut** : 2 éléments :  TLS v1.1 et TLS v1.2  
   *Sélectionnez la flèche vers le bas pour afficher les options que vous pouvez sélectionner pour ce paramètre.*
 
 ::: zone-end
@@ -1366,9 +1366,9 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   - *Envoyer une réponse NTLMv2 uniquement* : les clients utilisent uniquement l’authentification NTLMv2 et la sécurité de session NTLMv2 si le serveur la prend en charge. Les contrôleurs de domaine acceptent les authentifications LM, NTLM et NTLMv2.
 
-  - *Envoyer une réponse NTLMv2 uniquement. Refuser LM* : les clients utilisent uniquement l’authentification NTLMv2 et la sécurité de session NTLMv2 si le serveur la prend en charge. Les contrôleurs de domaine refusent LM (ils acceptent uniquement l’authentification NTLM et NTLMv2).
+  - *Envoyer uniquement une réponse NTLMv2. Refuser LM* : les clients utilisent uniquement l’authentification NTLMv2 et la sécurité de session NTLMv2 si le serveur la prend en charge. Les contrôleurs de domaine refusent LM (ils acceptent uniquement l’authentification NTLM et NTLMv2).
 
-  - *Envoyer une réponse NTLMv2 uniquement. Refuser LM et NTLM* : les clients utilisent uniquement l’authentification NTLMv2 et la sécurité de session NTLMv2 si le serveur la prend en charge. Les contrôleurs de domaine refusent LM et NTLM (ils n’acceptent que l’authentification NTLMv2).
+  - *Envoyer uniquement une réponse NTLMv2. Refuser LM et NTLM* : les clients utilisent uniquement l’authentification NTLMv2 et la sécurité de session NTLMv2 si le serveur la prend en charge. Les contrôleurs de domaine refusent LM et NTLM (ils n’acceptent que l’authentification NTLMv2).
 
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067189)
 
@@ -1779,7 +1779,7 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
 
   - *Si vous ne configurez pas ce paramètre de stratégie*, les utilisateurs peuvent activer ou désactiver eux-mêmes l’assistance à distance sollicitée (demander) dans les propriétés système du Panneau de configuration. Les utilisateurs peuvent également configurer les paramètres d’assistance à distance.
 
-  Si vous activez ce paramètre de stratégie, vous avez deux façons de permettre aux personnes qui vous aident de fournir une assistance à distance : « Ne permettre aux conseillers que de voir l’ordinateur » ou « Permettre aux conseillers de contrôler l’ordinateur à distance ». Le paramètre de stratégie « Durée maximale du ticket » définit une limite sur la durée pendant laquelle une invitation d’assistance à distance créée via la messagerie ou un transfert de fichiers peut rester ouverte. Le paramètre « Sélectionner la méthode d’envoi d’invitations par e-mail » spécifie le standard des e-mails à utiliser pour envoyer des invitations d’assistance à distance. En fonction de votre programme de messagerie, vous pouvez utiliser le standard *Mailto* (le destinataire de l’invitation se connecte via une liaison Internet) ou le standard SMAPI (Simple MAPI) (l’invitation est jointe à votre message e-mail). Ce paramètre de stratégie n’est pas disponible dans Windows Vista, car SMAPI est la seule méthode prise en charge. Si vous activez ce paramètre de stratégie, vous devez également activer les exceptions de pare-feu appropriées pour permettre les communications de l’assistance à distance.  
+  Si vous activez ce paramètre de stratégie, deux méthodes s’offrent à vous pour permettre aux conseillers de fournir une assistance à distance : « Ne permettre aux conseillers que de voir l’ordinateur » ou « Permettre aux conseillers de contrôler l’ordinateur à distance ». Le paramètre de stratégie « Durée maximale du ticket » définit une limite sur la durée pendant laquelle une invitation d’assistance à distance créée via la messagerie ou un transfert de fichiers peut rester ouverte. Le paramètre « Sélectionner la méthode d’envoi d’invitations par e-mail » spécifie le standard des e-mails à utiliser pour envoyer des invitations d’assistance à distance. En fonction de votre programme de messagerie, vous pouvez utiliser le standard *Mailto* (le destinataire de l’invitation se connecte via une liaison Internet) ou le standard SMAPI (Simple MAPI) (l’invitation est jointe à votre message e-mail). Ce paramètre de stratégie n’est pas disponible dans Windows Vista, car SMAPI est la seule méthode prise en charge. Si vous activez ce paramètre de stratégie, vous devez également activer les exceptions de pare-feu appropriées pour permettre les communications de l’assistance à distance.  
   [En savoir plus](https://go.microsoft.com/fwlink/?linkid=2067198)
 
   **Par défaut** : Désactiver l’assistance à distance
@@ -1793,10 +1793,10 @@ Pour plus d’informations, consultez [Fournisseur de services de configuration 
     **Par défaut** : *Non configuré*
 
   - **Période d'attente maximale du ticket** :  
-    **Par défaut** : minutes
+    **Par défaut** : Minutes
 
   - **Méthode d’invitation par e-mail** :  
-    **Par défaut** : SMAPI (Simple MAPI)
+    **Par défaut** : MAPI simple
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
